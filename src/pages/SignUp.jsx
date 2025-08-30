@@ -89,7 +89,7 @@ export default function Signup() {
                     // updating user state and navigating if necessary for other cases.
                     // For direct signup with session, we can navigate.
                     toast.success("Welcome to ZionAI 🎉");
-                    navigate("/dashboard");
+                    router("/dashboard");
                 }
                 else {
                     // This case might indicate an unexpected response from the API
@@ -164,7 +164,12 @@ export default function Signup() {
                 {form.formState.errors.root && (<Alert variant="destructive" className="mb-4">
                     <AlertDescription>{form.formState.errors.root.message}</AlertDescription>
                   </Alert>)}
-                <form onSubmit={form.handleSubmit(onSubmit, onInvalid)} className="space-y-6" noValidate>
+                <form onSubmit = {
+  form.handleSubmit(onSubmit,
+  onInvalid)
+
+
+} className="space-y-6" noValidate>
                   <FormField control={form.control} name="displayName" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
                         <FormControl>

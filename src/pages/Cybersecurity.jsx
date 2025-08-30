@@ -2,50 +2,6 @@ import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Shield, Lock, Eye, Users, Database, Network, Zap, Target, CheckCircle, BarChart3 } from 'lucide-react';
 const Cybersecurity = () => {
-    const securityServices = [
-        {
-            icon: Shield,
-            title: "Advanced Threat Detection",
-            description: "AI-powered threat detection and prevention systems",
-            features: ["Real-time Monitoring", "Behavioral Analysis", "Machine Learning", "Automated Response"],
-            path: "/ai-powered-enterprise-security"
-        },
-        {
-            icon: Lock,
-            title: "SOC2 Compliance Automation",
-            description: "Automated compliance management and reporting",
-            features: ["Automated Auditing", "Real-time Monitoring", "Compliance Reporting", "Risk Assessment"],
-            path: "/soc2-compliance-automation"
-        },
-        {
-            icon: Eye,
-            title: "Zero Trust Architecture",
-            description: "Comprehensive zero trust security implementation",
-            features: ["Identity Verification", "Continuous Monitoring", "Least Privilege Access", "Micro-segmentation"],
-            path: "/zero-trust-network-architecture"
-        },
-        {
-            icon: Network,
-            title: "Network Security",
-            description: "Advanced network protection and monitoring",
-            features: ["Firewall Management", "Intrusion Detection", "Traffic Analysis", "Vulnerability Scanning"],
-            path: "/network-security"
-        },
-        {
-            icon: Database,
-            title: "Data Protection",
-            description: "Comprehensive data security and privacy solutions",
-            features: ["Encryption", "Access Control", "Data Loss Prevention", "Privacy Compliance"],
-            path: "/data-protection"
-        },
-        {
-            icon: Users,
-            title: "Identity & Access Management",
-            description: "Secure identity management and access control",
-            features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Identity Governance"],
-            path: "/identity-access-management"
-        }
-    ];
     const securityFeatures = [
         {
             icon: CheckCircle,

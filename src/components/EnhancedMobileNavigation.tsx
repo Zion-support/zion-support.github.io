@@ -129,12 +129,12 @@ const quickActions = [
   {
     label: 'Documentation',
     path: '/docs',
-    icon: FileText,
-    color: 'bg-zion-blue'
-  }
+    icon: FileText,;
+    color: 'bg-zion-blue';
+  };
 ];
 
-export const EnhancedMobileNavigation: React.FC = () => {
+export const EnhancedMobileNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
@@ -146,8 +146,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
   }, [location]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
       }
     };
@@ -163,8 +163,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
     };
   }, [isOpen]);
 
-  const toggleExpanded = (label: string) => {
-    setExpandedItems(prev => {
+  const toggleExpanded = (label: string) => {;
+    setExpandedItems(prev => {;
       const newSet = new Set(prev);
       if (newSet.has(label)) {
         newSet.delete(label);
@@ -175,28 +175,33 @@ export const EnhancedMobileNavigation: React.FC = () => {
     });
   };
 
-  const handleNavigation = (path: string) => {
+  const handleNavigation = (path: string) => {;
     setIsOpen(false);
     setExpandedItems(new Set());
   };
 
-  const isActive = (path: string) => {
-    if (path === '/') {
+  const isActive = (path: string) => {;
+    if (path === '/') {;
       return activePath === '/';
     }
     return activePath.startsWith(path);
   };
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
+  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
 
     return (
-      <div key={item.label} className="w-full">
+      <div key = {item.label} className="w-full">
         <motion.div
           initial={false}
-          animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' }}
+          animate = {
+  { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
+  0.1)' : 'transparent' 
+
+
+}}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
           <Link
@@ -250,10 +255,30 @@ export const EnhancedMobileNavigation: React.FC = () => {
           <AnimatePresence>
             {isExpanded && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                initial = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
+                animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+}}
+                exit = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
+                transition = {
+  { duration: 0.3,
+  ease: 'easeInOut' 
+
+
+}}
                 className="overflow-hidden"
               >
                 <div className="border-l border-zion-slate-light/20 ml-4">
@@ -261,9 +286,9 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 </div>
               </motion.div>
             )}
-          </AnimatePresence>
-        )}
-      </div>
+          </AnimatePresence>;
+        )};
+      </div>;
     );
   };
 
@@ -271,7 +296,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
     <>
       {/* Mobile Menu Toggle */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick = {() => setIsOpen(true)}
         className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 rounded-lg"
         aria-label="Open mobile navigation menu"
       >
@@ -293,7 +318,12 @@ export const EnhancedMobileNavigation: React.FC = () => {
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              transition = {
+  { duration: 0.3,
+  ease: 'easeOut' 
+
+
+}}
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
               {/* Header */}
@@ -390,8 +420,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+        )};
+      </AnimatePresence>;
+    </>;
   );
 };

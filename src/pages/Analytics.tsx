@@ -40,7 +40,7 @@ import {
   AreaChart,
   ScatterPlot
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 const Analytics: React.FC = () => {
   const analyticsFeatures = [
@@ -65,9 +65,9 @@ const Analytics: React.FC = () => {
     {
       title: "Custom Dashboards",
       description: "Build personalized dashboards tailored to your business needs",
-      icon: Target,
-      color: "from-orange-400 to-red-500"
-    }
+      icon: Target,;
+      color: "from-orange-400 to-red-500";
+    };
   ];
 
   const analyticsTypes = [
@@ -96,29 +96,29 @@ const Analytics: React.FC = () => {
       name: "Financial Analytics",
       description: "Financial performance tracking and optimization",
       icon: DollarSign,
-      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
-      path: "/services/ai-financial-analytics"
-    }
+      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;
+      path: "/services/ai-financial-analytics";
+    };
   ];
 
   const metrics = [
     { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },
-    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },
-    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },
-    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" }
+    { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },;
+    { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },;
+    { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
   ];
 
   const integrations = [
     { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },
     { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },
     { name: "Stripe", icon: "💳", description: "Payment and revenue data" },
-    { name: "Slack", icon: "💬", description: "Team communication metrics" },
-    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },
-    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" }
+    { name: "Slack", icon: "💬", description: "Team communication metrics" },;
+    { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;
+    { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Analytics - Zion Tech Group"
         description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards."
@@ -130,8 +130,18 @@ const Analytics: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -180,9 +190,24 @@ const Analytics: React.FC = () => {
             {metrics.map((metric, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -201,8 +226,18 @@ const Analytics: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -219,9 +254,24 @@ const Analytics: React.FC = () => {
             {analyticsFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -240,8 +290,18 @@ const Analytics: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -258,9 +318,24 @@ const Analytics: React.FC = () => {
             {analyticsTypes.map((type, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -296,8 +371,18 @@ const Analytics: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -314,9 +399,24 @@ const Analytics: React.FC = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
               >
                 <div className="text-4xl mb-3">{integration.icon}</div>
@@ -332,8 +432,18 @@ const Analytics: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -360,9 +470,9 @@ const Analytics: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

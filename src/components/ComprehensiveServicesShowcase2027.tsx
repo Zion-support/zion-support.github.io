@@ -2,35 +2,10 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
+import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Autonomous Systems': Brain,
-  'Quantum Computing & AI': Cpu,
-  'Blockchain & Web3': Database,
-  'Cybersecurity & Privacy': Shield,
-  'Healthcare & Biotech': Heart,
-  'Financial Technology': DollarSign,
-  'IoT & Automation': Cloud,
-  'Cloud & Infrastructure': Cloud,
-  'Data Analytics & BI': BarChart3,
-  'Digital Marketing & Automation': Users,
-  'E-commerce & Retail': ShoppingCart,
-  'Education & Learning Technology': GraduationCap,
-  'Space Technology & Earth Observation': Rocket,
-  'AR/VR & Immersive Technology': Users,
-  'Robotics & Automation': Factory,
-  'Green Technology & Sustainability': Leaf,
-  'Supply Chain & Logistics': Truck,
-  'Human Resources & Talent Management': Users,
-  'Legal Technology & Compliance': Gavel,
-  'Real Estate & Property Technology': Home,
-  'Sports Technology & Analytics': Trophy,
-  'Entertainment & Media Technology': Film
-};
 
 const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700',
@@ -67,9 +42,9 @@ const features = [
   "White-label Solutions",
   "Comprehensive Documentation",
   "24/7 Technical Support",
-  "99.9% Uptime Guarantee",
-  "SOC 2 Type II Compliant",
-  "30-Day Money Back Guarantee"
+  "99.9% Uptime Guarantee",;
+  "SOC 2 Type II Compliant",;
+  "30-Day Money Back Guarantee";
 ];
 
 const benefits = [
@@ -90,16 +65,19 @@ const benefits = [
   },
   {
     icon: <CheckCircle className="h-6 w-6"/>,
-    title: "Quality Guaranteed",
-    description: "30-day money-back guarantee with free migration support"
-  }
+    title: "Quality Guaranteed",;
+    description: "30-day money-back guarantee with free migration support";
+  };
 ];
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+;
+
+
 };
 
 export function ComprehensiveServicesShowcase2027() {
@@ -113,11 +91,10 @@ export function ComprehensiveServicesShowcase2027() {
   const categories = Array.from(new Set(allServices.map(service => service.category)));
   
   // Filter services based on selection and search
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = searchQuery === '' || 
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = searchQuery === '' || ;
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -125,7 +102,7 @@ export function ComprehensiveServicesShowcase2027() {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
 
   return (
-    <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    <div className = "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -392,10 +369,13 @@ export function ComprehensiveServicesShowcase2027() {
               <p>📍 Address: {contactInfo.address}</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }
 
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

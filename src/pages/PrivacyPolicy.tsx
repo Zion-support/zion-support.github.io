@@ -20,7 +20,7 @@ import {
   FileText
 } from 'lucide-react';
 
-const PrivacyPolicy = () => {
+const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
@@ -93,9 +93,9 @@ const PrivacyPolicy = () => {
     {
       id: 'contact',
       title: 'Contact Us',
-      icon: Mail,
-      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`
-    }
+      icon: Mail,;
+      content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`;
+    };
   ];
 
   const dataCategories = [
@@ -120,9 +120,9 @@ const PrivacyPolicy = () => {
     {
       category: 'Communication Data',
       examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],
-      purpose: 'Customer support, service improvement',
-      retention: '3 years from last interaction'
-    }
+      purpose: 'Customer support, service improvement',;
+      retention: '3 years from last interaction';
+    };
   ];
 
   const securityMeasures = [
@@ -153,16 +153,16 @@ const PrivacyPolicy = () => {
     },
     {
       measure: 'Incident Response',
-      description: 'Comprehensive incident response plan for handling security breaches',
-      icon: AlertTriangle
-    }
+      description: 'Comprehensive incident response plan for handling security breaches',;
+      icon: AlertTriangle;
+    };
   ];
 
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
-        <meta name="description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />
+        <meta name = "description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, Zion Tech Group, privacy practices" />
       </Helmet>
 
@@ -171,8 +171,18 @@ const PrivacyPolicy = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -206,9 +216,24 @@ const PrivacyPolicy = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents
@@ -219,9 +244,24 @@ const PrivacyPolicy = () => {
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
                   >
                     <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -240,9 +280,24 @@ const PrivacyPolicy = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               {sections.map((section, index) => (
                 <div key={section.id} id={section.id} className="mb-16">
@@ -266,9 +321,24 @@ const PrivacyPolicy = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Categories and Retention
@@ -278,9 +348,24 @@ const PrivacyPolicy = () => {
                 {dataCategories.map((category, index) => (
                   <motion.div
                     key={category.category}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-slate-50 rounded-xl p-6 border border-slate-200"
                   >
                     <h3 className="text-xl font-semibold text-slate-900 mb-4">{category.category}</h3>
@@ -316,9 +401,24 @@ const PrivacyPolicy = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Security Measures
@@ -328,9 +428,24 @@ const PrivacyPolicy = () => {
                 {securityMeasures.map((measure, index) => (
                   <motion.div
                     key={measure.measure}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-green-200"
                   >
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -349,9 +464,24 @@ const PrivacyPolicy = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Questions About Privacy?
@@ -382,9 +512,9 @@ const PrivacyPolicy = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

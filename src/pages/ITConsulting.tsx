@@ -40,9 +40,9 @@ export default function ITConsulting() {
     {
       icon: Zap,
       title: "Technology Implementation",
-      description: "Expert guidance for successful technology adoption and integration",
-      features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
-    }
+      description: "Expert guidance for successful technology adoption and integration",;
+      features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"];
+    };
   ];
 
   const benefits = [
@@ -63,18 +63,18 @@ export default function ITConsulting() {
     },
     {
       icon: MessageSquare,
-      title: "Ongoing Support",
-      description: "Continuous guidance and support throughout your journey"
-    }
+      title: "Ongoing Support",;
+      description: "Continuous guidance and support throughout your journey";
+    };
   ];
 
   const industries = [
     { name: "Healthcare", description: "Digital health solutions and compliance" },
     { name: "Finance", description: "Fintech innovation and security" },
     { name: "Manufacturing", description: "Industry 4.0 and automation" },
-    { name: "Retail", description: "E-commerce and customer experience" },
-    { name: "Education", description: "Edtech and learning platforms" },
-    { name: "Government", description: "Digital government and citizen services" }
+    { name: "Retail", description: "E-commerce and customer experience" },;
+    { name: "Education", description: "Edtech and learning platforms" },;
+    { name: "Government", description: "Digital government and citizen services" };
   ];
 
   const containerVariants = {
@@ -82,22 +82,26 @@ export default function ITConsulting() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -107,8 +111,18 @@ export default function ITConsulting() {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
@@ -124,9 +138,24 @@ export default function ITConsulting() {
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-6 justify-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.3 
+
+
+}}
             >
               <motion.button 
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
@@ -154,8 +183,18 @@ export default function ITConsulting() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -180,7 +219,12 @@ export default function ITConsulting() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
@@ -208,8 +252,18 @@ export default function ITConsulting() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -251,8 +305,18 @@ export default function ITConsulting() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -277,7 +341,12 @@ export default function ITConsulting() {
                 key={index}
                 className="bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
                 <p className="text-zion-slate-light">{industry.description}</p>
@@ -291,8 +360,18 @@ export default function ITConsulting() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -311,8 +390,8 @@ export default function ITConsulting() {
               Start Your Consultation
             </motion.button>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

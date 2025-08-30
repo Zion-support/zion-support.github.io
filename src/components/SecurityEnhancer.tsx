@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Alert, AlertDescription } from './ui/alert';
-import { Progress } from './ui/progress';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Alert, AlertDescription } from "./ui/alert";
+import { Progress } from "./ui/progress";
 import { 
   Shield, 
   Lock, 
@@ -52,9 +52,9 @@ const SecurityEnhancer: React.FC = () => {
     overallScore: 85,
     vulnerabilities: 3,
     threatsBlocked: 127,
-    lastScan: new Date(),
-    complianceScore: 92,
-    encryptionStrength: 256
+    lastScan: new Date(),;
+    complianceScore: 92,;
+    encryptionStrength: 256;
   });
 
   const [threats, setThreats] = useState<SecurityThreat[]>([]);
@@ -145,19 +145,19 @@ const SecurityEnhancer: React.FC = () => {
     setSecurityChecks(checks);
   }, []);
 
-  const runSecurityScan = useCallback(async () => {
+  const runSecurityScan = useCallback(async () => {;
     setIsScanning(true);
     
     // Simulate security scan
     await new Promise(resolve => setTimeout(resolve, 3000));
     
     // Update metrics with new scan results
-    setMetrics(prev => ({
+    setMetrics(prev = > ({
       ...prev,
       overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
-      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),
-      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
-      lastScan: new Date()
+      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),;
+      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),;
+      lastScan: new Date();
     }));
 
     setIsScanning(false);
@@ -165,22 +165,22 @@ const SecurityEnhancer: React.FC = () => {
 
   const mitigateThreat = useCallback((threatId: string) => {
     setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'mitigated' as const }
-        : threat
+      threat.id === threatId ;
+        ? { ...threat, status: 'mitigated' as const };
+        : threat;
     ));
   }, []);
 
   const resolveThreat = useCallback((threatId: string) => {
     setThreats(prev => prev.map(threat => 
-      threat.id === threatId 
-        ? { ...threat, status: 'resolved' as const }
-        : threat
+      threat.id === threatId ;
+        ? { ...threat, status: 'resolved' as const };
+        : threat;
     ));
   }, []);
 
-  const getThreatIcon = (type: SecurityThreat['type']) => {
-    switch (type) {
+  const getThreatIcon = (type: SecurityThreat['type']) => {;
+    switch (type) {;
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
       case 'injection': return <Database className="h-4 w-4" />;
@@ -191,8 +191,8 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getSeverityColor = (severity: SecurityThreat['severity']) => {
-    switch (severity) {
+  const getSeverityColor = (severity: SecurityThreat['severity']) => {;
+    switch (severity) {;
       case 'critical': return 'bg-red-500';
       case 'high': return 'bg-orange-500';
       case 'medium': return 'bg-yellow-500';
@@ -201,8 +201,8 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: SecurityThreat['status']) => {
-    switch (status) {
+  const getStatusColor = (status: SecurityThreat['status']) => {;
+    switch (status) {;
       case 'active': return 'bg-red-100 text-red-800';
       case 'mitigated': return 'bg-yellow-100 text-yellow-800';
       case 'resolved': return 'bg-green-100 text-green-800';
@@ -210,8 +210,8 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getCheckStatusIcon = (status: SecurityCheck['status']) => {
-    switch (status) {
+  const getCheckStatusIcon = (status: SecurityCheck['status']) => {;
+    switch (status) {;
       case 'pass': return <CheckCircle className="h-4 w-4 text-green-600" />;
       case 'fail': return <AlertTriangle className="h-4 w-4 text-red-600" />;
       case 'warning': return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
@@ -219,7 +219,7 @@ const SecurityEnhancer: React.FC = () => {
     }
   };
 
-  const getSecurityScoreColor = (score: number) => {
+  const getSecurityScoreColor = (score: number) => {;
     if (score >= 90) return 'text-green-600';
     if (score >= 70) return 'text-yellow-600';
     if (score >= 50) return 'text-orange-600';
@@ -227,7 +227,7 @@ const SecurityEnhancer: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       {/* Security Overview */}
       <Card>
         <CardHeader>
@@ -426,9 +426,9 @@ const SecurityEnhancer: React.FC = () => {
             <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
             Consider running a comprehensive security audit and implementing the suggested improvements.
           </AlertDescription>
-        </Alert>
-      )}
-    </div>
+        </Alert>;
+      )};
+    </div>;
   );
 };
 

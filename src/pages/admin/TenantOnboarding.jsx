@@ -49,8 +49,11 @@ export default function TenantOnboarding() {
             const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
             // Create landing page copy
             const landingPageCopy = {
-                headline: "AI Hiring Assistant",
-                subtitle: `Find the best talent for your ${formData.industry || "company"}`,
+  headline: "AI Hiring Assistant",
+  subtitle: `Find the best talent for your ${formData.industry || "company"
+
+
+}`,
                 cta: "Get Started"
             };
             // Submit to Supabase
@@ -135,7 +138,12 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select name="industry" value={formData.industry} onValueChange={(value) => handleSelectChange("industry", value)}>
+                      <Select name="industry" value={formData.industry} onValueChange = {
+  (value) => handleSelectChange("industry",
+  value)
+
+
+}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry"/>
                         </SelectTrigger>
@@ -154,7 +162,12 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
-                      <Select name="company_size" value={formData.company_size} onValueChange={(value) => handleSelectChange("company_size", value)}>
+                      <Select name="company_size" value={formData.company_size} onValueChange = {
+  (value) => handleSelectChange("company_size",
+  value)
+
+
+}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select company size"/>
                         </SelectTrigger>
@@ -189,7 +202,12 @@ export default function TenantOnboarding() {
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select name="theme_preset" value={formData.theme_preset} onValueChange={(value) => handleSelectChange("theme_preset", value)}>
+                      <Select name="theme_preset" value={formData.theme_preset} onValueChange = {
+  (value) => handleSelectChange("theme_preset",
+  value)
+
+
+}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme"/>
                         </SelectTrigger>
@@ -210,7 +228,12 @@ export default function TenantOnboarding() {
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
                       </div>
-                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}/>
+                      <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {
+  (checked) => handleSwitchChange("is_co_branded",
+  checked)
+
+
+}/>
                     </div>
                   </TabsContent>
                   
@@ -218,7 +241,12 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder={formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '') : "company"} className="rounded-r-none"/>
+                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
+  formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
+  '') : "company"
+
+
+} className="rounded-r-none"/>
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>

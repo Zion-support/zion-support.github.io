@@ -9,7 +9,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }) {
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
-            await mutate(() => true, undefined, { revalidate: true });
+            await mutate(() => true, null, { revalidate: true });
             resetErrorBoundary();
         }
         catch (retryError) {
@@ -54,7 +54,7 @@ export function MarketplaceErrorBoundary({ children }) {
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
-                componentStack: errorInfo.componentStack || undefined,
+                componentStack: errorInfo.componentStack || null,
             });
             scope.setLevel('error');
             Sentry.captureException(error);

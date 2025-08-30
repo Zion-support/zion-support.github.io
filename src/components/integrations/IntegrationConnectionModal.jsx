@@ -55,22 +55,42 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 <h3 className="text-sm font-medium">Sync Settings</h3>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, autoCreateContacts: checked })}/>
+                  <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  autoCreateContacts: checked 
+
+
+})}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, pushNotes: checked })}/>
+                  <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  pushNotes: checked 
+
+
+})}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, syncJobDetails: checked })}/>
+                  <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  syncJobDetails: checked 
+
+
+})}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange={(checked) => setSyncSettings({ ...syncSettings, syncApplicantData: checked })}/>
+                  <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
+  (checked) => setSyncSettings({ ...syncSettings,
+  syncApplicantData: checked 
+
+
+})}/>
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>

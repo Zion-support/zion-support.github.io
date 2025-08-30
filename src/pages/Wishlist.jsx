@@ -20,7 +20,7 @@ export default function WishlistPage() {
     useEffect(() => {
         // Redirect if not authenticated and auth loading is complete
         if (!isAuthLoading && !user) {
-            navigate('/login');
+            router('/login');
         }
     }, [user, isAuthLoading, navigate]);
     

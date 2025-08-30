@@ -6,32 +6,6 @@ import { SEO } from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
-    const services = [
-        {
-            title: "Penetration Testing",
-            description: "Comprehensive security assessments to identify vulnerabilities in your systems",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,500"
-        },
-        {
-            title: "Security Audits",
-            description: "Thorough review of your security policies, procedures, and infrastructure",
-            icon: <Eye className="h-6 w-6 text-zion-purple"/>,
-            price: "From $1,800"
-        },
-        {
-            title: "Incident Response",
-            description: "24/7 emergency response team for security breaches and cyber attacks",
-            icon: <AlertTriangle className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Security Training",
-            description: "Employee cybersecurity awareness and best practices training",
-            icon: <Users className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $500"
-        }
-    ];
     const securitySolutions = [
         {
             title: "Network Security",

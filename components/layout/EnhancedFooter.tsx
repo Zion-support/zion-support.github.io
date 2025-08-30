@@ -25,10 +25,14 @@ import {
 } from 'lucide-react';
 
 const footerNavigation = {
-	services: {
+  services: {
 		title: 'Services',
 		items: [
-			{ name: 'AI Solutions', href: '/services/ai-solutions' },
+			{ name: 'AI Solutions',
+  href: '/services/ai-solutions' 
+
+
+},
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
 			{ name: 'Data & Analytics', href: '/services/data' },
@@ -66,33 +70,33 @@ const footerNavigation = {
 			{ name: 'Documentation', href: '/docs' },
 			{ name: 'API Reference', href: '/api' },
 			{ name: 'Terms of Service', href: '/terms' },
-			{ name: 'Privacy Policy', href: '/privacy' },
-		],
-	},
+			{ name: 'Privacy Policy', href: '/privacy' },;
+		],;
+	},;
 };
 
 const socialLinks = [
 	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },
 	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },
-	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },
-	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
+	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },;
+	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
+	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },;
 ];
 
 const quickLinks = [
 	{ name: 'Request Quote', href: '/request-quote', icon: Zap },
-	{ name: 'Security', href: '/security', icon: Shield },
-	{ name: 'Compliance', href: '/compliance', icon: Award },
-	{ name: 'Status', href: '/status', icon: Cloud },
+	{ name: 'Security', href: '/security', icon: Shield },;
+	{ name: 'Compliance', href: '/compliance', icon: Award },;
+	{ name: 'Status', href: '/status', icon: Cloud },;
 ];
 
-const EnhancedFooter: React.FC = () => {
-	const scrollToTop = () => {
+const EnhancedFooter: React.FC = () => {;
+	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
 
 	return (
-		<footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
+		<footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
 			{/* Background decorative elements */}
 			<div className="absolute inset-0 opacity-5">
 				<div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
@@ -201,12 +205,12 @@ const EnhancedFooter: React.FC = () => {
 
 				{/* Bottom section */}
 				<div className="pt-8 border-t border-zion-blue-light">
-					<div className="flex flex-col md:flex-row justify-between items-center">
-						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
-							<p className="text-zion-slate-light text-sm">
+					<div className="flex flex-col md:flex-row justify-between items-center">;
+						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">;
+							<p className="text-zion-slate-light text-sm">;
 								&copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
 							</p>
-							<div className="flex items-center gap-2 text-zion-slate-light/60">
+							<div className = "flex items-center gap-2 text-zion-slate-light/60">
 								<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 								<span className="text-xs">Live</span>
 							</div>
@@ -264,9 +268,9 @@ const EnhancedFooter: React.FC = () => {
 				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
 				aria-label="Scroll to top"
 			>
-				<ArrowUp className="w-5 h-5" />
-			</button>
-		</footer>
+				<ArrowUp className="w-5 h-5" />;
+			</button>;
+		</footer>;
 	);
 };
 

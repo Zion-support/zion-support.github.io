@@ -4,7 +4,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
     useEffect(() => {
         // Add structured data to the page
         const structuredData = {
-            '@context': 'https://schema.org',
+  '@context': 'https://schema.org',
             '@type': type === 'article' ? 'Article' : 'Organization',
             name: 'Zion Tech Group',
             url: 'https://ziontechgroup.com',
@@ -16,8 +16,11 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 addressLocality: 'Wilmington',
                 addressRegion: 'DE',
                 postalCode: '19801',
-                addressCountry: 'US'
-            },
+  addressCountry: 'US'
+            
+
+
+},
             contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
@@ -146,7 +149,12 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description}/>
-      <meta name="keywords" content={keywords.join(', ')}/>
+      <meta name="keywords" content = {
+  keywords.join(',
+  ')
+
+
+}/>
       <meta name="author" content={author}/>
       <meta name="robots" content="index, follow"/>
       <meta name="language" content="English"/>

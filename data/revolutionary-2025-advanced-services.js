@@ -645,7 +645,7 @@ export const REVOLUTIONARY_2025_ADVANCED_SERVICES = [
 ];
 // Additional specialized service categories
 export const SERVICE_CATEGORIES = {
-    'Micro SAAS': [
+  'Micro SAAS': [
         'Financial Technology',
         'Content Creation & Marketing',
         'Healthcare Technology',
@@ -679,12 +679,15 @@ export const SERVICE_CATEGORIES = {
         'Transportation & Logistics',
         'Energy & Sustainability',
         'Education & Training',
-        'Creative Industries'
+  'Creative Industries'
     ]
+
+
+
 };
 // Market analysis and pricing information
 export const MARKET_ANALYSIS = {
-    totalMarketSize: '$2.8T',
+  totalMarketSize: '$2.8T',
     growthRate: '15.7% CAGR',
     keyTrends: [
         'Quantum computing integration',
@@ -700,6 +703,9 @@ export const MARKET_ANALYSIS = {
         'Global quantum network access',
         'Enterprise-grade security',
         'Comprehensive compliance frameworks',
-        '24/7 autonomous operations'
+  '24/7 autonomous operations'
     ]
+
+
+
 };

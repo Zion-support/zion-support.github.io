@@ -7,9 +7,9 @@ export default function AIHealthcare() {
     'Automated medical record processing and coding',
     'Predictive analytics for patient outcomes',
     'Drug interaction and adverse event monitoring',
-    'Telemedicine and remote patient monitoring',
-    'Integration with major EHR and healthcare systems',
-    'Custom AI models for specialized medical domains'
+    'Telemedicine and remote patient monitoring',;
+    'Integration with major EHR and healthcare systems',;
+    'Custom AI models for specialized medical domains';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIHealthcare() {
     },
     { 
       name: 'Large Health System', 
-      price: '$2,999/mo', 
-      details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+      price: '$2,999/mo', ;
+      details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Medical imaging and radiology analysis',
     'Patient diagnosis and treatment planning',
     'Electronic health record optimization',
-    'Drug discovery and clinical trials',
-    'Population health management',
-    'Medical research and data analysis'
+    'Drug discovery and clinical trials',;
+    'Population health management',;
+    'Medical research and data analysis';
   ];
 
   const benefits = [
     'Improve diagnostic accuracy by 20-35%',
     'Reduce medical errors by 30-50%',
     'Cut administrative costs by 25-40%',
-    'Accelerate treatment decisions by 40-60%',
-    'Enhance patient outcomes and satisfaction',
-    'Scale healthcare operations efficiently'
+    'Accelerate treatment decisions by 40-60%',;
+    'Enhance patient outcomes and satisfaction',;
+    'Scale healthcare operations efficiently';
   ];
 
   const industries = [
     'Hospitals & Health Systems',
     'Medical Practices & Clinics',
     'Radiology & Imaging Centers',
-    'Pharmaceutical Companies',
-    'Research Institutions',
-    'Health Insurance Providers'
+    'Pharmaceutical Companies',;
+    'Research Institutions',;
+    'Health Insurance Providers';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIHealthcare() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

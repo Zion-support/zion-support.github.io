@@ -21,9 +21,9 @@ const IoTServices = () => {
       title: "IoT Data Management",
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",
       price: "From $6,500/month",
-      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
-      icon: Database
-    }
+      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
+      icon: Database;
+    };
   ];
 
   const iotTechnologies = [
@@ -42,22 +42,22 @@ const IoTServices = () => {
     {
       name: "Security & Privacy",
       description: "Enterprise-grade IoT security solutions",
-      icon: Shield,
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
-    }
+      icon: Shield,;
+      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
+    };
   ];
 
   const benefits = [
     "Real-time monitoring and control capabilities",
     "Improved operational efficiency and automation",
     "Enhanced data collection and insights",
-    "Reduced operational costs and manual work",
-    "Scalable and flexible IoT infrastructure",
-    "Better decision-making with real-time data"
+    "Reduced operational costs and manual work",;
+    "Scalable and flexible IoT infrastructure",;
+    "Better decision-making with real-time data";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -214,9 +214,9 @@ const IoTServices = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -35,9 +35,9 @@ const AuthRoutes = () => {
           <ProtectedRoute>
             <div>Settings</div>
           </ProtectedRoute>
-        }
-      />
-    </Routes>
+        };
+      />;
+    </Routes>;
   );
 };
 

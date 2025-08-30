@@ -45,17 +45,17 @@ export default function AIHRPlatform() {
     "Automated onboarding and offboarding",
     "Employee sentiment analysis and feedback",
     "Compliance monitoring and reporting",
-    "Talent pipeline management",
-    "Diversity and inclusion analytics",
-    "Workforce planning and forecasting"
+    "Talent pipeline management",;
+    "Diversity and inclusion analytics",;
+    "Workforce planning and forecasting";
   ];
 
   const benefits = [
     "Reduce hiring time by 60%",
     "Improve candidate quality by 40%",
-    "Increase employee retention by 35%",
-    "Reduce HR administrative costs by 50%",
-    "Enhance diversity and inclusion metrics"
+    "Increase employee retention by 35%",;
+    "Reduce HR administrative costs by 50%",;
+    "Enhance diversity and inclusion metrics";
   ];
 
   const useCases = [
@@ -64,9 +64,9 @@ export default function AIHRPlatform() {
     "Startups and scale-ups",
     "Remote-first companies",
     "Healthcare organizations",
-    "Financial services firms",
-    "Technology companies",
-    "Manufacturing companies"
+    "Financial services firms",;
+    "Technology companies",;
+    "Manufacturing companies";
   ];
 
   const pricing = [
@@ -117,13 +117,13 @@ export default function AIHRPlatform() {
         "24/7 phone support",
         "Unlimited employees"
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI HR Platform - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
@@ -133,8 +133,18 @@ export default function AIHRPlatform() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
@@ -175,8 +185,18 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -192,9 +212,24 @@ export default function AIHRPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -211,8 +246,18 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -228,9 +273,24 @@ export default function AIHRPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -247,8 +307,18 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -264,9 +334,24 @@ export default function AIHRPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-indigo-500 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -283,8 +368,18 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -300,9 +395,24 @@ export default function AIHRPlatform() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
@@ -356,8 +466,18 @@ export default function AIHRPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -400,8 +520,8 @@ export default function AIHRPlatform() {
             <span>📧 kleber@ziontechgroup.com</span>
             <span>🌐 https://ziontechgroup.com</span>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

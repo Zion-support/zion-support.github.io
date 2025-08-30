@@ -33,9 +33,9 @@ export default function AISupportHelpdesk() {
     },
     {
       icon: Globe,
-      title: "Global Support",
-      description: "Multi-language support with localization and timezone-aware routing for global teams."
-    }
+      title: "Global Support",;
+      description: "Multi-language support with localization and timezone-aware routing for global teams.";
+    };
   ];
 
   const aiCapabilities = [
@@ -66,9 +66,9 @@ export default function AISupportHelpdesk() {
     },
     {
       icon: Users,
-      title: "Learning & Improvement",
-      description: "Continuous learning from interactions to improve responses"
-    }
+      title: "Learning & Improvement",;
+      description: "Continuous learning from interactions to improve responses";
+    };
   ];
 
   const pricingPlans = [
@@ -116,9 +116,9 @@ export default function AISupportHelpdesk() {
         "Advanced security",
         "Custom training",
         "On-premise options"
-      ],
-      popular: false
-    }
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -139,9 +139,9 @@ export default function AISupportHelpdesk() {
     },
     {
       title: "Gain Actionable Insights",
-      description: "Understand customer needs and improve products with comprehensive support analytics.",
-      icon: BarChart3
-    }
+      description: "Understand customer needs and improve products with comprehensive support analytics.",;
+      icon: BarChart3;
+    };
   ];
 
   const supportChannels = [
@@ -172,15 +172,15 @@ export default function AISupportHelpdesk() {
     },
     {
       icon: Users,
-      title: "Social Media",
-      description: "Monitor and respond to support requests across social platforms"
-    }
+      title: "Social Media",;
+      description: "Monitor and respond to support requests across social platforms";
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Support Helpdesk - Zion Tech Group"
+        title = "AI Support Helpdesk - Zion Tech Group"
         description="Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service."
         canonical="/services/ai-support-helpdesk"
       />
@@ -192,8 +192,18 @@ export default function AISupportHelpdesk() {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -240,9 +250,24 @@ export default function AISupportHelpdesk() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
@@ -272,9 +297,24 @@ export default function AISupportHelpdesk() {
               {aiCapabilities.map((capability, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -304,9 +344,24 @@ export default function AISupportHelpdesk() {
               {supportChannels.map((channel, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
@@ -336,9 +391,24 @@ export default function AISupportHelpdesk() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -370,9 +440,24 @@ export default function AISupportHelpdesk() {
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-teal-500 ring-2 ring-teal-500/20' 
@@ -425,8 +510,18 @@ export default function AISupportHelpdesk() {
         <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -451,9 +546,9 @@ export default function AISupportHelpdesk() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }
 

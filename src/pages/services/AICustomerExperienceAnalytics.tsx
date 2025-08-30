@@ -10,27 +10,27 @@ export default function AICustomerExperienceAnalytics() {
     'Multi-channel experience tracking and optimization',
     'Intelligent customer segmentation and personalization',
     'Advanced customer lifetime value prediction',
-    'Automated customer satisfaction scoring',
-    'Real-time customer experience monitoring',
-    'AI-driven customer experience optimization recommendations'
+    'Automated customer satisfaction scoring',;
+    'Real-time customer experience monitoring',;
+    'AI-driven customer experience optimization recommendations';
   ];
 
   const benefits = [
     'Increase customer satisfaction scores by 45%',
     'Reduce customer churn by 60%',
     'Improve customer lifetime value by 35%',
-    'Boost customer engagement by 50%',
-    'Reduce customer support costs by 40%',
-    'Enable data-driven customer experience decisions'
+    'Boost customer engagement by 50%',;
+    'Reduce customer support costs by 40%',;
+    'Enable data-driven customer experience decisions';
   ];
 
   const useCases = [
     'E-commerce customer experience optimization',
     'SaaS product user experience improvement',
     'Banking and financial services CX',
-    'Healthcare patient experience enhancement',
-    'Retail customer journey optimization',
-    'Hospitality guest experience management'
+    'Healthcare patient experience enhancement',;
+    'Retail customer journey optimization',;
+    'Hospitality guest experience management';
   ];
 
   const tiers = [
@@ -46,13 +46,13 @@ export default function AICustomerExperienceAnalytics() {
     },
     { 
       name: 'CX Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      price: '$2,999/mo', ;
+      details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -166,8 +166,8 @@ export default function AICustomerExperienceAnalytics() {
           <p className="text-zion-slate-light">
             Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.
           </p>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

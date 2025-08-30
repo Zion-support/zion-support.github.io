@@ -3,13 +3,13 @@ import { SEO } from '@/components/SEO';
 
 export default function Training() {
 	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
+		<div className = "min-h-screen bg-slate-900 text-white py-16">
 			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
 			<div className="container mx-auto px-4 max-w-4xl">
 				<h1 className="text-4xl font-bold mb-4">Training</h1>
-				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>
-			</div>
-		</div>
+				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>;
+			</div>;
+		</div>;
 	);
 }
 
@@ -28,25 +28,25 @@ export default function Training() {
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },
-    { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 }
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },;
+    { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 };
   ];
 
   const levels = [
     { id: 'all', name: 'All Levels', count: 0 },
     { id: 'beginner', name: 'Beginner', count: 0 },
-    { id: 'intermediate', name: 'Intermediate', count: 0 },
-    { id: 'advanced', name: 'Advanced', count: 0 },
-    { id: 'expert', name: 'Expert', count: 0 }
+    { id: 'intermediate', name: 'Intermediate', count: 0 },;
+    { id: 'advanced', name: 'Advanced', count: 0 },;
+    { id: 'expert', name: 'Expert', count: 0 };
   ];
 
   const formats = [
     { id: 'all', name: 'All Formats', count: 0 },
     { id: 'online', name: 'Online', count: 0 },
-    { id: 'in-person', name: 'In-Person', count: 0 },
-    { id: 'hybrid', name: 'Hybrid', count: 0 },
-    { id: 'self-paced', name: 'Self-Paced', count: 0 }
+    { id: 'in-person', name: 'In-Person', count: 0 },;
+    { id: 'hybrid', name: 'Hybrid', count: 0 },;
+    { id: 'self-paced', name: 'Self-Paced', count: 0 };
   ];
 
   const trainingPrograms = [
@@ -209,42 +209,40 @@ export default function Training() {
         'Technology Selection and Implementation',
         'Stakeholder Management',
         'Success Measurement'
-      ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
-    }
+      ],;
+      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy'];
+    };
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat = > {;
     cat.count = trainingPrograms.filter(p => p.category === cat.id).length;
   });
 
-  levels.forEach(level => {
+  levels.forEach(level = > {;
     level.count = trainingPrograms.filter(p => p.level === level.id).length;
   });
 
-  formats.forEach(format => {
+  formats.forEach(format = > {;
     format.count = trainingPrograms.filter(p => p.format === format.id).length;
   });
 
-  const filteredPrograms = trainingPrograms.filter(program => {
-    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredPrograms = trainingPrograms.filter(program => {;
+    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
-    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
     const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
     
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
   };
 
-  const getLevelColor = (level: string) => {
-    switch (level) {
+  const getLevelColor = (level: string) => {;
+    switch (level) {;
       case 'beginner': return 'text-green-400';
       case 'intermediate': return 'text-yellow-400';
       case 'advanced': return 'text-orange-400';
@@ -253,8 +251,8 @@ export default function Training() {
     }
   };
 
-  const getFormatIcon = (format: string) => {
-    switch (format) {
+  const getFormatIcon = (format: string) => {;
+    switch (format) {;
       case 'online': return <Globe className="w-4 h-4" />;
       case 'in-person': return <MapPin className="w-4 h-4" />;
       case 'hybrid': return <Users className="w-4 h-4" />;
@@ -265,14 +263,14 @@ export default function Training() {
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
     });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -577,8 +575,8 @@ export default function Training() {
               Contact Advisor
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

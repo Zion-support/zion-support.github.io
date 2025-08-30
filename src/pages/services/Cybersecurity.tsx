@@ -74,17 +74,17 @@ export default function CybersecurityServices() {
         "Backup and recovery",
         "Compliance frameworks (GDPR, HIPAA, SOC2)"
       ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-    }
+      price: "From $6,000",;
+      duration: "4-10 weeks";
+    };
   ];
   const securityTechnologies = [
     { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
     { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
     { name: "NGFW", description: "Next-Generation Firewall", icon: Network },
-    { name: "WAF", description: "Web Application Firewall", icon: Shield },
-    { name: "DLP", description: "Data Loss Prevention", icon: Database },
-    { name: "IAM", description: "Identity and Access Management", icon: Key }
+    { name: "WAF", description: "Web Application Firewall", icon: Shield },;
+    { name: "DLP", description: "Data Loss Prevention", icon: Database },;
+    { name: "IAM", description: "Identity and Access Management", icon: Key };
   ];
   const complianceFrameworks = [
     {
@@ -120,19 +120,29 @@ export default function CybersecurityServices() {
     {
       name: "NIST",
       description: "National Institute of Standards and Technology",
-      icon: Award,
-      color: "from-cyan-500 to-blue-600"
-    }
+      icon: Award,;
+      color: "from-cyan-500 to-blue-600";
+    };
   ];
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
             className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -298,8 +308,8 @@ export default function CybersecurityServices() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

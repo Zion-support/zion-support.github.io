@@ -36,27 +36,27 @@ export default function EnhancedServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
 
-  const filteredServices = ENHANCED_SERVICES.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ENHANCED_SERVICES.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' || ;
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     
     const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'basic' && service.price <= 2000) ||
-                        (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
-                        (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||
+                        (selectedPriceRange === 'basic' && service.price <= 2000) ||;
+                        (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||;
+                        (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||;
                         (selectedPriceRange === 'premium' && service.price > 25000);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
   const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'ai automation':
-      case 'ai & machine learning':
+    switch (category.toLowerCase()) {;
+      case 'ai automation':;
+      case 'ai & machine learning':;
         return <Brain className="w-5 h-5" />;
       case 'cloud management':
       case 'cloud & infrastructure':
@@ -87,7 +87,7 @@ export default function EnhancedServicesPage() {
     }
   };
 
-  const getPriceRange = (price: number) => {
+  const getPriceRange = (price: number) => {;
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
@@ -95,7 +95,7 @@ export default function EnhancedServicesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className = "min-h-screen bg-background">
       <SEO 
         title="Enhanced IT & AI Services - Zion Tech Group" 
         description="Discover our comprehensive suite of AI services, IT solutions, and micro SAAS offerings. From AI automation to quantum computing readiness."
@@ -529,7 +529,12 @@ export default function EnhancedServicesPage() {
                 size="lg" 
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                onClick={() => window.open(CONTACT_INFO.website, '_blank')}
+                onClick = {
+  () => window.open(CONTACT_INFO.website,
+  '_blank')
+
+
+}
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website
@@ -549,8 +554,8 @@ export default function EnhancedServicesPage() {
               </Button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

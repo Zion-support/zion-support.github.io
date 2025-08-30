@@ -13,11 +13,6 @@ export default function EnhancedServicesPage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedPriceRange, setSelectedPriceRange] = useState('all');
     const filteredServices = ENHANCED_SERVICES.filter(service => {
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-        const matchesCategory = selectedCategory === 'all' ||
-            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
         const matchesPrice = selectedPriceRange === 'all' ||
             (selectedPriceRange === 'basic' && service.price <= 2000) ||
             (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||
@@ -355,7 +350,12 @@ export default function EnhancedServicesPage() {
                 <Mail className="w-5 h-5 mr-2"/>
                 Send Email
               </Button>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick={() => window.open(CONTACT_INFO.website, '_blank')}>
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10" onClick = {
+  () => window.open(CONTACT_INFO.website,
+  '_blank')
+
+
+}>
                 <ExternalLink className="w-5 h-5 mr-2"/>
                 Visit Website
               </Button>

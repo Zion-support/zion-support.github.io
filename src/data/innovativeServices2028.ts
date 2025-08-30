@@ -446,9 +446,9 @@ export const innovativeServices2028 = [
     roi: "1200% within 24 months",
     setupTime: "12-20 weeks",
     integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
-    freeTier: false,
-    trialPeriod: "90 days"
-  }
+    freeTier: false,;
+    trialPeriod: "90 days";
+  };
 ];
 
 // Service Categories for Navigation
@@ -522,9 +522,9 @@ export const serviceCategories = [
     name: "5G & Networking",
     description: "Next-generation network optimization",
     icon: "Network",
-    color: "from-blue-600 to-indigo-600",
-    services: [10]
-  }
+    color: "from-blue-600 to-indigo-600",;
+    services: [10];
+  };
 ];
 
 // Pricing Tiers
@@ -568,9 +568,9 @@ export const pricingTiers = [
       "On-site training",
       "SLA guarantees",
       "White-label options"
-    ],
-    recommended: false
-  }
+    ],;
+    recommended: false;
+  };
 ];
 
 // Contact Information
@@ -583,6 +583,9 @@ export const contactInfo = {
     twitter: "https://twitter.com/ziontechgroup",
     linkedin: "https://www.linkedin.com/company/zion-tech-group",
     facebook: "https://www.facebook.com/ziontechgroup",
-    instagram: "https://www.instagram.com/ziontechgroup"
-  }
+  instagram: "https://www.instagram.com/ziontechgroup"
+  ;
+;
+
+};
 };

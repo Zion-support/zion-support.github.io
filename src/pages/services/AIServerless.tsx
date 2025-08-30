@@ -7,9 +7,9 @@ export default function AIServerless() {
     'Automated serverless monitoring and alerting',
     'Predictive analytics for serverless scaling',
     'Smart serverless security and compliance',
-    'AI-driven serverless automation and orchestration',
-    'Real-time serverless analytics and insights',
-    'Custom AI models for serverless applications'
+    'AI-driven serverless automation and orchestration',;
+    'Real-time serverless analytics and insights',;
+    'Custom AI models for serverless applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIServerless() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full serverless suite', '24/7 dedicated support'] 
-    },
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full serverless suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Serverless optimization',
     'Serverless management',
     'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Serverless scaling and management'
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Serverless scaling and management';
   ];
 
   const benefits = [
     'Improve serverless performance by 50-80%',
     'Reduce serverless costs by 40-70%',
     'Cut operational costs by 35-65%',
-    'Enhance serverless reliability and scalability',
-    'Optimize resource utilization',
-    'Scale serverless operations efficiently'
+    'Enhance serverless reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale serverless operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIServerless() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

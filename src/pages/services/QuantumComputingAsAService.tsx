@@ -38,9 +38,9 @@ const QuantumComputingAsAService: React.FC = () => {
     {
       icon: Target,
       title: 'Quantum Simulation',
-      description: 'Molecular modeling, material science, and chemical reaction simulations',
-      color: 'from-indigo-500 to-purple-500'
-    }
+      description: 'Molecular modeling, material science, and chemical reaction simulations',;
+      color: 'from-indigo-500 to-purple-500';
+    };
   ];
 
   const pricingPlans = [
@@ -91,9 +91,9 @@ const QuantumComputingAsAService: React.FC = () => {
         'On-premise deployment options',
         'Research partnerships'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -109,15 +109,15 @@ const QuantumComputingAsAService: React.FC = () => {
     },
     {
       title: 'Logistics & Supply Chain',
-      description: 'Route optimization, inventory management, and supply chain optimization',
-      metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization']
-    }
+      description: 'Route optimization, inventory management, and supply chain optimization',;
+      metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization'];
+    };
   ];
 
   const integrations = [
-    'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Julia', 'MATLAB',
-    'AWS Braket', 'Azure Quantum', 'Google Cloud', 'IBM Quantum',
-    'REST APIs', 'GraphQL', 'Webhooks', 'Docker', 'Kubernetes'
+    'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Julia', 'MATLAB',;
+    'AWS Braket', 'Azure Quantum', 'Google Cloud', 'IBM Quantum',;
+    'REST APIs', 'GraphQL', 'Webhooks', 'Docker', 'Kubernetes';
   ];
 
   const benefits = [
@@ -138,13 +138,13 @@ const QuantumComputingAsAService: React.FC = () => {
     },
     {
       icon: Clock,
-      title: 'Immediate Access',
-      description: 'Start using quantum computing today with our cloud-based platform'
-    }
+      title: 'Immediate Access',;
+      description: 'Start using quantum computing today with our cloud-based platform';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Quantum Computing as a Service - Zion Tech Group"
         description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
@@ -155,8 +155,18 @@ const QuantumComputingAsAService: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -207,9 +217,24 @@ const QuantumComputingAsAService: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center p-6"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -239,9 +264,24 @@ const QuantumComputingAsAService: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -271,9 +311,24 @@ const QuantumComputingAsAService: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
                   plan.popular 
                     ? 'border-purple-500 relative' 
@@ -338,9 +393,24 @@ const QuantumComputingAsAService: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -375,9 +445,24 @@ const QuantumComputingAsAService: React.FC = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+}}
                 className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200"
               >
                 <span className="text-slate-300 font-medium">{integration}</span>
@@ -401,8 +486,18 @@ const QuantumComputingAsAService: React.FC = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
             >
@@ -414,9 +509,24 @@ const QuantumComputingAsAService: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -427,9 +537,24 @@ const QuantumComputingAsAService: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
               className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -446,8 +571,18 @@ const QuantumComputingAsAService: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto"
           >
@@ -522,9 +657,9 @@ const QuantumComputingAsAService: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

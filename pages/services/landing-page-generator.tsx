@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function LandingPageGenerator() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>Landing Page Generator — Services — Zion</title>
         <meta name="description" content="Launch optimized landing pages instantly with AI." />
@@ -25,8 +25,8 @@ export default function LandingPageGenerator() {
         <div className="mt-8 flex gap-3">
           <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
-        </div>
-      </main>
-    </div>
+        </div>;
+      </main>;
+    </div>;
   );
 }

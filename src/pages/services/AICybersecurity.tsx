@@ -7,9 +7,9 @@ export default function AICybersecurity() {
     'Automated security monitoring and alerting',
     'Predictive analytics for security threats',
     'Smart security compliance and governance',
-    'AI-driven security automation and orchestration',
-    'Real-time security analytics and insights',
-    'Custom AI models for security applications'
+    'AI-driven security automation and orchestration',;
+    'Real-time security analytics and insights',;
+    'Custom AI models for security applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AICybersecurity() {
     },
     { 
       name: 'Enterprise', 
-      price: '$3,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] 
-    },
+      price: '$3,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Cybersecurity optimization',
     'Threat detection and response',
     'Security monitoring and analytics',
-    'Compliance and governance monitoring',
-    'Security automation and orchestration',
-    'Security scaling and management'
+    'Compliance and governance monitoring',;
+    'Security automation and orchestration',;
+    'Security scaling and management';
   ];
 
   const benefits = [
     'Improve security performance by 50-80%',
     'Reduce threat response time by 40-70%',
     'Cut security operational costs by 35-65%',
-    'Enhance security reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security operations efficiently'
+    'Enhance security reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AICybersecurity() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

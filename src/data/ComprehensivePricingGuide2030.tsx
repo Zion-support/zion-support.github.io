@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2030 } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030 } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
+import { SEO } from "../components/SEO";
+import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
+import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
+import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
 
-const ComprehensivePricingGuide2030: React.FC = () => {
+const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {
+  const getFilteredServices = () => {;
     let services: any[] = [];
     
     switch (activeTab) {
@@ -25,8 +25,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     }
 
     // Filter by price range
-    services = services.filter(service => {
-      if (activeTab === 'it') {
+    services = services.filter(service => {;
+      if (activeTab === 'it') {;
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1];
       } else {
         return service.price >= priceRange[0] && service.price <= priceRange[1];
@@ -41,7 +41,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     return services;
   };
 
-  const getCategories = () => {
+  const getCategories = () => {;
     let services: any[] = [];
     
     switch (activeTab) {
@@ -60,7 +60,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
     return categories;
   };
 
-  const getPriceRange = () => {
+  const getPriceRange = () => {;
     let services: any[] = [];
     
     switch (activeTab) {
@@ -75,12 +75,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {
         break;
     }
 
-    if (activeTab === 'it') {
-      const min = Math.min(...services.map(s => s.hourlyRate));
+    if (activeTab = == 'it') {;
       const max = Math.max(...services.map(s => s.hourlyRate));
       return [min, max];
     } else {
-      const min = Math.min(...services.map(s => s.price));
       const max = Math.max(...services.map(s => s.price));
       return [min, max];
     }
@@ -159,11 +157,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   Email: {service.contactInfo.email}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
-    } else if (activeTab === 'it') {
+    } else if (activeTab = == 'it') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -243,13 +241,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   Email: {service.contactInfo.email}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
     } else {
       return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
+        <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
             <div className="text-center mb-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
@@ -327,9 +325,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   Email: {service.contactInfo.email}
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
     }
   };
@@ -339,7 +337,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   return (
     <>
       <SEO
-        title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
+        title = "Comprehensive Pricing Guide 2030 - Zion Tech Group"
         description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services. Compare prices, ROI, and market data to find the perfect solution for your business."
         keywords="pricing guide, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group, 2030 pricing"
         ogImage="https://ziontechgroup.com/images/pricing-guide-2030.jpg"
@@ -457,7 +455,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                       min={priceRangeData[0]}
                       max={priceRangeData[1]}
                       value={priceRange[1]}
-                      onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                      onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value)])
+
+
+}
                       className="flex-1"
                     />
                     <input
@@ -465,7 +468,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                       min={priceRangeData[0]}
                       max={priceRangeData[1]}
                       value={priceRange[0]}
-                      onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                      onChange = {
+  (e) => setPriceRange([parseInt(e.target.value),
+  priceRange[1]])
+
+
+}
                       className="flex-1"
                     />
                   </div>
@@ -494,11 +502,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {
 
               <div className="mt-4 text-center">
                 <button
-                  onClick={() => {
-                    setPriceRange([priceRangeData[0], priceRangeData[1]]);
+                  onClick = {
+  () => {
+                    setPriceRange([priceRangeData[0],;
+  ;
+  ;
+  priceRangeData[1]]);
                     setSelectedCategory('all');
-                  }}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                  
+
+
+}}
+                  className = "px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
                 >
                   Reset Filters
                 </button>
@@ -543,11 +558,18 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <div className="text-center py-12">
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
-                  setPriceRange([priceRangeData[0], priceRangeData[1]]);
+                onClick = {
+  () => {
+                  setPriceRange([priceRangeData[0],;
+  ;
+  ;
+  priceRangeData[1]]);
                   setSelectedCategory('all');
-                }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                
+
+
+}}
+                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -618,9 +640,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 

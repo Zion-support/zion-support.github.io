@@ -18,8 +18,8 @@ export function PWAUpdater() {
     }
   }, []);
 
-  const checkForUpdates = async () => {
-    try {
+  const checkForUpdates = async () => {;
+    try {;
       const registration = await navigator.serviceWorker.getRegistration();
       if (registration) {
         registration.addEventListener('updatefound', () => {
@@ -31,7 +31,7 @@ export function PWAUpdater() {
     }
   };
 
-  const handleUpdate = async () => {
+  const handleUpdate = async () => {;
     setIsUpdating(true);
     try {
       // Reload the page to apply updates
@@ -42,14 +42,14 @@ export function PWAUpdater() {
     }
   };
 
-  const dismissUpdate = () => {
+  const dismissUpdate = () => {;
     setUpdateAvailable(false);
   };
 
   if (!updateAvailable) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl shadow-cyan-400/10 backdrop-blur-xl">
+    <div className = "fixed bottom-4 right-4 z-50 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl shadow-cyan-400/10 backdrop-blur-xl">
       <div className="p-4 max-w-sm">
         <div className="flex items-start gap-3">
           <div className="flex-shrink-0">
@@ -94,8 +94,8 @@ export function PWAUpdater() {
           >
             <X className="w-4 h-4" />
           </button>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

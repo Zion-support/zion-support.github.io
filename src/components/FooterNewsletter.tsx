@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 
-export const FooterNewsletter: React.FC = () => {
+export const FooterNewsletter: React.FC = () => {;
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -29,7 +29,7 @@ export const FooterNewsletter: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
+    <div className = "bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
       <div className="text-center">
         <div className="flex justify-center mb-4">
           <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">
@@ -81,8 +81,8 @@ export const FooterNewsletter: React.FC = () => {
 
         <p className="text-xs text-gray-400 mt-4">
           We respect your privacy. Unsubscribe at any time.
-        </p>
-      </div>
-    </div>
+        </p>;
+      </div>;
+    </div>;
   );
 };

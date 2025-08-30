@@ -9,27 +9,27 @@ export default function AIFinancialRiskManagement() {
     'Predictive risk modeling and scenario analysis',
     'Automated compliance monitoring and reporting',
     'Multi-asset class risk management',
-    'Real-time risk dashboard and analytics',
-    'AI-driven risk mitigation recommendations',
-    'Advanced stress testing and stress scenarios'
+    'Real-time risk dashboard and analytics',;
+    'AI-driven risk mitigation recommendations',;
+    'Advanced stress testing and stress scenarios';
   ];
 
   const benefits = [
     'Reduce credit losses by 40-60%',
     'Improve risk-adjusted returns by 25%',
     'Detect fraud with 99.5% accuracy',
-    'Reduce compliance costs by 50%',
-    'Enable real-time risk monitoring',
-    'Automate 90% of risk assessment tasks'
+    'Reduce compliance costs by 50%',;
+    'Enable real-time risk monitoring',;
+    'Automate 90% of risk assessment tasks';
   ];
 
   const useCases = [
     'Commercial banking and lending',
     'Investment management and wealth advisory',
     'Insurance risk assessment',
-    'Fintech and digital banking',
-    'Corporate treasury management',
-    'Regulatory compliance and reporting'
+    'Fintech and digital banking',;
+    'Corporate treasury management',;
+    'Regulatory compliance and reporting';
   ];
 
   const tiers = [
@@ -45,13 +45,13 @@ export default function AIFinancialRiskManagement() {
     },
     { 
       name: 'Enterprise Risk', 
-      price: '$5,999/mo', 
-      details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      price: '$5,999/mo', ;
+      details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -151,8 +151,8 @@ export default function AIFinancialRiskManagement() {
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

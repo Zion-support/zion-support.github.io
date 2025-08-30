@@ -53,9 +53,9 @@ export default function AIFinancialTradingPlatform() {
     },
     {
       icon: Eye,
-      title: 'Market Sentiment Analysis',
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment'
-    }
+      title: 'Market Sentiment Analysis',;
+      description: 'AI analyzes news, social media, and market data to gauge investor sentiment';
+    };
   ];
 
   const pricingPlans = [
@@ -106,9 +106,9 @@ export default function AIFinancialTradingPlatform() {
         'Unlimited portfolio size',
         'On-premise options',
         'SLA guarantees'
-      ],
-      popular: false
-    }
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -129,9 +129,9 @@ export default function AIFinancialTradingPlatform() {
     },
     {
       icon: BarChart3,
-      title: 'Emotion-Free Trading',
-      description: 'Eliminate human bias and emotional decision-making from your trades'
-    }
+      title: 'Emotion-Free Trading',;
+      description: 'Eliminate human bias and emotional decision-making from your trades';
+    };
   ];
 
   const tradingMarkets = [
@@ -152,20 +152,20 @@ export default function AIFinancialTradingPlatform() {
     },
     {
       title: 'Commodities',
-      description: 'AI-driven insights for gold, oil, and other commodity markets',
-      icon: BarChart3
-    }
+      description: 'AI-driven insights for gold, oil, and other commodity markets',;
+      icon: BarChart3;
+    };
   ];
 
   const performanceMetrics = [
     { metric: '95%', label: 'Win Rate' },
-    { metric: '2.5x', label: 'Sharpe Ratio' },
-    { metric: '15%', label: 'Max Drawdown' },
-    { metric: '24/7', label: 'Uptime' }
+    { metric: '2.5x', label: 'Sharpe Ratio' },;
+    { metric: '15%', label: 'Max Drawdown' },;
+    { metric: '24/7', label: 'Uptime' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
@@ -175,8 +175,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6">
@@ -213,9 +223,24 @@ export default function AIFinancialTradingPlatform() {
             {performanceMetrics.map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -231,8 +256,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -249,9 +284,24 @@ export default function AIFinancialTradingPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300"
               >
@@ -270,8 +320,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -288,9 +348,24 @@ export default function AIFinancialTradingPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -309,8 +384,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -327,9 +412,24 @@ export default function AIFinancialTradingPlatform() {
             {tradingMarkets.map((market, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
               >
@@ -348,8 +448,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -366,9 +476,24 @@ export default function AIFinancialTradingPlatform() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
@@ -419,8 +544,18 @@ export default function AIFinancialTradingPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -444,8 +579,8 @@ export default function AIFinancialTradingPlatform() {
               No credit card required • 14-day free trial • Cancel anytime
             </p>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

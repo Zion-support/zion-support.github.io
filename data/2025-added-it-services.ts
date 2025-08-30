@@ -1,9 +1,12 @@
-import type { AdvancedITService } from './advanced-it-services'
+import type { AdvancedITService } from "./advanced-it-services"
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+
+
+
 }
 export const addedITServices2025: AdvancedITService[] = [
   {
@@ -64,9 +67,9 @@ export const addedITServices2025: AdvancedITService[] = [
     ],
     popular: true,
     icon: '🔐',
-    color: 'from-amber-600 to-rose-700',
-    textColor: 'text-amber-200',
-    link: 'https://ziontechgroup.com/services/zero-trust-access-service',
+    color: 'from-amber-600 to-rose-700',;
+    textColor: 'text-amber-200',;
+    link: 'https://ziontechgroup.com/services/zero-trust-access-service',;
     marketPosition: 'Simpler than full SASE; faster rollout than DIY BeyondCorp',
     targetAudience: 'SaaS companies, regulated industries, remote teams',
     trialDays: 14,

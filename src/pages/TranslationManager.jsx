@@ -113,7 +113,6 @@ export default function TranslationManager() {
     };
     const handleTranslateKey = async (key) => {
         // Find first non-empty translation to use as source
-        let sourceLanguage = 'en';
         let sourceText = '';
         for (const lang of supportedLanguages.map(l => l.code)) {
             if (translations[lang]?.[key]) {
@@ -221,7 +220,17 @@ export default function TranslationManager() {
                                     <span>{lang.name}</span>
                                   </div>
                                   {editedTranslations[key][lang.code]?.includes('\n') ||
-                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key, e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange={(e) => handleChange(lang.code, key, e.target.value)} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
+                            editedTranslations[key][lang.code]?.length > 100 ? (<Textarea value={editedTranslations[key][lang.code] || ''} onChange = {
+  (e) => handleChange(lang.code, key,
+  e.target.value)
+
+
+} dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {
+  (e) => handleChange(lang.code, key,
+  e.target.value)
+
+
+} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}/>)}
                                 </div>))}
                             </div>
                             <div className="flex gap-2 mt-4">

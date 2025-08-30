@@ -42,22 +42,22 @@ const Services: React.FC = () => {
               </ul>
               <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>
               <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">Support Ticket Triage Copilot</h3>
+            </div>;
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
+              <h3 className="text-2xl font-bold mb-2">Support Ticket Triage Copilot</h3>;
               <p className="text-gray-300 mb-4">Classifies, deduplicates, and suggests resolutions; integrates with Zendesk/Jira.</p>
-              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+              <ul className = "text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
                 <li>Auto-priority and routing</li>
                 <li>Knowledge base suggestions</li>
                 <li>First-response macros</li>
               </ul>
               <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>
               <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">Invoice OCR + Reconciliation</h3>
+            </div>;
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
+              <h3 className="text-2xl font-bold mb-2">Invoice OCR + Reconciliation</h3>;
               <p className="text-gray-300 mb-4">Extracts line-items and auto-matches to POs; exports to QuickBooks/Xero.</p>
-              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+              <ul className = "text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
                 <li>Vendor anomaly detection</li>
                 <li>Tax and currency support</li>
                 <li>Audit trails</li>
@@ -217,9 +217,9 @@ const Services: React.FC = () => {
           <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
             📞 Call +1 (302) 464-0950
           </a>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

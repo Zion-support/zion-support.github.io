@@ -7,9 +7,9 @@ export default function AIPrometheus() {
     'Automated Prometheus monitoring and alerting',
     'Predictive analytics for Prometheus scaling',
     'Smart Prometheus security and compliance',
-    'AI-driven Prometheus automation and orchestration',
-    'Real-time Prometheus analytics and insights',
-    'Custom AI models for Prometheus applications'
+    'AI-driven Prometheus automation and orchestration',;
+    'Real-time Prometheus analytics and insights',;
+    'Custom AI models for Prometheus applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIPrometheus() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full Prometheus suite', '24/7 dedicated support'] 
-    },
+      price: '$1,999/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full Prometheus suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Prometheus optimization',
     'Prometheus management',
     'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Prometheus scaling and management'
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Prometheus scaling and management';
   ];
 
   const benefits = [
     'Improve Prometheus performance by 50-80%',
     'Reduce Prometheus query time by 40-70%',
     'Cut operational costs by 35-65%',
-    'Enhance Prometheus reliability and scalability',
-    'Optimize resource utilization',
-    'Scale Prometheus operations efficiently'
+    'Enhance Prometheus reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale Prometheus operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIPrometheus() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

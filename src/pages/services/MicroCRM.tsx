@@ -129,18 +129,18 @@ const MicroCRM = () => {
     },
     {
       icon: Cloud,
-      title: 'Cloud-Based',
-      description: 'Access your CRM from anywhere with cloud synchronization'
-    }
+      title: 'Cloud-Based',;
+      description: 'Access your CRM from anywhere with cloud synchronization';
+    };
   ];
 
   const benefits = [
     'Increase sales productivity by 40%',
     'Improve customer retention by 60%',
     'Reduce lead response time by 80%',
-    'Streamline sales processes',
-    'Enhance customer relationships',
-    'Boost team collaboration'
+    'Streamline sales processes',;
+    'Enhance customer relationships',;
+    'Boost team collaboration';
   ];
 
   const services = [
@@ -161,9 +161,9 @@ const MicroCRM = () => {
     },
     {
       icon: UserPlus,
-      title: 'Lead Generation',
-      description: 'Tools for capturing and nurturing new leads'
-    }
+      title: 'Lead Generation',;
+      description: 'Tools for capturing and nurturing new leads';
+    };
   ];
 
   const useCases = [
@@ -180,20 +180,30 @@ const MicroCRM = () => {
       description: 'Manage property listings and client relationships'
     },
     {
-      industry: 'Consulting',
-      description: 'Track client projects and communications'
-    }
+      industry: 'Consulting',;
+      description: 'Track client projects and communications';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -230,8 +240,18 @@ const MicroCRM = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -248,9 +268,24 @@ const MicroCRM = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -268,8 +303,18 @@ const MicroCRM = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -286,9 +331,24 @@ const MicroCRM = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -310,8 +370,18 @@ const MicroCRM = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -328,9 +398,24 @@ const MicroCRM = () => {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
@@ -342,9 +427,24 @@ const MicroCRM = () => {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
@@ -360,8 +460,18 @@ const MicroCRM = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -378,9 +488,24 @@ const MicroCRM = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -398,8 +523,18 @@ const MicroCRM = () => {
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -419,9 +554,9 @@ const MicroCRM = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

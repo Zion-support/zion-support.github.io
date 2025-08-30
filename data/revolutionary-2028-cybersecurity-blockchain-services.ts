@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface Revolutionary2028CybersecurityBlockchainService {
   id: string;
   name: string;

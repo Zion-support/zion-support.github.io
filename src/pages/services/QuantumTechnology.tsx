@@ -21,9 +21,9 @@ const QuantumTechnology = () => {
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
       price: "From $42,000/month",
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
-      icon: Shield
-    }
+      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
+      icon: Shield;
+    };
   ];
 
   const quantumTechnologies = [
@@ -42,22 +42,22 @@ const QuantumTechnology = () => {
     {
       name: "Quantum Communications",
       description: "Secure communication using quantum principles",
-      icon: Globe,
-      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
-    }
+      icon: Globe,;
+      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
+    };
   ];
 
   const benefits = [
     "Exponential speedup for complex computational problems",
     "Unbreakable encryption and enhanced security",
     "Advanced machine learning and AI capabilities",
-    "Revolutionary breakthroughs in scientific research",
-    "Competitive advantage in technology innovation",
-    "Future-proof solutions for emerging challenges"
+    "Revolutionary breakthroughs in scientific research",;
+    "Competitive advantage in technology innovation",;
+    "Future-proof solutions for emerging challenges";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -255,9 +255,9 @@ const QuantumTechnology = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

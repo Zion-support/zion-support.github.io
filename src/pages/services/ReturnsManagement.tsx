@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 function ReturnsManagement() {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO 
         title="E‑commerce Returns Management SaaS"
         description="Automate return labels, RMA approvals, and refunds with branded portals and carrier integrations."
@@ -60,11 +60,15 @@ function ReturnsManagement() {
 
         <p className="mt-10 text-sm text-zion-slate-light">
           Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
-        </p>
-      </section>
-    </div>
+        </p>;
+      </section>;
+    </div>;
   );
 }
 
 export default ReturnsManagement;
 
+
+export default ReturnsManagement;
+export default ReturnsManagement;
+export default ReturnsManagement;

@@ -15,9 +15,9 @@ export const real2029ServiceAdditions = [
     ],
     popular: true,
     icon: '📧',
-    color: 'from-cyan-500 to-blue-600',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
+    color: 'from-cyan-500 to-blue-600',;
+    textColor: 'text-cyan-400',;
+    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',;
     marketPosition: 'Comparable to Superhuman AI and Gmail add-ons; adds policy guardrails and SLA routing.',
     targetAudience: 'SMBs, agencies, support teams',
     trialDays: 14,

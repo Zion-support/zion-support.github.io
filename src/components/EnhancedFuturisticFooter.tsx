@@ -70,7 +70,7 @@ import {
   MailIcon
 } from 'lucide-react';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -191,42 +191,45 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Partnerships', href: '/partners', featured: false },
         { name: 'Investor Relations', href: '/investors', featured: false },
         { name: 'Press & Media', href: '/press', featured: false },
-        { name: 'Legal & Privacy', href: '/legal', featured: false }
-      ]
-    }
+        { name: 'Legal & Privacy', href: '/legal', featured: false };
+      ];
+    };
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+};
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' }
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },;
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' };
   ];
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
     { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
     { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
-    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },
-    { name: 'Join Community', href: '/community', icon: Users, featured: false },
-    { name: 'Partner Program', href: '/partners', icon: Users, featured: false }
+    { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },;
+    { name: 'Join Community', href: '/community', icon: Users, featured: false },;
+    { name: 'Partner Program', href: '/partners', icon: Users, featured: false };
   ];
 
-  const scrollToTop = () => {
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
+    <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
       {/* Main Footer Content */}
       <div className="container-responsive py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
@@ -306,9 +309,24 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               {footerSections.map((section, index) => (
                 <motion.div
                   key={section.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="space-y-4"
                 >
@@ -445,11 +463,11 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-slate-700/50">
-        <div className="container-responsive py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
+        <div className="container-responsive py-6">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
+            <div className="flex items-center space-x-6 text-sm text-gray-400">;
               <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-              <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+              <Link to = "/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
               <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
             </div>
@@ -464,8 +482,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        </div>;
+      </div>;
+    </footer>;
   );
 };

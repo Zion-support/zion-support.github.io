@@ -9,27 +9,27 @@ export default function AIHealthcareAnalytics() {
     'Clinical decision support systems',
     'Population health management',
     'Drug interaction and safety monitoring',
-    'Healthcare fraud detection',
-    'Patient engagement optimization',
-    'Regulatory compliance automation'
+    'Healthcare fraud detection',;
+    'Patient engagement optimization',;
+    'Regulatory compliance automation';
   ];
 
   const benefits = [
     'Improve patient outcomes by 35%',
     'Reduce healthcare costs by 25%',
     'Increase diagnostic accuracy by 40%',
-    'Reduce readmission rates by 30%',
-    'Optimize resource allocation by 45%',
-    'Enhance patient satisfaction by 50%'
+    'Reduce readmission rates by 30%',;
+    'Optimize resource allocation by 45%',;
+    'Enhance patient satisfaction by 50%';
   ];
 
   const useCases = [
     'Hospital management and operations',
     'Clinical research and trials',
     'Telemedicine and remote care',
-    'Pharmaceutical development',
-    'Insurance and claims processing',
-    'Public health monitoring'
+    'Pharmaceutical development',;
+    'Insurance and claims processing',;
+    'Public health monitoring';
   ];
 
   const tiers = [
@@ -65,18 +65,22 @@ export default function AIHealthcareAnalytics() {
         'Custom algorithms',
         'Dedicated support',
         'White-label solutions',
-        'Multi-facility support'
-      ]
-    }
+        'Multi-facility support';
+      ];
+    };
   ];
 
   const technicalSpecs = {
-    technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
+  technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
     integrations: ['Epic', 'Cerner', 'Allscripts', 'Meditech', 'Practice Fusion', 'Athenahealth'],
     security: ['HIPAA', 'SOC 2 Type II', 'HITECH', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.99%',
-    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR', 'CCPA']
-  };
+    compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR',;
+  'CCPA'];
+  ;
+
+
+};
 
   const healthcareSolutions = [
     {
@@ -88,13 +92,13 @@ export default function AIHealthcareAnalytics() {
       solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching']
     },
     {
-      specialty: 'Neurology',
-      solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring']
-    }
+      specialty: 'Neurology',;
+      solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring'];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -252,8 +256,8 @@ export default function AIHealthcareAnalytics() {
               Learn More <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

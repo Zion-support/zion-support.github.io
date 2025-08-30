@@ -5,7 +5,6 @@ import { execSync, spawn } from 'child_process';
 import chokidar from 'chokidar';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 class LintMonitor {
   constructor() {
@@ -41,7 +40,6 @@ class LintMonitor {
       this.log('✅ Lint check passed - no errors found');
       return { success: true, errors: 0 };
     } catch (error) {
-      const errorOutput = error.stdout || error.message;
       const errorLines = errorOutput.split('\n').filter(line => 
         line.includes('error') || line.includes('Error')
       );
@@ -173,11 +171,14 @@ class LintMonitor {
   }
   status() {
     const status = {
-      running: this.isRunning,
+  running: this.isRunning,
       errorCount: this.errorCount,
       lastCheck: this.lastCheck,
-      uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0
-    };
+  uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0
+    
+
+
+};
     
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
     this.log(`📊 Error Count: ${status.errorCount}`);
@@ -187,13 +188,15 @@ class LintMonitor {
   }
   getStats() {
     const stats = {
-      totalChecks: 0,
+  totalChecks: 0,
       totalErrors: 0,
       autoFixes: 0,
-      filesWatched: 0
-    };
+  filesWatched: 0
+    
+
+
+};
     try {
-      const logContent = fs.readFileSync(this.logFile, 'utf8');
       const lines = logContent.split('\n');
       
       stats.totalChecks = lines.filter(line => line.includes('Checking lint status')).length;

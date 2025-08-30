@@ -58,10 +58,8 @@ function fixCorruptedFile(filePath) {
   }
 }
 // Function to recursively find and fix corrupted files
-function fixCorruptedFiles(directory) {
-  const files = fs.readdirSync(directory);
-  for (const file of files) {
-    const filePath = path.join(directory, file);
+function files = fs.readdirSync(directory);
+  for (const filePath = path.join(directory, file);
     const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
       fixCorruptedFiles(filePath);
@@ -75,3 +73,7 @@ console.log("Fixing corrupted TypeScript files...");
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
 console.log("Finished fixing corrupted files.");
+
+export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;

@@ -169,6 +169,4 @@ export const enhancedServices2025 = [
   }
 ];
 
-export const ENHANCED_SERVICES_2025 = enhancedServices2025;
-
 export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility

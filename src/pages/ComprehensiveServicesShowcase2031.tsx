@@ -95,9 +95,9 @@ import {
   HeartIcon,
   LeafIcon
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
-import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031 } from '../data/specializedITInfrastructureServices2031';
-import { SPECIALIZED_AI_SERVICES_2031 } from '../data/specializedAIServices2031';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from "../data/innovativeMicroSaasServices2031";
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031 } from "../data/specializedITInfrastructureServices2031";
+import { SPECIALIZED_AI_SERVICES_2031 } from "../data/specializedAIServices2031";
 
 interface ServiceContact {
   mobile: string;
@@ -106,7 +106,7 @@ interface ServiceContact {
   website: string;
 }
 
-const ComprehensiveServicesShowcase2031: React.FC = () => {
+const ComprehensiveServicesShowcase2031: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -117,9 +117,9 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
 
   // Combine all services
   const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2031,
-    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031,
-    ...SPECIALIZED_AI_SERVICES_2031
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2031,;
+    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031,;
+    ...SPECIALIZED_AI_SERVICES_2031;
   ];
 
   const categories = [
@@ -152,32 +152,33 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
-    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },
-    { id: 'Managed Services', name: 'Managed Services', count: allServices.filter(s => s.category === 'Managed Services').length, icon: '🔄' },
-    { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s => s.category === 'Digital Transformation').length, icon: '🔄' }
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },;
+    { id: 'Managed Services', name: 'Managed Services', count: allServices.filter(s => s.category === 'Managed Services').length, icon: '🔄' },;
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s => s.category === 'Digital Transformation').length, icon: '🔄' };
   ];
 
   const contactInfo: ServiceContact = {
-    mobile: "+1 302 464 0950",
+  mobile: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
-  };
+    address: "364 E Main St STE 1008 Middletown DE 19709",;
+  website: "https://ziontechgroup.com";
+  ;
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+
+};
+
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
@@ -190,14 +191,14 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     const categoryData = categories.find(c => c.id === category);
     return categoryData?.icon || '🚀';
   };
 
-  const getInnovationColor = (level: string) => {
-    switch (level) {
-      case 'Revolutionary':
+  const getInnovationColor = (level: string) => {;
+    switch (level) {;
+      case 'Revolutionary':;
         return 'text-purple-400';
       case 'Advanced':
         return 'text-blue-400';
@@ -209,31 +210,71 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative container mx-auto px-4 py-24 text-center text-white">
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
           >
             Zion Tech Group 2031
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300"
           >
             Revolutionary AI, IT Infrastructure & Micro SAAS Services
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a 
@@ -250,9 +291,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
             </a>
           </motion.div>
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+}}
             className="mt-8 text-gray-400"
           >
             <p className="text-lg">📍 {contactInfo.address}</p>
@@ -264,8 +320,18 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
       {/* Services Overview */}
       <div className="container mx-auto px-4 py-16">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           className="text-center text-white mb-16"
         >
@@ -279,9 +345,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
 
         {/* Service Statistics */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16"
         >
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center text-white border border-white/20">
@@ -304,9 +385,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
 
         {/* Search and Filters */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
           className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8"
         >
           <div className="flex flex-col lg:flex-row gap-4 items-center">
@@ -369,9 +465,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+}}
           className={`grid gap-6 ${
             viewMode === 'grid' 
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
@@ -381,9 +492,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
           {sortedServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-start justify-between mb-4">
@@ -472,9 +598,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
 
       {/* CTA Section */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+}}
         className="container mx-auto px-4 py-16"
       >
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/10 text-center text-white">
@@ -522,9 +663,24 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
             onClick={() => setSelectedService(null)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
               className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -659,9 +815,9 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+        )};
+      </AnimatePresence>;
+    </div>;
   );
 };
 

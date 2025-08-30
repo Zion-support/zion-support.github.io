@@ -1,8 +1,7 @@
 
-
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
-        '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
+  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
         '/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',
@@ -17,10 +16,14 @@ export class SEOOptimizer {
         '/services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business.',
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
-        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-    };
+        '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
+  and innovative IT services for the healthcare industry.'
+    
+
+
+};
     static KEYWORD_MAPPINGS = {
-        '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
+  '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
         '/about': ['Zion Tech Group', 'technology company', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'company history'],
@@ -35,8 +38,12 @@ export class SEOOptimizer {
         '/services/it-infrastructure': ['IT infrastructure', 'network infrastructure', 'cloud infrastructure', 'data centers', 'server management', 'network security'],
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
-        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-    };
+        '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
+  'medical technology']
+    
+
+
+};
     static generateSEOData(path) {
         const title = this.generateTitle(path);
         const description = this.generateDescription(path);
@@ -80,7 +87,7 @@ export class SEOOptimizer {
     }
     static generateStructuredData(path) {
         const baseData = {
-            "@context": "https://schema.org",
+  "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -89,8 +96,11 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-            }
+  "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
+            
+
+
+}
         };
         // Add specific structured data based on page type
         if (path === '/') {

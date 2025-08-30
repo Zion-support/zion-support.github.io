@@ -27,7 +27,7 @@ import {
   Heart
 } from 'lucide-react';
 
-const DigitalTransformation = () => {
+const DigitalTransformation = () => {;
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
@@ -70,9 +70,9 @@ const DigitalTransformation = () => {
       title: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
       icon: Shield,
-      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
-      color: "from-yellow-500 to-orange-500"
-    }
+      features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
+      color: "from-yellow-500 to-orange-500";
+    };
   ];
 
   const transformationPhases = [
@@ -125,9 +125,9 @@ const DigitalTransformation = () => {
         "Change management implementation",
         "Performance monitoring",
         "Continuous optimization",
-        "Training and support"
-      ]
-    }
+        "Training and support";
+      ];
+    };
   ];
 
   const testimonials = [
@@ -146,20 +146,20 @@ const DigitalTransformation = () => {
     {
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
       name: "Marcus Johnson",
-      role: "CTO, DigitalFirst Inc",
-      rating: 5
-    }
+      role: "CTO, DigitalFirst Inc",;
+      rating: 5;
+    };
   ];
 
   const stats = [
     { number: "85%", label: "Average efficiency improvement" },
-    { number: "3.2x", label: "Faster time to market" },
-    { number: "40%", label: "Cost reduction achieved" },
-    { number: "92%", label: "Customer satisfaction increase" }
+    { number: "3.2x", label: "Faster time to market" },;
+    { number: "40%", label: "Cost reduction achieved" },;
+    { number: "92%", label: "Customer satisfaction increase" };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -203,9 +203,24 @@ const DigitalTransformation = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
@@ -233,9 +248,24 @@ const DigitalTransformation = () => {
             {transformationServices.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
@@ -277,9 +307,24 @@ const DigitalTransformation = () => {
               {transformationPhases.map((phase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
                   }`}
@@ -304,8 +349,18 @@ const DigitalTransformation = () => {
                     {/* Activities */}
                     {selectedPhase === index && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
                       >
@@ -342,9 +397,24 @@ const DigitalTransformation = () => {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-1 mb-4">
@@ -384,9 +454,9 @@ const DigitalTransformation = () => {
               Schedule Consultation
             </button>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -114,9 +114,9 @@ export default function HelpCenter() {
         { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },
         { title: 'Performance Issues', type: 'guide', readTime: '20 min' },
         { title: 'Connection Problems', type: 'guide', readTime: '18 min' },
-        { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' }
-      ]
-    }
+        { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' };
+      ];
+    };
   ];
 
   const videoTutorials = [
@@ -145,9 +145,9 @@ export default function HelpCenter() {
       title: 'Cloud Migration Best Practices',
       duration: '28:20',
       thumbnail: '/api/placeholder/300/200',
-      views: '3.1k',
-      rating: 4.8
-    }
+      views: '3.1k',;
+      rating: 4.8;
+    };
   ];
 
   const supportOptions = [
@@ -180,13 +180,13 @@ export default function HelpCenter() {
       title: 'Community Forum',
       description: 'Connect with other users',
       availability: '24/7',
-      responseTime: 'Varies',
-      action: 'Visit Forum'
-    }
+      responseTime: 'Varies',;
+      action: 'Visit Forum';
+    };
   ];
 
-  const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories 
+  const filteredCategories = selectedCategory === 'all' ;
+    ? helpCategories ;
     : helpCategories.filter(cat => cat.id === selectedCategory);
 
   const filteredArticles = filteredCategories.flatMap(cat => cat.articles);
@@ -195,7 +195,7 @@ export default function HelpCenter() {
     <>
       <Helmet>
         <title>Help Center - Zion Tech Group | Support & Documentation</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />
+        <meta name = "description" content="Get help with Zion Tech Group services. Access documentation, tutorials, video guides, and support resources." />
         <meta name="keywords" content="help center, support, documentation, tutorials, Zion Tech Group, user guide" />
       </Helmet>
 
@@ -204,8 +204,18 @@ export default function HelpCenter() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -240,9 +250,24 @@ export default function HelpCenter() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Need Help Right Now?
@@ -252,9 +277,24 @@ export default function HelpCenter() {
                 {supportOptions.map((option, index) => (
                   <motion.div
                     key={option.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -280,9 +320,24 @@ export default function HelpCenter() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               <div className="flex flex-wrap justify-center gap-3 mb-12">
                 <button
@@ -314,9 +369,24 @@ export default function HelpCenter() {
                 {filteredCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
                   >
                     <div className={`h-2 bg-gradient-to-r ${category.color}`}></div>
@@ -363,9 +433,24 @@ export default function HelpCenter() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Video Tutorials
@@ -375,9 +460,24 @@ export default function HelpCenter() {
                 {videoTutorials.map((tutorial, index) => (
                   <motion.div
                     key={tutorial.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
                   >
                     <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative">
@@ -415,9 +515,24 @@ export default function HelpCenter() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Can't Find What You're Looking For?
@@ -436,9 +551,9 @@ export default function HelpCenter() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

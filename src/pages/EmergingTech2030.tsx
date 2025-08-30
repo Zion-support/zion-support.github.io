@@ -29,8 +29,8 @@ import {
   Heart,
   Zap as Lightning
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { emergingTechServices2030 } from '../data/emergingTechServices2030';
+import { SEO } from "../components/SEO";
+import { emergingTechServices2030 } from "../data/emergingTechServices2030";
 
 export default function EmergingTech2030() {
   const containerVariants = {
@@ -38,36 +38,43 @@ export default function EmergingTech2030() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5;
+      };
+    };
   };
 
   const serviceIcons = {
-    'Quantum Computing': Brain,
+  'Quantum Computing': Brain,
     'Artificial Intelligence': Cpu,
     'Neuromorphic Computing': Brain,
     'Synthetic Biology': Heart,
     'Space Technology': Rocket,
-    'Brain-Computer Interface': Brain,
-    'Fusion Energy': Zap
-  };
+    'Brain-Computer Interface': Brain,;
+  'Fusion Energy': Zap;
+  ;
+
+
+};
 
   return (
     <>
       <SEO 
-        title="Emerging Technology Services 2030 - Zion Tech Group"
+        title = "Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
         canonical="/emerging-tech-2030"
         url="https://ziontechgroup.com/emerging-tech-2030"
@@ -150,14 +157,14 @@ export default function EmergingTech2030() {
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
               </p>
             </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index) => {
+;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {emergingTechServices2030.map((service, index) => {;
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
                 
                 return (
                   <motion.div
-                    key={service.id}
+                    key = {service.id}
                     variants={itemVariants}
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
@@ -202,13 +209,18 @@ export default function EmergingTech2030() {
                     </div>
 
                     <Link
-                      to={`/services/${service.id.replace(/-/g, '-')}`}
+                      to = {
+  `/services/${service.id.replace(/-/g,
+  '-')
+
+
+}`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                  </motion.div>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
+                    </Link>;
+                  </motion.div>;
                 );
               })}
             </div>
@@ -216,7 +228,7 @@ export default function EmergingTech2030() {
         </section>
 
         {/* Why Choose Zion Tech Group */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
+        <section className = "py-20 px-4 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
           <motion.div 
             className="container mx-auto max-w-6xl"
             variants={containerVariants}
@@ -336,8 +348,8 @@ export default function EmergingTech2030() {
               </Link>
             </motion.div>
           </motion.div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

@@ -1,8 +1,8 @@
-import { LoginForm } from './LoginForm';
+import { LoginForm } from "./LoginForm";
 
 export function LoginContent() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-white mb-2">Welcome Back</h1>
@@ -20,8 +20,8 @@ export function LoginContent() {
               Sign up
             </a>
           </p>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

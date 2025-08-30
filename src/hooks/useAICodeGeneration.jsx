@@ -1,5 +1,5 @@
 import { useState, useCallback, useRef, useEffect } from 'react';
-import { useAnalytics } from './useAnalytics';
+import { useAnalytics } from "./useAnalytics";
 export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -54,7 +54,7 @@ export const useAICodeGeneration = () => {
         }
         catch (error) {
             console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
@@ -69,15 +69,19 @@ export const useAICodeGeneration = () => {
             // Simulate AI analysis - in production, this would call an AI service
             await new Promise(resolve => setTimeout(resolve, 2000));
             const analysis = {
-                complexity: calculateComplexity(code),
+  complexity: calculateComplexity(code),
                 maintainability: calculateMaintainability(code),
                 security: calculateSecurityScore(code),
                 performance: calculatePerformanceScore(code),
                 accessibility: calculateAccessibilityScore(code),
                 suggestions: generateCodeSuggestions(code, language),
                 metrics: getCodeMetrics(code),
-                issues: analyzeCodeIssues(code, language)
-            };
+                issues: analyzeCodeIssues(code,
+  language)
+            
+
+
+};
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysis', 'code_analyzed', language, code.length, {
@@ -89,7 +93,7 @@ export const useAICodeGeneration = () => {
         }
         catch (error) {
             console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
@@ -105,18 +109,14 @@ export const useAICodeGeneration = () => {
         });
         // Remove the applied suggestion
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
-        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, undefined, {
+        trackEvent('ai_code_generation', 'suggestion_applied', suggestion.type, null, {
             suggestionId: suggestion.id,
             impact: suggestion.impact,
             category: suggestion.category
         });
     }, [trackEvent]);
     // Optimize existing code
-    const optimizeCode = useCallback(async (code, focus) => {
-        try {
-            // Simulate AI optimization - in production, this would call an AI service
-            await new Promise(resolve => setTimeout(resolve, 2500));
-            let optimizedCode = code;
+    const optimizedCode = code;
             switch (focus) {
                 case 'performance':
                     optimizedCode = optimizeForPerformance(code);
@@ -136,7 +136,7 @@ export const useAICodeGeneration = () => {
         }
         catch (error) {
             console.error('Failed to optimize code:', error);
-            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code;
@@ -162,7 +162,7 @@ export const useAICodeGeneration = () => {
         }
         catch (error) {
             console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests';
@@ -188,7 +188,7 @@ export const useAICodeGeneration = () => {
         }
         catch (error) {
             console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation';
@@ -200,8 +200,7 @@ export const useAICodeGeneration = () => {
         trackEvent('ai_code_generation', 'history_cleared', 'manual');
     }, [trackEvent]);
     // Export generated code
-    const exportCode = useCallback((format) => {
-        let exportContent = '';
+    const exportContent = '';
         let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
@@ -348,8 +347,7 @@ console.log("Prompt:", "${prompt}");
 console.log("Language:", "${options.language}");`;
     };
     // Helper functions for code analysis
-    const calculateComplexity = (code) => {
-        const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
+    const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
     };
     const calculateMaintainability = (code) => {
@@ -474,7 +472,7 @@ console.log("Language:", "${options.language}");`;
     // Helper functions for test generation
     const generateJestTests = (_code) => {
         return `import { render, screen, fireEvent } from '@testing-library/react';
-import GeneratedComponent from './GeneratedComponent';
+import GeneratedComponent from "./GeneratedComponent";
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {
@@ -584,3 +582,7 @@ def generated_function():
         getCodeMetrics
     };
 };
+
+export default with;
+export default with;
+export default with;

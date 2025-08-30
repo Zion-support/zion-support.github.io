@@ -152,20 +152,30 @@ const servicePricing = [
       { name: 'Micro CRM', price: '$49/month', description: 'Customer relationship management' },
       { name: 'Helpdesk Platform', price: '$79/month', description: 'Customer support system' },
       { name: 'Website Analytics', price: '$29/month', description: 'Performance tracking & insights' },
-      { name: 'IT Helpdesk', price: '$99/month', description: 'IT support system' }
-    ]
-  }
+      { name: 'IT Helpdesk', price: '$99/month', description: 'IT support system' };
+    ];
+  };
 ];
 
 export default function Pricing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}
       <div className="bg-black/20 backdrop-blur-sm border-b border-zion-cyan/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -196,9 +206,24 @@ export default function Pricing() {
       {/* Pricing Tiers */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
@@ -211,9 +236,24 @@ export default function Pricing() {
           {pricingTiers.map((tier, index) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 + index * 0.1 
+
+
+}}
               className={`relative ${tier.popular ? 'lg:-mt-4 lg:mb-4' : ''}`}
             >
               {tier.popular && (
@@ -270,9 +310,24 @@ export default function Pricing() {
 
         {/* Service Pricing */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl font-bold text-white mb-4">Individual Service Pricing</h2>
@@ -285,9 +340,24 @@ export default function Pricing() {
           {servicePricing.map((category, categoryIndex) => (
             <motion.div
               key={category.category}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 + categoryIndex * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.7 + categoryIndex * 0.1 
+
+
+}}
             >
               <div className="flex items-center mb-8">
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4">
@@ -300,16 +370,36 @@ export default function Pricing() {
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.8 + categoryIndex * 0.1 + serviceIndex * 0.05 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.8 + categoryIndex * 0.1 + serviceIndex * 0.05 
+
+
+}}
                   >
                     <div className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 h-full">
                       <h4 className="text-lg font-semibold text-white mb-2">{service.name}</h4>
                       <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                       <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                       <Link
-                        to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        to = {
+  `/services/${service.name.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+}`}
                         className="w-full py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 text-sm font-medium text-center block"
                       >
                         Learn More
@@ -324,9 +414,24 @@ export default function Pricing() {
 
         {/* Additional Information */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+}}
           className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           <div className="text-center p-6">
@@ -356,9 +461,24 @@ export default function Pricing() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 1.2 
+
+
+}}
           className="mt-20 text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl border border-zion-cyan/20 p-12">
@@ -381,8 +501,8 @@ export default function Pricing() {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

@@ -9,17 +9,17 @@ export default function AICustomerSupportAutomation() {
     'Intelligent ticket routing and prioritization',
     'Sentiment analysis and emotion detection',
     'Automated response generation with brand voice',
-    'Seamless human-AI handoff system',
-    'Integration with CRM, helpdesk, and messaging platforms',
-    'Advanced analytics and performance insights'
+    'Seamless human-AI handoff system',;
+    'Integration with CRM, helpdesk, and messaging platforms',;
+    'Advanced analytics and performance insights';
   ];
 
   const benefits = [
     'Reduce support costs by 60-80%',
     'Improve customer satisfaction by 40%',
-    'Handle 10x more support requests',
-    '24/7 availability without human limitations',
-    'Consistent quality across all interactions'
+    'Handle 10x more support requests',;
+    '24/7 availability without human limitations',;
+    'Consistent quality across all interactions';
   ];
 
   const pricingTiers = [
@@ -41,28 +41,28 @@ export default function AICustomerSupportAutomation() {
       name: 'Enterprise',
       price: '$499',
       period: '/mo',
-      conversations: 'Unlimited conversations',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access']
-    }
+      conversations: 'Unlimited conversations',;
+      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access'];
+    };
   ];
 
   const useCases = [
     'E-commerce businesses',
     'SaaS companies',
     'Financial services',
-    'Healthcare providers',
-    'Travel agencies',
-    'Educational institutions'
+    'Healthcare providers',;
+    'Travel agencies',;
+    'Educational institutions';
   ];
 
   const integrations = [
-    'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',
-    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',
-    'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion'
+    'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',;
+    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',;
+    'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Customer Support Automation - Zion Tech Group"
         description="Revolutionary AI customer support platform that provides 24/7 automated assistance, intelligent routing, and seamless human handoffs."
@@ -332,8 +332,8 @@ export default function AICustomerSupportAutomation() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

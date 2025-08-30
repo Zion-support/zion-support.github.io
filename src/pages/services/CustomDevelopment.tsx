@@ -50,9 +50,9 @@ export default function CustomDevelopment() {
     {
       title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-              icon: GitFork,
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
-    }
+              icon: GitFork,;
+      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
+    };
   ];
 
   const technologies = [
@@ -77,9 +77,9 @@ export default function CustomDevelopment() {
     {
       title: 'Database',
       description: 'Modern database solutions for data storage and management.',
-      icon: Database,
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
-    }
+      icon: Database,;
+      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
+    };
   ];
 
   const benefits = [
@@ -100,25 +100,35 @@ export default function CustomDevelopment() {
     },
     {
       title: 'Support & Maintenance',
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
-      icon: Settings
-    }
+      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      icon: Settings;
+    };
   ];
 
-  const industries = [
-    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy'
+  const industries = [;
+    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-20">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
@@ -151,8 +161,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -169,9 +189,24 @@ export default function CustomDevelopment() {
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
@@ -205,8 +240,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -223,9 +268,24 @@ export default function CustomDevelopment() {
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
@@ -250,8 +310,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -267,9 +337,24 @@ export default function CustomDevelopment() {
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -287,8 +372,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -305,9 +400,24 @@ export default function CustomDevelopment() {
               <motion.div 
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
@@ -321,8 +431,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -343,9 +463,24 @@ export default function CustomDevelopment() {
               <motion.div 
                 key={index}
                 className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
@@ -363,8 +498,18 @@ export default function CustomDevelopment() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -389,8 +534,8 @@ export default function CustomDevelopment() {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

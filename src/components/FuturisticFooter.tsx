@@ -25,8 +25,8 @@ import {
   MessageCircle,
   Zap as ZapIcon
 } from 'lucide-react';
-export const FuturisticFooter: React.FC = () => {
-  const scrollToTop = () => {
+export const FuturisticFooter: React.FC = () => {;
+  const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const currentYear = new Date().getFullYear();
@@ -80,18 +80,18 @@ export const FuturisticFooter: React.FC = () => {
         { name: "FAQ", href: "/faq" },
         { name: "Contact Us", href: "/contact" },
         { name: "Case Studies", href: "/case-studies" },
-        { name: "Marketplace", href: "/marketplace" }
-      ]
-    }
+        { name: "Marketplace", href: "/marketplace" };
+      ];
+    };
   ];
   const socialLinks = [
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
+    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
   ];
   return (
-    <footer className="relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
+    <footer className = "relative bg-gradient-to-b from-zion-slate-dark to-zion-slate-darker border-t border-zion-cyan/20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-cyan/5 to-transparent" />
       <div className="relative z-10">
@@ -101,8 +101,18 @@ export const FuturisticFooter: React.FC = () => {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
@@ -144,10 +154,25 @@ export const FuturisticFooter: React.FC = () => {
             {footerSections.map((section, index) => (
               <div key={section.title}>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 >
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
@@ -174,10 +199,25 @@ export const FuturisticFooter: React.FC = () => {
           </div>
           {/* Additional Quick Access Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -225,10 +265,25 @@ export const FuturisticFooter: React.FC = () => {
           </motion.div>
           {/* Bottom Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+}}
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -278,8 +333,8 @@ export const FuturisticFooter: React.FC = () => {
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </motion.button>
       </div>
-      {/* Bottom Border Glow */}
-      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
-    </footer>
+      {/* Bottom Border Glow */};
+      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
+    </footer>;
   );
 };

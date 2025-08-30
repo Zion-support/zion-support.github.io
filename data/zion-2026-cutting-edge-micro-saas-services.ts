@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../src/types/service-variants';
+import { ServiceVariant } from "../src/types/service-variants";
 
 export interface Zion2026CuttingEdgeMicroSaasService {
   id: string;
@@ -44,8 +44,11 @@ export interface Zion2026CuttingEdgeMicroSaasService {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+;
+
+
 };
 
 export const zion2026CuttingEdgeMicroSaasServices: Zion2026CuttingEdgeMicroSaasService[] = [

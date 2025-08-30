@@ -27,105 +27,6 @@ import {
   Code
 } from 'lucide-react';
 
-const retailSolutions = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "Complete online shopping experience with advanced features and seamless user experience.",
-    icon: ShoppingCart,
-    features: [
-      "Multi-channel sales",
-      "Inventory management",
-      "Payment processing",
-      "Order fulfillment"
-    ],
-    price: "From $30,000",
-    timeline: "12-20 weeks",
-    category: "E-commerce",
-    integrations: ["Shopify", "WooCommerce", "Magento", "Payment Gateways"]
-  },
-  {
-    id: 2,
-    title: "Mobile Shopping App",
-    description: "Native mobile applications that provide seamless shopping experience on iOS and Android.",
-    icon: Smartphone,
-    features: [
-      "Native app development",
-      "Push notifications",
-      "Offline functionality",
-      "App store optimization"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Mobile Development",
-    integrations: ["iOS", "Android", "Cross-platform", "React Native"]
-  },
-  {
-    id: 3,
-    title: "Point of Sale (POS) System",
-    description: "Modern POS solutions that streamline in-store operations and customer service.",
-    icon: CreditCard,
-    features: [
-      "Payment processing",
-      "Inventory tracking",
-      "Customer management",
-      "Sales reporting"
-    ],
-    price: "From $20,000",
-    timeline: "8-14 weeks",
-    category: "POS Systems",
-    integrations: ["Payment Processors", "Accounting Software", "CRM Systems"]
-  },
-  {
-    id: 4,
-    title: "Customer Analytics Platform",
-    description: "Data-driven insights to understand customer behavior and optimize retail strategies.",
-    icon: BarChart3,
-    features: [
-      "Customer segmentation",
-      "Purchase patterns",
-      "Predictive analytics",
-      "Real-time reporting"
-    ],
-    price: "From $35,000",
-    timeline: "12-18 weeks",
-    category: "Analytics",
-    integrations: ["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
-  },
-  {
-    id: 5,
-    title: "Inventory Management System",
-    description: "Comprehensive inventory tracking and management across all sales channels.",
-    icon: Package,
-    features: [
-      "Real-time tracking",
-      "Automated reordering",
-      "Multi-location support",
-      "Supplier management"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Inventory",
-    integrations: ["ERP Systems", "Accounting Software", "Shipping Providers"]
-  },
-  {
-    id: 6,
-    title: "Omnichannel Retail Platform",
-    description: "Unified platform that connects online and offline retail experiences seamlessly.",
-    icon: Store,
-    features: [
-      "Channel integration",
-      "Unified inventory",
-      "Customer experience",
-      "Data synchronization"
-    ],
-    price: "From $50,000",
-    timeline: "16-24 weeks",
-    category: "Platform Solutions",
-    integrations: ["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
-  }
-];
-
 const retailTrends = [
   {
     title: "AI-Powered Personalization",
@@ -236,15 +137,40 @@ export default function RetailSolutions() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <ShoppingCart className="w-10 h-10 text-white" />
@@ -283,8 +209,18 @@ export default function RetailSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -298,9 +234,24 @@ export default function RetailSolutions() {
             {retailTrends.map((trend, index) => (
               <motion.div
                 key={trend.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -329,8 +280,18 @@ export default function RetailSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -344,9 +305,24 @@ export default function RetailSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -373,8 +349,18 @@ export default function RetailSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -405,9 +391,24 @@ export default function RetailSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -462,8 +463,18 @@ export default function RetailSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -477,9 +488,24 @@ export default function RetailSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -523,8 +549,18 @@ export default function RetailSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

@@ -578,105 +578,6 @@ import {
   Server
 } from 'lucide-react';
 
-const infrastructureSolutions = [
-  {
-    id: 1,
-    title: "Data Center Infrastructure",
-    description: "Enterprise-grade data center design and implementation with high availability and scalability.",
-    icon: Server,
-    features: [
-      "Server infrastructure",
-      "Storage systems",
-      "Network architecture",
-      "Power and cooling"
-    ],
-    price: "From $500,000",
-    timeline: "24-48 weeks",
-    category: "Data Center",
-    technologies: ["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
-  },
-  {
-    id: 2,
-    title: "Cloud Infrastructure",
-    description: "Multi-cloud and hybrid cloud infrastructure design and management.",
-    icon: Cloud,
-    features: [
-      "Cloud architecture",
-      "Multi-cloud strategy",
-      "Hybrid cloud setup",
-      "Cloud migration"
-    ],
-    price: "From $200,000",
-    timeline: "16-32 weeks",
-    category: "Cloud",
-    technologies: ["AWS", "Azure", "GCP", "Kubernetes"]
-  },
-  {
-    id: 3,
-    title: "Network Infrastructure",
-    description: "Enterprise networking solutions with security and performance optimization.",
-    icon: Network,
-    features: [
-      "Network design",
-      "Security implementation",
-      "Performance optimization",
-      "Monitoring systems"
-    ],
-    price: "From $150,000",
-    timeline: "12-24 weeks",
-    category: "Networking",
-    technologies: ["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
-  },
-  {
-    id: 4,
-    title: "Security Infrastructure",
-    description: "Comprehensive security infrastructure with threat detection and prevention.",
-    icon: Shield,
-    features: [
-      "Firewall systems",
-      "Intrusion detection",
-      "Access control",
-      "Security monitoring"
-    ],
-    price: "From $300,000",
-    timeline: "20-36 weeks",
-    category: "Security",
-    technologies: ["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
-  },
-  {
-    id: 5,
-    title: "Storage Infrastructure",
-    description: "High-performance storage solutions with data protection and backup.",
-    icon: HardDrive,
-    features: [
-      "Storage architecture",
-      "Data protection",
-      "Backup systems",
-      "Disaster recovery"
-    ],
-    price: "From $250,000",
-    timeline: "16-28 weeks",
-    category: "Storage",
-    technologies: ["SAN", "NAS", "Backup Software", "DR Systems"]
-  },
-  {
-    id: 6,
-    title: "Monitoring & Observability",
-    description: "Comprehensive monitoring and observability platform for infrastructure management.",
-    icon: Activity,
-    features: [
-      "Infrastructure monitoring",
-      "Application performance",
-      "Log management",
-      "Alerting systems"
-    ],
-    price: "From $100,000",
-    timeline: "12-20 weeks",
-    category: "Monitoring",
-    technologies: ["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
-  }
-];
-
 const infrastructureTechnologies = [
   {
     name: "Server Technologies",
@@ -818,15 +719,40 @@ export default function Infrastructure() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Server className="w-10 h-10 text-white" />
@@ -864,8 +790,18 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +815,24 @@ export default function Infrastructure() {
             {infrastructureBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +861,18 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +886,24 @@ export default function Infrastructure() {
             {infrastructureTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +933,18 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +958,24 @@ export default function Infrastructure() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +1002,18 @@ export default function Infrastructure() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +1044,24 @@ export default function Infrastructure() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1116,18 @@ export default function Infrastructure() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1141,24 @@ export default function Infrastructure() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1151,8 +1202,18 @@ export default function Infrastructure() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

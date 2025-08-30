@@ -124,11 +124,11 @@ export interface DocumentationConfig {
   };
 }
 export class APIDocGeneratorService {
-  private supportedFrameworks = [
-    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel'
+  private supportedFrameworks = [;
+    'express', 'fastify', 'koa', 'hapi', 'django', 'flask', 'fastapi', 'spring', 'aspnet', 'laravel';
   ];
-  private supportedLanguages = [
-    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby'
+  private supportedLanguages = [;
+    'javascript', 'typescript', 'python', 'java', 'csharp', 'php', 'go', 'ruby';
   ];
   async generateDocumentation(
     sourcePath: string,
@@ -147,9 +147,9 @@ export class APIDocGeneratorService {
         lastGenerated: new Date(),
         totalEndpoints: 0,
         coverage: 0,
-        languages: [],
-        frameworks: []
-      }
+        languages: [],;
+        frameworks: [];
+      };
     };
     try {
       // Analyze source code
@@ -189,22 +189,21 @@ export class APIDocGeneratorService {
     for (const file of files) {
       const extension = file.split('.').pop()?.toLowerCase();
       
-      if (extension === 'js' || extension === 'ts') {
+      if (extension = == 'js' || extension === 'ts') {;
         languages.push('javascript', 'typescript');
         frameworks.push('express', 'fastify');
         endpoints.push(...this.analyzeJavaScriptFile(file));
-      } else if (extension === 'py') {
+      } else if (extension = == 'py') {;
         languages.push('python');
         frameworks.push('django', 'flask', 'fastapi');
         endpoints.push(...this.analyzePythonFile(file));
-      } else if (extension === 'java') {
+      } else if (extension = == 'java') {;
         languages.push('java');
         frameworks.push('spring');
         endpoints.push(...this.analyzeJavaFile(file));
       }
     }
     // Remove duplicates
-    const uniqueLanguages = [...new Set(languages)];
     const uniqueFrameworks = [...new Set(frameworks)];
     return {
       endpoints,
@@ -253,7 +252,7 @@ export class APIDocGeneratorService {
               description: 'Number of users per page'
             }
           ],
-          requestBody: undefined,
+          requestBody: null,
           responses: [
             {
               code: '200',
@@ -303,7 +302,7 @@ export class APIDocGeneratorService {
               description: 'User unique identifier'
             }
           ],
-          requestBody: undefined,
+          requestBody: null,
           responses: [
             {
               code: '200',
@@ -387,7 +386,7 @@ export class APIDocGeneratorService {
             description: 'Filter orders by status'
           }
         ],
-        requestBody: undefined,
+        requestBody: null,
         responses: [
           {
             code: '200',
@@ -486,7 +485,7 @@ export class APIDocGeneratorService {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer your-jwt-token'
           },
-          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : undefined
+          body: endpoint.requestBody ? this.generateExampleBody(endpoint.requestBody) : null
         },
         response: {
           status: parseInt(endpoint.responses[0]?.code || '200'),
@@ -528,7 +527,7 @@ export class APIDocGeneratorService {
         summary: 'Health check endpoint',
         description: 'Simple health check to verify API is running',
         parameters: [],
-        requestBody: undefined,
+        requestBody: null,
         responses: [
           {
             code: '200',

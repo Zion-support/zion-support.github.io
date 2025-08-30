@@ -26,7 +26,7 @@ function cartReducer(state, action) {
             return state;
     }
 }
-const CartContext = createContext(undefined);
+const CartContext = createContext(null);
 export function useCart() {
     const ctx = useContext(CartContext);
     if (!ctx)
@@ -68,8 +68,10 @@ export function CartProvider({ children }) {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
     const value = {
-        items: state.items,
+  items: state.items,
         dispatch,
-    };
+  
+
+};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

@@ -10,9 +10,9 @@ const Marketplace: React.FC = () => (
 				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>
 				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>
 				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>
-			</div>
-		</div>
-	</div>
+			</div>;
+		</div>;
+	</div>;
 );
 
 export default Marketplace;

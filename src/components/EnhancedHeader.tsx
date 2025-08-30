@@ -51,7 +51,7 @@ import {
   FileText,
   Sparkles as SparklesIcon
 } from 'lucide-react';
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
+import { enhancedServicesCatalog2025 } from "../data/enhancedServicesCatalog2025";
 
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,7 +62,7 @@ export function EnhancedHeader() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 10);
     };
 
@@ -70,7 +70,7 @@ export function EnhancedHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -98,9 +98,9 @@ export function EnhancedHeader() {
     { name: 'News', href: '/news', current: location.pathname === '/news' },
     { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
     { name: 'Help', href: '/help', current: location.pathname === '/help' },
-    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
-    { name: 'Marketplace', href: '/marketplace', current: location.pathname === '/marketplace' },
+    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },;
+    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },;
+    { name: 'Marketplace', href: '/marketplace', current: location.pathname === '/marketplace' },;
   ];
 
   // Enhanced services by category with better organization
@@ -231,15 +231,15 @@ export function EnhancedHeader() {
       icon: Heart, 
       description: 'AI-powered drug discovery', 
       category: 'Emerging Tech', 
-      color: 'from-emerald-600 to-green-700',
-      badge: 'New'
-    }
+      color: 'from-emerald-600 to-green-700',;
+      badge: 'New';
+    };
   ];
 
   return (
     <>
       {/* Matrix Rain Background */}
-      <div className="matrix-rain"></div>
+      <div className = "matrix-rain"></div>
       
       {/* Enhanced Header */}
       <motion.header
@@ -250,7 +250,12 @@ export function EnhancedHeader() {
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition = {
+  { duration: 0.8,
+  ease: "easeOut" 
+
+
+}}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -258,7 +263,12 @@ export function EnhancedHeader() {
             <Link to="/" className="flex items-center space-x-3 group">
               <motion.div
                 className="relative"
-                whileHover={{ scale: 1.05, rotate: 5 }}
+                whileHover = {
+  { scale: 1.05,
+  rotate: 5 
+
+
+}}
                 whileTap={{ scale: 0.95 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
@@ -307,9 +317,24 @@ export function EnhancedHeader() {
                   {servicesDropdownOpen && (
                     <motion.div
                       className="absolute top-full left-0 mt-4 w-[800px] bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20"
-                      initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                      initial = {
+  { opacity: 0, y: -20,
+  scale: 0.95 
+
+
+}}
+                      animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+}}
+                      exit = {
+  { opacity: 0, y: -20,
+  scale: 0.95 
+
+
+}}
                       transition={{ duration: 0.3 }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -460,9 +485,24 @@ export function EnhancedHeader() {
           {mobileMenuOpen && (
             <motion.div
               className="xl:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/30"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
               transition={{ duration: 0.3 }}
             >
               <div className="container mx-auto px-4 py-6">
@@ -532,10 +572,13 @@ export function EnhancedHeader() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
-      </motion.header>
-    </>
+        </AnimatePresence>;
+      </motion.header>;
+    </>;
   );
 }
 
+export default EnhancedHeader;
+export default EnhancedHeader;
+export default EnhancedHeader;
 export default EnhancedHeader;

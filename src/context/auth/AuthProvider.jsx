@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }) => {
         }
         const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-        navigate(next, { replace: true });
+        router(next, { replace: true });
         return { error: null }; // Successful login
     };
     // Register via backend and persist auth info
@@ -90,7 +90,7 @@ export const AuthProvider = ({ children }) => {
                 toast({ title: `Welcome, ${firstName}!` });
                 const params = new URLSearchParams(location.search);
                 const next = params.get('redirectTo') || params.get('next') || '/dashboard';
-                navigate(next, { replace: true });
+                router(next, { replace: true });
             }
         }
         return result;
@@ -118,12 +118,12 @@ export const AuthProvider = ({ children }) => {
                                 const { id, title, price } = location.state.pendingActionArgs;
                                 dispatch(addItem({ id, title, price }));
                                 // Clear pending action from state first
-                                navigate(location.pathname, { state: {}, replace: true });
+                                router(location.pathname, { state: {}, replace: true });
                                 // Navigate to checkout
-                                navigate('/checkout', { replace: true });
+                                router('/checkout', { replace: true });
                             }
                             else if (next) {
-                                navigate(decodeURIComponent(next), { replace: true });
+                                router(decodeURIComponent(next), { replace: true });
                             }
                             // --- END MODIFICATION ---
                         }
@@ -152,7 +152,7 @@ export const AuthProvider = ({ children }) => {
         };
     }, [navigate]);
     const authContextValue = {
-        user,
+  user,
         isLoading,
         isAuthenticated: !!user,
         login,
@@ -167,8 +167,11 @@ export const AuthProvider = ({ children }) => {
         loginWithWeb3,
         setUser,
         onboardingStep,
-        tokens
-    };
+  tokens
+    
+
+
+};
     return (<AuthContext.Provider value={authContextValue}>
       {children}
     </AuthContext.Provider>);

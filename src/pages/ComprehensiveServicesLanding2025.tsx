@@ -39,13 +39,13 @@ import {
   Globe as GlobeIcon,
   ExternalLink
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+import { SEO } from "../components/SEO";
+import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025";
 
 const ComprehensiveServicesLanding2025: React.FC = () => {
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Automation':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
       case 'AI & Security':
         return <Shield className="w-8 h-8" />;
@@ -70,9 +70,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'AI & Automation':
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';
       case 'AI & Security':
         return 'from-red-500 to-orange-500';
@@ -100,20 +100,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({
     category,
-    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),
-    icon: getCategoryIcon(category),
-    color: getCategoryColor(category)
+    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
+    icon: getCategoryIcon(category),;
+    color: getCategoryColor(category);
   }));
 
-  const totalServices = INNOVATIVE_SERVICES_2025.length;
   const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {
+  const avgROI = INNOVATIVE_SERVICES_2025.reduce((sum, service) => {;
     const roi = parseInt(service.roi.replace('%', ''));
     return sum + roi;
   }, 0) / totalServices;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services Landing 2025 - Zion Tech Group"
         description="Discover our complete portfolio of innovative technology services. From AI and Quantum Computing to IoT and Blockchain solutions - transform your business with cutting-edge technology."
@@ -123,8 +122,18 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -195,9 +204,24 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             {servicesByCategory.map((categoryData, index) => (
               <motion.div
                 key={categoryData.category}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="group"
               >
                 <Link
@@ -261,9 +285,24 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -374,9 +413,24 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border border-blue-400/30 mb-6">
@@ -394,8 +448,18 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
       <section className="px-4 pb-20">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 text-center"
           >
@@ -442,9 +506,9 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

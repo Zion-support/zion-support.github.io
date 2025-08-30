@@ -43,15 +43,18 @@ import {
   Clipboard,
   TestTube
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AIHealthcarePredictiveAnalytics() {
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+};
 
   const features = [
     {
@@ -81,18 +84,18 @@ export default function AIHealthcarePredictiveAnalytics() {
     },
     {
       icon: BarChart3,
-      title: 'Advanced Clinical Insights',
-      description: 'Generate actionable insights from complex medical data and research'
-    }
+      title: 'Advanced Clinical Insights',;
+      description: 'Generate actionable insights from complex medical data and research';
+    };
   ];
 
   const benefits = [
     'Reduce readmission rates by 35%',
     'Improve early detection by 60%',
     'Cut healthcare costs by 25%',
-    'Enhance patient outcomes by 45%',
-    'Streamline clinical workflows',
-    'Enable proactive care delivery'
+    'Enhance patient outcomes by 45%',;
+    'Streamline clinical workflows',;
+    'Enable proactive care delivery';
   ];
 
   const pricingPlans = [
@@ -152,9 +155,9 @@ export default function AIHealthcarePredictiveAnalytics() {
         'White-label solutions',
         'Multi-tenant architecture'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   const clinicalApplications = [
@@ -185,9 +188,9 @@ export default function AIHealthcarePredictiveAnalytics() {
     },
     {
       title: 'Geriatrics',
-      description: 'Aging-related health decline prediction and prevention',
-      icon: UserCheck
-    }
+      description: 'Aging-related health decline prediction and prevention',;
+      icon: UserCheck;
+    };
   ];
 
   const useCases = [
@@ -208,22 +211,22 @@ export default function AIHealthcarePredictiveAnalytics() {
     },
     {
       title: 'Insurance Companies',
-      description: 'Risk assessment and claims prediction for health insurers',
-      icon: Shield
-    }
+      description: 'Risk assessment and claims prediction for health insurers',;
+      icon: Shield;
+    };
   ];
 
   const complianceFeatures = [
     'HIPAA Compliance',
     'HITECH Act Support',
     'SOC 2 Type II Certified',
-    'GDPR Compliance',
-    'FDA Guidelines Adherence',
-    'Clinical Trial Compliance'
+    'GDPR Compliance',;
+    'FDA Guidelines Adherence',;
+    'Clinical Trial Compliance';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEO 
         title="AI Healthcare Predictive Analytics Platform | Zion Tech Group"
         description="Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy."
@@ -234,8 +237,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-100/10 border border-red-200/20 text-red-200 text-sm font-medium mb-6">
@@ -271,8 +284,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -289,9 +312,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
               >
@@ -310,8 +348,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -328,9 +376,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {clinicalApplications.map((application, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300"
               >
@@ -349,8 +412,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -367,9 +440,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
@@ -385,8 +473,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -403,9 +501,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {complianceFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center p-4 bg-slate-800/30 rounded-lg border border-slate-700/50 hover:border-red-500/50 transition-all duration-300"
               >
@@ -421,8 +534,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -439,9 +562,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -460,8 +598,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -478,9 +626,24 @@ export default function AIHealthcarePredictiveAnalytics() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -531,8 +694,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -563,8 +736,18 @@ export default function AIHealthcarePredictiveAnalytics() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -601,8 +784,8 @@ export default function AIHealthcarePredictiveAnalytics() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

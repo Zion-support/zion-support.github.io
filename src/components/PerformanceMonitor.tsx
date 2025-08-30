@@ -22,14 +22,14 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
+    fid: null,;
+    cls: null,;
+    ttfb: null;
   });
   const [isVisible, setIsVisible] = useState(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
 
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {;
     let score = 0;
     let totalMetrics = 0;
 
@@ -76,21 +76,21 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0;
   }, []);
 
-  const getScoreColor = (score: number): string => {
+  const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
     if (score >= 50) return 'text-orange-400';
     return 'text-red-400';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (score: number) => {;
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
     if (score >= 70) return <TrendingUp className="w-5 h-5 text-yellow-400" />;
     if (score >= 50) return <AlertTriangle className="w-5 h-5 text-orange-400" />;
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
 
-  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): {
+  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): {;
     status: 'good' | 'needs-improvement' | 'poor';
     color: string;
     icon: React.ReactNode;
@@ -98,11 +98,15 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (value === null) return { status: 'poor', color: 'text-gray-400', icon: <Clock className="w-4 h-4" /> };
 
     const thresholds = {
-      fcp: { good: 1800, needsImprovement: 3000 },
+  fcp: { good: 1800,
+  needsImprovement: 3000 
+
+
+},
       lcp: { good: 2500, needsImprovement: 4000 },
-      fid: { good: 100, needsImprovement: 300 },
-      cls: { good: 0.1, needsImprovement: 0.25 },
-      ttfb: { good: 800, needsImprovement: 1800 }
+      fid: { good: 100, needsImprovement: 300 },;
+      cls: { good: 0.1, needsImprovement: 0.25 },;
+      ttfb: { good: 800, needsImprovement: 1800 };
     };
 
     const threshold = thresholds[metric];
@@ -118,7 +122,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   useEffect(() => {
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcpEntry) {
@@ -128,7 +132,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const lcpEntry = entries[entries.length - 1];
         if (lcpEntry) {
@@ -138,7 +142,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         const fidEntry = entries[entries.length - 1];
         if (fidEntry) {
@@ -148,8 +152,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let clsValue = 0;
+      const clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value;
@@ -188,9 +191,19 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   return (
     <motion.div
-      className={`bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-4 ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      className = {`bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-4 ${className}`}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.5 }}
     >
       <div className="flex items-center justify-between mb-4">
@@ -206,34 +219,37 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
       </div>
 
-      {showDetails && (
-        <div className="space-y-3">
-          {Object.entries(metrics).map(([key, value]) => {
+      {showDetails && (;
+        <div className="space-y-3">;
+          {Object.entries(metrics).map(([key, value]) => {;
             const status = getMetricStatus(key as keyof PerformanceMetrics, value);
             const label = {
-              fcp: 'First Contentful Paint',
+  fcp: 'First Contentful Paint',
               lcp: 'Largest Contentful Paint',
               fid: 'First Input Delay',
-              cls: 'Cumulative Layout Shift',
-              ttfb: 'Time to First Byte'
-            }[key];
+              cls: 'Cumulative Layout Shift',;
+  ttfb: 'Time to First Byte';
+            ;
+
+
+}[key];
 
             return (
-              <div key={key} className="flex items-center justify-between">
+              <div key = {key} className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <div className={status.color}>{status.icon}</div>
                   <span className="text-sm text-gray-300">{label}</span>
                 </div>
                 <span className="text-sm font-mono text-white">
-                  {value !== null ? `${value.toFixed(2)}${key === 'cls' ? '' : 'ms'}` : 'N/A'}
-                </span>
-              </div>
+                  {value !== null ? `${value.toFixed(2)}${key === 'cls' ? '' : 'ms'}` : 'N/A'};
+                </span>;
+              </div>;
             );
           })}
         </div>
       )}
 
-      <div className="mt-4 pt-3 border-t border-cyan-400/20">
+      <div className = "mt-4 pt-3 border-t border-cyan-400/20">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Performance Score</span>
           <div className="flex items-center space-x-2">
@@ -244,9 +260,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                performanceScore >= 50 ? 'Needs Improvement' : 'Poor'}
             </span>
           </div>
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 };
 

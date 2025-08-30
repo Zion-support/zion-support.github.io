@@ -46,105 +46,6 @@ import {
   Palette
 } from 'lucide-react';
 
-const mobileDevelopmentSolutions = [
-  {
-    id: 1,
-    title: "Native iOS Development",
-    description: "Custom iOS applications built with Swift and SwiftUI for optimal performance and user experience.",
-    icon: Smartphone,
-    features: [
-      "Swift/SwiftUI development",
-      "iOS app store optimization",
-      "Device-specific features",
-      "Performance optimization"
-    ],
-    price: "From $25,000",
-    timeline: "12-24 weeks",
-    category: "iOS",
-    technologies: ["Swift", "SwiftUI", "Core Data", "iOS SDK"]
-  },
-  {
-    id: 2,
-    title: "Native Android Development",
-    description: "Custom Android applications built with Kotlin and Jetpack Compose for modern Android development.",
-    icon: Smartphone,
-    features: [
-      "Kotlin/Jetpack Compose",
-      "Material Design 3",
-      "Android-specific features",
-      "Performance optimization"
-    ],
-    price: "From $25,000",
-    timeline: "12-24 weeks",
-    category: "Android",
-    technologies: ["Kotlin", "Jetpack Compose", "Room Database", "Android SDK"]
-  },
-  {
-    id: 3,
-    title: "Cross-Platform Development",
-    description: "Multi-platform applications using React Native, Flutter, or Xamarin for cost-effective development.",
-    icon: AppWindow,
-    features: [
-      "Single codebase",
-      "Multiple platforms",
-      "Native performance",
-      "Rapid development"
-    ],
-    price: "From $35,000",
-    timeline: "16-28 weeks",
-    category: "Cross-Platform",
-    technologies: ["React Native", "Flutter", "Xamarin", "Native Modules"]
-  },
-  {
-    id: 4,
-    title: "Progressive Web Apps (PWA)",
-    description: "Web applications that provide native app-like experience across all devices and platforms.",
-    icon: Globe,
-    features: [
-      "Offline functionality",
-      "Push notifications",
-      "App-like experience",
-      "Cross-platform compatibility"
-    ],
-    price: "From $20,000",
-    timeline: "10-18 weeks",
-    category: "PWA",
-    technologies: ["Service Workers", "Web App Manifest", "PWA APIs", "Responsive Design"]
-  },
-  {
-    id: 5,
-    title: "Enterprise Mobile Solutions",
-    description: "Business-focused mobile applications with enterprise-grade security and integration capabilities.",
-    icon: Building,
-    features: [
-      "Enterprise security",
-      "Backend integration",
-      "User management",
-      "Analytics & reporting"
-    ],
-    price: "From $50,000",
-    timeline: "20-36 weeks",
-    category: "Enterprise",
-    technologies: ["Enterprise Security", "API Integration", "User Management", "Analytics"]
-  },
-  {
-    id: 6,
-    title: "Mobile App Maintenance",
-    description: "Ongoing support, updates, and maintenance services for existing mobile applications.",
-    icon: Settings,
-    features: [
-      "Bug fixes & updates",
-      "Performance optimization",
-      "Feature enhancements",
-      "Platform updates"
-    ],
-    price: "From $5,000/month",
-    timeline: "Ongoing",
-    category: "Maintenance",
-    technologies: ["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
-  }
-];
-
 const mobileTechnologies = [
   {
     name: "iOS Development",
@@ -286,15 +187,40 @@ export default function MobileDevelopment() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Smartphone className="w-10 h-10 text-white" />
@@ -332,8 +258,18 @@ export default function MobileDevelopment() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -347,9 +283,24 @@ export default function MobileDevelopment() {
             {mobileBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -378,8 +329,18 @@ export default function MobileDevelopment() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -393,9 +354,24 @@ export default function MobileDevelopment() {
             {mobileTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -425,8 +401,18 @@ export default function MobileDevelopment() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -440,9 +426,24 @@ export default function MobileDevelopment() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -469,8 +470,18 @@ export default function MobileDevelopment() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -501,9 +512,24 @@ export default function MobileDevelopment() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -558,8 +584,18 @@ export default function MobileDevelopment() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -573,9 +609,24 @@ export default function MobileDevelopment() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -619,8 +670,18 @@ export default function MobileDevelopment() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

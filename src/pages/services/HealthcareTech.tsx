@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
 
@@ -38,9 +38,9 @@ export default function HealthcareTech() {
     {
       icon: Activity,
       title: 'Predictive Analytics',
-      description: 'Early warning systems and preventive care insights',
-      color: 'from-indigo-500 to-purple-500'
-    }
+      description: 'Early warning systems and preventive care insights',;
+      color: 'from-indigo-500 to-purple-500';
+    };
   ];
 
   const services = [
@@ -65,22 +65,22 @@ export default function HealthcareTech() {
     {
       title: 'Medical Device Integration',
       description: 'IoT integration for medical devices and wearables',
-      price: 'From $18,000',
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
-    }
+      price: 'From $18,000',;
+      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];
+    };
   ];
 
   const applications = [
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },
-    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },
-    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
+    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;
+    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;
+    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Healthcare Technology Services - Zion Tech Group"
         description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
@@ -91,8 +91,18 @@ export default function HealthcareTech() {
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -135,8 +145,18 @@ export default function HealthcareTech() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -153,9 +173,24 @@ export default function HealthcareTech() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -173,8 +208,18 @@ export default function HealthcareTech() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -191,9 +236,24 @@ export default function HealthcareTech() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -224,8 +284,18 @@ export default function HealthcareTech() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -242,9 +312,24 @@ export default function HealthcareTech() {
             {applications.map((app, index) => (
               <motion.div
                 key={app.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center group"
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
@@ -262,8 +347,18 @@ export default function HealthcareTech() {
       <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -290,8 +385,8 @@ export default function HealthcareTech() {
               </motion.button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

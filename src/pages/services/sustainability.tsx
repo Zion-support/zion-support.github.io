@@ -21,9 +21,9 @@ export default function Sustainability() {
     },
     {
       icon: Globe,
-      title: 'Carbon Neutral',
-      description: 'Achieve net-zero emissions through smart technology'
-    }
+      title: 'Carbon Neutral',;
+      description: 'Achieve net-zero emissions through smart technology';
+    };
   ];
 
   const services = [
@@ -44,20 +44,30 @@ export default function Sustainability() {
     },
     {
       title: 'Carbon Footprint Analysis',
-      description: 'Comprehensive environmental impact assessment',
-      icon: Globe
-    }
+      description: 'Comprehensive environmental impact assessment',;
+      icon: Globe;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -93,8 +103,18 @@ export default function Sustainability() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -111,9 +131,24 @@ export default function Sustainability() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
@@ -132,8 +167,18 @@ export default function Sustainability() {
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -150,9 +195,24 @@ export default function Sustainability() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
@@ -175,8 +235,18 @@ export default function Sustainability() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden"
@@ -199,8 +269,8 @@ export default function Sustainability() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

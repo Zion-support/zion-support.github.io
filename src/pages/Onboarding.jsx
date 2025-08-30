@@ -29,11 +29,11 @@ export default function Onboarding() {
         setUserType(type);
         // Direct to specific registration page based on user type
         if (type === "serviceProvider") {
-            navigate('/service-onboarding');
+            router('/service-onboarding');
             return;
         }
         else if (type === "talent") {
-            navigate('/talent-onboarding');
+            router('/talent-onboarding');
             return;
         }
         // Continue with the onboarding flow for clients
@@ -46,7 +46,7 @@ export default function Onboarding() {
                 description: "Your session may have expired. Please log in again.",
                 variant: "destructive",
             });
-            navigate('/login');
+            router('/login');
             return;
         }
         const dbUserType = mapUserTypeToDatabase(userType);
@@ -74,7 +74,7 @@ export default function Onboarding() {
                 ? "/client-dashboard"
                 : "/talent-dashboard";
             // Redirect to dashboard
-            navigate(dashboardRoute);
+            router(dashboardRoute);
         }
         catch (error) {
             console.error('Error updating profile:', error);
@@ -90,7 +90,7 @@ export default function Onboarding() {
         { label: "Create Profile", description: "Tell us about yourself" },
     ];
     if (!user) {
-        navigate('/login');
+        router('/login');
         return null;
     }
     return (<>

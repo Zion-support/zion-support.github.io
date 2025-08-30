@@ -238,9 +238,9 @@ const sidebarSections = [
           { name: 'Community Forum', href: '/community' },
           { name: 'Knowledge Base', href: '/knowledge-base' }
         ]
-      }
-    ]
-  }
+      };
+    ];
+  };
 ];
 
 interface EnhancedSidebar2025Props {
@@ -252,7 +252,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: string) => {
+  const toggleSection = (sectionTitle: string) => {;
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
       newExpanded.delete(sectionTitle);
@@ -266,12 +266,12 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     section.items.flatMap(item =>
       item.subItems?.filter(child =>
         child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        child.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      ) || []
-    )
+        child.description?.toLowerCase().includes(searchQuery.toLowerCase());
+      ) || [];
+    );
   );
 
-  const toggleItem = (itemName: string) => {
+  const toggleItem = (itemName: string) => {;
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
       newExpanded.delete(itemName);
@@ -301,7 +301,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial = {{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
@@ -315,7 +315,12 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       <motion.div
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
-        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+        transition = {
+  { type: 'spring', damping: 25,
+  stiffness: 200 
+
+
+}}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
       >
         {/* Header */}
@@ -391,9 +396,24 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="space-y-2 ml-6"
                   >
@@ -426,9 +446,24 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                           <AnimatePresence>
                             {expandedItems.has(item.name) && (
                               <motion.div
-                                initial={{ opacity: 0, height: 0 }}
-                                animate={{ opacity: 1, height: 'auto' }}
-                                exit={{ opacity: 0, height: 0 }}
+                                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                                 transition={{ duration: 0.3 }}
                                 className="space-y-1 ml-6"
                               >
@@ -489,8 +524,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
               </Link>
             </div>
           </div>
-        </div>
-      </motion.div>
-    </>
+        </div>;
+      </motion.div>;
+    </>;
   );
 }

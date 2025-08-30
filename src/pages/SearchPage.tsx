@@ -246,9 +246,9 @@ export default function SearchPage() {
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
     { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
-    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },
-    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },
-    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 }
+    { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },;
+    { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },;
+    { id: 'documentation', name: 'Documentation', icon: Code, count: 0 };
   ];
 
   useEffect(() => {
@@ -257,19 +257,19 @@ export default function SearchPage() {
     }
   }, [searchQuery, selectedFilters, sortBy]);
 
-  const performSearch = async () => {
+  const performSearch = async () => {;
     setIsSearching(true);
     
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 800));
     
-    let filtered = mockSearchResults.filter(result => {
-      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    let filtered = mockSearchResults.filter(result => {;
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       
-      const matchesFilters = selectedFilters.size === 0 || 
-                           selectedFilters.has(result.category.toLowerCase().replace(/\s+/g, '-')) ||
+      const matchesFilters = selectedFilters.size === 0 || ;
+                           selectedFilters.has(result.category.toLowerCase().replace(/\s+/g, '-')) ||;
                            selectedFilters.has(result.type);
       
       return matchesQuery && matchesFilters;
@@ -291,14 +291,14 @@ export default function SearchPage() {
     setIsSearching(false);
   };
 
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (filterId: string) => {;
     const newFilters = new Set(selectedFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -308,12 +308,12 @@ export default function SearchPage() {
     setSelectedFilters(newFilters);
   };
 
-  const clearFilters = () => {
+  const clearFilters = () => {;
     setSelectedFilters(new Set());
   };
 
-  const getResultIcon = (type: string) => {
-    switch (type) {
+  const getResultIcon = (type: string) => {;
+    switch (type) {;
       case 'service': return Zap;
       case 'page': return FileText;
       case 'blog': return BookOpen;
@@ -323,8 +323,8 @@ export default function SearchPage() {
     }
   };
 
-  const getResultColor = (type: string) => {
-    switch (type) {
+  const getResultColor = (type: string) => {;
+    switch (type) {;
       case 'service': return 'from-blue-500 to-indigo-500';
       case 'blog': return 'from-green-500 to-emerald-500';
       case 'case-study': return 'from-purple-500 to-pink-500';
@@ -334,21 +334,31 @@ export default function SearchPage() {
   };
 
   // Calculate filter counts
-  filterOptions.forEach(filter => {
-    filter.count = mockSearchResults.filter(result => 
-      result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||
-      result.type === filter.id
+  filterOptions.forEach(filter = > {
+    filter.count = mockSearchResults.filter(result => ;
+      result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||;
+      result.type === filter.id;
     ).length;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.5 }}
             className="text-center"
           >
@@ -363,9 +373,24 @@ export default function SearchPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Search Form */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.5,
+  delay: 0.1 
+
+
+}}
           className="mb-8"
         >
           <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
@@ -467,9 +492,24 @@ export default function SearchPage() {
             <AnimatePresence>
               {showFilters && (
                 <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
+                  initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                   className="lg:hidden mb-6 bg-white rounded-xl shadow-sm border border-gray-200 p-4"
                 >
                   <div className="grid grid-cols-2 gap-3">
@@ -506,8 +546,18 @@ export default function SearchPage() {
                 searchResults.map((result, index) => (
                   <motion.div
                     key={result.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                     transition={{ delay: index * 0.1 }}
                     className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
                   >
@@ -622,8 +672,8 @@ export default function SearchPage() {
               </div>
             )}
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

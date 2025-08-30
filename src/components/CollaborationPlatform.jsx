@@ -50,11 +50,14 @@ export function CollaborationPlatform() {
     const sendMessage = () => {
         if (newMessage.trim()) {
             const message = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 user: 'You',
                 message: newMessage,
-                timestamp: new Date()
-            };
+  timestamp: new Date()
+            
+
+
+};
             setChatMessages(prev => [...prev, message]);
             setNewMessage('');
         }

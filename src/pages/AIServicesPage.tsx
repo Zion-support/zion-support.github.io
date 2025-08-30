@@ -24,7 +24,7 @@ import {
   Star,
   Heart
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -107,9 +107,9 @@ const AIServicesPage = () => {
       marketSize: '$2.1B emotional AI market',
       growthRate: '180% annual growth',
       rating: 4.8,
-      reviews: 32,
-      customers: 67
-    }
+      reviews: 32,;
+      customers: 67;
+    };
   ];
 
   const aiSolutions = [
@@ -130,9 +130,9 @@ const AIServicesPage = () => {
     },
     {
       title: 'AI-Driven Marketing',
-      description: 'Personalized campaigns and customer insights',
-      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
-    }
+      description: 'Personalized campaigns and customer insights',;
+      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization'];
+    };
   ];
 
   const caseStudies = [
@@ -154,15 +154,15 @@ const AIServicesPage = () => {
       company: 'HealthTech Solutions',
       industry: 'Healthcare',
       challenge: 'Patient data analysis',
-      solution: 'NLP for medical records',
-      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
-    }
+      solution: 'NLP for medical records',;
+      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Services - Zion Tech Group"
+        title = "AI Services - Zion Tech Group"
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
       />
@@ -205,9 +205,24 @@ const AIServicesPage = () => {
               {aiSolutions.map((solution, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
@@ -232,9 +247,24 @@ const AIServicesPage = () => {
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
                 >
                   <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
@@ -286,9 +316,9 @@ const AIServicesPage = () => {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 

@@ -578,136 +578,6 @@ import {
   Brain
 } from 'lucide-react';
 
-const soc2Solutions = [
-  {
-    id: 1,
-    title: "SOC2 Compliance Monitoring",
-    description: "Automated monitoring and tracking of SOC2 compliance requirements.",
-    icon: Shield,
-    features: [
-      "Real-time monitoring",
-      "Compliance tracking",
-      "Automated alerts",
-      "Audit trails"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "Monitoring",
-    technologies: ["AI Monitoring", "Compliance", "Automation", "Audit Trails"]
-  },
-  {
-    id: 2,
-    title: "Automated Policy Management",
-    description: "AI-powered system for managing and enforcing SOC2 policies.",
-    icon: FileText,
-    features: [
-      "Policy automation",
-      "Compliance checking",
-      "Policy updates",
-      "Enforcement tracking"
-    ],
-    price: "From $120,000",
-    timeline: "18-30 weeks",
-    category: "Policy Management",
-    technologies: ["AI", "Policy Automation", "Compliance", "Enforcement"]
-  },
-  {
-    id: 3,
-    title: "Risk Assessment Automation",
-    description: "Intelligent system for automated risk assessment and management.",
-    icon: AlertTriangle,
-    features: [
-      "Risk identification",
-      "Assessment automation",
-      "Mitigation tracking",
-      "Risk reporting"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Risk Management",
-    technologies: ["AI Risk Assessment", "Automation", "Risk Analysis", "Reporting"]
-  },
-  {
-    id: 4,
-    title: "Audit Preparation System",
-    description: "AI-driven system for preparing and managing SOC2 audits.",
-    icon: CheckCircle,
-    features: [
-      "Audit preparation",
-      "Documentation automation",
-      "Evidence collection",
-      "Compliance reporting"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Audit Preparation",
-    technologies: ["AI", "Audit Automation", "Documentation", "Compliance"]
-  },
-  {
-    id: 5,
-    title: "Security Control Automation",
-    description: "Automated implementation and monitoring of security controls.",
-    icon: Lock,
-    features: [
-      "Control automation",
-      "Security monitoring",
-      "Compliance validation",
-      "Control reporting"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Security Controls",
-    technologies: ["AI Security", "Automation", "Monitoring", "Compliance"]
-  },
-  {
-    id: 6,
-    title: "Compliance Reporting Platform",
-    description: "Comprehensive platform for SOC2 compliance reporting and analytics.",
-    icon: BarChart3,
-    features: [
-      "Automated reporting",
-      "Compliance analytics",
-      "Dashboard views",
-      "Executive summaries"
-    ],
-    price: "From $160,000",
-    timeline: "20-32 weeks",
-    category: "Reporting",
-    technologies: ["AI Reporting", "Analytics", "Dashboards", "Automation"]
-  }
-];
-
-const soc2Technologies = [
-  {
-    name: "AI Compliance Monitoring",
-    description: "Intelligent monitoring of compliance requirements",
-    icon: Shield,
-    useCase: "Compliance Monitoring",
-    reliability: "Critical"
-  },
-  {
-    name: "Policy Automation",
-    description: "Automated policy management and enforcement",
-    icon: FileText,
-    useCase: "Policy Management",
-    reliability: "Critical"
-  },
-  {
-    name: "Risk Assessment AI",
-    description: "AI-powered risk assessment and management",
-    icon: AlertTriangle,
-    useCase: "Risk Management",
-    reliability: "High"
-  },
-  {
-    name: "Security Automation",
-    description: "Automated security control implementation",
-    icon: Lock,
-    useCase: "Security Controls",
-    reliability: "High"
-  }
-];
-
 const successStories = [
   {
     id: 1,
@@ -818,15 +688,40 @@ export default function SOC2ComplianceAutomation() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Shield className="w-10 h-10 text-white" />
@@ -864,8 +759,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +784,24 @@ export default function SOC2ComplianceAutomation() {
             {soc2Benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +830,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +855,24 @@ export default function SOC2ComplianceAutomation() {
             {soc2Technologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +902,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +927,24 @@ export default function SOC2ComplianceAutomation() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +971,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +1013,24 @@ export default function SOC2ComplianceAutomation() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1085,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1110,24 @@ export default function SOC2ComplianceAutomation() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1151,8 +1171,18 @@ export default function SOC2ComplianceAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

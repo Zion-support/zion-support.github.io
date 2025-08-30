@@ -991,7 +991,7 @@ export const SPECIALIZED_SERVICES_2026 = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  }
+      website: "https://ziontechgroup.com";
+    };
+  };
 ];

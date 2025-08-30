@@ -5,26 +5,26 @@ export default function EmailSequencer() {
 		'Multi-step sequences with A/B testing',
 		'AI subject line and body suggestions',
 		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',
-		'Smart send windows and reply-detection',
-		'Per-recipient throttling and warmup controls',
-		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips'
+		'Smart send windows and reply-detection',;
+		'Per-recipient throttling and warmup controls',;
+		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
 	];
 
 	const plans = [
-		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends', '1 domain', 'Basic templates'] },
-		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends', '3 domains', 'A/B testing, webhooks'] },
-		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends', 'SAML/SSO', 'Priority support'] }
+		{ name: 'Launch', price: '$49/mo', details: ['Up to 2,500 sends', '1 domain', 'Basic templates'] },;
+		{ name: 'Scale', price: '$149/mo', details: ['Up to 25,000 sends', '3 domains', 'A/B testing, webhooks'] },;
+		{ name: 'Teams', price: '$399/mo', details: ['100,000+ sends', 'SAML/SSO', 'Priority support'] };
 	];
 
 	const references = [
 		{ label: 'HubSpot Email Marketing Pricing', href: 'https://www.hubspot.com/pricing/marketing/email' },
-		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },
-		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },
-		{ label: 'Salesloft Pricing', href: 'https://salesloft.com/pricing/' }
+		{ label: 'Mailchimp Pricing', href: 'https://mailchimp.com/pricing/marketing/' },;
+		{ label: 'Lemlist Pricing', href: 'https://lemlist.com/pricing' },;
+		{ label: 'Salesloft Pricing', href: 'https://salesloft.com/pricing/' };
 	];
 
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+		<div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
 			<section className="max-w-7xl mx-auto px-6 py-20">
 				<div className="text-center mb-12">
 					<div className="mx-auto w-16 h-16 rounded-2xl bg-zion-cyan/20 flex items-center justify-center mb-4">
@@ -78,9 +78,9 @@ export default function EmailSequencer() {
 							</a>
 						))}
 					</div>
-				</div>
-			</section>
-		</div>
+				</div>;
+			</section>;
+		</div>;
 	);
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../src/data/innovativeServices2025';
-const InnovativeServicesShowcase: React.FC = () => {
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../src/data/innovativeServices2025";
+const InnovativeServicesShowcase: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
@@ -10,24 +10,23 @@ const InnovativeServicesShowcase: React.FC = () => {
     { label: 'All Prices', value: 'all' },
     { label: 'Under $100', value: '0-100' },
     { label: '$100 - $500', value: '100-500' },
-    { label: '$500 - $1000', value: '500-1000' },
-    { label: '$1000 - $3000', value: '1000-3000' },
-    { label: 'Over $3000', value: '3000+' }
+    { label: '$500 - $1000', value: '500-1000' },;
+    { label: '$1000 - $3000', value: '1000-3000' },;
+    { label: 'Over $3000', value: '3000+' };
   ];
   const sortOptions = [
     { label: 'Highest Rated', value: 'rating' },
-    { label: 'Highest AI Score', value: 'aiScore' },
-    { label: 'Lowest Price', value: 'price' },
-    { label: 'Newest Launch', value: 'launchDate' }
+    { label: 'Highest AI Score', value: 'aiScore' },;
+    { label: 'Lowest Price', value: 'price' },;
+    { label: 'Newest Launch', value: 'launchDate' };
   ];
-  const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_SERVICES_2025;
+  const filtered = INNOVATIVE_SERVICES_2025;
     // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
     }
     // Filter by category
@@ -37,7 +36,7 @@ const InnovativeServicesShowcase: React.FC = () => {
     // Filter by price range
     if (priceRange !== 'all') {
       const [min, max] = priceRange.split('-').map(Number);
-      if (priceRange === '3000+') {
+      if (priceRange = == '3000+') {;
         filtered = filtered.filter(service => service.price >= 3000);
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max);
@@ -61,7 +60,7 @@ const InnovativeServicesShowcase: React.FC = () => {
     return filtered;
   }, [searchTerm, selectedCategory, priceRange, sortBy]);
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
-    <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+    <div className = "bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
         <div className="flex items-center space-x-2">
@@ -124,12 +123,12 @@ const InnovativeServicesShowcase: React.FC = () => {
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">
             Learn More
           </button>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className = "min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -264,9 +263,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               Download Brochure
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 export default InnovativeServicesShowcase;

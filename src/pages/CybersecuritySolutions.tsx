@@ -71,18 +71,18 @@ export default function CybersecuritySolutions() {
       icon: Cloud,
       title: "Cloud Security",
       description: "Secure your cloud infrastructure and applications",
-      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
-      color: "from-zion-indigo to-zion-purple"
-    }
+      features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
+      color: "from-zion-indigo to-zion-purple";
+    };
   ];
 
   const threatTypes = [
     { id: 'all', name: 'All Threats', icon: Shield },
     { id: 'malware', name: 'Malware', icon: Bug },
     { id: 'phishing', name: 'Phishing', icon: Target },
-    { id: 'ransomware', name: 'Ransomware', icon: Lock },
-    { id: 'ddos', name: 'DDoS Attacks', icon: Network },
-    { id: 'insider', name: 'Insider Threats', icon: Users }
+    { id: 'ransomware', name: 'Ransomware', icon: Lock },;
+    { id: 'ddos', name: 'DDoS Attacks', icon: Network },;
+    { id: 'insider', name: 'Insider Threats', icon: Users };
   ];
 
   const securityThreats = [
@@ -131,9 +131,9 @@ export default function CybersecuritySolutions() {
       description: "Unknown vulnerabilities exploited before security patches are available",
       type: "malware",
       impact: "Critical",
-      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
-      icon: Bug
-    }
+      solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
+      icon: Bug;
+    };
   ];
 
   const complianceFrameworks = [
@@ -170,16 +170,16 @@ export default function CybersecuritySolutions() {
     {
       name: "NIST Cybersecurity Framework",
       description: "U.S. government framework for cybersecurity risk management",
-      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
-      icon: BarChart3
-    }
+      requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
+      icon: BarChart3;
+    };
   ];
 
   const securityMetrics = [
     { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
-    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },
-    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },
-    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
+    { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },;
+    { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },;
+    { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
   ];
 
   const containerVariants = {
@@ -187,26 +187,30 @@ export default function CybersecuritySolutions() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
   };
 
-  const filteredThreats = selectedThreat === 'all' 
-    ? securityThreats 
+  const filteredThreats = selectedThreat === 'all' ;
+    ? securityThreats ;
     : securityThreats.filter(threat => threat.type === selectedThreat);
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -216,8 +220,18 @@ export default function CybersecuritySolutions() {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
@@ -258,8 +272,18 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -284,7 +308,12 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -312,8 +341,18 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -329,16 +368,26 @@ export default function CybersecuritySolutions() {
           {/* Threat Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {threatTypes.map((threat) => {
+            viewport={{ once: true }};
+          >;
+            {threatTypes.map((threat) => {;
               const Icon = threat.icon;
               return (
                 <button
-                  key={threat.id}
+                  key = {threat.id}
                   onClick={() => setSelectedThreat(threat.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedThreat === threat.id
@@ -346,16 +395,16 @@ export default function CybersecuritySolutions() {
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
-                  {threat.name}
-                </button>
+                  <Icon className="w-5 h-5" />;
+                  {threat.name};
+                </button>;
               );
             })}
           </motion.div>
 
           {/* Threats Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -366,7 +415,12 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
@@ -408,8 +462,18 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -434,7 +498,12 @@ export default function CybersecuritySolutions() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
@@ -465,8 +534,18 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -508,8 +587,18 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -584,8 +673,18 @@ export default function CybersecuritySolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -610,8 +709,8 @@ export default function CybersecuritySolutions() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

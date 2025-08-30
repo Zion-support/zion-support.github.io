@@ -156,9 +156,9 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
   showProjects = true,
   showCommunication = true,
-  showFileSharing = true,
-  maxItems = 20
-}) => {
+  showFileSharing = true,;
+  maxItems = 20;
+}) => {;
   const [activeTab, setActiveTab] = useState<'team' | 'projects' | 'communication' | 'files'>('team');
   const [teamMembers, setTeamMembers] = useState<TeamMember[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
@@ -173,147 +173,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
   // Sample data
   useEffect(() => {
-    const sampleTeamMembers: TeamMember[] = [
-      {
-        id: '1',
-        name: 'Sarah Johnson',
-        role: 'Senior AI Engineer',
-        department: 'Engineering',
-        avatar: 'SJ',
-        status: 'online',
-        lastSeen: '2 minutes ago',
-        skills: ['Machine Learning', 'Python', 'TensorFlow', 'AI/ML'],
-        projects: ['AI Platform Development', 'ML Model Optimization'],
-        availability: 'available'
-      },
-      {
-        id: '2',
-        name: 'Michael Chen',
-        role: 'Cloud Architect',
-        department: 'IT Operations',
-        avatar: 'MC',
-        status: 'busy',
-        lastSeen: '15 minutes ago',
-        skills: ['AWS', 'Azure', 'Kubernetes', 'DevOps'],
-        projects: ['Cloud Migration', 'Infrastructure Modernization'],
-        availability: 'busy'
-      },
-      {
-        id: '3',
-        name: 'David Kim',
-        role: 'Cybersecurity Specialist',
-        department: 'Security',
-        avatar: 'DK',
-        status: 'online',
-        lastSeen: '1 minute ago',
-        skills: ['Penetration Testing', 'Threat Detection', 'Incident Response'],
-        projects: ['Security Audit', 'Threat Intelligence'],
-        availability: 'available'
-      },
-      {
-        id: '4',
-        name: 'Lisa Thompson',
-        role: 'Project Manager',
-        department: 'Management',
-        avatar: 'LT',
-        status: 'away',
-        lastSeen: '1 hour ago',
-        skills: ['Agile', 'Scrum', 'Risk Management', 'Stakeholder Communication'],
-        projects: ['Digital Transformation', 'Process Optimization'],
-        availability: 'unavailable'
-      },
-      {
-        id: '5',
-        name: 'Alex Wong',
-        role: 'DevOps Engineer',
-        department: 'Engineering',
-        avatar: 'AW',
-        status: 'online',
-        lastSeen: '5 minutes ago',
-        skills: ['Docker', 'Jenkins', 'Terraform', 'Monitoring'],
-        projects: ['CI/CD Pipeline', 'Infrastructure as Code'],
-        availability: 'available'
-      }
-    ];
-
-    const sampleProjects: Project[] = [
-      {
-        id: '1',
-        name: 'AI Platform Development',
-        description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',
-        status: 'active',
-        priority: 'high',
-        progress: 65,
-        startDate: '2024-01-01',
-        endDate: '2024-06-30',
-        teamMembers: ['Sarah Johnson', 'Alex Wong'],
-        tasks: [],
-        budget: 500000,
-        client: 'TechCorp Inc.',
-        tags: ['AI', 'Machine Learning', 'Platform']
-      },
-      {
-        id: '2',
-        name: 'Cloud Migration',
-        description: 'Migrating legacy systems to cloud infrastructure with zero downtime',
-        status: 'active',
-        priority: 'critical',
-        progress: 45,
-        startDate: '2024-02-01',
-        endDate: '2024-08-31',
-        teamMembers: ['Michael Chen', 'Alex Wong'],
-        tasks: [],
-        budget: 750000,
-        client: 'Global Enterprises',
-        tags: ['Cloud', 'Migration', 'Infrastructure']
-      },
-      {
-        id: '3',
-        name: 'Security Audit',
-        description: 'Comprehensive security assessment and vulnerability remediation',
-        status: 'review',
-        priority: 'high',
-        progress: 90,
-        startDate: '2024-01-15',
-        endDate: '2024-03-15',
-        teamMembers: ['David Kim'],
-        tasks: [],
-        budget: 150000,
-        client: 'SecureBank',
-        tags: ['Security', 'Audit', 'Compliance']
-      }
-    ];
-
-    const sampleMessages: Message[] = [
-      {
-        id: '1',
-        sender: 'Sarah Johnson',
-        content: 'Great progress on the AI model training! The accuracy has improved significantly.',
-        timestamp: '2 minutes ago',
-        type: 'text',
-        reactions: [{ type: 'thumbsUp', count: 3 }],
-        isRead: true
-      },
-      {
-        id: '2',
-        sender: 'Michael Chen',
-        content: 'Cloud migration phase 1 completed successfully. Ready for phase 2 planning.',
-        timestamp: '15 minutes ago',
-        type: 'text',
-        reactions: [{ type: 'check', count: 2 }],
-        isRead: false
-      },
-      {
-        id: '3',
-        sender: 'David Kim',
-        content: 'Security vulnerabilities identified and patched. Report ready for review.',
-        timestamp: '1 hour ago',
-        type: 'text',
-        reactions: [{ type: 'star', count: 1 }],
-        isRead: true
-      }
-    ];
-
     const sampleFiles: FileItem[] = [
       {
         id: '1',
@@ -363,8 +222,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   }, []);
 
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {
-    switch (status) {
+  const getStatusDisplay = (status: string) => {;
+    switch (status) {;
       case 'online': return { color: 'text-green-400 bg-green-400/20', icon: <div className="w-2 h-2 bg-green-400 rounded-full"></div> };
       case 'away': return { color: 'text-yellow-400 bg-yellow-400/20', icon: <div className="w-2 h-2 bg-yellow-400 rounded-full"></div> };
       case 'busy': return { color: 'text-red-400 bg-red-400/20', icon: <div className="w-2 h-2 bg-red-400 rounded-full"></div> };
@@ -374,8 +233,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get project status color
-  const getProjectStatusColor = (status: string) => {
-    switch (status) {
+  const getProjectStatusColor = (status: string) => {;
+    switch (status) {;
       case 'planning': return 'text-blue-400 bg-blue-400/20';
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'review': return 'text-yellow-400 bg-yellow-400/20';
@@ -386,8 +245,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
+  const getPriorityColor = (priority: string) => {;
+    switch (priority) {;
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
       case 'high': return 'text-orange-400 bg-orange-400/20';
@@ -397,8 +256,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Get file type icon
-  const getFileTypeIcon = (type: string) => {
-    switch (type) {
+  const getFileTypeIcon = (type: string) => {;
+    switch (type) {;
       case 'document': return <FileText className="w-5 h-5" />;
       case 'image': return <img className="w-5 h-5" />;
       case 'video': return <Video className="w-5 h-5" />;
@@ -409,21 +268,21 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   // Format file size
-  const formatFileSize = (size: number) => {
+  const formatFileSize = (size: number) => {;
     if (size < 1) return `${(size * 1024).toFixed(0)} KB`;
     if (size < 1024) return `${size.toFixed(1)} MB`;
     return `${(size / 1024).toFixed(1)} GB`;
   };
 
   // Handle project selection
-  const handleProjectSelect = (project: Project) => {
+  const handleProjectSelect = (project: Project) => {;
     setSelectedProject(project);
   };
 
   // Handle message reactions
-  const handleMessageReaction = (messageId: string, reactionType: string) => {
-    setMessages(prev => prev.map(msg => {
-      if (msg.id === messageId) {
+  const handleMessageReaction = (messageId: string, reactionType: string) => {;
+    setMessages(prev => prev.map(msg => {;
+      if (msg.id === messageId) {;
         const existingReaction = msg.reactions.find(r => r.type === reactionType);
         if (existingReaction) {
           existingReaction.count += 1;
@@ -436,7 +295,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-6">
+    <div className = "w-full max-w-7xl mx-auto p-6">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-white mb-4">Team Collaboration Tools</h1>
@@ -471,15 +330,35 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       {/* Team Members Tab */}
       {activeTab === 'team' && showTeamMembers && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-6"
         >
           {/* Team Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>
@@ -487,8 +366,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -499,8 +388,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -511,8 +410,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -528,8 +437,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
@@ -622,15 +541,35 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       {/* Projects Tab */}
       {activeTab === 'projects' && showProjects && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-6"
         >
           {/* Project Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>
@@ -638,8 +577,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -650,8 +599,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -662,8 +621,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -679,8 +648,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
                 onClick={() => handleProjectSelect(project)}
@@ -727,7 +706,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${project.progress}%` }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
+                      transition = {
+  { duration: 1,
+  delay: index * 0.1 
+
+
+}}
                       className="h-2 bg-zion-cyan rounded-full"
                     />
                   </div>
@@ -784,15 +768,35 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       {/* Communication Tab */}
       {activeTab === 'communication' && showCommunication && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-6"
         >
           {/* Communication Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>
@@ -800,8 +804,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -812,8 +826,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -829,8 +853,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             {messages.map((message, index) => (
               <motion.div
                 key={message.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${
                   !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''
@@ -859,7 +893,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       {message.reactions.map((reaction, idx) => (
                         <button
                           key={idx}
-                          onClick={() => handleMessageReaction(message.id, reaction.type)}
+                          onClick = {
+  () => handleMessageReaction(message.id,
+  reaction.type)
+
+
+}
                           className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full hover:bg-zinc-700/50 transition-colors"
                         >
                           {reaction.type === 'thumbsUp' && <ThumbsUp className="w-3 h-3 inline mr-1" />}
@@ -914,15 +953,35 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
       {/* File Sharing Tab */}
       {activeTab === 'files' && showFileSharing && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-6"
         >
           {/* File Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>
@@ -930,8 +989,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.1 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -942,8 +1011,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.2 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -954,8 +1033,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.3 }}
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
@@ -971,8 +1060,18 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             {files.map((file, index) => (
               <motion.div
                 key={file.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
@@ -1030,8 +1129,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
               </button>
             </div>
           </div>
-        </motion.div>
-      )}
-    </div>
+        </motion.div>;
+      )};
+    </div>;
   );
 };

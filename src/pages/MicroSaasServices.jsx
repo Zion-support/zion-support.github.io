@@ -8,14 +8,17 @@ import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 const categoryIcons = {
-    'AI Business Solutions': Brain,
+  'AI Business Solutions': Brain,
     'IT Infrastructure': Cloud,
     'Data Analytics': BarChart3,
     'AI Development': Code,
     'FinTech': DollarSign,
     'HealthTech': Heart,
     'E-commerce': ShoppingCart,
-    'EdTech': GraduationCap
+  'EdTech': GraduationCap
+
+
+
 };
 const benefits = [
     {

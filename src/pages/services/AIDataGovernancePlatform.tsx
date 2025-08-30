@@ -9,27 +9,27 @@ export default function AIDataGovernancePlatform() {
     'Real-time data access control and monitoring',
     'Automated data retention policy enforcement',
     'AI-driven data catalog and metadata management',
-    'Comprehensive audit trails and reporting',
-    'Multi-cloud data governance and synchronization',
-    'Advanced data masking and anonymization'
+    'Comprehensive audit trails and reporting',;
+    'Multi-cloud data governance and synchronization',;
+    'Advanced data masking and anonymization';
   ];
 
   const benefits = [
     'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)',
     'Reduce data governance costs by 50%',
     'Improve data quality by 80%',
-    'Automate 90% of compliance tasks',
-    'Eliminate data privacy violations',
-    'Streamline data access management'
+    'Automate 90% of compliance tasks',;
+    'Eliminate data privacy violations',;
+    'Streamline data access management';
   ];
 
   const complianceFrameworks = [
     'GDPR (General Data Protection Regulation)',
     'CCPA (California Consumer Privacy Act)',
     'HIPAA (Health Insurance Portability and Accountability Act)',
-    'SOX (Sarbanes-Oxley Act)',
-    'SOC 2 Type II Compliance',
-    'ISO 27001 Information Security'
+    'SOX (Sarbanes-Oxley Act)',;
+    'SOC 2 Type II Compliance',;
+    'ISO 27001 Information Security';
   ];
 
   const tiers = [
@@ -45,13 +45,13 @@ export default function AIDataGovernancePlatform() {
     },
     { 
       name: 'Global Compliance', 
-      price: '$3,999/mo', 
-      details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support'] 
-    },
+      price: '$3,999/mo', ;
+      details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -151,8 +151,8 @@ export default function AIDataGovernancePlatform() {
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

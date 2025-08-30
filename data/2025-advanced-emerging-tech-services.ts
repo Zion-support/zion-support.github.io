@@ -296,7 +296,7 @@ export const advancedEmergingTechServices2025 = [
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$6.8B',
-    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',
-    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
+    targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
+    competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
+  };
 ];

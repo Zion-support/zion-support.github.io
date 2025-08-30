@@ -37,18 +37,18 @@ export default function CaseStudies() {
     { id: 'all', name: 'All Industries', icon: Building, count: 0 },
     { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },
     { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },
-    { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },
-    { id: 'government', name: 'Government', icon: Building, count: 0 }
+    { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },;
+    { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },;
+    { id: 'government', name: 'Government', icon: Building, count: 0 };
   ];
 
   const services = [
     { id: 'all', name: 'All Services', icon: Zap, count: 0 },
     { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
-    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 }
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },;
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 };
   ];
 
   const caseStudies = [
@@ -149,46 +149,54 @@ export default function CaseStudies() {
       duration: '14 months',
       teamSize: '20 engineers',
       technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],
-      featured: false,
-      image: '/api/placeholder/600/400'
-    }
+      featured: false,;
+      image: '/api/placeholder/600/400';
+    };
   ];
 
   // Calculate counts
-  industries.forEach(industry => {
-    if (industry.id === 'all') {
+  industries.forEach(industry = > {;
+    if (industry.id === 'all') {;
       industry.count = caseStudies.length;
     } else {
       industry.count = caseStudies.filter(cs => cs.industry === industry.id).length;
     }
   });
 
-  services.forEach(service => {
-    if (service.id === 'all') {
+  services.forEach(service = > {;
+    if (service.id === 'all') {;
       service.count = caseStudies.length;
     } else {
       service.count = caseStudies.filter(cs => cs.service === service.id).length;
     }
   });
 
-  const filteredCaseStudies = caseStudies.filter(cs => {
-    const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry;
-    const matchesService = selectedService === 'all' || cs.service === selectedService;
-    const matchesSearch = cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredCaseStudies = caseStudies.filter(cs => {;
+    const matchesSearch = cs.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         cs.company.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          cs.challenge.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesIndustry && matchesService && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.5 }}
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
@@ -254,8 +262,18 @@ export default function CaseStudies() {
               {filteredCaseStudies.filter(cs => cs.featured).map((cs, index) => (
                 <motion.article
                   key={cs.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
                 >
@@ -304,8 +322,18 @@ export default function CaseStudies() {
             {filteredCaseStudies.filter(cs => !cs.featured).map((cs, index) => (
               <motion.article
                 key={cs.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
               >
@@ -375,8 +403,18 @@ export default function CaseStudies() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.5 }}
           className="mt-16 text-center"
         >
@@ -401,8 +439,8 @@ export default function CaseStudies() {
               </a>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

@@ -147,9 +147,9 @@ const researchAreas = [
       'DevOps Automation'
     ],
     publications: 20,
-    patents: 10,
-    projects: 16
-  }
+    patents: 10,;
+    projects: 16;
+  };
 ];
 
 const researchProjects = [
@@ -258,9 +258,9 @@ const researchProjects = [
       '4 research publications',
       'Industry standards contribution'
     ],
-    icon: Brain,
-    color: 'from-purple-500 to-indigo-600'
-  }
+    icon: Brain,;
+    color: 'from-purple-500 to-indigo-600';
+  };
 ];
 
 const publications = [
@@ -311,9 +311,9 @@ const publications = [
     journal: 'Cloud Computing Security',
     year: 2026,
     citations: 38,
-    area: 'Cloud-Native',
-    abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
-  }
+    area: 'Cloud-Native',;
+    abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
+  };
 ];
 
 const patents = [
@@ -364,9 +364,9 @@ const patents = [
     filingDate: '2026-02-15',
     status: 'Pending',
     patentNumber: 'US 2026/0098765',
-    area: 'Cloud-Native',
-    description: 'A security architecture pattern for cloud-native applications.'
-  }
+    area: 'Cloud-Native',;
+    description: 'A security architecture pattern for cloud-native applications.';
+  };
 ];
 
 export default function ResearchDevelopment() {
@@ -377,29 +377,27 @@ export default function ResearchDevelopment() {
   const areas = ['All', ...researchAreas.map(area => area.name)];
   const statuses = ['All', 'Active', 'Completed', 'Planning'];
 
-  const filteredProjects = researchProjects.filter(project => {
-    const matchesArea = selectedArea === 'All' || project.area === selectedArea;
-    const matchesStatus = selectedStatus === 'All' || project.status === selectedStatus;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredProjects = researchProjects.filter(project => {;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesArea && matchesStatus && matchesSearch;
   });
 
-  const getAreaIcon = (areaName: string) => {
+  const getAreaIcon = (areaName: string) => {;
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.icon : FlaskConical;
   };
 
-  const getAreaColor = (areaName: string) => {
+  const getAreaColor = (areaName: string) => {;
     const area = researchAreas.find(a => a.name === areaName);
     return area ? area.color : 'from-gray-500 to-slate-600';
   };
 
-  const getStatusBadge = (status: string) => {
-    if (status === 'Active') {
+  const getStatusBadge = (status: string) => {;
+    if (status === 'Active') {;
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
-    } else if (status === 'Completed') {
+    } else if (status = == 'Completed') {;
       return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
     } else {
       return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
@@ -407,13 +405,23 @@ export default function ResearchDevelopment() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -485,8 +493,18 @@ export default function ResearchDevelopment() {
       <section id="research-areas" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -494,16 +512,31 @@ export default function ResearchDevelopment() {
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index) => {
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {researchAreas.map((area, index) => {;
               const IconComponent = area.icon;
               return (
                 <motion.div
-                  key={area.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {area.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -537,9 +570,9 @@ export default function ResearchDevelopment() {
                     <div>
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
                       <div className="text-xs text-zion-slate-light">Projects</div>
-                    </div>
-                  </div>
-                </motion.div>
+                    </div>;
+                  </div>;
+                </motion.div>;
               );
             })}
           </div>
@@ -547,11 +580,21 @@ export default function ResearchDevelopment() {
       </section>
 
       {/* Active Research Projects */}
-      <section id="active-projects" className="py-16">
+      <section id = "active-projects" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -559,17 +602,32 @@ export default function ResearchDevelopment() {
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => {
+;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {filteredProjects.map((project, index) => {;
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
                 <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {project.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -645,9 +703,9 @@ export default function ResearchDevelopment() {
                     <div className="text-right">
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                    </div>
-                  </div>
-                </motion.div>
+                    </div>;
+                  </div>;
+                </motion.div>;
               );
             })}
           </div>
@@ -655,11 +713,21 @@ export default function ResearchDevelopment() {
       </section>
 
       {/* Publications */}
-      <section id="publications" className="py-16">
+      <section id = "publications" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -672,9 +740,24 @@ export default function ResearchDevelopment() {
             {publications.map((pub, index) => (
               <motion.div
                 key={pub.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
               >
@@ -726,8 +809,18 @@ export default function ResearchDevelopment() {
       <section id="patents" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -740,9 +833,24 @@ export default function ResearchDevelopment() {
             {patents.map((patent, index) => (
               <motion.div
                 key={patent.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
               >
@@ -801,8 +909,18 @@ export default function ResearchDevelopment() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -830,8 +948,8 @@ export default function ResearchDevelopment() {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

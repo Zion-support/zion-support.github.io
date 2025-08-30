@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { AuthContext } from '../../context/auth/AuthContext';
-import { useDebounce } from '../../hooks/useDebounce';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
+import { AuthContext } from "../../context/auth/AuthContext";
+import { useDebounce } from "../../hooks/useDebounce";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
+import { ChatMessage } from "./ChatMessage";
+import { ChatInput } from "./ChatInput";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
@@ -72,11 +72,14 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             return;
         if (!isGuest) { // Logged-in user
             const newMessage = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 role: 'user',
                 message: messageContent,
-                timestamp: new Date()
-            };
+  timestamp: new Date()
+            
+
+
+};
             setCurrentMessages((prev) => [...prev, newMessage]);
             setPendingApiCallParams({ message: messageContent, conversationId });
         }
@@ -89,11 +92,14 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         if (!guestMessage)
             return;
         const newMessage = {
-            id: Date.now().toString(),
+  id: Date.now().toString(),
             role: 'user',
             message: guestMessage,
-            timestamp: new Date()
-        };
+  timestamp: new Date()
+        
+
+
+};
         setCurrentMessages((prev) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
         setPendingApiCallParams({ message: guestMessage, conversationId });
         setShowGuestModal(false);
@@ -112,7 +118,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 handleModalCancel();
             }
         };
-        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : undefined;
+        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
         return () => {
             document.removeEventListener('keydown', handleKey);

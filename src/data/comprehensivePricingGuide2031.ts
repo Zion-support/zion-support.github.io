@@ -685,8 +685,12 @@ export const PRICING_SUMMARY_2031 = {
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
   priceRange: {
     min: "$399/month",
-    max: "$150,000/project"
-  },
+    max: "$150,
+  000/project"
+  
+
+
+},
   averageROI: "300-500%",
   implementationTime: {
     min: "2-4 weeks",
@@ -695,7 +699,7 @@ export const PRICING_SUMMARY_2031 = {
   contactInfo: {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
-  }
+    website: "https://ziontechgroup.com",;
+    address: "364 E Main St STE 1008 Middletown DE 19709";
+  };
 };

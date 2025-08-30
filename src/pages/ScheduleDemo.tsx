@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 interface DemoFormData {
   firstName: string;
@@ -25,17 +25,17 @@ const ScheduleDemo: React.FC = () => {
     phone: '',
     preferredDate: '',
     preferredTime: '',
-    attendees: '1-5',
-    services: [],
-    message: ''
+    attendees: '1-5',;
+    services: [],;
+    message: '';
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const timeSlots = [
-    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM'
+  const timeSlots = [;
+    '9:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',;
+    '1:00 PM', '2:00 PM', '3:00 PM', '4:00 PM', '5:00 PM';
   ];
 
   const availableServices = [
@@ -44,21 +44,21 @@ const ScheduleDemo: React.FC = () => {
     { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },
     { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },
-    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },
-    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },
-    { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
+    { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;
+    { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
+    { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
 
   const handleServiceToggle = (serviceId: string) => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
-        : [...prev.services, serviceId]
+      services: prev.services.includes(serviceId);
+        ? prev.services.filter(id => id !== serviceId);
+        : [...prev.services, serviceId];
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -75,14 +75,24 @@ const ScheduleDemo: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
         <SEO
           title="Demo Scheduled - Zion Tech Group"
           description="Your demo has been successfully scheduled. We'll be in touch soon to confirm the details."
         />
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
           className="max-w-2xl mx-auto text-center p-8"
         >
           <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -128,14 +138,14 @@ const ScheduleDemo: React.FC = () => {
             >
               Contact Us
             </a>
-          </div>
-        </motion.div>
-      </div>
+          </div>;
+        </motion.div>;
+      </div>;
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Schedule a Demo - Zion Tech Group"
         description="Book a personalized demo of our cutting-edge AI, quantum computing, and innovative technology solutions. See how we can transform your business."
@@ -146,8 +156,18 @@ const ScheduleDemo: React.FC = () => {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -184,9 +204,24 @@ const ScheduleDemo: React.FC = () => {
             {/* Form */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8"
               >
                 <h2 className="text-2xl font-bold text-white mb-6">Book Your Demo</h2>
@@ -202,7 +237,12 @@ const ScheduleDemo: React.FC = () => {
                         type="text"
                         required
                         value={formData.firstName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, firstName: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  firstName: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your first name"
                       />
@@ -215,7 +255,12 @@ const ScheduleDemo: React.FC = () => {
                         type="text"
                         required
                         value={formData.lastName}
-                        onChange={(e) => setFormData(prev => ({ ...prev, lastName: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  lastName: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your last name"
                       />
@@ -231,7 +276,12 @@ const ScheduleDemo: React.FC = () => {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  email: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your email"
                       />
@@ -244,7 +294,12 @@ const ScheduleDemo: React.FC = () => {
                         type="text"
                         required
                         value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  company: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter company name"
                       />
@@ -258,7 +313,12 @@ const ScheduleDemo: React.FC = () => {
                     <input
                       type="tel"
                       value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  phone: e.target.value 
+
+
+}))}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Enter phone number"
                     />
@@ -274,7 +334,12 @@ const ScheduleDemo: React.FC = () => {
                         type="date"
                         required
                         value={formData.preferredDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredDate: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  preferredDate: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         min={new Date().toISOString().split('T')[0]}
                       />
@@ -286,7 +351,12 @@ const ScheduleDemo: React.FC = () => {
                       <select
                         required
                         value={formData.preferredTime}
-                        onChange={(e) => setFormData(prev => ({ ...prev, preferredTime: e.target.value }))}
+                        onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  preferredTime: e.target.value 
+
+
+}))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       >
                         <option value="">Select time</option>
@@ -303,7 +373,12 @@ const ScheduleDemo: React.FC = () => {
                     </label>
                     <select
                       value={formData.attendees}
-                      onChange={(e) => setFormData(prev => ({ ...prev, attendees: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  attendees: e.target.value 
+
+
+}))}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="1-5">1-5 people</option>
@@ -342,7 +417,12 @@ const ScheduleDemo: React.FC = () => {
                     </label>
                     <textarea
                       value={formData.message}
-                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      onChange = {
+  (e) => setFormData(prev => ({ ...prev,
+  message: e.target.value 
+
+
+}))}
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       placeholder="Tell us about your specific needs, challenges, or questions..."
@@ -374,9 +454,24 @@ const ScheduleDemo: React.FC = () => {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
                 className="space-y-6"
               >
                 {/* What to Expect */}
@@ -450,9 +545,9 @@ const ScheduleDemo: React.FC = () => {
               </motion.div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

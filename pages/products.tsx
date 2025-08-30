@@ -23,16 +23,16 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const Products: NextPage = () => {
+const Products: NextPage = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
 
   const productCategories = [
     { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },
     { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },
     { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },
-    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },
-    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },
-    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' }
+    { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },;
+    { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },;
+    { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' };
   ];
 
   const products = [
@@ -201,17 +201,17 @@ const Products: NextPage = () => {
       ],
       icon: Network,
       color: 'from-violet-600 to-purple-600',
-      demoUrl: '/demo/blockchainforge',
-      pricingUrl: '/pricing/blockchainforge'
-    }
+      demoUrl: '/demo/blockchainforge',;
+      pricingUrl: '/pricing/blockchainforge';
+    };
   ];
 
-  const filteredProducts = activeCategory === 'all' 
-    ? products 
+  const filteredProducts = activeCategory === 'all' ;
+    ? products ;
     : products.filter(product => product.category === activeCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Products - Zion Tech Group | AI, SaaS, Security Solutions</title>
         <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
@@ -247,13 +247,13 @@ const Products: NextPage = () => {
       </div>
 
       {/* Category Filter */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
-          {productCategories.map((category) => {
+      <div className="container mx-auto px-4 py-16">;
+        <div className="flex flex-wrap justify-center gap-4 mb-16">;
+          {productCategories.map((category) => {;
             const IconComponent = category.icon;
             return (
               <button
-                key={category.id}
+                key = {category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                   activeCategory === category.id
@@ -261,20 +261,20 @@ const Products: NextPage = () => {
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
                 }`}
               >
-                <IconComponent className="w-5 h-5" />
-                <span>{category.name}</span>
-              </button>
+                <IconComponent className="w-5 h-5" />;
+                <span>{category.name}</span>;
+              </button>;
             );
           })}
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {filteredProducts.map((product) => {
+        <div className = "grid lg:grid-cols-2 gap-8">;
+          {filteredProducts.map((product) => {;
             const IconComponent = product.icon;
             return (
               <div
-                key={product.id}
+                key = {product.id}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
               >
                 <div className="flex items-start justify-between mb-6">
@@ -333,15 +333,15 @@ const Products: NextPage = () => {
                     className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
                   >
                     💰 View Pricing
-                  </a>
-                </div>
-              </div>
+                  </a>;
+                </div>;
+              </div>;
             );
           })}
         </div>
 
         {/* Enterprise Solutions */}
-        <div className="mt-20">
+        <div className = "mt-20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Enterprise Solutions
@@ -519,9 +519,9 @@ const Products: NextPage = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

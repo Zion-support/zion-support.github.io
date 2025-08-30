@@ -1,34 +1,46 @@
 import { motion } from 'framer-motion';
 export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', text, fullScreen = false }) {
     const sizeClasses = {
-        sm: 'w-6 h-6',
+  sm: 'w-6 h-6',
         md: 'w-12 h-12',
-        lg: 'w-16 h-16'
-    };
+  lg: 'w-16 h-16'
+    
+
+
+};
     const colorClasses = {
-        primary: 'text-zion-purple',
+  primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
-        white: 'text-white'
-    };
+  white: 'text-white'
+    
+
+
+};
     const spinnerVariants = {
-        animate: {
+  animate: {
             rotate: 360,
             transition: {
                 duration: 1,
                 repeat: Infinity,
-                ease: "linear"
-            }
+  ease: "linear"
+            
+
+
+}
         }
     };
     const pulseVariants = {
-        animate: {
+  animate: {
             scale: [1, 1.2, 1],
             opacity: [0.5, 1, 0.5],
             transition: {
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
-            }
+  ease: "easeInOut"
+            
+
+
+}
         }
     };
     const LoaderContent = () => (<div className="flex flex-col items-center justify-center space-y-4">

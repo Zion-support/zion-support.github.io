@@ -9,18 +9,18 @@ export default function AISupplyChainRiskManagement() {
     'Multi-tier supplier risk analysis',
     'Geopolitical and economic risk integration',
     'Supply chain resilience optimization',
-    'Compliance and regulatory risk monitoring',
-    'Custom risk threshold configuration',
-    'Advanced visualization and reporting dashboards'
+    'Compliance and regulatory risk monitoring',;
+    'Custom risk threshold configuration',;
+    'Advanced visualization and reporting dashboards';
   ];
 
   const benefits = [
     'Reduce supply chain disruptions by 60-80%',
     'Cut risk assessment time by 90%',
     'Improve supplier selection accuracy by 75%',
-    'Real-time global risk monitoring',
-    'Predict supply chain issues 30-60 days in advance',
-    'Automated compliance reporting and alerts'
+    'Real-time global risk monitoring',;
+    'Predict supply chain issues 30-60 days in advance',;
+    'Automated compliance reporting and alerts';
   ];
 
   const pricing = [
@@ -39,18 +39,18 @@ export default function AISupplyChainRiskManagement() {
     { 
       name: 'Enterprise', 
       price: '$2,499/mo', 
-      features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-    }
+      features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
     'Manufacturing supply chain risk management',
     'Retail inventory risk assessment',
     'Healthcare supply chain monitoring',
-    'Automotive supplier risk analysis',
-    'Food and beverage supply chain safety',
-    'Technology component sourcing risk'
+    'Automotive supplier risk analysis',;
+    'Food and beverage supply chain safety',;
+    'Technology component sourcing risk';
   ];
 
   const riskCategories = [
@@ -59,13 +59,13 @@ export default function AISupplyChainRiskManagement() {
     'Natural Disaster Prediction',
     'Supplier Financial Health',
     'Regulatory Compliance Risk',
-    'Cybersecurity Threats',
-    'Transportation Disruptions',
-    'Quality Control Issues'
+    'Cybersecurity Threats',;
+    'Transportation Disruptions',;
+    'Quality Control Issues';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 via-red-600 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -293,8 +293,8 @@ export default function AISupplyChainRiskManagement() {
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

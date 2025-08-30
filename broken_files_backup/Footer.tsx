@@ -66,7 +66,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className = "bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -95,23 +95,23 @@ export function Footer() {
               </a>
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Youtube className="h-5 w-5" />
-              </a>
-=======
-=======
+              </a>;
+=======;
+=======;
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
-const Footer: React.FC = () => {
+const Footer: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     { name: "LinkedIn", url: "https://www.linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
     { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
-    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },
-    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
-    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+    { name: "GitHub", url: "https://github.com/Zion-Holdings", icon: "💻", color: "hover:bg-gray-600/20" },;
+    { name: "YouTube", url: "https://www.youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },;
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" };
   ];
 
   const footerSections = [
@@ -156,16 +156,16 @@ const Footer: React.FC = () => {
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support", path: "/support" },
-        { label: "Request Quote", path: "/request-quote" }
-      ]
-    }
+        { label: "Request Quote", path: "/request-quote" };
+      ];
+    };
   ];
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
-    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },
-    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" }
+    { icon: Phone, label: "Phone", value: "+1 302 464 0950", href: "tel:+13024640950" },;
+    { icon: MapPin, label: "Address", value: "364 E Main St STE 1008, Middletown DE 19709", href: "#" },;
+    { icon: Globe, label: "Website", value: "ziontechgroup.com", href: "https://ziontechgroup.com" };
   ];
 
   const containerVariants: Variants = {
@@ -173,25 +173,29 @@ const Footer: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut";
+      };
+    };
   };
 
   return (
-    <footer className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
+    <footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
@@ -306,7 +310,12 @@ const Footer: React.FC = () => {
                     key={link.label}
                     variants={itemVariants}
                     whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
+                    transition = {
+  { type: "spring",
+  stiffness: 300 
+
+
+}}
                   >
                     <Link
                       to={link.path}
@@ -502,10 +511,13 @@ const Footer: React.FC = () => {
               <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        </div>;
+      </div>;
+    </footer>;
   );
 }
 
+export default Footer;
+export default Footer;
+export default Footer;
 export default Footer;

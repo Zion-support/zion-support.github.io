@@ -7,12 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from 'react-router-dom';
 export default function AdminDashboard() {
     const schema = {
-        "@context": "https://schema.org",
+  "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Admin Dashboard",
         "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
-        "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-    };
+  "url": "https://app.ziontechgroup.com/features/admin-dashboard"
+    
+
+
+};
     return (<>
       <SEO title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}

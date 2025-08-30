@@ -1,4 +1,4 @@
-export type PricingTier = {
+export type PricingTier = {;
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -9,7 +9,7 @@ export type PricingTier = {
   popular?: boolean;
 };
 
-export type ServicePricing = {
+export type ServicePricing = {;
   id: string;
   title: string;
   description: string;

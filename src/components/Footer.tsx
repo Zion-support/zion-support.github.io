@@ -166,18 +166,18 @@ const footerSections = [
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
-      { name: 'Sitemap', path: '/sitemap', icon: FileText }
-    ]
-  }
+      { name: 'Sitemap', path: '/sitemap', icon: FileText };
+    ];
+  };
 ];
 
 const socialLinks = [
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
   { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
-  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },
-  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },;
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },;
+  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' };
 ];
 
 export function Footer() {
@@ -186,7 +186,7 @@ export function Footer() {
 
   // Handle scroll to show/hide scroll to top button
   React.useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setShowScrollTop(window.scrollY > 400);
     };
 
@@ -195,8 +195,8 @@ export function Footer() {
   }, []);
 
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: string) => {
-    setExpandedSections(prev => {
+  const toggleSection = (title: string) => {;
+    setExpandedSections(prev => {;
       const newSet = new Set(prev);
       if (newSet.has(title)) {
         newSet.delete(title);
@@ -209,16 +209,16 @@ export function Footer() {
 
   // Scroll to top function
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    window.scrollTo({;
+      top: 0,;
+      behavior: 'smooth';
     });
   };
 
 
 
   return (
-    <footer className="bg-zion-slate-dark text-white relative overflow-hidden">
+    <footer className = "bg-zion-slate-dark text-white relative overflow-hidden">
       {/* Enhanced Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
       
@@ -231,17 +231,24 @@ export function Footer() {
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-            animate={{
+            animate = {
+  {
               x: [0, 50, 0],
               y: [0, -50, 0],
               opacity: [0.1, 0.5, 0.1],
-            }}
-            transition={{
+  
+
+}}
+            transition = {
+  {
               duration: 4 + i * 0.3,
               repeat: Infinity,
               delay: i * 0.2,
-              ease: "easeInOut"
-            }}
+  ease: "easeInOut"
+            
+
+
+}}
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -360,17 +367,32 @@ export function Footer() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-6 h-6" />
           </motion.button>
-        )}
-      </AnimatePresence>
-    </footer>
+        )};
+      </AnimatePresence>;
+    </footer>;
   );
 }

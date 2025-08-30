@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function ProductsIndex() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>Products — Zion</title>
         <meta name="description" content="A showcase of ready-to-run automation suites." />
@@ -70,8 +70,8 @@ export default function ProductsIndex() {
               <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Browse Services</a></Link>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </section>;
+      </main>;
+    </div>;
   );
 }

@@ -15,17 +15,17 @@ export default function ApiPlayground() {
     { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 }
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 };
   ];
 
   const methods = [
     { id: 'all', name: 'All Methods', count: 0 },
     { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
-    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
-    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
+    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },;
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },;
+    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' };
   ];
 
   const apis = [
@@ -207,40 +207,39 @@ export default function ApiPlayground() {
         total: 1
       },
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
-      sdk: 'https://github.com/ziontechgroup/iot-sdk',
-      featured: false
-    }
+      sdk: 'https://github.com/ziontechgroup/iot-sdk',;
+      featured: false;
+    };
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat = > {;
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
 
-  methods.forEach(method => {
+  methods.forEach(method = > {;
     method.count = apis.filter(api => api.method === method.id).length;
   });
 
-  const filteredApis = apis.filter(api => {
-    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredApis = apis.filter(api => {;
+    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          api.description.toLowerCase().includes(searchQuery.toLowerCase());
     
-    const matchesCategory = activeCategory === 'all' || api.category === category.id;
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
     
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: string) => {
+  const getMethodColor = (method: string) => {;
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
@@ -248,14 +247,14 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api: any) => {;
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
     setActiveTab('playground');
   };
 
-  const handleTestApi = async () => {
+  const handleTestApi = async () => {;
     if (!selectedApi) return;
     
     setIsLoading(true);
@@ -267,11 +266,11 @@ export default function ApiPlayground() {
     }, 1500);
   };
 
-  const copyToClipboard = (text: string) => {
+  const copyToClipboard = (text: string) => {;
     navigator.clipboard.writeText(text);
   };
 
-  const downloadResponse = () => {
+  const downloadResponse = () => {;
     if (!responseData) return;
     
     const blob = new Blob([responseData], { type: 'application/json' });
@@ -286,7 +285,7 @@ export default function ApiPlayground() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -644,8 +643,8 @@ export default function ApiPlayground() {
               View Documentation
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

@@ -16,9 +16,9 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   showProgress = false,
   progress = 0,
   variant = 'default',
-  size = 'lg',
-  className = ''
-}) => {
+  size = 'lg',;
+  className = '';
+}) => {;
   const [currentMessage, setCurrentMessage] = useState(message);
   const [messageIndex, setMessageIndex] = useState(0);
 
@@ -30,14 +30,14 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     'Connecting global networks...',
     'Building autonomous systems...',
     'Unleashing quantum capabilities...',
-    'Crafting seamless user experiences...',
-    'Processing complex data streams...',
-    'Initializing advanced algorithms...'
+    'Crafting seamless user experiences...',;
+    'Processing complex data streams...',;
+    'Initializing advanced algorithms...';
   ];
 
   useEffect(() => {
-    if (variant === 'ai' || variant === 'tech' || variant === 'global') {
-      const interval = setInterval(() => {
+    if (variant = == 'ai' || variant === 'tech' || variant === 'global') {;
+      const interval = setInterval(() => {;
         setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length);
       }, 3000); // Change message every 3 seconds
       return () => clearInterval(interval);
@@ -49,42 +49,74 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   }, [message]);
 
   const spinnerSizeClasses = {
-    sm: 'h-4 w-4 border-2',
+  sm: 'h-4 w-4 border-2',
     md: 'h-6 w-6 border-2',
     lg: 'h-8 w-8 border-3',
-    xl: 'h-12 w-12 border-4',
-  };
+    xl: 'h-12 w-12 border-4',;
+  ;
+  ;
+
+
+};
 
   const spinnerColorClasses = {
-    default: 'border-t-blue-500',
+  default: 'border-t-blue-500',
     ai: 'border-t-purple-500',
     tech: 'border-t-cyan-500',
-    global: 'border-t-green-500',
-  };
+    global: 'border-t-green-500',;
+  ;
+  ;
+
+
+};
 
   const iconMap = {
-    default: Loader2,
+  default: Loader2,
     ai: Brain,
     tech: Zap,
-    global: Globe,
-  };
+    global: Globe,;
+  ;
+  ;
+
+
+};
 
   const IconComponent = iconMap[variant];
 
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+    <div className = {`flex flex-col items-center justify-center ${className}`}>
       <motion.div
         className={`rounded-full animate-spin ${spinnerSizeClasses[size]} ${spinnerColorClasses[variant]} border-solid border-gray-700`}
         initial={{ rotate: 0 }}
         animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+        transition = {
+  { duration: 1, repeat: Infinity,
+  ease: 'linear' 
+
+
+}}
       >
         {variant !== 'default' && (
           <motion.div
             className="absolute inset-0 flex items-center justify-center text-white"
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, repeat: Infinity, repeatType: 'reverse' }}
+            initial = {
+  { opacity: 0,
+  scale: 0.5 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+            transition = {
+  { duration: 0.5, repeat: Infinity,
+  repeatType: 'reverse' 
+
+
+}}
           >
             <IconComponent className={`h-3 w-3 ${size === 'xl' ? 'h-6 w-6' : ''}`} />
           </motion.div>
@@ -94,9 +126,24 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         <AnimatePresence mode="wait">
           <motion.p
             key={messageIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+            initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  y: -10 
+
+
+}}
             transition={{ duration: 0.5 }}
             className="mt-3 text-sm text-gray-400 text-center max-w-xs"
           >
@@ -112,18 +159,18 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.5 }}
           ></motion.div>
-        </div>
-      )}
-    </div>
+        </div>;
+      )};
+    </div>;
   );
 };
 
 export const ZionLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
-  <EnhancedLoadingSpinner {...props} variant="tech" />
+  <EnhancedLoadingSpinner {...props} variant = "tech" />;
 );
 
 export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
-  <EnhancedLoadingSpinner {...props} variant="tech" />
+  <EnhancedLoadingSpinner {...props} variant = "tech" />;
 );
 
 interface LoadingOverlayProps {
@@ -148,9 +195,9 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
         >
-          <EnhancedLoadingSpinner message={message} showProgress={progress !== undefined} progress={progress} variant={variant} size="xl" />
-        </motion.div>
-      )}
-    </AnimatePresence>
+          <EnhancedLoadingSpinner message={message} showProgress={progress !== null} progress={progress} variant={variant} size="xl" />
+        </motion.div>;
+      )};
+    </AnimatePresence>;
   );
 };

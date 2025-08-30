@@ -214,8 +214,6 @@ export function AdvancedAIBusinessProcessAutomation() {
             : p));
     };
     const filteredProcesses = businessProcesses.filter(process => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch;

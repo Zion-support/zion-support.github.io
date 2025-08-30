@@ -67,7 +67,7 @@ import {
   type ExpandedServicePricing 
 } from '@/data/expandedServicesPricing2027';
 
-const ExpandedServicesPricingGuide2027: React.FC = () => {
+const ExpandedServicesPricingGuide2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
@@ -82,17 +82,17 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
     if (searchQuery) {
       pricing = pricing.filter(p => 
-        p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
+        p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
       );
     }
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
         return Shield;
       case 'Data Analytics':
         return BarChart3;
@@ -109,9 +109,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
         return 'from-blue-500 to-cyan-600';
@@ -128,9 +128,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const getMarketPositionColor = (position: string) => {
-    switch (position) {
-      case 'leader':
+  const getMarketPositionColor = (position: string) => {;
+    switch (position) {;
+      case 'leader':;
         return 'bg-green-100 text-green-800';
       case 'challenger':
         return 'bg-blue-100 text-blue-800';
@@ -143,15 +143,25 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
     }
   };
 
-  const renderPricingCard = (pricing: ExpandedServicePricing) => {
+  const renderPricingCard = (pricing: ExpandedServicePricing) => {;
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
     return (
       <motion.div
-        key={pricing.serviceId}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        key = {pricing.serviceId}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
       >
@@ -209,9 +219,24 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-starter' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                       className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
                     >
                       <div className="space-y-2">
@@ -262,9 +287,24 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-professional' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                       className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700"
                     >
                       <div className="space-y-2">
@@ -312,9 +352,24 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <AnimatePresence>
                   {expandedService === pricing.serviceId + '-enterprise' && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                       className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
                     >
                       <div className="space-y-2">
@@ -432,14 +487,14 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 <span>Learn More</span>
               </a>
             </div>
-          </div>
-        </div>
-      </motion.div>
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO 
         title="Expanded Services Pricing Guide 2027 - Zion Tech Group"
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
@@ -451,8 +506,18 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
@@ -462,9 +527,24 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services. 
@@ -473,9 +553,24 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -594,9 +689,9 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <span>Call Sales Team</span>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

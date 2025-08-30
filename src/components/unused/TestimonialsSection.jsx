@@ -46,7 +46,11 @@ export function TestimonialsSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -63,7 +67,17 @@ export function TestimonialsSection() {
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
           </h2>
@@ -102,7 +116,22 @@ export function TestimonialsSection() {
         </motion.div>
 
         {/* Stats */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.5 }} className="mt-16 text-center">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.8,
+  delay: 0.5 
+
+
+}} className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>

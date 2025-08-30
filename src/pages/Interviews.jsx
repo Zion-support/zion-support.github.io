@@ -26,15 +26,13 @@ function InterviewsContent() {
             ['confirmed', 'requested'].includes(interview.status);
     })
         .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime());
-    const pendingInterviews = interviews.filter(interview => interview.status === 'requested');
     const pastInterviews = interviews.filter(interview => {
         const interviewDate = parseISO(interview.scheduled_date);
         return !isAfter(interviewDate, now) ||
             ['completed', 'declined', 'cancelled'].includes(interview.status);
     });
     // Group interviews by date
-    const groupInterviewsByDate = (interviews) => {
-        const grouped = {};
+    const grouped = {};
         interviews.forEach((interview) => {
             const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
             if (!grouped[dateKey]) {
@@ -45,7 +43,6 @@ function InterviewsContent() {
         return grouped;
     };
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
-    const pendingGrouped = groupInterviewsByDate(pendingInterviews);
     const pastGrouped = groupInterviewsByDate(pastInterviews);
     const renderInterviewGroups = (groupedInterviews) => {
         return Object.entries(groupedInterviews)

@@ -72,7 +72,7 @@ interface SecuritySettings {
   }>;
 }
 
-const Profile: React.FC = () => {
+const Profile: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -131,12 +131,12 @@ const Profile: React.FC = () => {
     'Manufacturing',
     'Retail',
     'Education',
-    'Government',
-    'Non-profit',
-    'Other'
+    'Government',;
+    'Non-profit',;
+    'Other';
   ];
 
-  const handleProfileUpdate = async () => {
+  const handleProfileUpdate = async () => {;
     setIsLoading(true);
     setError('');
     setSuccess('');
@@ -154,8 +154,8 @@ const Profile: React.FC = () => {
     }
   };
 
-  const handlePasswordChange = async () => {
-    if (!currentPassword || !newPassword || !confirmPassword) {
+  const handlePasswordChange = async () => {;
+    if (!currentPassword || !newPassword || !confirmPassword) {;
       setError('Please fill in all password fields');
       return;
     }
@@ -188,13 +188,13 @@ const Profile: React.FC = () => {
   };
 
   const handleNotificationToggle = (key: keyof NotificationSettings) => {
-    setNotifications(prev => ({
-      ...prev,
-      [key]: !prev[key]
+    setNotifications(prev => ({;
+      ...prev,;
+      [key]: !prev[key];
     }));
   };
 
-  const getPasswordStrength = (password: string) => {
+  const getPasswordStrength = (password: string) => {;
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -206,23 +206,33 @@ const Profile: React.FC = () => {
 
   const stats = [
     { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },
-    { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5" /> },
-    { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5" /> },
-    { label: 'Rating', value: '4.9', icon: <Star className="w-5 h-5" /> }
+    { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5" /> },;
+    { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5" /> },;
+    { label: 'Rating', value: '4.9', icon: <Star className="w-5 h-5" /> };
   ];
 
   const achievements = [
     { title: 'First Project', description: 'Completed your first project', icon: <Award className="w-6 h-6" />, earned: true },
     { title: 'Team Player', description: 'Collaborated on 5+ projects', icon: <UserCheck className="w-6 h-6" />, earned: true },
-    { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w-6 h-6" />, earned: true },
-    { title: 'Cloud Master', description: 'Deployed 10+ cloud solutions', icon: <Cloud className="w-6 h-6" />, earned: false },
-    { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false }
+    { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w-6 h-6" />, earned: true },;
+    { title: 'Cloud Master', description: 'Deployed 10+ cloud solutions', icon: <Cloud className="w-6 h-6" />, earned: false },;
+    { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false };
   ];
 
   const renderProfileTab = () => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
@@ -258,9 +268,24 @@ const Profile: React.FC = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 + index * 0.1 
+
+
+}}
               className="text-center p-4 bg-white/5 rounded-xl border border-slate-600/30"
             >
               <div className="flex justify-center mb-2">
@@ -287,7 +312,12 @@ const Profile: React.FC = () => {
               <input
                 type="text"
                 value={profile.firstName}
-                onChange={(e) => setProfile(prev => ({ ...prev, firstName: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  firstName: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -301,7 +331,12 @@ const Profile: React.FC = () => {
               <input
                 type="text"
                 value={profile.lastName}
-                onChange={(e) => setProfile(prev => ({ ...prev, lastName: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  lastName: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -317,7 +352,12 @@ const Profile: React.FC = () => {
               <input
                 type="email"
                 value={profile.email}
-                onChange={(e) => setProfile(prev => ({ ...prev, email: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  email: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -331,7 +371,12 @@ const Profile: React.FC = () => {
               <input
                 type="tel"
                 value={profile.phone}
-                onChange={(e) => setProfile(prev => ({ ...prev, phone: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  phone: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -347,7 +392,12 @@ const Profile: React.FC = () => {
               <input
                 type="text"
                 value={profile.company}
-                onChange={(e) => setProfile(prev => ({ ...prev, company: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  company: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -359,7 +409,12 @@ const Profile: React.FC = () => {
             <input
               type="text"
               value={profile.position}
-              onChange={(e) => setProfile(prev => ({ ...prev, position: e.target.value }))}
+              onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  position: e.target.value 
+
+
+}))}
               disabled={!isEditing}
               className="w-full px-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
             />
@@ -373,7 +428,12 @@ const Profile: React.FC = () => {
               <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <select
                 value={profile.industry}
-                onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  industry: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -391,7 +451,12 @@ const Profile: React.FC = () => {
               <input
                 type="text"
                 value={profile.location}
-                onChange={(e) => setProfile(prev => ({ ...prev, location: e.target.value }))}
+                onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  location: e.target.value 
+
+
+}))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -406,7 +471,12 @@ const Profile: React.FC = () => {
             <input
               type="url"
               value={profile.website}
-              onChange={(e) => setProfile(prev => ({ ...prev, website: e.target.value }))}
+              onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  website: e.target.value 
+
+
+}))}
               disabled={!isEditing}
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
             />
@@ -417,7 +487,12 @@ const Profile: React.FC = () => {
           <label className="block text-white font-medium mb-2">Bio</label>
           <textarea
             value={profile.bio}
-            onChange={(e) => setProfile(prev => ({ ...prev, bio: e.target.value }))}
+            onChange = {
+  (e) => setProfile(prev => ({ ...prev,
+  bio: e.target.value 
+
+
+}))}
             disabled={!isEditing}
             rows={4}
             className="w-full px-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed resize-none"
@@ -454,9 +529,24 @@ const Profile: React.FC = () => {
           {achievements.map((achievement, index) => (
             <motion.div
               key={achievement.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 + index * 0.1 
+
+
+}}
               className={`p-4 rounded-xl border ${
                 achievement.earned 
                   ? 'bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30' 
@@ -482,15 +572,25 @@ const Profile: React.FC = () => {
               )}
             </motion.div>
           ))}
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   const renderSecurityTab = () => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
@@ -512,7 +612,12 @@ const Profile: React.FC = () => {
               />
               <button
                 type="button"
-                onClick={() => setShowPasswords(prev => ({ ...prev, current: !prev.current }))}
+                onClick = {
+  () => setShowPasswords(prev => ({ ...prev,
+  current: !prev.current 
+
+
+}))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {showPasswords.current ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -533,7 +638,12 @@ const Profile: React.FC = () => {
               />
               <button
                 type="button"
-                onClick={() => setShowPasswords(prev => ({ ...prev, new: !prev.new }))}
+                onClick = {
+  () => setShowPasswords(prev => ({ ...prev,
+  new: !prev.new 
+
+
+}))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {showPasswords.new ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -545,11 +655,16 @@ const Profile: React.FC = () => {
                   {[1, 2, 3, 4].map((level) => (
                     <div
                       key={level}
-                      className={`h-1 flex-1 rounded-full transition-all duration-300 ${
+                      className = {
+  `h-1 flex-1 rounded-full transition-all duration-300 ${
                         level <= passwordStrength.score
-                          ? passwordStrength.color.replace('text-', 'bg-')
+                          ? passwordStrength.color.replace('text-',
+  'bg-')
                           : 'bg-slate-600/30'
-                      }`}
+                      
+
+
+}`}
                     />
                   ))}
                 </div>
@@ -573,7 +688,12 @@ const Profile: React.FC = () => {
               />
               <button
                 type="button"
-                onClick={() => setShowPasswords(prev => ({ ...prev, confirm: !prev.confirm }))}
+                onClick = {
+  () => setShowPasswords(prev => ({ ...prev,
+  confirm: !prev.confirm 
+
+
+}))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {showPasswords.confirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -615,7 +735,12 @@ const Profile: React.FC = () => {
               <input
                 type="checkbox"
                 checked={security.twoFactorEnabled}
-                onChange={(e) => setSecurity(prev => ({ ...prev, twoFactorEnabled: e.target.checked }))}
+                onChange = {
+  (e) => setSecurity(prev => ({ ...prev,
+  twoFactorEnabled: e.target.checked 
+
+
+}))}
                 className="sr-only peer"
               />
               <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>
@@ -629,7 +754,12 @@ const Profile: React.FC = () => {
             </div>
             <select
               value={security.sessionTimeout}
-              onChange={(e) => setSecurity(prev => ({ ...prev, sessionTimeout: Number(e.target.value) }))}
+              onChange = {
+  (e) => setSecurity(prev => ({ ...prev,
+  sessionTimeout: Number(e.target.value) 
+
+
+}))}
               className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               <option value={15}>15 minutes</option>
@@ -666,15 +796,25 @@ const Profile: React.FC = () => {
               </span>
             </div>
           ))}
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   const renderNotificationsTab = () => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
@@ -708,15 +848,25 @@ const Profile: React.FC = () => {
               </label>
             </div>
           ))}
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   const renderPreferencesTab = () => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
@@ -791,18 +941,28 @@ const Profile: React.FC = () => {
             </div>
             <Trash2 className="w-5 h-5 text-red-400" />
           </button>
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
@@ -813,8 +973,18 @@ const Profile: React.FC = () => {
         {/* Error/Success Messages */}
         {error && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
           >
             <AlertCircle className="w-5 h-5" />
@@ -824,8 +994,18 @@ const Profile: React.FC = () => {
 
         {success && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
           >
             <CheckCircle className="w-5 h-5" />
@@ -860,9 +1040,9 @@ const Profile: React.FC = () => {
         {activeTab === 'profile' && renderProfileTab()}
         {activeTab === 'security' && renderSecurityTab()}
         {activeTab === 'notifications' && renderNotificationsTab()}
-        {activeTab === 'preferences' && renderPreferencesTab()}
-      </div>
-    </div>
+        {activeTab === 'preferences' && renderPreferencesTab()};
+      </div>;
+    </div>;
   );
 };
 

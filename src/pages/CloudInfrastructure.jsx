@@ -4,32 +4,6 @@ import { motion } from 'framer-motion';
 import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign } from 'lucide-react';
 export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
-    const cloudProviders = [
-        {
-            id: 'aws',
-            name: 'Amazon Web Services',
-            logo: 'AWS',
-            description: 'Leading cloud platform with comprehensive services',
-            features: ['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53'],
-            icon: Cloud
-        },
-        {
-            id: 'azure',
-            name: 'Microsoft Azure',
-            logo: 'Azure',
-            description: 'Enterprise-grade cloud solutions',
-            features: ['Virtual Machines', 'Azure SQL', 'App Service, Functions'],
-            icon: Server
-        },
-        {
-            id: 'gcp',
-            name: 'Google Cloud Platform',
-            logo: 'GCP',
-            description: 'Innovative cloud technologies',
-            features: ['Compute Engine', 'Cloud Storage', 'BigQuery, AI Platform'],
-            icon: Globe
-        }
-    ];
     const cloudServices = [
         {
             title: 'Infrastructure as Code',
@@ -86,7 +60,17 @@ export default function CloudInfrastructure() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} className="text-center mb-16">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">
                 <Cloud className="w-10 h-10 text-white"/>
@@ -116,8 +100,28 @@ export default function CloudInfrastructure() {
           </motion.div>
 
           {/* Stats Grid */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (<motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + index * 0.1 }} className="text-center p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            {stats.map((stat, index) => (<motion.div key={stat.label} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.2 + index * 0.1 }} className="text-center p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
                 <div className="flex justify-center mb-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                     <stat.icon className="w-6 h-6 text-white"/>
@@ -133,7 +137,17 @@ export default function CloudInfrastructure() {
       {/* Cloud Providers Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Multi-Cloud Expertise</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               We work with all major cloud providers to give you the best solution for your needs
@@ -141,7 +155,17 @@ export default function CloudInfrastructure() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {cloudProviders.map((provider, index) => (<motion.button key={provider.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} onClick={() => setSelectedProvider(provider.id)} className={`p-6 rounded-lg transition-all duration-200 text-left ${selectedProvider === provider.id
+            {cloudProviders.map((provider, index) => (<motion.button key={provider.id} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} onClick={() => setSelectedProvider(provider.id)} className={`p-6 rounded-lg transition-all duration-200 text-left ${selectedProvider === provider.id
                 ? 'bg-gradient-to-r from-cyan-400/20 to-purple-600/20 border-cyan-400/50'
                 : 'bg-white/10 hover:bg-white/20 border-white/20'} border`}>
                 <div className="flex items-center space-x-4">
@@ -162,7 +186,17 @@ export default function CloudInfrastructure() {
           </div>
 
           {/* Provider Details */}
-          <motion.div key={selectedProvider} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+          <motion.div key={selectedProvider} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold text-white mb-4">
                 {cloudProviders.find(p => p.id === selectedProvider)?.name} Solutions
@@ -192,7 +226,17 @@ export default function CloudInfrastructure() {
       {/* Benefits Section */}
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Cloud Infrastructure?</h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Modern cloud solutions provide unprecedented flexibility, security, and cost efficiency
@@ -200,7 +244,17 @@ export default function CloudInfrastructure() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-200 group">
+            {benefits.map((benefit, index) => (<motion.div key={benefit.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-200 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <benefit.icon className="w-8 h-8 text-white"/>
                 </div>
@@ -214,7 +268,17 @@ export default function CloudInfrastructure() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-400/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }}>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Move to the Cloud?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Let's design and implement a cloud infrastructure that grows with your business
@@ -237,7 +301,17 @@ export default function CloudInfrastructure() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+            <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white"/>
               </div>
@@ -245,7 +319,17 @@ export default function CloudInfrastructure() {
               <p className="text-gray-300">+1 (302) 464-0950</p>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+            <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white"/>
               </div>
@@ -253,7 +337,17 @@ export default function CloudInfrastructure() {
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
+            <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-white"/>
               </div>

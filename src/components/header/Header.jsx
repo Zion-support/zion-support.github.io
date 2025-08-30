@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
+import { Logo } from "./Logo";
+import { UserMenu } from "./UserMenu";
+import { LanguageSelector } from "./LanguageSelector";
 import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
+import { MobileMenu } from "./MobileMenu";
 import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -29,7 +29,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     primaryColor,
     backgroundColor: '#000000', // Default dark background
     textColor: '#ffffff', // Default light text
-  } : undefined);
+  } : null);
 
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor,
@@ -49,7 +49,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (query.trim()) {
-      navigate(`/search?q=${encodeURIComponent(query)}`);
+      router(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
   };
@@ -89,7 +89,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
+                router(`/search?q=${encodeURIComponent(text)}`);
                 setQuery("");
               }} 
               searchSuggestions={searchSuggestions}
@@ -129,7 +129,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               value={query} 
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
-                navigate(`/search?q=${encodeURIComponent(text)}`);
+                router(`/search?q=${encodeURIComponent(text)}`);
                 setQuery("");
               }} 
               searchSuggestions={searchSuggestions} 

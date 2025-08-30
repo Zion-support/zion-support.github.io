@@ -1,6 +1,6 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 import { Star, Zap, Shield, TrendingUp, Users } from 'lucide-react';
 export function ServiceShowcase({ services }) {
     const getCategoryIcon = (category) => {

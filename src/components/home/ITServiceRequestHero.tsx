@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function ITServiceRequestHero() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
+    <section className = "py-20 bg-gradient-to-br from-blue-900 via-slate-900 to-purple-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -14,8 +14,18 @@ export function ITServiceRequestHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: -30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -68,10 +78,25 @@ export function ITServiceRequestHero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
           >
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -130,8 +155,8 @@ export function ITServiceRequestHero() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 }

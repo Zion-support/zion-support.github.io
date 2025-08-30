@@ -29,19 +29,29 @@ const features = [
   },
   {
     icon: "📊",
-    title: "Real-Time Analytics",
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"
-  }
+    title: "Real-Time Analytics",;
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly";
+  };
 ];
 
 export function FeatureHighlights() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -58,10 +68,25 @@ export function FeatureHighlights() {
             <motion.div
               key={feature.title}
               className="text-center group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{feature.icon}</span>
@@ -80,17 +105,32 @@ export function FeatureHighlights() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>
             <span className="text-2xl">→</span>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

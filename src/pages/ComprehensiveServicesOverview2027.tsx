@@ -142,24 +142,24 @@ const MICRO_SAAS_SERVICES = [
     featured: true,
     createdAt: '2024-01-10',
     href: '/services/website-analytics',
-    tags: ['Analytics', 'Web', 'Performance'],
-    images: ['/images/analytics.jpg']
-  }
+    tags: ['Analytics', 'Web', 'Performance'],;
+    images: ['/images/analytics.jpg'];
+  };
 ];
 
 const categories = [
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },
-  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },
-  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 }
+  { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
+  { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
+  { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
   { id: 'monthly', name: 'Monthly' },
-  { id: 'yearly', name: 'Yearly' },
-  { id: 'one-time', name: 'One-time' },
-  { id: 'usage-based', name: 'Usage-based' }
+  { id: 'yearly', name: 'Yearly' },;
+  { id: 'one-time', name: 'One-time' },;
+  { id: 'usage-based', name: 'Usage-based' };
 ];
 
 export default function ComprehensiveServicesOverview2027() {
@@ -183,9 +183,9 @@ export default function ComprehensiveServicesOverview2027() {
       const query = searchQuery.toLowerCase();
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(query) ||
-        service.description.toLowerCase().includes(query) ||
-        service.tags.some(tag => tag.toLowerCase().includes(query)) ||
-        service.subcategory?.toLowerCase().includes(query)
+        service.description.toLowerCase().includes(query) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
+        service.subcategory?.toLowerCase().includes(query);
       );
     }
     filtered.sort((a, b) => {
@@ -207,8 +207,18 @@ export default function ComprehensiveServicesOverview2027() {
 
   const ServiceCard = ({ service }: { service: any }) => (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
     >
@@ -274,19 +284,29 @@ export default function ComprehensiveServicesOverview2027() {
             Learn More
             <ArrowRight className="ml-2 w-4 h-4" />
           </Link>
-        </Button>
-      </div>
-    </motion.div>
+        </Button>;
+      </div>;
+    </motion.div>;
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-16">
           <motion.h1 
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
@@ -296,9 +316,24 @@ export default function ComprehensiveServicesOverview2027() {
             </span>
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
@@ -390,14 +425,14 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
-            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
-            <Button
-              onClick={() => {
+            <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
+            <Button;
+              onClick={() => {;
                 setSelectedCategory('all');
                 setSelectedPricing('all');
                 setSearchQuery('');
               }}
-              className="bg-zion-cyan hover:bg-zion-cyan-light"
+              className = "bg-zion-cyan hover:bg-zion-cyan-light"
             >
               Clear Filters
             </Button>
@@ -427,8 +462,8 @@ export default function ComprehensiveServicesOverview2027() {
               </a>
             </Button>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

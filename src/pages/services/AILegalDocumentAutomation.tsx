@@ -9,27 +9,27 @@ export default function AILegalDocumentAutomation() {
     'Real-time legal document collaboration',
     'Advanced clause library and templates',
     'Automated contract renewal reminders',
-    'Legal document version control and tracking',
-    'Integration with e-signature platforms',
-    'Comprehensive audit trail and reporting'
+    'Legal document version control and tracking',;
+    'Integration with e-signature platforms',;
+    'Comprehensive audit trail and reporting';
   ];
 
   const benefits = [
     'Reduce legal document creation time by 85%',
     'Minimize legal risks and compliance issues',
     'Cut legal costs by up to 60%',
-    'Improve contract accuracy and consistency',
-    'Enable faster deal closures and negotiations',
-    'Provide 24/7 legal document assistance'
+    'Improve contract accuracy and consistency',;
+    'Enable faster deal closures and negotiations',;
+    'Provide 24/7 legal document assistance';
   ];
 
   const useCases = [
     'Contract management and automation',
     'Legal document review and analysis',
     'Compliance monitoring and reporting',
-    'Risk assessment and mitigation',
-    'Legal workflow optimization',
-    'Regulatory compliance automation'
+    'Risk assessment and mitigation',;
+    'Legal workflow optimization',;
+    'Regulatory compliance automation';
   ];
 
   const tiers = [
@@ -65,21 +65,25 @@ export default function AILegalDocumentAutomation() {
         'Custom legal frameworks',
         'Dedicated legal support',
         'API integrations',
-        'Advanced analytics & reporting'
-      ]
-    }
+        'Advanced analytics & reporting';
+      ];
+    };
   ];
 
   const technicalSpecs = {
-    technology: ['GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'PostgreSQL'],
+  technology: ['GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'PostgreSQL'],
     integrations: ['DocuSign', 'Adobe Sign', 'Salesforce', 'HubSpot', 'Microsoft 365'],
     security: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.9%',
-    compliance: ['ISO 27001', 'SOC 2', 'GDPR', 'CCPA', 'HIPAA']
-  };
+    compliance: ['ISO 27001', 'SOC 2', 'GDPR', 'CCPA',;
+  'HIPAA'];
+  ;
+
+
+};
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -218,8 +222,8 @@ export default function AILegalDocumentAutomation() {
               Learn More <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

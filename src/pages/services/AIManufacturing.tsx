@@ -7,9 +7,9 @@ export default function AIManufacturing() {
     'Automated production planning and optimization',
     'Real-time supply chain and inventory management',
     'Predictive analytics for production efficiency',
-    'Smart factory automation and IoT integration',
-    'Integration with major ERP and MES systems',
-    'Custom AI models for industry-specific processes'
+    'Smart factory automation and IoT integration',;
+    'Integration with major ERP and MES systems',;
+    'Custom AI models for industry-specific processes';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIManufacturing() {
     },
     { 
       name: 'Large Manufacturer', 
-      price: '$2,999/mo', 
-      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+      price: '$2,999/mo', ;
+      details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Production line optimization and monitoring',
     'Quality control and defect prevention',
     'Predictive maintenance and equipment management',
-    'Supply chain optimization and inventory management',
-    'Energy efficiency and sustainability',
-    'Workforce safety and compliance'
+    'Supply chain optimization and inventory management',;
+    'Energy efficiency and sustainability',;
+    'Workforce safety and compliance';
   ];
 
   const benefits = [
     'Improve production efficiency by 25-40%',
     'Reduce equipment downtime by 30-50%',
     'Cut quality defects by 40-60%',
-    'Optimize inventory levels by 20-35%',
-    'Enhance worker safety and compliance',
-    'Scale manufacturing operations efficiently'
+    'Optimize inventory levels by 20-35%',;
+    'Enhance worker safety and compliance',;
+    'Scale manufacturing operations efficiently';
   ];
 
   const industries = [
     'Automotive Manufacturing',
     'Electronics & Semiconductors',
     'Food & Beverage Processing',
-    'Pharmaceutical Manufacturing',
-    'Textiles & Apparel',
-    'Aerospace & Defense'
+    'Pharmaceutical Manufacturing',;
+    'Textiles & Apparel',;
+    'Aerospace & Defense';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIManufacturing() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

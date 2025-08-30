@@ -48,27 +48,37 @@ export default function Partners() {
       icon: Globe,
       partners: [
         { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
-        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
-      ]
-    }
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' };
+      ];
+    };
   ];
 
   const benefits = [
     { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },
-    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
-    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
-    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
+    { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },;
+    { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },;
+    { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.5 }}
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
@@ -89,8 +99,18 @@ export default function Partners() {
           {partnerCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-sm border border-gray-200 p-8"
             >
@@ -108,8 +128,18 @@ export default function Partners() {
                 {category.partners.map((partner, partnerIndex) => (
                   <motion.div
                     key={partner.name}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
                     transition={{ delay: (index * 0.1) + (partnerIndex * 0.05) }}
                     className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
                   >
@@ -134,8 +164,18 @@ export default function Partners() {
 
         {/* Benefits Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.4 }}
           className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
         >
@@ -144,8 +184,18 @@ export default function Partners() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: 0.5 + index * 0.1 }}
                 className="text-center p-6"
               >
@@ -161,8 +211,18 @@ export default function Partners() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.6 }}
           className="mt-16 text-center"
         >
@@ -187,8 +247,8 @@ export default function Partners() {
               </a>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

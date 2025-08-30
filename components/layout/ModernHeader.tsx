@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Zap, Shield, Cpu, Database, Globe, Smartphone, Lock } from 'lucide-react';
 
-const ModernHeader: React.FC = () => {
+const ModernHeader: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -20,21 +20,26 @@ const ModernHeader: React.FC = () => {
     { name: 'AI Services', icon: Cpu, href: '/services/ai', description: 'Intelligent automation & AI solutions' },
     { name: 'IT Solutions', icon: Shield, href: '/services/it', description: 'Comprehensive IT infrastructure' },
     { name: 'SAAS Platforms', icon: Database, href: '/services/saas', description: 'Custom software solutions' },
-    { name: 'Development', icon: Globe, href: '/services/development', description: 'Web & mobile development' },
-    { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security', description: 'Secure cloud infrastructure' },
-    { name: 'Analytics', icon: Database, href: '/services/analytics', description: 'Data insights & reporting' }
+    { name: 'Development', icon: Globe, href: '/services/development', description: 'Web & mobile development' },;
+    { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security', description: 'Secure cloud infrastructure' },;
+    { name: 'Analytics', icon: Database, href: '/services/analytics', description: 'Data insights & reporting' };
   ];
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition = {
+  { duration: 0.6,
+  ease: "easeOut" 
+
+
+}}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -79,9 +84,24 @@ const ModernHeader: React.FC = () => {
                 {activeDropdown === 'services' && (
                   <motion.div
                     className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-md border border-gray-200 rounded-2xl p-6 shadow-2xl"
-                    initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                    initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+}}
+                    animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+}}
+                    exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+}}
                     transition={{ duration: 0.2 }}
                     onMouseEnter={() => setActiveDropdown('services')}
                     onMouseLeave={() => setActiveDropdown(null)}
@@ -161,9 +181,24 @@ const ModernHeader: React.FC = () => {
         {isMenuOpen && (
           <motion.div
             className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 py-6 space-y-4">
@@ -191,9 +226,9 @@ const ModernHeader: React.FC = () => {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+        )};
+      </AnimatePresence>;
+    </motion.header>;
   );
 };
 

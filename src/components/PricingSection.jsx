@@ -117,7 +117,11 @@ export function PricingSection() {
         }
     };
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+},
         visible: {
             y: 0,
             opacity: 1,
@@ -137,7 +141,17 @@ export function PricingSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Simple, <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Transparent</span> Pricing
           </h2>
@@ -165,7 +179,12 @@ export function PricingSection() {
 
         {/* Pricing Plans */}
         <motion.div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 300 }} className="relative">
+          {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition = {
+  { type: "spring",
+  stiffness: 300 
+
+
+}} className="relative">
               {/* Popular badge */}
               {plan.popular && (<div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
                   <div className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
@@ -221,7 +240,22 @@ export function PricingSection() {
         </motion.div>
 
         {/* Add-ons Section */}
-        <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <motion.div className="text-center mb-16" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}>
           <h3 className="text-3xl font-bold text-white mb-6">
             Additional <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
           </h3>
@@ -231,7 +265,12 @@ export function PricingSection() {
         </motion.div>
 
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition={{ type: "spring", stiffness: 300 }}>
+          {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition = {
+  { type: "spring",
+  stiffness: 300 
+
+
+}}>
               <div className="p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <div className="text-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
@@ -264,7 +303,22 @@ export function PricingSection() {
         </motion.div>
 
         {/* FAQ Section */}
-        <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
+        <motion.div className="text-center mt-20" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+}}>
           <h3 className="text-2xl font-bold text-white mb-6">Have Questions?</h3>
           <p className="text-zion-slate-light mb-8">
             Our team is here to help you choose the right plan

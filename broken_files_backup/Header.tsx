@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Header: React.FC = () => {;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -12,27 +12,27 @@ const Header: React.FC = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
-    { name: 'Solutions', path: '/solutions' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Solutions', path: '/solutions' },;
+    { name: 'Blog', path: '/blog' },;
+    { name: 'Contact', path: '/contact' };
   ];
 
-  const isActive = (path: string) => {
+  const isActive = (path: string) => {;
     return location.pathname === path;
   };
 
-  const closeMenu = () => {
+  const closeMenu = () => {;
     setIsMenuOpen(false);
     setActiveDropdown(null);
   };
 
-  const toggleDropdown = (name: string) => {
+  const toggleDropdown = (name: string) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
+    const handleResize = () => {;
+      if (window.innerWidth > 768) {;
         setIsMenuOpen(false);
         setActiveDropdown(null);
       }
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -74,15 +74,15 @@ const Header: React.FC = () => {
               {items.map((item) => (
                 <Link
                   key={item.path}
-                  href={item.path}
-                  className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
-                  onClick={() => {
+                  href={item.path};
+                  className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors";
+                  onClick={() => {;
                     setIsServicesDropdownOpen(false);
                     setIsCompanyDropdownOpen(false);
                     setIsResourcesDropdownOpen(false);
                   }}
                 >
-                  {item.icon && <item.icon className="h-5 w-5" />}
+                  {item.icon && <item.icon className = "h-5 w-5" />}
                   <div>
                     <div className="font-medium">{item.name}</div>
                   </div>
@@ -90,13 +90,13 @@ const Header: React.FC = () => {
               ))}
             </div>
           </div>
-        </div>
-      )}
-    </div>
+        </div>;
+      )};
+    </div>;
   );
 
   return (
-    <header className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
+    <header className = "bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -157,9 +157,24 @@ const Header: React.FC = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
             className="md:hidden bg-gray-900 border-t border-gray-800"
           >
             <nav className="px-4 py-6 space-y-4">
@@ -197,9 +212,9 @@ const Header: React.FC = () => {
               </div>
             </nav>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </header>
+        )};
+      </AnimatePresence>;
+    </header>;
   );
 };
 

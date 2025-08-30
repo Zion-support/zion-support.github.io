@@ -7,9 +7,9 @@ export default function AIMongoDB() {
     'Automated MongoDB monitoring and alerting',
     'Predictive analytics for MongoDB scaling',
     'Smart MongoDB security and compliance',
-    'AI-driven MongoDB automation and orchestration',
-    'Real-time MongoDB analytics and insights',
-    'Custom AI models for MongoDB applications'
+    'AI-driven MongoDB automation and orchestration',;
+    'Real-time MongoDB analytics and insights',;
+    'Custom AI models for MongoDB applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIMongoDB() {
     },
     { 
       name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full MongoDB suite', '24/7 dedicated support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full MongoDB suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'MongoDB optimization',
     'MongoDB management',
     'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'MongoDB scaling and management'
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'MongoDB scaling and management';
   ];
 
   const benefits = [
     'Improve MongoDB performance by 50-80%',
     'Reduce MongoDB query time by 40-70%',
     'Cut operational costs by 35-65%',
-    'Enhance MongoDB reliability and scalability',
-    'Optimize resource utilization',
-    'Scale MongoDB operations efficiently'
+    'Enhance MongoDB reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale MongoDB operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIMongoDB() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -28,7 +28,11 @@ export function HeroSection() {
     };
     
     const itemVariants = {
-        hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+},
         visible: {
             opacity: 1,
             y: 0,
@@ -40,38 +44,32 @@ export function HeroSection() {
     };
     
     const floatingVariants = {
-        animate: {
+  animate: {
             y: [-15, 15, -15],
             rotate: [0, 5, 0],
             transition: {
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut"
-            }
-        }
-    };
-    
-    const pulseVariants = {
-        animate: {
-            scale: [1, 1.1, 1],
-            opacity: [0.5, 0.8, 0.5],
-            transition: {
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-            }
+  ease: "easeInOut"
+            
+
+
+}
         }
     };
     
     const particleVariants = {
-        animate: {
+  animate: {
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.7, 0.3],
             transition: {
                 duration: 3,
                 repeat: Infinity,
-                ease: "easeInOut"
-            }
+  ease: "easeInOut"
+            
+
+
+}
         }
     };
 
@@ -80,7 +78,12 @@ export function HeroSection() {
             {/* Enhanced background with parallax effect */}
             <motion.div 
                 className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90" 
-                style={{ y, opacity }}
+                style = {
+  { y,
+  opacity 
+
+
+}}
             />
             
             {/* Animated floating particles with better positioning and variety */}
@@ -126,12 +129,22 @@ export function HeroSection() {
             <motion.div 
                 className="absolute top-20 right-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" 
                 animate={{ rotate: 360 }} 
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                transition = {
+  { duration: 20, repeat: Infinity,
+  ease: "linear" 
+
+
+}}
             />
             <motion.div 
                 className="absolute bottom-20 left-20 w-24 h-24 border border-zion-purple/20 transform rotate-45 opacity-30" 
                 animate={{ rotate: -360 }} 
-                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                transition = {
+  { duration: 25, repeat: Infinity,
+  ease: "linear" 
+
+
+}}
             />
             
             {/* New floating elements */}
@@ -170,7 +183,12 @@ export function HeroSection() {
                     <motion.div 
                         className="flex items-center gap-3 group" 
                         whileHover={{ scale: 1.05 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
                             <Sparkles className="w-6 h-6 text-zion-cyan"/>
@@ -181,7 +199,12 @@ export function HeroSection() {
                     <motion.div 
                         className="flex items-center gap-3 group" 
                         whileHover={{ scale: 1.05 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
                             <Zap className="w-6 h-6 text-zion-purple"/>
@@ -192,7 +215,12 @@ export function HeroSection() {
                     <motion.div 
                         className="flex items-center gap-3 group" 
                         whileHover={{ scale: 1.05 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="p-2 bg-zion-cyan-light/20 rounded-full group-hover:bg-zion-cyan-light/30 transition-colors">
                             <Users className="w-6 h-6 text-zion-cyan-light"/>
@@ -206,7 +234,12 @@ export function HeroSection() {
                     <motion.div 
                         whileHover={{ scale: 1.05 }} 
                         whileTap={{ scale: 0.95 }} 
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+
+}}
                     >
                         <Link 
                             to="/signup" 
@@ -220,7 +253,12 @@ export function HeroSection() {
                     <motion.div 
                         whileHover={{ scale: 1.05 }} 
                         whileTap={{ scale: 0.95 }} 
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+
+
+}}
                     >
                         <Link 
                             id="browse-marketplace" 
@@ -239,23 +277,63 @@ export function HeroSection() {
                     <div className="flex justify-center items-center gap-12 opacity-60">
                         <motion.div 
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
-                            whileHover={{ scale: 1.1, opacity: 1 }} 
-                            transition={{ type: "spring", stiffness: 400 }}
+                            whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+
+}} 
+                            transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                         />
                         <motion.div 
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
-                            whileHover={{ scale: 1.1, opacity: 1 }} 
-                            transition={{ type: "spring", stiffness: 400 }}
+                            whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+
+}} 
+                            transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                         />
                         <motion.div 
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
-                            whileHover={{ scale: 1.1, opacity: 1 }} 
-                            transition={{ type: "spring", stiffness: 400 }}
+                            whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+
+}} 
+                            transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                         />
                         <motion.div 
                             className="w-20 h-10 bg-zion-slate-light/20 rounded-lg backdrop-blur-sm" 
-                            whileHover={{ scale: 1.1, opacity: 1 }} 
-                            transition={{ type: "spring", stiffness: 400 }}
+                            whileHover = {
+  { scale: 1.1,
+  opacity: 1 
+
+
+}} 
+                            transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                         />
                     </div>
                 </motion.div>
@@ -265,7 +343,12 @@ export function HeroSection() {
                     <motion.div 
                         className="text-center group" 
                         whileHover={{ y: -5 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors">
                             10K+
@@ -276,7 +359,12 @@ export function HeroSection() {
                     <motion.div 
                         className="text-center group" 
                         whileHover={{ y: -5 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">
                             500+
@@ -287,7 +375,12 @@ export function HeroSection() {
                     <motion.div 
                         className="text-center group" 
                         whileHover={{ y: -5 }} 
-                        transition={{ type: "spring", stiffness: 400 }}
+                        transition = {
+  { type: "spring",
+  stiffness: 400 
+
+
+}}
                     >
                         <div className="text-4xl font-bold text-zion-cyan-light mb-2 group-hover:text-zion-cyan transition-colors">
                             99.9%

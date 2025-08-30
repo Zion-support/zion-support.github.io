@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🔍 Starting continuous quality checks automation...');
@@ -82,12 +81,6 @@ async function runQualityChecks() {
     
     // Generate quality report
     console.log('📊 Generating quality report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Quality checks completed',
-      status: 'completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Quality report saved to ${reportPath}`);

@@ -17,7 +17,11 @@ export const HeroSectionAlt = () => {
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+  hidden: { y: 30,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -29,14 +33,17 @@ export const HeroSectionAlt = () => {
   };
 
   const floatingVariants = {
-    animate: {
+  animate: {
       y: [-15, 15, -15],
       rotate: [0, 5, -5, 0],
       transition: {
         duration: 8,
         repeat: Infinity,
-        ease: "easeInOut"
-      }
+  ease: "easeInOut"
+      
+
+
+}
     }
   };
 

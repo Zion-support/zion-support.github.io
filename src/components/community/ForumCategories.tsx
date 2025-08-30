@@ -97,7 +97,7 @@ export default function ForumCategories() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
+    <section className = "py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
@@ -176,8 +176,8 @@ export default function ForumCategories() {
               Start a Discussion
             </button>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 }

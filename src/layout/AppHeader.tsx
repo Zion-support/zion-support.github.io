@@ -1,7 +1,7 @@
 import { ArrowRight, Atom, BookOpen, Brain, Building, Building2, ChevronDown, Cloud, Code, Cpu, DollarSign, FileText, Globe, HeartHandshake, Heart, HelpCircle, Leaf, Lock, Mail, MapPin, Menu, MessageCircle, PenTool, Phone, Rocket, Scale, Search, Settings, Shield, ShoppingCart, Star, Target, TrendingUp, Users, X, Zap, Workflow, Calendar } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ThemeToggle } from '../components/ThemeToggle';
+import { ThemeToggle } from "../components/ThemeToggle";
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ export function AppHeader() {
   const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 10);
     };
 
@@ -21,7 +21,7 @@ export function AppHeader() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: React.FormEvent) => {
+  const handleSearch = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -38,9 +38,9 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
-    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },
-    { name: 'About', href: '/about', current: false },
-    { name: 'Contact', href: '/contact', current: false },
+    { name: 'Resources', href: '/resources', current: false, hasDropdown: true },;
+    { name: 'About', href: '/about', current: false },;
+    { name: 'Contact', href: '/contact', current: false },;
   ];
 
   const services = [
@@ -129,9 +129,9 @@ export function AppHeader() {
       href: '/revolutionary-services-2030', 
       icon: Rocket, 
       description: 'Future Technology Solutions',
-      featured: true,
-      color: 'from-purple-500 to-pink-500'
-    }
+      featured: true,;
+      color: 'from-purple-500 to-pink-500';
+    };
   ];
 
   const solutions = [
@@ -174,9 +174,9 @@ export function AppHeader() {
       name: 'Startup Solutions',
       href: '/solutions',
       icon: Rocket,
-      description: 'Accelerate your startup growth',
-      featured: false
-    }
+      description: 'Accelerate your startup growth',;
+      featured: false;
+    };
   ];
 
   const resources = [
@@ -240,9 +240,9 @@ export function AppHeader() {
       name: 'Developers',
       href: '/developers',
       icon: Code,
-      description: 'Developer resources',
-      featured: false
-    }
+      description: 'Developer resources',;
+      featured: false;
+    };
   ];
 
   const quickLinks = [
@@ -253,20 +253,23 @@ export function AppHeader() {
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
     { name: 'Community', href: '/community', icon: Users },
-    { name: 'Developers', href: '/developers', icon: Code },
-    { name: 'Privacy', href: '/privacy', icon: Shield },
-    { name: 'Terms', href: '/terms', icon: BookOpen },
+    { name: 'Developers', href: '/developers', icon: Code },;
+    { name: 'Privacy', href: '/privacy', icon: Shield },;
+    { name: 'Terms', href: '/terms', icon: BookOpen },;
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+};
 
   return (
     <>
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      <header className = {`sticky top-0 z-50 w-full transition-all duration-300 ${
         scrolled 
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10' 
           : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'
@@ -296,23 +299,23 @@ export function AppHeader() {
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
                     <div className="relative">
-                      <button
-                        onClick={() => {
-                          if (item.name === 'Services') {
+                      <button;
+                        onClick={() => {;
+                          if (item.name === 'Services') {;
                             setServicesDropdownOpen(!servicesDropdownOpen);
                             setSolutionsDropdownOpen(false);
                             setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Solutions') {
+                          } else if (item.name = == 'Solutions') {;
                             setSolutionsDropdownOpen(!solutionsDropdownOpen);
                             setServicesDropdownOpen(false);
                             setResourcesDropdownOpen(false);
-                          } else if (item.name === 'Resources') {
+                          } else if (item.name = == 'Resources') {;
                             setResourcesDropdownOpen(!resourcesDropdownOpen);
                             setServicesDropdownOpen(false);
                             setSolutionsDropdownOpen(false);
                           }
                         }}
-                        className="flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
+                        className = "flex items-center text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-all duration-200 relative group"
                       >
                         {item.name}
                         <ChevronDown className={`ml-1 w-4 h-4 transition-transform duration-200 ${
@@ -627,14 +630,14 @@ export function AppHeader() {
                 {navigation.map((item) => (
                   <div key={item.name}>
                     {item.hasDropdown ? (
-                      <div>
-                        <button
-                          onClick={() => {
+                      <div>;
+                        <button;
+                          onClick={() => {;
                             if (item.name === 'Services') setServicesDropdownOpen(!servicesDropdownOpen);
                             else if (item.name === 'Solutions') setSolutionsDropdownOpen(!solutionsDropdownOpen);
                             else if (item.name === 'Resources') setResourcesDropdownOpen(!resourcesDropdownOpen);
                           }}
-                          className="flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
+                          className = "flex items-center justify-between w-full text-left text-slate-300 hover:text-cyan-400 py-2 text-lg font-medium transition-colors"
                         >
                           {item.name}
                           <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${
@@ -752,9 +755,9 @@ export function AppHeader() {
 
       {/* Click outside to close dropdowns */}
       {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => {
+        <div;
+          className="fixed inset-0 z-40";
+          onClick={() => {;
             setServicesDropdownOpen(false);
             setSolutionsDropdownOpen(false);
             setResourcesDropdownOpen(false);

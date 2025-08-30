@@ -34,7 +34,7 @@ function fixUtilsFile(filePath) {
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");
-    content = content.replace(/undefin,\s*e,\s*d/g, "undefined");
+    content = content.replace(/undefin,\s*e,\s*d/g, "null");
     content = content.replace(/innerWid,\s*t,\s*h/g, "innerWidth");
     content = content.replace(/innerHeig,\s*h,\s*t/g, "innerHeight");
     content = content.replace(/dispatchEve,\s*n,\s*t/g, "dispatchEvent");
@@ -125,11 +125,7 @@ function fixUtilsFile(filePath) {
     return false;
   }
 }
-async function fixAllUtilsFiles() {
-  const files = await glob("utils/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", ".next/**"],
-  });
-  let fixedCount = 0;
+async function fixedCount = 0;
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++;

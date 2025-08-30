@@ -79,9 +79,9 @@ const AIDataGovernance: React.FC = () => {
     {
       icon: Users,
       title: "Data Lineage Tracking",
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",
-      color: "from-yellow-500 to-orange-500"
-    }
+      description: "Complete audit trail showing data origins, transformations, and usage patterns",;
+      color: "from-yellow-500 to-orange-500";
+    };
   ];
 
   const pricingPlans = [
@@ -136,9 +136,9 @@ const AIDataGovernance: React.FC = () => {
         "SLA guarantees",
         "On-premise option"
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -163,9 +163,9 @@ const AIDataGovernance: React.FC = () => {
     {
       icon: Clock,
       title: "Real-time Monitoring",
-      description: "Instant alerts and proactive threat prevention",
-      metric: "24/7"
-    }
+      description: "Instant alerts and proactive threat prevention",;
+      metric: "24/7";
+    };
   ];
 
   const complianceFrameworks = [
@@ -202,9 +202,9 @@ const AIDataGovernance: React.FC = () => {
     {
       name: "SOC 2",
       description: "Service Organization Control 2 compliance",
-      icon: CheckCircle,
-      color: "from-yellow-500 to-orange-500"
-    }
+      icon: CheckCircle,;
+      color: "from-yellow-500 to-orange-500";
+    };
   ];
 
   const useCases = [
@@ -233,13 +233,13 @@ const AIDataGovernance: React.FC = () => {
       industry: "Technology",
       title: "Intellectual Property",
       description: "Protect trade secrets and proprietary data with advanced classification",
-      icon: Cpu,
-      color: "from-orange-500 to-red-500"
-    }
+      icon: Cpu,;
+      color: "from-orange-500 to-red-500";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Data Governance - Zion Tech Group"
         description="Protect your data with AI-powered governance solutions. Automated classification, access control, and compliance management for enterprise data security."
@@ -251,8 +251,18 @@ const AIDataGovernance: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
@@ -299,9 +309,24 @@ const AIDataGovernance: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -333,9 +358,24 @@ const AIDataGovernance: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
@@ -366,9 +406,24 @@ const AIDataGovernance: React.FC = () => {
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -400,9 +455,24 @@ const AIDataGovernance: React.FC = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="group"
               >
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
@@ -439,9 +509,24 @@ const AIDataGovernance: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className={`relative rounded-xl p-8 ${
                   plan.popular 
                     ? 'bg-gradient-to-br from-blue-500/20 to-green-500/20 border-2 border-blue-500/50' 
@@ -491,8 +576,18 @@ const AIDataGovernance: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -510,9 +605,9 @@ const AIDataGovernance: React.FC = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

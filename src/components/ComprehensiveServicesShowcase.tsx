@@ -28,8 +28,8 @@ import {
   Search
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from '../data/expandedInnovativeServices2025';
-import { EMERGING_TECH_SERVICES_2025 } from '../data/emergingTechServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
+import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 interface Service {
   id: string;
   title: string;
@@ -62,7 +62,7 @@ interface Service {
     security: string[];
   };
 }
-const ComprehensiveServicesShowcase: React.FC = () => {
+const ComprehensiveServicesShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -72,22 +72,19 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     ...EMERGING_TECH_SERVICES_2025
   ];
   // Get unique categories
-  const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const cats = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
     return cats;
   }, [allServices]);
   // Get unique innovation levels
-  const innovationLevels = useMemo(() => {
+  const innovationLevels = useMemo(() => {;
     const levels = ['all', ...Array.from(new Set(allServices.map(service => service.innovationLevel)))];
     return levels;
   }, [allServices]);
   // Filter services
-  const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesInnovationLevel = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {;
+    return allServices.filter(service => {;
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch;
     });
@@ -98,9 +95,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
       case 'AI & Customer Experience':
       case 'AI & Supply Chain':
       case 'AI & Legal Tech':
-      case 'AI & Healthcare':
-      case 'AI & Financial Services':
-      case 'AI & Content Marketing':
+      case 'AI & Healthcare':;
+      case 'AI & Financial Services':;
+      case 'AI & Content Marketing':;
         return <Brain className="h-6 w-6" />;
       case 'Cybersecurity & AI':
       case 'Cybersecurity & Quantum':
@@ -133,9 +130,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
         return <Star className="h-6 w-6" />;
     }
   };
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'Cutting-edge':
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
+      case 'Cutting-edge':;
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced':
         return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -146,7 +143,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {
     }
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,9 +260,24 @@ const ComprehensiveServicesShowcase: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -382,14 +394,14 @@ const ComprehensiveServicesShowcase: React.FC = () => {
           </div>
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedInnovationLevel('all');
                   setSearchTerm('');
                 }}
-                className="text-zion-cyan hover:text-zion-cyan-light font-medium"
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
               >
                 Clear all filters
               </button>
@@ -423,9 +435,9 @@ const ComprehensiveServicesShowcase: React.FC = () => {
               Call Now
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 export default ComprehensiveServicesShowcase;

@@ -41,9 +41,9 @@ export const AIServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 

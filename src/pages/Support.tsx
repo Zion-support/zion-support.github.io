@@ -30,7 +30,7 @@ import {
   Mailbox
 } from 'lucide-react';
 
-const Support = () => {
+const Support = () => {;
   const [selectedCategory, setSelectedCategory] = useState('general');
   const [contactMethod, setContactMethod] = useState('email');
 
@@ -80,9 +80,9 @@ const Support = () => {
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security concerns, compliance questions, and access control',
-      responseTime: 'Immediate',
-      availability: '24/7'
-    }
+      responseTime: 'Immediate',;
+      availability: '24/7';
+    };
   ];
 
   const supportMethods = [
@@ -123,9 +123,9 @@ const Support = () => {
       description: 'Create a detailed support ticket for tracking and follow-up',
       responseTime: 'Within 4 hours',
       availability: '24/7',
-      action: 'Create Ticket',
-      color: 'from-orange-500 to-red-500'
-    }
+      action: 'Create Ticket',;
+      color: 'from-orange-500 to-red-500';
+    };
   ];
 
   const quickActions = [
@@ -154,9 +154,9 @@ const Support = () => {
       title: 'Status Page',
       description: 'Check system status and maintenance schedules',
       icon: Globe,
-      action: 'Check Status',
-      color: 'from-yellow-500 to-orange-500'
-    }
+      action: 'Check Status',;
+      color: 'from-yellow-500 to-orange-500';
+    };
   ];
 
   const faqItems = [
@@ -187,26 +187,29 @@ const Support = () => {
     },
     {
       question: 'Do you offer training for new users?',
-      answer: 'Yes, we offer comprehensive onboarding and training programs for new users. Contact our customer success team to schedule a training session.',
-      category: 'general'
-    }
+      answer: 'Yes, we offer comprehensive onboarding and training programs for new users. Contact our customer success team to schedule a training session.',;
+      category: 'general';
+    };
   ];
 
   const contactForm = {
-    name: '',
+  name: '',
     email: '',
     company: '',
     category: 'general',
     priority: 'medium',
-    subject: '',
-    message: ''
-  };
+    subject: '',;
+  message: '';
+  ;
+
+
+};
 
   return (
     <>
       <Helmet>
         <title>Support - Zion Tech Group | Get Help & Contact Us</title>
-        <meta name="description" content="Get support for Zion Tech Group services. Contact our team through multiple channels including email, chat, phone, and support tickets." />
+        <meta name = "description" content="Get support for Zion Tech Group services. Contact our team through multiple channels including email, chat, phone, and support tickets." />
         <meta name="keywords" content="support, help, contact, customer service, Zion Tech Group, technical support" />
       </Helmet>
 
@@ -215,8 +218,18 @@ const Support = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -250,9 +263,24 @@ const Support = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 How Can We Help You?
@@ -262,9 +290,24 @@ const Support = () => {
                 {supportMethods.map((method, index) => (
                   <motion.div
                     key={method.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -290,9 +333,24 @@ const Support = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Quick Actions
@@ -302,9 +360,24 @@ const Support = () => {
                 {quickActions.map((action, index) => (
                   <motion.div
                     key={action.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
@@ -326,9 +399,24 @@ const Support = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Support Categories
@@ -338,9 +426,24 @@ const Support = () => {
                 {supportCategories.map((category, index) => (
                   <motion.div
                     key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className={`bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border-2 cursor-pointer ${
                       selectedCategory === category.id 
                         ? 'border-blue-500 bg-blue-50' 
@@ -368,9 +471,24 @@ const Support = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Contact Our Support Team
@@ -464,9 +582,24 @@ const Support = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Frequently Asked Questions
@@ -476,9 +609,24 @@ const Support = () => {
                 {faqItems.map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-slate-50 rounded-lg p-6 border border-slate-200"
                   >
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.question}</h3>
@@ -499,9 +647,24 @@ const Support = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-green-600">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.2 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Still Need Help?
@@ -520,9 +683,9 @@ const Support = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

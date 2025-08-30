@@ -261,7 +261,7 @@ export const innovativeMicroSaasBreakthrough2025 = [
       'Medical research and analysis',
       'Healthcare workflow automation'
     ],
-    integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],
-    compliance: ['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards']
-  }
+    integrations: ['Electronic health records', 'Medical imaging systems', 'Laboratory systems', 'Patient monitoring devices', 'Healthcare platforms'],;
+    compliance: ['HIPAA', 'FDA regulations', 'Medical device standards', 'SOC2', 'ISO 27001', 'Healthcare compliance standards'];
+  };
 ];

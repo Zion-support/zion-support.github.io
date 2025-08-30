@@ -11,16 +11,16 @@ export default function Documentation() {
     { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },
     { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },
     { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },
-    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },
-    { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },
-    { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 }
+    { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },;
+    { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },;
+    { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 };
   ];
 
   const sortOptions = [
     { value: 'popular', label: 'Most Popular' },
-    { value: 'newest', label: 'Newest First' },
-    { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'recently-updated', label: 'Recently Updated' }
+    { value: 'newest', label: 'Newest First' },;
+    { value: 'alphabetical', label: 'Alphabetical' },;
+    { value: 'recently-updated', label: 'Recently Updated' };
   ];
 
   const documentationItems = [
@@ -105,9 +105,9 @@ export default function Documentation() {
       lastUpdated: '2025-01-08',
       views: 5670,
       rating: 4.5,
-      featured: false,
-      tags: ['python', 'sdk', 'examples']
-    }
+      featured: false,;
+      tags: ['python', 'sdk', 'examples'];
+    };
   ];
 
   const featuredResources = [
@@ -129,13 +129,13 @@ export default function Documentation() {
       title: 'Community Forum',
       description: 'Connect with other developers and get help',
       type: 'community',
-      link: '/community',
-      featured: false
-    }
+      link: '/community',;
+      featured: false;
+    };
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyColor = (difficulty: string) => {;
+    switch (difficulty) {;
       case 'beginner': return 'bg-green-500';
       case 'intermediate': return 'bg-yellow-500';
       case 'advanced': return 'bg-red-500';
@@ -143,8 +143,8 @@ export default function Documentation() {
     }
   };
 
-  const getDifficultyText = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyText = (difficulty: string) => {;
+    switch (difficulty) {;
       case 'beginner': return 'Beginner';
       case 'intermediate': return 'Intermediate';
       case 'advanced': return 'Advanced';
@@ -152,9 +152,9 @@ export default function Documentation() {
     }
   };
 
-  const filteredItems = documentationItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredItems = documentationItems.filter(item => {;
+    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = activeCategory === 'all' || item.category === activeCategory;
@@ -163,8 +163,8 @@ export default function Documentation() {
   });
 
   // Update counts
-  categories.forEach(cat => {
-    if (cat.id === 'all') {
+  categories.forEach(cat = > {;
+    if (cat.id === 'all') {;
       cat.count = documentationItems.length;
     } else {
       cat.count = documentationItems.filter(item => item.category === cat.id).length;
@@ -172,7 +172,7 @@ export default function Documentation() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -383,8 +383,8 @@ export default function Documentation() {
               Help Center
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

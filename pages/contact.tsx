@@ -12,18 +12,6 @@ export default function Contact() {
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault()
-		// Here you would typically send the form data to your backend
-		console.log('Form submitted:', formData)
-		setIsSubmitted(true)
-		// Reset form after submission
-		setTimeout(() => {
-			setIsSubmitted(false)
-			setFormData({ name: '', email: '', company: '', message: '' })
-		}, 3000)
-	}
-
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		setFormData({
 			...formData,
@@ -207,6 +195,6 @@ export default function Contact() {
 					</div>
 				</div>
 			</section>
-		</>
-	)
-}
+		</>;
+	);
+};

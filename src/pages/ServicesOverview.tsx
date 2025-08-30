@@ -79,8 +79,8 @@ import {
   XCircle,
   Info as InfoIcon
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
-import { servicesCatalog } from '../data/servicesCatalog';
+import { SEO } from "../components/SEO";
+import { servicesCatalog } from "../data/servicesCatalog";
 
 // Enhanced category definitions with better organization
 const serviceCategories = [
@@ -137,30 +137,40 @@ const serviceCategories = [
     name: 'Emerging Technologies',
     icon: Sparkles,
     color: 'from-yellow-600 to-orange-600',
-    description: 'Cutting-edge technologies and innovations',
-    count: 0
-  }
+    description: 'Cutting-edge technologies and innovations',;
+    count: 0;
+  };
 ];
 
 // Enhanced service features display
 const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
   const [expanded, setExpanded] = useState(false);
   
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.icon : Grid;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string) => {;
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.color : 'from-gray-600 to-gray-700';
   };
 
-  if (viewMode === 'grid') {
+  if (viewMode = == 'grid') {
     return (
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group border border-gray-100"
       >
@@ -224,17 +234,27 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
           >
             {service.ctaLabel}
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </div>
-      </motion.div>
+          </a>;
+        </div>;
+      </motion.div>;
     );
   }
 
   // List view
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100"
     >
@@ -276,24 +296,24 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             {service.ctaLabel}
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 };
 
 // Sidebar component for better navigation
 const ServicesSidebar = ({ 
   selectedCategory, 
-  onCategoryChange, 
-  categoriesWithCounts 
-}: { 
+  onCategoryChange, ;
+  categoriesWithCounts ;
+}: { ;
   selectedCategory: string; 
   onCategoryChange: (category: string) => void; 
   categoriesWithCounts: any[];
 }) => {
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+    <div className = "bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
       <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
         <Filter className="w-5 h-5 mr-2 text-blue-600" />
         Service Categories
@@ -336,9 +356,9 @@ const ServicesSidebar = ({
             <span>Categories</span>
             <span className="font-semibold text-gray-900">{categoriesWithCounts.length}</span>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 
@@ -349,14 +369,12 @@ export default function ServicesOverview() {
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
 
   // Flatten all services from the catalog
-  const allServices = useMemo(() => {
+  const allServices = useMemo(() => {;
     return servicesCatalog.flatMap(category => category.items);
   }, []);
 
   // Calculate service counts for each category
-  const categoriesWithCounts = useMemo(() => {
-    return serviceCategories.map(cat => {
-      const count = allServices.filter(service => {
+  const count = allServices.filter(service => {;
         if (cat.id === 'all') return true;
         return service.category === cat.id;
       }).length;
@@ -366,9 +384,9 @@ export default function ServicesOverview() {
 
   // Filter services based on search and category
   const filteredServices = useMemo(() => {
-    return allServices.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    return allServices.filter(service => {;
+      const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
@@ -378,7 +396,7 @@ export default function ServicesOverview() {
   return (
     <>
       <SEO 
-        title="Services Overview | Zion Tech Group"
+        title = "Services Overview | Zion Tech Group"
         description="Explore our comprehensive portfolio of AI solutions, IT services, and Micro SaaS platforms. Discover innovative technology solutions for your business needs."
         keywords="AI solutions, IT services, Micro SaaS, cybersecurity, cloud services, digital transformation"
       />
@@ -388,8 +406,18 @@ export default function ServicesOverview() {
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -478,9 +506,24 @@ export default function ServicesOverview() {
                 {/* Advanced Filters */}
                 {showAdvancedFilters && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="mt-4 pt-4 border-t border-gray-200"
                   >
@@ -583,8 +626,8 @@ export default function ServicesOverview() {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 }

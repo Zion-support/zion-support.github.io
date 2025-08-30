@@ -24,9 +24,9 @@ export default function Press() {
   const categories = [
     { id: 'all', name: 'All News', count: 45 },
     { id: 'press-releases', name: 'Press Releases', count: 18 },
-    { id: 'media-coverage', name: 'Media Coverage', count: 15 },
-    { id: 'awards', name: 'Awards & Recognition', count: 8 },
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 }
+    { id: 'media-coverage', name: 'Media Coverage', count: 15 },;
+    { id: 'awards', name: 'Awards & Recognition', count: 8 },;
+    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 };
   ];
 
   const pressReleases = [
@@ -93,9 +93,9 @@ export default function Press() {
       category: "press-releases",
       excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",
       content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
-      featured: false,
-      tags: ["Global Expansion", "Europe", "Market Growth"]
-    }
+      featured: false,;
+      tags: ["Global Expansion", "Europe", "Market Growth"];
+    };
   ];
 
   const mediaCoverage = [
@@ -140,9 +140,9 @@ export default function Press() {
       author: "Emily Watson",
       category: "media-coverage",
       excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
-      url: "https://venturebeat.com/zion-tech-group-startup",
-      featured: false
-    }
+      url: "https://venturebeat.com/zion-tech-group-startup",;
+      featured: false;
+    };
   ];
 
   const awards = [
@@ -170,13 +170,13 @@ export default function Press() {
       organization: "InfoSec Awards",
       year: "2023",
       category: "awards",
-      description: "Outstanding achievement in AI-powered cybersecurity solutions",
-      image: "/images/awards/infosec.png"
-    }
+      description: "Outstanding achievement in AI-powered cybersecurity solutions",;
+      image: "/images/awards/infosec.png";
+    };
   ];
 
-  const filteredContent = selectedCategory === 'all' 
-    ? [...pressReleases, ...mediaCoverage, ...awards]
+  const filteredContent = selectedCategory === 'all' ;
+    ? [...pressReleases, ...mediaCoverage, ...awards];
     : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {
@@ -184,22 +184,26 @@ export default function Press() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
   };
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -209,8 +213,18 @@ export default function Press() {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
@@ -259,8 +273,18 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -284,7 +308,12 @@ export default function Press() {
                 key={item.id}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -334,8 +363,18 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -359,7 +398,12 @@ export default function Press() {
                 key={item.id}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
@@ -399,8 +443,18 @@ export default function Press() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -422,7 +476,12 @@ export default function Press() {
             <motion.div 
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Download className="w-8 h-8 text-white" />
@@ -437,7 +496,12 @@ export default function Press() {
             <motion.div 
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
@@ -452,7 +516,12 @@ export default function Press() {
             <motion.div 
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-white" />
@@ -467,7 +536,12 @@ export default function Press() {
             <motion.div 
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
               variants={itemVariants}
-              whileHover={{ y: -5, scale: 1.02 }}
+              whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
@@ -486,8 +560,18 @@ export default function Press() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -533,8 +617,8 @@ export default function Press() {
               Contact Media Team
             </motion.button>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

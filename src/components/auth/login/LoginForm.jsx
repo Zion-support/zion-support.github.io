@@ -37,7 +37,7 @@ function LoginForm() {
                 form.setError("root", { message: error });
             }
             else {
-                navigate("/");
+                router("/");
             }
         }
         finally {
@@ -96,4 +96,8 @@ function LoginForm() {
     </Form>);
 }
 
+export default LoginForm;
+
+export default LoginForm;
+export default LoginForm;
 export default LoginForm;

@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface CuttingEdgeITInfrastructureInnovation2025 {
   id: string;
   name: string;
@@ -257,7 +257,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     contact: 'kleber@ziontechgroup.com',
     mobile: '+1 302 464 0950',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-    slug: '/autonomous-data-center-management-platform'
-  }
+    website: 'https://ziontechgroup.com',;
+    slug: '/autonomous-data-center-management-platform';
+  };
 ];

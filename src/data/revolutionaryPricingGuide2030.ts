@@ -531,33 +531,32 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
 ];
 
 // Utility functions for pricing guide management
-export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | undefined => {
+export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | null => {;
   return REVOLUTIONARY_PRICING_GUIDE_2030.find(guide => guide.serviceId === serviceId);
 };
 
-export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[] => {
+export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[] => {;
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
 };
 
-export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[] => {
-  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
+export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[] => {;
+  return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {;
     const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
     return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
   });
 };
 
-export const getAllPricingGuides = (): RevolutionaryPricingGuide2030[] => {
+export const getAllPricingGuides = (): RevolutionaryPricingGuide2030[] => {;
   return REVOLUTIONARY_PRICING_GUIDE_2030;
 };
 
-export const getPricingGuideStats = () => {
-  const totalServices = REVOLUTIONARY_PRICING_GUIDE_2030.length;
+export const getPricingGuideStats = () => {;
   const totalTiers = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => sum + guide.pricingTiers.length, 0);
-  const averageStarterPrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
+  const averageStarterPrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {;
     const starterTier = guide.pricingTiers.find(tier => tier.id === 'starter');
     return sum + (starterTier?.monthlyPrice || 0);
   }, 0) / totalServices;
-  const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
+  const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {;
     const enterpriseTier = guide.pricingTiers.find(tier => tier.id === 'enterprise');
     return sum + (enterpriseTier?.monthlyPrice || 0);
   }, 0) / totalServices;
@@ -567,7 +566,7 @@ export const getPricingGuideStats = () => {
     totalTiers,
     averageStarterPrice: Math.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
-    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.category))],
-    subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.subcategory))]
+    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide = > guide.category))],;
+    subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide => guide.subcategory))];
   };
 };

@@ -35,9 +35,9 @@ const EnhancedServices = () => {
               <p className="text-gray-300 mb-4">Seamless integration with existing systems</p>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 export default EnhancedServices;

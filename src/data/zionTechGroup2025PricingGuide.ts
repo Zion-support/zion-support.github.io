@@ -683,22 +683,22 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
   }
 ];
 
-export const getPricingByCategory = (category: string) => {
+export const getPricingByCategory = (category: string) => {;
   return zionTechGroup2025PricingGuide.filter(service => service.category === category);
 };
 
-export const getPricingByPriceRange = (minPrice: number, maxPrice: number) => {
-  return zionTechGroup2025PricingGuide.filter(service => {
+export const getPricingByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return zionTechGroup2025PricingGuide.filter(service => {;
     const basePrice = parseInt(service.pricingTiers[1]?.price.replace(/[^0-9]/g, '') || '0');
     return basePrice >= minPrice && basePrice <= maxPrice;
   });
 };
 
-export const searchPricing = (query: string) => {
+export const searchPricing = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-  return zionTechGroup2025PricingGuide.filter(service =>
-    service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery)
+  return zionTechGroup2025PricingGuide.filter(service = >
+    service.title.toLowerCase().includes(lowercaseQuery) ||;
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
+    service.category.toLowerCase().includes(lowercaseQuery);
   );
 };

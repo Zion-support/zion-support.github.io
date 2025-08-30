@@ -1,5 +1,5 @@
 import Stripe from 'stripe';
-import { withErrorLogging } from './withErrorLogging.cjs';
+import { withErrorLogging } from "./withErrorLogging.cjs";
 const PROD_DOMAIN = 'app.ziontechgroup.com';
 function isProdDomain() {
   const url = process.env.URL || '';
@@ -28,9 +28,6 @@ async function handler(req, res) {
     if (!isProdDomain() && liveKey.startsWith('sk_live') && !process.env.STRIPE_TEST_SECRET_KEY) {
       throw new Error('Refusing to use live Stripe key on non-production domain');
     }
-    const stripe = new Stripe(isProdDomain() ? liveKey : testKey, {
-      apiVersion: '2023-10-16',
-    });
     const session = await stripe.checkout.sessions.create({
       line_items: [{ price: productId, quantity: 1 }],
       mode: 'payment',
@@ -47,3 +44,7 @@ async function handler(req, res) {
   }
 }
 export default withErrorLogging(handler);
+
+export default isProdDomain;
+export default isProdDomain;
+export default isProdDomain;

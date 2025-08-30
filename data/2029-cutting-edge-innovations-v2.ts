@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+import { ServiceVariant } from "../types/service-variants";
 export interface CuttingEdge2029Service {
   id: string;
   name: string;
@@ -508,14 +508,14 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     reviews: 134
   }
 ];
-export const getPopularCuttingEdge2029Services = () => {
+export const getPopularCuttingEdge2029Services = () => {;
   return cuttingEdge2029Services.filter(service => service.popular);
 };
-export const getCuttingEdge2029ServicesByCategory = (category: string) => {
+export const getCuttingEdge2029ServicesByCategory = (category: string) => {;
   return cuttingEdge2029Services.filter(service => service.category === category);
 };
-export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return cuttingEdge2029Services.filter(service => {
+export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return cuttingEdge2029Services.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });

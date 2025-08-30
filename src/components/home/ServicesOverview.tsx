@@ -17,12 +17,22 @@ interface ServicesOverviewProps {
 
 const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
+    <section className = "py-20 bg-gradient-to-b from-zion-slate-dark/30 via-zion-slate-dark/20 to-zion-slate-dark/30" role="region" aria-labelledby="services-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -45,13 +55,32 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover = {
+  { 
                 y: -5,
-                transition: { duration: 0.3 }
+  transition: { duration: 0.3 
+
+
+}
               }}
             >
               {/* Animated background */}
@@ -79,9 +108,24 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
                   <motion.li 
                     key={itemIndex} 
                     className="flex items-center text-zion-slate-light group-hover:text-zion-slate-light/90 transition-colors duration-300"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: itemIndex * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: itemIndex * 0.1 
+
+
+}}
                     viewport={{ once: true }}
                   >
                     <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
@@ -91,7 +135,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               </ul>
               
               <Link 
-                to={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}
+                to = {
+  `/services/${service.category.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+}`}
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
                 aria-label={`Learn more about ${service.category} services`}
               >
@@ -103,9 +152,9 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />
             </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 

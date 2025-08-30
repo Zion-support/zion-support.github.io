@@ -15,10 +15,14 @@ const iconVariants = {
     rotate: 360,
     scale: [1, 1.2, 1],
     transition: {
-      rotate: { duration: 2, repeat: Infinity, ease: "linear" },
-      scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
-    }
-  }
+      rotate: { duration: 2, repeat: Infinity,
+  ease: "linear" 
+
+
+},
+      scale: { duration: 1, repeat: Infinity, ease: "easeInOut" };
+    };
+  };
 };
 
 const pulseVariants = {
@@ -28,9 +32,12 @@ const pulseVariants = {
     transition: {
       duration: 2,
       repeat: Infinity,
-      ease: "easeInOut"
-    }
-  }
+  ease: "easeInOut"
+    
+
+;
+};
+  };
 };
 
 export function EnhancedLoadingSpinner({ 
@@ -41,20 +48,26 @@ export function EnhancedLoadingSpinner({
   progress = 0
 }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16'
-  };
+  sm: 'w-8 h-8',
+    md: 'w-12 h-12',;
+  lg: 'w-16 h-16';
+  ;
+
+
+};
 
   const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };
+  sm: 'text-sm',
+    md: 'text-base',;
+  lg: 'text-lg';
+  ;
 
-  const getIcon = () => {
-    switch (variant) {
-      case 'ai':
+
+};
+
+  const getIcon = () => {;
+    switch (variant) {;
+      case 'ai':;
         return <Brain className="w-full h-full text-cyan-400" />;
       case 'quantum':
         return <Atom className="w-full h-full text-purple-400" />;
@@ -65,9 +78,9 @@ export function EnhancedLoadingSpinner({
     }
   };
 
-  const getBackground = () => {
-    switch (variant) {
-      case 'ai':
+  const getBackground = () => {;
+    switch (variant) {;
+      case 'ai':;
         return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
       case 'quantum':
         return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
@@ -79,7 +92,7 @@ export function EnhancedLoadingSpinner({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 p-6">
+    <div className = "flex flex-col items-center justify-center space-y-4 p-6">
       {/* Main Spinner */}
       <div className="relative">
         <motion.div
@@ -101,27 +114,41 @@ export function EnhancedLoadingSpinner({
           <>
             <motion.div
               className="absolute inset-0 w-full h-full"
-              animate={{
+              animate = {
+  {
                 rotate: 360,
-              }}
-              transition={{
+  
+
+}}
+              transition = {
+  {
                 duration: 3,
                 repeat: Infinity,
-                ease: "linear"
-              }}
+  ease: "linear"
+              
+
+
+}}
             >
               <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
             </motion.div>
             <motion.div
               className="absolute inset-0 w-full h-full"
-              animate={{
+              animate = {
+  {
                 rotate: -360,
-              }}
-              transition={{
+  
+
+}}
+              transition = {
+  {
                 duration: 4,
                 repeat: Infinity,
-                ease: "linear"
-              }}
+  ease: "linear"
+              
+
+
+}}
             >
               <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-purple-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
             </motion.div>
@@ -142,8 +169,18 @@ export function EnhancedLoadingSpinner({
       {/* Progress Bar */}
       {showProgress && (
         <motion.div
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: '100%' }}
+          initial = {
+  { opacity: 0,
+  width: 0 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  width: '100%' 
+
+
+}}
           transition={{ delay: 0.8 }}
           className="w-48 bg-gray-200 rounded-full h-2 overflow-hidden"
         >
@@ -151,7 +188,12 @@ export function EnhancedLoadingSpinner({
             className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition = {
+  { duration: 0.5,
+  ease: "easeOut" 
+
+
+}}
           />
         </motion.div>
       )}
@@ -167,20 +209,27 @@ export function EnhancedLoadingSpinner({
           <motion.div
             key={i}
             className="w-2 h-2 bg-gray-400 rounded-full"
-            animate={{
+            animate = {
+  {
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
+  
+
+}}
+            transition = {
+  {
               duration: 1.5,
               repeat: Infinity,
               delay: i * 0.2,
-              ease: "easeInOut"
-            }}
+  ease: "easeInOut"
+            
+
+
+}}
           />
-        ))}
-      </motion.div>
-    </div>
+        ))};
+      </motion.div>;
+    </div>;
   );
 }
 

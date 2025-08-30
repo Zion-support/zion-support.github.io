@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Shield, 
   Lock, 
@@ -68,9 +68,9 @@ export default function SecurityHeadersCSP() {
     },
     {
       icon: Monitor,
-      title: "Threat Detection",
-      description: "Advanced threat detection and automated response for policy violations."
-    }
+      title: "Threat Detection",;
+      description: "Advanced threat detection and automated response for policy violations.";
+    };
   ];
 
   const benefits = [
@@ -101,9 +101,9 @@ export default function SecurityHeadersCSP() {
     },
     {
       icon: Award,
-      title: "Cost Savings",
-      description: "Prevent costly security incidents and reduce compliance costs."
-    }
+      title: "Cost Savings",;
+      description: "Prevent costly security incidents and reduce compliance costs.";
+    };
   ];
 
   const securityHeaders = [
@@ -134,9 +134,9 @@ export default function SecurityHeadersCSP() {
     },
     {
       header: "Permissions Policy",
-      description: "Control browser feature access",
-      icon: Fingerprint
-    }
+      description: "Control browser feature access",;
+      icon: Fingerprint;
+    };
   ];
 
   const useCases = [
@@ -167,13 +167,13 @@ export default function SecurityHeadersCSP() {
     },
     {
       industry: "Technology",
-      description: "Secure SaaS applications and web services",
-      icon: Cpu
-    }
+      description: "Secure SaaS applications and web services",;
+      icon: Cpu;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Security Headers CSP - Zion Tech Group"
         description="Secure your web applications with comprehensive security headers and Content Security Policy implementation. Protect against XSS, CSRF, and other web vulnerabilities."
@@ -185,8 +185,18 @@ export default function SecurityHeadersCSP() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-600/20 text-red-400 rounded-full text-sm font-medium mb-6">
@@ -221,8 +231,18 @@ export default function SecurityHeadersCSP() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -240,9 +260,24 @@ export default function SecurityHeadersCSP() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
               >
@@ -275,8 +310,18 @@ export default function SecurityHeadersCSP() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -294,9 +339,24 @@ export default function SecurityHeadersCSP() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
               >
@@ -329,8 +389,18 @@ export default function SecurityHeadersCSP() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -348,9 +418,24 @@ export default function SecurityHeadersCSP() {
             {securityHeaders.map((header, index) => (
               <motion.div
                 key={header.header}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
               >
@@ -383,8 +468,18 @@ export default function SecurityHeadersCSP() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -402,9 +497,24 @@ export default function SecurityHeadersCSP() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
               >
@@ -437,8 +547,18 @@ export default function SecurityHeadersCSP() {
       <section className="py-20 bg-gradient-to-r from-red-900/20 to-orange-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -460,8 +580,8 @@ export default function SecurityHeadersCSP() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

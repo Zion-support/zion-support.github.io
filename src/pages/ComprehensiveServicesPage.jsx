@@ -14,10 +14,6 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing;
         });
@@ -27,10 +23,13 @@ export default function ComprehensiveServicesPage() {
     };
     const getServiceTypeColor = (type) => {
         const colorMap = {
-            'Micro SAAS': 'bg-blue-100 text-blue-800',
+  'Micro SAAS': 'bg-blue-100 text-blue-800',
             'IT Services': 'bg-green-100 text-green-800',
-            'AI Services': 'bg-purple-100 text-purple-800'
-        };
+  'AI Services': 'bg-purple-100 text-purple-800'
+        
+
+
+};
         return colorMap[type] || 'bg-gray-100 text-gray-800';
     };
     return (<div className="min-h-screen bg-zion-blue-dark">

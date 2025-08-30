@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Truck, 
   TrendingUp, 
@@ -72,9 +72,9 @@ export default function AISupplyChainOptimization() {
     },
     {
       icon: Activity,
-      title: "Real-time Visibility",
-      description: "End-to-end supply chain visibility with real-time tracking and predictive analytics."
-    }
+      title: "Real-time Visibility",;
+      description: "End-to-end supply chain visibility with real-time tracking and predictive analytics.";
+    };
   ];
 
   const benefits = [
@@ -105,9 +105,9 @@ export default function AISupplyChainOptimization() {
     },
     {
       icon: Clock,
-      title: "Time Savings",
-      description: "Automate routine supply chain tasks and focus on strategic decision-making."
-    }
+      title: "Time Savings",;
+      description: "Automate routine supply chain tasks and focus on strategic decision-making.";
+    };
   ];
 
   const pricingPlans = [
@@ -163,9 +163,9 @@ export default function AISupplyChainOptimization() {
         "SLA guarantees",
         "24/7 support"
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -196,9 +196,9 @@ export default function AISupplyChainOptimization() {
     },
     {
       industry: "Healthcare",
-      description: "Optimize medical supply chains, ensure availability, and reduce costs",
-      icon: Shield
-    }
+      description: "Optimize medical supply chains, ensure availability, and reduce costs",;
+      icon: Shield;
+    };
   ];
 
   const integrations = [
@@ -223,9 +223,9 @@ export default function AISupplyChainOptimization() {
       platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"]
     },
     {
-      name: "IoT & Sensors",
-      platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"]
-    }
+      name: "IoT & Sensors",;
+      platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"];
+    };
   ];
 
   const keyMetrics = [
@@ -246,9 +246,9 @@ export default function AISupplyChainOptimization() {
     },
     {
       metric: "40%",
-      label: "Inventory Optimization",
-      description: "Reduction in excess inventory levels"
-    }
+      label: "Inventory Optimization",;
+      description: "Reduction in excess inventory levels";
+    };
   ];
 
   const optimizationAreas = [
@@ -265,13 +265,13 @@ export default function AISupplyChainOptimization() {
       areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"]
     },
     {
-      category: "Supplier Management",
-      areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"]
-    }
+      category: "Supplier Management",;
+      areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Supply Chain Optimization - Zion Tech Group"
         description="Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management. Reduce costs and improve efficiency."
@@ -283,8 +283,18 @@ export default function AISupplyChainOptimization() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
@@ -322,9 +332,24 @@ export default function AISupplyChainOptimization() {
             {keyMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -347,8 +372,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -365,9 +400,24 @@ export default function AISupplyChainOptimization() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -400,8 +450,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -418,9 +478,24 @@ export default function AISupplyChainOptimization() {
             {optimizationAreas.map((category, index) => (
               <motion.div
                 key={category.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -445,8 +520,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -463,9 +548,24 @@ export default function AISupplyChainOptimization() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -498,8 +598,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -516,9 +626,24 @@ export default function AISupplyChainOptimization() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
@@ -569,8 +694,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -587,9 +722,24 @@ export default function AISupplyChainOptimization() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -622,8 +772,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -640,9 +800,24 @@ export default function AISupplyChainOptimization() {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
               >
@@ -669,8 +844,18 @@ export default function AISupplyChainOptimization() {
       <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -692,8 +877,8 @@ export default function AISupplyChainOptimization() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

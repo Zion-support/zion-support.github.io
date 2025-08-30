@@ -9,27 +9,27 @@ export default function AISustainableTechnology() {
     'Automated sustainability compliance monitoring',
     'Real-time environmental impact assessment',
     'Advanced resource efficiency optimization',
-    'Predictive sustainability analytics',
-    'AI-driven green technology recommendations',
-    'Comprehensive sustainability dashboard and reporting'
+    'Predictive sustainability analytics',;
+    'AI-driven green technology recommendations',;
+    'Comprehensive sustainability dashboard and reporting';
   ];
 
   const benefits = [
     'Reduce energy consumption by 25-40%',
     'Lower carbon footprint by 30-50%',
     'Improve resource efficiency by 35%',
-    'Reduce waste generation by 40%',
-    'Achieve sustainability certifications faster',
-    'Enable data-driven environmental decisions'
+    'Reduce waste generation by 40%',;
+    'Achieve sustainability certifications faster',;
+    'Enable data-driven environmental decisions';
   ];
 
   const useCases = [
     'Manufacturing and industrial sustainability',
     'Commercial building energy management',
     'Data center and IT sustainability',
-    'Transportation and logistics optimization',
-    'Retail and hospitality sustainability',
-    'Healthcare and medical facility management'
+    'Transportation and logistics optimization',;
+    'Retail and hospitality sustainability',;
+    'Healthcare and medical facility management';
   ];
 
   const tiers = [
@@ -45,13 +45,13 @@ export default function AISustainableTechnology() {
     },
     { 
       name: 'Enterprise Sustainability', 
-      price: '$2,499/mo', 
-      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -151,8 +151,8 @@ export default function AISustainableTechnology() {
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

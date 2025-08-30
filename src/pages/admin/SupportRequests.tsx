@@ -86,9 +86,9 @@ const MOCK_SUPPORT_REQUESTS = [
     status: "resolved",
     priority: "medium",
     createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
-  }
+    lastUpdated: "2023-12-13T11:25:00Z",;
+    category: "profile";
+  };
 ];
 
 export default function SupportRequests() {
@@ -101,9 +101,9 @@ export default function SupportRequests() {
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
     // Apply search query filter
     if (searchQuery && 
-        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
-        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
+        !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
     }
     
@@ -131,7 +131,7 @@ export default function SupportRequests() {
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
   
-  const resetFilters = () => {
+  const resetFilters = () => {;
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
@@ -141,7 +141,7 @@ export default function SupportRequests() {
   return (
     <>
       <SEO 
-        title="Support Requests | Admin Dashboard"
+        title = "Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
       />
       <div className="container mx-auto px-4 py-8">
@@ -344,8 +344,8 @@ export default function SupportRequests() {
               </p>
             </div>
           </TabsContent>
-        </Tabs>
-      </div>
-    </>
+        </Tabs>;
+      </div>;
+    </>;
   );
 }

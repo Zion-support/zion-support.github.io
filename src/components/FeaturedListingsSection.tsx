@@ -40,19 +40,29 @@ const featuredListings = [
     category: "IoT",
     price: "$449/month",
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",
-    rating: 4.6,
-    reviews: 178
-  }
+    rating: 4.6,;
+    reviews: 178;
+  };
 ];
 
 export function FeaturedListingsSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -69,10 +79,25 @@ export function FeaturedListingsSection() {
             <motion.div
               key={listing.id}
               className="bg-slate-800 rounded-lg overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
             >
               <div className="relative">
                 <img 
@@ -116,10 +141,25 @@ export function FeaturedListingsSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <Link 
             to="/services"
@@ -128,8 +168,8 @@ export function FeaturedListingsSection() {
             View All Services
             <span className="text-xl">→</span>
           </Link>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

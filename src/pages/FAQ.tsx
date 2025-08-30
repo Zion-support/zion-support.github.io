@@ -33,9 +33,9 @@ export default function FAQ() {
 
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
+      prev.includes(index) ;
+        ? prev.filter(i => i !== index);
+        : [...prev, index];
     );
   };
 
@@ -122,17 +122,17 @@ export default function FAQ() {
         {
           question: "Do you comply with industry regulations?",
           answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements."
-        }
-      ]
-    }
+        };
+      ];
+    };
   ];
 
   const filteredFAQ = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
-      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+      q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+      q.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    );
   })).filter(category => category.questions.length > 0);
 
   const contactMethods = [
@@ -154,16 +154,16 @@ export default function FAQ() {
       icon: MessageCircle,
       title: "Live Chat",
       description: "Chat with our team",
-      contact: "Available on website",
-      response: "Real-time support"
-    }
+      contact: "Available on website",;
+      response: "Real-time support";
+    };
   ];
 
   return (
     <>
       <Helmet>
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's services, pricing, support, and technology solutions." />
+        <meta name = "description" content="Find answers to common questions about Zion Tech Group's services, pricing, support, and technology solutions." />
         <meta name="keywords" content="FAQ, frequently asked questions, Zion Tech Group, support, help, technology services" />
       </Helmet>
 
@@ -172,8 +172,18 @@ export default function FAQ() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -208,9 +218,24 @@ export default function FAQ() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               {filteredFAQ.map((category, categoryIndex) => (
                 <div key={category.category} className="mb-12">
@@ -222,18 +247,32 @@ export default function FAQ() {
                     {category.category === "Technology & Security" && <Shield className="w-6 h-6 text-blue-600" />}
                     {category.category}
                   </h2>
-                  
-                  <div className="space-y-4">
-                    {category.questions.map((item, questionIndex) => {
-                      const index = categoryIndex * 100 + questionIndex;
+                  ;
+                  <div className="space-y-4">;
+                    {category.questions.map((item, questionIndex) => {;
                       const isOpen = openItems.includes(index);
                       
                       return (
                         <motion.div
-                          key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ duration: 0.6, delay: 0.1 * index }}
+                          key = {index}
+                          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                          transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                           className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden"
                         >
                           <button
@@ -252,18 +291,33 @@ export default function FAQ() {
                           
                           {isOpen && (
                             <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
+                              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                              animate = {
+  { opacity: 1,
+  height: "auto" 
+
+
+}}
+                              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                               transition={{ duration: 0.3 }}
                               className="px-6 pb-4"
                             >
                               <p className="text-slate-600 leading-relaxed">
                                 {item.answer}
                               </p>
-                            </motion.div>
-                          )}
-                        </motion.div>
+                            </motion.div>;
+                          )};
+                        </motion.div>;
                       );
                     })}
                   </div>
@@ -274,12 +328,27 @@ export default function FAQ() {
         </section>
 
         {/* Contact Support Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className = "py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Still Need Help?
@@ -289,9 +358,24 @@ export default function FAQ() {
                 {contactMethods.map((method, index) => (
                   <motion.div
                     key={method.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="text-center p-6 bg-slate-50 rounded-xl"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -312,9 +396,24 @@ export default function FAQ() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Get Started?
@@ -333,9 +432,9 @@ export default function FAQ() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

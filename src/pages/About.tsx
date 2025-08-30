@@ -31,9 +31,9 @@ const About: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

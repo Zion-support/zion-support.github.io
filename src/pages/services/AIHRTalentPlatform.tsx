@@ -7,18 +7,18 @@ export default function AIHRTalentPlatform() {
     'Intelligent interview scheduling and feedback',
     'Employee performance analytics and insights',
     'Predictive turnover analysis and retention strategies',
-    'Automated onboarding and training workflows',
-    'Diversity and inclusion analytics',
-    'Compliance monitoring and reporting'
+    'Automated onboarding and training workflows',;
+    'Diversity and inclusion analytics',;
+    'Compliance monitoring and reporting';
   ];
 
   const benefits = [
     'Reduce time-to-hire by 60%',
     'Improve candidate quality by 40%',
     'Reduce hiring costs by 30%',
-    'Increase employee retention by 25%',
-    'Automate routine HR tasks',
-    'Data-driven decision making'
+    'Increase employee retention by 25%',;
+    'Automate routine HR tasks',;
+    'Data-driven decision making';
   ];
 
   const pricing = [
@@ -37,18 +37,18 @@ export default function AIHRTalentPlatform() {
     { 
       name: 'Enterprise', 
       price: '$999/mo', 
-      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
-      popular: false
-    }
+      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
     'Recruitment and talent acquisition',
     'Employee performance management',
     'Learning and development',
-    'Workforce planning and analytics',
-    'Compliance and HR operations',
-    'Employee engagement and retention'
+    'Workforce planning and analytics',;
+    'Compliance and HR operations',;
+    'Employee engagement and retention';
   ];
 
   const platformModules = [
@@ -57,13 +57,13 @@ export default function AIHRTalentPlatform() {
     'Learning & Development',
     'Workforce Analytics',
     'Employee Engagement',
-    'Compliance & Reporting',
-    'Onboarding & Offboarding',
-    'Succession Planning'
+    'Compliance & Reporting',;
+    'Onboarding & Offboarding',;
+    'Succession Planning';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -315,8 +315,8 @@ export default function AIHRTalentPlatform() {
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

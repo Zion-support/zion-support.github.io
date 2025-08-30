@@ -31,7 +31,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
           'Content-Type': 'application/json',
           ...headers,
         },
-        body: body ? JSON.stringify(body) : undefined,
+        body: body ? JSON.stringify(body) : null,
       });
 
       if (!response.ok) {
@@ -116,11 +116,14 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   constructor(form, options = {}) {
     this.form = form;
     this.options = {
-      validateOnBlur: true,
+  validateOnBlur: true,
       validateOnSubmit: true,
       showErrors: true,
-      ...options
-    };
+  ...options
+    
+
+
+};
     
     this.rules = new Map();
     this.errors = new Map();
@@ -136,11 +139,9 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
 
   validateField(field) {
     const value = this.form[field]?.value;
-    const fieldRules = this.rules.get(field) || [];
     const fieldErrors = [];
 
-    for (const rule of fieldRules) {
-      const result = rule(value, this.form);
+    for (const result = rule(value, this.form);
       if (result !== true) {
         fieldErrors.push(result);
       }
@@ -205,41 +206,6 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
         rating: 4.9,
         usageCount: 2100,
         createdAt: '2024-01-08'
-    }
-];
-const mockCodeAnalysis = [
-    {
-        id: '1',
-        snippetId: '1',
-        quality: 92,
-        performance: 88,
-        security: 95,
-        maintainability: 90,
-        suggestions: [
-            'Consider adding request timeout handling',
-            'Add retry logic for failed requests',
-            'Implement request cancellation with AbortController'
-        ],
-        warnings: [
-            'No input validation for URL parameter',
-            'Consider rate limiting for API calls'
-        ],
-        timestamp: '2024-01-15T10:30:00Z'
-    },
-    {
-        id: '2',
-        snippetId: '2',
-        quality: 85,
-        performance: 95,
-        security: 100,
-        maintainability: 88,
-        suggestions: [
-            'Add vendor prefixes for better browser support',
-            'Consider using CSS custom properties for colors',
-            'Add animation performance optimizations'
-        ],
-        warnings: [],
-        timestamp: '2024-01-10T14:20:00Z'
     }
 ];
 const mockAIGenerations = [
@@ -319,9 +285,12 @@ export function AdvancedAICodeGenerator() {
         // Simulate AI code generation
         setTimeout(() => {
             const newGeneration = {
-                id: Date.now().toString(),
+  id: Date.now().toString(),
                 prompt: aiPrompt,
-                generatedCode: `// Generated code for: ${aiPrompt}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
+  generatedCode: `// Generated code for: ${aiPrompt
+
+
+}\n\nfunction example() {\n  console.log("Hello from AI!");\n  return "Generated code";\n}`,
                 language: 'javascript',
                 confidence: 0.87,
                 alternatives: [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus } from 'lucide-react';
 
@@ -22,9 +22,9 @@ const AIHRPlatform: React.FC = () => {
     },
     {
       icon: Shield,
-      title: 'Compliance Automation',
-      description: 'Automated HR compliance and reporting'
-    }
+      title: 'Compliance Automation',;
+      description: 'Automated HR compliance and reporting';
+    };
   ];
 
   const modules = [
@@ -45,22 +45,22 @@ const AIHRPlatform: React.FC = () => {
     },
     {
       title: 'Employee Engagement',
-      description: 'Monitor and improve workplace satisfaction',
-      icon: '❤️'
-    }
+      description: 'Monitor and improve workplace satisfaction',;
+      icon: '❤️';
+    };
   ];
 
   const benefits = [
     'Reduce time-to-hire by 50% with AI screening',
     'Improve candidate quality and retention rates',
     'Automate routine HR tasks and workflows',
-    'Data-driven insights for better decisions',
-    'Enhanced employee experience and engagement',
-    'Compliance automation and risk reduction'
+    'Data-driven insights for better decisions',;
+    'Enhanced employee experience and engagement',;
+    'Compliance automation and risk reduction';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI HR Platform Services - Zion Tech Group"
         description="Transform your HR operations with AI-powered recruitment, talent management, and performance analytics. Streamline HR processes and improve employee experience."
@@ -70,8 +70,18 @@ const AIHRPlatform: React.FC = () => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -108,8 +118,18 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -125,9 +145,24 @@ const AIHRPlatform: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -145,8 +180,18 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -162,9 +207,24 @@ const AIHRPlatform: React.FC = () => {
             {modules.map((module, index) => (
               <motion.div
                 key={module.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -184,8 +244,18 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -199,8 +269,18 @@ const AIHRPlatform: React.FC = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
             >
@@ -216,8 +296,18 @@ const AIHRPlatform: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 border border-blue-400/30 rounded-xl p-8"
             >
@@ -238,8 +328,18 @@ const AIHRPlatform: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -257,9 +357,9 @@ const AIHRPlatform: React.FC = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

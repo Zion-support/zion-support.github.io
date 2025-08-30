@@ -14,8 +14,8 @@ export const GradientHeading: React.FC<GradientHeadingProps> = ({
   return (
     <Component 
       className={`bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ${className}`}
-    >
-      {children}
-    </Component>
+    >;
+      {children};
+    </Component>;
   );
 };

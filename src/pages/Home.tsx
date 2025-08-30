@@ -65,13 +65,13 @@ const FuturisticBackground = React.memo(() => {
       id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
-      delay: i * 0.1,
-      duration: 5 + i * 0.3
-    })), []
+      delay: i * 0.1,;
+      duration: 5 + i * 0.3;
+    })), [];
   );
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <div className = "fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       {/* Animated grid with neon effect */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
       
@@ -80,32 +80,42 @@ const FuturisticBackground = React.memo(() => {
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
-          animate={{
+          animate = {
+  {
             x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
             scale: [0.5, 1.2, 0.5],
-          }}
-          transition={{
+  
+
+}}
+          transition = {
+  {
             duration: particle.duration,
             repeat: Infinity,
             delay: particle.delay,
-            ease: "easeInOut"
-          }}
-          style={{
+  ease: "easeInOut"
+          
+
+
+}}
+          style = {
+  {
             left: particle.left,
             top: particle.top,
-          }}
-        />
-      ))}
-    </div>
+  
+
+}}
+        />;
+      ))};
+    </div>;
   );
 });
 
 FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {;
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const heroSlides = useMemo(() => [
@@ -130,16 +140,16 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     {
       title: "Digital Transformation",
       description: "Modernize your infrastructure for the future",
-      icon: Rocket,
-      features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
-    }
+      icon: Rocket,;
+      features: ["Cloud Migration", "DevOps", "Security", "Compliance"];
+    };
   ], []);
 
-  const nextSlide = useCallback(() => {
+  const nextSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   }, [heroSlides.length]);
 
-  const prevSlide = useCallback(() => {
+  const prevSlide = useCallback(() => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   }, [heroSlides.length]);
 
@@ -149,12 +159,22 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [nextSlide]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+    <section className = "relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
       <div className="max-w-7xl mx-auto text-center">
         {/* Hero Content */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
@@ -194,18 +214,48 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
         {/* Hero Slides */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
           className="max-w-6xl mx-auto"
         >
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial = {
+  { opacity: 0,
+  x: 50 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                exit = {
+  { opacity: 0,
+  x: -50 
+
+
+}}
                 transition={{ duration: 0.5 }}
                 className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
               >
@@ -265,9 +315,9 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
               ))}
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 });
 
@@ -277,21 +327,36 @@ HeroSection.displayName = 'HeroSection';
 const StatsSection = React.memo(() => {
   const stats = useMemo(() => [
     { icon: Users, value: "500+", label: "Happy Clients", color: "from-blue-500 to-cyan-500" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate", color: "from-green-500 to-emerald-500" },
-    { icon: Award, value: "50+", label: "Awards Won", color: "from-yellow-500 to-orange-500" },
-    { icon: Globe, value: "25+", label: "Countries Served", color: "from-purple-500 to-pink-500" }
+    { icon: TrendingUp, value: "95%", label: "Success Rate", color: "from-green-500 to-emerald-500" },;
+    { icon: Award, value: "50+", label: "Awards Won", color: "from-yellow-500 to-orange-500" },;
+    { icon: Globe, value: "25+", label: "Countries Served", color: "from-purple-500 to-pink-500" };
   ], []);
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
+    <section className = "px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -302,9 +367,9 @@ const StatsSection = React.memo(() => {
               <div className="text-gray-300">{stat.label}</div>
             </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 });
 
@@ -331,17 +396,27 @@ const FeaturedServices = React.memo(() => {
       title: "Micro SAAS Solutions",
       description: "Custom software solutions for specific business needs",
       icon: Zap,
-      path: "/micro-saas",
-      features: ["Custom Development", "Scalable Architecture", "API-First Design", "Cloud Deployment"]
-    }
+      path: "/micro-saas",;
+      features: ["Custom Development", "Scalable Architecture", "API-First Design", "Cloud Deployment"];
+    };
   ], []);
 
   return (
-    <section className="px-4 sm:px-6 lg:px-8 py-20">
+    <section className = "px-4 sm:px-6 lg:px-8 py-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -358,9 +433,24 @@ const FeaturedServices = React.memo(() => {
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
               viewport={{ once: true }}
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"
             >
@@ -397,29 +487,29 @@ const FeaturedServices = React.memo(() => {
               </Link>
             </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 });
 
 FeaturedServices.displayName = 'FeaturedServices';
 
 // Main Home component
-const Home = () => {
+const Home = () => {;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const handleGetStarted = () => {
-    // Handle get started action
+  const handleGetStarted = () => {;
+    // Handle get started action;
     console.log('Get Started clicked');
   };
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "relative min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <FuturisticBackground />
       
       <HeroSection onGetStarted={handleGetStarted} />
@@ -430,8 +520,18 @@ const Home = () => {
       <section className="px-4 sm:px-6 lg:px-8 py-20 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: isVisible ? 1 : 0,
+  y: isVisible ? 0 : 20 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -472,9 +572,9 @@ const Home = () => {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

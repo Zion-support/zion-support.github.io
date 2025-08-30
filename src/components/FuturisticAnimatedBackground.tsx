@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export const FuturisticAnimatedBackground: React.FC = () => {
+export const FuturisticAnimatedBackground: React.FC = () => {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {
+    const resizeCanvas = () => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -35,7 +35,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     }> = [];
 
     // Create particles
-    const createParticle = () => {
+    const createParticle = () => {;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const angle = Math.random() * Math.PI * 2;
@@ -54,7 +54,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     };
 
     // Update and draw particles
-    const animate = () => {
+    const animate = () => {;
       time += 0.01;
       
       // Clear canvas with fade effect
@@ -108,7 +108,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.globalAlpha = 0.3;
       
       const gridSize = 50;
-      const offsetX = (time * 10) % gridSize;
       const offsetY = (time * 5) % gridSize;
 
       // Vertical lines
@@ -133,7 +132,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.lineWidth = 2;
 
       // Rotating triangle
-      const centerX = canvas.width * 0.2;
       const centerY = canvas.height * 0.3;
       const triangleSize = 30;
       const rotation = time * 0.5;
@@ -150,8 +148,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.restore();
 
       // Floating circle
-      const circleX = canvas.width * 0.8;
-      const circleY = canvas.height * 0.7;
       const circleSize = 20 + Math.sin(time * 2) * 10;
 
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.5)';
@@ -167,7 +163,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.lineWidth = 3;
       
       for (let i = 0; i < 3; i++) {
-        const waveOffset = (time * 50 + i * 100) % (canvas.width + 200);
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
         
         ctx.beginPath();
@@ -190,10 +185,15 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 
   return (
     <canvas
-      ref={canvasRef}
+      ref = {canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03), transparent 60%)' }}
-    />
+      style = {
+  { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),
+  transparent 60%)' 
+
+;
+}};
+    />;
   );
 };
 

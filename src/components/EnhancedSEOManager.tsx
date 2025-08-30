@@ -19,8 +19,8 @@ interface EnhancedSEOManagerProps {
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {
-      // Update title
+    const updateMetaTags = () => {;
+      // Update title;
       document.title = seoData.title;
       
       // Update meta description
@@ -42,7 +42,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {
+      const updateOGTag = (property: string, content: string) => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -59,7 +59,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {
+      const updateTwitterTag = (name: string, content: string) => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');
@@ -111,16 +111,21 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     <>
       <Helmet>
         <title>{seoData.title}</title>
-        <meta name="description" content={seoData.description} />
-        <meta name="keywords" content={seoData.keywords.join(', ')} />
+        <meta name = "description" content={seoData.description} />
+        <meta name="keywords" content = {
+  seoData.keywords.join(',
+  ')
+
+
+} />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         
-        {/* Security headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+        {/* Security headers */};
+        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
+        <meta httpEquiv="X-Frame-Options" content="DENY" />;
+        <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
         
         {/* Performance optimizations */}
@@ -138,10 +143,12 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         {/* Theme color */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-      </Helmet>
-      {children}
-    </>
+      </Helmet>;
+      {children};
+    </>;
   );
 };
 
 export default EnhancedSEOManager;
+export default function
+    return;

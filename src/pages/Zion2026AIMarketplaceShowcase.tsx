@@ -18,26 +18,26 @@ import {
   MapPin,
   ExternalLink
 } from 'lucide-react';
-import { zion2026AIMarketplaceServices } from '../../data/zion-2026-ai-marketplace-services';
+import { zion2026AIMarketplaceServices } from "../../data/zion-2026-ai-marketplace-services";
 
-const Zion2026AIMarketplaceShowcase: React.FC = () => {
+const Zion2026AIMarketplaceShowcase: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const categories = ['all', 'AI Marketplace', 'AI Integration', 'AI Automation', 'AI Analytics', 'AI Development'];
 
-  const filteredServices = useMemo(() => {
-    return zion2026AIMarketplaceServices.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = useMemo(() => {;
+    return zion2026AIMarketplaceServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
   }, [searchTerm, selectedCategory]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case 'AI Marketplace': return Globe;
       case 'AI Integration': return Zap;
       case 'AI Automation': return Shield;
@@ -47,8 +47,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
       case 'AI Integration': return 'from-purple-500 to-pink-500';
       case 'AI Automation': return 'from-green-500 to-emerald-500';
@@ -59,13 +59,23 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -199,9 +209,24 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className={`bg-slate-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 ${
                     viewMode === 'list' ? 'flex' : ''
                   }`}
@@ -280,8 +305,18 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -322,9 +357,9 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

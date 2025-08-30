@@ -7,9 +7,9 @@ export default function AIPenetrationTesting() {
     'Automated security assessment and reporting',
     'Predictive analytics for security risks',
     'Smart testing methodology and planning',
-    'AI-driven testing automation and orchestration',
-    'Real-time testing analytics and insights',
-    'Custom AI models for testing applications'
+    'AI-driven testing automation and orchestration',;
+    'Real-time testing analytics and insights',;
+    'Custom AI models for testing applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIPenetrationTesting() {
     },
     { 
       name: 'Enterprise', 
-      price: '$4,999/mo', 
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] 
-    },
+      price: '$4,999/mo', ;
+      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Penetration testing optimization',
     'Vulnerability discovery and exploitation',
     'Security assessment and reporting',
-    'Testing methodology and planning',
-    'Testing automation and orchestration',
-    'Testing scaling and management'
+    'Testing methodology and planning',;
+    'Testing automation and orchestration',;
+    'Testing scaling and management';
   ];
 
   const benefits = [
     'Improve penetration testing performance by 50-80%',
     'Reduce testing completion time by 40-70%',
     'Cut testing operational costs by 35-65%',
-    'Enhance testing reliability and scalability',
-    'Optimize resource utilization',
-    'Scale testing operations efficiently'
+    'Enhance testing reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale testing operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-gray-500 via-slate-500 to-zinc-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIPenetrationTesting() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -58,10 +58,10 @@ function processFile(filePath) {
     // Additional replacements for useRouter usage
     if (newContent.includes('useRouter')) {
       newContent = newContent.replace(/useRouter\(\)/g, 'useNavigate()');
-      newContent = newContent.replace(/router\.push\(/g, 'navigate(');
-      newContent = newContent.replace(/router\.replace\(/g, 'navigate(');
-      newContent = newContent.replace(/router\.back\(\)/g, 'navigate(-1)');
-      newContent = newContent.replace(/router\.forward\(\)/g, 'navigate(1)');
+      newContent = newContent.replace(/router\.push\(/g, 'router(');
+      newContent = newContent.replace(/router\.replace\(/g, 'router(');
+      newContent = newContent.replace(/router\.back\(\)/g, 'router(-1)');
+      newContent = newContent.replace(/router\.forward\(\)/g, 'router(1)');
       modified = true;
     }
 
@@ -95,8 +95,7 @@ function processFile(filePath) {
 }
 
 // Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  const files = [];
+function files = [];
   
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);

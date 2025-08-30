@@ -578,105 +578,6 @@ import {
   Brain
 } from 'lucide-react';
 
-const ventureCapitalSolutions = [
-  {
-    id: 1,
-    title: "AI Investment Analysis Platform",
-    description: "Intelligent platform for analyzing investment opportunities and market trends.",
-    icon: BarChart3,
-    features: [
-      "Market analysis",
-      "Risk assessment",
-      "Portfolio optimization",
-      "Investment recommendations"
-    ],
-    price: "From $300,000",
-    timeline: "32-44 weeks",
-    category: "Investment Analysis",
-    technologies: ["Machine Learning", "Data Analytics", "Financial Modeling", "AI Models"]
-  },
-  {
-    id: 2,
-    title: "Autonomous Deal Sourcing",
-    description: "AI-powered system for identifying and evaluating investment opportunities.",
-    icon: Target,
-    features: [
-      "Deal identification",
-      "Company screening",
-      "Market research",
-      "Opportunity scoring"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Deal Sourcing",
-    technologies: ["AI", "Data Mining", "Market Intelligence", "Machine Learning"]
-  },
-  {
-    id: 3,
-    title: "Portfolio Management System",
-    description: "Intelligent system for managing and optimizing investment portfolios.",
-    icon: Users,
-    features: [
-      "Portfolio tracking",
-      "Performance analysis",
-      "Risk management",
-      "Rebalancing"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Portfolio Management",
-    technologies: ["AI Optimization", "Portfolio Theory", "Analytics", "Machine Learning"]
-  },
-  {
-    id: 4,
-    title: "Predictive Market Intelligence",
-    description: "AI-driven forecasting and market intelligence for investment decisions.",
-    icon: TrendingUp,
-    features: [
-      "Market forecasting",
-      "Trend analysis",
-      "Sector insights",
-      "Economic indicators"
-    ],
-    price: "From $350,000",
-    timeline: "36-48 weeks",
-    category: "Market Intelligence",
-    technologies: ["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
-  },
-  {
-    id: 5,
-    title: "Due Diligence Automation",
-    description: "AI-powered system for automating due diligence processes.",
-    icon: FileText,
-    features: [
-      "Document analysis",
-      "Risk assessment",
-      "Compliance checking",
-      "Report generation"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Due Diligence",
-    technologies: ["AI", "Document Processing", "Risk Analysis", "Compliance"]
-  },
-  {
-    id: 6,
-    title: "Exit Strategy Optimization",
-    description: "AI-driven system for optimizing exit strategies and timing.",
-    icon: Rocket,
-    features: [
-      "Exit timing",
-      "Strategy optimization",
-      "Market analysis",
-      "Value maximization"
-    ],
-    price: "From $220,000",
-    timeline: "26-38 weeks",
-    category: "Exit Strategy",
-    technologies: ["AI", "Exit Planning", "Market Analysis", "Optimization"]
-  }
-];
-
 const vcTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -818,15 +719,40 @@ export default function AIAutonomousVentureCapitalist() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <TrendingUp className="w-10 h-10 text-white" />
@@ -864,8 +790,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +815,24 @@ export default function AIAutonomousVentureCapitalist() {
             {vcBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +861,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +886,24 @@ export default function AIAutonomousVentureCapitalist() {
             {vcTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +933,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +958,24 @@ export default function AIAutonomousVentureCapitalist() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +1002,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +1044,24 @@ export default function AIAutonomousVentureCapitalist() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1116,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1141,24 @@ export default function AIAutonomousVentureCapitalist() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1151,8 +1202,18 @@ export default function AIAutonomousVentureCapitalist() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

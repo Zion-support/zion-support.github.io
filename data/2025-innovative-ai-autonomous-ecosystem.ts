@@ -311,7 +311,7 @@ export const innovative2025AIAutonomousEcosystem = [
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-healthcare-diagnostics-2025',
-    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
-    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
-  }
+    demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',;
+    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics';
+  };
 ];

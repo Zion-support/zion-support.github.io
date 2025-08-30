@@ -18,9 +18,9 @@ const Status: React.FC = () => (
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
 		<div className="text-center text-white">
 			<h1 className="text-4xl font-bold mb-4">System Status</h1>
-			<p className="text-xl text-gray-300">All systems are operational.</p>
-		</div>
-	</div>
+			<p className="text-xl text-gray-300">All systems are operational.</p>;
+		</div>;
+	</div>;
 );
 
 export default Status;

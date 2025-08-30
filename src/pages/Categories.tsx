@@ -44,21 +44,24 @@ export default function Categories() {
       id: 'development',
       name: 'Development',
       icon: <Code className="w-8 h-8" />,
-      color: 'from-zion-indigo to-zion-purple',
-      count: 41
-    }
+      color: 'from-zion-indigo to-zion-purple',;
+      count: 41;
+    };
   ];
 
   const subCategories = {
-    'ai-ml': [
+  'ai-ml': [
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: <Brain className="w-6 h-6" />,
         services: 12,
         talent: 8,
-        equipment: 3
-      },
+  equipment: 3
+      
+
+
+},
       {
         name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
@@ -185,9 +188,9 @@ export default function Categories() {
         icon: <Network className="w-6 h-6" />,
         services: 13,
         talent: 8,
-        equipment: 1
-      }
-    ]
+        equipment: 1;
+      };
+    ];
   };
 
   const featuredItems = [
@@ -212,15 +215,15 @@ export default function Categories() {
       title: 'High-Performance GPU Cluster',
       category: 'AI & Machine Learning',
       rating: 4.7,
-      price: '$15,000/month',
-      featured: true
-    }
+      price: '$15,000/month',;
+      featured: true;
+    };
   ];
 
   const getCategoryCount = (categoryId: string) => {
-    if (categoryId === 'all') {
-      return Object.values(subCategories).flat().reduce((total, sub) => 
-        total + sub.services + sub.talent + sub.equipment, 0
+    if (categoryId === 'all') {;
+      return Object.values(subCategories).flat().reduce((total, sub) => ;
+        total + sub.services + sub.talent + sub.equipment, 0;
       );
     }
     return subCategories[categoryId]?.reduce((total, sub) => 
@@ -229,12 +232,12 @@ export default function Categories() {
   };
 
   // Update counts
-  mainCategories.forEach(cat => {
+  mainCategories.forEach(cat = > {;
     cat.count = getCategoryCount(cat.id);
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -379,8 +382,8 @@ export default function Categories() {
               Contact Us
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

@@ -2,19 +2,14 @@ import React from 'react';
 import { cn } from '@/lib/utils';
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     const sizeClasses = {
-        sm: 'w-4 h-4',
+  sm: 'w-4 h-4',
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
-        xl: 'w-12 h-12'
-    };
-    const renderSpinner = () => (<div className={cn('border-2 border-current border-t-transparent rounded-full animate-spin', sizeClasses[size])}/>);
-    const renderDots = () => (<div className="flex space-x-1">
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '0ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '150ms' }}/>
-      <div className={cn('bg-current rounded-full animate-bounce', sizeClasses[size])} style={{ animationDelay: '300ms' }}/>
-    </div>);
-    const renderPulse = () => (<div className={cn('bg-current rounded-full animate-ping', sizeClasses[size])}/>);
-    const renderSkeleton = () => (<div className={cn('bg-current rounded animate-pulse', sizeClasses[size])}/>);
+  xl: 'w-12 h-12'
+    
+
+
+};
     const renderContent = () => {
         switch (variant) {
             case 'dots':
@@ -27,14 +22,24 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
                 return renderSpinner();
         }
     };
-    return (<div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+    return (<div className = {
+  cn('flex flex-col items-center justify-center gap-3',
+  className)
+
+
+}>
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
     </div>);
 }
 // Skeleton loading for content
 export function Skeleton({ className, ...props }) {
-    return (<div className={cn('animate-pulse rounded-md bg-zion-slate-light/20', className)} {...props}/>);
+    return (<div className = {
+  cn('animate-pulse rounded-md bg-zion-slate-light/20',
+  className)
+
+
+} {...props}/>);
 }
 // Page loading component
 export function PageLoading() {

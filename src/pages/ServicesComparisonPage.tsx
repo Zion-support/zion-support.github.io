@@ -1,11 +1,11 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function ServicesComparisonPage() {
   return (
     <>
       <SEO
-        title="Services Comparison | Zion Tech Group"
+        title = "Services Comparison | Zion Tech Group"
         description="Compare our comprehensive range of technology services and find the perfect solution for your business needs."
         keywords="services comparison, technology services, AI services, IT services, Zion Tech Group"
         canonical="https://ziontechgroup.com/services-comparison"
@@ -25,8 +25,8 @@ export default function ServicesComparisonPage() {
           <div className="mt-16 text-center text-white">
             <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 }

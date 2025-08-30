@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 import { motion } from 'framer-motion';
 import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart3, Activity, Rocket, ExternalLink, Github, Globe, Shield, Zap, Database, Brain, Cloud, Lock } from 'lucide-react';
 
@@ -26,9 +26,9 @@ const DeveloperPortal: React.FC = () => {
     {
       icon: Download,
       title: 'SDKs & Libraries',
-      description: 'Official client libraries for all platforms',
-      category: 'Integration'
-    }
+      description: 'Official client libraries for all platforms',;
+      category: 'Integration';
+    };
   ];
 
   const resources = [
@@ -53,9 +53,9 @@ const DeveloperPortal: React.FC = () => {
     {
       title: 'Code Samples',
       description: 'Real-world implementation examples',
-      icon: '💻',
-      difficulty: 'All Levels'
-    }
+      icon: '💻',;
+      difficulty: 'All Levels';
+    };
   ];
 
   const community = [
@@ -80,13 +80,13 @@ const DeveloperPortal: React.FC = () => {
     {
       name: 'Stack Overflow',
       description: 'Q&A platform integration',
-      members: '5K+',
-      icon: '📝'
-    }
+      members: '5K+',;
+      icon: '📝';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
@@ -96,8 +96,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -134,8 +144,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -151,9 +171,24 @@ const DeveloperPortal: React.FC = () => {
             {tools.map((tool, index) => (
               <motion.div
                 key={tool.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -174,8 +209,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -191,9 +236,24 @@ const DeveloperPortal: React.FC = () => {
             {resources.map((resource, index) => (
               <motion.div
                 key={resource.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -222,8 +282,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -239,9 +309,24 @@ const DeveloperPortal: React.FC = () => {
             {community.map((platform, index) => (
               <motion.div
                 key={platform.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
               >
                 <div className="text-4xl mb-4">{platform.icon}</div>
@@ -263,8 +348,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -277,9 +372,24 @@ const DeveloperPortal: React.FC = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
           >
             <div className="space-y-6">
@@ -319,8 +429,18 @@ const DeveloperPortal: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -338,9 +458,9 @@ const DeveloperPortal: React.FC = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

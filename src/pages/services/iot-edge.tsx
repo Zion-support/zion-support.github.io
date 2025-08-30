@@ -8,7 +8,7 @@ export default function IoTEdge() {
     <>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
-        <meta name="description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management." />
+        <meta name = "description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management." />
         <meta name="keywords" content="IoT, edge computing, smart devices, sensor networks, real-time processing, device management, industrial IoT" />
       </Helmet>
 
@@ -345,8 +345,8 @@ export default function IoTEdge() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

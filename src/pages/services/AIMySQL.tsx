@@ -7,9 +7,9 @@ export default function AIMySQL() {
     'Automated MySQL performance monitoring',
     'Predictive analytics for database scaling',
     'Smart MySQL security and compliance',
-    'AI-driven MySQL automation and orchestration',
-    'Real-time MySQL analytics and insights',
-    'Custom AI models for MySQL applications'
+    'AI-driven MySQL automation and orchestration',;
+    'Real-time MySQL analytics and insights',;
+    'Custom AI models for MySQL applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIMySQL() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,499/mo', 
-      details: ['Unlimited storage', 'Custom AI models', 'Full MySQL suite', '24/7 dedicated support'] 
-    },
+      price: '$1,499/mo', ;
+      details: ['Unlimited storage', 'Custom AI models', 'Full MySQL suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'MySQL query optimization',
     'Database indexing and partitioning',
     'Performance monitoring and analytics',
-    'Security and compliance monitoring',
-    'Automation and orchestration',
-    'Database scaling and management'
+    'Security and compliance monitoring',;
+    'Automation and orchestration',;
+    'Database scaling and management';
   ];
 
   const benefits = [
     'Improve query performance by 50-80%',
     'Reduce storage costs by 40-70%',
     'Cut operational costs by 35-65%',
-    'Enhance database reliability and scalability',
-    'Optimize resource utilization',
-    'Scale MySQL operations efficiently'
+    'Enhance database reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale MySQL operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIMySQL() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

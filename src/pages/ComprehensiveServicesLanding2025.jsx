@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { innovativeMicroSaasServices2025 } from '../data/innovativeMicroSaasServices2025';
+import { innovativeMicroSaasServices2025 } from "../data/innovativeMicroSaasServices2025";
 const ComprehensiveServicesLanding2025 = () => {
     const [selectedIndustry, setSelectedIndustry] = useState('all');
     const industries = [
@@ -17,14 +17,17 @@ const ComprehensiveServicesLanding2025 = () => {
         if (industry === 'all')
             return innovativeMicroSaasServices2025;
         const industryMap = {
-            'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
+  'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
             'healthcare': ['Healthcare & AI'],
             'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
             'energy': ['Energy & Sustainability'],
             'logistics': ['Logistics & Transportation'],
             'legal': ['Legal Tech & AI'],
-            'marketing': ['Marketing & AI']
-        };
+  'marketing': ['Marketing & AI']
+        
+
+
+};
         return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category));
     };
     const filteredServices = getServicesByIndustry(selectedIndustry);

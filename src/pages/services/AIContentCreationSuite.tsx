@@ -9,27 +9,27 @@ export default function AIContentCreationSuite() {
     'SEO-optimized content creation',
     'Brand voice consistency management',
     'Content performance analytics',
-    'Automated content scheduling',
-    'Plagiarism detection and prevention',
-    'Content collaboration and workflow management'
+    'Automated content scheduling',;
+    'Plagiarism detection and prevention',;
+    'Content collaboration and workflow management';
   ];
 
   const benefits = [
     'Increase content production by 10x',
     'Reduce content creation costs by 60%',
     'Improve content engagement by 45%',
-    'Maintain consistent brand voice',
-    'Scale content across multiple channels',
-    'Optimize content for better SEO performance'
+    'Maintain consistent brand voice',;
+    'Scale content across multiple channels',;
+    'Optimize content for better SEO performance';
   ];
 
   const useCases = [
     'Marketing and advertising agencies',
     'E-commerce and retail brands',
     'Publishing and media companies',
-    'Educational institutions',
-    'Corporate communications',
-    'Social media management'
+    'Educational institutions',;
+    'Corporate communications',;
+    'Social media management';
   ];
 
   const tiers = [
@@ -65,18 +65,22 @@ export default function AIContentCreationSuite() {
         'Custom AI models',
         'Dedicated support',
         'API access',
-        'White-label solutions'
-      ]
-    }
+        'White-label solutions';
+      ];
+    };
   ];
 
   const technicalSpecs = {
-    technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+  technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
     integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Adobe Creative Suite'],
     security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.9%',
-    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'CCPA', 'COPPA']
-  };
+    compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'CCPA',;
+  'COPPA'];
+  ;
+
+
+};
 
   const contentTypes = [
     {
@@ -88,13 +92,13 @@ export default function AIContentCreationSuite() {
       solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets']
     },
     {
-      type: 'Video Content',
-      solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
-    }
+      type: 'Video Content',;
+      solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams'];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -252,8 +256,8 @@ export default function AIContentCreationSuite() {
               Learn More <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -261,7 +261,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk model development',
       'Performance analysis and attribution'
     ],
-    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
-    compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards']
-  }
+    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],;
+    compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards'];
+  };
 ];

@@ -1,32 +1,6 @@
 import React from 'react';
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
 const AIContentGeneration = () => {
-    const contentFeatures = [
-        {
-            icon: FileText,
-            title: "Text Generation",
-            description: "AI-powered content creation for various text formats",
-            features: ["Article writing", "Copywriting", "Technical documentation", "Creative storytelling"]
-        },
-        {
-            icon: Image,
-            title: "Visual Content",
-            description: "Generate images, graphics, and visual elements",
-            features: ["Image generation", "Graphic design", "Illustrations", "Visual branding"]
-        },
-        {
-            icon: Video,
-            title: "Video Production",
-            description: "AI-enhanced video creation and editing",
-            features: ["Video generation", "Content editing", "Animation", "Visual effects"]
-        },
-        {
-            icon: Music,
-            title: "Audio Content",
-            description: "Generate audio content and music compositions",
-            features: ["Music generation", "Voice synthesis", "Sound effects", "Audio editing"]
-        }
-    ];
     const contentTypes = [
         {
             title: "Marketing Content",

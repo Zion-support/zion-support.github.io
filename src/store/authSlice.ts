@@ -18,14 +18,18 @@ const initialState: AuthState = {
   user: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,
+  error: null,;
+  ;
+  ;
+
+
 };
 
 const authSlice = createSlice({
   name: 'auth',
-  initialState,
-  reducers: {
-    setUser: (state, action: PayloadAction<User>) => {
+  initialState,;
+  reducers: {;
+    setUser: (state, action: PayloadAction<User>) => {;
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;

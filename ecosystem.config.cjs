@@ -77,6 +77,34 @@ module.exports = {
       }
     },
 
+    // 🚨 NEW: Comprehensive Error Fixer - runs every 10 minutes (HIGHEST PRIORITY)
+    {
+      name: 'comprehensive-error-fixer',
+      script: './scripts/automation/comprehensive-error-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // 🔧 NEW: Error Fixer Automation - runs every 15 minutes
+    {
+      name: 'error-fixer-automation',
+      script: './scripts/automation/error-fixer-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
     // Continuous console error fixer - runs every 15 minutes (HIGHEST PRIORITY)
     {
       name: 'console-error-fixer',

@@ -23,9 +23,9 @@ import {
 } from 'lucide-react';
 
 // Import the new services
-import { ultimateInnovativeServices2025 } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025 } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025 } from '../../data/2025-innovative-micro-saas-solutions';
+import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
+import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
+import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
 
 interface Service {
   id: string;
@@ -74,8 +74,11 @@ interface Service {
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+;
+
+
 };
 
 const categories = [
@@ -100,23 +103,29 @@ const categories = [
     name: 'Micro SAAS Solutions',
     description: 'Innovative software solutions for small businesses',
     icon: <Code className="w-8 h-8" />,
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions2025
-  }
+    color: 'from-green-600 to-emerald-700',;
+    services: innovativeMicroSaasSolutions2025;
+  };
 ];
 
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700',
   'Breakthrough': 'from-purple-600 to-violet-700',
-  'Advanced': 'from-blue-600 to-cyan-700',
-  'Emerging': 'from-green-600 to-emerald-700'
+  'Advanced': 'from-blue-600 to-cyan-700',;
+  'Emerging': 'from-green-600 to-emerald-700';
+;
+
+
 };
 
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700',
   'Patent Pending': 'from-yellow-600 to-orange-700',
-  'Trade Secret': 'from-blue-600 to-indigo-700',
-  'Open Source': 'from-purple-600 to-violet-700'
+  'Trade Secret': 'from-blue-600 to-indigo-700',;
+  'Open Source': 'from-purple-600 to-violet-700';
+;
+
+
 };
 
 export function UltimateServicesShowcase() {
@@ -124,13 +133,13 @@ export function UltimateServicesShowcase() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   const allServices = [
-    ...ultimateInnovativeServices2025,
-    ...enterpriseITInfrastructureServices2025,
-    ...innovativeMicroSaasSolutions2025
+    ...ultimateInnovativeServices2025,;
+    ...enterpriseITInfrastructureServices2025,;
+    ...innovativeMicroSaasSolutions2025;
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
+  const filteredServices = selectedCategory === 'all' ;
+    ? allServices ;
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
 
   const containerVariants = {
@@ -139,31 +148,45 @@ export function UltimateServicesShowcase() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut";
+      };
+    };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -198,9 +221,24 @@ export function UltimateServicesShowcase() {
         {/* Category Navigation */}
         <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
         >
           <button
             onClick={() => setSelectedCategory('all')}
@@ -344,9 +382,24 @@ export function UltimateServicesShowcase() {
         {/* Call to Action */}
         <motion.div 
           className="text-center mt-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -492,10 +545,13 @@ export function UltimateServicesShowcase() {
               </div>
             </div>
           </div>
-        </div>
-      )}
-    </section>
+        </div>;
+      )};
+    </section>;
   );
 }
 
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

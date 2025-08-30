@@ -93,21 +93,21 @@ export default function FuturisticServicesShowcase() {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-		const interval = setInterval(() => {
+		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {
-		switch (status) {
+	const getStatusColor = (status: string) => {;
+		switch (status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500';
 		}
 	};
-	const getStatusText = (status: string) => {
-		switch (status) {
+	const getStatusText = (status: string) => {;
+		switch (status) {;
 			case 'new': return 'NEW';
 			case 'beta': return 'BETA';
 			case 'active': return 'ACTIVE';
@@ -115,13 +115,23 @@ export default function FuturisticServicesShowcase() {
 		}
 	};
 	return (
-		<div className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
 			<div className="container mx-auto px-4">
 				{/* Header */}
 				<div className="text-center mb-16">
 					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+						whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
 						transition={{ duration: 0.6 }}
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
 					>
@@ -131,9 +141,24 @@ export default function FuturisticServicesShowcase() {
 						</span>
 					</motion.h2>
 					<motion.p 
-						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6, delay: 0.2 }}
+						initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+						whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+						transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 					>
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
@@ -169,9 +194,24 @@ export default function FuturisticServicesShowcase() {
 					<AnimatePresence mode="wait">
 						<motion.div
 							key={currentService}
-							initial={{ opacity: 0, x: 100 }}
-							animate={{ opacity: 1, x: 0 }}
-							exit={{ opacity: 0, x: -100 }}
+							initial = {
+  { opacity: 0,
+  x: 100 
+
+
+}}
+							animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+							exit = {
+  { opacity: 0,
+  x: -100 
+
+
+}}
 							transition={{ duration: 0.5 }}
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 						>
@@ -200,8 +240,18 @@ export default function FuturisticServicesShowcase() {
 											{futuristicServices[currentService].features.map((feature, index) => (
 												<motion.li
 													key={index}
-													initial={{ opacity: 0, x: -20 }}
-													animate={{ opacity: 1, x: 0 }}
+													initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+													animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
 													transition={{ delay: index * 0.1 }}
 													className="flex items-center text-zion-slate-light"
 												>
@@ -230,15 +280,24 @@ export default function FuturisticServicesShowcase() {
 										</div>
 										{/* Animated particles */}
 										<motion.div
-											animate={{ 
+											animate = {
+  { 
 												rotate: [0, 360],
-												scale: [1, 1.1, 1]
-											}}
-											transition={{ 
+												scale: [1, 1.1,
+  1]
+											
+
+
+}}
+											transition = {
+  { 
 												duration: 20, 
-												repeat: Infinity, 
-												ease: "linear" 
-											}}
+												repeat: Infinity,
+  ease: "linear" 
+											
+
+
+}}
 											className="absolute inset-0"
 										>
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>
@@ -260,9 +319,24 @@ export default function FuturisticServicesShowcase() {
 						{futuristicServices.map((service, index) => (
 							<motion.div
 								key={service.id}
-								initial={{ opacity: 0, y: 20 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.5, delay: index * 0.1 }}
+								initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+								whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+								transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 							>
@@ -286,8 +360,8 @@ export default function FuturisticServicesShowcase() {
 							</motion.div>
 						))}
 					</div>
-				</div>
-			</div>
-		</div>
+				</div>;
+			</div>;
+		</div>;
 	);
 }

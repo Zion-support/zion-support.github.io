@@ -167,18 +167,18 @@ const Enterprise = () => {
     },
     {
       icon: Monitor,
-      title: 'Enterprise Monitoring',
-      description: 'Advanced monitoring, alerting, and reporting capabilities'
-    }
+      title: 'Enterprise Monitoring',;
+      description: 'Advanced monitoring, alerting, and reporting capabilities';
+    };
   ];
 
   const benefits = [
     'Scale to support thousands of users and systems',
     'Ensure enterprise-grade security and compliance',
     'Optimize performance for large-scale operations',
-    'Reduce total cost of ownership',
-    'Enable rapid deployment and scaling',
-    'Provide 24/7 enterprise support'
+    'Reduce total cost of ownership',;
+    'Enable rapid deployment and scaling',;
+    'Provide 24/7 enterprise support';
   ];
 
   const services = [
@@ -199,9 +199,9 @@ const Enterprise = () => {
     },
     {
       icon: Scale,
-      title: 'Scalability Planning',
-      description: 'Plan for enterprise growth and technology scaling'
-    }
+      title: 'Scalability Planning',;
+      description: 'Plan for enterprise growth and technology scaling';
+    };
   ];
 
   const useCases = [
@@ -218,20 +218,30 @@ const Enterprise = () => {
       description: 'HIPAA-compliant enterprise healthcare systems'
     },
     {
-      industry: 'Financial Services',
-      description: 'Secure, compliant financial enterprise solutions'
-    }
+      industry: 'Financial Services',;
+      description: 'Secure, compliant financial enterprise solutions';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -268,8 +278,18 @@ const Enterprise = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -286,9 +306,24 @@ const Enterprise = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
@@ -306,8 +341,18 @@ const Enterprise = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -324,9 +369,24 @@ const Enterprise = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -348,8 +408,18 @@ const Enterprise = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -366,9 +436,24 @@ const Enterprise = () => {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -380,9 +465,24 @@ const Enterprise = () => {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -398,8 +498,18 @@ const Enterprise = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -416,9 +526,24 @@ const Enterprise = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -436,8 +561,18 @@ const Enterprise = () => {
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -457,9 +592,9 @@ const Enterprise = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

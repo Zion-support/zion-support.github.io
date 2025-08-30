@@ -7,9 +7,9 @@ export default function AIInsurance() {
     'Automated policy management and customer service',
     'Predictive analytics for risk modeling and pricing',
     'Real-time customer behavior analysis and risk scoring',
-    'Smart document processing and compliance monitoring',
-    'Integration with major insurance management systems',
-    'Custom AI models for insurance-specific insights'
+    'Smart document processing and compliance monitoring',;
+    'Integration with major insurance management systems',;
+    'Custom AI models for insurance-specific insights';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIInsurance() {
     },
     { 
       name: 'Large Insurer', 
-      price: '$3,999/mo', 
-      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
-    },
+      price: '$3,999/mo', ;
+      details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Automated underwriting and risk assessment',
     'Claims processing and fraud detection',
     'Customer service and policy management',
-    'Risk modeling and pricing optimization',
-    'Compliance monitoring and reporting',
-    'Customer retention and cross-selling'
+    'Risk modeling and pricing optimization',;
+    'Compliance monitoring and reporting',;
+    'Customer retention and cross-selling';
   ];
 
   const benefits = [
     'Reduce claims processing time by 60-80%',
     'Improve fraud detection accuracy by 40-60%',
     'Cut operational costs by 25-40%',
-    'Optimize pricing for maximum profitability',
-    'Enhance customer experience and satisfaction',
-    'Scale insurance operations efficiently'
+    'Optimize pricing for maximum profitability',;
+    'Enhance customer experience and satisfaction',;
+    'Scale insurance operations efficiently';
   ];
 
   const industries = [
     'Property & Casualty Insurance',
     'Life & Health Insurance',
     'Auto Insurance',
-    'Commercial Insurance',
-    'Reinsurance',
-    'Insurance Brokers'
+    'Commercial Insurance',;
+    'Reinsurance',;
+    'Insurance Brokers';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIInsurance() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

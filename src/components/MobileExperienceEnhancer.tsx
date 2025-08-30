@@ -96,8 +96,8 @@ interface DeviceInfo {
 }
 
 export function MobileExperienceEnhancer({ 
-  enabled = true 
-}: { 
+  enabled = true ;
+}: { ;
   enabled?: boolean; 
 }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -207,7 +207,7 @@ export function MobileExperienceEnhancer({
 
   // Detect device information
   useEffect(() => {
-    const detectDevice = () => {
+    const detectDevice = () => {;
       const userAgent = navigator.userAgent;
       const screen = window.screen;
       
@@ -232,15 +232,19 @@ export function MobileExperienceEnhancer({
       }
       
       const deviceInfo: DeviceInfo = {
-        type,
+  type,
         platform,
-        screenSize: { width: screen.width, height: screen.height },
+        screenSize: { width: screen.width,
+  height: screen.height 
+
+
+},
         pixelRatio: window.devicePixelRatio || 1,
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',
         touchSupport: 'ontouchstart' in window,
-        pwaSupport: 'serviceWorker' in navigator,
-        networkType: (navigator as any).connection?.effectiveType || 'unknown',
-        batteryLevel: 0
+        pwaSupport: 'serviceWorker' in navigator,;
+        networkType: (navigator as any).connection?.effectiveType || 'unknown',;
+        batteryLevel: 0;
       };
       
       setDeviceInfo(deviceInfo);
@@ -267,29 +271,30 @@ export function MobileExperienceEnhancer({
   useEffect(() => {
     if (!settings.touchGestures) return;
     
-    const handleTouchStart = (e: TouchEvent) => {
-      if (e.touches.length === 1) {
+    const handleTouchStart = (e: TouchEvent) => {;
+      if (e.touches.length === 1) {;
         const touch = e.touches[0];
         touchStartRef.current = {
-          x: touch.clientX,
-          y: touch.clientY,
-          time: Date.now()
-        };
+  x: touch.clientX,
+          y: touch.clientY,;
+  time: Date.now();
+        ;
+
+
+};
       }
     };
     
-    const handleTouchEnd = (e: TouchEvent) => {
+    const handleTouchEnd = (e: TouchEvent) => {;
       if (!touchStartRef.current || e.touches.length !== 0) return;
       
       const touch = e.changedTouches[0];
       const start = touchStartRef.current;
-      const deltaX = touch.clientX - start.x;
-      const deltaY = touch.clientY - start.y;
       const deltaTime = Date.now() - start.time;
       
       // Detect gesture type
       let gestureType: TouchGesture['type'] = 'tap';
-      let direction: TouchGesture['direction'] | undefined;
+      let direction: TouchGesture['direction'] | null;
       
       if (deltaTime < 300 && Math.abs(deltaX) < 10 && Math.abs(deltaY) < 10) {
         gestureType = 'tap';
@@ -304,11 +309,15 @@ export function MobileExperienceEnhancer({
       }
       
       const gesture: TouchGesture = {
-        type: gestureType,
+  type: gestureType,
         direction,
         timestamp: Date.now(),
-        coordinates: { x: touch.clientX, y: touch.clientY },
-        intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY)
+        coordinates: { x: touch.clientX,
+  y: touch.clientY 
+
+;
+},;
+        intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       };
       
       setTouchGestures(prev => [...prev.slice(-9), gesture]);
@@ -320,12 +329,12 @@ export function MobileExperienceEnhancer({
     const handleGesture = (gesture: TouchGesture) => {
       // Handle different gesture types
       switch (gesture.type) {
-        case 'swipe':
-          if (gesture.direction === 'left') {
-            // Navigate forward
+        case 'swipe':;
+          if (gesture.direction === 'left') {;
+            // Navigate forward;
             console.log('Swipe left - navigate forward');
-          } else if (gesture.direction === 'right') {
-            // Navigate back
+          } else if (gesture.direction = == 'right') {;
+            // Navigate back;
             console.log('Swipe right - navigate back');
           }
           break;
@@ -358,7 +367,7 @@ export function MobileExperienceEnhancer({
   }, [settings.touchGestures]);
 
   // Apply mobile optimizations
-  const applyMobileOptimizations = useCallback(async () => {
+  const applyMobileOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     
     try {
@@ -400,9 +409,9 @@ export function MobileExperienceEnhancer({
   }, [settings, features]);
 
   // Toggle mobile features
-  const toggleFeature = useCallback((featureId: string) => {
-    setFeatures(prev => prev.map(f => 
-      f.id === featureId ? { ...f, enabled: !f.enabled } : f
+  const toggleFeature = useCallback((featureId: string) => {;
+    setFeatures(prev => prev.map(f => ;
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f;
     ));
     
     // Apply optimizations after feature toggle
@@ -410,7 +419,7 @@ export function MobileExperienceEnhancer({
   }, [applyMobileOptimizations]);
 
   // Save mobile settings
-  const saveSettings = useCallback(async () => {
+  const saveSettings = useCallback(async () => {;
     setIsOptimizing(true);
     try {
       localStorage.setItem('zion-mobile-settings', JSON.stringify(settings));
@@ -423,7 +432,7 @@ export function MobileExperienceEnhancer({
   }, [settings]);
 
   // Load mobile settings
-  const loadSettings = useCallback(async () => {
+  const loadSettings = useCallback(async () => {;
     setIsOptimizing(true);
     try {
       const saved = localStorage.getItem('zion-mobile-settings');
@@ -442,7 +451,7 @@ export function MobileExperienceEnhancer({
   // Reset to default settings
   const resetSettings = useCallback(() => {
     const defaultSettings: MobileSettings = {
-      touchGestures: true,
+  touchGestures: true,
       orientationLock: false,
       mobileOptimizations: true,
       pwaFeatures: true,
@@ -455,9 +464,12 @@ export function MobileExperienceEnhancer({
       gestureHistory: true,
       mobileAnalytics: true,
       deviceOrientation: 'auto',
-      touchSensitivity: 'medium',
-      hapticIntensity: 'medium'
-    };
+      touchSensitivity: 'medium',;
+  hapticIntensity: 'medium';
+    ;
+
+
+};
     
     setSettings(defaultSettings);
     setTouchGestures([]);
@@ -479,7 +491,7 @@ export function MobileExperienceEnhancer({
     <>
       {/* Floating Mobile Button */}
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick = {() => setIsOpen(true)}
         className="fixed bottom-6 left-20 z-50 p-3 bg-gradient-to-r from-zion-green to-zion-blue rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
@@ -500,9 +512,24 @@ export function MobileExperienceEnhancer({
             ref={mobileRef}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
             >
               {/* Header */}
@@ -673,8 +700,18 @@ export function MobileExperienceEnhancer({
                     {features.map((feature) => (
                       <motion.div
                         key={feature.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
+                        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                         className={`p-4 rounded-xl border transition-all cursor-pointer ${
                           feature.enabled
                             ? 'bg-zion-green/10 border-zion-green'
@@ -788,9 +825,24 @@ export function MobileExperienceEnhancer({
                   
                   {showAdvanced && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                       className="mt-4 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
                     >
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -800,7 +852,12 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.touchSensitivity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as any }))}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  touchSensitivity: e.target.value as any 
+
+
+}))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="low">Low</option>
@@ -815,7 +872,12 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.hapticIntensity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as any }))}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  hapticIntensity: e.target.value as any 
+
+
+}))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="light">Light</option>
@@ -830,7 +892,12 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.deviceOrientation}
-                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as any }))}
+                            onChange = {
+  (e) => setSettings(prev => ({ ...prev,
+  deviceOrientation: e.target.value as any 
+
+
+}))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
                             <option value="auto">Auto</option>
@@ -886,9 +953,9 @@ export function MobileExperienceEnhancer({
       {/* Global Mobile Styles */}
       <style jsx global>{`
         .mobile-touch-targets button,
-        .mobile-touch-targets a,
-        .mobile-touch-targets input,
-        .mobile-touch-targets select {
+        .mobile-touch-targets a,;
+        .mobile-touch-targets input,;
+        .mobile-touch-targets select {;
           min-height: 44px !important;
           min-width: 44px !important;
         }

@@ -13,7 +13,7 @@ interface Testimonial {
   industry: string;
 }
 
-const Testimonials: React.FC = () => {
+const Testimonials: React.FC = () => {;
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
@@ -59,25 +59,35 @@ const Testimonials: React.FC = () => {
     }
   ];
 
-  const nextTestimonial = () => {
+  const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
+  const prevTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: number) => {;
     setCurrentIndex(index);
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
+    <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -100,9 +110,24 @@ const Testimonials: React.FC = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
+              initial = {
+  { opacity: 0,
+  x: 100 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+              exit = {
+  { opacity: 0,
+  x: -100 
+
+
+}}
               transition={{ duration: 0.5 }}
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
             >
@@ -180,9 +205,24 @@ const Testimonials: React.FC = () => {
         {/* Trust Indicators */}
         <motion.div
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
           viewport={{ once: true }}
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
@@ -204,9 +244,9 @@ const Testimonials: React.FC = () => {
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
 

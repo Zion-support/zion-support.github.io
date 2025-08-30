@@ -46,46 +46,46 @@ export default function RevolutionaryServices2030() {
   const categories = [
     { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },
-    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' }
+    { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;
+    { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;
+    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },
-    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },
-    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' }
+    { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;
+    { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;
+    { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
 
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
     { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'innovation', name: 'Innovation Level' },
-    { id: 'market-size', name: 'Market Size' }
+    { id: 'price-high', name: 'Price: High to Low' },;
+    { id: 'innovation', name: 'Innovation Level' },;
+    { id: 'market-size', name: 'Market Size' };
   ];
 
   // Combine all revolutionary services
-  const allServices = [
-    ...REVOLUTIONARY_SERVICES_2030,
-    ...EMERGING_TECH_SERVICES_2030
+  const allServices = [;
+    ...REVOLUTIONARY_SERVICES_2030,;
+    ...EMERGING_TECH_SERVICES_2030;
   ];
 
   // Filter and sort services
-  const filteredServices = allServices.filter(service => {
+  const filteredServices = allServices.filter(service => {;
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
-    const priceMatch = selectedPriceRange === 'all' || 
-      (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||
-      (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||
+    const priceMatch = selectedPriceRange === 'all' || ;
+      (selectedPriceRange === 'budget' && service.pricing.monthly <= 10000) ||;
+      (selectedPriceRange === 'mid-range' && service.pricing.monthly > 10000 && service.pricing.monthly <= 25000) ||;
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
     
     return categoryMatch && priceMatch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
         return a.pricing.monthly - b.pricing.monthly;
       case 'price-high':
         return b.pricing.monthly - a.pricing.monthly;
@@ -98,9 +98,9 @@ export default function RevolutionaryServices2030() {
     }
   });
 
-  const getServiceIcon = (category: string) => {
-    switch (category) {
-      case 'AI Services':
+  const getServiceIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
         return Brain;
       case 'Blockchain Services':
         return Lock;
@@ -111,9 +111,9 @@ export default function RevolutionaryServices2030() {
     }
   };
 
-  const getServiceColor = (category: string) => {
-    switch (category) {
-      case 'AI Services':
+  const getServiceColor = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
         return 'from-zion-cyan to-zion-purple';
       case 'Blockchain Services':
         return 'from-zion-purple to-zion-blue';
@@ -125,7 +125,7 @@ export default function RevolutionaryServices2030() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover our revolutionary AI, blockchain, cybersecurity, and emerging technology services that will transform your business in 2030 and beyond."
@@ -135,8 +135,18 @@ export default function RevolutionaryServices2030() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -174,8 +184,18 @@ export default function RevolutionaryServices2030() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -183,27 +203,72 @@ export default function RevolutionaryServices2030() {
               <div className="text-gray-400">Revolutionary Services</div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
               className="text-center"
             >
               <div className="text-4xl font-bold text-zion-purple mb-2">$2.1T+</div>
               <div className="text-gray-400">Combined Market Size</div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
               className="text-center"
             >
               <div className="text-4xl font-bold text-zion-orange mb-2">99.9%</div>
               <div className="text-gray-400">Uptime Guarantee</div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
               className="text-center"
             >
               <div className="text-4xl font-bold text-zion-green mb-2">24/7</div>
@@ -270,19 +335,39 @@ export default function RevolutionaryServices2030() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence>
-              {sortedServices.map((service, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            <AnimatePresence>;
+              {sortedServices.map((service, index) => {;
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
                 
                 return (
                   <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key = {service.id}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+                    transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                     className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-zion-cyan"
                   >
                     {/* Service Header */}
@@ -372,25 +457,25 @@ export default function RevolutionaryServices2030() {
                           <Globe className="inline mr-1 h-3 w-3" />
                           Website
                         </Link>
-                      </div>
-                    </div>
-                  </motion.div>
+                      </div>;
+                    </div>;
+                  </motion.div>;
                 );
               })}
             </AnimatePresence>
           </div>
 
           {/* No Results */}
-          {sortedServices.length === 0 && (
+          {sortedServices.length = == 0 && (
             <div className="text-center py-12">
-              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+              <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                   setSortBy('featured');
                 }}
-                className="text-zion-cyan hover:text-zion-blue transition-colors duration-300"
+                className = "text-zion-cyan hover:text-zion-blue transition-colors duration-300"
               >
                 Clear all filters
               </button>
@@ -403,8 +488,18 @@ export default function RevolutionaryServices2030() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -449,8 +544,8 @@ export default function RevolutionaryServices2030() {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

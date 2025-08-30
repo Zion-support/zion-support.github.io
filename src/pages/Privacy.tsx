@@ -14,7 +14,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Privacy() {
   const privacyPrinciples = [
@@ -35,9 +35,9 @@ export default function Privacy() {
     },
     {
       icon: Users,
-      title: 'User Control',
-      description: 'You have full control over your personal data and can manage it at any time.'
-    }
+      title: 'User Control',;
+      description: 'You have full control over your personal data and can manage it at any time.';
+    };
   ];
 
   const dataCategories = [
@@ -58,9 +58,9 @@ export default function Privacy() {
     },
     {
       title: 'Communication Data',
-      description: 'Records of our interactions and communications',
-      examples: ['Support tickets', 'Email correspondence', 'Chat logs']
-    }
+      description: 'Records of our interactions and communications',;
+      examples: ['Support tickets', 'Email correspondence', 'Chat logs'];
+    };
   ];
 
   const dataUses = [
@@ -77,9 +77,9 @@ export default function Privacy() {
       description: 'To analyze usage patterns and improve our services and user experience.'
     },
     {
-      purpose: 'Security',
-      description: 'To protect against fraud, abuse, and ensure the security of our services.'
-    }
+      purpose: 'Security',;
+      description: 'To protect against fraud, abuse, and ensure the security of our services.';
+    };
   ];
 
   const userRights = [
@@ -104,13 +104,13 @@ export default function Privacy() {
       description: 'Object to processing of your personal data in certain situations.'
     },
     {
-      right: 'Restriction',
-      description: 'Request limitation of processing your personal data.'
-    }
+      right: 'Restriction',;
+      description: 'Request limitation of processing your personal data.';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Privacy Policy - Zion Tech Group"
         description="Learn how Zion Tech Group protects your privacy and handles your personal data. Our comprehensive privacy policy ensures transparency and data protection."
@@ -121,8 +121,18 @@ export default function Privacy() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -149,8 +159,18 @@ export default function Privacy() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -167,9 +187,24 @@ export default function Privacy() {
             {privacyPrinciples.map((principle, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -187,8 +222,18 @@ export default function Privacy() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -205,9 +250,24 @@ export default function Privacy() {
             {dataCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
@@ -230,8 +290,18 @@ export default function Privacy() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -248,9 +318,24 @@ export default function Privacy() {
             {dataUses.map((use, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
@@ -265,8 +350,18 @@ export default function Privacy() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -283,9 +378,24 @@ export default function Privacy() {
             {userRights.map((right, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{right.right}</h3>
@@ -301,8 +411,18 @@ export default function Privacy() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -338,8 +458,18 @@ export default function Privacy() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -372,8 +502,18 @@ export default function Privacy() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -412,8 +552,18 @@ export default function Privacy() {
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -438,8 +588,8 @@ export default function Privacy() {
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

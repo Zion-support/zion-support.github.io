@@ -8,7 +8,7 @@ export default function CloudDevOps() {
     <>
       <Helmet>
         <title>Cloud DevOps - Zion Tech Group</title>
-        <meta name="description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
+        <meta name = "description" content="Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery." />
         <meta name="keywords" content="cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud" />
       </Helmet>
 
@@ -374,8 +374,8 @@ export default function CloudDevOps() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

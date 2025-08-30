@@ -49,18 +49,18 @@ export default function AIContentGenerator() {
     },
     {
       icon: BarChart3,
-      title: 'Performance Analytics',
-      description: 'Track content performance with AI-powered insights and optimization recommendations'
-    }
+      title: 'Performance Analytics',;
+      description: 'Track content performance with AI-powered insights and optimization recommendations';
+    };
   ];
 
   const benefits = [
     'Increase content production by 10x with AI assistance',
     'Improve SEO rankings by 45% with optimized content',
     'Reduce content creation costs by 60%',
-    'Boost engagement rates by 35% with targeted content',
-    'Save 20+ hours per week on content creation',
-    'Maintain consistent brand voice across all content'
+    'Boost engagement rates by 35% with targeted content',;
+    'Save 20+ hours per week on content creation',;
+    'Maintain consistent brand voice across all content';
   ];
 
   const pricing = [
@@ -113,15 +113,15 @@ export default function AIContentGenerator() {
         'Advanced security features',
         'Custom integrations'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Content Generator - Create Engaging Content with AI"
+        title = "AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
       />
@@ -132,8 +132,18 @@ export default function AIContentGenerator() {
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-600/10 to-red-600/10"></div>
           <div className="container-responsive relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -160,8 +170,18 @@ export default function AIContentGenerator() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -178,9 +198,24 @@ export default function AIContentGenerator() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -198,8 +233,18 @@ export default function AIContentGenerator() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -216,9 +261,24 @@ export default function AIContentGenerator() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -233,8 +293,18 @@ export default function AIContentGenerator() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -251,9 +321,24 @@ export default function AIContentGenerator() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     plan.popular 
                       ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' 
@@ -303,8 +388,18 @@ export default function AIContentGenerator() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -325,8 +420,8 @@ export default function AIContentGenerator() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

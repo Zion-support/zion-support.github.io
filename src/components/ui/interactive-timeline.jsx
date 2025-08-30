@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { Button } from "./button";
+import { Badge } from "./badge";
 export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -24,8 +24,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     });
     // Filter events based on current filters
     const filteredEvents = events.filter(event => {
-        const matchesStatus = filters.status.length === 0 || filters.status.includes(event.status);
-        const matchesCategory = filters.category.length === 0 || filters.category.includes(event.category);
         const matchesPriority = filters.priority.length === 0 || filters.priority.includes(event.priority);
         return matchesStatus && matchesCategory && matchesPriority;
     });
@@ -86,14 +84,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     // Get category icon
     const getCategoryIcon = (category) => {
         const iconMap = {
-            'AI & ML': Zap,
+  'AI & ML': Zap,
             'Cybersecurity': Shield,
             'Cloud': Globe,
             'Development': Rocket,
             'Research': TrendingUp,
             'Team': Users,
-            'Launch': Award
-        };
+  'Launch': Award
+        
+
+
+};
         return iconMap[category] || Calendar;
     };
     // Toggle play/pause
@@ -107,7 +108,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     }, []);
     // Export timeline
     const exportTimeline = useCallback(() => {
-        const dataStr = JSON.stringify(filteredEvents, null, 2);
         const dataBlob = new Blob([dataStr], { type: 'application/json' });
         const url = URL.createObjectURL(dataBlob);
         const link = document.createElement('a');
@@ -169,11 +169,21 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
           
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 bg-zion-blue/20 rounded-lg p-1">
-            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.max(0.5, prev - 0.1))} className="text-zinc-400 hover:text-white p-2">
+            <Button size="sm" variant="ghost" onClick = {
+  () => setZoomLevel(prev => Math.max(0.5,
+  prev - 0.1))
+
+
+} className="text-zinc-400 hover:text-white p-2">
               <ZoomOut className="w-4 h-4"/>
             </Button>
             <span className="text-zinc-300 text-xs px-2">{Math.round(zoomLevel * 100)}%</span>
-            <Button size="sm" variant="ghost" onClick={() => setZoomLevel(prev => Math.min(2, prev + 0.1))} className="text-zinc-400 hover:text-white p-2">
+            <Button size="sm" variant="ghost" onClick = {
+  () => setZoomLevel(prev => Math.min(2,
+  prev + 0.1))
+
+
+} className="text-zinc-400 hover:text-white p-2">
               <ZoomIn className="w-4 h-4"/>
             </Button>
           </div>
@@ -199,12 +209,32 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         </Button>
         
         <AnimatePresence>
-          {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
+          {showFilters && (<motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-zion-blue/10 rounded-lg border border-zion-blue-light/20" initial = {
+  { height: 0,
+  opacity: 0 
+
+
+}} animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+}} exit = {
+  { height: 0,
+  opacity: 0 
+
+
+}} transition={{ duration: 0.2 }}>
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Status</label>
-                <select multiple value={filters.status} onChange={(e) => {
+                <select multiple value={filters.status} onChange = {
+  (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, status: selected }));
+                setFilters(prev => ({ ...prev,
+  status: selected 
+
+
+}));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
@@ -215,9 +245,14 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Category</label>
-                <select multiple value={filters.category} onChange={(e) => {
+                <select multiple value={filters.category} onChange = {
+  (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, category: selected }));
+                setFilters(prev => ({ ...prev,
+  category: selected 
+
+
+}));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
@@ -231,9 +266,14 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Priority</label>
-                <select multiple value={filters.priority} onChange={(e) => {
+                <select multiple value={filters.priority} onChange = {
+  (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-                setFilters(prev => ({ ...prev, priority: selected }));
+                setFilters(prev => ({ ...prev,
+  priority: selected 
+
+
+}));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
@@ -245,7 +285,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div>
                 <label className="text-zinc-300 text-sm font-medium">Progress</label>
                 <div className="mt-1">
-                  <input type="range" min="0" max="100" value={filters.progress || 0} onChange={(e) => setFilters(prev => ({ ...prev, progress: Number(e.target.value) }))} className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slider"/>
+                  <input type="range" min="0" max="100" value={filters.progress || 0} onChange = {
+  (e) => setFilters(prev => ({ ...prev,
+  progress: Number(e.target.value) 
+
+
+}))} className="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer slider"/>
                   <div className="text-xs text-zinc-400 mt-1">
                     {filters.progress || 0}% Complete
                   </div>
@@ -262,7 +307,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             <span>{Math.round((filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100)}%</span>
           </div>
           <div className="w-full bg-zinc-700 rounded-full h-2">
-            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition={{ duration: 1, ease: "easeOut" }}/>
+            <motion.div className="bg-gradient-to-r from-zion-cyan to-zion-blue h-2 rounded-full" initial={{ width: 0 }} whileInView={{ width: `${(filteredEvents.filter(e => e.status === 'completed').length / filteredEvents.length) * 100}%` }} transition = {
+  { duration: 1,
+  ease: "easeOut" 
+
+
+}}/>
           </div>
         </div>)}
 
@@ -277,19 +327,49 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 const statusInfo = getStatusIcon(event.status);
                 const CategoryIcon = getCategoryIcon(event.category);
                 const isCurrent = index === currentEventIndex;
-                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : ''}`} initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.02 }}>
+                return (<motion.div key={event.id} className={`relative flex items-start gap-6 group ${isCurrent ? 'scale-105' : ''}`} initial = {
+  { opacity: 0,
+  x: -50 
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} whileHover={{ scale: 1.02 }}>
                   {/* Status Indicator */}
                   <div className="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent
                         ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
-                        : 'border-zion-blue-light/30'}`} animate={isCurrent ? { scale: [1, 1.1, 1] } : {}} transition={{ duration: 2, repeat: Infinity }}>
+                        : 'border-zion-blue-light/30'}`} animate = {
+  isCurrent ? { scale: [1, 1.1,
+  1] 
+
+
+} : {}} transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+}}>
                       <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
                     </motion.div>
                     
                     {/* Progress Ring for in-progress events */}
                     {event.status === 'in-progress' && (<svg className="absolute inset-0 w-16 h-16 transform -rotate-90">
                         <circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan/20"/>
-                        <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition={{ duration: 1, ease: "easeOut" }}/>
+                        <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
+  { duration: 1,
+  ease: "easeOut" 
+
+
+}}/>
                       </svg>)}
                   </div>
 
@@ -337,7 +417,12 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                       
                       {/* Status Change Button */}
                       <div className="ml-4">
-                        <select value={event.status} onChange={(e) => handleStatusChange(event.id, e.target.value)} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
+                        <select value={event.status} onChange = {
+  (e) => handleStatusChange(event.id,
+  e.target.value)
+
+
+} className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
                           <option value="upcoming">Upcoming</option>
                           <option value="in-progress">In Progress</option>
                           <option value="completed">Completed</option>
@@ -371,7 +456,22 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
       {/* List View */}
       {viewMode === 'list' && (<div className="space-y-3">
-          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.05 }} onClick={() => handleEventClick(event)}>
+          {filteredEvents.map((event, index) => (<motion.div key={event.id} className="p-4 rounded-lg border border-zion-blue-light/30 hover:border-zion-blue-light/50 hover:bg-zion-blue/10 transition-all duration-200 cursor-pointer" initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.4,
+  delay: index * 0.05 
+
+
+}} onClick={() => handleEventClick(event)}>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className={`w-3 h-3 rounded-full ${event.status === 'completed' ? 'bg-green-400' :
@@ -404,7 +504,22 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
               <div className="space-y-2">
                 {filteredEvents
                     .filter(event => event.status === status)
-                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.3, delay: index * 0.1 }} onClick={() => handleEventClick(event)}>
+                    .map((event, index) => (<motion.div key={event.id} className="p-3 rounded-lg border border-zion-blue-light/30 bg-zion-blue/20 cursor-pointer hover:border-zion-blue-light/50 transition-all duration-200" initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}} transition = {
+  { duration: 0.3,
+  delay: index * 0.1 
+
+
+}} onClick={() => handleEventClick(event)}>
                       <h5 className="text-white font-medium text-sm mb-1">{event.title}</h5>
                       <p className="text-zinc-400 text-xs line-clamp-2">{event.description}</p>
                       <div className="flex items-center justify-between mt-2">
@@ -422,7 +537,22 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
       <AnimatePresence>
         {selectedEvent && (<motion.div className="fixed inset-0 z-50 flex items-center justify-center p-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setSelectedEvent(null)}/>
-            <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ duration: 0.2 }}>
+            <motion.div className="relative bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto" initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}} animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+}} exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}} transition={{ duration: 0.2 }}>
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-xl font-semibold text-white">{selectedEvent.title}</h3>
                 <Button size="sm" variant="ghost" onClick={() => setSelectedEvent(null)} className="text-zinc-400 hover:text-white">

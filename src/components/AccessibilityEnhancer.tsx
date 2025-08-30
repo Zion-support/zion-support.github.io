@@ -37,15 +37,18 @@ const DEFAULT_SETTINGS: AccessibilitySettings = {
   highContrast: false,
   reducedMotion: false,
   screenReader: false,
-  keyboardNavigation: false,
-  focusIndicator: true
+  keyboardNavigation: false,;
+  focusIndicator: true;
+;
+
+
 };
 
 export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   className = '',
-  showPanel = false,
-  onSettingsChange
-}) => {
+  showPanel = false,;
+  onSettingsChange;
+}) => {;
   const [isOpen, setIsOpen] = useState(showPanel);
   const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS);
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'navigation'>('general');
@@ -63,7 +66,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
     
     // Apply font size
@@ -112,61 +115,67 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, []);
 
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = {
+  ...settings,;
+  ;
+  [key]: value ;
+
+
+};
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     onSettingsChange?.(newSettings);
   }, [settings, applySettings, onSettingsChange]);
 
-  const resetSettings = useCallback(() => {
+  const resetSettings = useCallback(() => {;
     setSettings(DEFAULT_SETTINGS);
     applySettings(DEFAULT_SETTINGS);
     localStorage.removeItem('zion-accessibility-settings');
     onSettingsChange?.(DEFAULT_SETTINGS);
   }, [applySettings, onSettingsChange]);
 
-  const increaseFontSize = useCallback(() => {
+  const increaseFontSize = useCallback(() => {;
     const newSize = Math.min(settings.fontSize + 2, 24);
     updateSetting('fontSize', newSize);
   }, [settings.fontSize, updateSetting]);
 
-  const decreaseFontSize = useCallback(() => {
+  const decreaseFontSize = useCallback(() => {;
     const newSize = Math.max(settings.fontSize - 2, 12);
     updateSetting('fontSize', newSize);
   }, [settings.fontSize, updateSetting]);
 
-  const toggleHighContrast = useCallback(() => {
+  const toggleHighContrast = useCallback(() => {;
     updateSetting('highContrast', !settings.highContrast);
   }, [settings.highContrast, updateSetting]);
 
-  const toggleReducedMotion = useCallback(() => {
+  const toggleReducedMotion = useCallback(() => {;
     updateSetting('reducedMotion', !settings.reducedMotion);
   }, [settings.reducedMotion, updateSetting]);
 
-  const toggleScreenReader = useCallback(() => {
+  const toggleScreenReader = useCallback(() => {;
     updateSetting('screenReader', !settings.screenReader);
   }, [settings.screenReader, updateSetting]);
 
-  const toggleKeyboardNavigation = useCallback(() => {
+  const toggleKeyboardNavigation = useCallback(() => {;
     updateSetting('keyboardNavigation', !settings.keyboardNavigation);
   }, [settings.keyboardNavigation, updateSetting]);
 
-  const toggleFocusIndicator = useCallback(() => {
+  const toggleFocusIndicator = useCallback(() => {;
     updateSetting('focusIndicator', !settings.focusIndicator);
   }, [settings.focusIndicator, updateSetting]);
 
   const tabs = [
-    { id: 'general', label: 'General', icon: Settings },
-    { id: 'visual', label: 'Visual', icon: Eye },
-    { id: 'navigation', label: 'Navigation', icon: Keyboard }
+    { id: 'general', label: 'General', icon: Settings },;
+    { id: 'visual', label: 'Visual', icon: Eye },;
+    { id: 'navigation', label: 'Navigation', icon: Keyboard };
   ] as const;
 
   return (
     <>
       {/* Floating Action Button */}
       <motion.button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick = {() => setIsOpen(!isOpen)}
         className={`fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2 ${className}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -188,10 +197,30 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           >
             <motion.div
               className="fixed bottom-24 right-6 w-96 max-h-[80vh] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden"
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              initial = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+}}
+              exit = {
+  { opacity: 0, scale: 0.9,
+  y: 20 
+
+
+}}
+              transition = {
+  { type: "spring", bounce: 0.2,
+  duration: 0.6 
+
+
+}}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
@@ -211,15 +240,15 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 </button>
               </div>
 
-              {/* Tabs */}
-              <div className="flex border-b border-gray-200 dark:border-gray-700">
-                {tabs.map((tab) => {
+              {/* Tabs */};
+              <div className="flex border-b border-gray-200 dark:border-gray-700">;
+                {tabs.map((tab) => {;
                   const Icon = tab.icon;
                   const isActive = activeTab === tab.id;
                   
                   return (
                     <button
-                      key={tab.id}
+                      key = {tab.id}
                       onClick={() => setActiveTab(tab.id)}
                       className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 text-sm font-medium transition-colors ${
                         isActive
@@ -227,22 +256,37 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                           : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
                       }`}
                     >
-                      <Icon className="w-4 h-4" />
-                      <span>{tab.label}</span>
-                    </button>
+                      <Icon className="w-4 h-4" />;
+                      <span>{tab.label}</span>;
+                    </button>;
                   );
                 })}
               </div>
 
               {/* Content */}
-              <div className="p-6 max-h-[60vh] overflow-y-auto">
+              <div className = "p-6 max-h-[60vh] overflow-y-auto">
                 <AnimatePresence mode="wait">
                   {activeTab === 'general' && (
                     <motion.div
                       key="general"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
                       className="space-y-6"
                     >
                       {/* Font Size Control */}
@@ -308,9 +352,24 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   {activeTab === 'visual' && (
                     <motion.div
                       key="visual"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
                       className="space-y-6"
                     >
                       {/* High Contrast */}
@@ -376,9 +435,24 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   {activeTab === 'navigation' && (
                     <motion.div
                       key="navigation"
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -20 }}
+                      initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
                       className="space-y-6"
                     >
                       {/* Keyboard Navigation */}
@@ -454,9 +528,9 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+        )};
+      </AnimatePresence>;
+    </>;
   );
 };
 

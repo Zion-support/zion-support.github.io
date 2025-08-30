@@ -30,7 +30,7 @@ export default function JobDetails() {
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
+          <Button onClick={() => router('/jobs')}>View All Jobs</Button>
         </div>
         
       </>);
@@ -38,7 +38,7 @@ export default function JobDetails() {
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
-            navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+            router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
         }
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
@@ -58,11 +58,16 @@ export default function JobDetails() {
     };
     const isOwnJob = user?.id === job.client_id;
     return (<>
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
+      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
+  job.description.substring(0,
+  160)
+
+
+}/>
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Button variant="outline" size="sm" onClick={() => navigate('/jobs')}>
+          <Button variant="outline" size="sm" onClick={() => router('/jobs')}>
             ← Back to Jobs
           </Button>
         </div>
@@ -146,13 +151,17 @@ export default function JobDetails() {
       
       
       {/* Job application modal */}
-      {job && (<ApplyToJobModal job={{
+      {job && (<ApplyToJobModal job = {
+  {
                 id: job.id,
                 title: job.title,
                 description: job.description,
                 company_name: job.company_name || "Company",
                 budget: job.budget,
-                client_id: job.client_id
-            }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
+  client_id: job.client_id
+            
+
+
+}} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
 }

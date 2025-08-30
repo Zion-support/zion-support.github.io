@@ -66,7 +66,7 @@ import {
   type ExpandedService2027 
 } from '@/data/expandedInnovativeServices2027';
 
-const ExpandedServicesShowcase2027: React.FC = () => {
+const ExpandedServicesShowcase2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -81,9 +81,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     setFilteredServices(services);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
         return Shield;
       case 'Data Analytics':
         return BarChart3;
@@ -100,9 +100,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'Cybersecurity':
+  const getCategoryColor = (category: string) => {;
+    switch (category) {;
+      case 'Cybersecurity':;
         return 'from-red-500 to-pink-600';
       case 'Data Analytics':
         return 'from-blue-500 to-cyan-600';
@@ -119,22 +119,32 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     }
   };
 
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {
-    if (pricing.model === 'Transaction Fees + Governance') {
+  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
     }
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: ExpandedService2027) => {
+  const renderServiceCard = (service: ExpandedService2027) => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
       >
@@ -206,9 +216,24 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           <AnimatePresence>
             {expandedService === service.id && (
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                 className="mb-4"
               >
                 <div className="space-y-1">
@@ -299,21 +324,31 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <span>Learn More</span>
               </a>
             </div>
-          </div>
-        </div>
-      </motion.div>
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
 
-  const renderServiceList = (service: ExpandedService2027) => {
+  const renderServiceList = (service: ExpandedService2027) => {;
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
 
     return (
       <motion.div
-        key={service.id}
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
+        key = {service.id}
+        initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
         transition={{ duration: 0.5 }}
         className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6"
       >
@@ -386,14 +421,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <span>Learn More</span>
               </a>
             </div>
-          </div>
-        </div>
-      </motion.div>
+          </div>;
+        </div>;
+      </motion.div>;
     );
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO 
         title="Expanded Innovative Services 2027 - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. From quantum cybersecurity to healthcare AI, explore cutting-edge solutions."
@@ -405,8 +440,18 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
@@ -416,9 +461,24 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. 
@@ -427,9 +487,24 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -574,9 +649,9 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <span>Call Now</span>
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

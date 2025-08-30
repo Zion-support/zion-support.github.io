@@ -119,18 +119,18 @@ const QuantumComputing = () => {
     },
     {
       icon: Database2,
-      title: 'Quantum Databases',
-      description: 'High-performance quantum database systems'
-    }
+      title: 'Quantum Databases',;
+      description: 'High-performance quantum database systems';
+    };
   ];
 
   const benefits = [
     'Solve complex problems exponentially faster',
     'Enable breakthroughs in scientific research',
     'Provide unbreakable quantum encryption',
-    'Accelerate AI and machine learning',
-    'Revolutionize drug discovery and materials science',
-    'Transform financial modeling and optimization'
+    'Accelerate AI and machine learning',;
+    'Revolutionize drug discovery and materials science',;
+    'Transform financial modeling and optimization';
   ];
 
   const services = [
@@ -151,9 +151,9 @@ const QuantumComputing = () => {
     },
     {
       icon: Server2,
-      title: 'Quantum Cloud Platform',
-      description: 'Cloud-based quantum computing infrastructure'
-    }
+      title: 'Quantum Cloud Platform',;
+      description: 'Cloud-based quantum computing infrastructure';
+    };
   ];
 
   const useCases = [
@@ -170,13 +170,13 @@ const QuantumComputing = () => {
       description: 'New material discovery and simulation'
     },
     {
-      industry: 'Artificial Intelligence',
-      description: 'Enhanced machine learning algorithms'
-    }
+      industry: 'Artificial Intelligence',;
+      description: 'Enhanced machine learning algorithms';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Quantum Computing Services - Zion Tech Group"
         description="Harness the power of quantum computing with our advanced quantum solutions. Quantum algorithms, cryptography, and machine learning for the future."
@@ -188,8 +188,18 @@ const QuantumComputing = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -226,8 +236,18 @@ const QuantumComputing = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -244,9 +264,24 @@ const QuantumComputing = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
@@ -264,8 +299,18 @@ const QuantumComputing = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -282,9 +327,24 @@ const QuantumComputing = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -306,8 +366,18 @@ const QuantumComputing = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -324,9 +394,24 @@ const QuantumComputing = () => {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
@@ -338,9 +423,24 @@ const QuantumComputing = () => {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
@@ -356,8 +456,18 @@ const QuantumComputing = () => {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -374,9 +484,24 @@ const QuantumComputing = () => {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-indigo-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -394,8 +519,18 @@ const QuantumComputing = () => {
       <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -415,9 +550,9 @@ const QuantumComputing = () => {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

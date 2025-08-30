@@ -28,7 +28,7 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
-            navigate("/login?redirect=/content-generator");
+            router("/login?redirect=/content-generator");
         }
     }, [user, isLoading, router]);
     const generateContent = async () => {
@@ -38,8 +38,8 @@ export default function ContentGenerator() {
             const { data, error } = await supabase.functions.invoke('generate-content', {
                 body: {
                     contentType,
-                    prompt: customPrompt || undefined,
-                    topic: topic || undefined,
+                    prompt: customPrompt || null,
+                    topic: topic || null,
                     autoPublish,
                     includeImage: contentType === 'blog' ? includeImage : false
                 }
@@ -126,7 +126,12 @@ export default function ContentGenerator() {
                   
                   <div className="space-y-2">
                     <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>
-                    <Input id="topic" placeholder={contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g., May Platform Updates"} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
+                    <Input id="topic" placeholder = {
+  contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
+  May Platform Updates"
+
+
+} className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
                   
                   <div className="space-y-2">
@@ -187,9 +192,14 @@ export default function ContentGenerator() {
                               <div className="space-y-4">
                                 <h2 className="text-2xl font-bold text-white">{previewContent.title}</h2>
                                 <p className="text-zion-slate-light">{previewContent.metaDescription}</p>
-                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML={{
+                                <div className="prose prose-invert max-w-none" dangerouslySetInnerHTML = {
+  {
                 __html: previewContent.body
-                    .replace(/^#{1,6}\s+(.+)$/gm, "<h$1>$2</h$1>")
+                    .replace(/^#{1,
+  6
+
+
+}\s+(.+)$/gm, "<h$1>$2</h$1>")
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")
                     .replace(/^-\s+(.+)$/gm, "<li>$1</li>")

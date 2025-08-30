@@ -316,7 +316,7 @@ export const real2036InnovativeServices = [
       'Hedge fund operations',
       'Investment banking',
       'Portfolio management',
-      'Risk assessment'
-    ]
-  }
+      'Risk assessment';
+    ];
+  };
 ];

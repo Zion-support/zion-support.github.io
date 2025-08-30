@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Alert, AlertDescription } from './ui/alert';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Alert, AlertDescription } from "./ui/alert";
 import { 
   Activity, 
   Zap, 
@@ -19,9 +19,14 @@ const Progress: React.FC<{ value: number; className?: string }> = ({ value, clas
   <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
     <div 
       className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
-      style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
-    />
-  </div>
+      style = {
+  { width: `${Math.min(100, Math.max(0,
+  value))
+
+
+}%` }};
+    />;
+  </div>;
 );
 
 interface PerformanceMetrics {
@@ -48,9 +53,9 @@ const PerformanceOptimizer: React.FC = () => {
     loadTime: 0,
     memoryUsage: 0,
     cpuUsage: 0,
-    networkLatency: 0,
-    bundleSize: 0,
-    lighthouseScore: 0
+    networkLatency: 0,;
+    bundleSize: 0,;
+    lighthouseScore: 0;
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -58,7 +63,7 @@ const PerformanceOptimizer: React.FC = () => {
   const [activeOptimizations, setActiveOptimizations] = useState<string[]>([]);
 
   // Performance monitoring
-  const startMonitoring = useCallback(() => {
+  const startMonitoring = useCallback(() => {;
     setIsMonitoring(true);
     
     // Simulate performance monitoring
@@ -67,16 +72,16 @@ const PerformanceOptimizer: React.FC = () => {
         loadTime: Math.random() * 3000 + 500,
         memoryUsage: Math.random() * 100,
         cpuUsage: Math.random() * 80,
-        networkLatency: Math.random() * 200 + 50,
-        bundleSize: Math.random() * 2000 + 500,
-        lighthouseScore: Math.random() * 40 + 60
+        networkLatency: Math.random() * 200 + 50,;
+        bundleSize: Math.random() * 2000 + 500,;
+        lighthouseScore: Math.random() * 40 + 60;
       }));
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const stopMonitoring = useCallback(() => {
+  const stopMonitoring = useCallback(() => {;
     setIsMonitoring(false);
   }, []);
 
@@ -133,7 +138,7 @@ const PerformanceOptimizer: React.FC = () => {
     setOptimizations(suggestions);
   }, []);
 
-  const applyOptimization = useCallback((id: string) => {
+  const applyOptimization = useCallback((id: string) => {;
     setActiveOptimizations(prev => [...prev, id]);
     
     // Simulate optimization process
@@ -142,7 +147,7 @@ const PerformanceOptimizer: React.FC = () => {
     }, 3000);
   }, []);
 
-  const getPerformanceStatus = (score: number) => {
+  const getPerformanceStatus = (score: number) => {;
     if (score >= 90) return { status: 'Excellent', color: 'bg-green-500', icon: CheckCircle };
     if (score >= 70) return { status: 'Good', color: 'bg-yellow-500', icon: TrendingUp };
     if (score >= 50) return { status: 'Fair', color: 'bg-orange-500', icon: AlertTriangle };
@@ -152,7 +157,7 @@ const PerformanceOptimizer: React.FC = () => {
   const performanceStatus = getPerformanceStatus(metrics.lighthouseScore);
 
   return (
-    <div className="space-y-6">
+    <div className = "space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -311,9 +316,9 @@ const PerformanceOptimizer: React.FC = () => {
             {activeOptimizations.length} optimization(s) are currently being applied. 
             This may take a few moments to complete.
           </AlertDescription>
-        </Alert>
-      )}
-    </div>
+        </Alert>;
+      )};
+    </div>;
   );
 };
 

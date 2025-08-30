@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from '../data/advancedMicroSaasServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-import { ADVANCED_AI_SERVICES_2025 } from '../data/advancedAIServices2025';
+import { SEO } from "../components/SEO";
+import { ADVANCED_MICRO_SAAS_SERVICES_2025 } from "../data/advancedMicroSaasServices2025";
+import { SPECIALIZED_IT_SERVICES_2025 } from "../data/specializedITServices2025";
+import { ADVANCED_AI_SERVICES_2025 } from "../data/advancedAIServices2025";
 
-const AdvancedServicesShowcase2025: React.FC = () => {
+const AdvancedServicesShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const allServices = [
-    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),
-    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),
-    ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }))
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;
+    ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;
+    ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.source === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },
-    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },
-    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length }
+    { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
+    { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
+    { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Advanced Services Showcase 2025 - Zion Tech Group"
         description="Explore our comprehensive portfolio of advanced micro SaaS, IT services, and AI solutions designed for the future of business technology."
@@ -254,13 +253,13 @@ const AdvancedServicesShowcase2025: React.FC = () => {
 
         {filteredServices.length === 0 && (
           <div className="text-center py-16">
-            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-            <button
-              onClick={() => {
+            <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
+            <button;
+              onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
-              className="text-blue-400 hover:text-blue-300 underline"
+              className = "text-blue-400 hover:text-blue-300 underline"
             >
               Clear filters
             </button>
@@ -325,9 +324,9 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

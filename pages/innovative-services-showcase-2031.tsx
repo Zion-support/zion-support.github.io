@@ -4,7 +4,7 @@ import {
   innovativeMicroSaasServices2031, 
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
-} from '../src/data/innovativeServices2031';
+} from "../src/data/innovativeServices2031";
 import { 
   Brain, 
   Cloud, 
@@ -22,8 +22,8 @@ import {
   Clock
 } from 'lucide-react';
 
-const InnovativeServicesShowcase2031: React.FC = () => {
-  const scrollToContact = () => {
+const InnovativeServicesShowcase2031: React.FC = () => {;
+  const scrollToContact = () => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -31,7 +31,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {
     <>
       <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
-        <meta name="description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
+        <meta name = "description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
         <meta name="keywords" content="innovative services 2031, quantum computing, AI services, IT infrastructure, micro SAAS, Zion Tech Group, cutting-edge technology, digital transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2031" />
       </Helmet>
@@ -445,9 +445,9 @@ const InnovativeServicesShowcase2031: React.FC = () => {
               </a>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

@@ -10,18 +10,18 @@ export default function AIProjectManager() {
     'Real-time progress tracking with predictive analytics',
     'Intelligent risk assessment and mitigation',
     'Automated stakeholder communication and reporting',
-    'Integration with popular project management tools',
-    'Mobile app for on-the-go project updates',
-    'Advanced analytics and performance insights'
+    'Integration with popular project management tools',;
+    'Mobile app for on-the-go project updates',;
+    'Advanced analytics and performance insights';
   ];
 
   const benefits = [
     'Reduce project planning time by 70%',
     'Improve project delivery success rate by 40%',
     'Automate routine project management tasks',
-    'Real-time visibility into project health',
-    'Predict and prevent project delays',
-    'Optimize resource utilization'
+    'Real-time visibility into project health',;
+    'Predict and prevent project delays',;
+    'Optimize resource utilization';
   ];
 
   const pricing = [
@@ -40,15 +40,15 @@ export default function AIProjectManager() {
     { 
       name: 'Enterprise', 
       price: '$799/mo', 
-      features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],
-      popular: false
-    }
+      features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],;
+      popular: false;
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="AI Project Manager - Intelligent Project Management Solution"
+        title = "AI Project Manager - Intelligent Project Management Solution"
         description="Transform your project management with AI-powered task prioritization, smart team allocation, and predictive analytics. Boost productivity by 35%."
         canonical="/services/ai-project-manager"
       />
@@ -59,8 +59,18 @@ export default function AIProjectManager() {
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-600/10 to-purple-600/10"></div>
           <div className="container-responsive relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -87,8 +97,18 @@ export default function AIProjectManager() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -104,9 +124,24 @@ export default function AIProjectManager() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-glass-dark rounded-xl p-6 border border-slate-700/50 text-center"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -123,8 +158,18 @@ export default function AIProjectManager() {
         <section className="py-20">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -140,9 +185,24 @@ export default function AIProjectManager() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-glass-dark rounded-xl p-6 border border-slate-700/50"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
@@ -159,8 +219,18 @@ export default function AIProjectManager() {
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -176,9 +246,24 @@ export default function AIProjectManager() {
               {pricing.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className={`relative bg-glass-dark rounded-2xl p-8 border ${
                     plan.popular 
                       ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
@@ -224,8 +309,18 @@ export default function AIProjectManager() {
         <section className="py-20">
           <div className="container-responsive text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -244,8 +339,8 @@ export default function AIProjectManager() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

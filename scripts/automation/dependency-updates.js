@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('📦 Starting continuous dependency updates automation...');
@@ -53,7 +52,6 @@ async function runDependencyUpdates() {
     // Check for major version updates
     console.log('🔍 Checking for major version updates...');
     try {
-      const outdatedOutput = execSync('npm outdated --json', { encoding: 'utf8' });
       const outdated = JSON.parse(outdatedOutput);
       
       const majorUpdates = Object.entries(outdated).filter(([pkg, info]) => {
@@ -92,12 +90,6 @@ async function runDependencyUpdates() {
     }
     
     // Generate dependency update report
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Dependency updates completed',
-      status: 'completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'dependency-updates-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);

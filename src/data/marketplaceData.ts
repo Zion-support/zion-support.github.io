@@ -33,7 +33,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 127,
     views: 2847,
     likes: 156,
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
     featured: true,
     seller: {
@@ -158,9 +158,9 @@ export const marketplaceItems: MarketplaceItem[] = [
     },
     location: 'Remote',
     availability: 'available',
-    deliveryTime: 'Immediate',
-    warranty: 'N/A'
-  }
+    deliveryTime: 'Immediate',;
+    warranty: 'N/A';
+  };
 ];
 
 export const marketplaceCategories = [
@@ -185,9 +185,9 @@ export const marketplaceCategories = [
   {
     id: 'services',
     name: 'Services',
-    description: 'Professional services and consulting',
-    count: marketplaceItems.filter(item => item.category === 'services').length
-  }
+    description: 'Professional services and consulting',;
+    count: marketplaceItems.filter(item => item.category === 'services').length;
+  };
 ];
 
 export const marketplaceFilters = [
@@ -229,7 +229,7 @@ export const marketplaceFilters = [
     options: [
       { value: 'available', label: 'Available' },
       { value: 'limited', label: 'Limited' },
-      { value: 'out-of-stock', label: 'Out of Stock' }
-    ]
-  }
+      { value: 'out-of-stock', label: 'Out of Stock' };
+    ];
+  };
 ];

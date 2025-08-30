@@ -13,16 +13,16 @@ export default function WhitePapers() {
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 }
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 };
   ];
 
   const sortOptions = [
     { value: 'newest', label: 'Newest First' },
-    { value: 'popular', label: 'Most Popular' },
-    { value: 'alphabetical', label: 'Alphabetical' },
-    { value: 'downloads', label: 'Most Downloaded' }
+    { value: 'popular', label: 'Most Popular' },;
+    { value: 'alphabetical', label: 'Alphabetical' },;
+    { value: 'downloads', label: 'Most Downloaded' };
   ];
 
   const whitePapers = [
@@ -119,9 +119,9 @@ export default function WhitePapers() {
       featured: false,
       tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
-      fileSize: '2.2 MB',
-      language: 'English'
-    }
+      fileSize: '2.2 MB',;
+      language: 'English';
+    };
   ];
 
   const featuredInsights = [
@@ -140,26 +140,26 @@ export default function WhitePapers() {
     {
       title: 'Cloud Migration Success Stories',
       description: 'Real-world examples of successful cloud transformations',
-      icon: <Cloud className="w-6 h-6" />,
-      link: '/insights/cloud-success-stories'
-    }
+      icon: <Cloud className="w-6 h-6" />,;
+      link: '/insights/cloud-success-stories';
+    };
   ];
 
-  const getCategoryCount = (categoryId: string) => {
-    if (categoryId === 'all') {
+  const getCategoryCount = (categoryId: string) => {;
+    if (categoryId === 'all') {;
       return whitePapers.length;
     }
     return whitePapers.filter(paper => paper.category === categoryId).length;
   };
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat = > {;
     cat.count = getCategoryCount(cat.id);
   });
 
-  const filteredPapers = whitePapers.filter(paper => {
-    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredPapers = whitePapers.filter(paper => {;
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
@@ -169,14 +169,14 @@ export default function WhitePapers() {
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
     });
   };
 
-  const formatDownloads = (downloads: number) => {
-    if (downloads >= 1000000) {
+  const formatDownloads = (downloads: number) => {;
+    if (downloads >= 1000000) {;
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
       return (downloads / 1000).toFixed(1) + 'K';
@@ -185,7 +185,7 @@ export default function WhitePapers() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -405,8 +405,8 @@ export default function WhitePapers() {
               Subscribe
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

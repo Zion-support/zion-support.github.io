@@ -1,15 +1,15 @@
 import React from 'react';
 import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AIAutonomousVehiclePlatform() {
   const features = [
     'Advanced computer vision and sensor fusion',
     'Real-time decision making and path planning',
     'Predictive maintenance and fleet optimization',
-    'Multi-vehicle coordination and traffic management',
-    'Safety-first autonomous driving algorithms',
-    'Cloud-based vehicle monitoring and control'
+    'Multi-vehicle coordination and traffic management',;
+    'Safety-first autonomous driving algorithms',;
+    'Cloud-based vehicle monitoring and control';
   ];
 
   const tiers = [
@@ -51,41 +51,41 @@ export default function AIAutonomousVehiclePlatform() {
         'On-premise deployment options',
         'Custom integrations and APIs',
         'White-label solutions available',
-        'Regulatory compliance tools'
-      ]
-    }
+        'Regulatory compliance tools';
+      ];
+    };
   ];
 
   const useCases = [
     'Ride-sharing and taxi services',
     'Logistics and delivery fleets',
     'Public transportation systems',
-    'Mining and construction vehicles',
-    'Agricultural machinery automation',
-    'Emergency response vehicles'
+    'Mining and construction vehicles',;
+    'Agricultural machinery automation',;
+    'Emergency response vehicles';
   ];
 
   const benefits = [
     'Reduce transportation costs by 40-60% through automation',
     'Improve safety by eliminating human error factors',
-    'Increase fleet efficiency and utilization rates',
-    'Enable 24/7 operation without driver fatigue',
-    'Reduce carbon emissions through optimized routing'
+    'Increase fleet efficiency and utilization rates',;
+    'Enable 24/7 operation without driver fatigue',;
+    'Reduce carbon emissions through optimized routing';
   ];
 
   const industries = [
     'Transportation and Logistics',
     'Automotive Manufacturing',
     'Ride-sharing Services',
-    'Public Transit',
-    'Construction and Mining',
-    'Agriculture and Farming'
+    'Public Transit',;
+    'Construction and Mining',;
+    'Agriculture and Farming';
   ];
 
   return (
     <>
       <SEO 
-        title="AI Autonomous Vehicle Platform | Zion Tech Group"
+        title = "AI Autonomous Vehicle Platform | Zion Tech Group"
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
         keywords="AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation"
       />
@@ -306,8 +306,8 @@ export default function AIAutonomousVehiclePlatform() {
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

@@ -1,23 +1,20 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState, useMemo } from 'react';
-import { ALL_EXPANDED_SERVICES_2027 } from '../data/expandedInnovativeServices2027';
+import { ALL_EXPANDED_SERVICES_2027 } from "../data/expandedInnovativeServices2027";
 
-const ExpandedServicesShowcase2027: NextPage = () => {
+const ExpandedServicesShowcase2027: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   // Get unique categories and subcategories
-  const categories = useMemo(() => {
-    const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
+  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.category)))];
     return cats;
   }, []);
 
-  const subcategories = useMemo(() => {
-    if (selectedCategory === 'all') {
-      const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
+  const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.map(s => s.subcategory)))];
       return subcats;
     }
     const subcats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_2027.filter(s => s.category === selectedCategory).map(s => s.subcategory)))];
@@ -27,26 +24,25 @@ const ExpandedServicesShowcase2027: NextPage = () => {
   // Filter services based on search and filters
   const filteredServices = useMemo(() => {
     return ALL_EXPANDED_SERVICES_2027.filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
   }, [searchTerm, selectedCategory, selectedSubcategory]);
 
-  const resetFilters = () => {
+  const resetFilters = () => {;
     setSearchTerm('');
     setSelectedCategory('all');
     setSelectedSubcategory('all');
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
         <title>Expanded Innovative Services 2027 - Zion Tech Group</title>
         <meta name="description" content="Discover our comprehensive range of advanced cybersecurity, data analytics, cloud solutions, IoT, fintech, and healthcare technology services for 2027." />
@@ -100,13 +96,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             
-            <select
-              value={selectedCategory}
-              onChange={(e) => {
+            <select;
+              value={selectedCategory};
+              onChange={(e) => {;
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
@@ -263,9 +259,9 @@ const ExpandedServicesShowcase2027: NextPage = () => {
               </a>
             </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </div>;
+      </main>;
+    </div>;
   );
 };
 

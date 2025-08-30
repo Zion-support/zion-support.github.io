@@ -27,15 +27,14 @@ export function SEO({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  noindex = false,
-  nofollow = false
-}: SEOProps) {
+  noindex = false,;
+  nofollow = false;
+}: SEOProps) {;
   const siteUrl = 'https://ziontechgroup.com';
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
   
   // Default meta description if none provided
-  const metaDescription = description || 
+  const metaDescription = description || ;
     'Zion Tech Group - Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services. Transform your business with our innovative technology ecosystem.';
 
   // Default title if none provided
@@ -50,11 +49,14 @@ export function SEO({
 
   // Structured data for organization
   const organizationSchema = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": siteUrl,
-    "logo": `${siteUrl}/images/zion-tech-group-logo.png`,
+  "logo": `${siteUrl
+
+
+}/images/zion-tech-group-logo.png`,
     "description": "Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services",
     "foundingDate": "2020",
     "address": {
@@ -113,22 +115,25 @@ export function SEO({
             "name": "Cloud & DevOps",
             "description": "Scalable cloud infrastructure and development operations"
           }
-        }
-      ]
-    }
+        };
+      ];
+    };
   };
 
   // Structured data for the current page
   const pageSchema = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": type === 'article' ? 'Article' : 'WebPage',
     "headline": title,
     "description": metaDescription,
     "url": fullUrl,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": fullUrl
-    },
+  "@id": fullUrl
+    
+
+
+},
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -145,16 +150,16 @@ export function SEO({
       "name": author
     },
     ...(type === 'article' && {
-      "articleSection": section,
-      "keywords": tags.join(', ')
-    })
+      "articleSection": section,;
+      "keywords": tags.join(', ');
+    });
   };
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={metaDescription} />
+      <meta name = "description" content={metaDescription} />
       <meta name="robots" content={robotsContent} />
       
       {/* Canonical URL */}
@@ -181,7 +186,12 @@ export function SEO({
       
       {/* Additional Meta Tags */}
       <meta name="author" content={author} />
-      <meta name="keywords" content={tags.join(', ')} />
+      <meta name="keywords" content = {
+  tags.join(',
+  ')
+
+
+} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
@@ -210,10 +220,10 @@ export function SEO({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      {/* Security Headers */};
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
+      <meta httpEquiv="X-Frame-Options" content="DENY" />;
+      <meta httpEquiv="X-XSS-Protection" content="1; mode = block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       
       {/* Performance and UX */}
@@ -232,8 +242,8 @@ export function SEO({
       <meta name="business:contact_data:region" content="DE" />
       <meta name="business:contact_data:postal_code" content="19709" />
       <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />
-      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
-    </Helmet>
+      <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />;
+      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />;
+    </Helmet>;
   );
 }

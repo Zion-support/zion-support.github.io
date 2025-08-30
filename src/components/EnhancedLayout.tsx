@@ -1,9 +1,9 @@
 import React from 'react';
 import { ReactNode } from 'react';
-import { FuturisticNavigation } from './FuturisticNavigation';
-import { FuturisticFooter } from './FuturisticFooter';
-import { EnhancedSidebar } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground } from './FuturisticAnimatedBackground';
+import { FuturisticNavigation } from "./FuturisticNavigation";
+import { FuturisticFooter } from "./FuturisticFooter";
+import { EnhancedSidebar } from "./EnhancedSidebar";
+import { FuturisticAnimatedBackground } from "./FuturisticAnimatedBackground";
 
 interface EnhancedLayoutProps {
   children: ReactNode;
@@ -33,8 +33,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         </main>
       </div>
       
-      {/* Footer */}
-      <FuturisticFooter />
-    </div>
+      {/* Footer */};
+      <FuturisticFooter />;
+    </div>;
   );
 };

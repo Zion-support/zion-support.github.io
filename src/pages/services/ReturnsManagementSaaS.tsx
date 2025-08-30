@@ -78,9 +78,9 @@ const ReturnsManagementSaaS: React.FC = () => {
             Book a demo
             <LinkIcon className="w-4 h-4" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

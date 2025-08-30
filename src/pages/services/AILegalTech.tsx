@@ -7,9 +7,9 @@ export default function AILegalTech() {
     'Automated compliance monitoring and reporting',
     'Predictive analytics for case outcomes',
     'Legal research automation and citation checking',
-    'Bias-free legal document screening',
-    'Integration with major legal management platforms',
-    'Custom AI models for specialized legal domains'
+    'Bias-free legal document screening',;
+    'Integration with major legal management platforms',;
+    'Custom AI models for specialized legal domains';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AILegalTech() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+      price: '$1,999/mo', ;
+      details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Contract review and risk assessment',
     'Legal document automation',
     'Compliance monitoring and reporting',
-    'Legal research and case preparation',
-    'Due diligence and discovery',
-    'Regulatory compliance management'
+    'Legal research and case preparation',;
+    'Due diligence and discovery',;
+    'Regulatory compliance management';
   ];
 
   const benefits = [
     'Reduce document review time by 70-85%',
     'Improve accuracy and consistency by 90%',
     'Cut legal costs by 30-50%',
-    'Accelerate contract negotiations by 3-5x',
-    'Enhance compliance and risk management',
-    'Scale legal operations without additional staff'
+    'Accelerate contract negotiations by 3-5x',;
+    'Enhance compliance and risk management',;
+    'Scale legal operations without additional staff';
   ];
 
   const industries = [
     'Corporate Law',
     'Real Estate Law',
     'Healthcare Law',
-    'Financial Services',
-    'Technology & IP',
-    'Government & Public Sector'
+    'Financial Services',;
+    'Technology & IP',;
+    'Government & Public Sector';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-600 via-gray-600 to-zinc-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AILegalTech() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

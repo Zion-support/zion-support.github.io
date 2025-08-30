@@ -9,18 +9,18 @@ export default function AIEdgeComputingPlatform() {
     'Automatic load balancing and failover',
     'Edge security and threat detection',
     'IoT device integration and management',
-    'Custom edge computing workflows',
-    'Edge analytics and reporting tools',
-    'Scalable edge infrastructure management'
+    'Custom edge computing workflows',;
+    'Edge analytics and reporting tools',;
+    'Scalable edge infrastructure management';
   ];
 
   const benefits = [
     'Reduce latency by 80-90%',
     'Cut bandwidth costs by 60-70%',
     'Improve data privacy and security',
-    'Real-time edge processing',
-    'Enhanced offline capabilities',
-    'Scalable edge infrastructure'
+    'Real-time edge processing',;
+    'Enhanced offline capabilities',;
+    'Scalable edge infrastructure';
   ];
 
   const pricing = [
@@ -39,31 +39,31 @@ export default function AIEdgeComputingPlatform() {
     { 
       name: 'Enterprise', 
       price: '$3,499/mo', 
-      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-    }
+      features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
     'Smart city infrastructure',
     'Industrial IoT monitoring',
     'Autonomous vehicle systems',
-    'Healthcare edge computing',
-    'Retail edge analytics',
-    'Energy grid optimization'
+    'Healthcare edge computing',;
+    'Retail edge analytics',;
+    'Energy grid optimization';
   ];
 
   const industries = [
     'Smart Cities & Infrastructure',
     'Manufacturing & Industry 4.0',
     'Transportation & Logistics',
-    'Healthcare & Medical Devices',
-    'Retail & E-commerce',
-    'Energy & Utilities'
+    'Healthcare & Medical Devices',;
+    'Retail & E-commerce',;
+    'Energy & Utilities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -291,8 +291,8 @@ export default function AIEdgeComputingPlatform() {
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

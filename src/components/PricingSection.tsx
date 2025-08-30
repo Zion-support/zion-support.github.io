@@ -50,19 +50,29 @@ const pricingTiers = [
       "Custom Development",
       "SLA Guarantee"
     ],
-    popular: false,
-    color: "from-green-500 to-emerald-500"
-  }
+    popular: false,;
+    color: "from-green-500 to-emerald-500";
+  };
 ];
 
 export function PricingSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -79,10 +89,25 @@ export function PricingSection() {
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -129,10 +154,25 @@ export function PricingSection() {
 
         <motion.div 
           className="mt-16 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <p className="text-gray-400 mb-6">
             Need a custom solution? Contact us for a personalized quote.
@@ -144,8 +184,8 @@ export function PricingSection() {
             Contact Sales Team
             <span className="text-sm">→</span>
           </Link>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

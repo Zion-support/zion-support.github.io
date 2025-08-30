@@ -7,20 +7,24 @@ const baseData: QuoteFormData = {
   specificItem: null,
   projectName: '',
   projectDescription: '',
-  startDate: undefined,
-  endDate: undefined,
+  startDate: null,
+  endDate: null,
   timeline: 'flexible',
-  budget: { amount: 0, type: 'fixed' },
-  contactInfo: { name: '', email: '', phone: '', company: '' },
+  budget: { amount: 0,
+  type: 'fixed' 
+
+;
+},;
+  contactInfo: { name: '', email: '', phone: '', company: '' },;
 };
 it('shows results when searching services', async () => {
   const data = { ...baseData };
   const updateFormData = (d: Partial<QuoteFormData>) => Object.assign(data, d);
   global.fetch = jest.fn().mockResolvedValue({
     ok: true,
-    json: async () => [
-      { id: 'service-3', title: 'IT Consulting', category: 'service' },
-    ],
+    json: async () => [;
+      { id: 'service-3', title: 'IT Consulting', category: 'service' },;
+    ],;
   }) as any;
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
   fireEvent.click(screen.getByText('Services'));
@@ -37,9 +41,9 @@ it('renders results from api', async () => {
     ok: true,
     json: async () => [
       { id: 's1', title: 'A', category: 'service' },
-      { id: 's2', title: 'B', category: 'service' },
-      { id: 's3', title: 'C', category: 'service' },
-    ],
+      { id: 's2', title: 'B', category: 'service' },;
+      { id: 's3', title: 'C', category: 'service' },;
+    ],;
   }) as any;
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
   fireEvent.click(screen.getByText('Services'));

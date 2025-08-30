@@ -361,9 +361,9 @@ const blockchainSolutions = [
     ],
     price: "From $200,000",
     timeline: "18-30 weeks",
-    category: "Integration",
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
-  }
+    category: "Integration",;
+    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
+  };
 ];
 
 const blockchainTechnologies = [
@@ -392,9 +392,9 @@ const blockchainTechnologies = [
     name: "Cryptography",
     description: "Advanced cryptographic security solutions",
     icon: Lock,
-    useCase: "Security & Privacy",
-    reliability: "High"
-  }
+    useCase: "Security & Privacy",;
+    reliability: "High";
+  };
 ];
 
 const successStories = [
@@ -422,9 +422,9 @@ const successStories = [
     industry: "Healthcare",
     challenge: "Needed secure patient identity management system",
     solution: "Built blockchain-based identity management platform",
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",
-    logo: "HIS"
-  }
+    results: "100% data security, 90% faster verification, better privacy, improved compliance",;
+    logo: "HIS";
+  };
 ];
 
 const processSteps = [
@@ -453,9 +453,9 @@ const processSteps = [
     step: 4,
     title: "Testing & Deployment",
     description: "Test blockchain systems and deploy to production",
-    icon: Gauge,
-    duration: "4-8 weeks"
-  }
+    icon: Gauge,;
+    duration: "4-8 weeks";
+  };
 ];
 
 const blockchainBenefits = [
@@ -480,9 +480,9 @@ const blockchainBenefits = [
   {
     title: "Cost Reduction",
     description: "Blockchain eliminates intermediaries and reduces operational costs",
-    icon: TrendingUp,
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-  }
+    icon: TrendingUp,;
+    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
+  };
 ];
 
 export default function BlockchainEnterpriseSolutions() {
@@ -491,12 +491,12 @@ export default function BlockchainEnterpriseSolutions() {
 
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
   
-  const filteredSolutions = selectedCategory === 'All' 
-    ? blockchainSolutions 
+  const filteredSolutions = selectedCategory === 'All' ;
+    ? blockchainSolutions ;
     : blockchainSolutions.filter(solution => solution.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
@@ -507,15 +507,40 @@ export default function BlockchainEnterpriseSolutions() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Building className="w-10 h-10 text-white" />
@@ -553,8 +578,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -568,9 +603,24 @@ export default function BlockchainEnterpriseSolutions() {
             {blockchainBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -599,8 +649,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -614,9 +674,24 @@ export default function BlockchainEnterpriseSolutions() {
             {blockchainTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -646,8 +721,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -661,9 +746,24 @@ export default function BlockchainEnterpriseSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -690,8 +790,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -722,9 +832,24 @@ export default function BlockchainEnterpriseSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -779,8 +904,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -794,9 +929,24 @@ export default function BlockchainEnterpriseSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -840,8 +990,18 @@ export default function BlockchainEnterpriseSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -866,8 +1026,8 @@ export default function BlockchainEnterpriseSolutions() {
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

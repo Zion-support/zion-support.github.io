@@ -39,7 +39,7 @@ import {
   Battery as BatteryIcon,
   Signal
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 const MobileLaunch: React.FC = () => {
   const features = [
@@ -64,9 +64,9 @@ const MobileLaunch: React.FC = () => {
     {
       title: "Smart Notifications",
       description: "Intelligent alerts that adapt to your preferences and schedule",
-      icon: Bell,
-      color: "from-orange-400 to-red-500"
-    }
+      icon: Bell,;
+      color: "from-orange-400 to-red-500";
+    };
   ];
 
   const appScreens = [
@@ -91,9 +91,9 @@ const MobileLaunch: React.FC = () => {
     {
       name: "Services",
       description: "Access to all Zion Tech Group services and solutions",
-      icon: Settings,
-      features: ["Service catalog", "Quick setup", "Support access"]
-    }
+      icon: Settings,;
+      features: ["Service catalog", "Quick setup", "Support access"];
+    };
   ];
 
   const downloadOptions = [
@@ -115,21 +115,21 @@ const MobileLaunch: React.FC = () => {
       platform: "Web App",
       icon: "🌐",
       description: "Access via browser",
-      link: "/",
-      featured: false
-    }
+      link: "/",;
+      featured: false;
+    };
   ];
 
   const systemRequirements = [
     { requirement: "iOS 14.0+", icon: "🍎" },
     { requirement: "Android 8.0+", icon: "🤖" },
-    { requirement: "2GB RAM", icon: "💾" },
-    { requirement: "100MB Storage", icon: "💿" },
-    { requirement: "Internet Connection", icon: "🌐" }
+    { requirement: "2GB RAM", icon: "💾" },;
+    { requirement: "100MB Storage", icon: "💿" },;
+    { requirement: "Internet Connection", icon: "🌐" };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Mobile App - Zion Tech Group"
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
@@ -142,8 +142,18 @@ const MobileLaunch: React.FC = () => {
         <div className="relative z-10 container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center mb-6">
@@ -184,9 +194,24 @@ const MobileLaunch: React.FC = () => {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="relative"
             >
               {/* Mock Phone */}
@@ -250,8 +275,18 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -268,9 +303,24 @@ const MobileLaunch: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
               >
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -289,8 +339,18 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -306,9 +366,24 @@ const MobileLaunch: React.FC = () => {
             {appScreens.map((screen, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -336,8 +411,18 @@ const MobileLaunch: React.FC = () => {
       <section id="download" className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -353,9 +438,24 @@ const MobileLaunch: React.FC = () => {
             {downloadOptions.map((option, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className={`bg-slate-800/50 border rounded-xl p-8 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   option.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
@@ -388,8 +488,18 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -405,9 +515,24 @@ const MobileLaunch: React.FC = () => {
             {systemRequirements.map((req, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className="text-4xl mb-3">{req.icon}</div>
@@ -422,8 +547,18 @@ const MobileLaunch: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -451,9 +586,9 @@ const MobileLaunch: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

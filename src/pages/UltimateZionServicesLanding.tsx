@@ -1,11 +1,11 @@
 import React from 'react';
-import UltimateZionServicesShowcase from '../components/UltimateZionServicesShowcase';
+import UltimateZionServicesShowcase from "../components/UltimateZionServicesShowcase";
 
 const UltimateZionServicesLanding: React.FC = () => {
   return (
-    <div>
-      <UltimateZionServicesShowcase />
-    </div>
+    <div>;
+      <UltimateZionServicesShowcase />;
+    </div>;
   );
 };
 

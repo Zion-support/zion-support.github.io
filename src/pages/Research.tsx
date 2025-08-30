@@ -13,25 +13,25 @@ export default function Research() {
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },;
+    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 };
   ];
 
   const statuses = [
     { id: 'all', name: 'All Statuses', count: 0 },
     { id: 'active', name: 'Active', count: 0 },
-    { id: 'completed', name: 'Completed', count: 0 },
-    { id: 'planning', name: 'Planning', count: 0 },
-    { id: 'published', name: 'Published', count: 0 }
+    { id: 'completed', name: 'Completed', count: 0 },;
+    { id: 'planning', name: 'Planning', count: 0 },;
+    { id: 'published', name: 'Published', count: 0 };
   ];
 
   const types = [
     { id: 'all', name: 'All Types', count: 0 },
     { id: 'research', name: 'Research Papers', count: 0 },
-    { id: 'patents', name: 'Patents', count: 0 },
-    { id: 'prototypes', name: 'Prototypes', count: 0 },
-    { id: 'collaborations', name: 'Collaborations', count: 0 }
+    { id: 'patents', name: 'Patents', count: 0 },;
+    { id: 'prototypes', name: 'Prototypes', count: 0 },;
+    { id: 'collaborations', name: 'Collaborations', count: 0 };
   ];
 
   const researchProjects = [
@@ -211,42 +211,40 @@ export default function Research() {
       ],
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
-      progress: 55,
-      impact: 'high'
-    }
+      progress: 55,;
+      impact: 'high';
+    };
   ];
 
   // Update counts
-  categories.forEach(cat => {
+  categories.forEach(cat = > {;
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
 
-  statuses.forEach(status => {
+  statuses.forEach(status = > {;
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
 
-  types.forEach(type => {
+  types.forEach(type = > {;
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
 
-  const filteredProjects = researchProjects.filter(project => {
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredProjects = researchProjects.filter(project => {;
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
-    const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
     
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
+  const getStatusColor = (status: string) => {;
+    switch (status) {;
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
@@ -255,8 +253,8 @@ export default function Research() {
     }
   };
 
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
+  const getImpactColor = (impact: string) => {;
+    switch (impact) {;
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
@@ -266,14 +264,14 @@ export default function Research() {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short'
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'short';
     });
   };
 
-  const formatFunding = (amount: number) => {
-    if (amount >= 1000000) {
+  const formatFunding = (amount: number) => {;
+    if (amount >= 1000000) {;
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
@@ -282,7 +280,7 @@ export default function Research() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -598,8 +596,8 @@ export default function Research() {
               Contact Research Team
             </button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

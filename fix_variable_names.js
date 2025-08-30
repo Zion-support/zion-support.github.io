@@ -7,10 +7,7 @@ function convertToValidVariableName(filename) {
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
 }
-function fixFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const filename = path.basename(filePath);
+function filename = path.basename(filePath);
     const validName = convertToValidVariableName(filename);
     
     // Replace the invalid variable name with the valid one
@@ -53,3 +50,7 @@ if (fs.existsSync(servicesDir)) {
   });
 }
 console.log('Variable name fixing completed!');
+
+export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default convertToValidVariableName;

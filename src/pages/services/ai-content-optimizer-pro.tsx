@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, 
@@ -26,11 +26,14 @@ import {
 
 const AIContentOptimizerPro: React.FC = () => {
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+};
 
   const features = [
     {
@@ -66,9 +69,9 @@ const AIContentOptimizerPro: React.FC = () => {
     {
       icon: Shield,
       title: 'Content Plagiarism Detection',
-      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
-    }
+      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
+      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
+    };
   ];
 
   const pricingPlans = [
@@ -121,9 +124,9 @@ const AIContentOptimizerPro: React.FC = () => {
         'Advanced reporting',
         'SLA guarantees'
       ],
-      popular: false,
-      cta: 'Contact Sales'
-    }
+      popular: false,;
+      cta: 'Contact Sales';
+    };
   ];
 
   const useCases = [
@@ -144,9 +147,9 @@ const AIContentOptimizerPro: React.FC = () => {
     },
     {
       title: 'Technical Content',
-      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
-      metrics: ['45% improvement in readability scores', '40% increase in engagement']
-    }
+      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
+      metrics: ['45% improvement in readability scores', '40% increase in engagement'];
+    };
   ];
 
   const testimonials = [
@@ -168,15 +171,15 @@ const AIContentOptimizerPro: React.FC = () => {
       name: 'Sarah Williams',
       role: 'Content Creator',
       company: 'Creative Content Studio',
-      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
-      rating: 5
-    }
+      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
+      rating: 5;
+    };
   ];
 
   return (
     <>
       <SEO
-        title="AI Content Optimizer Pro | Zion Tech Group"
+        title = "AI Content Optimizer Pro | Zion Tech Group"
         description="Advanced AI-powered content optimization platform. Improve SEO, readability, and engagement with machine learning algorithms. Start free trial today."
         keywords="AI content optimization, SEO optimization, content readability, content marketing, AI writing tools, content analytics"
         canonical="https://ziontechgroup.com/services/ai-content-optimizer-pro"
@@ -187,8 +190,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -234,8 +247,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -252,9 +275,24 @@ const AIContentOptimizerPro: React.FC = () => {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
                 >
@@ -281,8 +319,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -299,9 +347,24 @@ const AIContentOptimizerPro: React.FC = () => {
               {useCases.map((useCase, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 >
@@ -325,8 +388,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -343,9 +416,24 @@ const AIContentOptimizerPro: React.FC = () => {
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
@@ -391,9 +479,24 @@ const AIContentOptimizerPro: React.FC = () => {
             </div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
               viewport={{ once: true }}
               className="text-center mt-12"
             >
@@ -411,8 +514,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -429,9 +542,24 @@ const AIContentOptimizerPro: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
                 >
@@ -456,8 +584,18 @@ const AIContentOptimizerPro: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -513,9 +651,9 @@ const AIContentOptimizerPro: React.FC = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

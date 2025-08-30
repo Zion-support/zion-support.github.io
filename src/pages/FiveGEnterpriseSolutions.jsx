@@ -578,105 +578,6 @@ import {
   Brain
 } from 'lucide-react';
 
-const fiveGSolutions = [
-  {
-    id: 1,
-    title: "5G Network Infrastructure",
-    description: "Comprehensive 5G network design, deployment, and management solutions.",
-    icon: Network,
-    features: [
-      "5G network design",
-      "Core network deployment",
-      "RAN optimization",
-      "Network management"
-    ],
-    price: "From $500,000",
-    timeline: "32-48 weeks",
-    category: "Network Infrastructure",
-    technologies: ["5G Core", "RAN", "Network Slicing", "Edge Computing"]
-  },
-  {
-    id: 2,
-    title: "5G Enterprise Applications",
-    description: "Custom 5G applications for enterprise use cases and requirements.",
-    icon: Code,
-    features: [
-      "Custom applications",
-      "Enterprise integration",
-      "API development",
-      "Performance optimization"
-    ],
-    price: "From $200,000",
-    timeline: "20-32 weeks",
-    category: "Applications",
-    technologies: ["5G APIs", "Enterprise Apps", "Integration", "Optimization"]
-  },
-  {
-    id: 3,
-    title: "5G IoT Solutions",
-    description: "5G-powered IoT solutions for enterprise connectivity and management.",
-    icon: Wifi,
-    features: [
-      "IoT connectivity",
-      "Device management",
-      "Data analytics",
-      "Security solutions"
-    ],
-    price: "From $150,000",
-    timeline: "18-30 weeks",
-    category: "IoT",
-    technologies: ["5G IoT", "Device Management", "Analytics", "Security"]
-  },
-  {
-    id: 4,
-    title: "5G Edge Computing",
-    description: "Edge computing solutions leveraging 5G network capabilities.",
-    icon: Server,
-    features: [
-      "Edge deployment",
-      "Low latency",
-      "High bandwidth",
-      "Local processing"
-    ],
-    price: "From $300,000",
-    timeline: "24-36 weeks",
-    category: "Edge Computing",
-    technologies: ["Edge Computing", "5G Networks", "Low Latency", "High Bandwidth"]
-  },
-  {
-    id: 5,
-    title: "5G Security Solutions",
-    description: "Comprehensive security solutions for 5G enterprise networks.",
-    icon: Shield,
-    features: [
-      "Network security",
-      "Threat protection",
-      "Compliance",
-      "Monitoring"
-    ],
-    price: "From $250,000",
-    timeline: "22-34 weeks",
-    category: "Security",
-    technologies: ["5G Security", "Threat Protection", "Compliance", "Monitoring"]
-  },
-  {
-    id: 6,
-    title: "5G Analytics Platform",
-    description: "Advanced analytics platform for 5G network and application insights.",
-    icon: BarChart3,
-    features: [
-      "Network analytics",
-      "Performance insights",
-      "Predictive analytics",
-      "Reporting"
-    ],
-    price: "From $180,000",
-    timeline: "20-32 weeks",
-    category: "Analytics",
-    technologies: ["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
-  }
-];
-
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -818,15 +719,40 @@ export default function FiveGEnterpriseSolutions() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Network className="w-10 h-10 text-white" />
@@ -864,8 +790,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -879,9 +815,24 @@ export default function FiveGEnterpriseSolutions() {
             {fiveGBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -910,8 +861,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -925,9 +886,24 @@ export default function FiveGEnterpriseSolutions() {
             {fiveGTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -957,8 +933,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -972,9 +958,24 @@ export default function FiveGEnterpriseSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -1001,8 +1002,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1033,9 +1044,24 @@ export default function FiveGEnterpriseSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -1090,8 +1116,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -1105,9 +1141,24 @@ export default function FiveGEnterpriseSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -1151,8 +1202,18 @@ export default function FiveGEnterpriseSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

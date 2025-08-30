@@ -47,7 +47,7 @@ function ProjectDetailsContent() {
                     description: "The requested project could not be found.",
                     variant: "destructive",
                 });
-                navigate("/dashboard");
+                router("/dashboard");
             }
             setIsLoading(false);
         }
@@ -161,7 +161,7 @@ function ProjectDetailsContent() {
             <p className="text-muted-foreground mb-4">
               The project you're looking for doesn't exist or you don't have access to it.
             </p>
-            <Button onClick={() => navigate("/dashboard")}>
+            <Button onClick={() => router("/dashboard")}>
               Return to Dashboard
             </Button>
           </CardContent>
@@ -169,14 +169,11 @@ function ProjectDetailsContent() {
       </div>);
     }
     // Check if user is either the client or the talent
-    const isClient = user?.id === project.client_id;
     const isTalent = user?.id === project.talent_id;
     if (!isClient && !isTalent) {
-        navigate("/unauthorized");
+        router("/unauthorized");
         return null;
     }
-    const isOfferPending = project.status === "offer_sent";
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
@@ -260,7 +257,7 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>)}
               
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
+              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (<Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}>
                   <MessageSquare className="mr-2 h-4 w-4"/> Message
                 </Button>)}
             </div>
@@ -447,7 +444,7 @@ function ProjectDetailsContent() {
                       <p className="text-sm text-muted-foreground">
                         {project.talent_profile?.professional_title || "Professional"}
                       </p>
-                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}>
+                      {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?talentId=${project.talent_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -462,7 +459,7 @@ function ProjectDetailsContent() {
                         {project.talent_profile?.full_name || "Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => navigate(`/messages?clientId=${project.client_id}`)}>
+                      {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router(`/messages?clientId=${project.client_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message
                         </Button>)}
                     </div>
@@ -504,7 +501,7 @@ function ProjectDetailsContent() {
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4"/> The talent has requested changes to this offer.
                   </p>
-                  <Button variant="outline" onClick={() => navigate(`/messages?talentId=${project.talent_id}`)} className="w-full">
+                  <Button variant="outline" onClick={() => router(`/messages?talentId=${project.talent_id}`)} className="w-full">
                     <MessageSquare className="mr-2 h-4 w-4"/> Discuss Changes
                   </Button>
                 </CardFooter>)}

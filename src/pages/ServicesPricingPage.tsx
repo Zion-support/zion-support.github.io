@@ -27,8 +27,8 @@ import {
 } from "lucide-react";
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
 // Group services by category for better organization
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
-  if (!acc[service.category]) {
+const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
+  if (!acc[service.category]) {;
     acc[service.category] = [];
   }
   acc[service.category].push(service);
@@ -41,15 +41,15 @@ const pricingFeatures = [
   "Global Coverage",
   "Custom Integration",
   "Training & Documentation",
-  "Regular Updates",
-  "Security Compliance",
-  "Scalable Architecture"
+  "Regular Updates",;
+  "Security Compliance",;
+  "Scalable Architecture";
 ];
 export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
-  const filteredServices = selectedCategory === 'all' 
-    ? EXPANDED_SERVICES 
+  const filteredServices = selectedCategory === 'all' ;
+    ? EXPANDED_SERVICES ;
     : servicesByCategory[selectedCategory] || [];
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -70,14 +70,14 @@ export default function ServicesPricingPage() {
       'Mobile Development': <Smartphone className="h-5 w-5" />,
       'E-commerce': <ShoppingCart className="h-5 w-5" />,
       'Healthcare Technology': <Heart className="h-5 w-5" />,
-      'FinTech': <TrendingUp className="h-5 w-5" />,
-      'Education Technology': <GraduationCap className="h-5 w-5" />,
-      'Supply Chain': <Truck className="h-5 w-5" />
+      'FinTech': <TrendingUp className="h-5 w-5" />,;
+      'Education Technology': <GraduationCap className="h-5 w-5" />,;
+      'Supply Chain': <Truck className="h-5 w-5" />;
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />;
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
@@ -145,7 +145,12 @@ export default function ServicesPricingPage() {
                   </div>
                   <Button 
                     className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
+                    onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
+  '_blank')
+
+
+}
                   >
                     Get Custom Quote
                   </Button>
@@ -248,7 +253,12 @@ export default function ServicesPricingPage() {
                           <Button 
                             variant="outline" 
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+                            onClick = {
+  () => window.open('https://ziontechgroup.com',
+  '_blank')
+
+
+}
                           >
                             <ExternalLink className="h-4 w-4" />
                           </Button>
@@ -337,7 +347,12 @@ export default function ServicesPricingPage() {
             <Button 
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
-              onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
+              onClick = {
+  () => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`,
+  '_blank')
+
+
+}
             >
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
@@ -346,14 +361,19 @@ export default function ServicesPricingPage() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
-              onClick={() => window.open('tel:+13024640950', '_blank')}
+              onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+
+
+}
             >
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </Button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

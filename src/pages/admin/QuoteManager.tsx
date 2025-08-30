@@ -44,23 +44,26 @@ export default function QuoteManager() {
 
   // Count quotes by status
   const statusCounts = {
-    new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
+  new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
     in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
     accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,
-    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,
-    closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
-  };
+    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
+  closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length;
+  ;
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+
+};
+
+  const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
     setShowDetails(true);
   };
 
-  const handleResetFilters = () => {
+  const handleResetFilters = () => {;
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
+    setDateRange({ from: null, to: null });
   };
 
   if (!isAdmin) {
@@ -71,7 +74,7 @@ export default function QuoteManager() {
     <ProtectedRoute adminOnly>
       <div>
         
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+        <div className = "min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
               <div>
@@ -137,9 +140,9 @@ export default function QuoteManager() {
         
         {/* Quote Details Modal */}
         <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
+          quote={selectedQuote};
+          isOpen={showDetails};
+          onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
           }}

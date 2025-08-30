@@ -151,7 +151,6 @@ class CodeQualityMonitor {
       });
       return [];
     } catch (error) {
-      const errorOutput = error.stderr || '';
       const errors = errorOutput.split('\n')
         .filter(line => line.includes('error TS'))
         .map(line => line.trim())
@@ -291,7 +290,6 @@ class CodeQualityMonitor {
     this.log('Attempting to fix syntax errors...');
     
     // Create a detailed report
-    const reportPath = path.join(this.projectRoot, 'logs', 'syntax-errors-report.txt');
     const reportContent = `Syntax Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n\nThese errors require manual attention.`;
     
     try {
@@ -521,9 +519,7 @@ class CodeQualityMonitor {
         const now = Date.now();
         const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days
         
-        for (const file of files) {
-          if (file.includes('-report.txt')) {
-            const filePath = path.join(logsDir, file);
+        for (const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
             
             if (now - stats.mtime.getTime() > maxAge) {

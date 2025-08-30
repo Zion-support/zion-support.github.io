@@ -2,16 +2,19 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027 } from '../../data/2027-specialized-innovative-services';
+import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
+import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+;
+
+
 };
 
 const pricingTiers = [
@@ -57,9 +60,9 @@ const pricingTiers = [
       'Dedicated account manager',
       'Custom training programs',
       'SLA guarantees'
-    ],
-    popular: false
-  }
+    ],;
+    popular: false;
+  };
 ];
 
 export default function ComprehensivePricing() {
@@ -73,10 +76,8 @@ export default function ComprehensivePricing() {
   const categories = Array.from(new Set(allServices.map(service => service.category)));
   
   // Filter services based on selection
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    
-    let matchesPrice = true;
+  const filteredServices = allServices.filter(service => {;
+    const matchesPrice = true;
     if (selectedPriceRange !== 'all') {
       const price = parseInt(service.price.replace(/[^0-9]/g, ''));
       switch (selectedPriceRange) {
@@ -98,8 +99,8 @@ export default function ComprehensivePricing() {
     return matchesCategory && matchesPrice;
   });
 
-  const getPriceRangeLabel = (range: string) => {
-    switch (range) {
+  const getPriceRangeLabel = (range: string) => {;
+    switch (range) {;
       case 'under-1000': return 'Under $1,000';
       case '1000-3000': return '$1,000 - $3,000';
       case '3000-5000': return '$3,000 - $5,000';
@@ -109,7 +110,7 @@ export default function ComprehensivePricing() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Header */}
       <div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
@@ -307,13 +308,13 @@ export default function ComprehensivePricing() {
           
           {filteredServices.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>
-              <Button 
-                onClick={() => {
+              <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>;
+              <Button ;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
-                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
+                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
               >
                 Clear Filters
               </Button>
@@ -390,8 +391,8 @@ export default function ComprehensivePricing() {
               <p>📍 Address: {contactInfo.address}</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

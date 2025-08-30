@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut, Settings, Accessibility, X } from 'lucide-react';
-import { Button } from './button';
+import { Button } from "./button";
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
     const [settings, setSettings] = useState({
@@ -66,21 +66,27 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     // Toggle settings
     const toggleSetting = useCallback((key, value) => {
         const newSettings = {
-            ...settings,
-            [key]: value !== undefined ? value : !settings[key]
-        };
+  ...settings,
+  [key]: value !== null ? value : !settings[key]
+        
+
+
+};
         saveSettings(newSettings);
     }, [settings, saveSettings]);
     // Reset to defaults
     const resetSettings = useCallback(() => {
         const defaults = {
-            highContrast: false,
+  highContrast: false,
             largeText: false,
             reducedMotion: false,
             screenReader: false,
             fontSize: 16,
-            colorBlindMode: 'normal'
-        };
+  colorBlindMode: 'normal'
+        
+
+
+};
         saveSettings(defaults);
     }, [saveSettings]);
     // Font size controls
@@ -91,9 +97,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         toggleSetting('fontSize', Math.max(settings.fontSize - 2, 12));
     }, [settings.fontSize, toggleSetting]);
     // Screen reader announcement
-    const announceToScreenReader = useCallback((message) => {
-        if (settings.screenReader) {
-            const announcement = document.createElement('div');
+    const announcement = document.createElement('div');
             announcement.setAttribute('aria-live', 'polite');
             announcement.setAttribute('aria-atomic', 'true');
             announcement.className = 'sr-only';
@@ -119,7 +123,27 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(false)}/>
             
             {/* Panel */}
-            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial={{ opacity: 0, x: 300, scale: 0.95 }} animate={{ opacity: 1, x: 0, scale: 1 }} exit={{ opacity: 0, x: 300, scale: 0.95 }} transition={{ duration: 0.3, ease: "easeOut" }}>
+            <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
+  { opacity: 0, x: 300,
+  scale: 0.95 
+
+
+}} animate = {
+  { opacity: 1, x: 0,
+  scale: 1 
+
+
+}} exit = {
+  { opacity: 0, x: 300,
+  scale: 0.95 
+
+
+}} transition = {
+  { duration: 0.3,
+  ease: "easeOut" 
+
+
+}}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Accessibility</h2>
@@ -176,7 +200,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                     <Eye className="w-5 h-5 text-zion-cyan"/>
                     <span className="text-zinc-300">Color Blind Mode</span>
                   </div>
-                  <select value={settings.colorBlindMode} onChange={(e) => toggleSetting('colorBlindMode', e.target.value)} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                  <select value={settings.colorBlindMode} onChange = {
+  (e) => toggleSetting('colorBlindMode',
+  e.target.value)
+
+
+} className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -240,7 +269,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       </AnimatePresence>
 
       {/* Screen Reader Only Class */}
-      <style dangerouslySetInnerHTML={{
+      <style dangerouslySetInnerHTML = {
+  {
             __html: `
           .sr-only {
             position: absolute;
@@ -249,10 +279,14 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             padding: 0;
             margin: -1px;
             overflow: hidden;
-            clip: rect(0, 0, 0, 0);
+            clip: rect(0, 0, 0,
+  0);
             white-space: nowrap;
             border: 0;
-          }
+          
+
+
+}
 
           .high-contrast {
             --zion-cyan: #00ffff;
@@ -303,7 +337,12 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
         }}/>
 
       {/* SVG Filters for Color Blind Modes */}
-      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+      <svg style = {
+  { position: 'absolute', width: 0,
+  height: 0 
+
+
+}}>
         <defs>
           <filter id="protanopia-filter">
             <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/>

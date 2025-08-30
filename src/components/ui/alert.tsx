@@ -7,9 +7,9 @@ interface AlertProps {
 
 export function Alert({ children, className = '' }: AlertProps) {
   return (
-    <div className={`relative w-full rounded-lg border p-4 ${className}`}>
-      {children}
-    </div>
+    <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
+      {children};
+    </div>;
   );
 }
 
@@ -20,8 +20,8 @@ interface AlertDescriptionProps {
 
 export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
   return (
-    <div className={`text-sm ${className}`}>
-      {children}
-    </div>
+    <div className={`text-sm ${className}`}>;
+      {children};
+    </div>;
   );
 }

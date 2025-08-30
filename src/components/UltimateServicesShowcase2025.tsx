@@ -31,23 +31,22 @@ export default function UltimateServicesShowcase2025() {
 
   const categories = ['all', ...Object.keys(ULTIMATE_SERVICE_CATEGORIES_2025)];
 
-  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? 
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : 
+      <span className = "text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w-6 h-6" />;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="Ultimate Innovative Services 2025 | Zion Tech Group"
         description="Discover our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Transform your business with cutting-edge technology."
@@ -218,8 +217,8 @@ export default function UltimateServicesShowcase2025() {
               View Pricing
             </Link>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

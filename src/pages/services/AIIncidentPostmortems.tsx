@@ -26,15 +26,18 @@ import {
   MapPin,
   Server
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function AIIncidentPostmortems() {
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+  ;
+
+
+};
 
   const features = [
     {
@@ -64,18 +67,18 @@ export default function AIIncidentPostmortems() {
     },
     {
       icon: Database,
-      title: 'Centralized Knowledge Base',
-      description: 'Maintain a searchable repository of all incidents and resolutions'
-    }
+      title: 'Centralized Knowledge Base',;
+      description: 'Maintain a searchable repository of all incidents and resolutions';
+    };
   ];
 
   const benefits = [
     'Reduce incident resolution time by 60%',
     'Improve team productivity by 45%',
     'Decrease repeat incidents by 80%',
-    'Enhance customer satisfaction scores',
-    'Streamline compliance reporting',
-    'Optimize resource allocation'
+    'Enhance customer satisfaction scores',;
+    'Streamline compliance reporting',;
+    'Optimize resource allocation';
   ];
 
   const pricingPlans = [
@@ -130,9 +133,9 @@ export default function AIIncidentPostmortems() {
         'On-premise deployment option',
         'Dedicated account manager'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -153,13 +156,13 @@ export default function AIIncidentPostmortems() {
     },
     {
       title: 'Customer Support',
-      description: 'Improve customer experience with faster incident resolution and communication',
-      icon: MessageSquare
-    }
+      description: 'Improve customer experience with faster incident resolution and communication',;
+      icon: MessageSquare;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
         title="AI Incident Postmortems Platform | Zion Tech Group"
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
@@ -170,8 +173,18 @@ export default function AIIncidentPostmortems() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6">
@@ -207,8 +220,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -225,9 +248,24 @@ export default function AIIncidentPostmortems() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
@@ -246,8 +284,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -264,9 +312,24 @@ export default function AIIncidentPostmortems() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
               >
@@ -282,8 +345,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -300,9 +373,24 @@ export default function AIIncidentPostmortems() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -353,8 +441,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -371,9 +469,24 @@ export default function AIIncidentPostmortems() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -392,8 +505,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -424,8 +547,18 @@ export default function AIIncidentPostmortems() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -462,9 +595,9 @@ export default function AIIncidentPostmortems() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

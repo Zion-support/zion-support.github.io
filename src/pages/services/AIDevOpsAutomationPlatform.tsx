@@ -9,18 +9,18 @@ export default function AIDevOpsAutomationPlatform() {
     'Intelligent monitoring and alerting with anomaly detection',
     'Multi-cloud deployment automation (AWS, Azure, GCP, Kubernetes)',
     'Automated testing orchestration with AI-driven test case generation',
-    'Performance optimization and resource scaling recommendations',
-    'Security scanning and compliance automation in deployment pipelines',
-    'Real-time collaboration and approval workflows for deployments',
+    'Performance optimization and resource scaling recommendations',;
+    'Security scanning and compliance automation in deployment pipelines',;
+    'Real-time collaboration and approval workflows for deployments',;
   ];
 
   const benefits = [
     'Reduce deployment time by 80% with intelligent automation',
     'Cut infrastructure costs by 40% through AI optimization',
     'Achieve 99.9% deployment success rate with predictive analytics',
-    'Eliminate manual configuration errors and security gaps',
-    'Scale infrastructure automatically based on demand patterns',
-    'Reduce mean time to recovery (MTTR) by 70%',
+    'Eliminate manual configuration errors and security gaps',;
+    'Scale infrastructure automatically based on demand patterns',;
+    'Reduce mean time to recovery (MTTR) by 70%',;
   ];
 
   const automationCapabilities = [
@@ -31,9 +31,9 @@ export default function AIDevOpsAutomationPlatform() {
     'Security & Compliance Automation',
     'Performance Monitoring & Alerting',
     'Database Migration & Management',
-    'Multi-Environment Deployment',
-    'Disaster Recovery Automation',
-    'Cost Optimization & Governance',
+    'Multi-Environment Deployment',;
+    'Disaster Recovery Automation',;
+    'Cost Optimization & Governance',;
   ];
 
   const stack = [
@@ -42,13 +42,13 @@ export default function AIDevOpsAutomationPlatform() {
     { name: 'Jenkins', url: 'https://www.jenkins.io/' },
     { name: 'GitLab CI/CD', url: 'https://docs.gitlab.com/ee/ci/' },
     { name: 'AWS CloudFormation', url: 'https://aws.amazon.com/cloudformation/' },
-    { name: 'Azure DevOps', url: 'https://azure.microsoft.com/services/devops/' },
-    { name: 'Prometheus', url: 'https://prometheus.io/' },
-    { name: 'Grafana', url: 'https://grafana.com/' },
+    { name: 'Azure DevOps', url: 'https://azure.microsoft.com/services/devops/' },;
+    { name: 'Prometheus', url: 'https://prometheus.io/' },;
+    { name: 'Grafana', url: 'https://grafana.com/' },;
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -205,8 +205,8 @@ export default function AIDevOpsAutomationPlatform() {
           <p className="text-slate-400 mt-6">
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions
           </p>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

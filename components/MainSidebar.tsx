@@ -78,17 +78,21 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
+      prev.includes(section) ;
+        ? prev.filter(s => s !== section);
+        : [...prev, section];
     );
   };
 
   const isActive = (path: string) => router.pathname === path;
 
   const navigation = {
-    main: [
-      { name: 'Home', href: '/', icon: Home },
+  main: [
+      { name: 'Home', href: '/',
+  icon: Home 
+
+
+},
       { name: 'About', href: '/about', icon: Building },
       { name: 'Services', href: '/services', icon: Briefcase },
       { name: 'Solutions', href: '/solutions', icon: Target },
@@ -126,28 +130,28 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
-      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },;
+      { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },;
+    ];
   };
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
-    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },
-    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },
-    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },
+    { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },;
+    { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },;
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },;
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },
+    { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },;
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },;
+    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },;
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },
-    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },;
+    { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },;
   ];
 
   const renderNavSection = (title: string, items: any[], sectionKey: string) => (
@@ -186,9 +190,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </Link>
           ))}
-        </div>
-      )}
-    </div>
+        </div>;
+      )};
+    </div>;
   );
 
   return (
@@ -196,7 +200,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className = "fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -323,9 +327,9 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="text-xs text-zion-slate-light text-center">
             © {new Date().getFullYear()} Zion Tech Group
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 

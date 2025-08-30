@@ -8,7 +8,7 @@ export default function DigitalTransformation() {
     <>
       <Helmet>
         <title>Digital Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
+        <meta name = "description" content="Transform your business with comprehensive digital transformation services. Modernize operations, enhance customer experience, and drive innovation." />
         <meta name="keywords" content="digital transformation, business modernization, digital strategy, technology consulting, process automation, digital innovation" />
       </Helmet>
 
@@ -374,8 +374,8 @@ export default function DigitalTransformation() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

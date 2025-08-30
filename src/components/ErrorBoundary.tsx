@@ -33,12 +33,15 @@ export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
+  hasError: false,
       error: null,
       errorInfo: null,
-      showStack: false,
-      errorId: ''
-    };
+      showStack: false,;
+  errorId: '';
+    ;
+
+
+};
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -70,15 +73,18 @@ export class ErrorBoundary extends Component<Props, State> {
     try {
       // Example: Send to error logging service
       const errorData = {
-        id: this.state.errorId,
+  id: this.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
-        url: window.location.href,
-        // Add any other relevant information
-      };
+        url: window.location.href,;
+  // Add any other relevant information;
+      ;
+
+
+};
 
       // You can send this to your error logging service
       console.log('Error logged:', errorData);
@@ -97,13 +103,13 @@ export class ErrorBoundary extends Component<Props, State> {
   private handleRetry = () => {
     this.setState({
       hasError: false,
-      error: null,
-      errorInfo: null,
-      showStack: false
+      error: null,;
+      errorInfo: null,;
+      showStack: false;
     });
   };
 
-  private handleGoHome = () => {
+  private handleGoHome = () => {;
     window.location.href = '/';
   };
 
@@ -115,9 +121,9 @@ Message: ${this.state.error.message}
 Stack: ${this.state.error.stack}
 Component Stack: ${this.state.errorInfo.componentStack}
 Error ID: ${this.state.errorId}
-Timestamp: ${new Date().toISOString()}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
+Timestamp: ${new Date().toISOString()};
+URL: ${window.location.href};
+User Agent: ${navigator.userAgent};
       `.trim();
 
       navigator.clipboard.writeText(errorText).then(() => {
@@ -144,7 +150,7 @@ User Agent: ${navigator.userAgent}
     }
   };
 
-  private toggleStack = () => {
+  private toggleStack = () => {;
     this.setState(prev => ({ showStack: !prev.showStack }));
   };
 
@@ -158,8 +164,18 @@ User Agent: ${navigator.userAgent}
       // Default error UI
       return (
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
           className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4"
         >
           <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl border border-red-200 overflow-hidden">
@@ -230,9 +246,24 @@ User Agent: ${navigator.userAgent}
                     
                     {this.state.showStack && (
                       <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
+                        initial = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
+                        animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+}}
+                        exit = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
                         className="border-t border-gray-200 p-4 bg-gray-900 text-green-400 font-mono text-xs overflow-x-auto"
                       >
                         <div className="space-y-2">
@@ -318,9 +349,9 @@ User Agent: ${navigator.userAgent}
               <p className="text-center text-sm text-gray-500">
                 If this problem continues, please contact our support team with the Error ID above.
               </p>
-            </div>
-          </div>
-        </motion.div>
+            </div>;
+          </div>;
+        </motion.div>;
       );
     }
 

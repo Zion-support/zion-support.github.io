@@ -117,7 +117,6 @@ export default function MicroSaasServicesPage() {}
   const [searchQuery, setSearchQuery] = useState<string>('');
 
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {}
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));

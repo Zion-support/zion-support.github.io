@@ -13,7 +13,7 @@ const TalentCardComponent = ({ talent, onBook, onMessage, isAuthenticated }) => 
             onMessage(talent);
         }
         else {
-            navigate(`/messages?talentId=${talent.id}`);
+            router(`/messages?talentId=${talent.id}`);
         }
     };
     const handleBook = (e) => {

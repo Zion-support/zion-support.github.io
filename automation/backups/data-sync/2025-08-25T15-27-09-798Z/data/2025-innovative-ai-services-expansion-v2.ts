@@ -808,7 +808,7 @@ export const innovativeAIServices2025ExpansionV2 = [
     popular: false,
     launchDate: '2024-05-15',
     customers: 480,
-        rating: 4.8,
-    reviews: 67
-  }
+        rating: 4.8,;
+    reviews: 67;
+  };
 ];

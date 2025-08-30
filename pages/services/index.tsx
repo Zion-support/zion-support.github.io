@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function ServicesIndex() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
+    <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Helmet>
         <title>Services — Zion</title>
         <meta name="description" content="Futuristic, autonomous services to accelerate your roadmap." />
@@ -74,8 +74,8 @@ export default function ServicesIndex() {
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </section>;
+      </main>;
+    </div>;
   );
 }

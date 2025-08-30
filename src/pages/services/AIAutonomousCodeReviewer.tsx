@@ -46,20 +46,20 @@ const AIAutonomousCodeReviewer: React.FC = () => {
     {
       icon: TrendingUp,
       title: "Quality Metrics",
-      description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
-      benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
-    }
+      description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",;
+      benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"];
+    };
   ];
 
-  const supportedLanguages = [
-    "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust", "PHP", "Ruby", "Swift", "Kotlin"
+  const supportedLanguages = [;
+    "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust", "PHP", "Ruby", "Swift", "Kotlin";
   ];
 
   const integrations = [
     { name: "GitHub", icon: Github, description: "Seamless integration with GitHub repositories and pull requests" },
-    { name: "GitLab", icon: Gitlab, description: "Full support for GitLab CI/CD pipelines and merge requests" },
-    { name: "Slack", icon: Slack, description: "Real-time notifications and alerts in Slack channels" },
-    { name: "Jira", icon: MessageSquare, description: "Connect code reviews with Jira tickets and workflows" }
+    { name: "GitLab", icon: Gitlab, description: "Full support for GitLab CI/CD pipelines and merge requests" },;
+    { name: "Slack", icon: Slack, description: "Real-time notifications and alerts in Slack channels" },;
+    { name: "Jira", icon: MessageSquare, description: "Connect code reviews with Jira tickets and workflows" };
   ];
 
   const pricingPlans = [
@@ -108,9 +108,9 @@ const AIAutonomousCodeReviewer: React.FC = () => {
         "Custom integrations",
         "SLA guarantee"
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const useCases = [
@@ -131,16 +131,16 @@ const AIAutonomousCodeReviewer: React.FC = () => {
     },
     {
       title: "Performance Optimization",
-      description: "Identify and fix performance bottlenecks through intelligent code analysis.",
-      icon: Zap
-    }
+      description: "Identify and fix performance bottlenecks through intelligent code analysis.",;
+      icon: Zap;
+    };
   ];
 
   return (
     <>
       <Helmet>
         <title>AI Autonomous Code Reviewer — Zion Tech Group | Automated Code Quality & Security</title>
-        <meta name="description" content="Revolutionize your code review process with AI-powered automated analysis. Detect security vulnerabilities, optimize performance, and maintain code quality across multiple programming languages."/>
+        <meta name = "description" content="Revolutionize your code review process with AI-powered automated analysis. Detect security vulnerabilities, optimize performance, and maintain code quality across multiple programming languages."/>
         <meta property="og:title" content="AI Autonomous Code Reviewer — Zion Tech Group"/>
         <meta property="og:description" content="AI-powered automated code review with security analysis, performance optimization, and quality metrics for development teams."/>
         <meta property="og:url" content="https://ziontechgroup.com/services/ai-autonomous-code-reviewer"/>
@@ -373,9 +373,9 @@ const AIAutonomousCodeReviewer: React.FC = () => {
               Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
             </p>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

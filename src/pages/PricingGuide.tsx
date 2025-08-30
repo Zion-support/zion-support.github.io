@@ -27,16 +27,20 @@ import {
   Atom,
   Satellite
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function PricingGuide() {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
   const currencyRates = {
-    USD: { symbol: '$', rate: 1 },
-    EUR: { symbol: '€', rate: 0.85 },
-    GBP: { symbol: '£', rate: 0.73 }
+  USD: { symbol: '$',
+  rate: 1 
+
+
+},;
+    EUR: { symbol: '€', rate: 0.85 },;
+    GBP: { symbol: '£', rate: 0.73 };
   };
 
   const pricingPlans = [
@@ -102,9 +106,9 @@ export default function PricingGuide() {
         "SLA Guarantees"
       ],
       notIncluded: [],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const servicePricing = [
@@ -143,12 +147,12 @@ export default function PricingGuide() {
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
-        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" }
-      ]
-    }
+        { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
+      ];
+    };
   ];
 
-  const calculatePrice = (price: number) => {
+  const calculatePrice = (price: number) => {;
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
     const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
@@ -158,7 +162,7 @@ export default function PricingGuide() {
   const savings = selectedPeriod === 'yearly' ? 10 : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
@@ -376,8 +380,8 @@ export default function PricingGuide() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

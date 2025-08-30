@@ -1,8 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
-const DialogContext = createContext(undefined);
-export function Dialog({ children, open, onOpenChange }) {
+const Dialog({ children, open, onOpenChange }) {
     const [internalOpen, setInternalOpen] = useState(false);
-    const isControlled = open !== undefined;
     const isOpen = isControlled ? open : internalOpen;
     const setIsOpen = (newOpen) => {
         if (!isControlled) {
@@ -12,7 +10,12 @@ export function Dialog({ children, open, onOpenChange }) {
             onOpenChange(newOpen);
         }
     };
-    return (<DialogContext.Provider value={{ isOpen, setIsOpen }}>
+    return (<DialogContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+
+
+}}>
       <div className="relative">
         {children}
       </div>

@@ -56,9 +56,9 @@ export default function PricingPage() {
         'On-Premise Options'
       ],
       cta: 'Contact Sales',
-      ctaLink: '/contact',
-      popular: false
-    }
+      ctaLink: '/contact',;
+      popular: false;
+    };
   ];
   const addOnServices = [
     {
@@ -82,9 +82,9 @@ export default function PricingPage() {
     {
       name: 'Cloud Migration',
       description: 'Complete cloud infrastructure migration',
-      price: 'From $10,000',
-      features: ['Architecture Design', 'Data Migration', 'Performance Optimization']
-    }
+      price: 'From $10,000',;
+      features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
+    };
   ];
   const faqs = [
     {
@@ -108,15 +108,15 @@ export default function PricingPage() {
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
     },
     {
-      question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
-    }
+      question: 'Can I cancel my subscription?',;
+      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
+    };
   ];
   return (
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
+        <meta name = "description" content="Transparent pricing for Zion Tech Group's AI, cloud, and cybersecurity solutions. Choose the plan that fits your business needs." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Helmet>
@@ -276,8 +276,8 @@ export default function PricingPage() {
               </Link>
             </div>
           </div>
-        </section>
-      </main>
-    </>
+        </section>;
+      </main>;
+    </>;
   );
 }

@@ -109,8 +109,7 @@ export const getRecentBlogPosts = (limit = 3) => {
     .slice(0, limit);
 };
 
-export const searchBlogPosts = (query) => {
-  const searchTerm = query.toLowerCase();
+export const searchTerm = query.toLowerCase();
   return blogPosts.filter(post => 
     post.title.toLowerCase().includes(searchTerm) ||
     post.excerpt.toLowerCase().includes(searchTerm) ||

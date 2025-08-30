@@ -74,7 +74,7 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsLoading(true);
     setErrors({});
@@ -116,25 +116,35 @@ export default function Login() {
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },
     { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },
     { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },
-    { icon: Atom, title: 'Quantum Computing', description: 'Next-generation computational power' },
-    { icon: Network, title: 'IoT & Edge Computing', description: 'Smart device networks & processing' },
-    { icon: Leaf, title: 'Sustainable Technology', description: 'Green IT & eco-friendly solutions' }
+    { icon: Atom, title: 'Quantum Computing', description: 'Next-generation computational power' },;
+    { icon: Network, title: 'IoT & Edge Computing', description: 'Smart device networks & processing' },;
+    { icon: Leaf, title: 'Sustainable Technology', description: 'Green IT & eco-friendly solutions' };
   ];
 
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime SLA', icon: Activity },
-    { number: '24/7', label: 'Support Available', icon: MessageCircle },
-    { number: '50+', label: 'AI Services', icon: Brain }
+    { number: '99.9%', label: 'Uptime SLA', icon: Activity },;
+    { number: '24/7', label: 'Support Available', icon: MessageCircle },;
+    { number: '50+', label: 'AI Services', icon: Brain };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 flex">
       {/* Left Side - Login Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial = {
+  { opacity: 0,
+  x: -50 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
           transition={{ duration: 0.5 }}
           className="w-full max-w-md"
         >
@@ -302,9 +312,24 @@ export default function Login() {
       {/* Right Side - Company Info & Features */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  x: 50 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+          transition = {
+  { duration: 0.5,
+  delay: 0.2 
+
+
+}}
           className="w-full max-w-lg mx-auto"
         >
           {/* Company Header */}
@@ -323,8 +348,18 @@ export default function Login() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: 0.4 + index * 0.1 }}
                 className="text-center"
               >
@@ -343,8 +378,18 @@ export default function Login() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 transition={{ delay: 0.6 + index * 0.1 }}
                 className="flex items-start space-x-3"
               >
@@ -376,8 +421,8 @@ export default function Login() {
               123 Innovation Drive, Tech Valley, CA 94000
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

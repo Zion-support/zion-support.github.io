@@ -48,7 +48,7 @@ interface SidebarItem {
   }[];
 }
 
-export const Sidebar: React.FC = () => {
+export const Sidebar: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
@@ -139,24 +139,24 @@ export const Sidebar: React.FC = () => {
 
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
-        ? prev.filter(name => name !== sectionTitle)
-        : [...prev, sectionTitle]
+      prev.includes(sectionTitle) ;
+        ? prev.filter(name => name !== sectionTitle);
+        : [...prev, sectionTitle];
     );
   };
 
-  const isActive = (path: string) => {
-    if (path === '/') {
+  const isActive = (path: string) => {;
+    if (path === '/') {;
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
 
-  const renderNavItem = (item: SidebarItem, level: number = 0) => {
+  const renderNavItem = (item: SidebarItem, level: number = 0) => {;
     const isExpanded = expandedSections.includes(item.title);
 
     return (
-      <div key={item.title} className="mb-4">
+      <div key = {item.title} className="mb-4">
         <button
           onClick={() => toggleSection(item.title)}
           className={`flex items-center w-full px-3 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -176,9 +176,24 @@ export const Sidebar: React.FC = () => {
         
         {isExpanded && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
             transition={{ duration: 0.2 }}
             className="ml-4 mt-2 space-y-1"
           >
@@ -197,9 +212,9 @@ export const Sidebar: React.FC = () => {
                 <span>{child.name}</span>
               </Link>
             ))}
-          </motion.div>
-        )}
-      </div>
+          </motion.div>;
+        )};
+      </div>;
     );
   };
 
@@ -207,7 +222,7 @@ export const Sidebar: React.FC = () => {
     <>
       {/* Mobile menu button */}
       <button
-        onClick={() => setIsOpen(true)}
+        onClick = {() => setIsOpen(true)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
       >
         <Menu className="w-6 h-6" />
@@ -233,7 +248,12 @@ export const Sidebar: React.FC = () => {
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              transition = {
+  { type: 'spring', damping: 25,
+  stiffness: 200 
+
+
+}}
               className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl"
             >
               {/* Header */}
@@ -301,8 +321,8 @@ export const Sidebar: React.FC = () => {
               Get Started
             </Link>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };

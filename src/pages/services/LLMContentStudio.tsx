@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 export default function LLMContentStudio() {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO
         title="LLM Content Studio | Zion Tech Group"
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics."
@@ -38,9 +38,9 @@ export default function LLMContentStudio() {
               References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>
             </p>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

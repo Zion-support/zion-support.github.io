@@ -7,9 +7,9 @@ export default function AISecurityTesting() {
     'Automated security vulnerability detection and assessment',
     'Predictive analytics for testing needs',
     'Smart testing framework management',
-    'AI-driven testing automation and orchestration',
-    'Real-time testing performance tracking',
-    'Custom AI models for testing applications'
+    'AI-driven testing automation and orchestration',;
+    'Real-time testing performance tracking',;
+    'Custom AI models for testing applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityTesting() {
     },
     { 
       name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security testing optimization',
     'Testing strategy management and execution',
     'Security vulnerability detection and assessment',
-    'Testing framework management and automation',
-    'Testing automation and orchestration',
-    'Testing scaling and management'
+    'Testing framework management and automation',;
+    'Testing automation and orchestration',;
+    'Testing scaling and management';
   ];
 
   const benefits = [
     'Improve security testing performance by 50-80%',
     'Reduce testing completion time by 40-70%',
     'Cut security testing costs by 35-65%',
-    'Enhance security testing reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security testing operations efficiently'
+    'Enhance security testing reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security testing operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityTesting() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

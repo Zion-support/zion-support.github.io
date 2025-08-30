@@ -12,7 +12,6 @@ export default function PricingGuidePage() {
         : EXPANDED_SERVICES.filter(service => service.category === selectedCategory);
     const getCategoryStats = (category) => {
         const services = EXPANDED_SERVICES.filter(s => s.category === category);
-        const avgPrice = services.reduce((sum, s) => sum + (s.price || 0), 0) / services.length;
         const avgRating = services.reduce((sum, s) => sum + (s.rating || 0), 0) / services.length;
         return { count: services.length, avgPrice, avgRating };
     };
@@ -161,7 +160,12 @@ export default function PricingGuidePage() {
                 </CardHeader>
 
                 <CardContent className="pt-0">
-                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+                  <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style = {
+  { display: '-webkit-box', WebkitLineClamp: 3,
+  WebkitBoxOrient: 'vertical' 
+
+
+}}>
                     {service.description}
                   </CardDescription>
 

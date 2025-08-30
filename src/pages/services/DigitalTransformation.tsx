@@ -184,18 +184,18 @@ export default function DigitalTransformation() {
     },
     {
       icon: Search,
-      title: 'Performance Monitoring',
-      description: 'Track transformation progress and measure ROI'
-    }
+      title: 'Performance Monitoring',;
+      description: 'Track transformation progress and measure ROI';
+    };
   ];
 
   const benefits = [
     'Increase operational efficiency by 40%',
     'Reduce costs by 30% through automation',
     'Improve customer experience and satisfaction',
-    'Enable data-driven decision making',
-    'Accelerate time to market',
-    'Enhance competitive advantage'
+    'Enable data-driven decision making',;
+    'Accelerate time to market',;
+    'Enhance competitive advantage';
   ];
 
   const services = [
@@ -216,9 +216,9 @@ export default function DigitalTransformation() {
     },
     {
       icon: Data,
-      title: 'Data Analytics',
-      description: 'Implement advanced analytics and business intelligence'
-    }
+      title: 'Data Analytics',;
+      description: 'Implement advanced analytics and business intelligence';
+    };
   ];
 
   const useCases = [
@@ -235,35 +235,49 @@ export default function DigitalTransformation() {
       description: 'Digital banking and fintech innovation'
     },
     {
-      industry: 'Retail',
-      description: 'E-commerce and omnichannel retail transformation'
-    }
+      industry: 'Retail',;
+      description: 'E-commerce and omnichannel retail transformation';
+    };
   ];
   const contactInfo = {
-    phone: "+1 302 464 0950",
+  phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008, Middletown DE 19709"
-  };
+    address: "364 E Main St STE 1008,;
+  Middletown DE 19709";
+  ;
+
+
+};
   const industries = [
     'Healthcare',
     'Finance',
     'Manufacturing',
     'Retail',
     'Education',
-    'Government',
-    'Technology',
-    'Transportation'
+    'Government',;
+    'Technology',;
+    'Transportation';
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -300,8 +314,18 @@ export default function DigitalTransformation() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -318,9 +342,24 @@ export default function DigitalTransformation() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -338,8 +377,18 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -356,9 +405,24 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
               >
                 <div className="flex items-start space-x-4">
@@ -380,8 +444,18 @@ export default function DigitalTransformation() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -398,9 +472,24 @@ export default function DigitalTransformation() {
               {benefits.slice(0, 3).map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
@@ -412,9 +501,24 @@ export default function DigitalTransformation() {
               {benefits.slice(3).map((benefit, index) => (
                 <motion.div
                   key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
@@ -430,8 +534,18 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -448,9 +562,24 @@ export default function DigitalTransformation() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -468,8 +597,18 @@ export default function DigitalTransformation() {
       <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -489,9 +628,9 @@ export default function DigitalTransformation() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

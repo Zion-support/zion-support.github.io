@@ -1,10 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/button";
+import { Badge } from "./ui/badge";
+import { Input } from "./ui/input";
 const AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');
@@ -92,91 +92,8 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
         }
     ];
-    const futureRoadmap = [
-        {
-            id: 'quantum-internet',
-            title: 'Quantum Internet Infrastructure',
-            description: 'Global quantum internet enabling ultra-secure, instant communication worldwide.',
-            timeline: '2030-2040',
-            milestones: [
-                'Quantum network prototypes',
-                'Inter-city quantum links',
-                'Global quantum backbone',
-                'Consumer quantum internet'
-            ],
-            challenges: [
-                'Quantum entanglement over long distances',
-                'Infrastructure costs',
-                'Technical complexity',
-                'Regulatory frameworks'
-            ],
-            opportunities: [
-                'Unbreakable security',
-                'Instant global communication',
-                'Quantum computing access',
-                'New business models'
-            ],
-            investment: '$200B+',
-            category: 'quantum'
-        },
-        {
-            id: 'space-colonization',
-            title: 'Space Colonization & Settlement',
-            description: 'Establishment of permanent human settlements on Mars and other celestial bodies.',
-            timeline: '2040-2060',
-            milestones: [
-                'Mars mission planning',
-                'Habitat construction',
-                'Sustainable life support',
-                'Self-sufficient colonies'
-            ],
-            challenges: [
-                'Life support systems',
-                'Radiation protection',
-                'Resource sustainability',
-                'Human psychology'
-            ],
-            opportunities: [
-                'New human civilization',
-                'Resource expansion',
-                'Scientific research',
-                'Economic growth'
-            ],
-            investment: '$1T+',
-            category: 'space-tech'
-        },
-        {
-            id: 'ai-governance',
-            title: 'AI Governance & Regulation',
-            description: 'Comprehensive frameworks for responsible AI development and deployment.',
-            timeline: '2025-2035',
-            milestones: [
-                'Ethical AI frameworks',
-                'Regulatory standards',
-                'Global AI governance',
-                'AI safety protocols'
-            ],
-            challenges: [
-                'International coordination',
-                'Technology evolution',
-                'Balancing innovation and safety',
-                'Stakeholder alignment'
-            ],
-            opportunities: [
-                'Responsible AI development',
-                'Public trust building',
-                'Innovation guidance',
-                'Global cooperation'
-            ],
-            investment: '$50B+',
-            category: 'ai'
-        }
-    ];
     const filteredTrends = useMemo(() => {
         return innovationTrends.filter(trend => {
-            const matchesCategory = selectedCategory === 'all' || trend.category === selectedCategory;
-            const matchesImpact = selectedImpact === 'all' || trend.impact === selectedImpact;
-            const matchesStatus = selectedStatus === 'all' || trend.status === selectedStatus;
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 trend.description.toLowerCase().includes(searchTerm.toLowerCase());
             return matchesCategory && matchesImpact && matchesStatus && matchesSearch;
@@ -219,7 +136,17 @@ const AdvancedServiceInnovationHub = () => {
     ];
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} className="mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
@@ -244,7 +171,17 @@ const AdvancedServiceInnovationHub = () => {
       {/* Innovation Trends View */}
       {viewMode === 'trends' && (<>
           {/* Filters */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div>
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
@@ -284,8 +221,28 @@ const AdvancedServiceInnovationHub = () => {
           </motion.div>
 
           {/* Trends Grid */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}} transition={{ delay: 0.1 * index }}>
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-4">
@@ -361,8 +318,28 @@ const AdvancedServiceInnovationHub = () => {
         </>)}
 
       {/* Future Roadmap View */}
-      {viewMode === 'roadmap' && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-6">
-          {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 * index }}>
+      {viewMode === 'roadmap' && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.1 }} className="space-y-6">
+          {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}} transition={{ delay: 0.1 * index }}>
               <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start justify-between">
@@ -441,7 +418,17 @@ const AdvancedServiceInnovationHub = () => {
         </motion.div>)}
 
       {/* Strategic Insights View */}
-      {viewMode === 'insights' && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-6">
+      {viewMode === 'insights' && (<motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.1 }} className="space-y-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
@@ -582,7 +569,17 @@ const AdvancedServiceInnovationHub = () => {
         </motion.div>)}
 
       {/* CTA Section */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ delay: 0.4 }} className="mt-12 text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Shape the Future?</h3>
           <p className="text-xl mb-6 max-w-2xl mx-auto">
@@ -590,11 +587,21 @@ const AdvancedServiceInnovationHub = () => {
             of emerging technologies and capitalize on future opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', '_blank')}>
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
+  () => window.open('mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation',
+  '_blank')
+
+
+}>
               <Users className="w-5 h-5 mr-2"/>
               Get Innovation Strategy
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+13024640950', '_blank')}>
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
+  () => window.open('tel:+13024640950',
+  '_blank')
+
+
+}>
               <Zap className="w-5 h-5 mr-2"/>
               Speak with an Expert
             </Button>

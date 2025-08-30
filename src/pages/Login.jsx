@@ -28,7 +28,7 @@ export default function Login() {
       // Clear token from URL to prevent re-processing and clean up history
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
-      navigate(location.pathname, { replace: true });
+      router(location.pathname, { replace: true });
     }
   }, [location.search, location.pathname, navigate]);
 
@@ -36,7 +36,7 @@ export default function Login() {
     if (!isLoading && isAuthenticated) {
       reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';
-      navigate(next, { replace: true });
+      router(next, { replace: true });
     }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
 

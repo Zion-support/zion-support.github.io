@@ -8,7 +8,7 @@ export default function HealthcareTech() {
     <>
       <Helmet>
         <title>Healthcare Technology Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />
+        <meta name = "description" content="Transform healthcare delivery with AI-powered medical technology, patient monitoring, and digital health solutions. Improve patient outcomes and operational efficiency." />
         <meta name="keywords" content="healthcare technology, medical AI, digital health, patient monitoring, telemedicine, healthcare analytics, medical devices" />
       </Helmet>
 
@@ -375,8 +375,8 @@ export default function HealthcareTech() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

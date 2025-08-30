@@ -25,9 +25,9 @@ interface ProductListingCardProps {
 export function ProductListingCard({
   listing,
   view = 'grid',
-  onRequestQuote,
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) {
+  onRequestQuote,;
+  detailBasePath = '/marketplace/listing';
+}: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -38,30 +38,30 @@ export function ProductListingCard({
   );
   const [imageError, setImageError] = useState(false);
     
-  const formatPrice = () => {
+  const formatPrice = () => {;
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`;
   };
 
-  const handleImageError = () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
+  const handleImageError = () => {;
+    if (!imageError) { // Prevent infinite loops if placeholder also fails;
       setImageSrc('/placeholder.svg');
       setImageError(true);
     }
   };
   
-  const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`);
+  const handleViewListing = () => {;
+    router(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: React.MouseEvent) => {
+  const handleRequestQuote = (e: React.MouseEvent) => {;
     e.preventDefault();
     e.stopPropagation();
     
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
-      navigate(`/request-quote?listing=${listing.id}`);
+      router(`/request-quote?listing=${listing.id}`);
     }
   };
   
@@ -69,13 +69,13 @@ export function ProductListingCard({
 
   return (
     <div
-      data-testid="equipment-link"
+      data-testid = "equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
-      role="button"
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+      role="button";
+      onKeyDown={(e) => {;
+        if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault();
           handleViewListing();
         }
@@ -83,18 +83,18 @@ export function ProductListingCard({
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+        tabIndex={-1} // Remove from tab order as parent is focusable;
+        onKeyDown={(e) => {;
+          if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault();
             handleViewListing();
           }
         }}
       >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+        <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
             src={imageSrc}
             alt={listing.title}
@@ -165,13 +165,13 @@ export function ProductListingCard({
           
           <div className="flex gap-2">
             <Button
-              size="sm"
-              className="bg-primary hover:bg-primary/80 text-primary-foreground"
-              onClick={(e) => {
+              size="sm";
+              className="bg-primary hover:bg-primary/80 text-primary-foreground";
+              onClick={(e) => {;
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`);
+                router(`${detailBasePath}/${listing.id}`);
               }}
-              disabled={loading}
+              disabled = {loading}
             >
               {loading ? (
                 <>
@@ -196,10 +196,14 @@ export function ProductListingCard({
               </Button>
             )}
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
-};
+}
 
 export default React.memo(ProductListingCard);
+
+export default ProductListingCard;
+export default ProductListingCard;
+export default ProductListingCard;

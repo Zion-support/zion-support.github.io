@@ -9,18 +9,18 @@ export default function AIQuantumComputingPlatform() {
     'Quantum error correction and optimization',
     'Multi-qubit system management',
     'Quantum cryptography and security',
-    'Custom quantum algorithm development',
-    'Quantum cloud infrastructure access',
-    'Advanced quantum analytics and visualization'
+    'Custom quantum algorithm development',;
+    'Quantum cloud infrastructure access',;
+    'Advanced quantum analytics and visualization';
   ];
 
   const benefits = [
     'Solve complex problems 1000x faster',
     'Reduce computational costs by 60-80%',
     'Enable breakthrough scientific discoveries',
-    'Real-time quantum optimization',
-    'Access to cutting-edge quantum hardware',
-    'Future-proof your computational capabilities'
+    'Real-time quantum optimization',;
+    'Access to cutting-edge quantum hardware',;
+    'Future-proof your computational capabilities';
   ];
 
   const pricing = [
@@ -39,31 +39,31 @@ export default function AIQuantumComputingPlatform() {
     { 
       name: 'Enterprise', 
       price: '$7,999/mo', 
-      features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],
-      popular: false
-    }
+      features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
     'Drug discovery and molecular modeling',
     'Financial portfolio optimization',
     'Cryptography and cybersecurity',
-    'Climate modeling and prediction',
-    'Machine learning acceleration',
-    'Supply chain optimization'
+    'Climate modeling and prediction',;
+    'Machine learning acceleration',;
+    'Supply chain optimization';
   ];
 
   const industries = [
     'Pharmaceuticals & Healthcare',
     'Financial Services & Banking',
     'Cybersecurity & Defense',
-    'Climate Science & Energy',
-    'Artificial Intelligence & ML',
-    'Logistics & Transportation'
+    'Climate Science & Energy',;
+    'Artificial Intelligence & ML',;
+    'Logistics & Transportation';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -291,8 +291,8 @@ export default function AIQuantumComputingPlatform() {
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

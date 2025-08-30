@@ -7,9 +7,9 @@ export default function AISecurityAwareness() {
     'Automated security behavior assessment and training',
     'Predictive analytics for awareness needs',
     'Smart awareness framework management',
-    'AI-driven awareness automation and orchestration',
-    'Real-time awareness performance tracking',
-    'Custom AI models for awareness applications'
+    'AI-driven awareness automation and orchestration',;
+    'Real-time awareness performance tracking',;
+    'Custom AI models for awareness applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityAwareness() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,199/mo', 
-      details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] 
-    },
+      price: '$1,199/mo', ;
+      details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security awareness optimization',
     'Awareness strategy management and execution',
     'Security behavior assessment and training',
-    'Awareness framework management and automation',
-    'Awareness automation and orchestration',
-    'Awareness scaling and management'
+    'Awareness framework management and automation',;
+    'Awareness automation and orchestration',;
+    'Awareness scaling and management';
   ];
 
   const benefits = [
     'Improve security awareness performance by 50-80%',
     'Reduce awareness training time by 40-70%',
     'Cut security awareness costs by 35-65%',
-    'Enhance security awareness reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security awareness operations efficiently'
+    'Enhance security awareness reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security awareness operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-500 via-blue-500 to-sky-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityAwareness() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

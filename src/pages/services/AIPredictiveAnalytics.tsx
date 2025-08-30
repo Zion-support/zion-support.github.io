@@ -7,9 +7,9 @@ export default function AIPredictiveAnalytics() {
     'Custom AI models trained on your industry data',
     'Automated feature engineering and model selection',
     'Predictive insights with confidence intervals',
-    'Interactive dashboards and visualization tools',
-    'API integration with existing business systems',
-    'Automated model retraining and performance monitoring'
+    'Interactive dashboards and visualization tools',;
+    'API integration with existing business systems',;
+    'Automated model retraining and performance monitoring';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIPredictiveAnalytics() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] 
-    },
+      price: '$1,999/mo', ;
+      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Sales forecasting and demand prediction',
     'Customer churn prediction and retention',
     'Inventory optimization and supply chain forecasting',
-    'Risk assessment and fraud detection',
-    'Predictive maintenance for equipment',
-    'Market trend analysis and investment insights'
+    'Risk assessment and fraud detection',;
+    'Predictive maintenance for equipment',;
+    'Market trend analysis and investment insights';
   ];
 
   const benefits = [
     'Improve forecast accuracy by 40-60%',
     'Reduce operational costs by 25-35%',
     'Increase revenue through better predictions',
-    'Optimize resource allocation and planning',
-    'Identify opportunities before competitors',
-    'Make data-driven decisions with confidence'
+    'Optimize resource allocation and planning',;
+    'Identify opportunities before competitors',;
+    'Make data-driven decisions with confidence';
   ];
 
   const industries = [
     'E-commerce & Retail',
     'Financial Services',
     'Healthcare & Pharmaceuticals',
-    'Manufacturing & Logistics',
-    'Real Estate & Construction',
-    'Energy & Utilities'
+    'Manufacturing & Logistics',;
+    'Real Estate & Construction',;
+    'Energy & Utilities';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIPredictiveAnalytics() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

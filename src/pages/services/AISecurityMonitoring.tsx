@@ -7,9 +7,9 @@ export default function AISecurityMonitoring() {
     'Automated security threat detection and assessment',
     'Predictive analytics for monitoring needs',
     'Smart monitoring framework management',
-    'AI-driven monitoring automation and orchestration',
-    'Real-time monitoring performance tracking',
-    'Custom AI models for monitoring applications'
+    'AI-driven monitoring automation and orchestration',;
+    'Real-time monitoring performance tracking',;
+    'Custom AI models for monitoring applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityMonitoring() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,999/mo', 
-      details: ['Unlimited systems', 'Custom AI models', 'Full monitoring suite', '24/7 dedicated support'] 
-    },
+      price: '$1,999/mo', ;
+      details: ['Unlimited systems', 'Custom AI models', 'Full monitoring suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security monitoring optimization',
     'Monitoring strategy management and execution',
     'Security threat detection and assessment',
-    'Monitoring framework management and automation',
-    'Monitoring automation and orchestration',
-    'Monitoring scaling and management'
+    'Monitoring framework management and automation',;
+    'Monitoring automation and orchestration',;
+    'Monitoring scaling and management';
   ];
 
   const benefits = [
     'Improve security monitoring performance by 50-80%',
     'Reduce threat detection time by 40-70%',
     'Cut security monitoring costs by 35-65%',
-    'Enhance security monitoring reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security monitoring operations efficiently'
+    'Enhance security monitoring reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security monitoring operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-slate-500 via-gray-500 to-zinc-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityMonitoring() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

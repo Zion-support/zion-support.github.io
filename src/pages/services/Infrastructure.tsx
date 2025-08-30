@@ -21,9 +21,9 @@ const InfrastructureServices = () => {
       title: "Data Center Solutions",
       description: "Reliable hosting, colocation, and data center management.",
       price: "From $8,000/month",
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
-      icon: Database
-    }
+      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
+      icon: Database;
+    };
   ];
 
   const technologies = [
@@ -42,22 +42,22 @@ const InfrastructureServices = () => {
     {
       name: "Network Security",
       description: "Advanced network protection and monitoring",
-      icon: Shield,
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
-    }
+      icon: Shield,;
+      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
+    };
   ];
 
   const benefits = [
     "Improved system reliability and uptime",
     "Enhanced security and compliance",
     "Scalable infrastructure that grows with your business",
-    "Reduced operational costs and complexity",
-    "Expert support and maintenance",
-    "Future-proof technology solutions"
+    "Reduced operational costs and complexity",;
+    "Expert support and maintenance",;
+    "Future-proof technology solutions";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -214,9 +214,9 @@ const InfrastructureServices = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

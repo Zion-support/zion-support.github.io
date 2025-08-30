@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
+    <section className = "relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
@@ -14,8 +14,18 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
@@ -36,9 +46,24 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
           <Link
@@ -57,9 +82,24 @@ export function HeroSection() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
         >
           <div className="text-center">
@@ -85,17 +125,32 @@ export function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition = {
+  { duration: 1,
+  delay: 1 
+
+
+}}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            animate = {
+  { y: [0, 12,
+  0] 
+
+
+}}
+            transition = {
+  { duration: 1.5,
+  repeat: Infinity 
+
+
+}}
             className="w-1 h-3 bg-gray-400 rounded-full mt-2"
           ></motion.div>
-        </div>
-      </motion.div>
-    </section>
+        </div>;
+      </motion.div>;
+    </section>;
   );
 }

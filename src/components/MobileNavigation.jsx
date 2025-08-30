@@ -82,13 +82,16 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         console.log('Search query:', searchQuery);
     };
     const menuVariants = {
-        closed: {
+  closed: {
             x: '100%',
             opacity: 0,
             transition: {
                 duration: 0.3,
-                ease: 'easeInOut'
-            }
+  ease: 'easeInOut'
+            
+
+
+}
         },
         open: {
             x: 0,
@@ -100,13 +103,16 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
         }
     };
     const dropdownVariants = {
-        closed: {
+  closed: {
             height: 0,
             opacity: 0,
             transition: {
                 duration: 0.2,
-                ease: 'easeInOut'
-            }
+  ease: 'easeInOut'
+            
+
+
+}
         },
         open: {
             height: 'auto',

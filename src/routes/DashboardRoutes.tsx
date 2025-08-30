@@ -218,9 +218,9 @@ const DashboardRoutes = () => {
           <ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>
-        } 
-      />
-    </Routes>
+        } ;
+      />;
+    </Routes>;
   );
 };
 

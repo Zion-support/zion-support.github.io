@@ -612,12 +612,15 @@ export const PRICING_SUMMARY_2026 = {
     approach: "Value-based pricing with ROI focus",
     target: "15-30% below market average",
     value: "2-3x better ROI than competitors",
-    flexibility: "Custom pricing for enterprise clients"
-  },
+  flexibility: "Custom pricing for enterprise clients"
+  
+
+
+},
   contactInfo: {
     phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
-  }
+    website: "https://ziontechgroup.com",;
+    address: "364 E Main St STE 1008 Middletown DE 19709";
+  };
 };

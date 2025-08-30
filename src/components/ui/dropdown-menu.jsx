@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useState } from 'react';
-const DropdownMenuContext = createContext(undefined);
-export function DropdownMenu({ children }) {
+const DropdownMenu({ children }) {
     const [isOpen, setIsOpen] = useState(false);
-    return (<DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
+    return (<DropdownMenuContext.Provider value = {
+  { isOpen,
+  setIsOpen 
+
+
+}}>
       <div className="relative">
         {children}
       </div>
@@ -28,10 +32,13 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     if (!context.isOpen)
         return null;
     const alignClasses = {
-        start: 'left-0',
+  start: 'left-0',
         center: 'left-1/2 transform -translate-x-1/2',
-        end: 'right-0'
-    };
+  end: 'right-0'
+    
+
+
+};
     return (<div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
     </div>);

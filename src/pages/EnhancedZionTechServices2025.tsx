@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from '../data/enhancedZionTechServices2025';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories, getEnhancedServicesByCategory } from "../data/enhancedZionTechServices2025";
 
-const EnhancedZionTechServices2025: React.FC = () => {
+const EnhancedZionTechServices2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
   
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.price - b.price;
       case 'rating':
         return b.rating - a.rating;
@@ -30,7 +29,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -287,9 +286,9 @@ const EnhancedZionTechServices2025: React.FC = () => {
               <p className="text-gray-400">24/7 support and global deployment capabilities</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

@@ -177,9 +177,9 @@ export function ServicesShowcase() {
       title: "Affiliate Tracking",
       description: "Partner revenue platform",
       href: "/services/affiliate-tracking",
-      category: "Marketing",
-      color: "from-green-500 to-emerald-600"
-    }
+      category: "Marketing",;
+      color: "from-green-500 to-emerald-600";
+    };
   ];
 
   const containerVariants = {
@@ -187,29 +187,43 @@ export function ServicesShowcase() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5;
+      };
+    };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
@@ -228,14 +242,24 @@ export function ServicesShowcase() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          viewport = {
+  { once: true,
+  margin: "-50px" 
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
+              whileHover = {
+  { y: -8,
+  scale: 1.02 
+
+
+}}
               className="group relative"
             >
               <Link to={service.href}>
@@ -273,10 +297,25 @@ export function ServicesShowcase() {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
@@ -301,8 +340,8 @@ export function ServicesShowcase() {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

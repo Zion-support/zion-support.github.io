@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { focusManagement } from '@/utils/accessibility';
-import { sendMessage } from '../services/messages';
+import { sendMessage } from "../services/messages";
 import { toast } from '@/hooks/use-toast';
 export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) {
     const [subject, setSubject] = useState('');
@@ -18,7 +18,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
                 onClose();
             }
         }
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
+        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;
         firstInputRef.current?.focus();
         document.addEventListener('keydown', handleKeyDown);
         return () => {

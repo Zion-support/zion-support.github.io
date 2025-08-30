@@ -27,7 +27,7 @@ interface NavigationLink {
   children?: NavigationLink[];
 }
 
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '' }: {;
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -41,8 +41,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {;
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
         setIsServicesOpen(false);
         setIsCompanyOpen(false);
         setActiveDropdown(null);
@@ -58,7 +58,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       key: 'home',
       href: '/',
       name: 'Home',
-      matches: (path: string) => path === '/'
+      matches: (path: string) => path = == '/'
     },
     {
       key: 'services',
@@ -122,18 +122,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
     {
       key: 'contact',
       href: '/contact',
-      name: 'Contact',
-      matches: (path: string) => path.startsWith('/contact')
-    }
+      name: 'Contact',;
+      matches: (path: string) => path.startsWith('/contact');
+    };
   ];
 
   const isActive = (link: NavigationLink) => link.matches(location.pathname);
 
-  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean) => void) => {
+  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean) => void) => {;
     if (!link.children) return null;
 
     return (
-      <div className="relative" ref={dropdownRef}>
+      <div className = "relative" ref={dropdownRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={`flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -149,9 +149,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              initial = {
+  { opacity: 0,
+  y: -10 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              exit = {
+  { opacity: 0,
+  y: -10 
+
+
+}}
               transition={{ duration: 0.2 }}
               className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-white/10 rounded-lg shadow-xl z-50"
             >
@@ -170,14 +185,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
                 ))}
               </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+          )};
+        </AnimatePresence>;
+      </div>;
     );
   };
 
   return (
-    <nav className={`${className}`}>
+    <nav className = {`${className}`}>
       {/* Desktop Navigation */}
       <div className="hidden lg:flex items-center space-x-1">
         {baseLinks.map((link) => (
@@ -216,9 +231,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
+            initial = {
+  { opacity: 0,
+  x: '100%' 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  x: '100%' 
+
+
+}}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed inset-y-0 right-0 w-80 bg-zion-slate-dark border-l border-white/10 shadow-xl z-50"
           >
@@ -285,8 +315,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+        )};
+      </AnimatePresence>;
+    </nav>;
   );
 }

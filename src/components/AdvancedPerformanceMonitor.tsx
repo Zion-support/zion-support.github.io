@@ -25,9 +25,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     fps: 0,
     memory: 0,
     loadTime: 0,
-    networkLatency: 0,
-    cpuUsage: 0,
-    timestamp: Date.now()
+    networkLatency: 0,;
+    cpuUsage: 0,;
+    timestamp: Date.now();
   });
 
   const [alerts, setAlerts] = useState<PerformanceAlert[]>([]);
@@ -35,11 +35,11 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // FPS monitoring
-  const measureFPS = useCallback(() => {
+  const measureFPS = useCallback(() => {;
     let frameCount = 0;
     let lastTime = performance.now();
 
-    const countFrames = () => {
+    const countFrames = () => {;
       frameCount++;
       const currentTime = performance.now();
       
@@ -57,17 +57,14 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Memory monitoring
-  const measureMemory = useCallback(() => {
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
     }
   }, []);
 
   // Load time monitoring
-  const measureLoadTime = useCallback(() => {
-    if (typeof window !== 'undefined') {
+  const measureLoadTime = useCallback(() => {;
+    if (typeof window !== 'null') {;
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
@@ -77,8 +74,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Network latency monitoring
-  const measureNetworkLatency = useCallback(async () => {
-    try {
+  const measureNetworkLatency = useCallback(async () => {;
+    try {;
       const start = performance.now();
       await fetch('/api/health', { method: 'HEAD' });
       const end = performance.now();
@@ -91,11 +88,11 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // CPU usage estimation
-  const estimateCPUUsage = useCallback(() => {
+  const estimateCPUUsage = useCallback(() => {;
     let lastTime = performance.now();
     let frameCount = 0;
     
-    const measureFrame = () => {
+    const measureFrame = () => {;
       frameCount++;
       const currentTime = performance.now();
       
@@ -113,7 +110,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   // Performance alerts
-  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {
+  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {;
     const newAlerts: PerformanceAlert[] = [];
 
     if (metrics.fps < 30) {
@@ -176,7 +173,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
 
   // Auto-hide alerts after 5 seconds
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer = setTimeout(() => {;
       setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000));
     }, 5000);
 
@@ -191,7 +188,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     measureNetworkLatency();
     estimateCPUUsage();
 
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       measureMemory();
       measureLoadTime();
       measureNetworkLatency();
@@ -201,7 +198,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     return () => clearInterval(interval);
   }, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
 
-  const getPerformanceScore = useMemo(() => {
+  const getPerformanceScore = useMemo(() => {;
     let score = 100;
     
     if (metrics.fps < 30) score -= 30;
@@ -219,13 +216,13 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     return Math.max(0, score);
   }, [metrics]);
 
-  const getScoreColor = (score: number) => {
+  const getScoreColor = (score: number) => {;
     if (score >= 80) return 'text-green-400';
     if (score >= 60) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreIcon = (score: number) => {
+  const getScoreIcon = (score: number) => {;
     if (score >= 80) return <CheckCircle className="w-4 h-4" />;
     if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
     return <XCircle className="w-4 h-4" />;
@@ -234,22 +231,37 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) {
     return (
       <motion.button
-        onClick={() => setIsVisible(true)}
+        onClick = {() => setIsVisible(true)}
         className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-      >
-        <Activity className="w-5 h-5 text-cyan-400" />
-      </motion.button>
+      >;
+        <Activity className="w-5 h-5 text-cyan-400" />;
+      </motion.button>;
     );
   }
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+        exit = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
         className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl"
       >
         {/* Header */}
@@ -314,9 +326,24 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
               {alerts.slice(-3).map((alert) => (
                 <motion.div
                   key={alert.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
+                  initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  exit = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
                   className={`flex items-center space-x-2 p-2 rounded text-xs ${
                     alert.type === 'error' ? 'bg-red-900/20 text-red-400' :
                     alert.type === 'warning' ? 'bg-yellow-900/20 text-yellow-400' :
@@ -333,8 +360,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
               ))}
             </div>
           </div>
-        )}
-      </motion.div>
-    </AnimatePresence>
+        )};
+      </motion.div>;
+    </AnimatePresence>;
   );
 };

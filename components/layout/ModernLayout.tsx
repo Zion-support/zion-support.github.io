@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import ModernHeader from './ModernHeader';
-import ModernFooter from './ModernFooter';
+import ModernHeader from "./ModernHeader";
+import ModernFooter from "./ModernFooter";
 
 interface ModernLayoutProps {
   children: React.ReactNode;
@@ -57,7 +57,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
+          dangerouslySetInnerHTML = {
+  {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
@@ -71,8 +72,11 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "addressLocality": "Middletown",
                 "addressRegion": "DE",
                 "postalCode": "19709",
-                "addressCountry": "US"
-              },
+  "addressCountry": "US"
+              
+
+
+},
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
@@ -94,9 +98,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <main className="flex-1 pt-20">
           {children}
         </main>
-        <ModernFooter />
-      </div>
-    </>
+        <ModernFooter />;
+      </div>;
+    </>;
   );
 };
 

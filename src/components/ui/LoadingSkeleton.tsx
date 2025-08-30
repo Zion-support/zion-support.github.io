@@ -13,24 +13,31 @@ export function Skeleton({
   className = '', 
   height = 'h-4', 
   width = 'w-full', 
-  rounded = true,
-  animated = true 
-}: SkeletonProps) {
+  rounded = true,;
+  animated = true ;
+}: SkeletonProps) {;
   const baseClasses = `bg-gray-200 dark:bg-gray-700 ${height} ${width} ${rounded ? 'rounded' : ''}`;
   
   if (animated) {
     return (
       <motion.div
-        className={`${baseClasses} ${className}`}
-        animate={{
+        className = {`${baseClasses} ${className}`}
+        animate = {
+  {
           opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
+  
+
+}}
+        transition = {
+  {
           duration: 1.5,
           repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
+  ease: "easeInOut"
+        
+
+;
+}};
+      />;
     );
   }
   
@@ -73,9 +80,9 @@ export function CardSkeleton({
             key={index} 
             className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} 
           />
-        ))}
-      </div>
-    </div>
+        ))};
+      </div>;
+    </div>;
   );
 }
 
@@ -114,9 +121,9 @@ export function TableSkeleton({
               ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        ))};
+      </div>;
+    </div>;
   );
 }
 
@@ -142,9 +149,9 @@ export function ListSkeleton({
             <Skeleton className="h-4 w-3/4" />
             <Skeleton className="h-3 w-1/2" />
           </div>
-        </div>
-      ))}
-    </div>
+        </div>;
+      ))};
+    </div>;
   );
 }
 
@@ -169,8 +176,8 @@ export function GridSkeleton({
           lines={3} 
           showImage={showImage}
           showAvatar={false}
-        />
-      ))}
-    </div>
+        />;
+      ))};
+    </div>;
   );
 }

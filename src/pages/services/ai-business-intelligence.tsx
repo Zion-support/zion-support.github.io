@@ -8,7 +8,7 @@ export default function AIBusinessIntelligence() {
     <>
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
+        <meta name = "description" content="Transform your business data into actionable insights with AI-powered business intelligence, predictive analytics, and intelligent reporting." />
         <meta name="keywords" content="AI business intelligence, predictive analytics, data insights, business analytics, AI reporting, data visualization" />
       </Helmet>
 
@@ -257,8 +257,8 @@ export default function AIBusinessIntelligence() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

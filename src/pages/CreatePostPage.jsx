@@ -7,7 +7,6 @@ export default function CreatePostPage() {
     const { toast } = useToast();
     const [searchParams] = useSearchParams();
     // Get category from URL query params if available
-    const initialCategory = searchParams.get("category");
     const initialValues = {
         categoryId: initialCategory || "project-help"
     };
@@ -22,7 +21,7 @@ export default function CreatePostPage() {
                 description: "Your post has been published successfully"
             });
             // Redirect to the forum category
-            navigate(`/community/category/${values.categoryId}`);
+            router(`/community/category/${values.categoryId}`);
         }
         catch (error) {
             toast({

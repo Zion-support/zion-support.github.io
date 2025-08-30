@@ -7,9 +7,9 @@ export default function AIIncidentResponse() {
     'Automated incident triage and prioritization',
     'Predictive analytics for incident prevention',
     'Smart response automation and orchestration',
-    'AI-driven incident investigation and forensics',
-    'Real-time incident analytics and insights',
-    'Custom AI models for incident applications'
+    'AI-driven incident investigation and forensics',;
+    'Real-time incident analytics and insights',;
+    'Custom AI models for incident applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIIncidentResponse() {
     },
     { 
       name: 'Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited incidents', 'Custom AI models', 'Full incident suite', '24/7 dedicated support'] 
-    },
+      price: '$3,999/mo', ;
+      details: ['Unlimited incidents', 'Custom AI models', 'Full incident suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Incident response optimization',
     'Threat detection and analysis',
     'Incident triage and prioritization',
-    'Response automation and orchestration',
-    'Incident investigation and forensics',
-    'Incident scaling and management'
+    'Response automation and orchestration',;
+    'Incident investigation and forensics',;
+    'Incident scaling and management';
   ];
 
   const benefits = [
     'Improve incident response performance by 50-80%',
     'Reduce incident resolution time by 40-70%',
     'Cut incident operational costs by 35-65%',
-    'Enhance incident response reliability and scalability',
-    'Optimize resource utilization',
-    'Scale incident response operations efficiently'
+    'Enhance incident response reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale incident response operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIIncidentResponse() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

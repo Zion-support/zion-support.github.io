@@ -24,7 +24,6 @@ export function OnChainExport() {
                 return;
             }
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
             const address = accounts[0];
             // Sign message to verify ownership
             const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
@@ -73,7 +72,7 @@ export function OnChainExport() {
     return (<Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5 text-primary"/>) : (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
+          {isConnected ? (<Wallet aria-hidden="true" className="h-5 w-5"/>)}
           On-chain Export
           <TooltipProvider>
             <Tooltip>

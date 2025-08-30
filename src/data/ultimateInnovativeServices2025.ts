@@ -41,9 +41,9 @@ export const SERVICE_CATEGORIES = [
   'IoT & Edge Computing',
   'Metaverse & AR/VR',
   'Robotics & Automation',
-  'Biotechnology',
-  'Space Technology',
-  'Green Technology'
+  'Biotechnology',;
+  'Space Technology',;
+  'Green Technology';
 ];
 
 export const SERVICE_SUBCATEGORIES = {
@@ -56,7 +56,11 @@ export const SERVICE_SUBCATEGORIES = {
   'Robotics & Automation': ['Autonomous Systems', 'Collaborative Robots', 'Service Robots', 'Industrial Automation'],
   'Biotechnology': ['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
   'Space Technology': ['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
-  'Green Technology': ['Renewable Energy', 'Carbon Capture', 'Sustainable Materials', 'Clean Transportation']
+  'Green Technology': ['Renewable Energy', 'Carbon Capture', 'Sustainable Materials',;
+  'Clean Transportation'];
+;
+
+
 };
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [

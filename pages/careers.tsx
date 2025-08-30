@@ -220,5 +220,6 @@ export default function Careers() {
 				</div>
 			</section>
 		</>
-	)
-}
+	);
+};
+;

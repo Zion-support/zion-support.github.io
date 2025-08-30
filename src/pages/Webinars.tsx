@@ -14,16 +14,16 @@ export default function Webinars() {
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
-    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 };
   ];
 
   const filterTypes = [
     { id: 'all', name: 'All Webinars', count: 0 },
-    { id: 'upcoming', name: 'Upcoming', count: 0 },
-    { id: 'on-demand', name: 'On-Demand', count: 0 },
-    { id: 'live', name: 'Live Now', count: 0 }
+    { id: 'upcoming', name: 'Upcoming', count: 0 },;
+    { id: 'on-demand', name: 'On-Demand', count: 0 },;
+    { id: 'live', name: 'Live Now', count: 0 };
   ];
 
   const webinars = [
@@ -58,19 +58,19 @@ export default function Webinars() {
       featured: false,
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],
       thumbnail: '/images/webinars/zero-trust-security-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-    }
+      registrationRequired: true,;
+      recordingAvailable: false;
+    };
   ];
 
   // Update counts
   React.useEffect(() => {
-    categories.forEach(cat => {
+    categories.forEach(cat = > {;
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
 
-    filterTypes.forEach(type => {
-      if (type.id === 'all') {
+    filterTypes.forEach(type = > {;
+      if (type.id === 'all') {;
         type.count = webinars.length;
       } else {
         type.count = webinars.filter(w => w.type === type.id).length;
@@ -78,12 +78,11 @@ export default function Webinars() {
     });
   }, []);
 
-  const filteredWebinars = webinars.filter(webinar => {
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredWebinars = webinars.filter(webinar => {;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
     const matchesType = filterType === 'all' || webinar.type === filterType;
     
     return matchesSearch && matchesCategory && matchesType;
@@ -92,16 +91,15 @@ export default function Webinars() {
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
     });
   };
 
-  const formatTimeUntil = (dateString: string) => {
+  const formatTimeUntil = (dateString: string) => {;
     const now = new Date();
     const webinarDate = new Date(dateString);
-    const diffTime = webinarDate.getTime() - now.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     
     if (diffDays < 0) return 'Past';
@@ -111,18 +109,28 @@ export default function Webinars() {
     return `${Math.ceil(diffDays / 30)} months`;
   };
 
-  const getCategoryIcon = (categoryId: string) => {
+  const getCategoryIcon = (categoryId: string) => {;
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -214,14 +222,14 @@ export default function Webinars() {
               <div className="text-center py-20">
                 <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />
                 <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>
-                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>
-                <button
-                  onClick={() => {
+                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>;
+                <button;
+                  onClick={() => {;
                     setSearchQuery('');
                     setActiveCategory('all');
                     setFilterType('all');
                   }}
-                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                  className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -231,8 +239,18 @@ export default function Webinars() {
                 {filteredWebinars.map((webinar) => (
                   <motion.div
                     key={webinar.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                     className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
@@ -315,8 +333,8 @@ export default function Webinars() {
               </div>
             )}
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

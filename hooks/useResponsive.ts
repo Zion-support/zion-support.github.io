@@ -12,9 +12,9 @@ const useResponsive = (): ResponsiveState => {
     screenWidth: 1920,
     screenHeight: 1080,
     orientation: "landscape",
-    isMobile: false,
-    isTablet: false,
-    isDesktop: true,
+    isMobile: false,;
+    isTablet: false,;
+    isDesktop: true,;
   });
   useEffect(() => {
     const updateDimensions = () => {
@@ -23,9 +23,9 @@ const useResponsive = (): ResponsiveState => {
         screenHeight: window.innerHeight,
         orientation:
           window.innerWidth > window.innerHeight ? "landscape" : "portrait",
-        isMobile: window.innerWidth < 768,
-        isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
-        isDesktop: window.innerWidth >= 1024,
+        isMobile: window.innerWidth < 768,;
+        isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,;
+        isDesktop: window.innerWidth >= 1024,;
       });
     };
     updateDimensions();

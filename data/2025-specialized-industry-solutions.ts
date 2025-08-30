@@ -408,18 +408,18 @@ export const industryCategories2025: string[] = Array.from(
   new Set(
     specializedIndustrySolutions2025
       .map((s) => s.industry)
-      .filter((v): v is string => Boolean(v))
-  )
+      .filter((v): v is string = > Boolean(v));
+  );
 ).sort();
-export const getSolutionsByIndustry = (industry: string) => {
+export const getSolutionsByIndustry = (industry: string) => {;
   if (!industry || industry === 'All') return specializedIndustrySolutions2025;
   return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
 };
-export const getSolutionsByCategory = (category: string) => {
+export const getSolutionsByCategory = (category: string) => {;
   if (!category || category === 'All') return specializedIndustrySolutions2025;
   return specializedIndustrySolutions2025.filter((s) => s.category === category);
 };
-export const getPopularIndustrySolutions = () =>
-  specializedIndustrySolutions2025
-    .filter((s) => !!s.popular)
+export const getPopularIndustrySolutions = () =>;
+  specializedIndustrySolutions2025;
+    .filter((s) => !!s.popular);
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));

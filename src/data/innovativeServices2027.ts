@@ -110,12 +110,12 @@ export const serviceCategories2027 = [
   'Quantum Space',
   'Biotechnology',
   'Quantum Medicine',
-  'Quantum Security',
-  'Nanotechnology',
-  'Neural Technology'
+  'Quantum Security',;
+  'Nanotechnology',;
+  'Neural Technology';
 ];
-export const getServicesByCategory = (category: string): InnovativeService2027[] => {
-  if (category === 'All') {
+export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
+  if (category === 'All') {;
     return innovativeServices2027;
   }
   return innovativeServices2027.filter(service => service.category === category);

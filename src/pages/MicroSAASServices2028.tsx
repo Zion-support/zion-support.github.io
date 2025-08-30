@@ -491,12 +491,12 @@ const microSAASServices2028 = [
     marketSize: '$7.2B AI analytics market',
     growthRate: '260% annual growth',
     rating: 4.6,
-    reviews: 234,
-    customers: 123
-  }
+    reviews: 234,;
+    customers: 123;
+  };
 ];
 
-const MicroSAASServices2028: React.FC = () => {
+const MicroSAASServices2028: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
@@ -507,16 +507,16 @@ const MicroSAASServices2028: React.FC = () => {
     { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },
     { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },
     { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },
-    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },
-    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },
-    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' }
+    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },;
+    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },;
+    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
   ];
 
-  const filteredServices = microSAASServices2028
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || 
+  const filteredServices = microSAASServices2028;
+    .filter(service => {;
+      const matchesCategory = selectedCategory === 'all' || ;
         service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     })
@@ -535,31 +535,71 @@ const MicroSAASServices2028: React.FC = () => {
     });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
           >
             Micro SAAS Services 2028
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
           >
             Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             className="flex flex-wrap justify-center gap-4"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
@@ -633,9 +673,24 @@ const MicroSAASServices2028: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
                 {/* Popular Badge */}
@@ -723,25 +778,65 @@ const MicroSAASServices2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6 text-center">
           <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
           >
             Ready to Get Started?
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
           >
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
@@ -759,9 +854,9 @@ const MicroSAASServices2028: React.FC = () => {
               kleber@ziontechgroup.com
             </a>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

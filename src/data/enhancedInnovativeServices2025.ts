@@ -108,7 +108,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group",
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto = format&fit=crop&w=100&h=100",
       verified: true
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
@@ -912,8 +912,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roi: "600% within 18 months",
     setupTime: "24 hours",
     integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
-    freeTier: false,
-    trialPeriod: "7 days"
-  }
+    freeTier: false,;
+    trialPeriod: "7 days";
+  };
 ];
 export default ENHANCED_INNOVATIVE_SERVICES_2025;

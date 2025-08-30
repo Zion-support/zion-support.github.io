@@ -35,25 +35,25 @@ const AICustomerChurnPrediction: React.FC = () => {
     },
     {
       icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."
-    }
+      title: "Customer Segmentation",;
+      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
+    };
   ];
 
   const benefits = [
     "Reduce customer churn by 40-60%",
     "Increase customer lifetime value by 35%",
-    "Save $50K+ annually on customer acquisition",
-    "Improve customer satisfaction scores by 25%",
-    "Automate 80% of retention workflows"
+    "Save $50K+ annually on customer acquisition",;
+    "Improve customer satisfaction scores by 25%",;
+    "Automate 80% of retention workflows";
   ];
 
   const integrations = [
     "Salesforce, HubSpot, Pipedrive",
     "Stripe, PayPal, Square",
-    "Intercom, Zendesk, Freshdesk",
-    "Google Analytics, Mixpanel, Amplitude",
-    "Slack, Microsoft Teams, Email"
+    "Intercom, Zendesk, Freshdesk",;
+    "Google Analytics, Mixpanel, Amplitude",;
+    "Slack, Microsoft Teams, Email";
   ];
 
   const pricing = [
@@ -75,13 +75,13 @@ const AICustomerChurnPrediction: React.FC = () => {
       plan: "Enterprise",
       price: "Custom",
       period: "",
-      features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
-      popular: false
-    }
+      features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
         title="AI Customer Churn Prediction Platform - Zion Tech Group"
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
@@ -94,8 +94,18 @@ const AICustomerChurnPrediction: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-800 to-blue-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -131,8 +141,18 @@ const AICustomerChurnPrediction: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -149,10 +169,25 @@ const AICustomerChurnPrediction: React.FC = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
@@ -170,8 +205,18 @@ const AICustomerChurnPrediction: React.FC = () => {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -188,10 +233,25 @@ const AICustomerChurnPrediction: React.FC = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -208,8 +268,18 @@ const AICustomerChurnPrediction: React.FC = () => {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -226,10 +296,25 @@ const AICustomerChurnPrediction: React.FC = () => {
             {integrations.map((integration, index) => (
               <motion.div
                 key={integration}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-blue-500 transition-colors"
               >
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
@@ -243,8 +328,18 @@ const AICustomerChurnPrediction: React.FC = () => {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -261,10 +356,25 @@ const AICustomerChurnPrediction: React.FC = () => {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular 
                     ? 'border-red-500 shadow-lg shadow-red-500/20' 
@@ -313,8 +423,18 @@ const AICustomerChurnPrediction: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -374,9 +494,9 @@ const AICustomerChurnPrediction: React.FC = () => {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

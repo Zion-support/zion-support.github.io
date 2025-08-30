@@ -9,17 +9,17 @@ export default function AIMarketingAutomation() {
     'Automated content personalization and optimization',
     'Multi-channel campaign orchestration',
     'Real-time performance optimization',
-    'Advanced A/B testing with AI insights',
-    'Lead scoring and qualification automation',
-    'ROI tracking and predictive analytics'
+    'Advanced A/B testing with AI insights',;
+    'Lead scoring and qualification automation',;
+    'ROI tracking and predictive analytics';
   ];
 
   const benefits = [
     'Increase conversion rates by 40-60%',
     'Reduce customer acquisition costs by 30%',
-    'Improve customer lifetime value by 25%',
-    'Save 15+ hours per week on marketing tasks',
-    'Achieve 3x better campaign performance'
+    'Improve customer lifetime value by 25%',;
+    'Save 15+ hours per week on marketing tasks',;
+    'Achieve 3x better campaign performance';
   ];
 
   const pricingTiers = [
@@ -41,27 +41,27 @@ export default function AIMarketingAutomation() {
       name: 'Enterprise',
       price: '$799',
       period: '/mo',
-      contacts: 'Unlimited contacts',
-      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting']
-    }
+      contacts: 'Unlimited contacts',;
+      features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
+    };
   ];
 
   const useCases = [
     'E-commerce businesses',
     'B2B SaaS companies',
     'Digital agencies',
-    'Real estate companies',
-    'Healthcare providers',
-    'Educational institutions'
+    'Real estate companies',;
+    'Healthcare providers',;
+    'Educational institutions';
   ];
 
-  const channels = [
-    'Email Marketing', 'Social Media', 'SMS/Text', 'Push Notifications', 'Web Push',
-    'Display Advertising', 'Search Marketing', 'Content Marketing', 'Influencer Marketing'
+  const channels = [;
+    'Email Marketing', 'Social Media', 'SMS/Text', 'Push Notifications', 'Web Push',;
+    'Display Advertising', 'Search Marketing', 'Content Marketing', 'Influencer Marketing';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="AI-Powered Marketing Automation Platform - Zion Tech Group"
         description="Revolutionary AI marketing automation platform that personalizes campaigns, optimizes performance, and maximizes ROI through intelligent automation."
@@ -378,8 +378,8 @@ export default function AIMarketingAutomation() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

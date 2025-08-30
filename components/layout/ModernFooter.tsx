@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Cpu, Database, Globe, Lock } from 'lucide-react';
 
-const ModernFooter: React.FC = () => {
+const ModernFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
     { name: 'AI Services', icon: Cpu, href: '/services/ai' },
     { name: 'IT Solutions', icon: Shield, href: '/services/it' },
     { name: 'SAAS Platforms', icon: Database, href: '/services/saas' },
-    { name: 'Development', icon: Globe, href: '/services/development' },
-    { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security' },
-    { name: 'Analytics', icon: Database, href: '/services/analytics' }
+    { name: 'Development', icon: Globe, href: '/services/development' },;
+    { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security' },;
+    { name: 'Analytics', icon: Database, href: '/services/analytics' };
   ];
 
   const quickLinks = [
@@ -20,19 +20,19 @@ const ModernFooter: React.FC = () => {
     { name: 'Our Team', href: '/about#team' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' }
+    { name: 'Careers', href: '/careers' },;
+    { name: 'Privacy Policy', href: '/privacy' },;
+    { name: 'Terms of Service', href: '/terms' };
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
   ];
 
   return (
-    <footer className="bg-gray-900 text-white relative overflow-hidden">
+    <footer className = "bg-gray-900 text-white relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-gray-900" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.05),transparent_50%)]" />
@@ -65,7 +65,12 @@ const ModernFooter: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-800 hover:bg-blue-600 border border-gray-700 hover:border-blue-500 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
-                    whileHover={{ scale: 1.1, y: -2 }}
+                    whileHover = {
+  { scale: 1.1,
+  y: -2 
+
+
+}}
                     whileTap={{ scale: 0.95 }}
                   >
                     <social.icon className="w-5 h-5" />
@@ -196,9 +201,9 @@ const ModernFooter: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        </div>;
+      </div>;
+    </footer>;
   );
 };
 

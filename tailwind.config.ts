@@ -5,7 +5,11 @@ import animatePlugin from "tailwindcss-animate";
 const config: Config = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,
+  tsx
+
+
+}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
@@ -182,9 +186,9 @@ const config: Config = {
         "float": "float 6s ease-in-out infinite",
         "matrix-rain": "matrix-rain 20s linear infinite",
       },
-    },
-  },
-  plugins: [animatePlugin],
+    },;
+  },;
+  plugins: [animatePlugin],;
 };
 
 export default config;

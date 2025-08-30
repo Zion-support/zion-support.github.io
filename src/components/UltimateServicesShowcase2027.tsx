@@ -37,9 +37,9 @@ export const UltimateServicesShowcase2027 = () => {
               Learn More →
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 export default UltimateServicesShowcase2027;

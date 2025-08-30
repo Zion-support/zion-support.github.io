@@ -26,105 +26,6 @@ import {
   Code
 } from 'lucide-react';
 
-const educationSolutions = [
-  {
-    id: 1,
-    title: "Learning Management System (LMS)",
-    description: "Comprehensive platform for managing courses, content, and student progress tracking.",
-    icon: BookOpen,
-    features: [
-      "Course management",
-      "Content delivery",
-      "Student tracking",
-      "Assessment tools"
-    ],
-    price: "From $40,000",
-    timeline: "16-24 weeks",
-    category: "LMS Platforms",
-    integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom"]
-  },
-  {
-    id: 2,
-    title: "Mobile Learning Apps",
-    description: "Native mobile applications that enable learning on-the-go across all devices.",
-    icon: Smartphone,
-    features: [
-      "Cross-platform development",
-      "Offline content access",
-      "Push notifications",
-      "Progress synchronization"
-    ],
-    price: "From $30,000",
-    timeline: "12-20 weeks",
-    category: "Mobile Development",
-    integrations: ["iOS", "Android", "React Native", "Flutter"]
-  },
-  {
-    id: 3,
-    title: "Virtual Reality (VR) Learning",
-    description: "Immersive educational experiences using virtual reality technology.",
-    icon: Monitor,
-    features: [
-      "3D learning environments",
-      "Interactive simulations",
-      "Multi-user collaboration",
-      "Progress tracking"
-    ],
-    price: "From $60,000",
-    timeline: "20-32 weeks",
-    category: "VR/AR",
-    integrations: ["Oculus", "HTC Vive", "WebXR", "Unity"]
-  },
-  {
-    id: 4,
-    title: "AI-Powered Tutoring",
-    description: "Intelligent tutoring systems that adapt to individual learning styles and needs.",
-    icon: Brain,
-    features: [
-      "Personalized learning paths",
-      "Adaptive assessments",
-      "Natural language processing",
-      "Learning analytics"
-    ],
-    price: "From $50,000",
-    timeline: "16-24 weeks",
-    category: "AI & Analytics",
-    integrations: ["Machine Learning", "NLP", "Data Analytics", "Cloud AI"]
-  },
-  {
-    id: 5,
-    title: "Video Conferencing Platform",
-    description: "Secure and scalable video conferencing solution for remote learning and collaboration.",
-    icon: Video,
-    features: [
-      "HD video streaming",
-      "Screen sharing",
-      "Recording capabilities",
-      "Breakout rooms"
-    ],
-    price: "From $35,000",
-    timeline: "12-18 weeks",
-    category: "Communication",
-    integrations: ["Zoom API", "Microsoft Teams", "Google Meet", "WebRTC"]
-  },
-  {
-    id: 6,
-    title: "Student Analytics Dashboard",
-    description: "Comprehensive analytics platform for tracking student performance and engagement.",
-    icon: BarChart3,
-    features: [
-      "Performance metrics",
-      "Engagement tracking",
-      "Predictive analytics",
-      "Custom reporting"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Analytics",
-    integrations: ["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
-  }
-];
-
 const edTechTrends = [
   {
     title: "Personalized Learning",
@@ -235,15 +136,40 @@ export default function EducationSolutions() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <GraduationCap className="w-10 h-10 text-white" />
@@ -282,8 +208,18 @@ export default function EducationSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -297,9 +233,24 @@ export default function EducationSolutions() {
             {edTechTrends.map((trend, index) => (
               <motion.div
                 key={trend.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -328,8 +279,18 @@ export default function EducationSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -343,9 +304,24 @@ export default function EducationSolutions() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -372,8 +348,18 @@ export default function EducationSolutions() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -404,9 +390,24 @@ export default function EducationSolutions() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -461,8 +462,18 @@ export default function EducationSolutions() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -476,9 +487,24 @@ export default function EducationSolutions() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -522,8 +548,18 @@ export default function EducationSolutions() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

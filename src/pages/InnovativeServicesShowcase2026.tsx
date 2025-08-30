@@ -2,24 +2,23 @@ import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Cpu, Database, Lock, Leaf, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from "../data/innovativeMicroSaasServices2026";
 
-const InnovativeServicesShowcase2026: React.FC = () => {
+const InnovativeServicesShowcase2026: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('innovation');
 
   const categories = ['All', 'AI & Automation', 'Quantum Computing', 'Blockchain', 'Cybersecurity', 'IoT', 'AI & Content', 'DevOps', 'Finance', 'Sustainability'];
 
-  const filteredServices = useMemo(() => {
-    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
+  const filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2026;
 
     // Filter by search query
     if (searchQuery) {
       filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
     }
 
@@ -45,9 +44,9 @@ const InnovativeServicesShowcase2026: React.FC = () => {
     return filtered;
   }, [searchQuery, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Automation':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI & Automation':;
         return <Cpu className="w-5 h-5" />;
       case 'Quantum Computing':
         return <Zap className="w-5 h-5" />;
@@ -72,20 +71,23 @@ const InnovativeServicesShowcase2026: React.FC = () => {
 
   const getInnovationBadge = (level: string) => {
     const colors = {
-      'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',
-      'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600'
-    };
+  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
+      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
+  'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
+    ;
+
+
+};
 
     return (
-      <span className={`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>
-        {level}
-      </span>
+      <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
+        {level};
+      </span>;
     );
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Innovative Services Showcase 2026 - Zion Tech Group" 
         description="Explore our cutting-edge 2026 innovative micro SAAS services including AI, Quantum Computing, Blockchain, and more. Transform your business with revolutionary technology solutions."
@@ -95,8 +97,18 @@ const InnovativeServicesShowcase2026: React.FC = () => {
       <section className="relative py-20 sm:py-32">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
@@ -184,9 +196,24 @@ const InnovativeServicesShowcase2026: React.FC = () => {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
               >
                 {/* Header */}
@@ -321,8 +348,18 @@ const InnovativeServicesShowcase2026: React.FC = () => {
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -407,9 +444,9 @@ const InnovativeServicesShowcase2026: React.FC = () => {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

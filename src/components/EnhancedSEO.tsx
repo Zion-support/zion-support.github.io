@@ -37,16 +37,16 @@ export function EnhancedSEO({
     'digital transformation',
     'cloud computing',
     'cybersecurity',
-    'machine learning',
-    'quantum computing',
-    'Zion Tech Group'
+    'machine learning',;
+    'quantum computing',;
+    'Zion Tech Group';
   ];
 
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
 
   // Default structured data for Zion Tech Group
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+  "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -54,8 +54,11 @@ export function EnhancedSEO({
     "description": "Empowering the future through innovative technology solutions including AI, IT consulting, and digital transformation services.",
     "address": {
       "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
+  "addressCountry": "US"
+    
+
+
+},
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer service",
@@ -71,9 +74,9 @@ export function EnhancedSEO({
       "AI Services",
       "IT Consulting",
       "Digital Transformation",
-      "Cloud Computing",
-      "Cybersecurity"
-    ]
+      "Cloud Computing",;
+      "Cybersecurity";
+    ];
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -82,8 +85,13 @@ export function EnhancedSEO({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={allKeywords.join(', ')} />
+      <meta name = "description" content={description} />
+      <meta name="keywords" content = {
+  allKeywords.join(',
+  ')
+
+
+} />
       <meta name="author" content={author} />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
@@ -180,8 +188,8 @@ export function EnhancedSEO({
               "name": "Zion Tech Group Services"
             }
           })}
-        </script>
-      )}
-    </Helmet>
+        </script>;
+      )};
+    </Helmet>;
   );
 }

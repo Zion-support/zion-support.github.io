@@ -32,25 +32,24 @@ export default function RequestsPanel() {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: QuoteRequest) => {
+  const handleViewDetails = (quote: QuoteRequest) => {;
     setSelectedQuote(quote);
     setShowDetails(true);
     
     // If status is new, mark as viewed
-    if (quote.status === 'new') {
+    if (quote.status = == 'new') {;
       markAsViewed(quote.id);
     }
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived);
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
 
   return (
     <ProtectedRoute>
       <div>
         
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
+        <div className = "min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
               unreadCount={unreadCount}
@@ -94,9 +93,9 @@ export default function RequestsPanel() {
         
         {/* Quote Details Modal */}
         <QuoteDetails
-          quote={selectedQuote}
-          isOpen={showDetails}
-          onClose={() => {
+          quote={selectedQuote};
+          isOpen={showDetails};
+          onClose={() => {;
             setShowDetails(false);
             setSelectedQuote(null);
           }}

@@ -21,9 +21,9 @@ const CloudServices = () => {
       title: "Cloud Security & Compliance",
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
       price: "From $6,500/month",
-      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
-      icon: Shield
-    }
+      features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],;
+      icon: Shield;
+    };
   ];
 
   const cloudPlatforms = [
@@ -42,22 +42,22 @@ const CloudServices = () => {
     {
       name: "Google Cloud Platform",
       description: "AI-first cloud platform with advanced analytics",
-      icon: Globe,
-      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
-    }
+      icon: Globe,;
+      features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"];
+    };
   ];
 
   const benefits = [
     "Scalable infrastructure that grows with your business",
     "Reduced capital expenditure and operational costs",
     "Enhanced security and compliance capabilities",
-    "Faster time to market with cloud-native tools",
-    "Global availability and disaster recovery",
-    "Automated scaling and resource management"
+    "Faster time to market with cloud-native tools",;
+    "Global availability and disaster recovery",;
+    "Automated scaling and resource management";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -213,9 +213,9 @@ const CloudServices = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

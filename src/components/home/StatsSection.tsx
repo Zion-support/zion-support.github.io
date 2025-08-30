@@ -23,24 +23,22 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
   useEffect(() => {
     if (isInView) {
-      const timer = setTimeout(() => {
-        stats.forEach((stat, index) => {
-          const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
           const suffix = stat.number.replace(/[0-9]/g, '');
           
           let current = 0;
           const increment = targetNumber / 50;
           
-          const countTimer = setInterval(() => {
+          const countTimer = setInterval(() => {;
             current += increment;
             if (current >= targetNumber) {
               current = targetNumber;
               clearInterval(countTimer);
             }
             
-            setCounts(prev => ({
-              ...prev,
-              [stat.label]: Math.floor(current)
+            setCounts(prev = > ({;
+              ...prev,;
+              [stat.label]: Math.floor(current);
             }));
           }, 50);
         });
@@ -51,12 +49,22 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   }, [isInView, stats]);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
@@ -73,13 +81,32 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             <motion.div
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover = {
+  { 
                 y: -8,
-                transition: { duration: 0.3 }
+  transition: { duration: 0.3 
+
+
+}
               }}
             >
               {/* Animated background */}
@@ -97,7 +124,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
                 className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300"
                 initial={{ scale: 0.8 }}
                 whileInView={{ scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 + 0.5 
+
+
+}}
                 viewport={{ once: true }}
               >
                 {counts[stat.label] || 0}
@@ -116,9 +148,9 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
             </motion.div>
           ))}
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 

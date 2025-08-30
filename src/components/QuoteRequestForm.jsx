@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/Button';
-import { Input } from './ui/input';
-import { Textarea } from './ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Checkbox } from './ui/checkbox';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const QuoteRequestForm = () => {
@@ -184,7 +184,12 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.firstName}
-                onChange={(e) => handleChange('firstName', e.target.value)}
+                onChange = {
+  (e) => handleChange('firstName',
+  e.target.value)
+
+
+}
                 className={errors.firstName ? 'border-red-500' : ''}
                 placeholder="Enter your first name"
               />
@@ -200,7 +205,12 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.lastName}
-                onChange={(e) => handleChange('lastName', e.target.value)}
+                onChange = {
+  (e) => handleChange('lastName',
+  e.target.value)
+
+
+}
                 className={errors.lastName ? 'border-red-500' : ''}
                 placeholder="Enter your last name"
               />
@@ -219,7 +229,12 @@ export const QuoteRequestForm = () => {
               <Input
                 type="email"
                 value={formData.email}
-                onChange={(e) => handleChange('email', e.target.value)}
+                onChange = {
+  (e) => handleChange('email',
+  e.target.value)
+
+
+}
                 className={errors.email ? 'border-red-500' : ''}
                 placeholder="your.email@company.com"
               />
@@ -235,7 +250,12 @@ export const QuoteRequestForm = () => {
               <Input
                 type="tel"
                 value={formData.phone}
-                onChange={(e) => handleChange('phone', e.target.value)}
+                onChange = {
+  (e) => handleChange('phone',
+  e.target.value)
+
+
+}
                 placeholder="+1 (555) 123-4567"
               />
             </div>
@@ -249,7 +269,12 @@ export const QuoteRequestForm = () => {
             <Input
               type="text"
               value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
+              onChange = {
+  (e) => handleChange('company',
+  e.target.value)
+
+
+}
               className={errors.company ? 'border-red-500' : ''}
               placeholder="Your Company Inc."
             />
@@ -265,7 +290,12 @@ export const QuoteRequestForm = () => {
             </label>
             <Select
               value={formData.serviceType}
-              onValueChange={(value) => handleChange('serviceType', value)}
+              onValueChange = {
+  (value) => handleChange('serviceType',
+  value)
+
+
+}
             >
               <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
                 <SelectValue placeholder="Select a service type" />
@@ -290,7 +320,12 @@ export const QuoteRequestForm = () => {
             </label>
             <Textarea
               value={formData.projectDescription}
-              onChange={(e) => handleChange('projectDescription', e.target.value)}
+              onChange = {
+  (e) => handleChange('projectDescription',
+  e.target.value)
+
+
+}
               className={errors.projectDescription ? 'border-red-500' : ''}
               placeholder="Please describe your project requirements, goals, and any specific needs..."
               rows={4}
@@ -308,7 +343,12 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.timeline}
-                onValueChange={(value) => handleChange('timeline', value)}
+                onValueChange = {
+  (value) => handleChange('timeline',
+  value)
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select timeline" />
@@ -329,7 +369,12 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.budget}
-                onValueChange={(value) => handleChange('budget', value)}
+                onValueChange = {
+  (value) => handleChange('budget',
+  value)
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select budget range" />
@@ -353,7 +398,12 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.urgency}
-                onValueChange={(value) => handleChange('urgency', value)}
+                onValueChange = {
+  (value) => handleChange('urgency',
+  value)
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -374,7 +424,12 @@ export const QuoteRequestForm = () => {
               </label>
               <Select
                 value={formData.contactMethod}
-                onValueChange={(value) => handleChange('contactMethod', value)}
+                onValueChange = {
+  (value) => handleChange('contactMethod',
+  value)
+
+
+}
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -394,7 +449,12 @@ export const QuoteRequestForm = () => {
               <Checkbox
                 id="terms"
                 checked={formData.agreeToTerms}
-                onCheckedChange={(checked) => handleChange('agreeToTerms', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToTerms',
+  checked)
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="terms" className="text-sm text-gray-700">
@@ -414,7 +474,12 @@ export const QuoteRequestForm = () => {
               <Checkbox
                 id="marketing"
                 checked={formData.agreeToMarketing}
-                onCheckedChange={(checked) => handleChange('agreeToMarketing', checked)}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToMarketing',
+  checked)
+
+
+}
                 className="mt-1"
               />
               <label htmlFor="marketing" className="text-sm text-gray-700">

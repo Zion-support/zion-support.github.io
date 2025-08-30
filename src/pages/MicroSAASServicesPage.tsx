@@ -367,9 +367,9 @@ export default function MicroSAASServicesPage() {
         enterprise: "$249/month"
       },
       freeTrial: "21 days",
-      rating: 4.9,
-      reviewCount: 167
-    }
+      rating: 4.9,;
+      reviewCount: 167;
+    };
   ];
   const categories = [
     "All Services",
@@ -382,21 +382,21 @@ export default function MicroSAASServicesPage() {
     "Marketing",
     "Inventory",
     "HR Management",
-    "Accounting",
-    "E-commerce",
-    "Education"
+    "Accounting",;
+    "E-commerce",;
+    "Education";
   ];
   const [selectedCategory, setSelectedCategory] = React.useState("All Services");
   const [filteredServices, setFilteredServices] = React.useState(microSAASServices);
   React.useEffect(() => {
-    if (selectedCategory === "All Services") {
+    if (selectedCategory = == "All Services") {;
       setFilteredServices(microSAASServices);
     } else {
       setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
     }
   }, [selectedCategory]);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
@@ -558,8 +558,8 @@ export default function MicroSAASServicesPage() {
               Call +1 302 464 0950
             </Button>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

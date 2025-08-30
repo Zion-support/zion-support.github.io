@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   PenTool, 
   FileText, 
@@ -59,9 +59,9 @@ export default function AIContentGenerationPlatform() {
     {
       icon: Users,
       title: 'Team Collaboration',
-      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
-      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
-    }
+      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;
+      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
+    };
   ];
 
   const useCases = [
@@ -86,9 +86,9 @@ export default function AIContentGenerationPlatform() {
     {
       industry: 'Corporate Communications',
       title: 'Business Content',
-      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
-      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
-    }
+      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
+      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
+    };
   ];
 
   const benefits = [
@@ -113,9 +113,9 @@ export default function AIContentGenerationPlatform() {
     {
       icon: TrendingUp,
       title: 'Scalability',
-      description: 'Scale content production without proportional increases in resources.',
-      value: '10x'
-    }
+      description: 'Scale content production without proportional increases in resources.',;
+      value: '10x';
+    };
   ];
 
   const technologies = [
@@ -128,9 +128,9 @@ export default function AIContentGenerationPlatform() {
     'Machine Learning',
     'Cloud Computing',
     'Real-time Processing',
-    'API Integration',
-    'Content Management',
-    'Analytics & Insights'
+    'API Integration',;
+    'Content Management',;
+    'Analytics & Insights';
   ];
 
   const pricing = [
@@ -184,13 +184,13 @@ export default function AIContentGenerationPlatform() {
         'Custom integrations',
         'SLA guarantees'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Content Generation Platform - Zion Tech Group"
         description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
@@ -200,8 +200,18 @@ export default function AIContentGenerationPlatform() {
       <section className="relative overflow-hidden py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -239,9 +249,24 @@ export default function AIContentGenerationPlatform() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             <div className="text-center">
@@ -268,8 +293,18 @@ export default function AIContentGenerationPlatform() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -289,9 +324,24 @@ export default function AIContentGenerationPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -317,8 +367,18 @@ export default function AIContentGenerationPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -337,9 +397,24 @@ export default function AIContentGenerationPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -368,8 +443,18 @@ export default function AIContentGenerationPlatform() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -388,9 +473,24 @@ export default function AIContentGenerationPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -409,8 +509,18 @@ export default function AIContentGenerationPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -429,9 +539,24 @@ export default function AIContentGenerationPlatform() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
               >
                 <div className="text-white font-semibold">{tech}</div>
@@ -445,8 +570,18 @@ export default function AIContentGenerationPlatform() {
       <section id="pricing" className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -465,9 +600,24 @@ export default function AIContentGenerationPlatform() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-purple-400/50 scale-105' 
@@ -520,8 +670,18 @@ export default function AIContentGenerationPlatform() {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -555,8 +715,8 @@ export default function AIContentGenerationPlatform() {
               <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">ziontechgroup.com</a></p>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

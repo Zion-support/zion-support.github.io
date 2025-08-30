@@ -36,9 +36,9 @@ const Consulting = () => {
     {
       icon: Zap,
       title: "Digital Innovation",
-      description: "Emerging technology consulting and innovation acceleration",
-      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-    }
+      description: "Emerging technology consulting and innovation acceleration",;
+      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
+    };
   ];
 
   const industries = [
@@ -69,18 +69,18 @@ const Consulting = () => {
     },
     {
       title: "Government",
-      description: "Public sector digital transformation consulting",
-      icon: Briefcase
-    }
+      description: "Public sector digital transformation consulting",;
+      icon: Briefcase;
+    };
   ];
 
   const benefits = [
     "Expert guidance from industry professionals",
     "Proven methodologies and best practices",
     "Customized solutions for your specific needs",
-    "Long-term strategic partnerships",
-    "Measurable results and ROI",
-    "Access to cutting-edge technology insights"
+    "Long-term strategic partnerships",;
+    "Measurable results and ROI",;
+    "Access to cutting-edge technology insights";
   ];
 
   const process = [
@@ -101,13 +101,13 @@ const Consulting = () => {
     },
     {
       phase: "Implementation",
-      description: "Executing the strategy with ongoing support and guidance",
-      duration: "Ongoing"
-    }
+      description: "Executing the strategy with ongoing support and guidance",;
+      duration: "Ongoing";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -282,9 +282,9 @@ const Consulting = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

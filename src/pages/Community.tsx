@@ -23,14 +23,14 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Community() {
   const communityStats = [
     { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },
-    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },
-    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },
-    { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' }
+    { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
+    { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;
+    { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
   ];
 
   const communityForums = [
@@ -71,9 +71,9 @@ export default function Community() {
       color: 'from-green-600 to-emerald-600',
       topics: 620,
       posts: 4100,
-      members: 1800,
-      href: '/community/digital-transformation'
-    }
+      members: 1800,;
+      href: '/community/digital-transformation';
+    };
   ];
 
   const upcomingEvents = [
@@ -107,9 +107,9 @@ export default function Community() {
       type: 'Meetup',
       attendees: 75,
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/events/devops-meetup-nyc'
-    }
+      color: 'from-blue-500 to-cyan-500',;
+      href: '/events/devops-meetup-nyc';
+    };
   ];
 
   const featuredDiscussions = [
@@ -146,9 +146,9 @@ export default function Community() {
       lastActivity: '1 day ago',
       tags: ['Multi-Cloud', 'Cost Optimization', 'DevOps'],
       icon: Cloud,
-      color: 'from-blue-500 to-cyan-500',
-      href: '/community/discussions/multi-cloud-cost-optimization'
-    }
+      color: 'from-blue-500 to-cyan-500',;
+      href: '/community/discussions/multi-cloud-cost-optimization';
+    };
   ];
 
   const communityResources = [
@@ -177,13 +177,13 @@ export default function Community() {
       title: 'Resource Library',
       description: 'Access shared resources, templates, and tools',
       icon: Download,
-      href: '/community/resources',
-      color: 'from-orange-500 to-red-500'
-    }
+      href: '/community/resources',;
+      color: 'from-orange-500 to-red-500';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Community - Zion Tech Group"
         description="Join our vibrant community of technology professionals. Connect, learn, and collaborate with experts in AI, cloud computing, cybersecurity, and digital transformation."
@@ -193,8 +193,18 @@ export default function Community() {
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -217,9 +227,24 @@ export default function Community() {
           {communityStats.map((stat, index) => (
             <motion.div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 + index * 0.1 
+
+
+}}
               className="text-center"
             >
               <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
@@ -236,9 +261,24 @@ export default function Community() {
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
             className="text-3xl font-bold text-white text-center mb-12"
           >
             Community Forums
@@ -248,9 +288,24 @@ export default function Community() {
             {communityForums.map((forum, index) => (
               <motion.div
                 key={forum.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 + index * 0.1 
+
+
+}}
                 className="group"
               >
                 <Link
@@ -300,9 +355,24 @@ export default function Community() {
       {/* Upcoming Events */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+}}
           className="text-3xl font-bold text-white text-center mb-12"
         >
           Upcoming Events
@@ -312,9 +382,24 @@ export default function Community() {
           {upcomingEvents.map((event, index) => (
             <motion.div
               key={event.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+}}
               className="group"
             >
               <Link
@@ -369,9 +454,24 @@ export default function Community() {
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.7 
+
+
+}}
             className="text-3xl font-bold text-white text-center mb-12"
           >
             Featured Discussions
@@ -381,9 +481,24 @@ export default function Community() {
             {featuredDiscussions.map((discussion, index) => (
               <motion.div
                 key={discussion.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 + index * 0.1 
+
+
+}}
                 className="group"
               >
                 <Link
@@ -440,9 +555,24 @@ export default function Community() {
       {/* Community Resources */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.9 
+
+
+}}
           className="text-3xl font-bold text-white text-center mb-12"
         >
           Community Resources
@@ -452,9 +582,24 @@ export default function Community() {
           {communityResources.map((resource, index) => (
             <motion.div
               key={resource.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 + index * 0.1 
+
+
+}}
               className="group"
             >
               <Link
@@ -478,9 +623,24 @@ export default function Community() {
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 1.1 
+
+
+}}
           className="bg-gradient-to-r from-cyan-600 to-blue-700 rounded-2xl p-12 text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -503,8 +663,8 @@ export default function Community() {
               Learn More
             </Link>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

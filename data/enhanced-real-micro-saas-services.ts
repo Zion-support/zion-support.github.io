@@ -1,4 +1,4 @@
-export type EnhancedRealMicroSaasService = {
+export type EnhancedRealMicroSaasService = {;
 	id: string;
 	name: string;
 	category?: string;
@@ -39,10 +39,10 @@ export type EnhancedRealMicroSaasService = {
 	reviews?: number;
 };
 // Aggregate rich, real services from multiple sources into a single catalog
-import { additionalEnhancedServices } from './additional-real-services';
-import { realMarketServices } from './real-market-services';
+import { additionalEnhancedServices } from "./additional-real-services";
+import { realMarketServices } from "./real-market-services";
 // Normalize types to EnhancedRealMicroSaasService without mutating originals
-const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] =>
+const mapToEnhanced = (items: any[]): EnhancedRealMicroSaasService[] =>;
 	(items || []).map((s) => ({ ...s }));
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 	...mapToEnhanced(realMarketServices as unknown as any[]),
@@ -52,14 +52,14 @@ export const serviceCategories: string[] = Array.from(
 	new Set(
 		enhancedRealMicroSaasServices
 			.map((s) => s.category)
-			.filter((v): v is string => Boolean(v))
-	)
+			.filter((v): v is string = > Boolean(v));
+	);
 ).sort();
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
 	if (!category || category === 'All') return enhancedRealMicroSaasServices;
 	return enhancedRealMicroSaasServices.filter((s) => s.category === category);
 };
-export const getPopularServices = () =>
-	enhancedRealMicroSaasServices
-		.filter((s) => !!s.popular)
+export const getPopularServices = () =>;
+	enhancedRealMicroSaasServices;
+		.filter((s) => !!s.popular);
 		.sort((a, b) => (b.rating || 0) - (a.rating || 0));

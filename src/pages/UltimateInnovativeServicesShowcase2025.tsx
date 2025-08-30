@@ -31,7 +31,7 @@ import {
   Clock,
   Shield as ShieldIcon
 } from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/ultimateInnovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from "../data/ultimateInnovativeServices2025";
 
 export default function UltimateInnovativeServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -39,8 +39,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('innovation');
 
-  const filteredServices = useMemo(() => {
-    let filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
+  const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025;
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
@@ -52,9 +51,9 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
     if (searchTerm) {
       filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
 
@@ -67,21 +66,21 @@ export default function UltimateInnovativeServicesShowcase2025() {
         filtered = [...filtered].sort((a, b) => b.price - a.price);
         break;
       case 'roi':
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const aRoi = parseInt(a.roi.split('%')[0]);
           const bRoi = parseInt(b.roi.split('%')[0]);
           return bRoi - aRoi;
         });
         break;
       case 'delivery':
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
           const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
           return aWeeks - bWeeks;
         });
         break;
       default: // innovation
-        filtered = [...filtered].sort((a, b) => {
+        filtered = [...filtered].sort((a, b) => {;
           const innovationOrder = ['Revolutionary', 'Breakthrough', 'Advanced'];
           const aIndex = innovationOrder.indexOf(a.innovationLevel.split(' - ')[0]);
           const bIndex = innovationOrder.indexOf(b.innovationLevel.split(' - ')[0]);
@@ -92,8 +91,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
       case 'Blockchain & Web3': return <Globe className="w-6 h-6" />;
@@ -108,7 +107,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
     }
   };
 
-  const getInnovationBadge = (level: string) => {
+  const getInnovationBadge = (level: string) => {;
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':
@@ -123,21 +122,41 @@ export default function UltimateInnovativeServicesShowcase2025() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
             >
               Ultimate Innovative Services 2025
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: 0.2 }}
               className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
             >
@@ -145,8 +164,18 @@ export default function UltimateInnovativeServicesShowcase2025() {
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
               transition={{ delay: 0.4 }}
               className="mt-6 flex flex-wrap justify-center gap-4"
             >
@@ -185,13 +214,13 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
             {/* Category Filter */}
             <div className="flex gap-2">
-              <select
-                value={selectedCategory}
-                onChange={(e) => {
+              <select;
+                value={selectedCategory};
+                onChange={(e) => {;
                   setSelectedCategory(e.target.value);
                   setSelectedSubcategory('all');
                 }}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
@@ -232,8 +261,18 @@ export default function UltimateInnovativeServicesShowcase2025() {
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
@@ -405,8 +444,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <p className="text-sm">https://ziontechgroup.com</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

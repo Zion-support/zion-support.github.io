@@ -33,9 +33,9 @@ export default function SOC2ComplianceTracker() {
     },
     {
       icon: Clock,
-      title: "Audit Trail",
-      description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting."
-    }
+      title: "Audit Trail",;
+      description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting.";
+    };
   ];
 
   const complianceAreas = [
@@ -66,9 +66,9 @@ export default function SOC2ComplianceTracker() {
     },
     {
       icon: FileText,
-      title: "Documentation",
-      description: "Policies, procedures, and compliance documentation management"
-    }
+      title: "Documentation",;
+      description: "Policies, procedures, and compliance documentation management";
+    };
   ];
 
   const pricingPlans = [
@@ -116,9 +116,9 @@ export default function SOC2ComplianceTracker() {
         "Advanced integrations",
         "Unlimited users",
         "Custom training"
-      ],
-      popular: false
-    }
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -139,9 +139,9 @@ export default function SOC2ComplianceTracker() {
     },
     {
       title: "Build Customer Trust",
-      description: "Demonstrate your commitment to security and compliance to build customer confidence.",
-      icon: Users
-    }
+      description: "Demonstrate your commitment to security and compliance to build customer confidence.",;
+      icon: Users;
+    };
   ];
 
   const complianceSteps = [
@@ -172,15 +172,15 @@ export default function SOC2ComplianceTracker() {
     },
     {
       step: "06",
-      title: "Ongoing Compliance",
-      description: "Maintain compliance with continuous monitoring and improvement"
-    }
+      title: "Ongoing Compliance",;
+      description: "Maintain compliance with continuous monitoring and improvement";
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="SOC2 Compliance Tracker - Zion Tech Group"
+        title = "SOC2 Compliance Tracker - Zion Tech Group"
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
         canonical="/services/soc2-compliance-tracker"
       />
@@ -192,8 +192,18 @@ export default function SOC2ComplianceTracker() {
           <div className="relative max-w-7xl mx-auto px-6">
             <div className="text-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ duration: 0.6 }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -240,9 +250,24 @@ export default function SOC2ComplianceTracker() {
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
@@ -272,9 +297,24 @@ export default function SOC2ComplianceTracker() {
               {complianceAreas.map((area, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
@@ -304,9 +344,24 @@ export default function SOC2ComplianceTracker() {
               {complianceSteps.map((step, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
@@ -336,9 +391,24 @@ export default function SOC2ComplianceTracker() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className="flex items-start space-x-4"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -370,9 +440,24 @@ export default function SOC2ComplianceTracker() {
               {pricingPlans.map((plan, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                   className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
@@ -425,8 +510,18 @@ export default function SOC2ComplianceTracker() {
         <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -451,9 +546,9 @@ export default function SOC2ComplianceTracker() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }
 

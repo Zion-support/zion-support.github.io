@@ -35,9 +35,9 @@ const teamExpertise = [
   {
     icon: "🚀",
     title: "Successful Projects",
-    description: "Successfully delivered complex technology solutions for Fortune 500 companies",
-    count: "500+"
-  }
+    description: "Successfully delivered complex technology solutions for Fortune 500 companies",;
+    count: "500+";
+  };
 ];
 
 const coreExpertise = [
@@ -46,19 +46,29 @@ const coreExpertise = [
   "Blockchain & Web3 Technologies",
   "Cloud Infrastructure & DevOps",
   "Cybersecurity & Compliance",
-  "Data Science & Analytics",
-  "IoT & Edge Computing",
-  "Mobile & Web Development"
+  "Data Science & Analytics",;
+  "IoT & Edge Computing",;
+  "Mobile & Web Development";
 ];
 
 export function TeamExpertiseSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -75,10 +85,25 @@ export function TeamExpertiseSection() {
             <motion.div
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{expertise.icon}</span>
@@ -101,10 +126,25 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
         >
           <h3 className="text-3xl font-bold text-white mb-6">
             Core Technology Expertise
@@ -119,10 +159,25 @@ export function TeamExpertiseSection() {
             <motion.div
               key={skill}
               className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition = {
+  { duration: 0.4,
+  delay: index * 0.05 
+
+
+}}
             >
               <span className="text-white font-medium text-sm">{skill}</span>
             </motion.div>
@@ -131,17 +186,32 @@ export function TeamExpertiseSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to work with experts?</span>
             <span className="text-2xl">→</span>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

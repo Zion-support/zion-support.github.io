@@ -10,20 +10,20 @@ export default function Header() {
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Quantum Computing', href: '/quantum-computing' },
     { name: 'Research & Development', href: '/research-development' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Case Studies', href: '/case-studies' },;
+    { name: 'News', href: '/news' },;
+    { name: 'Contact', href: '/contact' },;
   ];
   const services = [
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
     { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
-    { name: 'Business Intelligence', href: '/ai-business-intelligence' },
-    { name: 'Content Generation', href: '/ai-content-generator' },
-    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },
+    { name: 'Business Intelligence', href: '/ai-business-intelligence' },;
+    { name: 'Content Generation', href: '/ai-content-generator' },;
+    { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },;
   ];
   return (
-    <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <header className = "sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
@@ -133,8 +133,8 @@ export default function Header() {
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </header>
+        )};
+      </div>;
+    </header>;
   );
 }

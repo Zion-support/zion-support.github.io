@@ -34,8 +34,18 @@ const EnhancedErrorBoundary = ({ children, fallback }) => {
     const defaultFallback = (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="max-w-md mx-auto text-center p-8 bg-white rounded-xl shadow-lg"
         >
           <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">

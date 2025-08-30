@@ -14,7 +14,7 @@ import {
   MapPin,
   Calendar
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Terms() {
   const termsSections = [
@@ -35,9 +35,9 @@ export default function Terms() {
     },
     {
       icon: Globe,
-      title: 'Intellectual Property',
-      description: 'All content and technology remain the property of Zion Tech Group.'
-    }
+      title: 'Intellectual Property',;
+      description: 'All content and technology remain the property of Zion Tech Group.';
+    };
   ];
 
   const userObligations = [
@@ -62,9 +62,9 @@ export default function Terms() {
       description: 'Pay all fees and charges in accordance with agreed payment schedules.'
     },
     {
-      obligation: 'Confidentiality',
-      description: 'Maintain the confidentiality of any proprietary information shared with you.'
-    }
+      obligation: 'Confidentiality',;
+      description: 'Maintain the confidentiality of any proprietary information shared with you.';
+    };
   ];
 
   const prohibitedActivities = [
@@ -73,9 +73,9 @@ export default function Terms() {
     'Interfering with the proper functioning of our services',
     'Using our services for illegal or fraudulent activities',
     'Reverse engineering or attempting to extract source code',
-    'Harassing, threatening, or abusing other users',
-    'Violating intellectual property rights',
-    'Collecting personal information without consent'
+    'Harassing, threatening, or abusing other users',;
+    'Violating intellectual property rights',;
+    'Collecting personal information without consent';
   ];
 
   const serviceLevels = [
@@ -94,13 +94,13 @@ export default function Terms() {
     {
       level: 'Premium Support',
       description: 'Dedicated support team and 24/7 emergency response',
-      response: '1-2 hours',
-      included: false
-    }
+      response: '1-2 hours',;
+      included: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Terms of Service - Zion Tech Group"
         description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
@@ -111,8 +111,18 @@ export default function Terms() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -139,8 +149,18 @@ export default function Terms() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -157,9 +177,24 @@ export default function Terms() {
             {termsSections.map((section, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -177,8 +212,18 @@ export default function Terms() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -195,9 +240,24 @@ export default function Terms() {
             {userObligations.map((obligation, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
@@ -213,8 +273,18 @@ export default function Terms() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -235,8 +305,18 @@ export default function Terms() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -269,8 +349,18 @@ export default function Terms() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -288,9 +378,24 @@ export default function Terms() {
               {serviceLevels.map((level, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
                     level.included ? 'border-blue-400/50' : 'border-slate-700/50'
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
@@ -320,8 +425,18 @@ export default function Terms() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -357,8 +472,18 @@ export default function Terms() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -395,8 +520,18 @@ export default function Terms() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -456,8 +591,18 @@ export default function Terms() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -515,8 +660,18 @@ export default function Terms() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -555,8 +710,18 @@ export default function Terms() {
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -581,8 +746,8 @@ export default function Terms() {
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

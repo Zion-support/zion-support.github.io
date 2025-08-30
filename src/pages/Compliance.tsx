@@ -22,7 +22,7 @@ import {
   AlertTriangle,
   Info
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -83,9 +83,9 @@ export default function Compliance() {
         'Healthcare industry access',
         'Patient data protection',
         'Regulatory compliance',
-        'Trust in healthcare sector'
-      ]
-    }
+        'Trust in healthcare sector';
+      ];
+    };
   ];
 
   const industryStandards = [
@@ -134,9 +134,9 @@ export default function Compliance() {
         'OWASP Top 10',
         'Secure SDLC',
         'Code Review Standards',
-        'Vulnerability Management'
-      ]
-    }
+        'Vulnerability Management';
+      ];
+    };
   ];
 
   const complianceProcesses = [
@@ -189,9 +189,9 @@ export default function Compliance() {
         'Incident detection and reporting',
         'Compliance impact assessment',
         'Regulatory notification procedures',
-        'Post-incident compliance review'
-      ]
-    }
+        'Post-incident compliance review';
+      ];
+    };
   ];
 
   const complianceTools = [
@@ -220,9 +220,9 @@ export default function Compliance() {
       title: 'Training Portal',
       description: 'Compliance training and certification portal',
       icon: Users,
-      href: '/compliance/training',
-      color: 'from-orange-500 to-red-500'
-    }
+      href: '/compliance/training',;
+      color: 'from-orange-500 to-red-500';
+    };
   ];
 
   const contactInfo = [
@@ -237,13 +237,13 @@ export default function Compliance() {
       title: 'Audit Requests',
       description: 'Request compliance audits or assessments',
       email: 'audit@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      responseTime: '1-2 business days'
-    }
+      phone: '+1 302 464 0950',;
+      responseTime: '1-2 business days';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Compliance - Zion Tech Group"
         description="Learn about Zion Tech Group's compliance certifications, frameworks, and commitment to meeting industry standards and regulatory requirements."
@@ -253,8 +253,18 @@ export default function Compliance() {
       <div className="bg-slate-800/50 border-b border-slate-700">
         <div className="container mx-auto px-4 py-16">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -275,9 +285,24 @@ export default function Compliance() {
       {/* Compliance Commitment */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
           className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
         >
           <h2 className="text-2xl font-bold text-white mb-4">
@@ -295,9 +320,24 @@ export default function Compliance() {
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
             className="text-3xl font-bold text-white text-center mb-12"
           >
             Compliance Frameworks & Certifications
@@ -307,9 +347,24 @@ export default function Compliance() {
             {complianceFrameworks.map((framework, index) => (
               <motion.div
                 key={framework.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 + index * 0.1 
+
+
+}}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -364,9 +419,24 @@ export default function Compliance() {
       {/* Industry Standards */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+}}
           className="text-3xl font-bold text-white text-center mb-12"
         >
           Industry Standards & Best Practices
@@ -376,9 +446,24 @@ export default function Compliance() {
           {industryStandards.map((standard, index) => (
             <motion.div
               key={standard.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+}}
               className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
             >
               <div className="text-center mb-6">
@@ -406,9 +491,24 @@ export default function Compliance() {
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.7 
+
+
+}}
             className="text-3xl font-bold text-white text-center mb-12"
           >
             Compliance Processes & Procedures
@@ -418,9 +518,24 @@ export default function Compliance() {
             {complianceProcesses.map((process, index) => (
               <motion.div
                 key={process.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 + index * 0.1 
+
+
+}}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
               >
                 <div className="text-center mb-6">
@@ -451,9 +566,24 @@ export default function Compliance() {
       {/* Compliance Tools */}
       <div className="container mx-auto px-4 py-16">
         <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.9 
+
+
+}}
           className="text-3xl font-bold text-white text-center mb-12"
         >
           Compliance Tools & Resources
@@ -463,9 +593,24 @@ export default function Compliance() {
           {complianceTools.map((tool, index) => (
             <motion.div
               key={tool.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 + index * 0.1 
+
+
+}}
               className="group"
             >
               <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 h-full text-center">
@@ -485,9 +630,24 @@ export default function Compliance() {
       <div className="bg-slate-800/20 py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 1.1 
+
+
+}}
             className="text-3xl font-bold text-white text-center mb-12"
           >
             Compliance Support & Inquiries
@@ -497,9 +657,24 @@ export default function Compliance() {
             {contactInfo.map((contact, index) => (
               <motion.div
                 key={contact.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.2 + index * 0.1 
+
+
+}}
                 className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
@@ -535,9 +710,24 @@ export default function Compliance() {
       {/* Continuous Compliance */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 1.3 
+
+
+}}
           className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 text-center"
         >
           <h2 className="text-2xl font-bold text-white mb-4">
@@ -548,8 +738,8 @@ export default function Compliance() {
             update our processes, and enhance our compliance posture to ensure we always meet and exceed 
             industry standards and regulatory requirements.
           </p>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

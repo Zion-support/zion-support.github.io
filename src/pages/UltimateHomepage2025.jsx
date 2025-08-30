@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { SEO } from "@/components/SEO";
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, Users, TrendingUp, Globe, Rocket, CheckCircle, ArrowRight, Phone, Mail, MapPin, ChevronRight, Clock, BarChart3, Cpu, ShieldCheck, Building2 } from 'lucide-react';
-import ultimateInnovativeServices2025 from '../../data/2025-ultimate-innovative-services-expansion';
+import ultimateInnovativeServices2025 from "../../data/2025-ultimate-innovative-services-expansion";
 export default function UltimateHomepage2025() {
     const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
     const [isVisible, setIsVisible] = useState(false);

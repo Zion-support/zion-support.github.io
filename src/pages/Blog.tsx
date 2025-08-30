@@ -12,9 +12,9 @@ function Blog() {
   const categories = [
     { id: 'all', name: 'All Posts', count: 45 },
     { id: 'ai', name: 'AI & Machine Learning', count: 18 },
-    { id: 'quantum', name: 'Quantum Computing', count: 12 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 7 }
+    { id: 'quantum', name: 'Quantum Computing', count: 12 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },;
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 7 };
   ];
 
   const blogPosts = [
@@ -93,20 +93,19 @@ function Blog() {
       readTime: '9 min read',
       views: 389,
       featured: false,
-      tags: ['Edge Computing', 'IoT', 'Performance'],
-      image: '/images/blog/edge-computing-iot.jpg'
-    }
+      tags: ['Edge Computing', 'IoT', 'Performance'],;
+      image: '/images/blog/edge-computing-iot.jpg';
+    };
   ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredPosts = blogPosts.filter(post => {;
+    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string) => {;
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -116,13 +115,23 @@ function Blog() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -177,8 +186,18 @@ function Blog() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="text-3xl font-bold text-white mb-12 text-center"
@@ -192,10 +211,25 @@ function Blog() {
                 .map((post, index) => (
                   <motion.article
                     key={post.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                     className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
                   >
                     <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
@@ -258,8 +292,18 @@ function Blog() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-white mb-12 text-center"
@@ -273,10 +317,25 @@ function Blog() {
               .map((post, index) => (
                 <motion.article
                   key={post.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2"
                 >
                   <div className="aspect-video bg-gradient-to-br from-slate-600/20 to-slate-700/20 flex items-center justify-center">
@@ -343,8 +402,18 @@ function Blog() {
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30"
@@ -371,8 +440,8 @@ function Blog() {
               No spam, unsubscribe at any time. We respect your privacy.
             </p>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

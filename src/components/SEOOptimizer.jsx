@@ -151,8 +151,7 @@ const SEOOptimizer = () => {
         }
         return Math.round((score / maxScore) * 100);
     };
-    const identifySEOIssues = (page) => {
-        const issues = [];
+    const issues = [];
         if (!page.title || page.title.length < 30) {
             issues.push('Title is too short (should be 30-60 characters)');
         }

@@ -40,13 +40,13 @@ export function SitemapPage() {
         { name: 'White Papers', url: '/white-papers' },
         { name: 'Webinars', url: '/webinars' },
         { name: 'Documentation', url: '/docs' },
-        { name: 'API Reference', url: '/api' },
-      ]
-    }
+        { name: 'API Reference', url: '/api' },;
+      ];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white py-16">
+    <div className = "min-h-screen bg-slate-900 text-white py-16">
       <SEO 
         title="Sitemap - Zion Tech Group" 
         description="Complete sitemap of Zion Tech Group website with all pages and services organized by category."
@@ -92,8 +92,8 @@ export function SitemapPage() {
             </a>{' '}
             for assistance.
           </p>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

@@ -19,27 +19,26 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 import { 
   revolutionaryMicroSaasServices2026,
   revolutionaryITInfrastructureServices2026,
   revolutionaryAIServices2026,
   ALL_REVOLUTIONARY_SERVICES_2026
-} from '../data/comprehensiveServices2026';
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+} from "../data/comprehensiveServices2026";
+const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
   const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
-  const filteredServices = useMemo(() => {
-    let filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+  const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
       const lowerQuery = searchTerm.toLowerCase();
       filtered = filtered.filter(service => 
-        service.name.toLowerCase().includes(lowerQuery) ||
-        service.description.toLowerCase().includes(lowerQuery) ||
-        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+        service.name.toLowerCase().includes(lowerQuery) ||;
+        service.description.toLowerCase().includes(lowerQuery) ||;
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery));
       );
     }
     if (selectedCategory !== 'all') {
@@ -50,8 +49,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
     }
     return filtered;
   }, [searchTerm, selectedCategory, selectedInnovationLevel]);
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
       case 'Neural Networks': return <Brain className="w-5 h-5" />;
       case 'Blockchain Development': return <Shield className="w-5 h-5" />;
@@ -62,8 +61,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
       default: return <Zap className="w-5 h-5" />;
     }
   };
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
@@ -73,7 +72,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
   return (
     <>
       <SEO 
-        title="Revolutionary Services 2026 - Zion Tech Group"
+        title = "Revolutionary Services 2026 - Zion Tech Group"
         description="Discover Zion Tech Group's revolutionary 2026 micro SAAS, IT infrastructure, and AI services. Quantum computing, edge AI, autonomous agents, and more."
         keywords="quantum computing, edge AI, autonomous AI, blockchain, micro SAAS, IT services, AI services, 2026, Zion Tech Group"
       />
@@ -83,8 +82,18 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
@@ -94,18 +103,48 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </span>
             </motion.h1>
             <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
             >
               Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services. 
               Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
             </motion.p>
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
               className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
             >
               <span className="flex items-center gap-2">
@@ -174,9 +213,24 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Service Header */}
@@ -288,14 +342,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
             </div>
             {filteredServices.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>
-                <button
-                  onClick={() => {
+                <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
+                <button;
+                  onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedInnovationLevel('all');
                   }}
-                  className="mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
+                  className = "mt-4 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -307,8 +361,18 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20 rounded-3xl p-12 border border-white/10"
             >
@@ -341,9 +405,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 export default ComprehensiveServicesShowcase2026;

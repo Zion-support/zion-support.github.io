@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Target, 
   Brain, 
@@ -54,18 +54,18 @@ export default function AIProjectManagement() {
     },
     {
       icon: Clock,
-      title: "Time Management",
-      description: "AI-powered time tracking and productivity optimization."
-    }
+      title: "Time Management",;
+      description: "AI-powered time tracking and productivity optimization.";
+    };
   ];
 
   const benefits = [
     "Increase project completion rates by 30-50% with AI insights",
     "Reduce project delays by 40-60% through predictive analytics",
     "Improve team productivity by 25-40% with automation",
-    "Enhance resource allocation efficiency by 35-55%",
-    "Reduce project management overhead by 50-70%",
-    "Improve stakeholder communication and reporting by 45%"
+    "Enhance resource allocation efficiency by 35-55%",;
+    "Reduce project management overhead by 50-70%",;
+    "Improve stakeholder communication and reporting by 45%";
   ];
 
   const projectPhases = [
@@ -96,9 +96,9 @@ export default function AIProjectManagement() {
     },
     {
       phase: "Closure",
-      description: "Automated project documentation, lessons learned, and knowledge transfer",
-      icon: CheckCircle
-    }
+      description: "Automated project documentation, lessons learned, and knowledge transfer",;
+      icon: CheckCircle;
+    };
   ];
 
   const useCases = [
@@ -119,13 +119,13 @@ export default function AIProjectManagement() {
       description: "Clinical trial management, patient care coordination, and facility projects"
     },
     {
-      industry: "Manufacturing",
-      description: "Production planning, quality control, and supply chain optimization"
-    }
+      industry: "Manufacturing",;
+      description: "Production planning, quality control, and supply chain optimization";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Project Management - Zion Tech Group"
         description="Transform your project management with AI-powered planning, automation, and intelligent insights. Boost productivity and project success rates."
@@ -136,8 +136,18 @@ export default function AIProjectManagement() {
         <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -182,8 +192,18 @@ export default function AIProjectManagement() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -200,9 +220,24 @@ export default function AIProjectManagement() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-teal-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -220,8 +255,18 @@ export default function AIProjectManagement() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -241,9 +286,24 @@ export default function AIProjectManagement() {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                    whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                     className="flex items-start space-x-3"
                   >
                     <CheckCircle className="w-6 h-6 text-teal-400 mt-1 flex-shrink-0" />
@@ -286,8 +346,18 @@ export default function AIProjectManagement() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -304,9 +374,24 @@ export default function AIProjectManagement() {
             {projectPhases.map((phase, index) => (
               <motion.div
                 key={phase.phase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -326,8 +411,18 @@ export default function AIProjectManagement() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -344,9 +439,24 @@ export default function AIProjectManagement() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -366,8 +476,18 @@ export default function AIProjectManagement() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 p-12 rounded-2xl border border-teal-400/20 text-center"
           >
@@ -395,8 +515,8 @@ export default function AIProjectManagement() {
               </motion.button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

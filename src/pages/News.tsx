@@ -25,9 +25,9 @@ export default function News() {
     { id: 'all', name: 'All News', count: 0 },
     { id: 'ai', name: 'AI & Technology', count: 0 },
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },
-    { id: 'security', name: 'Security & Compliance', count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', count: 0 },
-    { id: 'company', name: 'Company Updates', count: 0 }
+    { id: 'security', name: 'Security & Compliance', count: 0 },;
+    { id: 'quantum', name: 'Quantum Computing', count: 0 },;
+    { id: 'company', name: 'Company Updates', count: 0 };
   ];
 
   const newsArticles = [
@@ -94,37 +94,46 @@ export default function News() {
       author: 'David Kim',
       date: '2024-11-18',
       readTime: '5 min read',
-      featured: false,
-      tags: ['Edge Computing', 'IoT', 'Real-time', 'Industrial']
-    }
+      featured: false,;
+      tags: ['Edge Computing', 'IoT', 'Real-time', 'Industrial'];
+    };
   ];
 
   // Calculate category counts
-  categories.forEach(category => {
-    if (category.id === 'all') {
+  categories.forEach(category = > {;
+    if (category.id === 'all') {;
       category.count = newsArticles.length;
     } else {
       category.count = newsArticles.filter(article => article.category === category.id).length;
     }
   });
 
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredArticles = newsArticles.filter(article => {;
+    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.5 }}
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
@@ -179,8 +188,18 @@ export default function News() {
               {filteredArticles.filter(article => article.featured).map((article, index) => (
                 <motion.article
                   key={article.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
                 >
@@ -248,8 +267,18 @@ export default function News() {
             {filteredArticles.filter(article => !article.featured).map((article, index) => (
               <motion.article
                 key={article.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
               >
@@ -311,8 +340,18 @@ export default function News() {
 
         {/* Newsletter Signup */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.5 }}
           className="mt-16 text-center"
         >
@@ -332,8 +371,8 @@ export default function News() {
               </button>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

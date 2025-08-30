@@ -24,7 +24,14 @@
     "type-check:all": "npm run type-check && npm run type-check:backend",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "npm run lint --fix || true",
-    "install:all": "npm install && cd server && npm install"
+    "install:all": "npm install && cd server && npm install",
+    "automation:start": "./scripts/start-error-automation.sh",
+    "automation:stop": "pm2 stop all",
+    "automation:restart": "pm2 restart all",
+    "automation:status": "pm2 status",
+    "automation:logs": "pm2 logs",
+    "automation:error-fix": "node scripts/automation/error-fixer-automation.cjs",
+    "automation:comprehensive": "node scripts/automation/comprehensive-error-automation.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",

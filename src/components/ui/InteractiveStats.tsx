@@ -22,9 +22,9 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
           <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
           <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
           <div className="text-gray-300 text-sm">{stat.description}</div>
-        </div>
-      ))}
-    </div>
+        </div>;
+      ))};
+    </div>;
   );
 };
 

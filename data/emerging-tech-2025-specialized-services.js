@@ -654,7 +654,7 @@ export const EMERGING_TECH_2025_SPECIALIZED_SERVICES = [
 ];
 // Market analysis for emerging technology services
 export const EMERGING_TECH_MARKET_ANALYSIS = {
-    totalMarketSize: '$892B',
+  totalMarketSize: '$892B',
     growthRate: '18.4% CAGR',
     keyTrends: [
         'Blockchain and Web3 adoption',
@@ -670,6 +670,9 @@ export const EMERGING_TECH_MARKET_ANALYSIS = {
         'Comprehensive technology stack integration',
         'Global network and infrastructure',
         'Regulatory compliance expertise',
-        'Sustainable technology focus'
+  'Sustainable technology focus'
     ]
+
+
+
 };

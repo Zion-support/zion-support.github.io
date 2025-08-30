@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('📊 Starting continuous performance monitoring automation...');
@@ -68,13 +67,6 @@ async function runPerformanceMonitor() {
     
     // Generate performance report
     console.log('📊 Generating performance report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      buildSize: getDirectorySize(distPath),
-      largeFiles: findLargeFiles(distPath),
-      summary: 'Performance monitoring completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`✅ Performance report saved to ${reportPath}`);

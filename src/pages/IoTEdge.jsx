@@ -25,105 +25,6 @@ import {
   Cpu
 } from 'lucide-react';
 
-const iotEdgeSolutions = [
-  {
-    id: 1,
-    title: "IoT Device Management",
-    description: "Comprehensive platform for managing and monitoring IoT devices at scale.",
-    icon: Wifi,
-    features: [
-      "Device provisioning",
-      "Remote monitoring",
-      "Firmware updates",
-      "Device analytics"
-    ],
-    price: "From $30,000",
-    timeline: "16-24 weeks",
-    category: "IoT Platform",
-    technologies: ["MQTT", "CoAP", "HTTP", "WebSocket"]
-  },
-  {
-    id: 2,
-    title: "Edge Computing Infrastructure",
-    description: "Distributed edge computing solutions for real-time data processing.",
-    icon: Server,
-    features: [
-      "Edge nodes setup",
-      "Data processing",
-      "Load balancing",
-      "Failover systems"
-    ],
-    price: "From $40,000",
-    timeline: "20-32 weeks",
-    category: "Edge Computing",
-    technologies: ["Kubernetes", "Docker", "Apache Kafka", "Redis"]
-  },
-  {
-    id: 3,
-    title: "Real-Time Data Analytics",
-    description: "Streaming analytics platform for processing IoT data in real-time.",
-    icon: Activity,
-    features: [
-      "Stream processing",
-      "Real-time alerts",
-      "Predictive analytics",
-      "Data visualization"
-    ],
-    price: "From $35,000",
-    timeline: "18-26 weeks",
-    category: "Analytics",
-    technologies: ["Apache Spark", "Apache Flink", "InfluxDB", "Grafana"]
-  },
-  {
-    id: 4,
-    title: "Smart City Solutions",
-    description: "IoT infrastructure for smart city applications and urban management.",
-    icon: Globe,
-    features: [
-      "Traffic management",
-      "Environmental monitoring",
-      "Smart lighting",
-      "Public safety"
-    ],
-    price: "From $100,000",
-    timeline: "32-48 weeks",
-    category: "Smart Cities",
-    technologies: ["LoRaWAN", "NB-IoT", "5G", "Cloud Platforms"]
-  },
-  {
-    id: 5,
-    title: "Industrial IoT (IIoT)",
-    description: "Connected manufacturing and industrial automation solutions.",
-    icon: Cpu,
-    features: [
-      "Equipment monitoring",
-      "Predictive maintenance",
-      "Quality control",
-      "Energy optimization"
-    ],
-    price: "From $80,000",
-    timeline: "24-36 weeks",
-    category: "Industrial IoT",
-    technologies: ["OPC UA", "Modbus", "Ethernet/IP", "Profinet"]
-  },
-  {
-    id: 6,
-    title: "IoT Security Framework",
-    description: "Comprehensive security solutions for IoT and edge computing environments.",
-    icon: Shield,
-    features: [
-      "Device authentication",
-      "Data encryption",
-      "Access control",
-      "Threat detection"
-    ],
-    price: "From $45,000",
-    timeline: "16-24 weeks",
-    category: "Security",
-    technologies: ["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
-  }
-];
-
 const iotTechnologies = [
   {
     name: "MQTT Protocol",
@@ -238,15 +139,40 @@ export default function IoTEdge() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Wifi className="w-10 h-10 text-white" />
@@ -284,8 +210,18 @@ export default function IoTEdge() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -299,9 +235,24 @@ export default function IoTEdge() {
             {iotTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -331,8 +282,18 @@ export default function IoTEdge() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -346,9 +307,24 @@ export default function IoTEdge() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -375,8 +351,18 @@ export default function IoTEdge() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -407,9 +393,24 @@ export default function IoTEdge() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -464,8 +465,18 @@ export default function IoTEdge() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -479,9 +490,24 @@ export default function IoTEdge() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -525,8 +551,18 @@ export default function IoTEdge() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

@@ -21,7 +21,7 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Leadership() {
   const leadershipTeam = [
@@ -62,9 +62,9 @@ export default function Leadership() {
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
       expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
       linkedin: 'https://linkedin.com/in/emilywatson',
-      email: 'emily@ziontechgroup.com',
-      phone: '+1 302 464 0953'
-    }
+      email: 'emily@ziontechgroup.com',;
+      phone: '+1 302 464 0953';
+    };
   ];
 
   const values = [
@@ -85,9 +85,9 @@ export default function Leadership() {
     },
     {
       icon: Globe,
-      title: 'Global Impact',
-      description: 'We believe technology should make the world better for everyone, everywhere.'
-    }
+      title: 'Global Impact',;
+      description: 'We believe technology should make the world better for everyone, everywhere.';
+    };
   ];
 
   const achievements = [
@@ -108,13 +108,13 @@ export default function Leadership() {
     },
     {
       metric: '25+',
-      label: 'Industry Awards',
-      description: 'Recognition for innovation and excellence in technology'
-    }
+      label: 'Industry Awards',;
+      description: 'Recognition for innovation and excellence in technology';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Leadership - Zion Tech Group"
         description="Meet the visionary leaders driving innovation at Zion Tech Group. Our experienced team is committed to transforming businesses through cutting-edge AI and technology solutions."
@@ -338,8 +338,8 @@ export default function Leadership() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

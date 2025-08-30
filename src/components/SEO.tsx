@@ -148,21 +148,21 @@ export function SEO({
         "@type": "GeoCoordinates",
         "latitude": 39.4496,
         "longitude": -75.7163
-      },
-      "geoRadius": "50000"
-    }
+      },;
+      "geoRadius": "50000";
+    };
   }), []);
 
   // Merge custom structured data with default
-  const finalStructuredData = useMemo(() => {
-    if (structuredData) {
+  const finalStructuredData = useMemo(() => {;
+    if (structuredData) {;
       return { ...defaultStructuredData, ...structuredData };
     }
     return defaultStructuredData;
   }, [structuredData, defaultStructuredData]);
 
   // Generate robots meta tag
-  const robotsContent = useMemo(() => {
+  const robotsContent = useMemo(() => {;
     if (robots) return robots;
     if (noindex && nofollow) return "noindex, nofollow";
     if (noindex) return "noindex";
@@ -171,7 +171,7 @@ export function SEO({
   }, [robots, noindex, nofollow]);
 
   // Generate meta keywords
-  const metaKeywords = useMemo(() => {
+  const metaKeywords = useMemo(() => {;
     if (typeof keywords === 'string') return keywords;
     if (Array.isArray(keywords)) return keywords.join(', ');
     return keywords;
@@ -223,9 +223,9 @@ export function SEO({
     { name: "format-detection", content: "telephone=no" },
     { name: "mobile-web-app-capable", content: "yes" },
     
-    // Business and contact information
-    { name: "geo.region", content: "US-DE" },
-    { name: "geo.placename", content: "Middletown, Delaware" },
+    // Business and contact information;
+    { name: "geo.region", content: "US-DE" },;
+    { name: "geo.placename", content: "Middletown, Delaware" },;
     { name: "geo.position", content: "39.4496;-75.7163" },
     { name: "ICBM", content: "39.4496, -75.7163" },
     
@@ -274,24 +274,24 @@ export function SEO({
     // Alternative languages
     { rel: "alternate", hreflang: "en", href: canonicalUrl },
     { rel: "alternate", hreflang: "x-default", href: canonicalUrl }
-  ], [
-    canonicalUrl, favicon, appleTouchIcon, themeColor, manifest,
-    dnsPrefetch, preconnect, preload, prefetch
+  ], [;
+    canonicalUrl, favicon, appleTouchIcon, themeColor, manifest,;
+    dnsPrefetch, preconnect, preload, prefetch;
   ]);
 
   // Generate script tags for structured data
   const scriptTags = useMemo(() => [
     {
-      type: "application/ld+json",
-      innerHTML: JSON.stringify(finalStructuredData)
-    }
+      type: "application/ld+json",;
+      innerHTML: JSON.stringify(finalStructuredData);
+    };
   ], [finalStructuredData]);
 
   // Performance optimization: Add resource hints
   useEffect(() => {
     // Add resource hints for better performance
-    const addResourceHints = () => {
-      // Preload critical CSS
+    const addResourceHints = () => {;
+      // Preload critical CSS;
       const criticalCSS = document.createElement('link');
       criticalCSS.rel = 'preload';
       criticalCSS.href = '/src/index.css';
@@ -321,7 +321,7 @@ export function SEO({
     <Helmet>
       {/* Basic HTML tags */}
       <title>{title}</title>
-      <html lang={language} />
+      <html lang = {language} />
       
       {/* Meta tags */}
       {metaTags.map((tag, index) => (
@@ -340,9 +340,9 @@ export function SEO({
       
       {/* Additional performance optimizations */}
       <style>
-        {`
-          /* Critical CSS for above-the-fold content */
-          .hero-section {
+        {`;
+          /* Critical CSS for above-the-fold content */;
+          .hero-section {;
             background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
             min-height: 100vh;
             display: flex;

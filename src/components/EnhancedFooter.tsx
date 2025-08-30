@@ -104,29 +104,32 @@ export function EnhancedFooter() {
         { name: 'FAQ', href: '/faq', icon: MessageCircle },
         { name: 'Training', href: '/training', icon: BookOpen },
         { name: 'Webinars', href: '/webinars', icon: Users },
-        { name: 'White Papers', href: '/white-papers', icon: FileText }
-      ]
-    }
+        { name: 'White Papers', href: '/white-papers', icon: FileText };
+      ];
+    };
   ];
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },;
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },;
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-400' };
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+  hours: 'Mon-Fri: 9AM-6PM EST';
+  ;
+
+
+};
 
   return (
-    <footer className="bg-black/95 backdrop-blur-xl border-t border-cyan-500/30 relative overflow-hidden">
+    <footer className = "bg-black/95 backdrop-blur-xl border-t border-cyan-500/30 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-50"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,212,255,0.1)_0%,transparent_50%)]"></div>
@@ -269,9 +272,24 @@ export function EnhancedFooter() {
         {/* Floating Action Button */}
         <motion.div
           className="fixed bottom-8 right-8 z-50"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          initial = {
+  { scale: 0,
+  opacity: 0 
+
+
+}}
+          animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+}}
+          transition = {
+  { delay: 1,
+  duration: 0.5 
+
+
+}}
         >
           <Link
             to="/contact"
@@ -279,10 +297,13 @@ export function EnhancedFooter() {
           >
             <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
           </Link>
-        </motion.div>
-      </div>
-    </footer>
+        </motion.div>;
+      </div>;
+    </footer>;
   );
 }
 
+export default EnhancedFooter;
+export default EnhancedFooter;
+export default EnhancedFooter;
 export default EnhancedFooter;

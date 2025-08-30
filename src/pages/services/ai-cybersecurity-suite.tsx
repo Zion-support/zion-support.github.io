@@ -8,7 +8,7 @@ export default function AICybersecuritySuite() {
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
-        <meta name="description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
+        <meta name = "description" content="Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning." />
         <meta name="keywords" content="AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence" />
       </Helmet>
 
@@ -307,8 +307,8 @@ export default function AICybersecuritySuite() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

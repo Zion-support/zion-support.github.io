@@ -11,58 +11,66 @@ export interface ChatAssistantProps {
   isOpen?: boolean;
   onClose?: () => void;
 }
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
+export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: string) => {
+  const handleSendMessage = async (message: string) => {;
     if (!message.trim()) return;
     const userMessage: Message = {
-      id: Date.now().toString(),
+  id: Date.now().toString(),
       role: 'user',
       message: message.trim(),
-      timestamp: new Date(),
-    };
+      timestamp: new Date(),;
+  ;
+  ;
+
+
+};
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: (Date.now() + 1).toString(),
+  id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
-        timestamp: new Date(),
-      };
+        timestamp: new Date(),;
+  ;
+  ;
+
+
+};
       setMessages(prev => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
     handleSendMessage(inputMessage);
   };
-  const toggleChat = () => {
+  const toggleChat = () => {;
     setIsChatOpen(!isChatOpen);
   };
-  const closeChat = () => {
+  const closeChat = () => {;
     setIsChatOpen(false);
     if (onClose) onClose();
   };
   if (!isChatOpen) {
     return (
       <button
-        onClick={toggleChat}
+        onClick = {toggleChat}
         className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
         aria-label="Open chat"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-      </button>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />;
+        </svg>;
+      </button>;
     );
   }
   return (
-    <div className="fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
+    <div className = "fixed bottom-6 right-6 w-96 h-96 bg-white rounded-lg shadow-xl border border-gray-200 z-50 flex flex-col">
       {/* Header */}
       <div className="bg-zion-cyan text-zion-blue-dark p-4 rounded-t-lg flex items-center justify-between">
         <h3 className="font-semibold">Chat with Zion Tech Group</h3>
@@ -118,8 +126,8 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
           >
             <Send size={20} />
           </button>
-        </div>
-      </form>
-    </div>
+        </div>;
+      </form>;
+    </div>;
   );
 }

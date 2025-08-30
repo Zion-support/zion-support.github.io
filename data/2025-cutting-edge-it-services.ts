@@ -261,7 +261,7 @@ export const cuttingEdgeITServices2025 = [
       'Incident response automation',
       'Quality assurance automation'
     ],
-    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
-    compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols']
-  }
+    integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],;
+    compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols'];
+  };
 ];

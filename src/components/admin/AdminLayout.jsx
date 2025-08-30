@@ -20,3 +20,7 @@ export function AdminLayout({ children }) {
     </div>);
 }
 export default AdminLayout;
+
+export default AdminLayout;
+export default AdminLayout;
+export default AdminLayout;

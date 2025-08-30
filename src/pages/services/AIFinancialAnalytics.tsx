@@ -7,18 +7,18 @@ export default function AIFinancialAnalytics() {
     'Automated financial reporting and compliance',
     'Risk assessment and portfolio optimization',
     'Predictive analytics for investment decisions',
-    'Multi-currency and global market support',
-    'Advanced visualization and dashboard tools',
-    'Secure, SOC 2 compliant data handling'
+    'Multi-currency and global market support',;
+    'Advanced visualization and dashboard tools',;
+    'Secure, SOC 2 compliant data handling';
   ];
 
   const benefits = [
     'Improve investment returns by 25-40%',
     'Reduce financial analysis time by 80%',
     'Automate compliance and reporting',
-    'Real-time market insights and alerts',
-    'Predict market trends with 85% accuracy',
-    'Optimize portfolio allocation automatically'
+    'Real-time market insights and alerts',;
+    'Predict market trends with 85% accuracy',;
+    'Optimize portfolio allocation automatically';
   ];
 
   const pricing = [
@@ -37,18 +37,18 @@ export default function AIFinancialAnalytics() {
     { 
       name: 'Enterprise', 
       price: '$1,299/mo', 
-      features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
-      popular: false
-    }
+      features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],;
+      popular: false;
+    };
   ];
 
   const useCases = [
     'Investment portfolio management',
     'Financial planning and advisory',
     'Risk management and compliance',
-    'Market research and analysis',
-    'Trading strategy optimization',
-    'Corporate financial planning'
+    'Market research and analysis',;
+    'Trading strategy optimization',;
+    'Corporate financial planning';
   ];
 
   const analyticsTypes = [
@@ -57,13 +57,13 @@ export default function AIFinancialAnalytics() {
     'Market Trend Prediction',
     'Asset Allocation Optimization',
     'Compliance & Regulatory Reporting',
-    'Real-time Market Monitoring',
-    'Financial Forecasting',
-    'Stress Testing & Scenarios'
+    'Real-time Market Monitoring',;
+    'Financial Forecasting',;
+    'Stress Testing & Scenarios';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
@@ -315,8 +315,8 @@ export default function AIFinancialAnalytics() {
           >
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

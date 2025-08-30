@@ -19,16 +19,26 @@ export function ContactSection() {
     {
       icon: MapPin,
       title: "Address",
-      value: "364 E Main St STE 1008 Middletown DE 19709",
-      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-    }
+      value: "364 E Main St STE 1008 Middletown DE 19709",;
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
+    };
   ];
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8">
+    <section className = "py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -44,9 +54,24 @@ export function ContactSection() {
           {contactInfo.map((contact, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -62,8 +87,18 @@ export function ContactSection() {
           ))}
         </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center"
@@ -75,9 +110,13 @@ export function ContactSection() {
             Contact Us Today
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }
+export default ContactSection;
+
+export default ContactSection;
+export default ContactSection;
 export default ContactSection;

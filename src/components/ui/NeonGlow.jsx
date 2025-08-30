@@ -22,7 +22,12 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
         return intensityMap[intensity];
     };
     const glowStyles = getGlowStyles();
-    return (<span className={cn('transition-all duration-300', className)} style={glowStyles}>
+    return (<span className = {
+  cn('transition-all duration-300',
+  className)
+
+
+} style={glowStyles}>
       {children}
     </span>);
 }

@@ -29,7 +29,7 @@ export const useAuthState = () => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'null') {
           const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
           if (auth) {
             const parsed = JSON.parse(auth);

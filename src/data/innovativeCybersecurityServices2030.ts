@@ -54,8 +54,11 @@ export interface CybersecurityService {
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  website: "https://ziontechgroup.com",;
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+;
+
+
 };
 
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
@@ -146,7 +149,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     availability: "Global",
     location: "Global",
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
     trending: true
@@ -520,9 +523,9 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
     image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
-  }
+    featured: true,;
+    trending: true;
+  };
 ];
 
 export default innovativeCybersecurityServices2030;

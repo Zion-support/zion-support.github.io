@@ -8,7 +8,7 @@ export default function BlockchainEnterpriseSolutions() {
     <>
       <Helmet>
         <title>Blockchain Enterprise Solutions - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
+        <meta name = "description" content="Transform your business with enterprise blockchain solutions. Secure transactions, smart contracts, and decentralized applications for modern enterprises." />
         <meta name="keywords" content="blockchain, enterprise blockchain, smart contracts, DeFi, distributed ledger, cryptocurrency, enterprise solutions" />
       </Helmet>
 
@@ -361,8 +361,8 @@ export default function BlockchainEnterpriseSolutions() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

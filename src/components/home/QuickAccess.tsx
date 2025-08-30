@@ -96,7 +96,7 @@ import {
   Sparkles
 } from 'lucide-react';
 
-const QuickAccess: React.FC = () => {
+const QuickAccess: React.FC = () => {;
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
@@ -164,9 +164,9 @@ const QuickAccess: React.FC = () => {
       bgColor: "bg-zion-purple/10",
       borderColor: "border-zion-purple/20",
       path: "/micro-saas",
-      features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],
-      stats: { solutions: "25+", deployment: "<1hr", success: "90%" }
-    }
+      features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],;
+      stats: { solutions: "25+", deployment: "<1hr", success: "90%" };
+    };
   ];
 
   const containerVariants = {
@@ -174,37 +174,44 @@ const QuickAccess: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
+  hidden: { opacity: 0, y: 20,
+  scale: 0.95 
+
+
+},
     visible: { 
       opacity: 1, 
       y: 0, 
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut";
+      };
+    };
   };
 
   const hoverVariants = {
-    hover: { 
+  hover: { 
       y: -8, 
       scale: 1.02,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
-      }
-    }
+  ease: "easeOut"
+      
+
+;
+};
+    };
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
+    <section className = "py-20 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 left-20 w-64 h-64 bg-zion-cyan/10 rounded-full blur-3xl"></div>
@@ -215,8 +222,18 @@ const QuickAccess: React.FC = () => {
       <div className="container-responsive relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -224,7 +241,12 @@ const QuickAccess: React.FC = () => {
           <motion.div
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
           >
@@ -297,9 +319,24 @@ const QuickAccess: React.FC = () => {
                   {link.features.slice(0, 2).map((feature, idx) => (
                     <motion.div
                       key={feature}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.4, delay: 0.1 + idx * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  x: -10 
+
+
+}}
+                      whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                      transition = {
+  { duration: 0.4,
+  delay: 0.1 + idx * 0.1 
+
+
+}}
                       viewport={{ once: true }}
                       className="flex items-center gap-2 text-xs text-gray-400"
                     >
@@ -316,9 +353,24 @@ const QuickAccess: React.FC = () => {
                   {Object.entries(link.stats).slice(0, 2).map(([key, value], idx) => (
                     <motion.div
                       key={key}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: 0.2 + idx * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+                      whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                      transition = {
+  { duration: 0.4,
+  delay: 0.2 + idx * 0.1 
+
+
+}}
                       viewport={{ once: true }}
                       className="text-center"
                     >
@@ -349,9 +401,24 @@ const QuickAccess: React.FC = () => {
 
         {/* Enhanced CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
           viewport={{ once: true }}
           className="text-center"
         >
@@ -378,9 +445,9 @@ const QuickAccess: React.FC = () => {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };
 

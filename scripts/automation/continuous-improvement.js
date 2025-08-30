@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🚀 Starting continuous improvement automation...');
@@ -65,12 +64,6 @@ async function runContinuousImprovement() {
     }
     
     // Generate report
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Continuous improvement completed',
-      status: 'completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'continuous-improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);

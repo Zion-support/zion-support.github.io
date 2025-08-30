@@ -35,15 +35,15 @@ const Cookies = () => {
   const [expandedSections, setExpandedSections] = useState({
     essential: true,
     functional: false,
-    analytics: false,
-    marketing: false,
-    preferences: false
+    analytics: false,;
+    marketing: false,;
+    preferences: false;
   });
 
   const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
+    setExpandedSections(prev => ({;
+      ...prev,;
+      [section]: !prev[section];
     }));
   };
 
@@ -115,9 +115,9 @@ const Cookies = () => {
         'Notification settings',
         'Accessibility options',
         'Theme selection'
-      ],
-      alwaysActive: false
-    }
+      ],;
+      alwaysActive: false;
+    };
   ];
 
   const cookieTable = [
@@ -167,13 +167,13 @@ const Cookies = () => {
       name: 'preferences',
       purpose: 'Stores your website preferences and settings',
       duration: '1 year',
-      category: 'Preferences',
-      provider: 'Zion Tech Group'
-    }
+      category: 'Preferences',;
+      provider: 'Zion Tech Group';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -183,8 +183,18 @@ const Cookies = () => {
         
         <motion.div 
           className="container mx-auto px-4 text-center relative z-10"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <div className="flex justify-center mb-8">
@@ -239,9 +249,24 @@ const Cookies = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -254,9 +279,24 @@ const Cookies = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: 0.2 
+
+
+}}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -269,9 +309,24 @@ const Cookies = () => {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: 0.3 
+
+
+}}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -304,9 +359,24 @@ const Cookies = () => {
             {cookieCategories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="p-6">
@@ -342,9 +412,24 @@ const Cookies = () => {
 
                   {expandedSections[category.id] && (
                     <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
+                      initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                      animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                      exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                       transition={{ duration: 0.3 }}
                       className="border-t border-zion-cyan/20 pt-4"
                     >
@@ -499,10 +584,14 @@ const Cookies = () => {
               Terms of Service
             </button>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 
 export default Cookies;
+
+export default properly;
+export default properly;
+export default properly;

@@ -2,10 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
-import App from './App'
+import App from "./App"
 import './index.css'
-import { registerServiceWorker } from './utils/serviceWorker'
-import { ErrorBoundary } from './components/ErrorBoundary'
+import { registerServiceWorker } from "./utils/serviceWorker"
+import { ErrorBoundary } from "./components/ErrorBoundary"
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 // Register service worker with error handling
 try {
-  registerServiceWorker().catch(error => {
+  registerServiceWorker().catch(error = > {;
     console.warn('Service worker registration failed:', error);
   });
 } catch (error) {

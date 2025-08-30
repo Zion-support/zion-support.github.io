@@ -154,9 +154,9 @@ export default function Resources() {
         { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
         { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },
         { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },
-        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false }
-      ]
-    }
+        { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
+      ];
+    };
   ];
 
   const additionalResources = [
@@ -189,25 +189,38 @@ export default function Resources() {
       title: 'Community Forum',
       icon: Users,
       description: 'Connect with peers and experts',
-      color: 'from-orange-500 to-red-500',
-      href: '/community'
-    }
+      color: 'from-orange-500 to-red-500',;
+      href: '/community';
+    };
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -246,8 +259,18 @@ export default function Resources() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -264,9 +287,24 @@ export default function Resources() {
             {resourceCategories.filter(cat => cat.featured).map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative"
               >
@@ -318,8 +356,18 @@ export default function Resources() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -337,9 +385,24 @@ export default function Resources() {
               <motion.div
                 key={category.id}
                 id={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+}}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
               >
@@ -380,8 +443,18 @@ export default function Resources() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -399,9 +472,24 @@ export default function Resources() {
               <motion.div
                 key={resource.id}
                 id={resource.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
               >
@@ -434,8 +522,18 @@ export default function Resources() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
@@ -505,8 +603,8 @@ export default function Resources() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

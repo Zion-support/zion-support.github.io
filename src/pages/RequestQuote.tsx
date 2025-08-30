@@ -84,18 +84,18 @@ const industries = [
   'Non-profit',
   'Real Estate',
   'Transportation',
-  'Energy',
-  'Media & Entertainment',
-  'Other'
+  'Energy',;
+  'Media & Entertainment',;
+  'Other';
 ];
 
 const companySizes = [
   '1-10 employees',
   '11-50 employees',
   '51-200 employees',
-  '201-500 employees',
-  '501-1000 employees',
-  '1000+ employees'
+  '201-500 employees',;
+  '501-1000 employees',;
+  '1000+ employees';
 ];
 
 const projectTypes = [
@@ -103,9 +103,9 @@ const projectTypes = [
   'System Integration',
   'Migration/Upgrade',
   'Consulting',
-  'Support & Maintenance',
-  'Custom Solution',
-  'Other'
+  'Support & Maintenance',;
+  'Custom Solution',;
+  'Other';
 ];
 
 const services = [
@@ -114,42 +114,42 @@ const services = [
   'Cybersecurity',
   'IoT & Edge Computing',
   'Quantum Computing',
-  'Digital Transformation',
-  'IT Infrastructure',
-  'Technology Consulting'
+  'Digital Transformation',;
+  'IT Infrastructure',;
+  'Technology Consulting';
 ];
 
 const budgets = [
   'Under $10,000',
   '$10,000 - $50,000',
   '$50,000 - $100,000',
-  '$100,000 - $500,000',
-  '$500,000 - $1,000,000',
-  'Over $1,000,000'
+  '$100,000 - $500,000',;
+  '$500,000 - $1,000,000',;
+  'Over $1,000,000';
 ];
 
 const timelines = [
   'Immediate (1-2 weeks)',
   'Quick (1-2 months)',
   'Standard (3-6 months)',
-  'Extended (6-12 months)',
-  'Long-term (12+ months)',
-  'Flexible'
+  'Extended (6-12 months)',;
+  'Long-term (12+ months)',;
+  'Flexible';
 ];
 
 const urgencyLevels = [
   'Low - Planning phase',
-  'Medium - Need within 3 months',
-  'High - Need within 1 month',
-  'Critical - Need immediately'
+  'Medium - Need within 3 months',;
+  'High - Need within 1 month',;
+  'Critical - Need immediately';
 ];
 
 const teamSizes = [
   '1-5 people',
   '6-15 people',
-  '16-50 people',
-  '51-100 people',
-  '100+ people'
+  '16-50 people',;
+  '51-100 people',;
+  '100+ people';
 ];
 
 export default function RequestQuote() {
@@ -187,40 +187,40 @@ export default function RequestQuote() {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
+    setFormData(prev = > ({;
+      ...prev,;
+      [name]: value;
     }));
   };
 
   const handleServiceToggle = (service: string) => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
-        : [...prev.services, service]
+      services: prev.services.includes(service);
+        ? prev.services.filter(s => s !== service);
+        : [...prev.services, service];
     }));
   };
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string) => {;
     setExpandedSection(expandedSection === section ? null : section);
   };
 
-  const nextStep = () => {
-    if (currentStep < totalSteps) {
+  const nextStep = () => {;
+    if (currentStep < totalSteps) {;
       setCurrentStep(currentStep + 1);
     }
   };
 
-  const prevStep = () => {
-    if (currentStep > 1) {
+  const prevStep = () => {;
+    if (currentStep > 1) {;
       setCurrentStep(currentStep - 1);
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -263,9 +263,9 @@ export default function RequestQuote() {
     }, 2000);
   };
 
-  const isStepValid = (step: number) => {
-    switch (step) {
-      case 1:
+  const isStepValid = (step: number) => {;
+    switch (step) {;
+      case 1:;
         return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
       case 2:
         return formData.projectTitle && formData.projectDescription && formData.projectType && formData.services.length > 0;
@@ -278,8 +278,8 @@ export default function RequestQuote() {
     }
   };
 
-  const getStepIcon = (step: number) => {
-    switch (step) {
+  const getStepIcon = (step: number) => {;
+    switch (step) {;
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
       case 3: return <Calculator className="h-5 w-5" />;
@@ -288,8 +288,8 @@ export default function RequestQuote() {
     }
   };
 
-  const getStepTitle = (step: number) => {
-    switch (step) {
+  const getStepTitle = (step: number) => {;
+    switch (step) {;
       case 1: return 'Company & Contact';
       case 2: return 'Project Details';
       case 3: return 'Budget & Timeline';
@@ -299,13 +299,23 @@ export default function RequestQuote() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -320,9 +330,24 @@ export default function RequestQuote() {
         {/* Progress Steps */}
         <motion.div 
           className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto">
             {Array.from({ length: totalSteps }, (_, index) => (
@@ -365,8 +390,18 @@ export default function RequestQuote() {
         {/* Success Message */}
         {submitStatus === 'success' && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
             className="mb-8 p-6 bg-green-500/20 border border-green-500/30 rounded-2xl flex items-center gap-4 max-w-2xl mx-auto"
           >
             <CheckCircle className="h-8 w-8 text-green-500" />
@@ -383,16 +418,41 @@ export default function RequestQuote() {
         {/* Quote Form */}
         <motion.div 
           className="max-w-4xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
         >
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8">
             {/* Step 1: Company & Contact Information */}
             {currentStep === 1 && (
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
@@ -558,8 +618,18 @@ export default function RequestQuote() {
             {/* Step 2: Project Details */}
             {currentStep === 2 && (
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
@@ -647,8 +717,18 @@ export default function RequestQuote() {
             {/* Step 3: Budget & Timeline */}
             {currentStep === 3 && (
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
@@ -727,8 +807,18 @@ export default function RequestQuote() {
             {/* Step 4: Additional Information */}
             {currentStep === 4 && (
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
                 transition={{ duration: 0.4 }}
                 className="space-y-6"
               >
@@ -872,9 +962,24 @@ export default function RequestQuote() {
         {/* Why Choose Zion Tech Group */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <h2 className="text-3xl font-bold text-white mb-12">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -913,9 +1018,24 @@ export default function RequestQuote() {
         {/* Contact Information */}
         <motion.div 
           className="mt-20 text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
         >
           <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8 max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-6">Need Immediate Assistance?</h2>
@@ -939,8 +1059,8 @@ export default function RequestQuote() {
               </a>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

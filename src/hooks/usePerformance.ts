@@ -44,7 +44,7 @@ export function usePerformance() {
       return;
     }
     // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
+    const fcpObserver = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
       if (fcpEntry) {
@@ -52,7 +52,7 @@ export function usePerformance() {
       }
     });
     // Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       const lcpEntry = entries[entries.length - 1];
       if (lcpEntry) {
@@ -60,7 +60,7 @@ export function usePerformance() {
       }
     });
     // First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       const fidEntry = entries[entries.length - 1] as FirstInputEntry;
       if (fidEntry && 'processingStart' in fidEntry) {
@@ -68,8 +68,7 @@ export function usePerformance() {
       }
     });
     // Cumulative Layout Shift (CLS)
-    const clsObserver = new PerformanceObserver((list) => {
-      let clsValue = 0;
+    const clsValue = 0;
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as LayoutShiftEntry;
         if (!layoutShiftEntry.hadRecentInput) {
@@ -90,11 +89,11 @@ export function usePerformance() {
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      setMetrics(prev => ({
+      setMetrics(prev = > ({
         ...prev,
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
-        domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-        windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,;
+        domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,;
+        windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
       }));
     }
     // Cleanup
@@ -108,11 +107,15 @@ export function usePerformance() {
   // Get performance rating
   const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
     const thresholds = {
-      fcp: { good: 1800, poor: 3000 },
+  fcp: { good: 1800,
+  poor: 3000 
+
+
+},
       lcp: { good: 2500, poor: 4000 },
-      fid: { good: 100, poor: 300 },
-      cls: { good: 0.1, poor: 0.25 },
-      ttfb: { good: 800, poor: 1800 },
+      fid: { good: 100, poor: 300 },;
+      cls: { good: 0.1, poor: 0.25 },;
+      ttfb: { good: 800, poor: 1800 },;
     };
     const threshold = thresholds[metric];
     if (!threshold) return 'good';
@@ -121,7 +124,7 @@ export function usePerformance() {
     return 'poor';
   };
   // Get all metrics with ratings
-  const getMetricsWithRatings = () => {
+  const getMetricsWithRatings = () => {;
     const result: PerformanceObserverEntry[] = [];
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== null) {
@@ -135,7 +138,7 @@ export function usePerformance() {
     return result;
   };
   // Log performance metrics
-  const logMetrics = () => {
+  const logMetrics = () => {;
     const metricsWithRatings = getMetricsWithRatings();
     console.group('🚀 Performance Metrics');
     // Measure basic timing
@@ -143,11 +146,11 @@ export function usePerformance() {
     console.groupEnd();
   };
   // Get performance score (0-100)
-  const getPerformanceScore = () => {
+  const getPerformanceScore = () => {;
     const metricsWithRatings = getMetricsWithRatings();
     if (metricsWithRatings.length === 0) return 0;
-    const scores = metricsWithRatings.map(({ rating }) => {
-      switch (rating) {
+    const scores = metricsWithRatings.map(({ rating }) => {;
+      switch (rating) {;
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
@@ -159,7 +162,7 @@ export function usePerformance() {
   // Monitor long tasks
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
-    const longTaskObserver = new PerformanceObserver((list) => {
+    const longTaskObserver = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
@@ -193,7 +196,7 @@ export function usePerformance() {
 export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
   useEffect(() => {
     if (!('PerformanceObserver' in window)) return;
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       list.getEntries().forEach(callback);
     });
     try {

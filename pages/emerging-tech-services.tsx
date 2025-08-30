@@ -1,9 +1,9 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { EMERGING_TECH_SERVICES_2027 } from '../data/emergingTechServices2027';
+import { EMERGING_TECH_SERVICES_2027 } from "../data/emergingTechServices2027";
 
-const EmergingTechServices: NextPage = () => {
+const EmergingTechServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<string>('innovation');
@@ -12,21 +12,20 @@ const EmergingTechServices: NextPage = () => {
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },
     { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },
     { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },
-    { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },
-    { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },
-    { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' }
+    { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },;
+    { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },;
+    { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' };
   ];
 
-  const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = EMERGING_TECH_SERVICES_2027.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
@@ -37,8 +36,8 @@ const EmergingTechServices: NextPage = () => {
     }
   });
 
-  const getInnovationColor = (level: string) => {
-    switch (level) {
+  const getInnovationColor = (level: string) => {;
+    switch (level) {;
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
       case 'Advanced': return 'from-blue-500 to-cyan-600';
@@ -46,8 +45,8 @@ const EmergingTechServices: NextPage = () => {
     }
   };
 
-  const getBadgeColor = (badge: string) => {
-    switch (badge) {
+  const getBadgeColor = (badge: string) => {;
+    switch (badge) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-500 to-cyan-600';
@@ -56,7 +55,7 @@ const EmergingTechServices: NextPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -279,9 +278,9 @@ const EmergingTechServices: NextPage = () => {
               📞 Call +1 (302) 464-0950
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

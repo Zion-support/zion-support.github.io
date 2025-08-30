@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from '../data/enhancedZionTechServices2025';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories } from "../data/enhancedZionTechServices2025";
 
-const ComprehensiveZionTechPricing2025: React.FC = () => {
+const ComprehensiveZionTechPricing2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
   
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => 
-    selectedCategory === 'All' || service.category === selectedCategory
+  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
+    selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getPrice = (service: any) => {
-    if (billingCycle === 'yearly' && service.pricing?.yearly) {
+  const getPrice = (service: any) => {;
+    if (billingCycle === 'yearly' && service.pricing?.yearly) {;
       return service.pricing.yearly;
     }
     return service.price;
   };
 
-  const getSavings = (service: any) => {
-    if (billingCycle === 'yearly' && service.pricing?.yearly) {
+  const getSavings = (service: any) => {;
+    if (billingCycle === 'yearly' && service.pricing?.yearly) {;
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
     }
     return 0;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -331,9 +331,9 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
             <p className="text-gray-300">We provide 24/7 technical support, dedicated account managers for enterprise clients, and comprehensive documentation and training resources.</p>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

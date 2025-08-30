@@ -229,9 +229,9 @@ export default function ComprehensivePricingGuide2027() {
           features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],
           popular: false,
           link: "/services/ai-customer-support-automation"
-        }
-      ]
-    }
+        };
+      ];
+    };
   ];
 
   const enterprisePackages = [
@@ -280,9 +280,9 @@ export default function ComprehensivePricingGuide2027() {
         "Advanced analytics",
         "Compliance automation",
         "Strategic consulting"
-      ],
-      popular: false
-    }
+      ],;
+      popular: false;
+    };
   ];
 
   const marketComparison = [
@@ -311,13 +311,13 @@ export default function ComprehensivePricingGuide2027() {
       feature: "Cloud DevOps",
       zion: "$599/month",
       competitor1: "$1,199/month",
-      competitor2: "$1,599/month",
-      savings: "50-63%"
-    }
+      competitor2: "$1,599/month",;
+      savings: "50-63%";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
@@ -329,8 +329,18 @@ export default function ComprehensivePricingGuide2027() {
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
@@ -373,8 +383,18 @@ export default function ComprehensivePricingGuide2027() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -391,9 +411,24 @@ export default function ComprehensivePricingGuide2027() {
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: categoryIndex * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="mb-16"
               >
@@ -409,9 +444,24 @@ export default function ComprehensivePricingGuide2027() {
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={serviceIndex}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                      initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                      whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                      transition = {
+  { duration: 0.8,
+  delay: serviceIndex * 0.1 
+
+
+}}
                       viewport={{ once: true }}
                       className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
                         service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'
@@ -466,8 +516,18 @@ export default function ComprehensivePricingGuide2027() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -484,9 +544,24 @@ export default function ComprehensivePricingGuide2027() {
               {enterprisePackages.map((pkg, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     pkg.popular 
@@ -541,8 +616,18 @@ export default function ComprehensivePricingGuide2027() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -588,8 +673,18 @@ export default function ComprehensivePricingGuide2027() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -642,8 +737,8 @@ export default function ComprehensivePricingGuide2027() {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </div>
+        </section>;
+      </div>;
+    </div>;
   );
 }

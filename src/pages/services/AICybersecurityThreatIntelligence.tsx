@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Shield, 
   AlertTriangle, 
@@ -61,9 +61,9 @@ export default function AICybersecurityThreatIntelligence() {
     {
       icon: Database,
       title: 'Data Protection',
-      description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',
-      benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
-    }
+      description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',;
+      benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring'];
+    };
   ];
 
   const useCases = [
@@ -88,9 +88,9 @@ export default function AICybersecurityThreatIntelligence() {
     {
       industry: 'E-commerce',
       title: 'Customer Data Protection',
-      description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',
-      metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
-    }
+      description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',;
+      metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking'];
+    };
   ];
 
   const benefits = [
@@ -115,9 +115,9 @@ export default function AICybersecurityThreatIntelligence() {
     {
       icon: Target,
       title: 'Accuracy',
-      description: 'High-precision threat detection with minimal false positives.',
-      value: '99.9%'
-    }
+      description: 'High-precision threat detection with minimal false positives.',;
+      value: '99.9%';
+    };
   ];
 
   const technologies = [
@@ -130,9 +130,9 @@ export default function AICybersecurityThreatIntelligence() {
     'Real-time Processing',
     'Cloud Security',
     'Zero Trust Architecture',
-    'Blockchain Security',
-    'Quantum-resistant Encryption',
-    'IoT Security Protocols'
+    'Blockchain Security',;
+    'Quantum-resistant Encryption',;
+    'IoT Security Protocols';
   ];
 
   const pricing = [
@@ -185,13 +185,13 @@ export default function AICybersecurityThreatIntelligence() {
         'Advanced compliance',
         'White-label options'
       ],
-      cta: 'Contact Sales',
-      popular: false
-    }
+      cta: 'Contact Sales',;
+      popular: false;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Cybersecurity Threat Intelligence - Zion Tech Group"
         description="Protect your business with AI-powered cybersecurity threat intelligence. Real-time threat detection, behavioral analytics, and automated response capabilities."
@@ -201,8 +201,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="relative overflow-hidden py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -239,18 +249,33 @@ export default function AICybersecurityThreatIntelligence() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-slate-400">Threat Detection</div>
-            </div>
-            <div className="text-center">
+              <div className="text-slate-400">Threat Detection</div>;
+            </div>;
+            <div className="text-center">;
               <div className="text-3xl font-bold text-white mb-2">&lt;100ms</div>
-              <div className="text-slate-400">Response Time</div>
+              <div className = "text-slate-400">Response Time</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">40-60%</div>
@@ -268,8 +293,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -289,9 +324,24 @@ export default function AICybersecurityThreatIntelligence() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-xl flex items-center justify-center mb-6">
@@ -317,8 +367,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -337,9 +397,24 @@ export default function AICybersecurityThreatIntelligence() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -368,8 +443,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -388,9 +473,24 @@ export default function AICybersecurityThreatIntelligence() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -409,8 +509,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -429,9 +539,24 @@ export default function AICybersecurityThreatIntelligence() {
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.05 
+
+
+}}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 text-center"
               >
                 <div className="text-white font-semibold">{tech}</div>
@@ -445,8 +570,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section id="pricing" className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -465,9 +600,24 @@ export default function AICybersecurityThreatIntelligence() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-red-400/50 scale-105' 
@@ -520,8 +670,18 @@ export default function AICybersecurityThreatIntelligence() {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -555,8 +715,8 @@ export default function AICybersecurityThreatIntelligence() {
               <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300">ziontechgroup.com</a></p>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

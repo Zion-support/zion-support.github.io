@@ -28,7 +28,7 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 const ComprehensiveServices: React.FC = () => {
   const serviceCategories = [
@@ -92,20 +92,20 @@ const ComprehensiveServices: React.FC = () => {
       services: [
         { name: "Data Analytics", path: "/services/data-analytics" },
         { name: "AI Data Analytics", path: "/services/ai-data-analytics" },
-        { name: "Business Intelligence", path: "/services/ai-business-intelligence" }
-      ]
-    }
+        { name: "Business Intelligence", path: "/services/ai-business-intelligence" };
+      ];
+    };
   ];
 
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate" },
-    { icon: Award, value: "10+", label: "Years Experience" },
-    { icon: Globe, value: "25+", label: "Countries Served" }
+    { icon: TrendingUp, value: "95%", label: "Success Rate" },;
+    { icon: Award, value: "10+", label: "Years Experience" },;
+    { icon: Globe, value: "25+", label: "Countries Served" };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Comprehensive Services - Zion Tech Group"
         description="Explore our complete portfolio of innovative technology solutions including AI, Quantum Computing, Cloud DevOps, IoT, and Micro SaaS services."
@@ -117,8 +117,18 @@ const ComprehensiveServices: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -160,9 +170,24 @@ const ComprehensiveServices: React.FC = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -180,8 +205,18 @@ const ComprehensiveServices: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -198,9 +233,24 @@ const ComprehensiveServices: React.FC = () => {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   category.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
@@ -234,7 +284,12 @@ const ComprehensiveServices: React.FC = () => {
                 </ul>
                 
                 <Link
-                  to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                  to = {
+  `/services#${category.title.toLowerCase().replace(/\s+/g,
+  '-')
+
+
+}`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
                   View All {category.title}
@@ -250,8 +305,18 @@ const ComprehensiveServices: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -278,9 +343,9 @@ const ComprehensiveServices: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

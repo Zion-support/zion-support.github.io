@@ -123,9 +123,9 @@ const solutionCategories = [
       'Legacy Modernization',
       'Digital Strategy',
       'Change Management',
-      'Technology Consulting'
-    ]
-  }
+      'Technology Consulting';
+    ];
+  };
 ];
 
 const industrySolutions = [
@@ -204,9 +204,9 @@ const industrySolutions = [
       'Citizen Engagement',
       'Regulatory Compliance',
       'Infrastructure Management'
-    ],
-    color: 'from-gray-500 to-slate-600'
-  }
+    ],;
+    color: 'from-gray-500 to-slate-600';
+  };
 ];
 
 const featuredSolutions = [
@@ -279,9 +279,9 @@ const featuredSolutions = [
     ],
     price: 'Starting at $1,800/month',
     implementation: '8-16 weeks',
-    icon: Cloud,
-    color: 'from-blue-500 to-cyan-600'
-  }
+    icon: Cloud,;
+    color: 'from-blue-500 to-cyan-600';
+  };
 ];
 
 export default function Solutions() {
@@ -292,22 +292,31 @@ export default function Solutions() {
   const categories = ['All', ...solutionCategories.map(cat => cat.name)];
   const industries = ['All', ...industrySolutions.map(ind => ind.industry)];
 
-  const filteredSolutions = featuredSolutions.filter(solution => {
-    const matchesCategory = selectedCategory === 'All' || solution.category === selectedCategory;
-    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredSolutions = featuredSolutions.filter(solution => {;
+    const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesCategory && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -379,8 +388,18 @@ export default function Solutions() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -388,16 +407,31 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index) => {
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {solutionCategories.map((category, index) => {;
               const IconComponent = category.icon;
               return (
                 <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {category.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="group cursor-pointer"
                 >
@@ -420,9 +454,9 @@ export default function Solutions() {
                         <span className="text-sm font-medium">Learn More</span>
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
-                    </div>
-                  </Link>
-                </motion.div>
+                    </div>;
+                  </Link>;
+                </motion.div>;
               );
             })}
           </div>
@@ -430,11 +464,21 @@ export default function Solutions() {
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -442,16 +486,31 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index) => {
+;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {industrySolutions.map((industry, index) => {;
               const IconComponent = industry.icon;
               return (
                 <motion.div
-                  key={industry.industry}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {industry.industry}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -474,9 +533,9 @@ export default function Solutions() {
                     >
                       View {industry.industry} Solutions
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
+                    </Link>;
+                  </div>;
+                </motion.div>;
               );
             })}
           </div>
@@ -484,11 +543,21 @@ export default function Solutions() {
       </section>
 
       {/* Featured Solutions */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
@@ -496,16 +565,31 @@ export default function Solutions() {
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index) => {
+;
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {filteredSolutions.map((solution, index) => {;
               const IconComponent = solution.icon;
               return (
                 <motion.div
-                  key={solution.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key = {solution.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
                 >
@@ -569,9 +653,9 @@ export default function Solutions() {
                     >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </div>
-                </motion.div>
+                    </Link>;
+                  </div>;
+                </motion.div>;
               );
             })}
           </div>
@@ -579,11 +663,21 @@ export default function Solutions() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      <section className = "py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -611,8 +705,8 @@ export default function Solutions() {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -33,9 +33,9 @@ export default function Blockchain() {
     },
     {
       icon: Network,
-      title: "Cross-Chain Interoperability",
-      description: "Seamless communication between different blockchain networks"
-    }
+      title: "Cross-Chain Interoperability",;
+      description: "Seamless communication between different blockchain networks";
+    };
   ];
 
   const pricing = [
@@ -83,9 +83,9 @@ export default function Blockchain() {
         "White-label solutions",
         "Dedicated blockchain engineer"
       ],
-      cta: "Contact Sales",
-      popular: false
-    }
+      cta: "Contact Sales",;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -106,9 +106,9 @@ export default function Blockchain() {
     },
     {
       icon: Users,
-      title: "Trust & Compliance",
-      description: "Build trust through verifiable and auditable processes"
-    }
+      title: "Trust & Compliance",;
+      description: "Build trust through verifiable and auditable processes";
+    };
   ];
 
   const useCases = [
@@ -127,13 +127,13 @@ export default function Blockchain() {
     {
       icon: Shield,
       title: "Healthcare",
-      description: "Secure patient records and pharmaceutical supply chain management",
-      examples: ["Patient data", "Drug tracking", "Clinical trials"]
-    }
+      description: "Secure patient records and pharmaceutical supply chain management",;
+      examples: ["Patient data", "Drug tracking", "Clinical trials"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic relative overflow-hidden">
+    <div className = "min-h-screen bg-futuristic relative overflow-hidden">
       <SEO 
         title="Blockchain Services - Zion Tech Group"
         description="Transform your business with our advanced blockchain solutions. Smart contracts, DeFi, NFTs, and supply chain tracking for the digital age."
@@ -157,8 +157,18 @@ export default function Blockchain() {
           <div className="container-responsive">
             <motion.div 
               className="text-center max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
@@ -196,8 +206,18 @@ export default function Blockchain() {
           <div className="container-responsive">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -214,9 +234,24 @@ export default function Blockchain() {
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -243,8 +278,18 @@ export default function Blockchain() {
           <div className="container-responsive">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -261,9 +306,24 @@ export default function Blockchain() {
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -282,8 +342,18 @@ export default function Blockchain() {
           <div className="container-responsive">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -304,9 +374,24 @@ export default function Blockchain() {
                       ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50' 
                       : 'bg-white/5 border border-white/10'
                   } backdrop-blur-sm`}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                 >
                   {plan.popular && (
@@ -356,8 +441,18 @@ export default function Blockchain() {
           <div className="container-responsive">
             <motion.div 
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -374,9 +469,24 @@ export default function Blockchain() {
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                   viewport={{ once: true }}
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -396,8 +506,18 @@ export default function Blockchain() {
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -424,8 +544,8 @@ export default function Blockchain() {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </div>
+        </section>;
+      </div>;
+    </div>;
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 interface ServiceStatus {
   id: string;
@@ -101,9 +101,9 @@ const incidents: Incident[] = [
   }
 ];
 
-const getStatusColor = (status: ServiceStatus['status']) => {
-  switch (status) {
-    case 'operational':
+const getStatusColor = (status: ServiceStatus['status']) => {;
+  switch (status) {;
+    case 'operational':;
       return 'text-green-400 bg-green-400/10 border-green-400/20';
     case 'degraded':
       return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
@@ -116,9 +116,9 @@ const getStatusColor = (status: ServiceStatus['status']) => {
   }
 };
 
-const getStatusIcon = (status: ServiceStatus['status']) => {
-  switch (status) {
-    case 'operational':
+const getStatusIcon = (status: ServiceStatus['status']) => {;
+  switch (status) {;
+    case 'operational':;
       return CheckCircle;
     case 'degraded':
       return AlertCircle;
@@ -131,9 +131,9 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
   }
 };
 
-const getSeverityColor = (severity: Incident['severity']) => {
-  switch (severity) {
-    case 'low':
+const getSeverityColor = (severity: Incident['severity']) => {;
+  switch (severity) {;
+    case 'low':;
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     case 'medium':
       return 'text-yellow-400 bg-yellow-400/10 border-yellow-400/20';
@@ -150,7 +150,7 @@ export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {;
       setLastUpdated(new Date());
     }, 30000); // Update every 30 seconds
 
@@ -158,15 +158,15 @@ export default function SystemStatus() {
   }, []);
 
   const overallStatus = services.every(s => s.status === 'operational') 
-    ? 'operational' 
-    : services.some(s => s.status === 'outage') 
-    ? 'outage' 
+    ? 'operational' ;
+    : services.some(s => s.status === 'outage') ;
+    ? 'outage' ;
     : 'degraded';
 
   const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="System Status - Zion Tech Group"
         description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
@@ -176,8 +176,18 @@ export default function SystemStatus() {
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
           >
@@ -186,18 +196,48 @@ export default function SystemStatus() {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
             System Status
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             Real-time monitoring of our services, infrastructure, and performance metrics.
@@ -208,9 +248,24 @@ export default function SystemStatus() {
       {/* Overall Status */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -246,17 +301,47 @@ export default function SystemStatus() {
       {/* Service Status Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 + index * 0.1 
+
+
+}}
               className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
@@ -300,18 +385,48 @@ export default function SystemStatus() {
       {incidents.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 1.4 
+
+
+}}
           >
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
                 <motion.div
                   key={incident.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: 1.6 + index * 0.1 
+
+
+}}
                   className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -371,9 +486,24 @@ export default function SystemStatus() {
       {/* Performance Metrics */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.8 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 1.8 
+
+
+}}
           className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
@@ -413,9 +543,24 @@ export default function SystemStatus() {
       {/* Footer CTA */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2.0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 2.0 
+
+
+}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
@@ -440,8 +585,8 @@ export default function SystemStatus() {
               </a>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

@@ -8,8 +8,7 @@ function kebabToPascal(str) {
     .join('');
 }
 // Function to create a proper Next.js page template
-function createPageTemplate(pageName, filePath) {
-  const componentName = kebabToPascal(pageName);
+function componentName = kebabToPascal(pageName);
   const isApi = filePath.includes('/api/');
   
   if (isApi) {
@@ -39,8 +38,7 @@ const ${componentName}: NextPage = () => {
 export default ${componentName};`;
 }
 // Function to fix empty files
-function fixEmptyFiles(dir) {
-  const files = fs.readdirSync(dir);
+function files = fs.readdirSync(dir);
   
   files.forEach(file => {
     const filePath = path.join(dir, file);

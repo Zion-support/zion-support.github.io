@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 import { 
   Shield, 
   CheckCircle, 
@@ -53,9 +53,9 @@ export default function AIComplianceAssistant() {
     },
     {
       icon: Clock,
-      title: "Audit Preparation",
-      description: "Streamlined audit processes with automated documentation and compliance reporting."
-    }
+      title: "Audit Preparation",;
+      description: "Streamlined audit processes with automated documentation and compliance reporting.";
+    };
   ];
 
   const benefits = [
@@ -86,9 +86,9 @@ export default function AIComplianceAssistant() {
     },
     {
       icon: TrendingUp,
-      title: "Cost Optimization",
-      description: "Reduce manual compliance efforts and associated costs through automation."
-    }
+      title: "Cost Optimization",;
+      description: "Reduce manual compliance efforts and associated costs through automation.";
+    };
   ];
 
   const regulations = [
@@ -119,9 +119,9 @@ export default function AIComplianceAssistant() {
     },
     {
       name: "ISO 27001",
-      description: "Information security management system standard",
-      icon: Database
-    }
+      description: "Information security management system standard",;
+      icon: Database;
+    };
   ];
 
   const useCases = [
@@ -152,13 +152,13 @@ export default function AIComplianceAssistant() {
     },
     {
       industry: "Education",
-      description: "Maintain student data privacy and educational compliance",
-      icon: Award
-    }
+      description: "Maintain student data privacy and educational compliance",;
+      icon: Award;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="AI Compliance Assistant - Zion Tech Group"
         description="Automate regulatory compliance with our AI-powered compliance assistant. Monitor, assess, and maintain compliance across multiple regulatory frameworks."
@@ -170,8 +170,18 @@ export default function AIComplianceAssistant() {
         
         <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
@@ -206,8 +216,18 @@ export default function AIComplianceAssistant() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -225,9 +245,24 @@ export default function AIComplianceAssistant() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -260,8 +295,18 @@ export default function AIComplianceAssistant() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -279,9 +324,24 @@ export default function AIComplianceAssistant() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -314,8 +374,18 @@ export default function AIComplianceAssistant() {
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -333,9 +403,24 @@ export default function AIComplianceAssistant() {
             {regulations.map((regulation, index) => (
               <motion.div
                 key={regulation.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -368,8 +453,18 @@ export default function AIComplianceAssistant() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -387,9 +482,24 @@ export default function AIComplianceAssistant() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
               >
@@ -422,8 +532,18 @@ export default function AIComplianceAssistant() {
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -445,9 +565,9 @@ export default function AIComplianceAssistant() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

@@ -34,108 +34,14 @@ export interface FinancialAIService {
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
+  website: "https://ziontechgroup.com",;
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+;
+
+
 };
 
-export const specializedFinancialAIServices2025: FinancialAIService[] = [
-  {
-    id: 1,
-    name: "QuantumRisk Pro",
-    category: "Quantum Financial Risk Management",
-    description: "Revolutionary quantum computing-powered risk management platform for financial institutions, providing real-time risk assessment and portfolio optimization",
-    pricing: "Enterprise",
-    price: 8999,
-    pricingModel: "monthly",
-    features: [
-      "Quantum Monte Carlo simulations",
-      "Real-time portfolio risk assessment",
-      "Stress testing scenarios",
-      "Regulatory compliance automation",
-      "AI-powered risk prediction",
-      "Multi-asset correlation analysis",
-      "Dynamic hedging strategies",
-      "Quantum encryption security"
-    ],
-    benefits: [
-      "1000x faster risk calculations",
-      "Real-time portfolio optimization",
-      "Enhanced regulatory compliance",
-      "Reduced capital requirements",
-      "Improved risk-adjusted returns",
-      "Future-proof quantum technology"
-    ],
-    targetAudience: ["Investment banks", "Hedge funds", "Asset managers", "Insurance companies", "Regulatory bodies"],
-    tags: ["Quantum Computing", "Risk Management", "Financial Services", "AI", "Compliance"],
-    marketPrice: "$8,000 - $12,000/month",
-    competitors: ["RiskMetrics", "Bloomberg Risk", "MSCI RiskMetrics"],
-    roi: "500% within 18 months",
-    setupTime: "6-8 weeks",
-    compliance: ["Basel III", "Solvency II", "CCAR", "FRTB", "SOX"],
-    riskLevel: "Low",
-    regulatoryApproval: ["SEC", "FINRA", "OCC", "Federal Reserve"],
-    useCases: [
-      "Portfolio risk management",
-      "Regulatory capital calculation",
-      "Stress testing",
-      "Real-time risk monitoring"
-    ],
-    technologies: ["Quantum Computing", "Machine Learning", "Financial Modeling", "Real-time Analytics"]
-  },
-  {
-    id: 2,
-    name: "NeuralTrade Elite",
-    category: "AI-Powered Algorithmic Trading",
-    description: "Advanced neural network-based algorithmic trading platform with real-time market analysis, predictive modeling, and automated execution strategies",
-    pricing: "Premium",
-    price: 5999,
-    pricingModel: "monthly",
-    features: [
-      "Deep learning market prediction",
-      "Multi-strategy execution engine",
-      "Real-time market data analysis",
-      "Risk management controls",
-      "Backtesting and optimization",
-      "Multi-exchange connectivity",
-      "Compliance monitoring",
-      "Performance analytics"
-    ],
-    benefits: [
-      "40% improvement in trading performance",
-      "Reduced market impact",
-      "Automated compliance monitoring",
-      "24/7 market coverage",
-      "Enhanced risk controls",
-      "Scalable trading operations"
-    ],
-    targetAudience: ["Proprietary trading firms", "Hedge funds", "Investment banks", "Quantitative traders"],
-    tags: ["Algorithmic Trading", "AI", "Machine Learning", "Financial Markets", "Automation"],
-    marketPrice: "$5,000 - $8,000/month",
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers"],
-    roi: "300% within 12 months",
-    setupTime: "4-6 weeks",
-    compliance: ["MiFID II", "Dodd-Frank", "SEC regulations", "FINRA rules"],
-    riskLevel: "Medium",
-    regulatoryApproval: ["SEC", "FINRA", "CFTC"],
-    useCases: [
-      "High-frequency trading",
-      "Statistical arbitrage",
-      "Market making",
-      "Portfolio rebalancing"
-    ],
-    technologies: ["Deep Learning", "Neural Networks", "Real-time Processing", "Market Data APIs"]
-  },
-  {
-    id: 3,
-    name: "CryptoGuard Pro",
-    category: "Cryptocurrency Security & Compliance",
-    description: "Comprehensive cryptocurrency security platform with AI-powered threat detection, compliance monitoring, and regulatory reporting for digital asset operations",
-    pricing: "Professional",
-    price: 3499,
-    pricingModel: "monthly",
-    features: [
-      "AI-powered threat detection",
-      "Multi-signature wallet security",
+export const security",
       "Regulatory compliance automation",
       "Real-time transaction monitoring",
       "KYC/AML integration",

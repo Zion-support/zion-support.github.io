@@ -38,7 +38,12 @@ export function MobileMenu({ className }) {
   }
   
   return (
-    <div className={cn("md:hidden", className)}>
+    <div className = {
+  cn("md:hidden",
+  className)
+
+
+}>
       {/* Mobile menu button */}
       <Button 
         variant="ghost" 
@@ -76,12 +81,16 @@ export function MobileMenu({ className }) {
                     key={item.href} 
                     to={item.href} 
                     onClick={toggleMenu} 
-                    className={cn(
-                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors", 
-                      isActive
+                    className = {
+  cn(
+                      "flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors",
+  isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan"
-                    )}
+                    )
+
+
+}
                   >
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>

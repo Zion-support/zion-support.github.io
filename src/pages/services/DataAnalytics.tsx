@@ -28,7 +28,7 @@ import {
   Network,
   FileText
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO } from "../../components/SEO";
 
 export default function DataAnalytics() {
   const features = [
@@ -49,9 +49,9 @@ export default function DataAnalytics() {
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.'
-    }
+      title: 'Automated Reporting',;
+      description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
+    };
   ];
 
   const solutions = [
@@ -76,9 +76,9 @@ export default function DataAnalytics() {
     {
       title: 'Performance Analytics',
       description: 'Monitor and optimize business performance across all key metrics',
-      icon: Activity,
-      benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment']
-    }
+      icon: Activity,;
+      benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment'];
+    };
   ];
 
   const useCases = [
@@ -103,9 +103,9 @@ export default function DataAnalytics() {
     {
       industry: 'Manufacturing',
       description: 'Predictive maintenance, quality control, and production optimization',
-      icon: Cpu,
-      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction']
-    }
+      icon: Cpu,;
+      metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction'];
+    };
   ];
 
   const benefits = [
@@ -126,13 +126,13 @@ export default function DataAnalytics() {
     },
     {
       icon: Target,
-      title: 'Strategic Planning',
-      description: 'Develop informed strategies and plans based on predictive analytics and trends'
-    }
+      title: 'Strategic Planning',;
+      description: 'Develop informed strategies and plans based on predictive analytics and trends';
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Data Analytics Services - Zion Tech Group"
         description="Transform your business data into actionable insights with our comprehensive data analytics solutions. Real-time dashboards, predictive analytics, and automated reporting."
@@ -143,8 +143,18 @@ export default function DataAnalytics() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -177,8 +187,18 @@ export default function DataAnalytics() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -215,8 +235,18 @@ export default function DataAnalytics() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -259,8 +289,18 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -277,9 +317,24 @@ export default function DataAnalytics() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -297,8 +352,18 @@ export default function DataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -315,9 +380,24 @@ export default function DataAnalytics() {
             {solutions.map((solution, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -345,8 +425,18 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -363,9 +453,24 @@ export default function DataAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -393,8 +498,18 @@ export default function DataAnalytics() {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -411,9 +526,24 @@ export default function DataAnalytics() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -431,8 +561,18 @@ export default function DataAnalytics() {
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -469,9 +609,24 @@ export default function DataAnalytics() {
             ].map((phase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -489,8 +644,18 @@ export default function DataAnalytics() {
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -509,8 +674,8 @@ export default function DataAnalytics() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

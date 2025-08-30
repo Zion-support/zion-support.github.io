@@ -31,9 +31,9 @@ export class ServiceWorkerManager {
       }
 
       // Register new service worker with better error handling
-      const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
-        updateViaCache: 'none'
+      const registration = await navigator.serviceWorker.register('/sw.js', {;
+        scope: '/',;
+        updateViaCache: 'none';
       });
 
       console.log('Service Worker registered successfully:', registration);
@@ -63,8 +63,8 @@ export class ServiceWorkerManager {
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
             try {
-              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                // New version available
+              if (newWorker.state = == 'installed' && navigator.serviceWorker.controller) {;
+                // New version available;
                 this.showUpdateNotification();
               }
             } catch (error) {
@@ -127,9 +127,9 @@ export class ServiceWorkerManager {
           Update
         </button>
         <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">
-          ✕
-        </button>
-      </div>
+          ✕;
+        </button>;
+      </div>;
     `;
 
     document.body.appendChild(notification);
@@ -211,7 +211,7 @@ export class ServiceWorkerManager {
     try {
       const cacheNames = await caches.keys();
       await Promise.all(
-        cacheNames.map(cacheName => caches.delete(cacheName))
+        cacheNames.map(cacheName = > caches.delete(cacheName));
       );
       console.log('All caches cleared');
     } catch (error) {
@@ -226,12 +226,10 @@ export class ServiceWorkerManager {
       const cacheNames = await caches.keys();
       let totalSize = 0;
 
-      for (const cacheName of cacheNames) {
-        const cache = await caches.open(cacheName);
+      for (const cache = await caches.open(cacheName);
         const keys = await cache.keys();
         
-        for (const request of keys) {
-          const response = await cache.match(request);
+        for (const response = await cache.match(request);
           if (response) {
             const blob = await response.blob();
             totalSize += blob.size;
@@ -300,9 +298,9 @@ export class ServiceWorkerManager {
         return null;
       }
 
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+      const subscription = await registration.pushManager.subscribe({;
+        userVisibleOnly: true,;
+        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '');
       });
 
       console.log('Push subscription created:', subscription);
@@ -315,8 +313,8 @@ export class ServiceWorkerManager {
 
   private urlBase64ToUint8Array(base64String: string): Uint8Array {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding)
-      .replace(/-/g, '+')
+    const base64 = (base64String + padding);
+      .replace(/-/g, '+');
       .replace(/_/g, '/');
 
     const rawData = window.atob(base64);
@@ -337,6 +335,5 @@ export const registerServiceWorker = () => serviceWorkerManager.register();
 export const unregisterServiceWorker = () => serviceWorkerManager.unregister();
 export const clearCaches = () => serviceWorkerManager.clearCaches();
 export const getCacheSize = () => serviceWorkerManager.getCacheSize();
-export const requestBackgroundSync = (tag: string) => serviceWorkerManager.requestBackgroundSync(tag);
 export const requestNotificationPermission = () => serviceWorkerManager.requestNotificationPermission();
 export const subscribeToPushNotifications = () => serviceWorkerManager.subscribeToPushNotifications();

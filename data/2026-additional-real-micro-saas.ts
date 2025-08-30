@@ -81,7 +81,7 @@ export const additionalRealMicroSaas2026 = [
 		],
 		pricing: { starter: '$129/month' },
 		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',
-		rating: 4.6,
-		launchDate: '2025-11-10'
-	}
+		rating: 4.6,;
+		launchDate: '2025-11-10';
+	};
 ];

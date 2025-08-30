@@ -1,4 +1,4 @@
-export type InnovativeService = {
+export type InnovativeService = {;
   id: string;
   title: string;
   description: string;
@@ -626,9 +626,9 @@ export const serviceCategories = [
   },
   {
     name: 'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  }
+    description: 'Cutting-edge technologies shaping the future',;
+    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
+  };
 ];
 
 export default innovativeServices2026;

@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 console.log('🔒 Starting continuous security audit automation...');
@@ -61,12 +60,6 @@ async function runSecurityAudit() {
     }
     
     // Generate security report
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Security audit completed',
-      status: 'completed'
-    };
-    
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);

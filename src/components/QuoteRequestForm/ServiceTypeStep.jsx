@@ -7,12 +7,6 @@ import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";
 import { useDebounce } from "@/hooks/useDebounce";
 import { z } from "zod";
-const listingSchema = z.object({
-    id: z.string(),
-    title: z.string(),
-    category: z.string(),
-    image: z.string().optional(),
-});
 const listingsSchema = z.array(listingSchema);
 export function ServiceTypeStep({ formData, updateFormData }) {
     const [searchQuery, setSearchQuery] = useState("");

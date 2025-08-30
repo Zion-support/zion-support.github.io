@@ -18,8 +18,8 @@ interface InstanceCardProps {
 }
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
-  const getVerticalColor = (vertical: string) => {
-    switch (vertical) {
+  const getVerticalColor = (vertical: string) => {;
+    switch (vertical) {;
       case 'HEALTH': return 'bg-red-500/20 text-red-400 border-red-500/30';
       case 'EDUCATION': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       case 'LAW': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
@@ -27,8 +27,8 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
-  const getGovernanceColor = (governance: string) => {
-    switch (governance) {
+  const getGovernanceColor = (governance: string) => {;
+    switch (governance) {;
       case 'DAO_FULL': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'DAO_LITE': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
@@ -36,13 +36,13 @@ export function InstanceCard({ instance }: InstanceCardProps) {
   };
   const formatDate = (date: Date) => {
     return new Date(date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric'
+      year: 'numeric',;
+      month: 'short',;
+      day: 'numeric';
     });
   };
   return (
-    <div className="card group hover:scale-105 transition-all duration-200 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
+    <div className = "card group hover:scale-105 transition-all duration-200 cursor-pointer" onClick={() => setIsExpanded(!isExpanded)}>
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">
@@ -120,8 +120,8 @@ export function InstanceCard({ instance }: InstanceCardProps) {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

@@ -1,32 +1,6 @@
 import React from 'react';
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
 const AIAutonomousEcosystem = () => {
-    const ecosystemFeatures = [
-        {
-            icon: Network,
-            title: "Seamless Integration",
-            description: "Connect all your AI systems and applications seamlessly",
-            features: ["API-first architecture", "Real-time data sync", "Cross-platform compatibility", "Scalable infrastructure"]
-        },
-        {
-            icon: Link,
-            title: "Interoperability",
-            description: "Ensure all components work together harmoniously",
-            features: ["Standard protocols", "Data compatibility", "System coordination", "Unified interfaces"]
-        },
-        {
-            icon: Shield,
-            title: "Security & Compliance",
-            description: "Enterprise-grade security across the entire ecosystem",
-            features: ["End-to-end encryption", "Access controls", "Audit trails", "Compliance monitoring"]
-        },
-        {
-            icon: Zap,
-            title: "Performance Optimization",
-            description: "Optimize performance across all ecosystem components",
-            features: ["Load balancing", "Resource management", "Performance monitoring", "Auto-scaling"]
-        }
-    ];
     const ecosystemComponents = [
         {
             title: "AI Core Engine",

@@ -22,7 +22,7 @@ import {
   Lightbulb
 } from 'lucide-react';
 
-const Careers = () => {
+const Careers = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   // Sample job listings
@@ -132,9 +132,9 @@ const Careers = () => {
         "Experience with agile methodologies",
         "Excellent communication and leadership skills"
       ],
-      benefits: ["Competitive salary", "Health insurance", "Stock options", "Professional development"],
-      category: "product"
-    }
+      benefits: ["Competitive salary", "Health insurance", "Stock options", "Professional development"],;
+      category: "product";
+    };
   ];
 
   const categories = [
@@ -142,13 +142,13 @@ const Careers = () => {
     { id: 'ai', name: 'AI & ML', count: jobListings.filter(job => job.category === 'ai').length },
     { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },
     { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },
-    { id: 'engineering', name: 'Engineering', count: jobListings.filter(job => job.category === 'engineering').length },
-    { id: 'data', name: 'Data & Analytics', count: jobListings.filter(job => job.category === 'data').length },
-    { id: 'product', name: 'Product', count: jobListings.filter(job => job.category === 'product').length }
+    { id: 'engineering', name: 'Engineering', count: jobListings.filter(job => job.category === 'engineering').length },;
+    { id: 'data', name: 'Data & Analytics', count: jobListings.filter(job => job.category === 'data').length },;
+    { id: 'product', name: 'Product', count: jobListings.filter(job => job.category === 'product').length };
   ];
 
-  const filteredJobs = selectedCategory === 'all' 
-    ? jobListings 
+  const filteredJobs = selectedCategory === 'all' ;
+    ? jobListings ;
     : jobListings.filter(job => job.category === selectedCategory);
 
   const companyValues = [
@@ -169,9 +169,9 @@ const Careers = () => {
     },
     {
       icon: Code,
-      title: "Quality Code",
-      description: "Writing clean, maintainable, and efficient code"
-    }
+      title: "Quality Code",;
+      description: "Writing clean, maintainable, and efficient code";
+    };
   ];
 
   const benefits = [
@@ -180,16 +180,16 @@ const Careers = () => {
     "Flexible work arrangements and remote options",
     "Professional development and learning opportunities",
     "Modern equipment and tools",
-    "Regular team events and activities",
-    "Generous vacation and time-off policies",
-    "401(k) matching and financial planning"
+    "Regular team events and activities",;
+    "Generous vacation and time-off policies",;
+    "401(k) matching and financial planning";
   ];
 
   return (
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Innovation Team</title>
-        <meta name="description" content="Join Zion Tech Group's talented team of innovators, engineers, and technology experts. Explore exciting career opportunities in AI, cybersecurity, cloud computing, and more." />
+        <meta name = "description" content="Join Zion Tech Group's talented team of innovators, engineers, and technology experts. Explore exciting career opportunities in AI, cybersecurity, cloud computing, and more." />
         <meta name="keywords" content="careers, jobs, employment, Zion Tech Group, technology jobs, AI engineer, cybersecurity specialist, cloud engineer" />
       </Helmet>
 
@@ -198,8 +198,18 @@ const Careers = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -227,9 +237,24 @@ const Careers = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Our Values & Culture
@@ -239,9 +264,24 @@ const Careers = () => {
                 {companyValues.map((value, index) => (
                   <motion.div
                     key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="text-center"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -260,9 +300,24 @@ const Careers = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Why Work at Zion Tech?
@@ -272,9 +327,24 @@ const Careers = () => {
                 {benefits.map((benefit, index) => (
                   <motion.div
                     key={benefit}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: 0.05 * index }}
+                    initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.05 * index 
+
+
+}}
                     className="flex items-center gap-3"
                   >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -290,9 +360,24 @@ const Careers = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Open Positions
@@ -320,9 +405,24 @@ const Careers = () => {
                 {filteredJobs.map((job, index) => (
                   <motion.div
                     key={job.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 p-6"
                   >
                     <div className="flex items-start justify-between mb-4">
@@ -385,9 +485,24 @@ const Careers = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Join Our Team?
@@ -406,9 +521,9 @@ const Careers = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

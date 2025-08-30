@@ -10,27 +10,27 @@ export default function AIHRTalentAcquisition() {
     'Advanced interview scheduling and coordination',
     'Real-time candidate engagement tracking',
     'Automated reference checking and verification',
-    'Intelligent job posting optimization',
-    'Advanced analytics and reporting dashboard',
-    'Multi-channel recruitment campaign management'
+    'Intelligent job posting optimization',;
+    'Advanced analytics and reporting dashboard',;
+    'Multi-channel recruitment campaign management';
   ];
 
   const benefits = [
     'Reduce time-to-hire by 60%',
     'Improve candidate quality by 45%',
     'Reduce recruitment costs by 40%',
-    'Increase diversity in hiring by 35%',
-    'Automate 80% of manual recruitment tasks',
-    'Improve candidate experience significantly'
+    'Increase diversity in hiring by 35%',;
+    'Automate 80% of manual recruitment tasks',;
+    'Improve candidate experience significantly';
   ];
 
   const useCases = [
     'Enterprise talent acquisition',
     'Tech recruitment and hiring',
     'Healthcare staffing solutions',
-    'Financial services recruitment',
-    'Manufacturing and logistics hiring',
-    'Retail and hospitality staffing'
+    'Financial services recruitment',;
+    'Manufacturing and logistics hiring',;
+    'Retail and hospitality staffing';
   ];
 
   const tiers = [
@@ -46,13 +46,13 @@ export default function AIHRTalentAcquisition() {
     },
     { 
       name: 'Enterprise Talent', 
-      price: '$2,499/mo', 
-      details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -166,8 +166,8 @@ export default function AIHRTalentAcquisition() {
           <p className="text-zion-slate-light">
             Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.
           </p>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

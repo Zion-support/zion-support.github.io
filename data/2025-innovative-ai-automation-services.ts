@@ -261,7 +261,7 @@ export const innovativeAIAutomationServices2025 = [
       'Tax optimization',
       'Wealth preservation and growth'
     ],
-    integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],
-    compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations']
-  }
+    integrations: ['Brokerage platforms', 'Banking systems', 'Tax software', 'Insurance platforms', 'Real estate platforms'],;
+    compliance: ['SEC', 'FINRA', 'SOC2', 'ISO 27001', 'Financial regulations'];
+  };
 ];

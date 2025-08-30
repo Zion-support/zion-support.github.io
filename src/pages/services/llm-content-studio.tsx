@@ -8,7 +8,7 @@ export default function LLMContentStudio() {
     <>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
+        <meta name = "description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
         <meta name="keywords" content="LLM content studio, AI content generation, content creation, marketing copy, AI writing, content automation" />
       </Helmet>
 
@@ -408,8 +408,8 @@ export default function LLMContentStudio() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

@@ -7,9 +7,9 @@ export default function AICustomerExperiencePlatform() {
     'Intelligent chatbot with natural language processing',
     'Personalized recommendation engine',
     'Omnichannel customer interaction tracking',
-    'Predictive customer behavior analytics',
-    'Automated customer feedback analysis',
-    'Integration with major CRM and marketing platforms'
+    'Predictive customer behavior analytics',;
+    'Automated customer feedback analysis',;
+    'Integration with major CRM and marketing platforms';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AICustomerExperiencePlatform() {
     },
     { 
       name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'E-commerce customer experience optimization',
     'SaaS product user engagement tracking',
     'Financial services customer journey mapping',
-    'Healthcare patient experience improvement',
-    'Retail customer satisfaction enhancement',
-    'B2B customer relationship management'
+    'Healthcare patient experience improvement',;
+    'Retail customer satisfaction enhancement',;
+    'B2B customer relationship management';
   ];
 
   const benefits = [
     'Increase customer satisfaction scores by 25-40%',
     'Improve customer retention rates by 30-50%',
     'Reduce customer service costs by 35-45%',
-    'Boost customer lifetime value by 20-35%',
-    'Enhance brand loyalty and advocacy',
-    'Gain actionable insights for product development'
+    'Boost customer lifetime value by 20-35%',;
+    'Enhance brand loyalty and advocacy',;
+    'Gain actionable insights for product development';
   ];
 
   const metrics = [
     'Customer Satisfaction Score (CSAT)',
     'Net Promoter Score (NPS)',
     'Customer Effort Score (CES)',
-    'Customer Lifetime Value (CLV)',
-    'Customer Churn Rate',
-    'First Response Time'
+    'Customer Lifetime Value (CLV)',;
+    'Customer Churn Rate',;
+    'First Response Time';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-pink-600 via-rose-600 to-red-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AICustomerExperiencePlatform() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -1,6 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
-const TabsContext = createContext(undefined);
-export function Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
+const Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
     const [activeTab, setActiveTab] = useState(value || defaultValue || '');
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -8,7 +7,12 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
             onValueChange(tab);
         }
     };
-    return (<TabsContext.Provider value={{ activeTab, setActiveTab: handleTabChange }}>
+    return (<TabsContext.Provider value = {
+  { activeTab,
+  setActiveTab: handleTabChange 
+
+
+}}>
       <div className={className}>
         {children}
       </div>

@@ -22,12 +22,12 @@ interface FloatingActionButtonProps {
   enabled?: boolean;
 }
 
-export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
+export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {;
   const [isExpanded, setIsExpanded] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
   // Hide button when scrolling down, show when scrolling up
-  const handleScroll = useCallback(() => {
+  const handleScroll = useCallback(() => {;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const isScrollingDown = scrollTop > (window as any).lastScrollTop;
     
@@ -49,9 +49,9 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   const quickActions = [
     {
       icon: MessageCircle,
-      label: 'Chat Support',
-      action: () => {
-        // Trigger chat support
+      label: 'Chat Support',;
+      action: () => {;
+        // Trigger chat support;
         const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
         if (chatButton) chatButton.click();
       },
@@ -119,7 +119,6 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
           installButton.click();
         } else {
           // Show app store links
-          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
           const isAndroid = /Android/.test(navigator.userAgent);
           
           if (isIOS) {
@@ -142,14 +141,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    window.scrollTo({;
+      top: 0,;
+      behavior: 'smooth';
     });
   }, []);
 
   // Toggle expanded state
-  const toggleExpanded = useCallback(() => {
+  const toggleExpanded = useCallback(() => {;
     setIsExpanded(!isExpanded);
   }, [isExpanded]);
 
@@ -161,9 +160,24 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
+            initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  scale: 0 
+
+
+}}
             className="fixed bottom-6 right-6 z-50"
           >
             {/* Quick Actions */}
@@ -173,10 +187,30 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                   {quickActions.map((action, index) => (
                     <motion.button
                       key={action.label}
-                      initial={{ opacity: 0, x: 20, scale: 0.8 }}
-                      animate={{ opacity: 1, x: 0, scale: 1 }}
-                      exit={{ opacity: 0, x: 20, scale: 0.8 }}
-                      transition={{ delay: action.delay, duration: 0.2 }}
+                      initial = {
+  { opacity: 0, x: 20,
+  scale: 0.8 
+
+
+}}
+                      animate = {
+  { opacity: 1, x: 0,
+  scale: 1 
+
+
+}}
+                      exit = {
+  { opacity: 0, x: 20,
+  scale: 0.8 
+
+
+}}
+                      transition = {
+  { delay: action.delay,
+  duration: 0.2 
+
+
+}}
                       onClick={action.action}
                       className={`group relative flex items-center justify-center w-14 h-14 bg-gradient-to-r ${action.color} rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
                       title={action.label}
@@ -208,9 +242,24 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                 {isExpanded ? (
                   <motion.div
                     key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
+                    initial = {
+  { rotate: -90,
+  opacity: 0 
+
+
+}}
+                    animate = {
+  { rotate: 0,
+  opacity: 1 
+
+
+}}
+                    exit = {
+  { rotate: 90,
+  opacity: 0 
+
+
+}}
                     transition={{ duration: 0.2 }}
                   >
                     <X className="w-8 h-8 text-white" />
@@ -218,9 +267,24 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
                 ) : (
                   <motion.div
                     key="plus"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
+                    initial = {
+  { rotate: 90,
+  opacity: 0 
+
+
+}}
+                    animate = {
+  { rotate: 0,
+  opacity: 1 
+
+
+}}
+                    exit = {
+  { rotate: -90,
+  opacity: 0 
+
+
+}}
                     transition={{ duration: 0.2 }}
                   >
                     <Plus className="w-8 h-8 text-white" />
@@ -236,9 +300,24 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       <AnimatePresence>
         {window.pageYOffset > 300 && (
           <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            exit = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
             onClick={scrollToTop}
             className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
             whileHover={{ scale: 1.1 }}
@@ -253,15 +332,30 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
       {/* Help Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.3 }}
-        onClick={() => {
-          // Trigger help center or FAQ
+        initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+        transition = {
+  { delay: 1,
+  duration: 0.3 
+
+
+}};
+        onClick={() => {;
+          // Trigger help center or FAQ;
           const helpButton = document.querySelector('[data-help-trigger]') as HTMLElement;
           if (helpButton) helpButton.click();
         }}
-        className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        className = "fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Get Help"
@@ -272,15 +366,30 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
       {/* Settings Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.2, duration: 0.3 }}
-        onClick={() => {
-          // Trigger settings panel
+        initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+        transition = {
+  { delay: 1.2,
+  duration: 0.3 
+
+
+}};
+        onClick={() => {;
+          // Trigger settings panel;
           const settingsButton = document.querySelector('[data-settings-trigger]') as HTMLElement;
           if (settingsButton) settingsButton.click();
         }}
-        className="fixed top-6 right-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        className = "fixed top-6 right-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Settings"
@@ -291,22 +400,37 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
       {/* Feedback Button */}
       <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.4, duration: 0.3 }}
-        onClick={() => {
-          // Trigger feedback form
+        initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+        transition = {
+  { delay: 1.4,
+  duration: 0.3 
+
+
+}};
+        onClick={() => {;
+          // Trigger feedback form;
           const feedbackButton = document.querySelector('[data-feedback-trigger]') as HTMLElement;
           if (feedbackButton) feedbackButton.click();
         }}
-        className="fixed top-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        className = "fixed top-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Send Feedback"
         aria-label="Open feedback form"
       >
-        <Star className="w-6 h-6 text-white" />
-      </motion.button>
-    </>
+        <Star className="w-6 h-6 text-white" />;
+      </motion.button>;
+    </>;
   );
 }

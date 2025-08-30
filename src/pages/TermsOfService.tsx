@@ -21,7 +21,7 @@ import {
   BookOpen
 } from 'lucide-react';
 
-const TermsOfService = () => {
+const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   
   const sections = [
@@ -106,9 +106,9 @@ const TermsOfService = () => {
     {
       id: 'contact',
       title: 'Contact Information',
-      icon: Mail,
-      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`
-    }
+      icon: Mail,;
+      content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
+    };
   ];
 
   const keyProvisions = [
@@ -139,9 +139,9 @@ const TermsOfService = () => {
     },
     {
       title: 'Termination Rights',
-      description: 'Either party may terminate services with appropriate notice as specified in service agreements',
-      icon: AlertTriangle
-    }
+      description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
+      icon: AlertTriangle;
+    };
   ];
 
   const disputeResolution = [
@@ -162,16 +162,16 @@ const TermsOfService = () => {
     },
     {
       step: '4',
-      title: 'Arbitration',
-      description: 'As a last resort, resolve disputes through binding arbitration'
-    }
+      title: 'Arbitration',;
+      description: 'As a last resort, resolve disputes through binding arbitration';
+    };
   ];
 
   return (
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | Legal Terms & Conditions</title>
-        <meta name="description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
+        <meta name = "description" content="Read Zion Tech Group's Terms of Service to understand the legal terms and conditions governing your use of our services." />
         <meta name="keywords" content="terms of service, legal terms, conditions, Zion Tech Group, service agreement" />
       </Helmet>
 
@@ -180,8 +180,18 @@ const TermsOfService = () => {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               className="text-center"
             >
@@ -215,9 +225,24 @@ const TermsOfService = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents
@@ -228,9 +253,24 @@ const TermsOfService = () => {
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300"
                   >
                     <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
@@ -249,9 +289,24 @@ const TermsOfService = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Key Provisions
@@ -261,9 +316,24 @@ const TermsOfService = () => {
                 {keyProvisions.map((provision, index) => (
                   <motion.div
                     key={provision.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-purple-200"
                   >
                     <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -282,9 +352,24 @@ const TermsOfService = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
             >
               {sections.map((section, index) => (
                 <div key={section.id} id={section.id} className="mb-16">
@@ -308,9 +393,24 @@ const TermsOfService = () => {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.8 
+
+
+}}
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Dispute Resolution Process
@@ -320,9 +420,24 @@ const TermsOfService = () => {
                 {disputeResolution.map((step, index) => (
                   <motion.div
                     key={step.step}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: 0.1 * index 
+
+
+}}
                     className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-indigo-200 text-center"
                   >
                     <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -341,9 +456,24 @@ const TermsOfService = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 1.0 
+
+
+}}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Questions About These Terms?
@@ -373,9 +503,9 @@ const TermsOfService = () => {
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 };
 

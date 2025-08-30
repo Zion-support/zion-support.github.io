@@ -261,7 +261,7 @@ export const cuttingEdgeEmergingTechServices2025 = [
       'Logistics automation',
       'Transportation optimization'
     ],
-    integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],
-    compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines']
-  }
+    integrations: ['Vehicle Control Systems', 'Sensor Platforms', 'Robotics Frameworks', 'Simulation Tools', 'Analytics Platforms'],;
+    compliance: ['Autonomous Vehicle Regulations', 'Safety Standards', 'Transportation Laws', 'AI Safety Guidelines'];
+  };
 ];

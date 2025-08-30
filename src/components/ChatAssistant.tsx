@@ -60,9 +60,9 @@ interface ChatAssistantProps {
 export function ChatAssistant({ 
   enabled = true, 
   position = 'bottom-right',
-  theme = 'auto',
-  language = 'en'
-}: ChatAssistantProps) {
+  theme = 'auto',;
+  language = 'en';
+}: ChatAssistantProps) {;
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -88,13 +88,13 @@ export function ChatAssistant({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: any) => {;
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: any) => {;
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -103,9 +103,9 @@ export function ChatAssistant({
 
   // Initialize with welcome message
   useEffect(() => {
-    if (enabled && messages.length === 0) {
+    if (enabled && messages.length = == 0) {
       const welcomeMessage: Message = {
-        id: 'welcome',
+  id: 'welcome',
         type: 'assistant',
         content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
         timestamp: new Date(),
@@ -114,9 +114,12 @@ export function ChatAssistant({
             'Tell me about your AI solutions',
             'What quantum computing services do you offer?',
             'How can I get started with your platform?',
-            'What are your pricing plans?'
+  'What are your pricing plans?'
           ]
-        }
+        ;
+;
+
+};
       };
       setMessages([welcomeMessage]);
       setSuggestions(welcomeMessage.metadata?.suggestions || []);
@@ -129,19 +132,19 @@ export function ChatAssistant({
   }, [messages]);
 
   // Handle input change
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     setInputValue(e.target.value);
   };
 
   // Handle send message
-  const handleSendMessage = useCallback(async () => {
+  const handleSendMessage = useCallback(async () => {;
     if (!inputValue.trim() || isProcessing) return;
 
     const userMessage: Message = {
       id: `user-${Date.now()}`,
-      type: 'user',
-      content: inputValue.trim(),
-      timestamp: new Date()
+      type: 'user',;
+      content: inputValue.trim(),;
+      timestamp: new Date();
     };
 
     setMessages(prev => [...prev, userMessage]);
@@ -152,13 +155,12 @@ export function ChatAssistant({
 
     // Simulate AI response
     setTimeout(() => {
-      const aiResponse = generateAIResponse(inputValue.trim());
       const assistantMessage: Message = {
         id: `assistant-${Date.now()}`,
         type: 'assistant',
-        content: aiResponse.content,
-        timestamp: new Date(),
-        metadata: aiResponse.metadata
+        content: aiResponse.content,;
+        timestamp: new Date(),;
+        metadata: aiResponse.metadata;
       };
 
       setMessages(prev => [...prev, assistantMessage]);
@@ -260,14 +262,14 @@ export function ChatAssistant({
   };
 
   // Handle suggestion click
-  const handleSuggestionClick = (suggestion: string) => {
+  const handleSuggestionClick = (suggestion: string) => {;
     setInputValue(suggestion);
     inputRef.current?.focus();
   };
 
   // Toggle speech recognition
-  const toggleSpeechRecognition = () => {
-    if (!recognitionRef.current) {
+  const toggleSpeechRecognition = () => {;
+    if (!recognitionRef.current) {;
       alert('Speech recognition is not supported in your browser');
       return;
     }
@@ -282,29 +284,29 @@ export function ChatAssistant({
   };
 
   // Toggle mute
-  const toggleMute = () => {
+  const toggleMute = () => {;
     setIsMuted(!isMuted);
   };
 
   // Handle key press
-  const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+  const handleKeyPress = (e: React.KeyboardEvent) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
       e.preventDefault();
       handleSendMessage();
     }
   };
 
   // Clear chat
-  const clearChat = () => {
+  const clearChat = () => {;
     setMessages([]);
     setChatHistory([]);
     setSuggestions([]);
   };
 
   // Export chat
-  const exportChat = () => {
-    const chatText = chatHistory.map(msg => 
-      `${msg.type === 'user' ? 'You' : 'AI Assistant'}: ${msg.content}`
+  const exportChat = () => {;
+    const chatText = chatHistory.map(msg => ;
+      `${msg.type === 'user' ? 'You' : 'AI Assistant'}: ${msg.content}`;
     ).join('\n\n');
     
     const blob = new Blob([chatText], { type: 'text/plain' });
@@ -319,16 +321,19 @@ export function ChatAssistant({
   if (!enabled) return null;
 
   const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
+  'bottom-right': 'bottom-4 right-4',
     'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
-  };
+    'top-right': 'top-4 right-4',;
+  'top-left': 'top-4 left-4';
+  ;
+
+
+};
 
   if (!isOpen) {
     return (
       <motion.button
-        onClick={() => setIsOpen(true)}
+        onClick = {() => setIsOpen(true)}
         className={`fixed ${positionClasses[position]} z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -338,19 +343,44 @@ export function ChatAssistant({
         <MessageCircle className="w-6 h-6" />
         <motion.div
           className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        />
-      </motion.button>
+          animate = {
+  { scale: [1, 1.2,
+  1] 
+
+
+}}
+          transition = {
+  { duration: 2,
+  repeat: Infinity 
+
+
+}};
+        />;
+      </motion.button>;
     );
   }
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.8, y: 20 }}
+        initial = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1, scale: 1,
+  y: 0 
+
+
+}}
+        exit = {
+  { opacity: 0, scale: 0.8,
+  y: 20 
+
+
+}}
         className={`fixed ${positionClasses[position]} z-50 w-96 h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col`}
       >
         {/* Header */}
@@ -406,9 +436,24 @@ export function ChatAssistant({
         <AnimatePresence>
           {showSettings && (
             <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
+              initial = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
+              animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+}}
+              exit = {
+  { height: 0,
+  opacity: 0 
+
+
+}}
               className="border-b border-gray-200 p-4 bg-gray-50"
             >
               <div className="space-y-3">
@@ -443,8 +488,18 @@ export function ChatAssistant({
               {messages.map((message) => (
                 <motion.div
                   key={message.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-[80%] ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
@@ -485,8 +540,18 @@ export function ChatAssistant({
               
               {isTyping && (
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
                   className="flex justify-start"
                 >
                   <div className="max-w-[80%]">
@@ -570,8 +635,8 @@ export function ChatAssistant({
               </div>
             </div>
           </>
-        )}
-      </motion.div>
-    </AnimatePresence>
+        )};
+      </motion.div>;
+    </AnimatePresence>;
   );
 }

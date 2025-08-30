@@ -116,9 +116,9 @@ export default function ComprehensivePricingGuide2025() {
         'SLA Guarantees'
       ],
       popular: false,
-      cta: 'Contact Sales',
-      href: '/contact'
-    }
+      cta: 'Contact Sales',;
+      href: '/contact';
+    };
   ];
 
   const serviceCategories = [
@@ -163,9 +163,9 @@ export default function ComprehensivePricingGuide2025() {
         { name: 'Data Analytics Platform', price: '$300-3000', description: 'Monthly subscription' },
         { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },
         { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },
-        { name: 'Custom Dashboards', price: '$200-2000', description: 'Per dashboard' }
-      ]
-    }
+        { name: 'Custom Dashboards', price: '$200-2000', description: 'Per dashboard' };
+      ];
+    };
   ];
 
   const industrySolutions = [
@@ -190,25 +190,38 @@ export default function ComprehensivePricingGuide2025() {
     {
       title: 'Retail & E-commerce',
       icon: ShoppingCart,
-      color: 'from-purple-500 to-indigo-500',
-      pricing: 'Revenue-based pricing model'
-    }
+      color: 'from-purple-500 to-indigo-500',;
+      pricing: 'Revenue-based pricing model';
+    };
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  };
+  phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  ;
+
+
+};
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -247,8 +260,18 @@ export default function ComprehensivePricingGuide2025() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -265,9 +288,24 @@ export default function ComprehensivePricingGuide2025() {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative group ${
                   tier.popular ? 'lg:scale-105' : ''
@@ -323,8 +361,18 @@ export default function ComprehensivePricingGuide2025() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -341,9 +389,24 @@ export default function ComprehensivePricingGuide2025() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
               >
@@ -376,8 +439,18 @@ export default function ComprehensivePricingGuide2025() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -394,9 +467,24 @@ export default function ComprehensivePricingGuide2025() {
             {industrySolutions.map((solution, index) => (
               <motion.div
                 key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
               >
@@ -424,8 +512,18 @@ export default function ComprehensivePricingGuide2025() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
@@ -473,8 +571,18 @@ export default function ComprehensivePricingGuide2025() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center"
@@ -519,8 +627,8 @@ export default function ComprehensivePricingGuide2025() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

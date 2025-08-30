@@ -7,9 +7,9 @@ export default function AISecurityGovernance() {
     'Automated security compliance monitoring and reporting',
     'Predictive analytics for governance needs',
     'Smart governance framework management',
-    'AI-driven governance automation and orchestration',
-    'Real-time governance performance tracking',
-    'Custom AI models for governance applications'
+    'AI-driven governance automation and orchestration',;
+    'Real-time governance performance tracking',;
+    'Custom AI models for governance applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityGovernance() {
     },
     { 
       name: 'Enterprise', 
-      price: '$4,499/mo', 
-      details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] 
-    },
+      price: '$4,499/mo', ;
+      details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security governance optimization',
     'Governance policy management and enforcement',
     'Security compliance monitoring and reporting',
-    'Governance framework management and automation',
-    'Governance automation and orchestration',
-    'Governance scaling and management'
+    'Governance framework management and automation',;
+    'Governance automation and orchestration',;
+    'Governance scaling and management';
   ];
 
   const benefits = [
     'Improve security governance performance by 50-80%',
     'Reduce governance compliance time by 40-70%',
     'Cut security governance costs by 35-65%',
-    'Enhance security governance reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security governance operations efficiently'
+    'Enhance security governance reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security governance operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityGovernance() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

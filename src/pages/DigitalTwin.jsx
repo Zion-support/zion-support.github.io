@@ -40,105 +40,6 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
-const digitalTwinSolutions = [
-  {
-    id: 1,
-    title: "Manufacturing Digital Twin",
-    description: "Real-time digital representation of manufacturing processes and equipment for optimization.",
-    icon: Factory,
-    features: [
-      "Equipment monitoring",
-      "Process optimization",
-      "Predictive maintenance",
-      "Quality control"
-    ],
-    price: "From $150,000",
-    timeline: "24-36 weeks",
-    category: "Manufacturing",
-    technologies: ["IoT Sensors", "3D Modeling", "Real-time Analytics", "ML Algorithms"]
-  },
-  {
-    id: 2,
-    title: "Smart City Digital Twin",
-    description: "Comprehensive digital representation of urban infrastructure and systems.",
-    icon: Building,
-    features: [
-      "Infrastructure monitoring",
-      "Traffic optimization",
-      "Energy management",
-      "Public safety"
-    ],
-    price: "From $300,000",
-    timeline: "36-52 weeks",
-    category: "Smart Cities",
-    technologies: ["GIS Mapping", "IoT Networks", "AI Analytics", "Real-time Data"]
-  },
-  {
-    id: 3,
-    title: "Healthcare Digital Twin",
-    description: "Patient-specific digital models for personalized medicine and treatment planning.",
-    icon: Users,
-    features: [
-      "Patient modeling",
-      "Treatment simulation",
-      "Drug response prediction",
-      "Surgical planning"
-    ],
-    price: "From $200,000",
-    timeline: "28-40 weeks",
-    category: "Healthcare",
-    technologies: ["Medical Imaging", "AI Models", "3D Visualization", "Predictive Analytics"]
-  },
-  {
-    id: 4,
-    title: "Energy Infrastructure Twin",
-    description: "Digital representation of power plants, grids, and renewable energy systems.",
-    icon: Zap,
-    features: [
-      "Grid monitoring",
-      "Load balancing",
-      "Predictive maintenance",
-      "Energy optimization"
-    ],
-    price: "From $250,000",
-    timeline: "32-44 weeks",
-    category: "Energy",
-    technologies: ["SCADA Systems", "IoT Sensors", "AI Analytics", "Real-time Control"]
-  },
-  {
-    id: 5,
-    title: "Transportation Digital Twin",
-    description: "Digital models of transportation networks, vehicles, and logistics systems.",
-    icon: Truck,
-    features: [
-      "Fleet monitoring",
-      "Route optimization",
-      "Traffic simulation",
-      "Predictive analytics"
-    ],
-    price: "From $180,000",
-    timeline: "24-36 weeks",
-    category: "Transportation",
-    technologies: ["GPS Tracking", "IoT Sensors", "AI Routing", "Real-time Data"]
-  },
-  {
-    id: 6,
-    title: "Building Digital Twin",
-    description: "Digital representation of buildings for facility management and optimization.",
-    icon: Building,
-    features: [
-      "Building monitoring",
-      "Energy optimization",
-      "Occupancy tracking",
-      "Maintenance planning"
-    ],
-    price: "From $120,000",
-    timeline: "20-28 weeks",
-    category: "Buildings",
-    technologies: ["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
-  }
-];
-
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",
@@ -280,15 +181,40 @@ export default function DigitalTwin() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Monitor className="w-10 h-10 text-white" />
@@ -326,8 +252,18 @@ export default function DigitalTwin() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -341,9 +277,24 @@ export default function DigitalTwin() {
             {digitalTwinBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -372,8 +323,18 @@ export default function DigitalTwin() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -387,9 +348,24 @@ export default function DigitalTwin() {
             {digitalTwinTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -419,8 +395,18 @@ export default function DigitalTwin() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -434,9 +420,24 @@ export default function DigitalTwin() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -463,8 +464,18 @@ export default function DigitalTwin() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -495,9 +506,24 @@ export default function DigitalTwin() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -552,8 +578,18 @@ export default function DigitalTwin() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -567,9 +603,24 @@ export default function DigitalTwin() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -613,8 +664,18 @@ export default function DigitalTwin() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

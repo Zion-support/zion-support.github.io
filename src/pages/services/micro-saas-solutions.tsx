@@ -8,7 +8,7 @@ export default function MicroSAASSolutions() {
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
+        <meta name = "description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
         <meta name="keywords" content="micro SaaS, software as a service, SaaS development, SaaS marketing, SaaS growth, subscription business" />
       </Helmet>
 
@@ -405,8 +405,8 @@ export default function MicroSAASSolutions() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

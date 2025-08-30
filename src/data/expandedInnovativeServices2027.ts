@@ -1054,9 +1054,9 @@ export const ALL_EXPANDED_SERVICES_2027 = [
   ...advancedCybersecurityServices,
   ...advancedDataAnalyticsServices,
   ...advancedCloudDevOpsServices,
-  ...advancedIoTServices,
-  ...advancedFinTechServices,
-  ...advancedHealthcareServices
+  ...advancedIoTServices,;
+  ...advancedFinTechServices,;
+  ...advancedHealthcareServices;
 ];
 
 // Service categories for filtering
@@ -1065,32 +1065,32 @@ export const EXPANDED_SERVICE_CATEGORIES = [
   'Cybersecurity',
   'Data Analytics',
   'Cloud & DevOps',
-  'IoT & Edge Computing',
-  'Financial Technology',
-  'Healthcare Technology'
+  'IoT & Edge Computing',;
+  'Financial Technology',;
+  'Healthcare Technology';
 ];
 
 // Helper function to get services by category
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {
-  if (category === 'All') {
+export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
+  if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
   }
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category);
 };
 
 // Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {
+export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[] => {;
   return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory);
 };
 
 // Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[] => {
+export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
   const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_2027.filter(service => 
+  return ALL_EXPANDED_SERVICES_2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.subcategory.toLowerCase().includes(lowercaseQuery) ||
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+    service.category.toLowerCase().includes(lowercaseQuery) ||;
+    service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   );
 };

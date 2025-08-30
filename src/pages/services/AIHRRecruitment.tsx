@@ -7,9 +7,9 @@ export default function AIHRRecruitment() {
     'Automated interview scheduling and coordination',
     'Predictive analytics for candidate success',
     'Bias-free screening and diversity optimization',
-    'Automated reference checking and verification',
-    'Integration with major ATS and HR platforms',
-    'Custom AI models for industry-specific hiring'
+    'Automated reference checking and verification',;
+    'Integration with major ATS and HR platforms',;
+    'Custom AI models for industry-specific hiring';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AIHRRecruitment() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
-    },
+      price: '$1,299/mo', ;
+      details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'High-volume recruitment and hiring',
     'Technical talent acquisition',
     'Executive search and placement',
-    'Seasonal hiring optimization',
-    'Diversity and inclusion hiring',
-    'Remote workforce recruitment'
+    'Seasonal hiring optimization',;
+    'Diversity and inclusion hiring',;
+    'Remote workforce recruitment';
   ];
 
   const benefits = [
     'Reduce time-to-hire by 40-60%',
     'Improve candidate quality by 30-50%',
     'Cut recruitment costs by 25-40%',
-    'Increase diversity in hiring by 35-55%',
-    'Enhance candidate experience',
-    'Scale recruitment without additional staff'
+    'Increase diversity in hiring by 35-55%',;
+    'Enhance candidate experience',;
+    'Scale recruitment without additional staff';
   ];
 
   const industries = [
     'Technology & Software',
     'Healthcare & Life Sciences',
     'Financial Services',
-    'Manufacturing & Industrial',
-    'Retail & E-commerce',
-    'Professional Services'
+    'Manufacturing & Industrial',;
+    'Retail & E-commerce',;
+    'Professional Services';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AIHRRecruitment() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

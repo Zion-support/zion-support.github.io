@@ -81,8 +81,13 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
             cancelAnimationFrame(animationId);
         };
     }, [intensity, color, speed]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
+    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
+  {
+            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
+  #16213e 100%)'
+        
+
+
+}}/>);
 };
 export default FuturisticMatrixBackground;

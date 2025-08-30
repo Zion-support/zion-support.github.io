@@ -1,5 +1,5 @@
 import React from 'react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 import { 
   Code, 
   Zap, 
@@ -53,9 +53,9 @@ export default function MicroSAASSolutions() {
     {
       title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-    }
+      icon: TrendingUp,;
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
+    };
   ];
 
   const benefits = [
@@ -76,9 +76,9 @@ export default function MicroSAASSolutions() {
     },
     {
       title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
-    }
+      description: "Enterprise-grade security and compliance standards",;
+      icon: Shield;
+    };
   ];
 
   const industries = [
@@ -109,9 +109,9 @@ export default function MicroSAASSolutions() {
     },
     {
       name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
-    }
+      description: "Property management and client portals",;
+      icon: Building;
+    };
   ];
 
   const processSteps = [
@@ -140,15 +140,15 @@ export default function MicroSAASSolutions() {
       step: 4,
       title: "Testing & Deployment",
       description: "Comprehensive testing and production deployment",
-      icon: Rocket,
-      duration: "2-4 weeks"
-    }
+      icon: Rocket,;
+      duration: "2-4 weeks";
+    };
   ];
 
   return (
     <>
       <SEO 
-        title="Micro SAAS Solutions - Custom Software Development"
+        title = "Micro SAAS Solutions - Custom Software Development"
         description="Transform your business with custom Micro SAAS solutions. From development to deployment, we deliver scalable, secure, and efficient software-as-a-service applications."
         keywords="micro saas, custom software, saas development, software solutions, business applications"
       />
@@ -348,8 +348,8 @@ export default function MicroSAASSolutions() {
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

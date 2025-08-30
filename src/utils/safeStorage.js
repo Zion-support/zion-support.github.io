@@ -12,7 +12,7 @@ function isLocalStorageAvailable() {
     }
     lastAvailabilityCheck = now;
     try {
-        if (typeof window === 'undefined') {
+        if (typeof window === 'null') {
             localStorageAvailable = false;
             return false;
         }

@@ -7,9 +7,9 @@ export default function AISecurityCompliance() {
     'Automated compliance verification and validation',
     'Predictive analytics for compliance needs',
     'Smart compliance framework management',
-    'AI-driven compliance automation and orchestration',
-    'Real-time compliance performance tracking',
-    'Custom AI models for compliance applications'
+    'AI-driven compliance automation and orchestration',;
+    'Real-time compliance performance tracking',;
+    'Custom AI models for compliance applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityCompliance() {
     },
     { 
       name: 'Enterprise', 
-      price: '$2,499/mo', 
-      details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] 
-    },
+      price: '$2,499/mo', ;
+      details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security compliance optimization',
     'Compliance monitoring and reporting',
     'Compliance verification and validation',
-    'Compliance framework management and automation',
-    'Compliance automation and orchestration',
-    'Compliance scaling and management'
+    'Compliance framework management and automation',;
+    'Compliance automation and orchestration',;
+    'Compliance scaling and management';
   ];
 
   const benefits = [
     'Improve security compliance performance by 50-80%',
     'Reduce compliance verification time by 40-70%',
     'Cut security compliance costs by 35-65%',
-    'Enhance security compliance reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security compliance operations efficiently'
+    'Enhance security compliance reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security compliance operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityCompliance() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

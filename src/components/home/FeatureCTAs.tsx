@@ -153,13 +153,13 @@ export function FeatureCTAs() {
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: "/micro-saas",
-      badge: "New",
-      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-    }
+      badge: "New",;
+      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank.";
+    };
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section className = "py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -228,8 +228,8 @@ export function FeatureCTAs() {
               </Link>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 }

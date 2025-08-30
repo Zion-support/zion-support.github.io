@@ -4,7 +4,7 @@ interface FuturisticAnimatedBackground2029Props {
   className?: string;
 }
 
-export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {
+export default function FuturisticAnimatedBackground2029({ className = '' }: FuturisticAnimatedBackground2029Props) {;
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {
+    const resizeCanvas = () => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -147,7 +147,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
           for (let x = 0; x < canvas.width; x++) {
             const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2;
-            if (x === 0) {
+            if (x = == 0) {;
               ctx.moveTo(x, y);
             } else {
               ctx.lineTo(x, y);
@@ -179,9 +179,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
     }
 
     // Animation loop
-    let animationId: number;
-    const animate = () => {
-      // Clear canvas with fade effect
+    let animate = () => {;
+      // Clear canvas with fade effect;
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -190,7 +189,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       grid.draw();
 
       // Update and draw waves
-      waves.forEach(wave => {
+      waves.forEach(wave = > {;
         wave.update();
         wave.draw();
       });
@@ -211,8 +210,6 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 100) {
@@ -240,7 +237,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         const angle = (i * Math.PI) / 3;
         const x = Math.cos(angle) * 150;
         const y = Math.sin(angle) * 150;
-        if (i === 0) {
+        if (i = == 0) {;
           ctx.moveTo(x, y);
         } else {
           ctx.lineTo(x, y);
@@ -257,7 +254,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         const angle = (i * Math.PI * 2) / 3 + time * 0.5;
         const x = Math.cos(angle) * 100;
         const y = Math.sin(angle) * 100;
-        if (i === 0) {
+        if (i = == 0) {;
           ctx.moveTo(x, y);
         } else {
           ctx.lineTo(x, y);
@@ -283,13 +280,18 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
   }, []);
 
   return (
-    <div className={`fixed inset-0 pointer-events-none ${className}`}>
+    <div className = {`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
         ref={canvasRef}
         className="w-full h-full"
-        style={{
-          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0, 1) 100%)'
-        }}
+        style = {
+  {
+          background: 'radial-gradient(ellipse at center, rgba(20, 20, 40, 0.8) 0%, rgba(0, 0, 0,
+  1) 100%)'
+        
+
+
+}}
       />
       
       {/* Overlay gradients */}
@@ -298,8 +300,8 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       
       {/* Animated orbs */}
       <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
-    </div>
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />;
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />;
+    </div>;
   );
 }

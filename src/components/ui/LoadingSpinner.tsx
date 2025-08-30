@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from '../../utils/cn';
+import { cn } from "../../utils/cn";
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -18,25 +18,40 @@ export default function LoadingSpinner({
   text = 'Loading...'
 }: LoadingSpinnerProps) {
   const sizeClasses = {
-    sm: 'w-4 h-4',
+  sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
+    lg: 'w-12 h-12',;
+  xl: 'w-16 h-16';
+  ;
+
+
+};
 
   const colorClasses = {
-    primary: 'border-cyan-400 border-t-transparent',
-    white: 'border-white border-t-transparent',
-    gray: 'border-gray-400 border-t-transparent'
-  };
+  primary: 'border-cyan-400 border-t-transparent',
+    white: 'border-white border-t-transparent',;
+  gray: 'border-gray-400 border-t-transparent';
+  ;
+
+
+};
 
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
-      <div className={cn(
+    <div className = {
+  cn('flex flex-col items-center justify-center',
+  className)
+
+
+}>
+      <div className = {
+  cn(
         'animate-spin rounded-full border-2',
         sizeClasses[size],
-        colorClasses[color]
-      )} />
+  colorClasses[color]
+      )
+
+
+} />
       {showText && (
         <motion.p
           initial={{ opacity: 0 }}
@@ -45,64 +60,74 @@ export default function LoadingSpinner({
           className="mt-2 text-sm text-gray-500"
         >
           {text}
-        </motion.p>
-      )}
-    </div>
+        </motion.p>;
+      )};
+    </div>;
   );
 }
 
 // Optimized skeleton loader
 export function SkeletonLoader({ 
   className = '', 
-  lines = 3, 
-  height = 'h-4' 
-}: { 
+  lines = 3, ;
+  height = 'h-4' ;
+}: { ;
   className?: string; 
   lines?: number; 
   height?: string; 
 }) {
   return (
-    <div className={`space-y-3 ${className}`}>
+    <div className = {`space-y-3 ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1, duration: 0.3 }}
+          transition = {
+  { delay: index * 0.1,
+  duration: 0.3 
+
+
+}}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
-        />
-      ))}
-    </div>
+        />;
+      ))};
+    </div>;
   );
 }
 
 // Button loading state
 export function ButtonLoader({
-  size = 'sm',
-  className
-}: {
+  size = 'sm',;
+  className;
+}: {;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }) {
   return (
-    <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} color="white" />
-      <span className="ml-2">Loading...</span>
-    </div>
+    <div className = {
+  cn('inline-flex items-center',
+  className)
+
+
+}>
+      <LoadingSpinner size={size} color="white" />;
+      <span className="ml-2">Loading...</span>;
+    </div>;
   );
 }
 
 // Page loading overlay
 export function PageLoaderOverlay({ 
-  text = 'Loading page...',
-  showSpinner = true 
-}: { 
+  text = 'Loading page...',;
+  showSpinner = true ;
+}: { ;
   text?: string; 
   showSpinner?: boolean; 
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial = {{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center"
@@ -110,42 +135,70 @@ export function PageLoaderOverlay({
       <div className="text-center">
         {showSpinner && <LoadingSpinner size="xl" color="primary" />}
         <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.3 }}
+          initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { delay: 0.3,
+  duration: 0.3 
+
+
+}}
           className="mt-4 text-lg text-gray-300 font-medium"
         >
           {text}
-        </motion.p>
-      </div>
-    </motion.div>
+        </motion.p>;
+      </div>;
+    </motion.div>;
   );
 }
 
 // Content loading placeholder
 export function ContentPlaceholder({ 
-  className = '',
-  variant = 'default'
-}: { 
+  className = '',;
+  variant = 'default';
+}: { ;
   className?: string; 
   variant?: 'default' | 'card' | 'list' | 'grid'; 
 }) {
   const variants = {
-    default: 'space-y-4',
+  default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
-    list: 'space-y-3',
-    grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
-  };
+    list: 'space-y-3',;
+  grid: 'grid grid-cols-2 md:grid-cols-4 gap-4';
+  ;
+
+
+};
 
   return (
-    <div className={`${variants[variant]} ${className}`}>
+    <div className = {`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
         Array.from({ length: 6 }).map((_, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-6 border border-white/10"
           >
@@ -159,8 +212,18 @@ export function ContentPlaceholder({
         Array.from({ length: 5 }).map((_, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="flex items-center space-x-3"
           >
@@ -173,8 +236,18 @@ export function ContentPlaceholder({
         Array.from({ length: 8 }).map((_, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="bg-white/5 rounded-lg p-4 border border-white/10"
           >
@@ -187,13 +260,23 @@ export function ContentPlaceholder({
         Array.from({ length: 4 }).map((_, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ delay: index * 0.1 }}
             className="h-4 bg-white/10 rounded animate-pulse" />
-        ))
-      )}
-    </div>
+        ));
+      )};
+    </div>;
   );
 }
 
@@ -202,12 +285,17 @@ export function AppLoadingSpinner() {
   const icons = ['🤖', '☁️', '🔒', '💡'];
   
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="relative">
         {/* Main spinning ring */}
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
-          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style = {
+  { animationDirection: 'reverse',
+  animationDuration: '1.5s' 
+
+
+}}></div>
           <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
         </div>
         
@@ -216,26 +304,40 @@ export function AppLoadingSpinner() {
           <motion.div
             key={index}
             className="absolute text-2xl"
-            style={{
+            style = {
+  {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-            }}
-            animate={{
+  
+
+}}
+            animate = {
+  {
               rotate: [0, 360],
               scale: [0.8, 1.2, 0.8],
-            }}
-            transition={{
+  
+
+}}
+            transition = {
+  {
               duration: 3,
               repeat: Infinity,
               delay: index * 0.5,
-              ease: "easeInOut"
-            }}
+  ease: "easeInOut"
+            
+
+
+}}
           >
             <span 
-              style={{
+              style = {
+  {
                 position: 'absolute',
-                top: `${Math.cos(index * Math.PI / 2) * 60}px`,
+  top: `${Math.cos(index * Math.PI / 2) * 60
+
+
+}px`,
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`,
               }}
             >
@@ -248,8 +350,18 @@ export function AppLoadingSpinner() {
       {/* Loading text */}
       <motion.div
         className="mt-8 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
         transition={{ delay: 0.5 }}
       >
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
@@ -262,18 +374,24 @@ export function AppLoadingSpinner() {
           <motion.div
             key={i}
             className="w-2 h-2 bg-cyan-400 rounded-full"
-            animate={{
+            animate = {
+  {
               scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],
-            }}
-            transition={{
+  
+
+}}
+            transition = {
+  {
               duration: 1.5,
               repeat: Infinity,
               delay: i * 0.2,
-            }}
+  
+
+}}
           />
-        ))}
-      </div>
-    </div>
+        ))};
+      </div>;
+    </div>;
   );
 }

@@ -7,9 +7,9 @@ export default function AISecurityRiskManagement() {
     'Automated risk identification and prioritization',
     'Predictive analytics for risk prediction',
     'Smart risk framework management',
-    'AI-driven risk automation and orchestration',
-    'Real-time risk performance tracking',
-    'Custom AI models for risk applications'
+    'AI-driven risk automation and orchestration',;
+    'Real-time risk performance tracking',;
+    'Custom AI models for risk applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityRiskManagement() {
     },
     { 
       name: 'Enterprise', 
-      price: '$2,999/mo', 
-      details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support'] 
-    },
+      price: '$2,999/mo', ;
+      details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security risk management optimization',
     'Risk assessment and analysis',
     'Risk identification and prioritization',
-    'Risk framework management and automation',
-    'Risk automation and orchestration',
-    'Risk scaling and management'
+    'Risk framework management and automation',;
+    'Risk automation and orchestration',;
+    'Risk scaling and management';
   ];
 
   const benefits = [
     'Improve security risk management performance by 50-80%',
     'Reduce risk assessment time by 40-70%',
     'Cut security risk management costs by 35-65%',
-    'Enhance security risk management reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security risk management operations efficiently'
+    'Enhance security risk management reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security risk management operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-red-500 via-pink-500 to-rose-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityRiskManagement() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

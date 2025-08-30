@@ -7,9 +7,9 @@ export default function AISecurityAssessment() {
     'Automated security risk detection and evaluation',
     'Predictive analytics for assessment needs',
     'Smart assessment framework management',
-    'AI-driven assessment automation and orchestration',
-    'Real-time assessment performance tracking',
-    'Custom AI models for assessment applications'
+    'AI-driven assessment automation and orchestration',;
+    'Real-time assessment performance tracking',;
+    'Custom AI models for assessment applications';
   ];
 
   const tiers = [
@@ -25,40 +25,40 @@ export default function AISecurityAssessment() {
     },
     { 
       name: 'Enterprise', 
-      price: '$3,199/mo', 
-      details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support'] 
-    },
+      price: '$3,199/mo', ;
+      details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support'] ;
+    },;
   ];
 
   const useCases = [
     'Security assessment optimization',
     'Assessment strategy management and execution',
     'Security risk detection and evaluation',
-    'Assessment framework management and automation',
-    'Assessment automation and orchestration',
-    'Assessment scaling and management'
+    'Assessment framework management and automation',;
+    'Assessment automation and orchestration',;
+    'Assessment scaling and management';
   ];
 
   const benefits = [
     'Improve security assessment performance by 50-80%',
     'Reduce assessment completion time by 40-70%',
     'Cut security assessment costs by 35-65%',
-    'Enhance security assessment reliability and scalability',
-    'Optimize resource utilization',
-    'Scale security assessment operations efficiently'
+    'Enhance security assessment reliability and scalability',;
+    'Optimize resource utilization',;
+    'Scale security assessment operations efficiently';
   ];
 
   const industries = [
     'Software Development',
     'E-commerce & Retail',
     'Financial Services',
-    'Healthcare & Life Sciences',
-    'Media & Entertainment',
-    'Technology & SaaS'
+    'Healthcare & Life Sciences',;
+    'Media & Entertainment',;
+    'Technology & SaaS';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-lime-500 via-green-500 to-emerald-500 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -167,8 +167,8 @@ export default function AISecurityAssessment() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

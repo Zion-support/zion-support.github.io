@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 } from 'lucide-react'
 
-import { additionalEnhancedServices } from '../data/additional-real-services'
+import { additionalEnhancedServices } from "../data/additional-real-services"
 
 export default function Services() {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -358,5 +358,6 @@ export default function Services() {
 				</div>
 			</section>
 		</>
-	)
-}
+	);
+};
+;

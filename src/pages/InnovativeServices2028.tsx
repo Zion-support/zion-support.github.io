@@ -27,7 +27,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from '../data/innovativeServices2028';
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
 
 export default function InnovativeServices2028() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -35,18 +35,18 @@ export default function InnovativeServices2028() {
   const [sortBy, setSortBy] = useState('name');
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
-  const filteredServices = innovativeServices2028.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+  const filteredServices = innovativeServices2028.filter(service => {;
+    const matchesCategory = selectedCategory === 'all' || ;
       serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
@@ -57,7 +57,7 @@ export default function InnovativeServices2028() {
     }
   });
 
-  const getCategoryIcon = (categoryName: string) => {
+  const getCategoryIcon = (categoryName: string) => {;
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
@@ -75,13 +75,13 @@ export default function InnovativeServices2028() {
     return iconMap[category.icon] || Brain;
   };
 
-  const getCategoryColor = (categoryName: string) => {
+  const getCategoryColor = (categoryName: string) => {;
     const category = serviceCategories.find(cat => cat.name === categoryName);
     return category?.color || 'from-purple-500 to-pink-500';
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Futuristic Background */}
       <div className="fixed inset-0 pointer-events-none z-[-1]">
         {/* Animated grid */}
@@ -101,8 +101,18 @@ export default function InnovativeServices2028() {
       <section className="pt-32 pb-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="max-w-6xl mx-auto"
           >
@@ -192,9 +202,24 @@ export default function InnovativeServices2028() {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 className="group relative"
               >
                 {/* Background glow */}
@@ -251,9 +276,24 @@ export default function InnovativeServices2028() {
                   <AnimatePresence>
                     {expandedService === service.id && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                         transition={{ duration: 0.3 }}
                         className="mb-6 overflow-hidden"
                       >
@@ -334,8 +374,18 @@ export default function InnovativeServices2028() {
       <section className="py-20 bg-black/30 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -352,9 +402,24 @@ export default function InnovativeServices2028() {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
                   tier.recommended
@@ -409,8 +474,18 @@ export default function InnovativeServices2028() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -455,8 +530,8 @@ export default function InnovativeServices2028() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

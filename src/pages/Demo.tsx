@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 export default function Demo() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
       <SEO title="Request a Demo - Zion Tech Group" description="Book a personalized demo of our AI and IT solutions." />
       <div className="container mx-auto px-4 max-w-3xl">
         <h1 className="text-4xl font-bold mb-4">Request a Demo</h1>
@@ -30,9 +30,9 @@ export default function Demo() {
             </div>
             <button type="button" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold">Request Demo</button>
           </form>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }
 

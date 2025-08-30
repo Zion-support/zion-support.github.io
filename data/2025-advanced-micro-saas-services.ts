@@ -296,7 +296,7 @@ export const advancedMicroSaasServices2025 = [
       email: 'kleber@ziontechgroup.com'
     },
     marketSize: '$3.9B',
-    targetAudience: 'API developers, DevOps teams, enterprise businesses, cloud platforms',
-    competitiveAdvantage: 'Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration'
-  }
+    targetAudience: 'API developers, DevOps teams, enterprise businesses, cloud platforms',;
+    competitiveAdvantage: 'Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration';
+  };
 ];

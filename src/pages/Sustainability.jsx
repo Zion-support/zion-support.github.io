@@ -48,136 +48,6 @@ import {
   Thermometer
 } from 'lucide-react';
 
-const sustainabilitySolutions = [
-  {
-    id: 1,
-    title: "Renewable Energy Systems",
-    description: "Solar, wind, and hydroelectric power solutions for sustainable energy generation.",
-    icon: Sun,
-    features: [
-      "Solar panel installation",
-      "Wind turbine systems",
-      "Energy storage solutions",
-      "Grid integration"
-    ],
-    price: "From $200,000",
-    timeline: "32-48 weeks",
-    category: "Energy",
-    technologies: ["Solar PV", "Wind Power", "Battery Storage", "Smart Grid"]
-  },
-  {
-    id: 2,
-    title: "Green Building Solutions",
-    description: "Sustainable building design and construction for energy efficiency and environmental impact reduction.",
-    icon: Building,
-    features: [
-      "LEED certification",
-      "Energy-efficient design",
-      "Green materials",
-      "Smart building systems"
-    ],
-    price: "From $150,000",
-    timeline: "24-40 weeks",
-    category: "Buildings",
-    technologies: ["LEED Standards", "BIM Modeling", "IoT Sensors", "Energy Management"]
-  },
-  {
-    id: 3,
-    title: "Waste Management Systems",
-    description: "Advanced waste reduction, recycling, and circular economy solutions.",
-    icon: Recycle,
-    features: [
-      "Waste sorting automation",
-      "Recycling optimization",
-      "Circular economy design",
-      "Waste-to-energy"
-    ],
-    price: "From $100,000",
-    timeline: "20-32 weeks",
-    category: "Waste Management",
-    technologies: ["AI Sorting", "IoT Monitoring", "Biogas", "Composting"]
-  },
-  {
-    id: 4,
-    title: "Sustainable Transportation",
-    description: "Electric vehicles, public transit optimization, and green logistics solutions.",
-    icon: Car,
-    features: [
-      "EV infrastructure",
-      "Public transit optimization",
-      "Green logistics",
-      "Carbon footprint tracking"
-    ],
-    price: "From $120,000",
-    timeline: "24-36 weeks",
-    category: "Transportation",
-    technologies: ["EV Charging", "Smart Routing", "Fleet Management", "Carbon Analytics"]
-  },
-  {
-    id: 5,
-    title: "Water Conservation",
-    description: "Smart water management and conservation systems for sustainable resource use.",
-    icon: Droplets,
-    features: [
-      "Smart irrigation",
-      "Water quality monitoring",
-      "Leak detection",
-      "Conservation analytics"
-    ],
-    price: "From $80,000",
-    timeline: "16-24 weeks",
-    category: "Water Management",
-    technologies: ["IoT Sensors", "AI Analytics", "Smart Valves", "Water Quality"]
-  },
-  {
-    id: 6,
-    title: "Carbon Management",
-    description: "Comprehensive carbon footprint tracking and reduction strategies.",
-    icon: Tree,
-    features: [
-      "Carbon footprint analysis",
-      "Emissions tracking",
-      "Offset strategies",
-      "Sustainability reporting"
-    ],
-    price: "From $60,000",
-    timeline: "12-20 weeks",
-    category: "Carbon Management",
-    technologies: ["Carbon Analytics", "IoT Monitoring", "Blockchain", "AI Reporting"]
-  }
-];
-
-const sustainabilityTechnologies = [
-  {
-    name: "Solar Power",
-    description: "Photovoltaic systems for renewable energy generation",
-    icon: Sun,
-    useCase: "Energy Generation",
-    reliability: "High"
-  },
-  {
-    name: "Wind Energy",
-    description: "Wind turbine systems for sustainable power",
-    icon: Wind,
-    useCase: "Large-scale Power",
-    reliability: "High"
-  },
-  {
-    name: "Energy Storage",
-    description: "Battery and storage solutions for renewable energy",
-    icon: Battery,
-    useCase: "Grid Stability",
-    reliability: "Critical"
-  },
-  {
-    name: "Smart Grid",
-    description: "Intelligent energy distribution and management",
-    icon: Network,
-    useCase: "Energy Distribution",
-    reliability: "Critical"
-  }
-];
-
 const successStories = [
   {
     id: 1,
@@ -288,15 +158,40 @@ export default function Sustainability() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Leaf className="w-10 h-10 text-white" />
@@ -334,8 +229,18 @@ export default function Sustainability() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -349,9 +254,24 @@ export default function Sustainability() {
             {sustainabilityBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -380,8 +300,18 @@ export default function Sustainability() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -395,9 +325,24 @@ export default function Sustainability() {
             {sustainabilityTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -427,8 +372,18 @@ export default function Sustainability() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -442,9 +397,24 @@ export default function Sustainability() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -471,8 +441,18 @@ export default function Sustainability() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -503,9 +483,24 @@ export default function Sustainability() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -560,8 +555,18 @@ export default function Sustainability() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -575,9 +580,24 @@ export default function Sustainability() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -621,8 +641,18 @@ export default function Sustainability() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

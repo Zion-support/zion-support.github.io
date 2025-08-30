@@ -1,4 +1,4 @@
-export type InnovativeMicroSaasV2 = {
+export type InnovativeMicroSaasV2 = {;
 	id: string;
 	title: string;
 	description: string;

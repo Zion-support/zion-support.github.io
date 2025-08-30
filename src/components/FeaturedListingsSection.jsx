@@ -122,7 +122,11 @@ export function FeaturedListingsSection() {
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
@@ -137,17 +141,42 @@ export function FeaturedListingsSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
           >
             Featured Solutions
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
             className="text-xl text-gray-600 max-w-3xl mx-auto"
           >
             Discover our most popular and innovative solutions that are transforming businesses worldwide
@@ -306,9 +335,24 @@ export function FeaturedListingsSection() {
 
         {/* CTA Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">

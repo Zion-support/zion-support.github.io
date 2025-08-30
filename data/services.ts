@@ -411,14 +411,14 @@ export const services: Service[] = [
   }
 ];
 
-export const getServicesByCategory = (category: Service['category']) => {
+export const getServicesByCategory = (category: Service['category']) => {;
   return services.filter(service => service.category === category);
 };
 
-export const getPopularServices = () => {
+export const getPopularServices = () => {;
   return services.filter(service => service.isPopular);
 };
 
-export const getNewServices = () => {
+export const getNewServices = () => {;
   return services.filter(service => service.isNew);
 };

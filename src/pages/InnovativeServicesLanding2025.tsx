@@ -37,9 +37,9 @@ export default function InnovativeServicesLanding2025() {
       price: "$1,999/month",
       category: "Research & Development",
       icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      benefits: ["500% research acceleration", "70% cost reduction", "24/7 research capability"]
-    }
+      color: "from-purple-500 to-pink-500",;
+      benefits: ["500% research acceleration", "70% cost reduction", "24/7 research capability"];
+    };
   ];
 
   const innovationHighlights = [
@@ -64,27 +64,37 @@ export default function InnovativeServicesLanding2025() {
     {
       title: "Edge Computing",
       description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",
-      icon: Network,
-      color: "from-cyan-500 to-blue-500"
-    }
+      icon: Network,;
+      color: "from-cyan-500 to-blue-500";
+    };
   ];
 
   const marketStats = [
     { label: "Total Market Size", value: "$500B+", description: "Combined market opportunity" },
-    { label: "Growth Rate", value: "25-35%", description: "Annual market growth" },
-    { label: "ROI Potential", value: "200-500%", description: "Average customer ROI" },
-    { label: "Global Reach", value: "150+", description: "Countries served" }
+    { label: "Growth Rate", value: "25-35%", description: "Annual market growth" },;
+    { label: "ROI Potential", value: "200-500%", description: "Average customer ROI" },;
+    { label: "Global Reach", value: "150+", description: "Countries served" };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
@@ -130,9 +140,24 @@ export default function InnovativeServicesLanding2025() {
             {marketStats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -155,8 +180,18 @@ export default function InnovativeServicesLanding2025() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -173,9 +208,24 @@ export default function InnovativeServicesLanding2025() {
             {innovationHighlights.map((highlight, index) => (
               <motion.div
                 key={highlight.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300"
               >
@@ -200,8 +250,18 @@ export default function InnovativeServicesLanding2025() {
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -218,9 +278,24 @@ export default function InnovativeServicesLanding2025() {
             {featuredServices.map((service, index) => (
               <motion.div
                 key={service.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300"
               >
@@ -272,8 +347,18 @@ export default function InnovativeServicesLanding2025() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -288,9 +373,24 @@ export default function InnovativeServicesLanding2025() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -304,9 +404,24 @@ export default function InnovativeServicesLanding2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -320,9 +435,24 @@ export default function InnovativeServicesLanding2025() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
               viewport={{ once: true }}
               className="text-center"
             >
@@ -342,8 +472,18 @@ export default function InnovativeServicesLanding2025() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -409,8 +549,8 @@ export default function InnovativeServicesLanding2025() {
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

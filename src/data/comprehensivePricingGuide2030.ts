@@ -337,21 +337,24 @@ export const PRICING_ANALYSIS_2030 = {
   ),
   priceRange: {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  },
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
-    if (!acc[service.category]) {
+  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
+  
+
+
+},;
+  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
+    if (!acc[service.category]) {;
       acc[service.category] = [];
     }
     acc[service.category].push(service.basePrice);
     return acc;
   }, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
     serviceName: service.serviceName,
     roi: service.roi,
-    setupTime: service.setupTime,
-    price: service.basePrice
-  }))
+    setupTime: service.setupTime,;
+    price: service.basePrice;
+  }));
 };
 
 // Payment and Discount Information
@@ -370,8 +373,11 @@ export const PAYMENT_OPTIONS_2030 = {
     "Dedicated support",
     "On-premise deployment",
     "Custom integrations",
-    "SLA guarantees"
-  ]
+  "SLA guarantees";
+  ];
+;
+
+
 };
 
 // Contact Information for Pricing Inquiries
@@ -380,6 +386,9 @@ export const PRICING_CONTACT_2030 = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "Within 24 hours for pricing inquiries"
+  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
+  responseTime: "Within 24 hours for pricing inquiries";
+;
+
+
 };

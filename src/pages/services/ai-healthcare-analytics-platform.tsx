@@ -53,9 +53,9 @@ export default function AIHealthcareAnalyticsPlatform() {
     },
     {
       icon: Eye,
-      title: 'Medical Image Analysis',
-      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
-    }
+      title: 'Medical Image Analysis',;
+      description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
+    };
   ];
 
   const pricingPlans = [
@@ -106,9 +106,9 @@ export default function AIHealthcareAnalyticsPlatform() {
         'On-premise options',
         'SLA guarantees',
         'Custom integrations'
-      ],
-      popular: false
-    }
+      ],;
+      popular: false;
+    };
   ];
 
   const benefits = [
@@ -129,9 +129,9 @@ export default function AIHealthcareAnalyticsPlatform() {
     },
     {
       icon: BarChart3,
-      title: '40% Cost Reduction',
-      description: 'AI optimization reduces healthcare costs and improves efficiency'
-    }
+      title: '40% Cost Reduction',;
+      description: 'AI optimization reduces healthcare costs and improves efficiency';
+    };
   ];
 
   const useCases = [
@@ -152,22 +152,22 @@ export default function AIHealthcareAnalyticsPlatform() {
     },
     {
       title: 'Drug Safety Monitoring',
-      description: 'Real-time monitoring of drug interactions and adverse effects',
-      icon: Shield
-    }
+      description: 'Real-time monitoring of drug interactions and adverse effects',;
+      icon: Shield;
+    };
   ];
 
   const complianceStandards = [
     'HIPAA Compliant',
     'FDA Approved',
     'ISO 13485',
-    'SOC 2 Type II',
-    'GDPR Compliant',
-    'HITECH Certified'
+    'SOC 2 Type II',;
+    'GDPR Compliant',;
+    'HITECH Certified';
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Healthcare Analytics Platform - Zion Tech Group"
         description="Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month."
@@ -177,8 +177,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
@@ -212,8 +222,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -230,9 +250,24 @@ export default function AIHealthcareAnalyticsPlatform() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
@@ -251,8 +286,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -269,9 +314,24 @@ export default function AIHealthcareAnalyticsPlatform() {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -290,8 +350,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -308,9 +378,24 @@ export default function AIHealthcareAnalyticsPlatform() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
               >
@@ -329,8 +414,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -347,9 +442,24 @@ export default function AIHealthcareAnalyticsPlatform() {
             {complianceStandards.map((standard, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
               >
@@ -365,8 +475,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -383,9 +503,24 @@ export default function AIHealthcareAnalyticsPlatform() {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
@@ -436,8 +571,18 @@ export default function AIHealthcareAnalyticsPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -461,8 +606,8 @@ export default function AIHealthcareAnalyticsPlatform() {
               No credit card required • 30-day free trial • HIPAA compliant
             </p>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

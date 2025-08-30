@@ -28,12 +28,12 @@ export default function Signup() {
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
+    setFormData({;
+      ...formData,;
+      [e.target.name]: e.target.value;
     });
   };
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (!agreedToTerms) {
       alert('Please agree to the terms and conditions');
@@ -63,27 +63,37 @@ export default function Signup() {
     },
     {
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
-      title: "Team Collaboration",
-      description: "Built-in tools for seamless team communication and project management"
-    }
+      title: "Team Collaboration",;
+      description: "Built-in tools for seamless team communication and project management";
+    };
   ];
   const benefits = [
     "Access to cutting-edge AI solutions",
     "24/7 customer support",
     "Free consultation session",
-    "Exclusive partner discounts",
-    "Early access to new features",
-    "Dedicated account manager"
+    "Exclusive partner discounts",;
+    "Early access to new features",;
+    "Dedicated account manager";
   ];
   return (
-    <div className="min-h-screen bg-zion-blue text-white flex">
+    <div className = "min-h-screen bg-zion-blue text-white flex">
       {/* Left Side - Signup Form */}
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
           >
@@ -99,9 +109,24 @@ export default function Signup() {
           <motion.form
             onSubmit={handleSubmit}
             className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
           >
             {/* Name Fields */}
             <div className="grid grid-cols-2 gap-4">
@@ -322,9 +347,24 @@ export default function Signup() {
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the AI Revolution
@@ -339,9 +379,24 @@ export default function Signup() {
                 <motion.div
                   key={feature.title}
                   className="flex items-start gap-4"
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
+                  initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.8,
+  delay: 0.6 + index * 0.1 
+
+
+}}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {feature.icon}
@@ -361,9 +416,24 @@ export default function Signup() {
                   <motion.div
                     key={benefit}
                     className="flex items-center gap-3"
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 1 + index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.8,
+  delay: 1 + index * 0.1 
+
+
+}}
                   >
                     <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <span className="text-zion-slate-light">{benefit}</span>
@@ -374,9 +444,24 @@ export default function Signup() {
             {/* Stats */}
             <motion.div
               className="grid grid-cols-3 gap-8 text-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.5 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 1.5 
+
+
+}}
             >
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
@@ -392,8 +477,8 @@ export default function Signup() {
               </div>
             </motion.div>
           </motion.div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 }

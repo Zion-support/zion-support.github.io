@@ -200,7 +200,6 @@ export function TalentRegistrationForm() {
                 throw new Error("User not authenticated");
             }
             // Enhance profile if not already done
-            let finalSummary = "";
             let finalSkills = skillTags;
             if (values.enhancedProfile && !generatedContent) {
                 try {

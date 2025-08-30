@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+import { comprehensiveMicroSaasServices2025 } from "../../data/2025-comprehensive-micro-saas-services";
+import { innovativeITAIServices2025 } from "../../data/2025-innovative-it-ai-services";
+import { expandedInnovativeServices2025 } from "../../data/2025-expanded-innovative-services";
+import { emergingTechInnovationServices2025 } from "../../data/2025-emerging-tech-innovations";
+import { enterpriseITInnovationServices2025 } from "../../data/2025-enterprise-it-innovations";
 const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedService, setSelectedService] = useState(null);
@@ -65,7 +65,7 @@ const ComprehensiveServicesShowcase = () => {
                 return true;
             // Handle special category mappings
             const categoryMappings = {
-                'ai-legal-compliance': ['Legal', 'Compliance'],
+  'ai-legal-compliance': ['Legal', 'Compliance'],
                 'quantum-security-communication': ['Quantum', 'Security', 'Communication'],
                 'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'],
                 'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'],
@@ -87,23 +87,32 @@ const ComprehensiveServicesShowcase = () => {
                 'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'],
                 'enterprise-governance': ['Enterprise', 'Data Governance'],
                 'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'],
-                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']
-            };
+                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin',
+  'IoT']
+            
+
+
+};
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')));
         });
-    const fadeInUp = {
-        initial: { opacity: 0, y: 60 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6 }
-    };
     const filteredServices = selectedCategory === 'all'
         ? COMPREHENSIVE_SERVICES
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+        <motion.div className="max-w-7xl mx-auto text-center" initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }}>
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
             Comprehensive
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
@@ -164,112 +173,6 @@ import {Brain,
 export const ComprehensiveServicesShowcase: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const serviceCategories = [
-    {id}: 'all', name: 'All Services', icon: Star },
-    {id}: 'ai', name: 'AI & ML', icon: Brain },
-    {id}: 'quantum', name: 'Quantum Computing', icon: Atom },
-    {id}: 'security', name: 'Cybersecurity', icon: Shield },
-    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
-    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon },
-    {id}: 'enterprise', name: 'Enterprise IT', icon: Users },
-    {id}: 'green', name: 'Green IT', icon: Leaf },
-    {id}: 'space', name: 'Space Tech', icon: Rocket },
-    {id}: 'saas', name: 'MicroSAAS', icon: Package }
-  ];
-
-  const services = [
-    {id}: 'ai-solutions',
-      title: 'AI Solutions',
-      category: 'ai',
-      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.',
-      icon: Brain,
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'],
-      benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'],
-      color: 'from-purple-500 to-pink-500',
-      href: '/services/ai-solutions'
-    },
-    {id}: 'quantum-computing',
-      title: 'Quantum Computing',
-      category: 'quantum',
-      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',
-      icon: Atom,
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
-      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/quantum-computing'
-    },
-    {id}: 'cybersecurity',
-      title: 'Cybersecurity',
-      category: 'security',
-      description: 'Advanced security solutions with AI-powered threat detection and prevention.',
-      icon: Shield,
-      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'],
-      benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'],
-      color: 'from-red-500 to-orange-500',
-      href: '/services/cybersecurity'
-    },
-    {id}: 'cloud-devops',
-      title: 'Cloud & DevOps',
-      category: 'cloud',
-      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.',
-      icon: Cloud,
-      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
-      benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'],
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/cloud-devops'
-    },
-    {id}: 'blockchain-web3',
-      title: 'Blockchain & Web3',
-      category: 'blockchain',
-      description: 'Decentralized technology solutions for the next generation of digital applications.',
-      icon: LinkIcon,
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'],
-      benefits: ['Transparency', 'Security', 'Innovation'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/blockchain-web3'
-    },
-    {id}: 'enterprise-it',
-      title: 'Enterprise IT',
-      category: 'enterprise',
-      description: 'Comprehensive IT solutions for large organizations and enterprises.',
-      icon: Users,
-      features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'],
-      benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'],
-      color: 'from-slate-500 to-gray-500',
-      href: '/services/enterprise-it'
-    },
-    {id}: 'green-it',
-      title: 'Green IT',
-      category: 'green',
-      description: 'Sustainable technology solutions for environmentally conscious businesses.',
-      icon: Leaf,
-      features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'],
-      benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'],
-      color: 'from-green-500 to-teal-500',
-      href: '/services/green-it'
-    },
-    {id}: 'space-tech',
-      title: 'Space Technology',
-      category: 'space',
-      description: 'Advanced space technology solutions for satellite systems and space exploration.',
-      icon: Rocket,
-      features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'],
-      benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'],
-      color: 'from-violet-500 to-purple-500',
-      href: '/services/space-tech'
-    },
-    {id}: 'microsaas',
-      title: 'MicroSAAS Development',
-      category: 'saas',
-      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.',
-      icon: Package,
-      features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'],
-      benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'],
-      color: 'from-orange-500 to-red-500',
-      href: '/services/microsaas'
-    }
-  ];
-
   const solutions = [
     {id}: 'ai-autonomous-business',
       title: 'AI Autonomous Business',
@@ -328,10 +231,6 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       href: '/solutions/ai-business-intelligence'
     }
   ];
-
-  const filteredServices = activeCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === activeCategory);
 
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
@@ -396,7 +295,22 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (<motion.div key={service.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular
+            {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
                     : 'border-white/20 hover:border-white/40'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -445,7 +359,22 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
       {/* Service Details Modal */}
       {selectedService && (<div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <motion.div initial = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.9 
+
+
+}} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-8">
               <div className="flex justify-between items-start mb-6">
                 <div className="flex items-center gap-4">
@@ -719,7 +648,7 @@ import {Search,
             Smartphone,
             Monitor,
             Server} from 'lucide-react';
-import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
+import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from "../data/innovativeMicroSaasServices";
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
@@ -781,7 +710,27 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
   if (viewMode === 'grid') {}
     return (
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ y: -5, scale: 1.02 }} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
+      <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 transform rotate-12 scale-150"></div>
@@ -867,7 +816,22 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
   // List View
   return (
-    <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
+    <motion.div initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Service Info */}
         <div className="flex-1">
@@ -1028,7 +992,17 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
             Comprehensive Services
           </h1>
@@ -1053,7 +1027,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         </motion.div>
 
         {/* Search and Filter Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {/* Search */}
             <div className="relative">
@@ -1102,7 +1091,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         </motion.div>
 
         {/* Services Grid/List */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}>
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (<ServiceCard key={service.id} service={service} index={index} viewMode={viewMode} onServiceClick={handleServiceClick}/>))}
               </div>) : (<div className="space-y-6">
@@ -1118,7 +1122,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         </motion.div>
 
         {/* CTA Section */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="text-center mt-20">
+        <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.8,
+  delay: 0.8 
+
+
+}} className="text-center mt-20">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -1145,3 +1164,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 export default ComprehensiveServicesShowcase;
     </></></></></></></></>);
 };
+
+export default ServiceCard;
+export default ServiceCard;
+export default ServiceCard;

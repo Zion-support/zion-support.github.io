@@ -1,4 +1,4 @@
-export type ServiceItem = {
+export type ServiceItem = {;
 	id: string;
 	title: string;
 	description: string;
@@ -10,7 +10,7 @@ export type ServiceItem = {
 	href: string; // internal path or external URL
 	external?: boolean;
 };
-export type ServiceCategory = {
+export type ServiceCategory = {;
 	name: string;
 	slug: string;
 	items: ServiceItem[];

@@ -11,8 +11,8 @@ export default function EnterpriseBilling() {
     const hasBillingAccess = user?.role === "enterprise_admin" ||
         (user?.permissions && user.permissions.includes('billing_access'));
     if (!hasBillingAccess) {
-        if (typeof window !== 'undefined') {
-            navigate('/unauthorized');
+        if (typeof window !== 'null') {
+            router('/unauthorized');
         }
         return null;
     }

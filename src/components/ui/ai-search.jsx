@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, Sparkles, TrendingUp, Star, Zap, ArrowRight, Mic, MicOff, Settings, History, Bookmark, Share2 } from 'lucide-react';
-import { Button } from './button';
-import { Badge } from './badge';
+import { Button } from "./button";
+import { Badge } from "./badge";
 export function AISearch({ enabled = true, placeholder = "Search for AI services, talent, or companies...", onSearch, onResultClick, className = "" }) {
     const [isOpen, setIsOpen] = useState(false);
     const [query, setQuery] = useState('');
@@ -117,12 +117,6 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         await new Promise(resolve => setTimeout(resolve, 800));
         // Filter results based on query and filters
         const filteredResults = mockResults.filter(result => {
-            const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-            const matchesCategory = searchFilters.category.length === 0 ||
-                searchFilters.category.includes(result.category);
-            const matchesRating = result.rating >= searchFilters.rating;
             const matchesVerified = !searchFilters.verified || result.metadata.verified;
             return matchesQuery && matchesCategory && matchesRating && matchesVerified;
         });
@@ -231,7 +225,22 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         </div>
 
         {/* Clear Button */}
-        {query && (<motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }} onClick={() => {
+        {query && (<motion.button initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}} onClick={() => {
                 setQuery('');
                 setResults([]);
                 setSuggestions([]);
@@ -243,7 +252,27 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
       {/* Search Results Panel */}
       <AnimatePresence>
-        {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial={{ opacity: 0, y: -10, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -10, scale: 0.95 }} transition={{ duration: 0.2, ease: "easeOut" }}>
+        {isOpen && (<motion.div className="absolute top-full left-0 right-0 mt-2 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl z-50 max-h-96 overflow-hidden" initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+
+
+}} exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+
+
+}} transition = {
+  { duration: 0.2,
+  ease: "easeOut" 
+
+
+}}>
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
               <div className="flex items-center gap-3">
@@ -268,13 +297,33 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
             {/* Filters Panel */}
             <AnimatePresence>
-              {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }}>
+              {showFilters && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
+  { height: 0,
+  opacity: 0 
+
+
+}} animate = {
+  { height: 'auto',
+  opacity: 1 
+
+
+}} exit = {
+  { height: 0,
+  opacity: 0 
+
+
+}} transition={{ duration: 0.2 }}>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Category</label>
-                      <select multiple value={filters.category} onChange={(e) => {
+                      <select multiple value={filters.category} onChange = {
+  (e) => {
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFilters(prev => ({ ...prev, category: selected }));
+                    setFilters(prev => ({ ...prev,
+  category: selected 
+
+
+}));
                 }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value="AI & Analytics">AI & Analytics</option>
                         <option value="Cybersecurity">Cybersecurity</option>
@@ -286,7 +335,12 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Min Rating</label>
-                      <select value={filters.rating} onChange={(e) => setFilters(prev => ({ ...prev, rating: Number(e.target.value) }))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
+                      <select value={filters.rating} onChange = {
+  (e) => setFilters(prev => ({ ...prev,
+  rating: Number(e.target.value) 
+
+
+}))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
                         <option value={3}>3+ Stars</option>
                         <option value={4}>4+ Stars</option>
@@ -297,14 +351,24 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Verified Only</label>
                       <div className="mt-1">
-                        <input type="checkbox" checked={filters.verified} onChange={(e) => setFilters(prev => ({ ...prev, verified: e.target.checked }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
+                        <input type="checkbox" checked={filters.verified} onChange = {
+  (e) => setFilters(prev => ({ ...prev,
+  verified: e.target.checked 
+
+
+}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
                     
                     <div>
                       <label className="text-zinc-300 text-sm font-medium">Featured</label>
                       <div className="mt-1">
-                        <input type="checkbox" checked={filters.featured} onChange={(e) => setFilters(prev => ({ ...prev, featured: e.target.checked }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
+                        <input type="checkbox" checked={filters.featured} onChange = {
+  (e) => setFilters(prev => ({ ...prev,
+  featured: e.target.checked 
+
+
+}))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
                   </div>
@@ -320,10 +384,15 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     Recent Searches
                   </h4>
                   <div className="space-y-2">
-                    {searchHistory.map((search, index) => (<button key={index} onClick={() => {
+                    {searchHistory.map((search, index) => (<button key={index} onClick = {
+  () => {
                         setQuery(search);
-                        performSearch(search, filters);
-                    }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
+                        performSearch(search,
+  filters);
+                    
+
+
+}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
                         {search}
                       </button>))}
                   </div>
@@ -336,10 +405,15 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     AI Suggestions
                   </h4>
                   <div className="space-y-2">
-                    {suggestions.map((suggestion, index) => (<button key={index} onClick={() => {
+                    {suggestions.map((suggestion, index) => (<button key={index} onClick = {
+  () => {
                         setQuery(suggestion);
-                        performSearch(suggestion, filters);
-                    }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
+                        performSearch(suggestion,
+  filters);
+                    
+
+
+}} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
                         <span>{suggestion}</span>
                         <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200"/>
                       </button>))}

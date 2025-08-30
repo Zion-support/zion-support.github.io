@@ -8,7 +8,7 @@ import { NEW_PRODUCTS } from '@/data/newProductsData';
 export default function CheckoutPage() {
     const router = useNavigate();
     const { id: rawId } = router.query;
-    const id = typeof rawId === 'string' ? rawId : undefined;
+    const id = typeof rawId === 'string' ? rawId : null;
     const [product, setProduct] = useState(null);
     const [intent, setIntent] = useState(null);
     const [isLoading, setIsLoading] = useState(true);

@@ -24,7 +24,7 @@ import {
   Globe,
   Rocket
 } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -150,9 +150,9 @@ export default function Help() {
           description: 'Managing your account preferences and settings',
           url: '/help/billing/account-settings',
           type: 'guide'
-        }
-      ]
-    }
+        };
+      ];
+    };
   ];
 
   const quickLinks = [
@@ -181,28 +181,28 @@ export default function Help() {
       title: 'Email Support',
       description: 'Send us an email for detailed inquiries',
       icon: Mail,
-      url: 'mailto:support@ziontechgroup.com',
-      color: 'from-orange-500 to-orange-600'
-    }
+      url: 'mailto:support@ziontechgroup.com',;
+      color: 'from-orange-500 to-orange-600';
+    };
   ];
 
   const supportHours = [
-    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
-    { day: 'Sunday', hours: 'Emergency Support Only', available: false }
+    { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },;
+    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },;
+    { day: 'Sunday', hours: 'Emergency Support Only', available: false };
   ];
 
   const filteredCategories = helpCategories.filter(category =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
     category.articles.some(article =>
-      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+      article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+      article.description.toLowerCase().includes(searchQuery.toLowerCase());
+    );
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Help & Support - Zion Tech Group"
         description="Get help and support for all Zion Tech Group services. Find documentation, tutorials, and contact our support team."
@@ -213,8 +213,18 @@ export default function Help() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -248,8 +258,18 @@ export default function Help() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -262,9 +282,24 @@ export default function Help() {
               <motion.a
                 key={index}
                 href={link.url}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -282,8 +317,18 @@ export default function Help() {
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -323,8 +368,18 @@ export default function Help() {
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -336,9 +391,24 @@ export default function Help() {
             {filteredCategories.map((category, index) => (
               <motion.div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 rounded-xl border border-slate-700/50 overflow-hidden"
               >
                 <button
@@ -365,9 +435,24 @@ export default function Help() {
 
                 {expandedCategory === category.id && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="border-t border-slate-700/50"
                   >
@@ -406,8 +491,18 @@ export default function Help() {
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -442,9 +537,24 @@ export default function Help() {
               <motion.a
                 key={index}
                 href={resource.url}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -462,8 +572,18 @@ export default function Help() {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -487,8 +607,8 @@ export default function Help() {
               </a>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

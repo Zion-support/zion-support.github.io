@@ -502,19 +502,19 @@ export const serviceCategories2025: string[] = Array.from(
   new Set(
     cuttingEdgeInnovativeServices2025
       .map((s) => s.category)
-      .filter((v): v is string => Boolean(v))
-  )
+      .filter((v): v is string = > Boolean(v));
+  );
 ).sort();
-export const getServicesByCategory2025 = (category: string) => {
+export const getServicesByCategory2025 = (category: string) => {;
   if (!category || category === 'All') return cuttingEdgeInnovativeServices2025;
   return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category);
 };
-export const getPopularServices2025 = () =>
-  cuttingEdgeInnovativeServices2025
-    .filter((s) => !!s.popular)
+export const getPopularServices2025 = () =>;
+  cuttingEdgeInnovativeServices2025;
+    .filter((s) => !!s.popular);
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
-export const getServicesByTechnology = (technology: string) => {
-  return cuttingEdgeInnovativeServices2025.filter((s) => 
-    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()))
+export const getServicesByTechnology = (technology: string) => {;
+  return cuttingEdgeInnovativeServices2025.filter((s) => ;
+    s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()));
   );
 };

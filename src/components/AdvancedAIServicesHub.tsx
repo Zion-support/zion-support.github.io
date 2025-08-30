@@ -32,7 +32,7 @@ interface AIService {
   status: 'active' | 'beta' | 'coming-soon';
 }
 
-const AdvancedAIServicesHub: React.FC = () => {
+const AdvancedAIServicesHub: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
@@ -111,21 +111,20 @@ const AdvancedAIServicesHub: React.FC = () => {
     { id: 'project-management', name: 'Project Management', icon: Brain },
     { id: 'customer-support', name: 'Customer Support', icon: Users },
     { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },
-    { id: 'marketing', name: 'Marketing Automation', icon: Globe },
-    { id: 'analytics', name: 'Data Analytics', icon: Database },
-    { id: 'security', name: 'Cybersecurity', icon: Shield }
+    { id: 'marketing', name: 'Marketing Automation', icon: Globe },;
+    { id: 'analytics', name: 'Data Analytics', icon: Database },;
+    { id: 'security', name: 'Cybersecurity', icon: Shield };
   ];
 
-  const filteredServices = aiServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = aiServices.filter(service => {;
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'name':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'name':;
         return a.name.localeCompare(b.name);
       case 'price':
         return a.pricing.starter - b.pricing.starter;
@@ -137,12 +136,22 @@ const AdvancedAIServicesHub: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -155,8 +164,18 @@ const AdvancedAIServicesHub: React.FC = () => {
 
         {/* Search and Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.2 }}
           className="mb-12"
         >
@@ -188,8 +207,18 @@ const AdvancedAIServicesHub: React.FC = () => {
 
         {/* Category Filters */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.3 }}
           className="mb-12"
         >
@@ -213,8 +242,18 @@ const AdvancedAIServicesHub: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -222,9 +261,24 @@ const AdvancedAIServicesHub: React.FC = () => {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                exit = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
                 transition={{ delay: index * 0.1 }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
               >
@@ -291,8 +345,18 @@ const AdvancedAIServicesHub: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ delay: 0.6 }}
           className="text-center mt-20"
         >
@@ -314,9 +378,9 @@ const AdvancedAIServicesHub: React.FC = () => {
               </button>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 };
 

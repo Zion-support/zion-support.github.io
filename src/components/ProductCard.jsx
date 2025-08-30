@@ -37,10 +37,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             id: product.id,
             title: productTitle,
             price: product.price ?? 0,
-            image: imageUrl || undefined,
+            image: imageUrl || null,
         }));
     };
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
     const imageAltText = productTitle;
     const handleImageError = (error) => {
         if (!imageError) {
@@ -51,8 +50,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             });
         }
     };
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const isTablet = useMediaQuery('(max-width: 1200px)');
     const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>

@@ -58,9 +58,9 @@ export default function NewServicesShowcase2025() {
       pricing: 'Starting at $499/mo',
       benefits: ['80-90% reduction in latency', '60-70% cut in bandwidth costs', 'Enhanced data privacy and security'],
       color: 'from-teal-600 via-cyan-600 to-blue-800',
-      icon: Wifi,
-      path: '/services/ai-edge-computing-platform'
-    }
+      icon: Wifi,;
+      path: '/services/ai-edge-computing-platform';
+    };
   ];
 
   const industries = [
@@ -69,20 +69,24 @@ export default function NewServicesShowcase2025() {
     'Healthcare & Medical Devices',
     'Financial Services & Banking',
     'Energy & Utilities',
-    'Transportation & Logistics',
-    'Retail & E-commerce',
-    'Cybersecurity & Defense'
+    'Transportation & Logistics',;
+    'Retail & E-commerce',;
+    'Cybersecurity & Defense';
   ];
 
   const contactInfo = {
-    phone: '+1 302 464 0950',
+  phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
+    address: '364 E Main St STE 1008,;
+  Middletown DE 19709';
+  ;
+
+
+};
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <SEO 
         title="New AI-Powered Micro SAAS Services 2025 - Zion Tech Group"
         description="Discover our revolutionary new AI-powered micro SAAS services for project management, customer support, financial analytics, and marketing automation."
@@ -283,8 +287,8 @@ export default function NewServicesShowcase2025() {
             <span className="text-gray-400">|</span>
             <span className="text-gray-600">{contactInfo.address}</span>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

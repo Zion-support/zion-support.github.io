@@ -83,7 +83,6 @@ export function UpcomingInterviewsCard() {
         <div className="space-y-4">
           {upcomingInterviews.map(interview => {
             const interviewDate = parseISO(interview.scheduled_date);
-            const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h:mm a');
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();

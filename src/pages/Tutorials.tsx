@@ -25,9 +25,9 @@ const Tutorials = () => {
     {
       title: "Expert",
       description: "Cutting-edge research and techniques",
-      color: "from-purple-500 to-indigo-500",
-      count: "5"
-    }
+      color: "from-purple-500 to-indigo-500",;
+      count: "5";
+    };
   ];
 
   const featuredTutorials = [
@@ -68,9 +68,9 @@ const Tutorials = () => {
       duration: "75 min",
       instructor: "Dr. Emily Watson",
       rating: 4.6,
-      students: "623",
-      thumbnail: "/images/tutorials/model-optimization.jpg"
-    }
+      students: "623",;
+      thumbnail: "/images/tutorials/model-optimization.jpg";
+    };
   ];
 
   const recentTutorials = [
@@ -103,9 +103,9 @@ const Tutorials = () => {
       category: "Advanced",
       duration: "65 min",
       instructor: "Michael Rodriguez",
-      rating: 4.7,
-      students: "345"
-    }
+      rating: 4.7,;
+      students: "345";
+    };
   ];
 
   const learningPaths = [
@@ -127,13 +127,13 @@ const Tutorials = () => {
       title: "Quantum Computing Engineer",
       description: "Learn quantum algorithms and applications",
       courses: 5,
-      duration: "10 weeks",
-      level: "Advanced to Expert"
-    }
+      duration: "10 weeks",;
+      level: "Advanced to Expert";
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -314,9 +314,9 @@ const Tutorials = () => {
               Contact Us
             </button>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

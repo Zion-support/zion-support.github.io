@@ -71,9 +71,9 @@ const Contact: React.FC = () => {
               ✉️ Send Email
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

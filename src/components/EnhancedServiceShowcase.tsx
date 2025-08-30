@@ -151,20 +151,20 @@ const categories = [
   'Cybersecurity',
   'Cloud & DevOps',
   'Blockchain & Web3',
-  'Digital Transformation',
-  'Micro SAAS',
-  'Healthcare AI'
+  'Digital Transformation',;
+  'Micro SAAS',;
+  'Healthcare AI';
 ];
 
-export const EnhancedServiceShowcase: React.FC = () => {
+export const EnhancedServiceShowcase: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry.isIntersecting) {;
           setIsVisible(true);
         }
       },
@@ -179,8 +179,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const filteredServices = selectedCategory === 'All Services' 
-    ? services 
+  const filteredServices = selectedCategory === 'All Services' ;
+    ? services ;
     : services.filter(service => service.category === selectedCategory);
 
   const renderStars = (rating: number) => {
@@ -190,19 +190,29 @@ export const EnhancedServiceShowcase: React.FC = () => {
         className={`w-4 h-4 ${
           i < Math.floor(rating) 
             ? 'text-yellow-400 fill-current' 
-            : 'text-gray-400'
-        }`}
-      />
+            : 'text-gray-400';
+        }`};
+      />;
     ));
   };
 
   return (
-    <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+} : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
@@ -219,9 +229,24 @@ export const EnhancedServiceShowcase: React.FC = () => {
 
         {/* Category Filter */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category, index) => (
@@ -243,22 +268,46 @@ export const EnhancedServiceShowcase: React.FC = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ 
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                exit = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+                transition = {
+  { 
                   duration: 0.6, 
                   delay: index * 0.1,
                   type: "spring",
-                  stiffness: 100
-                }}
+  stiffness: 100
+                
+
+
+}}
                 whileHover={{ y: -10 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
@@ -333,9 +382,24 @@ export const EnhancedServiceShowcase: React.FC = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  isVisible ? { opacity: 1,
+  y: 0 
+
+
+} : { opacity: 0, y: 20 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
@@ -363,8 +427,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 };

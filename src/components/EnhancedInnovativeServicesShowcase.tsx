@@ -41,9 +41,9 @@ export const EnhancedInnovativeServicesShowcase = () => {
               Learn More →
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 

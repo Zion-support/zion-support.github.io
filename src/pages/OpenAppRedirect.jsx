@@ -10,10 +10,8 @@ const OpenAppRedirect = () => {
     const [status, setStatus] = useState('redirecting');
     useEffect(() => {
         const attemptAppOpen = async () => {
-            const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
             const isAndroid = /Android/.test(navigator.userAgent);
             // App scheme URLs (these would be your actual app's URL schemes)
-            const appScheme = "zion://";
             const androidAppUrl = "market://details?id=app.zion.marketplace";
             const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";
             const fallbackUrl = "/mobile-launch"; // Fallback to mobile launch page
@@ -37,7 +35,7 @@ const OpenAppRedirect = () => {
                 // Not on mobile, redirect to mobile launch page
                 setStatus('failed');
                 setTimeout(() => {
-                    navigate(fallbackUrl);
+                    router(fallbackUrl);
                 }, 1500);
             }
             // Clear timeout if page visibility changes (meaning app opened successfully)

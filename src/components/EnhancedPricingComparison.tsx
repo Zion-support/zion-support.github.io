@@ -83,9 +83,9 @@ export const EnhancedPricingComparison = () => {
               Contact Sales
             </Link>
           </div>
-        </div>
-      </div>
-    </section>
+        </div>;
+      </div>;
+    </section>;
   );
 };
 

@@ -49,54 +49,54 @@ export default function ServicesPage() {
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },
-    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },
-    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' }
+    { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },;
+    { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },;
+    { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' };
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },
-    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },
-    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' }
+    { id: 'budget', name: 'Budget', range: '$100 - $1,000' },;
+    { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },;
+    { id: 'enterprise', name: 'Enterprise', range: '$5,000+' };
   ];
 
   const sortOptions = [
     { id: 'featured', name: 'Featured' },
     { id: 'price-low', name: 'Price: Low to High' },
-    { id: 'price-high', name: 'Price: High to Low' },
-    { id: 'newest', name: 'Newest' },
-    { id: 'popular', name: 'Most Popular' }
+    { id: 'price-high', name: 'Price: High to Low' },;
+    { id: 'newest', name: 'Newest' },;
+    { id: 'popular', name: 'Most Popular' };
   ];
 
   // Filter and sort services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...SPECIALIZED_SERVICES,;
+    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,;
+    ...ADDITIONAL_SPECIALIZED_SERVICES;
   ];
   
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     
-    const matchesCategory = selectedCategory === 'all' || 
+    const matchesCategory = selectedCategory === 'all' || ;
                            service.category.toLowerCase().includes(selectedCategory);
     
-    const matchesPrice = selectedPriceRange === 'all' || 
-                        (selectedPriceRange === 'budget' && service.price <= 1000) ||
-                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||
+    const matchesPrice = selectedPriceRange === 'all' || ;
+                        (selectedPriceRange === 'budget' && service.price <= 1000) ||;
+                        (selectedPriceRange === 'mid-range' && service.price > 1000 && service.price <= 5000) ||;
                         (selectedPriceRange === 'enterprise' && service.price > 5000);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
   // Sort services
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
@@ -107,12 +107,12 @@ export default function ServicesPage() {
     }
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string) => {;
     const cat = categories.find(c => c.id === category.toLowerCase().replace(' ', '-'));
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
@@ -120,7 +120,7 @@ export default function ServicesPage() {
   return (
     <>
       <SEO 
-        title="Innovative Micro SAAS Services - Zion Tech Group"
+        title = "Innovative Micro SAAS Services - Zion Tech Group"
         description="Discover cutting-edge micro SAAS solutions including AI, Quantum Computing, Blockchain, IoT, and more. Transform your business with our innovative technology services."
         canonical="/services"
         url="https://ziontechgroup.com/services"
@@ -138,8 +138,18 @@ export default function ServicesPage() {
         <div className="container-responsive relative z-10">
           <motion.div 
             className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="heading-responsive font-bold mb-6">
@@ -170,27 +180,72 @@ export default function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <motion.div 
                 className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
               >
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
                 className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+}}
               >
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
                 className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
               >
                 <div className="text-3xl font-bold text-zion-blue mb-2">99.9%</div>
                 <div className="text-zion-slate-light">Uptime Guarantee</div>
@@ -206,8 +261,18 @@ export default function ServicesPage() {
           {/* Category Pills */}
           <motion.div 
             className="flex flex-wrap gap-3 mb-8 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             {categories.map((category) => (
@@ -229,9 +294,24 @@ export default function ServicesPage() {
           {/* Advanced Filters */}
           <motion.div 
             className="flex flex-col md:flex-row gap-4 items-center justify-between"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
           >
             <div className="flex flex-wrap gap-4">
               {/* Price Range Filter */}
@@ -286,9 +366,24 @@ export default function ServicesPage() {
                   <motion.div
                     key={service.id}
                     className="card-futuristic group"
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                     whileHover={{ y: -10 }}
                   >
                     {/* Service Header */}
@@ -386,14 +481,14 @@ export default function ServicesPage() {
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-zion-slate-light mb-6">
                   Try adjusting your search criteria or browse all categories
-                </p>
-                <button
-                  onClick={() => {
+                </p>;
+                <button;
+                  onClick={() => {;
                     setSearchQuery('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}
-                  className="btn-futuristic px-6 py-3"
+                  className = "btn-futuristic px-6 py-3"
                 >
                   View All Services
                 </button>
@@ -408,8 +503,18 @@ export default function ServicesPage() {
         <div className="container-responsive">
           <motion.div 
             className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
           >
             <h2 className="heading-responsive font-bold mb-4">
@@ -425,9 +530,24 @@ export default function ServicesPage() {
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 whileHover={{ y: -5 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -462,8 +582,18 @@ export default function ServicesPage() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h2 className="heading-responsive font-bold mb-6">
@@ -498,8 +628,8 @@ export default function ServicesPage() {
               <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a></p>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </>
+        </div>;
+      </section>;
+    </>;
   );
 }

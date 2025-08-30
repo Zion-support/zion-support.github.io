@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { SEO } from '../components/SEO';
-import { innovativeMicroSaasServices2030 } from '../data/innovativeMicroSaasServices2030';
-import { comprehensiveITServices2030 } from '../data/comprehensiveITServices2030';
-import { comprehensiveAIServices2030 } from '../data/comprehensiveAIServices2030';
+import { SEO } from "../components/SEO";
+import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
+import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
+import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
 
-const ComprehensiveServicesShowcase2030: React.FC = () => {
+const ComprehensiveServicesShowcase2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const getFilteredServices = () => {
+  const getFilteredServices = () => {;
     let services: any[] = [];
     
     switch (activeTab) {
@@ -26,9 +26,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
 
     if (searchTerm) {
       services = services.filter(service => 
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
 
@@ -39,7 +39,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
     return services;
   };
 
-  const getCategories = () => {
+  const getCategories = () => {;
     let services: any[] = [];
     
     switch (activeTab) {
@@ -160,11 +160,11 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   Learn More
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
-    } else if (activeTab === 'it') {
+    } else if (activeTab = == 'it') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
@@ -262,13 +262,13 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   Learn More
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
     } else {
       return (
-        <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
+        <div key = {service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
           <div className="p-6">
             <div className="flex items-start justify-between mb-4">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h3>
@@ -376,9 +376,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   Learn More
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
+            </div>;
+          </div>;
+        </div>;
       );
     }
   };
@@ -386,7 +386,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
   return (
     <>
       <SEO
-        title="Comprehensive Services Showcase 2030 - Zion Tech Group"
+        title = "Comprehensive Services Showcase 2030 - Zion Tech Group"
         description="Explore our cutting-edge micro SAAS, IT infrastructure, and AI services. Discover innovative solutions with real market data, competitive pricing, and proven ROI."
         keywords="micro SAAS, IT services, AI services, technology solutions, Zion Tech Group, 2030 services"
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
@@ -521,13 +521,13 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
           {/* No Results */}
           {getFilteredServices().length === 0 && (
             <div className="text-center py-12">
-              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+              <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Clear Filters
               </button>
@@ -555,9 +555,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import { useApiKeys } from '../../hooks/useApiKeys';
-import { Button } from '../ui/button';
-import { Checkbox } from '../ui/checkbox';
-import { Label } from '../ui/label';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
-import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from '../ui/alert-dialog';
-import CodeBlock from './CodeBlock';
+import { useApiKeys } from "../../hooks/useApiKeys";
+import { Button } from "../ui/button";
+import { Checkbox } from "../ui/checkbox";
+import { Label } from "../ui/label";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";
+import CodeBlock from "./CodeBlock";
 import { Copy, MoreHorizontal, Eye, EyeOff, RotateCcw, Trash2, Settings } from 'lucide-react';
 export default function ApiKeysManager() {
     const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys();

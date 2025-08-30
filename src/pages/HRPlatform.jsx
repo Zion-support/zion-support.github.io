@@ -142,105 +142,6 @@ import {
   Signal
 } from 'lucide-react';
 
-const hrPlatformSolutions = [
-  {
-    id: 1,
-    title: "Employee Management System",
-    description: "Comprehensive platform for managing employee information, performance, and development.",
-    icon: Users,
-    features: [
-      "Employee profiles",
-      "Performance tracking",
-      "Goal setting",
-      "Development plans"
-    ],
-    price: "From $60,000",
-    timeline: "16-24 weeks",
-    category: "Employee Management",
-    technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
-  },
-  {
-    id: 2,
-    title: "Recruitment & Onboarding",
-    description: "Streamlined hiring process with automated onboarding workflows and candidate management.",
-    icon: UserPlus,
-    features: [
-      "Job posting",
-      "Candidate tracking",
-      "Interview scheduling",
-      "Onboarding automation"
-    ],
-    price: "From $80,000",
-    timeline: "20-28 weeks",
-    category: "Recruitment",
-    technologies: ["AI/ML", "Workflow Automation", "Calendar Integration", "Email Systems"]
-  },
-  {
-    id: 3,
-    title: "Performance Management",
-    description: "360-degree performance evaluation and feedback system with goal tracking.",
-    icon: Target,
-    features: [
-      "Performance reviews",
-      "Goal tracking",
-      "Feedback systems",
-      "Analytics dashboard"
-    ],
-    price: "From $70,000",
-    timeline: "18-26 weeks",
-    category: "Performance",
-    technologies: ["Real-time Analytics", "Dashboard Tools", "Reporting Engine", "Data Visualization"]
-  },
-  {
-    id: 4,
-    title: "Learning Management System",
-    description: "Corporate training and development platform with course management and progress tracking.",
-    icon: GraduationCap,
-    features: [
-      "Course creation",
-      "Progress tracking",
-      "Certification",
-      "Learning paths"
-    ],
-    price: "From $90,000",
-    timeline: "24-32 weeks",
-    category: "Learning",
-    technologies: ["Video Streaming", "Interactive Content", "Progress Tracking", "Assessment Tools"]
-  },
-  {
-    id: 5,
-    title: "Payroll & Benefits",
-    description: "Automated payroll processing and benefits management system with compliance features.",
-    icon: Briefcase,
-    features: [
-      "Payroll processing",
-      "Benefits administration",
-      "Tax compliance",
-      "Reporting tools"
-    ],
-    price: "From $100,000",
-    timeline: "20-30 weeks",
-    category: "Payroll",
-    technologies: ["Financial APIs", "Tax Calculation", "Compliance Tools", "Reporting Systems"]
-  },
-  {
-    id: 6,
-    title: "HR Analytics Platform",
-    description: "Data-driven insights for workforce planning and HR decision making.",
-    icon: BarChart3,
-    features: [
-      "Workforce analytics",
-      "Predictive insights",
-      "Custom reports",
-      "Data visualization"
-    ],
-    price: "From $50,000",
-    timeline: "14-22 weeks",
-    category: "Analytics",
-    technologies: ["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
-  }
-];
-
 const hrTechnologies = [
   {
     name: "Employee Management",
@@ -382,15 +283,40 @@ export default function HRPlatform() {
         
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
             <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
             >
               <Users className="w-10 h-10 text-white" />
@@ -428,8 +354,18 @@ export default function HRPlatform() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -443,9 +379,24 @@ export default function HRPlatform() {
             {hrBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -474,8 +425,18 @@ export default function HRPlatform() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -489,9 +450,24 @@ export default function HRPlatform() {
             {hrTechnologies.map((technology, index) => (
               <motion.div
                 key={technology.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -521,8 +497,18 @@ export default function HRPlatform() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -536,9 +522,24 @@ export default function HRPlatform() {
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="relative mb-6">
@@ -565,8 +566,18 @@ export default function HRPlatform() {
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -597,9 +608,24 @@ export default function HRPlatform() {
             {filteredSolutions.map((solution, index) => (
               <motion.div
                 key={solution.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
               >
@@ -654,8 +680,18 @@ export default function HRPlatform() {
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -669,9 +705,24 @@ export default function HRPlatform() {
             {successStories.map((story, index) => (
               <motion.div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
                 <div className="flex items-center gap-4 mb-6">
@@ -715,8 +766,18 @@ export default function HRPlatform() {
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >

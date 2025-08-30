@@ -28,8 +28,12 @@ const pricingData2028 = {
       setupTime: '4-6 weeks',
       trialDays: 30,
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
-      targetAudience: 'AI research institutions, Government agencies, Ethics committees'
-    },
+      targetAudience: 'AI research institutions, Government agencies,
+  Ethics committees'
+    
+
+
+},
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -136,39 +140,39 @@ const pricingData2028 = {
       setupTime: '4-5 weeks',
       trialDays: 21,
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
-      targetAudience: 'Development teams, DevOps engineers, Technology companies'
-    }
-  ]
+      targetAudience: 'Development teams, DevOps engineers, Technology companies';
+    };
+  ];
 };
 
-const ComprehensivePricingGuide2028: React.FC = () => {
+const ComprehensivePricingGuide2028: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },
-    { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' }
+    { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;
+    { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;
+    { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $500', range: 'Under $500' },
-    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },
-    { id: 'high', name: 'Over $10K', range: 'Over $10K' }
+    { id: 'low', name: 'Under $500', range: 'Under $500' },;
+    { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
+    { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
   const getAllServices = () => {
     return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
-      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),
-      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }))
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
+      ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
+      ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ];
   };
 
-  const filteredServices = getAllServices().filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
+  const filteredServices = getAllServices().filter(service => {;
+    const matchesCategory = selectedCategory === 'all' || ;
       service.type.toLowerCase().includes(selectedCategory.replace('-', ' '));
     
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -180,38 +184,78 @@ const ComprehensivePricingGuide2028: React.FC = () => {
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: string) => {
+  const calculateROI = (roi: string) => {;
     return parseInt(roi.replace('%', ''));
   };
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
           >
             Comprehensive Pricing Guide 2028
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
           >
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             className="flex flex-wrap justify-center gap-4"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
@@ -231,8 +275,18 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
           >
@@ -240,9 +294,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.1 
+
+
+}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -253,9 +322,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-zion-slate-light">Combined market value across all service categories</p>
             </motion.div>
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
@@ -266,9 +350,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               <p className="text-zion-slate-light">Annual growth rate across all service categories</p>
             </motion.div>
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.3 
+
+
+}}
               className="text-center"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
@@ -335,9 +434,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             {sortedServices.map((service, index) => (
               <motion.div
                 key={`${service.type}-${service.name}`}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
                 {/* Service Type Badge */}
@@ -419,8 +533,18 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-center mb-12 text-gradient"
           >
@@ -487,25 +611,65 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
           >
             Ready to Maximize Your ROI?
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
           >
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment
           </motion.p>
           <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <a
@@ -523,9 +687,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {
               kleber@ziontechgroup.com
             </a>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

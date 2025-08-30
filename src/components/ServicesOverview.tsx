@@ -125,13 +125,13 @@ export function ServicesOverview() {
       name: 'Healthcare AI',
       icon: Heart,
       color: 'from-zion-pink to-zion-purple',
-      description: 'Healthcare artificial intelligence solutions',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
-    }
+      description: 'Healthcare artificial intelligence solutions',;
+      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'));
+    };
   ];
 
   return (
-    <div className="py-20 bg-futuristic relative overflow-hidden">
+    <div className = "py-20 bg-futuristic relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="cyber-grid w-full h-full"></div>
@@ -141,8 +141,18 @@ export function ServicesOverview() {
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <h1 className="heading-responsive font-bold mb-6">
@@ -163,9 +173,24 @@ export function ServicesOverview() {
             <motion.div
               key={category.id}
               className="group"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               whileHover={{ y: -10 }}
             >
               <Link to={`/services/${category.id}`} className="block">
@@ -207,8 +232,18 @@ export function ServicesOverview() {
         {/* Featured Services */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.6 }}
         >
           <h2 className="heading-responsive font-bold mb-8 text-center">
@@ -220,9 +255,24 @@ export function ServicesOverview() {
               <motion.div
                 key={service.id}
                 className="card-futuristic group"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -30 : 30 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 whileHover={{ y: -5 }}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -291,8 +341,18 @@ export function ServicesOverview() {
         {/* CTA Section */}
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.8 }}
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
@@ -348,8 +408,8 @@ export function ServicesOverview() {
               </div>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </div>
+        </motion.div>;
+      </div>;
+    </div>;
   );
 }

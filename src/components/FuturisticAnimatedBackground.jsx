@@ -19,12 +19,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
         // Particle system
         const particles = [];
         // Color schemes
-        const colorSchemes = {
-            blue: ['#00ffff', '#0080ff', '#0040ff', '#0000ff'],
-            purple: ['#ff00ff', '#8000ff', '#4000ff', '#0000ff'],
-            green: ['#00ff00', '#00ff80', '#00ff40', '#00ff00'],
-            multi: ['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000', '#8000ff']
-        };
         const colors = colorSchemes[colorScheme];
         const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
         // Initialize particles
@@ -42,7 +36,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             });
         }
         // Grid lines
-        const gridSize = 50;
         const gridOpacity = intensity === 'low' ? 0.1 : intensity === 'medium' ? 0.2 : 0.3;
         // Animation loop
         const animate = () => {
@@ -105,8 +98,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
                         const alpha = (1 - distance / 100) * gridOpacity * 0.5;
@@ -141,7 +132,6 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
                 ctx.fill();
             }
             // Draw scanning line effect
-            const scanY = (time * 50) % (canvas.height + 100) - 50;
             const scanGradient = ctx.createLinearGradient(0, scanY - 2, 0, scanY + 2);
             scanGradient.addColorStop(0, 'transparent');
             scanGradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)');

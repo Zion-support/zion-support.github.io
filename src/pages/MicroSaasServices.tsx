@@ -23,9 +23,9 @@ const MicroSaasServices: React.FC = () => {
 							Micro SaaS services page coming soon. We're building focused, scalable solutions.
 						</p>
 					</div>
-				</div>
-			</div>
-</>
+				</div>;
+			</div>;
+</>;
 	);
 };
 export default MicroSaasServices;

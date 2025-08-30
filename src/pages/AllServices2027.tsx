@@ -26,28 +26,28 @@ import {
   Rocket
 } from 'lucide-react';
 
-const AllServices2027: React.FC = () => {
+const AllServices2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
   const categories = [
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },
-    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },
-    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' }
+    { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
+    { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
+    { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
   ];
 
-  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => 
-    selectedCategory === 'All' || service.category === selectedCategory
+  const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
+    selectedCategory === 'All' || service.category === selectedCategory;
   );
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
       return {
-        count: INNOVATIVE_SERVICES_2027.length,
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),
-        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10
+        count: INNOVATIVE_SERVICES_2027.length,;
+        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
+        avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
     }
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
@@ -63,26 +63,30 @@ const AllServices2027: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5;
+      };
+    };
   };
 
   return (
     <>
       <SEOHead 
-        title="All Services 2027 - Zion Tech Group"
+        title = "All Services 2027 - Zion Tech Group"
         description="Explore our complete portfolio of cutting-edge technology services. From AI and cybersecurity to quantum computing and 5G solutions, we have everything your business needs to succeed."
         canonical="/all-services-2027"
         url="https://ziontechgroup.com/all-services-2027"
@@ -94,8 +98,18 @@ const AllServices2027: React.FC = () => {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -153,15 +167,15 @@ const AllServices2027: React.FC = () => {
               Explore our comprehensive range of technology services, each designed to address 
               specific business challenges and drive innovation.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category) => {
+          </div>;
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+            {categories.map((category) => {;
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
               
               return (
                 <motion.div
-                  key={category.id}
+                  key = {category.id}
                   variants={itemVariants}
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
@@ -184,9 +198,9 @@ const AllServices2027: React.FC = () => {
                     <div className="flex justify-between">
                       <span>Avg. Rating:</span>
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
-                    </div>
-                  </div>
-                </motion.div>
+                    </div>;
+                  </div>;
+                </motion.div>;
               );
             })}
           </div>
@@ -194,7 +208,7 @@ const AllServices2027: React.FC = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className = "py-20 bg-zion-slate-dark">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center justify-between mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -330,17 +344,17 @@ const AllServices2027: React.FC = () => {
               Call Now
             </a>
           </div>
-        </div>
-      </section>
-    </>
+        </div>;
+      </section>;
+    </>;
   );
 };
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI Services':
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
+      case 'AI Services':;
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
         return <Shield className="w-5 h-5" />;
@@ -357,7 +371,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
 
   return (
     <motion.div
-      variants={itemVariants}
+      variants = {itemVariants}
       className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
     >
       {/* Service Image */}
@@ -427,9 +441,9 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           >
             Contact
           </Link>
-        </div>
-      </div>
-    </motion.div>
+        </div>;
+      </div>;
+    </motion.div>;
   );
 };
 export default AllServices2027;

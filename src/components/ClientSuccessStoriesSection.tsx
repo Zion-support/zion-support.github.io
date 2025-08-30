@@ -50,19 +50,29 @@ const successStories = [
     testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",
     author: "Dr. Emily Rodriguez",
     position: "Chief Medical Officer",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400"
-  }
+    rating: 5,;
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
+  };
 ];
 
 export function ClientSuccessStoriesSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
@@ -79,10 +89,25 @@ export function ClientSuccessStoriesSection() {
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
             >
               <div className="relative">
                 <img 
@@ -155,10 +180,25 @@ export function ClientSuccessStoriesSection() {
         {/* Success Metrics */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -188,17 +228,32 @@ export function ClientSuccessStoriesSection() {
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to be our next success story?</span>
             <span className="text-2xl">→</span>
           </div>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

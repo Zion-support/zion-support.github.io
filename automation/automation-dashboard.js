@@ -40,8 +40,7 @@ class AutomationDashboard {
       { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
       { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
     ];
-    for (const system of systems) {
-      const systemPath = path.join(__dirname, system.path);
+    for (const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {
         this.automationSystems.set(system.name, {
           ...system,
@@ -70,13 +69,16 @@ class AutomationDashboard {
   collectMetrics() {
     for (const [name, system] of this.automationSystems) {
       const metrics = {
-        timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
         isRunning: system.isRunning,
         lastRun: system.lastRun,
         successRate: system.successCount / (system.successCount + system.failureCount) || 0,
         averageExecutionTime: system.averageExecutionTime,
-        uptime: system.uptime
-      };
+  uptime: system.uptime
+      
+
+
+};
       this.metrics.set(name, metrics);
     }
   }
@@ -298,13 +300,16 @@ class AutomationDashboard {
   }
   generateReport() {
     const report = {
-      timestamp: new Date().toISOString(),
+  timestamp: new Date().toISOString(),
       summary: {
         totalSystems: this.automationSystems.size,
         runningSystems: Array.from(this.automationSystems.values()).filter(s => s.isRunning).length,
         totalAlerts: this.alerts.length,
-        averageSuccessRate: this.calculateAverageSuccessRate()
-      },
+  averageSuccessRate: this.calculateAverageSuccessRate()
+      
+
+
+},
       systems: {},
       metrics: {},
       alerts: this.alerts,
@@ -373,7 +378,6 @@ class AutomationDashboard {
   }
   createServer() {
     const server = http.createServer((req, res) => {
-      const parsedUrl = url.parse(req.url, true);
       const pathname = parsedUrl.pathname;
       res.setHeader('Content-Type', 'application/json');
       res.setHeader('Access-Control-Allow-Origin', '*');

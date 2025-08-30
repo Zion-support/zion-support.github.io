@@ -160,9 +160,9 @@ const caseStudies = [
     },
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
     duration: "15 months",
-    roi: "500%",
-    image: "/images/case-study-6.jpg"
-  }
+    roi: "500%",;
+    image: "/images/case-study-6.jpg";
+  };
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
@@ -173,25 +173,34 @@ export default function CaseStudies() {
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredCaseStudies = caseStudies.filter(study => {
-    const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
-    const matchesTechnology = selectedTechnology === 'All' || 
+  const filteredCaseStudies = caseStudies.filter(study => {;
+    const matchesTechnology = selectedTechnology === 'All' || ;
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
-    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesIndustry && matchesTechnology && matchesSearch;
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
+    <div className = "min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {/* Hero Section */}
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
@@ -266,9 +275,24 @@ export default function CaseStudies() {
             {filteredCaseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
               >
                 {/* Header */}
@@ -371,8 +395,18 @@ export default function CaseStudies() {
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
@@ -400,8 +434,8 @@ export default function CaseStudies() {
               </Link>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

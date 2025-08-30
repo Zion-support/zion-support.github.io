@@ -15,13 +15,16 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       const paragraphCount = content.split(/\n\s*\n/).length;
       
       const analysisResult = {
-        wordCount,
+  wordCount,
         sentenceCount,
         paragraphCount,
         averageWordsPerSentence: Math.round(wordCount / sentenceCount),
         readabilityScore: Math.min(100, Math.max(0, 100 - (wordCount / 10))),
-        suggestions: []
-      };
+  suggestions: []
+      
+
+
+};
       
       // Generate suggestions based on analysis
       if (wordCount < 300) {
@@ -55,8 +58,18 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       
       {analysis && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-4"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

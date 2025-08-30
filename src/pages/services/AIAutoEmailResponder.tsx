@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 export default function AIAutoEmailResponder() {
   return (
-    <div className="min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">
       <SEO
         title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
@@ -22,15 +22,15 @@ export default function AIAutoEmailResponder() {
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>
             <ul className="space-y-2 text-sm text-zion-slate-light">
-              <li>• Intent/sentiment detection, priority triage</li>
-              <li>• Multi-lingual drafting with brand tone controls</li>
-              <li>• Knowledge grounding from your docs/CRM</li>
+              <li>• Intent/sentiment detection, priority triage</li>;
+              <li>• Multi-lingual drafting with brand tone controls</li>;
+              <li>• Knowledge grounding from your docs/CRM</li>;
               <li>• Approval queues; role-based workflows</li>
               <li>• Secure redaction (PII/PHI), audit logs</li>
               <li>• Integrations: Gmail, O365, HubSpot, Salesforce, Zendesk</li>
             </ul>
           </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
+          <div className = "rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h2 className="text-xl font-semibold mb-3">Pricing</h2>
             <ul className="space-y-2 text-sm text-zion-slate-light">
               <li>• Starter: $299/mo up to 5 seats, 10k emails/mo</li>
@@ -46,12 +46,12 @@ export default function AIAutoEmailResponder() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h3 className="font-semibold mb-2">Time-to-Value</h3>
+        <div className="mt-10 grid gap-8 md:grid-cols-3">;
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
+            <h3 className="font-semibold mb-2">Time-to-Value</h3>;
             <p className="text-sm text-zion-slate-light">Deploy pilot in 7 days; typical 35–60% faster responses.</p>
           </div>
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
+          <div className = "rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Compliance</h3>
             <p className="text-sm text-zion-slate-light">SOC 2 patterns, data residency, encryption, audit trails.</p>
           </div>
@@ -59,9 +59,9 @@ export default function AIAutoEmailResponder() {
             <h3 className="font-semibold mb-2">Get a Quote</h3>
             <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }
 

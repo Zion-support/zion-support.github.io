@@ -37,7 +37,7 @@ export default function VideoCall() {
         });
         // Navigate back after a short delay
         setTimeout(() => {
-            navigate(-1);
+            router(-1);
         }, 1500);
     };
     const simulateUserJoining = () => {

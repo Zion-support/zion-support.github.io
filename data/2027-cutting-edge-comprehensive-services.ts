@@ -678,32 +678,32 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
 ];
 
 // Helper functions for service management
-export const getServiceById = (id: string) => {
+export const getServiceById = (id: string) => {;
   return cuttingEdgeComprehensiveServices2027.find(service => service.id === id);
 };
 
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: string) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category);
 };
 
-export const getPopularServices = () => {
+export const getPopularServices = () => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
 };
 
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return cuttingEdgeComprehensiveServices2027.filter(service => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+  return cuttingEdgeComprehensiveServices2027.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
 
-export const searchServices = (query: string) => {
+export const searchServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-  return cuttingEdgeComprehensiveServices2027.filter(service => 
+  return cuttingEdgeComprehensiveServices2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
+    service.category.toLowerCase().includes(lowercaseQuery) ||;
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   );
 };
 

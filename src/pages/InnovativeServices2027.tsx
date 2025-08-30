@@ -32,21 +32,8 @@ import {
   Building,
   Phone
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
-import { SEO } from '../components/SEO';
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Customer Success': Brain,
-  'Blockchain & DeFi': Lock,
-  'Quantum Computing': Zap,
-  'AI & Healthcare': Heart,
-  'Metaverse & AR/VR': Eye,
-  'Autonomous Systems': Car,
-  'Green Tech': Leaf,
-  'Space Tech': Satellite,
-  'FinTech': Banknote,
-  'IoT & Smart Cities': Building
-};
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from "../data/innovativeMicroSaasServices2027";
+import { SEO } from "../components/SEO";
 
 const categoryColors: { [key: string]: string } = {
   'AI & Customer Success': 'from-cyan-500 to-blue-600',
@@ -68,17 +55,16 @@ export default function InnovativeServices2027() {
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
 
-  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2027.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
         return a.price - b.price;
       case 'roi':
         return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
@@ -90,7 +76,7 @@ export default function InnovativeServices2027() {
   });
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       <SEO 
         title="2027 Innovative Services - Zion Tech Group"
         description="Discover our revolutionary 2027 services portfolio featuring cutting-edge AI, Quantum Computing, Blockchain, and emerging technology solutions."
@@ -101,8 +87,18 @@ export default function InnovativeServices2027() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="container-responsive relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -198,10 +194,30 @@ export default function InnovativeServices2027() {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  whileHover={{ y: -10, scale: 1.02 }}
+                  initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+}}
+                  whileHover = {
+  { y: -10,
+  scale: 1.02 
+
+
+}}
                   className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
                 >
                   {/* Service Header */}
@@ -324,13 +340,13 @@ export default function InnovativeServices2027() {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-              <button
-                onClick={() => {
+              <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
+              <button;
+                onClick={() => {;
                   setSelectedCategory('all');
                   setSearchQuery('');
                 }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                className = "px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 View All Services
               </button>
@@ -343,8 +359,18 @@ export default function InnovativeServices2027() {
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="container-responsive text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -382,8 +408,18 @@ export default function InnovativeServices2027() {
         <div className="container-responsive">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -393,8 +429,18 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">+1 302 464 0950</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -404,8 +450,18 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 30 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center"
@@ -415,8 +471,8 @@ export default function InnovativeServices2027() {
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </motion.div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

@@ -31,9 +31,9 @@ const categories = [
     description: "Business modernization and digital strategy",
     icon: <TrendingUp className="w-10 h-10" />,
     link: "/all-services",
-    color: "from-emerald-500 to-green-600",
-    gradient: "from-zion-purple-light to-zion-purple",
-  },
+    color: "from-emerald-500 to-green-600",;
+    gradient: "from-zion-purple-light to-zion-purple",;
+  },;
 ];
 const specialServices = [
   {
@@ -45,9 +45,9 @@ const specialServices = [
     link: "/comprehensive-services"
   },
   {
-    title: "Services Comparison",
-    link: "/services-comparison"
-  }
+    title: "Services Comparison",;
+    link: "/services-comparison";
+  };
 ];
 interface CategoriesSectionProps {
   showTitle?: boolean;
@@ -58,38 +58,56 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2;
+    };
+  };
 };
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
   visible: {
     y: 0,
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: "easeOut"
-    }
-  }
+      ease: "easeOut";
+    };
+  };
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
+        <div className="absolute inset-0" style = {
+  {
           backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
-          backgroundSize: '50px 50px'
-        }}></div>
+  backgroundSize: '50px 50px'
+        
+
+
+}}></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -120,10 +138,25 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.4 
+
+
+}}
         >
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -147,10 +180,25 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
         <motion.div 
           className="mt-12 flex justify-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition = {
+  { duration: 0.6,
+  delay: 0.6 
+
+
+}}
         >
           <Link 
             href="/categories" 
@@ -159,8 +207,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             View All Categories
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </Link>
-        </motion.div>
-      </div>
-    </section>
+        </motion.div>;
+      </div>;
+    </section>;
   );
 }

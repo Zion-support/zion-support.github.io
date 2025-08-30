@@ -1,7 +1,7 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
-type Service = {
+type Service = {;
   name: string;
   path: string;
   summary: string;
@@ -42,15 +42,15 @@ const services: Service[] = [
   { name: 'FinOps Advisory Sprint', path: '/services/finops-advisory-sprint', summary: '90-day cost optimization with KPIs and automation.', price: '$9k–$35k fixed', category: 'IT Services' }
 ];
 
-const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {
+const groupByCategory = (items: Service[]) => items.reduce<Record<string, Service[]>>((acc, s) => {;
   (acc[s.category] = acc[s.category] || []).push(s);
   return acc;
 }, {});
 
-const ServicesCatalog: React.FC = () => {
+const ServicesCatalog: React.FC = () => {;
   const grouped = groupByCategory(services);
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       <SEO title="Services Catalog - Zion Tech Group" description="Explore our micro SaaS, IT, and AI solutions with features, benefits, and pricing." />
       <section className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold mb-3">Services Catalog</h1>
@@ -80,9 +80,9 @@ const ServicesCatalog: React.FC = () => {
           <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

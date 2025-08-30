@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Users, MessageSquare, Sparkles, Save, Download, Loader2 } from 'lucide-react';
-import { useRealTimeCollaboration } from '../hooks/useRealTimeCollaboration';
-import { useAnalytics } from '../hooks/useAnalytics';
+import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration";
+import { useAnalytics } from "../hooks/useAnalytics";
 export const CollaborativeTextEditor = ({ roomId, userId, userName, initialContent = '', enableAI = true, enableCollaboration = true, enableVersioning = true, className = '', onSave, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -37,15 +37,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Handle text changes
     const handleTextChange = useCallback((event) => {
         const newContent = event.target.value;
-        const selectionStart = event.target.selectionStart;
-        const selectionEnd = event.target.selectionEnd;
         const selectedText = newContent.slice(selectionStart, selectionEnd);
         setEditorState(prev => {
             const change = {
                 id: `change_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
                 type: newContent.length > prev.content.length ? 'insert' : 'delete',
                 position: Math.min(selectionStart, prev.content.length),
-                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : undefined,
+                text: newContent.length > prev.content.length ? newContent.slice(prev.content.length) : null,
                 length: Math.abs(newContent.length - prev.content.length),
                 timestamp: new Date(),
                 userId,
@@ -155,7 +153,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         }
         catch (error) {
             console.error('Failed to generate AI suggestions:', error);
-            trackEvent('editor', 'ai_suggestions_failed', 'generation_error', undefined, {
+            trackEvent('editor', 'ai_suggestions_failed', 'generation_error', null, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
         }
@@ -187,7 +185,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             const newPosition = suggestion.position + suggestion.text.length;
             editorRef.current.setSelectionRange(newPosition, newPosition);
         }
-        trackEvent('editor', 'ai_suggestion_applied', suggestion.type, undefined, { suggestionId: suggestion.id });
+        trackEvent('editor', 'ai_suggestion_applied', suggestion.type, null, { suggestionId: suggestion.id });
     }, [editorState.content, trackEvent]);
     // Save content
     const handleSave = useCallback(() => {
@@ -217,7 +215,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             a.click();
             window.URL.revokeObjectURL(url);
         }
-        trackEvent('editor', 'content_exported', format, undefined, { format });
+        trackEvent('editor', 'content_exported', format, null, { format });
     }, [editorState.content, onExport, trackEvent]);
     // Handle collaboration text changes
     useEffect(() => {
@@ -233,7 +231,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                         version: Math.max(prev.version, message.payload.version)
                     };
                 });
-                trackEvent('editor', 'collaboration_sync', 'text_synced', undefined, {
+                trackEvent('editor', 'collaboration_sync', 'text_synced', null, {
                     userId: message.userId,
                     version: message.payload.version
                 });
@@ -329,7 +327,17 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               </h4>
               
               <div className="space-y-3">
-                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
+                {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {
+  { opacity: 0,
+  x: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
                     <div className="flex items-start justify-between mb-2">
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
                     suggestion.type === 'style' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
@@ -414,11 +422,31 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
 
       {/* Collaboration Cursors Overlay */}
       {enableCollaboration && (<div ref={collaborationRef} className="absolute inset-0 pointer-events-none" style={{ zIndex: 10 }}>
-          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} className="absolute w-4 h-4" style={{
+          {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {
+  { opacity: 0,
+  scale: 0 
+
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+
+}} exit = {
+  { opacity: 0,
+  scale: 0 
+
+
+}} className="absolute w-4 h-4" style = {
+  {
                     left: x,
                     top: y,
-                    transform: 'translate(-50%, -50%)'
-                }}>
+                    transform: 'translate(-50%,
+  -50%)'
+                
+
+
+}}>
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
                 {user.name}

@@ -45,11 +45,11 @@ import {
   User
 } from 'lucide-react';
 
-export const EnhancedSidebar: React.FC = () => {
+export const EnhancedSidebar: React.FC = () => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string) => {;
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -97,25 +97,35 @@ export const EnhancedSidebar: React.FC = () => {
         { name: "Support", href: "/support", icon: HelpCircle },
         { name: "Sitemap", href: "/sitemap", icon: Globe },
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
-        { name: "Login", href: "/login", icon: User }
-      ]
-    }
+        { name: "Login", href: "/login", icon: User };
+      ];
+    };
   ];
 
   const quickActions = [
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
-    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
+    { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
   ];
 
   return (
-    <aside className="hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
+    <aside className = "hidden lg:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
       <div className="p-6">
         {/* Logo Section */}
         <motion.div 
           className="mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           transition={{ duration: 0.5 }}
         >
           <Link to="/" className="flex items-center space-x-3 group">
@@ -137,18 +147,48 @@ export const EnhancedSidebar: React.FC = () => {
         {/* Quick Actions */}
         <motion.div 
           className="mb-8"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.5,
+  delay: 0.1 
+
+
+}}
         >
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
             {quickActions.map((action, index) => (
               <motion.div
                 key={action.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                transition = {
+  { duration: 0.3,
+  delay: index * 0.1 
+
+
+}}
               >
                 <Link
                   to={action.href}
@@ -171,9 +211,24 @@ export const EnhancedSidebar: React.FC = () => {
           {navigationSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: -20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: sectionIndex * 0.1 
+
+
+}}
             >
               <button
                 onClick={() => toggleSection(section.title)}
@@ -193,18 +248,48 @@ export const EnhancedSidebar: React.FC = () => {
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                     transition={{ duration: 0.3 }}
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item, itemIndex) => (
                       <motion.div
                         key={item.name}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
+                        initial = {
+  { opacity: 0,
+  x: -20 
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
+                        transition = {
+  { duration: 0.2,
+  delay: itemIndex * 0.05 
+
+
+}}
                       >
                         <Link
                           to={item.href}
@@ -229,9 +314,24 @@ export const EnhancedSidebar: React.FC = () => {
         {/* Contact Info */}
         <motion.div 
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+          transition = {
+  { duration: 0.5,
+  delay: 0.5 
+
+
+}}
         >
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
           <div className="space-y-2 text-xs text-zion-slate-light">
@@ -248,8 +348,8 @@ export const EnhancedSidebar: React.FC = () => {
               <span>Middletown, DE</span>
             </div>
           </div>
-        </motion.div>
-      </div>
-    </aside>
+        </motion.div>;
+      </div>;
+    </aside>;
   );
 };

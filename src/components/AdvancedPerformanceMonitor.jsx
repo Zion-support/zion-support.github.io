@@ -1,103 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
-const mockSystemMetrics = [
-    {
-        id: '1',
-        name: 'CPU Usage',
-        value: 78.5,
-        unit: '%',
-        threshold: 85,
-        status: 'warning',
-        trend: 'up',
-        change: 5.2,
-        category: 'Processor',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '2',
-        name: 'Memory Usage',
-        value: 65.3,
-        unit: '%',
-        threshold: 80,
-        status: 'normal',
-        trend: 'stable',
-        change: 0.8,
-        category: 'Memory',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '3',
-        name: 'Disk I/O',
-        value: 1250,
-        unit: 'MB/s',
-        threshold: 1500,
-        status: 'normal',
-        trend: 'down',
-        change: -2.1,
-        category: 'Storage',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '4',
-        name: 'Network Latency',
-        value: 45,
-        unit: 'ms',
-        threshold: 50,
-        status: 'normal',
-        trend: 'stable',
-        change: 0.5,
-        category: 'Network',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '5',
-        name: 'Database Connections',
-        value: 89,
-        unit: 'connections',
-        threshold: 100,
-        status: 'warning',
-        trend: 'up',
-        change: 8.7,
-        category: 'Database',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    },
-    {
-        id: '6',
-        name: 'Response Time',
-        value: 180,
-        unit: 'ms',
-        threshold: 200,
-        status: 'normal',
-        trend: 'down',
-        change: -3.2,
-        category: 'Performance',
-        lastUpdated: '2024-01-15T10:00:00.000Z'
-    }
-];
-const mockPerformanceAlerts = [
-    {
-        id: '1',
-        type: 'performance',
-        severity: 'medium',
-        title: 'High CPU Usage Detected',
-        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        affected: ['Web Server 1', 'Application Server 2'],
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'],
-        status: 'active'
-    },
-    {
-        id: '2',
-        type: 'scalability',
-        severity: 'high',
-        title: 'Database Connection Pool Near Capacity',
-        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
-        timestamp: '2024-01-15T09:45:00.000Z',
-        affected: ['Database Cluster', 'Application Servers'],
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
-        status: 'acknowledged'
-    }
-];
 const mockScalabilityMetrics = [
     {
         id: '1',
@@ -146,7 +48,6 @@ export function AdvancedPerformanceMonitor() {
     const [performanceAlerts, setPerformanceAlerts] = useState(mockPerformanceAlerts);
     const [scalabilityMetrics, setScalabilityMetrics] = useState(mockScalabilityMetrics);
     const [isRefreshing, setIsRefreshing] = useState(false);
-    const containerRef = useRef(null);
     const categories = ['all', 'Processor', 'Memory', 'Storage', 'Network', 'Database', 'Performance'];
     const timeRanges = [
         { value: '15m', label: '15 Minutes' },

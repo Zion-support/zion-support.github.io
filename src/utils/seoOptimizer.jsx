@@ -43,7 +43,6 @@ const SEOOptimizer = ({ content, onOptimize }) => {
       }
       
       // Check headings
-      const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
       const h2Count = (content.match(/<h2[^>]*>/gi) || []).length;
       if (h1Count > 0 && h2Count > 0) {
         score += 20;
@@ -55,7 +54,6 @@ const SEOOptimizer = ({ content, onOptimize }) => {
       }
       
       // Check images with alt text
-      const images = content.match(/<img[^>]*>/gi) || [];
       const imagesWithAlt = images.filter(img => img.includes('alt='));
       if (images.length > 0) {
         if (imagesWithAlt.length === images.length) {
@@ -99,8 +97,18 @@ const SEOOptimizer = ({ content, onOptimize }) => {
       
       {seoScore > 0 && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-4"
         >
           <div className="text-center">

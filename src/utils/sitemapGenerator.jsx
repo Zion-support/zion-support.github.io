@@ -11,8 +11,12 @@ const SitemapGenerator = ({ onGenerate }) => {
     // Simulate sitemap generation
     setTimeout(() => {
       const sitemap = {
-        pages: [
-          { url: '/', priority: '1.0', changefreq: 'daily' },
+  pages: [
+          { url: '/', priority: '1.0',
+  changefreq: 'daily' 
+
+
+},
           { url: '/services', priority: '0.9', changefreq: 'weekly' },
           { url: '/about', priority: '0.8', changefreq: 'monthly' },
           { url: '/contact', priority: '0.8', changefreq: 'monthly' },
@@ -50,8 +54,18 @@ const SitemapGenerator = ({ onGenerate }) => {
       
       {sitemapData && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
           className="space-y-4"
         >
           <div className="bg-indigo-50 p-4 rounded-lg">

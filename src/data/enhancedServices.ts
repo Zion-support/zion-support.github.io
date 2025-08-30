@@ -17,7 +17,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       avatarUrl: "https://ziontechgroup.com/wp-content/uploads/2024/01/zion-logo.png",
       email: "kleber@ziontechgroup.com"
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
     reviewCount: 156,
@@ -1144,9 +1144,9 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     rating: 4.7,
     reviewCount: 78,
     location: "Global",
-    availability: "3-4 Weeks",
-    aiScore: 91
-  }
+    availability: "3-4 Weeks",;
+    aiScore: 91;
+  };
 ];
 
 // Append additional diversified, real micro SaaS, IT, and AI services
@@ -1160,7 +1160,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     currency: "$",
     tags: ["RAG", "Knowledge Base", "Support Automation"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
-    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"],
+    images: ["https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto = format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-01T10:00:00.000Z",
     rating: 4.7,
     reviewCount: 72,
@@ -1224,9 +1224,9 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2025-02-01T08:00:00.000Z",
     rating: 4.7,
-    reviewCount: 28,
-    link: "https://ziontechgroup.com/services/pdf-render-api"
-  }
+    reviewCount: 28,;
+    link: "https://ziontechgroup.com/services/pdf-render-api";
+  };
 ];
 
 export const ALL_ENHANCED_SERVICES: ProductListing[] = [
@@ -1247,17 +1247,21 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'Financial Technology', value: 'fintech' },
   { label: 'Blockchain', value: 'blockchain' },
   { label: 'Quantum Computing', value: 'quantum-computing' },
-  { label: 'Edge Computing', value: 'edge-computing' },
-  { label: 'Emerging Technology', value: 'emerging-tech' },
-  { label: 'AI Automation', value: 'ai-automation' }
+  { label: 'Edge Computing', value: 'edge-computing' },;
+  { label: 'Emerging Technology', value: 'emerging-tech' },;
+  { label: 'AI Automation', value: 'ai-automation' };
 ];
 
 // Pricing tiers for different service levels
 export const SERVICE_PRICING_TIERS = {
-  basic: { range: "$500 - $2,000", description: "Essential services for small businesses and startups" },
-  professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },
-  enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },
-  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" }
+  basic: { range: "$500 - $2,000",
+  description: "Essential services for small businesses and startups" 
+
+
+},
+  professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
+  enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;
+  premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
 };
 
 // Contact information
@@ -1265,6 +1269,9 @@ export const CONTACT_INFO = {
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-  website: "https://ziontechgroup.com",
-  domain: "ziontechgroup.com"
+  website: "https://ziontechgroup.com",;
+  domain: "ziontechgroup.com";
+;
+
+
 };

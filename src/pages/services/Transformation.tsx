@@ -21,9 +21,9 @@ const DigitalTransformation = () => {
       title: "Change Management",
       description: "Guide your team through digital adoption and transformation.",
       price: "From $8,000/month",
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
-      icon: Users
-    }
+      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
+      icon: Users;
+    };
   ];
 
   const transformationAreas = [
@@ -42,22 +42,22 @@ const DigitalTransformation = () => {
     {
       name: "Technology",
       description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-    }
+      icon: BarChart3,;
+      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
+    };
   ];
 
   const benefits = [
     "Increased operational efficiency and productivity",
     "Enhanced customer experience and satisfaction",
     "Improved data insights and decision making",
-    "Reduced operational costs and manual work",
-    "Faster time to market for new products",
-    "Better competitive positioning in the market"
+    "Reduced operational costs and manual work",;
+    "Faster time to market for new products",;
+    "Better competitive positioning in the market";
   ];
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
+    <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -214,9 +214,9 @@ const DigitalTransformation = () => {
               View All Services
             </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

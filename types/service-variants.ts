@@ -1,5 +1,4 @@
-export type ServiceVariant = 
-  | 'default'
+export type ServiceVariant = | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
@@ -97,7 +96,7 @@ export type ServiceVariant =
   | 'monitoring-futuristic'
   | 'backup-futuristic'
   | 'analytics-futuristic'
-  | 'emerging-tech'
-  | 'space-tech'
-  | 'autonomous-systems'
+  | 'emerging-tech';
+  | 'space-tech';
+  | 'autonomous-systems';
   | 'quantum-futuristic';

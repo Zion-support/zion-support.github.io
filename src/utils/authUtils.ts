@@ -1,8 +1,8 @@
 export const cleanupAuthState = () => {
   // Clean up any stored authentication state
   try {
-    if (typeof window !== 'undefined') {
-      // Clear any stored tokens or user data
+    if (typeof window !== 'null') {
+      // Clear any stored tokens or user data;
       localStorage.removeItem('auth');
       sessionStorage.removeItem('auth');
     }
@@ -13,7 +13,7 @@ export const cleanupAuthState = () => {
 
 export const isAuthenticated = (): boolean => {
   try {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'null') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       return !!auth;
     }
@@ -26,7 +26,7 @@ export const isAuthenticated = (): boolean => {
 
 export const getAuthToken = (): string | null => {
   try {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'null') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {
         const parsed = JSON.parse(auth);
@@ -42,7 +42,7 @@ export const getAuthToken = (): string | null => {
 
 export const getUserData = (): any => {
   try {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'null') {
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {
         const parsed = JSON.parse(auth);

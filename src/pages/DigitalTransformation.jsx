@@ -2,77 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
-import { SEO } from '../components/SEO';
-const transformationServices = [
-    {
-        title: "Strategy & Planning",
-        description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
-        icon: Rocket,
-        features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
-        color: "from-purple-500 to-pink-500"
-    },
-    {
-        title: "Process Automation",
-        description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
-        icon: Zap,
-        features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
-        color: "from-blue-500 to-cyan-500"
-    },
-    {
-        title: "Technology Modernization",
-        description: "Legacy system modernization and cloud-native architecture implementation.",
-        icon: Cpu,
-        features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
-        color: "from-green-500 to-emerald-500"
-    },
-    {
-        title: "Data & Analytics",
-        description: "Data-driven insights and business intelligence solutions for informed decision-making.",
-        icon: Database,
-        features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
-        color: "from-orange-500 to-red-500"
-    },
-    {
-        title: "Customer Experience",
-        description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
-        icon: Users,
-        features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
-        color: "from-indigo-500 to-purple-500"
-    },
-    {
-        title: "Security & Compliance",
-        description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
-        icon: Shield,
-        features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
-        color: "from-yellow-500 to-orange-500"
-    }
-];
-const transformationPhases = [
-    {
-        phase: "01",
-        title: "Discovery & Assessment",
-        description: "Evaluate current state, identify opportunities, and assess digital maturity",
-        duration: "2-4 weeks"
-    },
-    {
-        phase: "02",
-        title: "Strategy Development",
-        description: "Create comprehensive digital transformation roadmap and business case",
-        duration: "4-6 weeks"
-    },
-    {
-        phase: "03",
-        title: "Pilot & Validation",
-        description: "Implement proof-of-concept and validate approach with stakeholders",
-        duration: "6-8 weeks"
-    },
-    {
-        phase: "04",
-        title: "Full Implementation",
-        description: "Execute transformation plan with phased rollout and continuous optimization",
-        duration: "6-18 months"
-    }
-];
+import { SEO } from "../components/SEO";
 const testimonials = [
     {
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
@@ -105,7 +35,17 @@ export default function DigitalTransformation() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Digital
               <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -136,7 +76,22 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
             const IconComponent = stat.icon;
-            return (<motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
+            return (<motion.div key={stat.label} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <IconComponent className="w-8 h-8 text-white"/>
                   </div>
@@ -150,7 +105,17 @@ export default function DigitalTransformation() {
       {/* Services Grid */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Our Transformation Services
             </h2>
@@ -161,7 +126,22 @@ export default function DigitalTransformation() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index) => {
             const IconComponent = service.icon;
-            return (<motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+            return (<motion.div key={service.title} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8"/>
                   </div>
@@ -190,7 +170,17 @@ export default function DigitalTransformation() {
       {/* Transformation Process */}
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Our Transformation Process
             </h2>
@@ -199,7 +189,22 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="text-center">
+            {transformationPhases.map((phase, index) => (<motion.div key={phase.phase} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
                   {phase.phase}
                 </div>
@@ -213,7 +218,17 @@ export default function DigitalTransformation() {
       {/* Benefits Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Transformation Benefits
             </h2>
@@ -245,7 +260,22 @@ export default function DigitalTransformation() {
             }
         ].map((benefit, index) => {
             const IconComponent = benefit.icon;
-            return (<motion.div key={benefit.title} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
+            return (<motion.div key={benefit.title} initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-zion-purple/20 rounded-lg text-zion-cyan">
                       <IconComponent className="w-8 h-8"/>
@@ -263,7 +293,17 @@ export default function DigitalTransformation() {
       {/* Testimonials */}
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               Success Stories
             </h2>
@@ -272,7 +312,22 @@ export default function DigitalTransformation() {
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
+            {testimonials.map((testimonial, index) => (<motion.div key={testimonial.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}} className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-zion-cyan fill-current"/>))}
                 </div>
@@ -290,7 +345,17 @@ export default function DigitalTransformation() {
       {/* CTA Section */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center">
+          <motion.div initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}} transition={{ duration: 0.8 }} className="text-center">
             <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
               <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
                 Ready to Transform Your Business?

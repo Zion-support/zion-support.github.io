@@ -7,9 +7,9 @@ export default function AIWorkflowAutomation() {
     'Multi-platform integration (Slack, Teams, Zapier)',
     'Real-time workflow analytics and performance metrics',
     'Automated error handling and fallback procedures',
-    'Custom workflow templates for common business processes',
-    'Role-based access control and approval workflows',
-    'Mobile workflow management and notifications'
+    'Custom workflow templates for common business processes',;
+    'Role-based access control and approval workflows',;
+    'Mobile workflow management and notifications';
   ];
 
   const tiers = [
@@ -25,22 +25,22 @@ export default function AIWorkflowAutomation() {
     },
     { 
       name: 'Enterprise', 
-      price: '$1,299/mo', 
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] 
-    },
+      price: '$1,299/mo', ;
+      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] ;
+    },;
   ];
 
   const useCases = [
     'Customer onboarding automation',
     'Invoice processing and approval',
     'Employee onboarding and offboarding',
-    'Project approval workflows',
-    'Quality assurance processes',
-    'Compliance documentation flows'
+    'Project approval workflows',;
+    'Quality assurance processes',;
+    'Compliance documentation flows';
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -125,8 +125,8 @@ export default function AIWorkflowAutomation() {
           <div className="mt-4 text-sm text-gray-500">
             Address: 364 E Main St STE 1008, Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

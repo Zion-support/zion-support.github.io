@@ -28,7 +28,7 @@ export function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = () => {;
       setIsScrolled(window.scrollY > 10);
     };
 
@@ -58,15 +58,15 @@ export function Header() {
       items: [
         { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },
-        { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> }
-      ]
-    }
+        { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> };
+      ];
+    };
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-black/95 backdrop-blur-md border-b border-white/10 shadow-2xl' 
         : 'bg-gradient-to-r from-black/90 via-slate-900/90 to-black/90 backdrop-blur-sm'
@@ -99,9 +99,24 @@ export function Header() {
               <AnimatePresence>
                 {isServicesOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
+                    initial = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
+                    animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                    exit = {
+  { opacity: 0,
+  y: 10 
+
+
+}}
                     transition={{ duration: 0.2 }}
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
@@ -196,9 +211,24 @@ export function Header() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+              exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
               transition={{ duration: 0.3 }}
               className="lg:hidden border-t border-white/10"
             >
@@ -216,9 +246,24 @@ export function Header() {
                   <AnimatePresence>
                     {isServicesOpen && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
+                        animate = {
+  { opacity: 1,
+  height: 'auto' 
+
+
+}}
+                        exit = {
+  { opacity: 0,
+  height: 0 
+
+
+}}
                         transition={{ duration: 0.2 }}
                         className="ml-4 mt-2 space-y-2"
                       >
@@ -298,9 +343,9 @@ export function Header() {
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
-      </nav>
-    </header>
+        </AnimatePresence>;
+      </nav>;
+    </header>;
   );
 }
 

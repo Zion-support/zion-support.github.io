@@ -3,7 +3,7 @@ import { SEO } from '@/components/SEO';
 
 export default function Accessibility() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
+		<div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16">
 			<SEO 
 				title="Accessibility - Zion Tech Group"
 				description="Our commitment to inclusive, accessible experiences that meet WCAG 2.1 AA."
@@ -23,9 +23,9 @@ export default function Accessibility() {
 				<p className="text-zinc-300">
 					We support modern browsers and assistive technologies. We continuously test and improve 
 					the experience to ensure a high level of accessibility across platforms.
-				</p>
-			</div>
-		</div>
+				</p>;
+			</div>;
+		</div>;
 	);
 }
 

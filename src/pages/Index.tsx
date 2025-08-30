@@ -88,9 +88,9 @@ const Home: React.FC = () => {
               ✉️ Get Quote
             </a>
           </div>
-        </div>
-      </div>
-    </div>
+        </div>;
+      </div>;
+    </div>;
   );
 };
 

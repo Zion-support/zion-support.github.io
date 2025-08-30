@@ -62,9 +62,9 @@ const AIHealthcarePlatform = () => {
     },
     {
       icon: <Database className="w-8 h-8 text-cyan-400" />,
-      title: "Health Records",
-      description: "Secure, AI-managed electronic health records with intelligent data analysis"
-    }
+      title: "Health Records",;
+      description: "Secure, AI-managed electronic health records with intelligent data analysis";
+    };
   ];
 
   const benefits = [
@@ -81,9 +81,9 @@ const AIHealthcarePlatform = () => {
       description: "Continuous health monitoring"
     },
     {
-      metric: "Global",
-      description: "Healthcare access worldwide"
-    }
+      metric: "Global",;
+      description: "Healthcare access worldwide";
+    };
   ];
 
   const healthcareModules = [
@@ -114,9 +114,9 @@ const AIHealthcarePlatform = () => {
     },
     {
       title: "Research & Development",
-      description: "AI-powered medical research, clinical trial optimization, and breakthrough discovery",
-      icon: <Microscope className="w-6 h-6 text-cyan-400" />
-    }
+      description: "AI-powered medical research, clinical trial optimization, and breakthrough discovery",;
+      icon: <Microscope className="w-6 h-6 text-cyan-400" />;
+    };
   ];
 
   const complianceFeatures = [
@@ -147,20 +147,30 @@ const AIHealthcarePlatform = () => {
     },
     {
       name: "HITECH Act",
-      status: "100%",
-      icon: <FileText className="w-5 h-5 text-orange-400" />
-    }
+      status: "100%",;
+      icon: <FileText className="w-5 h-5 text-orange-400" />;
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               className="flex justify-center mb-6"
             >
@@ -169,17 +179,47 @@ const AIHealthcarePlatform = () => {
               </div>
             </motion.div>
             <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-cyan-500 bg-clip-text text-transparent"
             >
               AI Healthcare Platform
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               Revolutionize healthcare delivery with our comprehensive AI-powered platform. 
@@ -187,9 +227,24 @@ const AIHealthcarePlatform = () => {
               improves outcomes, and accelerates medical breakthroughs.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+}}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg">
@@ -208,8 +263,18 @@ const AIHealthcarePlatform = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: -50 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
@@ -238,8 +303,18 @@ const AIHealthcarePlatform = () => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial = {
+  { opacity: 0,
+  x: 50 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="relative"
@@ -281,8 +356,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -293,9 +378,24 @@ const AIHealthcarePlatform = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
               >
@@ -316,8 +416,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -328,9 +438,24 @@ const AIHealthcarePlatform = () => {
             {healthcareModules.map((module, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
               >
@@ -349,8 +474,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -361,9 +496,24 @@ const AIHealthcarePlatform = () => {
             {complianceFeatures.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
               >
@@ -398,8 +548,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -410,9 +570,24 @@ const AIHealthcarePlatform = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -432,8 +607,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -443,8 +628,18 @@ const AIHealthcarePlatform = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Starter Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
@@ -479,9 +674,24 @@ const AIHealthcarePlatform = () => {
 
             {/* Professional Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.1 
+
+
+}}
               viewport={{ once: true }}
               className="bg-gradient-to-br from-blue-600/20 to-green-600/20 p-8 rounded-xl border border-blue-500/50 relative"
             >
@@ -524,9 +734,24 @@ const AIHealthcarePlatform = () => {
 
             {/* Enterprise Plan */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
               viewport={{ once: true }}
               className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
             >
@@ -569,8 +794,18 @@ const AIHealthcarePlatform = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-green-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6"
@@ -578,9 +813,24 @@ const AIHealthcarePlatform = () => {
             Ready to Transform Healthcare?
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.2 
+
+
+}}
             viewport={{ once: true }}
             className="text-xl text-gray-300 mb-8"
           >
@@ -588,9 +838,24 @@ const AIHealthcarePlatform = () => {
             Enhance patient care, improve outcomes, and accelerate medical breakthroughs.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+
+}}
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
@@ -601,9 +866,9 @@ const AIHealthcarePlatform = () => {
               View Pricing
             </Link>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

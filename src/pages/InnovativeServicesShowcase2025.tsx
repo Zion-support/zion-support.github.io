@@ -205,15 +205,15 @@ export default function InnovativeServicesShowcase2025() {
         'Improve machine learning accuracy by 40-60%',
         'Enable previously impossible computational tasks'
       ],
-      path: '/services/ai-quantum-machine-learning',
-      category: 'AI & Quantum Computing'
-    }
+      path: '/services/ai-quantum-machine-learning',;
+      category: 'AI & Quantum Computing';
+    };
   ];
 
   const categories = [...new Set(services.map(service => service.category))];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <SEO 
         title="Innovative AI Services Showcase 2025 - Zion Tech Group"
         description="Discover our cutting-edge AI-powered micro SAAS services and solutions. From workflow orchestration to quantum machine learning, transform your business with intelligent technology."
@@ -222,25 +222,65 @@ export default function InnovativeServicesShowcase2025() {
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"
           >
             <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025
           </motion.div>
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+
+
+}}
             className="text-4xl md:text-6xl font-bold text-white mb-4"
           >
             Innovative AI Services Showcase 2025
           </motion.h1>
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+}}
             className="text-zion-slate-light text-xl"
           >
             Discover our cutting-edge AI-powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
@@ -264,9 +304,24 @@ export default function InnovativeServicesShowcase2025() {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
               className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <div className="flex items-center mb-4">
@@ -348,9 +403,24 @@ export default function InnovativeServicesShowcase2025() {
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+}}
                 className="text-center"
               >
                 <div className="p-4 bg-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -381,8 +451,8 @@ export default function InnovativeServicesShowcase2025() {
         
         <div className="text-sm text-zion-slate-light">
           Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

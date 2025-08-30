@@ -13,30 +13,30 @@ export function Accordion({
   className = '', 
   type = 'single',
   defaultValue 
-}: AccordionProps) {
-  const [openItems, setOpenItems] = useState<string[]>(
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
+}: AccordionProps) {;
+  const [openItems, setOpenItems] = useState<string[]>(;
+    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
   );
 
-  const handleToggle = (value: string) => {
-    if (type === 'single') {
+  const handleToggle = (value: string) => {;
+    if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
-      setOpenItems(prev => 
-        prev.includes(value) 
-          ? prev.filter(item => item !== value)
-          : [...prev, value]
+      setOpenItems(prev = > 
+        prev.includes(value) ;
+          ? prev.filter(item => item !== value);
+          : [...prev, value];
       );
     }
   };
 
   return (
-    <div className={`space-y-1 ${className}`}>
+    <div className = {`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
-            isOpen: openItems.includes(child.props.value),
-            onToggle: () => handleToggle(child.props.value)
+          return React.cloneElement(child, { ;
+            isOpen: openItems.includes(child.props.value),;
+            onToggle: () => handleToggle(child.props.value);
           });
         }
         return child;
@@ -60,9 +60,9 @@ export function AccordionItem({
   onToggle
 }: AccordionItemProps) {
   return (
-    <div className={`border-b border-gray-200 ${className}`}>
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+    <div className={`border-b border-gray-200 ${className}`}>;
+      {React.Children.map(children, (child) => {;
+        if (React.isValidElement(child)) {;
           return React.cloneElement(child, { isOpen, onToggle });
         }
         return child;
@@ -93,9 +93,9 @@ export function AccordionTrigger({
       <ChevronDown 
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
           isOpen ? 'rotate-180' : ''
-        }`} 
-      />
-    </button>
+        }`} ;
+      />;
+    </button>;
   );
 }
 
@@ -107,14 +107,14 @@ interface AccordionContentProps {
 
 export function AccordionContent({ 
   children, 
-  className = '',
-  isOpen = false
-}: AccordionContentProps) {
+  className = '',;
+  isOpen = false;
+}: AccordionContentProps) {;
   if (!isOpen) return null;
 
   return (
-    <div className={`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
-      {children}
-    </div>
+    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
+      {children};
+    </div>;
   );
 }

@@ -1,4 +1,4 @@
-import { specializedIndustrySolutions2026 } from '../../data/2026-specialized-industry-solutions';
+import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
 
 // Interface for the existing service structure
 export interface Service {
@@ -39,7 +39,7 @@ export interface Service {
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
-  return specializedIndustrySolutions2026.map(service => ({
+  return specializedIndustrySolutions2026.map(service = > ({
     id: service.id,
     title: service.name,
     description: service.description,
@@ -70,8 +70,8 @@ export function map2026ServicesToExistingStructure(): Service[] {
       uptime: "99.9%", // Default value
       security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security
     },
-    competitors: service.competitors,
-    marketSize: service.marketSize,
-    compliance: ["SOC 2", "ISO 27001"] // Default compliance
+    competitors: service.competitors,;
+    marketSize: service.marketSize,;
+    compliance: ["SOC 2", "ISO 27001"] // Default compliance;
   }));
 }

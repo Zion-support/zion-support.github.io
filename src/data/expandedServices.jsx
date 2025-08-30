@@ -496,7 +496,7 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 // Service subcategories for detailed filtering
 export const EXPANDED_SERVICE_SUBCATEGORIES = {
-    'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
+  'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
     'cloud-services': ['Migration', 'Optimization', 'Security', 'Monitoring', 'Cost Management'],
     'devops': ['Automation', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'Monitoring'],
     'cybersecurity': ['Audit & Testing', 'Architecture', 'Incident Response', 'Compliance', 'Training'],
@@ -507,7 +507,11 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'iot': ['Platform Development', 'Device Integration', 'Data Analytics', 'Security', 'Cloud Integration'],
     'hardware': ['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],
     'business-automation': ['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
-    'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
+    'business-solutions': ['ERP', 'CRM', 'HR Systems', 'Financial Systems',
+  'Project Management']
+
+
+
 };
 
 // Alias exports for backward compatibility

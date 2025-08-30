@@ -40,9 +40,9 @@ const ITServicesPage = () => {
               <p className="text-gray-300 mb-4">Strategic technology consulting services</p>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        </div>;
+      </div>;
+    </>;
   );
 };
 

@@ -205,7 +205,12 @@ export const EnhancedSearchInput = () => {
                   >
                     <span className="text-sm text-gray-700">{search}</span>
                     <button
-                      onClick={(e) => removeRecentSearch(search, e)}
+                      onClick = {
+  (e) => removeRecentSearch(search,
+  e)
+
+
+}
                       className="opacity-0 group-hover:opacity-100 p-1 hover:bg-gray-200 rounded"
                     >
                       <X className="w-3 h-3 text-gray-400" />

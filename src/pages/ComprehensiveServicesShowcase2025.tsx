@@ -57,7 +57,7 @@ import {
   Heart,
   Leaf
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 
 interface ServiceContact {
   mobile: string;
@@ -66,7 +66,7 @@ interface ServiceContact {
   website: string;
 }
 
-const ComprehensiveServicesShowcase2025: React.FC = () => {
+const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
@@ -100,44 +100,48 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s => s.category === 'Healthcare').length, icon: '🏥' },
     { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s => s.category === 'Financial Services').length, icon: '💰' },
     { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category === 'Marketing').length, icon: '📢' },
-    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category === 'Project Management').length, icon: '📋' },
-    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s => s.category === 'Business Intelligence').length, icon: '📊' },
-    { id: 'Software Development', name: 'Software Development', count: allServices.filter(s => s.category === 'Software Development').length, icon: '💻' }
+    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category === 'Project Management').length, icon: '📋' },;
+    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s => s.category === 'Business Intelligence').length, icon: '📊' },;
+    { id: 'Software Development', name: 'Software Development', count: allServices.filter(s => s.category === 'Software Development').length, icon: '💻' };
   ];
 
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = allServices.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
     const matchesInnovation = innovationLevel === 'all' || service.innovationLevel === innovationLevel;
     
     return matchesCategory && matchesSearch && matchesPrice && matchesInnovation;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
       case 'name':
         return a.title.localeCompare(b.title);
       case 'innovation':
-        const innovationOrder = { 'Breakthrough': 3, 'Revolutionary': 2, 'Advanced': 1 };
+        const innovationOrder = {
+  'Breakthrough': 3, 'Revolutionary': 2,;
+  ;
+  'Advanced': 1 ;
+
+
+};
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0);
       default:
         return 0;
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: any) => {;
     setSelectedService(service);
   };
 
-  const closeModal = () => {
+  const closeModal = () => {;
     setSelectedService(null);
   };
 
@@ -146,21 +150,25 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+  hidden: { y: 20,
+  opacity: 0 
+
+
+},
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut";
+      };
+    };
   };
 
   const getCategoryIcon = (category: string) => {
@@ -186,22 +194,32 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       'Healthcare': Heart,
       'Financial Services': DollarSign,
       'Marketing': MessageCircle,
-      'Project Management': Clipboard,
-      'Business Intelligence': BarChart,
-      'Software Development': Code
+      'Project Management': Clipboard,;
+      'Business Intelligence': BarChart,;
+      'Software Development': Code;
     };
     return iconMap[category] || Rocket;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 via-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -309,7 +327,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   min="0"
                   max="10000"
                   value={priceRange[0]}
-                  onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                  onChange = {
+  (e) => setPriceRange([parseInt(e.target.value),
+  priceRange[1]])
+
+
+}
                   className="flex-1"
                 />
                 <input
@@ -317,7 +340,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   min="0"
                   max="10000"
                   value={priceRange[1]}
-                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  onChange = {
+  (e) => setPriceRange([priceRange[0],
+  parseInt(e.target.value)])
+
+
+}
                   className="flex-1"
                 />
               </div>
@@ -452,8 +480,18 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -485,9 +523,24 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+}}
                 viewport={{ once: true }}
                 className="text-center"
               >
@@ -506,8 +559,18 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -556,9 +619,24 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             onClick={closeModal}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+}}
               className="bg-zion-slate-dark rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -634,9 +712,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               </div>
             </motion.div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+        )};
+      </AnimatePresence>;
+    </div>;
   );
 };
 

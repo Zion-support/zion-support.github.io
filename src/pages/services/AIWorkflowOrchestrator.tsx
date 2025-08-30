@@ -10,27 +10,27 @@ export default function AIWorkflowOrchestrator() {
     'Predictive workflow failure prevention',
     'Multi-system integration and synchronization',
     'Advanced workflow templates and customization',
-    'Intelligent exception handling and recovery',
-    'Comprehensive audit trail and compliance',
-    'Scalable workflow engine for enterprise use'
+    'Intelligent exception handling and recovery',;
+    'Comprehensive audit trail and compliance',;
+    'Scalable workflow engine for enterprise use';
   ];
 
   const benefits = [
     'Increase workflow efficiency by 70%',
     'Reduce manual errors by 85%',
     'Improve process completion time by 60%',
-    'Reduce operational costs by 45%',
-    'Enable 24/7 automated operations',
-    'Provide real-time process visibility'
+    'Reduce operational costs by 45%',;
+    'Enable 24/7 automated operations',;
+    'Provide real-time process visibility';
   ];
 
   const useCases = [
     'Enterprise process automation',
     'Manufacturing workflow optimization',
     'Healthcare process management',
-    'Financial services automation',
-    'Supply chain orchestration',
-    'Customer service workflow automation'
+    'Financial services automation',;
+    'Supply chain orchestration',;
+    'Customer service workflow automation';
   ];
 
   const tiers = [
@@ -46,13 +46,13 @@ export default function AIWorkflowOrchestrator() {
     },
     { 
       name: 'Workflow Enterprise', 
-      price: '$3,999/mo', 
-      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] 
-    },
+      price: '$3,999/mo', ;
+      details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] ;
+    },;
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className = "min-h-screen bg-white">
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -166,8 +166,8 @@ export default function AIWorkflowOrchestrator() {
           <p className="text-zion-slate-light">
             Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.
           </p>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

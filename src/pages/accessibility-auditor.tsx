@@ -38,17 +38,17 @@ const AccessibilityAuditor: React.FC = () => {
     },
     {
       title: "Compliance Reporting",
-      description: "Detailed reports with actionable recommendations",
-      icon: "📋"
-    }
+      description: "Detailed reports with actionable recommendations",;
+      icon: "📋";
+    };
   ];
 
   const complianceStandards = [
     "WCAG 2.1 AA",
     "Section 508",
-    "ADA Title III",
-    "EN 301 549",
-    "ISO 9241-171"
+    "ADA Title III",;
+    "EN 301 549",;
+    "ISO 9241-171";
   ];
 
   const testingAreas = [
@@ -61,13 +61,13 @@ const AccessibilityAuditor: React.FC = () => {
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
     },
     {
-      category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-    }
+      category: "Technical Accessibility",;
+      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -244,9 +244,9 @@ const AccessibilityAuditor: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

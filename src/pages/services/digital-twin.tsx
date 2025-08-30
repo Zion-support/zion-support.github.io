@@ -8,7 +8,7 @@ export default function DigitalTwin() {
     <>
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
-        <meta name="description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
+        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
         <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics" />
       </Helmet>
 
@@ -311,8 +311,8 @@ export default function DigitalTwin() {
               </Link>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </section>;
+      </div>;
+    </>;
   );
 }

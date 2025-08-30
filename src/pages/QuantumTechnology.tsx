@@ -70,18 +70,18 @@ export default function QuantumTechnology() {
       icon: Zap,
       title: "Quantum Sensors",
       description: "Ultra-sensitive detection using quantum phenomena",
-      features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
-      color: "from-zion-indigo to-zion-purple"
-    }
+      features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;
+      color: "from-zion-indigo to-zion-purple";
+    };
   ];
 
   const applications = [
     { id: 'all', name: 'All Applications', icon: Globe },
     { id: 'finance', name: 'Financial Services', icon: BarChart3 },
     { id: 'healthcare', name: 'Healthcare', icon: Monitor },
-    { id: 'logistics', name: 'Logistics', icon: Network },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
-    { id: 'research', name: 'Research', icon: Lightbulb }
+    { id: 'logistics', name: 'Logistics', icon: Network },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
+    { id: 'research', name: 'Research', icon: Lightbulb };
   ];
 
   const quantumApplications = [
@@ -124,9 +124,9 @@ export default function QuantumTechnology() {
       title: "AI Training",
       description: "Quantum-enhanced machine learning and neural networks",
       category: "research",
-      benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
-      icon: Brain
-    }
+      benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
+      icon: Brain;
+    };
   ];
 
   const quantumTechnologies = [
@@ -163,16 +163,16 @@ export default function QuantumTechnology() {
     {
       name: "Neutral Atoms",
       description: "Quantum bits using neutral atoms for computation",
-      advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
-      icon: Atom
-    }
+      advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],;
+      icon: Atom;
+    };
   ];
 
   const quantumAdvantages = [
     { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },
-    { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },
-    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },
-    { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" }
+    { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },;
+    { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },;
+    { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" };
   ];
 
   const containerVariants = {
@@ -180,26 +180,30 @@ export default function QuantumTechnology() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1;
+      };
+    };
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0,
+  y: 20 
+
+
+},
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
+      y: 0,;
+      transition: { duration: 0.6 };
+    };
   };
 
-  const filteredApplications = selectedApplication === 'all' 
-    ? quantumApplications 
+  const filteredApplications = selectedApplication === 'all' ;
+    ? quantumApplications ;
     : quantumApplications.filter(app => app.category === selectedApplication);
 
   return (
-    <div className="min-h-screen bg-futuristic">
+    <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -209,8 +213,18 @@ export default function QuantumTechnology() {
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
           >
             <div className="flex justify-center mb-8">
@@ -251,8 +265,18 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -277,7 +301,12 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -305,8 +334,18 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -322,16 +361,26 @@ export default function QuantumTechnology() {
           {/* Application Filter */}
           <motion.div 
             className="flex flex-wrap justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {applications.map((app) => {
+            viewport={{ once: true }};
+          >;
+            {applications.map((app) => {;
               const Icon = app.icon;
               return (
                 <button
-                  key={app.id}
+                  key = {app.id}
                   onClick={() => setSelectedApplication(app.id)}
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                     selectedApplication === app.id
@@ -339,16 +388,16 @@ export default function QuantumTechnology() {
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-purple/20'
                   }`}
                 >
-                  <Icon className="w-5 h-5" />
-                  {app.name}
-                </button>
+                  <Icon className="w-5 h-5" />;
+                  {app.name};
+                </button>;
               );
             })}
           </motion.div>
 
           {/* Applications Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -359,7 +408,12 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-pink rounded-xl flex items-center justify-center">
@@ -392,8 +446,18 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -418,7 +482,12 @@ export default function QuantumTechnology() {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.02 }}
+                whileHover = {
+  { y: -5,
+  scale: 1.02 
+
+
+}}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
@@ -449,8 +518,18 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -492,8 +571,18 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
@@ -568,8 +657,18 @@ export default function QuantumTechnology() {
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
@@ -594,8 +693,8 @@ export default function QuantumTechnology() {
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 }

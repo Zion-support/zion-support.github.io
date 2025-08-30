@@ -15,23 +15,23 @@ const ITServices: React.FC = () => {
     { icon: Database, title: 'Data Platforms & MLOps', desc: 'Lakehouse setups, ELT pipelines, feature stores, and ML deployment with observability.', price: '$7,000 - $95,000+' },
     { icon: Building, title: 'Enterprise SaaS Rollouts', desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2-aligned configuration baselines at scale.', price: '$5,000 - $70,000+' }
     ,
-    { icon: Cloud, title: 'Cloud Landing Zones', desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.', price: '$8,000 - $65,000+' },
-    { icon: Server, title: 'Database Reliability Engineering', desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.', price: '$4,000 - $45,000+' },
-    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' }
+    { icon: Cloud, title: 'Cloud Landing Zones', desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.', price: '$8,000 - $65,000+' },;
+    { icon: Server, title: 'Database Reliability Engineering', desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.', price: '$4,000 - $45,000+' },;
+    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
         <h1 className="text-4xl font-bold sm:text-5xl">Enterprise-grade IT services, delivered with startup speed</h1>
         <p className="mt-4 max-w-2xl text-slate-300">From modernization to managed services, we design and operate robust, secure and cost-efficient platforms.</p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Link to="/contact" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500">Talk to an architect</Link>
-          <Link to="/request-quote" className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5">Request a quote</Link>
-        </div>
+          <Link to="/contact" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500">Talk to an architect</Link>;
+          <Link to="/request-quote" className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5">Request a quote</Link>;
+        </div>;
         <div className="mt-10 text-xs text-slate-400">Typical T&M: $110–$200/hr blended; fixed-scope engagements available.</div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className = "mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o) => (
             <div key={o.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-cyan-400/30">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300">
@@ -62,9 +62,9 @@ const ITServices: React.FC = () => {
           <div className="mt-6 text-xs text-slate-400">
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
           </div>
-        </div>
-      </section>
-    </div>
+        </div>;
+      </section>;
+    </div>;
   );
 };
 

@@ -312,6 +312,6 @@ export default function CaseStudies() {
 					</div>
 				</div>
 			</section>
-		</>
-	)
-}
+		</>;
+	);
+};

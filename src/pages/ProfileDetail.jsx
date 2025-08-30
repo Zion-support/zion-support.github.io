@@ -163,12 +163,16 @@ export default function ProfileDetail() {
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">
-            <HireNowCTA talentProfile={{
+            <HireNowCTA talentProfile = {
+  {
             id: profileData?.id || '',
             full_name: profileData?.full_name || '',
             professional_title: profileData?.professional_title || '',
-            hourly_rate: profileData?.hourly_rate || 0
-        }}/>
+  hourly_rate: profileData?.hourly_rate || 0
+        
+
+
+}}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
