@@ -82,6 +82,7 @@ export function Footer() {
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
+              Based in Middletown, DE with global reach and local expertise.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
@@ -115,11 +116,11 @@ export function Footer() {
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/services/ai-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Edge Computing</Link></li>
+              <li><Link to="/services/ai-financial-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance</Link></li>
+              <li><Link to="/services/ai-healthcare-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Analytics</Link></li>
+              <li><Link to="/services/ai-supply-chain-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Supply Chain Risk</Link></li>
               <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 

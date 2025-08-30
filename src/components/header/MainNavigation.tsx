@@ -104,11 +104,11 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
-                    <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
-                    <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
-                    <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
+                    <li><Link to="/services/ai-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Edge Computing</Link></li>
+                    <li><Link to="/services/ai-financial-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
+                    <li><Link to="/services/ai-healthcare-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare Analytics</Link></li>
+                    <li><Link to="/services/ai-supply-chain-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Supply Chain Risk Management</Link></li>
                     <li><Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
-                    <li><Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Customer Support</Link></li>
                   </ul>
                 </div>
                 <div>
