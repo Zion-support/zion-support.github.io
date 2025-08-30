@@ -31,7 +31,8 @@ import {
   Target,
   TrendingUp,
   Briefcase,
-  Newspaper
+  Newspaper,
+  DollarSign
 } from 'lucide-react';
 
 export function Header() {
@@ -56,7 +57,8 @@ export function Header() {
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
-        { name: 'New Services 2025', href: '/new-services-2025', icon: Star }
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },
     {
