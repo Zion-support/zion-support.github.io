@@ -40,6 +40,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative Services 2025
+const AIEnterpriseResourceOptimizer = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-optimizer'));
+const AISustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-sustainability-analytics-platform'));
+const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/ai-digital-twin-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -165,6 +170,11 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-enterprise-resource-optimizer" element={<AIEnterpriseResourceOptimizer />} />
+                    <Route path="/services/ai-sustainability-analytics-platform" element={<AISustainabilityAnalyticsPlatform />} />
+                    <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />

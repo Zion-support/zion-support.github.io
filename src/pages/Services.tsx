@@ -23,6 +23,7 @@ import {
   Globe2,
   Leaf,
   Satellite,
+
   Atom,
   Code,
   FileText,
@@ -54,6 +55,17 @@ export default function Services() {
   const allServices = [
     // AI & Analytics Services
     {
+      name: 'AI Enterprise Resource Optimizer',
+      description: 'AI-powered resource allocation and optimization across your entire enterprise',
+      category: 'AI & Analytics',
+      icon: Brain,
+      href: '/services/ai-enterprise-resource-optimizer',
+      color: 'from-cyan-600 to-blue-600',
+      features: ['Resource optimization', 'Cost reduction', 'Performance maximization', 'Predictive analytics'],
+      pricing: 'From $299/month',
+      featured: true
+    },
+    {
       name: 'AI Enterprise Orchestrator',
       description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
       category: 'AI & Analytics',
@@ -62,7 +74,7 @@ export default function Services() {
       color: 'from-purple-600 to-pink-600',
       features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration', 'Real-time monitoring'],
       pricing: 'Custom pricing',
-      featured: true
+      featured: false
     },
     {
       name: 'AI Business Intelligence',
@@ -168,6 +180,17 @@ export default function Services() {
       featured: false
     },
     {
+      name: 'AI Digital Twin Platform',
+      description: 'AI-powered digital replicas with predictive analytics and real-time optimization',
+      category: 'Emerging Tech',
+      icon: Box,
+      href: '/services/ai-digital-twin-platform',
+      color: 'from-purple-600 to-indigo-600',
+      features: ['AI-powered modeling', 'Predictive analytics', '3D visualization', 'IoT integration'],
+      pricing: 'From $399/month',
+      featured: true
+    },
+    {
       name: 'Digital Twin',
       description: 'Virtual replicas and simulation for predictive maintenance and optimization',
       category: 'Emerging Tech',
@@ -258,6 +281,17 @@ export default function Services() {
       features: ['Predictive modeling', 'Risk assessment', 'Treatment optimization', 'Outcome prediction'],
       pricing: 'From $2,500/month',
       featured: false
+    },
+    {
+      name: 'AI Sustainability Analytics Platform',
+      description: 'AI-powered environmental impact analysis and sustainability optimization',
+      category: 'Sustainability',
+      icon: Leaf,
+      href: '/services/ai-sustainability-analytics-platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Environmental tracking', 'ESG analytics', 'Carbon management', 'Compliance automation'],
+      pricing: 'From $199/month',
+      featured: true
     },
 
     // Financial Technology
