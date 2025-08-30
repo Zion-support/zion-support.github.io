@@ -14,9 +14,9 @@ import { Search,
   Cloud,
   Brain,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Blog(...args[]):  {
+export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -137,7 +137,7 @@ export default function Blog(...args[]):  {
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.author.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    [];
+    : [...featuredPosts, ...recentPosts];
 
   return (
     <div className="min-h-screen bg-slate-900">

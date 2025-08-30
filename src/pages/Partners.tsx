@@ -17,15 +17,15 @@ import { Handshake,
   CheckCircle,
   Building,
   Briefcase
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Partners(...args[]):  {
+export default function Partners() {
   const partnershipTypes = [
     {
       name: 'Technology Partners',
       icon: Brain,
       description: 'Integrate with leading technology platforms and tools',
-      benefits[
+      benefits: [
         'Joint product development',
         'Technical integration support',
         'Co-marketing opportunities',
@@ -37,7 +37,7 @@ export default function Partners(...args[]):  {
       name: 'Channel Partners',
       icon: Users,
       description: 'Resell and implement our solutions in your market',
-      benefits[
+      benefits: [
         'Competitive pricing',
         'Sales and technical training',
         'Marketing materials and support',
@@ -49,7 +49,7 @@ export default function Partners(...args[]):  {
       name: 'Strategic Partners',
       icon: Handshake,
       description: 'Long-term collaboration on major initiatives',
-      benefits[
+      benefits: [
         'Exclusive market access',
         'Joint go-to-market strategies',
         'Shared R&D investments',
@@ -61,7 +61,7 @@ export default function Partners(...args[]):  {
       name: 'Consulting Partners',
       icon: Briefcase,
       description: 'Deliver our solutions through your consulting practice',
-      benefits[
+      benefits: [
         'Implementation certification',
         'Technical expertise training',
         'Project delivery support',

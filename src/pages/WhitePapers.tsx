@@ -22,9 +22,9 @@ import { FileText,
   ExternalLink,
   Clock,
   Tag
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function WhitePapers(...args[]):  {
+export default function WhitePapers() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 

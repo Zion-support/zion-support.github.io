@@ -12,9 +12,9 @@ import { Shield,
   Mail,
   Phone,
   MapPin
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Terms(...args[]):  {
+export default function Terms() {
   const lastUpdated = 'December 15, 2024';
 
   const termsSections = [

@@ -4,7 +4,7 @@ export default {
     'autoprefixer': {
       flexbox: 'no-2009',
       grid: 'autoplace',
-      overrideBrowserslist[
+      overrideBrowserslist: [
         '> 1%',
         'last 2 versions',
         'Firefox ESR',
@@ -29,31 +29,11 @@ export default {
         'is-pseudo-class': true,
         'clamp': true,
         'gap-properties': true,
-        'double-position-gradients': true,
-        'logical-properties-and-values': true,
-        'overflow-property': true,
-        'focus-visible-pseudo-class': true,
-        'focus-within-pseudo-class': true,
-        'color-functional-notation': true,
-        'cascade-layers': true,
-        'is-pseudo-class': true,
-        'clamp': true,
-        'gap-properties': true,
-        'double-position-gradients': true,
-        'logical-properties-and-values': true,
-        'overflow-property': true,
-        'focus-visible-pseudo-class': true,
-        'focus-within-pseudo-class': true,
-        'color-functional-notation': true,
-        'cascade-layers': true,
-        'is-pseudo-class': true,
-        'clamp': true,
-        'gap-properties': true,
         'double-position-gradients': true
       }
     },
     'cssnano': {
-      preset['default', {
+      preset: ['default', {
         discardComments: {
           removeAll: true,
         },

@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
 
-export default function Training(...args[]):  {
+export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');

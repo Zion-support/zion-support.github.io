@@ -21,10 +21,10 @@ import { HelpCircle,
   Lock,
   Cpu,
   Star
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
-export default function Support(...args[]):  {
+export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

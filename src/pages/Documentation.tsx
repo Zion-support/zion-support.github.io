@@ -18,9 +18,9 @@ import { Search,
   Cloud,
   Shield,
   Rocket
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Documentation(...args[]):  {
+export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

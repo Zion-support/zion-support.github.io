@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
 
-export default function Research(...args[]):  {
+export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
@@ -45,7 +45,7 @@ export default function Research(...args[]):  {
       startDate: '2024-01-01',
       endDate: '2025-12-31',
       leadResearcher: 'Dr. Elena Vasquez',
-      team['Dr. Elena Vasquez', 'Dr. Michael Chen', 'Sarah Johnson', 'Alex Rodriguez'],
+              team: ['Dr. Elena Vasquez', 'Dr. Michael Chen', 'Sarah Johnson', 'Alex Rodriguez'],
       funding: 2500000,
       institution: 'MIT',
       abstract: 'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',
@@ -75,7 +75,7 @@ export default function Research(...args[]):  {
       startDate: '2023-06-01',
       endDate: '2024-11-30',
       leadResearcher: 'Dr. Sarah Chen',
-      team['Dr. Sarah Chen', 'Dr. James Wilson', 'Lisa Anderson', 'David Kim'],
+              team: ['Dr. Sarah Chen', 'Dr. James Wilson', 'Lisa Anderson', 'David Kim'],
       funding: 1800000,
       institution: 'Stanford University',
       abstract: 'This project addresses the critical need for privacy-preserving machine learning in healthcare by developing novel federated learning approaches.',
@@ -112,7 +112,7 @@ export default function Research(...args[]):  {
       startDate: '2024-03-01',
       endDate: '2025-08-31',
       leadResearcher: 'Michael Rodriguez',
-      team['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
+              team: ['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
       funding: 1200000,
       institution: 'Carnegie Mellon University',
       abstract: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',
@@ -142,7 +142,7 @@ export default function Research(...args[]):  {
       startDate: '2025-01-01',
       endDate: '2026-12-31',
       leadResearcher: 'Dr. David Thompson',
-      team['Dr. David Thompson', 'Dr. Lisa Chen', 'Marcus Rodriguez', 'Jennifer Kim'],
+              team: ['Dr. David Thompson', 'Dr. Lisa Chen', 'Marcus Rodriguez', 'Jennifer Kim'],
       funding: 3000000,
       institution: 'UC Berkeley',
       abstract: 'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',
@@ -164,7 +164,7 @@ export default function Research(...args[]):  {
       startDate: '2023-01-01',
       endDate: '2024-06-30',
       leadResearcher: 'Dr. Robert Kim',
-      team['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
+              team: ['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
       funding: 900000,
       institution: 'Columbia University',
       abstract: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',
@@ -194,7 +194,7 @@ export default function Research(...args[]):  {
       startDate: '2024-09-01',
       endDate: '2026-08-31',
       leadResearcher: 'Dr. Jennifer Park',
-      team['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
+              team: ['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
       funding: 2200000,
       institution: 'Georgia Tech',
       abstract: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',

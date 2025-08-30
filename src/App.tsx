@@ -1,5 +1,5 @@
-import React, { Suspense } from 'react.ts';
-import { Routes, Route  } from 'react-router-dom.ts';
+import React, { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { AppHeader  } from './layout/AppHeader';
 import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant  } from './components/ChatAssistant';
@@ -44,7 +44,7 @@ const Webinars = React.lazy(() => import('./pages/Webinars'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
 
 // Enhanced services pages - only import existing ones
-const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
+const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.jsx'));
 
 // 2025 Services pages
@@ -98,6 +98,14 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 
 // New AI Services
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
+
+// Additional Innovative AI Services
+const AIEnterpriseResourcePlanning = React.lazy(() => import('./pages/services/ai-enterprise-resource-planning'));
+const AIQuantumFinancialTrading = React.lazy(() => import('./pages/services/ai-quantum-financial-trading'));
+const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/ai-healthcare-diagnostics'));
+const AIBlockchainSupplyChain = React.lazy(() => import('./pages/services/ai-blockchain-supply-chain'));
+const AICyberThreatIntelligence = React.lazy(() => import('./pages/services/ai-cyber-threat-intelligence'));
+const AIQuantumComputingPlatform = React.lazy(() => import('./pages/services/ai-quantum-computing-platform'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
 const AIHealthcareAnalytics = React.lazy(() => import('./pages/services/AIHealthcareAnalytics'));
 const AIWorkflowAutomation = React.lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -282,6 +290,15 @@ function App(...args[]):  {
               <Route path="/services/ai-data-governance" element={<AIDataGovernance />} />
               <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
               <Route path="/services/ai-customer-success-platform" element={<AICustomerSuccessPlatform />} />
+              
+              {/* Additional Innovative AI Services Routes */}
+              <Route path="/services/ai-enterprise-resource-planning" element={<AIEnterpriseResourcePlanning />} />
+              <Route path="/services/ai-quantum-financial-trading" element={<AIQuantumFinancialTrading />} />
+              <Route path="/services/ai-healthcare-diagnostics" element={<AIHealthcareDiagnostics />} />
+              <Route path="/services/ai-blockchain-supply-chain" element={<AIBlockchainSupplyChain />} />
+              <Route path="/services/ai-cyber-threat-intelligence" element={<AICyberThreatIntelligence />} />
+              <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
+              
               {/* New AI-Powered Micro SAAS Service Routes */}
               <Route path="/services/ai-code-review-security" element={<AICodeReviewSecurity />} />
               <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />

@@ -87,7 +87,7 @@ export function Footer() {
   const footerSections = [
     {
       title: "Services",
-      links[
+      links: [
         { label: "AI Solutions", path: "/services/ai" },
         { label: "Cloud & DevOps", path: "/services/cloud" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
@@ -99,8 +99,8 @@ export function Footer() {
       ]
     },
     {
-      title: "Comp",
-      links[
+      title: "Company",
+      links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
@@ -111,7 +111,7 @@ export function Footer() {
     },
     {
       title: "Resources",
-      links[
+      links: [
         { label: "Blog", path: "/blog" },
         { label: "Documentation", path: "/docs" },
         { label: "White Papers", path: "/white-papers" },
@@ -123,7 +123,7 @@ export function Footer() {
     },
     {
       title: "Support",
-      links[
+      links: [
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
