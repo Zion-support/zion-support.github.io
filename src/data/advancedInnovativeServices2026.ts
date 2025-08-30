@@ -12,6 +12,7 @@ export interface AdvancedInnovativeService2026 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -34,6 +35,7 @@ contactInfo: {;
     phone: string;
     email: string;
 website: string;
+
 
 
 

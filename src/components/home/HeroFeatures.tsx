@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 
 interface HeroFeature {
 
@@ -15,7 +15,9 @@ interface HeroFeature {
 
 
 
+
 icon: React.ComponentType<{ className?: string;
+
 
 
 
@@ -51,9 +53,9 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.6 }}
+      transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.6 }}
 
-      {features.map((feature, index)             => (
+      {features.map((feature, index)              => (
         <motion.div
           key={feature.title}
           className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"

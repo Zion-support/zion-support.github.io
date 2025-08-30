@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import {
   Brain,
   Globe,
@@ -231,9 +231,9 @@ export function FeatureHighlights(...args[]: any):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-20"
 
-          {highlights.map((highlight, index)             => (
+          {highlights.map((highlight, index)              => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -284,9 +284,9 @@ export function FeatureHighlights(...args[]: any):  {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
 
-          {features.map((feature, index)             => (
+          {features.map((feature, index)              => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -334,8 +334,8 @@ export function FeatureHighlights(...args[]: any):  {
             Trusted by Industry Leaders
           </h3>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {achievements.map((achievement, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {achievements.map((achievement, index)              => (
               <motion.div
                 key={index}
                 variants={achievementVariants}

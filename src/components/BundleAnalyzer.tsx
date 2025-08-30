@@ -20,12 +20,14 @@ interface BundleMetrics {
 
 
 
+
   totalSize: number;
   chunkCount: number;
 largestChunk: {;
     name: string;
     size: number;
   
+
 
 
 
@@ -65,9 +67,9 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       // Calculate bundle metrics
       let totalSize = 0;
       let chunkCount = 0;
-      let largestChunk = { name: anyanyanyanyanyanyanyanyanyanyanyany'', size: 0 };
+      let largestChunk = { name: anyanyanyanyanyanyanyanyanyanyanyanyany'', size: 0 };
       
-      resourceEntries.forEach((entry: )             => {
+      resourceEntries.forEach((entry: )              => {
         if (entry.name.includes('.js') || entry.name.includes('.css')) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
@@ -141,13 +143,13 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
 
     // Apply optimizations
     optimizations.forEach(optimization => {
-      console.log(`🔧 Optimization: anyanyanyanyanyanyanyanyanyanyanyany${optimization}`);
+      console.log(`🔧 Optimization: anyanyanyanyanyanyanyanyanyanyanyanyany${optimization}`);
     });
 
     return optimizations;
   }, [enabled, metrics]);
 
-  useEffect(()             => {
+  useEffect(()              => {
     if (!enabled) return;
 
     // Analyze bundle after page load

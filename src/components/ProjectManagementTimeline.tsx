@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Calendar,
   Clock,
   CheckCircle,
@@ -25,10 +25,11 @@ import { Calendar,
   Settings
 <<<<<<< HEAD
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
+
 
 
 
@@ -69,10 +70,12 @@ milestones: Milestone[];
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Milestone {
+
 
 
 
@@ -96,6 +99,7 @@ interface Milestone {
   priority: 'low' | 'medium' | 'high';
 =======
 priority: 'low' | 'medium' | 'high';
+
 
 
 
@@ -149,7 +153,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyany'1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -265,7 +269,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(sampleProjects)}, []);
 
   // Filter projects
-  useEffect(()              => {
+  useEffect(()               => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -306,28 +310,28 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   // Calculate project stats
   const projectStats = {
   <<<<<<< HEAD
-    total: anyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
-    active: projects.filter(p              => p.status === 'active').length,
-    completed: anyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p              => p.status === 'completed').length,
-    onHold: anyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p              => p.status === 'on-hold').length,
-    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)              => sum + p.budget, 0),
-    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)              => sum + p.progress,
+    total: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
+    active: projects.filter(p               => p.status === 'active').length,
+    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'completed').length,
+    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'on-hold').length,
+    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.budget, 0),
+    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.progress,
   0) / projects.length || 0;
   ;
 
 };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (status) {
       case 'planning':
 =======
-  total: anyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
-    active: projects.filter(p             => p.status === 'active').length,
-    completed: anyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p             => p.status === 'completed').length,
-    onHold: anyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p             => p.status === 'on-hold').length,;
-    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)             => sum + p.budget, 0),;
-    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)             => sum + p.progress,;
+  total: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
+    active: projects.filter(p              => p.status === 'active').length,
+    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p              => p.status === 'completed').length,
+    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p              => p.status === 'on-hold').length,;
+    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)              => sum + p.budget, 0),;
+    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)              => sum + p.progress,;
   ;
   ;
   0) / projects.length || 0;
@@ -339,7 +343,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (status) {;
       case 'planning':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -363,7 +367,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -380,7 +384,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Get milestone status color
 <<<<<<< HEAD
-  const getMilestoneStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getMilestoneStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
@@ -397,7 +401,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Format currency
 <<<<<<< HEAD
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -406,9 +410,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }).format(amount)};
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
 =======;
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {;
+  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -418,7 +422,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const end = new Date(endDate);
     const today = new Date();

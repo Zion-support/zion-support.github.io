@@ -1,7 +1,8 @@
 import React, { useState } from 'react.ts';
-import { useState, useEffect             } from 'react.ts';
+import { useState, useEffect              } from 'react.ts';
 
 interface User {
+
 
 
 
@@ -41,9 +42,11 @@ updatedAt?: string;
 
 
 
+
 }
 
 interface AuthTokens {
+
 
 
 
@@ -71,6 +74,7 @@ refreshToken: string | null;
 
 
 
+
 }
 
 export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
@@ -78,11 +82,11 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
-    accessToken: anyanyanyanyanyanyanyanyanyanyanyanynull,
+    accessToken: anyanyanyanyanyanyanyanyanyanyanyanyanynull,
     refreshToken: null
   });
 
-  useEffect(()              => {
+  useEffect(()               => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {;

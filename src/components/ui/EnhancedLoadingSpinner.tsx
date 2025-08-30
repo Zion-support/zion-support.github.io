@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
   message?: string;
@@ -12,7 +12,7 @@ import { Loader2, Zap, Brain, Rocket, Globe interface EnhancedLoadingSpinnerProp
 =======
 import React from 'react.ts';
 import { motion  
-           } from 'framer-motion.ts';
+            } from 'framer-motion.ts';
 
 interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
 

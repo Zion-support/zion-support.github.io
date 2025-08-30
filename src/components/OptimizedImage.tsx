@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { ImageIcon, AlertCircle, Loader2             } from 'lucide-react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { ImageIcon, AlertCircle, Loader2              } from 'lucide-react.ts';
 
 interface OptimizedImageProps extends React.PropsWithChildren<{}> {
 
-  src: anyanyanyanyanyanyanyanyanyanyanyanystring;
+  src: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
   alt: string;
   width?: number | string;
   height?: number | string;
@@ -12,8 +12,8 @@ interface OptimizedImageProps extends React.PropsWithChildren<{}> {
   priority?: boolean;
   placeholder?: 'blur' | 'shimmer' | 'none';
   fallbackSrc?: string;
-  onLoad?: ()             => void;
-  onError?: (error: anyanyanyanyanyanyanyanyanyanyanyanyError)             => void;
+  onLoad?: ()              => void;
+  onError?: (error: anyanyanyanyanyanyanyanyanyanyanyanyanyError)              => void;
   lazy?: boolean;
   quality?: number;
   sizes?: string;
@@ -69,14 +69,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }
       },
       {
-        rootMargin: anyanyanyanyanyanyanyanyanyanyanyany'50px',
+        rootMargin: anyanyanyanyanyanyanyanyanyanyanyanyany'50px',
         threshold: 0.1
       }
     );
 
     observerRef.current.observe(imgRef.current);
 
-    return ()             => {
+    return ()              => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -99,12 +99,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     } else {
       setHasError(true);
       setIsLoading(false);
-      onError?.(new Error(`Failed to load image: anyanyanyanyanyanyanyanyanyanyanyany${src}`));
+      onError?.(new Error(`Failed to load image: anyanyanyanyanyanyanyanyanyanyanyanyany${src}`));
     }
   };
 
   // Cleanup on unmount
-  useEffect(()             => {
+  useEffect(()              => {
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
@@ -113,7 +113,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, []);
 
   // Generate optimized src with quality parameter
-  const getOptimizedSrc = (src: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getOptimizedSrc = (src: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
       return src;
     }

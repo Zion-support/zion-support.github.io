@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import {
   ArrowRight,
   Play,
@@ -34,12 +34,12 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   ctaText = "Explore Our Services",
   ctaLink = "/services",
   features = [;
-    { icon: anyanyanyanyanyanyanyanyanyanyanyanyBrain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },;
+    { icon: anyanyanyanyanyanyanyanyanyanyanyanyanyBrain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },;
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },;
     { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
   ];
-})             => {;
+})              => {;
   const [currentFeature, setCurrentFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 

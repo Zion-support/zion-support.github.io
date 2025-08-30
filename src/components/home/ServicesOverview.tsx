@@ -1,8 +1,9 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { ArrowRight, CheckCircle, Sparkles interface Service {
+
 
 
 
@@ -29,11 +30,13 @@ import { motion
  
  
  
+ 
 } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { ArrowRight, CheckCircle, Sparkles              } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle, Sparkles               } from 'lucide-react.ts';
 
 interface Service {
+
 
 
 
@@ -50,6 +53,7 @@ interface Service {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   category: string;
 icon: React.ComponentType<{ className?: string;
+
 
 
 
@@ -122,8 +126,8 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
-          {services.map((service, index)              => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
+          {services.map((service, index)               => (
             <motion.div
               key={service.category}
               className="group relative bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"

@@ -13,11 +13,13 @@ interface Stat {
 
 
 
+
   label: string;
   value: string;
   description: string;
 
 interface InteractiveStatsProps extends React.PropsWithChildren<{
+
 
 
 
@@ -35,8 +37,8 @@ interface InteractiveStatsProps extends React.PropsWithChildren<{
 const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "";
 }) => {
   return (
-    <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 ${className}`}>
-      {stats.map((stat, index)             => (
+    <div className={`grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 ${className}`}>
+      {stats.map((stat, index)              => (
         <div
           key={index}
           className="text-center p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"

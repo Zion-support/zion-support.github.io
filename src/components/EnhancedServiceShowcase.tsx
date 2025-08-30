@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -19,10 +19,11 @@ import { Brain,
   CheckCircle
 <<<<<<< HEAD
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
+
 
 
 
@@ -40,6 +41,7 @@ interface Service {
   title: string;
   description: string;
 icon: React.ComponentType<{ className?: string;
+
 
 
 
@@ -220,11 +222,11 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
     return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services'
-    ? services: anyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service             => service.category === selectedCategory);
+    ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service              => service.category === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)               => (
       <Star
         key={i}
         className={`w-4 h-4 ${

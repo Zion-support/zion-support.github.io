@@ -1,8 +1,8 @@
-import { Progress              } from '@/components/ui/progress';
-import { Alert, AlertDescription, AlertTitle              } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
-import { Badge              } from '@/components/ui/badge'; // Badge not used, but kept for consistency
-import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info              } from 'lucide-react.ts';
-import { Card              } from '@/components/ui/card'; // Added missing import
+import { Progress               } from '@/components/ui/progress';
+import { Alert, AlertDescription, AlertTitle               } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
+import { Badge               } from '@/components/ui/badge'; // Badge not used, but kept for consistency
+import { TrendingDown, TrendingUp, AlertTriangle, CheckCircle, Info               } from 'lucide-react.ts';
+import { Card               } from '@/components/ui/card'; // Added missing import
 
 interface BudgetStatusDisplayProps extends React.PropsWithChildren<{}> {
 
@@ -12,12 +12,12 @@ estimatedCost: { // From TeamRecommendation;
     max: number}}
 
 // Helper to parse budget string (very basic, needs improvement for production)
-const parseBudget = (budgetString: anyanyanyanyanyanyanyanyanyanyanyanystring): { min: number | null; max: number | null }              => {
+const parseBudget = (budgetString: anyanyanyanyanyanyanyanyanyanyanyanyanystring): { min: number | null; max: number | null }               => {
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g, ''); // Clean string
 
   let max: number | null = null;
 
-  const kTo1000 = (val: anyanyanyanyanyanyanyanyanyanyanyanystring)              => parseFloat(val.replace('k', '')) * 1000;
+  const kTo1000 = (val: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => parseFloat(val.replace('k', '')) * 1000;
 
   if (budgetString.includes('-')) {
     const parts = budgetString.split('-');

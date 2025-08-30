@@ -1,14 +1,14 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { MobileSidebarToggle               } from './MobileSidebarToggle';
+import { Menu, 
+=======
+import React, { useState, useEffect              } from 'react.ts';
 import { Link, useLocation              } from 'react-router-dom.ts';
 import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { MobileSidebarToggle              } from './MobileSidebarToggle';
-import { Menu, 
-=======
-import React, { useState, useEffect             } from 'react.ts';
-import { Link, useLocation             } from 'react-router-dom.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { MobileSidebarToggle             } from './MobileSidebarToggle';
 import { Menu,
   X,
   Search,
@@ -188,7 +188,7 @@ import { Menu,
 export const FuturisticNavigation: React.FC = (): JSX.Element => {
 =======
 <<<<<<< HEAD
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
@@ -213,24 +213,24 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {;
   useEffect(() => {
 <<<<<<< HEAD
     setActiveDropdown(null)}, [location.pathname]);
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
 =======;
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
 
   };
-  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   };
-  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [

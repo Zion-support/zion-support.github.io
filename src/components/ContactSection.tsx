@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Phone, Mail, MapPin, ArrowRight export function ContactSection(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Phone, Mail, MapPin, ArrowRight              } from 'lucide-react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Phone, Mail, MapPin, ArrowRight               } from 'lucide-react.ts';
 export function ContactSection(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const contactInfo = [
@@ -75,8 +75,8 @@ export function ContactSection(...args[]: any):  {
             Ready to transform your business? Contact us today to discuss your technology needs
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
-          {contactInfo.map((contact, index)              => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
+          {contactInfo.map((contact, index)               => (
             <motion.div
               key={index}
               initial = {

@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 import React from 'react.ts';
+import { ReactNode               } from 'react.ts';
+import { FuturisticNavigation               } from './FuturisticNavigation';
+import { FuturisticFooter               } from './FuturisticFooter';
+import { EnhancedSidebar               } from './EnhancedSidebar';
+import { FuturisticAnimatedBackground               } from './FuturisticAnimatedBackground';
+
+interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
+=======
+import React from 'react.ts';
 import { ReactNode              } from 'react.ts';
 import { FuturisticNavigation              } from './FuturisticNavigation';
 import { FuturisticFooter              } from './FuturisticFooter';
 import { EnhancedSidebar              } from './EnhancedSidebar';
 import { FuturisticAnimatedBackground              } from './FuturisticAnimatedBackground';
-
-interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
-=======
-import React from 'react.ts';
-import { ReactNode             } from 'react.ts';
-import { FuturisticNavigation             } from './FuturisticNavigation';
-import { FuturisticFooter             } from './FuturisticFooter';
-import { EnhancedSidebar             } from './EnhancedSidebar';
-import { FuturisticAnimatedBackground             } from './FuturisticAnimatedBackground';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   children: ReactNode;

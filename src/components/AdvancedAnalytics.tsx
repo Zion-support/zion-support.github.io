@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { BarChart3,
   TrendingUp,
@@ -38,10 +38,11 @@ import {
   Filter,
   Calendar,
   RefreshCw
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface AnalyticsData {
+
 
 
 
@@ -69,6 +70,7 @@ interface AnalyticsData {
   formSubmissions: number;
 
 interface Props extends React.PropsWithChildren<{
+
 
 
 
@@ -142,7 +144,7 @@ export function AdvancedAnalytics(...args: any[]): any {
   const [heatmapData, setHeatmapData] = useState<Array<any>>([]);
   
   const trackingRef = useRef<{
-    pageViews: anyanyanyanyanyanyanyanyanyanyanyanynumber;
+    pageViews: anyanyanyanyanyanyanyanyanyanyanyanyanynumber;
     clicks: number;
     scrolls: number;
     formSubmissions: number;
@@ -158,21 +160,21 @@ export function AdvancedAnalytics(...args: any[]): any {
   });
 
   // Generate unique session ID
-  useEffect(()             => {
+  useEffect(()              => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId);
   }, []);
 
   // Track page views
-  const trackPageView = useCallback((path: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const trackPageView = useCallback((path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     if (!enabled) return;
 
     setCurrentPage(path);
     trackingRef.current.pageViews++;
     
     const pageViewData = {
-      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyuserSession,
+      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       path,
       timestamp: new Date().toISOString(),
       referrer: document.referrer,
@@ -187,18 +189,18 @@ export function AdvancedAnalytics(...args: any[]): any {
     this.sendAnalyticsData('pageview', pageViewData);
     
     // Update local state
-    setAnalyticsData(prev             => ({
+    setAnalyticsData(prev              => ({
       ...prev,
       pageViews: prev.pageViews + 1
     }));
   }, [enabled, userSession]);
 
   // Track user interactions
-  const trackInteraction = useCallback((type: anyanyanyanyanyanyanyanyanyanyanyany'click' | 'scroll' | 'form' | 'error', data?: )             => {
+  const trackInteraction = useCallback((type: anyanyanyanyanyanyanyanyanyanyanyanyany'click' | 'scroll' | 'form' | 'error', data?: )              => {
     if (!enabled) return;
 
     const interactionData = {
-      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyuserSession,
+      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       type,
       timestamp: new Date().toISOString(),
       page: currentPage,
@@ -227,7 +229,7 @@ export function AdvancedAnalytics(...args: any[]): any {
     this.sendAnalyticsData('interaction', interactionData);
 
     // Update local state
-    setAnalyticsData(prev             => ({
+    setAnalyticsData(prev              => ({
       ...prev,
       interactions: {
         ...prev.interactions,
@@ -247,18 +249,18 @@ export function AdvancedAnalytics(...args: any[]): any {
       const paint = performance.getEntriesByType('paint');
       
       const performanceData = {
-        sessionId: anyanyanyanyanyanyanyanyanyanyanyanyuserSession,
+        sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find(entry             => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanypaint.find(entry             => entry.name === 'first-contentful-paint')?.startTime || 0,
-        largestContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyany0, // Will be updated by observer
+        firstPaint: paint.find(entry              => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyanypaint.find(entry              => entry.name === 'first-contentful-paint')?.startTime || 0,
+        largestContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyany0, // Will be updated by observer
         timestamp: new Date().toISOString()
       };
 
       // Update local state
-      setAnalyticsData(prev             => ({
+      setAnalyticsData(prev              => ({
         ...prev,
-        performance: anyanyanyanyanyanyanyanyanyanyanyany{
+        performance: anyanyanyanyanyanyanyanyanyanyanyanyany{
           loadTime: performanceData.loadTime,
           firstPaint: performanceData.firstPaint,
           firstContentfulPaint: performanceData.firstContentfulPaint,
@@ -272,7 +274,7 @@ export function AdvancedAnalytics(...args: any[]): any {
   }, [enabled, userSession]);
 
   // Setup event listeners
-  useEffect(()             => {
+  useEffect(()              => {
     if (!enabled) return;
 
     setIsTracking(true);
@@ -311,7 +313,7 @@ export function AdvancedAnalytics(...args: any[]): any {
     };
 
     // Track form submissions
-    const trackFormSubmissions = (e: anyanyanyanyanyanyanyanyanyanyanyanyEvent)             => {
+    const trackFormSubmissions = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyEvent)              => {
       if (e.target instanceof HTMLFormElement) {
         setAnalyticsData(prev => ({
           ...prev,
@@ -360,15 +362,15 @@ export function AdvancedAnalytics(...args: any[]): any {
     trackPerformance();
 
     // Setup click tracking
-    const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)             => {
+    const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)              => {
       const target = e.target as HTMLElement;
-      const position = { x: anyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
+      const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
       
       trackInteraction('click', { target, position });
       
       // Add to heatmap data
       if (enableHeatmap) {
-        setHeatmapData(prev             => [...prev, { x: position.x, y: position.y, type: 'click' }]);
+        setHeatmapData(prev              => [...prev, { x: position.x, y: position.y, type: 'click' }]);
       }
     };
 
@@ -385,7 +387,7 @@ export function AdvancedAnalytics(...args: any[]): any {
     };
 
     // Setup form submission tracking
-    const handleFormSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyEvent)             => {
+    const handleFormSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyEvent)              => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', { 
         formId: form.id || form.className,
@@ -395,7 +397,7 @@ export function AdvancedAnalytics(...args: any[]): any {
     };
 
     // Setup error tracking
-    const handleError = (e: anyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)             => {
+    const handleError = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)              => {
       trackInteraction('error', {
         message: e.message,
         filename: e.filename,
@@ -407,7 +409,7 @@ export function AdvancedAnalytics(...args: any[]): any {
     };
 
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: anyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)             => {
+    const handleUnhandledRejection = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)              => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
@@ -476,7 +478,7 @@ export function AdvancedAnalytics(...args: any[]): any {
         if (lastEntry) {
           setAnalyticsData(prev => ({
             ...prev,
-            performance: anyanyanyanyanyanyanyanyanyanyanyany{
+            performance: anyanyanyanyanyanyanyanyanyanyanyanyany{
               ...prev.performance,
               largestContentfulPaint: lastEntry.startTime
             }
@@ -485,7 +487,7 @@ export function AdvancedAnalytics(...args: any[]): any {
       });
 
 <<<<<<< HEAD
-      return ()             => clearInterval(interval);
+      return ()              => clearInterval(interval);
 
   }, [isTracking, sessionStart]);
 
@@ -507,16 +509,16 @@ export function AdvancedAnalytics(...args: any[]): any {
       }));
 
 =======
-      lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
 
-      return ()             => lcpObserver.disconnect();
+      return ()              => lcpObserver.disconnect();
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]);
 
   // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: anyanyanyanyanyanyanyanyanyanyanyanystring, data: )             => {
+  const sendAnalyticsData = useCallback(async (eventType: anyanyanyanyanyanyanyanyanyanyanyanyanystring, data: )              => {
     if (!trackingId) return;
 
     try {
@@ -524,7 +526,7 @@ export function AdvancedAnalytics(...args: any[]): any {
         trackingId,
         eventType,
         data,
-        timestamp: anyanyanyanyanyanyanyanyanyanyanyanynew Date().toISOString(),
+        timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanynew Date().toISOString(),
         sessionId: userSession
       };
 
@@ -542,7 +544,7 @@ export function AdvancedAnalytics(...args: any[]): any {
   }, [trackingId, userSession]);
 
   // Generate mock data for demonstration
-  useEffect(()             => {
+  useEffect(()              => {
     if (!enabled) return;
 
     // Simulate data collection

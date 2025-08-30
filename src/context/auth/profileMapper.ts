@@ -12,11 +12,13 @@ interface SupabaseUser {
 
 
 
+
   id: string;
   email?: string;
 user_metadata?: {;
     full_name?: string;
 avatar_url?: string;
+
 
 
 
@@ -37,6 +39,7 @@ avatar_url?: string;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface Profile {
+
 
 
 
@@ -71,10 +74,12 @@ updated_at?: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface MappedUser {
+
 
 
 
@@ -110,10 +115,11 @@ updatedAt?: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-export const mapProfileToUser = (supabaseUser: anyanyanyanyanyanyanyanyanyanyanyanySupabaseUser, profile: Profile): MappedUser              => {
+export const mapProfileToUser = (supabaseUser: anyanyanyanyanyanyanyanyanyanyanyanyanySupabaseUser, profile: Profile): MappedUser               => {
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',

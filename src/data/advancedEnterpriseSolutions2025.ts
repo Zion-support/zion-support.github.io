@@ -12,6 +12,7 @@ export interface EnterpriseSolution {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -27,6 +28,7 @@ pricing: {;
     professional: string;
     enterprise: string;
 custom: string;
+
 
 
 
@@ -400,14 +402,14 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
 
 ];
 <<<<<<< HEAD
-export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]              => {
+export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]               => {
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
 =======
-export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]             => {;
+export const getEnterpriseSolutionsByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): EnterpriseSolution[]              => {;
   if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
 

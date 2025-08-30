@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Globe,
   MapPin,
   Users,
@@ -10,7 +10,7 @@ import { Globe,
 <<<<<<< HEAD
 export const GlobalPresenceSection: React.FC = (): JSX.Element => {
 =======
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const GlobalPresenceSection: React.FC = (): JSX.Element => {
@@ -165,9 +165,9 @@ export function GlobalPresenceSection(...args: any[]): any {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 mb-16"
 
-          {globalStats.map((stat, index)             => {
+          {globalStats.map((stat, index)              => {
 =======
         {/* Global Statistics */}
         <motion.div 
@@ -212,7 +212,7 @@ export function GlobalPresenceSection(...args: any[]): any {
 }}
           viewport={{ once: true }}
           transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyanyany0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.2 
 
 
@@ -223,7 +223,7 @@ export function GlobalPresenceSection(...args: any[]): any {
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >;
-          {globalStats.map((stat, index)              => {;
+          {globalStats.map((stat, index)               => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const IconComponent = stat.icon;
             return (
@@ -243,8 +243,8 @@ export function GlobalPresenceSection(...args: any[]): any {
 
 <<<<<<< HEAD
         {/* Locations Grid */}
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {locations.map((location, index)              => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index)               => (
             <motion.div
               key={location.city}
               initial = {
@@ -324,8 +324,8 @@ export function GlobalPresenceSection(...args: any[]): any {
             Strategic Global Locations
           </h3>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index)              => (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { toast             } from 'react-hot-toast.ts';
+import { toast              } from 'react-hot-toast.ts';
 import {
   Activity,
   Zap,
@@ -39,6 +39,7 @@ interface PerformanceMetrics {
 
 
 
+
   loadTime: number;
   memoryUsage: number;
   cpuUsage: number;
@@ -63,11 +64,13 @@ coreWebVitals: {;
 
 
 
+
 };
   resourceCount: number;
   totalTransferSize: number;
 
 interface OptimizationSuggestion {
+
 
 
 
@@ -101,6 +104,7 @@ import { Zap, TrendingUp, AlertTriangle, CheckCircle, X
  
  
  
+ 
 } from 'lucide-react.ts';
 
 interface PerformanceMetrics {
@@ -116,11 +120,13 @@ interface PerformanceMetrics {
 
 
 
-  fcp: anyanyanyanyanyanyanyanyanyanyanyanynumber; // First Contentful Paint
+
+  fcp: anyanyanyanyanyanyanyanyanyanyanyanyanynumber; // First Contentful Paint
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
+
 
 
 
@@ -139,7 +145,7 @@ interface PerformanceOptimizerProps extends React.PropsWithChildren<{}> {
 
   showMetrics?: boolean;
   autoOptimize?: boolean;
-  onOptimizationComplete?: (metrics: PerformanceMetrics)             => void;
+  onOptimizationComplete?: (metrics: PerformanceMetrics)              => void;
 
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -184,18 +190,18 @@ export function PerformanceOptimizer(...args: any[]): any {
       // Resource analysis
       const resources = performance.getEntriesByType('resource');
       const resourceCount = resources.length;
-      const totalTransferSize = resources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )             =>
+      const totalTransferSize = resources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )              =>
         total + (entry.transferSize || 0), 0) / 1024;
 
       // Bundle size analysis
-      const jsResources = resources.filter((entry: anyanyanyanyanyanyanyanyanyanyanyany)             =>
+      const jsResources = resources.filter((entry: anyanyanyanyanyanyanyanyanyanyanyanyany)              =>
         entry.name.includes('.js') && !entry.name.includes('chunk'));
-      const cssResources = resources.filter((entry: anyanyanyanyanyanyanyanyanyanyanyany)             =>
+      const cssResources = resources.filter((entry: anyanyanyanyanyanyanyanyanyanyanyanyany)              =>
         entry.name.includes('.css'));
 
-      const bundleSize = (jsResources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )             =>
+      const bundleSize = (jsResources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )              =>
         total + (entry.transferSize || 0), 0) +
-        cssResources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )             =>
+        cssResources.reduce((total: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, entry: )              =>
         total + (entry.transferSize || 0), 0)) / 1024;
 
       // Enhanced Core Web Vitals
@@ -299,13 +305,13 @@ export function PerformanceOptimizer(...args: any[]): any {
   }, []);
 
   // Enhanced optimization suggestions
-  const generateOptimizationSuggestions = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)             => {
+  const generateOptimizationSuggestions = useCallback((metrics: anyanyanyanyanyanyanyanyanyanyanyanyanyPerformanceMetrics)              => {
     const newSuggestions: OptimizationSuggestion[] = [];
 
     // Bundle size optimizations
     if (metrics.bundleSize > 500) {
       newSuggestions.push({
-        id: anyanyanyanyanyanyanyanyanyanyanyany'bundle-size',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyany'bundle-size',
         title: 'Reduce Bundle Size',
         description: `Current bundle size is ${metrics.bundleSize.toFixed(1)}KB. Consider code splitting and tree shaking.`,
         impact: 'high',
@@ -414,20 +420,20 @@ export function PerformanceOptimizer(...args: any[]): any {
       estimatedSavings: 'Enhanced security'
     });
 
-    setSuggestions(newSuggestions.sort((a, b)             => a.priority - b.priority));
+    setSuggestions(newSuggestions.sort((a, b)              => a.priority - b.priority));
   }, []);
 
   // Auto-optimization features
-  const implementOptimization = useCallback((suggestionId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const implementOptimization = useCallback((suggestionId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setSuggestions(prev => prev.map(s =>
-      s.id === suggestionId ? { ...s, implemented: anyanyanyanyanyanyanyanyanyanyanyanytrue } : s
+      s.id === suggestionId ? { ...s, implemented: anyanyanyanyanyanyanyanyanyanyanyanyanytrue } : s
     ));
 
     // Show success notification
     toast.success('Optimization implemented successfully!');
 
     // Simulate optimization implementation
-    setTimeout(()             => {
+    setTimeout(()              => {
       measurePerformance();
     }, 1000);
   }, [measurePerformance]);
@@ -455,7 +461,7 @@ export function PerformanceOptimizer(...args: any[]): any {
 
   }, [autoOptimize, suggestions, implementOptimization]);
 
-  const getPerformanceColor = (score: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
+  const getPerformanceColor = (score: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
 =======
   const [isOptimizing, setIsOptimizing] = useState(false);
   const [optimizationComplete, setOptimizationComplete] = useState(false);
@@ -471,7 +477,7 @@ export function PerformanceOptimizer(...args: any[]): any {
 
   // Performance thresholds
   const THRESHOLDS = {
-    fcp: anyanyanyanyanyanyanyanyanyanyanyany{ good: 1800, poor: 3000 },
+    fcp: anyanyanyanyanyanyanyanyanyanyanyanyany{ good: 1800, poor: 3000 },
     lcp: { good: 2500, poor: 4000 },
     fid: { good: 100, poor: 300 },
     cls: { good: 0.1, poor: 0.25 },
@@ -479,7 +485,7 @@ export function PerformanceOptimizer(...args: any[]): any {
   };
 
   // Initialize performance monitoring
-  useEffect(()             => {
+  useEffect(()              => {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       initializePerformanceMonitoring();
     }
@@ -543,7 +549,7 @@ export function PerformanceOptimizer(...args: any[]): any {
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           const entries = list.getEntries();
-          entries.forEach((entry: anyanyanyanyanyanyanyanyanyanyanyany)             => {
+          entries.forEach((entry: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
             }
@@ -629,12 +635,12 @@ export function PerformanceOptimizer(...args: any[]): any {
       try {
         await (document as ).fonts.ready;
       } catch (error) {
-        console.warn('Font optimization failed: anyanyanyanyanyanyanyanyanyanyanyany', error);
+        console.warn('Font optimization failed: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
       }
     }
     
     // Simulate optimization delay
-    await new Promise(resolve             => setTimeout(resolve, 300));
+    await new Promise(resolve              => setTimeout(resolve, 300));
   };
 
   const preloadCriticalResources = async () => {
@@ -662,14 +668,14 @@ export function PerformanceOptimizer(...args: any[]): any {
       try {
         const cacheNames = await caches.keys();
         // Clean up old caches if needed
-        console.log('Available caches: anyanyanyanyanyanyanyanyanyanyanyany', cacheNames);
+        console.log('Available caches: anyanyanyanyanyanyanyanyanyanyanyanyany', cacheNames);
       } catch (error) {
         console.warn('Cache optimization failed:', error);
       }
     }
     
     // Simulate optimization delay
-    await new Promise(resolve             => setTimeout(resolve, 400));
+    await new Promise(resolve              => setTimeout(resolve, 400));
   };
 
   const getPerformanceScore = (): number => {
@@ -696,7 +702,7 @@ export function PerformanceOptimizer(...args: any[]): any {
     return Math.max(0, score);
   };
 
-  const getPerformanceGrade = (score: anyanyanyanyanyanyanyanyanyanyanyanynumber): string             => {
+  const getPerformanceGrade = (score: anyanyanyanyanyanyanyanyanyanyanyanyanynumber): string              => {
     if (score >= 90) return 'A';
     if (score >= 80) return 'B';
     if (score >= 70) return 'C';
@@ -704,7 +710,7 @@ export function PerformanceOptimizer(...args: any[]): any {
     return 'F';
   };
 
-  const getPerformanceColor = (score: anyanyanyanyanyanyanyanyanyanyanyanynumber): string             => {
+  const getPerformanceColor = (score: anyanyanyanyanyanyanyanyanyanyanyanyanynumber): string              => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (score >= 90) return 'text-green-500';
     if (score >= 80) return 'text-yellow-500';
@@ -713,7 +719,7 @@ export function PerformanceOptimizer(...args: any[]): any {
   };
 
 <<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (impact) {
       case 'high':
         return 'text-red-600 bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';

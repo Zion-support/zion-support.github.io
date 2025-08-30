@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
-import { Link, useLocation             } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link, useLocation              } from 'react-router-dom.ts';
 import { Menu,
   X,
   ChevronDown,
@@ -34,7 +34,7 @@ import { Menu,
   Clock
 <<<<<<< HEAD
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
@@ -51,9 +51,11 @@ interface NavigationItem {
 
 
 
+
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 
 
 
@@ -189,7 +191,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
 
   useEffect(() => {
 <<<<<<< HEAD
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)             => {;
+    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)              => {;
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
         setIsOpen(false);
 <<<<<<< HEAD
@@ -215,7 +217,7 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
 <<<<<<< HEAD
-  const toggleExpanded = (label: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const toggleExpanded = (label: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setExpandedItems(prev => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const newSet = new Set(prev);
@@ -235,18 +237,18 @@ export const EnhancedMobileNavigation: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const handleNavigation = (path: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const handleNavigation = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setIsOpen(false);
     setExpandedItems(new Set())};
 
 <<<<<<< HEAD
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     if (path === '/') {;
       return activePath === '/'};
     return activePath.startsWith(path)};
 =======
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     if (path === '/') {;
       return activePath === '/';
 

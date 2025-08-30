@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 import React, { Suspense, lazy } from 'react.ts'
-import { LoadingSpinner              } from './ui/LoadingSpinner'
+import { LoadingSpinner               } from './ui/LoadingSpinner'
 =======
 import React, { Suspense, lazy } from 'react.ts'
-import { LoadingSpinner             } from './ui/LoadingSpinner'
+import { LoadingSpinner              } from './ui/LoadingSpinner'
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 <<<<<<< HEAD

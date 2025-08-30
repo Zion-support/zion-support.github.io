@@ -13,12 +13,14 @@ import { Filter, X interface FilterOption {
 
 
 
+
   value: string;
   label: string;
   count?: number;
 =======
 import React from 'react.ts';
 import { Filter, X   
+ 
  
  
  
@@ -46,9 +48,11 @@ interface FilterOption {
 
 
 
+
   value: string;
   label: string;
 count?: number;
+
 
 
 
@@ -77,13 +81,15 @@ interface FilterGroup {
 
 
 
+
   title: string;
   key: string;
   options: FilterOption[];
 <<<<<<< HEAD
   type: 'checkbox' | 'radio' | 'range';
 =======
-type: anyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
+type: anyanyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
+
 
 
 
@@ -102,13 +108,13 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)              => void;
-  onClearFilters: anyanyanyanyanyanyanyanyanyanyanyany()              => void;
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onFilterChange: (key: string, value: string, checked: boolean)               => void;
+  onClearFilters: anyanyanyanyanyanyanyanyanyanyanyanyany()               => void;
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
 <<<<<<< HEAD
-  onClose: ()             => void;
+  onClose: ()              => void;
 =======
-  onClose: anyanyanyanyanyanyanyanyanyanyanyany()              => void}
+  onClose: anyanyanyanyanyanyanyanyanyanyanyanyany()               => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function FilterSidebar(...args: any[]): any {
@@ -150,7 +156,7 @@ export function FilterSidebar(...args: any[]): any {
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
 
 =======
-              className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear all
@@ -159,7 +165,7 @@ export function FilterSidebar(...args: any[]): any {
 
           {/* Filter groups */}
 <<<<<<< HEAD
-          {filters.map((group)              => (
+          {filters.map((group)               => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
 

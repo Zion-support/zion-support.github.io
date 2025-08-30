@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react.ts';
 import { Sun, Moon, Monitor type Theme = 'dark' | 'light' | 'system';
 =======
-import React, { useState, useEffect             } from 'react.ts';
-import { Sun, Moon, Monitor              } from 'lucide-react.ts';
+import React, { useState, useEffect              } from 'react.ts';
+import { Sun, Moon, Monitor               } from 'lucide-react.ts';
 
 type Theme = 'dark' | 'light' | 'system';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -99,8 +99,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
       </motion.button>
       
       {/* Theme indicator tooltip */}
-      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover: anyanyanyanyanyanyanyanyanyanyanyanyopacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-        {themes.find(t             => t.value === theme)?.label} theme
+      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover: anyanyanyanyanyanyanyanyanyanyanyanyanyopacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        {themes.find(t              => t.value === theme)?.label} theme
       </div>
     </div>
   );
@@ -195,9 +195,9 @@ export function ThemeToggleDropdown(...args: any[]): any {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full right-0 mt-2 w-32 bg-white dark: anyanyanyanyanyanyanyanyanyanyanyanybg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
+            className="absolute top-full right-0 mt-2 w-32 bg-white dark: anyanyanyanyanyanyanyanyanyanyanyanyanybg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
-            {themes.map((themeOption)             => (
+            {themes.map((themeOption)              => (
               <button
                 key={themeOption.value}
                 onClick={() => {
