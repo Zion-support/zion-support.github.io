@@ -44,7 +44,7 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { innovativeMicroSaasServices2031 } from '../data/innovativeMicroSaasServices2031';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031 } from '../data/innovativeMicroSaasServices2031';
 
 const ZionCuttingEdgeServices2031: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -53,12 +53,12 @@ const ZionCuttingEdgeServices2031: React.FC = () => {
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
   const categories = useMemo(() => {
-    const cats = ['All', ...Array.from(new Set(innovativeMicroSaasServices2031.map(service => service.category)))];
+    const cats = ['All', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2031.map(service => service.category)))];
     return cats;
   }, []);
 
   const filteredServices = useMemo(() => {
-    let filtered = innovativeMicroSaasServices2031;
+    let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2031;
 
     if (searchQuery) {
       filtered = filtered.filter(service =>
