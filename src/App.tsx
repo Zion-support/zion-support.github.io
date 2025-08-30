@@ -15,6 +15,7 @@ const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
 const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
+const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap').then(module => ({ default: module.ComprehensiveSitemap })));
 const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
 const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
 const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
@@ -22,6 +23,11 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+
+// Service Pages
+const AISolutions = lazy(() => import('./pages/services/AISolutions').then(module => ({ default: module.AISolutions })));
+const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing').then(module => ({ default: module.QuantumComputing })));
+const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.Cybersecurity })));
 
 // Loading component
 const PageLoader = () => (
@@ -75,6 +81,9 @@ export default function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/services/ai-solutions" element={<AISolutions />} />
+                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
+                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
@@ -100,6 +109,7 @@ export default function App() {
                 <Route path="/community" element={<BlogPage />} />
                 <Route path="/support" element={<Support />} />
                 <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
                 <Route path="/privacy-policy" element={<BlogPage />} />
                 <Route path="/terms-of-service" element={<BlogPage />} />
                 <Route path="/cookie-policy" element={<BlogPage />} />

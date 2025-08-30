@@ -76,7 +76,8 @@ export function Footer() {
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'New Services 2025', path: '/new-services-2025', icon: Star }
+        { name: 'New Services 2025', path: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', path: '/enhanced-new-services-2025', icon: Star }
       ]
     },
     {
@@ -105,6 +106,20 @@ export function Footer() {
         { name: 'Server Management', path: '/services/server-management', icon: Server },
         { name: 'Training & Education', path: '/training', icon: GraduationCap },
         { name: 'Support & Helpdesk', path: '/support', icon: HelpCircle }
+      ]
+    },
+    {
+      title: 'Resources',
+      icon: FileText,
+      links: [
+        { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'Research & Development', path: '/research-development', icon: Activity },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'API Reference', path: '/api', icon: Code },
+        { name: 'Developer Portal', path: '/developer', icon: Code },
+        { name: 'Sitemap', path: '/sitemap', icon: Map },
+        { name: 'Comprehensive Sitemap', path: '/comprehensive-sitemap', icon: Map }
       ]
     }
   ];
