@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   MessageCircle,
@@ -15,15 +14,6 @@ import {
   FileText,
   Video,
   Smile,
-=======
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Settings,
   Mic,
   MicOff,
@@ -36,7 +26,6 @@ import {
   TrendingUp,
   Shield,
   Clock,
-<<<<<<< HEAD
   CheckCircle,
   AlertCircle,
   Loader2,
@@ -46,13 +35,9 @@ import {
   Maximize2,
   Volume2,
   VolumeX
-interface Message {
-=======
-  Star
 } from 'lucide-react';
 
 interface ChatMessage {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: string;
   type: 'user' | 'assistant' | 'system';
   content: string;
@@ -69,12 +54,6 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enabled?: boolean;
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
-<<<<<<< HEAD
-  language?: string;
-
-export function ChatAssistant({
-  enabled = true,
-=======
   maxMessages?: number;
   enableVoice?: boolean;
   enableFileUpload?: boolean;
@@ -82,8 +61,7 @@ export function ChatAssistant({
 }
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({ 
-  enabled = true, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  enabled = true,
   position = 'bottom-right',
   theme = 'auto',
   maxMessages = 100,
