@@ -42,12 +42,14 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const AdvancedServicesShowcase2025 = createLazyComponent(() => import('./pages/AdvancedServicesShowcase2025'));
 
 // 2031 Cutting-Edge Services
 const ZionCuttingEdgeServices2031 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2031'));
 
 // Comprehensive Pricing Guide 2031
 const ComprehensivePricingGuide2031 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2031'));
+const AdvancedPricingGuide2025 = createLazyComponent(() => import('./pages/AdvancedPricingGuide2025'));
 
 // Additional pages that actually exist
 const Solutions = createLazyComponent(() => import('./pages/solutions'));
@@ -173,13 +175,15 @@ function App() {
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
                     
                     {/* Showcase pages */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                            <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+        <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
+
+        {/* 2031 Cutting-Edge Services */}
+        <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
                     
-                    {/* 2031 Cutting-Edge Services */}
-                    <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
-                    
-                    {/* Comprehensive Pricing Guide 2031 */}
-                    <Route path="/comprehensive-pricing-guide-2031" element={<ComprehensivePricingGuide2031 />} />
+                            {/* Comprehensive Pricing Guide 2031 */}
+        <Route path="/comprehensive-pricing-guide-2031" element={<ComprehensivePricingGuide2031 />} />
+        <Route path="/advanced-pricing-guide-2025" element={<AdvancedPricingGuide2025 />} />
                     
                     {/* Additional pages */}
                     <Route path="/solutions" element={<Solutions />} />
