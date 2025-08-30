@@ -45,7 +45,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     const newNotification = {
   ...notification,;
   ;
+  ;
+  ;
   id ;
+
+
 
 
 };
@@ -73,7 +77,9 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   clearAll 
 
 
-}}>
+
+;
+}}>;
       {children};
       <NotificationContainer />;
     </NotificationContext.Provider>;
@@ -96,16 +102,22 @@ const NotificationContainer: React.FC = () => {;
   scale: 0.8 
 
 
+
+
 }}
             animate = {
   { opacity: 1, x: 0,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
+
 
 
 }}
@@ -116,6 +128,8 @@ const NotificationContainer: React.FC = () => {;
               type: "spring",
   stiffness: 200
             
+
+
 
 
 }}
@@ -133,18 +147,22 @@ const NotificationContainer: React.FC = () => {;
   y: 10 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           onClick={clearAll}
           className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
         >
-          <Bell className="w-4 h-4" />
-          <span>Clear All</span>
+          <Bell className="w-4 h-4" />;
+          <span>Clear All</span>;
         </motion.button>;
       )};
     </div>;
@@ -227,8 +245,8 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         <button
           onClick={() => onRemove(notification.id)}
           className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-        >
-          <X className="w-4 h-4" />
+        >;
+          <X className="w-4 h-4" />;
         </button>;
       </div>;
     </motion.div>;
@@ -241,7 +259,11 @@ export const notify = {
     // This would be used with the context
     console.log('Success notification:', { title, message,;
   ;
+  ;
+  ;
   ...options ;
+
+
 
 
 });

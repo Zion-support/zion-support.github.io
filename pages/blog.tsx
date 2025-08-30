@@ -250,8 +250,8 @@ export default function Blog() {
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </div>;
+      </section>;
     </div>;
   );
 };

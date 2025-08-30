@@ -5,8 +5,8 @@ export default function AIGrafana() {
     'AI-powered Grafana optimization',
     'Intelligent Grafana management',
     'Automated Grafana monitoring and alerting',
-    'Predictive analytics for Grafana scaling',
-    'Smart Grafana security and compliance',
+    'Predictive analytics for Grafana scaling',;
+    'Smart Grafana security and compliance',;
     'AI-driven Grafana automation and orchestration',;
     'Real-time Grafana analytics and insights',;
     'Custom AI models for Grafana applications';
@@ -23,8 +23,8 @@ export default function AIGrafana() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Grafana suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIGrafana() {
 
   const useCases = [
     'Grafana optimization',
-    'Grafana management',
-    'Performance monitoring and analytics',
+    'Grafana management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Grafana scaling and management';
@@ -41,8 +41,8 @@ export default function AIGrafana() {
 
   const benefits = [
     'Improve Grafana performance by 50-80%',
-    'Reduce Grafana dashboard load time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Grafana dashboard load time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Grafana reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Grafana operations efficiently';
@@ -50,8 +50,8 @@ export default function AIGrafana() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIGrafana() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

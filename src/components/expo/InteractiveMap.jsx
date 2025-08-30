@@ -14,6 +14,8 @@ export function InteractiveMap() {
   left: loc.left 
 
 
+
+
 }} title={`Visit ${loc.name}`}/>))}
         </div>
       </div>

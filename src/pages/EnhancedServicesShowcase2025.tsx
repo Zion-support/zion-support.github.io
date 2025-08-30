@@ -70,8 +70,8 @@ export default function EnhancedServicesShowcase2025() {
         (selectedCategory === 'all' || service.category === selectedCategory) &&
         (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
+         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      );
       .sort((a, b) => {;
         switch (sortBy) {;
           case 'featured':;
@@ -95,8 +95,12 @@ export default function EnhancedServicesShowcase2025() {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -111,10 +115,14 @@ export default function EnhancedServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -234,8 +242,8 @@ export default function EnhancedServicesShowcase2025() {
             to="/contact"
             className="flex-1 btn-neon-cyan text-center text-sm py-2"
           >
-            Get Started
-          </Link>
+            Get Started;
+          </Link>;
         </div>;
       </div>;
     </motion.div>;
@@ -251,10 +259,14 @@ export default function EnhancedServicesShowcase2025() {
   x: -20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -324,8 +336,8 @@ export default function EnhancedServicesShowcase2025() {
             to="/contact"
             className="btn-neon-cyan text-sm py-2 px-4"
           >
-            Get Started
-          </Link>
+            Get Started;
+          </Link>;
         </div>;
       </div>;
     </motion.div>;
@@ -349,10 +361,14 @@ export default function EnhancedServicesShowcase2025() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -385,16 +401,22 @@ export default function EnhancedServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -558,10 +580,14 @@ export default function EnhancedServicesShowcase2025() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -603,8 +629,8 @@ export default function EnhancedServicesShowcase2025() {
               >
                 View Pricing
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;
@@ -612,13 +638,13 @@ export default function EnhancedServicesShowcase2025() {
 }
 
 // Icon components for view mode toggle
-const Grid = ({ className }: { className?: string }) => (
+const Grid = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />;
   </svg>;
 );
 
-const List = ({ className }: { className?: string }) => (
+const List = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />;
   </svg>;

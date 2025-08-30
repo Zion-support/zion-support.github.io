@@ -33,8 +33,8 @@ const teamExpertise = [
     count: "30+"
   },
   {
-    icon: "🚀",
-    title: "Successful Projects",
+    icon: "🚀",;
+    title: "Successful Projects",;
     description: "Successfully delivered complex technology solutions for Fortune 500 companies",;
     count: "500+";
   };
@@ -44,8 +44,8 @@ const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
   "Quantum Computing & Algorithms",
   "Blockchain & Web3 Technologies",
-  "Cloud Infrastructure & DevOps",
-  "Cybersecurity & Compliance",
+  "Cloud Infrastructure & DevOps",;
+  "Cybersecurity & Compliance",;
   "Data Science & Analytics",;
   "IoT & Edge Computing",;
   "Mobile & Web Development";
@@ -62,10 +62,14 @@ export function TeamExpertiseSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -90,10 +94,14 @@ export function TeamExpertiseSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -101,6 +109,8 @@ export function TeamExpertiseSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -131,10 +141,14 @@ export function TeamExpertiseSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -142,6 +156,8 @@ export function TeamExpertiseSection() {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -164,10 +180,14 @@ export function TeamExpertiseSection() {
   scale: 0.9 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -175,6 +195,8 @@ export function TeamExpertiseSection() {
               transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -191,10 +213,14 @@ export function TeamExpertiseSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -204,12 +230,14 @@ export function TeamExpertiseSection() {
   delay: 0.4 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to work with experts?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

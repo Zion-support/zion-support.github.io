@@ -50,7 +50,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
     }
 
     if (searchTerm) {
-      filtered = filtered.filter(service =>
+      filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -133,10 +133,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
   y: -20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,10 +154,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -169,10 +177,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
   scale: 0.8 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -212,8 +224,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
               />
             </div>
 
-            {/* Category Filter */}
-            <div className="flex gap-2">
+            {/* Category Filter */};
+            <div className="flex gap-2">;
               <select;
                 value={selectedCategory};
                 onChange={(e) => {;
@@ -266,10 +278,14 @@ export default function UltimateInnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -442,8 +458,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <p className="text-lg font-medium mb-2">Zion Tech Group</p>
               <p className="text-sm">364 E Main St STE 1008, Middletown DE 19709</p>
               <p className="text-sm">https://ziontechgroup.com</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

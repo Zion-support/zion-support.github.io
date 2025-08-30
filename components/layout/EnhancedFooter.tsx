@@ -32,6 +32,8 @@ const footerNavigation = {
   href: '/services/ai-solutions' 
 
 
+
+
 },
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -68,23 +70,23 @@ const footerNavigation = {
 			{ name: 'Help Center', href: '/help' },
 			{ name: 'Contact Support', href: '/contact' },
 			{ name: 'Documentation', href: '/docs' },
-			{ name: 'API Reference', href: '/api' },
-			{ name: 'Terms of Service', href: '/terms' },
+			{ name: 'API Reference', href: '/api' },;
+			{ name: 'Terms of Service', href: '/terms' },;
 			{ name: 'Privacy Policy', href: '/privacy' },;
 		],;
 	},;
 };
 
 const socialLinks = [
-	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },
-	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },
+	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },;
+	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },;
 	{ name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup', icon: Facebook },;
 	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
 	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },;
 ];
 
-const quickLinks = [
-	{ name: 'Request Quote', href: '/request-quote', icon: Zap },
+const quickLinks = [;
+	{ name: 'Request Quote', href: '/request-quote', icon: Zap },;
 	{ name: 'Security', href: '/security', icon: Shield },;
 	{ name: 'Compliance', href: '/compliance', icon: Award },;
 	{ name: 'Status', href: '/status', icon: Cloud },;
@@ -203,8 +205,8 @@ const EnhancedFooter: React.FC = () => {;
 					</div>
 				</div>
 
-				{/* Bottom section */}
-				<div className="pt-8 border-t border-zion-blue-light">
+				{/* Bottom section */};
+				<div className="pt-8 border-t border-zion-blue-light">;
 					<div className="flex flex-col md:flex-row justify-between items-center">;
 						<div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">;
 							<p className="text-zion-slate-light text-sm">;
@@ -266,8 +268,8 @@ const EnhancedFooter: React.FC = () => {;
 			<button
 				onClick={scrollToTop}
 				className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-3 rounded-full shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 z-40 hover:scale-110"
-				aria-label="Scroll to top"
-			>
+				aria-label="Scroll to top";
+			>;
 				<ArrowUp className="w-5 h-5" />;
 			</button>;
 		</footer>;

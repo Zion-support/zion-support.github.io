@@ -75,8 +75,8 @@ export default function AIFinancialPlanning() {
       title: "Financial Health Monitoring",
       description: "Real-time monitoring of your financial health with predictive insights and alerts."
     },
-    {
-      icon: Activity,
+    {;
+      icon: Activity,;
       title: "Tax Optimization",;
       description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities.";
     };
@@ -108,8 +108,8 @@ export default function AIFinancialPlanning() {
       title: "Investment Growth",
       description: "Optimize investment portfolios and maximize returns with AI-driven recommendations."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Time Savings",;
       description: "Automate financial tasks and focus on what matters most with intelligent automation.";
     };
@@ -164,8 +164,8 @@ export default function AIFinancialPlanning() {
         "API access",
         "Custom integrations",
         "Multi-account support",
-        "Tax filing assistance"
-      ],
+        "Tax filing assistance";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -197,8 +197,8 @@ export default function AIFinancialPlanning() {
       description: "Optimize tax strategies and maximize deductions throughout the year",
       icon: Receipt
     },
-    {
-      industry: "Investment Management",
+    {;
+      industry: "Investment Management",;
       description: "Build and manage investment portfolios with AI-driven insights",;
       icon: TrendingUp;
     };
@@ -224,8 +224,8 @@ export default function AIFinancialPlanning() {
     {
       name: "Payment Platforms",
       platforms: ["PayPal", "Venmo", "Square", "Stripe"]
-    },
-    {
+    },;
+    {;
       name: "Cryptocurrency",;
       platforms: ["Coinbase", "Binance", "Kraken", "Gemini"];
     };
@@ -247,8 +247,8 @@ export default function AIFinancialPlanning() {
       label: "Goal Achievement",
       description: "Users achieve their financial goals"
     },
-    {
-      metric: "3x",
+    {;
+      metric: "3x",;
       label: "Faster Planning",;
       description: "Faster financial planning process";
     };
@@ -266,8 +266,8 @@ export default function AIFinancialPlanning() {
     {
       category: "Tax Planning",
       areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]
-    },
-    {
+    },;
+    {;
       category: "Goal Planning",;
       areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"];
     };
@@ -291,10 +291,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -340,16 +344,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -380,10 +390,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -408,16 +422,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -458,10 +478,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -486,16 +510,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -528,10 +558,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -556,16 +590,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -606,10 +646,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -634,16 +678,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -702,10 +752,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -730,16 +784,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -780,10 +840,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -808,16 +872,22 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -852,10 +922,14 @@ export default function AIFinancialPlanning() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -878,8 +952,8 @@ export default function AIFinancialPlanning() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

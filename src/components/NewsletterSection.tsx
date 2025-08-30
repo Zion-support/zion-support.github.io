@@ -32,8 +32,8 @@ const NewsletterSection: React.FC = () => {;
       title: "Industry Insights",
       description: "Get exclusive access to tech trends and analysis"
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: "Early Access",;
       description: "Be the first to know about beta programs and launches";
     };
@@ -49,10 +49,14 @@ const NewsletterSection: React.FC = () => {;
   scale: 0.8 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -71,8 +75,8 @@ const NewsletterSection: React.FC = () => {;
               onClick={() => setIsSubscribed(false)}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-              Subscribe Another Email
-            </button>
+              Subscribe Another Email;
+            </button>;
           </motion.div>;
         </div>;
       </section>;
@@ -90,10 +94,14 @@ const NewsletterSection: React.FC = () => {;
   x: -30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -116,16 +124,22 @@ const NewsletterSection: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -155,16 +169,22 @@ const NewsletterSection: React.FC = () => {;
   x: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -225,8 +245,8 @@ const NewsletterSection: React.FC = () => {;
                   </a>
                 </p>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </div>;
     </section>;

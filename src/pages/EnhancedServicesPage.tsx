@@ -44,7 +44,7 @@ export default function EnhancedServicesPage() {
     const matchesCategory = selectedCategory === 'all' || ;
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     
-    const matchesPrice = selectedPriceRange === 'all' || 
+    const matchesPrice = selectedPriceRange === 'all' || ;
                         (selectedPriceRange === 'basic' && service.price <= 2000) ||;
                         (selectedPriceRange === 'professional' && service.price > 2000 && service.price <= 8000) ||;
                         (selectedPriceRange === 'enterprise' && service.price > 8000 && service.price <= 25000) ||;
@@ -53,7 +53,7 @@ export default function EnhancedServicesPage() {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     switch (category.toLowerCase()) {;
       case 'ai automation':;
       case 'ai & machine learning':;
@@ -534,6 +534,8 @@ export default function EnhancedServicesPage() {
   '_blank')
 
 
+
+
 }
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
@@ -552,8 +554,8 @@ export default function EnhancedServicesPage() {
               >
                 Request Enterprise Consultation
               </Button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

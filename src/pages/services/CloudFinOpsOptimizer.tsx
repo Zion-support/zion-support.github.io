@@ -77,8 +77,8 @@ const CloudFinOpsOptimizer = () => {
       title: 'Predictive Modeling',
       description: 'Forecast future costs and identify optimization trends'
     },
-    {
-      icon: Lightbulb,
+    {;
+      icon: Lightbulb,;
       title: 'Smart Recommendations',;
       description: 'Intelligent suggestions for cost savings and efficiency improvements';
     };
@@ -86,8 +86,8 @@ const CloudFinOpsOptimizer = () => {
 
   const benefits = [
     'Reduce cloud costs by 40-60%',
-    'Improve resource efficiency by 50%',
-    'Automate 80% of optimization tasks',
+    'Improve resource efficiency by 50%',;
+    'Automate 80% of optimization tasks',;
     'Achieve 95% cost predictability',;
     'Enable real-time cost monitoring',;
     'Maximize cloud ROI and performance';
@@ -109,8 +109,8 @@ const CloudFinOpsOptimizer = () => {
       title: 'Real-time Dashboards',
       description: 'Live monitoring and reporting of cloud costs and performance'
     },
-    {
-      icon: Target,
+    {;
+      icon: Target,;
       title: 'Goal Setting & Tracking',;
       description: 'Set cost targets and track progress with automated alerts';
     };
@@ -128,8 +128,8 @@ const CloudFinOpsOptimizer = () => {
     {
       industry: 'E-commerce',
       description: 'Balance performance with cost optimization'
-    },
-    {
+    },;
+    {;
       industry: 'SaaS Platforms',;
       description: 'Optimize costs for multi-tenant applications';
     };
@@ -147,10 +147,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -195,10 +199,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -223,16 +231,22 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -258,10 +272,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -286,16 +304,22 @@ const CloudFinOpsOptimizer = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -325,10 +349,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -353,16 +381,22 @@ const CloudFinOpsOptimizer = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -382,16 +416,22 @@ const CloudFinOpsOptimizer = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -415,10 +455,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -443,16 +487,22 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -478,10 +528,14 @@ const CloudFinOpsOptimizer = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -502,8 +556,8 @@ const CloudFinOpsOptimizer = () => {
               <button className="px-8 py-4 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

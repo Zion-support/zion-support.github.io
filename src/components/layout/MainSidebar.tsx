@@ -341,8 +341,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Developer Portal', href: '/developers', icon: Code },
         { name: 'API Documentation', href: '/api-docs', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },;
+        { name: 'White Papers', href: '/white-papers', icon: FileText },;
         { name: 'Video Tutorials', href: '/tutorials', icon: Video },;
       ];
     };
@@ -362,15 +362,15 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       description: 'Email us for support'
     },
     { 
-      icon: MapPin, 
-      text: '364 E Main St STE 1008 Middletown DE 19709', 
+      icon: MapPin, ;
+      text: '364 E Main St STE 1008 Middletown DE 19709', ;
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',;
       description: 'Headquarters location';
     },;
   ];
 
-  const quickStats = [
-    { value: '500+', label: 'Projects Delivered', icon: Award },
+  const quickStats = [;
+    { value: '500+', label: 'Projects Delivered', icon: Award },;
     { value: '15+', label: 'Years Experience', icon: Star },;
     { value: '99.9%', label: 'Client Satisfaction', icon: TrendingUp },;
     { value: '24/7', label: 'Support Available', icon: Clock },;
@@ -392,6 +392,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         "fixed left-0 top-0 z-50 h-full w-80 bg-gradient-to-b from-zion-slate-dark via-zion-slate to-zion-slate-light border-r border-white/20 transform transition-all duration-300 ease-in-out lg:translate-x-0 shadow-2xl",
   isOpen ? "translate-x-0" : "-translate-x-full"
       )
+
+
 
 
 }>
@@ -436,8 +438,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
             {navigationItems.map((section) => (
               <div key={section.title}>
                 <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                  {section.title}
+                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
+                  {section.title};
                 </h3>;
                 <ul className="space-y-1">;
                   {section.items.map((item) => {;
@@ -458,6 +460,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                           )
 
 
+
+
 }
                         >
                           <IconComponent className = {
@@ -467,7 +471,9 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                           )
 
 
-} />
+
+;
+} />;
                           {item.name};
                         </Link>;
                       </li>;
@@ -481,8 +487,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
           {/* Contact Info */}
           <div className = "p-4 border-t border-white/20 bg-white/5">
             <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              Contact Information
+              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
+              Contact Information;
             </h3>;
             <div className="space-y-3">;
               {contactInfo.map((contact) => {;
@@ -502,8 +508,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                       <div className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
                         {contact.text}
                       </div>
-                      <div className="text-xs text-gray-400 mt-1">
-                        {contact.description}
+                      <div className="text-xs text-gray-400 mt-1">;
+                        {contact.description};
                       </div>;
                     </div>;
                   </a>;
@@ -522,8 +528,8 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 <Globe className="w-4 h-4" />
                 Visit Website
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </>;

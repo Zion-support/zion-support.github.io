@@ -5,8 +5,8 @@ export default function AIVideoAnalytics() {
     'Real-time video analysis with AI-powered object detection',
     'Advanced facial recognition and person tracking',
     'Behavioral analysis and anomaly detection',
-    'Automated video summarization and highlights',
-    'Multi-camera synchronization and analytics',
+    'Automated video summarization and highlights',;
+    'Multi-camera synchronization and analytics',;
     'Custom AI models for industry-specific use cases',;
     'Cloud-based processing with edge computing options',;
     'Integration with major security and analytics platforms';
@@ -23,8 +23,8 @@ export default function AIVideoAnalytics() {
       price: '$599/mo', 
       details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited cameras', 'Custom AI models', '90-day storage', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIVideoAnalytics() {
 
   const useCases = [
     'Retail analytics and customer behavior tracking',
-    'Security surveillance and threat detection',
-    'Manufacturing quality control and safety monitoring',
+    'Security surveillance and threat detection',;
+    'Manufacturing quality control and safety monitoring',;
     'Traffic analysis and smart city applications',;
     'Healthcare patient monitoring and safety',;
     'Sports analytics and performance tracking';
@@ -41,8 +41,8 @@ export default function AIVideoAnalytics() {
 
   const benefits = [
     'Reduce security incidents by 60-80%',
-    'Improve operational efficiency by 30-50%',
-    'Cut manual monitoring costs by 70-90%',
+    'Improve operational efficiency by 30-50%',;
+    'Cut manual monitoring costs by 70-90%',;
     'Enhance safety compliance and reporting',;
     'Gain actionable insights from video data',;
     'Scale security operations without additional staff';
@@ -50,8 +50,8 @@ export default function AIVideoAnalytics() {
 
   const industries = [
     'Retail & Shopping Centers',
-    'Manufacturing & Industrial',
-    'Healthcare & Hospitals',
+    'Manufacturing & Industrial',;
+    'Healthcare & Hospitals',;
     'Transportation & Logistics',;
     'Education & Universities',;
     'Government & Public Safety';
@@ -165,8 +165,8 @@ export default function AIVideoAnalytics() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

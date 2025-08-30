@@ -31,8 +31,8 @@ export default function SOC2ComplianceTracker() {
       title: "Security Controls",
       description: "Comprehensive security control monitoring including encryption, authentication, and network security."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Audit Trail",;
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting.";
     };
@@ -64,8 +64,8 @@ export default function SOC2ComplianceTracker() {
       title: "Privacy",
       description: "Data handling, consent management, and privacy controls"
     },
-    {
-      icon: FileText,
+    {;
+      icon: FileText,;
       title: "Documentation",;
       description: "Policies, procedures, and compliance documentation management";
     };
@@ -114,8 +114,8 @@ export default function SOC2ComplianceTracker() {
         "White-label solutions",
         "Dedicated compliance manager",
         "Advanced integrations",
-        "Unlimited users",
-        "Custom training"
+        "Unlimited users",;
+        "Custom training";
       ],;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function SOC2ComplianceTracker() {
       description: "Strengthen your security controls and risk management with continuous monitoring.",
       icon: Shield
     },
-    {
-      title: "Build Customer Trust",
+    {;
+      title: "Build Customer Trust",;
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",;
       icon: Users;
     };
@@ -170,8 +170,8 @@ export default function SOC2ComplianceTracker() {
       title: "Audit Preparation",
       description: "Prepare for external audit with complete documentation and evidence"
     },
-    {
-      step: "06",
+    {;
+      step: "06",;
       title: "Ongoing Compliance",;
       description: "Maintain compliance with continuous monitoring and improvement";
     };
@@ -197,10 +197,14 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +259,22 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,16 +312,22 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -349,16 +365,22 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -396,16 +418,22 @@ export default function SOC2ComplianceTracker() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -445,16 +473,22 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -515,10 +549,14 @@ export default function SOC2ComplianceTracker() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,8 +582,8 @@ export default function SOC2ComplianceTracker() {
                   Contact Sales
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

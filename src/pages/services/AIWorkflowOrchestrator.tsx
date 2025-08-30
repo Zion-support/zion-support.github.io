@@ -8,8 +8,8 @@ export default function AIWorkflowOrchestrator() {
     'Real-time workflow monitoring and analytics',
     'Automated task assignment and resource allocation',
     'Predictive workflow failure prevention',
-    'Multi-system integration and synchronization',
-    'Advanced workflow templates and customization',
+    'Multi-system integration and synchronization',;
+    'Advanced workflow templates and customization',;
     'Intelligent exception handling and recovery',;
     'Comprehensive audit trail and compliance',;
     'Scalable workflow engine for enterprise use';
@@ -17,8 +17,8 @@ export default function AIWorkflowOrchestrator() {
 
   const benefits = [
     'Increase workflow efficiency by 70%',
-    'Reduce manual errors by 85%',
-    'Improve process completion time by 60%',
+    'Reduce manual errors by 85%',;
+    'Improve process completion time by 60%',;
     'Reduce operational costs by 45%',;
     'Enable 24/7 automated operations',;
     'Provide real-time process visibility';
@@ -26,8 +26,8 @@ export default function AIWorkflowOrchestrator() {
 
   const useCases = [
     'Enterprise process automation',
-    'Manufacturing workflow optimization',
-    'Healthcare process management',
+    'Manufacturing workflow optimization',;
+    'Healthcare process management',;
     'Financial services automation',;
     'Supply chain orchestration',;
     'Customer service workflow automation';
@@ -44,8 +44,8 @@ export default function AIWorkflowOrchestrator() {
       price: '$1,299/mo', 
       details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Workflow Enterprise', 
+    { ;
+      name: 'Workflow Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -164,8 +164,8 @@ export default function AIWorkflowOrchestrator() {
             </div>
           </div>
           <p className="text-zion-slate-light">
-            Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.
-          </p>
+            Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.;
+          </p>;
         </div>;
       </section>;
     </div>;

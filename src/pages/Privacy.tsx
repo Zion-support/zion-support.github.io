@@ -33,8 +33,8 @@ export default function Privacy() {
       title: 'Transparency',
       description: 'We are clear about what data we collect, how we use it, and your rights.'
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: 'User Control',;
       description: 'You have full control over your personal data and can manage it at any time.';
     };
@@ -56,8 +56,8 @@ export default function Privacy() {
       description: 'Device information and technical specifications',
       examples: ['IP address', 'Browser type', 'Device information']
     },
-    {
-      title: 'Communication Data',
+    {;
+      title: 'Communication Data',;
       description: 'Records of our interactions and communications',;
       examples: ['Support tickets', 'Email correspondence', 'Chat logs'];
     };
@@ -75,8 +75,8 @@ export default function Privacy() {
     {
       purpose: 'Improvement',
       description: 'To analyze usage patterns and improve our services and user experience.'
-    },
-    {
+    },;
+    {;
       purpose: 'Security',;
       description: 'To protect against fraud, abuse, and ensure the security of our services.';
     };
@@ -102,8 +102,8 @@ export default function Privacy() {
     {
       right: 'Objection',
       description: 'Object to processing of your personal data in certain situations.'
-    },
-    {
+    },;
+    {;
       right: 'Restriction',;
       description: 'Request limitation of processing your personal data.';
     };
@@ -126,10 +126,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -164,10 +168,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -192,16 +200,22 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -227,10 +241,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +273,22 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -295,10 +319,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -323,16 +351,22 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -355,10 +389,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +421,22 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -416,10 +460,14 @@ export default function Privacy() {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -463,10 +511,14 @@ export default function Privacy() {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -507,10 +559,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -557,10 +613,14 @@ export default function Privacy() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -586,8 +646,8 @@ export default function Privacy() {
               >
                 General Contact
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

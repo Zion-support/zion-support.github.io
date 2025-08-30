@@ -58,8 +58,8 @@ function ReturnsManagement() {
           ))}
         </div>
 
-        <p className="mt-10 text-sm text-zion-slate-light">
-          Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>
+        <p className="mt-10 text-sm text-zion-slate-light">;
+          Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
         </p>;
       </section>;
     </div>;
@@ -69,6 +69,8 @@ function ReturnsManagement() {
 export default ReturnsManagement;
 
 
+export default ReturnsManagement;
+export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;

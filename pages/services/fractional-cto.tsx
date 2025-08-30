@@ -26,8 +26,8 @@ export default function FractionalCTO() {
         </ul>
         <div className="mt-6 text-sm text-white/70">Average market pricing: $6,000–$20,000/mo part-time retainer.</div>
         <div className="mt-8 flex gap-3">
-          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>
-          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
+          <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>;
+          <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>;
         </div>;
       </main>;
     </div>;

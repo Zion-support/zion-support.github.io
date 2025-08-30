@@ -69,10 +69,14 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -214,16 +218,22 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -310,10 +320,14 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -355,8 +369,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {;
                 <span>Visit our website</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

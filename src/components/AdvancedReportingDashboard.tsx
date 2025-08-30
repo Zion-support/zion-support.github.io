@@ -54,8 +54,8 @@ interface AdvancedReportingDashboardProps {
 }
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
-  showMetrics = true,
-  showFilters = true,
+  showMetrics = true,;
+  showFilters = true,;
   showCharts = true,;
   maxReports = 15;
 }) => {;
@@ -208,7 +208,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
+      filtered = filtered.filter(r => ;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -236,7 +236,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           const priorityOrder = {
   low: 1, medium: 2, high: 3,;
   ;
+  ;
+  ;
   critical: 4 ;
+
+
 
 
 };
@@ -272,10 +276,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     topCategories: (() => {
       const catCounts = reports.reduce((acc,;
   ;
+  ;
+  ;
   r) => {;
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
       
+
+
 
 
 }, {} as Record<string, number>);
@@ -304,9 +312,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   color: 'text-green-400 bg-green-400/20' 
 
 
+
+
 },
-      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },
-      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },
+      operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },;
+      performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },;
       security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' },;
       customer: { icon: <Users className="w-4 h-4" />, color: 'text-yellow-400 bg-yellow-400/20' },;
       technical: { icon: <Server className="w-4 h-4" />, color: 'text-zion-cyan bg-zion-cyan/20' };
@@ -418,10 +428,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -437,10 +451,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -457,10 +475,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -477,10 +499,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -502,10 +528,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -527,6 +557,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   duration: 0.8 
 
 
+
+
 }}
                         className="h-2 bg-zion-cyan rounded-full"
                       />
@@ -544,10 +576,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -574,10 +610,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -689,10 +729,14 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -735,6 +779,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   'view')
 
 
+
+
 }
                   className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                 >
@@ -746,6 +792,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   'download')
 
 
+
+
 }
                   className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
@@ -755,6 +803,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   onClick = {
   () => handleReportAction(report.id,
   'share')
+
+
 
 
 }
@@ -832,6 +882,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   'pdf')
 
 
+
+
 }
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
@@ -843,6 +895,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   'excel')
 
 
+
+
 }
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
@@ -852,6 +906,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   onClick = {
   () => exportReport(report,
   'csv')
+
+
 
 
 }
@@ -902,16 +958,22 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -954,8 +1016,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </div>;

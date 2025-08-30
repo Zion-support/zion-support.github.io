@@ -74,8 +74,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
       description: "Transform data into actionable insights with AI-powered business intelligence",
-      price: "From $1,499/month",
-      features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
+      price: "From $1,499/month",;
+      features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
       link: "/services/ai-business-intelligence-platform",;
       category: "Analytics";
     };
@@ -107,8 +107,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
       description: "Customer analytics, inventory optimization, and personalized marketing",
       icon: Users
     },
-    {
-      title: "Energy & Utilities",
+    {;
+      title: "Energy & Utilities",;
       description: "Predictive maintenance, energy optimization, and grid management",;
       icon: Zap;
     };
@@ -118,8 +118,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
     "Machine Learning & Deep Neural Networks",
     "Natural Language Processing (NLP)",
     "Computer Vision & Image Recognition",
-    "Predictive Analytics & Forecasting",
-    "Robotic Process Automation (RPA)",
+    "Predictive Analytics & Forecasting",;
+    "Robotic Process Automation (RPA)",;
     "Edge Computing & IoT Integration",;
     "Blockchain & Distributed Systems",;
     "Quantum Computing Solutions";
@@ -145,10 +145,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -190,10 +194,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -218,16 +226,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -282,10 +296,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -310,16 +328,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -345,10 +369,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -373,16 +401,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -405,10 +439,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -423,16 +461,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -447,16 +491,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -489,10 +539,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -515,10 +569,14 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -536,16 +594,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -562,16 +626,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -589,16 +659,22 @@ export default function ComprehensiveAIServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -609,8 +685,8 @@ export default function ComprehensiveAIServicesShowcase2025() {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

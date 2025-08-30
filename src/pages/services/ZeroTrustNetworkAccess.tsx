@@ -61,8 +61,8 @@ const ZeroTrustNetworkAccess = () => {
       title: 'Encrypted Communication',
       description: 'End-to-end encryption for all data in transit and at rest'
     },
-    {
-      icon: Monitor,
+    {;
+      icon: Monitor,;
       title: 'Threat Detection',;
       description: 'Advanced threat detection and automated response capabilities';
     };
@@ -70,8 +70,8 @@ const ZeroTrustNetworkAccess = () => {
 
   const benefits = [
     'Eliminate network perimeter vulnerabilities',
-    'Reduce attack surface by 90%',
-    'Enable secure remote work from anywhere',
+    'Reduce attack surface by 90%',;
+    'Enable secure remote work from anywhere',;
     'Comply with industry security standards',;
     'Improve incident response time by 80%',;
     'Enhance user experience with seamless access';
@@ -89,8 +89,8 @@ const ZeroTrustNetworkAccess = () => {
     {
       industry: 'Government',
       description: 'Secure access to classified systems and citizen data'
-    },
-    {
+    },;
+    {;
       industry: 'Enterprise',;
       description: 'Protected access to corporate resources and applications';
     };
@@ -112,8 +112,8 @@ const ZeroTrustNetworkAccess = () => {
       title: 'Network Security',
       description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: 'Application Security',;
       description: 'API security, application-level access controls, and data protection';
     };
@@ -131,10 +131,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -179,10 +183,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,16 +215,22 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -242,10 +256,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -270,16 +288,22 @@ const ZeroTrustNetworkAccess = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -309,10 +333,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -337,16 +365,22 @@ const ZeroTrustNetworkAccess = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -366,16 +400,22 @@ const ZeroTrustNetworkAccess = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -399,10 +439,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -427,16 +471,22 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -462,10 +512,14 @@ const ZeroTrustNetworkAccess = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -486,8 +540,8 @@ const ZeroTrustNetworkAccess = () => {
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -68,8 +68,8 @@ export default function QuantumTechnology() {
     },
     {
       icon: Zap,
-      title: "Quantum Sensors",
-      description: "Ultra-sensitive detection using quantum phenomena",
+      title: "Quantum Sensors",;
+      description: "Ultra-sensitive detection using quantum phenomena",;
       features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],;
       color: "from-zion-indigo to-zion-purple";
     };
@@ -77,8 +77,8 @@ export default function QuantumTechnology() {
 
   const applications = [
     { id: 'all', name: 'All Applications', icon: Globe },
-    { id: 'finance', name: 'Financial Services', icon: BarChart3 },
-    { id: 'healthcare', name: 'Healthcare', icon: Monitor },
+    { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
+    { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
     { id: 'logistics', name: 'Logistics', icon: Network },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
     { id: 'research', name: 'Research', icon: Lightbulb };
@@ -122,8 +122,8 @@ export default function QuantumTechnology() {
     },
     {
       title: "AI Training",
-      description: "Quantum-enhanced machine learning and neural networks",
-      category: "research",
+      description: "Quantum-enhanced machine learning and neural networks",;
+      category: "research",;
       benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],;
       icon: Brain;
     };
@@ -161,15 +161,15 @@ export default function QuantumTechnology() {
       icon: Server
     },
     {
-      name: "Neutral Atoms",
-      description: "Quantum bits using neutral atoms for computation",
+      name: "Neutral Atoms",;
+      description: "Quantum bits using neutral atoms for computation",;
       advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],;
       icon: Atom;
     };
   ];
 
-  const quantumAdvantages = [
-    { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },
+  const quantumAdvantages = [;
+    { metric: "1000x", label: "Faster Processing", description: "Exponential speedup for specific problems" },;
     { metric: "∞", label: "Parallel Processing", description: "Simultaneous computation of multiple states" },;
     { metric: "100%", label: "Security", description: "Unbreakable quantum cryptography" },;
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" };
@@ -178,8 +178,8 @@ export default function QuantumTechnology() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -190,9 +190,11 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 };
     };
@@ -218,10 +220,14 @@ export default function QuantumTechnology() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -270,10 +276,14 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -304,6 +314,8 @@ export default function QuantumTechnology() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -339,10 +351,14 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -366,14 +382,18 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
-}}
-            transition={{ duration: 0.6 }}
+
+
+}};
+            transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {applications.map((app) => {;
@@ -386,8 +406,8 @@ export default function QuantumTechnology() {
                     selectedApplication === app.id
                       ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-purple/20'
-                  }`}
-                >
+                  }`};
+                >;
                   <Icon className="w-5 h-5" />;
                   {app.name};
                 </button>;
@@ -411,6 +431,8 @@ export default function QuantumTechnology() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -451,10 +473,14 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -485,6 +511,8 @@ export default function QuantumTechnology() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -523,10 +551,14 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -576,10 +608,14 @@ export default function QuantumTechnology() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -662,10 +698,14 @@ export default function QuantumTechnology() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -691,8 +731,8 @@ export default function QuantumTechnology() {
               <button className="px-8 py-4 border border-zion-purple text-zion-purple rounded-xl font-semibold text-lg hover:bg-zion-purple hover:text-white transition-all duration-300">
                 Download Quantum Guide
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

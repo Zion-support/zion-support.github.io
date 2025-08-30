@@ -75,8 +75,8 @@ export default function AICybersecuritySuite() {
       icon: CheckCircle,
       benefits: [
         "GDPR compliance",
-        "SOC 2 automation",
-        "HIPAA compliance",
+        "SOC 2 automation",;
+        "HIPAA compliance",;
         "Real-time audit trails";
       ];
     };
@@ -130,8 +130,8 @@ export default function AICybersecuritySuite() {
         "Custom security models",
         "White-label solutions",
         "On-premise deployment",
-        "SLA guarantees"
-      ],
+        "SLA guarantees";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -169,8 +169,8 @@ export default function AICybersecuritySuite() {
       industry: "Government",
       applications: [
         "Classified data protection",
-        "National security",
-        "Compliance automation",
+        "National security",;
+        "Compliance automation",;
         "Threat intelligence";
       ];
     };
@@ -196,8 +196,8 @@ export default function AICybersecuritySuite() {
       metric: "<0.1%"
     },
     {
-      title: "Compliance Coverage",
-      description: "Automated compliance for all major frameworks",
+      title: "Compliance Coverage",;
+      description: "Automated compliance for all major frameworks",;
       icon: CheckCircle,;
       metric: "100%";
     };
@@ -219,10 +219,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -277,10 +281,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -305,16 +313,22 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -342,10 +356,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -370,16 +388,22 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -417,10 +441,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -445,16 +473,22 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -516,10 +550,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,16 +582,22 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -583,10 +627,14 @@ export default function AICybersecuritySuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -615,8 +663,8 @@ export default function AICybersecuritySuite() {
               >
                 Contact Security Experts
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -59,7 +59,7 @@ interface ProjectManagementTimelineProps {
 }
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
-  showFilters = true,
+  showFilters = true,;
   showStats = true,;
   maxProjects = 10;
 }) => {;
@@ -205,8 +205,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(p => 
-        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      filtered = filtered.filter(p => ;
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -224,8 +224,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     onHold: projects.filter(p => p.status === 'on-hold').length,
     totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
     averageProgress: projects.reduce((sum, p) => sum + p.progress,;
+  ;
+  ;
   0) / projects.length || 0;
   ;
+
+
 
 
 };
@@ -272,8 +276,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Format currency
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+    return new Intl.NumberFormat('en-US', {;
+      style: 'currency',;
       currency: 'USD',;
       minimumFractionDigits: 0,;
       maximumFractionDigits: 0;
@@ -340,10 +344,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -359,10 +367,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -379,10 +391,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -399,10 +415,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -419,10 +439,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -439,10 +463,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -509,10 +537,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -589,6 +621,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   delay: index * 0.1 
 
 
+
+
 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
@@ -656,8 +690,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             onClick={() => setShowProjectForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-            Create Project
-          </button>
+            Create Project;
+          </button>;
         </motion.div>;
       )};
     </div>;

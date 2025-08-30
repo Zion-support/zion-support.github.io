@@ -9,7 +9,11 @@ describe('apiClient interceptor', () => {
     const error = {
   response: { status: 401,;
   ;
+  ;
+  ;
   data: {;
+
+
 
 
 } } } as any;

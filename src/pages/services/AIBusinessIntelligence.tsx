@@ -49,8 +49,8 @@ export default function AIBusinessIntelligence() {
       title: "Goal Tracking",
       description: "Monitor progress towards business objectives with automated alerts and recommendations."
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: "Automated Insights",;
       description: "AI-generated recommendations and actionable insights delivered in real-time.";
     };
@@ -58,8 +58,8 @@ export default function AIBusinessIntelligence() {
 
   const benefits = [
     "Increase revenue by 15-25% through data-driven decision making",
-    "Reduce operational costs by 20-30% with optimized processes",
-    "Improve customer satisfaction by 35% with personalized insights",
+    "Reduce operational costs by 20-30% with optimized processes",;
+    "Improve customer satisfaction by 35% with personalized insights",;
     "Accelerate time-to-market by 40% with predictive analytics",;
     "Enhance team productivity by 25% with automated reporting",;
     "Reduce risk by 30% with early warning systems";
@@ -81,8 +81,8 @@ export default function AIBusinessIntelligence() {
     {
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
+    },;
+    {;
       industry: "Marketing",;
       description: "Campaign performance analysis, audience targeting, and ROI optimization";
     };
@@ -105,10 +105,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -161,10 +165,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -189,16 +197,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -224,10 +238,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +273,22 @@ export default function AIBusinessIntelligence() {
   x: -20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -315,10 +339,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -343,16 +371,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -380,10 +414,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -412,8 +450,8 @@ export default function AIBusinessIntelligence() {
               >
                 Contact Sales
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

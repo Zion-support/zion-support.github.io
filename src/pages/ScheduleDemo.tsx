@@ -23,8 +23,8 @@ const ScheduleDemo: React.FC = () => {
     email: '',
     company: '',
     phone: '',
-    preferredDate: '',
-    preferredTime: '',
+    preferredDate: '',;
+    preferredTime: '',;
     attendees: '1-5',;
     services: [],;
     message: '';
@@ -42,16 +42,16 @@ const ScheduleDemo: React.FC = () => {
     { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
     { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },
     { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },
-    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;
+    { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },;
     { id: 'digital-twin', name: 'Digital Twin Platform', icon: Rocket, description: 'Virtual Replicas & Simulation' },;
     { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
 
   const handleServiceToggle = (serviceId: string) => {
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({;
+      ...prev,;
       services: prev.services.includes(serviceId);
         ? prev.services.filter(id => id !== serviceId);
         : [...prev.services, serviceId];
@@ -86,10 +86,14 @@ const ScheduleDemo: React.FC = () => {
   scale: 0.9 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -136,8 +140,8 @@ const ScheduleDemo: React.FC = () => {
               href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
             >
-              Contact Us
-            </a>
+              Contact Us;
+            </a>;
           </div>;
         </motion.div>;
       </div>;
@@ -161,10 +165,14 @@ const ScheduleDemo: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -209,16 +217,22 @@ const ScheduleDemo: React.FC = () => {
   x: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -242,6 +256,8 @@ const ScheduleDemo: React.FC = () => {
   firstName: e.target.value 
 
 
+
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your first name"
@@ -258,6 +274,8 @@ const ScheduleDemo: React.FC = () => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   lastName: e.target.value 
+
+
 
 
 }))}
@@ -281,6 +299,8 @@ const ScheduleDemo: React.FC = () => {
   email: e.target.value 
 
 
+
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your email"
@@ -297,6 +317,8 @@ const ScheduleDemo: React.FC = () => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   company: e.target.value 
+
+
 
 
 }))}
@@ -316,6 +338,8 @@ const ScheduleDemo: React.FC = () => {
                       onChange = {
   (e) => setFormData(prev => ({ ...prev,
   phone: e.target.value 
+
+
 
 
 }))}
@@ -339,6 +363,8 @@ const ScheduleDemo: React.FC = () => {
   preferredDate: e.target.value 
 
 
+
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         min={new Date().toISOString().split('T')[0]}
@@ -354,6 +380,8 @@ const ScheduleDemo: React.FC = () => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   preferredTime: e.target.value 
+
+
 
 
 }))}
@@ -376,6 +404,8 @@ const ScheduleDemo: React.FC = () => {
                       onChange = {
   (e) => setFormData(prev => ({ ...prev,
   attendees: e.target.value 
+
+
 
 
 }))}
@@ -422,6 +452,8 @@ const ScheduleDemo: React.FC = () => {
   message: e.target.value 
 
 
+
+
 }))}
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -459,16 +491,22 @@ const ScheduleDemo: React.FC = () => {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -543,8 +581,8 @@ const ScheduleDemo: React.FC = () => {
                   </ul>
                 </div>
               </motion.div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

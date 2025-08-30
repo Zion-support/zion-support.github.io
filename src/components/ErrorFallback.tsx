@@ -36,8 +36,8 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
             <pre className="mt-2 text-xs text-red-600 bg-red-50 p-3 rounded overflow-auto">
               {error.message}
               {error.stack}
-            </pre>
-          </details>
+            </pre>;
+          </details>;
         )};
       </div>;
     </div>;

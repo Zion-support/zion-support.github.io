@@ -126,6 +126,8 @@ export function FeaturedListingsSection() {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
@@ -146,10 +148,14 @@ export function FeaturedListingsSection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -164,16 +170,22 @@ export function FeaturedListingsSection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -340,16 +352,22 @@ export function FeaturedListingsSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}

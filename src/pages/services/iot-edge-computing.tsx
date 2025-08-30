@@ -20,8 +20,8 @@ const IoTEdgeComputing: React.FC = () => {
       title: 'Local Storage',
       description: 'Store and manage data at the edge'
     },
-    {
-      icon: Cloud,
+    {;
+      icon: Cloud,;
       title: 'Hybrid Cloud',;
       description: 'Seamless integration with cloud services';
     };
@@ -43,8 +43,8 @@ const IoTEdgeComputing: React.FC = () => {
       description: 'Remote monitoring and telemedicine',
       icon: '🏥'
     },
-    {
-      title: 'Retail',
+    {;
+      title: 'Retail',;
       description: 'Smart inventory and customer analytics',;
       icon: '🛍️';
     };
@@ -52,8 +52,8 @@ const IoTEdgeComputing: React.FC = () => {
 
   const benefits = [
     'Reduced latency and faster response times',
-    'Lower bandwidth costs and network efficiency',
-    'Enhanced privacy and data security',
+    'Lower bandwidth costs and network efficiency',;
+    'Enhanced privacy and data security',;
     'Real-time decision making capabilities',;
     'Scalable and flexible architecture',;
     'Improved reliability and uptime';
@@ -75,10 +75,14 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -123,10 +127,14 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,16 +158,22 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -185,10 +199,14 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -212,16 +230,22 @@ const IoTEdgeComputing: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -249,10 +273,14 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -274,10 +302,14 @@ const IoTEdgeComputing: React.FC = () => {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -301,10 +333,14 @@ const IoTEdgeComputing: React.FC = () => {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -333,10 +369,14 @@ const IoTEdgeComputing: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -355,8 +395,8 @@ const IoTEdgeComputing: React.FC = () => {
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

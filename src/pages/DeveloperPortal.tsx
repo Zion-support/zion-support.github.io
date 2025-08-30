@@ -24,8 +24,8 @@ const DeveloperPortal: React.FC = () => {
       category: 'Learning'
     },
     {
-      icon: Download,
-      title: 'SDKs & Libraries',
+      icon: Download,;
+      title: 'SDKs & Libraries',;
       description: 'Official client libraries for all platforms',;
       category: 'Integration';
     };
@@ -51,8 +51,8 @@ const DeveloperPortal: React.FC = () => {
       difficulty: 'Intermediate'
     },
     {
-      title: 'Code Samples',
-      description: 'Real-world implementation examples',
+      title: 'Code Samples',;
+      description: 'Real-world implementation examples',;
       icon: '💻',;
       difficulty: 'All Levels';
     };
@@ -78,8 +78,8 @@ const DeveloperPortal: React.FC = () => {
       icon: '🎮'
     },
     {
-      name: 'Stack Overflow',
-      description: 'Q&A platform integration',
+      name: 'Stack Overflow',;
+      description: 'Q&A platform integration',;
       members: '5K+',;
       icon: '📝';
     };
@@ -101,10 +101,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -149,10 +153,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -176,16 +184,22 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -214,10 +228,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -241,16 +259,22 @@ const DeveloperPortal: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -287,10 +311,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -314,16 +342,22 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -353,10 +387,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -377,16 +415,22 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -434,10 +478,14 @@ const DeveloperPortal: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -456,8 +504,8 @@ const DeveloperPortal: React.FC = () => {
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

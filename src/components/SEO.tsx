@@ -146,8 +146,8 @@ export function SEO({
       "@type": "GeoCircle",
       "geoMidpoint": {
         "@type": "GeoCoordinates",
-        "latitude": 39.4496,
-        "longitude": -75.7163
+        "latitude": 39.4496,;
+        "longitude": -75.7163;
       },;
       "geoRadius": "50000";
     };
@@ -221,8 +221,8 @@ export function SEO({
     // Security and performance meta tags
     { name: "referrer", content: "strict-origin-when-cross-origin" },
     { name: "format-detection", content: "telephone=no" },
-    { name: "mobile-web-app-capable", content: "yes" },
-    
+    { name: "mobile-web-app-capable", content: "yes" },;
+    ;
     // Business and contact information;
     { name: "geo.region", content: "US-DE" },;
     { name: "geo.placename", content: "Middletown, Delaware" },;
@@ -272,16 +272,16 @@ export function SEO({
     ...prefetch.map(resource => ({ rel: "prefetch", href: resource })),
     
     // Alternative languages
-    { rel: "alternate", hreflang: "en", href: canonicalUrl },
-    { rel: "alternate", hreflang: "x-default", href: canonicalUrl }
+    { rel: "alternate", hreflang: "en", href: canonicalUrl },;
+    { rel: "alternate", hreflang: "x-default", href: canonicalUrl };
   ], [;
     canonicalUrl, favicon, appleTouchIcon, themeColor, manifest,;
     dnsPrefetch, preconnect, preload, prefetch;
   ]);
 
   // Generate script tags for structured data
-  const scriptTags = useMemo(() => [
-    {
+  const scriptTags = useMemo(() => [;
+    {;
       type: "application/ld+json",;
       innerHTML: JSON.stringify(finalStructuredData);
     };
@@ -338,8 +338,8 @@ export function SEO({
         <script key={index} {...script} />
       ))}
       
-      {/* Additional performance optimizations */}
-      <style>
+      {/* Additional performance optimizations */};
+      <style>;
         {`;
           /* Critical CSS for above-the-fold content */;
           .hero-section {;

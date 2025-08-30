@@ -20,6 +20,8 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
             
 
 
+
+
 },
             contactPoint: {
                 '@type': 'ContactPoint',
@@ -152,6 +154,8 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="keywords" content = {
   keywords.join(',
   ')
+
+
 
 
 }/>

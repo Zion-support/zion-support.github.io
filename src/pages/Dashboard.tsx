@@ -54,23 +54,23 @@ import {
 export default function Dashboard() {
   const stats = [
     { name: 'Active Services', value: '12', icon: Zap, change: '+2', changeType: 'positive', color: 'from-blue-500 to-cyan-500' },
-    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },
-    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },
+    { name: 'AI Solutions', value: '8', icon: Brain, change: '+3', changeType: 'positive', color: 'from-purple-500 to-pink-500' },;
+    { name: 'Cloud Services', value: '5', icon: Cloud, change: '+1', changeType: 'positive', color: 'from-indigo-500 to-blue-500' },;
     { name: 'Security Score', value: '98%', icon: Shield, change: '+2%', changeType: 'positive', color: 'from-green-500 to-emerald-500' },;
     { name: 'Monthly Usage', value: '2.4TB', icon: Database, change: '+15%', changeType: 'positive', color: 'from-orange-500 to-red-500' },;
     { name: 'Response Time', value: '45ms', icon: Activity, change: '-12ms', changeType: 'negative', color: 'from-teal-500 to-green-500' };
   ];
 
   const recentServices = [
-    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },
-    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },
+    { name: 'AI Business Intelligence', status: 'Active', lastUsed: '2 hours ago', usage: '85%', icon: Brain, color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Cloud DevOps Platform', status: 'Active', lastUsed: '1 day ago', usage: '92%', icon: Cloud, color: 'from-indigo-500 to-blue-500' },;
     { name: 'AI Cybersecurity Suite', status: 'Active', lastUsed: '3 days ago', usage: '78%', icon: Shield, color: 'from-red-500 to-orange-500' },;
     { name: 'Quantum Computing Lab', status: 'Active', lastUsed: '1 week ago', usage: '45%', icon: Atom, color: 'from-purple-500 to-indigo-500' },;
     { name: 'IoT Edge Platform', status: 'Active', lastUsed: '2 weeks ago', usage: '67%', icon: Network, color: 'from-cyan-500 to-blue-500' };
   ];
 
-  const upcomingEvents = [
-    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },
+  const upcomingEvents = [;
+    { title: 'AI Strategy Workshop', date: 'Dec 15, 2024', time: '10:00 AM', type: 'Workshop', icon: Brain },;
     { title: 'Security Audit Review', date: 'Dec 18, 2024', time: '2:00 PM', type: 'Review', icon: Shield },;
     { title: 'Cloud Migration Planning', date: 'Dec 22, 2024', time: '11:00 AM', type: 'Planning', icon: Cloud },;
     { title: 'Quantum Computing Demo', date: 'Dec 25, 2024', time: '3:00 PM', type: 'Demo', icon: Atom };
@@ -78,8 +78,8 @@ export default function Dashboard() {
 
   const quickActions = [
     { name: 'Add New Service', icon: Plus, href: '/services', color: 'from-green-500 to-emerald-500' },
-    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },
-    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },
+    { name: 'View Analytics', icon: BarChart3, href: '/analytics', color: 'from-blue-500 to-indigo-500' },;
+    { name: 'Security Settings', icon: Shield, href: '/security', color: 'from-red-500 to-orange-500' },;
     { name: 'Support Request', icon: HelpCircle, href: '/help', color: 'from-purple-500 to-pink-500' },;
     { name: 'Billing & Plans', icon: DollarSign, href: '/pricing', color: 'from-yellow-500 to-orange-500' },;
     { name: 'API Documentation', icon: Code, href: '/api-docs', color: 'from-gray-500 to-slate-500' };
@@ -121,10 +121,14 @@ export default function Dashboard() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -170,10 +174,14 @@ export default function Dashboard() {
   x: -20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -222,10 +230,14 @@ export default function Dashboard() {
   scale: 0.9 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -251,10 +263,14 @@ export default function Dashboard() {
   y: 10 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -310,8 +326,8 @@ export default function Dashboard() {
               <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />
               <p className="text-gray-500">Performance chart will be displayed here</p>
               <p className="text-sm text-gray-400">Integration with analytics service required</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

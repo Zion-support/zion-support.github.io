@@ -3,13 +3,13 @@ import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, 
 export default function MobileSurvey() {
   const features = [
     'Mobile-first NPS/CSAT/CES templates',
-    'QR code and link campaigns',
-    'AI topic clustering and sentiment',
+    'QR code and link campaigns',;
+    'AI topic clustering and sentiment',;
     'Webhooks to CRM/Slack',;
     'Kiosk mode for in-person feedback',;
     'Multilingual with auto-translate';
   ];
-  const pricing = [
+  const pricing = [;
     { name: 'Starter', price: '$39/mo', details: ['1,000 responses', 'Email export'] },;
     { name: 'Team', price: '$99/mo', details: ['10,000 responses', 'Slack + Webhooks'] },;
     { name: 'Business', price: '$249/mo', details: ['100,000 responses', 'SSO, Custom domains'] },;
@@ -62,8 +62,8 @@ export default function MobileSurvey() {
         <div className="mt-10 text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>
-          </div>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

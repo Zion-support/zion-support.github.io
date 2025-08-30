@@ -203,8 +203,8 @@ export default function InnovativeServicesShowcase2025() {
       benefits: [
         'Solve complex problems 100x faster than classical computing',
         'Improve machine learning accuracy by 40-60%',
-        'Enable previously impossible computational tasks'
-      ],
+        'Enable previously impossible computational tasks';
+      ],;
       path: '/services/ai-quantum-machine-learning',;
       category: 'AI & Quantum Computing';
     };
@@ -227,10 +227,14 @@ export default function InnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -245,16 +249,22 @@ export default function InnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -268,16 +278,22 @@ export default function InnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -309,16 +325,22 @@ export default function InnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -408,16 +430,22 @@ export default function InnovativeServicesShowcase2025() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -449,8 +477,8 @@ export default function InnovativeServicesShowcase2025() {
           </a>
         </div>
         
-        <div className="text-sm text-zion-slate-light">
-          Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
+        <div className="text-sm text-zion-slate-light">;
+          Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
         </div>;
       </section>;
     </div>;

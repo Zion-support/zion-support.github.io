@@ -8,7 +8,7 @@ interface InnovativeServicesOverviewProps {
 }
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
-  maxServices = 6,
+  maxServices = 6,;
   category,;
   showViewAllButton = true;
 }) => {;
@@ -16,8 +16,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 
   const tabs = [
     { id: 'featured', label: 'Featured', count: 3 },
-    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },
-    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },
+    { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
+    { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
     { id: 'saas', label: 'Micro SAAS', count: getServicesByCategory('Micro SAAS').length },;
     { id: 'business', label: 'Business', count: getServicesByCategory('Business').length },;
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length };
@@ -98,8 +98,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             Get Quote
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors">
-            Details
-          </button>
+            Details;
+          </button>;
         </div>;
       </div>;
     </div>;
@@ -216,8 +216,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </a>
-          </div>
+            </a>;
+          </div>;
         )};
       </div>;
     </div>;

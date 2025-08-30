@@ -43,16 +43,16 @@ export default function AIProjectManagementPlatform() {
     "Risk prediction and mitigation strategies",
     "Smart time estimation and deadline management",
     "Collaborative team communication tools",
-    "Advanced reporting and insights",
-    "Integration with development tools",
+    "Advanced reporting and insights",;
+    "Integration with development tools",;
     "Mobile and desktop applications",;
     "Custom workflow automation",;
     "Multi-project portfolio management";
   ];
 
   const benefits = [
-    "Increase project success rate by 45%",
-    "Reduce project delivery time by 30%",
+    "Increase project success rate by 45%",;
+    "Reduce project delivery time by 30%",;
     "Improve team productivity by 40%",;
     "Reduce project costs by 25%",;
     "Enhance stakeholder communication";
@@ -62,8 +62,8 @@ export default function AIProjectManagementPlatform() {
     "Software development teams",
     "Marketing agencies",
     "Construction companies",
-    "Consulting firms",
-    "Healthcare organizations",
+    "Consulting firms",;
+    "Healthcare organizations",;
     "Financial services",;
     "Educational institutions",;
     "Non-profit organizations";
@@ -115,8 +115,8 @@ export default function AIProjectManagementPlatform() {
         "Custom workflow automation",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited team members"
-      ],
+        "Unlimited team members";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -138,10 +138,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -190,10 +194,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -217,16 +225,22 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -251,10 +265,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -278,16 +296,22 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -312,10 +336,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -339,16 +367,22 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -373,10 +407,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -400,16 +438,22 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -471,10 +515,14 @@ export default function AIProjectManagementPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -518,8 +566,8 @@ export default function AIProjectManagementPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -359,8 +359,8 @@ const blockchainSolutions = [
       "Data migration",
       "Legacy support"
     ],
-    price: "From $200,000",
-    timeline: "18-30 weeks",
+    price: "From $200,000",;
+    timeline: "18-30 weeks",;
     category: "Integration",;
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
   };
@@ -390,8 +390,8 @@ const blockchainTechnologies = [
   },
   {
     name: "Cryptography",
-    description: "Advanced cryptographic security solutions",
-    icon: Lock,
+    description: "Advanced cryptographic security solutions",;
+    icon: Lock,;
     useCase: "Security & Privacy",;
     reliability: "High";
   };
@@ -420,8 +420,8 @@ const successStories = [
     id: 3,
     company: "Healthcare Identity Solutions",
     industry: "Healthcare",
-    challenge: "Needed secure patient identity management system",
-    solution: "Built blockchain-based identity management platform",
+    challenge: "Needed secure patient identity management system",;
+    solution: "Built blockchain-based identity management platform",;
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;
     logo: "HIS";
   };
@@ -451,8 +451,8 @@ const processSteps = [
   },
   {
     step: 4,
-    title: "Testing & Deployment",
-    description: "Test blockchain systems and deploy to production",
+    title: "Testing & Deployment",;
+    description: "Test blockchain systems and deploy to production",;
     icon: Gauge,;
     duration: "4-8 weeks";
   };
@@ -478,8 +478,8 @@ const blockchainBenefits = [
     examples: ["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
   {
-    title: "Cost Reduction",
-    description: "Blockchain eliminates intermediaries and reduces operational costs",
+    title: "Cost Reduction",;
+    description: "Blockchain eliminates intermediaries and reduces operational costs",;
     icon: TrendingUp,;
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
   };
@@ -512,10 +512,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -528,16 +532,22 @@ export default function BlockchainEnterpriseSolutions() {
   scale: 0.8 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -583,10 +593,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -608,16 +622,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -654,10 +674,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -679,16 +703,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -726,10 +756,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -751,16 +785,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -795,10 +835,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -837,16 +881,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -909,10 +959,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -934,16 +988,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -995,10 +1055,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1024,8 +1088,8 @@ export default function BlockchainEnterpriseSolutions() {
               >
                 Blockchain Consultation
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

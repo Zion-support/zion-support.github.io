@@ -37,8 +37,12 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       showStack: false,;
+  ;
+  ;
   errorId: '';
     ;
+
+
 
 
 };
@@ -80,8 +84,12 @@ export class ErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,;
+  ;
+  ;
   // Add any other relevant information;
       ;
+
+
 
 
 };
@@ -101,8 +109,8 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   private handleRetry = () => {
-    this.setState({
-      hasError: false,
+    this.setState({;
+      hasError: false,;
       error: null,;
       errorInfo: null,;
       showStack: false;
@@ -119,8 +127,8 @@ export class ErrorBoundary extends Component<Props, State> {
 Error Details:
 Message: ${this.state.error.message}
 Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-Error ID: ${this.state.errorId}
+Component Stack: ${this.state.errorInfo.componentStack};
+Error ID: ${this.state.errorId};
 Timestamp: ${new Date().toISOString()};
 URL: ${window.location.href};
 User Agent: ${navigator.userAgent};
@@ -169,10 +177,14 @@ User Agent: ${navigator.userAgent};
   scale: 0.9 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -251,16 +263,22 @@ User Agent: ${navigator.userAgent};
   opacity: 0 
 
 
+
+
 }}
                         animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }}
                         exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }}
@@ -347,8 +365,8 @@ User Agent: ${navigator.userAgent};
             {/* Footer */}
             <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
               <p className="text-center text-sm text-gray-500">
-                If this problem continues, please contact our support team with the Error ID above.
-              </p>
+                If this problem continues, please contact our support team with the Error ID above.;
+              </p>;
             </div>;
           </div>;
         </motion.div>;

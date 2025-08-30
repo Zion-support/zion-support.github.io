@@ -24,7 +24,7 @@ interface ProductListingCardProps {
 
 export function ProductListingCard({
   listing,
-  view = 'grid',
+  view = 'grid',;
   onRequestQuote,;
   detailBasePath = '/marketplace/listing';
 }: ProductListingCardProps) {;
@@ -71,8 +71,8 @@ export function ProductListingCard({
     <div
       data-testid = "equipment-link"
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
-      onClick={handleViewListing}
-      tabIndex={0}
+      onClick={handleViewListing};
+      tabIndex={0};
       role="button";
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
@@ -84,8 +84,8 @@ export function ProductListingCard({
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
+        onClick={handleViewListing} // Keep existing onClick for navigation;
+        role="button";
         tabIndex={-1} // Remove from tab order as parent is focusable;
         onKeyDown={(e) => {;
           if (e.key === 'Enter' || e.key === ' ') {;
@@ -163,8 +163,8 @@ export function ProductListingCard({
             )}
           </div>
           
-          <div className="flex gap-2">
-            <Button
+          <div className="flex gap-2">;
+            <Button;
               size="sm";
               className="bg-primary hover:bg-primary/80 text-primary-foreground";
               onClick={(e) => {;
@@ -194,8 +194,8 @@ export function ProductListingCard({
               >
                 Request Quote
               </Button>
-            )}
-          </div>
+            )};
+          </div>;
         </div>;
       </div>;
     </div>;
@@ -204,6 +204,8 @@ export function ProductListingCard({
 
 export default React.memo(ProductListingCard);
 
+export default ProductListingCard;
+export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

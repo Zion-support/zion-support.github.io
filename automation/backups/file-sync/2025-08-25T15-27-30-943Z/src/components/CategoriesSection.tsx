@@ -50,8 +50,8 @@ const categories = [
   {
     title: "AI Hiring Platform",
     description: "AI-powered recruitment and talent acquisition tools",
-    icon: <ZapIcon className="w-10 h-10" />,
-    link: "/zion-hire-ai",
+    icon: <ZapIcon className="w-10 h-10" />,;
+    link: "/zion-hire-ai",;
     color: "from-zion-purple to-zion-purple-dark",;
     featured: true;
   };
@@ -76,8 +76,8 @@ const specialServices = [
     description: "Scalable cloud infrastructure"
   },
   {
-    title: "Security Services",
-    link: "/security-services",
+    title: "Security Services",;
+    link: "/security-services",;
     icon: <Shield className="w-5 h-5" />,;
     description: "Cybersecurity & compliance";
   };
@@ -89,8 +89,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -100,9 +100,11 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 30 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6, ease: "easeOut" };
     };
@@ -123,10 +125,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -201,16 +207,22 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -225,16 +237,22 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   scale: 0.9 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.5 + index * 0.1 
+
+
 
 
 }}
@@ -265,16 +283,22 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -284,8 +308,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold group"
           >
             Explore All Categories
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;

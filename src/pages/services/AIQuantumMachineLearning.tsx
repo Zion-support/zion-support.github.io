@@ -7,8 +7,8 @@ export default function AIQuantumMachineLearning() {
     'Advanced quantum neural network optimization',
     'Real-time quantum algorithm execution',
     'Quantum machine learning model training',
-    'Advanced quantum data processing and analysis',
-    'Quantum-enhanced optimization algorithms',
+    'Advanced quantum data processing and analysis',;
+    'Quantum-enhanced optimization algorithms',;
     'Real-time quantum computing resource management',;
     'AI-driven quantum algorithm selection',;
     'Comprehensive quantum computing analytics';
@@ -16,8 +16,8 @@ export default function AIQuantumMachineLearning() {
 
   const benefits = [
     'Solve complex problems 100x faster than classical computing',
-    'Improve machine learning accuracy by 40-60%',
-    'Enable previously impossible computational tasks',
+    'Improve machine learning accuracy by 40-60%',;
+    'Enable previously impossible computational tasks',;
     'Reduce computational costs for complex algorithms',;
     'Accelerate scientific research and discovery',;
     'Enable breakthrough innovations in AI and ML';
@@ -25,8 +25,8 @@ export default function AIQuantumMachineLearning() {
 
   const useCases = [
     'Drug discovery and pharmaceutical research',
-    'Financial modeling and risk assessment',
-    'Climate modeling and environmental research',
+    'Financial modeling and risk assessment',;
+    'Climate modeling and environmental research',;
     'Materials science and nanotechnology',;
     'Cryptography and cybersecurity',;
     'Artificial intelligence and machine learning';
@@ -43,8 +43,8 @@ export default function AIQuantumMachineLearning() {
       price: '$4,999/mo', 
       details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Quantum', 
+    { ;
+      name: 'Enterprise Quantum', ;
       price: '$12,999/mo', ;
       details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AIQuantumMachineLearning() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

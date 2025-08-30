@@ -75,6 +75,8 @@ export function MainSidebar() {
                     : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
 
 
+
+
 }>
                     {item.icon}
                     <span>{item.label}</span>

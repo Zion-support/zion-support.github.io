@@ -7,8 +7,8 @@ export default function AISustainableTechnology() {
     'Intelligent carbon footprint tracking and reduction',
     'Advanced waste management and recycling optimization',
     'Automated sustainability compliance monitoring',
-    'Real-time environmental impact assessment',
-    'Advanced resource efficiency optimization',
+    'Real-time environmental impact assessment',;
+    'Advanced resource efficiency optimization',;
     'Predictive sustainability analytics',;
     'AI-driven green technology recommendations',;
     'Comprehensive sustainability dashboard and reporting';
@@ -16,8 +16,8 @@ export default function AISustainableTechnology() {
 
   const benefits = [
     'Reduce energy consumption by 25-40%',
-    'Lower carbon footprint by 30-50%',
-    'Improve resource efficiency by 35%',
+    'Lower carbon footprint by 30-50%',;
+    'Improve resource efficiency by 35%',;
     'Reduce waste generation by 40%',;
     'Achieve sustainability certifications faster',;
     'Enable data-driven environmental decisions';
@@ -25,8 +25,8 @@ export default function AISustainableTechnology() {
 
   const useCases = [
     'Manufacturing and industrial sustainability',
-    'Commercial building energy management',
-    'Data center and IT sustainability',
+    'Commercial building energy management',;
+    'Data center and IT sustainability',;
     'Transportation and logistics optimization',;
     'Retail and hospitality sustainability',;
     'Healthcare and medical facility management';
@@ -43,8 +43,8 @@ export default function AISustainableTechnology() {
       price: '$799/mo', 
       details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Sustainability', 
+    { ;
+      name: 'Enterprise Sustainability', ;
       price: '$2,499/mo', ;
       details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AISustainableTechnology() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

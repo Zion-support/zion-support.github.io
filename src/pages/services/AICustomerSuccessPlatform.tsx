@@ -42,16 +42,16 @@ export default function AICustomerSuccessPlatform() {
     "Real-time customer sentiment analysis",
     "Proactive support and engagement automation",
     "Customer success metrics and analytics",
-    "Integration with CRM and support systems",
-    "Multi-channel communication tools",
+    "Integration with CRM and support systems",;
+    "Multi-channel communication tools",;
     "Customer feedback and survey automation",;
     "Success playbook and best practices",;
     "Revenue expansion and upsell opportunities";
   ];
 
   const benefits = [
-    "Reduce customer churn by 40%",
-    "Increase customer lifetime value by 50%",
+    "Reduce customer churn by 40%",;
+    "Increase customer lifetime value by 50%",;
     "Improve customer satisfaction by 35%",;
     "Reduce support costs by 30%",;
     "Accelerate time to value for customers";
@@ -61,8 +61,8 @@ export default function AICustomerSuccessPlatform() {
     "SaaS companies",
     "B2B service providers",
     "E-commerce businesses",
-    "Financial services",
-    "Healthcare organizations",
+    "Financial services",;
+    "Healthcare organizations",;
     "Educational institutions",;
     "Consulting firms",;
     "Technology companies";
@@ -114,8 +114,8 @@ export default function AICustomerSuccessPlatform() {
         "Custom success playbooks",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited team members"
-      ],
+        "Unlimited team members";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -137,10 +137,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -189,10 +193,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,16 +224,22 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -250,10 +264,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -277,16 +295,22 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -311,10 +335,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -338,16 +366,22 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -372,10 +406,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -399,16 +437,22 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -470,10 +514,14 @@ export default function AICustomerSuccessPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -517,8 +565,8 @@ export default function AICustomerSuccessPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

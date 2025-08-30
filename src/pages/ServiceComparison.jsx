@@ -48,9 +48,13 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -71,6 +75,8 @@ const ServiceComparison = () => {
   '_blank')
 
 
+
+
 }>
                 Get Expert Help
               </Button>
@@ -87,9 +93,13 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -108,14 +118,20 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -147,9 +163,13 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -167,14 +187,20 @@ const ServiceComparison = () => {
   x: -20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="flex items-start gap-3">
@@ -193,9 +219,13 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -220,9 +250,13 @@ const ServiceComparison = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
@@ -239,6 +273,8 @@ const ServiceComparison = () => {
   '_blank')
 
 
+
+
 }>
                 <Users className="w-5 h-5 mr-2"/>
                 Get Expert Consultation
@@ -246,6 +282,8 @@ const ServiceComparison = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

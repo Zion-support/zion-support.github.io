@@ -40,8 +40,8 @@ const Services: React.FC = () => {
                 <li>Sequence testing and analytics</li>
                 <li>Compliance guardrails</li>
               </ul>
-              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>
-              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>;
+              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>;
             </div>;
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
               <h3 className="text-2xl font-bold mb-2">Support Ticket Triage Copilot</h3>;
@@ -51,8 +51,8 @@ const Services: React.FC = () => {
                 <li>Knowledge base suggestions</li>
                 <li>First-response macros</li>
               </ul>
-              <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>
-              <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>;
+              <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>;
             </div>;
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">;
               <h3 className="text-2xl font-bold mb-2">Invoice OCR + Reconciliation</h3>;
@@ -171,8 +171,8 @@ const Services: React.FC = () => {
         </div>
         <div className="mt-16">
           <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-            📞 Call +1 (302) 464-0950
-          </a>
+            📞 Call +1 (302) 464-0950;
+          </a>;
         </div>;
       </div>;
     </div>;

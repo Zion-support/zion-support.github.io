@@ -38,14 +38,18 @@ const DEFAULT_SETTINGS: AccessibilitySettings = {
   reducedMotion: false,
   screenReader: false,
   keyboardNavigation: false,;
+  ;
+  ;
   focusIndicator: true;
 ;
+
+
 
 
 };
 
 export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  className = '',
+  className = '',;
   showPanel = false,;
   onSettingsChange;
 }) => {;
@@ -118,7 +122,11 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const newSettings = {
   ...settings,;
   ;
+  ;
+  ;
   [key]: value ;
+
+
 
 
 };
@@ -165,7 +173,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     updateSetting('focusIndicator', !settings.focusIndicator);
   }, [settings.focusIndicator, updateSetting]);
 
-  const tabs = [
+  const tabs = [;
     { id: 'general', label: 'General', icon: Settings },;
     { id: 'visual', label: 'Visual', icon: Eye },;
     { id: 'navigation', label: 'Navigation', icon: Keyboard };
@@ -202,10 +210,14 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
 
 
 }}
@@ -214,10 +226,14 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   y: 20 
 
 
+
+
 }}
               transition = {
   { type: "spring", bounce: 0.2,
   duration: 0.6 
+
+
 
 
 }}
@@ -238,8 +254,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                 >
                   <X className="w-5 h-5 text-gray-500" />
                 </button>
-              </div>
-
+              </div>;
+;
               {/* Tabs */};
               <div className="flex border-b border-gray-200 dark:border-gray-700">;
                 {tabs.map((tab) => {;
@@ -254,8 +270,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                         isActive
                           ? 'text-cyan-600 border-b-2 border-cyan-500 bg-cyan-50 dark:bg-cyan-900/20'
                           : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
-                      }`}
-                    >
+                      }`};
+                    >;
                       <Icon className="w-4 h-4" />;
                       <span>{tab.label}</span>;
                     </button>;
@@ -274,16 +290,22 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   x: 20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }}
@@ -357,16 +379,22 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   x: 20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }}
@@ -440,16 +468,22 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   x: 20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }}
@@ -526,8 +560,8 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </>;

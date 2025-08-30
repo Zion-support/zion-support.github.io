@@ -5,8 +5,8 @@ export default function Training() {
 	return (
 		<div className = "min-h-screen bg-slate-900 text-white py-16">
 			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Training</h1>
+			<div className="container mx-auto px-4 max-w-4xl">;
+				<h1 className="text-4xl font-bold mb-4">Training</h1>;
 				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>;
 			</div>;
 		</div>;
@@ -26,24 +26,24 @@ export default function Training() {
     { id: 'all', name: 'All Categories', icon: <GraduationCap className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
     { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 3 },;
     { id: 'leadership', name: 'Leadership & Management', icon: <Users className="w-5 h-5" />, count: 4 };
   ];
 
   const levels = [
-    { id: 'all', name: 'All Levels', count: 0 },
-    { id: 'beginner', name: 'Beginner', count: 0 },
+    { id: 'all', name: 'All Levels', count: 0 },;
+    { id: 'beginner', name: 'Beginner', count: 0 },;
     { id: 'intermediate', name: 'Intermediate', count: 0 },;
     { id: 'advanced', name: 'Advanced', count: 0 },;
     { id: 'expert', name: 'Expert', count: 0 };
   ];
 
   const formats = [
-    { id: 'all', name: 'All Formats', count: 0 },
-    { id: 'online', name: 'Online', count: 0 },
+    { id: 'all', name: 'All Formats', count: 0 },;
+    { id: 'online', name: 'Online', count: 0 },;
     { id: 'in-person', name: 'In-Person', count: 0 },;
     { id: 'hybrid', name: 'Hybrid', count: 0 },;
     { id: 'self-paced', name: 'Self-Paced', count: 0 };
@@ -207,8 +207,8 @@ export default function Training() {
         'Digital Strategy Development',
         'Change Management and Culture',
         'Technology Selection and Implementation',
-        'Stakeholder Management',
-        'Success Measurement'
+        'Stakeholder Management',;
+        'Success Measurement';
       ],;
       skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy'];
     };
@@ -261,8 +261,8 @@ export default function Training() {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
       month: 'long',;
       day: 'numeric';
@@ -573,8 +573,8 @@ export default function Training() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Advisor
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </div>;
     </div>;

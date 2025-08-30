@@ -44,8 +44,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       benefits: ["Performance insights", "Memory leak detection", "Optimization recommendations"]
     },
     {
-      icon: TrendingUp,
-      title: "Quality Metrics",
+      icon: TrendingUp,;
+      title: "Quality Metrics",;
       description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",;
       benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"];
     };
@@ -55,8 +55,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
     "Python", "JavaScript", "TypeScript", "Java", "C#", "C++", "Go", "Rust", "PHP", "Ruby", "Swift", "Kotlin";
   ];
 
-  const integrations = [
-    { name: "GitHub", icon: Github, description: "Seamless integration with GitHub repositories and pull requests" },
+  const integrations = [;
+    { name: "GitHub", icon: Github, description: "Seamless integration with GitHub repositories and pull requests" },;
     { name: "GitLab", icon: Gitlab, description: "Full support for GitLab CI/CD pipelines and merge requests" },;
     { name: "Slack", icon: Slack, description: "Real-time notifications and alerts in Slack channels" },;
     { name: "Jira", icon: MessageSquare, description: "Connect code reviews with Jira tickets and workflows" };
@@ -106,8 +106,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
         "API access",
         "Dedicated support",
         "Custom integrations",
-        "SLA guarantee"
-      ],
+        "SLA guarantee";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -129,8 +129,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       description: "Meet security requirements and compliance standards with automated security scanning.",
       icon: Shield
     },
-    {
-      title: "Performance Optimization",
+    {;
+      title: "Performance Optimization",;
       description: "Identify and fix performance bottlenecks through intelligent code analysis.",;
       icon: Zap;
     };
@@ -371,8 +371,8 @@ const AIAutonomousCodeReviewer: React.FC = () => {
             </div>
             <p className="text-sm text-gray-400 mt-6">
               Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>
-            </p>
-          </div>
+            </p>;
+          </div>;
         </section>;
       </div>;
     </>;

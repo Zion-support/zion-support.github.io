@@ -25,8 +25,8 @@ export function SEO({
   publishedTime,
   modifiedTime,
   author = 'Zion Tech Group',
-  section,
-  tags = [],
+  section,;
+  tags = [],;
   noindex = false,;
   nofollow = false;
 }: SEOProps) {;
@@ -54,6 +54,8 @@ export function SEO({
     "name": "Zion Tech Group",
     "url": siteUrl,
   "logo": `${siteUrl
+
+
 
 
 }/images/zion-tech-group-logo.png`,
@@ -113,8 +115,8 @@ export function SEO({
           "itemOffered": {
             "@type": "Service",
             "name": "Cloud & DevOps",
-            "description": "Scalable cloud infrastructure and development operations"
-          }
+            "description": "Scalable cloud infrastructure and development operations";
+          };
         };
       ];
     };
@@ -133,6 +135,8 @@ export function SEO({
     
 
 
+
+
 },
     "publisher": {
       "@type": "Organization",
@@ -148,8 +152,8 @@ export function SEO({
     "author": {
       "@type": "Organization",
       "name": author
-    },
-    ...(type === 'article' && {
+    },;
+    ...(type === 'article' && {;
       "articleSection": section,;
       "keywords": tags.join(', ');
     });
@@ -191,6 +195,8 @@ export function SEO({
   ')
 
 
+
+
 } />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
@@ -218,8 +224,8 @@ export function SEO({
       <meta name="application-name" content="Zion Tech Group" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
+      ;
       {/* Security Headers */};
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
       <meta httpEquiv="X-Frame-Options" content="DENY" />;
@@ -240,8 +246,8 @@ export function SEO({
       <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
       <meta name="business:contact_data:locality" content="Middletown" />
       <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19709" />
-      <meta name="business:contact_data:country_name" content="United States" />
+      <meta name="business:contact_data:postal_code" content="19709" />;
+      <meta name="business:contact_data:country_name" content="United States" />;
       <meta name="business:contact_data:phone_number" content="+1-800-ZION-TECH" />;
       <meta name="business:contact_data:email" content="info@ziontechgroup.com" />;
     </Helmet>;

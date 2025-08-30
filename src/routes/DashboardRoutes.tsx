@@ -216,8 +216,8 @@ const DashboardRoutes = () => {
         path="/contract-builder"
         element={
           <ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
+            <ContractBuilder />;
+          </ProtectedRoute>;
         } ;
       />;
     </Routes>;

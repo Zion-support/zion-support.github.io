@@ -359,7 +359,11 @@ export default function EnhancedAccessibilityEnhancer({
     const scores = {
   A: 0, AA: 0,;
   ;
+  ;
+  ;
   AAA: 0 ;
+
+
 
 
 };
@@ -457,10 +461,12 @@ export default function EnhancedAccessibilityEnhancer({
       customColors: {
         background: '#ffffff',
         text: '#000000',
-        primary: '#3b82f6',
-  secondary: '#64748b'
+        primary: '#3b82f6',;
+  secondary: '#64748b';
       ;
 ;
+
+
 
 };
     };
@@ -517,16 +523,22 @@ export default function EnhancedAccessibilityEnhancer({
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -660,10 +672,14 @@ export default function EnhancedAccessibilityEnhancer({
   y: 20 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -728,16 +744,22 @@ export default function EnhancedAccessibilityEnhancer({
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -757,7 +779,11 @@ export default function EnhancedAccessibilityEnhancer({
   (e) => {
                               const newSettings = { ...settings,;
   ;
+  ;
+  ;
   fontSize: parseInt(e.target.value) ;
+
+
 
 
 };
@@ -782,7 +808,11 @@ export default function EnhancedAccessibilityEnhancer({
   (e) => {
                               const newSettings = { ...settings,;
   ;
+  ;
+  ;
   lineHeight: parseFloat(e.target.value) ;
+
+
 
 
 };
@@ -852,8 +882,8 @@ export default function EnhancedAccessibilityEnhancer({
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
-
+      </AnimatePresence>;
+;
       {/* Global Accessibility Styles */};
       <style jsx global>{`;
         .high-contrast {;

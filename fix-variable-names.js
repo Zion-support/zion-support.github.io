@@ -13,6 +13,8 @@ function toCamelCase(str) {
       
 
 
+
+
 };
       return numberWords[match] || match;
     })
@@ -90,6 +92,8 @@ console.log('Fixing invalid variable names in TypeScript files...');
 const fixedCount = findAndFixFiles('./pages');
 console.log(`Fixed ${fixedCount} files.`);
 
+export default toCamelCase;
+export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;
 export default toCamelCase;

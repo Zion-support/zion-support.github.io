@@ -33,14 +33,14 @@ import {
 
 const Cookies = () => {
   const [expandedSections, setExpandedSections] = useState({
-    essential: true,
-    functional: false,
+    essential: true,;
+    functional: false,;
     analytics: false,;
     marketing: false,;
     preferences: false;
   });
 
-  const toggleSection = (section) => {
+  const toggleSection = (section) => {;
     setExpandedSections(prev => ({;
       ...prev,;
       [section]: !prev[section];
@@ -113,8 +113,8 @@ const Cookies = () => {
       examples: [
         'Content preferences',
         'Notification settings',
-        'Accessibility options',
-        'Theme selection'
+        'Accessibility options',;
+        'Theme selection';
       ],;
       alwaysActive: false;
     };
@@ -165,8 +165,8 @@ const Cookies = () => {
     },
     {
       name: 'preferences',
-      purpose: 'Stores your website preferences and settings',
-      duration: '1 year',
+      purpose: 'Stores your website preferences and settings',;
+      duration: '1 year',;
       category: 'Preferences',;
       provider: 'Zion Tech Group';
     };
@@ -188,10 +188,14 @@ const Cookies = () => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -254,16 +258,22 @@ const Cookies = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
+
+
 
 
 }}
@@ -284,16 +294,22 @@ const Cookies = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.2 
+
+
 
 
 }}
@@ -314,16 +330,22 @@ const Cookies = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.3 
+
+
 
 
 }}
@@ -364,16 +386,22 @@ const Cookies = () => {
   x: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -417,16 +445,22 @@ const Cookies = () => {
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -582,8 +616,8 @@ const Cookies = () => {
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Terms of Service
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </section>;
     </div>;
@@ -592,6 +626,8 @@ const Cookies = () => {
 
 export default Cookies;
 
+export default properly;
+export default properly;
 export default properly;
 export default properly;
 export default properly;

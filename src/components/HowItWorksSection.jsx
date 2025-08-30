@@ -29,6 +29,8 @@ export function HowItWorksSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -43,6 +45,8 @@ export function HowItWorksSection() {
     const statsVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
+
+
 
 
 },
@@ -74,10 +78,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }} 
                     whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} 
@@ -91,10 +99,14 @@ export function HowItWorksSection() {
   scale: 0.8 
 
 
+
+
 }}
                         whileInView = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -102,6 +114,8 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -117,10 +131,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
                         whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -128,6 +146,8 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -142,10 +162,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
                         whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -153,6 +177,8 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -210,16 +236,22 @@ export function HowItWorksSection() {
   height: 0 
 
 
+
+
 }}
                                             animate = {
   { opacity: 1,
   height: "auto" 
 
 
+
+
 }}
                                             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -264,10 +296,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -275,6 +311,8 @@ export function HowItWorksSection() {
                     transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -301,6 +339,8 @@ export function HowItWorksSection() {
   stiffness: 400 
 
 
+
+
 }}
                             >
                                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
@@ -325,10 +365,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -336,6 +380,8 @@ export function HowItWorksSection() {
                     transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}

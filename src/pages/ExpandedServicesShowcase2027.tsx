@@ -138,10 +138,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -221,16 +225,22 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -322,8 +332,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-              </a>
-            </div>
+              </a>;
+            </div>;
           </div>;
         </div>;
       </motion.div>;
@@ -342,10 +352,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -419,8 +433,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-              </a>
-            </div>
+              </a>;
+            </div>;
           </div>;
         </div>;
       </motion.div>;
@@ -445,10 +459,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -466,16 +484,22 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -492,16 +516,22 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -647,8 +677,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

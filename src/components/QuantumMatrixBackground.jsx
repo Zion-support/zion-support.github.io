@@ -141,6 +141,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} animate = {
   {
                 scale: [1, 1.2, 1],
@@ -150,12 +152,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} transition = {
   {
                 duration: 8,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
+
 
 
 }}/>
@@ -168,6 +174,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} animate = {
   {
                 y: [0, -20, 0],
@@ -177,12 +185,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} transition = {
   {
                 duration: 6,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
+
 
 
 }}/>
@@ -194,6 +206,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} animate = {
   {
                 scale: [1, 1.5, 1],
@@ -202,12 +216,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} transition = {
   {
                 duration: 10,
                 repeat: Infinity,
   ease: "linear"
             
+
+
 
 
 }}/>
@@ -224,12 +242,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 
 
 
+
+
 }} transition = {
   {
                     duration: 20,
                     repeat: Infinity,
   ease: "linear"
                 
+
+
 
 
 }}>
@@ -248,6 +270,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         
 
 
+
+
 }} animate = {
   {
             scale: [1, 1.5, 1],
@@ -256,12 +280,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         
 
 
+
+
 }} transition = {
   {
             duration: 12,
             repeat: Infinity,
   ease: "easeInOut"
         
+
+
 
 
 }}/>
@@ -274,6 +302,8 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         
 
 
+
+
 }} animate = {
   {
             scale: [1, 1.3, 1],
@@ -282,12 +312,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
         
 
 
+
+
 }} transition = {
   {
             duration: 15,
             repeat: Infinity,
   ease: "easeInOut"
         
+
+
 
 
 }}/>
@@ -306,12 +340,16 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             
 
 
+
+
 }} transition = {
   {
                 duration: 4 + Math.random() * 4,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
+
 
 
 }}/>))}

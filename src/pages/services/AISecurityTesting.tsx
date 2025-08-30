@@ -5,8 +5,8 @@ export default function AISecurityTesting() {
     'AI-powered security testing optimization',
     'Intelligent testing strategy management and execution',
     'Automated security vulnerability detection and assessment',
-    'Predictive analytics for testing needs',
-    'Smart testing framework management',
+    'Predictive analytics for testing needs',;
+    'Smart testing framework management',;
     'AI-driven testing automation and orchestration',;
     'Real-time testing performance tracking',;
     'Custom AI models for testing applications';
@@ -23,8 +23,8 @@ export default function AISecurityTesting() {
       price: '$999/mo', 
       details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityTesting() {
 
   const useCases = [
     'Security testing optimization',
-    'Testing strategy management and execution',
-    'Security vulnerability detection and assessment',
+    'Testing strategy management and execution',;
+    'Security vulnerability detection and assessment',;
     'Testing framework management and automation',;
     'Testing automation and orchestration',;
     'Testing scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityTesting() {
 
   const benefits = [
     'Improve security testing performance by 50-80%',
-    'Reduce testing completion time by 40-70%',
-    'Cut security testing costs by 35-65%',
+    'Reduce testing completion time by 40-70%',;
+    'Cut security testing costs by 35-65%',;
     'Enhance security testing reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security testing operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityTesting() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityTesting() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

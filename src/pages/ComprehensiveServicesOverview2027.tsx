@@ -140,23 +140,23 @@ const MICRO_SAAS_SERVICES = [
     reviewCount: 234,
     aiScore: 98,
     featured: true,
-    createdAt: '2024-01-10',
-    href: '/services/website-analytics',
+    createdAt: '2024-01-10',;
+    href: '/services/website-analytics',;
     tags: ['Analytics', 'Web', 'Performance'],;
     images: ['/images/analytics.jpg'];
   };
 ];
 
-const categories = [
-  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },
+const categories = [;
+  { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 
 const pricingModels = [
-  { id: 'all', name: 'All Pricing' },
-  { id: 'monthly', name: 'Monthly' },
+  { id: 'all', name: 'All Pricing' },;
+  { id: 'monthly', name: 'Monthly' },;
   { id: 'yearly', name: 'Yearly' },;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
@@ -181,8 +181,8 @@ export default function ComprehensiveServicesOverview2027() {
     }
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase();
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(query) ||
+      filtered = filtered.filter(service =>;
+        service.title.toLowerCase().includes(query) ||;
         service.description.toLowerCase().includes(query) ||;
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||;
         service.subcategory?.toLowerCase().includes(query);
@@ -212,10 +212,14 @@ export default function ComprehensiveServicesOverview2027() {
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -282,8 +286,8 @@ export default function ComprehensiveServicesOverview2027() {
         >
           <Link to={service.href}>
             Learn More
-            <ArrowRight className="ml-2 w-4 h-4" />
-          </Link>
+            <ArrowRight className="ml-2 w-4 h-4" />;
+          </Link>;
         </Button>;
       </div>;
     </motion.div>;
@@ -300,10 +304,14 @@ export default function ComprehensiveServicesOverview2027() {
   y: -20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -321,16 +329,22 @@ export default function ComprehensiveServicesOverview2027() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -423,8 +437,8 @@ export default function ComprehensiveServicesOverview2027() {
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-16">;
             <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>;
             <Button;
               onClick={() => {;
@@ -460,8 +474,8 @@ export default function ComprehensiveServicesOverview2027() {
               <a href="tel:+13024640950">
                 Call Now: +1 302 464 0950
               </a>
-            </Button>
-          </div>
+            </Button>;
+          </div>;
         </div>;
       </section>;
     </div>;

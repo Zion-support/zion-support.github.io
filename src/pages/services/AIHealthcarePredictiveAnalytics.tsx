@@ -50,8 +50,12 @@ export default function AIHealthcarePredictiveAnalytics() {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
@@ -82,8 +86,8 @@ export default function AIHealthcarePredictiveAnalytics() {
       title: 'Real-time Patient Monitoring',
       description: 'Continuous monitoring and alerting for critical health indicators'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: 'Advanced Clinical Insights',;
       description: 'Generate actionable insights from complex medical data and research';
     };
@@ -91,8 +95,8 @@ export default function AIHealthcarePredictiveAnalytics() {
 
   const benefits = [
     'Reduce readmission rates by 35%',
-    'Improve early detection by 60%',
-    'Cut healthcare costs by 25%',
+    'Improve early detection by 60%',;
+    'Cut healthcare costs by 25%',;
     'Enhance patient outcomes by 45%',;
     'Streamline clinical workflows',;
     'Enable proactive care delivery';
@@ -153,8 +157,8 @@ export default function AIHealthcarePredictiveAnalytics() {
         'Dedicated healthcare consultant',
         'Custom training programs',
         'White-label solutions',
-        'Multi-tenant architecture'
-      ],
+        'Multi-tenant architecture';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -186,8 +190,8 @@ export default function AIHealthcarePredictiveAnalytics() {
       description: 'Childhood disease prediction and growth monitoring',
       icon: Users
     },
-    {
-      title: 'Geriatrics',
+    {;
+      title: 'Geriatrics',;
       description: 'Aging-related health decline prediction and prevention',;
       icon: UserCheck;
     };
@@ -209,8 +213,8 @@ export default function AIHealthcarePredictiveAnalytics() {
       description: 'Advanced analytics for clinical research and drug development',
       icon: TestTube
     },
-    {
-      title: 'Insurance Companies',
+    {;
+      title: 'Insurance Companies',;
       description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield;
     };
@@ -218,8 +222,8 @@ export default function AIHealthcarePredictiveAnalytics() {
 
   const complianceFeatures = [
     'HIPAA Compliance',
-    'HITECH Act Support',
-    'SOC 2 Type II Certified',
+    'HITECH Act Support',;
+    'SOC 2 Type II Certified',;
     'GDPR Compliance',;
     'FDA Guidelines Adherence',;
     'Clinical Trial Compliance';
@@ -242,10 +246,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -289,10 +297,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -317,16 +329,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -353,10 +371,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -381,16 +403,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -417,10 +445,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -445,16 +477,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -478,10 +516,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -506,16 +548,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -539,10 +587,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -567,16 +619,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -603,10 +661,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -631,16 +693,22 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -699,10 +767,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -741,10 +813,14 @@ export default function AIHealthcarePredictiveAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -782,8 +858,8 @@ export default function AIHealthcarePredictiveAnalytics() {
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

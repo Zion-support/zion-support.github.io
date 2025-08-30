@@ -93,8 +93,8 @@ const IoTEdgeComputing = () => {
       title: 'Edge Security',
       description: 'Advanced security for edge devices and data'
     },
-    {
-      icon: Cloud,
+    {;
+      icon: Cloud,;
       title: 'Cloud Integration',;
       description: 'Seamless cloud-edge data synchronization';
     };
@@ -102,8 +102,8 @@ const IoTEdgeComputing = () => {
 
   const benefits = [
     'Reduce latency by 90% with edge processing',
-    'Lower bandwidth costs by 60%',
-    'Improve data privacy and security',
+    'Lower bandwidth costs by 60%',;
+    'Improve data privacy and security',;
     'Enable real-time decision making',;
     'Support offline operation capabilities',;
     'Scale IoT deployments efficiently';
@@ -125,8 +125,8 @@ const IoTEdgeComputing = () => {
       title: 'Edge Data Management',
       description: 'Local data storage and management solutions'
     },
-    {
-      icon: Monitor,
+    {;
+      icon: Monitor,;
       title: 'Edge Monitoring',;
       description: 'Real-time monitoring and alerting systems';
     };
@@ -144,8 +144,8 @@ const IoTEdgeComputing = () => {
     {
       industry: 'Agriculture',
       description: 'Precision farming and crop monitoring'
-    },
-    {
+    },;
+    {;
       industry: 'Healthcare',;
       description: 'Remote patient monitoring and medical devices';
     };
@@ -163,10 +163,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -211,10 +215,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -239,16 +247,22 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -274,10 +288,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -302,16 +320,22 @@ const IoTEdgeComputing = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -341,10 +365,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -369,16 +397,22 @@ const IoTEdgeComputing = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -398,16 +432,22 @@ const IoTEdgeComputing = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -431,10 +471,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -459,16 +503,22 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -494,10 +544,14 @@ const IoTEdgeComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -518,8 +572,8 @@ const IoTEdgeComputing = () => {
               <button className="px-8 py-4 border border-teal-500/30 text-teal-400 font-semibold rounded-lg hover:bg-teal-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

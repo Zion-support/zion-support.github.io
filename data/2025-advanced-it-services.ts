@@ -294,8 +294,8 @@ export const advancedITServices2025 = [
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
-    marketSize: '$15.7B',
+    },;
+    marketSize: '$15.7B',;
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
   };

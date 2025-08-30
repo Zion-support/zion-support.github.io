@@ -5,6 +5,8 @@ function Skeleton({ className, ...props }) {
   className)
 
 
+
+
 } {...props}/>);
 }
 export { Skeleton };

@@ -8,8 +8,8 @@ export default function AICustomerExperienceAnalytics() {
     'Predictive customer behavior modeling',
     'Automated customer feedback collection and analysis',
     'Multi-channel experience tracking and optimization',
-    'Intelligent customer segmentation and personalization',
-    'Advanced customer lifetime value prediction',
+    'Intelligent customer segmentation and personalization',;
+    'Advanced customer lifetime value prediction',;
     'Automated customer satisfaction scoring',;
     'Real-time customer experience monitoring',;
     'AI-driven customer experience optimization recommendations';
@@ -17,8 +17,8 @@ export default function AICustomerExperienceAnalytics() {
 
   const benefits = [
     'Increase customer satisfaction scores by 45%',
-    'Reduce customer churn by 60%',
-    'Improve customer lifetime value by 35%',
+    'Reduce customer churn by 60%',;
+    'Improve customer lifetime value by 35%',;
     'Boost customer engagement by 50%',;
     'Reduce customer support costs by 40%',;
     'Enable data-driven customer experience decisions';
@@ -26,8 +26,8 @@ export default function AICustomerExperienceAnalytics() {
 
   const useCases = [
     'E-commerce customer experience optimization',
-    'SaaS product user experience improvement',
-    'Banking and financial services CX',
+    'SaaS product user experience improvement',;
+    'Banking and financial services CX',;
     'Healthcare patient experience enhancement',;
     'Retail customer journey optimization',;
     'Hospitality guest experience management';
@@ -44,8 +44,8 @@ export default function AICustomerExperienceAnalytics() {
       price: '$999/mo', 
       details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'CX Enterprise', 
+    { ;
+      name: 'CX Enterprise', ;
       price: '$2,999/mo', ;
       details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -164,8 +164,8 @@ export default function AICustomerExperienceAnalytics() {
             </div>
           </div>
           <p className="text-zion-slate-light">
-            Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.
-          </p>
+            Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.;
+          </p>;
         </div>;
       </section>;
     </div>;

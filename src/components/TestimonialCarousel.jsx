@@ -105,9 +105,13 @@ export function TestimonialCarousel() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -128,6 +132,8 @@ export function TestimonialCarousel() {
   damping: 30 
 
 
+
+
 },
             opacity: { duration: 0.2 }
         }} drag="x" dragConstraints = {
@@ -135,9 +141,13 @@ export function TestimonialCarousel() {
   right: 0 
 
 
+
+
 }} dragElastic={1} onDragEnd = {
   (e, { offset,
   velocity 
+
+
 
 
 }) => {
@@ -221,14 +231,20 @@ export function TestimonialCarousel() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}>

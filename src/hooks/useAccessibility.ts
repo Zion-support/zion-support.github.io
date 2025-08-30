@@ -19,8 +19,8 @@ interface AccessibilityFeatures {
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const {
     enableKeyboardNavigation = true,
-    enableFocusManagement = true,
-    enableScreenReaderSupport = true,
+    enableFocusManagement = true,;
+    enableScreenReaderSupport = true,;
     enableHighContrast = true,;
     enableReducedMotion = true,;
     enableLargeText = true;
@@ -33,8 +33,8 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   // Detect accessibility preferences
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
     if (typeof window === 'null') {
-      return {
-        isHighContrast: false,
+      return {;
+        isHighContrast: false,;
         isReducedMotion: false,;
         isLargeText: false,;
         isScreenReader: false;
@@ -45,8 +45,12 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   highContrast: window.matchMedia('(prefers-contrast: high)'),
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'),;
+  ;
+  ;
   // Placeholder;
     ;
+
+
 
 
 };
@@ -158,8 +162,8 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     const selector = [
       'button:not([disabled])',
       'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
+      'select:not([disabled])',;
+      'textarea:not([disabled])',;
       'a[href]',;
       '[tabindex]:not([tabindex="-1"])',;
       '[contenteditable="true"]';

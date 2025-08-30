@@ -158,8 +158,8 @@ const caseStudies = [
       operations: "Streamlined",
       mobile: "First priority"
     },
-    technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
-    duration: "15 months",
+    technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
+    duration: "15 months",;
     roi: "500%",;
     image: "/images/case-study-6.jpg";
   };
@@ -194,10 +194,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -280,16 +284,22 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -400,10 +410,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -432,8 +446,8 @@ export default function CaseStudies() {
               >
                 View Our Services
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

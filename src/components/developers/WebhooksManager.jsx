@@ -173,6 +173,8 @@ export function WebhooksManager() {
   webhook.is_active)
 
 
+
+
 }/>
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}

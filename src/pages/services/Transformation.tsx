@@ -19,8 +19,8 @@ const DigitalTransformation = () => {
     },
     {
       title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
+      description: "Guide your team through digital adoption and transformation.",;
+      price: "From $8,000/month",;
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
       icon: Users;
     };
@@ -40,8 +40,8 @@ const DigitalTransformation = () => {
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
     },
     {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
+      name: "Technology",;
+      description: "Modernize your technology stack and infrastructure",;
       icon: BarChart3,;
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
     };
@@ -49,8 +49,8 @@ const DigitalTransformation = () => {
 
   const benefits = [
     "Increased operational efficiency and productivity",
-    "Enhanced customer experience and satisfaction",
-    "Improved data insights and decision making",
+    "Enhanced customer experience and satisfaction",;
+    "Improved data insights and decision making",;
     "Reduced operational costs and manual work",;
     "Faster time to market for new products",;
     "Better competitive positioning in the market";
@@ -212,8 +212,8 @@ const DigitalTransformation = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

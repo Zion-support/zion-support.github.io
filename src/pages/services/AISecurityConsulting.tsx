@@ -5,8 +5,8 @@ export default function AISecurityConsulting() {
     'AI-powered security consulting optimization',
     'Intelligent consulting strategy management and execution',
     'Automated security analysis and recommendations',
-    'Predictive analytics for consulting needs',
-    'Smart consulting framework management',
+    'Predictive analytics for consulting needs',;
+    'Smart consulting framework management',;
     'AI-driven consulting automation and orchestration',;
     'Real-time consulting performance tracking',;
     'Custom AI models for consulting applications';
@@ -23,8 +23,8 @@ export default function AISecurityConsulting() {
       price: '$1,999/mo', 
       details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited hours', 'Custom AI models', 'Full consulting suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityConsulting() {
 
   const useCases = [
     'Security consulting optimization',
-    'Consulting strategy management and execution',
-    'Security analysis and recommendations',
+    'Consulting strategy management and execution',;
+    'Security analysis and recommendations',;
     'Consulting framework management and automation',;
     'Consulting automation and orchestration',;
     'Consulting scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityConsulting() {
 
   const benefits = [
     'Improve security consulting performance by 50-80%',
-    'Reduce consulting delivery time by 40-70%',
-    'Cut security consulting costs by 35-65%',
+    'Reduce consulting delivery time by 40-70%',;
+    'Cut security consulting costs by 35-65%',;
     'Enhance security consulting reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security consulting operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityConsulting() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityConsulting() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

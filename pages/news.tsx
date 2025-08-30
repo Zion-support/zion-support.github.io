@@ -253,8 +253,8 @@ export default function News() {
 							Learn more <span aria-hidden="true">→</span>
 						</Link>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

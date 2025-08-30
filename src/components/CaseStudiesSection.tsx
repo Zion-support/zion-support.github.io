@@ -42,8 +42,8 @@ const caseStudies = [
     results: [
       "100% supply chain visibility",
       "Reduced fraud by 99%",
-      "Improved customer trust by 80%"
-    ],
+      "Improved customer trust by 80%";
+    ],;
     image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400",;
     color: "from-green-500 to-emerald-500";
   };
@@ -60,10 +60,14 @@ export function CaseStudiesSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -88,10 +92,14 @@ export function CaseStudiesSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -99,6 +107,8 @@ export function CaseStudiesSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -164,10 +174,14 @@ export function CaseStudiesSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -177,12 +191,14 @@ export function CaseStudiesSection() {
   delay: 0.4 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to write your success story?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

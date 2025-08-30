@@ -58,8 +58,8 @@ interface ChatAssistantProps {
 }
 
 export function ChatAssistant({ 
-  enabled = true, 
-  position = 'bottom-right',
+  enabled = true, ;
+  position = 'bottom-right',;
   theme = 'auto',;
   language = 'en';
 }: ChatAssistantProps) {;
@@ -114,10 +114,12 @@ export function ChatAssistant({
             'Tell me about your AI solutions',
             'What quantum computing services do you offer?',
             'How can I get started with your platform?',
-  'What are your pricing plans?'
-          ]
+  'What are your pricing plans?';
+          ];
         ;
 ;
+
+
 
 };
       };
@@ -140,8 +142,8 @@ export function ChatAssistant({
   const handleSendMessage = useCallback(async () => {;
     if (!inputValue.trim() || isProcessing) return;
 
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
+    const userMessage: Message = {;
+      id: `user-${Date.now()}`,;
       type: 'user',;
       content: inputValue.trim(),;
       timestamp: new Date();
@@ -156,8 +158,8 @@ export function ChatAssistant({
     // Simulate AI response
     setTimeout(() => {
       const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
-        type: 'assistant',
+        id: `assistant-${Date.now()}`,;
+        type: 'assistant',;
         content: aiResponse.content,;
         timestamp: new Date(),;
         metadata: aiResponse.metadata;
@@ -324,8 +326,12 @@ export function ChatAssistant({
   'bottom-right': 'bottom-4 right-4',
     'bottom-left': 'bottom-4 left-4',
     'top-right': 'top-4 right-4',;
+  ;
+  ;
   'top-left': 'top-4 left-4';
   ;
+
+
 
 
 };
@@ -348,11 +354,15 @@ export function ChatAssistant({
   1] 
 
 
+
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
 
+;
+;
 
 }};
         />;
@@ -368,16 +378,22 @@ export function ChatAssistant({
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }}
         exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
+
 
 
 }}
@@ -441,16 +457,22 @@ export function ChatAssistant({
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }}
@@ -493,10 +515,14 @@ export function ChatAssistant({
   y: 10 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -545,10 +571,14 @@ export function ChatAssistant({
   y: 10 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -633,8 +663,8 @@ export function ChatAssistant({
                   )}
                 </button>
               </div>
-            </div>
-          </>
+            </div>;
+          </>;
         )};
       </motion.div>;
     </AnimatePresence>;

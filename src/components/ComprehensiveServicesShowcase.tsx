@@ -93,8 +93,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Customer Experience':
-      case 'AI & Supply Chain':
-      case 'AI & Legal Tech':
+      case 'AI & Supply Chain':;
+      case 'AI & Legal Tech':;
       case 'AI & Healthcare':;
       case 'AI & Financial Services':;
       case 'AI & Content Marketing':;
@@ -265,16 +265,22 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -392,8 +398,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               </motion.div>
             ))}
           </div>
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-16">;
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -433,8 +439,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             >
               <Phone className="mr-2 h-5 w-5" />
               Call Now
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

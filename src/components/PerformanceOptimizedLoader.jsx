@@ -7,12 +7,16 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
     
 
 
+
+
 };
     const colorClasses = {
   primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
   white: 'text-white'
     
+
+
 
 
 };
@@ -24,6 +28,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 repeat: Infinity,
   ease: "linear"
             
+
+
 
 
 }
@@ -38,6 +44,8 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 repeat: Infinity,
   ease: "easeInOut"
             
+
+
 
 
 }

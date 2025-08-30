@@ -36,8 +36,8 @@ export default function EmergingTech2030() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -48,11 +48,13 @@ export default function EmergingTech2030() {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -65,8 +67,12 @@ export default function EmergingTech2030() {
     'Synthetic Biology': Heart,
     'Space Technology': Rocket,
     'Brain-Computer Interface': Brain,;
+  ;
+  ;
   'Fusion Energy': Zap;
   ;
+
+
 
 
 };
@@ -155,8 +161,8 @@ export default function EmergingTech2030() {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
-              </p>
-            </motion.div>
+              </p>;
+            </motion.div>;
 ;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {emergingTechServices2030.map((service, index) => {;
@@ -214,10 +220,12 @@ export default function EmergingTech2030() {
   '-')
 
 
+
+
 }`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
-                    >
-                      Learn More
+                    >;
+                      Learn More;
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />;
                     </Link>;
                   </motion.div>;
@@ -346,8 +354,8 @@ export default function EmergingTech2030() {
               >
                 Get Custom Quote
               </Link>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         </section>;
       </div>;
     </>;

@@ -45,8 +45,8 @@ const EmergingTechShowcase2025: React.FC = () => {;
     { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from-yellow-500 to-orange-600' },
     { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },
     { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },
-    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },
+    { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;
     { id: 'Biocomputing', name: 'Biocomputing', icon: Cpu, color: 'from-lime-500 to-green-600' },;
     { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
@@ -87,10 +87,14 @@ const EmergingTechShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -187,16 +191,22 @@ const EmergingTechShowcase2025: React.FC = () => {;
   x: 100 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   x: -100 
+
+
 
 
 }}
@@ -292,16 +302,22 @@ const EmergingTechShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -418,10 +434,14 @@ const EmergingTechShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
+
+
 
 
 }}
@@ -430,8 +450,10 @@ const EmergingTechShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
-}}
-              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+
+
+}};
+              className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()};
             >;
               {(() => {;
@@ -519,8 +541,8 @@ const EmergingTechShowcase2025: React.FC = () => {;
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setSelectedService(null)}
                         className="px-8 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all"
-                      >
-                        Close
+                      >;
+                        Close;
                       </motion.button>;
                     </div>;
                   </div>;

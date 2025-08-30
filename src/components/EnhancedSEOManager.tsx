@@ -117,11 +117,13 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
   ')
 
 
+
+
 } />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
+        ;
         {/* Security headers */};
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />;
         <meta httpEquiv="X-Frame-Options" content="DENY" />;
@@ -141,8 +143,8 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <link rel="manifest" href="/site.webmanifest" />
         
         {/* Theme color */}
-        <meta name="theme-color" content="#000000" />
-        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" content="#000000" />;
+        <meta name="msapplication-TileColor" content="#000000" />;
       </Helmet>;
       {children};
     </>;

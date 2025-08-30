@@ -59,8 +59,8 @@ export default function AICybersecurityThreatIntelligence() {
       benefits: ['Traffic analysis', 'Intrusion detection', 'DDoS protection', 'Network segmentation']
     },
     {
-      icon: Database,
-      title: 'Data Protection',
+      icon: Database,;
+      title: 'Data Protection',;
       description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',;
       benefits: ['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring'];
     };
@@ -86,8 +86,8 @@ export default function AICybersecurityThreatIntelligence() {
       metrics: ['99.99% uptime protection', 'Zero successful attacks', 'Real-time threat response']
     },
     {
-      industry: 'E-commerce',
-      title: 'Customer Data Protection',
+      industry: 'E-commerce',;
+      title: 'Customer Data Protection',;
       description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',;
       metrics: ['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking'];
     };
@@ -113,8 +113,8 @@ export default function AICybersecurityThreatIntelligence() {
       value: '40-60%'
     },
     {
-      icon: Target,
-      title: 'Accuracy',
+      icon: Target,;
+      title: 'Accuracy',;
       description: 'High-precision threat detection with minimal false positives.',;
       value: '99.9%';
     };
@@ -128,8 +128,8 @@ export default function AICybersecurityThreatIntelligence() {
     'Threat Intelligence Feeds',
     'Dark Web Monitoring',
     'Real-time Processing',
-    'Cloud Security',
-    'Zero Trust Architecture',
+    'Cloud Security',;
+    'Zero Trust Architecture',;
     'Blockchain Security',;
     'Quantum-resistant Encryption',;
     'IoT Security Protocols';
@@ -183,8 +183,8 @@ export default function AICybersecurityThreatIntelligence() {
         'On-site support',
         'Custom development',
         'Advanced compliance',
-        'White-label options'
-      ],
+        'White-label options';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -206,10 +206,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -254,10 +258,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,11 +274,13 @@ export default function AICybersecurityThreatIntelligence() {
   delay: 0.2 
 
 
+
+
 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-center">;
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>;
               <div className="text-slate-400">Threat Detection</div>;
             </div>;
             <div className="text-center">;
@@ -298,10 +308,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -329,16 +343,22 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -372,10 +392,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -402,16 +426,22 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -448,10 +478,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -478,16 +512,22 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -514,10 +554,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,16 +588,22 @@ export default function AICybersecurityThreatIntelligence() {
   scale: 0.9 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -575,10 +625,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -605,16 +659,22 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -675,10 +735,14 @@ export default function AICybersecurityThreatIntelligence() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -713,8 +777,8 @@ export default function AICybersecurityThreatIntelligence() {
             <div className="mt-6 text-slate-400">
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-red-400 hover:text-red-300">kleber@ziontechgroup.com</a></p>
               <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:text-red-300">ziontechgroup.com</a></p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

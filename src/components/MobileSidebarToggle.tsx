@@ -57,14 +57,14 @@ export const MobileSidebarToggle: React.FC = () => {;
       icon: BookOpen,
       items: [
         { name: "Documentation", href: "/docs", icon: FileText },
-        { name: "API Reference", href: "/api", icon: FileText },
-        { name: "Developer Portal", href: "/developer", icon: Server },
+        { name: "API Reference", href: "/api", icon: FileText },;
+        { name: "Developer Portal", href: "/developer", icon: Server },;
         { name: "Support Center", href: "/support", icon: HelpCircle };
       ];
     };
   ];
 
-  const quickActions = [
+  const quickActions = [;
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
     { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
@@ -106,6 +106,8 @@ export const MobileSidebarToggle: React.FC = () => {;
   ease: 'easeOut' 
 
 
+
+
 }}
               className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
             >
@@ -143,16 +145,22 @@ export const MobileSidebarToggle: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                         transition = {
   { duration: 0.3,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -184,16 +192,22 @@ export const MobileSidebarToggle: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       transition = {
   { duration: 0.5,
   delay: sectionIndex * 0.1 
+
+
 
 
 }}
@@ -221,16 +235,22 @@ export const MobileSidebarToggle: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -245,16 +265,22 @@ export const MobileSidebarToggle: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                                 transition = {
   { duration: 0.2,
   delay: itemIndex * 0.05 
+
+
 
 
 }}
@@ -296,8 +322,8 @@ export const MobileSidebarToggle: React.FC = () => {;
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </>
+            </motion.div>;
+          </>;
         )};
       </AnimatePresence>;
     </>;

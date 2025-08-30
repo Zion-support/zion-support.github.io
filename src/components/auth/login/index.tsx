@@ -18,8 +18,8 @@ export function LoginContent() {
             Don't have an account?{' '}
             <a href="/register" className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
               Sign up
-            </a>
-          </p>
+            </a>;
+          </p>;
         </div>;
       </div>;
     </div>;

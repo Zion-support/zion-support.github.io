@@ -5,8 +5,8 @@ export default function AISecurityOperations() {
     'AI-powered security operations optimization',
     'Intelligent security monitoring and alerting',
     'Automated incident detection and response',
-    'Predictive analytics for security threats',
-    'Smart security orchestration and automation',
+    'Predictive analytics for security threats',;
+    'Smart security orchestration and automation',;
     'AI-driven security analytics and insights',;
     'Real-time security performance monitoring',;
     'Custom AI models for security applications';
@@ -23,8 +23,8 @@ export default function AISecurityOperations() {
       price: '$1,799/mo', 
       details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited events', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityOperations() {
 
   const useCases = [
     'Security operations optimization',
-    'Security monitoring and alerting',
-    'Incident detection and response',
+    'Security monitoring and alerting',;
+    'Incident detection and response',;
     'Security orchestration and automation',;
     'Security analytics and insights',;
     'Security scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityOperations() {
 
   const benefits = [
     'Improve security operations performance by 50-80%',
-    'Reduce incident response time by 40-70%',
-    'Cut security operational costs by 35-65%',
+    'Reduce incident response time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
     'Enhance security operations reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityOperations() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityOperations() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

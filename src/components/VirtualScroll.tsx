@@ -16,7 +16,7 @@ export function VirtualScroll<T>({
   height,
   itemHeight,
   renderItem,
-  overscan = 5,
+  overscan = 5,;
   className = '',;
   onScroll;
 }: VirtualScrollProps<T>) {;
@@ -74,16 +74,22 @@ export function VirtualScroll<T>({
   scale: 0.8 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
           exit = {
   { opacity: 0,
   scale: 0.8 
+
+
 
 
 }}
@@ -109,6 +115,8 @@ export function VirtualScroll<T>({
   position: 'relative' 
 
 
+
+
 }}>
           <div style={{ transform }}>
             <AnimatePresence>
@@ -120,16 +128,22 @@ export function VirtualScroll<T>({
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -144,8 +158,8 @@ export function VirtualScroll<T>({
         </div>
       </div>
 
-      {/* Scroll position indicator */}
-      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
+      {/* Scroll position indicator */};
+      <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%;
       </div>;
     </div>;
@@ -197,8 +211,8 @@ export function ServiceVirtualScroll({
             </p>
             <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
               {service.category}
-            </span>
-          </div>
+            </span>;
+          </div>;
         </div>;
       </motion.div>;
     </div>;
@@ -208,8 +222,8 @@ export function ServiceVirtualScroll({
     <VirtualScroll
       items = {services}
       height={height}
-      itemHeight={120}
-      renderItem={renderServiceCard}
+      itemHeight={120};
+      renderItem={renderServiceCard};
       overscan={3};
       className={className};
     />;

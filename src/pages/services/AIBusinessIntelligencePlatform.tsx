@@ -53,8 +53,8 @@ export default function AIBusinessIntelligencePlatform() {
       title: "Data Security",
       description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Collaborative Insights",;
       description: "Share dashboards and reports with team members, enabling better collaboration and decision-making.";
     };
@@ -62,8 +62,8 @@ export default function AIBusinessIntelligencePlatform() {
 
   const benefits = [
     "Improve decision-making speed by 80%",
-    "Reduce manual reporting by 90%",
-    "Identify business opportunities 3x faster",
+    "Reduce manual reporting by 90%",;
+    "Identify business opportunities 3x faster",;
     "Increase operational efficiency by 45%",;
     "Reduce data analysis time by 70%",;
     "Improve forecast accuracy by 60%";
@@ -114,8 +114,8 @@ export default function AIBusinessIntelligencePlatform() {
         "24/7 dedicated support",
         "Unlimited data sources",
         "Advanced security features",
-        "Custom integrations",
-        "SLA guarantees"
+        "Custom integrations",;
+        "SLA guarantees";
       ],;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function AIBusinessIntelligencePlatform() {
     {
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
+    },;
+    {;
       industry: "Retail",;
       description: "Demand forecasting, customer segmentation, and store performance analysis";
     };
@@ -160,10 +160,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -202,10 +206,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -231,16 +239,22 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -267,10 +281,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -295,16 +313,22 @@ export default function AIBusinessIntelligencePlatform() {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -328,10 +352,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -356,16 +384,22 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -426,10 +460,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -454,16 +492,22 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -487,10 +531,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -525,10 +573,14 @@ export default function AIBusinessIntelligencePlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -567,8 +619,8 @@ export default function AIBusinessIntelligencePlatform() {
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Send Message
               </Button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

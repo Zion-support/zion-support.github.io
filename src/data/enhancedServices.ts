@@ -1142,8 +1142,8 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-09-05T11:20:00.000Z",
     rating: 4.7,
-    reviewCount: 78,
-    location: "Global",
+    reviewCount: 78,;
+    location: "Global",;
     availability: "3-4 Weeks",;
     aiScore: 91;
   };
@@ -1222,8 +1222,8 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     tags: ["PDF", "Rendering", "API"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com" },
     images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2025-02-01T08:00:00.000Z",
-    rating: 4.7,
+    createdAt: "2025-02-01T08:00:00.000Z",;
+    rating: 4.7,;
     reviewCount: 28,;
     link: "https://ziontechgroup.com/services/pdf-render-api";
   };
@@ -1245,8 +1245,8 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'Digital Transformation', value: 'digital-transformation' },
   { label: 'Healthcare Technology', value: 'healthcare-tech' },
   { label: 'Financial Technology', value: 'fintech' },
-  { label: 'Blockchain', value: 'blockchain' },
-  { label: 'Quantum Computing', value: 'quantum-computing' },
+  { label: 'Blockchain', value: 'blockchain' },;
+  { label: 'Quantum Computing', value: 'quantum-computing' },;
   { label: 'Edge Computing', value: 'edge-computing' },;
   { label: 'Emerging Technology', value: 'emerging-tech' },;
   { label: 'AI Automation', value: 'ai-automation' };
@@ -1258,7 +1258,9 @@ export const SERVICE_PRICING_TIERS = {
   description: "Essential services for small businesses and startups" 
 
 
-},
+
+;
+},;
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
   enterprise: { range: "$8,000 - $25,000", description: "Custom enterprise solutions with dedicated support" },;
   premium: { range: "$25,000 - $50,000+", description: "Specialized industry solutions and cutting-edge technology" };
@@ -1270,8 +1272,12 @@ export const CONTACT_INFO = {
   email: "kleber@ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
   website: "https://ziontechgroup.com",;
+  ;
+  ;
   domain: "ziontechgroup.com";
 ;
+
+
 
 
 };

@@ -13,6 +13,8 @@ const defaultConfig = {
     
 
 
+
+
 }
 };
 const WhitelabelContext = createContext(defaultConfig);
@@ -21,6 +23,8 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
     const mergedConfig = {
   ...defaultConfig,
   ...config 
+
+
 
 
 };

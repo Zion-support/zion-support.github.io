@@ -8,7 +8,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const allServices = [
+  const allServices = [;
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),;
     ...SPECIALIZED_IT_SERVICES_2025.map(service => ({ ...service, source: 'IT Services' })),;
     ...ADVANCED_AI_SERVICES_2025.map(service => ({ ...service, source: 'AI Solutions' }));
@@ -21,8 +21,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length },
+  const categories = [;
+    { id: 'all', name: 'All Services', count: allServices.length },;
     { id: 'Micro SaaS', name: 'Micro SaaS', count: ADVANCED_MICRO_SAAS_SERVICES_2025.length },;
     { id: 'IT Services', name: 'IT Services', count: SPECIALIZED_IT_SERVICES_2025.length },;
     { id: 'AI Solutions', name: 'AI Solutions', count: ADVANCED_AI_SERVICES_2025.length };
@@ -251,8 +251,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
           ))}
         </div>
 
-        {filteredServices.length === 0 && (
-          <div className="text-center py-16">
+        {filteredServices.length === 0 && (;
+          <div className="text-center py-16">;
             <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
             <button;
               onClick={() => {;
@@ -322,8 +322,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
                 <p>✓ Competitive Pricing</p>
                 <p>✓ 24/7 Support</p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

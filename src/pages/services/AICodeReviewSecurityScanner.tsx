@@ -35,8 +35,8 @@ const AICodeReviewSecurityScanner = () => {
       benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
     },
     {
-      icon: GitBranch,
-      title: 'Git Integration & Workflow',
+      icon: GitBranch,;
+      title: 'Git Integration & Workflow',;
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;
       benefits: ['Pull request scanning', 'Branch protection', 'Automated reviews', 'Workflow integration'];
     };
@@ -87,8 +87,8 @@ const AICodeReviewSecurityScanner = () => {
         '24/7 dedicated support',
         'Advanced integrations',
         'Custom workflows',
-        'On-premise deployment'
-      ],
+        'On-premise deployment';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -114,8 +114,8 @@ const AICodeReviewSecurityScanner = () => {
       benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
     },
     {
-      title: 'Compliance & Auditing',
-      description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',
+      title: 'Compliance & Auditing',;
+      description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',;
       icon: Shield,;
       benefits: ['Regulatory compliance', 'Security audits', 'Documentation', 'Risk assessment'];
     };
@@ -141,8 +141,8 @@ const AICodeReviewSecurityScanner = () => {
       examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
     },
     {
-      title: 'Insecure Dependencies',
-      description: 'Identify and update vulnerable third-party libraries and dependencies.',
+      title: 'Insecure Dependencies',;
+      description: 'Identify and update vulnerable third-party libraries and dependencies.',;
       icon: Package,;
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance'];
     };
@@ -159,10 +159,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -215,10 +219,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -243,16 +251,22 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -293,10 +307,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -321,16 +339,22 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -364,10 +388,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -392,16 +420,22 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -463,10 +497,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -491,16 +529,22 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -538,10 +582,14 @@ const AICodeReviewSecurityScanner = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -571,8 +619,8 @@ const AICodeReviewSecurityScanner = () => {
                 Contact Sales
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

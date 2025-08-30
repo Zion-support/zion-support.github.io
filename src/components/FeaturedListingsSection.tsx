@@ -38,8 +38,8 @@ const featuredListings = [
     title: "IoT Edge Computing Platform",
     description: "Real-time IoT data processing and analytics at the edge for instant insights.",
     category: "IoT",
-    price: "$449/month",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",
+    price: "$449/month",;
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",;
     rating: 4.6,;
     reviews: 178;
   };
@@ -56,10 +56,14 @@ export function FeaturedListingsSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -84,10 +88,14 @@ export function FeaturedListingsSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -95,6 +103,8 @@ export function FeaturedListingsSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -146,10 +156,14 @@ export function FeaturedListingsSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -159,6 +173,8 @@ export function FeaturedListingsSection() {
   delay: 0.4 
 
 
+
+
 }}
         >
           <Link 
@@ -166,8 +182,8 @@ export function FeaturedListingsSection() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-105"
           >
             View All Services
-            <span className="text-xl">→</span>
-          </Link>
+            <span className="text-xl">→</span>;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;

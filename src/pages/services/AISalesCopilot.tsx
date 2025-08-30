@@ -57,8 +57,8 @@ export default function AISalesCopilot() {
       title: "Performance Insights",
       description: "Real-time sales metrics and performance optimization recommendations."
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: "Revenue Optimization",;
       description: "Data-driven strategies to maximize deal size and improve win rates.";
     };
@@ -90,8 +90,8 @@ export default function AISalesCopilot() {
       title: "Time Optimization",
       description: "Reduce manual work and focus on building relationships and closing deals."
     },
-    {
-      icon: Award,
+    {;
+      icon: Award,;
       title: "Competitive Advantage",;
       description: "Stay ahead of competitors with AI-powered sales intelligence and automation.";
     };
@@ -123,8 +123,8 @@ export default function AISalesCopilot() {
       description: "AI-assisted deal closing with optimized pricing and negotiation",
       icon: CheckCircle
     },
-    {
-      stage: "Retention",
+    {;
+      stage: "Retention",;
       description: "Customer success monitoring and expansion opportunity identification",;
       icon: Users;
     };
@@ -156,8 +156,8 @@ export default function AISalesCopilot() {
       description: "Investment and insurance sales with compliance support",
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    {;
+      industry: "Healthcare",;
       description: "Medical device and service sales with regulatory compliance",;
       icon: Heart;
     };
@@ -181,10 +181,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,10 +231,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -256,16 +264,22 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -306,10 +320,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -335,16 +353,22 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -385,10 +409,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -414,16 +442,22 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -464,10 +498,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -493,16 +531,22 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -543,10 +587,14 @@ export default function AISalesCopilot() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -569,8 +617,8 @@ export default function AISalesCopilot() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

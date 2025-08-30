@@ -21,8 +21,12 @@ export default function LoadingSpinner({
   sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',;
+  ;
+  ;
   xl: 'w-16 h-16';
   ;
+
+
 
 
 };
@@ -30,8 +34,12 @@ export default function LoadingSpinner({
   const colorClasses = {
   primary: 'border-cyan-400 border-t-transparent',
     white: 'border-white border-t-transparent',;
+  ;
+  ;
   gray: 'border-gray-400 border-t-transparent';
   ;
+
+
 
 
 };
@@ -40,6 +48,8 @@ export default function LoadingSpinner({
     <div className = {
   cn('flex flex-col items-center justify-center',
   className)
+
+
 
 
 }>
@@ -51,6 +61,8 @@ export default function LoadingSpinner({
       )
 
 
+
+
 } />
       {showText && (
         <motion.p
@@ -58,8 +70,8 @@ export default function LoadingSpinner({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="mt-2 text-sm text-gray-500"
-        >
-          {text}
+        >;
+          {text};
         </motion.p>;
       )};
     </div>;
@@ -68,7 +80,7 @@ export default function LoadingSpinner({
 
 // Optimized skeleton loader
 export function SkeletonLoader({ 
-  className = '', 
+  className = '', ;
   lines = 3, ;
   height = 'h-4' ;
 }: { ;
@@ -88,8 +100,10 @@ export function SkeletonLoader({
   duration: 0.3 
 
 
-}}
-          className={`${height} bg-white/10 rounded-lg animate-pulse`}
+
+
+}};
+          className={`${height} bg-white/10 rounded-lg animate-pulse`};
         />;
       ))};
     </div>;
@@ -110,7 +124,9 @@ export function ButtonLoader({
   className)
 
 
-}>
+
+;
+}>;
       <LoadingSpinner size={size} color="white" />;
       <span className="ml-2">Loading...</span>;
     </div>;
@@ -140,10 +156,14 @@ export function PageLoaderOverlay({
   y: 10 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -152,10 +172,12 @@ export function PageLoaderOverlay({
   duration: 0.3 
 
 
+
+
 }}
           className="mt-4 text-lg text-gray-300 font-medium"
-        >
-          {text}
+        >;
+          {text};
         </motion.p>;
       </div>;
     </motion.div>;
@@ -174,8 +196,12 @@ export function ContentPlaceholder({
   default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
     list: 'space-y-3',;
+  ;
+  ;
   grid: 'grid grid-cols-2 md:grid-cols-4 gap-4';
   ;
+
+
 
 
 };
@@ -192,10 +218,14 @@ export function ContentPlaceholder({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -217,10 +247,14 @@ export function ContentPlaceholder({
   x: -20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -241,10 +275,14 @@ export function ContentPlaceholder({
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -265,15 +303,19 @@ export function ContentPlaceholder({
   y: 10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
-            transition={{ delay: index * 0.1 }}
-            className="h-4 bg-white/10 rounded animate-pulse" />
+            transition={{ delay: index * 0.1 }};
+            className="h-4 bg-white/10 rounded animate-pulse" />;
         ));
       )};
     </div>;
@@ -293,6 +335,8 @@ export function AppLoadingSpinner() {
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style = {
   { animationDirection: 'reverse',
   animationDuration: '1.5s' 
+
+
 
 
 }}></div>
@@ -328,6 +372,8 @@ export function AppLoadingSpinner() {
             
 
 
+
+
 }}
           >
             <span 
@@ -335,6 +381,8 @@ export function AppLoadingSpinner() {
   {
                 position: 'absolute',
   top: `${Math.cos(index * Math.PI / 2) * 60
+
+
 
 
 }px`,
@@ -355,10 +403,14 @@ export function AppLoadingSpinner() {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -388,8 +440,8 @@ export function AppLoadingSpinner() {
               delay: i * 0.2,
   
 
-}}
-          />
+}};
+          />;
         ))};
       </div>;
     </div>;

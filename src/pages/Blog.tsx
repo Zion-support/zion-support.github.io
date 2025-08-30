@@ -10,8 +10,8 @@ function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Posts', count: 45 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 18 },
+    { id: 'all', name: 'All Posts', count: 45 },;
+    { id: 'ai', name: 'AI & Machine Learning', count: 18 },;
     { id: 'quantum', name: 'Quantum Computing', count: 12 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 8 },;
     { id: 'cybersecurity', name: 'Cybersecurity', count: 7 };
@@ -91,8 +91,8 @@ function Blog() {
       author: 'Lisa Chen',
       date: '2025-01-03',
       readTime: '9 min read',
-      views: 389,
-      featured: false,
+      views: 389,;
+      featured: false,;
       tags: ['Edge Computing', 'IoT', 'Performance'],;
       image: '/images/blog/edge-computing-iot.jpg';
     };
@@ -125,10 +125,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -191,10 +195,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,10 +224,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,6 +239,8 @@ function Blog() {
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -297,10 +311,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -322,10 +340,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -333,6 +355,8 @@ function Blog() {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -407,10 +431,14 @@ function Blog() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -438,8 +466,8 @@ function Blog() {
             
             <p className="text-sm text-slate-400 mt-4">
               No spam, unsubscribe at any time. We respect your privacy.
-            </p>
-          </motion.div>
+            </p>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

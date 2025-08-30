@@ -36,8 +36,8 @@ export default function LLMContentStudio() {
             </ul>
             <p className="mt-4 text-xs text-zion-slate-light">
               References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>
-            </p>
-          </div>
+            </p>;
+          </div>;
         </div>;
       </section>;
     </div>;

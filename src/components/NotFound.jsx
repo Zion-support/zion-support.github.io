@@ -23,9 +23,13 @@ const NotFound = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.5 }}>
@@ -35,9 +39,13 @@ const NotFound = () => {
   1] 
 
 
+
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}>
@@ -75,9 +83,13 @@ const NotFound = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>
@@ -105,9 +117,13 @@ const NotFound = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>

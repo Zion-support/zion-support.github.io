@@ -37,15 +37,15 @@ export default function Footer() {
       links: [
         { name: 'Case Studies', href: '/case-studies' },
         { name: 'White Papers', href: '/white-papers' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Webinars', href: '/webinars' },
+        { name: 'Documentation', href: '/docs' },;
+        { name: 'Webinars', href: '/webinars' },;
         { name: 'Events', href: '/events' },;
       ],;
     },;
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'LinkedIn' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'LinkedIn' },;
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'Twitter' },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'GitHub' },;
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: 'YouTube' },;
     { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: 'Discord' },;
@@ -121,8 +121,8 @@ export default function Footer() {
               <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Accessibility
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </footer>;

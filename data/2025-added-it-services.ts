@@ -7,6 +7,8 @@ const contact = {
 
 
 
+
+
 }
 export const addedITServices2025: AdvancedITService[] = [
   {
@@ -65,8 +67,8 @@ export const addedITServices2025: AdvancedITService[] = [
       'Session recording',
       'SIEM integration'
     ],
-    popular: true,
-    icon: '🔐',
+    popular: true,;
+    icon: '🔐',;
     color: 'from-amber-600 to-rose-700',;
     textColor: 'text-amber-200',;
     link: 'https://ziontechgroup.com/services/zero-trust-access-service',;

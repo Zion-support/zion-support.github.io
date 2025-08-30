@@ -39,8 +39,8 @@ const securityFeatures = [
   },
   {
     title: "End-to-End Encryption",
-    description: "256-bit AES encryption for all data in transit and at rest",
-    icon: "🔐",
+    description: "256-bit AES encryption for all data in transit and at rest",;
+    icon: "🔐",;
     status: "Active",;
     color: "from-teal-500 to-green-600";
   };
@@ -69,8 +69,8 @@ const complianceFeatures = [
     category: "Monitoring & Auditing",
     features: [
       "24/7 security monitoring",
-      "Comprehensive audit logs",
-      "Real-time alerts",
+      "Comprehensive audit logs",;
+      "Real-time alerts",;
       "Automated compliance reporting";
     ];
   };
@@ -87,10 +87,14 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -116,10 +120,14 @@ export function SecurityComplianceSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -127,6 +135,8 @@ export function SecurityComplianceSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -159,10 +169,14 @@ export function SecurityComplianceSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -170,6 +184,8 @@ export function SecurityComplianceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -205,10 +221,14 @@ export function SecurityComplianceSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,6 +236,8 @@ export function SecurityComplianceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -226,8 +248,8 @@ export function SecurityComplianceSection() {
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>
+              <div className="text-center">;
+                <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;
                 <div className="text-gray-400 text-sm">Uptime SLA</div>;
               </div>;
               <div className="text-center">;
@@ -254,10 +276,14 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,12 +293,14 @@ export function SecurityComplianceSection() {
   delay: 0.8 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to secure your business?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

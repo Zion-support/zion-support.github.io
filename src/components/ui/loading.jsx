@@ -9,6 +9,8 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     
 
 
+
+
 };
     const renderContent = () => {
         switch (variant) {
@@ -27,6 +29,8 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
   className)
 
 
+
+
 }>
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
@@ -37,6 +41,8 @@ export function Skeleton({ className, ...props }) {
     return (<div className = {
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
+
+
 
 
 } {...props}/>);

@@ -186,8 +186,8 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-      verified: true
-    },
+      verified: true;
+    },;
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2024-01-25T09:15:00.000Z";
   };

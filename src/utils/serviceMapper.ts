@@ -68,8 +68,8 @@ export function map2026ServicesToExistingStructure(): Service[] {
       integrations: service.integrations,
       apiEndpoints: 200, // Default value
       uptime: "99.9%", // Default value
-      security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security
-    },
+      security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security;
+    },;
     competitors: service.competitors,;
     marketSize: service.marketSize,;
     compliance: ["SOC 2", "ISO 27001"] // Default compliance;

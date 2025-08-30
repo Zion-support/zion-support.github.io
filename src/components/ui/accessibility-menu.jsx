@@ -61,6 +61,8 @@ export function AccessibilityMenu() {
         
 
 
+
+
 };
         setSettings(defaultSettings);
     };
@@ -77,9 +79,13 @@ export function AccessibilityMenu() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
 
 
 }} exit = {
@@ -87,9 +93,13 @@ export function AccessibilityMenu() {
   y: 20 
 
 
+
+
 }} transition = {
   { type: "spring", stiffness: 300,
   damping: 30 
+
+
 
 
 }}>

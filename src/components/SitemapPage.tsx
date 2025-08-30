@@ -38,8 +38,8 @@ export function SitemapPage() {
       links: [
         { name: 'Case Studies', url: '/case-studies' },
         { name: 'White Papers', url: '/white-papers' },
-        { name: 'Webinars', url: '/webinars' },
-        { name: 'Documentation', url: '/docs' },
+        { name: 'Webinars', url: '/webinars' },;
+        { name: 'Documentation', url: '/docs' },;
         { name: 'API Reference', url: '/api' },;
       ];
     };
@@ -90,8 +90,8 @@ export function SitemapPage() {
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               Contact us
             </a>{' '}
-            for assistance.
-          </p>
+            for assistance.;
+          </p>;
         </div>;
       </div>;
     </div>;

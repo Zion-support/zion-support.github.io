@@ -1052,8 +1052,8 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
 // Export all expanded services
 export const ALL_EXPANDED_SERVICES_2027 = [
   ...advancedCybersecurityServices,
-  ...advancedDataAnalyticsServices,
-  ...advancedCloudDevOpsServices,
+  ...advancedDataAnalyticsServices,;
+  ...advancedCloudDevOpsServices,;
   ...advancedIoTServices,;
   ...advancedFinTechServices,;
   ...advancedHealthcareServices;
@@ -1063,8 +1063,8 @@ export const ALL_EXPANDED_SERVICES_2027 = [
 export const EXPANDED_SERVICE_CATEGORIES = [
   'All',
   'Cybersecurity',
-  'Data Analytics',
-  'Cloud & DevOps',
+  'Data Analytics',;
+  'Cloud & DevOps',;
   'IoT & Edge Computing',;
   'Financial Technology',;
   'Healthcare Technology';
@@ -1087,8 +1087,8 @@ export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedS
 export const searchExpandedServices = (query: string): ExpandedService2027[] => {;
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_2027.filter(service = > 
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.name.toLowerCase().includes(lowercaseQuery) ||;
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery) ||;
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));

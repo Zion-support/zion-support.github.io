@@ -42,7 +42,7 @@ import {
 import { SEO } from "../components/SEO";
 import { INNOVATIVE_SERVICES_2025 } from "../data/innovativeServices2025";
 
-const ComprehensiveServicesLanding2025: React.FC = () => {
+const ComprehensiveServicesLanding2025: React.FC = () => {;
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI & Automation':;
@@ -98,8 +98,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   };
 
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
-  const servicesByCategory = categories.map(category => ({
-    category,
+  const servicesByCategory = categories.map(category => ({;
+    category,;
     services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
     icon: getCategoryIcon(category),;
     color: getCategoryColor(category);
@@ -127,10 +127,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -209,16 +213,22 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -290,16 +300,22 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -418,16 +434,22 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -453,10 +475,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -504,8 +530,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             <div className="mt-6 text-sm text-gray-400">
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
               <p>Visit us at: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

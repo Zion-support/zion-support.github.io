@@ -11,15 +11,15 @@ export default function WhitePapers() {
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
     { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 };
   ];
 
-  const sortOptions = [
-    { value: 'newest', label: 'Newest First' },
+  const sortOptions = [;
+    { value: 'newest', label: 'Newest First' },;
     { value: 'popular', label: 'Most Popular' },;
     { value: 'alphabetical', label: 'Alphabetical' },;
     { value: 'downloads', label: 'Most Downloaded' };
@@ -117,8 +117,8 @@ export default function WhitePapers() {
       downloads: 8930,
       rating: 4.5,
       featured: false,
-      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],
-      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
+      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
       fileSize: '2.2 MB',;
       language: 'English';
     };
@@ -138,8 +138,8 @@ export default function WhitePapers() {
       link: '/insights/cybersecurity-2025'
     },
     {
-      title: 'Cloud Migration Success Stories',
-      description: 'Real-world examples of successful cloud transformations',
+      title: 'Cloud Migration Success Stories',;
+      description: 'Real-world examples of successful cloud transformations',;
       icon: <Cloud className="w-6 h-6" />,;
       link: '/insights/cloud-success-stories';
     };
@@ -167,8 +167,8 @@ export default function WhitePapers() {
     return matchesSearch && matchesCategory;
   });
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
       month: 'long',;
       day: 'numeric';
@@ -403,8 +403,8 @@ export default function WhitePapers() {
             />
             <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
               Subscribe
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </div>;
     </div>;

@@ -36,8 +36,8 @@ export default function ZeroTrustNetworkArchitecture() {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: ShieldCheck,
-      title: 'Micro-Segmentation',
+      icon: ShieldCheck,;
+      title: 'Micro-Segmentation',;
       description: 'Network segmentation at the application and workload level',;
       color: 'from-indigo-500 to-purple-500';
     };
@@ -63,8 +63,8 @@ export default function ZeroTrustNetworkArchitecture() {
       features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
     },
     {
-      title: 'Continuous Monitoring',
-      description: 'Real-time security monitoring and threat detection',
+      title: 'Continuous Monitoring',;
+      description: 'Real-time security monitoring and threat detection',;
       price: 'From $12,000',;
       features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics'];
     };
@@ -72,8 +72,8 @@ export default function ZeroTrustNetworkArchitecture() {
 
   const benefits = [
     { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },
-    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },
-    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },
+    { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
+    { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;
     { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },;
     { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },;
     { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' };
@@ -96,10 +96,14 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,10 +154,14 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -178,16 +186,22 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -213,10 +227,14 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -241,16 +259,22 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -289,10 +313,14 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -317,16 +345,22 @@ export default function ZeroTrustNetworkArchitecture() {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -352,10 +386,14 @@ export default function ZeroTrustNetworkArchitecture() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,8 +421,8 @@ export default function ZeroTrustNetworkArchitecture() {
               >
                 View Case Studies
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -5,8 +5,8 @@ export default function AIVirtualReality() {
     'AI-powered VR optimization',
     'Intelligent VR content management',
     'Automated VR monitoring and alerting',
-    'Predictive analytics for VR scaling',
-    'Smart VR security and compliance',
+    'Predictive analytics for VR scaling',;
+    'Smart VR security and compliance',;
     'AI-driven VR automation and orchestration',;
     'Real-time VR analytics and insights',;
     'Custom AI models for VR applications';
@@ -23,8 +23,8 @@ export default function AIVirtualReality() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full VR suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIVirtualReality() {
 
   const useCases = [
     'VR optimization',
-    'VR content management',
-    'Performance monitoring and analytics',
+    'VR content management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'VR scaling and management';
@@ -41,8 +41,8 @@ export default function AIVirtualReality() {
 
   const benefits = [
     'Improve VR performance by 50-80%',
-    'Reduce VR development time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce VR development time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance VR reliability and scalability',;
     'Optimize resource utilization',;
     'Scale VR operations efficiently';
@@ -50,8 +50,8 @@ export default function AIVirtualReality() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIVirtualReality() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

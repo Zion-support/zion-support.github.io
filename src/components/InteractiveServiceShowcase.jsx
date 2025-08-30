@@ -122,6 +122,8 @@ const InteractiveServiceShowcase = () => {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -135,6 +137,8 @@ const InteractiveServiceShowcase = () => {
     const categoryVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
+
 
 
 },
@@ -155,9 +159,13 @@ const InteractiveServiceShowcase = () => {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
@@ -179,9 +187,13 @@ const InteractiveServiceShowcase = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -262,14 +274,20 @@ const InteractiveServiceShowcase = () => {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}>

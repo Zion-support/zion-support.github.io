@@ -5,8 +5,8 @@ export default function AISecurityTraining() {
     'AI-powered security training optimization',
     'Intelligent training strategy management and execution',
     'Automated security skill assessment and certification',
-    'Predictive analytics for training needs',
-    'Smart training framework management',
+    'Predictive analytics for training needs',;
+    'Smart training framework management',;
     'AI-driven training automation and orchestration',;
     'Real-time training performance tracking',;
     'Custom AI models for training applications';
@@ -23,8 +23,8 @@ export default function AISecurityTraining() {
       price: '$599/mo', 
       details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited users', 'Custom AI models', 'Full training suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityTraining() {
 
   const useCases = [
     'Security training optimization',
-    'Training strategy management and execution',
-    'Security skill assessment and certification',
+    'Training strategy management and execution',;
+    'Security skill assessment and certification',;
     'Training framework management and automation',;
     'Training automation and orchestration',;
     'Training scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityTraining() {
 
   const benefits = [
     'Improve security training performance by 50-80%',
-    'Reduce training completion time by 40-70%',
-    'Cut security training costs by 35-65%',
+    'Reduce training completion time by 40-70%',;
+    'Cut security training costs by 35-65%',;
     'Enhance security training reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security training operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityTraining() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityTraining() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

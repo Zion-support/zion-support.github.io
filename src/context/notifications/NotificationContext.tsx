@@ -29,7 +29,11 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     const newNotification = {
   ...notification,;
   ;
+  ;
+  ;
   id ;
+
+
 
 
 };
@@ -57,6 +61,10 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     clearNotifications,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };

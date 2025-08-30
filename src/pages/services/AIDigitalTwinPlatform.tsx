@@ -7,8 +7,8 @@ export default function AIDigitalTwinPlatform() {
     'Predictive maintenance and failure prediction',
     '3D visualization and augmented reality support',
     'Multi-physics simulation and modeling',
-    'Automated anomaly detection and alerts',
-    'Historical data analysis and trend prediction',
+    'Automated anomaly detection and alerts',;
+    'Historical data analysis and trend prediction',;
     'Cross-platform integration and API access',;
     'Custom dashboard and reporting tools',;
     'Scalable cloud-based infrastructure';
@@ -16,8 +16,8 @@ export default function AIDigitalTwinPlatform() {
 
   const benefits = [
     'Reduce operational costs by 25-40%',
-    'Improve equipment uptime by 30-50%',
-    'Cut maintenance costs by 20-35%',
+    'Improve equipment uptime by 30-50%',;
+    'Cut maintenance costs by 20-35%',;
     'Real-time performance monitoring',;
     'Predictive maintenance optimization',;
     'Enhanced decision-making with data insights';
@@ -37,8 +37,8 @@ export default function AIDigitalTwinPlatform() {
       popular: true
     },
     { 
-      name: 'Enterprise', 
-      price: '$3,999/mo', 
+      name: 'Enterprise', ;
+      price: '$3,999/mo', ;
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
       popular: false;
     };
@@ -46,8 +46,8 @@ export default function AIDigitalTwinPlatform() {
 
   const useCases = [
     'Manufacturing process optimization',
-    'Smart city infrastructure monitoring',
-    'Healthcare facility management',
+    'Smart city infrastructure monitoring',;
+    'Healthcare facility management',;
     'Energy grid optimization',;
     'Transportation system monitoring',;
     'Building automation and management';
@@ -55,8 +55,8 @@ export default function AIDigitalTwinPlatform() {
 
   const industries = [
     'Manufacturing & Industry 4.0',
-    'Smart Cities & Infrastructure',
-    'Healthcare & Medical Devices',
+    'Smart Cities & Infrastructure',;
+    'Healthcare & Medical Devices',;
     'Energy & Utilities',;
     'Transportation & Logistics',;
     'Construction & Real Estate';
@@ -289,8 +289,8 @@ export default function AIDigitalTwinPlatform() {
             rel="noreferrer" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </section>;
     </div>;

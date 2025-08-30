@@ -23,8 +23,8 @@ const Tutorials = () => {
       count: "8"
     },
     {
-      title: "Expert",
-      description: "Cutting-edge research and techniques",
+      title: "Expert",;
+      description: "Cutting-edge research and techniques",;
       color: "from-purple-500 to-indigo-500",;
       count: "5";
     };
@@ -66,8 +66,8 @@ const Tutorials = () => {
       description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
       category: "Expert",
       duration: "75 min",
-      instructor: "Dr. Emily Watson",
-      rating: 4.6,
+      instructor: "Dr. Emily Watson",;
+      rating: 4.6,;
       students: "623",;
       thumbnail: "/images/tutorials/model-optimization.jpg";
     };
@@ -101,8 +101,8 @@ const Tutorials = () => {
     {
       title: "Machine Learning Model Deployment",
       category: "Advanced",
-      duration: "65 min",
-      instructor: "Michael Rodriguez",
+      duration: "65 min",;
+      instructor: "Michael Rodriguez",;
       rating: 4.7,;
       students: "345";
     };
@@ -125,8 +125,8 @@ const Tutorials = () => {
     },
     {
       title: "Quantum Computing Engineer",
-      description: "Learn quantum algorithms and applications",
-      courses: 5,
+      description: "Learn quantum algorithms and applications",;
+      courses: 5,;
       duration: "10 weeks",;
       level: "Advanced to Expert";
     };
@@ -312,8 +312,8 @@ const Tutorials = () => {
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Contact Us
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </section>;
     </div>;

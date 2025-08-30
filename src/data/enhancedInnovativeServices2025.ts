@@ -910,8 +910,8 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     marketPrice: "$2,999-8,999/month",
     competitors: ["ISARA", "PQShield", "Cryptosense"],
     roi: "600% within 18 months",
-    setupTime: "24 hours",
-    integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
+    setupTime: "24 hours",;
+    integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],;
     freeTier: false,;
     trialPeriod: "7 days";
   };

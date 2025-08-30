@@ -19,6 +19,8 @@ const categoryIcons = {
 
 
 
+
+
 };
 const benefits = [
     {

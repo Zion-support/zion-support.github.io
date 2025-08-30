@@ -72,6 +72,8 @@ const AdvancedServicesShowcase2025 = () => {
         
 
 
+
+
 };
         return icons[category] || '🚀';
     };
@@ -87,6 +89,8 @@ const AdvancedServicesShowcase2025 = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
+
 
 
 },
@@ -108,6 +112,8 @@ const AdvancedServicesShowcase2025 = () => {
         
 
 
+
+
 }}/>
 
       {/* Hero Section */}
@@ -118,9 +124,13 @@ const AdvancedServicesShowcase2025 = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -134,14 +144,20 @@ const AdvancedServicesShowcase2025 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}>
@@ -155,14 +171,20 @@ const AdvancedServicesShowcase2025 = () => {
   scale: 0.95 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}>
@@ -188,14 +210,20 @@ const AdvancedServicesShowcase2025 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}>
@@ -219,14 +247,20 @@ const AdvancedServicesShowcase2025 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }}>
@@ -372,14 +406,20 @@ const AdvancedServicesShowcase2025 = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 1 
+
+
 
 
 }}>

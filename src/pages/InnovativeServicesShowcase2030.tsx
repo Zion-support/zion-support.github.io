@@ -27,7 +27,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [
+  const allServices = [;
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
@@ -40,8 +40,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
@@ -58,10 +58,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -162,16 +166,22 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -295,8 +305,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             ))}
           </div>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -321,10 +331,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -370,16 +384,22 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -406,10 +426,14 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -485,8 +509,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 <div className="text-gray-300">Cloud & DevOps</div>
                 <div className="text-gray-300">IT Infrastructure</div>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

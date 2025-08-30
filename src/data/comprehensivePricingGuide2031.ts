@@ -690,6 +690,8 @@ export const PRICING_SUMMARY_2031 = {
   
 
 
+
+
 },
   averageROI: "300-500%",
   implementationTime: {
@@ -697,8 +699,8 @@ export const PRICING_SUMMARY_2031 = {
     max: "24-48 weeks"
   },
   contactInfo: {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
+    phone: "+1 302 464 0950",;
+    email: "kleber@ziontechgroup.com",;
     website: "https://ziontechgroup.com",;
     address: "364 E Main St STE 1008 Middletown DE 19709";
   };

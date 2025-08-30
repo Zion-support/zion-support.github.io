@@ -19,7 +19,9 @@ const iconVariants = {
   ease: "linear" 
 
 
-},
+
+;
+},;
       scale: { duration: 1, repeat: Infinity, ease: "easeInOut" };
     };
   };
@@ -33,9 +35,11 @@ const pulseVariants = {
       duration: 2,
       repeat: Infinity,
   ease: "easeInOut"
-    
-
+    ;
 ;
+;
+
+
 };
   };
 };
@@ -50,8 +54,12 @@ export function EnhancedLoadingSpinner({
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-12 h-12',;
+  ;
+  ;
   lg: 'w-16 h-16';
   ;
+
+
 
 
 };
@@ -59,8 +67,12 @@ export function EnhancedLoadingSpinner({
   const textSizes = {
   sm: 'text-sm',
     md: 'text-base',;
+  ;
+  ;
   lg: 'text-lg';
   ;
+
+
 
 
 };
@@ -128,6 +140,8 @@ export function EnhancedLoadingSpinner({
               
 
 
+
+
 }}
             >
               <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
@@ -146,6 +160,8 @@ export function EnhancedLoadingSpinner({
                 repeat: Infinity,
   ease: "linear"
               
+
+
 
 
 }}
@@ -174,10 +190,14 @@ export function EnhancedLoadingSpinner({
   width: 0 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   width: '100%' 
+
+
 
 
 }}
@@ -191,6 +211,8 @@ export function EnhancedLoadingSpinner({
             transition = {
   { duration: 0.5,
   ease: "easeOut" 
+
+
 
 
 }}
@@ -225,8 +247,10 @@ export function EnhancedLoadingSpinner({
             
 
 
-}}
-          />
+
+
+}};
+          />;
         ))};
       </motion.div>;
     </div>;

@@ -68,8 +68,8 @@ const CloudDevOps = () => {
       title: 'Monitoring & Logging',
       description: 'Comprehensive monitoring, alerting, and centralized logging solutions'
     },
-    {
-      icon: Shield,
+    {;
+      icon: Shield,;
       title: 'Security & Compliance',;
       description: 'DevSecOps practices and compliance automation for cloud environments';
     };
@@ -77,8 +77,8 @@ const CloudDevOps = () => {
 
   const benefits = [
     'Deploy 10x faster with automated pipelines',
-    'Reduce infrastructure costs by 40%',
-    'Achieve 99.9% uptime with monitoring',
+    'Reduce infrastructure costs by 40%',;
+    'Achieve 99.9% uptime with monitoring',;
     'Scale applications automatically',;
     'Improve team productivity by 60%',;
     'Ensure security and compliance';
@@ -100,8 +100,8 @@ const CloudDevOps = () => {
       title: 'Container Orchestration',
       description: 'Kubernetes clusters with Helm charts and automated scaling'
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: 'Database Management',;
       description: 'Automated database provisioning, backups, and scaling';
     };
@@ -119,8 +119,8 @@ const CloudDevOps = () => {
     {
       industry: 'Financial Services',
       description: 'Secure, compliant cloud infrastructure for banking applications'
-    },
-    {
+    },;
+    {;
       industry: 'Healthcare',;
       description: 'HIPAA-compliant cloud solutions for medical applications';
     };
@@ -138,10 +138,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -186,10 +190,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -214,16 +222,22 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -249,10 +263,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -277,16 +295,22 @@ const CloudDevOps = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -316,10 +340,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -344,16 +372,22 @@ const CloudDevOps = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -373,16 +407,22 @@ const CloudDevOps = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -406,10 +446,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -434,16 +478,22 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -469,10 +519,14 @@ const CloudDevOps = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -493,8 +547,8 @@ const CloudDevOps = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

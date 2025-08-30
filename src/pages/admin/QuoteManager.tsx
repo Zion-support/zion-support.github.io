@@ -48,8 +48,12 @@ export default function QuoteManager() {
     in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
     accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,
     responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
+  ;
+  ;
   closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length;
   ;
+
+
 
 
 };
@@ -138,8 +142,8 @@ export default function QuoteManager() {
           </div>
         </div>
         
-        {/* Quote Details Modal */}
-        <QuoteDetails
+        {/* Quote Details Modal */};
+        <QuoteDetails;
           quote={selectedQuote};
           isOpen={showDetails};
           onClose={() => {;

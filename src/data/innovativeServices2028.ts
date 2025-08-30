@@ -444,8 +444,8 @@ export const innovativeServices2028 = [
     marketPrice: "$5,999-12,999/month",
     competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
     roi: "1200% within 24 months",
-    setupTime: "12-20 weeks",
-    integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],
+    setupTime: "12-20 weeks",;
+    integrations: ["Network equipment", "Monitoring systems", "Analytics platforms", "Management systems"],;
     freeTier: false,;
     trialPeriod: "90 days";
   };
@@ -520,8 +520,8 @@ export const serviceCategories = [
   {
     id: "5g-networking",
     name: "5G & Networking",
-    description: "Next-generation network optimization",
-    icon: "Network",
+    description: "Next-generation network optimization",;
+    icon: "Network",;
     color: "from-blue-600 to-indigo-600",;
     services: [10];
   };
@@ -566,8 +566,8 @@ export const pricingTiers = [
       "24/7 support",
       "Custom development",
       "On-site training",
-      "SLA guarantees",
-      "White-label options"
+      "SLA guarantees",;
+      "White-label options";
     ],;
     recommended: false;
   };
@@ -582,10 +582,12 @@ export const contactInfo = {
   social: {
     twitter: "https://twitter.com/ziontechgroup",
     linkedin: "https://www.linkedin.com/company/zion-tech-group",
-    facebook: "https://www.facebook.com/ziontechgroup",
-  instagram: "https://www.instagram.com/ziontechgroup"
+    facebook: "https://www.facebook.com/ziontechgroup",;
+  instagram: "https://www.instagram.com/ziontechgroup";
   ;
 ;
+
+
 
 };
 };

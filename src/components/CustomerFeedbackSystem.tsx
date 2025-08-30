@@ -33,7 +33,7 @@ interface CustomerFeedbackSystemProps {
 }
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-  showStats = true,
+  showStats = true,;
   showFilters = true,;
   maxFeedback = 10;
 }) => {;
@@ -145,8 +145,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
-          category: category.charAt(0).toUpperCase() + category.slice(1),
-          count,
+          category: category.charAt(0).toUpperCase() + category.slice(1),;
+          count,;
           percentage: (count / totalFeedback) * 100;
         }));
         .sort((a, b) => b.count - a.count);
@@ -175,7 +175,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(f => 
+      filtered = filtered.filter(f => ;
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -200,8 +200,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       helpful: 0,
       unhelpful: 0,
       tags: [],;
+  ;
+  ;
   verified: false;
     ;
+
+
 
 
 };
@@ -214,8 +218,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   // Handle helpful/unhelpful votes
   const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful') => {
     setFeedback(prev => prev.map(f => {
-      if (f.id === feedbackId) {
-        return {
+      if (f.id === feedbackId) {;
+        return {;
           ...f,;
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,;
           unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
@@ -240,8 +244,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
       'support': 'text-purple-400 bg-purple-400/20',;
+  ;
+  ;
   'overall': 'text-zion-cyan bg-zion-cyan/20';
     ;
+
+
 
 
 };
@@ -265,10 +273,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -284,10 +296,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -316,10 +332,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -336,10 +356,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -365,10 +389,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   scale: 0.9 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -446,16 +474,22 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }}
             exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }}
@@ -476,6 +510,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                         onClick = {
   () => setNewFeedback(prev => ({ ...prev,
   rating: star 
+
+
 
 
 }))}
@@ -501,6 +537,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   category: e.target.value as Feedback['category'] 
 
 
+
+
 }))}
                     className="w-full px-3 py-2 bg-zinc-800 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
                   >
@@ -519,6 +557,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                     onChange = {
   (e) => setNewFeedback(prev => ({ ...prev,
   comment: e.target.value 
+
+
 
 
 }))}
@@ -561,10 +601,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -640,6 +684,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   'helpful')
 
 
+
+
 }
                   className="flex items-center gap-2 text-zinc-400 hover:text-green-400 transition-colors"
                 >
@@ -650,6 +696,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
                   onClick = {
   () => handleVote(item.id,
   'unhelpful')
+
+
 
 
 }
@@ -688,8 +736,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
             onClick={() => setShowFeedbackForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-            Add Feedback
-          </button>
+            Add Feedback;
+          </button>;
         </motion.div>;
       )};
     </div>;

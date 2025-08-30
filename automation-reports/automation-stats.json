@@ -1,7 +1,7 @@
 {
-  "totalRuns": 1,
-  "successfulRuns": 1,
+  "totalRuns": 2,
+  "successfulRuns": 2,
   "failedRuns": 0,
-  "totalFixes": 1764,
-  "totalErrors": 2
+  "totalFixes": 3434,
+  "totalErrors": 4
 }

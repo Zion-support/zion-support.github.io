@@ -124,8 +124,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
+        status: service.status,;
+        marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
         contactInfo: service.contactInfo;
@@ -151,8 +151,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
         rating: service.rating,
         reviewCount: service.reviewCount,
         launchDate: service.launchDate,
-        status: service.status,
-        marketPrice: service.marketPrice,
+        status: service.status,;
+        marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
         website: service.website,;
         contactInfo: service.contactInfo;
@@ -260,10 +260,14 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +387,22 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -482,16 +492,22 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -569,16 +585,22 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -760,8 +782,8 @@ const EnhancedComprehensiveServices2026: React.FC = () => {;
           </div>
           <div className="mt-6 text-gray-400">
             <p>364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
-          </div>
+            <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>;
+          </div>;
         </div>;
       </div>;
     </div>;

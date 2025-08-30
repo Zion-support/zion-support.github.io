@@ -26,8 +26,8 @@ import {
 import { SEO } from "../components/SEO";
 
 export default function Community() {
-  const communityStats = [
-    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },
+  const communityStats = [;
+    { label: 'Active Members', value: '15,000+', icon: Users, color: 'from-blue-500 to-cyan-500' },;
     { label: 'Discussions', value: '50,000+', icon: MessageCircle, color: 'from-purple-500 to-pink-500' },;
     { label: 'Events Hosted', value: '200+', icon: Calendar, color: 'from-green-500 to-emerald-500' },;
     { label: 'Countries', value: '45+', icon: Globe, color: 'from-orange-500 to-red-500' };
@@ -69,8 +69,8 @@ export default function Community() {
       description: 'Business transformation strategies and technology adoption',
       icon: Rocket,
       color: 'from-green-600 to-emerald-600',
-      topics: 620,
-      posts: 4100,
+      topics: 620,;
+      posts: 4100,;
       members: 1800,;
       href: '/community/digital-transformation';
     };
@@ -105,8 +105,8 @@ export default function Community() {
       date: 'March 28, 2025',
       location: 'New York, NY',
       type: 'Meetup',
-      attendees: 75,
-      icon: Cloud,
+      attendees: 75,;
+      icon: Cloud,;
       color: 'from-blue-500 to-cyan-500',;
       href: '/events/devops-meetup-nyc';
     };
@@ -144,8 +144,8 @@ export default function Community() {
       replies: 28,
       views: 650,
       lastActivity: '1 day ago',
-      tags: ['Multi-Cloud', 'Cost Optimization', 'DevOps'],
-      icon: Cloud,
+      tags: ['Multi-Cloud', 'Cost Optimization', 'DevOps'],;
+      icon: Cloud,;
       color: 'from-blue-500 to-cyan-500',;
       href: '/community/discussions/multi-cloud-cost-optimization';
     };
@@ -175,8 +175,8 @@ export default function Community() {
     },
     {
       title: 'Resource Library',
-      description: 'Access shared resources, templates, and tools',
-      icon: Download,
+      description: 'Access shared resources, templates, and tools',;
+      icon: Download,;
       href: '/community/resources',;
       color: 'from-orange-500 to-red-500';
     };
@@ -198,10 +198,14 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -232,16 +236,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 + index * 0.1 
+
+
 
 
 }}
@@ -266,16 +276,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -293,16 +309,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
+
 
 
 }}
@@ -360,16 +382,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -387,16 +415,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -459,16 +493,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
+
 
 
 }}
@@ -486,16 +526,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
+
 
 
 }}
@@ -560,16 +606,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
+
 
 
 }}
@@ -587,16 +639,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
+
 
 
 }}
@@ -628,16 +686,22 @@ export default function Community() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.1 
+
+
 
 
 }}
@@ -661,8 +725,8 @@ export default function Community() {
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
             >
               Learn More
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

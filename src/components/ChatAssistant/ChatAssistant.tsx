@@ -25,6 +25,10 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
       timestamp: new Date(),;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -39,6 +43,10 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         timestamp: new Date(),;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -62,8 +70,8 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
         onClick = {toggleChat}
         className="fixed bottom-6 right-6 bg-zion-cyan text-zion-blue-dark p-4 rounded-full shadow-lg hover:bg-zion-cyan-light transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 z-50"
         aria-label="Open chat"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      >;
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />;
         </svg>;
       </button>;
@@ -124,8 +132,8 @@ export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {
             type="submit"
             className="bg-zion-cyan text-zion-blue-dark p-2 rounded-lg hover:bg-zion-cyan-light transition-colors"
           >
-            <Send size={20} />
-          </button>
+            <Send size={20} />;
+          </button>;
         </div>;
       </form>;
     </div>;

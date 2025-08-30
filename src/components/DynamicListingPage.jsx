@@ -15,6 +15,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   max: 10000 
 
 
+
+
 }, detailBasePath = '/marketplace/listing' }) {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState("");
@@ -105,6 +107,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         
 
 
+
+
 }}>
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                     <SelectValue placeholder="Select Category"/>
@@ -128,6 +132,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   priceRange.max]
 
 
+
+
 } min={0} max={priceRange.max} step={priceRange.max / 100} value={currentPriceFilter} onValueChange={handleSliderChange} className="mb-4"/>
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -147,6 +153,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   rating);
                 setSelectedRating(rating);
             
+
+
 
 
 }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating
@@ -171,6 +179,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
         
 
 
+
+
 }}>
                 Reset Filters
               </Button>
@@ -188,6 +198,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
   e.target.value);
             setSearchQuery(e.target.value);
         
+
+
 
 
 }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
@@ -266,6 +278,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 
 
 
+
+
 }} className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
                   Clear all filters
                 </Button>
@@ -283,6 +297,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         setCurrentPage(Math.max(1,
   currentPage - 1));
                       
+
+
 
 
 }}/>
@@ -304,6 +320,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                         setCurrentPage(Math.min(totalPages,
   currentPage + 1));
                       
+
+
 
 
 }}/>

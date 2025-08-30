@@ -34,8 +34,8 @@ const WebsiteAiChatbot: React.FC = () => (
           <li>Enterprise: custom, SSO + analytics</li>
         </ul>
       </div>
-    </section>
-    <section className="container mx-auto px-4 pb-16">
+    </section>;
+    <section className="container mx-auto px-4 pb-16">;
       <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>;
     </section>;
   </div>;

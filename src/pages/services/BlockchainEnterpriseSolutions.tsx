@@ -36,8 +36,8 @@ export default function BlockchainEnterpriseSolutions() {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: TrendingUp,
-      title: 'Cost Efficiency',
+      icon: TrendingUp,;
+      title: 'Cost Efficiency',;
       description: 'Reduce intermediaries and streamline business processes',;
       color: 'from-indigo-500 to-purple-500';
     };
@@ -63,8 +63,8 @@ export default function BlockchainEnterpriseSolutions() {
       features: ['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
     },
     {
-      title: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols',
+      title: 'DeFi Solutions',;
+      description: 'Decentralized finance applications and protocols',;
       price: 'From $20,000',;
       features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
     };
@@ -72,8 +72,8 @@ export default function BlockchainEnterpriseSolutions() {
 
   const useCases = [
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },
-    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },
-    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },
+    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;
+    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },;
     { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;
     { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
@@ -96,10 +96,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,10 +154,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -178,16 +186,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -213,10 +227,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -240,16 +258,22 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -288,10 +312,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -316,16 +344,22 @@ export default function BlockchainEnterpriseSolutions() {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -351,10 +385,14 @@ export default function BlockchainEnterpriseSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -382,8 +420,8 @@ export default function BlockchainEnterpriseSolutions() {
               >
                 View Case Studies
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

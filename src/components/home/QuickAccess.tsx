@@ -162,8 +162,8 @@ const QuickAccess: React.FC = () => {;
       icon: Code,
       color: "from-zion-purple to-zion-cyan",
       bgColor: "bg-zion-purple/10",
-      borderColor: "border-zion-purple/20",
-      path: "/micro-saas",
+      borderColor: "border-zion-purple/20",;
+      path: "/micro-saas",;
       features: ["AI Lead Scoring", "Customer Feedback", "Compliance Tools", "Analytics"],;
       stats: { solutions: "25+", deployment: "<1hr", success: "90%" };
     };
@@ -172,8 +172,8 @@ const QuickAccess: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -184,13 +184,15 @@ const QuickAccess: React.FC = () => {;
   scale: 0.95 
 
 
+
+
 },
     visible: { 
       opacity: 1, 
       y: 0, 
       scale: 1,
-      transition: {
-        duration: 0.5,
+      transition: {;
+        duration: 0.5,;
         ease: "easeOut";
       };
     };
@@ -203,9 +205,11 @@ const QuickAccess: React.FC = () => {;
       transition: {
         duration: 0.3,
   ease: "easeOut"
-      
-
+      ;
 ;
+;
+
+
 };
     };
   };
@@ -227,10 +231,14 @@ const QuickAccess: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -244,6 +252,8 @@ const QuickAccess: React.FC = () => {;
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -324,16 +334,22 @@ const QuickAccess: React.FC = () => {;
   x: -10 
 
 
+
+
 }}
                       whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                       transition = {
   { duration: 0.4,
   delay: 0.1 + idx * 0.1 
+
+
 
 
 }}
@@ -358,16 +374,22 @@ const QuickAccess: React.FC = () => {;
   scale: 0.8 
 
 
+
+
 }}
                       whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                       transition = {
   { duration: 0.4,
   delay: 0.2 + idx * 0.1 
+
+
 
 
 }}
@@ -406,16 +428,22 @@ const QuickAccess: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -443,8 +471,8 @@ const QuickAccess: React.FC = () => {;
               >
                 View All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

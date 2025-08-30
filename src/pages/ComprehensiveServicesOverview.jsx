@@ -43,11 +43,15 @@ const categoryColors = {
 
 
 
+
+
 };
 const supportLevelColors = {
   'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
   'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+
+
 
 
 
@@ -228,9 +232,13 @@ export default function ComprehensiveServicesOverview() {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: index * 0.05 }}>

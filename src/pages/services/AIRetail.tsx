@@ -5,8 +5,8 @@ export default function AIRetail() {
     'AI-powered customer behavior analysis and personalization',
     'Intelligent inventory management and demand forecasting',
     'Automated pricing optimization and dynamic pricing',
-    'Real-time customer sentiment and feedback analysis',
-    'Predictive analytics for sales and customer lifetime value',
+    'Real-time customer sentiment and feedback analysis',;
+    'Predictive analytics for sales and customer lifetime value',;
     'Smart recommendation engines and cross-selling',;
     'Integration with major e-commerce and POS platforms',;
     'Custom AI models for retail-specific insights';
@@ -23,8 +23,8 @@ export default function AIRetail() {
       price: '$799/mo', 
       details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Retailer', 
+    { ;
+      name: 'Large Retailer', ;
       price: '$1,999/mo', ;
       details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIRetail() {
 
   const useCases = [
     'E-commerce optimization and conversion rate improvement',
-    'Brick-and-mortar store analytics and optimization',
-    'Inventory management and supply chain optimization',
+    'Brick-and-mortar store analytics and optimization',;
+    'Inventory management and supply chain optimization',;
     'Customer segmentation and targeted marketing',;
     'Price optimization and competitive analysis',;
     'Omnichannel retail experience enhancement';
@@ -41,8 +41,8 @@ export default function AIRetail() {
 
   const benefits = [
     'Increase sales conversion rates by 20-40%',
-    'Improve customer retention by 30-50%',
-    'Reduce inventory costs by 25-40%',
+    'Improve customer retention by 30-50%',;
+    'Reduce inventory costs by 25-40%',;
     'Optimize pricing for maximum profitability',;
     'Enhance customer experience and satisfaction',;
     'Scale retail operations efficiently';
@@ -50,8 +50,8 @@ export default function AIRetail() {
 
   const industries = [
     'E-commerce & Online Retail',
-    'Brick & Mortar Stores',
-    'Fashion & Apparel',
+    'Brick & Mortar Stores',;
+    'Fashion & Apparel',;
     'Electronics & Technology',;
     'Home & Garden',;
     'Food & Beverage Retail';
@@ -165,8 +165,8 @@ export default function AIRetail() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

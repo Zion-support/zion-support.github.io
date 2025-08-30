@@ -174,8 +174,8 @@ export default function ForumCategories() {
             </p>
             <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-zion-blue-dark font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105">
               Start a Discussion
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </div>;
     </section>;

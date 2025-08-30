@@ -95,8 +95,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         read: false,
         priority: 'high',
         category: 'security',
-        action: {
-          label: 'Update Now',
+        action: {;
+          label: 'Update Now',;
           onClick: () => console.log('Update Now clicked');
         };
       };
@@ -137,7 +137,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: string) => {
+  const markAsRead = useCallback((id: string) => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ;
         n.id === id ? { ...n, read: true } : n;
@@ -240,8 +240,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-          >
-            {unreadCount > 9 ? '9+' : unreadCount}
+          >;
+            {unreadCount > 9 ? '9+' : unreadCount};
           </motion.div>;
         )};
       </motion.button>;
@@ -256,16 +256,22 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   x: 300 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
         exit = {
   { opacity: 0,
   x: 300 
+
+
 
 
 }}
@@ -319,16 +325,22 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }}
@@ -377,16 +389,22 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -408,8 +426,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                           </p>
                           <p className="text-sm text-gray-600 mt-1">
                             {notification.message}
-                          </p>
-                          
+                          </p>;
+                          ;
                           {notification.action && (;
                             <button;
                               onClick={(e) => {;
@@ -425,8 +443,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                         
                         <div className="flex items-center gap-2 ml-3">
                           <span className="text-xs text-gray-400">
-                            {formatTimestamp(notification.timestamp)}
-                          </span>
+                            {formatTimestamp(notification.timestamp)};
+                          </span>;
                           ;
                           <button;
                             onClick={(e) => {;
@@ -461,8 +479,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
             <div className="flex items-center justify-between text-xs text-gray-500">
               <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>
               <span>{unreadCount} unread</span>
-            </div>
-          </div>
+            </div>;
+          </div>;
         )};
       </motion.div>;
     </AnimatePresence>;

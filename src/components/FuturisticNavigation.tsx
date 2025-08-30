@@ -263,8 +263,8 @@ export const FuturisticNavigation: React.FC = () => {;
       color: 'from-zion-cyan to-zion-purple',
       dropdown: [
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },
-        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },
-        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },
+        { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
+        { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
         { name: 'Pricing Guide 2028', href: '/comprehensive-pricing-guide-2028', icon: Calculator, description: 'Complete pricing and ROI analysis' };
       ];
     };
@@ -286,10 +286,14 @@ export const FuturisticNavigation: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -320,16 +324,22 @@ export const FuturisticNavigation: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
+
+
 
 
 }}
@@ -348,16 +358,22 @@ export const FuturisticNavigation: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.15 
+
+
 
 
 }}
@@ -379,16 +395,22 @@ export const FuturisticNavigation: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.5,
   delay: (index + 2) * 0.1 
+
+
 
 
 }}
@@ -414,16 +436,22 @@ export const FuturisticNavigation: React.FC = () => {;
   scale: 0.95 
 
 
+
+
 }}
                         animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
                         exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
+
 
 
 }}
@@ -444,16 +472,22 @@ export const FuturisticNavigation: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                                 transition = {
   { duration: 0.3,
   delay: subIndex * 0.05 
+
+
 
 
 }}
@@ -522,8 +556,8 @@ export const FuturisticNavigation: React.FC = () => {;
               </div>
               {/* Mobile Sidebar Toggle */}
               <MobileSidebarToggle />
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </header>;
     </>;

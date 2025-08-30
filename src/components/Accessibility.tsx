@@ -43,8 +43,8 @@ export function Accessibility() {
     }
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey) {
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
           case '+':;
@@ -103,7 +103,11 @@ export function Accessibility() {
     const newSettings = {
   ...settings,;
   ;
+  ;
+  ;
   [key]: value ;
+
+
 
 
 };
@@ -130,8 +134,12 @@ export function Accessibility() {
       highContrast: false,
       reducedMotion: false,
       soundEnabled: true,;
+  ;
+  ;
   theme: 'auto';
     ;
+
+
 
 
 };
@@ -161,10 +169,14 @@ export function Accessibility() {
   x: -400 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -173,10 +185,14 @@ export function Accessibility() {
   x: -400 
 
 
+
+
 }}
             transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
+
 
 
 }}
@@ -242,6 +258,8 @@ export function Accessibility() {
   e.target.checked)
 
 
+
+
 }
                     className="sr-only"
                   />
@@ -268,6 +286,8 @@ export function Accessibility() {
                     onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
+
+
 
 
 }
@@ -298,6 +318,8 @@ export function Accessibility() {
   theme)
 
 
+
+
 }
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
                         settings.theme === theme
@@ -326,6 +348,8 @@ export function Accessibility() {
                     onChange = {
   (e) => updateSetting('soundEnabled',
   e.target.checked)
+
+
 
 
 }
@@ -370,8 +394,8 @@ export function Accessibility() {
               >
                 Reset to Defaults
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </>;

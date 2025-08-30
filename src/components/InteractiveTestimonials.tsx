@@ -52,8 +52,8 @@ const testimonials = [
     position: "Security Director, SecureNet",
     company: "SecureNet",
     avatar: "👩‍💻",
-    rating: 5,
-    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",
+    rating: 5,;
+    content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",;
     category: "Cybersecurity",;
     results: ["100% compliance", "Zero incidents", "Automated security"];
   };
@@ -93,10 +93,14 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -119,10 +123,14 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -132,9 +140,11 @@ export function InteractiveTestimonials() {
   delay: 0.2 
 
 
+
+
 }}
-        >
-          {categories.map((category) => (
+        >;
+          {categories.map((category) => (;
             <button;
               key={category};
               onClick={() => {;
@@ -160,10 +170,14 @@ export function InteractiveTestimonials() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -171,6 +185,8 @@ export function InteractiveTestimonials() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -198,16 +214,22 @@ export function InteractiveTestimonials() {
   x: 50 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   x: -50 
+
+
 
 
 }}
@@ -262,10 +284,14 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -273,6 +299,8 @@ export function InteractiveTestimonials() {
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -298,10 +326,14 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -311,12 +343,14 @@ export function InteractiveTestimonials() {
   delay: 0.8 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Join our success stories</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

@@ -8,16 +8,16 @@ export default function Header() {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Quantum Computing', href: '/quantum-computing' },
-    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },;
+    { name: 'Research & Development', href: '/research-development' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'News', href: '/news' },;
     { name: 'Contact', href: '/contact' },;
   ];
   const services = [
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
-    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },
-    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },
+    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },;
+    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },;
     { name: 'Business Intelligence', href: '/ai-business-intelligence' },;
     { name: 'Content Generation', href: '/ai-content-generator' },;
     { name: 'Research Automation', href: '/ai-autonomous-research-assistant' },;
@@ -131,8 +131,8 @@ export default function Header() {
                   Get Started
                 </Link>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         )};
       </div>;
     </header>;

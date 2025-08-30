@@ -75,8 +75,8 @@ export default function OnsiteSupport() {
       color: 'from-purple-500 to-pink-500',
       services: [
         'User training programs',
-        'Best practices guidance',
-        'Technology consulting',
+        'Best practices guidance',;
+        'Technology consulting',;
         'Process optimization';
       ];
     };
@@ -117,8 +117,8 @@ export default function OnsiteSupport() {
       areas: [
         'Major metropolitan areas',
         'Enterprise client locations',
-        'Strategic partnerships',
-        'Emergency response'
+        'Strategic partnerships',;
+        'Emergency response';
       ],;
       responseTime: '8-24 hours';
     };
@@ -161,8 +161,8 @@ export default function OnsiteSupport() {
         '1-hour response time',
         '24/7 availability',
         'Dedicated support team',
-        'Custom maintenance plans',
-        'Strategic consultation'
+        'Custom maintenance plans',;
+        'Strategic consultation';
       ],;
       pricing: 'Custom pricing';
     };
@@ -199,8 +199,8 @@ export default function OnsiteSupport() {
     },
     {
       step: '5',
-      title: 'Follow-up',
-      description: 'Post-resolution support and documentation',
+      title: 'Follow-up',;
+      description: 'Post-resolution support and documentation',;
       icon: Mail,;
       color: 'from-yellow-500 to-orange-500';
     };
@@ -216,8 +216,8 @@ export default function OnsiteSupport() {
     },
     {
       title: 'Emergency Support',
-      description: '24/7 emergency response hotline',
-      email: 'emergency@ziontechgroup.com',
+      description: '24/7 emergency response hotline',;
+      email: 'emergency@ziontechgroup.com',;
       phone: '+1 302 464 0950',;
       address: 'Available 24/7 for critical issues';
     };
@@ -239,10 +239,14 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -271,16 +275,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -306,16 +316,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -333,16 +349,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
+
 
 
 }}
@@ -380,16 +402,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -407,16 +435,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -460,16 +494,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
+
 
 
 }}
@@ -487,16 +527,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
+
 
 
 }}
@@ -540,16 +586,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
+
 
 
 }}
@@ -567,16 +619,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
+
 
 
 }}
@@ -601,16 +659,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1.1 
+
+
 
 
 }}
@@ -695,16 +759,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.2 
+
+
 
 
 }}
@@ -722,16 +792,22 @@ export default function OnsiteSupport() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.3 + index * 0.1 
+
+
 
 
 }}
@@ -781,16 +857,22 @@ export default function OnsiteSupport() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.4 
+
+
 
 
 }}
@@ -805,8 +887,8 @@ export default function OnsiteSupport() {
           </p>
           <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">
             <span>Schedule Onsite Support</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+            <ArrowRight className="w-4 h-4" />;
+          </button>;
         </motion.div>;
       </div>;
     </div>;

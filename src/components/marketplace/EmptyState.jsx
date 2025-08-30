@@ -106,12 +106,16 @@ export function CategoriesEmptyState({ onRetry }) {
   onClick: onRetry 
 
 
+
+
 } : null}/>);
 }
 export function TalentEmptyState({ onRetry }) {
     return (<EmptyState type="talent" action = {
   onRetry ? { label: 'Reset Filters',
   onClick: onRetry 
+
+
 
 
 } : null}/>);
@@ -122,12 +126,16 @@ export function EquipmentEmptyState({ onRetry }) {
   onClick: onRetry 
 
 
+
+
 } : null}/>);
 }
 export function SearchEmptyState({ onRetry }) {
     return (<EmptyState type="search" action = {
   onRetry ? { label: 'Clear Search',
   onClick: onRetry 
+
+
 
 
 } : null}/>);
@@ -138,12 +146,16 @@ export function NetworkErrorState({ onRetry }) {
   onClick: onRetry 
 
 
+
+
 } : null}/>);
 }
 export function ServerErrorState({ onRetry }) {
     return (<EmptyState type="error" action = {
   onRetry ? { label: 'Retry',
   onClick: onRetry 
+
+
 
 
 } : null}/>);

@@ -54,8 +54,8 @@ export default function PostCard({ post }: PostCardProps) {
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-zion-green rounded-full"></span>
               {post.views} views
-            </span>
-          </div>
+            </span>;
+          </div>;
         </div>;
       </div>;
     </div>;

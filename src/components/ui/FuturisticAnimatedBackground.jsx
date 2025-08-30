@@ -90,6 +90,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             
 
 
+
+
 };
             return colors[variant][Math.floor(Math.random() * colors[variant].length)];
         }
@@ -213,6 +215,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         
 
 
+
+
 }}/>
       
       {/* Overlay effects */}
@@ -234,12 +238,16 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         
 
 
+
+
 }} transition = {
   {
             duration: 8,
             repeat: Infinity,
   ease: "linear"
         
+
+
 
 
 }}/>
@@ -251,12 +259,16 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         
 
 
+
+
 }} transition = {
   {
             duration: 6,
             repeat: Infinity,
   ease: "easeInOut"
         
+
+
 
 
 }}/>
@@ -268,6 +280,8 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         
 
 
+
+
 }} transition = {
   {
             duration: 10,
@@ -276,12 +290,16 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
         
 
 
+
+
 }}/>
       </div>
     </div>);
 };
 export default FuturisticAnimatedBackground;
 
+export default getParticleColor;
+export default getParticleColor;
 export default getParticleColor;
 export default getParticleColor;
 export default getParticleColor;

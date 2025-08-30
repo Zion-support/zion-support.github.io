@@ -489,8 +489,8 @@ const microSAASServices2028 = [
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
     competitors: ['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],
     marketSize: '$7.2B AI analytics market',
-    growthRate: '260% annual growth',
-    rating: 4.6,
+    growthRate: '260% annual growth',;
+    rating: 4.6,;
     reviews: 234,;
     customers: 123;
   };
@@ -505,8 +505,8 @@ const MicroSAASServices2028: React.FC = () => {;
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
     { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },
     { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },
-    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },
-    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },
+    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },;
+    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },;
     { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },;
     { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },;
     { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
@@ -546,10 +546,14 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -564,16 +568,22 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -587,16 +597,22 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -678,16 +694,22 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -783,10 +805,14 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -801,16 +827,22 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -824,16 +856,22 @@ const MicroSAASServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -852,8 +890,8 @@ const MicroSAASServices2028: React.FC = () => {;
             >
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

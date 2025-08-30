@@ -17,11 +17,15 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
   "text-blue-500")
 
 
+
+
 }/>;
         case 'quote_request':
             return <Briefcase className = {
   cn(className,
   "text-purple-500")
+
+
 
 
 }/>;
@@ -31,11 +35,15 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
   "text-green-500")
 
 
+
+
 }/>;
         case 'hire_request':
             return <UserCheck className = {
   cn(className,
   "text-zion-purple")
+
+
 
 
 }/>;
@@ -45,6 +53,8 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
   "text-zion-cyan")
 
 
+
+
 }/>;
         case 'system':
             return <AlertCircle className = {
@@ -52,11 +62,15 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
   "text-yellow-500")
 
 
+
+
 }/>;
         default:
             return <Bell className = {
   cn(className,
   "text-gray-500")
+
+
 
 
 }/>;
@@ -93,6 +107,8 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     return (<div className = {
   cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
   notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")
+
+
 
 
 }>

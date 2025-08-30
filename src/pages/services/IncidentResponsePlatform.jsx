@@ -126,9 +126,13 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
@@ -139,14 +143,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -160,14 +170,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>
@@ -181,14 +197,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}>
@@ -203,14 +225,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}>
@@ -232,9 +260,13 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -252,14 +284,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}>
@@ -279,9 +317,13 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -301,14 +343,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}>
@@ -354,9 +402,13 @@ const IncidentResponsePlatform = () => {
   x: -20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -375,9 +427,13 @@ const IncidentResponsePlatform = () => {
   x: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -401,9 +457,13 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -414,14 +474,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -433,14 +499,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>
@@ -458,14 +530,20 @@ const IncidentResponsePlatform = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}>
@@ -493,6 +571,8 @@ const IncidentResponsePlatform = () => {
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}>

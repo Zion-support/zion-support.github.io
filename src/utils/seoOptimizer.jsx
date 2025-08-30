@@ -102,10 +102,14 @@ const SEOOptimizer = ({ content, onOptimize }) => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}

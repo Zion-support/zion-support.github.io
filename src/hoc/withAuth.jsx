@@ -22,3 +22,5 @@ export default withAuth;
 export default withAuth;
 export default withAuth;
 export default withAuth;
+export default withAuth;
+export default withAuth;

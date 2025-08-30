@@ -177,15 +177,15 @@ const Home2026: React.FC = () => {;
     },
     {
       title: "Sustainability",
-      icon: Heart,
-      description: "Green technology and ESG compliance solutions",
+      icon: Heart,;
+      description: "Green technology and ESG compliance solutions",;
       color: "from-teal-500 to-cyan-600",;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length;
     };
   ];
 
-  const stats = [
-    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },
+  const stats = [;
+    { label: "Services Available", value: INNOVATIVE_MICRO_SAAS_SERVICES_2026.length, icon: BarChart3 },;
     { label: "Innovation Level", value: "Revolutionary", icon: Star },;
     { label: "Success Rate", value: "99.9%", icon: CheckCircle },;
     { label: "Client Satisfaction", value: "98%", icon: Heart };
@@ -236,6 +236,8 @@ const Home2026: React.FC = () => {;
               
 
 
+
+
 }}
               transition = {
   {
@@ -243,6 +245,8 @@ const Home2026: React.FC = () => {;
                 repeat: Infinity,
   ease: "easeInOut"
               
+
+
 
 
 }}
@@ -261,10 +265,14 @@ const Home2026: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -352,10 +360,14 @@ const Home2026: React.FC = () => {;
   0] 
 
 
+
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}
@@ -368,10 +380,14 @@ const Home2026: React.FC = () => {;
   0] 
 
 
+
+
 }}
               transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}
@@ -392,16 +408,22 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -427,10 +449,14 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -454,16 +480,22 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -509,10 +541,14 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -537,16 +573,22 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -616,10 +658,14 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -680,16 +726,22 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -721,10 +773,14 @@ const Home2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -789,8 +845,8 @@ const Home2026: React.FC = () => {;
                   </a>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

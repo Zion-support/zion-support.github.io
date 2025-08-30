@@ -19,8 +19,8 @@ export default function Infrastructure() {
       title: 'Security First',
       description: 'Protect your infrastructure with enterprise-grade security'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'High Performance',;
       description: 'Lightning-fast systems and applications';
     };
@@ -42,8 +42,8 @@ export default function Infrastructure() {
       description: 'Seamless transition to cloud infrastructure',
       icon: Cloud
     },
-    {
-      title: 'Disaster Recovery',
+    {;
+      title: 'Disaster Recovery',;
       description: 'Business continuity and backup solutions',;
       icon: Shield;
     };
@@ -61,10 +61,14 @@ export default function Infrastructure() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function Infrastructure() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function Infrastructure() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function Infrastructure() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function Infrastructure() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function Infrastructure() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,8 +295,8 @@ export default function Infrastructure() {
                   Contact Infrastructure Team
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

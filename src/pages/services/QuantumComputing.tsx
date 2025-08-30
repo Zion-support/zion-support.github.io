@@ -117,8 +117,8 @@ const QuantumComputing = () => {
       title: 'Quantum Machine Learning',
       description: 'AI and ML enhanced by quantum computing power'
     },
-    {
-      icon: Database2,
+    {;
+      icon: Database2,;
       title: 'Quantum Databases',;
       description: 'High-performance quantum database systems';
     };
@@ -126,8 +126,8 @@ const QuantumComputing = () => {
 
   const benefits = [
     'Solve complex problems exponentially faster',
-    'Enable breakthroughs in scientific research',
-    'Provide unbreakable quantum encryption',
+    'Enable breakthroughs in scientific research',;
+    'Provide unbreakable quantum encryption',;
     'Accelerate AI and machine learning',;
     'Revolutionize drug discovery and materials science',;
     'Transform financial modeling and optimization';
@@ -149,8 +149,8 @@ const QuantumComputing = () => {
       title: 'Quantum Software Solutions',
       description: 'Quantum software development and deployment'
     },
-    {
-      icon: Server2,
+    {;
+      icon: Server2,;
       title: 'Quantum Cloud Platform',;
       description: 'Cloud-based quantum computing infrastructure';
     };
@@ -168,8 +168,8 @@ const QuantumComputing = () => {
     {
       industry: 'Materials Science',
       description: 'New material discovery and simulation'
-    },
-    {
+    },;
+    {;
       industry: 'Artificial Intelligence',;
       description: 'Enhanced machine learning algorithms';
     };
@@ -193,10 +193,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -241,10 +245,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -269,16 +277,22 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -304,10 +318,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -332,16 +350,22 @@ const QuantumComputing = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -371,10 +395,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -399,16 +427,22 @@ const QuantumComputing = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -428,16 +462,22 @@ const QuantumComputing = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -461,10 +501,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -489,16 +533,22 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -524,10 +574,14 @@ const QuantumComputing = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -548,8 +602,8 @@ const QuantumComputing = () => {
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

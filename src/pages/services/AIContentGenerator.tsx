@@ -47,8 +47,8 @@ export default function AIContentGenerator() {
       title: 'Audience Targeting',
       description: 'Content tailored to specific demographics, industries, and customer personas'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: 'Performance Analytics',;
       description: 'Track content performance with AI-powered insights and optimization recommendations';
     };
@@ -56,8 +56,8 @@ export default function AIContentGenerator() {
 
   const benefits = [
     'Increase content production by 10x with AI assistance',
-    'Improve SEO rankings by 45% with optimized content',
-    'Reduce content creation costs by 60%',
+    'Improve SEO rankings by 45% with optimized content',;
+    'Reduce content creation costs by 60%',;
     'Boost engagement rates by 35% with targeted content',;
     'Save 20+ hours per week on content creation',;
     'Maintain consistent brand voice across all content';
@@ -111,8 +111,8 @@ export default function AIContentGenerator() {
         'Dedicated account manager',
         'SLA guarantees',
         'Advanced security features',
-        'Custom integrations'
-      ],
+        'Custom integrations';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -137,10 +137,14 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -175,10 +179,14 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -203,16 +211,22 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -238,10 +252,14 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,16 +284,22 @@ export default function AIContentGenerator() {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -298,10 +322,14 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -326,16 +354,22 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -393,10 +427,14 @@ export default function AIContentGenerator() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -418,8 +456,8 @@ export default function AIContentGenerator() {
                   Schedule Demo
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

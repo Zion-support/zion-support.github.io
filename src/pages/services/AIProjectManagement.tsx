@@ -52,8 +52,8 @@ export default function AIProjectManagement() {
       title: "Performance Analytics",
       description: "Real-time project analytics and predictive performance insights."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Time Management",;
       description: "AI-powered time tracking and productivity optimization.";
     };
@@ -61,8 +61,8 @@ export default function AIProjectManagement() {
 
   const benefits = [
     "Increase project completion rates by 30-50% with AI insights",
-    "Reduce project delays by 40-60% through predictive analytics",
-    "Improve team productivity by 25-40% with automation",
+    "Reduce project delays by 40-60% through predictive analytics",;
+    "Improve team productivity by 25-40% with automation",;
     "Enhance resource allocation efficiency by 35-55%",;
     "Reduce project management overhead by 50-70%",;
     "Improve stakeholder communication and reporting by 45%";
@@ -94,8 +94,8 @@ export default function AIProjectManagement() {
       description: "AI-driven change management and project adjustment recommendations",
       icon: TrendingUp
     },
-    {
-      phase: "Closure",
+    {;
+      phase: "Closure",;
       description: "Automated project documentation, lessons learned, and knowledge transfer",;
       icon: CheckCircle;
     };
@@ -117,8 +117,8 @@ export default function AIProjectManagement() {
     {
       industry: "Healthcare",
       description: "Clinical trial management, patient care coordination, and facility projects"
-    },
-    {
+    },;
+    {;
       industry: "Manufacturing",;
       description: "Production planning, quality control, and supply chain optimization";
     };
@@ -141,10 +141,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -197,10 +201,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -225,16 +233,22 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -260,10 +274,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -291,16 +309,22 @@ export default function AIProjectManagement() {
   x: -20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -351,10 +375,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -379,16 +407,22 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -416,10 +450,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -444,16 +482,22 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -481,10 +525,14 @@ export default function AIProjectManagement() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -513,8 +561,8 @@ export default function AIProjectManagement() {
               >
                 Contact Sales
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

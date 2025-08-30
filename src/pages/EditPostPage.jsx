@@ -26,6 +26,8 @@ const mockPost = {
 
 
 
+
+
 };
 export default function EditPostPage() {
     const { postId } = useParams();
@@ -72,6 +74,8 @@ export default function EditPostPage() {
         tags: post.tags.join(",
   ")
     
+
+
 
 
 };

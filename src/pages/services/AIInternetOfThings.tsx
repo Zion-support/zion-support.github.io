@@ -5,8 +5,8 @@ export default function AIInternetOfThings() {
     'AI-powered IoT optimization',
     'Intelligent IoT device management',
     'Automated IoT monitoring and alerting',
-    'Predictive analytics for IoT scaling',
-    'Smart IoT security and compliance',
+    'Predictive analytics for IoT scaling',;
+    'Smart IoT security and compliance',;
     'AI-driven IoT automation and orchestration',;
     'Real-time IoT analytics and insights',;
     'Custom AI models for IoT applications';
@@ -23,8 +23,8 @@ export default function AIInternetOfThings() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full IoT suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIInternetOfThings() {
 
   const useCases = [
     'IoT optimization',
-    'IoT device management',
-    'Performance monitoring and analytics',
+    'IoT device management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'IoT scaling and management';
@@ -41,8 +41,8 @@ export default function AIInternetOfThings() {
 
   const benefits = [
     'Improve IoT performance by 50-80%',
-    'Reduce IoT management time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce IoT management time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance IoT reliability and scalability',;
     'Optimize resource utilization',;
     'Scale IoT operations efficiently';
@@ -50,8 +50,8 @@ export default function AIInternetOfThings() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIInternetOfThings() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

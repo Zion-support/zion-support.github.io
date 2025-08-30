@@ -81,10 +81,14 @@ const Testimonials: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -115,16 +119,22 @@ const Testimonials: React.FC = () => {;
   x: 100 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
               exit = {
   { opacity: 0,
   x: -100 
+
+
 
 
 }}
@@ -210,16 +220,22 @@ const Testimonials: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -242,8 +258,8 @@ const Testimonials: React.FC = () => {;
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

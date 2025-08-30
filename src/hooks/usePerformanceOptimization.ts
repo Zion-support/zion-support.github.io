@@ -17,15 +17,15 @@ interface UsePerformanceOptimizationOptions {
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
   const {
-    enableLazyLoading = true,
-    enableIntersectionObserver = true,
+    enableLazyLoading = true,;
+    enableIntersectionObserver = true,;
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
     threshold = 0.1;
   } = options;
 
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
+  const metricsRef = useRef<PerformanceMetrics>({;
+    loadTime: 0,;
     renderTime: 0,;
     memoryUsage: 0,;
     fps: 0;
@@ -170,7 +170,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
+  const debounce = useCallback(<T extends (...args: any[]) => any>(;
     func: T,;
     delay: number;
   ): ((...args: Parameters<T>) => void) => {;
@@ -183,7 +183,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
+  const throttle = useCallback(<T extends (...args: any[]) => any>(;
     func: T,;
     delay: number;
   ): ((...args: Parameters<T>) => void) => {;
@@ -209,8 +209,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
 
   // Memoized performance data
-  const performanceData = useMemo(() => ({
-    metrics: getMetrics(),
+  const performanceData = useMemo(() => ({;
+    metrics: getMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
     isSlowRender: metricsRef.current.renderTime > 16;

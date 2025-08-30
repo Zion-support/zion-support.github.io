@@ -95,8 +95,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
       const filters = {
   protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',;
+  ;
+  ;
   tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
       ;
+
+
 
 
 };
@@ -110,8 +114,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   small: '0.875rem',
       medium: '1rem',
       large: '1.125rem',;
+  ;
+  ;
   'extra-large': '1.25rem';
     ;
+
+
 
 
 };
@@ -199,7 +207,11 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
     const newSettings = {
   ...settings,;
   ;
+  ;
+  ;
   [key]: value ;
+
+
 
 
 };
@@ -215,8 +227,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
       keyboardNavigation: 'keyboard navigation',
       focusIndicator: 'focus indicator',
       colorBlindness: 'color blindness simulation',;
+  ;
+  ;
   fontSize: 'font size';
     ;
+
+
 
 
 };
@@ -234,8 +250,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
       keyboardNavigation: false,
       focusIndicator: true,
       colorBlindness: 'none',;
+  ;
+  ;
   fontSize: 'medium';
     ;
+
+
 
 
 };
@@ -289,16 +309,22 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   x: 300 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   x: 300 
+
+
 
 
 }}
@@ -342,6 +368,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   !settings.highContrast)
 
 
+
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.highContrast ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -365,6 +393,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   !settings.largeText)
 
 
+
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.largeText ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -386,6 +416,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('reducedMotion',
   !settings.reducedMotion)
+
+
 
 
 }
@@ -414,6 +446,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   e.target.value)
 
 
+
+
 }
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                     >
@@ -433,6 +467,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onChange = {
   (e) => updateSetting('colorBlindness',
   e.target.value)
+
+
 
 
 }
@@ -463,6 +499,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   !settings.keyboardNavigation)
 
 
+
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -484,6 +522,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
+
+
 
 
 }
@@ -517,6 +557,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('screenReader',
   !settings.screenReader)
+
+
 
 
 }
@@ -579,16 +621,22 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   y: 20 
+
+
 
 
 }}
@@ -606,8 +654,8 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={togglePanel}
+          className="fixed inset-0 bg-black bg-opacity-50 z-40";
+          onClick={togglePanel};
         />;
       )};
     </>;

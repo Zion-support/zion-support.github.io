@@ -25,15 +25,15 @@ const researchAreas = [
   },
   {
     icon: "🌐",
-    title: "Edge Computing",
-    description: "Distributed computing and IoT optimization",
+    title: "Edge Computing",;
+    description: "Distributed computing and IoT optimization",;
     progress: 80,;
     color: "from-orange-500 to-red-500";
   };
 ];
 
-const innovationMetrics = [
-  { label: "Research Papers", value: "30+", icon: "📚" },
+const innovationMetrics = [;
+  { label: "Research Papers", value: "30+", icon: "📚" },;
   { label: "Patents Filed", value: "15+", icon: "📋" },;
   { label: "R&D Investment", value: "$2M+", icon: "💰" },;
   { label: "Innovation Awards", value: "8+", icon: "🏆" };
@@ -50,10 +50,14 @@ export function InnovationResearchSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -76,10 +80,14 @@ export function InnovationResearchSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -87,6 +95,8 @@ export function InnovationResearchSection() {
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -110,10 +120,14 @@ export function InnovationResearchSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -121,6 +135,8 @@ export function InnovationResearchSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -139,10 +155,14 @@ export function InnovationResearchSection() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,6 +170,8 @@ export function InnovationResearchSection() {
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -179,6 +201,8 @@ export function InnovationResearchSection() {
   delay: 0.8 + index * 0.1 
 
 
+
+
 }}
                         />
                       </div>
@@ -198,10 +222,14 @@ export function InnovationResearchSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -209,6 +237,8 @@ export function InnovationResearchSection() {
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -253,10 +283,14 @@ export function InnovationResearchSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,12 +300,14 @@ export function InnovationResearchSection() {
   delay: 1.0 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Join the innovation revolution</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

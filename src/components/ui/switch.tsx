@@ -16,8 +16,8 @@ export function Switch({
   disabled = false,
   className,
   id,
-  'aria-label': ariaLabel,
-  ...props
+  'aria-label': ariaLabel,;
+  ...props;
 }: SwitchProps) {;
   const handleToggle = () => {;
     if (!disabled && onCheckedChange) {;
@@ -42,6 +42,8 @@ export function Switch({
       )
 
 
+
+
 }
       id={id}
       {...props}
@@ -53,6 +55,8 @@ export function Switch({
   checked ? 'translate-x-5' : 'translate-x-0'
         )
 
+;
+;
 
 };
       />;

@@ -43,6 +43,8 @@ export function MobileMenu({ className }) {
   className)
 
 
+
+
 }>
       {/* Mobile menu button */}
       <Button 
@@ -88,6 +90,8 @@ export function MobileMenu({ className }) {
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan"
                     )
+
+
 
 
 }

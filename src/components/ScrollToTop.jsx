@@ -36,16 +36,22 @@ export function ScrollToTop() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }}
           exit = {
   { opacity: 0, scale: 0,
   y: 20 
+
+
 
 
 }}
@@ -58,6 +64,8 @@ export function ScrollToTop() {
           
 
 
+
+
 }}
           whileTap={{ scale: 0.95 }}
           transition = {
@@ -66,6 +74,8 @@ export function ScrollToTop() {
             stiffness: 400,
   damping: 17
           
+
+
 
 
 }}
@@ -81,6 +91,8 @@ export function ScrollToTop() {
 
 export default ScrollToTop;
 
+export default ScrollToTop;
+export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;

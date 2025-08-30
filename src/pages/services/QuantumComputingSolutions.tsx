@@ -25,8 +25,8 @@ export default function QuantumComputingSolutions() {
     'Quantum algorithm optimization and development',
     'Quantum machine learning and AI acceleration',
     'Cryptography and security solutions',
-    'Financial modeling and risk analysis',
-    'Drug discovery and molecular simulation',
+    'Financial modeling and risk analysis',;
+    'Drug discovery and molecular simulation',;
     'Supply chain optimization and logistics',;
     'Climate modeling and environmental analysis',;
     'Quantum error correction and fault tolerance';
@@ -34,8 +34,8 @@ export default function QuantumComputingSolutions() {
 
   const benefits = [
     'Solve complex problems 1000x faster than classical computers',
-    'Breakthrough discoveries in drug development and materials science',
-    'Unbreakable quantum encryption for ultimate security',
+    'Breakthrough discoveries in drug development and materials science',;
+    'Unbreakable quantum encryption for ultimate security',;
     'Revolutionary optimization for logistics and supply chains',;
     'Accelerate AI training and inference by orders of magnitude',;
     'Enable new computational paradigms impossible with classical computing';
@@ -61,8 +61,8 @@ export default function QuantumComputingSolutions() {
       useCases: ['Traveling salesman problem', 'Vehicle routing', 'Warehouse optimization', 'Supply chain resilience']
     },
     {
-      name: 'Cybersecurity',
-      description: 'Quantum-resistant cryptography and secure communications',
+      name: 'Cybersecurity',;
+      description: 'Quantum-resistant cryptography and secure communications',;
       icon: Shield,;
       useCases: ['Post-quantum cryptography', 'Quantum key distribution', 'Secure multi-party computation', 'Blockchain security'];
     };
@@ -85,8 +85,8 @@ export default function QuantumComputingSolutions() {
     },
     {
       plan: 'Government',
-      price: '$24,999',
-      period: '/month',
+      price: '$24,999',;
+      period: '/month',;
       features: ['Unlimited qubits', 'Custom quantum hardware', '24/7 support', 'On-site quantum experts', 'White-label solutions'],;
       recommended: false;
     };
@@ -96,8 +96,8 @@ export default function QuantumComputingSolutions() {
     { name: 'IBM Q', url: 'https://quantum-computing.ibm.com/', category: 'Quantum Hardware' },
     { name: 'Google Cirq', url: 'https://quantumai.google/cirq', category: 'Quantum Framework' },
     { name: 'Microsoft Q#', url: 'https://docs.microsoft.com/en-us/azure/quantum/', category: 'Quantum Language' },
-    { name: 'Amazon Braket', url: 'https://aws.amazon.com/braket/', category: 'Quantum Cloud' },
-    { name: 'Rigetti', url: 'https://www.rigetti.com/', category: 'Quantum Processors' },
+    { name: 'Amazon Braket', url: 'https://aws.amazon.com/braket/', category: 'Quantum Cloud' },;
+    { name: 'Rigetti', url: 'https://www.rigetti.com/', category: 'Quantum Processors' },;
     { name: 'D-Wave', url: 'https://www.dwavesys.com/', category: 'Quantum Annealing' },;
     { name: 'IonQ', url: 'https://ionq.com/', category: 'Trapped Ion Quantum' },;
     { name: 'Xanadu', url: 'https://www.xanadu.ai/', category: 'Photonics Quantum' };
@@ -107,8 +107,8 @@ export default function QuantumComputingSolutions() {
     'Quantum machine learning and neural networks',
     'Quantum optimization algorithms',
     'Quantum error correction codes',
-    'Quantum cryptography protocols',
-    'Quantum simulation methods',
+    'Quantum cryptography protocols',;
+    'Quantum simulation methods',;
     'Quantum sensing and metrology',;
     'Quantum communication networks',;
     'Quantum materials and devices';
@@ -132,10 +132,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -177,10 +181,14 @@ export default function QuantumComputingSolutions() {
   0.3] 
 
 
+
+
 }}
             transition = {
   { duration: 4,
   repeat: Infinity 
+
+
 
 
 }}
@@ -192,10 +200,14 @@ export default function QuantumComputingSolutions() {
   0.6] 
 
 
+
+
 }}
             transition = {
   { duration: 4, repeat: Infinity,
   delay: 2 
+
+
 
 
 }}
@@ -213,10 +225,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -241,10 +257,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -252,6 +272,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -290,10 +312,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -318,10 +344,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -329,6 +359,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -353,10 +385,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -381,10 +417,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -392,6 +432,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -419,10 +461,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -447,10 +493,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -458,6 +508,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -482,10 +534,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -514,10 +570,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -525,6 +585,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -580,10 +642,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -611,10 +677,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -622,6 +692,8 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -643,10 +715,14 @@ export default function QuantumComputingSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -676,8 +752,8 @@ export default function QuantumComputingSolutions() {
             </div>
             <div className="mt-6 text-sm text-slate-400">
               Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

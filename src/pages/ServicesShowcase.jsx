@@ -139,6 +139,8 @@ const ServicesShowcase = () => {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -159,9 +161,13 @@ const ServicesShowcase = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center">
@@ -239,9 +245,13 @@ const ServicesShowcase = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">

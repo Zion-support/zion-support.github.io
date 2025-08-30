@@ -314,8 +314,8 @@ export const real2036InnovativeServices = [
     ],
     useCases: [
       'Hedge fund operations',
-      'Investment banking',
-      'Portfolio management',
+      'Investment banking',;
+      'Portfolio management',;
       'Risk assessment';
     ];
   };

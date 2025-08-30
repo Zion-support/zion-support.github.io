@@ -129,8 +129,8 @@ const Profile: React.FC = () => {;
     'Healthcare',
     'Finance',
     'Manufacturing',
-    'Retail',
-    'Education',
+    'Retail',;
+    'Education',;
     'Government',;
     'Non-profit',;
     'Other';
@@ -187,7 +187,7 @@ const Profile: React.FC = () => {;
     }
   };
 
-  const handleNotificationToggle = (key: keyof NotificationSettings) => {
+  const handleNotificationToggle = (key: keyof NotificationSettings) => {;
     setNotifications(prev => ({;
       ...prev,;
       [key]: !prev[key];
@@ -204,16 +204,16 @@ const Profile: React.FC = () => {;
 
   const passwordStrength = getPasswordStrength(newPassword);
 
-  const stats = [
-    { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },
+  const stats = [;
+    { label: 'Projects Completed', value: '24', icon: <BarChart3 className="w-5 h-5" /> },;
     { label: 'Active Projects', value: '3', icon: <Activity className="w-5 h-5" /> },;
     { label: 'Days Active', value: '156', icon: <Calendar className="w-5 h-5" /> },;
     { label: 'Rating', value: '4.9', icon: <Star className="w-5 h-5" /> };
   ];
 
   const achievements = [
-    { title: 'First Project', description: 'Completed your first project', icon: <Award className="w-6 h-6" />, earned: true },
-    { title: 'Team Player', description: 'Collaborated on 5+ projects', icon: <UserCheck className="w-6 h-6" />, earned: true },
+    { title: 'First Project', description: 'Completed your first project', icon: <Award className="w-6 h-6" />, earned: true },;
+    { title: 'Team Player', description: 'Collaborated on 5+ projects', icon: <UserCheck className="w-6 h-6" />, earned: true },;
     { title: 'Innovator', description: 'Implemented AI solutions', icon: <Brain className="w-6 h-6" />, earned: true },;
     { title: 'Cloud Master', description: 'Deployed 10+ cloud solutions', icon: <Cloud className="w-6 h-6" />, earned: false },;
     { title: 'Speed Demon', description: 'Completed project ahead of schedule', icon: <Zap className="w-6 h-6" />, earned: false };
@@ -226,10 +226,14 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -273,16 +277,22 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 + index * 0.1 
+
+
 
 
 }}
@@ -317,6 +327,8 @@ const Profile: React.FC = () => {;
   firstName: e.target.value 
 
 
+
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -334,6 +346,8 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   lastName: e.target.value 
+
+
 
 
 }))}
@@ -357,6 +371,8 @@ const Profile: React.FC = () => {;
   email: e.target.value 
 
 
+
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -374,6 +390,8 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   phone: e.target.value 
+
+
 
 
 }))}
@@ -397,6 +415,8 @@ const Profile: React.FC = () => {;
   company: e.target.value 
 
 
+
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -412,6 +432,8 @@ const Profile: React.FC = () => {;
               onChange = {
   (e) => setProfile(prev => ({ ...prev,
   position: e.target.value 
+
+
 
 
 }))}
@@ -431,6 +453,8 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   industry: e.target.value 
+
+
 
 
 }))}
@@ -456,6 +480,8 @@ const Profile: React.FC = () => {;
   location: e.target.value 
 
 
+
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -476,6 +502,8 @@ const Profile: React.FC = () => {;
   website: e.target.value 
 
 
+
+
 }))}
               disabled={!isEditing}
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -490,6 +518,8 @@ const Profile: React.FC = () => {;
             onChange = {
   (e) => setProfile(prev => ({ ...prev,
   bio: e.target.value 
+
+
 
 
 }))}
@@ -534,16 +564,22 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 + index * 0.1 
+
+
 
 
 }}
@@ -570,8 +606,8 @@ const Profile: React.FC = () => {;
                   Earned
                 </div>
               )}
-            </motion.div>
-          ))}
+            </motion.div>;
+          ))};
         </div>;
       </div>;
     </motion.div>;
@@ -584,10 +620,14 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -617,6 +657,8 @@ const Profile: React.FC = () => {;
   current: !prev.current 
 
 
+
+
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
@@ -643,6 +685,8 @@ const Profile: React.FC = () => {;
   new: !prev.new 
 
 
+
+
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
@@ -662,6 +706,8 @@ const Profile: React.FC = () => {;
   'bg-')
                           : 'bg-slate-600/30'
                       
+
+
 
 
 }`}
@@ -691,6 +737,8 @@ const Profile: React.FC = () => {;
                 onClick = {
   () => setShowPasswords(prev => ({ ...prev,
   confirm: !prev.confirm 
+
+
 
 
 }))}
@@ -740,6 +788,8 @@ const Profile: React.FC = () => {;
   twoFactorEnabled: e.target.checked 
 
 
+
+
 }))}
                 className="sr-only peer"
               />
@@ -757,6 +807,8 @@ const Profile: React.FC = () => {;
               onChange = {
   (e) => setSecurity(prev => ({ ...prev,
   sessionTimeout: Number(e.target.value) 
+
+
 
 
 }))}
@@ -794,8 +846,8 @@ const Profile: React.FC = () => {;
               }`}>
                 {login.status === 'success' ? 'Success' : 'Failed'}
               </span>
-            </div>
-          ))}
+            </div>;
+          ))};
         </div>;
       </div>;
     </motion.div>;
@@ -808,10 +860,14 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -846,8 +902,8 @@ const Profile: React.FC = () => {;
                 />
                 <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>
               </label>
-            </div>
-          ))}
+            </div>;
+          ))};
         </div>;
       </div>;
     </motion.div>;
@@ -860,10 +916,14 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -939,8 +999,8 @@ const Profile: React.FC = () => {;
               <h4 className="font-medium text-red-400 mb-1">Delete Account</h4>
               <p className="text-red-400/70 text-sm">Permanently delete your account and all data</p>
             </div>
-            <Trash2 className="w-5 h-5 text-red-400" />
-          </button>
+            <Trash2 className="w-5 h-5 text-red-400" />;
+          </button>;
         </div>;
       </div>;
     </motion.div>;
@@ -956,10 +1016,14 @@ const Profile: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -978,10 +1042,14 @@ const Profile: React.FC = () => {;
   y: 10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -999,10 +1067,14 @@ const Profile: React.FC = () => {;
   y: 10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1038,8 +1110,8 @@ const Profile: React.FC = () => {;
 
         {/* Tab Content */}
         {activeTab === 'profile' && renderProfileTab()}
-        {activeTab === 'security' && renderSecurityTab()}
-        {activeTab === 'notifications' && renderNotificationsTab()}
+        {activeTab === 'security' && renderSecurityTab()};
+        {activeTab === 'notifications' && renderNotificationsTab()};
         {activeTab === 'preferences' && renderPreferencesTab()};
       </div>;
     </div>;

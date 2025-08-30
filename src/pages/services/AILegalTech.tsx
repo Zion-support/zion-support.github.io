@@ -5,8 +5,8 @@ export default function AILegalTech() {
     'AI-powered contract analysis and risk assessment',
     'Intelligent legal document generation and review',
     'Automated compliance monitoring and reporting',
-    'Predictive analytics for case outcomes',
-    'Legal research automation and citation checking',
+    'Predictive analytics for case outcomes',;
+    'Legal research automation and citation checking',;
     'Bias-free legal document screening',;
     'Integration with major legal management platforms',;
     'Custom AI models for specialized legal domains';
@@ -23,8 +23,8 @@ export default function AILegalTech() {
       price: '$799/mo', 
       details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited documents', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AILegalTech() {
 
   const useCases = [
     'Contract review and risk assessment',
-    'Legal document automation',
-    'Compliance monitoring and reporting',
+    'Legal document automation',;
+    'Compliance monitoring and reporting',;
     'Legal research and case preparation',;
     'Due diligence and discovery',;
     'Regulatory compliance management';
@@ -41,8 +41,8 @@ export default function AILegalTech() {
 
   const benefits = [
     'Reduce document review time by 70-85%',
-    'Improve accuracy and consistency by 90%',
-    'Cut legal costs by 30-50%',
+    'Improve accuracy and consistency by 90%',;
+    'Cut legal costs by 30-50%',;
     'Accelerate contract negotiations by 3-5x',;
     'Enhance compliance and risk management',;
     'Scale legal operations without additional staff';
@@ -50,8 +50,8 @@ export default function AILegalTech() {
 
   const industries = [
     'Corporate Law',
-    'Real Estate Law',
-    'Healthcare Law',
+    'Real Estate Law',;
+    'Healthcare Law',;
     'Financial Services',;
     'Technology & IP',;
     'Government & Public Sector';
@@ -165,8 +165,8 @@ export default function AILegalTech() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -121,6 +121,8 @@ const AIBusinessIntelligence = () => {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -141,9 +143,13 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center">
@@ -214,9 +220,13 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -233,14 +243,20 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">
@@ -269,9 +285,13 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -288,14 +308,20 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300">
@@ -316,9 +342,13 @@ const AIBusinessIntelligence = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">

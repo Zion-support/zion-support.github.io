@@ -50,8 +50,8 @@ interface SecurityCheck {
 const SecurityEnhancer: React.FC = () => {
   const [metrics, setMetrics] = useState<SecurityMetrics>({
     overallScore: 85,
-    vulnerabilities: 3,
-    threatsBlocked: 127,
+    vulnerabilities: 3,;
+    threatsBlocked: 127,;
     lastScan: new Date(),;
     complianceScore: 92,;
     encryptionStrength: 256;
@@ -153,8 +153,8 @@ const SecurityEnhancer: React.FC = () => {
     
     // Update metrics with new scan results
     setMetrics(prev = > ({
-      ...prev,
-      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
+      ...prev,;
+      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),;
       vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),;
       threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),;
       lastScan: new Date();
@@ -163,16 +163,16 @@ const SecurityEnhancer: React.FC = () => {
     setIsScanning(false);
   }, []);
 
-  const mitigateThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
+  const mitigateThreat = useCallback((threatId: string) => {;
+    setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'mitigated' as const };
         : threat;
     ));
   }, []);
 
-  const resolveThreat = useCallback((threatId: string) => {
-    setThreats(prev => prev.map(threat => 
+  const resolveThreat = useCallback((threatId: string) => {;
+    setThreats(prev => prev.map(threat => ;
       threat.id === threatId ;
         ? { ...threat, status: 'resolved' as const };
         : threat;
@@ -424,8 +424,8 @@ const SecurityEnhancer: React.FC = () => {
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
             <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
-            Consider running a comprehensive security audit and implementing the suggested improvements.
-          </AlertDescription>
+            Consider running a comprehensive security audit and implementing the suggested improvements.;
+          </AlertDescription>;
         </Alert>;
       )};
     </div>;

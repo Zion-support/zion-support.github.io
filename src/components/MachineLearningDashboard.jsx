@@ -41,6 +41,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         
 
 
+
+
 };
         try {
             await startTraining(modelId, hyperparameters);
@@ -187,14 +189,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -298,14 +306,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -326,14 +340,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   height: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -344,10 +364,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   name: e.target.value 
 
 
+
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
                       <select value={newModelForm.type} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   type: e.target.value 
+
+
 
 
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -361,6 +385,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <select value={newModelForm.framework} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   framework: e.target.value 
+
+
 
 
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -388,14 +414,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   height: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
@@ -478,14 +510,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -569,14 +607,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -588,6 +632,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   <select value={predictionForm.modelId} onChange = {
   (e) => setPredictionForm(prev => ({ ...prev,
   modelId: e.target.value 
+
+
 
 
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
@@ -604,6 +650,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
   (e) => setPredictionForm(prev => ({ ...prev,
   input: e.target.value 
+
+
 
 
 }))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
@@ -657,14 +705,20 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">

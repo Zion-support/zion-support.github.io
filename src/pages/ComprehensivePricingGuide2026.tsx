@@ -72,10 +72,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -93,16 +97,22 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -119,16 +129,22 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -202,16 +218,22 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -271,16 +293,22 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       transition = {
   { duration: 0.6,
   delay: (index * 0.1) + (tierIndex * 0.1) 
+
+
 
 
 }}
@@ -418,10 +446,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -470,10 +502,14 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -507,8 +543,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
                 <p>364 E Main St STE 1008 Middletown DE 19709</p>
                 <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

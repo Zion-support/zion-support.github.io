@@ -117,6 +117,8 @@ const ServiceCategory = ({ category, services }) => {
   '_blank')
 
 
+
+
 }>
                     Get Started
                   </Button>
@@ -258,12 +260,16 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
   '_blank')
 
 
+
+
 }>
           Contact Sales Team
         </Button>
         <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
+
 
 
 }>
@@ -292,6 +298,8 @@ export default function EnhancedServicesOverview() {
           <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
+
 
 
 }>

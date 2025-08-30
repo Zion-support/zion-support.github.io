@@ -7,8 +7,8 @@ export default function AIHealthcareAnalytics() {
     'Predictive analytics for disease prevention',
     'Automated medical image analysis',
     'Clinical decision support systems',
-    'Population health management',
-    'Drug interaction and safety monitoring',
+    'Population health management',;
+    'Drug interaction and safety monitoring',;
     'Healthcare fraud detection',;
     'Patient engagement optimization',;
     'Regulatory compliance automation';
@@ -16,8 +16,8 @@ export default function AIHealthcareAnalytics() {
 
   const benefits = [
     'Improve patient outcomes by 35%',
-    'Reduce healthcare costs by 25%',
-    'Increase diagnostic accuracy by 40%',
+    'Reduce healthcare costs by 25%',;
+    'Increase diagnostic accuracy by 40%',;
     'Reduce readmission rates by 30%',;
     'Optimize resource allocation by 45%',;
     'Enhance patient satisfaction by 50%';
@@ -25,8 +25,8 @@ export default function AIHealthcareAnalytics() {
 
   const useCases = [
     'Hospital management and operations',
-    'Clinical research and trials',
-    'Telemedicine and remote care',
+    'Clinical research and trials',;
+    'Telemedicine and remote care',;
     'Pharmaceutical development',;
     'Insurance and claims processing',;
     'Public health monitoring';
@@ -63,8 +63,8 @@ export default function AIHealthcareAnalytics() {
         'Unlimited patients',
         'Full AI healthcare suite',
         'Custom algorithms',
-        'Dedicated support',
-        'White-label solutions',
+        'Dedicated support',;
+        'White-label solutions',;
         'Multi-facility support';
       ];
     };
@@ -76,8 +76,12 @@ export default function AIHealthcareAnalytics() {
     security: ['HIPAA', 'SOC 2 Type II', 'HITECH', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.99%',
     compliance: ['HIPAA', 'HITECH', 'SOC 2', 'ISO 27001', 'GDPR',;
+  ;
+  ;
   'CCPA'];
   ;
+
+
 
 
 };
@@ -90,8 +94,8 @@ export default function AIHealthcareAnalytics() {
     {
       specialty: 'Oncology',
       solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching']
-    },
-    {
+    },;
+    {;
       specialty: 'Neurology',;
       solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring'];
     };
@@ -254,8 +258,8 @@ export default function AIHealthcareAnalytics() {
           <div className="mt-4">
             <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
               Learn More <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

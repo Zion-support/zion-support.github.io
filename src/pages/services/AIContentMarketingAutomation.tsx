@@ -37,16 +37,16 @@ export default function AIContentMarketingAutomation() {
     "SEO-optimized content creation",
     "Social media scheduling and automation",
     "Email marketing campaign automation",
-    "Content calendar management",
-    "Brand voice consistency maintenance",
+    "Content calendar management",;
+    "Brand voice consistency maintenance",;
     "A/B testing and optimization",;
     "Competitor analysis and insights",;
     "ROI tracking and attribution modeling";
   ];
 
   const benefits = [
-    "Increase content production by 300%",
-    "Improve engagement rates by 45%",
+    "Increase content production by 300%",;
+    "Improve engagement rates by 45%",;
     "Reduce content creation costs by 60%",;
     "Boost SEO rankings by 35%",;
     "Automate 80% of marketing workflows";
@@ -56,8 +56,8 @@ export default function AIContentMarketingAutomation() {
     "E-commerce content marketing",
     "B2B lead generation campaigns",
     "Social media management",
-    "Email marketing automation",
-    "Blog and article creation",
+    "Email marketing automation",;
+    "Blog and article creation",;
     "Video content marketing",;
     "Influencer collaboration",;
     "Event marketing campaigns";
@@ -107,8 +107,8 @@ export default function AIContentMarketingAutomation() {
         "White-label solutions",
         "API access",
         "Dedicated account manager",
-        "24/7 phone support"
-      ],
+        "24/7 phone support";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -130,10 +130,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -182,10 +186,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -209,16 +217,22 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -243,10 +257,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -270,16 +288,22 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -304,10 +328,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -331,16 +359,22 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -402,10 +436,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -429,16 +467,22 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -463,10 +507,14 @@ export default function AIContentMarketingAutomation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -510,8 +558,8 @@ export default function AIContentMarketingAutomation() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

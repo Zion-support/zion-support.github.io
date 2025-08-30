@@ -1025,8 +1025,8 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     availability: "Global",
     location: "Global",
     tags: ["Advanced Entertainment", "AI", "Content Creation", "Personalization", "Interactive Media"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",;
+    createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
     trending: true;
   };
@@ -1057,7 +1057,7 @@ export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTec
 
 export const searchEmergingTechServices = (query: string): EmergingTechService2030[] => {;
   const lowercaseQuery = query.toLowerCase();
-  return EMERGING_TECH_SERVICES_2030.filter(service = >
+  return EMERGING_TECH_SERVICES_2030.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));

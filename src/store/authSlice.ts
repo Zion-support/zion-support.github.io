@@ -21,12 +21,16 @@ const initialState: AuthState = {
   error: null,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
 
-const authSlice = createSlice({
-  name: 'auth',
+const authSlice = createSlice({;
+  name: 'auth',;
   initialState,;
   reducers: {;
     setUser: (state, action: PayloadAction<User>) => {;

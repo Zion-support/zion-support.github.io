@@ -63,8 +63,8 @@ const Analytics: React.FC = () => {
       color: "from-purple-400 to-pink-500"
     },
     {
-      title: "Custom Dashboards",
-      description: "Build personalized dashboards tailored to your business needs",
+      title: "Custom Dashboards",;
+      description: "Build personalized dashboards tailored to your business needs",;
       icon: Target,;
       color: "from-orange-400 to-red-500";
     };
@@ -94,15 +94,15 @@ const Analytics: React.FC = () => {
     },
     {
       name: "Financial Analytics",
-      description: "Financial performance tracking and optimization",
-      icon: DollarSign,
+      description: "Financial performance tracking and optimization",;
+      icon: DollarSign,;
       features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;
       path: "/services/ai-financial-analytics";
     };
   ];
 
-  const metrics = [
-    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },
+  const metrics = [;
+    { icon: Users, value: "10K+", label: "Active Users", description: "Monthly active users" },;
     { icon: TrendingUp, value: "95%", label: "Uptime", description: "System reliability" },;
     { icon: Globe, value: "25+", label: "Countries", description: "Global reach" },;
     { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
@@ -110,8 +110,8 @@ const Analytics: React.FC = () => {
 
   const integrations = [
     { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },
-    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },
-    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },
+    { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },;
+    { name: "Stripe", icon: "💳", description: "Payment and revenue data" },;
     { name: "Slack", icon: "💬", description: "Team communication metrics" },;
     { name: "HubSpot", icon: "🎯", description: "Marketing and lead data" },;
     { name: "AWS", icon: "☁️", description: "Cloud infrastructure metrics" };
@@ -135,10 +135,14 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -195,16 +199,22 @@ const Analytics: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -231,10 +241,14 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -259,16 +273,22 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -295,10 +315,14 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -323,16 +347,22 @@ const Analytics: React.FC = () => {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -376,10 +406,14 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -404,16 +438,22 @@ const Analytics: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -437,10 +477,14 @@ const Analytics: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -468,8 +512,8 @@ const Analytics: React.FC = () => {
               >
                 Get Custom Quote
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

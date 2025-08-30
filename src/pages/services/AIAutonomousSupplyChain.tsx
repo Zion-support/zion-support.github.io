@@ -65,8 +65,8 @@ const AIAutonomousSupplyChain = () => {
       color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "End-to-End Visibility",
-      description: "Complete transparency across the entire supply chain from raw materials to final delivery",
+      title: "End-to-End Visibility",;
+      description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
       icon: Eye,;
       color: "from-cyan-500 to-blue-500";
     };
@@ -115,8 +115,8 @@ const AIAutonomousSupplyChain = () => {
         "Advanced analytics dashboard",
         "Dedicated support team",
         "SLA guarantees",
-        "On-premise deployment",
-        "White-label solutions"
+        "On-premise deployment",;
+        "White-label solutions";
       ],;
       popular: false;
     };
@@ -138,8 +138,8 @@ const AIAutonomousSupplyChain = () => {
       description: "Faster delivery times and improved order accuracy",
       metric: "50% faster delivery"
     },
-    {
-      title: "Risk Mitigation",
+    {;
+      title: "Risk Mitigation",;
       description: "Identify and prevent supply chain disruptions proactively",;
       metric: "80% risk reduction";
     };
@@ -165,8 +165,8 @@ const AIAutonomousSupplyChain = () => {
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Food & Beverage",
-      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
+      title: "Food & Beverage",;
+      description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
       icon: Leaf,;
       color: "from-green-500 to-emerald-500";
     };
@@ -184,10 +184,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -231,10 +235,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -260,16 +268,22 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -296,10 +310,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -324,16 +342,22 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -360,10 +384,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -388,16 +416,22 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -422,10 +456,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -450,16 +488,22 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -521,10 +565,14 @@ const AIAutonomousSupplyChain = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -580,8 +628,8 @@ const AIAutonomousSupplyChain = () => {
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
               <p className="text-gray-300">Address</p>
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

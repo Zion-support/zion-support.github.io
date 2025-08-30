@@ -103,8 +103,8 @@ const SpaceTech = () => {
       title: 'Space Navigation',
       description: 'Advanced positioning and navigation systems for space missions'
     },
-    {
-      icon: Telescope,
+    {;
+      icon: Telescope,;
       title: 'Space Observation',;
       description: 'Earth observation and space monitoring capabilities';
     };
@@ -112,8 +112,8 @@ const SpaceTech = () => {
 
   const benefits = [
     'Enable global connectivity and coverage',
-    'Provide critical Earth observation data',
-    'Support space exploration missions',
+    'Provide critical Earth observation data',;
+    'Support space exploration missions',;
     'Enable advanced navigation systems',;
     'Support disaster response and monitoring',;
     'Drive innovation in space technology';
@@ -135,8 +135,8 @@ const SpaceTech = () => {
       title: 'Space Research',
       description: 'Scientific research and space exploration support'
     },
-    {
-      icon: Globe2,
+    {;
+      icon: Globe2,;
       title: 'Global Communications',;
       description: 'Satellite communications and internet services';
     };
@@ -154,8 +154,8 @@ const SpaceTech = () => {
     {
       industry: 'Agriculture',
       description: 'Crop monitoring and precision agriculture support'
-    },
-    {
+    },;
+    {;
       industry: 'Defense & Security',;
       description: 'Surveillance and national security applications';
     };
@@ -173,10 +173,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -221,10 +225,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -249,16 +257,22 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -284,10 +298,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -312,16 +330,22 @@ const SpaceTech = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -351,10 +375,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -379,16 +407,22 @@ const SpaceTech = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -408,16 +442,22 @@ const SpaceTech = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -441,10 +481,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -469,16 +513,22 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -504,10 +554,14 @@ const SpaceTech = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -528,8 +582,8 @@ const SpaceTech = () => {
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

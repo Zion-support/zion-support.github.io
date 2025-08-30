@@ -33,24 +33,24 @@ const AICustomerChurnPrediction: React.FC = () => {
       title: "Proactive Interventions",
       description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking."
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Customer Segmentation",;
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
     };
   ];
 
   const benefits = [
-    "Reduce customer churn by 40-60%",
-    "Increase customer lifetime value by 35%",
+    "Reduce customer churn by 40-60%",;
+    "Increase customer lifetime value by 35%",;
     "Save $50K+ annually on customer acquisition",;
     "Improve customer satisfaction scores by 25%",;
     "Automate 80% of retention workflows";
   ];
 
   const integrations = [
-    "Salesforce, HubSpot, Pipedrive",
-    "Stripe, PayPal, Square",
+    "Salesforce, HubSpot, Pipedrive",;
+    "Stripe, PayPal, Square",;
     "Intercom, Zendesk, Freshdesk",;
     "Google Analytics, Mixpanel, Amplitude",;
     "Slack, Microsoft Teams, Email";
@@ -73,8 +73,8 @@ const AICustomerChurnPrediction: React.FC = () => {
     },
     {
       plan: "Enterprise",
-      price: "Custom",
-      period: "",
+      price: "Custom",;
+      period: "",;
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false;
     };
@@ -99,10 +99,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -146,10 +150,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -174,10 +182,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -185,6 +197,8 @@ const AICustomerChurnPrediction: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -210,10 +224,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -238,10 +256,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -249,6 +271,8 @@ const AICustomerChurnPrediction: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -273,10 +297,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -301,10 +329,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -312,6 +344,8 @@ const AICustomerChurnPrediction: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -333,10 +367,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -361,10 +399,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -372,6 +414,8 @@ const AICustomerChurnPrediction: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -428,10 +472,14 @@ const AICustomerChurnPrediction: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -492,8 +540,8 @@ const AICustomerChurnPrediction: React.FC = () => {
               <p className="text-slate-300">
                 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
               </p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

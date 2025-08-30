@@ -53,8 +53,8 @@ export default function SmartContractRiskScanner() {
       benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
     },
     {
-      icon: Code,
-      title: 'Smart Contract Analysis',
+      icon: Code,;
+      title: 'Smart Contract Analysis',;
       description: 'Deep code analysis and optimization recommendations for smart contracts',;
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];
     };
@@ -80,8 +80,8 @@ export default function SmartContractRiskScanner() {
       features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
     },
     {
-      title: 'Logic Vulnerabilities',
-      description: 'Identify logical flaws and business logic vulnerabilities',
+      title: 'Logic Vulnerabilities',;
+      description: 'Identify logical flaws and business logic vulnerabilities',;
       icon: Lightbulb,;
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];
     };
@@ -135,8 +135,8 @@ export default function SmartContractRiskScanner() {
         '24/7 dedicated support',
         'Custom integrations',
         'On-premise deployment',
-        'Compliance certifications'
-      ],
+        'Compliance certifications';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -147,8 +147,12 @@ export default function SmartContractRiskScanner() {
     growthRate: '23.4% CAGR',
     averageMarketPrice: '$500-$2,000/month',
     setupTime: '1-2 weeks',;
+  ;
+  ;
   roi: '300-500% within 6 months';
   ;
+
+
 
 
 };
@@ -157,8 +161,8 @@ export default function SmartContractRiskScanner() {
     'Ethereum',
     'Binance Smart Chain',
     'Polygon',
-    'Solana',
-    'Avalanche',
+    'Solana',;
+    'Avalanche',;
     'Arbitrum',;
     'Optimism',;
     'Base';
@@ -166,8 +170,8 @@ export default function SmartContractRiskScanner() {
 
   const securityStandards = [
     'OWASP Top 10',
-    'Smart Contract Security Verification Standard',
-    'Ethereum Security Best Practices',
+    'Smart Contract Security Verification Standard',;
+    'Ethereum Security Best Practices',;
     'DeFi Security Guidelines',;
     'ISO 27001 Compliance',;
     'SOC 2 Type II';
@@ -190,10 +194,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -252,10 +260,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -281,10 +293,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -309,16 +325,22 @@ export default function SmartContractRiskScanner() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -356,10 +378,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -384,16 +410,22 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -431,10 +463,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -459,16 +495,22 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -493,10 +535,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -521,16 +567,22 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -555,10 +607,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -583,16 +639,22 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -654,10 +716,14 @@ export default function SmartContractRiskScanner() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -687,8 +753,8 @@ export default function SmartContractRiskScanner() {
               >
                 Contact Security Team
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

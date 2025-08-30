@@ -230,14 +230,20 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0.8 
+
+
 
 
 }} onClick={() => {
@@ -257,9 +263,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   scale: 0.95 
 
 
+
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
+
 
 
 }} exit = {
@@ -267,9 +277,13 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   scale: 0.95 
 
 
+
+
 }} transition = {
   { duration: 0.2,
   ease: "easeOut" 
+
+
 
 
 }}>
@@ -302,14 +316,20 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   opacity: 0 
 
 
+
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }} transition={{ duration: 0.2 }}>
@@ -321,6 +341,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     const selected = Array.from(e.target.selectedOptions, option => option.value);
                     setFilters(prev => ({ ...prev,
   category: selected 
+
+
 
 
 }));
@@ -340,6 +362,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   rating: Number(e.target.value) 
 
 
+
+
 }))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
                         <option value={3}>3+ Stars</option>
@@ -356,6 +380,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
   verified: e.target.checked 
 
 
+
+
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
@@ -366,6 +392,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         <input type="checkbox" checked={filters.featured} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   featured: e.target.checked 
+
+
 
 
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
@@ -392,6 +420,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                     
 
 
+
+
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
                         {search}
                       </button>))}
@@ -411,6 +441,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         performSearch(suggestion,
   filters);
                     
+
+
 
 
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">

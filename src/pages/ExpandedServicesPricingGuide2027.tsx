@@ -81,7 +81,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
       pricing = pricing.filter(p => p.category === selectedCategory);
     }
     if (searchQuery) {
-      pricing = pricing.filter(p => 
+      pricing = pricing.filter(p => ;
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
@@ -155,10 +155,14 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -224,16 +228,22 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -292,16 +302,22 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -357,16 +373,22 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -485,8 +507,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-              </a>
-            </div>
+              </a>;
+            </div>;
           </div>;
         </div>;
       </motion.div>;
@@ -511,10 +533,14 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -532,16 +558,22 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -558,16 +590,22 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -687,8 +725,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
             >
               <Phone className="w-5 h-5" />
               <span>Call Sales Team</span>
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

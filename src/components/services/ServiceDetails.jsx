@@ -17,6 +17,8 @@ export function ServiceDetails({ country }) {
         
 
 
+
+
 };
         return dataCenters[country] || dataCenters["default"];
     };
@@ -33,6 +35,8 @@ export function ServiceDetails({ country }) {
   // Default placeholder
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
         
+
+
 
 
 };

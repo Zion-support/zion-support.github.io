@@ -314,8 +314,8 @@ export const real2036AIServices = [
     ],
     useCases: [
       'Autonomous vehicles',
-      'Fleet management',
-      'Traffic optimization',
+      'Fleet management',;
+      'Traffic optimization',;
       'Safety systems';
     ];
   };

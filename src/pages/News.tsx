@@ -23,8 +23,8 @@ export default function News() {
 
   const categories = [
     { id: 'all', name: 'All News', count: 0 },
-    { id: 'ai', name: 'AI & Technology', count: 0 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },
+    { id: 'ai', name: 'AI & Technology', count: 0 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },;
     { id: 'security', name: 'Security & Compliance', count: 0 },;
     { id: 'quantum', name: 'Quantum Computing', count: 0 },;
     { id: 'company', name: 'Company Updates', count: 0 };
@@ -92,8 +92,8 @@ export default function News() {
       excerpt: 'New edge computing platform enables real-time processing for IoT devices, reducing latency and improving performance in industrial applications.',
       category: 'cloud',
       author: 'David Kim',
-      date: '2024-11-18',
-      readTime: '5 min read',
+      date: '2024-11-18',;
+      readTime: '5 min read',;
       featured: false,;
       tags: ['Edge Computing', 'IoT', 'Real-time', 'Industrial'];
     };
@@ -127,10 +127,14 @@ export default function News() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -193,10 +197,14 @@ export default function News() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -272,10 +280,14 @@ export default function News() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -345,10 +357,14 @@ export default function News() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -369,8 +385,8 @@ export default function News() {
               <button className="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
                 Subscribe
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

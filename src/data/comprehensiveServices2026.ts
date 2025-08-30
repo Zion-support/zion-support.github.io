@@ -407,7 +407,7 @@ export const revolutionaryAIServices2026: AIService[] = [
 ];
 
 // Export all services
-export const ALL_REVOLUTIONARY_SERVICES_2026 = [
+export const ALL_REVOLUTIONARY_SERVICES_2026 = [;
   ...revolutionaryMicroSaasServices2026,;
   ...revolutionaryITInfrastructureServices2026,;
   ...revolutionaryAIServices2026;

@@ -91,9 +91,13 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -114,6 +118,8 @@ const ServiceInnovationHub = () => {
   '_blank')
 
 
+
+
 }>
                 Get Innovation Strategy
               </Button>
@@ -130,9 +136,13 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -151,14 +161,20 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -206,9 +222,13 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -226,14 +246,20 @@ const ServiceInnovationHub = () => {
   x: -20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -275,9 +301,13 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -302,9 +332,13 @@ const ServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
@@ -321,6 +355,8 @@ const ServiceInnovationHub = () => {
   '_blank')
 
 
+
+
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Lead Innovation
@@ -328,6 +364,8 @@ const ServiceInnovationHub = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

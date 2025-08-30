@@ -66,10 +66,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -84,16 +88,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -110,16 +120,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -139,10 +155,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -166,16 +186,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -201,10 +227,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -228,16 +258,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: categoryIndex * 0.2 
+
+
 
 
 }}
@@ -263,16 +299,22 @@ export default function Partners() {
   scale: 0.9 
 
 
+
+
 }}
                         whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                         transition = {
   { duration: 0.4,
   delay: partnerIndex * 0.1 
+
+
 
 
 }}
@@ -307,10 +349,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -334,16 +380,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -381,10 +433,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -400,16 +456,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -425,16 +487,22 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -455,8 +523,8 @@ export default function Partners() {
               </a>
             </motion.div>
           </div>
-        </section>
-      </main>
+        </section>;
+      </main>;
     </>;
   );
 };

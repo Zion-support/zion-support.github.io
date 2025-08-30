@@ -11,8 +11,8 @@ function DisputesPage() {
           title = "Dispute Resolution Center | Zion AI Marketplace" 
           description="View and manage disputes between clients and talents"
         />
-        
-        <DisputeDashboard />
+        ;
+        <DisputeDashboard />;
         ;
       </>;
     </ProtectedRoute>;
@@ -21,6 +21,8 @@ function DisputesPage() {
 
 export default DisputesPage;
 
+export default DisputesPage;
+export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;

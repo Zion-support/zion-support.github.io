@@ -26,3 +26,5 @@ declare module 'jspdf-autotable' {
 export default autoTable;
 export default autoTable;
 export default autoTable;
+export default autoTable;
+export default autoTable;

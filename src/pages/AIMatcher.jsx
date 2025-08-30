@@ -182,9 +182,13 @@ const AIMatcher = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center">
@@ -211,14 +215,20 @@ const AIMatcher = () => {
   x: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
@@ -243,6 +253,8 @@ const AIMatcher = () => {
                 {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {
   () => handleAnswer(questions[currentStep - 1].id,
   option)
+
+
 
 
 } className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${answers[questions[currentStep - 1].id] === option
@@ -274,9 +286,13 @@ const AIMatcher = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="space-y-8">
@@ -296,14 +312,20 @@ const AIMatcher = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
@@ -355,9 +377,13 @@ const AIMatcher = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">

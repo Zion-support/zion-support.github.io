@@ -81,8 +81,8 @@ export default function Compliance() {
       scope: 'Healthcare data protection',
       benefits: [
         'Healthcare industry access',
-        'Patient data protection',
-        'Regulatory compliance',
+        'Patient data protection',;
+        'Regulatory compliance',;
         'Trust in healthcare sector';
       ];
     };
@@ -132,8 +132,8 @@ export default function Compliance() {
       color: 'from-orange-500 to-red-500',
       standards: [
         'OWASP Top 10',
-        'Secure SDLC',
-        'Code Review Standards',
+        'Secure SDLC',;
+        'Code Review Standards',;
         'Vulnerability Management';
       ];
     };
@@ -187,8 +187,8 @@ export default function Compliance() {
       frequency: 'As needed',
       process: [
         'Incident detection and reporting',
-        'Compliance impact assessment',
-        'Regulatory notification procedures',
+        'Compliance impact assessment',;
+        'Regulatory notification procedures',;
         'Post-incident compliance review';
       ];
     };
@@ -218,8 +218,8 @@ export default function Compliance() {
     },
     {
       title: 'Training Portal',
-      description: 'Compliance training and certification portal',
-      icon: Users,
+      description: 'Compliance training and certification portal',;
+      icon: Users,;
       href: '/compliance/training',;
       color: 'from-orange-500 to-red-500';
     };
@@ -235,8 +235,8 @@ export default function Compliance() {
     },
     {
       title: 'Audit Requests',
-      description: 'Request compliance audits or assessments',
-      email: 'audit@ziontechgroup.com',
+      description: 'Request compliance audits or assessments',;
+      email: 'audit@ziontechgroup.com',;
       phone: '+1 302 464 0950',;
       responseTime: '1-2 business days';
     };
@@ -258,10 +258,14 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -290,16 +294,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -325,16 +335,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -352,16 +368,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
+
 
 
 }}
@@ -424,16 +446,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -451,16 +479,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -496,16 +530,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
+
 
 
 }}
@@ -523,16 +563,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
+
 
 
 }}
@@ -571,16 +617,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
+
 
 
 }}
@@ -598,16 +650,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
+
 
 
 }}
@@ -635,16 +693,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1.1 
+
+
 
 
 }}
@@ -662,16 +726,22 @@ export default function Compliance() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 1.2 + index * 0.1 
+
+
 
 
 }}
@@ -715,16 +785,22 @@ export default function Compliance() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.3 
+
+
 
 
 }}
@@ -736,8 +812,8 @@ export default function Compliance() {
           <p className="text-slate-300 max-w-4xl mx-auto">
             Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes, 
             update our processes, and enhance our compliance posture to ensure we always meet and exceed 
-            industry standards and regulatory requirements.
-          </p>
+            industry standards and regulatory requirements.;
+          </p>;
         </motion.div>;
       </div>;
     </div>;

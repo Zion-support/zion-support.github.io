@@ -11,6 +11,8 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
   10))
 
 
+
+
 } className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
       <span className="w-20 text-right">
         ${(item.price * item.quantity).toFixed(2)}

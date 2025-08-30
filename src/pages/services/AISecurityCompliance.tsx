@@ -5,8 +5,8 @@ export default function AISecurityCompliance() {
     'AI-powered security compliance optimization',
     'Intelligent compliance monitoring and reporting',
     'Automated compliance verification and validation',
-    'Predictive analytics for compliance needs',
-    'Smart compliance framework management',
+    'Predictive analytics for compliance needs',;
+    'Smart compliance framework management',;
     'AI-driven compliance automation and orchestration',;
     'Real-time compliance performance tracking',;
     'Custom AI models for compliance applications';
@@ -23,8 +23,8 @@ export default function AISecurityCompliance() {
       price: '$999/mo', 
       details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityCompliance() {
 
   const useCases = [
     'Security compliance optimization',
-    'Compliance monitoring and reporting',
-    'Compliance verification and validation',
+    'Compliance monitoring and reporting',;
+    'Compliance verification and validation',;
     'Compliance framework management and automation',;
     'Compliance automation and orchestration',;
     'Compliance scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityCompliance() {
 
   const benefits = [
     'Improve security compliance performance by 50-80%',
-    'Reduce compliance verification time by 40-70%',
-    'Cut security compliance costs by 35-65%',
+    'Reduce compliance verification time by 40-70%',;
+    'Cut security compliance costs by 35-65%',;
     'Enhance security compliance reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security compliance operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityCompliance() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityCompliance() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

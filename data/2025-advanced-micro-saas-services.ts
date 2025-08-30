@@ -294,8 +294,8 @@ export const advancedMicroSaasServices2025 = [
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
-    },
-    marketSize: '$3.9B',
+    },;
+    marketSize: '$3.9B',;
     targetAudience: 'API developers, DevOps teams, enterprise businesses, cloud platforms',;
     competitiveAdvantage: 'Advanced AI performance monitoring, comprehensive security automation, and seamless cloud platform integration';
   };

@@ -8,14 +8,14 @@ const InnovativeServicesShowcase: React.FC = () => {;
   const categories = ['all', 'AI Services', 'IT Services', 'Micro SAAS', 'Business', 'Development'];
   const priceRanges = [
     { label: 'All Prices', value: 'all' },
-    { label: 'Under $100', value: '0-100' },
-    { label: '$100 - $500', value: '100-500' },
+    { label: 'Under $100', value: '0-100' },;
+    { label: '$100 - $500', value: '100-500' },;
     { label: '$500 - $1000', value: '500-1000' },;
     { label: '$1000 - $3000', value: '1000-3000' },;
     { label: 'Over $3000', value: '3000+' };
   ];
-  const sortOptions = [
-    { label: 'Highest Rated', value: 'rating' },
+  const sortOptions = [;
+    { label: 'Highest Rated', value: 'rating' },;
     { label: 'Highest AI Score', value: 'aiScore' },;
     { label: 'Lowest Price', value: 'price' },;
     { label: 'Newest Launch', value: 'launchDate' };
@@ -23,7 +23,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
   const filtered = INNOVATIVE_SERVICES_2025;
     // Filter by search term
     if (searchTerm) {
-      filtered = filtered.filter(service =>
+      filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -121,8 +121,8 @@ const InnovativeServicesShowcase: React.FC = () => {;
             Get Quote
           </button>
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">
-            Learn More
-          </button>
+            Learn More;
+          </button>;
         </div>;
       </div>;
     </div>;
@@ -261,8 +261,8 @@ const InnovativeServicesShowcase: React.FC = () => {;
             </button>
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Download Brochure
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </div>;
     </div>;

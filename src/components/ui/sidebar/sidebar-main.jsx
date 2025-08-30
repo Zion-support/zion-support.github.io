@@ -10,6 +10,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
   props.className)
 
 
+
+
 } ref={ref} {...props}>
         {props.children}
       </div>);
@@ -35,6 +37,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]")
 
 
+
+
 }/>
       <div className = {
   cn("duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex", props.side === "left"
@@ -45,6 +49,8 @@ export const Sidebar = React.forwardRef((props, ref) => {
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]"
             : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
   props.className)
+
+
 
 
 } {...props}>
@@ -62,6 +68,8 @@ export const SidebarRail = React.forwardRef((props, ref) => {
   props.className)
 
 
+
+
 } {...props}/>);
 });
 SidebarRail.displayName = "SidebarRail";
@@ -69,6 +77,8 @@ export const SidebarInset = React.forwardRef((props, ref) => {
     return (<main ref={ref} className = {
   cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
   props.className)
+
+
 
 
 } {...props}/>);

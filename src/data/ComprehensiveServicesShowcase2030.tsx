@@ -25,7 +25,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     }
 
     if (searchTerm) {
-      services = services.filter(service => 
+      services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -158,8 +158,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
                 >
                   Learn More
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -260,8 +260,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
                 >
                   Learn More
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -374,8 +374,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
                 >
                   Learn More
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -519,8 +519,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           </div>
 
           {/* No Results */}
-          {getFilteredServices().length === 0 && (
-            <div className="text-center py-12">
+          {getFilteredServices().length === 0 && (;
+            <div className="text-center py-12">;
               <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -553,8 +553,8 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               >
                 Email Us
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </>;

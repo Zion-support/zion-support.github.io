@@ -371,8 +371,8 @@ export default function AIAutoEmailResponder() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

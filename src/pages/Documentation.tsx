@@ -9,15 +9,15 @@ export default function Documentation() {
   const categories = [
     { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },
     { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },
-    { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },
-    { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },
+    { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },;
+    { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },;
     { id: 'tutorials', name: 'Tutorials', icon: <Video className="w-5 h-5" />, count: 23 },;
     { id: 'examples', name: 'Code Examples', icon: <Code className="w-5 h-5" />, count: 67 },;
     { id: 'reference', name: 'Reference', icon: <FileText className="w-5 h-5" />, count: 34 };
   ];
 
-  const sortOptions = [
-    { value: 'popular', label: 'Most Popular' },
+  const sortOptions = [;
+    { value: 'popular', label: 'Most Popular' },;
     { value: 'newest', label: 'Newest First' },;
     { value: 'alphabetical', label: 'Alphabetical' },;
     { value: 'recently-updated', label: 'Recently Updated' };
@@ -103,8 +103,8 @@ export default function Documentation() {
       difficulty: 'intermediate',
       readTime: '30 min',
       lastUpdated: '2025-01-08',
-      views: 5670,
-      rating: 4.5,
+      views: 5670,;
+      rating: 4.5,;
       featured: false,;
       tags: ['python', 'sdk', 'examples'];
     };
@@ -127,8 +127,8 @@ export default function Documentation() {
     },
     {
       title: 'Community Forum',
-      description: 'Connect with other developers and get help',
-      type: 'community',
+      description: 'Connect with other developers and get help',;
+      type: 'community',;
       link: '/community',;
       featured: false;
     };
@@ -381,8 +381,8 @@ export default function Documentation() {
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >
               Help Center
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

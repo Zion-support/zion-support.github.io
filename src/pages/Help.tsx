@@ -148,8 +148,8 @@ export default function Help() {
         {
           title: 'Account Settings',
           description: 'Managing your account preferences and settings',
-          url: '/help/billing/account-settings',
-          type: 'guide'
+          url: '/help/billing/account-settings',;
+          type: 'guide';
         };
       ];
     };
@@ -179,14 +179,14 @@ export default function Help() {
     },
     {
       title: 'Email Support',
-      description: 'Send us an email for detailed inquiries',
-      icon: Mail,
+      description: 'Send us an email for detailed inquiries',;
+      icon: Mail,;
       url: 'mailto:support@ziontechgroup.com',;
       color: 'from-orange-500 to-orange-600';
     };
   ];
 
-  const supportHours = [
+  const supportHours = [;
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },;
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },;
     { day: 'Sunday', hours: 'Emergency Support Only', available: false };
@@ -194,8 +194,8 @@ export default function Help() {
 
   const filteredCategories = helpCategories.filter(category =>
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    category.articles.some(article =>
+    category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    category.articles.some(article =>;
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       article.description.toLowerCase().includes(searchQuery.toLowerCase());
     );
@@ -218,10 +218,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -263,10 +267,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -287,16 +295,22 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -322,10 +336,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -373,10 +391,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -396,16 +418,22 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -440,16 +468,22 @@ export default function Help() {
   height: 0 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -496,10 +530,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -542,16 +580,22 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -577,10 +621,14 @@ export default function Help() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -605,8 +653,8 @@ export default function Help() {
               >
                 Send Email
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

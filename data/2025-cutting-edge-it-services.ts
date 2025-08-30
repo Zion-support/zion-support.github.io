@@ -259,8 +259,8 @@ export const cuttingEdgeITServices2025 = [
       'Continuous deployment pipelines',
       'Performance monitoring and optimization',
       'Incident response automation',
-      'Quality assurance automation'
-    ],
+      'Quality assurance automation';
+    ],;
     integrations: ['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],;
     compliance: ['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols'];
   };

@@ -131,10 +131,14 @@ export function Sitemap() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -162,16 +166,22 @@ export function Sitemap() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -221,16 +231,22 @@ export function Sitemap() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -260,8 +276,8 @@ export function Sitemap() {
               >
                 Get Help
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

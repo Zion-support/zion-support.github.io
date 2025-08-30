@@ -5,8 +5,8 @@ export default function AISecurityGovernance() {
     'AI-powered security governance optimization',
     'Intelligent governance policy management and enforcement',
     'Automated security compliance monitoring and reporting',
-    'Predictive analytics for governance needs',
-    'Smart governance framework management',
+    'Predictive analytics for governance needs',;
+    'Smart governance framework management',;
     'AI-driven governance automation and orchestration',;
     'Real-time governance performance tracking',;
     'Custom AI models for governance applications';
@@ -23,8 +23,8 @@ export default function AISecurityGovernance() {
       price: '$1,799/mo', 
       details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityGovernance() {
 
   const useCases = [
     'Security governance optimization',
-    'Governance policy management and enforcement',
-    'Security compliance monitoring and reporting',
+    'Governance policy management and enforcement',;
+    'Security compliance monitoring and reporting',;
     'Governance framework management and automation',;
     'Governance automation and orchestration',;
     'Governance scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityGovernance() {
 
   const benefits = [
     'Improve security governance performance by 50-80%',
-    'Reduce governance compliance time by 40-70%',
-    'Cut security governance costs by 35-65%',
+    'Reduce governance compliance time by 40-70%',;
+    'Cut security governance costs by 35-65%',;
     'Enhance security governance reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security governance operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityGovernance() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityGovernance() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

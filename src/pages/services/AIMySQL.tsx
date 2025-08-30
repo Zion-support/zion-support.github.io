@@ -5,8 +5,8 @@ export default function AIMySQL() {
     'AI-powered MySQL query optimization',
     'Intelligent database indexing and partitioning',
     'Automated MySQL performance monitoring',
-    'Predictive analytics for database scaling',
-    'Smart MySQL security and compliance',
+    'Predictive analytics for database scaling',;
+    'Smart MySQL security and compliance',;
     'AI-driven MySQL automation and orchestration',;
     'Real-time MySQL analytics and insights',;
     'Custom AI models for MySQL applications';
@@ -23,8 +23,8 @@ export default function AIMySQL() {
       price: '$599/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full MySQL suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIMySQL() {
 
   const useCases = [
     'MySQL query optimization',
-    'Database indexing and partitioning',
-    'Performance monitoring and analytics',
+    'Database indexing and partitioning',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Database scaling and management';
@@ -41,8 +41,8 @@ export default function AIMySQL() {
 
   const benefits = [
     'Improve query performance by 50-80%',
-    'Reduce storage costs by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce storage costs by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance database reliability and scalability',;
     'Optimize resource utilization',;
     'Scale MySQL operations efficiently';
@@ -50,8 +50,8 @@ export default function AIMySQL() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIMySQL() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

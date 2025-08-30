@@ -31,8 +31,8 @@ export default function AISupportHelpdesk() {
       title: "Mobile-First Design",
       description: "Fully responsive support platform accessible on any device with native mobile apps."
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: "Global Support",;
       description: "Multi-language support with localization and timezone-aware routing for global teams.";
     };
@@ -64,8 +64,8 @@ export default function AISupportHelpdesk() {
       title: "24/7 Availability",
       description: "Round-the-clock support without human intervention"
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Learning & Improvement",;
       description: "Continuous learning from interactions to improve responses";
     };
@@ -114,8 +114,8 @@ export default function AISupportHelpdesk() {
         "White-label solutions",
         "Dedicated support manager",
         "Advanced security",
-        "Custom training",
-        "On-premise options"
+        "Custom training",;
+        "On-premise options";
       ],;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function AISupportHelpdesk() {
       description: "Handle unlimited support requests without increasing headcount or response times.",
       icon: Globe
     },
-    {
-      title: "Gain Actionable Insights",
+    {;
+      title: "Gain Actionable Insights",;
       description: "Understand customer needs and improve products with comprehensive support analytics.",;
       icon: BarChart3;
     };
@@ -170,8 +170,8 @@ export default function AISupportHelpdesk() {
       title: "Mobile App",
       description: "Native mobile apps for iOS and Android with push notifications"
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Social Media",;
       description: "Monitor and respond to support requests across social platforms";
     };
@@ -197,10 +197,14 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +259,22 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,16 +312,22 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -349,16 +365,22 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -396,16 +418,22 @@ export default function AISupportHelpdesk() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -445,16 +473,22 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -515,10 +549,14 @@ export default function AISupportHelpdesk() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,8 +582,8 @@ export default function AISupportHelpdesk() {
                   Contact Sales
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

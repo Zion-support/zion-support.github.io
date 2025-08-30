@@ -53,6 +53,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         
 
 
+
+
 };
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added');
@@ -167,14 +169,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -255,14 +263,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -275,6 +289,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 details: 'Test security event',
   status: 'new'
             
+
+
 
 
 })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
@@ -307,6 +323,8 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   e.target.value)
 
 
+
+
 } className="text-sm border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                           <option value="new">New</option>
                           <option value="investigating">Investigating</option>
@@ -330,14 +348,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -391,14 +415,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -449,14 +479,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -503,14 +539,20 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
   height: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }} className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">

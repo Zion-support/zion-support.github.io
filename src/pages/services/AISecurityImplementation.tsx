@@ -5,8 +5,8 @@ export default function AISecurityImplementation() {
     'AI-powered security implementation optimization',
     'Intelligent implementation strategy management and execution',
     'Automated security solution deployment and configuration',
-    'Predictive analytics for implementation needs',
-    'Smart implementation framework management',
+    'Predictive analytics for implementation needs',;
+    'Smart implementation framework management',;
     'AI-driven implementation automation and orchestration',;
     'Real-time implementation performance tracking',;
     'Custom AI models for implementation applications';
@@ -23,8 +23,8 @@ export default function AISecurityImplementation() {
       price: '$1,799/mo', 
       details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,499/mo', ;
       details: ['Unlimited projects', 'Custom AI models', 'Full implementation suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityImplementation() {
 
   const useCases = [
     'Security implementation optimization',
-    'Implementation strategy management and execution',
-    'Security solution deployment and configuration',
+    'Implementation strategy management and execution',;
+    'Security solution deployment and configuration',;
     'Implementation framework management and automation',;
     'Implementation automation and orchestration',;
     'Implementation scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityImplementation() {
 
   const benefits = [
     'Improve security implementation performance by 50-80%',
-    'Reduce implementation completion time by 40-70%',
-    'Cut security implementation costs by 35-65%',
+    'Reduce implementation completion time by 40-70%',;
+    'Cut security implementation costs by 35-65%',;
     'Enhance security implementation reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security implementation operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityImplementation() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityImplementation() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

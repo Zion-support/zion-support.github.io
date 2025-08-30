@@ -16,6 +16,8 @@ const SitemapGenerator = ({ onGenerate }) => {
   changefreq: 'daily' 
 
 
+
+
 },
           { url: '/services', priority: '0.9', changefreq: 'weekly' },
           { url: '/about', priority: '0.8', changefreq: 'monthly' },
@@ -59,10 +61,14 @@ const SitemapGenerator = ({ onGenerate }) => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}

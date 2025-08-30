@@ -8,8 +8,8 @@ export default function AIHRTalentAcquisition() {
     'Automated candidate screening and assessment',
     'Predictive candidate success modeling',
     'Advanced interview scheduling and coordination',
-    'Real-time candidate engagement tracking',
-    'Automated reference checking and verification',
+    'Real-time candidate engagement tracking',;
+    'Automated reference checking and verification',;
     'Intelligent job posting optimization',;
     'Advanced analytics and reporting dashboard',;
     'Multi-channel recruitment campaign management';
@@ -17,8 +17,8 @@ export default function AIHRTalentAcquisition() {
 
   const benefits = [
     'Reduce time-to-hire by 60%',
-    'Improve candidate quality by 45%',
-    'Reduce recruitment costs by 40%',
+    'Improve candidate quality by 45%',;
+    'Reduce recruitment costs by 40%',;
     'Increase diversity in hiring by 35%',;
     'Automate 80% of manual recruitment tasks',;
     'Improve candidate experience significantly';
@@ -26,8 +26,8 @@ export default function AIHRTalentAcquisition() {
 
   const useCases = [
     'Enterprise talent acquisition',
-    'Tech recruitment and hiring',
-    'Healthcare staffing solutions',
+    'Tech recruitment and hiring',;
+    'Healthcare staffing solutions',;
     'Financial services recruitment',;
     'Manufacturing and logistics hiring',;
     'Retail and hospitality staffing';
@@ -44,8 +44,8 @@ export default function AIHRTalentAcquisition() {
       price: '$799/mo', 
       details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Talent', 
+    { ;
+      name: 'Enterprise Talent', ;
       price: '$2,499/mo', ;
       details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -164,8 +164,8 @@ export default function AIHRTalentAcquisition() {
             </div>
           </div>
           <p className="text-zion-slate-light">
-            Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.
-          </p>
+            Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.;
+          </p>;
         </div>;
       </section>;
     </div>;

@@ -44,16 +44,16 @@ export default function AIEducationPlatform() {
     "Adaptive learning algorithms",
     "Interactive virtual classrooms",
     "AI tutoring and homework help",
-    "Content creation and curation",
-    "Student engagement analytics",
+    "Content creation and curation",;
+    "Student engagement analytics",;
     "Parent and teacher dashboards",;
     "Multi-language support",;
     "Accessibility and inclusion tools";
   ];
 
   const benefits = [
-    "Improve learning outcomes by 40%",
-    "Reduce teacher workload by 50%",
+    "Improve learning outcomes by 40%",;
+    "Reduce teacher workload by 50%",;
     "Increase student engagement by 60%",;
     "Personalize education for every student",;
     "Scale quality education globally";
@@ -63,8 +63,8 @@ export default function AIEducationPlatform() {
     "K-12 schools and districts",
     "Higher education institutions",
     "Corporate training programs",
-    "Online learning platforms",
-    "Special education programs",
+    "Online learning platforms",;
+    "Special education programs",;
     "Language learning schools",;
     "Professional certification",;
     "Skills development programs";
@@ -116,8 +116,8 @@ export default function AIEducationPlatform() {
         "Custom content creation",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited users"
-      ],
+        "Unlimited users";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -139,10 +139,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -191,10 +195,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -218,16 +226,22 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -252,10 +266,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -279,16 +297,22 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -313,10 +337,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -340,16 +368,22 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -374,10 +408,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -401,16 +439,22 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -472,10 +516,14 @@ export default function AIEducationPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -519,8 +567,8 @@ export default function AIEducationPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -5,8 +5,8 @@ export default function AIDocker() {
     'AI-powered Docker optimization',
     'Intelligent Docker management',
     'Automated Docker monitoring and alerting',
-    'Predictive analytics for Docker scaling',
-    'Smart Docker security and compliance',
+    'Predictive analytics for Docker scaling',;
+    'Smart Docker security and compliance',;
     'AI-driven Docker automation and orchestration',;
     'Real-time Docker analytics and insights',;
     'Custom AI models for Docker applications';
@@ -23,8 +23,8 @@ export default function AIDocker() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Docker suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIDocker() {
 
   const useCases = [
     'Docker optimization',
-    'Docker management',
-    'Performance monitoring and analytics',
+    'Docker management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Docker scaling and management';
@@ -41,8 +41,8 @@ export default function AIDocker() {
 
   const benefits = [
     'Improve Docker performance by 50-80%',
-    'Reduce Docker build time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Docker build time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Docker reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Docker operations efficiently';
@@ -50,8 +50,8 @@ export default function AIDocker() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIDocker() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

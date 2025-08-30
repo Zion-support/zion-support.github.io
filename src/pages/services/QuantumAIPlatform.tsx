@@ -71,8 +71,8 @@ export default function QuantumAIPlatform() {
       icon: Atom,
       benefits: [
         "Molecular modeling",
-        "Chemical reaction simulation",
-        "Material property prediction",
+        "Chemical reaction simulation",;
+        "Material property prediction",;
         "Drug discovery acceleration";
       ];
     };
@@ -126,8 +126,8 @@ export default function QuantumAIPlatform() {
         "White-label solutions",
         "On-premise deployment",
         "SLA guarantees",
-        "Quantum strategy consulting"
-      ],
+        "Quantum strategy consulting";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -165,8 +165,8 @@ export default function QuantumAIPlatform() {
       industry: "Energy & Utilities",
       applications: [
         "Grid optimization",
-        "Energy trading",
-        "Resource allocation",
+        "Energy trading",;
+        "Resource allocation",;
         "Climate modeling";
       ];
     };
@@ -192,8 +192,8 @@ export default function QuantumAIPlatform() {
       metric: "∞"
     },
     {
-      title: "Quantum Entanglement",
-      description: "Leverage quantum correlations for secure communication",
+      title: "Quantum Entanglement",;
+      description: "Leverage quantum correlations for secure communication",;
       icon: Network,;
       metric: "100%";
     };
@@ -215,10 +215,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -272,10 +276,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -300,16 +308,22 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -337,10 +351,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -365,16 +383,22 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -412,10 +436,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -440,16 +468,22 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -511,10 +545,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -539,16 +577,22 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -578,10 +622,14 @@ export default function QuantumAIPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -610,8 +658,8 @@ export default function QuantumAIPlatform() {
               >
                 Contact Quantum Experts
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

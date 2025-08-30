@@ -107,6 +107,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
   { timeRange: e.target.value 
 
 
+
+
 });
         }} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
               <option value="1h">1 Hour</option>

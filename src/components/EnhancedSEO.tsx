@@ -35,8 +35,8 @@ export function EnhancedSEO({
     'IT consulting',
     'technology solutions',
     'digital transformation',
-    'cloud computing',
-    'cybersecurity',
+    'cloud computing',;
+    'cybersecurity',;
     'machine learning',;
     'quantum computing',;
     'Zion Tech Group';
@@ -58,6 +58,8 @@ export function EnhancedSEO({
     
 
 
+
+
 },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -72,8 +74,8 @@ export function EnhancedSEO({
     "numberOfEmployees": "50-100",
     "serviceType": [
       "AI Services",
-      "IT Consulting",
-      "Digital Transformation",
+      "IT Consulting",;
+      "Digital Transformation",;
       "Cloud Computing",;
       "Cybersecurity";
     ];
@@ -89,6 +91,8 @@ export function EnhancedSEO({
       <meta name="keywords" content = {
   allKeywords.join(',
   ')
+
+
 
 
 } />
@@ -186,8 +190,8 @@ export function EnhancedSEO({
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Zion Tech Group Services"
-            }
-          })}
+            };
+          })};
         </script>;
       )};
     </Helmet>;

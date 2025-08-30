@@ -340,6 +340,8 @@ export const PRICING_ANALYSIS_2030 = {
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   
 
+;
+;
 
 },;
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {;
@@ -350,8 +352,8 @@ export const PRICING_ANALYSIS_2030 = {
     return acc;
   }, {} as Record<string, number[]>),
   roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
-    serviceName: service.serviceName,
-    roi: service.roi,
+    serviceName: service.serviceName,;
+    roi: service.roi,;
     setupTime: service.setupTime,;
     price: service.basePrice;
   }));
@@ -372,10 +374,13 @@ export const PAYMENT_OPTIONS_2030 = {
     "White-label solutions",
     "Dedicated support",
     "On-premise deployment",
-    "Custom integrations",
+    "Custom integrations",;
+  ;
   "SLA guarantees";
   ];
 ;
+
+
 
 
 };
@@ -387,8 +392,12 @@ export const PRICING_CONTACT_2030 = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
+  ;
+  ;
   responseTime: "Within 24 hours for pricing inquiries";
 ;
+
+
 
 
 };

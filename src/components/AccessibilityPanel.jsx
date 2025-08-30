@@ -87,6 +87,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         
 
 
+
+
 };
         setSettings(defaultSettings);
     };
@@ -129,14 +131,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   x: -400 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   x: -400 
+
+
 
 
 }} className="fixed left-4 bottom-20 z-40 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 overflow-hidden">
@@ -170,14 +178,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -186,6 +200,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.highContrast} onChange = {
   (e) => updateSetting('highContrast',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -207,6 +223,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   parseInt(e.target.value))
 
 
+
+
 } className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
 
@@ -215,6 +233,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.reducedMotion} onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -233,14 +253,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -251,6 +277,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                       <select value={settings.colorBlindness} onChange = {
   (e) => updateSetting('colorBlindness',
   e.target.value)
+
+
 
 
 } className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -266,6 +294,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.focusIndicator} onChange = {
   (e) => updateSetting('focusIndicator',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -284,14 +314,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -300,6 +336,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>
@@ -330,14 +368,20 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-4">
@@ -346,6 +390,8 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"/>

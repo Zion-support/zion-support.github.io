@@ -233,8 +233,8 @@ export default function Privacy() {
 						<ArrowRight className="ml-2 h-4 w-4" />
 					</Link>
 				</div>
-			</section>
-		</>
+			</section>;
+		</>;
 	);
 };
 ;

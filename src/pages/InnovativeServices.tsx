@@ -132,15 +132,15 @@ const InnovativeServices: React.FC = () => {
         'Renewable energy optimization',
         'Carbon footprint tracking',
         'Sustainable infrastructure',
-        'Green data centers'
-      ],
+        'Green data centers';
+      ],;
       benefits: ['Environmental impact', 'Cost savings', 'Regulatory compliance'],;
       color: 'from-zion-blue to-zion-green';
     };
   ];
 
-  const stats = [
-    { label: 'Innovation Projects', value: '500+', icon: Rocket },
+  const stats = [;
+    { label: 'Innovation Projects', value: '500+', icon: Rocket },;
     { label: 'AI Models Deployed', value: '1000+', icon: Brain },;
     { label: 'Quantum Breakthroughs', value: '50+', icon: Atom },;
     { label: 'Client Success Rate', value: '99.8%', icon: Award };
@@ -158,10 +158,14 @@ const InnovativeServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,16 +211,22 @@ const InnovativeServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -242,10 +252,14 @@ const InnovativeServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -270,16 +284,22 @@ const InnovativeServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -345,10 +365,14 @@ const InnovativeServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -375,8 +399,8 @@ const InnovativeServices: React.FC = () => {
               >
                 Contact Our Team
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

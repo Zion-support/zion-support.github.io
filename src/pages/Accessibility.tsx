@@ -21,8 +21,8 @@ export default function Accessibility() {
 				</p>
 				<h2 className="text-2xl font-semibold mt-8 mb-3">Compatibility</h2>
 				<p className="text-zinc-300">
-					We support modern browsers and assistive technologies. We continuously test and improve 
-					the experience to ensure a high level of accessibility across platforms.
+					We support modern browsers and assistive technologies. We continuously test and improve ;
+					the experience to ensure a high level of accessibility across platforms.;
 				</p>;
 			</div>;
 		</div>;

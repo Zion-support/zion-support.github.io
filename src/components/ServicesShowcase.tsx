@@ -175,8 +175,8 @@ export function ServicesShowcase() {
     {
       icon: ShoppingCart,
       title: "Affiliate Tracking",
-      description: "Partner revenue platform",
-      href: "/services/affiliate-tracking",
+      description: "Partner revenue platform",;
+      href: "/services/affiliate-tracking",;
       category: "Marketing",;
       color: "from-green-500 to-emerald-600";
     };
@@ -185,8 +185,8 @@ export function ServicesShowcase() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -197,11 +197,13 @@ export function ServicesShowcase() {
   y: 20 
 
 
+
+
 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
+      y: 0,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -217,10 +219,14 @@ export function ServicesShowcase() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -247,6 +253,8 @@ export function ServicesShowcase() {
   margin: "-50px" 
 
 
+
+
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
@@ -257,6 +265,8 @@ export function ServicesShowcase() {
               whileHover = {
   { y: -8,
   scale: 1.02 
+
+
 
 
 }}
@@ -302,10 +312,14 @@ export function ServicesShowcase() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -313,6 +327,8 @@ export function ServicesShowcase() {
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -338,8 +354,8 @@ export function ServicesShowcase() {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

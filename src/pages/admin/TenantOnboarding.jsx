@@ -53,6 +53,8 @@ export default function TenantOnboarding() {
   subtitle: `Find the best talent for your ${formData.industry || "company"
 
 
+
+
 }`,
                 cta: "Get Started"
             };
@@ -143,6 +145,8 @@ export default function TenantOnboarding() {
   value)
 
 
+
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry"/>
@@ -165,6 +169,8 @@ export default function TenantOnboarding() {
                       <Select name="company_size" value={formData.company_size} onValueChange = {
   (value) => handleSelectChange("company_size",
   value)
+
+
 
 
 }>
@@ -207,6 +213,8 @@ export default function TenantOnboarding() {
   value)
 
 
+
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme"/>
@@ -233,6 +241,8 @@ export default function TenantOnboarding() {
   checked)
 
 
+
+
 }/>
                     </div>
                   </TabsContent>
@@ -244,6 +254,8 @@ export default function TenantOnboarding() {
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "company"
+
+
 
 
 } className="rounded-r-none"/>

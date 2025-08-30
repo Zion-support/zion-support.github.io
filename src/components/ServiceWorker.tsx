@@ -34,8 +34,8 @@ export function ServiceWorker() {
               setSwState(prev => ({ ...prev, isInstalling: true }));
               
               newWorker.addEventListener('statechange', () => {
-                if (newWorker.state = == 'installed') {
-                  setSwState(prev => ({ 
+                if (newWorker.state = == 'installed') {;
+                  setSwState(prev => ({ ;
                     ...prev, ;
                     isInstalling: false,;
                     hasUpdate: true ;
@@ -86,16 +86,22 @@ export function ServiceWorker() {
   y: -50 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           exit = {
   { opacity: 0,
   y: -50 
+
+
 
 
 }}
@@ -124,8 +130,8 @@ export function ServiceWorker() {
               >
                 Update
               </button>
-            )}
-          </div>
+            )};
+          </div>;
         </motion.div>;
       )};
     </AnimatePresence>;

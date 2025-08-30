@@ -90,13 +90,13 @@ const PerformanceAnalytics: React.FC = () => {;
       }
     ];
 
-    const alerts = [
+    const alerts = [;
       'High memory usage detected on server-01',;
       'Network latency increased by 15%',;
       'Error rate spike detected in last 5 minutes';
     ];
 
-    const recommendations = [
+    const recommendations = [;
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
@@ -165,10 +165,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -189,10 +193,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -246,10 +254,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -264,10 +276,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -306,10 +322,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -357,10 +377,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -391,10 +415,14 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -406,8 +434,8 @@ const PerformanceAnalytics: React.FC = () => {;
               <span className="text-sm text-gray-300">
                 Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()}
               </span>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </div>;
     </div>;

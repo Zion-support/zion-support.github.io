@@ -19,6 +19,8 @@ export default function HelpCenter() {
   href: '/help/create-account' 
 
 
+
+
 },
                 { title: 'Complete profile setup guide', href: '/help/profile-setup' },
                 { title: 'Understanding the marketplace', href: '/help/marketplace-guide' },
@@ -149,6 +151,8 @@ export default function HelpCenter() {
                   <Link to = {
   `/help/${article.toLowerCase().replace(/\s+/g,
   '-')
+
+
 
 
 }`} className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors">

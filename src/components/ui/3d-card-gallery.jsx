@@ -115,6 +115,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         
 
 
+
+
 };
         return iconMap[category] || Globe;
     };
@@ -182,6 +184,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   verified: !prev.verified 
 
 
+
+
 }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
               <Shield className="w-4 h-4 mr-1"/>
               Verified Only
@@ -190,6 +194,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick = {
   () => setFilters(prev => ({ ...prev,
   featured: !prev.featured 
+
+
 
 
 }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
@@ -206,6 +212,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                         : [...prev.category,
   category]
                 
+
+
 
 
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
@@ -226,14 +234,20 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
+
 
 
 }} onClick={() => handleCardClick(item)}>
@@ -289,6 +303,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   ease: "easeInOut" 
 
 
+
+
 }}>
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">
                   <Card3D item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon} isCarousel={true}/>
@@ -311,14 +327,20 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   opacity: 0 
 
 
+
+
 }} animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }} transition={{ duration: 0.2 }}>
@@ -433,14 +455,20 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
   y: 50 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ scale: 1.02 }}>
@@ -451,6 +479,8 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             rotateY,
   transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
         
+
+
 
 
 }} transition={{ duration: 0.3 }}>

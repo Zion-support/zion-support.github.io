@@ -49,8 +49,8 @@ export default function AIFinancialTradingRiskManagement() {
       title: "Security & Compliance",
       description: "Enterprise-grade security with regulatory compliance and audit trails"
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: "Data Integration",;
       description: "Seamless integration with major data providers and trading platforms";
     };
@@ -100,8 +100,8 @@ export default function AIFinancialTradingRiskManagement() {
         "Custom strategy development",
         "Advanced modeling",
         "Performance analytics",
-        "Research reports",
-        "Expert consultation",
+        "Research reports",;
+        "Expert consultation",;
         "Strategy optimization";
       ];
     };
@@ -111,8 +111,8 @@ export default function AIFinancialTradingRiskManagement() {
     "Stocks & Equities",
     "Bonds & Fixed Income",
     "Foreign Exchange (Forex)",
-    "Commodities",
-    "Cryptocurrencies",
+    "Commodities",;
+    "Cryptocurrencies",;
     "Options & Derivatives",;
     "ETFs & Mutual Funds",;
     "Alternative Investments";
@@ -120,8 +120,8 @@ export default function AIFinancialTradingRiskManagement() {
 
   const benefits = [
     "Increase trading returns by 25-40%",
-    "Reduce portfolio risk by 30%",
-    "24/7 automated trading",
+    "Reduce portfolio risk by 30%",;
+    "24/7 automated trading",;
     "Real-time risk monitoring",;
     "Compliance automation",;
     "Scalable operations";
@@ -129,8 +129,8 @@ export default function AIFinancialTradingRiskManagement() {
 
   const technologies = [
     "Machine Learning Algorithms",
-    "Deep Neural Networks",
-    "Natural Language Processing",
+    "Deep Neural Networks",;
+    "Natural Language Processing",;
     "High-Frequency Trading Engines",;
     "Real-time Data Processing",;
     "Blockchain Integration";
@@ -156,10 +156,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -201,10 +205,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -229,16 +237,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -264,10 +278,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -292,16 +310,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -339,10 +363,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -367,16 +395,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -399,10 +433,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -427,16 +465,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -461,10 +505,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -489,16 +537,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -521,10 +575,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -539,16 +597,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -563,16 +627,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -605,10 +675,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -631,10 +705,14 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -652,16 +730,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -678,16 +762,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -705,16 +795,22 @@ export default function AIFinancialTradingRiskManagement() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -725,8 +821,8 @@ export default function AIFinancialTradingRiskManagement() {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

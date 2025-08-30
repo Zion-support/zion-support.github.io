@@ -69,7 +69,7 @@ interface SEOOptimizerProps {
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url,
-  autoAnalyze = true,
+  autoAnalyze = true,;
   showDetails = false,;
   onAnalysisComplete;
 }) => {;
@@ -145,8 +145,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       seoScore: 87,
       coreWebVitals: {
         lcp: 2.8,
-        fid: 45,
-        cls: 0.08
+        fid: 45,;
+        cls: 0.08;
       };
     },;
     lastUpdated: new Date();
@@ -217,7 +217,11 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       const priorityOrder = {
   high: 3, medium: 2,;
   ;
+  ;
+  ;
   low: 1 ;
+
+
 
 
 };
@@ -232,8 +236,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors"
-        >
+          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
+        >;
           Analyze SEO;
         </button>;
       </div>;
@@ -402,16 +406,22 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -463,10 +473,14 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   x: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -501,16 +515,22 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   height: 0 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -537,8 +557,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   </div>
                 </div>
               </motion.div>
-            )}
-          </AnimatePresence>
+            )};
+          </AnimatePresence>;
         </>;
       ) : null};
     </div>;

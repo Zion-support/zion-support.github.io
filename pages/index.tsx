@@ -227,8 +227,8 @@ export default function Index() {
 							</Link>
 						</div>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

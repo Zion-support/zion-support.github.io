@@ -113,14 +113,20 @@ const LinkHealthMonitor = () => {
   opacity: 0 
 
 
+
+
 }} animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>

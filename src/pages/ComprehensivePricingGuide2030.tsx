@@ -28,7 +28,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [
+  const allServices = [;
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
@@ -41,8 +41,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     return matchesCategory && matchesSearch;
   });
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
@@ -73,10 +73,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -174,10 +178,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,16 +215,22 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -232,8 +246,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      {/* Services Grid */};
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
@@ -248,16 +262,22 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -397,8 +417,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       href={`mailto:${service.contactEmail}?subject=Pricing Inquiry for ${service.title}`}
                       className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-3 px-4 rounded-lg transition-colors border border-white/20 flex items-center justify-center gap-2"
                     >
-                      <Mail className="w-4 h-4" />
-                      Get Quote
+                      <Mail className="w-4 h-4" />;
+                      Get Quote;
                     </a>;
                   </div>;
                 </motion.div>;
@@ -406,8 +426,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             })}
           </div>
 
-          {filteredServices.length = == 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length = == 0 && (;
+            <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -432,10 +452,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -491,16 +515,22 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -527,10 +557,14 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -606,8 +640,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 <div className="text-gray-300">Cloud & DevOps</div>
                 <div className="text-gray-300">IT Infrastructure</div>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

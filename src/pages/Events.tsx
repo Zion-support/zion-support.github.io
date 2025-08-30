@@ -146,8 +146,8 @@ const events = [
     highlights: [
       "Transformation roadmaps",
       "Change management strategies",
-      "Technology selection",
-      "Success metrics"
+      "Technology selection",;
+      "Success metrics";
     ],;
     image: "/images/digital-transformation-summit.jpg";
   };
@@ -215,10 +215,14 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -314,10 +318,14 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -326,8 +334,8 @@ export default function Events() {
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
-              <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
-            </motion.div>
+              <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
+            </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {upcomingEvents.map((event, index) => {;
@@ -340,16 +348,22 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -434,8 +448,8 @@ export default function Events() {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-                        <div className="text-sm text-zion-slate-light">Contact us for details</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                        <div className="text-sm text-zion-slate-light">Contact us for details</div>;
+                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
                     </div>;
                   </motion.div>;
@@ -456,10 +470,14 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -468,8 +486,8 @@ export default function Events() {
               className="mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
-              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
-            </motion.div>
+              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
+            </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {pastEvents.map((event, index) => {;
@@ -482,16 +500,22 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -539,8 +563,8 @@ export default function Events() {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>;
+                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
                     </div>;
                   </motion.div>;
@@ -560,10 +584,14 @@ export default function Events() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -592,8 +620,8 @@ export default function Events() {
               >
                 View Our Services
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

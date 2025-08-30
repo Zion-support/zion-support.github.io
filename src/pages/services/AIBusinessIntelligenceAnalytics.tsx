@@ -52,8 +52,8 @@ const AIBusinessIntelligenceAnalytics = () => {
       title: 'User Behavior Analysis',
       description: 'Understand customer and employee behavior patterns for optimization'
     },
-    {
-      icon: PieChart,
+    {;
+      icon: PieChart,;
       title: 'Data Visualization',;
       description: 'Interactive charts and graphs that make complex data easy to understand';
     };
@@ -61,8 +61,8 @@ const AIBusinessIntelligenceAnalytics = () => {
 
   const benefits = [
     'Increase revenue by 25% through data-driven decisions',
-    'Reduce operational costs by 30%',
-    'Improve decision-making speed by 60%',
+    'Reduce operational costs by 30%',;
+    'Improve decision-making speed by 60%',;
     'Identify new business opportunities faster',;
     'Optimize resource allocation and efficiency',;
     'Enhance competitive advantage with insights';
@@ -80,8 +80,8 @@ const AIBusinessIntelligenceAnalytics = () => {
     {
       industry: 'Manufacturing',
       description: 'Production optimization, quality control, and supply chain management'
-    },
-    {
+    },;
+    {;
       industry: 'Healthcare',;
       description: 'Patient outcomes analysis, resource planning, and operational efficiency';
     };
@@ -99,10 +99,14 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -147,10 +151,14 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -175,16 +183,22 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -210,10 +224,14 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -238,16 +256,22 @@ const AIBusinessIntelligenceAnalytics = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -267,16 +291,22 @@ const AIBusinessIntelligenceAnalytics = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -300,10 +330,14 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -328,16 +362,22 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -363,10 +403,14 @@ const AIBusinessIntelligenceAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -387,8 +431,8 @@ const AIBusinessIntelligenceAnalytics = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

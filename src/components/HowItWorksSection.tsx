@@ -73,15 +73,15 @@ const steps = [
       "Comprehensive testing",
       "Documentation delivery",
       "Training and handover",
-      "Post-launch support"
-    ],
+      "Post-launch support";
+    ],;
     duration: "Ongoing",;
     success: "100% client retention";
   };
 ];
 
-const stats = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
+const stats = [;
+  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },;
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
@@ -95,8 +95,8 @@ export function HowItWorksSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
+      transition: {;
+        staggerChildren: 0.2,;
         delayChildren: 0.1;
       };
     };
@@ -107,12 +107,14 @@ export function HowItWorksSection() {
   scale: 0.8 
 
 
+
+
 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: {
-        duration: 0.5,
+      transition: {;
+        duration: 0.5,;
         ease: "easeOut";
       };
     };
@@ -129,6 +131,8 @@ export function HowItWorksSection() {
         
 
 
+
+
 }} />
       </div>
 
@@ -142,6 +146,8 @@ export function HowItWorksSection() {
   ease: "linear" 
 
 
+
+
 }}
         />
         <motion.div 
@@ -150,6 +156,8 @@ export function HowItWorksSection() {
           transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
+
 
 
 }}
@@ -161,10 +169,14 @@ export function HowItWorksSection() {
   1] 
 
 
+
+
 }}
           transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
+
 
 
 }}
@@ -179,10 +191,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -248,6 +264,8 @@ export function HowItWorksSection() {
   stiffness: 300 
 
 
+
+
 }}
               >
                 {/* Step card */}
@@ -293,16 +311,22 @@ export function HowItWorksSection() {
   scale: 0.95 
 
 
+
+
 }}
                       animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
                       exit = {
   { opacity: 0, y: 10,
   scale: 0.95 
+
+
 
 
 }}
@@ -336,10 +360,14 @@ export function HowItWorksSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -347,6 +375,8 @@ export function HowItWorksSection() {
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -359,8 +389,8 @@ export function HowItWorksSection() {
               <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
                 Start Your Project
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

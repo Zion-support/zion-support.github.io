@@ -48,8 +48,8 @@ export default function CustomDevelopment() {
       features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
-      title: 'System Integration',
-      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
+      title: 'System Integration',;
+      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
               icon: GitFork,;
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
     };
@@ -75,8 +75,8 @@ export default function CustomDevelopment() {
       stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
-      title: 'Database',
-      description: 'Modern database solutions for data storage and management.',
+      title: 'Database',;
+      description: 'Modern database solutions for data storage and management.',;
       icon: Database,;
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
     };
@@ -98,8 +98,8 @@ export default function CustomDevelopment() {
       description: 'Enterprise-grade security measures built into every application.',
       icon: Shield
     },
-    {
-      title: 'Support & Maintenance',
+    {;
+      title: 'Support & Maintenance',;
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings;
     };
@@ -122,10 +122,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -166,10 +170,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -194,16 +202,22 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -245,10 +259,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -273,16 +291,22 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -315,10 +339,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -342,16 +370,22 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -377,10 +411,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -405,16 +443,22 @@ export default function CustomDevelopment() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -436,10 +480,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -468,16 +516,22 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -503,10 +557,14 @@ export default function CustomDevelopment() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -532,8 +590,8 @@ export default function CustomDevelopment() {
               >
                 Explore Services
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

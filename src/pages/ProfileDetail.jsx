@@ -172,6 +172,8 @@ export default function ProfileDetail() {
         
 
 
+
+
 }}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">

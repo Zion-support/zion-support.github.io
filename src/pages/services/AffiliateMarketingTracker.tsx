@@ -31,8 +31,8 @@ export default function AffiliateMarketingTracker() {
       title: "Fraud Detection",
       description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity."
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: "Multi-channel Support",;
       description: "Track performance across social media, email, influencer partnerships, and more.";
     };
@@ -78,8 +78,8 @@ export default function AffiliateMarketingTracker() {
         "Custom integrations",
         "Dedicated account manager",
         "White-label options",
-        "Advanced fraud protection",
-        "Custom commission structures"
+        "Advanced fraud protection",;
+        "Custom commission structures";
       ],;
       popular: false;
     };
@@ -101,8 +101,8 @@ export default function AffiliateMarketingTracker() {
       description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
       icon: Shield
     },
-    {
-      title: "Scale Efficiently",
+    {;
+      title: "Scale Efficiently",;
       description: "Manage thousands of affiliates with automated systems and smart workflows.",;
       icon: Users;
     };
@@ -128,10 +128,14 @@ export default function AffiliateMarketingTracker() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -186,16 +190,22 @@ export default function AffiliateMarketingTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -233,16 +243,22 @@ export default function AffiliateMarketingTracker() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -282,16 +298,22 @@ export default function AffiliateMarketingTracker() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -352,10 +374,14 @@ export default function AffiliateMarketingTracker() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -381,8 +407,8 @@ export default function AffiliateMarketingTracker() {
                   Contact Sales
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

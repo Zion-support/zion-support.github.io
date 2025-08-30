@@ -41,8 +41,8 @@ const technologyCategories = [
       { name: "AWS", icon: "☁️", proficiency: 90 },
       { name: "Azure", icon: "🔷", proficiency: 85 },
       { name: "Google Cloud", icon: "🔵", proficiency: 80 },
-      { name: "Docker", icon: "🐳", proficiency: 90 },
-      { name: "Kubernetes", icon: "⚓", proficiency: 85 }
+      { name: "Docker", icon: "🐳", proficiency: 90 },;
+      { name: "Kubernetes", icon: "⚓", proficiency: 85 };
     ],;
     color: "from-orange-500 to-red-500";
   };
@@ -50,8 +50,8 @@ const technologyCategories = [
 
 const emergingTech = [
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },
-  { name: "Blockchain", icon: "🔗", status: "Production" },
-  { name: "Edge Computing", icon: "🌐", status: "Development" },
+  { name: "Blockchain", icon: "🔗", status: "Production" },;
+  { name: "Edge Computing", icon: "🌐", status: "Development" },;
   { name: "5G Networks", icon: "📡", status: "Integration" },;
   { name: "IoT Platforms", icon: "📱", status: "Production" },;
   { name: "AR/VR", icon: "🥽", status: "Research" };
@@ -68,10 +68,14 @@ export function TechnologyStackSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -97,10 +101,14 @@ export function TechnologyStackSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,6 +116,8 @@ export function TechnologyStackSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -139,6 +149,8 @@ export function TechnologyStackSection() {
   delay: 0.8 + techIndex * 0.1 
 
 
+
+
 }}
                         />
                       </div>
@@ -161,10 +173,14 @@ export function TechnologyStackSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -172,6 +188,8 @@ export function TechnologyStackSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -190,10 +208,14 @@ export function TechnologyStackSection() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -201,6 +223,8 @@ export function TechnologyStackSection() {
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -232,10 +256,14 @@ export function TechnologyStackSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -243,6 +271,8 @@ export function TechnologyStackSection() {
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -287,10 +317,14 @@ export function TechnologyStackSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -300,12 +334,14 @@ export function TechnologyStackSection() {
   delay: 1.0 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to leverage cutting-edge tech?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

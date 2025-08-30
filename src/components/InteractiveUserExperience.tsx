@@ -320,6 +320,8 @@ const InteractiveUserExperience: React.FC = () => {;
   !preference.value)
 
 
+
+
 }
                             size="sm"
                           >
@@ -332,6 +334,8 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   e.target.value)
+
+
 
 
 }
@@ -353,6 +357,8 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   parseInt(e.target.value))
+
+
 
 
 }
@@ -559,8 +565,8 @@ const InteractiveUserExperience: React.FC = () => {;
                   </Button>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </CardContent>;
+          </Card>;
         </TabsContent>;
       </Tabs>;
     </div>;

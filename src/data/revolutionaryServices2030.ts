@@ -1040,8 +1040,8 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
     availability: "Global",
     location: "Global",
     tags: ["Quantum AI", "Education", "Personalized Learning", "EdTech", "AI Tutoring"],
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500",;
+    createdAt: "2030-01-15T10:00:00.000Z",;
     featured: true,;
     trending: true;
   };
@@ -1072,7 +1072,7 @@ export const getRevolutionaryTrendingServices = (limit: number = 10): Revolution
 
 export const searchRevolutionaryServices = (query: string): RevolutionaryService2030[] => {;
   const lowercaseQuery = query.toLowerCase();
-  return REVOLUTIONARY_SERVICES_2030.filter(service = >
+  return REVOLUTIONARY_SERVICES_2030.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));

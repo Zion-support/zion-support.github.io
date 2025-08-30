@@ -37,6 +37,8 @@ export default function PricingGuide() {
   USD: { symbol: '$',
   rate: 1 
 
+;
+;
 
 },;
     EUR: { symbol: '€', rate: 0.85 },;
@@ -104,8 +106,8 @@ export default function PricingGuide() {
         "Monthly Strategy Sessions",
         "Custom Integration",
         "SLA Guarantees"
-      ],
-      notIncluded: [],
+      ],;
+      notIncluded: [],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -145,8 +147,8 @@ export default function PricingGuide() {
       icon: Cpu,
       services: [
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
-        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },
-        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },
+        { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;
+        { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;
         { name: "Onsite Support", price: "From $199/hour", description: "Local technical assistance" };
       ];
     };
@@ -378,8 +380,8 @@ export default function PricingGuide() {
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

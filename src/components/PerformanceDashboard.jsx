@@ -43,6 +43,8 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
         
 
 
+
+
 };
         return icons[metricName] || <Activity className="w-4 h-4"/>;
     };
@@ -56,6 +58,8 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             DOMLOAD: 'DOM Content Loaded - DOM ready time',
   WINDOWLOAD: 'Window Load - Full page load time'
         
+
+
 
 
 };
@@ -73,14 +77,20 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
   className)
 
 
+
+
 } initial = {
   { opacity: 0,
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -110,6 +120,8 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
   getScoreColor(performanceScore))
 
 
+
+
 }>
                 {performanceScore}
               </span>
@@ -127,14 +139,20 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
   opacity: 0 
 
 
+
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -160,6 +178,8 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
   rating === 'good' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
                     rating === 'needs-improvement' ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' :
                         'bg-red-500/20 text-red-400 border-red-500/30')
+
+
 
 
 }>
@@ -198,11 +218,15 @@ export function PerformanceIndicator({ className }) {
   className)
 
 
+
+
 }>
       <div className = {
   cn('w-2 h-2 rounded-full',
   performanceScore >= 90 ? 'bg-green-500' :
             performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500')
+
+
 
 
 }/>

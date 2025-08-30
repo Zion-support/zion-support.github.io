@@ -218,8 +218,8 @@ export default function Careers() {
 						</div>
 					</div>
 				</div>
-			</section>
-		</>
+			</section>;
+		</>;
 	);
 };
 ;

@@ -75,8 +75,12 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
+
 
 
 };
@@ -101,8 +105,8 @@ const categories = [
   {
     id: 'micro-saas',
     name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',
-    icon: <Code className="w-8 h-8" />,
+    description: 'Innovative software solutions for small businesses',;
+    icon: <Code className="w-8 h-8" />,;
     color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025;
   };
@@ -112,8 +116,12 @@ const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700',
   'Breakthrough': 'from-purple-600 to-violet-700',
   'Advanced': 'from-blue-600 to-cyan-700',;
+  ;
+  ;
   'Emerging': 'from-green-600 to-emerald-700';
 ;
+
+
 
 
 };
@@ -122,8 +130,12 @@ const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700',
   'Patent Pending': 'from-yellow-600 to-orange-700',
   'Trade Secret': 'from-blue-600 to-indigo-700',;
+  ;
+  ;
   'Open Source': 'from-purple-600 to-violet-700';
 ;
+
+
 
 
 };
@@ -132,7 +144,7 @@ export function UltimateServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
-  const allServices = [
+  const allServices = [;
     ...ultimateInnovativeServices2025,;
     ...enterpriseITInfrastructureServices2025,;
     ...innovativeMicroSaasSolutions2025;
@@ -146,8 +158,8 @@ export function UltimateServicesShowcase() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
+      transition: {;
+        staggerChildren: 0.1,;
         delayChildren: 0.2;
       };
     };
@@ -158,12 +170,14 @@ export function UltimateServicesShowcase() {
   y: 20 
 
 
+
+
 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
+      transition: {;
+        duration: 0.6,;
         ease: "easeOut";
       };
     };
@@ -180,10 +194,14 @@ export function UltimateServicesShowcase() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -226,16 +244,22 @@ export function UltimateServicesShowcase() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -387,16 +411,22 @@ export function UltimateServicesShowcase() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -543,14 +573,16 @@ export function UltimateServicesShowcase() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       )};
     </section>;
   );
 }
 
+export default UltimateServicesShowcase;
+export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

@@ -5,8 +5,8 @@ export default function AIHRTalentPlatform() {
     'AI-powered candidate screening and matching',
     'Automated resume parsing and skill assessment',
     'Intelligent interview scheduling and feedback',
-    'Employee performance analytics and insights',
-    'Predictive turnover analysis and retention strategies',
+    'Employee performance analytics and insights',;
+    'Predictive turnover analysis and retention strategies',;
     'Automated onboarding and training workflows',;
     'Diversity and inclusion analytics',;
     'Compliance monitoring and reporting';
@@ -14,8 +14,8 @@ export default function AIHRTalentPlatform() {
 
   const benefits = [
     'Reduce time-to-hire by 60%',
-    'Improve candidate quality by 40%',
-    'Reduce hiring costs by 30%',
+    'Improve candidate quality by 40%',;
+    'Reduce hiring costs by 30%',;
     'Increase employee retention by 25%',;
     'Automate routine HR tasks',;
     'Data-driven decision making';
@@ -35,8 +35,8 @@ export default function AIHRTalentPlatform() {
       popular: true
     },
     { 
-      name: 'Enterprise', 
-      price: '$999/mo', 
+      name: 'Enterprise', ;
+      price: '$999/mo', ;
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false;
     };
@@ -44,8 +44,8 @@ export default function AIHRTalentPlatform() {
 
   const useCases = [
     'Recruitment and talent acquisition',
-    'Employee performance management',
-    'Learning and development',
+    'Employee performance management',;
+    'Learning and development',;
     'Workforce planning and analytics',;
     'Compliance and HR operations',;
     'Employee engagement and retention';
@@ -55,8 +55,8 @@ export default function AIHRTalentPlatform() {
     'Talent Acquisition',
     'Performance Management',
     'Learning & Development',
-    'Workforce Analytics',
-    'Employee Engagement',
+    'Workforce Analytics',;
+    'Employee Engagement',;
     'Compliance & Reporting',;
     'Onboarding & Offboarding',;
     'Succession Planning';
@@ -313,8 +313,8 @@ export default function AIHRTalentPlatform() {
             rel="noreferrer" 
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </section>;
     </div>;

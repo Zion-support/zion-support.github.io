@@ -253,9 +253,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
@@ -265,14 +269,20 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   rotate: -90 
 
 
+
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -283,14 +293,20 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   rotate: -90 
 
 
+
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -301,14 +317,20 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   rotate: -90 
 
 
+
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -323,9 +345,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   x: -50 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
@@ -344,14 +370,20 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">
@@ -365,9 +397,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
@@ -381,9 +417,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
+
 
 
 }} exit = {
@@ -391,9 +431,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   scale: 0.8 
 
 
+
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
+
 
 
 }} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">

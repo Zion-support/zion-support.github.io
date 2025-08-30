@@ -70,8 +70,8 @@ export default function Developers() {
     {
       name: 'AI Security API',
       description: 'Integrate AI-powered security and compliance features',
-      category: 'Security',
-      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],
+      category: 'Security',;
+      endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],;
       documentation: '/docs/api/security',;
       status: 'Production';
     };
@@ -105,8 +105,8 @@ export default function Developers() {
     {
       name: 'Go',
       description: 'Go SDK for high-performance applications',
-      version: 'v1.2.0',
-      downloads: '8K+',
+      version: 'v1.2.0',;
+      downloads: '8K+',;
       repository: 'https://github.com/ziontechgroup/go-sdk',;
       documentation: '/docs/sdk/go';
     };
@@ -136,8 +136,8 @@ export default function Developers() {
     },
     {
       name: 'Code Examples',
-      description: 'Ready-to-use code samples and tutorials',
-      icon: Terminal,
+      description: 'Ready-to-use code samples and tutorials',;
+      icon: Terminal,;
       href: '/examples',;
       category: 'Learning';
     };
@@ -167,8 +167,8 @@ export default function Developers() {
     },
     {
       step: 4,
-      title: 'Make First Call',
-      description: 'Test your integration with our sample endpoints',
+      title: 'Make First Call',;
+      description: 'Test your integration with our sample endpoints',;
       action: 'Try API',;
       href: '/api-playground';
     };
@@ -488,8 +488,8 @@ export default function Developers() {
                 Contact Support
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

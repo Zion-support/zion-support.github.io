@@ -22,9 +22,13 @@ const AdvancedServices = () => {
   y: 50 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -60,14 +64,20 @@ const AdvancedServices = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.2 
+
+
 
 
 }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm">
@@ -102,9 +112,13 @@ const AdvancedServices = () => {
   y: 50 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
@@ -129,14 +143,20 @@ const AdvancedServices = () => {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="text-center group">
@@ -158,9 +178,13 @@ const AdvancedServices = () => {
   y: 50 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
@@ -215,14 +239,20 @@ const AdvancedServices = () => {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-500/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
@@ -244,9 +274,13 @@ const AdvancedServices = () => {
   y: 50 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/40 backdrop-blur-sm">

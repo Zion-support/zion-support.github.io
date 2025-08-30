@@ -61,8 +61,8 @@ interface ResourceManagementSystemProps {
 }
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
-  showStats = true,
-  showFilters = true,
+  showStats = true,;
+  showFilters = true,;
   showCharts = true,;
   maxResources = 20;
 }) => {;
@@ -192,8 +192,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }
 
     if (searchQuery) {
-      filtered = filtered.filter(r => 
-        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      filtered = filtered.filter(r => ;
+        r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -215,10 +215,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     topDepartments: (() => {
       const deptCounts = resources.reduce((acc,;
   ;
+  ;
+  ;
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc;
       
+
+
 
 
 }, {} as Record<string, number>);
@@ -275,8 +279,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Format currency
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+    return new Intl.NumberFormat('en-US', {;
+      style: 'currency',;
       currency: 'USD',;
       minimumFractionDigits: 0,;
       maximumFractionDigits: 0;
@@ -343,10 +347,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -362,10 +370,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -382,10 +394,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -402,10 +418,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -427,10 +447,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -448,10 +472,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -469,10 +497,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -499,10 +531,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   scale: 0.9 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -585,10 +621,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -677,6 +717,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   delay: index * 0.1 
 
 
+
+
 }}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     resource.utilization >= 90 ? 'bg-red-500' :
@@ -739,8 +781,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             onClick={() => setShowResourceForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-            Add Resource
-          </button>
+            Add Resource;
+          </button>;
         </motion.div>;
       )};
     </div>;

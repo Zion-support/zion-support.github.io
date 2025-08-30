@@ -5,8 +5,8 @@ export default function AI5GNetwork() {
     'AI-powered 5G optimization',
     'Intelligent 5G network management',
     'Automated 5G monitoring and alerting',
-    'Predictive analytics for 5G scaling',
-    'Smart 5G security and compliance',
+    'Predictive analytics for 5G scaling',;
+    'Smart 5G security and compliance',;
     'AI-driven 5G automation and orchestration',;
     'Real-time 5G analytics and insights',;
     'Custom AI models for 5G applications';
@@ -23,8 +23,8 @@ export default function AI5GNetwork() {
       price: '$1,499/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full 5G suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AI5GNetwork() {
 
   const useCases = [
     '5G optimization',
-    '5G network management',
-    'Performance monitoring and analytics',
+    '5G network management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     '5G scaling and management';
@@ -41,8 +41,8 @@ export default function AI5GNetwork() {
 
   const benefits = [
     'Improve 5G performance by 50-80%',
-    'Reduce 5G deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce 5G deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance 5G reliability and scalability',;
     'Optimize resource utilization',;
     'Scale 5G operations efficiently';
@@ -50,8 +50,8 @@ export default function AI5GNetwork() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AI5GNetwork() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

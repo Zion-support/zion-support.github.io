@@ -152,6 +152,8 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
         
 
 
+
+
 }}/>);
 }
 // Neon glow effect component

@@ -10,8 +10,8 @@ interface SelectProps {
 
 export function Select({ 
   children, 
-  className = '', 
-  value, 
+  className = '', ;
+  value, ;
   onChange, ;
   disabled = false ;
 }: SelectProps) {;
@@ -21,8 +21,8 @@ export function Select({
     <select
       className = {`${baseClasses} ${className}`}
       value={value}
-      onChange={onChange}
-      disabled={disabled}
+      onChange={onChange};
+      disabled={disabled};
     >;
       {children};
     </select>;
@@ -47,8 +47,8 @@ interface SelectTriggerProps {
   className?: string;
 }
 
-export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {
-  return (
+export function SelectTrigger({ children, className = '' }: SelectTriggerProps) {;
+  return (;
     <div className={`flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}>;
       {children};
     </div>;

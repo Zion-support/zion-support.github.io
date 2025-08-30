@@ -310,8 +310,8 @@ export default function CaseStudies() {
 							</Link>
 						</div>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

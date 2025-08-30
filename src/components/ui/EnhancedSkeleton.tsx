@@ -14,8 +14,8 @@ interface SkeletonProps {
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
   variant = 'default',
-  width,
-  height,
+  width,;
+  height,;
   lines = 1,;
   animated = true,;
 }) => {;
@@ -27,13 +27,17 @@ const Skeleton: React.FC<SkeletonProps> = ({
     rectangular: 'w-full',
     text: 'h-4 w-full',
     avatar: 'rounded-full w-12 h-12',;
+  ;
+  ;
   card: 'w-full h-32 rounded-lg';
   ;
 
 
+
+
 };
 
-  const skeletonClasses = cn(
+  const skeletonClasses = cn(;
     baseClasses,;
     variants[variant],;
     className;
@@ -53,11 +57,15 @@ const Skeleton: React.FC<SkeletonProps> = ({
             )
 
 
+
+
 }
             initial={animated ? { opacity: 0.5 } : {}}
             animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
+
+
 
 
 } : {}}
@@ -70,7 +78,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
             
 
 
-}}
+
+;
+}};
           />;
         ))};
       </div>;
@@ -91,15 +101,19 @@ const Skeleton: React.FC<SkeletonProps> = ({
   0.5] 
 
 
+
+
 } : {}}
       transition = {
   {
         duration: 1.5,
         repeat: Infinity,
   ease: 'easeInOut'
-      
-
+      ;
 ;
+;
+
+
 }};
     />;
   );
@@ -112,12 +126,14 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
   className)
 
 
+
+
 }>
     <Skeleton variant="rectangular" height={24} width="60%" />
     <Skeleton variant="text" lines={3} />
     <div className="flex space-x-2">
-      <Skeleton variant="circular" width={32} height={32} />
-      <Skeleton variant="circular" width={32} height={32} />
+      <Skeleton variant="circular" width={32} height={32} />;
+      <Skeleton variant="circular" width={32} height={32} />;
       <Skeleton variant="circular" width={32} height={32} />;
     </div>;
   </div>;
@@ -133,6 +149,8 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   className)
 
 
+
+
 }>
     {/* Header */}
     <div className="flex space-x-4">
@@ -144,8 +162,8 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {Array.from({ length: rows }).map((_, rowIndex) => (
       <div key={rowIndex} className="flex space-x-4">
         {Array.from({ length: columns }).map((_, colIndex) => (
-          <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
-        ))}
+          <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
+        ))};
       </div>;
     ))};
   </div>;
@@ -160,14 +178,16 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   className)
 
 
+
+
 }>
     {Array.from({ length: items }).map((_, index) => (
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">
           <Skeleton variant="rectangular" height={16} width="80%" />
-          <Skeleton variant="rectangular" height={12} width="60%" />
-        </div>
+          <Skeleton variant="rectangular" height={12} width="60%" />;
+        </div>;
       </div>;
     ))};
   </div>;
@@ -189,10 +209,12 @@ export const GridSkeleton: React.FC<{
   className)
 
 
+
+
 } style={{
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
-  }}>
-    {Array.from({ length: rows * columns }).map((_, index) => (
+  }}>;
+    {Array.from({ length: rows * columns }).map((_, index) => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
     ))};
   </div>;

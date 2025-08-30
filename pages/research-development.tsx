@@ -35,6 +35,8 @@ export default function ResearchDevelopment() {
 							
 
 
+
+
 }
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
@@ -217,8 +219,8 @@ export default function ResearchDevelopment() {
 							Join Our Team <span aria-hidden="true">→</span>
 						</Link>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

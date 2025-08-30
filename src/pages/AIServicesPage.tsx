@@ -105,8 +105,8 @@ const AIServicesPage = () => {
       roi: 'Healthcare providers achieve 400% ROI through improved patient outcomes and operational efficiency.',
       competitors: ['Traditional emotion analysis tools', 'AI sentiment platforms', 'Healthcare AI solutions'],
       marketSize: '$2.1B emotional AI market',
-      growthRate: '180% annual growth',
-      rating: 4.8,
+      growthRate: '180% annual growth',;
+      rating: 4.8,;
       reviews: 32,;
       customers: 67;
     };
@@ -128,8 +128,8 @@ const AIServicesPage = () => {
       description: 'Prevent equipment failures with AI insights',
       benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
     },
-    {
-      title: 'AI-Driven Marketing',
+    {;
+      title: 'AI-Driven Marketing',;
       description: 'Personalized campaigns and customer insights',;
       benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization'];
     };
@@ -152,8 +152,8 @@ const AIServicesPage = () => {
     },
     {
       company: 'HealthTech Solutions',
-      industry: 'Healthcare',
-      challenge: 'Patient data analysis',
+      industry: 'Healthcare',;
+      challenge: 'Patient data analysis',;
       solution: 'NLP for medical records',;
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
@@ -210,16 +210,22 @@ const AIServicesPage = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -252,16 +258,22 @@ const AIServicesPage = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -314,8 +326,8 @@ const AIServicesPage = () => {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </>;

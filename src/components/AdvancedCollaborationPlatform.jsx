@@ -58,6 +58,8 @@ export function AdvancedCollaborationPlatform() {
             
 
 
+
+
 };
             setChatMessages(prev => [...prev, newMessage]);
             setChatMessage('');

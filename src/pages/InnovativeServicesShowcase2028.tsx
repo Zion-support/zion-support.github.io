@@ -48,20 +48,20 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [
+  const allServices = [;
     ...ADVANCED_AI_SERVICES_2028,;
     ...COMPREHENSIVE_IT_INFRASTRUCTURE_2028,;
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2028;
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: ADVANCED_AI_SERVICES_2028.length },;
     { id: 'infrastructure', name: 'IT Infrastructure', icon: Server, count: COMPREHENSIVE_IT_INFRASTRUCTURE_2028.length },;
     { id: 'saas', name: 'Micro SAAS', icon: Cloud, count: INNOVATIVE_MICRO_SAAS_SERVICES_2028.length };
   ];
 
-  const filteredServices = allServices.filter(service => {
+  const filteredServices = allServices.filter(service => {;
     const matchesCategory = activeCategory === 'all' || ;
       (activeCategory === 'ai' && ADVANCED_AI_SERVICES_2028.includes(service)) ||;
       (activeCategory === 'infrastructure' && COMPREHENSIVE_IT_INFRASTRUCTURE_2028.includes(service)) ||;
@@ -77,8 +77,8 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -89,11 +89,13 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -110,10 +112,14 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -290,10 +296,14 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -318,16 +328,22 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
+
 
 
 }}
@@ -390,10 +406,14 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -504,8 +524,8 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
           <div className="border-t border-white/10 mt-8 pt-8 text-center">
             <p className="text-gray-400">
               © 2028 Zion Tech Group. All rights reserved. Transforming businesses through innovative technology solutions.
-            </p>
-          </div>
+            </p>;
+          </div>;
         </div>;
       </footer>;
     </div>;

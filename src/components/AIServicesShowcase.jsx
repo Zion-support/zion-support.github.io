@@ -109,6 +109,8 @@ export function AIServicesShowcase() {
   text: 'Active' 
 
 
+
+
 },
             beta: { color: 'bg-yellow-500', text: 'Beta' },
             new: { color: 'bg-blue-500', text: 'New' }
@@ -131,6 +133,8 @@ export function AIServicesShowcase() {
     const itemVariants = {
   hidden: { opacity: 0, y: 20,
   scale: 0.95 
+
+
 
 
 },
@@ -159,9 +163,13 @@ export function AIServicesShowcase() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -191,14 +199,20 @@ export function AIServicesShowcase() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -209,14 +223,20 @@ export function AIServicesShowcase() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}>
@@ -232,6 +252,8 @@ export function AIServicesShowcase() {
                 y: -8,
                 scale: 1.02,
   transition: { duration: 0.2 
+
+
 
 
 }

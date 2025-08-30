@@ -92,9 +92,13 @@ export default function RequestQuote() {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -116,14 +120,20 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
@@ -135,14 +145,20 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
@@ -154,14 +170,20 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }} className="flex items-center justify-center space-x-3 text-white/80">
@@ -184,9 +206,13 @@ export default function RequestQuote() {
   x: -30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
@@ -308,9 +334,13 @@ export default function RequestQuote() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
@@ -325,9 +355,13 @@ export default function RequestQuote() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
@@ -348,9 +382,13 @@ export default function RequestQuote() {
   x: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -377,14 +415,20 @@ export default function RequestQuote() {
   x: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -427,14 +471,20 @@ export default function RequestQuote() {
   x: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">

@@ -37,6 +37,8 @@ export const AccessibilityProvider = ({ children }) => {
         
 
 
+
+
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
@@ -76,6 +78,8 @@ export const AccessibilityProvider = ({ children }) => {
         setFontSize,
   setColorBlindMode
     
+
+
 
 
 };
@@ -123,14 +127,20 @@ export const AccessibilityPanel = () => {
   opacity: 0 
 
 
+
+
 }} animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>

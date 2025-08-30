@@ -66,8 +66,8 @@ export default function SecurityHeadersCSP() {
       title: "Compliance Reporting",
       description: "Detailed compliance reports for security standards and regulations."
     },
-    {
-      icon: Monitor,
+    {;
+      icon: Monitor,;
       title: "Threat Detection",;
       description: "Advanced threat detection and automated response for policy violations.";
     };
@@ -99,8 +99,8 @@ export default function SecurityHeadersCSP() {
       title: "Trust Building",
       description: "Build customer trust with robust security measures and compliance."
     },
-    {
-      icon: Award,
+    {;
+      icon: Award,;
       title: "Cost Savings",;
       description: "Prevent costly security incidents and reduce compliance costs.";
     };
@@ -132,8 +132,8 @@ export default function SecurityHeadersCSP() {
       description: "Control referrer information leakage",
       icon: Network
     },
-    {
-      header: "Permissions Policy",
+    {;
+      header: "Permissions Policy",;
       description: "Control browser feature access",;
       icon: Fingerprint;
     };
@@ -165,8 +165,8 @@ export default function SecurityHeadersCSP() {
       description: "Protect student data and educational platform security",
       icon: GraduationCap
     },
-    {
-      industry: "Technology",
+    {;
+      industry: "Technology",;
       description: "Secure SaaS applications and web services",;
       icon: Cpu;
     };
@@ -190,10 +190,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -236,10 +240,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -265,16 +273,22 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -315,10 +329,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -344,16 +362,22 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -394,10 +418,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -423,16 +451,22 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -473,10 +507,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -502,16 +540,22 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -552,10 +596,14 @@ export default function SecurityHeadersCSP() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -578,8 +626,8 @@ export default function SecurityHeadersCSP() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

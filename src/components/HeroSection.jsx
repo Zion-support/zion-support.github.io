@@ -32,6 +32,8 @@ export function HeroSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -54,6 +56,8 @@ export function HeroSection() {
             
 
 
+
+
 }
         }
     };
@@ -69,6 +73,8 @@ export function HeroSection() {
             
 
 
+
+
 }
         }
     };
@@ -81,6 +87,8 @@ export function HeroSection() {
                 style = {
   { y,
   opacity 
+
+
 
 
 }}
@@ -134,6 +142,8 @@ export function HeroSection() {
   ease: "linear" 
 
 
+
+
 }}
             />
             <motion.div 
@@ -142,6 +152,8 @@ export function HeroSection() {
                 transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
+
 
 
 }}
@@ -188,6 +200,8 @@ export function HeroSection() {
   stiffness: 400 
 
 
+
+
 }}
                     >
                         <div className="p-2 bg-zion-cyan/20 rounded-full group-hover:bg-zion-cyan/30 transition-colors">
@@ -204,6 +218,8 @@ export function HeroSection() {
   stiffness: 400 
 
 
+
+
 }}
                     >
                         <div className="p-2 bg-zion-purple/20 rounded-full group-hover:bg-zion-purple/30 transition-colors">
@@ -218,6 +234,8 @@ export function HeroSection() {
                         transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -239,6 +257,8 @@ export function HeroSection() {
   damping: 10 
 
 
+
+
 }}
                     >
                         <Link 
@@ -256,6 +276,8 @@ export function HeroSection() {
                         transition = {
   { type: "spring", stiffness: 400,
   damping: 10 
+
+
 
 
 }}
@@ -282,10 +304,14 @@ export function HeroSection() {
   opacity: 1 
 
 
+
+
 }} 
                             transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -297,10 +323,14 @@ export function HeroSection() {
   opacity: 1 
 
 
+
+
 }} 
                             transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -312,10 +342,14 @@ export function HeroSection() {
   opacity: 1 
 
 
+
+
 }} 
                             transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -327,10 +361,14 @@ export function HeroSection() {
   opacity: 1 
 
 
+
+
 }} 
                             transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -346,6 +384,8 @@ export function HeroSection() {
                         transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}
@@ -364,6 +404,8 @@ export function HeroSection() {
   stiffness: 400 
 
 
+
+
 }}
                     >
                         <div className="text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors">
@@ -378,6 +420,8 @@ export function HeroSection() {
                         transition = {
   { type: "spring",
   stiffness: 400 
+
+
 
 
 }}

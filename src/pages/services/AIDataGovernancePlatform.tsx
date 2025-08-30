@@ -7,8 +7,8 @@ export default function AIDataGovernancePlatform() {
     'Intelligent data lineage tracking and visualization',
     'Advanced data privacy and compliance automation',
     'Real-time data access control and monitoring',
-    'Automated data retention policy enforcement',
-    'AI-driven data catalog and metadata management',
+    'Automated data retention policy enforcement',;
+    'AI-driven data catalog and metadata management',;
     'Comprehensive audit trails and reporting',;
     'Multi-cloud data governance and synchronization',;
     'Advanced data masking and anonymization';
@@ -16,8 +16,8 @@ export default function AIDataGovernancePlatform() {
 
   const benefits = [
     'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)',
-    'Reduce data governance costs by 50%',
-    'Improve data quality by 80%',
+    'Reduce data governance costs by 50%',;
+    'Improve data quality by 80%',;
     'Automate 90% of compliance tasks',;
     'Eliminate data privacy violations',;
     'Streamline data access management';
@@ -25,8 +25,8 @@ export default function AIDataGovernancePlatform() {
 
   const complianceFrameworks = [
     'GDPR (General Data Protection Regulation)',
-    'CCPA (California Consumer Privacy Act)',
-    'HIPAA (Health Insurance Portability and Accountability Act)',
+    'CCPA (California Consumer Privacy Act)',;
+    'HIPAA (Health Insurance Portability and Accountability Act)',;
     'SOX (Sarbanes-Oxley Act)',;
     'SOC 2 Type II Compliance',;
     'ISO 27001 Information Security';
@@ -43,8 +43,8 @@ export default function AIDataGovernancePlatform() {
       price: '$1,299/mo', 
       details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support'] 
     },
-    { 
-      name: 'Global Compliance', 
+    { ;
+      name: 'Global Compliance', ;
       price: '$3,999/mo', ;
       details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AIDataGovernancePlatform() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

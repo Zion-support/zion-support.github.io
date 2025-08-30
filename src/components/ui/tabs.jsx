@@ -12,6 +12,8 @@ const Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
   setActiveTab: handleTabChange 
 
 
+
+
 }}>
       <div className={className}>
         {children}

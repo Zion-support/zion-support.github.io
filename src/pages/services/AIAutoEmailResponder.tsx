@@ -20,8 +20,8 @@ export default function AIAutoEmailResponder() {
 
         <div className="grid gap-8 md:grid-cols-2 mt-10">
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>
-            <ul className="space-y-2 text-sm text-zion-slate-light">
+            <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>;
+            <ul className="space-y-2 text-sm text-zion-slate-light">;
               <li>• Intent/sentiment detection, priority triage</li>;
               <li>• Multi-lingual drafting with brand tone controls</li>;
               <li>• Knowledge grounding from your docs/CRM</li>;
@@ -44,8 +44,8 @@ export default function AIAutoEmailResponder() {
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>
             </p>
           </div>
-        </div>
-
+        </div>;
+;
         <div className="mt-10 grid gap-8 md:grid-cols-3">;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h3 className="font-semibold mb-2">Time-to-Value</h3>;
@@ -57,8 +57,8 @@ export default function AIAutoEmailResponder() {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Get a Quote</h3>
-            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-          </div>
+            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -88,9 +88,13 @@ export default function FuturisticServicesShowcase() {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -114,14 +118,20 @@ export default function FuturisticServicesShowcase() {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }} className="flex flex-wrap justify-center gap-3 mb-12">
@@ -141,9 +151,13 @@ export default function FuturisticServicesShowcase() {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
+
 
 
 }} exit = {
@@ -151,9 +165,13 @@ export default function FuturisticServicesShowcase() {
   scale: 0.9 
 
 
+
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }} onHoverStart={() => setHoveredService(service.id)} onHoverEnd={() => setHoveredService(null)} className={`relative group cursor-pointer ${service.popular ? 'ring-2 ring-cyan-500/50' : ''}`}>
@@ -212,14 +230,20 @@ export default function FuturisticServicesShowcase() {
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
+
 
 
 }} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"/>
@@ -228,14 +252,20 @@ export default function FuturisticServicesShowcase() {
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
+
 
 
 }} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"/>
@@ -251,14 +281,20 @@ export default function FuturisticServicesShowcase() {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }} className="text-center mt-16">

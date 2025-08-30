@@ -105,12 +105,16 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   [key]: value 
 
 
+
+
 };
             // Add notification
             const notification = {
   id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g,
   ' $1').toLowerCase()
+
+
 
 
 } ${value ? 'enabled' : 'disabled'}`,
@@ -134,6 +138,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         
 
 
+
+
 };
         setSettings(defaultSettings);
         const notification = {
@@ -142,6 +148,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             type: 'info',
   timestamp: Date.now()
         
+
+
 
 
 };
@@ -197,9 +205,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   x: 300 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} exit = {
@@ -207,9 +219,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   x: 300 
 
 
+
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
+
 
 
 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
@@ -246,6 +262,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   e.target.checked)
 
 
+
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     High Contrast
                   </label>
@@ -258,6 +276,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.largeText} onChange = {
   (e) => updateSetting('largeText',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
@@ -290,6 +310,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   e.target.value)
 
 
+
+
 } className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -314,6 +336,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   e.target.checked)
 
 
+
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Reduced Motion
                   </label>
@@ -326,6 +350,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
@@ -349,6 +375,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   e.target.checked)
 
 
+
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Focus Indicator
                   </label>
@@ -360,6 +388,8 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
+
+
 
 
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
@@ -386,9 +416,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
+
 
 
 }} exit = {
@@ -396,9 +430,13 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   scale: 0.8 
 
 
+
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
+
 
 
 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success'

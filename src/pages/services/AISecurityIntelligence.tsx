@@ -5,8 +5,8 @@ export default function AISecurityIntelligence() {
     'AI-powered security intelligence optimization',
     'Intelligent threat intelligence gathering and analysis',
     'Automated security risk assessment and prediction',
-    'Predictive analytics for security threats',
-    'Smart intelligence framework management',
+    'Predictive analytics for security threats',;
+    'Smart intelligence framework management',;
     'AI-driven intelligence automation and orchestration',;
     'Real-time intelligence performance tracking',;
     'Custom AI models for intelligence applications';
@@ -23,8 +23,8 @@ export default function AISecurityIntelligence() {
       price: '$1,499/mo', 
       details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityIntelligence() {
 
   const useCases = [
     'Security intelligence optimization',
-    'Threat intelligence gathering and analysis',
-    'Security risk assessment and prediction',
+    'Threat intelligence gathering and analysis',;
+    'Security risk assessment and prediction',;
     'Intelligence framework management and automation',;
     'Intelligence automation and orchestration',;
     'Intelligence scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityIntelligence() {
 
   const benefits = [
     'Improve security intelligence performance by 50-80%',
-    'Reduce threat detection time by 40-70%',
-    'Cut security intelligence costs by 35-65%',
+    'Reduce threat detection time by 40-70%',;
+    'Cut security intelligence costs by 35-65%',;
     'Enhance security intelligence reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security intelligence operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityIntelligence() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityIntelligence() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

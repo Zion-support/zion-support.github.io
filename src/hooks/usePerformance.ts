@@ -89,8 +89,8 @@ export function usePerformance() {
     // Navigation timing metrics
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      setMetrics(prev = > ({
-        ...prev,
+      setMetrics(prev = > ({;
+        ...prev,;
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart,;
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,;
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
@@ -111,8 +111,10 @@ export function usePerformance() {
   poor: 3000 
 
 
-},
-      lcp: { good: 2500, poor: 4000 },
+
+
+},;
+      lcp: { good: 2500, poor: 4000 },;
       fid: { good: 100, poor: 300 },;
       cls: { good: 0.1, poor: 0.25 },;
       ttfb: { good: 800, poor: 1800 },;

@@ -7,8 +7,8 @@ export default function AIQuantumComputingPlatform() {
     'Quantum machine learning frameworks',
     'Real-time quantum circuit simulation',
     'Quantum error correction and optimization',
-    'Multi-qubit system management',
-    'Quantum cryptography and security',
+    'Multi-qubit system management',;
+    'Quantum cryptography and security',;
     'Custom quantum algorithm development',;
     'Quantum cloud infrastructure access',;
     'Advanced quantum analytics and visualization';
@@ -16,8 +16,8 @@ export default function AIQuantumComputingPlatform() {
 
   const benefits = [
     'Solve complex problems 1000x faster',
-    'Reduce computational costs by 60-80%',
-    'Enable breakthrough scientific discoveries',
+    'Reduce computational costs by 60-80%',;
+    'Enable breakthrough scientific discoveries',;
     'Real-time quantum optimization',;
     'Access to cutting-edge quantum hardware',;
     'Future-proof your computational capabilities';
@@ -37,8 +37,8 @@ export default function AIQuantumComputingPlatform() {
       popular: true
     },
     { 
-      name: 'Enterprise', 
-      price: '$7,999/mo', 
+      name: 'Enterprise', ;
+      price: '$7,999/mo', ;
       features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],;
       popular: false;
     };
@@ -46,8 +46,8 @@ export default function AIQuantumComputingPlatform() {
 
   const useCases = [
     'Drug discovery and molecular modeling',
-    'Financial portfolio optimization',
-    'Cryptography and cybersecurity',
+    'Financial portfolio optimization',;
+    'Cryptography and cybersecurity',;
     'Climate modeling and prediction',;
     'Machine learning acceleration',;
     'Supply chain optimization';
@@ -55,8 +55,8 @@ export default function AIQuantumComputingPlatform() {
 
   const industries = [
     'Pharmaceuticals & Healthcare',
-    'Financial Services & Banking',
-    'Cybersecurity & Defense',
+    'Financial Services & Banking',;
+    'Cybersecurity & Defense',;
     'Climate Science & Energy',;
     'Artificial Intelligence & ML',;
     'Logistics & Transportation';
@@ -289,8 +289,8 @@ export default function AIQuantumComputingPlatform() {
             rel="noreferrer" 
             className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </section>;
     </div>;

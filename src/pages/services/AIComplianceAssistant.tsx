@@ -51,8 +51,8 @@ export default function AIComplianceAssistant() {
       title: "Training & Certification",
       description: "Automated compliance training programs with progress tracking and certification management."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Audit Preparation",;
       description: "Streamlined audit processes with automated documentation and compliance reporting.";
     };
@@ -84,8 +84,8 @@ export default function AIComplianceAssistant() {
       title: "Performance Analytics",
       description: "Track compliance metrics and identify areas for improvement with detailed analytics."
     },
-    {
-      icon: TrendingUp,
+    {;
+      icon: TrendingUp,;
       title: "Cost Optimization",;
       description: "Reduce manual compliance efforts and associated costs through automation.";
     };
@@ -117,8 +117,8 @@ export default function AIComplianceAssistant() {
       description: "Payment card data security standards",
       icon: Cpu
     },
-    {
-      name: "ISO 27001",
+    {;
+      name: "ISO 27001",;
       description: "Information security management system standard",;
       icon: Database;
     };
@@ -150,8 +150,8 @@ export default function AIComplianceAssistant() {
       description: "Ensure regulatory compliance and quality standards",
       icon: Shield
     },
-    {
-      industry: "Education",
+    {;
+      industry: "Education",;
       description: "Maintain student data privacy and educational compliance",;
       icon: Award;
     };
@@ -175,10 +175,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -221,10 +225,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -250,16 +258,22 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -300,10 +314,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -329,16 +347,22 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -379,10 +403,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -408,16 +436,22 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -458,10 +492,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -487,16 +525,22 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -537,10 +581,14 @@ export default function AIComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -563,8 +611,8 @@ export default function AIComplianceAssistant() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

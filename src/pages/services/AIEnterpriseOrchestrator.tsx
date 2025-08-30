@@ -67,8 +67,8 @@ export default function AIEnterpriseOrchestrator() {
       icon: Shield,
       benefits: [
         "99.9% threat detection rate",
-        "Zero-day attack prevention",
-        "Automated incident response",
+        "Zero-day attack prevention",;
+        "Automated incident response",;
         "Compliance automation";
       ];
     };
@@ -120,8 +120,8 @@ export default function AIEnterpriseOrchestrator() {
         "Custom AI models",
         "White-label solutions",
         "On-premise deployment",
-        "SLA guarantees"
-      ],
+        "SLA guarantees";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -159,8 +159,8 @@ export default function AIEnterpriseOrchestrator() {
       industry: "Retail",
       applications: [
         "Customer behavior analysis",
-        "Inventory optimization",
-        "Personalized marketing",
+        "Inventory optimization",;
+        "Personalized marketing",;
         "Demand forecasting";
       ];
     };
@@ -182,10 +182,14 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -239,10 +243,14 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,16 +275,22 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -314,10 +328,14 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -342,16 +360,22 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -413,10 +437,14 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -441,16 +469,22 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -480,10 +514,14 @@ export default function AIEnterpriseOrchestrator() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -512,8 +550,8 @@ export default function AIEnterpriseOrchestrator() {
               >
                 Contact Sales Team
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

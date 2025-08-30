@@ -5,8 +5,8 @@ export default function AICustomerExperiencePlatform() {
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',
     'Intelligent chatbot with natural language processing',
-    'Personalized recommendation engine',
-    'Omnichannel customer interaction tracking',
+    'Personalized recommendation engine',;
+    'Omnichannel customer interaction tracking',;
     'Predictive customer behavior analytics',;
     'Automated customer feedback analysis',;
     'Integration with major CRM and marketing platforms';
@@ -23,8 +23,8 @@ export default function AICustomerExperiencePlatform() {
       price: '$899/mo', 
       details: ['Up to 100,000 interactions/month', '25 team members', 'Advanced AI features', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AICustomerExperiencePlatform() {
 
   const useCases = [
     'E-commerce customer experience optimization',
-    'SaaS product user engagement tracking',
-    'Financial services customer journey mapping',
+    'SaaS product user engagement tracking',;
+    'Financial services customer journey mapping',;
     'Healthcare patient experience improvement',;
     'Retail customer satisfaction enhancement',;
     'B2B customer relationship management';
@@ -41,8 +41,8 @@ export default function AICustomerExperiencePlatform() {
 
   const benefits = [
     'Increase customer satisfaction scores by 25-40%',
-    'Improve customer retention rates by 30-50%',
-    'Reduce customer service costs by 35-45%',
+    'Improve customer retention rates by 30-50%',;
+    'Reduce customer service costs by 35-45%',;
     'Boost customer lifetime value by 20-35%',;
     'Enhance brand loyalty and advocacy',;
     'Gain actionable insights for product development';
@@ -50,8 +50,8 @@ export default function AICustomerExperiencePlatform() {
 
   const metrics = [
     'Customer Satisfaction Score (CSAT)',
-    'Net Promoter Score (NPS)',
-    'Customer Effort Score (CES)',
+    'Net Promoter Score (NPS)',;
+    'Customer Effort Score (CES)',;
     'Customer Lifetime Value (CLV)',;
     'Customer Churn Rate',;
     'First Response Time';
@@ -165,8 +165,8 @@ export default function AICustomerExperiencePlatform() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

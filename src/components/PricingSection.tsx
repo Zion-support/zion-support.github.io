@@ -48,8 +48,8 @@ const pricingTiers = [
       "White-label Solutions",
       "Advanced Security",
       "Custom Development",
-      "SLA Guarantee"
-    ],
+      "SLA Guarantee";
+    ],;
     popular: false,;
     color: "from-green-500 to-emerald-500";
   };
@@ -66,10 +66,14 @@ export function PricingSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -94,10 +98,14 @@ export function PricingSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -105,6 +113,8 @@ export function PricingSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -159,10 +169,14 @@ export function PricingSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -170,6 +184,8 @@ export function PricingSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -182,8 +198,8 @@ export function PricingSection() {
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team
-            <span className="text-sm">→</span>
-          </Link>
+            <span className="text-sm">→</span>;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;

@@ -165,8 +165,8 @@ const Enterprise = () => {
       title: 'Cloud Integration',
       description: 'Multi-cloud and hybrid cloud deployment options'
     },
-    {
-      icon: Monitor,
+    {;
+      icon: Monitor,;
       title: 'Enterprise Monitoring',;
       description: 'Advanced monitoring, alerting, and reporting capabilities';
     };
@@ -174,8 +174,8 @@ const Enterprise = () => {
 
   const benefits = [
     'Scale to support thousands of users and systems',
-    'Ensure enterprise-grade security and compliance',
-    'Optimize performance for large-scale operations',
+    'Ensure enterprise-grade security and compliance',;
+    'Optimize performance for large-scale operations',;
     'Reduce total cost of ownership',;
     'Enable rapid deployment and scaling',;
     'Provide 24/7 enterprise support';
@@ -197,8 +197,8 @@ const Enterprise = () => {
       title: 'AI & Analytics',
       description: 'Advanced AI and analytics for enterprise insights'
     },
-    {
-      icon: Scale,
+    {;
+      icon: Scale,;
       title: 'Scalability Planning',;
       description: 'Plan for enterprise growth and technology scaling';
     };
@@ -216,8 +216,8 @@ const Enterprise = () => {
     {
       industry: 'Healthcare',
       description: 'HIPAA-compliant enterprise healthcare systems'
-    },
-    {
+    },;
+    {;
       industry: 'Financial Services',;
       description: 'Secure, compliant financial enterprise solutions';
     };
@@ -235,10 +235,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -283,10 +287,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -311,16 +319,22 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -346,10 +360,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -374,16 +392,22 @@ const Enterprise = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -413,10 +437,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -441,16 +469,22 @@ const Enterprise = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -470,16 +504,22 @@ const Enterprise = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -503,10 +543,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -531,16 +575,22 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -566,10 +616,14 @@ const Enterprise = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -590,8 +644,8 @@ const Enterprise = () => {
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -40,6 +40,8 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
   height: '100%' 
 
 
+
+
 }}/>
             </Suspense>
           </AspectRatio>

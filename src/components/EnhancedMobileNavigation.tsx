@@ -127,8 +127,8 @@ const quickActions = [
     color: 'bg-zion-purple'
   },
   {
-    label: 'Documentation',
-    path: '/docs',
+    label: 'Documentation',;
+    path: '/docs',;
     icon: FileText,;
     color: 'bg-zion-blue';
   };
@@ -201,6 +201,8 @@ export const EnhancedMobileNavigation: React.FC = () => {;
   0.1)' : 'transparent' 
 
 
+
+
 }}
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
@@ -260,10 +262,14 @@ export const EnhancedMobileNavigation: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
                 animate = {
   { height: 'auto',
   opacity: 1 
+
+
 
 
 }}
@@ -272,10 +278,14 @@ export const EnhancedMobileNavigation: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.3,
   ease: 'easeInOut' 
+
+
 
 
 }}
@@ -284,8 +294,8 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
-              </motion.div>
-            )}
+              </motion.div>;
+            )};
           </AnimatePresence>;
         )};
       </div>;
@@ -321,6 +331,8 @@ export const EnhancedMobileNavigation: React.FC = () => {;
               transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
+
 
 
 }}
@@ -418,8 +430,8 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </>;

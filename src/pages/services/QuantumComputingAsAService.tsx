@@ -36,8 +36,8 @@ const QuantumComputingAsAService: React.FC = () => {
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Target,
-      title: 'Quantum Simulation',
+      icon: Target,;
+      title: 'Quantum Simulation',;
       description: 'Molecular modeling, material science, and chemical reaction simulations',;
       color: 'from-indigo-500 to-purple-500';
     };
@@ -89,8 +89,8 @@ const QuantumComputingAsAService: React.FC = () => {
         '24/7 phone support',
         'Custom integrations',
         'On-premise deployment options',
-        'Research partnerships'
-      ],
+        'Research partnerships';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -107,14 +107,14 @@ const QuantumComputingAsAService: React.FC = () => {
       description: 'Drug discovery, molecular modeling, and protein folding simulations',
       metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs']
     },
-    {
-      title: 'Logistics & Supply Chain',
+    {;
+      title: 'Logistics & Supply Chain',;
       description: 'Route optimization, inventory management, and supply chain optimization',;
       metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization'];
     };
   ];
 
-  const integrations = [
+  const integrations = [;
     'Python', 'Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Julia', 'MATLAB',;
     'AWS Braket', 'Azure Quantum', 'Google Cloud', 'IBM Quantum',;
     'REST APIs', 'GraphQL', 'Webhooks', 'Docker', 'Kubernetes';
@@ -136,8 +136,8 @@ const QuantumComputingAsAService: React.FC = () => {
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities'
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: 'Immediate Access',;
       description: 'Start using quantum computing today with our cloud-based platform';
     };
@@ -160,10 +160,14 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -222,16 +226,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -269,16 +279,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -316,16 +332,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -398,16 +420,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -450,16 +478,22 @@ const QuantumComputingAsAService: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -491,10 +525,14 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -514,16 +552,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -542,16 +586,22 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -576,10 +626,14 @@ const QuantumComputingAsAService: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -655,8 +709,8 @@ const QuantumComputingAsAService: React.FC = () => {
                   ziontechgroup.com
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

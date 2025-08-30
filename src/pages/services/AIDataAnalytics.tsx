@@ -53,8 +53,8 @@ export default function AIDataAnalytics() {
       title: "Performance Tracking",
       description: "Monitor KPIs and track business performance with intelligent alerts."
     },
-    {
-      icon: Shield,
+    {;
+      icon: Shield,;
       title: "Data Security",;
       description: "Enterprise-grade security with data encryption and compliance features.";
     };
@@ -62,8 +62,8 @@ export default function AIDataAnalytics() {
 
   const benefits = [
     "Increase data-driven decision making by 60-80% with AI insights",
-    "Improve business performance by 25-45% through predictive analytics",
-    "Reduce analysis time by 70-90% with automated processing",
+    "Improve business performance by 25-45% through predictive analytics",;
+    "Reduce analysis time by 70-90% with automated processing",;
     "Enhance forecasting accuracy by 40-70% with ML algorithms",;
     "Identify new business opportunities with pattern recognition",;
     "Optimize operations and reduce costs by 20-35%";
@@ -95,8 +95,8 @@ export default function AIDataAnalytics() {
       description: "Live data processing and instant insights delivery",
       icon: Activity
     },
-    {
-      type: "Big Data Analytics",
+    {;
+      type: "Big Data Analytics",;
       description: "Large-scale data processing and complex pattern analysis",;
       icon: Database;
     };
@@ -118,8 +118,8 @@ export default function AIDataAnalytics() {
     {
       industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
+    },;
+    {;
       industry: "Marketing",;
       description: "Campaign performance analysis, customer segmentation, and ROI optimization";
     };
@@ -142,10 +142,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -198,10 +202,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -226,16 +234,22 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -261,10 +275,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -292,16 +310,22 @@ export default function AIDataAnalytics() {
   x: -20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -352,10 +376,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -380,16 +408,22 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -417,10 +451,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -445,16 +483,22 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -482,10 +526,14 @@ export default function AIDataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -514,8 +562,8 @@ export default function AIDataAnalytics() {
               >
                 Contact Sales
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

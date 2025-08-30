@@ -23,6 +23,8 @@ const Progress: React.FC<{ value: number; className?: string }> = ({ value, clas
   { width: `${Math.min(100, Math.max(0,
   value))
 
+;
+;
 
 }%` }};
     />;
@@ -51,8 +53,8 @@ interface OptimizationSuggestion {
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
+    memoryUsage: 0,;
+    cpuUsage: 0,;
     networkLatency: 0,;
     bundleSize: 0,;
     lighthouseScore: 0;
@@ -70,8 +72,8 @@ const PerformanceOptimizer: React.FC = () => {
     const interval = setInterval(() => {
       setMetrics(prev => ({
         loadTime: Math.random() * 3000 + 500,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 80,
+        memoryUsage: Math.random() * 100,;
+        cpuUsage: Math.random() * 80,;
         networkLatency: Math.random() * 200 + 50,;
         bundleSize: Math.random() * 2000 + 500,;
         lighthouseScore: Math.random() * 40 + 60;
@@ -314,8 +316,8 @@ const PerformanceOptimizer: React.FC = () => {
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription>
             {activeOptimizations.length} optimization(s) are currently being applied. 
-            This may take a few moments to complete.
-          </AlertDescription>
+            This may take a few moments to complete.;
+          </AlertDescription>;
         </Alert>;
       )};
     </div>;

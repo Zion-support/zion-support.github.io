@@ -36,16 +36,16 @@ const AIFinancialFraudDetection: React.FC = () => {
       title: "Multi-Layer Security",
       description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection."
     },
-    {
-      icon: Target,
+    {;
+      icon: Target,;
       title: "Adaptive Learning",;
       description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time.";
     };
   ];
 
   const benefits = [
-    "Reduce fraud losses by 85-95%",
-    "Improve detection accuracy by 40%",
+    "Reduce fraud losses by 85-95%",;
+    "Improve detection accuracy by 40%",;
     "Reduce false positives by 60%",;
     "Save $100K+ annually on fraud prevention",;
     "Comply with PCI DSS, SOC 2, and GDPR requirements";
@@ -53,16 +53,16 @@ const AIFinancialFraudDetection: React.FC = () => {
 
   const useCases = [
     "Credit Card Fraud",
-    "Banking & Financial Services",
-    "E-commerce & Retail",
+    "Banking & Financial Services",;
+    "E-commerce & Retail",;
     "Insurance Claims",;
     "Healthcare Billing",;
     "Cryptocurrency Transactions";
   ];
 
   const integrations = [
-    "Stripe, PayPal, Square",
-    "Visa, Mastercard, American Express",
+    "Stripe, PayPal, Square",;
+    "Visa, Mastercard, American Express",;
     "Banking APIs (Plaid, Yodlee)",;
     "QuickBooks, Xero, NetSuite",;
     "Salesforce, HubSpot, Pipedrive";
@@ -85,8 +85,8 @@ const AIFinancialFraudDetection: React.FC = () => {
     },
     {
       plan: "Enterprise",
-      price: "Custom",
-      period: "",
+      price: "Custom",;
+      period: "",;
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false;
     };
@@ -111,10 +111,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -158,10 +162,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -186,10 +194,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -197,6 +209,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -222,10 +236,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -250,10 +268,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -261,6 +283,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -285,10 +309,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -313,10 +341,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -324,6 +356,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -348,10 +382,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -376,10 +414,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -387,6 +429,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -408,10 +452,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -436,10 +484,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -447,6 +499,8 @@ const AIFinancialFraudDetection: React.FC = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -503,10 +557,14 @@ const AIFinancialFraudDetection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -567,8 +625,8 @@ const AIFinancialFraudDetection: React.FC = () => {
               <p className="text-slate-300">
                 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
               </p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

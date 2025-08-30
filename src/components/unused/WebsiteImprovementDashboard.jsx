@@ -50,6 +50,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         
 
 
+
+
 };
         setMetrics(mockMetrics);
         setIsAnalyzing(false);
@@ -81,6 +83,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             
 
 
+
+
 }
         };
         setSeoAnalysis(mockSEO);
@@ -102,6 +106,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             criticalIssues: Math.floor(Math.random() * 3),
   warnings: Math.floor(Math.random() * 5) + 1
         
+
+
 
 
 };
@@ -150,14 +156,20 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   x: -400 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   x: -400 
+
+
 
 
 }} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">

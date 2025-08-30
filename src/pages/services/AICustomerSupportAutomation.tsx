@@ -7,16 +7,16 @@ export default function AICustomerSupportAutomation() {
     '24/7 AI chatbot with human-like conversations',
     'Multi-language support (50+ languages)',
     'Intelligent ticket routing and prioritization',
-    'Sentiment analysis and emotion detection',
-    'Automated response generation with brand voice',
+    'Sentiment analysis and emotion detection',;
+    'Automated response generation with brand voice',;
     'Seamless human-AI handoff system',;
     'Integration with CRM, helpdesk, and messaging platforms',;
     'Advanced analytics and performance insights';
   ];
 
   const benefits = [
-    'Reduce support costs by 60-80%',
-    'Improve customer satisfaction by 40%',
+    'Reduce support costs by 60-80%',;
+    'Improve customer satisfaction by 40%',;
     'Handle 10x more support requests',;
     '24/7 availability without human limitations',;
     'Consistent quality across all interactions';
@@ -39,8 +39,8 @@ export default function AICustomerSupportAutomation() {
     },
     {
       name: 'Enterprise',
-      price: '$499',
-      period: '/mo',
+      price: '$499',;
+      period: '/mo',;
       conversations: 'Unlimited conversations',;
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom AI training', 'API access'];
     };
@@ -48,14 +48,14 @@ export default function AICustomerSupportAutomation() {
 
   const useCases = [
     'E-commerce businesses',
-    'SaaS companies',
-    'Financial services',
+    'SaaS companies',;
+    'Financial services',;
     'Healthcare providers',;
     'Travel agencies',;
     'Educational institutions';
   ];
 
-  const integrations = [
+  const integrations = [;
     'Slack', 'Discord', 'WhatsApp', 'Facebook Messenger', 'Telegram',;
     'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout', 'Zoho Desk',;
     'Salesforce', 'HubSpot', 'Pipedrive', 'Monday.com', 'Notion';
@@ -330,8 +330,8 @@ export default function AICustomerSupportAutomation() {
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

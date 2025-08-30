@@ -17,9 +17,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} className="max-w-4xl mx-auto text-center">
@@ -27,6 +31,8 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
   { delay: 0.2, type: "spring",
   stiffness: 200 
+
+
 
 
 }} className="mb-8">
@@ -42,9 +48,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.3 }} className="text-6xl md:text-8xl font-bold text-white mb-6">
@@ -56,9 +66,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.4 }} className="text-2xl md:text-3xl font-semibold text-gray-300 mb-4">
@@ -70,9 +84,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.5 }} className="text-lg text-gray-400 mb-8">
@@ -84,9 +102,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.6 }} className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
@@ -100,9 +122,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.7 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -128,9 +154,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.8 }} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
@@ -144,9 +174,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.9 + index * 0.1 }}>
@@ -169,9 +203,13 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 1.0 }} className="mt-12 text-center">

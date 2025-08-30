@@ -35,8 +35,8 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
     >
       <Heart 
-        className={`w-4 h-4 transition-all duration-300 ${
-          isFavorited ? 'fill-current' : ''
+        className={`w-4 h-4 transition-all duration-300 ${;
+          isFavorited ? 'fill-current' : '';
         }`} ;
       />;
     </button>;

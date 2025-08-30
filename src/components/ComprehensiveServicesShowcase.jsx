@@ -92,6 +92,8 @@ const ComprehensiveServicesShowcase = () => {
             
 
 
+
+
 };
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')));
@@ -107,9 +109,13 @@ const ComprehensiveServicesShowcase = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -300,14 +306,20 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular
@@ -364,14 +376,20 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }} className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -715,9 +733,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition = {
@@ -725,9 +747,13 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
   delay: index * 0.1 
 
 
+
+
 }} whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 relative overflow-hidden">
@@ -821,14 +847,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ x: 5 }} onClick={() => onServiceClick(service)} className="group cursor-pointer bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300">
@@ -997,9 +1029,13 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -1032,14 +1068,20 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }} className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-gray-700/50">
@@ -1096,14 +1138,20 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}>
@@ -1127,14 +1175,20 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }} className="text-center mt-20">
@@ -1165,6 +1219,8 @@ export default ComprehensiveServicesShowcase;
     </></></></></></></></>);
 };
 
+export default ServiceCard;
+export default ServiceCard;
 export default ServiceCard;
 export default ServiceCard;
 export default ServiceCard;

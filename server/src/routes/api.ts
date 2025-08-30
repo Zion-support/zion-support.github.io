@@ -48,8 +48,12 @@ router.post('/users', [
   id: Date.now(),
       name,
       email,;
+  ;
+  ;
   createdAt: new Date().toISOString();
     ;
+
+
 
 
 };
@@ -77,8 +81,12 @@ router.get('/users/:id', async (req, res) => {
   id: parseInt(id),
       name: 'John Doe',
       email: 'john@example.com',;
+  ;
+  ;
   createdAt: new Date().toISOString();
     ;
+
+
 
 
 };

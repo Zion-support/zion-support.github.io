@@ -131,6 +131,8 @@ export default function ContentGenerator() {
   May Platform Updates"
 
 
+
+
 } className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
                   
@@ -197,6 +199,8 @@ export default function ContentGenerator() {
                 __html: previewContent.body
                     .replace(/^#{1,
   6
+
+
 
 
 }\s+(.+)$/gm, "<h$1>$2</h$1>")

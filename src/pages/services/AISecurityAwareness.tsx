@@ -5,8 +5,8 @@ export default function AISecurityAwareness() {
     'AI-powered security awareness optimization',
     'Intelligent awareness strategy management and execution',
     'Automated security behavior assessment and training',
-    'Predictive analytics for awareness needs',
-    'Smart awareness framework management',
+    'Predictive analytics for awareness needs',;
+    'Smart awareness framework management',;
     'AI-driven awareness automation and orchestration',;
     'Real-time awareness performance tracking',;
     'Custom AI models for awareness applications';
@@ -23,8 +23,8 @@ export default function AISecurityAwareness() {
       price: '$449/mo', 
       details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,199/mo', ;
       details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityAwareness() {
 
   const useCases = [
     'Security awareness optimization',
-    'Awareness strategy management and execution',
-    'Security behavior assessment and training',
+    'Awareness strategy management and execution',;
+    'Security behavior assessment and training',;
     'Awareness framework management and automation',;
     'Awareness automation and orchestration',;
     'Awareness scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityAwareness() {
 
   const benefits = [
     'Improve security awareness performance by 50-80%',
-    'Reduce awareness training time by 40-70%',
-    'Cut security awareness costs by 35-65%',
+    'Reduce awareness training time by 40-70%',;
+    'Cut security awareness costs by 35-65%',;
     'Enhance security awareness reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security awareness operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityAwareness() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityAwareness() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

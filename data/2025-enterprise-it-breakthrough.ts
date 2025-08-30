@@ -259,8 +259,8 @@ export const enterpriseITBreakthroughServices2025 = [
       'High-performance computing',
       'Data center optimization',
       'Quantum computing research',
-      'Enterprise infrastructure management'
-    ],
+      'Enterprise infrastructure management';
+    ],;
     integrations: ['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],;
     compliance: ['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements'];
   };

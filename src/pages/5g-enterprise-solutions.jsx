@@ -90,9 +90,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -106,14 +110,20 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -125,14 +135,20 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -154,9 +170,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -174,14 +194,20 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
@@ -203,9 +229,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -223,14 +253,20 @@ const FiveGEnterpriseSolutions = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
+
 
 
 }} className="bg-gradient-to-r from-teal-600/10 to-blue-600/10 rounded-xl p-8 border border-teal-500/20">
@@ -255,9 +291,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -275,14 +315,20 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center">
@@ -304,9 +350,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -329,14 +379,20 @@ const FiveGEnterpriseSolutions = () => {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center">
@@ -358,9 +414,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -383,14 +443,20 @@ const FiveGEnterpriseSolutions = () => {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
+
 
 
 }} className="text-center">
@@ -412,9 +478,13 @@ const FiveGEnterpriseSolutions = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>

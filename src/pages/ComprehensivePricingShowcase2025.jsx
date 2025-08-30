@@ -85,6 +85,8 @@ const ComprehensivePricingShowcase2025 = () => {
         
 
 
+
+
 };
         return icons[category] || '🚀';
     };

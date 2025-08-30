@@ -372,8 +372,8 @@ export default function AISupplyChainOptimization() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

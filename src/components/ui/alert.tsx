@@ -5,8 +5,8 @@ interface AlertProps {
   className?: string;
 }
 
-export function Alert({ children, className = '' }: AlertProps) {
-  return (
+export function Alert({ children, className = '' }: AlertProps) {;
+  return (;
     <div className={`relative w-full rounded-lg border p-4 ${className}`}>;
       {children};
     </div>;
@@ -18,8 +18,8 @@ interface AlertDescriptionProps {
   className?: string;
 }
 
-export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {
-  return (
+export function AlertDescription({ children, className = '' }: AlertDescriptionProps) {;
+  return (;
     <div className={`text-sm ${className}`}>;
       {children};
     </div>;

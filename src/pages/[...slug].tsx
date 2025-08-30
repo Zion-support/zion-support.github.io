@@ -15,6 +15,8 @@ export default function GenericPage() {
   margin:'0 auto'
 
 
+
+
 }}>
       <Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -28,6 +30,8 @@ export default function GenericPage() {
   color:'#9ca3af'
 
 
+
+
 }}>/</span>
         <span>{title}</span>
       </nav>
@@ -38,13 +42,15 @@ export default function GenericPage() {
   borderRadius:8
 
 
+
+
 }}>
         <h2 style={{marginBottom:8}}>How we can help</h2>
         <ul style={{paddingLeft:18}}>
           <li>Micro SaaS solutions tailored to your workflow</li>
           <li>Applied AI: assistants, RAG, and automation</li>
-          <li>Cloud, DevOps, data, and cybersecurity services</li>
-        </ul>
+          <li>Cloud, DevOps, data, and cybersecurity services</li>;
+        </ul>;
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>;
       </section>;
     </main>;

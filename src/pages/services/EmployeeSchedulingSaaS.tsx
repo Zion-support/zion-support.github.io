@@ -31,8 +31,8 @@ export default function EmployeeSchedulingSaaS() {
       title: "Mobile App",
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: "Multi-location Support",;
       description: "Manage schedules across multiple locations, departments, and time zones seamlessly.";
     };
@@ -64,8 +64,8 @@ export default function EmployeeSchedulingSaaS() {
       title: "Custom Rules",
       description: "Configurable business rules for scheduling, overtime, and compliance"
     },
-    {
-      icon: FileText,
+    {;
+      icon: FileText,;
       title: "Compliance Tracking",;
       description: "Ensure compliance with labor laws, break requirements, and overtime regulations";
     };
@@ -114,8 +114,8 @@ export default function EmployeeSchedulingSaaS() {
         "Advanced compliance tools",
         "White-label options",
         "Dedicated account manager",
-        "Custom training",
-        "On-premise options"
+        "Custom training",;
+        "On-premise options";
       ],;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function EmployeeSchedulingSaaS() {
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
       icon: TrendingUp
     },
-    {
-      title: "Ensure Compliance",
+    {;
+      title: "Ensure Compliance",;
       description: "Automatically comply with labor laws and avoid costly violations.",;
       icon: Shield;
     };
@@ -170,8 +170,8 @@ export default function EmployeeSchedulingSaaS() {
       title: "Services",
       description: "Manage appointment-based scheduling for professional services"
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: "Construction",;
       description: "Coordinate complex project schedules with multiple teams and locations";
     };
@@ -197,10 +197,14 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +259,22 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,16 +312,22 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -349,16 +365,22 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -396,16 +418,22 @@ export default function EmployeeSchedulingSaaS() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -445,16 +473,22 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -515,10 +549,14 @@ export default function EmployeeSchedulingSaaS() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,8 +582,8 @@ export default function EmployeeSchedulingSaaS() {
                   Contact Sales
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

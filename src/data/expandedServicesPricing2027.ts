@@ -1152,8 +1152,8 @@ export const healthcarePricing: ExpandedServicePricing[] = [
 // Export all pricing data
 export const ALL_EXPANDED_SERVICES_PRICING = [
   ...cybersecurityPricing,
-  ...dataAnalyticsPricing,
-  ...cloudDevOpsPricing,
+  ...dataAnalyticsPricing,;
+  ...cloudDevOpsPricing,;
   ...iotEdgePricing,;
   ...finTechPricing,;
   ...healthcarePricing;
@@ -1174,7 +1174,7 @@ export const getPricingBySubcategory = (subcategory: string): ExpandedServicePri
 
 export const searchPricing = (query: string): ExpandedServicePricing[] => {;
   const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > 
+  return ALL_EXPANDED_SERVICES_PRICING.filter(pricing = > ;
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||;
     pricing.category.toLowerCase().includes(lowercaseQuery) ||;
     pricing.subcategory.toLowerCase().includes(lowercaseQuery);

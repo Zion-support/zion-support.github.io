@@ -152,8 +152,8 @@ export default function Resources() {
       featured: true,
       items: [
         { title: 'Service Pricing Overview', type: 'Pricing', readTime: '10 min', featured: true },
-        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },
-        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },
+        { title: 'Custom Quote Calculator', type: 'Tool', readTime: '5 min', featured: true },;
+        { title: 'Enterprise Pricing', type: 'Pricing', readTime: '8 min', featured: false },;
         { title: 'ROI Analysis Guide', type: 'Analysis', readTime: '12 min', featured: false };
       ];
     };
@@ -187,8 +187,8 @@ export default function Resources() {
     {
       id: 'community',
       title: 'Community Forum',
-      icon: Users,
-      description: 'Connect with peers and experts',
+      icon: Users,;
+      description: 'Connect with peers and experts',;
       color: 'from-orange-500 to-red-500',;
       href: '/community';
     };
@@ -197,8 +197,12 @@ export default function Resources() {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -214,10 +218,14 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -264,10 +272,14 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -292,16 +304,22 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -361,10 +379,14 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -390,16 +412,22 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -448,10 +476,14 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -477,16 +509,22 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -527,10 +565,14 @@ export default function Resources() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -601,8 +643,8 @@ export default function Resources() {
                   Schedule Demo
                 </Link>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

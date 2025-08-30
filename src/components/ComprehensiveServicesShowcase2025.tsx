@@ -431,15 +431,15 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
     { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
 
-  const innovationLevels = [
-    { id: 'all', name: 'All Levels', icon: '🌟' },
+  const innovationLevels = [;
+    { id: 'all', name: 'All Levels', icon: '🌟' },;
     { id: 'Advanced', name: 'Advanced', icon: '🚀' },;
     { id: 'Cutting-edge', name: 'Cutting-edge', icon: '⚡' },;
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
@@ -465,7 +465,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         const innovationOrder = {
   'Advanced': 1, 'Cutting-edge': 2,;
   ;
+  ;
+  ;
   'Revolutionary': 3 ;
+
+
 
 
 };
@@ -489,8 +493,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -501,12 +505,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: {;
+        duration: 0.5,;
         ease: "easeOut";
       };
     };
@@ -556,10 +562,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -595,16 +605,22 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -712,6 +728,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   priceRange[1]])
 
 
+
+
 }
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
@@ -723,6 +741,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
+
 
 
 }
@@ -887,6 +907,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               <button
                 onClick = {;
   ;
+  ;
+  ;
   () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
@@ -894,6 +916,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   10000]);
                   setInnovationLevel('all');
                 
+
+
 
 
 }}
@@ -922,16 +946,22 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -1100,8 +1130,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </div>;

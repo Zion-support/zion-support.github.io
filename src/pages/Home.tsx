@@ -63,8 +63,8 @@ const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() => 
     [...Array(20)].map((_, i) => ({
       id: i,
-      left: `${Math.random() * 100}%`,
-      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,;
+      top: `${Math.random() * 100}%`,;
       delay: i * 0.1,;
       duration: 5 + i * 0.3;
     })), [];
@@ -98,14 +98,16 @@ const FuturisticBackground = React.memo(() => {
           
 
 
+
+
 }}
           style = {
   {
             left: particle.left,
             top: particle.top,
   
-
-}}
+;
+}};
         />;
       ))};
     </div>;
@@ -138,8 +140,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
     },
     {
-      title: "Digital Transformation",
-      description: "Modernize your infrastructure for the future",
+      title: "Digital Transformation",;
+      description: "Modernize your infrastructure for the future",;
       icon: Rocket,;
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"];
     };
@@ -168,10 +170,14 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -219,16 +225,22 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -243,16 +255,22 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   x: 50 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   x: -50 
+
+
 
 
 }}
@@ -313,8 +331,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                   aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;
@@ -325,8 +343,8 @@ HeroSection.displayName = 'HeroSection';
 
 // Stats section component
 const StatsSection = React.memo(() => {
-  const stats = useMemo(() => [
-    { icon: Users, value: "500+", label: "Happy Clients", color: "from-blue-500 to-cyan-500" },
+  const stats = useMemo(() => [;
+    { icon: Users, value: "500+", label: "Happy Clients", color: "from-blue-500 to-cyan-500" },;
     { icon: TrendingUp, value: "95%", label: "Success Rate", color: "from-green-500 to-emerald-500" },;
     { icon: Award, value: "50+", label: "Awards Won", color: "from-yellow-500 to-orange-500" },;
     { icon: Globe, value: "25+", label: "Countries Served", color: "from-purple-500 to-pink-500" };
@@ -344,16 +362,22 @@ const StatsSection = React.memo(() => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -365,8 +389,8 @@ const StatsSection = React.memo(() => {
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-            </motion.div>
-          ))}
+            </motion.div>;
+          ))};
         </div>;
       </div>;
     </section>;
@@ -394,8 +418,8 @@ const FeaturedServices = React.memo(() => {
     },
     {
       title: "Micro SAAS Solutions",
-      description: "Custom software solutions for specific business needs",
-      icon: Zap,
+      description: "Custom software solutions for specific business needs",;
+      icon: Zap,;
       path: "/micro-saas",;
       features: ["Custom Development", "Scalable Architecture", "API-First Design", "Cloud Deployment"];
     };
@@ -410,10 +434,14 @@ const FeaturedServices = React.memo(() => {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -438,16 +466,22 @@ const FeaturedServices = React.memo(() => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -485,8 +519,8 @@ const FeaturedServices = React.memo(() => {
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </motion.div>
-          ))}
+            </motion.div>;
+          ))};
         </div>;
       </div>;
     </section>;
@@ -525,10 +559,14 @@ const Home = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: isVisible ? 1 : 0,
   y: isVisible ? 0 : 20 
+
+
 
 
 }}
@@ -570,8 +608,8 @@ const Home = () => {;
               >
                 View Pricing
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

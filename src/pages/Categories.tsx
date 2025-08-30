@@ -42,8 +42,8 @@ export default function Categories() {
     },
     {
       id: 'development',
-      name: 'Development',
-      icon: <Code className="w-8 h-8" />,
+      name: 'Development',;
+      icon: <Code className="w-8 h-8" />,;
       color: 'from-zion-indigo to-zion-purple',;
       count: 41;
     };
@@ -59,6 +59,8 @@ export default function Categories() {
         talent: 8,
   equipment: 3
       
+
+
 
 
 },
@@ -186,8 +188,8 @@ export default function Categories() {
         name: 'API Development',
         description: 'RESTful APIs and microservices',
         icon: <Network className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
+        services: 13,;
+        talent: 8,;
         equipment: 1;
       };
     ];
@@ -213,14 +215,14 @@ export default function Categories() {
     {
       type: 'equipment',
       title: 'High-Performance GPU Cluster',
-      category: 'AI & Machine Learning',
-      rating: 4.7,
+      category: 'AI & Machine Learning',;
+      rating: 4.7,;
       price: '$15,000/month',;
       featured: true;
     };
   ];
 
-  const getCategoryCount = (categoryId: string) => {
+  const getCategoryCount = (categoryId: string) => {;
     if (categoryId === 'all') {;
       return Object.values(subCategories).flat().reduce((total, sub) => ;
         total + sub.services + sub.talent + sub.equipment, 0;
@@ -380,8 +382,8 @@ export default function Categories() {
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
             >
               Contact Us
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

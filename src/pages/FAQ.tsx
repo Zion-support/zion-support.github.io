@@ -31,8 +31,8 @@ export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev => 
+  const toggleItem = (index: number) => {;
+    setOpenItems(prev => ;
       prev.includes(index) ;
         ? prev.filter(i => i !== index);
         : [...prev, index];
@@ -120,16 +120,16 @@ export default function FAQ() {
           answer: "We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance monitoring, and secure development practices. We're SOC2 compliant and follow industry best practices."
         },
         {
-          question: "Do you comply with industry regulations?",
-          answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements."
+          question: "Do you comply with industry regulations?",;
+          answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements.";
         };
       ];
     };
   ];
 
   const filteredFAQ = faqData.map(category => ({
-    ...category,
-    questions: category.questions.filter(q => 
+    ...category,;
+    questions: category.questions.filter(q => ;
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       q.answer.toLowerCase().includes(searchQuery.toLowerCase());
     );
@@ -152,8 +152,8 @@ export default function FAQ() {
     },
     {
       icon: MessageCircle,
-      title: "Live Chat",
-      description: "Chat with our team",
+      title: "Live Chat",;
+      description: "Chat with our team",;
       contact: "Available on website",;
       response: "Real-time support";
     };
@@ -177,10 +177,14 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -223,16 +227,22 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -245,8 +255,8 @@ export default function FAQ() {
                     {category.category === "Pricing & Billing" && <CheckCircle className="w-6 h-6 text-blue-600" />}
                     {category.category === "Support & Maintenance" && <Clock className="w-6 h-6 text-blue-600" />}
                     {category.category === "Technology & Security" && <Shield className="w-6 h-6 text-blue-600" />}
-                    {category.category}
-                  </h2>
+                    {category.category};
+                  </h2>;
                   ;
                   <div className="space-y-4">;
                     {category.questions.map((item, questionIndex) => {;
@@ -260,16 +270,22 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
                           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                           transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -296,10 +312,14 @@ export default function FAQ() {
   height: 0 
 
 
+
+
 }}
                               animate = {
   { opacity: 1,
   height: "auto" 
+
+
 
 
 }}
@@ -308,13 +328,15 @@ export default function FAQ() {
   height: 0 
 
 
+
+
 }}
                               transition={{ duration: 0.3 }}
                               className="px-6 pb-4"
                             >
                               <p className="text-slate-600 leading-relaxed">
-                                {item.answer}
-                              </p>
+                                {item.answer};
+                              </p>;
                             </motion.div>;
                           )};
                         </motion.div>;
@@ -336,16 +358,22 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -363,16 +391,22 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -401,16 +435,22 @@ export default function FAQ() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -430,8 +470,8 @@ export default function FAQ() {
                   Schedule Consultation
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

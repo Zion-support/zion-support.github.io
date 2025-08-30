@@ -7,8 +7,8 @@ export default function AIIoTEdgeComputing() {
     'Intelligent edge analytics and decision making',
     'Advanced device connectivity and protocol support',
     'Automated edge device provisioning and updates',
-    'Real-time data processing and filtering',
-    'Advanced security and encryption at the edge',
+    'Real-time data processing and filtering',;
+    'Advanced security and encryption at the edge',;
     'Scalable edge computing infrastructure',;
     'AI-driven predictive maintenance for IoT devices',;
     'Multi-cloud edge orchestration and management';
@@ -16,8 +16,8 @@ export default function AIIoTEdgeComputing() {
 
   const benefits = [
     'Reduce latency by 80-90%',
-    'Lower bandwidth costs by 60%',
-    'Improve device reliability by 75%',
+    'Lower bandwidth costs by 60%',;
+    'Improve device reliability by 75%',;
     'Enable real-time decision making',;
     'Reduce cloud computing costs by 40%',;
     'Enhance data privacy and security';
@@ -25,8 +25,8 @@ export default function AIIoTEdgeComputing() {
 
   const useCases = [
     'Smart manufacturing and Industry 4.0',
-    'Connected healthcare and medical devices',
-    'Smart cities and infrastructure',
+    'Connected healthcare and medical devices',;
+    'Smart cities and infrastructure',;
     'Autonomous vehicles and transportation',;
     'Energy management and smart grids',;
     'Retail and supply chain monitoring';
@@ -43,8 +43,8 @@ export default function AIIoTEdgeComputing() {
       price: '$1,299/mo', 
       details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Edge', 
+    { ;
+      name: 'Enterprise Edge', ;
       price: '$3,999/mo', ;
       details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AIIoTEdgeComputing() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

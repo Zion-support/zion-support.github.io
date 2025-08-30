@@ -97,6 +97,8 @@ export function AppHeader() {
   damping: 10 
 
 
+
+
 }}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
@@ -138,16 +140,22 @@ export function AppHeader() {
   scale: 0.95 
 
 
+
+
 }}
                           animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
                           exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
+
 
 
 }}
@@ -232,16 +240,22 @@ export function AppHeader() {
   height: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}

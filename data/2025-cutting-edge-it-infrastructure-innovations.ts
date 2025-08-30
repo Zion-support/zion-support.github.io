@@ -255,8 +255,8 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure',
     competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization',
     contact: 'kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',;
     slug: '/autonomous-data-center-management-platform';
   };

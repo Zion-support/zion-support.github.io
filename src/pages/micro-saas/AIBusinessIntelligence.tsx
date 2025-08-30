@@ -19,8 +19,8 @@ export default function AIBusinessIntelligence() {
       title: 'Automated Intelligence',
       description: 'Smart automation of business processes'
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: 'Predictive Analytics',;
       description: 'Forecast trends and identify opportunities';
     };
@@ -42,8 +42,8 @@ export default function AIBusinessIntelligence() {
       description: 'Ask questions in plain English and get instant answers',
       icon: Database
     },
-    {
-      title: 'Automated Reporting',
+    {;
+      title: 'Automated Reporting',;
       description: 'Generate reports automatically with AI insights',;
       icon: Target;
     };
@@ -61,10 +61,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function AIBusinessIntelligence() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,16 +295,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -309,16 +343,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -360,16 +400,22 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -411,10 +457,14 @@ export default function AIBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -438,8 +488,8 @@ export default function AIBusinessIntelligence() {
                   Schedule Demo
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;
@@ -447,7 +497,7 @@ export default function AIBusinessIntelligence() {
 }
 
 // Missing icon component
-const CheckCircle = ({ className }: { className?: string }) => (
+const CheckCircle = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
   </svg>;

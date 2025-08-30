@@ -22,8 +22,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
   }, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {
-    return ALL_EXPANDED_SERVICES_2027.filter(service => {
+  const filteredServices = useMemo(() => {;
+    return ALL_EXPANDED_SERVICES_2027.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -94,8 +94,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            
+            />;
+            ;
             <select;
               value={selectedCategory};
               onChange={(e) => {;
@@ -257,8 +257,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               >
                 View Detailed Pricing
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </main>;
     </div>;

@@ -45,8 +45,8 @@ const Services2026: React.FC = () => {;
     { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
     { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },
-    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },
-    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },
+    { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },;
+    { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },;
     { id: 'AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter(s => s.category === 'AI & HR').length },;
     { id: 'Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter(s => s.category === 'Sustainability').length },;
     { id: 'AI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category === 'AI & IoT').length };
@@ -57,8 +57,8 @@ const Services2026: React.FC = () => {;
     // Filter by search query
     if (query.trim()) {
       const q = query.trim().toLowerCase();
-      filtered = filtered.filter(s =>
-        s.title.toLowerCase().includes(q) ||
+      filtered = filtered.filter(s =>;
+        s.title.toLowerCase().includes(q) ||;
         s.description.toLowerCase().includes(q) ||;
         s.category.toLowerCase().includes(q) ||;
         s.tags?.some(t => t.toLowerCase().includes(q));
@@ -79,7 +79,11 @@ const Services2026: React.FC = () => {;
           const innovationLevels = {
   'Revolutionary': 3, 'Cutting-Edge': 2,;
   ;
+  ;
+  ;
   'Advanced': 1 ;
+
+
 
 
 };
@@ -123,10 +127,14 @@ const Services2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -230,10 +238,14 @@ const Services2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -314,10 +326,14 @@ const Services2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -491,8 +507,8 @@ const Services2026: React.FC = () => {;
             Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
           </div>
           <div className="text-sm text-slate-500">
-            Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>
-          </div>
+            Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

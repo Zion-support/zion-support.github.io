@@ -70,7 +70,11 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         const innovationOrder = {
   'Breakthrough': 3, 'Advanced': 2,;
   ;
+  ;
+  ;
   'Innovative': 1 ;
+
+
 
 
 };
@@ -137,10 +141,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -246,16 +254,22 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -327,16 +341,22 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }}
@@ -387,10 +407,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   x: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -445,10 +469,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   x: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -496,10 +524,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   x: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -595,10 +627,14 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   x: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -760,11 +796,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   '_blank')
 
 
+
+
 }
           >
             <ExternalLink className="w-5 h-5" />
-            <span>Visit Zion Tech Group</span>
-          </motion.button>
+            <span>Visit Zion Tech Group</span>;
+          </motion.button>;
         </div>;
       </div>;
     </div>;

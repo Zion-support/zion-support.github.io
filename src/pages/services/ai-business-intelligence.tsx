@@ -255,8 +255,8 @@ export default function AIBusinessIntelligence() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

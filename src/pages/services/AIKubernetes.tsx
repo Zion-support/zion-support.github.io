@@ -5,8 +5,8 @@ export default function AIKubernetes() {
     'AI-powered Kubernetes optimization',
     'Intelligent Kubernetes management',
     'Automated Kubernetes monitoring and alerting',
-    'Predictive analytics for Kubernetes scaling',
-    'Smart Kubernetes security and compliance',
+    'Predictive analytics for Kubernetes scaling',;
+    'Smart Kubernetes security and compliance',;
     'AI-driven Kubernetes automation and orchestration',;
     'Real-time Kubernetes analytics and insights',;
     'Custom AI models for Kubernetes applications';
@@ -23,8 +23,8 @@ export default function AIKubernetes() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Kubernetes suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIKubernetes() {
 
   const useCases = [
     'Kubernetes optimization',
-    'Kubernetes management',
-    'Performance monitoring and analytics',
+    'Kubernetes management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Kubernetes scaling and management';
@@ -41,8 +41,8 @@ export default function AIKubernetes() {
 
   const benefits = [
     'Improve Kubernetes performance by 50-80%',
-    'Reduce Kubernetes deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Kubernetes deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Kubernetes reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Kubernetes operations efficiently';
@@ -50,8 +50,8 @@ export default function AIKubernetes() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIKubernetes() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

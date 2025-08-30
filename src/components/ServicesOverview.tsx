@@ -123,8 +123,8 @@ export function ServicesOverview() {
     {
       id: 'healthcare-ai',
       name: 'Healthcare AI',
-      icon: Heart,
-      color: 'from-zion-pink to-zion-purple',
+      icon: Heart,;
+      color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'));
     };
@@ -146,10 +146,14 @@ export function ServicesOverview() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -178,16 +182,22 @@ export function ServicesOverview() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -237,10 +247,14 @@ export function ServicesOverview() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -260,16 +274,22 @@ export function ServicesOverview() {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -346,10 +366,14 @@ export function ServicesOverview() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -406,8 +430,8 @@ export function ServicesOverview() {
                   ziontechgroup.com
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

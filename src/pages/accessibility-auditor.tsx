@@ -36,16 +36,16 @@ const AccessibilityAuditor: React.FC = () => {
       description: "Continuous monitoring and alerting for accessibility issues",
       icon: "📊"
     },
-    {
-      title: "Compliance Reporting",
+    {;
+      title: "Compliance Reporting",;
       description: "Detailed reports with actionable recommendations",;
       icon: "📋";
     };
   ];
 
   const complianceStandards = [
-    "WCAG 2.1 AA",
-    "Section 508",
+    "WCAG 2.1 AA",;
+    "Section 508",;
     "ADA Title III",;
     "EN 301 549",;
     "ISO 9241-171";
@@ -59,8 +59,8 @@ const AccessibilityAuditor: React.FC = () => {
     {
       category: "Content Accessibility",
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
-    },
-    {
+    },;
+    {;
       category: "Technical Accessibility",;
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
     };
@@ -242,8 +242,8 @@ const AccessibilityAuditor: React.FC = () => {
                   View All Services
                 </Link>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

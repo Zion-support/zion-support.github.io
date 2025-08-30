@@ -24,8 +24,8 @@ export default function ComprehensivePricing2027() {
     .filter(service => 
       (selectedCategory === 'All' || service.category === service.category) &&
       (searchQuery === '' || 
-        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     );
     .sort((a, b) => {;
@@ -37,8 +37,8 @@ export default function ComprehensivePricing2027() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -49,12 +49,14 @@ export default function ComprehensivePricing2027() {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: {;
+        duration: 0.5,;
         ease: "easeOut";
       };
     };
@@ -63,6 +65,8 @@ export default function ComprehensivePricing2027() {
   const cardVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
+
 
 
 },
@@ -77,8 +81,8 @@ export default function ComprehensivePricing2027() {
     hover: {
       scale: 1.02,
       y: -5,
-      transition: {
-        duration: 0.2,
+      transition: {;
+        duration: 0.2,;
         ease: "easeOut";
       };
     };
@@ -125,10 +129,14 @@ export default function ComprehensivePricing2027() {
   y: -50 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -142,16 +150,22 @@ export default function ComprehensivePricing2027() {
   scale: 0.8 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -165,16 +179,22 @@ export default function ComprehensivePricing2027() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -191,16 +211,22 @@ export default function ComprehensivePricing2027() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -231,16 +257,22 @@ export default function ComprehensivePricing2027() {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }}
@@ -328,16 +360,22 @@ export default function ComprehensivePricing2027() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -433,16 +471,22 @@ export default function ComprehensivePricing2027() {
   height: 0 
 
 
+
+
 }}
                               animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                               exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -479,6 +523,8 @@ export default function ComprehensivePricing2027() {
                                 onClick = {
   () => window.open(service.website,
   '_blank')
+
+
 
 
 }
@@ -551,6 +597,8 @@ export default function ComprehensivePricing2027() {
   '_blank')
 
 
+
+
 }
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
@@ -587,16 +635,22 @@ export default function ComprehensivePricing2027() {
   y: 30 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1.2 
+
+
 
 
 }}
@@ -622,8 +676,8 @@ export default function ComprehensivePricing2027() {
               >
                 Call +1 302 464 0950
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </motion.section>;
     </div>;

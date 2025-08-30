@@ -39,8 +39,8 @@ export const SERVICE_CATEGORIES = [
   'Blockchain & Web3',
   'Cybersecurity',
   'IoT & Edge Computing',
-  'Metaverse & AR/VR',
-  'Robotics & Automation',
+  'Metaverse & AR/VR',;
+  'Robotics & Automation',;
   'Biotechnology',;
   'Space Technology',;
   'Green Technology';
@@ -57,8 +57,12 @@ export const SERVICE_SUBCATEGORIES = {
   'Biotechnology': ['Gene Editing', 'Synthetic Biology', 'Bioinformatics', 'Drug Discovery'],
   'Space Technology': ['Satellite Systems', 'Space Mining', 'Space Tourism', 'Space Manufacturing'],
   'Green Technology': ['Renewable Energy', 'Carbon Capture', 'Sustainable Materials',;
+  ;
+  ;
   'Clean Transportation'];
 ;
+
+
 
 
 };

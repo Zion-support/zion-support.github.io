@@ -21,6 +21,8 @@ const categoriesInfo = {
     
 
 
+
+
 },
     "project-help": {
         id: "project-help",
@@ -61,6 +63,8 @@ const iconMap = {
     "Code": Code,
     "FileText": FileText,
   "Megaphone": Megaphone
+
+
 
 
 
@@ -127,6 +131,8 @@ export default function ForumCategoryPage() {
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords = {
   `community, forum,
   ${category.id
+
+
 
 
 }, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>

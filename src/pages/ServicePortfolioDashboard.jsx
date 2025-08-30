@@ -76,9 +76,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }}>
@@ -99,6 +103,8 @@ const ServicePortfolioDashboard = () => {
   '_blank')
 
 
+
+
 }>
                 Get Consultation
               </Button>
@@ -115,9 +121,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -136,14 +146,20 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -178,9 +194,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -198,14 +218,20 @@ const ServicePortfolioDashboard = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -239,9 +265,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -259,14 +289,20 @@ const ServicePortfolioDashboard = () => {
   x: -20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="flex items-start gap-3">
@@ -285,9 +321,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -312,9 +352,13 @@ const ServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
@@ -331,6 +375,8 @@ const ServicePortfolioDashboard = () => {
   '_blank')
 
 
+
+
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Get Portfolio Strategy
@@ -338,6 +384,8 @@ const ServicePortfolioDashboard = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

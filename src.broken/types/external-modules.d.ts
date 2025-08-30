@@ -35,37 +35,24 @@ declare module 'lucide-react' {
     strokeWidth?: number | string;
   }
   export type LucideIcon = FC<LucideProps>;
-  export const ArrowLeft: LucideIcon;
   export const Award: LucideIcon;
-  export const BarChart3: LucideIcon;
-  export const BriefcaseIcon: LucideIcon;
   export const Building: LucideIcon;
-  export const ChevronDown: LucideIcon;
-  export const Cloud: LucideIcon;
   export const Crown: LucideIcon;
   export const Download: LucideIcon;
   export const EyeOff: LucideIcon;
-  export const Filter: LucideIcon;
   export const Flag: LucideIcon;
   export const GripVertical: LucideIcon;
   export const Home: LucideIcon;
   export const Instagram: LucideIcon;
   export const Key: LucideIcon;
-  export const Linkedin: LucideIcon;
-  export const LogOut: LucideIcon;
   export const LucideIcon: LucideIcon;
-  export const Mic: LucideIcon;
   export const Monitor: LucideIcon;
   export const Network: LucideIcon;
   export const MoreVertical: LucideIcon;
-  export const Pin: LucideIcon;
   export const PowerOff: LucideIcon;
   export const Quote: LucideIcon;
   export const RotateCcw: LucideIcon;
-  export const Server: LucideIcon;
-  export const Sliders: LucideIcon;
   export const Sun: LucideIcon;
-  export const Trophy: LucideIcon;
   export const Twitter: LucideIcon;
   export const Users: LucideIcon;
   export const VolumeX: LucideIcon;
@@ -132,8 +119,8 @@ declare module 'react-hook-form' {
     register: any
     formState: any
     [key: string]: any
-  }
-  export function useFormContext<
+  };
+  export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,;
   >(): UseFormReturn<TFieldValues>;
 };

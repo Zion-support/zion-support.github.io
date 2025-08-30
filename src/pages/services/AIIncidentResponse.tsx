@@ -5,8 +5,8 @@ export default function AIIncidentResponse() {
     'AI-powered incident response optimization',
     'Intelligent threat detection and analysis',
     'Automated incident triage and prioritization',
-    'Predictive analytics for incident prevention',
-    'Smart response automation and orchestration',
+    'Predictive analytics for incident prevention',;
+    'Smart response automation and orchestration',;
     'AI-driven incident investigation and forensics',;
     'Real-time incident analytics and insights',;
     'Custom AI models for incident applications';
@@ -23,8 +23,8 @@ export default function AIIncidentResponse() {
       price: '$1,599/mo', 
       details: ['Up to 500 incidents/month', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited incidents', 'Custom AI models', 'Full incident suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIIncidentResponse() {
 
   const useCases = [
     'Incident response optimization',
-    'Threat detection and analysis',
-    'Incident triage and prioritization',
+    'Threat detection and analysis',;
+    'Incident triage and prioritization',;
     'Response automation and orchestration',;
     'Incident investigation and forensics',;
     'Incident scaling and management';
@@ -41,8 +41,8 @@ export default function AIIncidentResponse() {
 
   const benefits = [
     'Improve incident response performance by 50-80%',
-    'Reduce incident resolution time by 40-70%',
-    'Cut incident operational costs by 35-65%',
+    'Reduce incident resolution time by 40-70%',;
+    'Cut incident operational costs by 35-65%',;
     'Enhance incident response reliability and scalability',;
     'Optimize resource utilization',;
     'Scale incident response operations efficiently';
@@ -50,8 +50,8 @@ export default function AIIncidentResponse() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIIncidentResponse() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

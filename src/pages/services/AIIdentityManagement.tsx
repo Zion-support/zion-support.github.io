@@ -5,8 +5,8 @@ export default function AIIdentityManagement() {
     'AI-powered identity management optimization',
     'Intelligent authentication and authorization',
     'Automated identity verification and validation',
-    'Predictive analytics for identity threats',
-    'Smart compliance and governance monitoring',
+    'Predictive analytics for identity threats',;
+    'Smart compliance and governance monitoring',;
     'AI-driven identity automation and orchestration',;
     'Real-time identity analytics and insights',;
     'Custom AI models for identity applications';
@@ -23,8 +23,8 @@ export default function AIIdentityManagement() {
       price: '$799/mo', 
       details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited users', 'Custom AI models', 'Full identity suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIIdentityManagement() {
 
   const useCases = [
     'Identity management optimization',
-    'Authentication and authorization',
-    'Identity verification and validation',
+    'Authentication and authorization',;
+    'Identity verification and validation',;
     'Compliance and governance monitoring',;
     'Identity automation and orchestration',;
     'Identity scaling and management';
@@ -41,8 +41,8 @@ export default function AIIdentityManagement() {
 
   const benefits = [
     'Improve identity management performance by 50-80%',
-    'Reduce authentication time by 40-70%',
-    'Cut identity operational costs by 35-65%',
+    'Reduce authentication time by 40-70%',;
+    'Cut identity operational costs by 35-65%',;
     'Enhance identity security reliability and scalability',;
     'Optimize resource utilization',;
     'Scale identity operations efficiently';
@@ -50,8 +50,8 @@ export default function AIIdentityManagement() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIIdentityManagement() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

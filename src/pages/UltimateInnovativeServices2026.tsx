@@ -74,23 +74,23 @@ export default function UltimateInnovativeServices2026() {
     { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
     { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },
     { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },
-    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },
+    { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;
+    { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;
     { id: 'edge-ai', name: 'Edge AI', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;
     { id: 'federated-learning', name: 'Federated Learning', icon: Network, color: 'from-zion-purple to-zion-blue' },;
     { id: 'sustainable-technology', name: 'Sustainable Technology', icon: Leaf, color: 'from-zion-green to-zion-blue' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'under-10k', name: 'Under $10K', range: 'Under $10,000' },;
     { id: '10k-20k', name: '$10K - $20K', range: '$10,000 - $20,000' },;
     { id: 'over-20k', name: 'Over $20K', range: 'Over $20,000' };
   ];
 
   const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
     { id: 'price-high', name: 'Price: High to Low' },;
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'roi', name: 'ROI Potential' };
@@ -129,7 +129,11 @@ export default function UltimateInnovativeServices2026() {
         const innovationOrder = {
   'Revolutionary': 3, 'Cutting-edge': 2,;
   ;
+  ;
+  ;
   'Advanced': 1 ;
+
+
 
 
 };
@@ -166,10 +170,14 @@ export default function UltimateInnovativeServices2026() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -306,10 +314,14 @@ export default function UltimateInnovativeServices2026() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -318,10 +330,14 @@ export default function UltimateInnovativeServices2026() {
   y: -20 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -413,16 +429,22 @@ export default function UltimateInnovativeServices2026() {
   height: 0 
 
 
+
+
 }}
                           animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                           exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -491,8 +513,8 @@ export default function UltimateInnovativeServices2026() {
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
-              <p className="text-zion-slate-300 mb-6">
-                Try adjusting your search criteria or browse all our innovative services.
+              <p className="text-zion-slate-300 mb-6">;
+                Try adjusting your search criteria or browse all our innovative services.;
               </p>;
               <button;
                 onClick={() => {;
@@ -518,10 +540,14 @@ export default function UltimateInnovativeServices2026() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -554,8 +580,8 @@ export default function UltimateInnovativeServices2026() {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

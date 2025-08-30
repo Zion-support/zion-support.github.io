@@ -17,3 +17,5 @@ export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
+export default DisputesPage;
+export default DisputesPage;

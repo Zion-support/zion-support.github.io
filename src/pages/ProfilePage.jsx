@@ -160,6 +160,8 @@ export default function ProfilePage() {
         
 
 
+
+
 }}/>
             {/* Placeholder for other sidebar elements */}
           </div>

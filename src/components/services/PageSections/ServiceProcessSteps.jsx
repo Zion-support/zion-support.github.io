@@ -112,6 +112,8 @@ export const ServiceProcessSteps = () => {
     
 
 
+
+
 };
     return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200';
   };
@@ -124,6 +126,8 @@ export const ServiceProcessSteps = () => {
       red: 'from-red-500 to-red-600',
   indigo: 'from-indigo-500 to-indigo-600'
     
+
+
 
 
 };

@@ -35,6 +35,8 @@ export function NewServices() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -67,9 +69,13 @@ export function NewServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -142,14 +148,20 @@ export function NewServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }} className="mb-12">
@@ -168,14 +180,20 @@ export function NewServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }} className="mb-16">
@@ -365,14 +383,20 @@ export function NewServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }} className="text-center mt-16">
@@ -409,9 +433,13 @@ export function NewServices() {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -519,6 +547,8 @@ export function NewServices() {
 }
 export default NewServices;
 
+export default NewServices;
+export default NewServices;
 export default NewServices;
 export default NewServices;
 export default NewServices;

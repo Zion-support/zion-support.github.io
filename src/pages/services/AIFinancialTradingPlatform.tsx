@@ -45,16 +45,16 @@ export default function AIFinancialTradingPlatform() {
     "Advanced technical and fundamental analysis",
     "Automated trading strategies and backtesting",
     "Real-time market data and news feeds",
-    "Portfolio performance tracking and analytics",
-    "Compliance and regulatory monitoring",
+    "Portfolio performance tracking and analytics",;
+    "Compliance and regulatory monitoring",;
     "Custom trading algorithm development",;
     "High-frequency trading capabilities",;
     "Secure and encrypted trading infrastructure";
   ];
 
   const benefits = [
-    "Increase trading returns by 25-40%",
-    "Reduce trading risks by 30-50%",
+    "Increase trading returns by 25-40%",;
+    "Reduce trading risks by 30-50%",;
     "24/7 automated trading operations",;
     "Eliminate emotional trading decisions",;
     "Access to institutional-grade tools";
@@ -64,8 +64,8 @@ export default function AIFinancialTradingPlatform() {
     "Individual retail traders",
     "Professional day traders",
     "Hedge funds and asset managers",
-    "Institutional investors",
-    "Cryptocurrency traders",
+    "Institutional investors",;
+    "Cryptocurrency traders",;
     "Forex trading professionals",;
     "Options and derivatives traders",;
     "Quantitative trading firms";
@@ -117,8 +117,8 @@ export default function AIFinancialTradingPlatform() {
         "Dedicated infrastructure",
         "Custom integrations",
         "Dedicated account manager",
-        "24/7 phone support"
-      ],
+        "24/7 phone support";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -140,10 +140,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -192,10 +196,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -219,16 +227,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -253,10 +267,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -280,16 +298,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -314,10 +338,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -341,16 +369,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -375,10 +409,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -402,16 +440,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -473,10 +517,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -520,8 +568,8 @@ export default function AIFinancialTradingPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

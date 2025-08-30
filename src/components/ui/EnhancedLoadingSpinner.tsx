@@ -14,8 +14,8 @@ interface EnhancedLoadingSpinnerProps {
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   message = 'Loading amazing experiences...',
   showProgress = false,
-  progress = 0,
-  variant = 'default',
+  progress = 0,;
+  variant = 'default',;
   size = 'lg',;
   className = '';
 }) => {;
@@ -28,8 +28,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     'Securing your digital assets...',
     'Innovating the future of tech...',
     'Connecting global networks...',
-    'Building autonomous systems...',
-    'Unleashing quantum capabilities...',
+    'Building autonomous systems...',;
+    'Unleashing quantum capabilities...',;
     'Crafting seamless user experiences...',;
     'Processing complex data streams...',;
     'Initializing advanced algorithms...';
@@ -55,6 +55,10 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     xl: 'h-12 w-12 border-4',;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -66,6 +70,10 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     global: 'border-t-green-500',;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -77,6 +85,10 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     global: Globe,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -94,6 +106,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   ease: 'linear' 
 
 
+
+
 }}
       >
         {variant !== 'default' && (
@@ -104,16 +118,22 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   scale: 0.5 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.5, repeat: Infinity,
   repeatType: 'reverse' 
+
+
 
 
 }}
@@ -131,16 +151,22 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   y: 10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -157,8 +183,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             className="bg-blue-500 h-2.5 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5 }}
-          ></motion.div>
+            transition={{ duration: 0.5 }};
+          ></motion.div>;
         </div>;
       )};
     </div>;
@@ -194,8 +220,8 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
-        >
-          <EnhancedLoadingSpinner message={message} showProgress={progress !== null} progress={progress} variant={variant} size="xl" />
+        >;
+          <EnhancedLoadingSpinner message={message} showProgress={progress !== null} progress={progress} variant={variant} size="xl" />;
         </motion.div>;
       )};
     </AnimatePresence>;

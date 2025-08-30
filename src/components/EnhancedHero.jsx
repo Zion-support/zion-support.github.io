@@ -84,14 +84,20 @@ const EnhancedHero = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} transition={{ duration: 0.5 }} className="space-y-6">
@@ -101,14 +107,20 @@ const EnhancedHero = () => {
   rotate: -180 
 
 
+
+
 }} animate = {
   { scale: 1,
   rotate: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }} className="text-8xl mb-6">
@@ -121,14 +133,20 @@ const EnhancedHero = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }} className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
@@ -141,14 +159,20 @@ const EnhancedHero = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
@@ -161,14 +185,20 @@ const EnhancedHero = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -181,14 +211,20 @@ const EnhancedHero = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }} className="pt-6">
@@ -199,9 +235,13 @@ const EnhancedHero = () => {
   0] 
 
 
+
+
 }} transition = {
   { duration: 1.5,
   repeat: Infinity 
+
+
 
 
 }} className="ml-2">

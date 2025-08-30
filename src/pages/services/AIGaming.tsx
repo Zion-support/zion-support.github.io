@@ -5,8 +5,8 @@ export default function AIGaming() {
     'AI-powered player behavior analysis and personalization',
     'Intelligent game difficulty adjustment and balancing',
     'Automated content generation and procedural creation',
-    'Predictive analytics for player engagement and retention',
-    'Real-time matchmaking and player pairing optimization',
+    'Predictive analytics for player engagement and retention',;
+    'Real-time matchmaking and player pairing optimization',;
     'Smart anti-cheat and security systems',;
     'Integration with major gaming engines and platforms',;
     'Custom AI models for gaming-specific insights';
@@ -23,8 +23,8 @@ export default function AIGaming() {
       price: '$799/mo', 
       details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Studio', 
+    { ;
+      name: 'Large Studio', ;
       price: '$1,999/mo', ;
       details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIGaming() {
 
   const useCases = [
     'Player engagement and retention optimization',
-    'Game difficulty and balance adjustment',
-    'Content generation and procedural creation',
+    'Game difficulty and balance adjustment',;
+    'Content generation and procedural creation',;
     'Matchmaking and player pairing',;
     'Anti-cheat and security systems',;
     'Monetization and in-game economy optimization';
@@ -41,8 +41,8 @@ export default function AIGaming() {
 
   const benefits = [
     'Increase player engagement by 35-55%',
-    'Improve player retention by 40-60%',
-    'Cut development costs by 25-40%',
+    'Improve player retention by 40-60%',;
+    'Cut development costs by 25-40%',;
     'Optimize game balance and difficulty',;
     'Enhance player experience and satisfaction',;
     'Scale gaming operations efficiently';
@@ -50,8 +50,8 @@ export default function AIGaming() {
 
   const industries = [
     'Mobile Gaming',
-    'PC Gaming',
-    'Console Gaming',
+    'PC Gaming',;
+    'Console Gaming',;
     'VR/AR Gaming',;
     'Esports & Competitive Gaming',;
     'Educational & Serious Games';
@@ -165,8 +165,8 @@ export default function AIGaming() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

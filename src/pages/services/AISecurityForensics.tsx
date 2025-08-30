@@ -5,8 +5,8 @@ export default function AISecurityForensics() {
     'AI-powered security forensics optimization',
     'Intelligent digital evidence analysis and processing',
     'Automated incident investigation and reconstruction',
-    'Predictive analytics for forensic needs',
-    'Smart forensics framework management',
+    'Predictive analytics for forensic needs',;
+    'Smart forensics framework management',;
     'AI-driven forensics automation and orchestration',;
     'Real-time forensics performance tracking',;
     'Custom AI models for forensics applications';
@@ -23,8 +23,8 @@ export default function AISecurityForensics() {
       price: '$1,999/mo', 
       details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityForensics() {
 
   const useCases = [
     'Security forensics optimization',
-    'Digital evidence analysis and processing',
-    'Incident investigation and reconstruction',
+    'Digital evidence analysis and processing',;
+    'Incident investigation and reconstruction',;
     'Forensics framework management and automation',;
     'Forensics automation and orchestration',;
     'Forensics scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityForensics() {
 
   const benefits = [
     'Improve security forensics performance by 50-80%',
-    'Reduce investigation time by 40-70%',
-    'Cut security forensics costs by 35-65%',
+    'Reduce investigation time by 40-70%',;
+    'Cut security forensics costs by 35-65%',;
     'Enhance security forensics reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security forensics operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityForensics() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityForensics() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

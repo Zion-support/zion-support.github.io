@@ -146,6 +146,8 @@ export function ValuePropositionShowcase() {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
@@ -160,6 +162,8 @@ export function ValuePropositionShowcase() {
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
+
 
 
 },
@@ -184,10 +188,14 @@ export function ValuePropositionShowcase() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -237,16 +245,22 @@ export function ValuePropositionShowcase() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -263,6 +277,8 @@ export function ValuePropositionShowcase() {
                 whileHover = {
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
   0.3)" 
+
+
 
 
 }}
@@ -285,16 +301,22 @@ export function ValuePropositionShowcase() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -357,16 +379,22 @@ export function ValuePropositionShowcase() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.7 
+
+
 
 
 }}
@@ -417,16 +445,22 @@ export function ValuePropositionShowcase() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
+
 
 
 }}

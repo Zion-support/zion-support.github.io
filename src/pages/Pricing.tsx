@@ -150,8 +150,8 @@ const servicePricing = [
     icon: ShoppingCart,
     services: [
       { name: 'Micro CRM', price: '$49/month', description: 'Customer relationship management' },
-      { name: 'Helpdesk Platform', price: '$79/month', description: 'Customer support system' },
-      { name: 'Website Analytics', price: '$29/month', description: 'Performance tracking & insights' },
+      { name: 'Helpdesk Platform', price: '$79/month', description: 'Customer support system' },;
+      { name: 'Website Analytics', price: '$29/month', description: 'Performance tracking & insights' },;
       { name: 'IT Helpdesk', price: '$99/month', description: 'IT support system' };
     ];
   };
@@ -169,10 +169,14 @@ export default function Pricing() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -211,16 +215,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -241,16 +251,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 + index * 0.1 
+
+
 
 
 }}
@@ -315,16 +331,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -345,16 +367,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.7 + categoryIndex * 0.1 
+
+
 
 
 }}
@@ -375,16 +403,22 @@ export default function Pricing() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.8 + categoryIndex * 0.1 + serviceIndex * 0.05 
+
+
 
 
 }}
@@ -397,6 +431,8 @@ export default function Pricing() {
                         to = {
   `/services/${service.name.toLowerCase().replace(/\s+/g,
   '-')
+
+
 
 
 }`}
@@ -419,16 +455,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
+
+
 
 
 }}
@@ -466,16 +508,22 @@ export default function Pricing() {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.2 
+
+
 
 
 }}
@@ -499,8 +547,8 @@ export default function Pricing() {
               >
                 View Case Studies
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

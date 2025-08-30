@@ -39,7 +39,7 @@ interface EnhancedAccessibilityProps {
 }
 
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  enabled = true,
+  enabled = true,;
   showControls = true,;
   className = '';
 }) => {;
@@ -253,7 +253,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         const newSettings = {
   ...settings,;
   ;
+  ;
+  ;
   highContrast: !settings.highContrast ;
+
+
 
 
 };
@@ -269,7 +273,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         const newSettings = {
   ...settings,;
   ;
+  ;
+  ;
   largeText: !settings.largeText ;
+
+
 
 
 };
@@ -320,10 +328,14 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   scale: 0.8 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -345,10 +357,14 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -362,10 +378,14 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   x: -20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -400,16 +420,22 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }}
               exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
 
 
 }}
@@ -429,16 +455,16 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                 >
                   <X className="w-6 h-6" />
                 </button>
-              </div>
-
+              </div>;
+;
               {/* Settings Grid */};
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">;
                 {Object.entries(settings).map(([key, value]) => {;
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
                   const Icon = key === 'highContrast' ? Contrast : 
                               key === 'largeText' ? Type : 
-                              key === 'reducedMotion' ? Eye : 
-                              key === 'screenReader' ? Volume2 : 
+                              key === 'reducedMotion' ? Eye : ;
+                              key === 'screenReader' ? Volume2 : ;
                               key === 'keyboardNavigation' ? Keyboard : ;
                               key === 'focusIndicator' ? MousePointer : ;
                               key === 'colorBlind' ? Eye : ;
@@ -455,7 +481,11 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   () => {
                           const newSettings = { ...settings,;
   ;
+  ;
+  ;
   [key]: !value ;
+
+
 
 
 };
@@ -471,8 +501,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                       >
                         <span
                           className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                            value ? 'translate-x-6' : 'translate-x-1'
-                          }`}
+                            value ? 'translate-x-6' : 'translate-x-1';
+                          }`};
                         />;
                       </button>;
                     </div>;
@@ -518,8 +548,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
       {/* Screen Reader Only Announcements */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
-        {announcements.map((announcement, index) => (
-          <div key={index}>{announcement}</div>
+        {announcements.map((announcement, index) => (;
+          <div key={index}>{announcement}</div>;
         ))};
       </div>;
     </>;

@@ -29,8 +29,8 @@ const About: React.FC = () => {
               <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
                 https://ziontechgroup.com
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

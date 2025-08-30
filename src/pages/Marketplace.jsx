@@ -138,6 +138,8 @@ export default function Marketplace() {
         
 
 
+
+
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
           {/* Main content */}

@@ -8,14 +8,20 @@ const ServiceCard = ({ service, index, isVisible }) => {
   scale: 0.9 
 
 
+
+
 }} animate = {
   isVisible ? { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 } : {}} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
@@ -187,9 +193,13 @@ export const FuturisticServicesShowcase = () => {
   y: -50 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -236,14 +246,20 @@ export const FuturisticServicesShowcase = () => {
   y: 50 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
+
 
 
 }} className="text-center mt-20">

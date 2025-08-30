@@ -10,8 +10,8 @@ const Header: React.FC = () => {;
 
   const navigation = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+    { name: 'About', path: '/about' },;
+    { name: 'Services', path: '/services' },;
     { name: 'Solutions', path: '/solutions' },;
     { name: 'Blog', path: '/blog' },;
     { name: 'Contact', path: '/contact' };
@@ -72,8 +72,8 @@ const Header: React.FC = () => {;
           <div className="p-4">
             <div className="grid grid-cols-1 gap-2">
               {items.map((item) => (
-                <Link
-                  key={item.path}
+                <Link;
+                  key={item.path};
                   href={item.path};
                   className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors";
                   onClick={() => {;
@@ -88,8 +88,8 @@ const Header: React.FC = () => {;
                   </div>
                 </Link>
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       )};
     </div>;
@@ -162,16 +162,22 @@ const Header: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -210,8 +216,8 @@ const Header: React.FC = () => {;
                   Get Started
                 </Link>
               </div>
-            </nav>
-          </motion.div>
+            </nav>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </header>;

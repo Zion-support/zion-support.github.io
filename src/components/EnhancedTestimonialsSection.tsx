@@ -135,10 +135,14 @@ export default function EnhancedTestimonialsSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -164,16 +168,22 @@ export default function EnhancedTestimonialsSection() {
   x: 100 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
               exit = {
   { opacity: 0,
   x: -100 
+
+
 
 
 }}
@@ -193,10 +203,14 @@ export default function EnhancedTestimonialsSection() {
   360] 
 
 
+
+
 }}
                   transition = {
   { duration: 20,
   repeat: Infinity 
+
+
 
 
 }}
@@ -234,10 +248,14 @@ export default function EnhancedTestimonialsSection() {
   y: 20 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -317,10 +335,14 @@ export default function EnhancedTestimonialsSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -328,6 +350,8 @@ export default function EnhancedTestimonialsSection() {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -351,10 +375,14 @@ export default function EnhancedTestimonialsSection() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -362,6 +390,8 @@ export default function EnhancedTestimonialsSection() {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -385,10 +415,14 @@ export default function EnhancedTestimonialsSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -396,6 +430,8 @@ export default function EnhancedTestimonialsSection() {
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -421,8 +457,8 @@ export default function EnhancedTestimonialsSection() {
               >
                 View Case Studies
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

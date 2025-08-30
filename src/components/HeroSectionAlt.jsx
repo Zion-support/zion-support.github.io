@@ -21,6 +21,8 @@ export const HeroSectionAlt = () => {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
@@ -41,6 +43,8 @@ export const HeroSectionAlt = () => {
         repeat: Infinity,
   ease: "easeInOut"
       
+
+
 
 
 }

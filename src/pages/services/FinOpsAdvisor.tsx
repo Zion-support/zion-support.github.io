@@ -70,8 +70,8 @@ const FinOpsAdvisor = () => {
       title: 'Trend Analysis',
       description: 'Predictive analytics for future cost planning'
     },
-    {
-      icon: Target2,
+    {;
+      icon: Target2,;
       title: 'ROI Optimization',;
       description: 'Maximize return on cloud infrastructure investment';
     };
@@ -79,8 +79,8 @@ const FinOpsAdvisor = () => {
 
   const benefits = [
     'Reduce cloud costs by 30-50%',
-    'Improve resource utilization by 40%',
-    'Achieve better budget predictability',
+    'Improve resource utilization by 40%',;
+    'Achieve better budget predictability',;
     'Enable data-driven decision making',;
     'Streamline cost governance',;
     'Enhance team accountability';
@@ -102,8 +102,8 @@ const FinOpsAdvisor = () => {
       title: 'Budget Planning',
       description: 'Strategic budget planning and forecasting'
     },
-    {
-      icon: Receipt,
+    {;
+      icon: Receipt,;
       title: 'Reporting & Analytics',;
       description: 'Detailed reports and actionable insights';
     };
@@ -121,8 +121,8 @@ const FinOpsAdvisor = () => {
     {
       industry: 'E-commerce',
       description: 'Balance performance with cost efficiency'
-    },
-    {
+    },;
+    {;
       industry: 'SaaS Companies',;
       description: 'Optimize costs for multi-tenant applications';
     };
@@ -140,10 +140,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -188,10 +192,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,16 +224,22 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -251,10 +265,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -279,16 +297,22 @@ const FinOpsAdvisor = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -318,10 +342,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -346,16 +374,22 @@ const FinOpsAdvisor = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -375,16 +409,22 @@ const FinOpsAdvisor = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -408,10 +448,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -436,16 +480,22 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -471,10 +521,14 @@ const FinOpsAdvisor = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -495,8 +549,8 @@ const FinOpsAdvisor = () => {
               <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

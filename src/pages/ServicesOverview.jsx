@@ -24,6 +24,8 @@ export default function ServicesOverview() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,

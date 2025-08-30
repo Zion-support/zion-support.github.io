@@ -5,8 +5,8 @@ export default function AITransportation() {
     'AI-powered route optimization and fleet management',
     'Intelligent traffic prediction and congestion avoidance',
     'Automated vehicle maintenance and predictive diagnostics',
-    'Real-time logistics optimization and delivery tracking',
-    'Predictive analytics for demand forecasting',
+    'Real-time logistics optimization and delivery tracking',;
+    'Predictive analytics for demand forecasting',;
     'Smart traffic signal optimization and control',;
     'Integration with major transportation management systems',;
     'Custom AI models for transportation-specific insights';
@@ -23,8 +23,8 @@ export default function AITransportation() {
       price: '$999/mo', 
       details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Fleet', 
+    { ;
+      name: 'Large Fleet', ;
       price: '$2,499/mo', ;
       details: ['Unlimited vehicles', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AITransportation() {
 
   const useCases = [
     'Fleet management and route optimization',
-    'Public transportation optimization',
-    'Logistics and supply chain management',
+    'Public transportation optimization',;
+    'Logistics and supply chain management',;
     'Traffic management and smart cities',;
     'Ride-sharing and mobility services',;
     'Freight and cargo transportation';
@@ -41,8 +41,8 @@ export default function AITransportation() {
 
   const benefits = [
     'Reduce fuel costs by 15-30%',
-    'Improve delivery efficiency by 25-40%',
-    'Cut maintenance costs by 20-35%',
+    'Improve delivery efficiency by 25-40%',;
+    'Cut maintenance costs by 20-35%',;
     'Optimize routes for maximum productivity',;
     'Enhance driver safety and compliance',;
     'Scale transportation operations efficiently';
@@ -50,8 +50,8 @@ export default function AITransportation() {
 
   const industries = [
     'Logistics & Freight',
-    'Public Transportation',
-    'Ride-sharing & Mobility',
+    'Public Transportation',;
+    'Ride-sharing & Mobility',;
     'E-commerce Delivery',;
     'Construction & Heavy Equipment',;
     'Emergency Services';
@@ -165,8 +165,8 @@ export default function AITransportation() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

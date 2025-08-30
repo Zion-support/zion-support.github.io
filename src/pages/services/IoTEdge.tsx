@@ -19,8 +19,8 @@ export default function IoTEdge() {
       title: 'Real-time Processing',
       description: 'Instant data analysis and decision making'
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: 'Data Management',;
       description: 'Efficient storage and processing of IoT data streams';
     };
@@ -42,8 +42,8 @@ export default function IoTEdge() {
       description: 'High-speed connectivity for IoT applications',
       icon: Wifi
     },
-    {
-      title: 'Security & Compliance',
+    {;
+      title: 'Security & Compliance',;
       description: 'End-to-end security for IoT ecosystems',;
       icon: Shield;
     };
@@ -61,10 +61,14 @@ export default function IoTEdge() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function IoTEdge() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function IoTEdge() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function IoTEdge() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function IoTEdge() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function IoTEdge() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,8 +295,8 @@ export default function IoTEdge() {
                   Contact IoT Team
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

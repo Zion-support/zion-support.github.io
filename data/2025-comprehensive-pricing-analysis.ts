@@ -356,8 +356,12 @@ export const getMarketInsights = () => {
     mostExpensiveCategory: 'Quantum Computing & AI',
     mostAffordableCategory: 'IoT & Edge Computing',
     highestROI: '1000% (Quantum Neural Network Platform)',;
+  ;
+  ;
   fastestPayback: '2-4 months (DeFi Trading Platform)';
   ;
+
+
 
 
 };
@@ -365,8 +369,8 @@ export const getMarketInsights = () => {
 };
 export const getCompetitiveLandscape = () => {
   return {
-    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
-    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
+    aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],;
+    quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],;
     cybersecurity: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],;
     manufacturing: ['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
     blockchain: ['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];

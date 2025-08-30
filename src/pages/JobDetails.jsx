@@ -63,6 +63,8 @@ export default function JobDetails() {
   160)
 
 
+
+
 }/>
       
       <main className="container mx-auto px-4 py-8">
@@ -160,6 +162,8 @@ export default function JobDetails() {
                 budget: job.budget,
   client_id: job.client_id
             
+
+
 
 
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}

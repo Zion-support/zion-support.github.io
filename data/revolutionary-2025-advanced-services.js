@@ -684,6 +684,8 @@ export const SERVICE_CATEGORIES = {
 
 
 
+
+
 };
 // Market analysis and pricing information
 export const MARKET_ANALYSIS = {
@@ -705,6 +707,8 @@ export const MARKET_ANALYSIS = {
         'Comprehensive compliance frameworks',
   '24/7 autonomous operations'
     ]
+
+
 
 
 

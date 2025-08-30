@@ -116,7 +116,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   const [innovationLevel, setInnovationLevel] = useState('all');
 
   // Combine all services
-  const allServices = [
+  const allServices = [;
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2031,;
     ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031,;
     ...SPECIALIZED_AI_SERVICES_2031;
@@ -150,8 +150,8 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🔒' },
     { id: 'Data & Analytics', name: 'Data & Analytics', count: allServices.filter(s => s.category === 'Data & Analytics').length, icon: '📈' },
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },;
     { id: 'Managed Services', name: 'Managed Services', count: allServices.filter(s => s.category === 'Managed Services').length, icon: '🔄' },;
     { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s => s.category === 'Digital Transformation').length, icon: '🔄' };
@@ -161,8 +161,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   mobile: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",;
+  ;
+  ;
   website: "https://ziontechgroup.com";
   ;
+
+
 
 
 };
@@ -221,10 +225,14 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -239,16 +247,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -262,16 +276,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -296,16 +316,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -325,10 +351,14 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -350,16 +380,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -390,16 +426,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -470,16 +512,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -497,16 +545,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -603,16 +657,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }}
@@ -668,16 +728,22 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -813,8 +879,8 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
                   🌐 Visit Website
                 </a>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </div>;

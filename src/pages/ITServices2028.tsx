@@ -192,8 +192,8 @@ const itServices2028 = [
     category: 'Data & Analytics',
     realService: true,
     marketSize: '$11.2B data analytics market',
-    growthRate: '220% annual growth',
-    rating: 4.6,
+    growthRate: '220% annual growth',;
+    rating: 4.6,;
     reviews: 156,;
     customers: 89;
   };
@@ -206,8 +206,8 @@ const ITServices2028: React.FC = () => {;
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },
-    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },;
+    { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },;
     { id: 'networking', name: 'Networking', icon: Network, color: 'from-zion-purple to-zion-indigo' },;
     { id: 'devops', name: 'DevOps & Automation', icon: Rocket, color: 'from-zion-orange to-zion-red' },;
     { id: 'analytics', name: 'Data & Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
@@ -233,10 +233,14 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -251,16 +255,22 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -274,16 +284,22 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -353,16 +369,22 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -458,10 +480,14 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -476,16 +502,22 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -499,16 +531,22 @@ const ITServices2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -527,8 +565,8 @@ const ITServices2028: React.FC = () => {;
             >
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

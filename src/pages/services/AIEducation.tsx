@@ -5,8 +5,8 @@ export default function AIEducation() {
     'AI-powered personalized learning paths and recommendations',
     'Intelligent assessment and adaptive testing',
     'Automated content generation and curriculum optimization',
-    'Predictive analytics for student performance',
-    'Smart tutoring and homework assistance',
+    'Predictive analytics for student performance',;
+    'Smart tutoring and homework assistance',;
     'Learning analytics and progress tracking',;
     'Integration with major LMS and educational platforms',;
     'Custom AI models for subject-specific learning';
@@ -23,8 +23,8 @@ export default function AIEducation() {
       price: '$399/mo', 
       details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] 
     },
-    { 
-      name: 'University', 
+    { ;
+      name: 'University', ;
       price: '$999/mo', ;
       details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIEducation() {
 
   const useCases = [
     'K-12 personalized learning and tutoring',
-    'Higher education course optimization',
-    'Corporate training and skill development',
+    'Higher education course optimization',;
+    'Corporate training and skill development',;
     'Language learning and proficiency testing',;
     'Special education and accessibility',;
     'Professional certification and licensing';
@@ -41,8 +41,8 @@ export default function AIEducation() {
 
   const benefits = [
     'Improve student performance by 25-40%',
-    'Reduce learning time by 30-50%',
-    'Increase engagement and retention by 40-60%',
+    'Reduce learning time by 30-50%',;
+    'Increase engagement and retention by 40-60%',;
     'Optimize curriculum and teaching methods',;
     'Provide personalized learning experiences',;
     'Scale educational programs without additional staff';
@@ -50,8 +50,8 @@ export default function AIEducation() {
 
   const industries = [
     'K-12 Education',
-    'Higher Education',
-    'Corporate Training',
+    'Higher Education',;
+    'Corporate Training',;
     'Online Learning',;
     'Special Education',;
     'Professional Development';
@@ -165,8 +165,8 @@ export default function AIEducation() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -5,8 +5,8 @@ export default function AIServerless() {
     'AI-powered serverless optimization',
     'Intelligent serverless management',
     'Automated serverless monitoring and alerting',
-    'Predictive analytics for serverless scaling',
-    'Smart serverless security and compliance',
+    'Predictive analytics for serverless scaling',;
+    'Smart serverless security and compliance',;
     'AI-driven serverless automation and orchestration',;
     'Real-time serverless analytics and insights',;
     'Custom AI models for serverless applications';
@@ -23,8 +23,8 @@ export default function AIServerless() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full serverless suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIServerless() {
 
   const useCases = [
     'Serverless optimization',
-    'Serverless management',
-    'Performance monitoring and analytics',
+    'Serverless management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Serverless scaling and management';
@@ -41,8 +41,8 @@ export default function AIServerless() {
 
   const benefits = [
     'Improve serverless performance by 50-80%',
-    'Reduce serverless costs by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce serverless costs by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance serverless reliability and scalability',;
     'Optimize resource utilization',;
     'Scale serverless operations efficiently';
@@ -50,8 +50,8 @@ export default function AIServerless() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIServerless() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

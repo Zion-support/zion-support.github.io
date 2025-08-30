@@ -19,8 +19,8 @@ const InfrastructureServices = () => {
     },
     {
       title: "Data Center Solutions",
-      description: "Reliable hosting, colocation, and data center management.",
-      price: "From $8,000/month",
+      description: "Reliable hosting, colocation, and data center management.",;
+      price: "From $8,000/month",;
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
       icon: Database;
     };
@@ -40,8 +40,8 @@ const InfrastructureServices = () => {
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
     },
     {
-      name: "Network Security",
-      description: "Advanced network protection and monitoring",
+      name: "Network Security",;
+      description: "Advanced network protection and monitoring",;
       icon: Shield,;
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
     };
@@ -49,8 +49,8 @@ const InfrastructureServices = () => {
 
   const benefits = [
     "Improved system reliability and uptime",
-    "Enhanced security and compliance",
-    "Scalable infrastructure that grows with your business",
+    "Enhanced security and compliance",;
+    "Scalable infrastructure that grows with your business",;
     "Reduced operational costs and complexity",;
     "Expert support and maintenance",;
     "Future-proof technology solutions";
@@ -212,8 +212,8 @@ const InfrastructureServices = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

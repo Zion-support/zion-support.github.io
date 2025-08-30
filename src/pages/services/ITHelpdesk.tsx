@@ -3,14 +3,14 @@ import { LifeBuoy, Ticket, Cpu, Shield, Clock, ArrowRight, Check, Phone, Mail } 
 export default function ITHelpdesk() {
   const features = [
     'Ticketing with SLA and automation rules',
-    'Self-service knowledge base and chat widget',
-    'Asset inventory and remote assistance',
+    'Self-service knowledge base and chat widget',;
+    'Asset inventory and remote assistance',;
     'Email-to-ticket and status notifications',;
     'Multi-tenant client portals',;
     'Reports: MTTR, CSAT, backlog trends';
   ];
 
-  const pricing = [
+  const pricing = [;
     { name: 'Basic', price: '$199/mo', details: ['3 agents', 'Email support', 'KB'] },;
     { name: 'Team', price: '$499/mo', details: ['10 agents', 'SLAs', 'Automation'] },;
     { name: 'Business', price: '$999/mo', details: ['25 agents', 'SSO', 'Advanced reports'] },;
@@ -71,8 +71,8 @@ export default function ITHelpdesk() {
         <div className="mt-10 text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>
-            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>
-          </div>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

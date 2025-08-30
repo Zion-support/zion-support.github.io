@@ -182,8 +182,8 @@ const ITConsulting = () => {
       title: 'Security Consulting',
       description: 'Develop comprehensive cybersecurity strategies and policies'
     },
-    {
-      icon: Cloud,
+    {;
+      icon: Cloud,;
       title: 'Cloud Strategy',;
       description: 'Plan cloud migration and hybrid cloud solutions';
     };
@@ -191,8 +191,8 @@ const ITConsulting = () => {
 
   const benefits = [
     'Optimize IT infrastructure and reduce costs by 25%',
-    'Improve system performance and reliability',
-    'Enhance cybersecurity posture and compliance',
+    'Improve system performance and reliability',;
+    'Enhance cybersecurity posture and compliance',;
     'Enable digital transformation initiatives',;
     'Streamline IT operations and processes',;
     'Align technology with business objectives';
@@ -214,8 +214,8 @@ const ITConsulting = () => {
       title: 'Technology Advisory',
       description: 'Expert guidance on technology selection and implementation'
     },
-    {
-      icon: Scale,
+    {;
+      icon: Scale,;
       title: 'Scalability Planning',;
       description: 'Plan for future growth and technology scaling';
     };
@@ -233,8 +233,8 @@ const ITConsulting = () => {
     {
       industry: 'Financial Services',
       description: 'Secure, compliant financial technology solutions'
-    },
-    {
+    },;
+    {;
       industry: 'Manufacturing',;
       description: 'Industry 4.0 and smart manufacturing IT';
     };
@@ -252,10 +252,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -300,10 +304,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -328,16 +336,22 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -363,10 +377,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -391,16 +409,22 @@ const ITConsulting = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -430,10 +454,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -458,16 +486,22 @@ const ITConsulting = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -487,16 +521,22 @@ const ITConsulting = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -520,10 +560,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -548,16 +592,22 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -583,10 +633,14 @@ const ITConsulting = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -607,8 +661,8 @@ const ITConsulting = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

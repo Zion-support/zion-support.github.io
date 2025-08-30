@@ -79,9 +79,13 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -117,9 +121,13 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
@@ -138,14 +146,20 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
@@ -167,9 +181,13 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
@@ -187,9 +205,13 @@ export default function RetailSolutions() {
   x: -20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -207,9 +229,13 @@ export default function RetailSolutions() {
   x: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
@@ -233,9 +259,13 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
@@ -254,14 +284,20 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">
@@ -280,9 +316,13 @@ export default function RetailSolutions() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>

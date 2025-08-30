@@ -39,6 +39,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   y: 30 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -59,6 +61,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             
 
 
+
+
 }
         }
     };
@@ -75,12 +79,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             duration: 20,
             repeat: Infinity,
   ease: "linear"
         
+
+
 
 
 }}/>
@@ -93,12 +101,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             duration: 25,
             repeat: Infinity,
   ease: "linear"
         
+
+
 
 
 }}/>
@@ -111,12 +123,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             duration: 18,
             repeat: Infinity,
   ease: "linear"
         
+
+
 
 
 }}/>
@@ -134,6 +150,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }}/>
       </div>
 
@@ -147,6 +165,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   ease: "linear" 
 
 
+
+
 }} className="mr-2">
               🚀
             </motion.span>
@@ -158,6 +178,8 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
   { type: "spring",
   stiffness: 300 
+
+
 
 
 }}>
@@ -215,12 +237,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             duration: 8,
             repeat: Infinity,
   ease: "easeInOut"
         
+
+
 
 
 }}/>
@@ -233,12 +259,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             duration: 12,
             repeat: Infinity,
   ease: "easeInOut"
         
+
+
 
 
 }}/>
@@ -252,12 +282,16 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         
 
 
+
+
 }} transition = {
   {
             type: "spring",
             stiffness: 500,
   damping: 30
         
+
+
 
 
 }}/>

@@ -67,8 +67,8 @@ export default function AIEmployeePerformanceAnalytics() {
       title: "Predictive Performance Insights",
       description: "AI-powered predictions for employee potential, retention risk, and career development opportunities."
     },
-    {
-      icon: Activity,
+    {;
+      icon: Activity,;
       title: "Engagement & Wellness Monitoring",;
       description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being.";
     };
@@ -100,8 +100,8 @@ export default function AIEmployeePerformanceAnalytics() {
       title: "Enhanced Productivity",
       description: "Optimize team performance through data-driven insights and targeted development programs."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Time Savings",;
       description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month.";
     };
@@ -158,8 +158,8 @@ export default function AIEmployeePerformanceAnalytics() {
         "Custom reporting",
         "On-premise deployment",
         "SLA guarantees",
-        "24/7 support"
-      ],
+        "24/7 support";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -191,8 +191,8 @@ export default function AIEmployeePerformanceAnalytics() {
       description: "Monitor production efficiency, quality metrics, and operational performance across manufacturing teams",
       icon: Settings
     },
-    {
-      industry: "Finance",
+    {;
+      industry: "Finance",;
       description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
       icon: DollarSign;
     };
@@ -218,8 +218,8 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       name: "Learning Platforms",
       platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]
-    },
-    {
+    },;
+    {;
       name: "Time Tracking",;
       platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"];
     };
@@ -241,8 +241,8 @@ export default function AIEmployeePerformanceAnalytics() {
       label: "Time Savings",
       description: "Reduction in manual performance review time"
     },
-    {
-      metric: "3.2x",
+    {;
+      metric: "3.2x",;
       label: "ROI",;
       description: "Return on investment for performance analytics";
     };
@@ -260,8 +260,8 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       category: "Collaboration Metrics",
       indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]
-    },
-    {
+    },;
+    {;
       category: "Growth Metrics",;
       indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"];
     };
@@ -285,10 +285,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -334,16 +338,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -374,10 +384,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -402,16 +416,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -452,10 +472,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -480,16 +504,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -522,10 +552,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -550,16 +584,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -600,10 +640,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -628,16 +672,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -696,10 +746,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -724,16 +778,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -774,10 +834,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -802,16 +866,22 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -846,10 +916,14 @@ export default function AIEmployeePerformanceAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -872,8 +946,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

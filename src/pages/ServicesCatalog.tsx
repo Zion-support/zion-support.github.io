@@ -78,8 +78,8 @@ const ServicesCatalog: React.FC = () => {;
       <section className="container mx-auto px-4 pb-20">
         <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">
           <h3 className="text-xl font-semibold mb-2">Contact Us</h3>
-          <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-          <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>
+          <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
+          <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>;
         </div>;
       </section>;
     </div>;

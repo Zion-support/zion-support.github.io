@@ -193,8 +193,8 @@ export default function Contact() {
 							</Link>
 						</div>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

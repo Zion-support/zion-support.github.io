@@ -26,6 +26,8 @@ export const BundleAnalyzer = () => {
                     
 
 
+
+
 },
                     {
                         name: 'animation-vendor',
@@ -152,9 +154,13 @@ export const BundleAnalyzer = () => {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
+
 
 
 }} exit = {
@@ -162,9 +168,13 @@ export const BundleAnalyzer = () => {
   scale: 0.9 
 
 
+
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
+
 
 
 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">

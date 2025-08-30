@@ -34,8 +34,8 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
     }
   };
-  const formatDate = (date: Date) => {
-    return new Date(date).toLocaleDateString('en-US', {
+  const formatDate = (date: Date) => {;
+    return new Date(date).toLocaleDateString('en-US', {;
       year: 'numeric',;
       month: 'short',;
       day: 'numeric';
@@ -118,8 +118,8 @@ export function InstanceCard({ instance }: InstanceCardProps) {
             stroke="currentColor" 
             viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />;
+          </svg>;
         </div>;
       </div>;
     </div>;

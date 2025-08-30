@@ -23,8 +23,8 @@ export default function ServicesComparisonPage() {
           </div>
           
           <div className="mt-16 text-center text-white">
-            <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>
-          </div>
+            <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>;
+          </div>;
         </div>;
       </div>;
     </>;

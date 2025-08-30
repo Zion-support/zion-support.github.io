@@ -75,6 +75,8 @@ const UltimateServicesShowcase2026 = () => {
         
 
 
+
+
 };
         return icons[category] || '🚀';
     };
@@ -90,6 +92,8 @@ const UltimateServicesShowcase2026 = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
+
 
 
 },
@@ -111,9 +115,13 @@ const UltimateServicesShowcase2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -127,14 +135,20 @@ const UltimateServicesShowcase2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}>
@@ -149,14 +163,20 @@ const UltimateServicesShowcase2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}>
@@ -232,9 +252,13 @@ const UltimateServicesShowcase2026 = () => {
   y: -5 
 
 
+
+
 }} transition = {
   { type: "spring",
   stiffness: 300 
+
+
 
 
 }}>
@@ -337,9 +361,13 @@ const UltimateServicesShowcase2026 = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>

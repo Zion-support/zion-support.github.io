@@ -51,8 +51,8 @@ export default function MicroSAASSolutions() {
       features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+      title: "Analytics & Reporting",;
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
     };
@@ -74,8 +74,8 @@ export default function MicroSAASSolutions() {
       description: "Reduced infrastructure costs with cloud-native solutions",
       icon: BarChart3
     },
-    {
-      title: "Security",
+    {;
+      title: "Security",;
       description: "Enterprise-grade security and compliance standards",;
       icon: Shield;
     };
@@ -107,8 +107,8 @@ export default function MicroSAASSolutions() {
       description: "E-commerce and point-of-sale solutions",
       icon: Building
     },
-    {
-      name: "Real Estate",
+    {;
+      name: "Real Estate",;
       description: "Property management and client portals",;
       icon: Building;
     };
@@ -138,8 +138,8 @@ export default function MicroSAASSolutions() {
     },
     {
       step: 4,
-      title: "Testing & Deployment",
-      description: "Comprehensive testing and production deployment",
+      title: "Testing & Deployment",;
+      description: "Comprehensive testing and production deployment",;
       icon: Rocket,;
       duration: "2-4 weeks";
     };
@@ -346,8 +346,8 @@ export default function MicroSAASSolutions() {
                   Get Consultation
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

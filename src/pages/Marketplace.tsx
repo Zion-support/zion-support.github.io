@@ -8,8 +8,8 @@ const Marketplace: React.FC = () => (
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>
 				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>
-				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>
-				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>
+				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>;
+				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>;
 			</div>;
 		</div>;
 	</div>;

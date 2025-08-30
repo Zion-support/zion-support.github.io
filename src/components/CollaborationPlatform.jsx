@@ -57,6 +57,8 @@ export function CollaborationPlatform() {
             
 
 
+
+
 };
             setChatMessages(prev => [...prev, message]);
             setNewMessage('');

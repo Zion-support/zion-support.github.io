@@ -5,8 +5,8 @@ export default function AISecurityRiskManagement() {
     'AI-powered security risk management optimization',
     'Intelligent risk assessment and analysis',
     'Automated risk identification and prioritization',
-    'Predictive analytics for risk prediction',
-    'Smart risk framework management',
+    'Predictive analytics for risk prediction',;
+    'Smart risk framework management',;
     'AI-driven risk automation and orchestration',;
     'Real-time risk performance tracking',;
     'Custom AI models for risk applications';
@@ -23,8 +23,8 @@ export default function AISecurityRiskManagement() {
       price: '$1,199/mo', 
       details: ['Up to 500 risk assessments/month', 'Advanced AI features', 'Enhanced risk management', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,999/mo', ;
       details: ['Unlimited risk assessments', 'Custom AI models', 'Full risk management suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityRiskManagement() {
 
   const useCases = [
     'Security risk management optimization',
-    'Risk assessment and analysis',
-    'Risk identification and prioritization',
+    'Risk assessment and analysis',;
+    'Risk identification and prioritization',;
     'Risk framework management and automation',;
     'Risk automation and orchestration',;
     'Risk scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityRiskManagement() {
 
   const benefits = [
     'Improve security risk management performance by 50-80%',
-    'Reduce risk assessment time by 40-70%',
-    'Cut security risk management costs by 35-65%',
+    'Reduce risk assessment time by 40-70%',;
+    'Cut security risk management costs by 35-65%',;
     'Enhance security risk management reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security risk management operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityRiskManagement() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityRiskManagement() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

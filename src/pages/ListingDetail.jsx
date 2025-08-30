@@ -64,6 +64,8 @@ export default function ListingDetail() {
   index === selectedImageIndex ? "border-zion-purple" : "border-transparent")
 
 
+
+
 }>
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
                       </div>))}
@@ -133,6 +135,8 @@ export default function ListingDetail() {
   i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")
 
 
+
+
 }/>))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
@@ -157,6 +161,8 @@ export default function ListingDetail() {
                     title: "Payment Processing",
   description: "Redirecting to secure checkout..."
                 
+
+
 
 
 });

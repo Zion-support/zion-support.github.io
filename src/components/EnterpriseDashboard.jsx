@@ -283,14 +283,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -301,9 +307,13 @@ export const EnterpriseDashboard = () => {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -412,14 +422,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -462,14 +478,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -494,9 +516,13 @@ export const EnterpriseDashboard = () => {
   x: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -549,14 +575,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -580,9 +612,13 @@ export const EnterpriseDashboard = () => {
   x: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
@@ -630,14 +666,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">
@@ -658,9 +700,13 @@ export const EnterpriseDashboard = () => {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">
@@ -711,14 +757,20 @@ export const EnterpriseDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }} className="space-y-6">

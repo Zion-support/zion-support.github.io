@@ -40,8 +40,8 @@ const features = [
   "Scalable Infrastructure",
   "Custom Integrations",
   "White-label Solutions",
-  "Comprehensive Documentation",
-  "24/7 Technical Support",
+  "Comprehensive Documentation",;
+  "24/7 Technical Support",;
   "99.9% Uptime Guarantee",;
   "SOC 2 Type II Compliant",;
   "30-Day Money Back Guarantee";
@@ -63,8 +63,8 @@ const benefits = [
     title: "Proven ROI",
     description: "Average 300% ROI within 6 months of implementation"
   },
-  {
-    icon: <CheckCircle className="h-6 w-6"/>,
+  {;
+    icon: <CheckCircle className="h-6 w-6"/>,;
     title: "Quality Guaranteed",;
     description: "30-day money-back guarantee with free migration support";
   };
@@ -74,8 +74,12 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
+
 
 
 };
@@ -367,14 +371,16 @@ export function ComprehensiveServicesShowcase2027() {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;
   );
 }
 
+export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

@@ -5,8 +5,8 @@ export default function AISecuritySupport() {
     'AI-powered security support optimization',
     'Intelligent support strategy management and execution',
     'Automated security issue resolution and assistance',
-    'Predictive analytics for support needs',
-    'Smart support framework management',
+    'Predictive analytics for support needs',;
+    'Smart support framework management',;
     'AI-driven support automation and orchestration',;
     'Real-time support performance tracking',;
     'Custom AI models for support applications';
@@ -23,8 +23,8 @@ export default function AISecuritySupport() {
       price: '$799/mo', 
       details: ['Up to 200 support tickets/month', 'Advanced AI features', 'Enhanced support', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited support tickets', 'Custom AI models', 'Full support suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecuritySupport() {
 
   const useCases = [
     'Security support optimization',
-    'Support strategy management and execution',
-    'Security issue resolution and assistance',
+    'Support strategy management and execution',;
+    'Security issue resolution and assistance',;
     'Support framework management and automation',;
     'Support automation and orchestration',;
     'Support scaling and management';
@@ -41,8 +41,8 @@ export default function AISecuritySupport() {
 
   const benefits = [
     'Improve security support performance by 50-80%',
-    'Reduce support resolution time by 40-70%',
-    'Cut security support costs by 35-65%',
+    'Reduce support resolution time by 40-70%',;
+    'Cut security support costs by 35-65%',;
     'Enhance security support reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security support operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecuritySupport() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecuritySupport() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

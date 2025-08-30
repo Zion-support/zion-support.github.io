@@ -314,8 +314,8 @@ export const real2036ITServices = [
     ],
     useCases: [
       'Data center recovery',
-      'Cloud recovery',
-      'Application recovery',
+      'Cloud recovery',;
+      'Application recovery',;
       'Business continuity';
     ];
   };

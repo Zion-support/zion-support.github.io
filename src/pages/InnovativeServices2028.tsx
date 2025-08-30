@@ -106,10 +106,14 @@ export default function InnovativeServices2028() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,16 +211,22 @@ export default function InnovativeServices2028() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -281,16 +291,22 @@ export default function InnovativeServices2028() {
   height: 0 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -379,10 +395,14 @@ export default function InnovativeServices2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -407,16 +427,22 @@ export default function InnovativeServices2028() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -479,10 +505,14 @@ export default function InnovativeServices2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -528,8 +558,8 @@ export default function InnovativeServices2028() {
                   Schedule a Call
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </div>;
       </section>;
     </div>;

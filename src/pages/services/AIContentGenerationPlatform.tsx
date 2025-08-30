@@ -57,8 +57,8 @@ export default function AIContentGenerationPlatform() {
       benefits: ['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
     },
     {
-      icon: Users,
-      title: 'Team Collaboration',
+      icon: Users,;
+      title: 'Team Collaboration',;
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;
       benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
     };
@@ -84,8 +84,8 @@ export default function AIContentGenerationPlatform() {
       metrics: ['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
     },
     {
-      industry: 'Corporate Communications',
-      title: 'Business Content',
+      industry: 'Corporate Communications',;
+      title: 'Business Content',;
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
       metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
     };
@@ -111,8 +111,8 @@ export default function AIContentGenerationPlatform() {
       value: '95%+'
     },
     {
-      icon: TrendingUp,
-      title: 'Scalability',
+      icon: TrendingUp,;
+      title: 'Scalability',;
       description: 'Scale content production without proportional increases in resources.',;
       value: '10x';
     };
@@ -126,8 +126,8 @@ export default function AIContentGenerationPlatform() {
     'Computer Vision',
     'Speech Synthesis',
     'Machine Learning',
-    'Cloud Computing',
-    'Real-time Processing',
+    'Cloud Computing',;
+    'Real-time Processing',;
     'API Integration',;
     'Content Management',;
     'Analytics & Insights';
@@ -182,8 +182,8 @@ export default function AIContentGenerationPlatform() {
         'Highest quality output',
         'Advanced analytics',
         'Custom integrations',
-        'SLA guarantees'
-      ],
+        'SLA guarantees';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -205,10 +205,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -254,16 +258,22 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -298,10 +308,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -329,16 +343,22 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -372,10 +392,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -402,16 +426,22 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -448,10 +478,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -478,16 +512,22 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -514,10 +554,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -544,16 +588,22 @@ export default function AIContentGenerationPlatform() {
   scale: 0.9 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -575,10 +625,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -605,16 +659,22 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -675,10 +735,14 @@ export default function AIContentGenerationPlatform() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -713,8 +777,8 @@ export default function AIContentGenerationPlatform() {
             <div className="mt-6 text-slate-400">
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>
               <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">ziontechgroup.com</a></p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -149,8 +149,8 @@ const categories = [
   'AI & Machine Learning',
   'Emerging Tech',
   'Cybersecurity',
-  'Cloud & DevOps',
-  'Blockchain & Web3',
+  'Cloud & DevOps',;
+  'Blockchain & Web3',;
   'Digital Transformation',;
   'Micro SAAS',;
   'Healthcare AI';
@@ -188,8 +188,8 @@ export const EnhancedServiceShowcase: React.FC = () => {;
       <Star
         key={i}
         className={`w-4 h-4 ${
-          i < Math.floor(rating) 
-            ? 'text-yellow-400 fill-current' 
+          i < Math.floor(rating) ;
+            ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';
         }`};
       />;
@@ -206,10 +206,14 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
 
 
 } : { opacity: 0, y: 20 }}
@@ -234,16 +238,22 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -273,6 +283,8 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   delay: 0.4 
 
 
+
+
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -285,16 +297,22 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -305,6 +323,8 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                   type: "spring",
   stiffness: 100
                 
+
+
 
 
 }}
@@ -387,16 +407,22 @@ export const EnhancedServiceShowcase: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -425,8 +451,8 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

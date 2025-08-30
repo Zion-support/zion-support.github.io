@@ -10,6 +10,8 @@ export function EnhancedCard({ children, className, variant = 'default', hover =
     
 
 
+
+
 };
     const hoverClasses = hover ? 'hover:shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]' : '';
     const interactiveClasses = onClick || href ? 'cursor-pointer' : '';
@@ -30,6 +32,8 @@ export function EnhancedCardHeader({ children, className }) {
   className)
 
 
+
+
 }>
       {children}
     </div>);
@@ -41,6 +45,8 @@ export function EnhancedCardContent({ children, className }) {
   className)
 
 
+
+
 }>
       {children}
     </div>);
@@ -50,6 +56,8 @@ export function EnhancedCardFooter({ children, className }) {
     return (<div className = {
   cn('p-6 pt-0',
   className)
+
+
 
 
 }>

@@ -84,8 +84,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
       path: '/services/ai-sales-copilot',
       icon: Brain,
       category: 'Sales AI',
-      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],
-      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],
+      features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],;
+      benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],;
       color: 'from-pink-500 to-rose-600',;
       glowColor: 'pink';
     };
@@ -94,8 +94,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -106,11 +106,13 @@ export const EnhancedServicesShowcase: React.FC = () => {
   y: 20 
 
 
+
+
 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
+      y: 0,;
+      transition: {;
         duration: 0.6;
       };
     };
@@ -133,10 +135,14 @@ export const EnhancedServicesShowcase: React.FC = () => {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -159,6 +165,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
           viewport = {
   { once: true,
   margin: "-100px" 
+
+
 
 
 }}
@@ -249,10 +257,14 @@ export const EnhancedServicesShowcase: React.FC = () => {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -260,6 +272,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -280,8 +294,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
             </a>
           </div>
           <div className="mt-6 text-zion-slate-light">
-            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>
-          </div>
+            Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

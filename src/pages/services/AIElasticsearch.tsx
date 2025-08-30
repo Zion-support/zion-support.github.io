@@ -5,8 +5,8 @@ export default function AIElasticsearch() {
     'AI-powered Elasticsearch optimization',
     'Intelligent Elasticsearch management',
     'Automated Elasticsearch monitoring and alerting',
-    'Predictive analytics for Elasticsearch scaling',
-    'Smart Elasticsearch security and compliance',
+    'Predictive analytics for Elasticsearch scaling',;
+    'Smart Elasticsearch security and compliance',;
     'AI-driven Elasticsearch automation and orchestration',;
     'Real-time Elasticsearch analytics and insights',;
     'Custom AI models for Elasticsearch applications';
@@ -23,8 +23,8 @@ export default function AIElasticsearch() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Elasticsearch suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIElasticsearch() {
 
   const useCases = [
     'Elasticsearch optimization',
-    'Elasticsearch management',
-    'Performance monitoring and analytics',
+    'Elasticsearch management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Elasticsearch scaling and management';
@@ -41,8 +41,8 @@ export default function AIElasticsearch() {
 
   const benefits = [
     'Improve Elasticsearch performance by 50-80%',
-    'Reduce Elasticsearch query time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Elasticsearch query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Elasticsearch reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Elasticsearch operations efficiently';
@@ -50,8 +50,8 @@ export default function AIElasticsearch() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIElasticsearch() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

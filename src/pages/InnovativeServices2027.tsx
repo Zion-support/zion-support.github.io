@@ -92,10 +92,14 @@ export default function InnovativeServices2027() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -199,10 +203,14 @@ export default function InnovativeServices2027() {
   y: 30 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -211,10 +219,14 @@ export default function InnovativeServices2027() {
   delay: index * 0.1 
 
 
+
+
 }}
                   whileHover = {
   { y: -10,
   scale: 1.02 
+
+
 
 
 }}
@@ -338,8 +350,8 @@ export default function InnovativeServices2027() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
+              className="text-center py-16";
+            >;
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -364,10 +376,14 @@ export default function InnovativeServices2027() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -413,10 +429,14 @@ export default function InnovativeServices2027() {
   x: -30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -434,10 +454,14 @@ export default function InnovativeServices2027() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -455,10 +479,14 @@ export default function InnovativeServices2027() {
   x: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -469,8 +497,8 @@ export default function InnovativeServices2027() {
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </div>;
       </section>;
     </div>;

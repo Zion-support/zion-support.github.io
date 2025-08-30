@@ -44,8 +44,8 @@ export function EnhancedContact() {
     { value: 'general', label: 'General Inquiry' },
     { value: 'ai-solutions', label: 'AI Solutions' },
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },
-    { value: 'cybersecurity', label: 'Cybersecurity' },
-    { value: 'digital-transformation', label: 'Digital Transformation' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },;
+    { value: 'digital-transformation', label: 'Digital Transformation' },;
     { value: 'consulting', label: 'IT Consulting' },;
     { value: 'quantum-computing', label: 'Quantum Computing' },;
     { value: 'green-it', label: 'Green IT Solutions' };
@@ -132,8 +132,8 @@ export function EnhancedContact() {
       description: 'Visit our office'
     },
     {
-      icon: Clock,
-      title: 'Business Hours',
+      icon: Clock,;
+      title: 'Business Hours',;
       value: 'Mon-Fri: 9AM-6PM EST',;
       description: 'Available during these hours';
     };
@@ -147,10 +147,14 @@ export function EnhancedContact() {
   scale: 0.8 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -165,6 +169,8 @@ export function EnhancedContact() {
   type: "spring" 
 
 
+
+
 }}
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >
@@ -177,10 +183,14 @@ export function EnhancedContact() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -196,10 +206,14 @@ export function EnhancedContact() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -215,18 +229,22 @@ export function EnhancedContact() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-          >
-            Send Another Message
+          >;
+            Send Another Message;
           </motion.button>;
         </div>;
       </motion.div>;
@@ -243,10 +261,14 @@ export function EnhancedContact() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -269,10 +291,14 @@ export function EnhancedContact() {
   x: -50 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -289,10 +315,14 @@ export function EnhancedContact() {
   x: -20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -318,10 +348,14 @@ export function EnhancedContact() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -357,10 +391,14 @@ export function EnhancedContact() {
   x: 50 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -384,6 +422,8 @@ export function EnhancedContact() {
   e.target.value)
 
 
+
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name 
@@ -400,16 +440,22 @@ export function EnhancedContact() {
   y: -10 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -436,6 +482,8 @@ export function EnhancedContact() {
   e.target.value)
 
 
+
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email 
@@ -452,16 +500,22 @@ export function EnhancedContact() {
   y: -10 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -489,6 +543,8 @@ export function EnhancedContact() {
   e.target.value)
 
 
+
+
 }
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
@@ -505,6 +561,8 @@ export function EnhancedContact() {
                     onChange = {
   (e) => handleInputChange('company',
   e.target.value)
+
+
 
 
 }
@@ -525,6 +583,8 @@ export function EnhancedContact() {
                   onChange = {
   (e) => handleInputChange('service',
   e.target.value)
+
+
 
 
 }
@@ -552,6 +612,8 @@ export function EnhancedContact() {
   e.target.value)
 
 
+
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message 
@@ -568,16 +630,22 @@ export function EnhancedContact() {
   y: -10 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -610,8 +678,8 @@ export function EnhancedContact() {
                   </>
                 )}
               </motion.button>
-            </form>
-          </motion.div>
+            </form>;
+          </motion.div>;
         </div>;
       </div>;
     </div>;

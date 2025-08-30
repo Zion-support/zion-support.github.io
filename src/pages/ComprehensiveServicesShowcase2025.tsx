@@ -98,8 +98,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
     { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s => s.category === 'Autonomous Vehicles').length, icon: '🚗' },
     { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s => s.category === 'Healthcare').length, icon: '🏥' },
-    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s => s.category === 'Financial Services').length, icon: '💰' },
-    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category === 'Marketing').length, icon: '📢' },
+    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s => s.category === 'Financial Services').length, icon: '💰' },;
+    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category === 'Marketing').length, icon: '📢' },;
     { id: 'Project Management', name: 'Project Management', count: allServices.filter(s => s.category === 'Project Management').length, icon: '📋' },;
     { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s => s.category === 'Business Intelligence').length, icon: '📊' },;
     { id: 'Software Development', name: 'Software Development', count: allServices.filter(s => s.category === 'Software Development').length, icon: '💻' };
@@ -127,7 +127,11 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         const innovationOrder = {
   'Breakthrough': 3, 'Revolutionary': 2,;
   ;
+  ;
+  ;
   'Advanced': 1 ;
+
+
 
 
 };
@@ -148,8 +152,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -160,12 +164,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: {;
+        duration: 0.5,;
         ease: "easeOut";
       };
     };
@@ -192,8 +198,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       'Metaverse': Globe,
       'Autonomous Vehicles': Car,
       'Healthcare': Heart,
-      'Financial Services': DollarSign,
-      'Marketing': MessageCircle,
+      'Financial Services': DollarSign,;
+      'Marketing': MessageCircle,;
       'Project Management': Clipboard,;
       'Business Intelligence': BarChart,;
       'Software Development': Code;
@@ -213,10 +219,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -332,6 +342,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   priceRange[1]])
 
 
+
+
 }
                   className="flex-1"
                 />
@@ -343,6 +355,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
+
 
 
 }
@@ -485,10 +499,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -528,16 +546,22 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -564,10 +588,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -624,16 +652,22 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -710,8 +744,8 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </div>;

@@ -52,8 +52,8 @@ const AIWorkflowOrchestrator = () => {
       title: "Advanced Analytics",
       description: "Comprehensive insights into workflow performance and optimization opportunities"
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Team Collaboration",;
       description: "Seamless team coordination with real-time updates and communication tools";
     };
@@ -61,8 +61,8 @@ const AIWorkflowOrchestrator = () => {
 
   const benefits = [
     "Reduce manual workflow processing by up to 80%",
-    "Improve decision accuracy with AI-powered insights",
-    "Scale operations without proportional cost increases",
+    "Improve decision accuracy with AI-powered insights",;
+    "Scale operations without proportional cost increases",;
     "Ensure compliance and audit trail maintenance",;
     "Real-time monitoring and alerting capabilities",;
     "Seamless integration with existing systems";
@@ -84,8 +84,8 @@ const AIWorkflowOrchestrator = () => {
       description: "Optimize production scheduling and quality control processes",
       icon: Settings
     },
-    {
-      title: "Retail",
+    {;
+      title: "Retail",;
       description: "Automate inventory management and customer service workflows",;
       icon: ShoppingCart;
     };
@@ -129,8 +129,8 @@ const AIWorkflowOrchestrator = () => {
         "Unlimited workflow executions",
         "Custom AI model training",
         "Dedicated security team",
-        "24/7 phone support",
-        "Custom development",
+        "24/7 phone support",;
+        "Custom development",;
         "On-premise deployment options";
       ];
     };
@@ -154,10 +154,14 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -198,16 +202,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -225,16 +235,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -261,16 +277,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -288,16 +310,22 @@ const AIWorkflowOrchestrator = () => {
   x: -20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.05 * index 
+
+
 
 
 }}
@@ -321,16 +349,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -348,16 +382,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -384,16 +424,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -411,16 +457,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -479,16 +531,22 @@ const AIWorkflowOrchestrator = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
+
 
 
 }}
@@ -508,8 +566,8 @@ const AIWorkflowOrchestrator = () => {
                   Schedule Demo
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

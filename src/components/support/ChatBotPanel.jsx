@@ -210,6 +210,8 @@ export function ChatBotPanel() {
   theme === "dark" ? "text-gray-300" : "text-gray-600")
 
 
+
+
 }>
             Suggested questions:
           </p>
@@ -222,6 +224,8 @@ export function ChatBotPanel() {
           <p className = {
   cn("text-sm mb-2 font-medium",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
+
+
 
 
 }>
@@ -242,6 +246,8 @@ export function ChatBotPanel() {
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
 
 
+
+
 }>
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -252,6 +258,8 @@ export function ChatBotPanel() {
   theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
+
+
 
 
 }/>

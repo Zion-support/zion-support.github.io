@@ -76,6 +76,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
               
 
 
+
+
 },
               "contactPoint": {
                 "@type": "ContactPoint",
@@ -96,8 +98,8 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
-          {children}
-        </main>
+          {children};
+        </main>;
         <ModernFooter />;
       </div>;
     </>;

@@ -5,8 +5,8 @@ export default function AISecurityOrchestration() {
     'AI-powered security orchestration optimization',
     'Intelligent security workflow management and execution',
     'Automated security process coordination and automation',
-    'Predictive analytics for orchestration needs',
-    'Smart orchestration framework management',
+    'Predictive analytics for orchestration needs',;
+    'Smart orchestration framework management',;
     'AI-driven orchestration automation and coordination',;
     'Real-time orchestration performance tracking',;
     'Custom AI models for orchestration applications';
@@ -23,8 +23,8 @@ export default function AISecurityOrchestration() {
       price: '$1,299/mo', 
       details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,299/mo', ;
       details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityOrchestration() {
 
   const useCases = [
     'Security orchestration optimization',
-    'Security workflow management and execution',
-    'Security process coordination and automation',
+    'Security workflow management and execution',;
+    'Security process coordination and automation',;
     'Orchestration framework management and automation',;
     'Orchestration automation and coordination',;
     'Orchestration scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityOrchestration() {
 
   const benefits = [
     'Improve security orchestration performance by 50-80%',
-    'Reduce orchestration completion time by 40-70%',
-    'Cut security orchestration costs by 35-65%',
+    'Reduce orchestration completion time by 40-70%',;
+    'Cut security orchestration costs by 35-65%',;
     'Enhance security orchestration reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security orchestration operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityOrchestration() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityOrchestration() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

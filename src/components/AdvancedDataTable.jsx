@@ -212,14 +212,20 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   height: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
@@ -232,6 +238,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <select onChange = {
   (e) => handleFilterChange(column.key, e.target.value,
   'contains')
+
+
 
 
 } className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
@@ -279,9 +287,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className={`flex items-center px-4 py-3 border-b border-gray-100 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${onRowClick ? 'cursor-pointer' : ''} ${selectedItems.has(String(item.id || JSON.stringify(item))) ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick = {
@@ -289,11 +301,15 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   index)
 
 
+
+
 }>
                 {enableSelection && (<div className="w-8 mr-2">
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {
   (e) => handleSelectionChange(item,
   e.target.checked)
+
+
 
 
 } onClick={(e) => e.stopPropagation()} className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
@@ -332,6 +348,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   prev - 1))
 
 
+
+
 } disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous
               </button>
@@ -348,6 +366,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
               <button onClick = {
   () => setCurrentPage(prev => Math.min(totalPages,
   prev + 1))
+
+
 
 
 } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">

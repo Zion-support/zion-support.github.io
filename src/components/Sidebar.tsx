@@ -137,8 +137,8 @@ export const Sidebar: React.FC = () => {;
     }
   ];
 
-  const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
+  const toggleSection = (sectionTitle: string) => {;
+    setExpandedSections(prev => ;
       prev.includes(sectionTitle) ;
         ? prev.filter(name => name !== sectionTitle);
         : [...prev, sectionTitle];
@@ -181,16 +181,22 @@ export const Sidebar: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -210,8 +216,8 @@ export const Sidebar: React.FC = () => {;
               >
                 <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
                 <span>{child.name}</span>
-              </Link>
-            ))}
+              </Link>;
+            ))};
           </motion.div>;
         )};
       </div>;
@@ -251,6 +257,8 @@ export const Sidebar: React.FC = () => {;
               transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
+
 
 
 }}
@@ -319,8 +327,8 @@ export const Sidebar: React.FC = () => {;
               className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
             >
               Get Started
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </div>;
       </div>;
     </>;

@@ -5,8 +5,8 @@ export default function AIInsurance() {
     'AI-powered risk assessment and underwriting automation',
     'Intelligent claims processing and fraud detection',
     'Automated policy management and customer service',
-    'Predictive analytics for risk modeling and pricing',
-    'Real-time customer behavior analysis and risk scoring',
+    'Predictive analytics for risk modeling and pricing',;
+    'Real-time customer behavior analysis and risk scoring',;
     'Smart document processing and compliance monitoring',;
     'Integration with major insurance management systems',;
     'Custom AI models for insurance-specific insights';
@@ -23,8 +23,8 @@ export default function AIInsurance() {
       price: '$1,299/mo', 
       details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Insurer', 
+    { ;
+      name: 'Large Insurer', ;
       price: '$3,999/mo', ;
       details: ['Unlimited policies', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIInsurance() {
 
   const useCases = [
     'Automated underwriting and risk assessment',
-    'Claims processing and fraud detection',
-    'Customer service and policy management',
+    'Claims processing and fraud detection',;
+    'Customer service and policy management',;
     'Risk modeling and pricing optimization',;
     'Compliance monitoring and reporting',;
     'Customer retention and cross-selling';
@@ -41,8 +41,8 @@ export default function AIInsurance() {
 
   const benefits = [
     'Reduce claims processing time by 60-80%',
-    'Improve fraud detection accuracy by 40-60%',
-    'Cut operational costs by 25-40%',
+    'Improve fraud detection accuracy by 40-60%',;
+    'Cut operational costs by 25-40%',;
     'Optimize pricing for maximum profitability',;
     'Enhance customer experience and satisfaction',;
     'Scale insurance operations efficiently';
@@ -50,8 +50,8 @@ export default function AIInsurance() {
 
   const industries = [
     'Property & Casualty Insurance',
-    'Life & Health Insurance',
-    'Auto Insurance',
+    'Life & Health Insurance',;
+    'Auto Insurance',;
     'Commercial Insurance',;
     'Reinsurance',;
     'Insurance Brokers';
@@ -165,8 +165,8 @@ export default function AIInsurance() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

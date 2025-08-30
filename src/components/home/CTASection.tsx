@@ -20,8 +20,8 @@ const CTASection: React.FC = () => {
       title: "Flexible Plans",
       description: "Scale up or down as your business grows"
     },
-    {
-      icon: Star,
+    {;
+      icon: Star,;
       title: "Proven Results",;
       description: "Trusted by industry leaders worldwide";
     };
@@ -44,10 +44,14 @@ const CTASection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -68,16 +72,22 @@ const CTASection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -93,16 +103,22 @@ const CTASection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -121,16 +137,22 @@ const CTASection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -145,16 +167,22 @@ const CTASection: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -178,16 +206,22 @@ const CTASection: React.FC = () => {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }}
@@ -220,6 +254,8 @@ const CTASection: React.FC = () => {
   delay: 1 
 
 
+
+
 }}
           viewport={{ once: true }}
         >
@@ -228,8 +264,8 @@ const CTASection: React.FC = () => {
             <div className="text-zion-cyan font-bold text-lg">Fortune 500</div>
             <div className="text-zion-blue font-bold text-lg">Startups</div>
             <div className="text-zion-purple font-bold text-lg">Enterprises</div>
-            <div className="text-zion-cyan font-bold text-lg">Government</div>
-          </div>
+            <div className="text-zion-cyan font-bold text-lg">Government</div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

@@ -63,7 +63,7 @@ export default function ComprehensiveServicesLanding2028() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
-  const allServices = [
+  const allServices = [;
     ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),;
     ...revolutionaryITInfrastructureServices2028.map(s => ({ ...s, type: 'IT Infrastructure' })),;
     ...revolutionaryAIServices2028.map(s => ({ ...s, type: 'AI Services' }));
@@ -89,15 +89,15 @@ export default function ComprehensiveServicesLanding2028() {
     {
       name: "Dr. Emily Rodriguez",
       role: "Research Director, BioTech Innovations",
-      company: "BioTech Innovations",
-      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
+      company: "BioTech Innovations",;
+      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
       rating: 5,;
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face";
     };
   ];
 
-  const stats = [
-    { number: "500+", label: "Successful Projects", icon: CheckCircle },
+  const stats = [;
+    { number: "500+", label: "Successful Projects", icon: CheckCircle },;
     { number: "15+", label: "Years of Innovation", icon: Award },;
     { number: "99.9%", label: "Client Satisfaction", icon: Star },;
     { number: "24/7", label: "Support Available", icon: Clock };
@@ -125,8 +125,8 @@ export default function ComprehensiveServicesLanding2028() {
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',
       'from-green-600 to-emerald-600',
-      'from-red-600 to-orange-600',
-      'from-indigo-600 to-purple-600',
+      'from-red-600 to-orange-600',;
+      'from-indigo-600 to-purple-600',;
       'from-yellow-600 to-orange-600',;
       'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
@@ -161,10 +161,14 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -182,16 +186,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -206,16 +216,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -252,16 +268,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -287,10 +309,14 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -312,16 +338,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -394,16 +426,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -430,10 +468,14 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -454,10 +496,14 @@ export default function ComprehensiveServicesLanding2028() {
   x: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -532,10 +578,14 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -555,16 +605,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -585,16 +641,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -615,16 +677,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -645,16 +713,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -675,16 +749,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -705,16 +785,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -741,16 +827,22 @@ export default function ComprehensiveServicesLanding2028() {
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }}
@@ -888,10 +980,14 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -911,16 +1007,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -945,16 +1047,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -979,16 +1087,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -1012,16 +1126,22 @@ export default function ComprehensiveServicesLanding2028() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -1033,8 +1153,8 @@ export default function ComprehensiveServicesLanding2028() {
               onClick={() => window.location.href = '/contact'}
             >
               Schedule a Consultation
-            </Button>
-          </motion.div>
+            </Button>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

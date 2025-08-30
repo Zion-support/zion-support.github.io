@@ -5,8 +5,8 @@ export default function AIDocumentIntelligence() {
     'Advanced OCR with 99.5% accuracy across 50+ languages',
     'Intelligent document classification and routing',
     'AI-powered data extraction from complex forms',
-    'Automated compliance checking and validation',
-    'Real-time document processing and indexing',
+    'Automated compliance checking and validation',;
+    'Real-time document processing and indexing',;
     'Secure cloud storage with enterprise-grade encryption',;
     'Custom workflow automation for document approval',;
     'Integration with major business applications';
@@ -23,8 +23,8 @@ export default function AIDocumentIntelligence() {
       price: '$399/mo', 
       details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$999/mo', ;
       details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIDocumentIntelligence() {
 
   const useCases = [
     'Invoice processing and expense management',
-    'Contract analysis and legal document review',
-    'Insurance claims processing and validation',
+    'Contract analysis and legal document review',;
+    'Insurance claims processing and validation',;
     'Healthcare records and medical documentation',;
     'Financial statements and compliance reports',;
     'HR documents and employee onboarding';
@@ -41,8 +41,8 @@ export default function AIDocumentIntelligence() {
 
   const benefits = [
     'Reduce manual data entry by 80-90%',
-    'Improve processing accuracy by 95%',
-    'Cut document processing costs by 60%',
+    'Improve processing accuracy by 95%',;
+    'Cut document processing costs by 60%',;
     'Accelerate approval workflows by 5x',;
     'Ensure 100% compliance with regulations',;
     'Scale operations without additional headcount';
@@ -144,8 +144,8 @@ export default function AIDocumentIntelligence() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -24,6 +24,8 @@ const InnovativeServicesShowcase = () => {
     
 
 
+
+
 };
     // Combine all services
     const allServices = [
@@ -48,6 +50,8 @@ const InnovativeServicesShowcase = () => {
             'Green Technology': <Leaf className="h-5 w-5"/>,
   'Digital Twin': <Cpu className="h-5 w-5"/>
         
+
+
 
 
 };

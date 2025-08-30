@@ -24,8 +24,8 @@ const API: React.FC = () => {
       auth: 'Required'
     },
     {
-      method: 'PUT',
-      path: '/api/v1/user/profile',
+      method: 'PUT',;
+      path: '/api/v1/user/profile',;
       description: 'Update user profile',;
       auth: 'Required';
     };
@@ -47,8 +47,8 @@ const API: React.FC = () => {
       title: 'Global CDN',
       description: 'Worldwide edge locations for fast access'
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: 'Real-time Data',;
       description: 'Live data synchronization across all endpoints';
     };
@@ -56,8 +56,8 @@ const API: React.FC = () => {
 
   const sdks = [
     { name: 'JavaScript/Node.js', icon: '🔷' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'Java', icon: '☕' },
+    { name: 'Python', icon: '🐍' },;
+    { name: 'Java', icon: '☕' },;
     { name: 'C#', icon: '🔷' },;
     { name: 'Go', icon: '🐹' },;
     { name: 'PHP', icon: '🐘' };
@@ -79,10 +79,14 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -127,10 +131,14 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -154,16 +162,22 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -189,10 +203,14 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,16 +234,22 @@ const API: React.FC = () => {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -265,10 +289,14 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -292,16 +320,22 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -334,10 +368,14 @@ const API: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -356,8 +394,8 @@ const API: React.FC = () => {
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Full Documentation
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

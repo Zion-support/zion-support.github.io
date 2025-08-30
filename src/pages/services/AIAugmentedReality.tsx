@@ -5,8 +5,8 @@ export default function AIAugmentedReality() {
     'AI-powered AR optimization',
     'Intelligent AR content management',
     'Automated AR monitoring and alerting',
-    'Predictive analytics for AR scaling',
-    'Smart AR security and compliance',
+    'Predictive analytics for AR scaling',;
+    'Smart AR security and compliance',;
     'AI-driven AR automation and orchestration',;
     'Real-time AR analytics and insights',;
     'Custom AI models for AR applications';
@@ -23,8 +23,8 @@ export default function AIAugmentedReality() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full AR suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIAugmentedReality() {
 
   const useCases = [
     'AR optimization',
-    'AR content management',
-    'Performance monitoring and analytics',
+    'AR content management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'AR scaling and management';
@@ -41,8 +41,8 @@ export default function AIAugmentedReality() {
 
   const benefits = [
     'Improve AR performance by 50-80%',
-    'Reduce AR development time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce AR development time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance AR reliability and scalability',;
     'Optimize resource utilization',;
     'Scale AR operations efficiently';
@@ -50,8 +50,8 @@ export default function AIAugmentedReality() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIAugmentedReality() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

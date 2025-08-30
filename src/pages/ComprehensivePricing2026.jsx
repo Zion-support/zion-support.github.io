@@ -52,6 +52,8 @@ const ComprehensivePricing2026 = () => {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -71,9 +73,13 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -87,14 +93,20 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}>
@@ -108,14 +120,20 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}>
@@ -134,14 +152,20 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}>
@@ -186,9 +210,13 @@ const ComprehensivePricing2026 = () => {
   y: -5 
 
 
+
+
 }} transition = {
   { type: "spring",
   stiffness: 300 
+
+
 
 
 }}>
@@ -294,9 +322,13 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
@@ -345,9 +377,13 @@ const ComprehensivePricing2026 = () => {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>

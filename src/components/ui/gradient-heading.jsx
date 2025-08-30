@@ -15,12 +15,16 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
     
 
 
+
+
 };
     const gradientClasses = {
   zion: 'bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent',
         cyber: 'bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent',
         quantum: 'bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 bg-clip-text text-transparent',
   custom: customColors ? `bg-gradient-to-r ${customColors.join(' ')
+
+
 
 
 } bg-clip-text text-transparent` : ''
@@ -31,14 +35,20 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   ease: "easeOut" 
+
+
 
 
 }}>

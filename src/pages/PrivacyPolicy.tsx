@@ -91,8 +91,8 @@ const PrivacyPolicy = () => {;
       content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
     },
     {
-      id: 'contact',
-      title: 'Contact Us',
+      id: 'contact',;
+      title: 'Contact Us',;
       icon: Mail,;
       content: `If you have any questions about this Privacy Policy or our privacy practices, please contact us using the information provided below.`;
     };
@@ -118,8 +118,8 @@ const PrivacyPolicy = () => {;
       retention: '1 year from collection'
     },
     {
-      category: 'Communication Data',
-      examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],
+      category: 'Communication Data',;
+      examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],;
       purpose: 'Customer support, service improvement',;
       retention: '3 years from last interaction';
     };
@@ -151,8 +151,8 @@ const PrivacyPolicy = () => {;
       description: 'Regular security training for all employees to ensure data protection awareness',
       icon: Users
     },
-    {
-      measure: 'Incident Response',
+    {;
+      measure: 'Incident Response',;
       description: 'Comprehensive incident response plan for handling security breaches',;
       icon: AlertTriangle;
     };
@@ -176,10 +176,14 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -221,16 +225,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -249,16 +259,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -285,16 +301,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -326,16 +348,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -353,16 +381,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -406,16 +440,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -433,16 +473,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -469,16 +515,22 @@ const PrivacyPolicy = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
+
 
 
 }}
@@ -510,8 +562,8 @@ const PrivacyPolicy = () => {;
                   Contact Privacy Team
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

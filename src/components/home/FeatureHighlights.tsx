@@ -27,8 +27,8 @@ const features = [
     title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements"
   },
-  {
-    icon: "📊",
+  {;
+    icon: "📊",;
     title: "Real-Time Analytics",;
     description: "Comprehensive insights and reporting to make data-driven decisions instantly";
   };
@@ -45,10 +45,14 @@ export function FeatureHighlights() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -73,10 +77,14 @@ export function FeatureHighlights() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -84,6 +92,8 @@ export function FeatureHighlights() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -110,10 +120,14 @@ export function FeatureHighlights() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -123,12 +137,14 @@ export function FeatureHighlights() {
   delay: 0.4 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

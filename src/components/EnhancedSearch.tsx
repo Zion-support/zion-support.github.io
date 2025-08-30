@@ -99,16 +99,16 @@ const searchData: SearchResult[] = [
 ];
 
 const categories = [
-  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },
-  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
+  { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },;
+  { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },;
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
   { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
 
 export function EnhancedSearch({ 
-  className = '',
-  placeholder = 'Search for AI services, quantum solutions...',
+  className = '',;
+  placeholder = 'Search for AI services, quantum solutions...',;
   onSearch,;
   variant = 'default';
 }: EnhancedSearchProps) {;
@@ -131,8 +131,8 @@ export function EnhancedSearch({
   const navigate = useNavigate();
 
   const popularSearches = [
-    'AI Business Intelligence',
-    'Cloud DevOps',
+    'AI Business Intelligence',;
+    'Cloud DevOps',;
     'Cybersecurity',;
     'Digital Transformation',;
     'IT Consulting';
@@ -255,8 +255,8 @@ export function EnhancedSearch({
   };
 
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {
-    setFilters(prev => ({
-      ...prev,
+    setFilters(prev => ({;
+      ...prev,;
       [filterType]: prev[filterType].includes(value);
         ? prev[filterType].filter(v => v !== value);
         : [...prev[filterType], value];
@@ -321,16 +321,22 @@ export function EnhancedSearch({
   y: -10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -364,16 +370,22 @@ export function EnhancedSearch({
   opacity: 0 
 
 
+
+
 }}
                   animate = {
   { height: 'auto',
   opacity: 1 
 
 
+
+
 }}
                   exit = {
   { height: 0,
   opacity: 0 
+
+
 
 
 }}
@@ -390,6 +402,8 @@ export function EnhancedSearch({
                             onClick = {
   () => toggleFilter('type',
   type)
+
+
 
 
 }
@@ -415,6 +429,8 @@ export function EnhancedSearch({
                             onClick = {
   () => toggleFilter('category',
   category.name)
+
+
 
 
 }
@@ -445,8 +461,8 @@ export function EnhancedSearch({
                         <Clock className="h-4 w-4" />
                         Recent Searches
                       </h4>
-                      <div className="space-y-2">
-                        {recentSearches.map((search, index) => (
+                      <div className="space-y-2">;
+                        {recentSearches.map((search, index) => (;
                           <button;
                             key={index};
                             onClick={() => {;
@@ -468,8 +484,8 @@ export function EnhancedSearch({
                       <TrendingUp className="h-4 w-4" />
                       Popular Searches
                     </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {popularSearches.map((search, index) => (
+                    <div className="flex flex-wrap gap-2">;
+                      {popularSearches.map((search, index) => (;
                         <button;
                           key={index};
                           onClick={() => {;
@@ -534,8 +550,8 @@ export function EnhancedSearch({
                   </p>
                 </div>
               )}
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </div>;

@@ -39,8 +39,8 @@ const EcommercePersonalization: React.FC = () => {
             </ul>
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $249–$1,499/month</div>
           </div>
-        </div>
-
+        </div>;
+;
         <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
       </section>;
     </div>;

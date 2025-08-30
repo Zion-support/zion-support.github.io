@@ -101,6 +101,8 @@ export const EnhancedAbout = () => {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -114,6 +116,8 @@ export const EnhancedAbout = () => {
     const cardVariants = {
   hidden: { scale: 0.9,
   opacity: 0 
+
+
 
 
 },
@@ -137,6 +141,8 @@ export const EnhancedAbout = () => {
     const timelineVariants = {
   hidden: { opacity: 0,
   x: -50 
+
+
 
 
 },

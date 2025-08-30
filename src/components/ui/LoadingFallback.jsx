@@ -8,6 +8,8 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
     
 
 
+
+
 };
     const textSizes = {
   sm: "text-sm",
@@ -16,11 +18,15 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
     
 
 
+
+
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
+
 
 
 }}>
@@ -41,12 +47,16 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
             
 
 
+
+
 }} transition = {
   {
                 duration: 1.4,
                 repeat: Infinity,
   delay: index * 0.2
             
+
+
 
 
 }}/>))}

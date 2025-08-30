@@ -10,8 +10,8 @@ interface ResponsiveState {
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
     screenWidth: 1920,
-    screenHeight: 1080,
-    orientation: "landscape",
+    screenHeight: 1080,;
+    orientation: "landscape",;
     isMobile: false,;
     isTablet: false,;
     isDesktop: true,;
@@ -21,8 +21,8 @@ const useResponsive = (): ResponsiveState => {
       setState({
         screenWidth: window.innerWidth,
         screenHeight: window.innerHeight,
-        orientation:
-          window.innerWidth > window.innerHeight ? "landscape" : "portrait",
+        orientation:;
+          window.innerWidth > window.innerHeight ? "landscape" : "portrait",;
         isMobile: window.innerWidth < 768,;
         isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,;
         isDesktop: window.innerWidth >= 1024,;

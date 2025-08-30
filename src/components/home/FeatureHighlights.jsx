@@ -55,6 +55,8 @@ export function FeatureHighlights() {
   scale: 0.95 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -71,6 +73,8 @@ export function FeatureHighlights() {
   scale: 0.8 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -81,6 +85,8 @@ export function FeatureHighlights() {
     const techVariants = {
   hidden: { opacity: 0,
   x: -20 
+
+
 
 
 },
@@ -104,9 +110,13 @@ export function FeatureHighlights() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -128,6 +138,8 @@ export function FeatureHighlights() {
                 y: -10,
                 scale: 1.02,
   transition: { duration: 0.3 
+
+
 
 
 }
@@ -169,9 +181,13 @@ export function FeatureHighlights() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -201,9 +217,13 @@ export function FeatureHighlights() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -217,6 +237,8 @@ export function FeatureHighlights() {
   y: -2 
 
 
+
+
 }}>
                 {tech}
               </motion.div>))}
@@ -228,14 +250,20 @@ export function FeatureHighlights() {
   scale: 0.9 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.3 
+
+
 
 
 }}>

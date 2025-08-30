@@ -23,8 +23,8 @@ interface PerformanceAlert {
 export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fps: 0,
-    memory: 0,
-    loadTime: 0,
+    memory: 0,;
+    loadTime: 0,;
     networkLatency: 0,;
     cpuUsage: 0,;
     timestamp: Date.now();
@@ -233,8 +233,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       <motion.button
         onClick = {() => setIsVisible(true)}
         className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1 }};
+        whileTap={{ scale: 0.9 }};
       >;
         <Activity className="w-5 h-5 text-cyan-400" />;
       </motion.button>;
@@ -249,16 +249,22 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         exit = {
   { opacity: 0,
   y: 20 
+
+
 
 
 }}
@@ -331,16 +337,22 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   x: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }}
@@ -358,8 +370,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
                   <span>{alert.message}</span>
                 </motion.div>
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         )};
       </motion.div>;
     </AnimatePresence>;

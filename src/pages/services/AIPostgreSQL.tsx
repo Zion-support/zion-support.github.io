@@ -5,8 +5,8 @@ export default function AIPostgreSQL() {
     'AI-powered PostgreSQL query optimization',
     'Intelligent database indexing and partitioning',
     'Automated PostgreSQL performance monitoring',
-    'Predictive analytics for database scaling',
-    'Smart PostgreSQL security and compliance',
+    'Predictive analytics for database scaling',;
+    'Smart PostgreSQL security and compliance',;
     'AI-driven PostgreSQL automation and orchestration',;
     'Real-time PostgreSQL analytics and insights',;
     'Custom AI models for PostgreSQL applications';
@@ -23,8 +23,8 @@ export default function AIPostgreSQL() {
       price: '$599/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full PostgreSQL suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIPostgreSQL() {
 
   const useCases = [
     'PostgreSQL query optimization',
-    'Database indexing and partitioning',
-    'Performance monitoring and analytics',
+    'Database indexing and partitioning',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Database scaling and management';
@@ -41,8 +41,8 @@ export default function AIPostgreSQL() {
 
   const benefits = [
     'Improve query performance by 50-80%',
-    'Reduce storage costs by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce storage costs by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance database reliability and scalability',;
     'Optimize resource utilization',;
     'Scale PostgreSQL operations efficiently';
@@ -50,8 +50,8 @@ export default function AIPostgreSQL() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIPostgreSQL() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

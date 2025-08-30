@@ -7,8 +7,8 @@ export default function HealthcareSolutions() {
       <SEO title="Healthcare Solutions - Zion Tech Group" description="Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms." />
       <section className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-4">Healthcare Solutions</h1>
-        <p className="text-lg text-gray-300 max-w-3xl">
-          Accelerate outcomes with AI diagnostics, care management analytics, FHIR-based integrations, and HIPAA-compliant data flows.
+        <p className="text-lg text-gray-300 max-w-3xl">;
+          Accelerate outcomes with AI diagnostics, care management analytics, FHIR-based integrations, and HIPAA-compliant data flows.;
         </p>;
       </section>;
     </div>;

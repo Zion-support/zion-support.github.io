@@ -16,8 +16,8 @@ import {
 const Status: React.FC = () => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">System Status</h1>
+		<div className="text-center text-white">;
+			<h1 className="text-4xl font-bold mb-4">System Status</h1>;
 			<p className="text-xl text-gray-300">All systems are operational.</p>;
 		</div>;
 	</div>;

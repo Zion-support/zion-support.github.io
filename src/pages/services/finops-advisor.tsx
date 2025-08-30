@@ -414,8 +414,8 @@ export default function FinOpsAdvisor() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

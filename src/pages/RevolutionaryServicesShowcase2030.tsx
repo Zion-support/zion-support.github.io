@@ -143,8 +143,8 @@ export default function RevolutionaryServicesShowcase2030() {
       'Quantum Computing': <Zap className="w-6 h-6" />,
       'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
       'Blockchain & Web3': <Network className="w-6 h-6" />,
-      'Digital Twin': <Eye className="w-6 h-6" />,
-      'Space Technology': <Satellite className="w-6 h-6" />,
+      'Digital Twin': <Eye className="w-6 h-6" />,;
+      'Space Technology': <Satellite className="w-6 h-6" />,;
       'Sustainable Technology': <Leaf className="w-6 h-6" />,;
       'IT Infrastructure': <Server className="w-6 h-6" />,;
       'Emerging Technology': <Lightbulb className="w-6 h-6" />;
@@ -178,8 +178,8 @@ export default function RevolutionaryServicesShowcase2030() {
       'Quantum Computing': 'from-indigo-500 to-purple-500',
       'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',
-      'Digital Twin': 'from-blue-500 to-indigo-500',
-      'Space Technology': 'from-purple-500 to-pink-500',
+      'Digital Twin': 'from-blue-500 to-indigo-500',;
+      'Space Technology': 'from-purple-500 to-pink-500',;
       'Sustainable Technology': 'from-green-500 to-teal-500',;
       'IT Infrastructure': 'from-slate-500 to-gray-500',;
       'Emerging Technology': 'from-violet-500 to-purple-500';
@@ -234,10 +234,14 @@ export default function RevolutionaryServicesShowcase2030() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -400,16 +404,22 @@ export default function RevolutionaryServicesShowcase2030() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -531,10 +541,14 @@ export default function RevolutionaryServicesShowcase2030() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -558,10 +572,14 @@ export default function RevolutionaryServicesShowcase2030() {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -619,10 +637,14 @@ export default function RevolutionaryServicesShowcase2030() {
   x: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -696,16 +718,22 @@ export default function RevolutionaryServicesShowcase2030() {
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }}
@@ -822,8 +850,8 @@ export default function RevolutionaryServicesShowcase2030() {
                   Call Now
                 </a>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       )};
     </>;

@@ -37,8 +37,8 @@ export const enhancedInnovativeServices2027Categories = [
   'NeuroTech Solutions',
   'Fusion Energy Solutions',
   'OceanTech Solutions',
-  'AgriTech Solutions',
-  'Smart City Solutions',
+  'AgriTech Solutions',;
+  'Smart City Solutions',;
   'Digital Twin Solutions',;
   'Edge AI Solutions',;
   'Federated Learning Solutions';

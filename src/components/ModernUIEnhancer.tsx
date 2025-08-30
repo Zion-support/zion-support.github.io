@@ -311,8 +311,8 @@ export const ModernUIEnhancer: React.FC = () => {;
     // Animate particles
     const animateParticles = () => {
       setParticles(prev => prev.map(particle => ({
-        ...particle,
-        x: particle.x + particle.vx,
+        ...particle,;
+        x: particle.x + particle.vx,;
         y: particle.y + particle.vy,;
         vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,;
         vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy;
@@ -413,6 +413,8 @@ export const ModernUIEnhancer: React.FC = () => {;
   rotate: 5 
 
 
+
+
 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -433,16 +435,22 @@ export const ModernUIEnhancer: React.FC = () => {;
   scale: 0.95 
 
 
+
+
 }}
             animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0, y: 20,
   scale: 0.95 
+
+
 
 
 }}
@@ -651,6 +659,8 @@ export const ModernUIEnhancer: React.FC = () => {;
               
 
 
+
+
 }}
             />
           ))}
@@ -677,8 +687,10 @@ export const ModernUIEnhancer: React.FC = () => {;
             
 
 
-}}
-          />
+
+
+}};
+          />;
         </div>;
       )};
     </>;

@@ -5,8 +5,8 @@ export default function AISecurityAuditing() {
     'AI-powered security auditing optimization',
     'Intelligent auditing strategy management and execution',
     'Automated security compliance verification and reporting',
-    'Predictive analytics for auditing needs',
-    'Smart auditing framework management',
+    'Predictive analytics for auditing needs',;
+    'Smart auditing framework management',;
     'AI-driven auditing automation and orchestration',;
     'Real-time auditing performance tracking',;
     'Custom AI models for auditing applications';
@@ -23,8 +23,8 @@ export default function AISecurityAuditing() {
       price: '$1,499/mo', 
       details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityAuditing() {
 
   const useCases = [
     'Security auditing optimization',
-    'Auditing strategy management and execution',
-    'Security compliance verification and reporting',
+    'Auditing strategy management and execution',;
+    'Security compliance verification and reporting',;
     'Auditing framework management and automation',;
     'Auditing automation and orchestration',;
     'Auditing scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityAuditing() {
 
   const benefits = [
     'Improve security auditing performance by 50-80%',
-    'Reduce auditing completion time by 40-70%',
-    'Cut security auditing costs by 35-65%',
+    'Reduce auditing completion time by 40-70%',;
+    'Cut security auditing costs by 35-65%',;
     'Enhance security auditing reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security auditing operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityAuditing() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityAuditing() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

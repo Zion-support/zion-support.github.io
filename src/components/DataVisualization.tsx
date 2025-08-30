@@ -46,8 +46,8 @@ interface DataVisualizationProps {
 }
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
-  title = "Data Analytics Dashboard",
-  showMetrics = true,
+  title = "Data Analytics Dashboard",;
+  showMetrics = true,;
   showCharts = true,;
   showActions = true;
 }) => {;
@@ -95,8 +95,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     {
       title: 'Avg Session',
       value: '2m 47s',
-      change: 0.0,
-      changeType: 'neutral',
+      change: 0.0,;
+      changeType: 'neutral',;
       icon: <Activity className="w-5 h-5" />,;
       color: 'text-purple-400';
     };
@@ -110,8 +110,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     
     // Update chart data with new random values
     setChartData(prev = > ({
-      ...prev,
-      datasets: [{
+      ...prev,;
+      datasets: [{;
         ...prev.datasets[0],;
         data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
       }];
@@ -120,8 +120,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update metrics with new random values
     setMetrics(prev = > prev.map(metric => ({
       ...metric,
-      change: Math.random() > 0.5 ? 
-        (Math.random() * 20 - 10) : 
+      change: Math.random() > 0.5 ? ;
+        (Math.random() * 20 - 10) : ;
         (Math.random() * 15 - 7.5),;
       changeType: Math.random() > 0.6 ? 'increase' : ;
                  Math.random() > 0.3 ? 'decrease' : 'neutral';
@@ -161,10 +161,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         'rgba(239, 68, 68, 1)',
         'rgba(16, 185, 129, 1)',
         'rgba(245, 158, 11, 1)'
-      ],
-  borderWidth: 2
+      ],;
+  borderWidth: 2;
     ;
 ;
+
+
 
 }];
   };
@@ -178,10 +180,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
       borderColor: 'rgba(34, 221, 210, 1)',
       borderWidth: 3,
-      fill: true,
-  tension: 0.4
+      fill: true,;
+  tension: 0.4;
     ;
 ;
+
+
 
 }];
   };
@@ -234,8 +238,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           </div>
         )}
       </div>
-
-      {/* Metrics Cards */}
+;
+      {/* Metrics Cards */};
       {showMetrics && (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
           {metrics.map((metric, index) => {;
@@ -248,10 +252,14 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,8 +274,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     {icon}
                     <span>{Math.abs(metric.change).toFixed(1)}%</span>
                   </div>
-                </div>
-                
+                </div>;
+                ;
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>;
                 <p className="text-zinc-400 text-sm">{metric.title}</p>;
               </motion.div>;
@@ -326,16 +334,22 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   scale: 0.9 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                   exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }}
@@ -356,6 +370,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   duration: 0.8 
 
 
+
+
 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
                               style={{ maxHeight: '200px' }}
@@ -368,8 +384,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                       ))}
                     </div>
                   )}
-
-                  {activeChart === 'pie' && (
+;
+                  {activeChart === 'pie' && (;
                     <div className="relative w-64 h-64">;
                       <svg className="w-full h-full transform -rotate-90">;
                         {pieChartData.datasets[0].data.map((value, index) => {;
@@ -389,8 +405,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           return (
                             <path
                               key = {index}
-                              d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-                              fill={pieChartData.datasets[0].backgroundColor[index]}
+                              d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`};
+                              fill={pieChartData.datasets[0].backgroundColor[index]};
                               stroke={pieChartData.datasets[0].borderColor[index]};
                               strokeWidth="2";
                             />;
@@ -452,6 +468,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   lineChartData.datasets[0].data.map((value,
   index) => 
                             `${index * 85.7 + 42.85
+
+
 
 
 },${300 - (value / 100) * 300}`
@@ -518,8 +536,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <h4 className="font-medium text-white mb-2">Market Trends</h4>
             <p className="text-zinc-400 text-sm">
               Cloud solutions show strong growth potential with increasing enterprise adoption.
-            </p>
-          </div>
+            </p>;
+          </div>;
         </div>;
       </div>;
     </div>;

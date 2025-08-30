@@ -244,8 +244,8 @@ export default function SearchPage() {
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
     { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },;
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },;
     { id: 'blog', name: 'Blog Posts', icon: BookOpen, count: 0 },;
     { id: 'case-studies', name: 'Case Studies', icon: FileText, count: 0 },;
     { id: 'documentation', name: 'Documentation', icon: Code, count: 0 };
@@ -334,7 +334,7 @@ export default function SearchPage() {
   };
 
   // Calculate filter counts
-  filterOptions.forEach(filter = > {
+  filterOptions.forEach(filter = > {;
     filter.count = mockSearchResults.filter(result => ;
       result.category.toLowerCase().replace(/\s+/g, '-') === filter.id ||;
       result.type === filter.id;
@@ -352,10 +352,14 @@ export default function SearchPage() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -378,16 +382,22 @@ export default function SearchPage() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.1 
+
+
 
 
 }}
@@ -497,16 +507,22 @@ export default function SearchPage() {
   height: 0 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                   exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -551,10 +567,14 @@ export default function SearchPage() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -670,8 +690,8 @@ export default function SearchPage() {
                   </button>
                 </nav>
               </div>
-            )}
-          </div>
+            )};
+          </div>;
         </div>;
       </div>;
     </div>;

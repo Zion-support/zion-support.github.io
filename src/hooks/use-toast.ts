@@ -16,7 +16,11 @@ export function useToast() {
     const newToast: Toast = {
   id, title, description, variant,;
   ;
+  ;
+  ;
   duration ;
+
+
 
 
 };

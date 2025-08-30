@@ -5,8 +5,8 @@ export default function AITerraform() {
     'AI-powered Terraform optimization',
     'Intelligent Terraform management',
     'Automated Terraform monitoring and alerting',
-    'Predictive analytics for Terraform scaling',
-    'Smart Terraform security and compliance',
+    'Predictive analytics for Terraform scaling',;
+    'Smart Terraform security and compliance',;
     'AI-driven Terraform automation and orchestration',;
     'Real-time Terraform analytics and insights',;
     'Custom AI models for Terraform applications';
@@ -23,8 +23,8 @@ export default function AITerraform() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Terraform suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AITerraform() {
 
   const useCases = [
     'Terraform optimization',
-    'Terraform management',
-    'Performance monitoring and analytics',
+    'Terraform management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Terraform scaling and management';
@@ -41,8 +41,8 @@ export default function AITerraform() {
 
   const benefits = [
     'Improve Terraform performance by 50-80%',
-    'Reduce Terraform deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Terraform deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Terraform reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Terraform operations efficiently';
@@ -50,8 +50,8 @@ export default function AITerraform() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AITerraform() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

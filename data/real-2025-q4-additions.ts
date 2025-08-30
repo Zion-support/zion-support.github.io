@@ -42,8 +42,12 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
+
 
 
 };
@@ -275,8 +279,8 @@ export const real2025Q4Additions = [
       'Observability and cost caps',
       'SDKs for Node/Python'
     ],
-    popular: true,
-    icon: '🧠',
+    popular: true,;
+    icon: '🧠',;
     color: 'from-cyan-600 to-blue-700',;
     textColor: 'text-cyan-300',;
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,;

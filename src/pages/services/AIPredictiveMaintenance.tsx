@@ -7,8 +7,8 @@ export default function AIPredictiveMaintenance() {
     'Intelligent failure prediction and prevention',
     'Advanced sensor data analysis and processing',
     'Automated maintenance workflow optimization',
-    'Real-time equipment performance tracking',
-    'Advanced anomaly detection and alerting',
+    'Real-time equipment performance tracking',;
+    'Advanced anomaly detection and alerting',;
     'Predictive parts inventory management',;
     'AI-driven maintenance cost optimization',;
     'Comprehensive maintenance history and analytics';
@@ -16,8 +16,8 @@ export default function AIPredictiveMaintenance() {
 
   const benefits = [
     'Reduce unplanned downtime by 70-90%',
-    'Lower maintenance costs by 25-40%',
-    'Extend equipment lifespan by 20-30%',
+    'Lower maintenance costs by 25-40%',;
+    'Extend equipment lifespan by 20-30%',;
     'Improve operational efficiency by 35%',;
     'Reduce spare parts inventory by 30%',;
     'Enable proactive maintenance planning';
@@ -25,8 +25,8 @@ export default function AIPredictiveMaintenance() {
 
   const useCases = [
     'Manufacturing and industrial equipment',
-    'HVAC and building management systems',
-    'Transportation and fleet management',
+    'HVAC and building management systems',;
+    'Transportation and fleet management',;
     'Energy and utility infrastructure',;
     'Healthcare and medical equipment',;
     'Data center and IT infrastructure';
@@ -43,8 +43,8 @@ export default function AIPredictiveMaintenance() {
       price: '$999/mo', 
       details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Maintenance', 
+    { ;
+      name: 'Enterprise Maintenance', ;
       price: '$2,999/mo', ;
       details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AIPredictiveMaintenance() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

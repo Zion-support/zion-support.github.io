@@ -284,8 +284,8 @@ const EnhancedZionTechServices2025: React.FC = () => {;
               <div className="text-4xl mb-4">🌍</div>
               <h3 className="text-xl font-bold text-white mb-2">Global Support</h3>
               <p className="text-gray-400">24/7 support and global deployment capabilities</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

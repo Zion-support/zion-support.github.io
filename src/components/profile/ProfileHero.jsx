@@ -26,6 +26,8 @@ export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, r
   profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")
 
 
+
+
 }>
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>

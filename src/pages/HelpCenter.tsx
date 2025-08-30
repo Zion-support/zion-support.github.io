@@ -112,8 +112,8 @@ export default function HelpCenter() {
       color: 'from-yellow-500 to-orange-500',
       articles: [
         { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },
-        { title: 'Performance Issues', type: 'guide', readTime: '20 min' },
-        { title: 'Connection Problems', type: 'guide', readTime: '18 min' },
+        { title: 'Performance Issues', type: 'guide', readTime: '20 min' },;
+        { title: 'Connection Problems', type: 'guide', readTime: '18 min' },;
         { title: 'Data Sync Issues', type: 'guide', readTime: '22 min' };
       ];
     };
@@ -143,8 +143,8 @@ export default function HelpCenter() {
     },
     {
       title: 'Cloud Migration Best Practices',
-      duration: '28:20',
-      thumbnail: '/api/placeholder/300/200',
+      duration: '28:20',;
+      thumbnail: '/api/placeholder/300/200',;
       views: '3.1k',;
       rating: 4.8;
     };
@@ -178,8 +178,8 @@ export default function HelpCenter() {
     {
       icon: Users,
       title: 'Community Forum',
-      description: 'Connect with other users',
-      availability: '24/7',
+      description: 'Connect with other users',;
+      availability: '24/7',;
       responseTime: 'Varies',;
       action: 'Visit Forum';
     };
@@ -209,10 +209,14 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +259,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -282,16 +292,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -325,16 +341,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -374,16 +396,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -438,16 +466,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -465,16 +499,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -520,16 +560,22 @@ export default function HelpCenter() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -549,8 +595,8 @@ export default function HelpCenter() {
                   Schedule a Call
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

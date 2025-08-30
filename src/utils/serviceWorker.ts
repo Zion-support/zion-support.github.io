@@ -125,8 +125,8 @@ export class ServiceWorkerManager {
         <span>🔄 New version available</span>
         <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
           Update
-        </button>
-        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">
+        </button>;
+        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;
           ✕;
         </button>;
       </div>;

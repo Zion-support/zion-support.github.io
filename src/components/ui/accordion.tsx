@@ -11,8 +11,8 @@ interface AccordionProps {
 export function Accordion({ 
   children, 
   className = '', 
-  type = 'single',
-  defaultValue 
+  type = 'single',;
+  defaultValue ;
 }: AccordionProps) {;
   const [openItems, setOpenItems] = useState<string[]>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
@@ -22,7 +22,7 @@ export function Accordion({
     if (type === 'single') {;
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
-      setOpenItems(prev = > 
+      setOpenItems(prev = > ;
         prev.includes(value) ;
           ? prev.filter(item => item !== value);
           : [...prev, value];
@@ -32,8 +32,8 @@ export function Accordion({
 
   return (
     <div className = {`space-y-1 ${className}`}>
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
+      {React.Children.map(children, (child) => {;
+        if (React.isValidElement(child)) {;
           return React.cloneElement(child, { ;
             isOpen: openItems.includes(child.props.value),;
             onToggle: () => handleToggle(child.props.value);
@@ -58,8 +58,8 @@ export function AccordionItem({
   className = '',
   isOpen = false,
   onToggle
-}: AccordionItemProps) {
-  return (
+}: AccordionItemProps) {;
+  return (;
     <div className={`border-b border-gray-200 ${className}`}>;
       {React.Children.map(children, (child) => {;
         if (React.isValidElement(child)) {;
@@ -91,8 +91,8 @@ export function AccordionTrigger({
     >
       {children}
       <ChevronDown 
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-          isOpen ? 'rotate-180' : ''
+        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
+          isOpen ? 'rotate-180' : '';
         }`} ;
       />;
     </button>;

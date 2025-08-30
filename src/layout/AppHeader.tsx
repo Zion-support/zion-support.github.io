@@ -36,8 +36,8 @@ export function AppHeader() {
 
   const navigation = [
     { name: 'Home', href: '/', current: true },
-    { name: 'Services', href: '/services', current: false, hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },
+    { name: 'Services', href: '/services', current: false, hasDropdown: true },;
+    { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },;
     { name: 'Resources', href: '/resources', current: false, hasDropdown: true },;
     { name: 'About', href: '/about', current: false },;
     { name: 'Contact', href: '/contact', current: false },;
@@ -127,8 +127,8 @@ export function AppHeader() {
     { 
       name: 'Revolutionary Services 2030', 
       href: '/revolutionary-services-2030', 
-      icon: Rocket, 
-      description: 'Future Technology Solutions',
+      icon: Rocket, ;
+      description: 'Future Technology Solutions',;
       featured: true,;
       color: 'from-purple-500 to-pink-500';
     };
@@ -172,8 +172,8 @@ export function AppHeader() {
     },
     {
       name: 'Startup Solutions',
-      href: '/solutions',
-      icon: Rocket,
+      href: '/solutions',;
+      icon: Rocket,;
       description: 'Accelerate your startup growth',;
       featured: false;
     };
@@ -238,8 +238,8 @@ export function AppHeader() {
     },
     {
       name: 'Developers',
-      href: '/developers',
-      icon: Code,
+      href: '/developers',;
+      icon: Code,;
       description: 'Developer resources',;
       featured: false;
     };
@@ -251,8 +251,8 @@ export function AppHeader() {
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Careers', href: '/careers', icon: Users },
     { name: 'Partners', href: '/partners', icon: HeartHandshake },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },
-    { name: 'Community', href: '/community', icon: Users },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
+    { name: 'Community', href: '/community', icon: Users },;
     { name: 'Developers', href: '/developers', icon: Code },;
     { name: 'Privacy', href: '/privacy', icon: Shield },;
     { name: 'Terms', href: '/terms', icon: BookOpen },;
@@ -261,8 +261,12 @@ export function AppHeader() {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -297,8 +301,8 @@ export function AppHeader() {
             <nav className="hidden lg:flex items-center space-x-8">
               {navigation.map((item) => (
                 <div key={item.name} className="relative">
-                  {item.hasDropdown ? (
-                    <div className="relative">
+                  {item.hasDropdown ? (;
+                    <div className="relative">;
                       <button;
                         onClick={() => {;
                           if (item.name === 'Services') {;
@@ -628,8 +632,8 @@ export function AppHeader() {
               {/* Mobile Navigation */}
               <nav className="space-y-4">
                 {navigation.map((item) => (
-                  <div key={item.name}>
-                    {item.hasDropdown ? (
+                  <div key={item.name}>;
+                    {item.hasDropdown ? (;
                       <div>;
                         <button;
                           onClick={() => {;
@@ -753,8 +757,8 @@ export function AppHeader() {
         )}
       </header>
 
-      {/* Click outside to close dropdowns */}
-      {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (
+      {/* Click outside to close dropdowns */};
+      {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (;
         <div;
           className="fixed inset-0 z-40";
           onClick={() => {;

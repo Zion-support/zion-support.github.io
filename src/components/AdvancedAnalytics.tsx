@@ -68,7 +68,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     setSessionStart(Date.now());
 
     // Track page view
-    const trackPageView = () => {
+    const trackPageView = () => {;
       setAnalyticsData(prev => ({;
         ...prev,;
         pageViews: prev.pageViews + 1;
@@ -96,7 +96,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     };
 
     // Track click events
-    const trackClickEvents = () => {
+    const trackClickEvents = () => {;
       setAnalyticsData(prev => ({;
         ...prev,;
         clickEvents: prev.clickEvents + 1;
@@ -104,8 +104,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     };
 
     // Track form submissions
-    const trackFormSubmissions = (e: Event) => {
-      if (e.target instanceof HTMLFormElement) {
+    const trackFormSubmissions = (e: Event) => {;
+      if (e.target instanceof HTMLFormElement) {;
         setAnalyticsData(prev => ({;
           ...prev,;
           formSubmissions: prev.formSubmissions + 1;
@@ -218,8 +218,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
           { path: '/', views: 1250 },
           { path: '/services', views: 890 },
           { path: '/about', views: 456 },
-          { path: '/contact', views: 234 },
-          { path: '/blog', views: 189 }
+          { path: '/contact', views: 234 },;
+          { path: '/blog', views: 189 };
         ],;
         bounceRate: 35.2,;
         conversionRate: 8.7;
@@ -236,8 +236,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        title="Analytics Dashboard"
-        aria-label="Open analytics dashboard"
+        title="Analytics Dashboard";
+        aria-label="Open analytics dashboard";
       >;
         <BarChart3 className="w-6 h-6 text-white" />;
       </motion.button>;
@@ -252,16 +252,22 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
   x: 300 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
         exit = {
   { opacity: 0,
   x: 300 
+
+
 
 
 }}
@@ -423,8 +429,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
                 <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
                 <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </motion.div>;
     </AnimatePresence>;

@@ -7,8 +7,8 @@ export default function AICustomerExperienceSupport() {
     'AI-powered chatbot with 95% accuracy and natural language processing',
     'Intelligent ticket routing and priority classification',
     'Automated customer sentiment analysis and satisfaction tracking',
-    'Multi-channel support integration (email, chat, phone, social media)',
-    'Predictive customer behavior analysis and proactive support',
+    'Multi-channel support integration (email, chat, phone, social media)',;
+    'Predictive customer behavior analysis and proactive support',;
     'Personalized customer journey mapping and optimization',;
     'Real-time analytics and performance monitoring dashboard',;
     'Integration with CRM, helpdesk, and e-commerce platforms',;
@@ -16,8 +16,8 @@ export default function AICustomerExperienceSupport() {
 
   const benefits = [
     'Increase customer satisfaction scores by 35-50%',
-    'Reduce support response time by 80% with AI automation',
-    'Cut support costs by 40-60% through intelligent automation',
+    'Reduce support response time by 80% with AI automation',;
+    'Cut support costs by 40-60% through intelligent automation',;
     'Improve customer retention rates by 25-40%',;
     'Generate 20-30% more upsell opportunities',;
     'Achieve 99.9% support ticket resolution rate',;
@@ -29,8 +29,8 @@ export default function AICustomerExperienceSupport() {
     'Phone Support Integration',
     'Social Media Monitoring',
     'Self-Service Knowledge Base',
-    'Video Call Support',
-    'Mobile App Support',
+    'Video Call Support',;
+    'Mobile App Support',;
     'Voice Assistant Integration',;
     'WhatsApp Business API',;
     'SMS Support Automation',;
@@ -42,8 +42,8 @@ export default function AICustomerExperienceSupport() {
     'Intent Recognition',
     'Automated Responses',
     'Smart Escalation',
-    'Predictive Analytics',
-    'Customer Segmentation',
+    'Predictive Analytics',;
+    'Customer Segmentation',;
     'Behavioral Analysis',;
     'Proactive Support',;
     'Performance Optimization',;
@@ -55,8 +55,8 @@ export default function AICustomerExperienceSupport() {
     'HubSpot Service Hub',
     'Intercom',
     'Freshdesk',
-    'Shopify',
-    'WooCommerce',
+    'Shopify',;
+    'WooCommerce',;
     'Magento',;
     'Slack',;
     'Microsoft Teams',;
@@ -66,8 +66,8 @@ export default function AICustomerExperienceSupport() {
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
     { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },
     { name: 'Twilio', url: 'https://www.twilio.com/' },
-    { name: 'Intercom', url: 'https://www.intercom.com/' },
-    { name: 'Zendesk', url: 'https://www.zendesk.com/' },
+    { name: 'Intercom', url: 'https://www.intercom.com/' },;
+    { name: 'Zendesk', url: 'https://www.zendesk.com/' },;
     { name: 'HubSpot', url: 'https://www.hubspot.com/' },;
     { name: 'Salesforce', url: 'https://www.salesforce.com/' },;
     { name: 'Analytics', url: 'https://analytics.google.com/' },;
@@ -255,8 +255,8 @@ export default function AICustomerExperienceSupport() {
             </a>
           </div>
           <p className="text-slate-400 mt-6">
-            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions
-          </p>
+            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
+          </p>;
         </div>;
       </section>;
     </div>;

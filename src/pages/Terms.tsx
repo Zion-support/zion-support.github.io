@@ -33,8 +33,8 @@ export default function Terms() {
       title: 'User Responsibilities',
       description: 'Users must comply with applicable laws and respect intellectual property rights.'
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: 'Intellectual Property',;
       description: 'All content and technology remain the property of Zion Tech Group.';
     };
@@ -60,8 +60,8 @@ export default function Terms() {
     {
       obligation: 'Payment Terms',
       description: 'Pay all fees and charges in accordance with agreed payment schedules.'
-    },
-    {
+    },;
+    {;
       obligation: 'Confidentiality',;
       description: 'Maintain the confidentiality of any proprietary information shared with you.';
     };
@@ -71,8 +71,8 @@ export default function Terms() {
     'Attempting to gain unauthorized access to our systems or other users\' accounts',
     'Transmitting viruses, malware, or other harmful code',
     'Interfering with the proper functioning of our services',
-    'Using our services for illegal or fraudulent activities',
-    'Reverse engineering or attempting to extract source code',
+    'Using our services for illegal or fraudulent activities',;
+    'Reverse engineering or attempting to extract source code',;
     'Harassing, threatening, or abusing other users',;
     'Violating intellectual property rights',;
     'Collecting personal information without consent';
@@ -92,8 +92,8 @@ export default function Terms() {
       included: false
     },
     {
-      level: 'Premium Support',
-      description: 'Dedicated support team and 24/7 emergency response',
+      level: 'Premium Support',;
+      description: 'Dedicated support team and 24/7 emergency response',;
       response: '1-2 hours',;
       included: false;
     };
@@ -116,10 +116,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -154,10 +158,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -182,16 +190,22 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -217,10 +231,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -245,16 +263,22 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -278,10 +302,14 @@ export default function Terms() {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -310,10 +338,14 @@ export default function Terms() {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -354,10 +386,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +419,22 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -430,10 +472,14 @@ export default function Terms() {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -477,10 +523,14 @@ export default function Terms() {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -525,10 +575,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -596,10 +650,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -665,10 +723,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -715,10 +777,14 @@ export default function Terms() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -744,8 +810,8 @@ export default function Terms() {
               >
                 Privacy Policy
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

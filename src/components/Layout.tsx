@@ -126,8 +126,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </aside>
         {/* Main Content Area */}
-        <main className="flex-1 md:ml-64">
-          {children}
+        <main className="flex-1 md:ml-64">;
+          {children};
         </main>;
       </div>;
     </div>;

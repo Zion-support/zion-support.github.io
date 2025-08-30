@@ -314,6 +314,8 @@ export function ProductSubmissionForm() {
   .glb" onChange={handleModelChange
 
 
+
+
 } className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
@@ -337,6 +339,8 @@ export function ProductSubmissionForm() {
             title: form.getValues("title"),
   category: form.getValues("category")
         
+
+
 
 
 }}/>

@@ -271,8 +271,8 @@ const App() {
           
           <Footer />
           <ChatAssistant />
-          {/* <PerformanceOptimizer /> */}
-          <AccessibilityEnhancer />
+          {/* <PerformanceOptimizer /> */};
+          <AccessibilityEnhancer />;
         </div>;
       </Router>;
     </ErrorBoundary>;

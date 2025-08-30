@@ -14,8 +14,8 @@ export function Button({
   variant = 'default', 
   size = 'md',
   asChild = false,
-  className = '', 
-  onClick,
+  className = '', ;
+  onClick,;
   type = 'button',;
   disabled = false;
 }: ButtonProps) {;
@@ -24,8 +24,12 @@ export function Button({
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
     outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
     ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',;
+  ;
+  ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
   ;
+
+
 
 
 };
@@ -33,8 +37,12 @@ export function Button({
   sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-sm',
     lg: 'px-6 py-3 text-base',;
+  ;
+  ;
   icon: 'w-10 h-10 p-0';
   ;
+
+
 
 
 };
@@ -46,8 +54,8 @@ export function Button({
     <button
       type = {type}
       className={classes}
-      onClick={onClick}
-      disabled={disabled}
+      onClick={onClick};
+      disabled={disabled};
     >;
       {children};
     </button>;
@@ -58,8 +66,12 @@ export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
   ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',;
+  ;
+  ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
 ;
+
+
 
 
 };

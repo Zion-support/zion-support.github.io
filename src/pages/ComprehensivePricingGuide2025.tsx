@@ -114,8 +114,8 @@ export default function ComprehensivePricingGuide2025() {
         'Dedicated Account Manager',
         'Custom Training Programs',
         'SLA Guarantees'
-      ],
-      popular: false,
+      ],;
+      popular: false,;
       cta: 'Contact Sales',;
       href: '/contact';
     };
@@ -161,8 +161,8 @@ export default function ComprehensivePricingGuide2025() {
       color: 'from-green-500 to-emerald-500',
       services: [
         { name: 'Data Analytics Platform', price: '$300-3000', description: 'Monthly subscription' },
-        { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },
-        { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },
+        { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },;
+        { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },;
         { name: 'Custom Dashboards', price: '$200-2000', description: 'Per dashboard' };
       ];
     };
@@ -188,8 +188,8 @@ export default function ComprehensivePricingGuide2025() {
       pricing: 'Volume-based pricing for production scale'
     },
     {
-      title: 'Retail & E-commerce',
-      icon: ShoppingCart,
+      title: 'Retail & E-commerce',;
+      icon: ShoppingCart,;
       color: 'from-purple-500 to-indigo-500',;
       pricing: 'Revenue-based pricing model';
     };
@@ -198,8 +198,12 @@ export default function ComprehensivePricingGuide2025() {
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -215,10 +219,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -265,10 +273,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -293,16 +305,22 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -366,10 +384,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -394,16 +416,22 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -444,10 +472,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -472,16 +504,22 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -517,10 +555,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -576,10 +618,14 @@ export default function ComprehensivePricingGuide2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -625,8 +671,8 @@ export default function ComprehensivePricingGuide2025() {
                   {contactInfo.address}
                 </p>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -32,8 +32,8 @@ export default function DigitalTwin() {
       title: "Data Synchronization",
       description: "Real-time data sync between physical and digital representations"
     },
-    {
-      icon: Cpu,
+    {;
+      icon: Cpu,;
       title: "Security & Compliance",;
       description: "Enterprise-grade security with industry compliance standards";
     };
@@ -53,8 +53,8 @@ export default function DigitalTwin() {
       benefits: ["Traffic optimization", "Infrastructure monitoring", "Environmental tracking"]
     },
     {
-      icon: Cloud,
-      title: "Healthcare",
+      icon: Cloud,;
+      title: "Healthcare",;
       description: "Patient monitoring, medical device management, and facility optimization",;
       benefits: ["Patient care", "Equipment tracking", "Resource optimization"];
     };
@@ -64,8 +64,8 @@ export default function DigitalTwin() {
     { name: "IoT Sensors", icon: "📡", description: "High-precision sensors for data collection" },
     { name: "Edge Computing", icon: "⚡", description: "Local processing for real-time decisions" },
     { name: "5G Networks", icon: "🌐", description: "Ultra-fast connectivity for data transmission" },
-    { name: "AI/ML Models", icon: "🤖", description: "Advanced algorithms for predictions" },
-    { name: "Cloud Platform", icon: "☁️", description: "Scalable data storage and processing" },
+    { name: "AI/ML Models", icon: "🤖", description: "Advanced algorithms for predictions" },;
+    { name: "Cloud Platform", icon: "☁️", description: "Scalable data storage and processing" },;
     { name: "Blockchain", icon: "🔗", description: "Secure and transparent data sharing" },;
     { name: "Augmented Reality", icon: "👁️", description: "Immersive visualization and interaction" },;
     { name: "Digital Thread", icon: "🧵", description: "End-to-end data connectivity" };
@@ -114,8 +114,8 @@ export default function DigitalTwin() {
         "24/7 phone support",
         "Advanced security",
         "Multi-site management",
-        "Dedicated support team"
-      ],
+        "Dedicated support team";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function DigitalTwin() {
       title: "Cost Reduction",
       description: "Reduce operational costs by 30-40% through intelligent optimization"
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: "Better Decision Making",;
       description: "Make data-driven decisions with real-time insights and analytics";
     };
@@ -163,10 +163,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -215,10 +219,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -244,16 +252,22 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -280,10 +294,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -309,16 +327,22 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -355,10 +379,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +411,22 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -454,10 +488,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -483,16 +521,22 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -519,10 +563,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -548,16 +596,22 @@ export default function DigitalTwin() {
   scale: 0.8 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -584,10 +638,14 @@ export default function DigitalTwin() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -617,8 +675,8 @@ export default function DigitalTwin() {
                   Explore Services
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

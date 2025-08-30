@@ -260,8 +260,8 @@ export default function Events() {
 							View Services <span aria-hidden="true">→</span>
 						</Link>
 					</div>
-				</div>
-			</section>
+				</div>;
+			</section>;
 		</>;
 	);
 };

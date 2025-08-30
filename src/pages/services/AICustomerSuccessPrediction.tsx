@@ -51,8 +51,8 @@ export default function AICustomerSuccessPrediction() {
       title: 'Behavioral Analytics',
       description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'Automated Alerts',;
       description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
     };
@@ -78,8 +78,8 @@ export default function AICustomerSuccessPrediction() {
       benefits: ['Actionable insights', 'Timing optimization', 'Resource allocation', 'Success probability']
     },
     {
-      title: 'Integration Hub',
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',
+      title: 'Integration Hub',;
+      description: 'Seamless integration with your existing CRM, support, and analytics tools',;
       icon: Database,;
       benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation'];
     };
@@ -105,8 +105,8 @@ export default function AICustomerSuccessPrediction() {
       metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
     },
     {
-      industry: 'Healthcare',
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',
+      industry: 'Healthcare',;
+      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
       icon: Heart,;
       metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization'];
     };
@@ -128,8 +128,8 @@ export default function AICustomerSuccessPrediction() {
       title: 'Improve Customer Satisfaction',
       description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'Optimize Resource Allocation',;
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
     };
@@ -178,8 +178,8 @@ export default function AICustomerSuccessPrediction() {
         'White-label solution',
         'Dedicated support',
         'Custom development',
-        'Advanced security'
-      ],
+        'Advanced security';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -203,10 +203,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -239,10 +243,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,16 +275,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,10 +316,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -330,16 +348,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -375,10 +399,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -403,16 +431,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -448,10 +482,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -476,16 +514,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -511,10 +555,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -539,16 +587,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -606,10 +660,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -655,16 +713,22 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -690,10 +754,14 @@ export default function AICustomerSuccessPrediction() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -752,8 +820,8 @@ export default function AICustomerSuccessPrediction() {
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

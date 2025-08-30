@@ -177,8 +177,8 @@ const WebsiteAnalytics = () => {
       title: 'Geographic Analytics',
       description: 'User location and regional performance data'
     },
-    {
-      icon: Device,
+    {;
+      icon: Device,;
       title: 'Device Analytics',;
       description: 'Cross-device performance and user experience insights';
     };
@@ -186,8 +186,8 @@ const WebsiteAnalytics = () => {
 
   const benefits = [
     'Improve website conversion rates by 35%',
-    'Reduce bounce rates by 25%',
-    'Optimize user experience based on data',
+    'Reduce bounce rates by 25%',;
+    'Optimize user experience based on data',;
     'Identify and fix performance bottlenecks',;
     'Make data-driven design decisions',;
     'Track marketing campaign effectiveness';
@@ -209,8 +209,8 @@ const WebsiteAnalytics = () => {
       title: 'Conversion Tracking',
       description: 'Track conversions and optimize funnels'
     },
-    {
-      icon: Search,
+    {;
+      icon: Search,;
       title: 'SEO Analytics',;
       description: 'Monitor search performance and rankings';
     };
@@ -228,8 +228,8 @@ const WebsiteAnalytics = () => {
     {
       industry: 'Content',
       description: 'Analyze content engagement and user preferences'
-    },
-    {
+    },;
+    {;
       industry: 'SaaS',;
       description: 'Monitor user onboarding and feature usage';
     };
@@ -247,10 +247,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -295,10 +299,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -323,16 +331,22 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -358,10 +372,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -386,16 +404,22 @@ const WebsiteAnalytics = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -425,10 +449,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -453,16 +481,22 @@ const WebsiteAnalytics = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -482,16 +516,22 @@ const WebsiteAnalytics = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -515,10 +555,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -543,16 +587,22 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -578,10 +628,14 @@ const WebsiteAnalytics = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -602,8 +656,8 @@ const WebsiteAnalytics = () => {
               <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -51,8 +51,8 @@ export default function AICybersecurityThreatDetection() {
       title: 'Automated Response',
       description: 'Instant threat containment and remediation without human intervention'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'Real-Time Intelligence',;
       description: 'Live threat intelligence feeds and global attack pattern recognition';
     };
@@ -104,8 +104,8 @@ export default function AICybersecurityThreatDetection() {
         'Dedicated security team',
         'Advanced compliance',
         'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
+        'SLA guarantees',;
+        'Custom integrations';
       ],;
       popular: false;
     };
@@ -127,8 +127,8 @@ export default function AICybersecurityThreatDetection() {
       title: 'Zero False Positives',
       description: 'Advanced AI reduces alert fatigue with intelligent filtering'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: '60% Cost Reduction',;
       description: 'Automated security reduces manual intervention and operational costs';
     };
@@ -150,8 +150,8 @@ export default function AICybersecurityThreatDetection() {
       description: 'Predictive AI blocks distributed attacks before they impact services',
       icon: Network
     },
-    {
-      title: 'Insider Threats',
+    {;
+      title: 'Insider Threats',;
       description: 'Behavioral analysis detects unusual user activities and data access patterns',;
       icon: Users;
     };
@@ -159,8 +159,8 @@ export default function AICybersecurityThreatDetection() {
 
   const complianceFrameworks = [
     'SOC 2 Type II',
-    'ISO 27001',
-    'GDPR',
+    'ISO 27001',;
+    'GDPR',;
     'HIPAA',;
     'PCI DSS',;
     'NIST Cybersecurity Framework';
@@ -182,10 +182,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,10 +231,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +263,22 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -291,10 +305,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -319,16 +337,22 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -355,10 +379,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +411,22 @@ export default function AICybersecurityThreatDetection() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -419,10 +453,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -447,16 +485,22 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -480,10 +524,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -508,16 +556,22 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -576,10 +630,14 @@ export default function AICybersecurityThreatDetection() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -604,8 +662,8 @@ export default function AICybersecurityThreatDetection() {
             
             <p className="text-gray-400 mt-6">
               No credit card required • 30-day free trial • 24/7 security monitoring
-            </p>
-          </motion.div>
+            </p>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

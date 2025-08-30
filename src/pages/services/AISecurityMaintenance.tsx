@@ -5,8 +5,8 @@ export default function AISecurityMaintenance() {
     'AI-powered security maintenance optimization',
     'Intelligent maintenance strategy management and execution',
     'Automated security updates and patch management',
-    'Predictive analytics for maintenance needs',
-    'Smart maintenance framework management',
+    'Predictive analytics for maintenance needs',;
+    'Smart maintenance framework management',;
     'AI-driven maintenance automation and orchestration',;
     'Real-time maintenance performance tracking',;
     'Custom AI models for maintenance applications';
@@ -23,8 +23,8 @@ export default function AISecurityMaintenance() {
       price: '$999/mo', 
       details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced maintenance', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited systems', 'Custom AI models', 'Full maintenance suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityMaintenance() {
 
   const useCases = [
     'Security maintenance optimization',
-    'Maintenance strategy management and execution',
-    'Security updates and patch management',
+    'Maintenance strategy management and execution',;
+    'Security updates and patch management',;
     'Maintenance framework management and automation',;
     'Maintenance automation and orchestration',;
     'Maintenance scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityMaintenance() {
 
   const benefits = [
     'Improve security maintenance performance by 50-80%',
-    'Reduce maintenance completion time by 40-70%',
-    'Cut security maintenance costs by 35-65%',
+    'Reduce maintenance completion time by 40-70%',;
+    'Cut security maintenance costs by 35-65%',;
     'Enhance security maintenance reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security maintenance operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityMaintenance() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityMaintenance() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -97,6 +97,8 @@ const ApiDemo: React.FC = () => {;
   name: e.target.value 
 
 
+
+
 }))}
                 className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
@@ -108,6 +110,8 @@ const ApiDemo: React.FC = () => {;
                 onChange = {
   (e) => setNewUser(prev => ({ ...prev,
   email: e.target.value 
+
+
 
 
 }))}
@@ -181,8 +185,8 @@ const ApiDemo: React.FC = () => {;
             <p>• <strong>Frontend:</strong> Vite + React (Port 3000) - Fast HMR & optimized builds</p>
             <p>• <strong>Backend:</strong> Node.js + Express (Port 5000) - API endpoints & business logic</p>
             <p>• <strong>Development:</strong> Vite proxy forwards /api calls to Node.js</p>
-            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>
-          </div>
+            <p>• <strong>Production:</strong> Node.js serves built frontend + API</p>;
+          </div>;
         </div>;
       </div>;
     </div>;

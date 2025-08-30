@@ -70,8 +70,8 @@ export default function AISupplyChainOptimization() {
       title: "Cost Optimization",
       description: "Identify cost-saving opportunities across transportation, warehousing, and procurement."
     },
-    {
-      icon: Activity,
+    {;
+      icon: Activity,;
       title: "Real-time Visibility",;
       description: "End-to-end supply chain visibility with real-time tracking and predictive analytics.";
     };
@@ -103,8 +103,8 @@ export default function AISupplyChainOptimization() {
       title: "Increased Revenue",
       description: "Improve customer satisfaction and increase sales through better inventory availability and faster delivery."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Time Savings",;
       description: "Automate routine supply chain tasks and focus on strategic decision-making.";
     };
@@ -161,8 +161,8 @@ export default function AISupplyChainOptimization() {
         "Custom reporting",
         "On-premise deployment",
         "SLA guarantees",
-        "24/7 support"
-      ],
+        "24/7 support";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -194,8 +194,8 @@ export default function AISupplyChainOptimization() {
       description: "Manage perishable supply chains, reduce waste, and ensure food safety",
       icon: Package
     },
-    {
-      industry: "Healthcare",
+    {;
+      industry: "Healthcare",;
       description: "Optimize medical supply chains, ensure availability, and reduce costs",;
       icon: Shield;
     };
@@ -221,8 +221,8 @@ export default function AISupplyChainOptimization() {
     {
       name: "Analytics",
       platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"]
-    },
-    {
+    },;
+    {;
       name: "IoT & Sensors",;
       platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"];
     };
@@ -244,8 +244,8 @@ export default function AISupplyChainOptimization() {
       label: "Forecast Accuracy",
       description: "AI-powered demand prediction accuracy"
     },
-    {
-      metric: "40%",
+    {;
+      metric: "40%",;
       label: "Inventory Optimization",;
       description: "Reduction in excess inventory levels";
     };
@@ -263,8 +263,8 @@ export default function AISupplyChainOptimization() {
     {
       category: "Transportation",
       areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"]
-    },
-    {
+    },;
+    {;
       category: "Supplier Management",;
       areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"];
     };
@@ -288,10 +288,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -337,16 +341,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -377,10 +387,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -405,16 +419,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -455,10 +475,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -483,16 +507,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -525,10 +555,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -553,16 +587,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -603,10 +643,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -631,16 +675,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -699,10 +749,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -727,16 +781,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -777,10 +837,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -805,16 +869,22 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -849,10 +919,14 @@ export default function AISupplyChainOptimization() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -875,8 +949,8 @@ export default function AISupplyChainOptimization() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

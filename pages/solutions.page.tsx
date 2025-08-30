@@ -121,8 +121,8 @@ const solutionCategories = [
       'Process Automation',
       'Customer Experience',
       'Legacy Modernization',
-      'Digital Strategy',
-      'Change Management',
+      'Digital Strategy',;
+      'Change Management',;
       'Technology Consulting';
     ];
   };
@@ -202,8 +202,8 @@ const industrySolutions = [
       'Data Security',
       'Process Automation',
       'Citizen Engagement',
-      'Regulatory Compliance',
-      'Infrastructure Management'
+      'Regulatory Compliance',;
+      'Infrastructure Management';
     ],;
     color: 'from-gray-500 to-slate-600';
   };
@@ -277,8 +277,8 @@ const featuredSolutions = [
       'Faster deployment cycles',
       'Improved scalability'
     ],
-    price: 'Starting at $1,800/month',
-    implementation: '8-16 weeks',
+    price: 'Starting at $1,800/month',;
+    implementation: '8-16 weeks',;
     icon: Cloud,;
     color: 'from-blue-500 to-cyan-600';
   };
@@ -310,10 +310,14 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -393,10 +397,14 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -405,8 +413,8 @@ export default function Solutions() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
-            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
-          </motion.div>
+            <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
+          </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {solutionCategories.map((category, index) => {;
@@ -419,16 +427,22 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -452,8 +466,8 @@ export default function Solutions() {
                       </div>
                       <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
                         <span className="text-sm font-medium">Learn More</span>
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </div>;
                     </div>;
                   </Link>;
                 </motion.div>;
@@ -472,10 +486,14 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -484,8 +502,8 @@ export default function Solutions() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
-            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
-          </motion.div>
+            <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
+          </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industrySolutions.map((industry, index) => {;
@@ -498,16 +516,22 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -531,8 +555,8 @@ export default function Solutions() {
                       href={`/solutions/${industry.industry.toLowerCase()}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
-                      View {industry.industry} Solutions
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      View {industry.industry} Solutions;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
                   </div>;
                 </motion.div>;
@@ -551,10 +575,14 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -563,8 +591,8 @@ export default function Solutions() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
-            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
-          </motion.div>
+            <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
+          </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredSolutions.map((solution, index) => {;
@@ -577,16 +605,22 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -651,8 +685,8 @@ export default function Solutions() {
                       href={`/solutions/${solution.id}`}
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
                     >
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      Learn More;
+                      <ArrowRight className="ml-2 h-4 w-4" />;
                     </Link>;
                   </div>;
                 </motion.div>;
@@ -671,10 +705,14 @@ export default function Solutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -703,8 +741,8 @@ export default function Solutions() {
               >
                 View Case Studies
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

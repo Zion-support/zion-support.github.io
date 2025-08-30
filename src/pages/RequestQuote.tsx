@@ -82,8 +82,8 @@ const industries = [
   'Education',
   'Government',
   'Non-profit',
-  'Real Estate',
-  'Transportation',
+  'Real Estate',;
+  'Transportation',;
   'Energy',;
   'Media & Entertainment',;
   'Other';
@@ -91,8 +91,8 @@ const industries = [
 
 const companySizes = [
   '1-10 employees',
-  '11-50 employees',
-  '51-200 employees',
+  '11-50 employees',;
+  '51-200 employees',;
   '201-500 employees',;
   '501-1000 employees',;
   '1000+ employees';
@@ -101,8 +101,8 @@ const companySizes = [
 const projectTypes = [
   'New Development',
   'System Integration',
-  'Migration/Upgrade',
-  'Consulting',
+  'Migration/Upgrade',;
+  'Consulting',;
   'Support & Maintenance',;
   'Custom Solution',;
   'Other';
@@ -112,8 +112,8 @@ const services = [
   'AI & Machine Learning',
   'Cloud & DevOps',
   'Cybersecurity',
-  'IoT & Edge Computing',
-  'Quantum Computing',
+  'IoT & Edge Computing',;
+  'Quantum Computing',;
   'Digital Transformation',;
   'IT Infrastructure',;
   'Technology Consulting';
@@ -121,8 +121,8 @@ const services = [
 
 const budgets = [
   'Under $10,000',
-  '$10,000 - $50,000',
-  '$50,000 - $100,000',
+  '$10,000 - $50,000',;
+  '$50,000 - $100,000',;
   '$100,000 - $500,000',;
   '$500,000 - $1,000,000',;
   'Over $1,000,000';
@@ -130,23 +130,23 @@ const budgets = [
 
 const timelines = [
   'Immediate (1-2 weeks)',
-  'Quick (1-2 months)',
-  'Standard (3-6 months)',
+  'Quick (1-2 months)',;
+  'Standard (3-6 months)',;
   'Extended (6-12 months)',;
   'Long-term (12+ months)',;
   'Flexible';
 ];
 
-const urgencyLevels = [
-  'Low - Planning phase',
+const urgencyLevels = [;
+  'Low - Planning phase',;
   'Medium - Need within 3 months',;
   'High - Need within 1 month',;
   'Critical - Need immediately';
 ];
 
 const teamSizes = [
-  '1-5 people',
-  '6-15 people',
+  '1-5 people',;
+  '6-15 people',;
   '16-50 people',;
   '51-100 people',;
   '100+ people';
@@ -196,8 +196,8 @@ export default function RequestQuote() {
   };
 
   const handleServiceToggle = (service: string) => {
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({;
+      ...prev,;
       services: prev.services.includes(service);
         ? prev.services.filter(s => s !== service);
         : [...prev.services, service];
@@ -309,10 +309,14 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -335,16 +339,22 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -395,10 +405,14 @@ export default function RequestQuote() {
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -423,16 +437,22 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -446,10 +466,14 @@ export default function RequestQuote() {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -623,10 +647,14 @@ export default function RequestQuote() {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -722,10 +750,14 @@ export default function RequestQuote() {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -812,10 +844,14 @@ export default function RequestQuote() {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -967,16 +1003,22 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -1023,16 +1065,22 @@ export default function RequestQuote() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -1057,8 +1105,8 @@ export default function RequestQuote() {
                 <MessageCircle className="mr-2 h-4 w-4" />
                 Live Chat
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

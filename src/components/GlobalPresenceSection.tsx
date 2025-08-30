@@ -25,15 +25,15 @@ const globalOffices = [
   },
   {
     city: "Toronto",
-    country: "Canada",
-    type: "North American Hub",
+    country: "Canada",;
+    type: "North American Hub",;
     icon: "🇨🇦",;
     description: "Canadian market and development center";
   };
 ];
 
-const globalStats = [
-  { label: "Countries Served", value: "25+", icon: "🌍" },
+const globalStats = [;
+  { label: "Countries Served", value: "25+", icon: "🌍" },;
   { label: "Global Clients", value: "500+", icon: "👥" },;
   { label: "Languages Supported", value: "15+", icon: "🗣️" },;
   { label: "24/7 Support", value: "Global", icon: "⏰" };
@@ -50,10 +50,14 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -76,10 +80,14 @@ export function GlobalPresenceSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -87,6 +95,8 @@ export function GlobalPresenceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -110,10 +120,14 @@ export function GlobalPresenceSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -121,6 +135,8 @@ export function GlobalPresenceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -139,10 +155,14 @@ export function GlobalPresenceSection() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,6 +170,8 @@ export function GlobalPresenceSection() {
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -180,10 +202,14 @@ export function GlobalPresenceSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -191,6 +217,8 @@ export function GlobalPresenceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -214,10 +242,14 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,12 +259,14 @@ export function GlobalPresenceSection() {
   delay: 1.0 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to go global?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

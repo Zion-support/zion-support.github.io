@@ -23,8 +23,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   hasError: false,
       error: null,
       errorInfo: null,;
+  ;
+  ;
   errorId: null;
     ;
+
+
 
 
 };
@@ -58,8 +62,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   handleRetry = () => {
-    this.setState({
-      hasError: false,
+    this.setState({;
+      hasError: false,;
       error: null,;
       errorInfo: null,;
       errorId: null;
@@ -84,8 +88,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         url: window.location.href,;
+  ;
+  ;
   userAgent: navigator.userAgent;
       ;
+
+
 
 
 };
@@ -116,10 +124,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   scale: 0.9 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -137,6 +149,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 
 
 
+
+
 }}
                 transition = {
   { 
@@ -144,6 +158,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                   repeat: Infinity,
   repeatDelay: 3
                 
+
+
 
 
 }}
@@ -241,8 +257,8 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
               <div className="text-center text-sm text-gray-500 dark:text-gray-400">
                 <p>
                   If this problem persists, please contact our support team with the Error ID above.
-                </p>
-              </div>
+                </p>;
+              </div>;
             </div>;
           </motion.div>;
         </div>;

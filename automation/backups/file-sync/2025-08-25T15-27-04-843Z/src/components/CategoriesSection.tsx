@@ -29,8 +29,8 @@ const categories = [
   {
     title: "Digital Transformation",
     description: "Business modernization and digital strategy",
-    icon: <TrendingUp className="w-10 h-10" />,
-    link: "/all-services",
+    icon: <TrendingUp className="w-10 h-10" />,;
+    link: "/all-services",;
     color: "from-emerald-500 to-green-600",;
     gradient: "from-zion-purple-light to-zion-purple",;
   },;
@@ -43,8 +43,8 @@ const specialServices = [
   {
     title: "Comprehensive Services",
     link: "/comprehensive-services"
-  },
-  {
+  },;
+  {;
     title: "Services Comparison",;
     link: "/services-comparison";
   };
@@ -56,8 +56,8 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
+    transition: {;
+      staggerChildren: 0.1,;
       delayChildren: 0.2;
     };
   };
@@ -67,12 +67,14 @@ const itemVariants = {
   opacity: 0 
 
 
+
+
 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
+    transition: {;
+      duration: 0.5,;
       ease: "easeOut";
     };
   };
@@ -89,6 +91,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
 
 
+
+
 }}></div>
       </div>
       
@@ -101,10 +105,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -143,10 +151,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -154,6 +166,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -185,10 +199,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -198,6 +216,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   delay: 0.6 
 
 
+
+
 }}
         >
           <Link 
@@ -205,8 +225,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
           >
             View All Categories
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </Link>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;

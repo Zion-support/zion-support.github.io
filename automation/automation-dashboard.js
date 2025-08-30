@@ -78,6 +78,8 @@ class AutomationDashboard {
       
 
 
+
+
 };
       this.metrics.set(name, metrics);
     }
@@ -307,6 +309,8 @@ class AutomationDashboard {
         totalAlerts: this.alerts.length,
   averageSuccessRate: this.calculateAverageSuccessRate()
       
+
+
 
 
 },

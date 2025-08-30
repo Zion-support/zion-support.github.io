@@ -10,8 +10,8 @@ const EmergingTechServices: NextPage = () => {;
 
   const categories = [
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },
-    { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },
-    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },
+    { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },;
+    { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },;
     { id: 'Biotechnology', name: 'Biotechnology', color: 'from-green-500 to-teal-600' },;
     { id: 'Advanced AI', name: 'Advanced AI', color: 'from-orange-500 to-red-600' },;
     { id: 'Energy Technology', name: 'Energy Technology', color: 'from-yellow-500 to-orange-600' };
@@ -276,8 +276,8 @@ const EmergingTechServices: NextPage = () => {;
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📞 Call +1 (302) 464-0950
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

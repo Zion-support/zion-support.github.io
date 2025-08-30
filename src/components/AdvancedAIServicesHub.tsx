@@ -109,8 +109,8 @@ const AdvancedAIServicesHub: React.FC = () => {;
   const categories = [
     { id: 'all', name: 'All Services', icon: Cpu },
     { id: 'project-management', name: 'Project Management', icon: Brain },
-    { id: 'customer-support', name: 'Customer Support', icon: Users },
-    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },
+    { id: 'customer-support', name: 'Customer Support', icon: Users },;
+    { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },;
     { id: 'marketing', name: 'Marketing Automation', icon: Globe },;
     { id: 'analytics', name: 'Data Analytics', icon: Database },;
     { id: 'security', name: 'Cybersecurity', icon: Shield };
@@ -145,10 +145,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -169,10 +173,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -212,10 +220,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -247,10 +259,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,16 +282,22 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -350,10 +372,14 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -376,8 +402,8 @@ const AdvancedAIServicesHub: React.FC = () => {;
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
                 Schedule Demo
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

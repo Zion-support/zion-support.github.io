@@ -68,8 +68,8 @@ const DigitalTransformation = () => {;
     },
     {
       title: "Security & Compliance",
-      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
-      icon: Shield,
+      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
+      icon: Shield,;
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
       color: "from-yellow-500 to-orange-500";
     };
@@ -123,8 +123,8 @@ const DigitalTransformation = () => {;
       activities: [
         "Phased rollout execution",
         "Change management implementation",
-        "Performance monitoring",
-        "Continuous optimization",
+        "Performance monitoring",;
+        "Continuous optimization",;
         "Training and support";
       ];
     };
@@ -144,15 +144,15 @@ const DigitalTransformation = () => {;
       rating: 5
     },
     {
-      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
-      name: "Marcus Johnson",
+      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
+      name: "Marcus Johnson",;
       role: "CTO, DigitalFirst Inc",;
       rating: 5;
     };
   ];
 
-  const stats = [
-    { number: "85%", label: "Average efficiency improvement" },
+  const stats = [;
+    { number: "85%", label: "Average efficiency improvement" },;
     { number: "3.2x", label: "Faster time to market" },;
     { number: "40%", label: "Cost reduction achieved" },;
     { number: "92%", label: "Customer satisfaction increase" };
@@ -208,16 +208,22 @@ const DigitalTransformation = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -253,16 +259,22 @@ const DigitalTransformation = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -312,16 +324,22 @@ const DigitalTransformation = () => {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -354,10 +372,14 @@ const DigitalTransformation = () => {;
   height: 0 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
+
+
 
 
 }}
@@ -402,16 +424,22 @@ const DigitalTransformation = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -452,8 +480,8 @@ const DigitalTransformation = () => {;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </section>;
     </div>;

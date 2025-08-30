@@ -5,8 +5,8 @@ export default function AIMongoDB() {
     'AI-powered MongoDB optimization',
     'Intelligent MongoDB management',
     'Automated MongoDB monitoring and alerting',
-    'Predictive analytics for MongoDB scaling',
-    'Smart MongoDB security and compliance',
+    'Predictive analytics for MongoDB scaling',;
+    'Smart MongoDB security and compliance',;
     'AI-driven MongoDB automation and orchestration',;
     'Real-time MongoDB analytics and insights',;
     'Custom AI models for MongoDB applications';
@@ -23,8 +23,8 @@ export default function AIMongoDB() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full MongoDB suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIMongoDB() {
 
   const useCases = [
     'MongoDB optimization',
-    'MongoDB management',
-    'Performance monitoring and analytics',
+    'MongoDB management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'MongoDB scaling and management';
@@ -41,8 +41,8 @@ export default function AIMongoDB() {
 
   const benefits = [
     'Improve MongoDB performance by 50-80%',
-    'Reduce MongoDB query time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce MongoDB query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance MongoDB reliability and scalability',;
     'Optimize resource utilization',;
     'Scale MongoDB operations efficiently';
@@ -50,8 +50,8 @@ export default function AIMongoDB() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIMongoDB() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

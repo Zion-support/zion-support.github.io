@@ -43,16 +43,16 @@ export default function AILegalResearchPlatform() {
     "Advanced search with natural language queries",
     "Legal document generation and templates",
     "Compliance monitoring and risk assessment",
-    "Multi-jurisdiction legal research",
-    "Legal trend analysis and predictions",
+    "Multi-jurisdiction legal research",;
+    "Legal trend analysis and predictions",;
     "Automated case outcome prediction",;
     "Legal knowledge base management",;
     "Collaborative research and sharing tools";
   ];
 
   const benefits = [
-    "Reduce research time by 70%",
-    "Improve case outcome accuracy by 45%",
+    "Reduce research time by 70%",;
+    "Improve case outcome accuracy by 45%",;
     "Increase billable hours by 30%",;
     "Reduce legal research costs by 50%",;
     "Enhance client service quality";
@@ -62,8 +62,8 @@ export default function AILegalResearchPlatform() {
     "Law firms and attorneys",
     "Corporate legal departments",
     "Legal research institutions",
-    "Government agencies",
-    "Compliance officers",
+    "Government agencies",;
+    "Compliance officers",;
     "Risk management teams",;
     "Legal technology companies",;
     "Academic legal research";
@@ -115,8 +115,8 @@ export default function AILegalResearchPlatform() {
         "Custom integrations",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited users"
-      ],
+        "Unlimited users";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -138,10 +138,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -190,10 +194,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -217,16 +225,22 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -251,10 +265,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -278,16 +296,22 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -312,10 +336,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -339,16 +367,22 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -373,10 +407,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -400,16 +438,22 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -471,10 +515,14 @@ export default function AILegalResearchPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -518,8 +566,8 @@ export default function AILegalResearchPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

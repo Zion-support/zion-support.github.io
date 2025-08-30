@@ -206,8 +206,8 @@ export default function ComprehensiveServicesOverview2026() {
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
       color: 'from-green-500 to-blue-500',
-      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),
-      marketSize: '$1.2 trillion by 2027',
+      services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s => s.category === 'Sustainable Technology'),;
+      marketSize: '$1.2 trillion by 2027',;
       avgROI: '300-800%',;
       innovationLevel: 'Advanced';
     };
@@ -242,10 +242,14 @@ export default function ComprehensiveServicesOverview2026() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -348,10 +352,14 @@ export default function ComprehensiveServicesOverview2026() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -360,10 +368,14 @@ export default function ComprehensiveServicesOverview2026() {
   y: -20 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -455,16 +467,22 @@ export default function ComprehensiveServicesOverview2026() {
   height: 0 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -543,10 +561,14 @@ export default function ComprehensiveServicesOverview2026() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -579,8 +601,8 @@ export default function ComprehensiveServicesOverview2026() {
             <div className="mt-8 text-zion-slate-400">
               <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

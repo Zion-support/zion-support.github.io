@@ -20,8 +20,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showDetails = false 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
+    fcp: null,;
+    lcp: null,;
     fid: null,;
     cls: null,;
     ttfb: null;
@@ -102,8 +102,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   needsImprovement: 3000 
 
 
-},
-      lcp: { good: 2500, needsImprovement: 4000 },
+
+
+},;
+      lcp: { good: 2500, needsImprovement: 4000 },;
       fid: { good: 100, needsImprovement: 300 },;
       cls: { good: 0.1, needsImprovement: 0.25 },;
       ttfb: { good: 800, needsImprovement: 1800 };
@@ -197,10 +199,14 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -217,8 +223,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             {performanceScore}
           </span>
         </div>
-      </div>
-
+      </div>;
+;
       {showDetails && (;
         <div className="space-y-3">;
           {Object.entries(metrics).map(([key, value]) => {;
@@ -228,8 +234,12 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               lcp: 'Largest Contentful Paint',
               fid: 'First Input Delay',
               cls: 'Cumulative Layout Shift',;
+  ;
+  ;
   ttfb: 'Time to First Byte';
             ;
+
+
 
 
 }[key];
@@ -239,8 +249,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <div className="flex items-center space-x-2">
                   <div className={status.color}>{status.icon}</div>
                   <span className="text-sm text-gray-300">{label}</span>
-                </div>
-                <span className="text-sm font-mono text-white">
+                </div>;
+                <span className="text-sm font-mono text-white">;
                   {value !== null ? `${value.toFixed(2)}${key === 'cls' ? '' : 'ms'}` : 'N/A'};
                 </span>;
               </div>;
@@ -258,8 +268,8 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               {performanceScore >= 90 ? 'Excellent' : 
                performanceScore >= 70 ? 'Good' : 
                performanceScore >= 50 ? 'Needs Improvement' : 'Poor'}
-            </span>
-          </div>
+            </span>;
+          </div>;
         </div>;
       </div>;
     </motion.div>;

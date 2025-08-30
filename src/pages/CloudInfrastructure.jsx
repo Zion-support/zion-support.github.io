@@ -65,9 +65,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="text-center mb-16">
@@ -105,9 +109,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
@@ -116,9 +124,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 + index * 0.1 }} className="text-center p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
@@ -142,9 +154,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} className="text-center mb-16">
@@ -160,9 +176,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} onClick={() => setSelectedProvider(provider.id)} className={`p-6 rounded-lg transition-all duration-200 text-left ${selectedProvider === provider.id
@@ -191,9 +211,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="p-8 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
@@ -231,9 +255,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} className="text-center mb-16">
@@ -249,9 +277,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-200 group">
@@ -273,9 +305,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }}>
@@ -306,9 +342,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
@@ -324,9 +364,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
@@ -342,9 +386,13 @@ export default function CloudInfrastructure() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="p-6 bg-white/10 backdrop-blur-md rounded-lg border border-white/20">

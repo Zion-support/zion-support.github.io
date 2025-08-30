@@ -94,8 +94,8 @@ export type ServiceVariant = | 'default'
   | 'api-futuristic'
   | 'integration-futuristic'
   | 'monitoring-futuristic'
-  | 'backup-futuristic'
-  | 'analytics-futuristic'
+  | 'backup-futuristic';
+  | 'analytics-futuristic';
   | 'emerging-tech';
   | 'space-tech';
   | 'autonomous-systems';

@@ -11,8 +11,8 @@ const BlogPost: React.FC = () => {
 				<p className="text-slate-300">Coming soon.</p>
 			</div>
 		</div>
-	)
-}
+	);
+};
 ;
 export default BlogPost;
 ;

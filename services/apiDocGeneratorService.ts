@@ -145,8 +145,8 @@ export class APIDocGeneratorService {
       examples: [],
       metadata: {
         lastGenerated: new Date(),
-        totalEndpoints: 0,
-        coverage: 0,
+        totalEndpoints: 0,;
+        coverage: 0,;
         languages: [],;
         frameworks: [];
       };

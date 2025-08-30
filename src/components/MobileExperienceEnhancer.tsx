@@ -238,10 +238,12 @@ export function MobileExperienceEnhancer({
   height: screen.height 
 
 
+
+
 },
         pixelRatio: window.devicePixelRatio || 1,
-        orientation: screen.width > screen.height ? 'landscape' : 'portrait',
-        touchSupport: 'ontouchstart' in window,
+        orientation: screen.width > screen.height ? 'landscape' : 'portrait',;
+        touchSupport: 'ontouchstart' in window,;
         pwaSupport: 'serviceWorker' in navigator,;
         networkType: (navigator as any).connection?.effectiveType || 'unknown',;
         batteryLevel: 0;
@@ -277,8 +279,12 @@ export function MobileExperienceEnhancer({
         touchStartRef.current = {
   x: touch.clientX,
           y: touch.clientY,;
+  ;
+  ;
   time: Date.now();
         ;
+
+
 
 
 };
@@ -313,9 +319,11 @@ export function MobileExperienceEnhancer({
         direction,
         timestamp: Date.now(),
         coordinates: { x: touch.clientX,
-  y: touch.clientY 
-
+  y: touch.clientY ;
 ;
+;
+
+
 },;
         intensity: Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       };
@@ -327,8 +335,8 @@ export function MobileExperienceEnhancer({
     };
     
     const handleGesture = (gesture: TouchGesture) => {
-      // Handle different gesture types
-      switch (gesture.type) {
+      // Handle different gesture types;
+      switch (gesture.type) {;
         case 'swipe':;
           if (gesture.direction === 'left') {;
             // Navigate forward;
@@ -465,8 +473,12 @@ export function MobileExperienceEnhancer({
       mobileAnalytics: true,
       deviceOrientation: 'auto',
       touchSensitivity: 'medium',;
+  ;
+  ;
   hapticIntensity: 'medium';
     ;
+
+
 
 
 };
@@ -517,16 +529,22 @@ export function MobileExperienceEnhancer({
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
+
 
 
 }}
@@ -705,10 +723,14 @@ export function MobileExperienceEnhancer({
   y: 20 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -830,16 +852,22 @@ export function MobileExperienceEnhancer({
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -855,6 +883,8 @@ export function MobileExperienceEnhancer({
                             onChange = {
   (e) => setSettings(prev => ({ ...prev,
   touchSensitivity: e.target.value as any 
+
+
 
 
 }))}
@@ -877,6 +907,8 @@ export function MobileExperienceEnhancer({
   hapticIntensity: e.target.value as any 
 
 
+
+
 }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
@@ -895,6 +927,8 @@ export function MobileExperienceEnhancer({
                             onChange = {
   (e) => setSettings(prev => ({ ...prev,
   deviceOrientation: e.target.value as any 
+
+
 
 
 }))}
@@ -951,8 +985,8 @@ export function MobileExperienceEnhancer({
       </AnimatePresence>
 
       {/* Global Mobile Styles */}
-      <style jsx global>{`
-        .mobile-touch-targets button,
+      <style jsx global>{`;
+        .mobile-touch-targets button,;
         .mobile-touch-targets a,;
         .mobile-touch-targets input,;
         .mobile-touch-targets select {;

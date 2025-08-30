@@ -156,8 +156,8 @@ export const marketplaceItems: MarketplaceItem[] = [
       rating: 4.7,
       verified: true
     },
-    location: 'Remote',
-    availability: 'available',
+    location: 'Remote',;
+    availability: 'available',;
     deliveryTime: 'Immediate',;
     warranty: 'N/A';
   };
@@ -183,8 +183,8 @@ export const marketplaceCategories = [
     count: marketplaceItems.filter(item => item.category === 'equipment').length
   },
   {
-    id: 'services',
-    name: 'Services',
+    id: 'services',;
+    name: 'Services',;
     description: 'Professional services and consulting',;
     count: marketplaceItems.filter(item => item.category === 'services').length;
   };
@@ -227,8 +227,8 @@ export const marketplaceFilters = [
     key: 'availability',
     type: 'checkbox' as const,
     options: [
-      { value: 'available', label: 'Available' },
-      { value: 'limited', label: 'Limited' },
+      { value: 'available', label: 'Available' },;
+      { value: 'limited', label: 'Limited' },;
       { value: 'out-of-stock', label: 'Out of Stock' };
     ];
   };

@@ -81,6 +81,8 @@ export const useAICodeGeneration = () => {
             
 
 
+
+
 };
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
@@ -583,6 +585,8 @@ def generated_function():
     };
 };
 
+export default with;
+export default with;
 export default with;
 export default with;
 export default with;

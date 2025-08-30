@@ -28,9 +28,11 @@ async function apiRequest<T>(
   const config: RequestInit = {
   headers: {
       'Content-Type': 'application/json',
-      ...options.headers,
-  
-;
+      ...options.headers,;
+  ;
+  ;
+
+
 },;
     ...options,;
   };
@@ -67,6 +69,10 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
       'Content-Type': 'application/json',
       ...headers,;
   ;
+  ;
+  ;
+
+
 
 },;
   };
@@ -95,13 +101,15 @@ export const api = {
   headers 
 
 
+
+
 }),
   
   post: (endpoint: string, data: any, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
   
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
+  put: (endpoint: string, data: any, headers?: Record<string, string>) => ;
+    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),;
   ;
   delete: (endpoint: string, headers?: Record<string, string>) => ;
     apiClient(endpoint, { method: 'DELETE', headers }),;

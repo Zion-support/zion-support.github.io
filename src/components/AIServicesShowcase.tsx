@@ -39,8 +39,8 @@ export const AIServicesShowcase = () => {
             <p className="text-gray-300 mb-4">Streamline operations with intelligent automation</p>
             <Link to="/services/automation" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </div>;
       </div>;
     </section>;

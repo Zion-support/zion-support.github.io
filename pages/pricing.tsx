@@ -54,8 +54,8 @@ export default function PricingPage() {
         'Dedicated Account Manager',
         'SLA Guarantees',
         'On-Premise Options'
-      ],
-      cta: 'Contact Sales',
+      ],;
+      cta: 'Contact Sales',;
       ctaLink: '/contact',;
       popular: false;
     };
@@ -80,8 +80,8 @@ export default function PricingPage() {
       features: ['Vulnerability Assessment', 'Compliance Review', 'Security Recommendations']
     },
     {
-      name: 'Cloud Migration',
-      description: 'Complete cloud infrastructure migration',
+      name: 'Cloud Migration',;
+      description: 'Complete cloud infrastructure migration',;
       price: 'From $10,000',;
       features: ['Architecture Design', 'Data Migration', 'Performance Optimization'];
     };
@@ -106,8 +106,8 @@ export default function PricingPage() {
     {
       question: 'Do you offer discounts for annual payments?',
       answer: 'Yes, we offer a 20% discount for annual payments on all plans.'
-    },
-    {
+    },;
+    {;
       question: 'Can I cancel my subscription?',;
       answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.';
     };
@@ -274,8 +274,8 @@ export default function PricingPage() {
               >
                 View Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </main>;
     </>;

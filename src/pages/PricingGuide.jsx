@@ -23,6 +23,8 @@ export default function PricingGuide() {
         
 
 
+
+
 };
         return icons[category] || <Star className="w-6 h-6"/>;
     };
@@ -36,6 +38,8 @@ export default function PricingGuide() {
         const comparisons = {
   'AI Development': { avg: price * 1.3,
   savings: 23 
+
+
 
 
 },

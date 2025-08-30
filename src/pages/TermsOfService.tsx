@@ -104,8 +104,8 @@ const TermsOfService = () => {;
       content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
     },
     {
-      id: 'contact',
-      title: 'Contact Information',
+      id: 'contact',;
+      title: 'Contact Information',;
       icon: Mail,;
       content: `If you have any questions about these Terms of Service, please contact us using the information provided below.`;
     };
@@ -137,8 +137,8 @@ const TermsOfService = () => {;
       description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
       icon: AlertTriangle
     },
-    {
-      title: 'Termination Rights',
+    {;
+      title: 'Termination Rights',;
       description: 'Either party may terminate services with appropriate notice as specified in service agreements',;
       icon: AlertTriangle;
     };
@@ -160,8 +160,8 @@ const TermsOfService = () => {;
       title: 'Mediation',
       description: 'For complex disputes, engage in mediation with a neutral third party'
     },
-    {
-      step: '4',
+    {;
+      step: '4',;
       title: 'Arbitration',;
       description: 'As a last resort, resolve disputes through binding arbitration';
     };
@@ -185,10 +185,14 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -230,16 +234,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -258,16 +268,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -294,16 +310,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -321,16 +343,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -357,16 +385,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -398,16 +432,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -425,16 +465,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -461,16 +507,22 @@ const TermsOfService = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
+
 
 
 }}
@@ -501,8 +553,8 @@ const TermsOfService = () => {;
                   Request Clarification
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

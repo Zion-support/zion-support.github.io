@@ -332,9 +332,13 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   x: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
@@ -427,14 +431,20 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   scale: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
+
 
 
 }} className="absolute w-4 h-4" style = {
@@ -444,6 +454,8 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     transform: 'translate(-50%,
   -50%)'
                 
+
+
 
 
 }}>

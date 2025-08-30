@@ -72,16 +72,16 @@ export default function CybersecurityServices() {
         "Data encryption at rest and in transit",
         "Data loss prevention",
         "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
-      ],
+        "Compliance frameworks (GDPR, HIPAA, SOC2)";
+      ],;
       price: "From $6,000",;
       duration: "4-10 weeks";
     };
   ];
   const securityTechnologies = [
     { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
-    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
-    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },
+    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },;
+    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },;
     { name: "WAF", description: "Web Application Firewall", icon: Shield },;
     { name: "DLP", description: "Data Loss Prevention", icon: Database },;
     { name: "IAM", description: "Identity and Access Management", icon: Key };
@@ -118,8 +118,8 @@ export default function CybersecurityServices() {
       color: "from-orange-500 to-amber-600"
     },
     {
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
+      name: "NIST",;
+      description: "National Institute of Standards and Technology",;
       icon: Award,;
       color: "from-cyan-500 to-blue-600";
     };
@@ -136,10 +136,14 @@ export default function CybersecurityServices() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -306,8 +310,8 @@ export default function CybersecurityServices() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

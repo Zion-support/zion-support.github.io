@@ -23,8 +23,8 @@ export default function AIComplianceCopilot() {
             <p className="text-sm text-zion-slate-light">SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST 800-53.</p>
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-lg font-semibold mb-2">Integrations</h2>
-            <p className="text-sm text-zion-slate-light">AWS, GCP, Azure, GitHub, GitLab, Okta, Jira, Slack.</p>
+            <h2 className="text-lg font-semibold mb-2">Integrations</h2>;
+            <p className="text-sm text-zion-slate-light">AWS, GCP, Azure, GitHub, GitLab, Okta, Jira, Slack.</p>;
           </div>;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h2 className="text-lg font-semibold mb-2">Pricing</h2>;
@@ -36,8 +36,8 @@ export default function AIComplianceCopilot() {
         </div>
 
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-          <h3 className="font-semibold mb-2">Contact</h3>
-          <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+          <h3 className="font-semibold mb-2">Contact</h3>;
+          <p className="text-sm text-zion-slate-light">+1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
         </div>;
       </section>;
     </div>;

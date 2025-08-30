@@ -59,6 +59,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             
 
 
+
+
 };
             setFixedLinks(prev => [...prev, fix]);
         }
@@ -89,6 +91,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             brokenLinks: brokenLinks,
   fixedLinks: fixedLinks
         
+
+
 
 
 };
@@ -177,6 +181,8 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 <button onClick = {
   () => fixBrokenLink(link.url,
   link)
+
+
 
 
 } className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">

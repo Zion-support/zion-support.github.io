@@ -359,8 +359,8 @@ export default function BlockchainEnterpriseSolutions() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </>;

@@ -16,6 +16,8 @@ const config: HardhatUserConfig = {
   runs: 200 
 
 
+
+
 },
     },
   },
@@ -40,8 +42,8 @@ const config: HardhatUserConfig = {
   //   } as any,
   // },
   paths: {
-    sources: './contracts',
-    tests: './test',
+    sources: './contracts',;
+    tests: './test',;
     cache: './cache',;
     artifacts: './artifacts',;
   },;

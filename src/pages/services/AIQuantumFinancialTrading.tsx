@@ -55,8 +55,8 @@ const AIQuantumFinancialTrading = () => {
       color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Portfolio Analytics",
-      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",
+      title: "Portfolio Analytics",;
+      description: "Advanced portfolio performance tracking with quantum-enhanced optimization",;
       icon: Target,;
       color: "from-cyan-500 to-blue-500";
     };
@@ -105,8 +105,8 @@ const AIQuantumFinancialTrading = () => {
         "Custom compliance modules",
         "Multi-tenant architecture",
         "Advanced analytics dashboard",
-        "SLA guarantees",
-        "On-premise deployment"
+        "SLA guarantees",;
+        "On-premise deployment";
       ],;
       popular: false;
     };
@@ -128,8 +128,8 @@ const AIQuantumFinancialTrading = () => {
       description: "Advanced risk management reduces portfolio volatility and losses",
       metric: "40% less risk"
     },
-    {
-      title: "Cost Savings",
+    {;
+      title: "Cost Savings",;
       description: "Automated trading reduces manual intervention and operational costs",;
       metric: "60% cost reduction";
     };
@@ -147,10 +147,14 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -194,10 +198,14 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -223,16 +231,22 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -259,10 +273,14 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -287,16 +305,22 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -321,10 +345,14 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -349,16 +377,22 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -420,10 +454,14 @@ const AIQuantumFinancialTrading = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -479,8 +517,8 @@ const AIQuantumFinancialTrading = () => {
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <p className="text-gray-300">Address</p>
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

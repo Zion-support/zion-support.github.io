@@ -7,8 +7,8 @@ export default function AIFinancialRiskManagement() {
     'Intelligent fraud detection and prevention',
     'Advanced portfolio risk analysis and optimization',
     'Predictive risk modeling and scenario analysis',
-    'Automated compliance monitoring and reporting',
-    'Multi-asset class risk management',
+    'Automated compliance monitoring and reporting',;
+    'Multi-asset class risk management',;
     'Real-time risk dashboard and analytics',;
     'AI-driven risk mitigation recommendations',;
     'Advanced stress testing and stress scenarios';
@@ -16,8 +16,8 @@ export default function AIFinancialRiskManagement() {
 
   const benefits = [
     'Reduce credit losses by 40-60%',
-    'Improve risk-adjusted returns by 25%',
-    'Detect fraud with 99.5% accuracy',
+    'Improve risk-adjusted returns by 25%',;
+    'Detect fraud with 99.5% accuracy',;
     'Reduce compliance costs by 50%',;
     'Enable real-time risk monitoring',;
     'Automate 90% of risk assessment tasks';
@@ -25,8 +25,8 @@ export default function AIFinancialRiskManagement() {
 
   const useCases = [
     'Commercial banking and lending',
-    'Investment management and wealth advisory',
-    'Insurance risk assessment',
+    'Investment management and wealth advisory',;
+    'Insurance risk assessment',;
     'Fintech and digital banking',;
     'Corporate treasury management',;
     'Regulatory compliance and reporting';
@@ -43,8 +43,8 @@ export default function AIFinancialRiskManagement() {
       price: '$1,999/mo', 
       details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Risk', 
+    { ;
+      name: 'Enterprise Risk', ;
       price: '$5,999/mo', ;
       details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] ;
     },;
@@ -149,8 +149,8 @@ export default function AIFinancialRiskManagement() {
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
-            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>
-          </div>
+            Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
+          </div>;
         </div>;
       </section>;
     </div>;

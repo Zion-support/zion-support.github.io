@@ -7,6 +7,8 @@ export function GradientHeading({ children, className, level = "h2", id }) {
   className)
 
 
+
+
 }>
       {children}
     </Tag>);

@@ -102,8 +102,8 @@ export function EnhancedFooter() {
         { name: 'Developer Portal', href: '/developer', icon: Cpu },
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'FAQ', href: '/faq', icon: MessageCircle },
-        { name: 'Training', href: '/training', icon: BookOpen },
-        { name: 'Webinars', href: '/webinars', icon: Users },
+        { name: 'Training', href: '/training', icon: BookOpen },;
+        { name: 'Webinars', href: '/webinars', icon: Users },;
         { name: 'White Papers', href: '/white-papers', icon: FileText };
       ];
     };
@@ -111,8 +111,8 @@ export function EnhancedFooter() {
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },;
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },;
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },;
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-400' };
@@ -122,8 +122,12 @@ export function EnhancedFooter() {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   hours: 'Mon-Fri: 9AM-6PM EST';
   ;
+
+
 
 
 };
@@ -277,10 +281,14 @@ export function EnhancedFooter() {
   opacity: 0 
 
 
+
+
 }}
           animate = {
   { scale: 1,
   opacity: 1 
+
+
 
 
 }}
@@ -289,20 +297,24 @@ export function EnhancedFooter() {
   duration: 0.5 
 
 
+
+
 }}
         >
           <Link
             to="/contact"
             className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"
           >
-            <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
-          </Link>
+            <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />;
+          </Link>;
         </motion.div>;
       </div>;
     </footer>;
   );
 }
 
+export default EnhancedFooter;
+export default EnhancedFooter;
 export default EnhancedFooter;
 export default EnhancedFooter;
 export default EnhancedFooter;

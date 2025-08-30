@@ -51,8 +51,8 @@ export default function AIHealthcareAnalyticsPlatform() {
       title: 'Real-Time Monitoring',
       description: 'Continuous patient monitoring with instant alerts for critical health changes'
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: 'Medical Image Analysis',;
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis';
     };
@@ -104,8 +104,8 @@ export default function AIHealthcareAnalyticsPlatform() {
         'Dedicated support team',
         'Advanced compliance',
         'On-premise options',
-        'SLA guarantees',
-        'Custom integrations'
+        'SLA guarantees',;
+        'Custom integrations';
       ],;
       popular: false;
     };
@@ -127,8 +127,8 @@ export default function AIHealthcareAnalyticsPlatform() {
       title: '24/7 Patient Monitoring',
       description: 'Continuous monitoring ensures patient safety around the clock'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: '40% Cost Reduction',;
       description: 'AI optimization reduces healthcare costs and improves efficiency';
     };
@@ -150,8 +150,8 @@ export default function AIHealthcareAnalyticsPlatform() {
       description: 'AI recommends optimal treatment plans based on patient data and outcomes',
       icon: Heart
     },
-    {
-      title: 'Drug Safety Monitoring',
+    {;
+      title: 'Drug Safety Monitoring',;
       description: 'Real-time monitoring of drug interactions and adverse effects',;
       icon: Shield;
     };
@@ -159,8 +159,8 @@ export default function AIHealthcareAnalyticsPlatform() {
 
   const complianceStandards = [
     'HIPAA Compliant',
-    'FDA Approved',
-    'ISO 13485',
+    'FDA Approved',;
+    'ISO 13485',;
     'SOC 2 Type II',;
     'GDPR Compliant',;
     'HITECH Certified';
@@ -182,10 +182,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,10 +231,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,16 +263,22 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -291,10 +305,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -319,16 +337,22 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -355,10 +379,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,16 +411,22 @@ export default function AIHealthcareAnalyticsPlatform() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -419,10 +453,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -447,16 +485,22 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -480,10 +524,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -508,16 +556,22 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -576,10 +630,14 @@ export default function AIHealthcareAnalyticsPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -604,8 +662,8 @@ export default function AIHealthcareAnalyticsPlatform() {
             
             <p className="text-gray-400 mt-6">
               No credit card required • 30-day free trial • HIPAA compliant
-            </p>
-          </motion.div>
+            </p>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

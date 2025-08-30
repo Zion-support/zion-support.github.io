@@ -19,8 +19,8 @@ export default function AIAnalytics() {
       title: 'Real-time Insights',
       description: 'Instant data analysis and actionable intelligence'
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: 'Data Visualization',;
       description: 'Clear and intuitive data presentation';
     };
@@ -42,8 +42,8 @@ export default function AIAnalytics() {
       description: 'Text analysis and language understanding systems',
       icon: Database
     },
-    {
-      title: 'Computer Vision',
+    {;
+      title: 'Computer Vision',;
       description: 'Image and video analysis with AI',;
       icon: Eye;
     };
@@ -61,10 +61,14 @@ export default function AIAnalytics() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function AIAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function AIAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function AIAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function AIAnalytics() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function AIAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,8 +295,8 @@ export default function AIAnalytics() {
                   Contact AI Team
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

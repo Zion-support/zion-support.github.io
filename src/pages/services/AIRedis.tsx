@@ -5,8 +5,8 @@ export default function AIRedis() {
     'AI-powered Redis optimization',
     'Intelligent Redis management',
     'Automated Redis monitoring and alerting',
-    'Predictive analytics for Redis scaling',
-    'Smart Redis security and compliance',
+    'Predictive analytics for Redis scaling',;
+    'Smart Redis security and compliance',;
     'AI-driven Redis automation and orchestration',;
     'Real-time Redis analytics and insights',;
     'Custom AI models for Redis applications';
@@ -23,8 +23,8 @@ export default function AIRedis() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Redis suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIRedis() {
 
   const useCases = [
     'Redis optimization',
-    'Redis management',
-    'Performance monitoring and analytics',
+    'Redis management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Redis scaling and management';
@@ -41,8 +41,8 @@ export default function AIRedis() {
 
   const benefits = [
     'Improve Redis performance by 50-80%',
-    'Reduce Redis latency by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Redis latency by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Redis reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Redis operations efficiently';
@@ -50,8 +50,8 @@ export default function AIRedis() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIRedis() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

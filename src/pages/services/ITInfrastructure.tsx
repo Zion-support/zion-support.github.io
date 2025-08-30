@@ -68,8 +68,8 @@ const ITInfrastructure = () => {
       title: 'Monitoring & Alerting',
       description: '24/7 infrastructure monitoring with proactive alerting'
     },
-    {
-      icon: Cloud,
+    {;
+      icon: Cloud,;
       title: 'Hybrid Cloud Solutions',;
       description: 'Seamless integration of on-premise and cloud infrastructure';
     };
@@ -77,8 +77,8 @@ const ITInfrastructure = () => {
 
   const benefits = [
     'Achieve 99.9% infrastructure uptime',
-    'Reduce operational costs by 35%',
-    'Improve system performance by 60%',
+    'Reduce operational costs by 35%',;
+    'Improve system performance by 60%',;
     'Ensure enterprise-grade security',;
     'Streamline IT operations',;
     'Enable business scalability';
@@ -100,8 +100,8 @@ const ITInfrastructure = () => {
       title: 'Network Security',
       description: 'Firewalls, VPNs, intrusion detection, and threat prevention'
     },
-    {
-      icon: Database2,
+    {;
+      icon: Database2,;
       title: 'Data Center Operations',;
       description: 'Facility management, power systems, and environmental controls';
     };
@@ -119,8 +119,8 @@ const ITInfrastructure = () => {
     {
       industry: 'Financial Services',
       description: 'Secure, high-availability infrastructure for banking'
-    },
-    {
+    },;
+    {;
       industry: 'Education',;
       description: 'Cost-effective infrastructure for educational institutions';
     };
@@ -138,10 +138,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -186,10 +190,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -214,16 +222,22 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -249,10 +263,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -277,16 +295,22 @@ const ITInfrastructure = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -316,10 +340,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -344,16 +372,22 @@ const ITInfrastructure = () => {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -373,16 +407,22 @@ const ITInfrastructure = () => {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -406,10 +446,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -434,16 +478,22 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -469,10 +519,14 @@ const ITInfrastructure = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -493,8 +547,8 @@ const ITInfrastructure = () => {
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

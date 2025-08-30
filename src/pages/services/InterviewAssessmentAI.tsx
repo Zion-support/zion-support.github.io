@@ -53,8 +53,8 @@ export default function InterviewAssessmentAI() {
       title: "Candidate Matching",
       description: "AI-driven candidate-job fit analysis and recommendation engine."
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: "Automated Scheduling",;
       description: "Intelligent interview scheduling and coordination across teams.";
     };
@@ -86,8 +86,8 @@ export default function InterviewAssessmentAI() {
       title: "Quality Hires",
       description: "Improve hire quality and retention with better candidate-job matching."
     },
-    {
-      icon: Award,
+    {;
+      icon: Award,;
       title: "Compliance",;
       description: "Maintain hiring compliance and audit trails for regulatory requirements.";
     };
@@ -119,8 +119,8 @@ export default function InterviewAssessmentAI() {
       description: "Assess past behavior patterns and situational responses",
       icon: TrendingUp
     },
-    {
-      type: "Cognitive Ability",
+    {;
+      type: "Cognitive Ability",;
       description: "Measure problem-solving, reasoning, and learning capabilities",;
       icon: Target;
     };
@@ -152,8 +152,8 @@ export default function InterviewAssessmentAI() {
       description: "Teaching, administration, and educational leadership assessments",
       icon: GraduationCap
     },
-    {
-      industry: "Manufacturing",
+    {;
+      industry: "Manufacturing",;
       description: "Production, quality control, and operational role assessments",;
       icon: Settings;
     };
@@ -177,10 +177,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -223,10 +227,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -252,16 +260,22 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,10 +316,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -331,16 +349,22 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -381,10 +405,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -410,16 +438,22 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -460,10 +494,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -489,16 +527,22 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -539,10 +583,14 @@ export default function InterviewAssessmentAI() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -565,8 +613,8 @@ export default function InterviewAssessmentAI() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

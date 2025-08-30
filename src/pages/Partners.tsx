@@ -46,15 +46,15 @@ export default function Partners() {
       title: 'Channel Partners',
       description: 'Resellers and distributors expanding our reach',
       icon: Globe,
-      partners: [
-        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
+      partners: [;
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },;
         { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' };
       ];
     };
   ];
 
-  const benefits = [
-    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },
+  const benefits = [;
+    { icon: Star, title: 'Exclusive Access', description: 'Early access to new features and beta programs' },;
     { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },;
     { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },;
     { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' };
@@ -72,10 +72,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -104,10 +108,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -133,10 +141,14 @@ export default function Partners() {
   scale: 0.9 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -169,10 +181,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -189,10 +205,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -216,10 +236,14 @@ export default function Partners() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -245,8 +269,8 @@ export default function Partners() {
               >
                 Contact Partnership Team
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

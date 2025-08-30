@@ -47,31 +47,31 @@ export default function ServicesPage() {
     { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
-    { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },;
+    { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },;
     { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue' },;
     { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple' },;
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'budget', name: 'Budget', range: '$100 - $1,000' },;
     { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000' },;
     { id: 'enterprise', name: 'Enterprise', range: '$5,000+' };
   ];
 
   const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
     { id: 'price-high', name: 'Price: High to Low' },;
     { id: 'newest', name: 'Newest' },;
     { id: 'popular', name: 'Most Popular' };
   ];
 
   // Filter and sort services
-  const allServices = [
-    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+  const allServices = [;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,;
     ...SPECIALIZED_SERVICES,;
     ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,;
     ...ADDITIONAL_SPECIALIZED_SERVICES;
@@ -143,10 +143,14 @@ export default function ServicesPage() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -185,16 +189,22 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -209,16 +219,22 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -233,16 +249,22 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -266,10 +288,14 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -299,16 +325,22 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -371,16 +403,22 @@ export default function ServicesPage() {
   y: 30 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -479,8 +517,8 @@ export default function ServicesPage() {
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-zion-slate-light mb-6">
-                  Try adjusting your search criteria or browse all categories
+                <p className="text-zion-slate-light mb-6">;
+                  Try adjusting your search criteria or browse all categories;
                 </p>;
                 <button;
                   onClick={() => {;
@@ -508,10 +546,14 @@ export default function ServicesPage() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -535,16 +577,22 @@ export default function ServicesPage() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -587,10 +635,14 @@ export default function ServicesPage() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -626,8 +678,8 @@ export default function ServicesPage() {
               <p className="mb-2">📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a></p>
               <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a></p>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </>;

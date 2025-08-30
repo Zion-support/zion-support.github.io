@@ -76,8 +76,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useNavigate();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
+  const toggleSection = (section: string) => {;
+    setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
         : [...prev, section];
@@ -90,6 +90,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   main: [
       { name: 'Home', href: '/',
   icon: Home 
+
+
 
 
 },
@@ -128,27 +130,27 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     company: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
-      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
+      { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },;
+      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },;
       { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },;
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },;
     ];
   };
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },
+  const quickActions = [;
+    { name: 'Request Quote', href: '/request-quote', icon: Quote, color: 'from-cyan-500 to-blue-600' },;
     { name: 'Get Support', href: '/contact', icon: HelpCircle, color: 'from-green-500 to-emerald-600' },;
     { name: 'View Status', href: '/status', icon: CheckCircle, color: 'from-yellow-500 to-orange-600' },;
     { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'from-purple-500 to-pink-600' },;
   ];
 
-  const contactInfo = [
+  const contactInfo = [;
     { icon: Phone, text: '+1 (302) 464-0950', href: 'tel:+13024640950' },;
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },;
     { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709' },;
   ];
 
-  const socialLinks = [
+  const socialLinks = [;
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin, color: 'text-blue-500' },;
     { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter, color: 'text-blue-400' },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },;
@@ -188,8 +190,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <div className="text-xs text-gray-500 truncate">{item.description}</div>
                 )}
               </div>
-            </Link>
-          ))}
+            </Link>;
+          ))};
         </div>;
       )};
     </div>;
@@ -325,8 +327,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
           {/* Copyright */}
           <div className="text-xs text-zion-slate-light text-center">
-            © {new Date().getFullYear()} Zion Tech Group
-          </div>
+            © {new Date().getFullYear()} Zion Tech Group;
+          </div>;
         </div>;
       </div>;
     </>;

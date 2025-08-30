@@ -97,8 +97,8 @@ const EdgeComputingPlatform: React.FC = () => {
       color: "from-indigo-500 to-purple-500"
     },
     {
-      icon: Shield,
-      title: "Edge Security",
+      icon: Shield,;
+      title: "Edge Security",;
       description: "Advanced security protocols and encryption for edge computing environments",;
       color: "from-yellow-500 to-orange-500";
     };
@@ -153,8 +153,8 @@ const EdgeComputingPlatform: React.FC = () => {
         "Dedicated support team",
         "Custom development",
         "SLA guarantees",
-        "On-premise option"
-      ],
+        "On-premise option";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -180,8 +180,8 @@ const EdgeComputingPlatform: React.FC = () => {
       metric: "99.9%"
     },
     {
-      icon: Users,
-      title: "Global Scale",
+      icon: Users,;
+      title: "Global Scale",;
       description: "Deploy edge nodes worldwide for optimal user experience",;
       metric: "200+";
     };
@@ -211,8 +211,8 @@ const EdgeComputingPlatform: React.FC = () => {
     },
     {
       industry: "Healthcare",
-      title: "Remote Monitoring",
-      description: "Real-time patient monitoring and emergency response systems",
+      title: "Remote Monitoring",;
+      description: "Real-time patient monitoring and emergency response systems",;
       icon: Heart,;
       color: "from-orange-500 to-red-500";
     };
@@ -238,8 +238,8 @@ const EdgeComputingPlatform: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     },
     {
-      region: "Latin America",
-      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
+      region: "Latin America",;
+      cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
       icon: MapPin,;
       color: "from-orange-500 to-red-500";
     };
@@ -263,10 +263,14 @@ const EdgeComputingPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -321,16 +325,22 @@ const EdgeComputingPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -370,16 +380,22 @@ const EdgeComputingPlatform: React.FC = () => {
   scale: 0.9 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -418,16 +434,22 @@ const EdgeComputingPlatform: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -472,16 +494,22 @@ const EdgeComputingPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -527,16 +555,22 @@ const EdgeComputingPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -594,10 +628,14 @@ const EdgeComputingPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -616,8 +654,8 @@ const EdgeComputingPlatform: React.FC = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -48,8 +48,8 @@ const successStories = [
       "Enhanced data accuracy by 95%"
     ],
     testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",
-    author: "Dr. Emily Rodriguez",
-    position: "Chief Medical Officer",
+    author: "Dr. Emily Rodriguez",;
+    position: "Chief Medical Officer",;
     rating: 5,;
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
@@ -66,10 +66,14 @@ export function ClientSuccessStoriesSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -94,10 +98,14 @@ export function ClientSuccessStoriesSection() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -105,6 +113,8 @@ export function ClientSuccessStoriesSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -185,10 +195,14 @@ export function ClientSuccessStoriesSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -196,6 +210,8 @@ export function ClientSuccessStoriesSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -233,10 +249,14 @@ export function ClientSuccessStoriesSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -246,12 +266,14 @@ export function ClientSuccessStoriesSection() {
   delay: 0.6 
 
 
+
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Ready to be our next success story?</span>
-            <span className="text-2xl">→</span>
-          </div>
+            <span className="text-2xl">→</span>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

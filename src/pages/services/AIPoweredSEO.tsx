@@ -57,8 +57,8 @@ export default function AIPoweredSEO() {
       title: "Technical SEO",
       description: "Automated technical SEO audits and optimization recommendations."
     },
-    {
-      icon: Smartphone,
+    {;
+      icon: Smartphone,;
       title: "Mobile Optimization",;
       description: "AI-driven mobile-first SEO strategies and testing.";
     };
@@ -90,8 +90,8 @@ export default function AIPoweredSEO() {
       title: "Competitive Advantage",
       description: "Stay ahead of competitors with AI-powered SEO insights and strategies."
     },
-    {
-      icon: Star,
+    {;
+      icon: Star,;
       title: "ROI Optimization",;
       description: "Maximize your marketing budget with data-driven SEO decisions.";
     };
@@ -123,8 +123,8 @@ export default function AIPoweredSEO() {
       description: "Ongoing optimization based on performance data and trends",
       icon: TrendingUp
     },
-    {
-      stage: "Mobile & Local SEO",
+    {;
+      stage: "Mobile & Local SEO",;
       description: "Mobile-first optimization and local search enhancement",;
       icon: Smartphone;
     };
@@ -156,8 +156,8 @@ export default function AIPoweredSEO() {
       description: "Optimize landing pages and conversion-focused content",
       icon: Cloud
     },
-    {
-      industry: "Healthcare",
+    {;
+      industry: "Healthcare",;
       description: "Improve patient discovery and medical information accessibility",;
       icon: Heart;
     };
@@ -181,10 +181,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,10 +231,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -256,16 +264,22 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -306,10 +320,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -335,16 +353,22 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -385,10 +409,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -414,16 +442,22 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -464,10 +498,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -493,16 +531,22 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -543,10 +587,14 @@ export default function AIPoweredSEO() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -569,8 +617,8 @@ export default function AIPoweredSEO() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

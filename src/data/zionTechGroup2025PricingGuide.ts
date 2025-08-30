@@ -696,7 +696,7 @@ export const getPricingByPriceRange = (minPrice: number, maxPrice: number) => {;
 
 export const searchPricing = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
-  return zionTechGroup2025PricingGuide.filter(service = >
+  return zionTechGroup2025PricingGuide.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;
     service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery);

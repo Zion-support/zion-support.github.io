@@ -20,8 +20,8 @@ const QuantumMachineLearning: React.FC = () => {
       title: 'Quantum Data Processing',
       description: 'Process massive datasets with quantum efficiency'
     },
-    {
-      icon: Target,
+    {;
+      icon: Target,;
       title: 'Quantum Optimization',;
       description: 'Solve complex optimization problems instantly';
     };
@@ -43,8 +43,8 @@ const QuantumMachineLearning: React.FC = () => {
       description: 'Complex climate modeling and prediction',
       icon: '🌍'
     },
-    {
-      title: 'AI Training',
+    {;
+      title: 'AI Training',;
       description: 'Train large language models faster',;
       icon: '🤖';
     };
@@ -52,8 +52,8 @@ const QuantumMachineLearning: React.FC = () => {
 
   const benefits = [
     'Exponential speedup for ML algorithms',
-    'Process massive datasets in seconds',
-    'Solve previously intractable problems',
+    'Process massive datasets in seconds',;
+    'Solve previously intractable problems',;
     'Unlock new AI capabilities',;
     'Competitive advantage in innovation',;
     'Future-proof your ML infrastructure';
@@ -75,10 +75,14 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -123,10 +127,14 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,16 +158,22 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -185,10 +199,14 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -212,16 +230,22 @@ const QuantumMachineLearning: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -249,10 +273,14 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -274,10 +302,14 @@ const QuantumMachineLearning: React.FC = () => {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -301,10 +333,14 @@ const QuantumMachineLearning: React.FC = () => {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -333,10 +369,14 @@ const QuantumMachineLearning: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -355,8 +395,8 @@ const QuantumMachineLearning: React.FC = () => {
               <button className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

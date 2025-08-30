@@ -58,8 +58,8 @@ export default function DSRPortal() {
       title: "Workflow Automation",
       description: "Automated workflows for request validation, processing, and response generation."
     },
-    {
-      icon: CheckCircle,
+    {;
+      icon: CheckCircle,;
       title: "Audit Trails",;
       description: "Complete audit trails for all data subject rights activities and compliance.";
     };
@@ -91,8 +91,8 @@ export default function DSRPortal() {
       title: "Customer Trust",
       description: "Build and maintain customer trust through transparent data rights management."
     },
-    {
-      icon: Award,
+    {;
+      icon: Award,;
       title: "Risk Mitigation",;
       description: "Minimize legal and reputational risks associated with data privacy violations.";
     };
@@ -124,8 +124,8 @@ export default function DSRPortal() {
       description: "Individuals can request limitation of data processing",
       icon: Lock
     },
-    {
-      right: "Right to Object",
+    {;
+      right: "Right to Object",;
       description: "Individuals can object to processing of their personal data",;
       icon: AlertTriangle;
     };
@@ -157,8 +157,8 @@ export default function DSRPortal() {
       description: "Manage student data rights and educational privacy compliance",
       icon: GraduationCap
     },
-    {
-      industry: "Real Estate",
+    {;
+      industry: "Real Estate",;
       description: "Handle client data rights and real estate privacy compliance",;
       icon: Home;
     };
@@ -182,10 +182,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -228,10 +232,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -257,16 +265,22 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -307,10 +321,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -336,16 +354,22 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -386,10 +410,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -415,16 +443,22 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -465,10 +499,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -494,16 +532,22 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -544,10 +588,14 @@ export default function DSRPortal() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -570,8 +618,8 @@ export default function DSRPortal() {
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

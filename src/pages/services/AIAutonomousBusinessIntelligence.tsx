@@ -65,8 +65,8 @@ export default function AIAutonomousBusinessIntelligence() {
       title: "Multi-dimensional Analysis",
       description: "Comprehensive analysis across multiple business dimensions including financial, operational, and market factors."
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: "Pattern Recognition",;
       description: "Advanced algorithms that identify hidden patterns and correlations in complex business data.";
     };
@@ -98,8 +98,8 @@ export default function AIAutonomousBusinessIntelligence() {
       title: "Advanced AI Models",
       description: "State-of-the-art machine learning algorithms trained on industry-specific data."
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: "Real-time Data Processing",;
       description: "Process and analyze massive amounts of data in real-time for instant insights.";
     };
@@ -131,8 +131,8 @@ export default function AIAutonomousBusinessIntelligence() {
       title: "Innovation Intelligence",
       description: "AI-powered identification of new opportunities and innovation pathways."
     },
-    {
-      icon: Rocket,
+    {;
+      icon: Rocket,;
       title: "Growth Intelligence",;
       description: "Strategic growth planning and execution optimization based on market analysis.";
     };
@@ -164,8 +164,8 @@ export default function AIAutonomousBusinessIntelligence() {
       title: "Educational Institutions",
       description: "Autonomous student performance analysis and educational program optimization."
     },
-    {
-      icon: Home,
+    {;
+      icon: Home,;
       title: "Real Estate",;
       description: "AI-driven property valuation, market analysis, and investment optimization.";
     };
@@ -187,10 +187,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -232,10 +236,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -260,16 +268,22 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -296,10 +310,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -324,16 +342,22 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -360,10 +384,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -388,16 +416,22 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -424,10 +458,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -452,16 +490,22 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -488,10 +532,14 @@ export default function AIAutonomousBusinessIntelligence() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -520,8 +568,8 @@ export default function AIAutonomousBusinessIntelligence() {
               >
                 Schedule Consultation
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

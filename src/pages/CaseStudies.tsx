@@ -35,8 +35,8 @@ export default function CaseStudies() {
 
   const industries = [
     { id: 'all', name: 'All Industries', icon: Building, count: 0 },
-    { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },
-    { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },
+    { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },;
+    { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },;
     { id: 'manufacturing', name: 'Manufacturing', icon: Factory, count: 0 },;
     { id: 'retail', name: 'Retail & E-commerce', icon: Users, count: 0 },;
     { id: 'government', name: 'Government', icon: Building, count: 0 };
@@ -44,8 +44,8 @@ export default function CaseStudies() {
 
   const services = [
     { id: 'all', name: 'All Services', icon: Zap, count: 0 },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
+    { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 0 },;
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },;
     { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 };
@@ -147,8 +147,8 @@ export default function CaseStudies() {
         'Improved public safety'
       ],
       duration: '14 months',
-      teamSize: '20 engineers',
-      technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],
+      teamSize: '20 engineers',;
+      technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],;
       featured: false,;
       image: '/api/placeholder/600/400';
     };
@@ -190,10 +190,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,10 +271,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -327,10 +335,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -408,10 +420,14 @@ export default function CaseStudies() {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -437,8 +453,8 @@ export default function CaseStudies() {
               >
                 Explore Our Services
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

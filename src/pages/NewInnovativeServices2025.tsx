@@ -147,8 +147,8 @@ export default function NewInnovativeServices2025() {
       icon: Brain,
       category: "Customer Experience",
       price: "From $399/month",
-      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],
-      link: "/services/ai-customer-experience-analytics",
+      features: ["Sentiment analysis", "Customer journey mapping", "Predictive analytics", "Personalization engine"],;
+      link: "/services/ai-customer-experience-analytics",;
       color: "from-zion-cyan to-zion-purple",;
       popular: false;
     };
@@ -202,8 +202,8 @@ export default function NewInnovativeServices2025() {
         "AI Workflow Orchestrator",
         "AI Project Management",
         "Customer Support Automation",
-        "Email Automation",
-        "Process Optimization"
+        "Email Automation",;
+        "Process Optimization";
       ],;
       color: "from-zion-purple to-zion-orange";
     };
@@ -225,8 +225,8 @@ export default function NewInnovativeServices2025() {
       title: "Enhanced Customer Experience",
       description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
     },
-    {
-      icon: Shield,
+    {;
+      icon: Shield,;
       title: "Improved Security",;
       description: "Advanced security measures and compliance automation protect your business and data";
     };
@@ -250,10 +250,14 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -304,10 +308,14 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -332,16 +340,22 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -407,10 +421,14 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -435,16 +453,22 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -484,10 +508,14 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -512,16 +540,22 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -548,10 +582,14 @@ export default function NewInnovativeServices2025() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -605,8 +643,8 @@ export default function NewInnovativeServices2025() {
                 <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
                 <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </div>;

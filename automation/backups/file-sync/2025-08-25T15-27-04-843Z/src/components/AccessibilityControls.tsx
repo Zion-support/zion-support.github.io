@@ -109,6 +109,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   e.target.checked)
 
 
+
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -122,6 +124,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('largeText',
   e.target.checked)
+
+
 
 
 }
@@ -148,6 +152,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   e.target.checked)
 
 
+
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -172,6 +178,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   e.target.checked)
 
 
+
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -185,6 +193,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('keyboardNavigation',
   e.target.checked)
+
+
 
 
 }
@@ -211,6 +221,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   e.target.checked)
 
 
+
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -226,8 +238,8 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <p><kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">Escape</kbd> Close modals</p>
                 <p><kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-700 rounded">Tab</kbd> Navigate elements</p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       )};
     </div>;

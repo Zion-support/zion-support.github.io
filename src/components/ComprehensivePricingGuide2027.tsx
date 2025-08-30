@@ -63,8 +63,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     ...innovativeServices2027.map(service => ({
       ...service,
       source: 'innovative',
-      category: service.category,
-      features: service.features || [],
+      category: service.category,;
+      features: service.features || [],;
       ctaLabel: service.ctaLabel || 'Get Started',;
       href: service.href || '/contact';
     }));
@@ -104,8 +104,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -144,8 +148,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       'GreenTech Solutions': Leaf,
       'SpaceTech Solutions': Rocket,
       'Robotics & Automation': Cpu,
-      'AR/VR Solutions': Eye,
-      'Biotech Solutions': Dna,
+      'AR/VR Solutions': Eye,;
+      'Biotech Solutions': Dna,;
       'LegalTech Solutions': Scale,;
       'Real Estate Tech': Home,;
       'Supply Chain Solutions': Truck;
@@ -169,10 +173,14 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
 
 
 } : { opacity: 0, y: 30 }}
@@ -205,16 +213,22 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -293,16 +307,22 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -316,16 +336,22 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -421,16 +447,22 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -477,8 +509,8 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

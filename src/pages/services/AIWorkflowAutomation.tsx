@@ -5,8 +5,8 @@ export default function AIWorkflowAutomation() {
     'Intelligent process mapping and optimization',
     'AI-powered decision trees and conditional logic',
     'Multi-platform integration (Slack, Teams, Zapier)',
-    'Real-time workflow analytics and performance metrics',
-    'Automated error handling and fallback procedures',
+    'Real-time workflow analytics and performance metrics',;
+    'Automated error handling and fallback procedures',;
     'Custom workflow templates for common business processes',;
     'Role-based access control and approval workflows',;
     'Mobile workflow management and notifications';
@@ -23,8 +23,8 @@ export default function AIWorkflowAutomation() {
       price: '$499/mo', 
       details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,299/mo', ;
       details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIWorkflowAutomation() {
 
   const useCases = [
     'Customer onboarding automation',
-    'Invoice processing and approval',
-    'Employee onboarding and offboarding',
+    'Invoice processing and approval',;
+    'Employee onboarding and offboarding',;
     'Project approval workflows',;
     'Quality assurance processes',;
     'Compliance documentation flows';
@@ -123,8 +123,8 @@ export default function AIWorkflowAutomation() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

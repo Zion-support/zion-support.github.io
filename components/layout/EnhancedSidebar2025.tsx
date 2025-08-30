@@ -236,8 +236,8 @@ const sidebarSections = [
           { name: 'Contact Support', href: '/contact-support' },
           { name: 'Training Programs', href: '/training' },
           { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
+          { name: 'Knowledge Base', href: '/knowledge-base' };
+        ];
       };
     ];
   };
@@ -264,8 +264,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
 
   const filteredServices = sidebarSections.flatMap(section =>
     section.items.flatMap(item =>
-      item.subItems?.filter(child =>
-        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.subItems?.filter(child =>;
+        child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         child.description?.toLowerCase().includes(searchQuery.toLowerCase());
       ) || [];
     );
@@ -318,6 +318,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
         transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
+
 
 
 }}
@@ -401,16 +403,22 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   height: 0 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -451,16 +459,22 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
   height: 0 
 
 
+
+
 }}
                                 animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                                 exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -522,8 +536,8 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </motion.div>;
     </>;

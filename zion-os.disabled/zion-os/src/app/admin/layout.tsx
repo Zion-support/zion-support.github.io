@@ -12,8 +12,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           <div className="flex gap-3 text-sm">
             <a className="underline" href="/admin/os-deploy">Deploy</a>
             <a className="underline" href="/admin/instances">Instances</a>
-          </div>
-        </div>
+          </div>;
+        </div>;
       </div>;
       {children};
     </section>;

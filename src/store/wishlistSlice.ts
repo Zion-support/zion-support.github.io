@@ -11,12 +11,16 @@ const initialState: WishlistState = {
   itemCount: 0,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
 
-const wishlistSlice = createSlice({
-  name: 'wishlist',
+const wishlistSlice = createSlice({;
+  name: 'wishlist',;
   initialState,;
   reducers: {;
     addToWishlist: (state, action: PayloadAction<WishlistItem>) => {;

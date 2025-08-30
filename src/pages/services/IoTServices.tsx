@@ -19,8 +19,8 @@ const IoTServices = () => {
     },
     {
       title: "IoT Data Management",
-      description: "Comprehensive data collection, processing, and analytics for IoT devices.",
-      price: "From $6,500/month",
+      description: "Comprehensive data collection, processing, and analytics for IoT devices.",;
+      price: "From $6,500/month",;
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
       icon: Database;
     };
@@ -40,8 +40,8 @@ const IoTServices = () => {
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
     },
     {
-      name: "Security & Privacy",
-      description: "Enterprise-grade IoT security solutions",
+      name: "Security & Privacy",;
+      description: "Enterprise-grade IoT security solutions",;
       icon: Shield,;
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
     };
@@ -49,8 +49,8 @@ const IoTServices = () => {
 
   const benefits = [
     "Real-time monitoring and control capabilities",
-    "Improved operational efficiency and automation",
-    "Enhanced data collection and insights",
+    "Improved operational efficiency and automation",;
+    "Enhanced data collection and insights",;
     "Reduced operational costs and manual work",;
     "Scalable and flexible IoT infrastructure",;
     "Better decision-making with real-time data";
@@ -212,8 +212,8 @@ const IoTServices = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -50,8 +50,8 @@ export const SERVICE_CATEGORIES_2030 = [
   "Quantum Computing",
   "IoT & Edge Computing",
   "Blockchain & Web3",
-  "Digital Twin",
-  "Space Technology",
+  "Digital Twin",;
+  "Space Technology",;
   "Sustainable Technology",;
   "IT Infrastructure",;
   "Emerging Technology";
@@ -72,11 +72,13 @@ export const SERVICE_STATISTICS_2030 = {
   featuredServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => service.featured).length,
   aiServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
     service.category.includes('AI') || service.aiScore > 90
-  ).length,
-  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => 
+  ).length,;
+  emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
     service.category === 'Emerging Technology';
   ).length;
 ;
+
+
 
 
 };

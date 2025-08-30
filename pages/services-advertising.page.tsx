@@ -8,15 +8,19 @@ export default function ServicesAdvertisingPage() {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
   const benefits = [
     '1000% ROI target with measurable KPIs',
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
+    'Transparent pricing with market references',;
+    'Fast onboarding with templates and playbooks',;
     'Enterprise-grade security and compliance',;
     '24/7 support with SLAs',;
     'Proven architectures and reference implementations',;
@@ -24,16 +28,16 @@ export default function ServicesAdvertisingPage() {
     'SOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
   ];
-  const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
+  const newHighlights = [;
+    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },;
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },;
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },;
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
   ];
   const anchors = [
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },
-    { title: 'Security', href: '#ai-guardrails-safety' },
-    { title: 'Observability', href: '#status-page-slo-monitor' },
+    { title: 'Security', href: '#ai-guardrails-safety' },;
+    { title: 'Observability', href: '#status-page-slo-monitor' },;
     { title: 'Compliance', href: '#k8s-soc2-control-pack' },;
     { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },;
     { title: 'Commerce', href: '#checkout-performance-optimizer' };
@@ -120,8 +124,8 @@ export default function ServicesAdvertisingPage() {
       title: 'Observability & APM',
       links: [
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' },
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+        { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
+        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' };
       ],;
       note: 'SMB budgets: $50–$2,000/mo.';
     };
@@ -130,6 +134,8 @@ export default function ServicesAdvertisingPage() {
   privacy: [
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
+
+
 
 
 },
@@ -141,8 +147,8 @@ export default function ServicesAdvertisingPage() {
     ],
     devex: [
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
-    ],
-    seo: [
+    ],;
+    seo: [;
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
     ];
@@ -542,8 +548,8 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="/contact" className="px-6 py-3 bg-cyan-600 text-white rounded-lg inline-flex">Contact Sales</a>
               <a href="/services" className="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg inline-flex">Browse Services</a>
-            </div>
-          </section>
+            </div>;
+          </section>;
         </div>;
       </div>;
     </div>;

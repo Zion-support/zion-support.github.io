@@ -42,8 +42,8 @@ const ComprehensivePricing2028 = () => {;
   const serviceCategories = [
     { id: 'all', name: 'All Services', icon: <Sparkles className="w-5 h-5" /> },
     { id: 'ai-research', name: 'AI & Research', icon: <Brain className="w-5 h-5" /> },
-    { id: 'ai-operations', name: 'AI & Operations', icon: <Network className="w-5 h-5" /> },
-    { id: 'ai-marketing', name: 'AI & Marketing', icon: <PenTool className="w-5 h-5" /> },
+    { id: 'ai-operations', name: 'AI & Operations', icon: <Network className="w-5 h-5" /> },;
+    { id: 'ai-marketing', name: 'AI & Marketing', icon: <PenTool className="w-5 h-5" /> },;
     { id: 'ai-development', name: 'AI & Development', icon: <Code className="w-5 h-5" /> },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" /> },;
     { id: 'quantum', name: 'Quantum Technology', icon: <Cpu className="w-5 h-5" /> };
@@ -115,8 +115,8 @@ const ComprehensivePricing2028 = () => {;
         starter: { price: 299, period: 'month', features: ['Basic Threat Protection', 'AI Monitoring', 'Email Support', 'Basic Reports'] },
         professional: { price: 799, period: 'month', features: ['Advanced Threat Protection', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },
         enterprise: { price: 1999, period: 'month', features: ['Complete Security Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] }
-      },
-      benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],
+      },;
+      benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],;
       useCases: ['Enterprise Security', 'Remote Work Security', 'Cloud Security', 'Compliance Requirements'],;
       color: 'red';
     };
@@ -129,8 +129,8 @@ const ComprehensivePricing2028 = () => {;
   const getColorClasses = (color: string) => {
     const colorMap: { [key: string]: string } = {
       blue: 'from-blue-500 to-cyan-500',
-      green: 'from-green-500 to-emerald-500',
-      purple: 'from-purple-500 to-pink-500',
+      green: 'from-green-500 to-emerald-500',;
+      purple: 'from-purple-500 to-pink-500',;
       cyan: 'from-cyan-500 to-blue-500',;
       red: 'from-red-500 to-pink-500',;
       indigo: 'from-indigo-500 to-purple-500';
@@ -141,8 +141,8 @@ const ComprehensivePricing2028 = () => {;
   const getBorderColor = (color: string) => {
     const colorMap: { [key: string]: string } = {
       blue: 'border-blue-500/30',
-      green: 'border-green-500/30',
-      purple: 'border-purple-500/30',
+      green: 'border-green-500/30',;
+      purple: 'border-purple-500/30',;
       cyan: 'border-cyan-500/30',;
       red: 'border-red-500/30',;
       indigo: 'border-indigo-500/30';
@@ -161,10 +161,14 @@ const ComprehensivePricing2028 = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -225,16 +229,22 @@ const ComprehensivePricing2028 = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -302,16 +312,22 @@ const ComprehensivePricing2028 = () => {;
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -378,10 +394,14 @@ const ComprehensivePricing2028 = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -409,8 +429,8 @@ const ComprehensivePricing2028 = () => {;
               >
                 Schedule Demo
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

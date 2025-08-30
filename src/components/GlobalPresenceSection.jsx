@@ -92,6 +92,8 @@ export function GlobalPresenceSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -117,9 +119,13 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -138,14 +144,20 @@ export function GlobalPresenceSection() {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -164,14 +176,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -185,14 +203,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ y: -4 }} className="relative">
@@ -251,14 +275,20 @@ export function GlobalPresenceSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -293,14 +323,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}>
@@ -314,14 +350,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ y: -4 }} className="relative">
@@ -361,14 +403,20 @@ export function GlobalPresenceSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -389,14 +437,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>
@@ -410,14 +464,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
@@ -447,14 +507,20 @@ export function GlobalPresenceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}>

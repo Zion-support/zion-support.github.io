@@ -624,8 +624,8 @@ export const serviceCategories = [
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s => s.category === 'IT Services')
   },
-  {
-    name: 'Emerging Technologies',
+  {;
+    name: 'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
     services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };

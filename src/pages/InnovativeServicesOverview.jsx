@@ -47,6 +47,8 @@ const InnovativeServicesOverview = () => {
             
 
 
+
+
 };
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()));
@@ -54,6 +56,8 @@ const InnovativeServicesOverview = () => {
     const fadeInUp = {
   initial: { opacity: 0,
   y: 60 
+
+
 
 
 },
@@ -68,9 +72,13 @@ const InnovativeServicesOverview = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -147,14 +155,20 @@ const InnovativeServicesOverview = () => {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 cursor-pointer ${service.popular ? 'border-cyan-400/50 shadow-cyan-400/20' : 'border-white/20'}`} onClick={() => setSelectedService(service)}>
@@ -212,14 +226,20 @@ const InnovativeServicesOverview = () => {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }} className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">

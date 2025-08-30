@@ -143,6 +143,8 @@ export default function EnhancedStatsSection() {
   y: 30 
 
 
+
+
 }}
           animate={controls}
           variants = {
@@ -153,6 +155,8 @@ export default function EnhancedStatsSection() {
   transition: {
                 duration: 0.6
               
+
+
 
 
 }
@@ -178,6 +182,8 @@ export default function EnhancedStatsSection() {
   y: 30 
 
 
+
+
 }}
               animate={controls}
               variants = {
@@ -189,6 +195,8 @@ export default function EnhancedStatsSection() {
                     duration: 0.6,
   delay: index * 0.1
                   
+
+
 
 
 }
@@ -207,6 +215,8 @@ export default function EnhancedStatsSection() {
                 
 
 
+
+
 }}
                 transition={{ duration: 0.3 }}
               >
@@ -223,6 +233,8 @@ export default function EnhancedStatsSection() {
                   
 
 
+
+
 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -237,6 +249,8 @@ export default function EnhancedStatsSection() {
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -275,6 +289,8 @@ export default function EnhancedStatsSection() {
   y: 30 
 
 
+
+
 }}
           animate={controls}
           variants = {
@@ -286,6 +302,8 @@ export default function EnhancedStatsSection() {
                 duration: 0.6,
   delay: 0.6
               
+
+
 
 
 }
@@ -322,8 +340,8 @@ export default function EnhancedStatsSection() {
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
                 <div className="text-gray-300">Client Retention</div>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

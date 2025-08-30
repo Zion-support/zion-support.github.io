@@ -11,8 +11,8 @@ interface SkeletonProps {
 
 export function Skeleton({ 
   className = '', 
-  height = 'h-4', 
-  width = 'w-full', 
+  height = 'h-4', ;
+  width = 'w-full', ;
   rounded = true,;
   animated = true ;
 }: SkeletonProps) {;
@@ -33,9 +33,11 @@ export function Skeleton({
           duration: 1.5,
           repeat: Infinity,
   ease: "easeInOut"
-        
-
+        ;
 ;
+;
+
+
 }};
       />;
     );
@@ -78,8 +80,8 @@ export function CardSkeleton({
         {Array.from({ length: lines }).map((_, index) => (
           <Skeleton 
             key={index} 
-            className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} 
-          />
+            className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} ;
+          />;
         ))};
       </div>;
     </div>;
@@ -119,8 +121,8 @@ export function TableSkeleton({
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
                 />
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         ))};
       </div>;
     </div>;
@@ -147,8 +149,8 @@ export function ListSkeleton({
           )}
           <div className="flex-1 space-y-2">
             <Skeleton className="h-4 w-3/4" />
-            <Skeleton className="h-3 w-1/2" />
-          </div>
+            <Skeleton className="h-3 w-1/2" />;
+          </div>;
         </div>;
       ))};
     </div>;
@@ -174,8 +176,8 @@ export function GridSkeleton({
         <CardSkeleton 
           key={index} 
           lines={3} 
-          showImage={showImage}
-          showAvatar={false}
+          showImage={showImage};
+          showAvatar={false};
         />;
       ))};
     </div>;

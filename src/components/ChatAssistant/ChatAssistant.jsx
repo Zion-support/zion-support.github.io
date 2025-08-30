@@ -79,6 +79,8 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             
 
 
+
+
 };
             setCurrentMessages((prev) => [...prev, newMessage]);
             setPendingApiCallParams({ message: messageContent, conversationId });
@@ -97,6 +99,8 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             message: guestMessage,
   timestamp: new Date()
         
+
+
 
 
 };

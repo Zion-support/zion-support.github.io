@@ -54,8 +54,8 @@ export default function AIContentCreation() {
       title: "Performance Analytics",
       description: "Content performance tracking and optimization recommendations."
     },
-    {
-      icon: Shield,
+    {;
+      icon: Shield,;
       title: "Quality Assurance",;
       description: "AI-powered grammar checking, plagiarism detection, and content validation.";
     };
@@ -63,8 +63,8 @@ export default function AIContentCreation() {
 
   const benefits = [
     "Increase content production by 300-500% with AI automation",
-    "Improve content engagement by 40-80% through AI optimization",
-    "Reduce content creation time by 70-90%",
+    "Improve content engagement by 40-80% through AI optimization",;
+    "Reduce content creation time by 70-90%",;
     "Enhance SEO performance with AI-powered keyword optimization",;
     "Maintain consistent brand voice across all content",;
     "Scale content marketing efforts without proportional resource increase";
@@ -96,8 +96,8 @@ export default function AIContentCreation() {
       description: "AI-generated images, infographics, and visual storytelling elements",
       icon: Image
     },
-    {
-      type: "Video Scripts",
+    {;
+      type: "Video Scripts",;
       description: "Video content planning, scripting, and storyboard creation",;
       icon: Video;
     };
@@ -119,8 +119,8 @@ export default function AIContentCreation() {
     {
       industry: "Publishing",
       description: "Article generation, content curation, and editorial assistance"
-    },
-    {
+    },;
+    {;
       industry: "Education",;
       description: "Course content, learning materials, and educational resources";
     };
@@ -143,10 +143,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -199,10 +203,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -227,16 +235,22 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -262,10 +276,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -293,16 +311,22 @@ export default function AIContentCreation() {
   x: -20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -353,10 +377,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -381,16 +409,22 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -418,10 +452,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -446,16 +484,22 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -483,10 +527,14 @@ export default function AIContentCreation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -515,8 +563,8 @@ export default function AIContentCreation() {
               >
                 Contact Sales
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

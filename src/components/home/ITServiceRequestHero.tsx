@@ -19,10 +19,14 @@ export function ITServiceRequestHero() {
   x: -30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -83,10 +87,14 @@ export function ITServiceRequestHero() {
   x: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -94,6 +102,8 @@ export function ITServiceRequestHero() {
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -153,8 +163,8 @@ export function ITServiceRequestHero() {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 text-sm font-semibold">Online Now</span>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </div>;
     </section>;

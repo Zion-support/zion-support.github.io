@@ -11,22 +11,22 @@ interface NewsletterFormData {
 
 const interests = [
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },
-  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },
-  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },
+  { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
+  { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
   { id: 'digital-transformation', label: 'Digital Transformation', icon: Zap },;
   { id: 'it-consulting', label: 'IT Consulting', icon: Gift },;
   { id: 'industry-insights', label: 'Industry Insights', icon: Zap };
 ];
 
-const frequencies = [
+const frequencies = [;
   { value: 'weekly', label: 'Weekly', description: 'Stay updated with latest trends' },;
   { value: 'monthly', label: 'Monthly', description: 'Monthly digest of insights' },;
   { value: 'quarterly', label: 'Quarterly', description: 'Quarterly strategic updates' };
 ];
 
 export const EnhancedNewsletter: React.FC = () => {
-  const [formData, setFormData] = useState<NewsletterFormData>({
-    email: '',
+  const [formData, setFormData] = useState<NewsletterFormData>({;
+    email: '',;
     firstName: '',;
     interests: [],;
     frequency: 'monthly';
@@ -92,8 +92,8 @@ export const EnhancedNewsletter: React.FC = () => {
   };
 
   const handleInterestToggle = (interestId: string) => {
-    setFormData(prev => ({
-      ...prev,
+    setFormData(prev => ({;
+      ...prev,;
       interests: prev.interests.includes(interestId);
         ? prev.interests.filter(id => id !== interestId);
         : [...prev.interests, interestId];
@@ -122,10 +122,14 @@ export const EnhancedNewsletter: React.FC = () => {
   scale: 0.95 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -138,8 +142,8 @@ export const EnhancedNewsletter: React.FC = () => {
         <p className="text-green-700 dark:text-green-300 mb-4">
           Thank you for subscribing to our newsletter. You'll receive our next update in your inbox.
         </p>
-        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">
-          <Mail className="h-4 w-4" />
+        <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;
+          <Mail className="h-4 w-4" />;
           <span>Check your email for a confirmation message</span>;
         </div>;
       </motion.div>;
@@ -157,6 +161,8 @@ export const EnhancedNewsletter: React.FC = () => {
   bounce: 0.4 
 
 
+
+
 }}
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
         >
@@ -169,10 +175,14 @@ export const EnhancedNewsletter: React.FC = () => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -188,10 +198,14 @@ export const EnhancedNewsletter: React.FC = () => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -208,10 +222,14 @@ export const EnhancedNewsletter: React.FC = () => {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -232,6 +250,8 @@ export const EnhancedNewsletter: React.FC = () => {
               onChange = {
   (e) => handleInputChange('firstName',
   e.target.value)
+
+
 
 
 }
@@ -263,6 +283,8 @@ export const EnhancedNewsletter: React.FC = () => {
   e.target.value)
 
 
+
+
 }
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.email
@@ -282,8 +304,8 @@ export const EnhancedNewsletter: React.FC = () => {
 
         {/* Interests Selection */}
         <div>
-          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
-            Areas of Interest * (Select all that apply)
+          <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
+            Areas of Interest * (Select all that apply);
           </label>;
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">;
             {interests.map((interest) => {;
@@ -301,8 +323,8 @@ export const EnhancedNewsletter: React.FC = () => {
                       : 'border-slate-300 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-600'
                   }`}
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
+                  whileTap={{ scale: 0.98 }};
+                >;
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />;
                   <span className="text-sm font-medium">{interest.label}</span>;
                 </motion.button>;
@@ -340,6 +362,8 @@ export const EnhancedNewsletter: React.FC = () => {
                   onChange = {
   (e) => handleInputChange('frequency',
   e.target.value)
+
+
 
 
 }
@@ -397,10 +421,14 @@ export const EnhancedNewsletter: React.FC = () => {
   y: 10 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -415,8 +443,8 @@ export const EnhancedNewsletter: React.FC = () => {
 
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
-          By subscribing, you agree to receive marketing emails from Zion Tech Group. 
-          You can unsubscribe at any time. We respect your privacy and will never share your information.
+          By subscribing, you agree to receive marketing emails from Zion Tech Group. ;
+          You can unsubscribe at any time. We respect your privacy and will never share your information.;
         </p>;
       </motion.form>;
     </div>;

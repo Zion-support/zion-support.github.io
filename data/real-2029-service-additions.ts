@@ -13,8 +13,8 @@ export const real2029ServiceAdditions = [
       'CRM/helpdesk sync (HubSpot, Zendesk)',
       'Weekly insights and KPI dashboard'
     ],
-    popular: true,
-    icon: '📧',
+    popular: true,;
+    icon: '📧',;
     color: 'from-cyan-500 to-blue-600',;
     textColor: 'text-cyan-400',;
     link: 'https://ziontechgroup.com/services/ai-email-responder-pro',;

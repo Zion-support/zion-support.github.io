@@ -15,6 +15,8 @@ export default function Ecommerce() {
     
 
 
+
+
 };
     return (<>
       <SEO title="E-commerce Platform" description="Buy and sell hardware, software and services in the Zion marketplace." keywords="tech marketplace, buy IT hardware, sell AI solutions" canonical="https://app.ziontechgroup.com/features/e-commerce"/>

@@ -43,6 +43,8 @@ export default function NextGenInnovativeServices() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -62,9 +64,13 @@ export default function NextGenInnovativeServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }} className="text-center">
@@ -239,14 +245,20 @@ export default function NextGenInnovativeServices() {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
+
 
 
 }} className="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -402,14 +414,20 @@ export default function NextGenInnovativeServices() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
+
 
 
 }} className="text-center">

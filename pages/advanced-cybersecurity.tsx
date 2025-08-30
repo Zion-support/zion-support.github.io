@@ -10,8 +10,8 @@ const AdvancedCybersecurityServices: NextPage = () => {;
 
   const categories = [
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },
+    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;
+    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;
     { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' };
@@ -80,6 +80,8 @@ const AdvancedCybersecurityServices: NextPage = () => {;
             backgroundImage: `url("data:image/svg+xml,
   %3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           
+
+
 
 
 }}></div>
@@ -341,8 +343,8 @@ const AdvancedCybersecurityServices: NextPage = () => {;
               className="bg-white/10 text-white px-8 py-4 rounded-xl font-semibold text-lg border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               📞 Call +1 (302) 464-0950
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </div>;
     </div>;

@@ -17,8 +17,8 @@ export function ContactSection() {
       link: "mailto:kleber@ziontechgroup.com"
     },
     {
-      icon: MapPin,
-      title: "Address",
+      icon: MapPin,;
+      title: "Address",;
       value: "364 E Main St STE 1008 Middletown DE 19709",;
       link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
     };
@@ -32,10 +32,14 @@ export function ContactSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -59,16 +63,22 @@ export function ContactSection() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -92,10 +102,14 @@ export function ContactSection() {
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,8 +122,8 @@ export function ContactSection() {
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
           >
             Contact Us Today
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+            <ArrowRight className="ml-2 h-5 w-5" />;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;
@@ -117,6 +131,8 @@ export function ContactSection() {
 }
 export default ContactSection;
 
+export default ContactSection;
+export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 export default ContactSection;

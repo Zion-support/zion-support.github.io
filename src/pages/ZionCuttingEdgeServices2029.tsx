@@ -78,10 +78,14 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,16 +211,22 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -351,8 +361,8 @@ export default function ZionCuttingEdgeServices2029() {
             ))}
           </div>
 
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
               <p className="text-gray-300 text-lg">No services found matching your criteria.</p>;
               <button;
                 onClick={() => {;
@@ -389,10 +399,14 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -414,16 +428,22 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.1 
+
+
 
 
 }}
@@ -444,16 +464,22 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.2 
+
+
 
 
 }}
@@ -474,16 +500,22 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.3 
+
+
 
 
 }}
@@ -510,10 +542,14 @@ export default function ZionCuttingEdgeServices2029() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -569,8 +605,8 @@ export default function ZionCuttingEdgeServices2029() {
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
                 <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Main Website</a></li>
-                <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>
-              </ul>
+                <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>;
+              </ul>;
             </div>;
           </div>;
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">;

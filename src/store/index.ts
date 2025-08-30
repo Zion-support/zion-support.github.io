@@ -4,8 +4,8 @@ import wishlistReducer from "./wishlistSlice";
 import authReducer from "./authSlice";
 
 export const store = configureStore({
-  reducer: {
-    cart: cartReducer,
+  reducer: {;
+    cart: cartReducer,;
     wishlist: wishlistReducer,;
     auth: authReducer,;
   },;

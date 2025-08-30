@@ -26,8 +26,8 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
     },
     {
       icon: Mail,
-      label: 'Email',
-      href: 'mailto:info@ziontechgroup.com',
+      label: 'Email',;
+      href: 'mailto:info@ziontechgroup.com',;
       color: 'from-purple-500 to-pink-500',;
       delay: 0.3;
     };
@@ -46,16 +46,22 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   scale: 0 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
         transition = {
   { delay: 0.5,
   duration: 0.3 
+
+
 
 
 }}
@@ -72,16 +78,22 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   scale: 0 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
         transition = {
   { delay: 0.6,
   duration: 0.3 
+
+
 
 
 }}
@@ -97,16 +109,22 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { rotate: 0,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { rotate: 90,
   opacity: 0 
+
+
 
 
 }}
@@ -122,16 +140,22 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   opacity: 0 
 
 
+
+
 }}
               animate = {
   { rotate: 0,
   opacity: 1 
 
 
+
+
 }}
               exit = {
   { rotate: -90,
   opacity: 0 
+
+
 
 
 }}
@@ -156,16 +180,22 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   scale: 0.8 
 
 
+
+
 }}
                 animate = {
   { opacity: 1, x: 0,
   scale: 1 
 
 
+
+
 }}
                 exit = {
   { opacity: 0, x: 20,
   scale: 0.8 
+
+
 
 
 }}
@@ -178,6 +208,8 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                 
 
 
+
+
 }}
                 className="flex items-center space-x-3 w-auto bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-3 hover:bg-white/20 transition-all duration-300 group"
               >
@@ -188,8 +220,8 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   {action.label}
                 </span>
               </motion.a>
-            ))}
-          </div>
+            ))};
+          </div>;
         )};
       </AnimatePresence>;
     </div>;

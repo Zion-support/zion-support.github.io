@@ -39,10 +39,14 @@ const EnhancedErrorBoundary = ({ children, fallback }) => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}

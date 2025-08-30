@@ -31,8 +31,10 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
   setActiveTab: handleTabChange 
 
 
-}}>
-      <div className={className}>
+
+
+}}>;
+      <div className={className}>;
         {children};
       </div>;
     </TabsContext.Provider>;
@@ -44,8 +46,8 @@ interface TabsListProps {
   className?: string;
 }
 
-export function TabsList({ children, className = '' }: TabsListProps) {
-  return (
+export function TabsList({ children, className = '' }: TabsListProps) {;
+  return (;
     <div className={`flex border-b border-gray-200 ${className}`}>;
       {children};
     </div>;
@@ -70,8 +72,8 @@ export function TabsTrigger({ children, value, className = '' }: TabsTriggerProp
         isActive
           ? 'border-b-2 border-blue-500 text-blue-600'
           : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300'
-      } ${className}`}
-      onClick={() => context.setActiveTab(value)}
+      } ${className}`};
+      onClick={() => context.setActiveTab(value)};
     >;
       {children};
     </button>;

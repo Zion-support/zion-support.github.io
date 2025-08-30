@@ -235,8 +235,8 @@ const ComprehensiveServicesShowcase2029 = () => {
           description: "AI-driven project optimization",
           href: "/services/ai-project-management",
           icon: Target,
-          color: "from-blue-500 to-indigo-500",
-          price: "$399/month"
+          color: "from-blue-500 to-indigo-500",;
+          price: "$399/month";
         };
       ];
     };
@@ -265,8 +265,8 @@ const ComprehensiveServicesShowcase2029 = () => {
       name: "AI Cybersecurity Threat Intelligence",
       description: "Protect your organization with AI-powered security",
       href: "/services/ai-cybersecurity-threat-intelligence",
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
+      icon: Shield,;
+      color: "from-red-500 to-orange-500",;
       price: "$5,999/month",;
       featured: true;
     };
@@ -284,10 +284,14 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -331,10 +335,14 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -359,16 +367,22 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -413,10 +427,14 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -441,16 +459,22 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.1 
+
+
 
 
 }}
@@ -470,16 +494,22 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
                       whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       transition = {
   { duration: 0.6,
   delay: serviceIndex * 0.1 
+
+
 
 
 }}
@@ -520,10 +550,14 @@ const ComprehensiveServicesShowcase2029 = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -579,8 +613,8 @@ const ComprehensiveServicesShowcase2029 = () => {
               <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
               <p className="text-gray-300">Address</p>
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

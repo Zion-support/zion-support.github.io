@@ -211,9 +211,13 @@ const AdvancedServiceRecommendation = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="text-center mb-8">
@@ -232,9 +236,13 @@ const AdvancedServiceRecommendation = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
@@ -251,6 +259,8 @@ const AdvancedServiceRecommendation = () => {
   industry: e.target.value 
 
 
+
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
@@ -262,6 +272,8 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.companySize} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   companySize: e.target.value 
+
+
 
 
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -277,6 +289,8 @@ const AdvancedServiceRecommendation = () => {
   budget: e.target.value 
 
 
+
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
@@ -290,6 +304,8 @@ const AdvancedServiceRecommendation = () => {
   timeline: e.target.value 
 
 
+
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
@@ -301,6 +317,8 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.technologyMaturity} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
+
+
 
 
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
@@ -319,6 +337,8 @@ const AdvancedServiceRecommendation = () => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
+
+
 
 
 }));
@@ -341,6 +361,8 @@ const AdvancedServiceRecommendation = () => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
+
+
 
 
 }));
@@ -373,9 +395,13 @@ const AdvancedServiceRecommendation = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }}>
@@ -389,9 +415,13 @@ const AdvancedServiceRecommendation = () => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>
@@ -473,6 +503,8 @@ const AdvancedServiceRecommendation = () => {
   '_blank')
 
 
+
+
 }>
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2"/>
@@ -491,9 +523,13 @@ const AdvancedServiceRecommendation = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
@@ -509,6 +545,8 @@ const AdvancedServiceRecommendation = () => {
   '_blank')
 
 
+
+
 }>
                   <Users className="w-5 h-5 mr-2"/>
                   Get Expert Consultation
@@ -516,6 +554,8 @@ const AdvancedServiceRecommendation = () => {
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

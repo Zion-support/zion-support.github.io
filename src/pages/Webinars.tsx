@@ -12,15 +12,15 @@ export default function Webinars() {
   const categories = [
     { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },;
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },;
     { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },;
     { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 };
   ];
 
-  const filterTypes = [
-    { id: 'all', name: 'All Webinars', count: 0 },
+  const filterTypes = [;
+    { id: 'all', name: 'All Webinars', count: 0 },;
     { id: 'upcoming', name: 'Upcoming', count: 0 },;
     { id: 'on-demand', name: 'On-Demand', count: 0 },;
     { id: 'live', name: 'Live Now', count: 0 };
@@ -56,8 +56,8 @@ export default function Webinars() {
       maxAttendees: 300,
       currentAttendees: 189,
       featured: false,
-      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],
-      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',
+      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
+      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
       registrationRequired: true,;
       recordingAvailable: false;
     };
@@ -89,8 +89,8 @@ export default function Webinars() {
   });
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      weekday: 'long',
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      weekday: 'long',;
       year: 'numeric',;
       month: 'long',;
       day: 'numeric';
@@ -124,10 +124,14 @@ export default function Webinars() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -220,8 +224,8 @@ export default function Webinars() {
           <div className="max-w-7xl mx-auto">
             {filteredWebinars.length === 0 ? (
               <div className="text-center py-20">
-                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />
-                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>
+                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />;
+                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>;
                 <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>;
                 <button;
                   onClick={() => {;
@@ -244,10 +248,14 @@ export default function Webinars() {
   y: 20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -331,8 +339,8 @@ export default function Webinars() {
                   </motion.div>
                 ))}
               </div>
-            )}
-          </div>
+            )};
+          </div>;
         </div>;
       </section>;
     </div>;

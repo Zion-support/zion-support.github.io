@@ -44,23 +44,23 @@ export default function RevolutionaryServices2030() {
   const [sortBy, setSortBy] = useState('featured');
 
   const categories = [
-    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'all', name: 'All Revolutionary Services', icon: Rocket, color: 'from-zion-purple to-zion-orange' },;
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-zion-cyan to-zion-purple' },;
     { id: 'Blockchain Services', name: 'Blockchain Services', icon: Lock, color: 'from-zion-purple to-zion-blue' },;
     { id: 'Cybersecurity Services', name: 'Cybersecurity Services', icon: Shield, color: 'from-zion-purple to-zion-red' },;
     { id: 'Emerging Tech', name: 'Emerging Technology', icon: Cpu, color: 'from-zion-orange to-zion-green' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'budget', name: 'Budget', range: '$1,000 - $10,000' },;
     { id: 'mid-range', name: 'Mid-Range', range: '$10,000 - $25,000' },;
     { id: 'enterprise', name: 'Enterprise', range: '$25,000+' };
   ];
 
   const sortOptions = [
-    { id: 'featured', name: 'Featured' },
-    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'featured', name: 'Featured' },;
+    { id: 'price-low', name: 'Price: Low to High' },;
     { id: 'price-high', name: 'Price: High to Low' },;
     { id: 'innovation', name: 'Innovation Level' },;
     { id: 'market-size', name: 'Market Size' };
@@ -140,10 +140,14 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -189,10 +193,14 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -208,16 +216,22 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -232,16 +246,22 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -256,16 +276,22 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -333,8 +359,8 @@ export default function RevolutionaryServices2030() {
               </select>
             </div>
           </div>
-
-          {/* Services Grid */}
+;
+          {/* Services Grid */};
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
               {sortedServices.map((service, index) => {;
@@ -349,10 +375,14 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -361,10 +391,14 @@ export default function RevolutionaryServices2030() {
   y: -20 
 
 
+
+
 }}
                     transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -455,8 +489,8 @@ export default function RevolutionaryServices2030() {
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
                         >
                           <Globe className="inline mr-1 h-3 w-3" />
-                          Website
-                        </Link>
+                          Website;
+                        </Link>;
                       </div>;
                     </div>;
                   </motion.div>;
@@ -466,8 +500,8 @@ export default function RevolutionaryServices2030() {
           </div>
 
           {/* No Results */}
-          {sortedServices.length = == 0 && (
-            <div className="text-center py-12">
+          {sortedServices.length = == 0 && (;
+            <div className="text-center py-12">;
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -493,10 +527,14 @@ export default function RevolutionaryServices2030() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -542,8 +580,8 @@ export default function RevolutionaryServices2030() {
                 <DollarSign className="mr-2 h-5 w-5" />
                 View Pricing
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

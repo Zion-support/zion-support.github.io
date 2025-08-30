@@ -5,8 +5,8 @@ export default function AIManufacturing() {
     'AI-powered predictive maintenance and equipment monitoring',
     'Intelligent quality control and defect detection',
     'Automated production planning and optimization',
-    'Real-time supply chain and inventory management',
-    'Predictive analytics for production efficiency',
+    'Real-time supply chain and inventory management',;
+    'Predictive analytics for production efficiency',;
     'Smart factory automation and IoT integration',;
     'Integration with major ERP and MES systems',;
     'Custom AI models for industry-specific processes';
@@ -23,8 +23,8 @@ export default function AIManufacturing() {
       price: '$1,299/mo', 
       details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Manufacturer', 
+    { ;
+      name: 'Large Manufacturer', ;
       price: '$2,999/mo', ;
       details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIManufacturing() {
 
   const useCases = [
     'Production line optimization and monitoring',
-    'Quality control and defect prevention',
-    'Predictive maintenance and equipment management',
+    'Quality control and defect prevention',;
+    'Predictive maintenance and equipment management',;
     'Supply chain optimization and inventory management',;
     'Energy efficiency and sustainability',;
     'Workforce safety and compliance';
@@ -41,8 +41,8 @@ export default function AIManufacturing() {
 
   const benefits = [
     'Improve production efficiency by 25-40%',
-    'Reduce equipment downtime by 30-50%',
-    'Cut quality defects by 40-60%',
+    'Reduce equipment downtime by 30-50%',;
+    'Cut quality defects by 40-60%',;
     'Optimize inventory levels by 20-35%',;
     'Enhance worker safety and compliance',;
     'Scale manufacturing operations efficiently';
@@ -50,8 +50,8 @@ export default function AIManufacturing() {
 
   const industries = [
     'Automotive Manufacturing',
-    'Electronics & Semiconductors',
-    'Food & Beverage Processing',
+    'Electronics & Semiconductors',;
+    'Food & Beverage Processing',;
     'Pharmaceutical Manufacturing',;
     'Textiles & Apparel',;
     'Aerospace & Defense';
@@ -165,8 +165,8 @@ export default function AIManufacturing() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

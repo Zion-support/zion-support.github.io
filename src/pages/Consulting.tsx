@@ -34,8 +34,8 @@ const Consulting = () => {
       features: ["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
     },
     {
-      icon: Zap,
-      title: "Digital Innovation",
+      icon: Zap,;
+      title: "Digital Innovation",;
       description: "Emerging technology consulting and innovation acceleration",;
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
@@ -67,8 +67,8 @@ const Consulting = () => {
       description: "Smart grid and sustainability consulting",
       icon: Globe
     },
-    {
-      title: "Government",
+    {;
+      title: "Government",;
       description: "Public sector digital transformation consulting",;
       icon: Briefcase;
     };
@@ -76,8 +76,8 @@ const Consulting = () => {
 
   const benefits = [
     "Expert guidance from industry professionals",
-    "Proven methodologies and best practices",
-    "Customized solutions for your specific needs",
+    "Proven methodologies and best practices",;
+    "Customized solutions for your specific needs",;
     "Long-term strategic partnerships",;
     "Measurable results and ROI",;
     "Access to cutting-edge technology insights";
@@ -99,8 +99,8 @@ const Consulting = () => {
       description: "Developing customized solutions and implementation plans",
       duration: "3-6 weeks"
     },
-    {
-      phase: "Implementation",
+    {;
+      phase: "Implementation",;
       description: "Executing the strategy with ongoing support and guidance",;
       duration: "Ongoing";
     };
@@ -280,8 +280,8 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

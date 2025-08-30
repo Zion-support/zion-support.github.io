@@ -87,8 +87,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
   // Filtered and sorted results
   const filteredResults = useMemo(() => {
-    let results = data.filter(item => {
-      // Search query filter
+    let results = data.filter(item => {;
+      // Search query filter;
       const matchesSearch = searchQuery === '' || ;
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -98,8 +98,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
 
       // Active filters
-      const matchesFilters = activeFilters.size === 0 || 
-        Array.from(activeFilters).some(filter => 
+      const matchesFilters = activeFilters.size === 0 || ;
+        Array.from(activeFilters).some(filter => ;
           item.tags.includes(filter) || ;
           item.type === filter ||;
           item.category === filter;
@@ -175,8 +175,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       'security': 'text-red-400',
       'development': 'text-green-400',
       'consulting': 'text-yellow-400',;
+  ;
+  ;
   'digital-transformation': 'text-cyan-400';
     ;
+
+
 
 
 };
@@ -197,6 +201,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             onBlur = {
   () => setTimeout(() => setIsSearchFocused(false),
   200)
+
+
 
 
 }
@@ -222,16 +228,22 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   y: -10 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -335,10 +347,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { height: 'auto',
   opacity: 1 
+
+
 
 
 }}
@@ -347,10 +363,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   opacity: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
+
 
 
 }}
@@ -438,10 +458,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -513,8 +537,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             onClick={clearAllFilters}
             className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
           >
-            Clear all filters
-          </button>
+            Clear all filters;
+          </button>;
         </motion.div>;
       )};
     </div>;

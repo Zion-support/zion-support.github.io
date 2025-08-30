@@ -36,8 +36,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Target,
-      title: 'Treatment Optimization',
+      icon: Target,;
+      title: 'Treatment Optimization',;
       description: 'AI-driven treatment recommendations based on patient history and outcomes',;
       color: 'from-indigo-500 to-purple-500';
     };
@@ -89,8 +89,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
         'White-label solution',
         'Dedicated support team',
         '24/7 phone support',
-        'SLA guarantees'
-      ],
+        'SLA guarantees';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -107,14 +107,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       description: 'Preventive care strategies, chronic disease management, and population health optimization',
       metrics: ['Increase preventive care by 40%', 'Reduce ER visits by 35%', 'Improve patient satisfaction by 45%']
     },
-    {
-      title: 'Specialty Clinics',
+    {;
+      title: 'Specialty Clinics',;
       description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',;
       metrics: ['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%'];
     };
   ];
 
-  const integrations = [
+  const integrations = [;
     'Epic', 'Cerner', 'Allscripts', 'Meditech', 'NextGen', 'Athenahealth',;
     'Practice Fusion', 'eClinicalWorks', 'Kareo', 'DrChrono', 'AdvancedMD',;
     'HL7 FHIR', 'DICOM', 'HL7 v2', 'CCDA', 'X12', 'Webhooks';
@@ -136,8 +136,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
       title: '20% Cost Reduction',
       description: 'Optimize resource allocation and reduce unnecessary procedures'
     },
-    {
-      icon: Clock,
+    {;
+      icon: Clock,;
       title: '50% Faster Diagnosis',;
       description: 'Accelerate diagnosis and treatment planning with AI insights';
     };
@@ -160,10 +160,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -222,16 +226,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -269,16 +279,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -316,16 +332,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -398,16 +420,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -450,16 +478,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
+
 
 
 }}
@@ -491,10 +525,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -514,16 +552,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -542,16 +586,22 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -576,10 +626,14 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -655,8 +709,8 @@ const AIHealthcareAnalyticsPlatform: React.FC = () => {
                   ziontechgroup.com
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

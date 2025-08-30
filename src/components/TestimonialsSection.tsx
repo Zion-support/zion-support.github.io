@@ -47,8 +47,8 @@ const testimonials = [
     name: "Lisa Park",
     position: "Head of IT",
     company: "Healthcare Innovations",
-    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",
-    rating: 5,
+    content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
+    rating: 5,;
     industry: "Healthcare",;
     project: "Cloud Migration & Optimization";
   };
@@ -125,16 +125,22 @@ export function TestimonialsSection() {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -155,8 +161,8 @@ export function TestimonialsSection() {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">24/7</div>
-            <div className="text-zion-slate-light">Support Available</div>
-          </div>
+            <div className="text-zion-slate-light">Support Available</div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

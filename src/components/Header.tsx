@@ -56,8 +56,8 @@ export function Header() {
     {
       category: 'Innovation Hub',
       items: [
-        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },
-        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },;
+        { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },;
         { name: 'All Services', path: '/services', icon: <Globe className="w-4 h-4" /> };
       ];
     };
@@ -104,16 +104,22 @@ export function Header() {
   y: 10 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   y: 10 
+
+
 
 
 }}
@@ -216,16 +222,22 @@ export function Header() {
   height: 0 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -251,16 +263,22 @@ export function Header() {
   height: 0 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -341,8 +359,8 @@ export function Header() {
                   Get Started
                 </Link>
               </div>
-            </motion.div>
-          )}
+            </motion.div>;
+          )};
         </AnimatePresence>;
       </nav>;
     </header>;

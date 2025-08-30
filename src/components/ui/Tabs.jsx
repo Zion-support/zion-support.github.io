@@ -26,10 +26,14 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {
   y: 10 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}

@@ -24,6 +24,8 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
       
 
 
+
+
 };
       
       // Generate suggestions based on analysis
@@ -63,10 +65,14 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}

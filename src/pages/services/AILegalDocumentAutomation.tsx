@@ -7,8 +7,8 @@ export default function AILegalDocumentAutomation() {
     'Automated risk assessment and mitigation',
     'Multi-jurisdiction legal framework support',
     'Real-time legal document collaboration',
-    'Advanced clause library and templates',
-    'Automated contract renewal reminders',
+    'Advanced clause library and templates',;
+    'Automated contract renewal reminders',;
     'Legal document version control and tracking',;
     'Integration with e-signature platforms',;
     'Comprehensive audit trail and reporting';
@@ -16,8 +16,8 @@ export default function AILegalDocumentAutomation() {
 
   const benefits = [
     'Reduce legal document creation time by 85%',
-    'Minimize legal risks and compliance issues',
-    'Cut legal costs by up to 60%',
+    'Minimize legal risks and compliance issues',;
+    'Cut legal costs by up to 60%',;
     'Improve contract accuracy and consistency',;
     'Enable faster deal closures and negotiations',;
     'Provide 24/7 legal document assistance';
@@ -25,8 +25,8 @@ export default function AILegalDocumentAutomation() {
 
   const useCases = [
     'Contract management and automation',
-    'Legal document review and analysis',
-    'Compliance monitoring and reporting',
+    'Legal document review and analysis',;
+    'Compliance monitoring and reporting',;
     'Risk assessment and mitigation',;
     'Legal workflow optimization',;
     'Regulatory compliance automation';
@@ -63,8 +63,8 @@ export default function AILegalDocumentAutomation() {
         'Unlimited documents',
         'Full AI legal automation',
         'Custom legal frameworks',
-        'Dedicated legal support',
-        'API integrations',
+        'Dedicated legal support',;
+        'API integrations',;
         'Advanced analytics & reporting';
       ];
     };
@@ -76,8 +76,12 @@ export default function AILegalDocumentAutomation() {
     security: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.9%',
     compliance: ['ISO 27001', 'SOC 2', 'GDPR', 'CCPA',;
+  ;
+  ;
   'HIPAA'];
   ;
+
+
 
 
 };
@@ -220,8 +224,8 @@ export default function AILegalDocumentAutomation() {
           <div className="mt-4">
             <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
               Learn More <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </div>;

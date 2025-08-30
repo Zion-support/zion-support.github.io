@@ -13,16 +13,16 @@ export default function ApiPlayground() {
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
     { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 };
   ];
 
   const methods = [
-    { id: 'all', name: 'All Methods', count: 0 },
-    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
+    { id: 'all', name: 'All Methods', count: 0 },;
+    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },;
     { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },;
     { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },;
     { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' };
@@ -205,8 +205,8 @@ export default function ApiPlayground() {
           }
         ],
         total: 1
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
+      },;
+      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',;
       sdk: 'https://github.com/ziontechgroup/iot-sdk',;
       featured: false;
     };
@@ -641,8 +641,8 @@ export default function ApiPlayground() {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               View Documentation
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </div>;
     </div>;

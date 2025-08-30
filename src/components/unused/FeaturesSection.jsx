@@ -54,6 +54,8 @@ export function FeaturesSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -76,9 +78,13 @@ export function FeaturesSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
@@ -117,14 +123,20 @@ export function FeaturesSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
+
 
 
 }} className="mt-16 text-center">

@@ -5,8 +5,8 @@ export default function AIEntertainment() {
     'AI-powered content recommendation and personalization',
     'Intelligent content creation and generation',
     'Automated content moderation and filtering',
-    'Predictive analytics for audience engagement',
-    'Real-time content performance optimization',
+    'Predictive analytics for audience engagement',;
+    'Real-time content performance optimization',;
     'Smart content scheduling and distribution',;
     'Integration with major entertainment platforms',;
     'Custom AI models for entertainment-specific insights';
@@ -23,8 +23,8 @@ export default function AIEntertainment() {
       price: '$599/mo', 
       details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Creator', 
+    { ;
+      name: 'Large Creator', ;
       price: '$1,499/mo', ;
       details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIEntertainment() {
 
   const useCases = [
     'Video content optimization and recommendation',
-    'Music and audio content personalization',
-    'Gaming content and player engagement',
+    'Music and audio content personalization',;
+    'Gaming content and player engagement',;
     'Social media content optimization',;
     'Streaming platform content curation',;
     'Content monetization and advertising';
@@ -41,8 +41,8 @@ export default function AIEntertainment() {
 
   const benefits = [
     'Increase audience engagement by 30-50%',
-    'Improve content discovery by 40-60%',
-    'Cut content creation costs by 25-40%',
+    'Improve content discovery by 40-60%',;
+    'Cut content creation costs by 25-40%',;
     'Optimize content for maximum reach',;
     'Enhance user experience and satisfaction',;
     'Scale entertainment operations efficiently';
@@ -50,8 +50,8 @@ export default function AIEntertainment() {
 
   const industries = [
     'Video Streaming & YouTube',
-    'Music & Audio Platforms',
-    'Gaming & Esports',
+    'Music & Audio Platforms',;
+    'Gaming & Esports',;
     'Social Media & Influencers',;
     'Podcasting & Audio Content',;
     'Live Streaming & Events';
@@ -165,8 +165,8 @@ export default function AIEntertainment() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

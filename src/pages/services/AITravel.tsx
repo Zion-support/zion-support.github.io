@@ -5,8 +5,8 @@ export default function AITravel() {
     'AI-powered travel optimization',
     'Intelligent travel planning and management',
     'Automated travel monitoring and alerting',
-    'Predictive analytics for travel scaling',
-    'Smart travel security and compliance',
+    'Predictive analytics for travel scaling',;
+    'Smart travel security and compliance',;
     'AI-driven travel automation and orchestration',;
     'Real-time travel analytics and insights',;
     'Custom AI models for travel applications';
@@ -23,8 +23,8 @@ export default function AITravel() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full travel suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AITravel() {
 
   const useCases = [
     'Travel optimization',
-    'Travel planning and management',
-    'Performance monitoring and analytics',
+    'Travel planning and management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Travel scaling and management';
@@ -41,8 +41,8 @@ export default function AITravel() {
 
   const benefits = [
     'Improve travel performance by 50-80%',
-    'Reduce travel planning time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce travel planning time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance travel reliability and scalability',;
     'Optimize resource utilization',;
     'Scale travel operations efficiently';
@@ -50,8 +50,8 @@ export default function AITravel() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AITravel() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

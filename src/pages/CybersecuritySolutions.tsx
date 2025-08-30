@@ -69,8 +69,8 @@ export default function CybersecuritySolutions() {
     },
     {
       icon: Cloud,
-      title: "Cloud Security",
-      description: "Secure your cloud infrastructure and applications",
+      title: "Cloud Security",;
+      description: "Secure your cloud infrastructure and applications",;
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
       color: "from-zion-indigo to-zion-purple";
     };
@@ -78,8 +78,8 @@ export default function CybersecuritySolutions() {
 
   const threatTypes = [
     { id: 'all', name: 'All Threats', icon: Shield },
-    { id: 'malware', name: 'Malware', icon: Bug },
-    { id: 'phishing', name: 'Phishing', icon: Target },
+    { id: 'malware', name: 'Malware', icon: Bug },;
+    { id: 'phishing', name: 'Phishing', icon: Target },;
     { id: 'ransomware', name: 'Ransomware', icon: Lock },;
     { id: 'ddos', name: 'DDoS Attacks', icon: Network },;
     { id: 'insider', name: 'Insider Threats', icon: Users };
@@ -129,8 +129,8 @@ export default function CybersecuritySolutions() {
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
-      type: "malware",
-      impact: "Critical",
+      type: "malware",;
+      impact: "Critical",;
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
       icon: Bug;
     };
@@ -168,15 +168,15 @@ export default function CybersecuritySolutions() {
       icon: CreditCard
     },
     {
-      name: "NIST Cybersecurity Framework",
-      description: "U.S. government framework for cybersecurity risk management",
+      name: "NIST Cybersecurity Framework",;
+      description: "U.S. government framework for cybersecurity risk management",;
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
       icon: BarChart3;
     };
   ];
 
-  const securityMetrics = [
-    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },
+  const securityMetrics = [;
+    { metric: "99.9%", label: "Uptime Protection", description: "Continuous security monitoring and protection" },;
     { metric: "<1hr", label: "Response Time", description: "Average time to detect and respond to threats" },;
     { metric: "0", label: "Data Breaches", description: "Successful breaches prevented for our clients" },;
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" };
@@ -185,8 +185,8 @@ export default function CybersecuritySolutions() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -197,9 +197,11 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 };
     };
@@ -225,10 +227,14 @@ export default function CybersecuritySolutions() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -277,10 +283,14 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -311,6 +321,8 @@ export default function CybersecuritySolutions() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -346,10 +358,14 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -373,14 +389,18 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
-}}
-            transition={{ duration: 0.6 }}
+
+
+}};
+            transition={{ duration: 0.6 }};
             viewport={{ once: true }};
           >;
             {threatTypes.map((threat) => {;
@@ -393,8 +413,8 @@ export default function CybersecuritySolutions() {
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
-                  }`}
-                >
+                  }`};
+                >;
                   <Icon className="w-5 h-5" />;
                   {threat.name};
                 </button>;
@@ -418,6 +438,8 @@ export default function CybersecuritySolutions() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -467,10 +489,14 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -501,6 +527,8 @@ export default function CybersecuritySolutions() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -539,10 +567,14 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -592,10 +624,14 @@ export default function CybersecuritySolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -678,10 +714,14 @@ export default function CybersecuritySolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -707,8 +747,8 @@ export default function CybersecuritySolutions() {
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

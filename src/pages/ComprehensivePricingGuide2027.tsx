@@ -227,8 +227,8 @@ export default function ComprehensivePricingGuide2027() {
           price: "$349",
           period: "/month",
           features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],
-          popular: false,
-          link: "/services/ai-customer-support-automation"
+          popular: false,;
+          link: "/services/ai-customer-support-automation";
         };
       ];
     };
@@ -278,8 +278,8 @@ export default function ComprehensivePricingGuide2027() {
         "24/7 dedicated support",
         "Custom integrations",
         "Advanced analytics",
-        "Compliance automation",
-        "Strategic consulting"
+        "Compliance automation",;
+        "Strategic consulting";
       ],;
       popular: false;
     };
@@ -309,8 +309,8 @@ export default function ComprehensivePricingGuide2027() {
     },
     {
       feature: "Cloud DevOps",
-      zion: "$599/month",
-      competitor1: "$1,199/month",
+      zion: "$599/month",;
+      competitor1: "$1,199/month",;
       competitor2: "$1,599/month",;
       savings: "50-63%";
     };
@@ -334,10 +334,14 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -388,10 +392,14 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -416,16 +424,22 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.1 
+
+
 
 
 }}
@@ -449,16 +463,22 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
                       whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                       transition = {
   { duration: 0.8,
   delay: serviceIndex * 0.1 
+
+
 
 
 }}
@@ -521,10 +541,14 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -549,16 +573,22 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -621,10 +651,14 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -678,10 +712,14 @@ export default function ComprehensivePricingGuide2027() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -735,8 +773,8 @@ export default function ComprehensivePricingGuide2027() {
                 <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
                 <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </section>;
       </div>;
     </div>;

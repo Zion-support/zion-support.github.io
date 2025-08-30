@@ -155,8 +155,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center"
                 >
                   Email: {service.contactInfo.email}
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -239,8 +239,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center"
                 >
                   Email: {service.contactInfo.email}
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -323,8 +323,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center"
                 >
                   Email: {service.contactInfo.email}
-                </a>
-              </div>
+                </a>;
+              </div>;
             </div>;
           </div>;
         </div>;
@@ -460,6 +460,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   parseInt(e.target.value)])
 
 
+
+
 }
                       className="flex-1"
                     />
@@ -471,6 +473,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       onChange = {
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
+
+
 
 
 }
@@ -507,9 +511,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                     setPriceRange([priceRangeData[0],;
   ;
   ;
+  ;
+  ;
   priceRangeData[1]]);
                     setSelectedCategory('all');
                   
+
+
 
 
 }}
@@ -563,9 +571,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   setPriceRange([priceRangeData[0],;
   ;
   ;
+  ;
+  ;
   priceRangeData[1]]);
                   setSelectedCategory('all');
                 
+
+
 
 
 }}
@@ -638,8 +650,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               >
                 Email Us
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </>;

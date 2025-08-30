@@ -5,8 +5,8 @@ export default function AIEdgeComputing() {
     'AI-powered edge optimization',
     'Intelligent edge device management',
     'Automated edge monitoring and alerting',
-    'Predictive analytics for edge scaling',
-    'Smart edge security and compliance',
+    'Predictive analytics for edge scaling',;
+    'Smart edge security and compliance',;
     'AI-driven edge automation and orchestration',;
     'Real-time edge analytics and insights',;
     'Custom AI models for edge applications';
@@ -23,8 +23,8 @@ export default function AIEdgeComputing() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full edge suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIEdgeComputing() {
 
   const useCases = [
     'Edge optimization',
-    'Edge device management',
-    'Performance monitoring and analytics',
+    'Edge device management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Edge scaling and management';
@@ -41,8 +41,8 @@ export default function AIEdgeComputing() {
 
   const benefits = [
     'Improve edge performance by 50-80%',
-    'Reduce edge processing time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce edge processing time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance edge reliability and scalability',;
     'Optimize resource utilization',;
     'Scale edge operations efficiently';
@@ -50,8 +50,8 @@ export default function AIEdgeComputing() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIEdgeComputing() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

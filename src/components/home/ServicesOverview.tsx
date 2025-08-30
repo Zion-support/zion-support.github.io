@@ -26,10 +26,14 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -60,10 +64,14 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -72,12 +80,16 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   delay: index * 0.1 
 
 
+
+
 }}
               viewport={{ once: true }}
               whileHover = {
   { 
                 y: -5,
   transition: { duration: 0.3 
+
+
 
 
 }
@@ -113,16 +125,22 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   x: -20 
 
 
+
+
 }}
                     whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.5,
   delay: itemIndex * 0.1 
+
+
 
 
 }}
@@ -140,6 +158,8 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
   '-')
 
 
+
+
 }`}
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
                 aria-label={`Learn more about ${service.category} services`}
@@ -150,8 +170,8 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
               
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue group-hover:w-full transition-all duration-700" />
-            </motion.div>
-          ))}
+            </motion.div>;
+          ))};
         </div>;
       </div>;
     </section>;

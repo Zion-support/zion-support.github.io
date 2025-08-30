@@ -51,8 +51,8 @@ export default function AIFinancialTradingPlatform() {
       title: 'High-Frequency Trading',
       description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies'
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: 'Market Sentiment Analysis',;
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment';
     };
@@ -104,8 +104,8 @@ export default function AIFinancialTradingPlatform() {
         'Dedicated support',
         'Advanced compliance',
         'Unlimited portfolio size',
-        'On-premise options',
-        'SLA guarantees'
+        'On-premise options',;
+        'SLA guarantees';
       ],;
       popular: false;
     };
@@ -127,8 +127,8 @@ export default function AIFinancialTradingPlatform() {
       title: 'Risk-Adjusted Returns',
       description: 'AI optimizes for the best risk-reward ratio in any market condition'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: 'Emotion-Free Trading',;
       description: 'Eliminate human bias and emotional decision-making from your trades';
     };
@@ -150,15 +150,15 @@ export default function AIFinancialTradingPlatform() {
       description: 'Real-time currency pair analysis and automated forex strategies',
       icon: Globe
     },
-    {
-      title: 'Commodities',
+    {;
+      title: 'Commodities',;
       description: 'AI-driven insights for gold, oil, and other commodity markets',;
       icon: BarChart3;
     };
   ];
 
-  const performanceMetrics = [
-    { metric: '95%', label: 'Win Rate' },
+  const performanceMetrics = [;
+    { metric: '95%', label: 'Win Rate' },;
     { metric: '2.5x', label: 'Sharpe Ratio' },;
     { metric: '15%', label: 'Max Drawdown' },;
     { metric: '24/7', label: 'Uptime' };
@@ -180,10 +180,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -228,16 +232,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -261,10 +271,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -289,16 +303,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -325,10 +345,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -353,16 +377,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -389,10 +419,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -417,16 +451,22 @@ export default function AIFinancialTradingPlatform() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -453,10 +493,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -481,16 +525,22 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -549,10 +599,14 @@ export default function AIFinancialTradingPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -577,8 +631,8 @@ export default function AIFinancialTradingPlatform() {
             
             <p className="text-gray-400 mt-6">
               No credit card required • 14-day free trial • Cancel anytime
-            </p>
-          </motion.div>
+            </p>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

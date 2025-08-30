@@ -13,12 +13,16 @@ const initialState: CartState = {
   itemCount: 0,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
 
-const cartSlice = createSlice({
-  name: 'cart',
+const cartSlice = createSlice({;
+  name: 'cart',;
   initialState,;
   reducers: {;
     addItem: (state, action: PayloadAction<CartItem>) => {;

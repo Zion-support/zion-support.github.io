@@ -145,8 +145,8 @@ const researchAreas = [
       'Multi-cloud Strategies',
       'Cloud Security',
       'DevOps Automation'
-    ],
-    publications: 20,
+    ],;
+    publications: 20,;
     patents: 10,;
     projects: 16;
   };
@@ -256,8 +256,8 @@ const researchProjects = [
       'AI ethics framework',
       'Responsible AI guidelines',
       '4 research publications',
-      'Industry standards contribution'
-    ],
+      'Industry standards contribution';
+    ],;
     icon: Brain,;
     color: 'from-purple-500 to-indigo-600';
   };
@@ -309,8 +309,8 @@ const publications = [
     title: 'Security-First Cloud Architecture Patterns',
     authors: ['Dr. Lisa Garcia', 'Dr. David Kim'],
     journal: 'Cloud Computing Security',
-    year: 2026,
-    citations: 38,
+    year: 2026,;
+    citations: 38,;
     area: 'Cloud-Native',;
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
@@ -362,8 +362,8 @@ const patents = [
     title: 'Cloud Security Architecture Pattern',
     inventors: ['Dr. Lisa Garcia'],
     filingDate: '2026-02-15',
-    status: 'Pending',
-    patentNumber: 'US 2026/0098765',
+    status: 'Pending',;
+    patentNumber: 'US 2026/0098765',;
     area: 'Cloud-Native',;
     description: 'A security architecture pattern for cloud-native applications.';
   };
@@ -415,10 +415,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -498,10 +502,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -510,8 +518,8 @@ export default function ResearchDevelopment() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
-            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
+            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
+          </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
@@ -524,16 +532,22 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -568,8 +582,8 @@ export default function ResearchDevelopment() {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
-                      <div className="text-xs text-zion-slate-light">Projects</div>
+                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
+                      <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
                   </div>;
                 </motion.div>;
@@ -588,10 +602,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -600,8 +618,8 @@ export default function ResearchDevelopment() {
             className="mb-12 text-center"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
-            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
+            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
+          </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map((project, index) => {;
@@ -615,16 +633,22 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -701,8 +725,8 @@ export default function ResearchDevelopment() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
-                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
+                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
                   </div>;
                 </motion.div>;
@@ -721,10 +745,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -745,16 +773,22 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -814,10 +848,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -838,16 +876,22 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -914,10 +958,14 @@ export default function ResearchDevelopment() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -946,8 +994,8 @@ export default function ResearchDevelopment() {
               >
                 View Research Impact
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

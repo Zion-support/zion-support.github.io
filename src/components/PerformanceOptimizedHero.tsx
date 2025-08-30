@@ -37,8 +37,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   ctaLink = "/services",
   features = [
     { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },
-    { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },
-    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },
+    { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },;
+    { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" };
   ];
 }) => {;
@@ -65,12 +65,14 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   y: 50 
 
 
+
+
 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
+      transition: {;
+        duration: 0.8,;
         staggerChildren: 0.2;
       };
     };
@@ -78,18 +80,22 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const itemVariants = {
   hidden: { opacity: 0,
-  y: 30 
-
+  y: 30 ;
 ;
+;
+
+
 },;
     visible: { opacity: 1, y: 0 };
   };
 
   const featureVariants = {
   hidden: { opacity: 0,
-  scale: 0.8 
-
+  scale: 0.8 ;
 ;
+;
+
+
 },;
     visible: { opacity: 1, scale: 1 };
   };
@@ -220,6 +226,8 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           
 
 
+
+
 }}
         />
         <motion.div
@@ -240,7 +248,9 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           
 
 
-}}
+
+;
+}};
         />;
       </AnimatePresence>;
     </section>;

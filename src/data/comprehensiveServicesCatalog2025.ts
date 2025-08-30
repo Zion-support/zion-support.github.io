@@ -81,29 +81,29 @@ export const SERVICE_CATEGORIES = [
   "Content Creation",
   "HR & Talent",
   "Sustainability",
-  "Manufacturing",
-  "Retail",
+  "Manufacturing",;
+  "Retail",;
   "Energy",;
   "Transportation",;
   "Logistics";
 ];
 
 // Service pricing tiers
-export const PRICING_TIERS = [
+export const PRICING_TIERS = [;
   { id: 'budget', name: 'Budget', range: '$100 - $1,000/month', count: 0 },;
   { id: 'mid-range', name: 'Mid-Range', range: '$1,000 - $5,000/month', count: 0 },;
   { id: 'enterprise', name: 'Enterprise', range: '$5,000+/month', count: 0 };
 ];
 
 // Innovation levels
-export const INNOVATION_LEVELS = [
+export const INNOVATION_LEVELS = [;
   { id: 'advanced', name: 'Advanced', count: 0 },;
   { id: 'cutting-edge', name: 'Cutting-edge', count: 0 },;
   { id: 'revolutionary', name: 'Revolutionary', count: 0 };
 ];
 
 // Support levels
-export const SUPPORT_LEVELS = [
+export const SUPPORT_LEVELS = [;
   { id: 'standard', name: 'Standard', count: 0 },;
   { id: 'premium', name: 'Premium', count: 0 },;
   { id: 'enterprise', name: 'Enterprise', count: 0 };
@@ -117,12 +117,16 @@ export const calculateServiceStats = () => {
     pricingTiers: PRICING_TIERS.map(tier => ({
       ...tier,;
   ;
+  ;
+  ;
   count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
         return false;
       
+
+
 
 
 }).length
@@ -134,8 +138,8 @@ export const calculateServiceStats = () => {
       ).length
     })),
     supportLevels: SUPPORT_LEVELS.map(level => ({
-      ...level,
-      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
+      ...level,;
+      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
         service.supportLevel.toLowerCase() === level.id;
       ).length;
     }));
@@ -175,8 +179,8 @@ export const getServicesBySupportLevel = (level: string) => {;
 // Search services
 export const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service = > 
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
+    service.title.toLowerCase().includes(searchTerm) ||;
+    service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm) ||;
     service.subcategory.toLowerCase().includes(searchTerm);
@@ -195,7 +199,7 @@ export const getFeaturedServices = (limit: number = 10) => {;
 };
 
 // Get trending services (recent and popular)
-export const getTrendingServices = (limit: number = 10) => {
+export const getTrendingServices = (limit: number = 10) => {;
   return COMPREHENSIVE_SERVICES_CATALOG_2025;
     .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
@@ -216,8 +220,8 @@ export const getServicesByIndustry = (industry: string) => {
     'energy': ['AI & Energy', 'Energy Management'],
     'transportation': ['AI & Transportation', 'Transportation & Logistics'],
     'logistics': ['AI & Supply Chain', 'Logistics Optimization', 'Transportation & Logistics'],
-    'cybersecurity': ['Cybersecurity', 'AI Security', 'Quantum Security'],
-    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],
+    'cybersecurity': ['Cybersecurity', 'AI Security', 'Quantum Security'],;
+    'blockchain': ['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],;
     'quantum': ['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],;
     'iot': ['IoT & Edge Computing', 'Edge AI'],;
     'ai': ['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics'];

@@ -19,8 +19,8 @@ export default function CustomerFeedbackSurveys() {
 
         <div className="grid gap-8 md:grid-cols-2 mt-10">
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
-            <h2 className="text-xl font-semibold mb-3">Features</h2>
-            <ul className="space-y-2 text-sm text-zion-slate-light">
+            <h2 className="text-xl font-semibold mb-3">Features</h2>;
+            <ul className="space-y-2 text-sm text-zion-slate-light">;
               <li>• NPS, CSAT, CES templates</li>;
               <li>• Branching logic, translations, rich media</li>;
               <li>• AI topic clustering, sentiment trends</li>;
@@ -45,8 +45,8 @@ export default function CustomerFeedbackSurveys() {
 
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
           <h3 className="font-semibold mb-2">Integrations</h3>
-          <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>
-          <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+          <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>;
+          <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
         </div>;
       </section>;
     </div>;

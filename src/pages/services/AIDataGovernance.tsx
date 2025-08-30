@@ -77,8 +77,8 @@ const AIDataGovernance: React.FC = () => {
       color: "from-indigo-500 to-purple-500"
     },
     {
-      icon: Users,
-      title: "Data Lineage Tracking",
+      icon: Users,;
+      title: "Data Lineage Tracking",;
       description: "Complete audit trail showing data origins, transformations, and usage patterns",;
       color: "from-yellow-500 to-orange-500";
     };
@@ -134,8 +134,8 @@ const AIDataGovernance: React.FC = () => {
         "Dedicated support team",
         "Custom development",
         "SLA guarantees",
-        "On-premise option"
-      ],
+        "On-premise option";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -161,8 +161,8 @@ const AIDataGovernance: React.FC = () => {
       metric: "40%"
     },
     {
-      icon: Clock,
-      title: "Real-time Monitoring",
+      icon: Clock,;
+      title: "Real-time Monitoring",;
       description: "Instant alerts and proactive threat prevention",;
       metric: "24/7";
     };
@@ -200,8 +200,8 @@ const AIDataGovernance: React.FC = () => {
       color: "from-indigo-500 to-purple-500"
     },
     {
-      name: "SOC 2",
-      description: "Service Organization Control 2 compliance",
+      name: "SOC 2",;
+      description: "Service Organization Control 2 compliance",;
       icon: CheckCircle,;
       color: "from-yellow-500 to-orange-500";
     };
@@ -231,8 +231,8 @@ const AIDataGovernance: React.FC = () => {
     },
     {
       industry: "Technology",
-      title: "Intellectual Property",
-      description: "Protect trade secrets and proprietary data with advanced classification",
+      title: "Intellectual Property",;
+      description: "Protect trade secrets and proprietary data with advanced classification",;
       icon: Cpu,;
       color: "from-orange-500 to-red-500";
     };
@@ -256,10 +256,14 @@ const AIDataGovernance: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -314,16 +318,22 @@ const AIDataGovernance: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -363,16 +373,22 @@ const AIDataGovernance: React.FC = () => {
   scale: 0.9 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -411,16 +427,22 @@ const AIDataGovernance: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -460,16 +482,22 @@ const AIDataGovernance: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -514,16 +542,22 @@ const AIDataGovernance: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -581,10 +615,14 @@ const AIDataGovernance: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -603,8 +641,8 @@ const AIDataGovernance: React.FC = () => {
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

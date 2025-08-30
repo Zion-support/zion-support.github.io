@@ -95,14 +95,14 @@ export const EnhancedSidebar: React.FC = () => {;
         { name: "Request a Quote", href: "/request-quote", icon: MessageCircle },
         { name: "Help Center", href: "/help", icon: HelpCircle },
         { name: "Support", href: "/support", icon: HelpCircle },
-        { name: "Sitemap", href: "/sitemap", icon: Globe },
-        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },
+        { name: "Sitemap", href: "/sitemap", icon: Globe },;
+        { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;
         { name: "Login", href: "/login", icon: User };
       ];
     };
   ];
 
-  const quickActions = [
+  const quickActions = [;
     { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
     { name: "Book Demo", href: "/enterprise-demo", icon: Calendar, variant: "secondary" },;
     { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
@@ -119,10 +119,14 @@ export const EnhancedSidebar: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -152,16 +156,22 @@ export const EnhancedSidebar: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.1 
+
+
 
 
 }}
@@ -176,16 +186,22 @@ export const EnhancedSidebar: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.3,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -216,16 +232,22 @@ export const EnhancedSidebar: React.FC = () => {;
   y: -20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.5,
   delay: sectionIndex * 0.1 
+
+
 
 
 }}
@@ -253,16 +275,22 @@ export const EnhancedSidebar: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -277,16 +305,22 @@ export const EnhancedSidebar: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                         transition = {
   { duration: 0.2,
   delay: itemIndex * 0.05 
+
+
 
 
 }}
@@ -319,16 +353,22 @@ export const EnhancedSidebar: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.5 
+
+
 
 
 }}
@@ -346,8 +386,8 @@ export const EnhancedSidebar: React.FC = () => {;
             <div className="flex items-center space-x-2">
               <MapPin className="w-3 h-3" />
               <span>Middletown, DE</span>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </aside>;

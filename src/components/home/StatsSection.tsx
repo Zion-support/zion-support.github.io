@@ -58,10 +58,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   y: 30 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -86,10 +90,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -98,12 +106,16 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   delay: index * 0.1 
 
 
+
+
 }}
               viewport={{ once: true }}
               whileHover = {
   { 
                 y: -8,
   transition: { duration: 0.3 
+
+
 
 
 }
@@ -129,6 +141,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   delay: index * 0.1 + 0.5 
 
 
+
+
 }}
                 viewport={{ once: true }}
               >
@@ -146,8 +160,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
-            </motion.div>
-          ))}
+            </motion.div>;
+          ))};
         </div>;
       </div>;
     </section>;

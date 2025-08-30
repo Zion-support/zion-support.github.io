@@ -6,7 +6,9 @@ const DropdownMenu({ children }) {
   setIsOpen 
 
 
-}}>
+
+;
+}}>;
       <div className="relative">;
         {children};
       </div>;
@@ -34,8 +36,12 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     const alignClasses = {
   start: 'left-0',
         center: 'left-1/2 transform -translate-x-1/2',;
+  ;
+  ;
   end: 'right-0';
     ;
+
+
 
 
 };

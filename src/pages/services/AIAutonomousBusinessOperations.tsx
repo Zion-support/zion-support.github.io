@@ -205,8 +205,8 @@ const AIAutonomousBusinessOperations = () => {
       benefits: ["Smart task allocation", "Performance tracking", "Communication optimization", "Knowledge sharing"]
     },
     {
-      icon: BarChart3,
-      title: "Advanced Analytics",
+      icon: BarChart3,;
+      title: "Advanced Analytics",;
       description: "Comprehensive business intelligence and reporting",;
       benefits: ["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"];
     };
@@ -238,8 +238,8 @@ const AIAutonomousBusinessOperations = () => {
       applications: ["DevOps automation", "Performance monitoring", "Security operations", "Customer support"],
       icon: Cpu
     },
-    {
-      industry: "Consulting",
+    {;
+      industry: "Consulting",;
       applications: ["Client management", "Project optimization", "Knowledge management", "Resource allocation"],;
       icon: Briefcase;
     };
@@ -288,8 +288,8 @@ const AIAutonomousBusinessOperations = () => {
         "Dedicated support team",
         "Advanced security & compliance",
         "White-label options",
-        "Custom development",
-        "On-premise deployment"
+        "Custom development",;
+        "On-premise deployment";
       ],;
       popular: false;
     };
@@ -299,8 +299,12 @@ const AIAutonomousBusinessOperations = () => {
   phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",;
+  ;
+  ;
   website: "https://ziontechgroup.com";
   ;
+
+
 
 
 };
@@ -323,10 +327,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -345,16 +353,22 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -372,16 +386,22 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -397,16 +417,22 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -439,10 +465,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -498,10 +528,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -509,6 +543,8 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -534,10 +570,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -564,10 +604,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -575,6 +619,8 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -619,10 +665,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -647,10 +697,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -658,6 +712,8 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -692,10 +748,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -724,10 +784,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -735,6 +799,8 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -792,10 +858,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -818,10 +888,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -829,6 +903,8 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.1 
+
+
 
 
 }}
@@ -847,10 +923,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -858,6 +938,8 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -876,10 +958,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -887,6 +973,8 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
+
 
 
 }}
@@ -906,10 +994,14 @@ const AIAutonomousBusinessOperations = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -917,6 +1009,8 @@ const AIAutonomousBusinessOperations = () => {
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -927,8 +1021,8 @@ const AIAutonomousBusinessOperations = () => {
             >
               <Rocket className="w-5 h-5 mr-2" />
               Request Custom Demo
-            </Link>
-          </motion.div>
+            </Link>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -869,8 +869,8 @@ export const getComprehensivePricingGuide2027ByCategory = (category: string) => 
 export const getComprehensivePricingGuide2027ById = (id: string) => ;
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [
-  'Metaverse Solutions',
-  'Web3 Solutions',
+  'Metaverse Solutions',;
+  'Web3 Solutions',;
   'Sustainable Tech',;
   'NeuroTech Solutions',;
   'Fusion Energy Solutions';
@@ -881,8 +881,12 @@ export const pricingSubcategories2027 = {
   'Sustainable Tech': ['Cloud Computing', 'Energy Management', 'Waste Management', 'Carbon Tracking'],
   'NeuroTech Solutions': ['Medical Technology', 'Research', 'Accessibility', 'Gaming'],
   'Fusion Energy Solutions': ['Energy Research', 'Plasma Physics', 'Reactor Design',;
+  ;
+  ;
   'Simulation'];
 ;
+
+
 
 
 };

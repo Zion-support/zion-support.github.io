@@ -5,8 +5,8 @@ export default function AISecurityAnalytics() {
     'AI-powered security analytics optimization',
     'Intelligent threat intelligence and analysis',
     'Automated security data processing and insights',
-    'Predictive analytics for security trends',
-    'Smart security reporting and visualization',
+    'Predictive analytics for security trends',;
+    'Smart security reporting and visualization',;
     'AI-driven security data correlation and analysis',;
     'Real-time security performance metrics',;
     'Custom AI models for security applications';
@@ -23,8 +23,8 @@ export default function AISecurityAnalytics() {
       price: '$1,299/mo', 
       details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,499/mo', ;
       details: ['Unlimited data', 'Custom AI models', 'Full analytics suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityAnalytics() {
 
   const useCases = [
     'Security analytics optimization',
-    'Threat intelligence and analysis',
-    'Security data processing and insights',
+    'Threat intelligence and analysis',;
+    'Security data processing and insights',;
     'Security reporting and visualization',;
     'Security data correlation and analysis',;
     'Security analytics scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityAnalytics() {
 
   const benefits = [
     'Improve security analytics performance by 50-80%',
-    'Reduce data processing time by 40-70%',
-    'Cut security analytics costs by 35-65%',
+    'Reduce data processing time by 40-70%',;
+    'Cut security analytics costs by 35-65%',;
     'Enhance security analytics reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security analytics operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityAnalytics() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityAnalytics() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

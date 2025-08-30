@@ -7,6 +7,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   scale: 0.95 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -29,6 +31,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     const iconVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
+
 
 
 },
@@ -58,12 +62,16 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
             
 
 
+
+
 }
         }
     };
     const badgeVariants = {
   hidden: { scale: 0,
   opacity: 0 
+
+
 
 
 },
@@ -83,6 +91,8 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   stiffness: 300 
 
 
+
+
 }}>
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
             ⭐ Most Popular
@@ -95,14 +105,20 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   rotate: -180 
 
 
+
+
 }} animate = {
   { scale: 1,
   rotate: 0 
 
 
+
+
 }} transition = {
   { delay: 0.3, type: "spring",
   stiffness: 300 
+
+
 
 
 }}>
@@ -121,9 +137,13 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   0] 
 
 
+
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
+
 
 
 }}>
@@ -176,9 +196,13 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
   0] 
 
 
+
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}>

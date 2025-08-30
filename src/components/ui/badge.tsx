@@ -48,8 +48,10 @@ function Badge({ className, variant, size, ...props }: BadgeProps) {
   size 
 
 
-}), className)} {...props} />
-  )
+
+
+}), className)} {...props} />;
+  );
 };
 ;
 export { Badge, badgeVariants };

@@ -7,6 +7,8 @@ const contact = {
 
 
 
+
+
 }
 export const addedAIServices2025: InnovativeAIService[] = [
   {
@@ -74,8 +76,8 @@ export const addedAIServices2025: InnovativeAIService[] = [
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
     setupTime: '3–5 weeks',
-    category: 'AI Governance',
-    realService: true,
+    category: 'AI Governance',;
+    realService: true,;
     technology: ['Vector DB', 'Policy engine', 'Eval harness'],;
     integrations: ['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],;
     useCases: ['Model launches', 'Vendor AI due diligence', 'Policy tracking'],;

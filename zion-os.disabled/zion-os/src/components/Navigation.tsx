@@ -96,8 +96,8 @@ export function Navigation() {
               <button className="w-full mt-4 btn-primary text-sm">
                 Get Started
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         )};
       </div>;
     </nav>;

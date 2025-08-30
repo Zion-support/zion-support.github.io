@@ -78,8 +78,8 @@ const Support = () => {;
     {
       id: 'security',
       name: 'Security & Compliance',
-      icon: Shield,
-      description: 'Security concerns, compliance questions, and access control',
+      icon: Shield,;
+      description: 'Security concerns, compliance questions, and access control',;
       responseTime: 'Immediate',;
       availability: '24/7';
     };
@@ -121,8 +121,8 @@ const Support = () => {;
       name: 'Support Ticket',
       icon: Ticket,
       description: 'Create a detailed support ticket for tracking and follow-up',
-      responseTime: 'Within 4 hours',
-      availability: '24/7',
+      responseTime: 'Within 4 hours',;
+      availability: '24/7',;
       action: 'Create Ticket',;
       color: 'from-orange-500 to-red-500';
     };
@@ -152,8 +152,8 @@ const Support = () => {;
     },
     {
       title: 'Status Page',
-      description: 'Check system status and maintenance schedules',
-      icon: Globe,
+      description: 'Check system status and maintenance schedules',;
+      icon: Globe,;
       action: 'Check Status',;
       color: 'from-yellow-500 to-orange-500';
     };
@@ -185,8 +185,8 @@ const Support = () => {;
       answer: 'You can upgrade your service plan through your account dashboard, or contact our billing team for assistance with custom enterprise plans.',
       category: 'billing'
     },
-    {
-      question: 'Do you offer training for new users?',
+    {;
+      question: 'Do you offer training for new users?',;
       answer: 'Yes, we offer comprehensive onboarding and training programs for new users. Contact our customer success team to schedule a training session.',;
       category: 'general';
     };
@@ -199,8 +199,12 @@ const Support = () => {;
     category: 'general',
     priority: 'medium',
     subject: '',;
+  ;
+  ;
   message: '';
   ;
+
+
 
 
 };
@@ -223,10 +227,14 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -268,16 +276,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -295,16 +309,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -338,16 +358,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -365,16 +391,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -404,16 +436,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -431,16 +469,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -476,16 +520,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -587,16 +637,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
+
 
 
 }}
@@ -614,16 +670,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -652,16 +714,22 @@ const Support = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.2 
+
+
 
 
 }}
@@ -681,8 +749,8 @@ const Support = () => {;
                   Schedule a Call
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

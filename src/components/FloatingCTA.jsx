@@ -46,14 +46,20 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
@@ -69,9 +75,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
@@ -84,9 +94,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
 
 
 }} exit = {
@@ -94,9 +108,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   y: 20 
 
 
+
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
+
 
 
 }}>
@@ -156,9 +174,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
@@ -171,9 +193,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
+
 
 
 }} exit = {
@@ -181,9 +207,13 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
   y: 20 
 
 
+
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
+
 
 
 }}>

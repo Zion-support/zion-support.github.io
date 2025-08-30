@@ -60,8 +60,8 @@ export default function Leadership() {
       title: 'Head of AI Research',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
-      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],
-      linkedin: 'https://linkedin.com/in/emilywatson',
+      expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;
+      linkedin: 'https://linkedin.com/in/emilywatson',;
       email: 'emily@ziontechgroup.com',;
       phone: '+1 302 464 0953';
     };
@@ -83,8 +83,8 @@ export default function Leadership() {
       title: 'Trust & Security',
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: 'Global Impact',;
       description: 'We believe technology should make the world better for everyone, everywhere.';
     };
@@ -106,8 +106,8 @@ export default function Leadership() {
       label: 'Client Satisfaction',
       description: 'Consistently high satisfaction ratings from our clients'
     },
-    {
-      metric: '25+',
+    {;
+      metric: '25+',;
       label: 'Industry Awards',;
       description: 'Recognition for innovation and excellence in technology';
     };
@@ -336,8 +336,8 @@ export default function Leadership() {
                   We'll respond within 24 hours
                 </p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

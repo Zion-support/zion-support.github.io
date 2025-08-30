@@ -154,8 +154,8 @@ interface TeamCollaborationToolsProps {
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true,
-  showProjects = true,
-  showCommunication = true,
+  showProjects = true,;
+  showCommunication = true,;
   showFileSharing = true,;
   maxItems = 20;
 }) => {;
@@ -335,10 +335,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -352,10 +356,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -371,10 +379,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -393,10 +405,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -415,10 +431,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -442,10 +462,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -546,10 +570,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -563,10 +591,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -582,10 +614,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -604,10 +640,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -626,10 +666,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -653,10 +697,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -709,6 +757,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       transition = {
   { duration: 1,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -773,10 +823,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -790,10 +844,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -809,10 +867,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -831,10 +893,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -858,10 +924,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -896,6 +966,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                           onClick = {
   () => handleMessageReaction(message.id,
   reaction.type)
+
+
 
 
 }
@@ -958,10 +1030,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -975,10 +1051,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -994,10 +1074,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1016,10 +1100,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1038,10 +1126,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1065,10 +1157,14 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1127,8 +1223,8 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
               <button className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                 Choose Files
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       )};
     </div>;

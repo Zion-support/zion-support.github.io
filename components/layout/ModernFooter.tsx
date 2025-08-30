@@ -8,8 +8,8 @@ const ModernFooter: React.FC = () => {;
 
   const serviceCategories = [
     { name: 'AI Services', icon: Cpu, href: '/services/ai' },
-    { name: 'IT Solutions', icon: Shield, href: '/services/it' },
-    { name: 'SAAS Platforms', icon: Database, href: '/services/saas' },
+    { name: 'IT Solutions', icon: Shield, href: '/services/it' },;
+    { name: 'SAAS Platforms', icon: Database, href: '/services/saas' },;
     { name: 'Development', icon: Globe, href: '/services/development' },;
     { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security' },;
     { name: 'Analytics', icon: Database, href: '/services/analytics' };
@@ -18,14 +18,14 @@ const ModernFooter: React.FC = () => {;
   const quickLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },;
+    { name: 'Blog', href: '/blog' },;
     { name: 'Careers', href: '/careers' },;
     { name: 'Privacy Policy', href: '/privacy' },;
     { name: 'Terms of Service', href: '/terms' };
   ];
 
-  const socialLinks = [
+  const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
@@ -68,6 +68,8 @@ const ModernFooter: React.FC = () => {;
                     whileHover = {
   { scale: 1.1,
   y: -2 
+
+
 
 
 }}
@@ -199,8 +201,8 @@ const ModernFooter: React.FC = () => {;
                   Cookie Policy
                 </Link>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </footer>;

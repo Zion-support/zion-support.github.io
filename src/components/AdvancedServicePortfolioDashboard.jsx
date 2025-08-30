@@ -179,9 +179,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="mb-8">
@@ -212,9 +216,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -321,9 +329,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
@@ -384,9 +396,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.3 }} className="mb-8">
@@ -424,9 +440,13 @@ const AdvancedServicePortfolioDashboard = () => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
@@ -485,9 +505,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
@@ -506,9 +530,13 @@ const AdvancedServicePortfolioDashboard = () => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
@@ -585,9 +613,13 @@ const AdvancedServicePortfolioDashboard = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.5 }} className="text-center">
@@ -603,6 +635,8 @@ const AdvancedServicePortfolioDashboard = () => {
   '_blank')
 
 
+
+
 }>
               <Users className="w-5 h-5 mr-2"/>
               Get Portfolio Consultation
@@ -610,6 +644,8 @@ const AdvancedServicePortfolioDashboard = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

@@ -359,8 +359,8 @@ const workflowSolutions = [
       "Resource allocation",
       "Performance tracking"
     ],
-    price: "From $100,000",
-    timeline: "16-28 weeks",
+    price: "From $100,000",;
+    timeline: "16-28 weeks",;
     category: "Task Management",;
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
@@ -390,8 +390,8 @@ const workflowTechnologies = [
   },
   {
     name: "Predictive Analytics",
-    description: "AI-powered analytics for workflow optimization",
-    icon: BarChart3,
+    description: "AI-powered analytics for workflow optimization",;
+    icon: BarChart3,;
     useCase: "Performance Optimization",;
     reliability: "High";
   };
@@ -420,8 +420,8 @@ const successStories = [
     id: 3,
     company: "Healthcare Technology Ltd",
     industry: "Healthcare",
-    challenge: "Needed AI workflow automation for patient care processes",
-    solution: "Built AI-powered workflow automation system for healthcare",
+    challenge: "Needed AI workflow automation for patient care processes",;
+    solution: "Built AI-powered workflow automation system for healthcare",;
     results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",;
     logo: "HTL";
   };
@@ -451,8 +451,8 @@ const processSteps = [
   },
   {
     step: 4,
-    title: "Testing & Optimization",
-    description: "Test systems and optimize performance",
+    title: "Testing & Optimization",;
+    description: "Test systems and optimize performance",;
     icon: Gauge,;
     duration: "4-8 weeks";
   };
@@ -478,8 +478,8 @@ const workflowBenefits = [
     examples: ["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
   },
   {
-    title: "Scalability",
-    description: "AI workflows scale efficiently with business growth",
+    title: "Scalability",;
+    description: "AI workflows scale efficiently with business growth",;
     icon: Rocket,;
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
@@ -512,10 +512,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -528,16 +532,22 @@ export default function AIWorkflowAutomation() {
   scale: 0.8 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -583,10 +593,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -608,16 +622,22 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -654,10 +674,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -679,16 +703,22 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -726,10 +756,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -751,16 +785,22 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -795,10 +835,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -837,16 +881,22 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -909,10 +959,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -934,16 +988,22 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -995,10 +1055,14 @@ export default function AIWorkflowAutomation() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -1024,8 +1088,8 @@ export default function AIWorkflowAutomation() {
               >
                 Workflow Consultation
               </a>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

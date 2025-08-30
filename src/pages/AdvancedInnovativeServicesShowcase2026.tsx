@@ -43,7 +43,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
     // Filter by search term
     if (searchTerm) {
-      filtered = filtered.filter(service =>
+      filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -72,8 +72,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -84,11 +84,13 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -112,16 +114,22 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { y: 0,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -135,16 +143,22 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { y: 0,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -158,16 +172,22 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -196,16 +216,22 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -274,6 +300,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -386,16 +414,22 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
   y: 50 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1 
+
+
 
 
 }}
@@ -450,8 +484,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             >
               Visit Our Website
               <ArrowRight className="w-5 h-5" />
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </motion.div>;
     </div>;

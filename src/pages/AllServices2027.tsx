@@ -31,8 +31,8 @@ const AllServices2027: React.FC = () => {;
 
   const categories = [
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },
-    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
+    { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
     { id: 'Emerging Technology', name: 'Emerging Technology', icon: Zap, color: 'from-yellow-500 to-orange-600' },;
     { id: 'IT Services', name: 'IT Services', icon: Code, color: 'from-green-500 to-teal-600' },;
     { id: 'Telecommunications', name: 'Telecommunications', icon: Signal, color: 'from-blue-500 to-indigo-600' };
@@ -43,8 +43,8 @@ const AllServices2027: React.FC = () => {;
   );
 
   const getCategoryStats = (categoryId: string) => {
-    if (categoryId === 'All') {
-      return {
+    if (categoryId === 'All') {;
+      return {;
         count: INNOVATIVE_SERVICES_2027.length,;
         avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
         avgRating: Math.round((INNOVATIVE_SERVICES_2027.reduce((sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
@@ -61,8 +61,8 @@ const AllServices2027: React.FC = () => {;
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -73,11 +73,13 @@ const AllServices2027: React.FC = () => {;
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -103,10 +105,14 @@ const AllServices2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -165,8 +171,8 @@ const AllServices2027: React.FC = () => {;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our comprehensive range of technology services, each designed to address 
-              specific business challenges and drive innovation.
-            </p>
+              specific business challenges and drive innovation.;
+            </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
@@ -196,8 +202,8 @@ const AllServices2027: React.FC = () => {;
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div className="flex justify-between">
-                      <span>Avg. Rating:</span>
-                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
+                      <span>Avg. Rating:</span>;
+                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
                     </div>;
                   </div>;
                 </motion.div>;
@@ -342,8 +348,8 @@ const AllServices2027: React.FC = () => {;
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </section>;
     </>;
@@ -439,8 +445,8 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
           >
-            Contact
-          </Link>
+            Contact;
+          </Link>;
         </div>;
       </div>;
     </motion.div>;

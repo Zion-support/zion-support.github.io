@@ -70,6 +70,8 @@ const EnhancedAccessibility = () => {
   [key]: value 
 
 
+
+
 };
         setSettings(newSettings);
         applySettings(newSettings);
@@ -95,6 +97,8 @@ const EnhancedAccessibility = () => {
             focusIndicator: true,
   colorBlindness: 'none'
         
+
+
 
 
 };
@@ -125,14 +129,20 @@ const EnhancedAccessibility = () => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   x: -20 
+
+
 
 
 }} transition={{ duration: 0.3 }} id="accessibility-panel" className="fixed bottom-24 left-6 z-50 w-80 bg-white dark:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dark:border-slate-700 max-h-96 overflow-y-auto" role="dialog" aria-labelledby="accessibility-title">
@@ -190,6 +200,8 @@ const EnhancedAccessibility = () => {
   !settings.reducedMotion)
 
 
+
+
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.reducedMotion ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.reducedMotion}>
                     <span className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'}`}/>
                   </button>
@@ -208,6 +220,8 @@ const EnhancedAccessibility = () => {
                   <button onClick = {
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
+
+
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.focusIndicator ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.focusIndicator}>
@@ -229,6 +243,8 @@ const EnhancedAccessibility = () => {
   e.target.value)
 
 
+
+
 } className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-gray-900 dark:text-white text-sm">
                   <option value="none">None</option>
                   <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -246,6 +262,8 @@ const EnhancedAccessibility = () => {
                   <button onClick = {
   () => updateSetting('screenReader',
   !settings.screenReader)
+
+
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.screenReader ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.screenReader}>
@@ -266,6 +284,8 @@ const EnhancedAccessibility = () => {
                   <button onClick = {
   () => updateSetting('keyboardNavigation',
   !settings.keyboardNavigation)
+
+
 
 
 } className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 ${settings.keyboardNavigation ? 'bg-purple-600' : 'bg-gray-200'}`} role="switch" aria-checked={settings.keyboardNavigation}>

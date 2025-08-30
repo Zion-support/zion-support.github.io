@@ -5,8 +5,8 @@ export default function AIPenetrationTesting() {
     'AI-powered penetration testing optimization',
     'Intelligent vulnerability discovery and exploitation',
     'Automated security assessment and reporting',
-    'Predictive analytics for security risks',
-    'Smart testing methodology and planning',
+    'Predictive analytics for security risks',;
+    'Smart testing methodology and planning',;
     'AI-driven testing automation and orchestration',;
     'Real-time testing analytics and insights',;
     'Custom AI models for testing applications';
@@ -23,8 +23,8 @@ export default function AIPenetrationTesting() {
       price: '$1,999/mo', 
       details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$4,999/mo', ;
       details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIPenetrationTesting() {
 
   const useCases = [
     'Penetration testing optimization',
-    'Vulnerability discovery and exploitation',
-    'Security assessment and reporting',
+    'Vulnerability discovery and exploitation',;
+    'Security assessment and reporting',;
     'Testing methodology and planning',;
     'Testing automation and orchestration',;
     'Testing scaling and management';
@@ -41,8 +41,8 @@ export default function AIPenetrationTesting() {
 
   const benefits = [
     'Improve penetration testing performance by 50-80%',
-    'Reduce testing completion time by 40-70%',
-    'Cut testing operational costs by 35-65%',
+    'Reduce testing completion time by 40-70%',;
+    'Cut testing operational costs by 35-65%',;
     'Enhance testing reliability and scalability',;
     'Optimize resource utilization',;
     'Scale testing operations efficiently';
@@ -50,8 +50,8 @@ export default function AIPenetrationTesting() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIPenetrationTesting() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

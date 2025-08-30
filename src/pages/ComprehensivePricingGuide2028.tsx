@@ -33,6 +33,8 @@ const pricingData2028 = {
     
 
 
+
+
 },
     {
       name: 'Quantum Financial Trading AI',
@@ -138,8 +140,8 @@ const pricingData2028 = {
       growthRate: '300%',
       roi: '600%',
       setupTime: '4-5 weeks',
-      trialDays: 21,
-      features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
+      trialDays: 21,;
+      features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
       targetAudience: 'Development teams, DevOps engineers, Technology companies';
     };
   ];
@@ -149,22 +151,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-zion-blue to-zion-cyan' },;
     { id: 'saas', name: 'Micro SAAS', icon: Zap, color: 'from-zion-purple to-zion-pink' },;
     { id: 'it', name: 'IT Services', icon: Server, color: 'from-zion-green to-zion-emerald' };
   ];
 
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', range: 'All' },;
     { id: 'low', name: 'Under $500', range: 'Under $500' },;
     { id: 'medium', name: '$500 - $10K', range: '$500 - $10K' },;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-  const getAllServices = () => {
-    return [
+  const getAllServices = () => {;
+    return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' })),;
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
@@ -202,10 +204,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -220,16 +226,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -243,16 +255,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -280,10 +298,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -299,16 +321,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.1 
+
+
 
 
 }}
@@ -327,16 +355,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -355,16 +389,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
+
 
 
 }}
@@ -439,16 +479,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -538,10 +584,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -616,10 +666,14 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -634,16 +688,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -657,16 +717,22 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -685,8 +751,8 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
             >
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

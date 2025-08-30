@@ -20,8 +20,8 @@ const SustainableTechnology: React.FC = () => {
       title: 'Circular Economy',
       description: 'Waste reduction and resource optimization'
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: 'Carbon Neutral',;
       description: 'Carbon footprint reduction and offsetting';
     };
@@ -43,8 +43,8 @@ const SustainableTechnology: React.FC = () => {
       description: 'Real-time environmental data collection',
       icon: '🌱'
     },
-    {
-      title: 'Sustainable Software',
+    {;
+      title: 'Sustainable Software',;
       description: 'Eco-friendly application development',;
       icon: '💻';
     };
@@ -52,8 +52,8 @@ const SustainableTechnology: React.FC = () => {
 
   const benefits = [
     'Reduce energy consumption and costs',
-    'Minimize environmental impact',
-    'Meet sustainability goals and compliance',
+    'Minimize environmental impact',;
+    'Meet sustainability goals and compliance',;
     'Improve brand reputation and ESG scores',;
     'Future-proof your technology infrastructure',;
     'Attract environmentally conscious customers';
@@ -75,10 +75,14 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -123,10 +127,14 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -150,16 +158,22 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -185,10 +199,14 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -212,16 +230,22 @@ const SustainableTechnology: React.FC = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -249,10 +273,14 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -274,10 +302,14 @@ const SustainableTechnology: React.FC = () => {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -301,10 +333,14 @@ const SustainableTechnology: React.FC = () => {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -333,10 +369,14 @@ const SustainableTechnology: React.FC = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -355,8 +395,8 @@ const SustainableTechnology: React.FC = () => {
               <button className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-200">
                 Schedule Consultation
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

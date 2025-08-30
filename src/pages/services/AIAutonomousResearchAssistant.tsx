@@ -50,8 +50,8 @@ const AIAutonomousResearchAssistant = () => {
       title: "Real-time Updates",
       description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
     },
-    {
-      icon: <Shield className="w-6 h-6" />,
+    {;
+      icon: <Shield className="w-6 h-6" />,;
       title: "Data Security",;
       description: "Enterprise-grade security with encryption, access controls, and compliance with research ethics standards.";
     };
@@ -98,8 +98,8 @@ const AIAutonomousResearchAssistant = () => {
         "Full database access",
         "Dedicated support team",
         "Advanced reporting & insights",
-        "API access",
-        "Custom integrations"
+        "API access",;
+        "Custom integrations";
       ],;
       popular: false;
     };
@@ -121,8 +121,8 @@ const AIAutonomousResearchAssistant = () => {
       description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
       icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
     },
-    {
-      title: "Policy Research",
+    {;
+      title: "Policy Research",;
       description: "Analyze policy implications, stakeholder perspectives, and implementation strategies.",;
       icon: <Target className="w-8 h-8 text-purple-500" />;
     };
@@ -139,10 +139,14 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -192,10 +196,14 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -219,16 +227,22 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -254,10 +268,14 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -281,16 +299,22 @@ const AIAutonomousResearchAssistant = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -318,10 +342,14 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -345,16 +373,22 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -416,10 +450,14 @@ const AIAutonomousResearchAssistant = () => {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -447,8 +485,8 @@ const AIAutonomousResearchAssistant = () => {
               >
                 Contact Sales
               </motion.button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

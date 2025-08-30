@@ -26,8 +26,8 @@ const categories = [
   },
   {
     title: "Digital Transformation",
-    description: "Business modernization and digital strategy",
-    icon: "📈",
+    description: "Business modernization and digital strategy",;
+    icon: "📈",;
     link: "/all-services",;
     color: "from-emerald-500 to-green-600",;
   },;
@@ -41,8 +41,8 @@ const specialServices = [
   {
     title: "Comprehensive Services",
     link: "/comprehensive-services"
-  },
-  {
+  },;
+  {;
     title: "Services Comparison",;
     link: "/services-comparison";
   };
@@ -56,8 +56,8 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
+    transition: {;
+      staggerChildren: 0.1,;
       delayChildren: 0.2;
     };
   };
@@ -68,12 +68,14 @@ const itemVariants = {
   opacity: 0 
 
 
+
+
 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.5,
+    transition: {;
+      duration: 0.5,;
       ease: "easeOut";
     };
   };
@@ -91,6 +93,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         
 
 
+
+
 }}></div>
       </div>
       
@@ -103,10 +107,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -157,10 +165,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -168,6 +180,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -194,10 +208,14 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   y: 20 
 
 
+
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -207,6 +225,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   delay: 0.6 
 
 
+
+
 }}
         >
           <Link 
@@ -214,8 +234,8 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             className="text-cyan-400 border-b border-cyan-400 hover:border-cyan-300 transition-colors flex items-center gap-2"
           >
             View All Categories
-            <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>
-          </Link>
+            <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>;
+          </Link>;
         </motion.div>;
       </div>;
     </section>;

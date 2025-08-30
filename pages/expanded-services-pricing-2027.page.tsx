@@ -21,7 +21,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
   }, [selectedCategory]);
 
   // Filter services based on search and filters
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo(() => {;
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -101,8 +101,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
-            
+            />;
+            ;
             <select;
               value={selectedCategory};
               onChange={(e) => {;
@@ -340,8 +340,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {;
               >
                 View All Services
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </main>;
     </div>;

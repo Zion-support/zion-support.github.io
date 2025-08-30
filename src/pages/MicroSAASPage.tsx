@@ -54,8 +54,8 @@ const MicroSAASPage = () => {
       id: 'user-management',
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
-      icon: <Users className="w-8 h-8" />,
-      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
+      icon: <Users className="w-8 h-8" />,;
+      features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
       useCases: ['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],;
       pricing: 'Starting from $1,500/month';
     };
@@ -66,8 +66,8 @@ const MicroSAASPage = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -77,11 +77,13 @@ const MicroSAASPage = () => {
   y: 20 
 
 
+
+
 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
+      y: 0,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -96,10 +98,14 @@ const MicroSAASPage = () => {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -206,16 +212,22 @@ const MicroSAASPage = () => {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.3 
+
+
 
 
 }}
@@ -239,16 +251,22 @@ const MicroSAASPage = () => {
   scale: 0.8 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -266,16 +284,22 @@ const MicroSAASPage = () => {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -323,16 +347,22 @@ const MicroSAASPage = () => {
   y: 30 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.5 
+
+
 
 
 }}
@@ -357,8 +387,8 @@ const MicroSAASPage = () => {
               className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
             >
               View SAAS Pricing
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

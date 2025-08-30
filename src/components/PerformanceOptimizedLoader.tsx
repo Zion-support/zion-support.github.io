@@ -19,16 +19,24 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   const sizeClasses = {
   sm: 'w-6 h-6',
     md: 'w-12 h-12',;
+  ;
+  ;
   lg: 'w-16 h-16';
   ;
+
+
 
 
 };
   const textSizes = {
   sm: 'text-xs',
     md: 'text-sm',;
+  ;
+  ;
   lg: 'text-base';
   ;
+
+
 
 
 };
@@ -52,6 +60,8 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
           
 
 
+
+
 }}
         />
         {/* Logo text */}
@@ -69,16 +79,20 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   0.5] 
 
 
+
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
 
 
+
+
 }}
           >
-            {text}
-          </motion.div>
+            {text};
+          </motion.div>;
         </div>;
       </div>;
     </div>;
@@ -88,7 +102,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
 export function SkeletonLoader({ 
-  className = "", 
+  className = "", ;
   lines = 3,;
   height = "h-4";
 }: { ;
@@ -106,8 +120,8 @@ export function SkeletonLoader({
           transition={{ delay: index * 0.1 }}
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
           style={{
-            width: `${Math.random() * 40 + 60}%`
-          }}
+            width: `${Math.random() * 40 + 60}%`;
+          }};
         />;
       ))};
     </div>;
@@ -128,8 +142,8 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
         </div>
         {/* Button skeleton */}
         <div className="flex gap-3 pt-4">
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />
-          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
+          <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
         </div>;
       </div>;
     </div>;
@@ -137,7 +151,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
 }
 // Grid skeleton loader
 export function GridSkeleton({ 
-  columns = 3, 
+  columns = 3, ;
   rows = 2,;
   className = "" ;
 }: { ;
@@ -146,8 +160,8 @@ export function GridSkeleton({
   className?: string;
 }) {
   return (
-    <div className = {`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: columns * rows }).map((_, index) => (
+    <div className = {`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>;
+      {Array.from({ length: columns * rows }).map((_, index) => (;
         <CardSkeleton key={index} />;
       ))};
     </div>;
@@ -165,8 +179,8 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       {/* Content skeleton */}
       <GridSkeleton columns={3} rows={2} />
       {/* Footer skeleton */}
-      <div className="space-y-3">
-        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />
+      <div className="space-y-3">;
+        <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/3" />;
       </div>;
     </div>;

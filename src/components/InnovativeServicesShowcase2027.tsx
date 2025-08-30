@@ -74,8 +74,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
+  ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
 
 
 };
@@ -97,10 +101,14 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
+
 
 
 } : { opacity: 0, y: 30 }}
@@ -133,16 +141,22 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -155,8 +169,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 selectedCategory === 'All'
                   ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
-              }`}
-            >
+              }`};
+            >;
               All Categories;
             </button>;
             {serviceCategories2027.map((category) => {;
@@ -169,8 +183,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                       : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white'
-                  }`}
-                >
+                  }`};
+                >;
                   {Icon && <Icon className="w-4 h-4" />};
                   {category};
                 </button>;
@@ -186,16 +200,22 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -209,16 +229,22 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -287,16 +313,22 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -369,16 +401,22 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
 
 
+
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -425,8 +463,8 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </section>;

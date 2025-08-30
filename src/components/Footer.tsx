@@ -164,8 +164,8 @@ const footerSections = [
       { name: 'News', path: '/news', icon: Newspaper },
       { name: 'Case Studies', path: '/case-studies', icon: FileText },
       { name: 'Pricing', path: '/pricing', icon: DollarSign },
-      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
-      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },;
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },;
       { name: 'Sitemap', path: '/sitemap', icon: FileText };
     ];
   };
@@ -173,8 +173,8 @@ const footerSections = [
 
 const socialLinks = [
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },;
+  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },;
   { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },;
   { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },;
   { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' };
@@ -208,7 +208,7 @@ export function Footer() {
   };
 
   // Scroll to top function
-  const scrollToTop = () => {
+  const scrollToTop = () => {;
     window.scrollTo({;
       top: 0,;
       behavior: 'smooth';
@@ -246,6 +246,8 @@ export function Footer() {
               delay: i * 0.2,
   ease: "easeInOut"
             
+
+
 
 
 }}
@@ -372,10 +374,14 @@ export function Footer() {
   scale: 0.8 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -384,13 +390,15 @@ export function Footer() {
   scale: 0.8 
 
 
+
+
 }}
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-110"
             aria-label="Scroll to top"
           >
-            <ArrowUp className="w-6 h-6" />
-          </motion.button>
+            <ArrowUp className="w-6 h-6" />;
+          </motion.button>;
         )};
       </AnimatePresence>;
     </footer>;

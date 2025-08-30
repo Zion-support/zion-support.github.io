@@ -18,8 +18,8 @@ const ModernHeader: React.FC = () => {;
 
   const serviceCategories = [
     { name: 'AI Services', icon: Cpu, href: '/services/ai', description: 'Intelligent automation & AI solutions' },
-    { name: 'IT Solutions', icon: Shield, href: '/services/it', description: 'Comprehensive IT infrastructure' },
-    { name: 'SAAS Platforms', icon: Database, href: '/services/saas', description: 'Custom software solutions' },
+    { name: 'IT Solutions', icon: Shield, href: '/services/it', description: 'Comprehensive IT infrastructure' },;
+    { name: 'SAAS Platforms', icon: Database, href: '/services/saas', description: 'Custom software solutions' },;
     { name: 'Development', icon: Globe, href: '/services/development', description: 'Web & mobile development' },;
     { name: 'Cloud & Security', icon: Lock, href: '/services/cloud-security', description: 'Secure cloud infrastructure' },;
     { name: 'Analytics', icon: Database, href: '/services/analytics', description: 'Data insights & reporting' };
@@ -37,6 +37,8 @@ const ModernHeader: React.FC = () => {;
       transition = {
   { duration: 0.6,
   ease: "easeOut" 
+
+
 
 
 }}
@@ -89,16 +91,22 @@ const ModernHeader: React.FC = () => {;
   scale: 0.95 
 
 
+
+
 }}
                     animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
                     exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
+
 
 
 }}
@@ -186,16 +194,22 @@ const ModernHeader: React.FC = () => {;
   height: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -224,8 +238,8 @@ const ModernHeader: React.FC = () => {;
                   </button>
                 </Link>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </motion.header>;

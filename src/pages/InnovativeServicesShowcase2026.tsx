@@ -15,7 +15,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
 
     // Filter by search query
     if (searchQuery) {
-      filtered = filtered.filter(service =>
+      filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -73,8 +73,12 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
     const colors = {
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600',
       'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;
+  ;
+  ;
   'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
     ;
+
+
 
 
 };
@@ -102,10 +106,14 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -201,16 +209,22 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -353,10 +367,14 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -442,8 +460,8 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
                   </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

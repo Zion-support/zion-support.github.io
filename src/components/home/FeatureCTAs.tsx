@@ -151,8 +151,8 @@ export function FeatureCTAs() {
     {
       title: "Micro SAAS Hub",
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: "/micro-saas",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
+      link: "/micro-saas",;
       badge: "New",;
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank.";
     };
@@ -226,8 +226,8 @@ export function FeatureCTAs() {
                   View All Services
                 </Button>
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </section>;

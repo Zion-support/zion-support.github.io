@@ -44,6 +44,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   id: `msg_${Date.now()
 
 
+
+
 }_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
@@ -191,9 +193,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="flex flex-wrap gap-2 mt-3">
@@ -217,14 +223,20 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
+
 
 
 }} className={`fixed bottom-24 right-6 z-40 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden ${isMinimized ? 'h-16' : 'h-[500px]'}`}>
@@ -259,9 +271,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
   x: message.type === 'user' ? 20 : -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>

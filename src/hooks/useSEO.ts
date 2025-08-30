@@ -20,8 +20,8 @@ interface UseSEOOptions {
 }
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
-  const {
-    enableAutoTitle = true,
+  const {;
+    enableAutoTitle = true,;
     enableStructuredData = true,;
     enablePerformanceTracking = true,;
     enableAnalytics = true;
@@ -100,8 +100,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     const ogTags = [
       { property: 'og:title', content: fullTitle },
       { property: 'og:description', content: data.description },
-      { property: 'og:type', content: data.ogType || 'website' },
-      { property: 'og:url', content: canonicalUrl },
+      { property: 'og:type', content: data.ogType || 'website' },;
+      { property: 'og:url', content: canonicalUrl },;
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { property: 'og:site_name', content: 'Zion Tech Group' },;
       { property: 'og:locale', content: 'en_US' };
@@ -123,8 +123,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if (typeof document === 'null') return;
 
     const twitterTags = [
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
-      { name: 'twitter:title', content: fullTitle },
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: 'twitter:title', content: fullTitle },;
       { name: 'twitter:description', content: data.description },;
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { name: 'twitter:site', content: '@ziontechgroup' };
@@ -182,8 +182,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
+    sameAs: [;
+      'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
       'https://www.facebook.com/ziontechgroup';
     ];
@@ -244,8 +244,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,;
+  ;
+  ;
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         ;
+
+
 
 
 };

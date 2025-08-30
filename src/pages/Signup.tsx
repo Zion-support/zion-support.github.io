@@ -27,7 +27,7 @@ export default function Signup() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     setFormData({;
       ...formData,;
       [e.target.name]: e.target.value;
@@ -61,16 +61,16 @@ export default function Signup() {
       title: "Lightning Fast",
       description: "Optimized performance for seamless user experience across all devices"
     },
-    {
-      icon: <Users className="h-6 w-6 text-zion-cyan" />,
+    {;
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,;
       title: "Team Collaboration",;
       description: "Built-in tools for seamless team communication and project management";
     };
   ];
   const benefits = [
     "Access to cutting-edge AI solutions",
-    "24/7 customer support",
-    "Free consultation session",
+    "24/7 customer support",;
+    "Free consultation session",;
     "Exclusive partner discounts",;
     "Early access to new features",;
     "Dedicated account manager";
@@ -87,10 +87,14 @@ export default function Signup() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -114,16 +118,22 @@ export default function Signup() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -352,16 +362,22 @@ export default function Signup() {
   x: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -384,16 +400,22 @@ export default function Signup() {
   x: 30 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.8,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -421,16 +443,22 @@ export default function Signup() {
   x: 30 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.8,
   delay: 1 + index * 0.1 
+
+
 
 
 }}
@@ -449,16 +477,22 @@ export default function Signup() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.5 
+
+
 
 
 }}
@@ -475,8 +509,8 @@ export default function Signup() {
                 <div className="text-3xl font-bold text-white mb-1">99.9%</div>
                 <div className="text-zion-slate-light text-sm">Uptime</div>
               </div>
-            </motion.div>
-          </motion.div>
+            </motion.div>;
+          </motion.div>;
         </div>;
       </div>;
     </div>;

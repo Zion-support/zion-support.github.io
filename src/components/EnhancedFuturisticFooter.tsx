@@ -189,8 +189,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
         { name: 'Request Quote', href: '/request-quote', featured: true },
         { name: 'Schedule Demo', href: '/demo', featured: false },
         { name: 'Partnerships', href: '/partners', featured: false },
-        { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Press & Media', href: '/press', featured: false },
+        { name: 'Investor Relations', href: '/investors', featured: false },;
+        { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ];
     };
@@ -200,16 +200,20 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },;
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-blue-400' },;
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' };
@@ -217,8 +221,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },
-    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },
-    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },
+    { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },;
+    { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },;
     { name: 'Get Support', href: '/support', icon: HelpCircle, featured: false },;
     { name: 'Join Community', href: '/community', icon: Users, featured: false },;
     { name: 'Partner Program', href: '/partners', icon: Users, featured: false };
@@ -314,16 +318,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -461,8 +471,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
         </section>
       </div>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-slate-700/50">
+      {/* Bottom Footer */};
+      <div className="border-t border-slate-700/50">;
         <div className="container-responsive py-6">;
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
             <div className="flex items-center space-x-6 text-sm text-gray-400">;
@@ -480,8 +490,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
               >
                 <ArrowUpRight className="w-5 h-5 rotate-45" />
               </button>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </footer>;

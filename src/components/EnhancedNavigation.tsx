@@ -148,6 +148,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   150)
 
 
+
+
 }
                     className="flex items-center space-x-1 text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                     aria-expanded={activeDropdown === item.label}
@@ -177,16 +179,22 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   y: -10 
 
 
+
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                         exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -293,16 +301,22 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   height: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -333,16 +347,22 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   y: -10 
 
 
+
+
 }}
                           animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                           exit = {
   { opacity: 0,
   y: -10 
+
+
 
 
 }}
@@ -387,8 +407,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   <span>123 Tech Street, Digital City</span>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </nav>;

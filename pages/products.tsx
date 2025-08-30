@@ -28,8 +28,8 @@ const Products: NextPage = () => {;
 
   const productCategories = [
     { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },
-    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },
-    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },
+    { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },;
+    { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },;
     { id: 'security', name: 'Security Tools', icon: Shield, color: 'from-red-600 to-orange-600' },;
     { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },;
     { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' };
@@ -199,8 +199,8 @@ const Products: NextPage = () => {;
         'Enhanced security',
         'Multi-chain compatibility'
       ],
-      icon: Network,
-      color: 'from-violet-600 to-purple-600',
+      icon: Network,;
+      color: 'from-violet-600 to-purple-600',;
       demoUrl: '/demo/blockchainforge',;
       pricingUrl: '/pricing/blockchainforge';
     };
@@ -245,8 +245,8 @@ const Products: NextPage = () => {;
           </div>
         </div>
       </div>
-
-      {/* Category Filter */}
+;
+      {/* Category Filter */};
       <div className="container mx-auto px-4 py-16">;
         <div className="flex flex-wrap justify-center gap-4 mb-16">;
           {productCategories.map((category) => {;
@@ -259,8 +259,8 @@ const Products: NextPage = () => {;
                   activeCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
                     : 'bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm'
-                }`}
-              >
+                }`};
+              >;
                 <IconComponent className="w-5 h-5" />;
                 <span>{category.name}</span>;
               </button>;
@@ -331,8 +331,8 @@ const Products: NextPage = () => {;
                   <a
                     href={product.pricingUrl}
                     className="flex-1 bg-transparent border border-white/30 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-white/10 transition-colors"
-                  >
-                    💰 View Pricing
+                  >;
+                    💰 View Pricing;
                   </a>;
                 </div>;
               </div>;
@@ -517,8 +517,8 @@ const Products: NextPage = () => {;
                 <h3 className="text-white font-semibold mb-2">⏰ Business Hours</h3>
                 <p className="text-gray-300">Mon-Fri: 9AM-6PM EST<br />Sat: 10AM-2PM EST</p>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

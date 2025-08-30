@@ -19,8 +19,8 @@ export default function CustomerExperience() {
       title: 'Personalization',
       description: 'Tailored experiences for every customer'
     },
-    {
-      icon: Star,
+    {;
+      icon: Star,;
       title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers';
     };
@@ -42,8 +42,8 @@ export default function CustomerExperience() {
       description: 'Smart workflows for customer interactions',
       icon: Zap
     },
-    {
-      title: 'Performance Analytics',
+    {;
+      title: 'Performance Analytics',;
       description: 'Track and improve customer experience metrics',;
       icon: TrendingUp;
     };
@@ -61,10 +61,14 @@ export default function CustomerExperience() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function CustomerExperience() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function CustomerExperience() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function CustomerExperience() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function CustomerExperience() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function CustomerExperience() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,8 +295,8 @@ export default function CustomerExperience() {
                   Schedule Demo
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

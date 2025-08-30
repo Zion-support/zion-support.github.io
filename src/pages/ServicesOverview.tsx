@@ -135,8 +135,8 @@ const serviceCategories = [
   {
     id: 'Emerging Tech',
     name: 'Emerging Technologies',
-    icon: Sparkles,
-    color: 'from-yellow-600 to-orange-600',
+    icon: Sparkles,;
+    color: 'from-yellow-600 to-orange-600',;
     description: 'Cutting-edge technologies and innovations',;
     count: 0;
   };
@@ -164,10 +164,14 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -232,8 +236,8 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             href={service.href}
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center"
           >
-            {service.ctaLabel}
-            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            {service.ctaLabel};
+            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
           </a>;
         </div>;
       </motion.div>;
@@ -248,10 +252,14 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
   x: -20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -294,8 +302,8 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
           >
             {service.ctaLabel}
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+            <ArrowRight className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </div>;
     </motion.div>;
@@ -303,8 +311,8 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
 };
 
 // Sidebar component for better navigation
-const ServicesSidebar = ({ 
-  selectedCategory, 
+const ServicesSidebar = ({ ;
+  selectedCategory, ;
   onCategoryChange, ;
   categoriesWithCounts ;
 }: { ;
@@ -354,8 +362,8 @@ const ServicesSidebar = ({
           </div>
           <div className="flex items-center justify-between">
             <span>Categories</span>
-            <span className="font-semibold text-gray-900">{categoriesWithCounts.length}</span>
-          </div>
+            <span className="font-semibold text-gray-900">{categoriesWithCounts.length}</span>;
+          </div>;
         </div>;
       </div>;
     </div>;
@@ -383,7 +391,7 @@ export default function ServicesOverview() {
   }, [allServices]);
 
   // Filter services based on search and category
-  const filteredServices = useMemo(() => {
+  const filteredServices = useMemo(() => {;
     return allServices.filter(service => {;
       const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -411,10 +419,14 @@ export default function ServicesOverview() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -511,16 +523,22 @@ export default function ServicesOverview() {
   height: 0 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -624,8 +642,8 @@ export default function ServicesOverview() {
                 <DollarSign className="w-5 h-5 mr-2" />
                 Request Custom Quote
               </a>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </>;

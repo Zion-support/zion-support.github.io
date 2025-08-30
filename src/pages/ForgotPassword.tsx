@@ -124,8 +124,8 @@ const ForgotPassword: React.FC = () => {;
       title: 'Multi-Factor Authentication',
       description: 'Enhanced security with verification codes'
     },
-    {
-      icon: <RefreshCw className="w-6 h-6" />,
+    {;
+      icon: <RefreshCw className="w-6 h-6" />,;
       title: 'Secure Reset Process',;
       description: 'Time-limited verification codes for safety';
     };
@@ -142,8 +142,8 @@ const ForgotPassword: React.FC = () => {;
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions for your business needs'
     },
-    {
-      icon: <Rocket className="w-6 h-6" />,
+    {;
+      icon: <Rocket className="w-6 h-6" />,;
       title: 'Digital Transformation',;
       description: 'Transform your business with modern technology';
     };
@@ -156,10 +156,14 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -209,8 +213,8 @@ const ForgotPassword: React.FC = () => {;
             <>
               Send Verification Code
               <ArrowRight className="w-5 h-5" />
-            </>
-          )}
+            </>;
+          )};
         </button>;
       </form>;
     </motion.div>;
@@ -223,10 +227,14 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -255,6 +263,8 @@ const ForgotPassword: React.FC = () => {;
             onChange = {
   (e) => setVerificationCode(e.target.value.replace(/\D/g, '').slice(0,
   6))
+
+
 
 
 }
@@ -302,8 +312,8 @@ const ForgotPassword: React.FC = () => {;
             onClick={handleEmailSubmit}
             className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200"
           >
-            Didn't receive the code? Resend
-          </button>
+            Didn't receive the code? Resend;
+          </button>;
         </div>;
       </form>;
     </motion.div>;
@@ -316,10 +326,14 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -375,6 +389,8 @@ const ForgotPassword: React.FC = () => {;
                     
 
 
+
+
 }`}
                   />
                 ))}
@@ -424,8 +440,8 @@ const ForgotPassword: React.FC = () => {;
             <>
               Reset Password
               <ArrowRight className="w-5 h-5" />
-            </>
-          )}
+            </>;
+          )};
         </button>;
       </form>;
     </motion.div>;
@@ -443,10 +459,14 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -467,10 +487,14 @@ const ForgotPassword: React.FC = () => {;
   y: 10 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -488,10 +512,14 @@ const ForgotPassword: React.FC = () => {;
   y: 10 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -516,16 +544,22 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -539,16 +573,22 @@ const ForgotPassword: React.FC = () => {;
   x: -20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
+
 
 
 }}
@@ -579,16 +619,22 @@ const ForgotPassword: React.FC = () => {;
   scale: 0.8 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -613,16 +659,22 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -637,16 +689,22 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }}
@@ -660,16 +718,22 @@ const ForgotPassword: React.FC = () => {;
   x: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
+
 
 
 }}
@@ -696,16 +760,22 @@ const ForgotPassword: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.2 
+
+
 
 
 }}
@@ -720,8 +790,8 @@ const ForgotPassword: React.FC = () => {;
               <p className="text-slate-300 text-sm">
                 We use industry-standard security measures to protect your account and ensure your data remains safe and secure.
               </p>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </div>;
       </div>;
     </div>;

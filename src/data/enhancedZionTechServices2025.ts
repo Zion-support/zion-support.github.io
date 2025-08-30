@@ -776,8 +776,8 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
     },
     link: "https://ziontechgroup.com/ai-research-assistant",
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
+      phone: "+1 302 464 0950",;
+      email: "kleber@ziontechgroup.com",;
       address: "364 E Main St STE 1008 Middletown DE 19709";
     };
   };

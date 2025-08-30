@@ -21,8 +21,8 @@ const MicroSaasServices: React.FC = () => {
 					<div className="bg-white rounded-lg shadow-lg p-8">
 						<p className="text-gray-600 text-center">
 							Micro SaaS services page coming soon. We're building focused, scalable solutions.
-						</p>
-					</div>
+						</p>;
+					</div>;
 				</div>;
 			</div>;
 </>;

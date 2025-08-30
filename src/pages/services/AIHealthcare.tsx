@@ -5,8 +5,8 @@ export default function AIHealthcare() {
     'AI-powered medical image analysis and diagnosis',
     'Intelligent patient data analysis and risk assessment',
     'Automated medical record processing and coding',
-    'Predictive analytics for patient outcomes',
-    'Drug interaction and adverse event monitoring',
+    'Predictive analytics for patient outcomes',;
+    'Drug interaction and adverse event monitoring',;
     'Telemedicine and remote patient monitoring',;
     'Integration with major EHR and healthcare systems',;
     'Custom AI models for specialized medical domains';
@@ -23,8 +23,8 @@ export default function AIHealthcare() {
       price: '$999/mo', 
       details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Health System', 
+    { ;
+      name: 'Large Health System', ;
       price: '$2,999/mo', ;
       details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIHealthcare() {
 
   const useCases = [
     'Medical imaging and radiology analysis',
-    'Patient diagnosis and treatment planning',
-    'Electronic health record optimization',
+    'Patient diagnosis and treatment planning',;
+    'Electronic health record optimization',;
     'Drug discovery and clinical trials',;
     'Population health management',;
     'Medical research and data analysis';
@@ -41,8 +41,8 @@ export default function AIHealthcare() {
 
   const benefits = [
     'Improve diagnostic accuracy by 20-35%',
-    'Reduce medical errors by 30-50%',
-    'Cut administrative costs by 25-40%',
+    'Reduce medical errors by 30-50%',;
+    'Cut administrative costs by 25-40%',;
     'Accelerate treatment decisions by 40-60%',;
     'Enhance patient outcomes and satisfaction',;
     'Scale healthcare operations efficiently';
@@ -50,8 +50,8 @@ export default function AIHealthcare() {
 
   const industries = [
     'Hospitals & Health Systems',
-    'Medical Practices & Clinics',
-    'Radiology & Imaging Centers',
+    'Medical Practices & Clinics',;
+    'Radiology & Imaging Centers',;
     'Pharmaceutical Companies',;
     'Research Institutions',;
     'Health Insurance Providers';
@@ -165,8 +165,8 @@ export default function AIHealthcare() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

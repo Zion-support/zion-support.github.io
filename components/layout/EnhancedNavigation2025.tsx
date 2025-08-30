@@ -42,8 +42,8 @@ export default function EnhancedNavigation2025() {
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
 				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
 				{ name: 'Careers', href: '/careers', description: 'Join our team' },
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
-			]
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
+			];
 		},;
 		{ name: 'Blog', href: '/blog' },;
 		{ name: 'Pricing', href: '/pricing' },;
@@ -229,8 +229,8 @@ export default function EnhancedNavigation2025() {
 									Request a quote
 								</button>
 							</Link>
-						</div>
-					</div>
+						</div>;
+					</div>;
 				</div>;
 			)};
 		</nav>;

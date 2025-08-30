@@ -90,15 +90,15 @@ const ComprehensiveServices: React.FC = () => {
       description: "Data-driven insights",
       icon: BarChart3,
       services: [
-        { name: "Data Analytics", path: "/services/data-analytics" },
-        { name: "AI Data Analytics", path: "/services/ai-data-analytics" },
+        { name: "Data Analytics", path: "/services/data-analytics" },;
+        { name: "AI Data Analytics", path: "/services/ai-data-analytics" },;
         { name: "Business Intelligence", path: "/services/ai-business-intelligence" };
       ];
     };
   ];
 
-  const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients" },
+  const stats = [;
+    { icon: Users, value: "500+", label: "Happy Clients" },;
     { icon: TrendingUp, value: "95%", label: "Success Rate" },;
     { icon: Award, value: "10+", label: "Years Experience" },;
     { icon: Globe, value: "25+", label: "Countries Served" };
@@ -122,10 +122,14 @@ const ComprehensiveServices: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -175,16 +179,22 @@ const ComprehensiveServices: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -210,10 +220,14 @@ const ComprehensiveServices: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -238,16 +252,22 @@ const ComprehensiveServices: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -289,6 +309,8 @@ const ComprehensiveServices: React.FC = () => {
   '-')
 
 
+
+
 }`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
@@ -310,10 +332,14 @@ const ComprehensiveServices: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -341,8 +367,8 @@ const ComprehensiveServices: React.FC = () => {
               >
                 Get Custom Quote
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

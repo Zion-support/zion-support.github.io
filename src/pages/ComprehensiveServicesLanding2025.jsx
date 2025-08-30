@@ -27,6 +27,8 @@ const ComprehensiveServicesLanding2025 = () => {
         
 
 
+
+
 };
         return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category));
     };

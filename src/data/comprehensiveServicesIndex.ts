@@ -14,7 +14,7 @@ export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices20
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 
 // Combined Services Array
-export const ALL_COMPREHENSIVE_SERVICES = [
+export const ALL_COMPREHENSIVE_SERVICES = [;
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
@@ -38,30 +38,30 @@ export const SERVICE_CATEGORIES = [
   '5G & Telecommunications',
   'Space Technology',
   'Neuromorphic Computing',
-  'Digital Twin & Simulation',
-  'Synthetic Biology',
+  'Digital Twin & Simulation',;
+  'Synthetic Biology',;
   'Brain-Computer Interface',;
   'Sustainability & Energy',;
   'Autonomous Vehicles & Fleet Management';
 ];
 
 // Innovation Levels
-export const INNOVATION_LEVELS = [
+export const INNOVATION_LEVELS = [;
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
 
 // Support Levels
-export const SUPPORT_LEVELS = [
+export const SUPPORT_LEVELS = [;
   'enterprise',;
   'professional',;
   'basic';
 ];
 
 // Pricing Models
-export const PRICING_MODELS = [
-  'monthly',
+export const PRICING_MODELS = [;
+  'monthly',;
   'annual',;
   'one-time',;
   'usage-based';
@@ -73,8 +73,12 @@ export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
   address: '364 E Main St STE 1008,;
+  ;
+  ;
   Middletown DE 19709';
 ;
+
+
 
 
 };
@@ -85,8 +89,12 @@ export const SERVICE_STATS = {
   categories: SERVICE_CATEGORIES.length,
   innovationLevels: INNOVATION_LEVELS.length,
   supportLevels: SUPPORT_LEVELS.length,;
+  ;
+  ;
   pricingModels: PRICING_MODELS.length;
 ;
+
+
 
 
 };
@@ -113,8 +121,8 @@ export const getServicesByTags = (tags: string[]) => {;
 };
 
 export const searchTerm = query.toLowerCase();
-  return ALL_COMPREHENSIVE_SERVICES.filter(service = >
-    service.title.toLowerCase().includes(searchTerm) ||
+  return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
+    service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);

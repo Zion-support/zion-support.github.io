@@ -139,8 +139,8 @@ export default function NotFound() {
             <Link to="/contact" className="text-zion-cyan hover:underline">
               contact our support team
             </Link>
-            .
-          </p>
+            .;
+          </p>;
         </div>;
       </div>;
     </div>;

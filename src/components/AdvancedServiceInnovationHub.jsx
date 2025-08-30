@@ -141,9 +141,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="mb-8">
@@ -176,9 +180,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
@@ -226,9 +234,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
@@ -237,9 +249,13 @@ const AdvancedServiceInnovationHub = () => {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>
@@ -323,9 +339,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="space-y-6">
@@ -334,9 +354,13 @@ const AdvancedServiceInnovationHub = () => {
   x: -20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>
@@ -423,9 +447,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="space-y-6">
@@ -574,9 +602,13 @@ const AdvancedServiceInnovationHub = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
@@ -592,6 +624,8 @@ const AdvancedServiceInnovationHub = () => {
   '_blank')
 
 
+
+
 }>
               <Users className="w-5 h-5 mr-2"/>
               Get Innovation Strategy
@@ -599,6 +633,8 @@ const AdvancedServiceInnovationHub = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

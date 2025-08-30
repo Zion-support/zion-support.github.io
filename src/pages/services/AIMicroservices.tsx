@@ -5,8 +5,8 @@ export default function AIMicroservices() {
     'AI-powered microservices optimization',
     'Intelligent microservices management',
     'Automated microservices monitoring and alerting',
-    'Predictive analytics for microservices scaling',
-    'Smart microservices security and compliance',
+    'Predictive analytics for microservices scaling',;
+    'Smart microservices security and compliance',;
     'AI-driven microservices automation and orchestration',;
     'Real-time microservices analytics and insights',;
     'Custom AI models for microservices applications';
@@ -23,8 +23,8 @@ export default function AIMicroservices() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full microservices suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIMicroservices() {
 
   const useCases = [
     'Microservices optimization',
-    'Microservices management',
-    'Performance monitoring and analytics',
+    'Microservices management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Microservices scaling and management';
@@ -41,8 +41,8 @@ export default function AIMicroservices() {
 
   const benefits = [
     'Improve microservices performance by 50-80%',
-    'Reduce microservices deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce microservices deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance microservices reliability and scalability',;
     'Optimize resource utilization',;
     'Scale microservices operations efficiently';
@@ -50,8 +50,8 @@ export default function AIMicroservices() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIMicroservices() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

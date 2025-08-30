@@ -67,6 +67,10 @@ export function useAuth() {
       userType: 'creator',;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -83,8 +87,8 @@ export function useAuth() {
     return mockUser;
   };
 
-  const logout = () => {
-    setAuthState({
+  const logout = () => {;
+    setAuthState({;
       user: null,;
       isAuthenticated: false,;
       isLoading: false,;
@@ -99,8 +103,12 @@ export function useAuth() {
   id: '1',
       email,
       name,;
+  ;
+  ;
   role: 'user';
     ;
+
+
 
 
 };

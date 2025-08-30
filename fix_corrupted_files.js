@@ -77,3 +77,5 @@ console.log("Finished fixing corrupted files.");
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
+export default fixCorruptedFile;
+export default fixCorruptedFile;

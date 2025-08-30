@@ -27,8 +27,12 @@ export function LoadingSpinner({
   const sizeClasses = {
   sm: 'w-8 h-8',
     md: 'w-16 h-16',;
+  ;
+  ;
   lg: 'w-32 h-32';
   ;
+
+
 
 
 };
@@ -51,11 +55,15 @@ export function LoadingSpinner({
           
 
 
+
+
 }}
           transition = {
   { 
             rotate: { duration: 2, repeat: Infinity,
   ease: "linear" 
+
+
 
 
 },
@@ -76,10 +84,14 @@ export function LoadingSpinner({
               
 
 
+
+
 }}
               transition = {
   { duration: 3,
   repeat: Infinity 
+
+
 
 
 }}
@@ -95,10 +107,14 @@ export function LoadingSpinner({
   0.3] 
 
 
+
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}
@@ -113,10 +129,14 @@ export function LoadingSpinner({
   0.5] 
 
 
+
+
 }}
           transition = {
   { duration: 1.5,
   repeat: Infinity 
+
+
 
 
 }}
@@ -138,6 +158,8 @@ export function LoadingSpinner({
               
 
 
+
+
 }}
               transition = {
   {
@@ -147,9 +169,11 @@ export function LoadingSpinner({
               
 
 
+
+
 }}
-            />
-          ))}
+            />;
+          ))};
         </div>;
       </div>;
     </div>;
@@ -176,10 +200,14 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             
 
 
+
+
 }}
             transition = {
   { duration: 4,
   repeat: Infinity 
+
+
 
 
 }}
@@ -194,10 +222,14 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             
 
 
+
+
 }}
             transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
+
 
 
 }}
@@ -211,10 +243,14 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   y: 20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -231,6 +267,8 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   ease: "linear" 
 
 
+
+
 }}
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
@@ -245,10 +283,14 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   0.7] 
 
 
+
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}
@@ -263,10 +305,14 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   0.5] 
 
 
+
+
 }}
             transition = {
   { duration: 2, repeat: Infinity,
   delay: 0.5 
+
+
 
 
 }}
@@ -286,10 +332,12 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   ease: "easeInOut" 
 
 
+
+
 }}
               />
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;
@@ -316,6 +364,8 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
           
 
 
+
+
 }}
           transition = {
   {
@@ -323,6 +373,8 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
             repeat: Infinity,
   delay: index * 0.1
           
+
+
 
 
 }}
@@ -333,7 +385,9 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
           
 
 
-}}
+
+;
+}};
         />;
       ))};
     </div>;

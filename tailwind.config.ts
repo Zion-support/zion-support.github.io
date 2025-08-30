@@ -9,6 +9,8 @@ const config: Config = {
   tsx
 
 
+
+
 }",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
@@ -184,8 +186,8 @@ const config: Config = {
         "spin-slow": "spin 3s linear infinite",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
-        "matrix-rain": "matrix-rain 20s linear infinite",
-      },
+        "matrix-rain": "matrix-rain 20s linear infinite",;
+      },;
     },;
   },;
   plugins: [animatePlugin],;

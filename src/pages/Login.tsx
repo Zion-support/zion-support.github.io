@@ -114,15 +114,15 @@ export default function Login() {
 
   const features = [
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },
-    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },
-    { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },
+    { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },;
+    { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },;
     { icon: Atom, title: 'Quantum Computing', description: 'Next-generation computational power' },;
     { icon: Network, title: 'IoT & Edge Computing', description: 'Smart device networks & processing' },;
     { icon: Leaf, title: 'Sustainable Technology', description: 'Green IT & eco-friendly solutions' };
   ];
 
-  const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
+  const stats = [;
+    { number: '500+', label: 'Enterprise Clients', icon: Building },;
     { number: '99.9%', label: 'Uptime SLA', icon: Activity },;
     { number: '24/7', label: 'Support Available', icon: MessageCircle },;
     { number: '50+', label: 'AI Services', icon: Brain };
@@ -138,10 +138,14 @@ export default function Login() {
   x: -50 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -317,16 +321,22 @@ export default function Login() {
   x: 50 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.2 
+
+
 
 
 }}
@@ -353,10 +363,14 @@ export default function Login() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -383,10 +397,14 @@ export default function Login() {
   x: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -419,8 +437,8 @@ export default function Login() {
             <div className="mt-2 text-sm text-blue-100">
               <MapPin className="h-4 w-4 inline mr-2" />
               123 Innovation Drive, Tech Valley, CA 94000
-            </div>
-          </div>
+            </div>;
+          </div>;
         </motion.div>;
       </div>;
     </div>;

@@ -5,8 +5,8 @@ export default function AIQuantumComputing() {
     'AI-powered quantum optimization',
     'Intelligent quantum algorithm management',
     'Automated quantum monitoring and alerting',
-    'Predictive analytics for quantum scaling',
-    'Smart quantum security and compliance',
+    'Predictive analytics for quantum scaling',;
+    'Smart quantum security and compliance',;
     'AI-driven quantum automation and orchestration',;
     'Real-time quantum analytics and insights',;
     'Custom AI models for quantum applications';
@@ -23,8 +23,8 @@ export default function AIQuantumComputing() {
       price: '$1,499/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full quantum suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIQuantumComputing() {
 
   const useCases = [
     'Quantum optimization',
-    'Quantum algorithm management',
-    'Performance monitoring and analytics',
+    'Quantum algorithm management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Quantum scaling and management';
@@ -41,8 +41,8 @@ export default function AIQuantumComputing() {
 
   const benefits = [
     'Improve quantum performance by 50-80%',
-    'Reduce quantum processing time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce quantum processing time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance quantum reliability and scalability',;
     'Optimize resource utilization',;
     'Scale quantum operations efficiently';
@@ -50,8 +50,8 @@ export default function AIQuantumComputing() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIQuantumComputing() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

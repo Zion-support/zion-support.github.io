@@ -43,16 +43,16 @@ export default function AIHRPlatform() {
     "Predictive analytics for retention and engagement",
     "Skills gap analysis and training recommendations",
     "Automated onboarding and offboarding",
-    "Employee sentiment analysis and feedback",
-    "Compliance monitoring and reporting",
+    "Employee sentiment analysis and feedback",;
+    "Compliance monitoring and reporting",;
     "Talent pipeline management",;
     "Diversity and inclusion analytics",;
     "Workforce planning and forecasting";
   ];
 
   const benefits = [
-    "Reduce hiring time by 60%",
-    "Improve candidate quality by 40%",
+    "Reduce hiring time by 60%",;
+    "Improve candidate quality by 40%",;
     "Increase employee retention by 35%",;
     "Reduce HR administrative costs by 50%",;
     "Enhance diversity and inclusion metrics";
@@ -62,8 +62,8 @@ export default function AIHRPlatform() {
     "Enterprise HR departments",
     "Recruitment agencies",
     "Startups and scale-ups",
-    "Remote-first companies",
-    "Healthcare organizations",
+    "Remote-first companies",;
+    "Healthcare organizations",;
     "Financial services firms",;
     "Technology companies",;
     "Manufacturing companies";
@@ -115,8 +115,8 @@ export default function AIHRPlatform() {
         "Custom integrations",
         "Dedicated account manager",
         "24/7 phone support",
-        "Unlimited employees"
-      ],
+        "Unlimited employees";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -138,10 +138,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -190,10 +194,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -217,16 +225,22 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -251,10 +265,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -278,16 +296,22 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -312,10 +336,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -339,16 +367,22 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -373,10 +407,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -400,16 +438,22 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -471,10 +515,14 @@ export default function AIHRPlatform() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -518,8 +566,8 @@ export default function AIHRPlatform() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
+            <span>🌐 https://ziontechgroup.com</span>;
+          </div>;
         </div>;
       </section>;
     </div>;

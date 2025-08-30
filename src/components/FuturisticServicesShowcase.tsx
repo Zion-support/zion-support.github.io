@@ -125,10 +125,14 @@ export default function FuturisticServicesShowcase() {
   y: 20 
 
 
+
+
 }}
 						whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -146,16 +150,22 @@ export default function FuturisticServicesShowcase() {
   y: 20 
 
 
+
+
 }}
 						whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
 						transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -199,16 +209,22 @@ export default function FuturisticServicesShowcase() {
   x: 100 
 
 
+
+
 }}
 							animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
 							exit = {
   { opacity: 0,
   x: -100 
+
+
 
 
 }}
@@ -245,10 +261,14 @@ export default function FuturisticServicesShowcase() {
   x: -20 
 
 
+
+
 }}
 													animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -288,6 +308,8 @@ export default function FuturisticServicesShowcase() {
 											
 
 
+
+
 }}
 											transition = {
   { 
@@ -295,6 +317,8 @@ export default function FuturisticServicesShowcase() {
 												repeat: Infinity,
   ease: "linear" 
 											
+
+
 
 
 }}
@@ -324,16 +348,22 @@ export default function FuturisticServicesShowcase() {
   y: 20 
 
 
+
+
 }}
 								whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
 								transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -358,8 +388,8 @@ export default function FuturisticServicesShowcase() {
 									{service.price}
 								</div>
 							</motion.div>
-						))}
-					</div>
+						))};
+					</div>;
 				</div>;
 			</div>;
 		</div>;

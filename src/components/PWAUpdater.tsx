@@ -92,8 +92,8 @@ export function PWAUpdater() {
             onClick={dismissUpdate}
             className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
           >
-            <X className="w-4 h-4" />
-          </button>
+            <X className="w-4 h-4" />;
+          </button>;
         </div>;
       </div>;
     </div>;

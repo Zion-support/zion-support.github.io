@@ -69,8 +69,8 @@ export default function AIContentMarketingSuite() {
       title: 'Automated Content Distribution',
       description: 'Intelligent scheduling and multi-channel distribution that reaches your audience at the optimal time across all platforms.'
     },
-    {
-      icon: Eye,
+    {;
+      icon: Eye,;
       title: 'Performance Analytics',;
       description: 'Real-time content performance tracking with AI insights that help you optimize your content strategy and ROI.';
     };
@@ -96,8 +96,8 @@ export default function AIContentMarketingSuite() {
       benefits: ['Text generation', 'Image creation', 'Video editing', 'Audio transcription']
     },
     {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive performance tracking and AI-powered recommendations',
+      title: 'Analytics & Insights',;
+      description: 'Comprehensive performance tracking and AI-powered recommendations',;
       icon: BarChart3,;
       benefits: ['Performance metrics', 'Audience insights', 'ROI tracking', 'Optimization tips'];
     };
@@ -123,8 +123,8 @@ export default function AIContentMarketingSuite() {
       metrics: ['Production Speed', 'Client Satisfaction', 'Content Quality', 'Project Delivery']
     },
     {
-      industry: 'Publishing & Media',
-      description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',
+      industry: 'Publishing & Media',;
+      description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',;
       icon: BookOpen,;
       metrics: ['Reader Engagement', 'Content Quality', 'Publishing Speed', 'Audience Growth'];
     };
@@ -146,8 +146,8 @@ export default function AIContentMarketingSuite() {
       title: 'Higher Engagement',
       description: 'Increase audience engagement by 35-50% with personalized, optimized content that resonates.'
     },
-    {
-      icon: DollarSign,
+    {;
+      icon: DollarSign,;
       title: 'Improved ROI',;
       description: 'Boost marketing ROI by 25-40% through better content performance and conversion optimization.';
     };
@@ -196,8 +196,8 @@ export default function AIContentMarketingSuite() {
         'White-label solution',
         'Dedicated support',
         'Custom development',
-        'Advanced analytics'
-      ],
+        'Advanced analytics';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -221,10 +221,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -258,10 +262,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -286,16 +294,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -321,10 +335,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -349,16 +367,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -394,10 +418,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -422,16 +450,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -467,10 +501,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -495,16 +533,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -530,10 +574,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -558,16 +606,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -625,10 +679,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -674,16 +732,22 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -709,10 +773,14 @@ export default function AIContentMarketingSuite() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -771,8 +839,8 @@ export default function AIContentMarketingSuite() {
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -24,8 +24,8 @@ const ResearchDevelopment: React.FC = () => {;
 
   const researchAreas = [
     { id: 'all', name: 'All Areas', icon: Flask },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },;
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
     { id: 'biotech', name: 'Biotechnology', icon: Microscope },;
     { id: 'space', name: 'Space Technology', icon: Rocket };
@@ -117,8 +117,8 @@ const ResearchDevelopment: React.FC = () => {;
       team: '18 researchers',
       funding: '$4.1M',
       outcomes: [
-        'Reduced energy consumption',
-        'Green computing standards',
+        'Reduced energy consumption',;
+        'Green computing standards',;
         'Sustainable technology practices';
       ];
     };
@@ -148,8 +148,8 @@ const ResearchDevelopment: React.FC = () => {;
     {
       title: 'AI-Driven Drug Discovery: Current State and Future Directions',
       authors: 'Dr. Maria Garcia, Dr. Robert Johnson, Dr. Amanda Lee',
-      journal: 'Science',
-      year: 2023,
+      journal: 'Science',;
+      year: 2023,;
       citations: 78,;
       doi: '10.1126/science.abc1234';
     };
@@ -175,8 +175,8 @@ const ResearchDevelopment: React.FC = () => {;
       duration: '2024-2028'
     },
     {
-      name: 'Google Research',
-      type: 'Industry',
+      name: 'Google Research',;
+      type: 'Industry',;
       focus: 'Large language models',;
       duration: '2023-2025';
     };
@@ -193,10 +193,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -243,10 +247,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,16 +275,22 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -336,10 +350,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -360,16 +378,22 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -417,10 +441,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -441,16 +469,22 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -485,10 +519,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -525,16 +563,22 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -561,10 +605,14 @@ const ResearchDevelopment: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -584,8 +632,8 @@ const ResearchDevelopment: React.FC = () => {;
               <button className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-all duration-300">
                 Submit Research Proposal
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

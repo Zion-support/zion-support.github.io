@@ -29,8 +29,12 @@ const AIContentOptimizerPro: React.FC = () => {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
@@ -67,8 +71,8 @@ const AIContentOptimizerPro: React.FC = () => {
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
     },
     {
-      icon: Shield,
-      title: 'Content Plagiarism Detection',
+      icon: Shield,;
+      title: 'Content Plagiarism Detection',;
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
     };
@@ -122,8 +126,8 @@ const AIContentOptimizerPro: React.FC = () => {
         'Dedicated support',
         'Custom integrations',
         'Advanced reporting',
-        'SLA guarantees'
-      ],
+        'SLA guarantees';
+      ],;
       popular: false,;
       cta: 'Contact Sales';
     };
@@ -145,8 +149,8 @@ const AIContentOptimizerPro: React.FC = () => {
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
       metrics: ['50% increase in local search visibility', '30% improvement in local leads']
     },
-    {
-      title: 'Technical Content',
+    {;
+      title: 'Technical Content',;
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
       metrics: ['45% improvement in readability scores', '40% increase in engagement'];
     };
@@ -169,8 +173,8 @@ const AIContentOptimizerPro: React.FC = () => {
     },
     {
       name: 'Sarah Williams',
-      role: 'Content Creator',
-      company: 'Creative Content Studio',
+      role: 'Content Creator',;
+      company: 'Creative Content Studio',;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
@@ -195,10 +199,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -252,10 +260,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -280,16 +292,22 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -324,10 +342,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -352,16 +374,22 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -393,10 +421,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -421,16 +453,22 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -484,16 +522,22 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -519,10 +563,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -547,16 +595,22 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -589,10 +643,14 @@ const AIContentOptimizerPro: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -649,8 +707,8 @@ const AIContentOptimizerPro: React.FC = () => {
                   <span>Visit Website</span>
                 </a>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

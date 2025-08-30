@@ -38,8 +38,8 @@ export default function CloudSolutions() {
       features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
     {
-      icon: Zap,
-      title: "DevOps Automation",
+      icon: Zap,;
+      title: "DevOps Automation",;
       description: "Streamline your development and deployment processes with automation",;
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"];
     };
@@ -61,8 +61,8 @@ export default function CloudSolutions() {
       title: "Enhanced Security",
       description: "Enterprise-grade security with advanced threat protection and compliance"
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "24/7 Support",;
       description: "Round-the-clock expert support for your cloud infrastructure needs";
     };
@@ -70,8 +70,8 @@ export default function CloudSolutions() {
 
   const technologies = [
     { name: "AWS", logo: "AWS", description: "Amazon Web Services" },
-    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },
-    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },
+    { name: "Azure", logo: "Azure", description: "Microsoft Azure" },;
+    { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },;
     { name: "Kubernetes", logo: "K8s", description: "Container Orchestration" },;
     { name: "Docker", logo: "Docker", description: "Containerization" },;
     { name: "Terraform", logo: "TF", description: "Infrastructure as Code" };
@@ -80,8 +80,8 @@ export default function CloudSolutions() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -92,9 +92,11 @@ export default function CloudSolutions() {
   y: 20 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 };
     };
@@ -116,10 +118,14 @@ export default function CloudSolutions() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -143,16 +149,22 @@ export default function CloudSolutions() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
+
 
 
 }}
@@ -188,10 +200,14 @@ export default function CloudSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -222,6 +238,8 @@ export default function CloudSolutions() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -257,10 +275,14 @@ export default function CloudSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -310,10 +332,14 @@ export default function CloudSolutions() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -363,10 +389,14 @@ export default function CloudSolutions() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -386,8 +416,8 @@ export default function CloudSolutions() {
               whileTap={{ scale: 0.95 }}
             >
               Start Your Cloud Journey
-            </motion.button>
-          </motion.div>
+            </motion.button>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

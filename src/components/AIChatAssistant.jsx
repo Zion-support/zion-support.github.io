@@ -40,6 +40,8 @@ export function AIChatAssistant() {
         
 
 
+
+
 };
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');
@@ -53,6 +55,8 @@ export function AIChatAssistant() {
                 content: randomResponse,
   timestamp: new Date()
             
+
+
 
 
 };

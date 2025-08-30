@@ -31,8 +31,8 @@ export default function UptimeSLAMonitor() {
       title: "Global Monitoring",
       description: "Monitor from multiple locations worldwide to ensure consistent user experience."
     },
-    {
-      icon: Shield,
+    {;
+      icon: Shield,;
       title: "Security Monitoring",;
       description: "SSL certificate monitoring, security headers, and vulnerability scanning included.";
     };
@@ -64,8 +64,8 @@ export default function UptimeSLAMonitor() {
       title: "Cloud Services",
       description: "AWS, Azure, GCP service monitoring and cost tracking"
     },
-    {
-      icon: Smartphone,
+    {;
+      icon: Smartphone,;
       title: "Mobile App Monitoring",;
       description: "API endpoints, push notifications, and mobile performance";
     };
@@ -114,8 +114,8 @@ export default function UptimeSLAMonitor() {
         "Priority support",
         "Advanced SLA reporting",
         "All global locations",
-        "White-label options",
-        "Custom integrations"
+        "White-label options",;
+        "Custom integrations";
       ],;
       popular: false;
     };
@@ -137,8 +137,8 @@ export default function UptimeSLAMonitor() {
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
       icon: TrendingUp
     },
-    {
-      title: "Reduce MTTR",
+    {;
+      title: "Reduce MTTR",;
       description: "Faster incident response with detailed error information and automated escalation.",;
       icon: Zap;
     };
@@ -164,10 +164,14 @@ export default function UptimeSLAMonitor() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -222,16 +226,22 @@ export default function UptimeSLAMonitor() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -269,16 +279,22 @@ export default function UptimeSLAMonitor() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -316,16 +332,22 @@ export default function UptimeSLAMonitor() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -365,16 +387,22 @@ export default function UptimeSLAMonitor() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -435,10 +463,14 @@ export default function UptimeSLAMonitor() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -464,8 +496,8 @@ export default function UptimeSLAMonitor() {
                   Contact Sales
                 </Link>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

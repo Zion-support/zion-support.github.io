@@ -9,5 +9,7 @@ export default function NewProductsPage() {
   max: 5000 
 
 
+
+
 }}/>);
 }

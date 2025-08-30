@@ -33,8 +33,12 @@ export default function AIIncidentPostmortems() {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
@@ -65,8 +69,8 @@ export default function AIIncidentPostmortems() {
       title: 'Team Collaboration Tools',
       description: 'Built-in communication and collaboration features for incident response teams'
     },
-    {
-      icon: Database,
+    {;
+      icon: Database,;
       title: 'Centralized Knowledge Base',;
       description: 'Maintain a searchable repository of all incidents and resolutions';
     };
@@ -74,8 +78,8 @@ export default function AIIncidentPostmortems() {
 
   const benefits = [
     'Reduce incident resolution time by 60%',
-    'Improve team productivity by 45%',
-    'Decrease repeat incidents by 80%',
+    'Improve team productivity by 45%',;
+    'Decrease repeat incidents by 80%',;
     'Enhance customer satisfaction scores',;
     'Streamline compliance reporting',;
     'Optimize resource allocation';
@@ -131,8 +135,8 @@ export default function AIIncidentPostmortems() {
         'Advanced analytics',
         'Custom AI models',
         'On-premise deployment option',
-        'Dedicated account manager'
-      ],
+        'Dedicated account manager';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -154,8 +158,8 @@ export default function AIIncidentPostmortems() {
       description: 'Enhance security incident response with AI-powered threat analysis',
       icon: Shield
     },
-    {
-      title: 'Customer Support',
+    {;
+      title: 'Customer Support',;
       description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare;
     };
@@ -178,10 +182,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -225,10 +233,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -253,16 +265,22 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -289,10 +307,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -317,16 +339,22 @@ export default function AIIncidentPostmortems() {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -350,10 +378,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -378,16 +410,22 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -446,10 +484,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -474,16 +516,22 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -510,10 +558,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -552,10 +604,14 @@ export default function AIIncidentPostmortems() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -593,8 +649,8 @@ export default function AIIncidentPostmortems() {
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

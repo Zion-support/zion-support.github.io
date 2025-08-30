@@ -47,8 +47,8 @@ export default function AICustomerSupport() {
       title: 'Predictive Analytics',
       description: 'Identify support trends and proactively address common customer issues'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'Automated Workflows',;
       description: 'Streamline support processes with intelligent automation and self-service options';
     };
@@ -56,8 +56,8 @@ export default function AICustomerSupport() {
 
   const benefits = [
     'Reduce response time by 80% with instant AI support',
-    'Increase customer satisfaction scores by 45%',
-    'Cut support costs by 60% through automation',
+    'Increase customer satisfaction scores by 45%',;
+    'Cut support costs by 60% through automation',;
     'Handle 5x more support requests with AI assistance',;
     'Provide 24/7 support coverage without additional staff',;
     'Improve first-call resolution rates by 35%';
@@ -111,8 +111,8 @@ export default function AICustomerSupport() {
         'SLA guarantees',
         'Advanced security features',
         'Custom workflows',
-        'Multi-language support'
-      ],
+        'Multi-language support';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -137,10 +137,14 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -175,10 +179,14 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -203,16 +211,22 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -238,10 +252,14 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -266,16 +284,22 @@ export default function AICustomerSupport() {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -298,10 +322,14 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -326,16 +354,22 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -393,10 +427,14 @@ export default function AICustomerSupport() {
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -418,8 +456,8 @@ export default function AICustomerSupport() {
                   Schedule Demo
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

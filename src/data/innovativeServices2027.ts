@@ -108,8 +108,8 @@ export const serviceCategories2027 = [
   'Quantum Finance',
   'Space Technology',
   'Quantum Space',
-  'Biotechnology',
-  'Quantum Medicine',
+  'Biotechnology',;
+  'Quantum Medicine',;
   'Quantum Security',;
   'Nanotechnology',;
   'Neural Technology';

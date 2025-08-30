@@ -62,8 +62,8 @@ const MobileLaunch: React.FC = () => {
       color: "from-green-400 to-emerald-500"
     },
     {
-      title: "Smart Notifications",
-      description: "Intelligent alerts that adapt to your preferences and schedule",
+      title: "Smart Notifications",;
+      description: "Intelligent alerts that adapt to your preferences and schedule",;
       icon: Bell,;
       color: "from-orange-400 to-red-500";
     };
@@ -89,8 +89,8 @@ const MobileLaunch: React.FC = () => {
       features: ["Interactive charts", "Custom reports", "Data export"]
     },
     {
-      name: "Services",
-      description: "Access to all Zion Tech Group services and solutions",
+      name: "Services",;
+      description: "Access to all Zion Tech Group services and solutions",;
       icon: Settings,;
       features: ["Service catalog", "Quick setup", "Support access"];
     };
@@ -113,16 +113,16 @@ const MobileLaunch: React.FC = () => {
     },
     {
       platform: "Web App",
-      icon: "🌐",
-      description: "Access via browser",
+      icon: "🌐",;
+      description: "Access via browser",;
       link: "/",;
       featured: false;
     };
   ];
 
   const systemRequirements = [
-    { requirement: "iOS 14.0+", icon: "🍎" },
-    { requirement: "Android 8.0+", icon: "🤖" },
+    { requirement: "iOS 14.0+", icon: "🍎" },;
+    { requirement: "Android 8.0+", icon: "🤖" },;
     { requirement: "2GB RAM", icon: "💾" },;
     { requirement: "100MB Storage", icon: "💿" },;
     { requirement: "Internet Connection", icon: "🌐" };
@@ -147,10 +147,14 @@ const MobileLaunch: React.FC = () => {
   x: -30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -199,16 +203,22 @@ const MobileLaunch: React.FC = () => {
   x: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -280,10 +290,14 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -308,16 +322,22 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -344,10 +364,14 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -371,16 +395,22 @@ const MobileLaunch: React.FC = () => {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -416,10 +446,14 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -443,16 +477,22 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -493,10 +533,14 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -520,16 +564,22 @@ const MobileLaunch: React.FC = () => {
   scale: 0.8 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -552,10 +602,14 @@ const MobileLaunch: React.FC = () => {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -584,8 +638,8 @@ const MobileLaunch: React.FC = () => {
                 Get Support
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

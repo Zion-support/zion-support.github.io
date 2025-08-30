@@ -15,6 +15,8 @@ export default function InstantMessaging() {
     
 
 
+
+
 };
     return (<>
       <SEO title="Instant Messaging" description="Negotiate deals and collaborate instantly with real-time chat." keywords="real-time messaging, Socket.IO chat, project communication" canonical="https://app.ziontechgroup.com/features/instant-messaging"/>

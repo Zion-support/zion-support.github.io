@@ -145,8 +145,8 @@ const BlockchainServicesPage = () => {;
         "Atomic swaps",
         "Network monitoring"
       ],
-      icon: Globe,
-      category: "Interoperability",
+      icon: Globe,;
+      category: "Interoperability",;
       badge: "Advanced",;
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500";
     };
@@ -155,8 +155,8 @@ const BlockchainServicesPage = () => {;
   const categories = [
     { id: 'all', name: 'All Services', count: blockchainServices.length },
     { id: 'Development', name: 'Development', count: blockchainServices.filter(s => s.category === 'Development').length },
-    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },
-    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s => s.category === 'DeFi').length },;
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s => s.category === 'NFTs').length },;
     { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s => s.category === 'Enterprise').length },;
     { id: 'Security', name: 'Security', count: blockchainServices.filter(s => s.category === 'Security').length },;
     { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s => s.category === 'Interoperability').length };
@@ -252,16 +252,22 @@ const BlockchainServicesPage = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -390,16 +396,22 @@ const BlockchainServicesPage = () => {;
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -434,8 +446,8 @@ const BlockchainServicesPage = () => {;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
-            </button>
-          </div>
+            </button>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -9,5 +9,7 @@ export default function MoreProductsPage() {
   max: 2000 
 
 
+
+
 }}/>);
 }

@@ -7,16 +7,16 @@ export default function AIMarketingAutomation() {
     'AI-powered audience segmentation and targeting',
     'Predictive customer behavior analysis',
     'Automated content personalization and optimization',
-    'Multi-channel campaign orchestration',
-    'Real-time performance optimization',
+    'Multi-channel campaign orchestration',;
+    'Real-time performance optimization',;
     'Advanced A/B testing with AI insights',;
     'Lead scoring and qualification automation',;
     'ROI tracking and predictive analytics';
   ];
 
   const benefits = [
-    'Increase conversion rates by 40-60%',
-    'Reduce customer acquisition costs by 30%',
+    'Increase conversion rates by 40-60%',;
+    'Reduce customer acquisition costs by 30%',;
     'Improve customer lifetime value by 25%',;
     'Save 15+ hours per week on marketing tasks',;
     'Achieve 3x better campaign performance';
@@ -39,8 +39,8 @@ export default function AIMarketingAutomation() {
     },
     {
       name: 'Enterprise',
-      price: '$799',
-      period: '/mo',
+      price: '$799',;
+      period: '/mo',;
       contacts: 'Unlimited contacts',;
       features: ['Full AI suite', 'White-label options', 'Dedicated support', 'SAML/SSO', 'Custom integrations', 'Advanced reporting'];
     };
@@ -48,8 +48,8 @@ export default function AIMarketingAutomation() {
 
   const useCases = [
     'E-commerce businesses',
-    'B2B SaaS companies',
-    'Digital agencies',
+    'B2B SaaS companies',;
+    'Digital agencies',;
     'Real estate companies',;
     'Healthcare providers',;
     'Educational institutions';
@@ -376,8 +376,8 @@ export default function AIMarketingAutomation() {
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

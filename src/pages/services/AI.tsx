@@ -73,8 +73,8 @@ export default function AIServices() {
         "ML pipeline automation",
         "Model versioning and deployment",
         "Scalable training infrastructure",
-        "Monitoring and alerting systems"
-      ],
+        "Monitoring and alerting systems";
+      ],;
       price: "From $6,000",;
       duration: "4-10 weeks";
     };
@@ -82,8 +82,8 @@ export default function AIServices() {
 
   const aiTechnologies = [
     { name: "TensorFlow", description: "Open-source ML framework", icon: Code },
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
     { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;
     { name: "NLP", description: "Natural language processing", icon: MessageSquare },;
     { name: "AutoML", description: "Automated machine learning", icon: Zap };
@@ -105,8 +105,8 @@ export default function AIServices() {
       applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-    {
-      industry: "Retail",
+    {;
+      industry: "Retail",;
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
       icon: ShoppingCart;
     };
@@ -296,8 +296,8 @@ export default function AIServices() {
               >
                 Explore All Services
               </Link>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </section>;
     </div>;

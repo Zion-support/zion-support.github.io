@@ -5,8 +5,8 @@ export default function AIFinancialTrading() {
     'AI-powered market analysis and trend prediction',
     'Intelligent portfolio optimization and risk management',
     'Automated trading strategies and execution',
-    'Real-time market data processing and insights',
-    'Predictive analytics for asset performance',
+    'Real-time market data processing and insights',;
+    'Predictive analytics for asset performance',;
     'Risk assessment and portfolio diversification',;
     'Integration with major trading platforms',;
     'Custom AI models for specific asset classes';
@@ -23,8 +23,8 @@ export default function AIFinancialTrading() {
       price: '$799/mo', 
       details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] 
     },
-    { 
-      name: 'Institutional', 
+    { ;
+      name: 'Institutional', ;
       price: '$2,499/mo', ;
       details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIFinancialTrading() {
 
   const useCases = [
     'Stock market trading and analysis',
-    'Cryptocurrency trading and portfolio management',
-    'Forex trading and currency analysis',
+    'Cryptocurrency trading and portfolio management',;
+    'Forex trading and currency analysis',;
     'Options and derivatives trading',;
     'Commodity trading and futures',;
     'Portfolio management and rebalancing';
@@ -41,8 +41,8 @@ export default function AIFinancialTrading() {
 
   const benefits = [
     'Improve trading performance by 20-40%',
-    'Reduce portfolio risk by 25-45%',
-    'Increase returns through optimized strategies',
+    'Reduce portfolio risk by 25-45%',;
+    'Increase returns through optimized strategies',;
     'Automate routine trading operations',;
     'Enhance decision-making with AI insights',;
     'Scale trading operations efficiently';
@@ -50,8 +50,8 @@ export default function AIFinancialTrading() {
 
   const industries = [
     'Individual Trading',
-    'Professional Trading',
-    'Institutional Investment',
+    'Professional Trading',;
+    'Institutional Investment',;
     'Hedge Funds',;
     'Asset Management',;
     'Quantitative Trading';
@@ -165,8 +165,8 @@ export default function AIFinancialTrading() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

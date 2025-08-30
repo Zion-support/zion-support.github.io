@@ -112,6 +112,8 @@ export function SecurityComplianceSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -137,9 +139,13 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -158,14 +164,20 @@ export function SecurityComplianceSection() {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -184,14 +196,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -204,14 +222,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ y: -4 }} className="relative">
@@ -279,14 +303,20 @@ export function SecurityComplianceSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -326,14 +356,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}>
@@ -346,14 +382,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ y: -4 }} className="relative">
@@ -421,14 +463,20 @@ export function SecurityComplianceSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -468,14 +516,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>
@@ -488,14 +542,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} whileHover={{ y: -4 }} className="relative">
@@ -540,14 +600,20 @@ export function SecurityComplianceSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -581,14 +647,20 @@ export function SecurityComplianceSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}>

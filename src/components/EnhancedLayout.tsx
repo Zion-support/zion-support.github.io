@@ -31,8 +31,8 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
         <main className={`flex-1 ${showSidebar ? 'lg:ml-80' : ''}`}>
           {children}
         </main>
-      </div>
-      
+      </div>;
+      ;
       {/* Footer */};
       <FuturisticFooter />;
     </div>;

@@ -151,6 +151,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     toggleVoiceNavigation,;
   ;
   ;
+  ;
+  ;
+
+
 
 
 };
@@ -166,16 +170,22 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   y: -20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -213,10 +223,14 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   x: -20 
 
 
+
+
 }}
           animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -272,8 +286,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
               A
             </button>
           </div>
-        </motion.div>
-      </div>
+        </motion.div>;
+      </div>;
 ;
       {children};
     </AccessibilityContext.Provider>;

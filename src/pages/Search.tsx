@@ -11,16 +11,16 @@ export default function Search() {
   const [loading, setLoading] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },
-    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },
+    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },;
+    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },;
     { id: 'talent', name: 'Talent', icon: <Users className="w-4 h-4" />, count: 0 },;
     { id: 'equipment', name: 'Equipment', icon: <Building className="w-4 h-4" />, count: 0 },;
     { id: 'companies', name: 'Companies', icon: <Building className="w-4 h-4" />, count: 0 };
   ];
 
   const sortOptions = [
-    { value: 'relevance', label: 'Relevance' },
-    { value: 'newest', label: 'Newest' },
+    { value: 'relevance', label: 'Relevance' },;
+    { value: 'newest', label: 'Newest' },;
     { value: 'rating', label: 'Highest Rated' },;
     { value: 'price-low', label: 'Price: Low to High' },;
     { value: 'price-high', label: 'Price: High to Low' };
@@ -79,8 +79,8 @@ export default function Search() {
       rating: 4.6,
       reviews: 203,
       price: '$300/hour',
-      location: 'Remote',
-      company: 'Zion Tech Group',
+      location: 'Remote',;
+      company: 'Zion Tech Group',;
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],;
       featured: false;
     };
@@ -330,8 +330,8 @@ export default function Search() {
               <p className="text-zion-slate-light">
                 Enter a search term above to find services, talent, equipment, and more
               </p>
-            </div>
-          )}
+            </div>;
+          )};
         </div>;
       </div>;
     </div>;

@@ -28,8 +28,8 @@ export default function Demo() {
               <label className="block text-sm mb-1">What would you like to see?</label>
               <textarea className="w-full rounded-lg bg-slate-900 border border-slate-700 px-3 py-2" rows={4} placeholder="Tell us about your goals and use cases" />
             </div>
-            <button type="button" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold">Request Demo</button>
-          </form>
+            <button type="button" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold">Request Demo</button>;
+          </form>;
         </div>;
       </div>;
     </div>;

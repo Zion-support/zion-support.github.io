@@ -7,8 +7,8 @@ export default function AIESGCompliancePlatform() {
     'Real-time sustainability performance tracking',
     'Carbon footprint calculation and optimization',
     'Social responsibility metrics and reporting',
-    'Governance risk assessment and monitoring',
-    'Regulatory compliance automation',
+    'Governance risk assessment and monitoring',;
+    'Regulatory compliance automation',;
     'Stakeholder engagement tracking',;
     'ESG scoring and benchmarking',;
     'Custom sustainability dashboard creation';
@@ -16,8 +16,8 @@ export default function AIESGCompliancePlatform() {
 
   const benefits = [
     'Reduce ESG reporting time by 85%',
-    'Improve compliance accuracy by 90%',
-    'Cut carbon emissions tracking costs by 70%',
+    'Improve compliance accuracy by 90%',;
+    'Cut carbon emissions tracking costs by 70%',;
     'Real-time sustainability performance insights',;
     'Automated regulatory compliance updates',;
     'Enhanced stakeholder transparency and trust';
@@ -37,8 +37,8 @@ export default function AIESGCompliancePlatform() {
       popular: true
     },
     { 
-      name: 'Enterprise', 
-      price: '$2,999/mo', 
+      name: 'Enterprise', ;
+      price: '$2,999/mo', ;
       features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
       popular: false;
     };
@@ -46,8 +46,8 @@ export default function AIESGCompliancePlatform() {
 
   const useCases = [
     'Corporate sustainability reporting',
-    'ESG investment portfolio analysis',
-    'Supply chain sustainability tracking',
+    'ESG investment portfolio analysis',;
+    'Supply chain sustainability tracking',;
     'Regulatory compliance automation',;
     'Stakeholder ESG communication',;
     'Sustainability performance benchmarking';
@@ -57,8 +57,8 @@ export default function AIESGCompliancePlatform() {
     'Environmental Impact Assessment',
     'Carbon Footprint Management',
     'Renewable Energy Tracking',
-    'Waste Management Analytics',
-    'Social Responsibility Metrics',
+    'Waste Management Analytics',;
+    'Social Responsibility Metrics',;
     'Diversity & Inclusion Tracking',;
     'Governance Risk Assessment',;
     'Compliance Monitoring';
@@ -291,8 +291,8 @@ export default function AIESGCompliancePlatform() {
             rel="noreferrer" 
             className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </section>;
     </div>;

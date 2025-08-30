@@ -215,8 +215,8 @@ export default function UltimateServicesShowcase2025() {
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
             >
               View Pricing
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -7,8 +7,8 @@ export default function AISupplyChainRiskManagement() {
     'Predictive analytics for supply chain vulnerabilities',
     'Automated risk scoring and prioritization',
     'Multi-tier supplier risk analysis',
-    'Geopolitical and economic risk integration',
-    'Supply chain resilience optimization',
+    'Geopolitical and economic risk integration',;
+    'Supply chain resilience optimization',;
     'Compliance and regulatory risk monitoring',;
     'Custom risk threshold configuration',;
     'Advanced visualization and reporting dashboards';
@@ -16,8 +16,8 @@ export default function AISupplyChainRiskManagement() {
 
   const benefits = [
     'Reduce supply chain disruptions by 60-80%',
-    'Cut risk assessment time by 90%',
-    'Improve supplier selection accuracy by 75%',
+    'Cut risk assessment time by 90%',;
+    'Improve supplier selection accuracy by 75%',;
     'Real-time global risk monitoring',;
     'Predict supply chain issues 30-60 days in advance',;
     'Automated compliance reporting and alerts';
@@ -37,8 +37,8 @@ export default function AISupplyChainRiskManagement() {
       popular: true
     },
     { 
-      name: 'Enterprise', 
-      price: '$2,499/mo', 
+      name: 'Enterprise', ;
+      price: '$2,499/mo', ;
       features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],;
       popular: false;
     };
@@ -46,8 +46,8 @@ export default function AISupplyChainRiskManagement() {
 
   const useCases = [
     'Manufacturing supply chain risk management',
-    'Retail inventory risk assessment',
-    'Healthcare supply chain monitoring',
+    'Retail inventory risk assessment',;
+    'Healthcare supply chain monitoring',;
     'Automotive supplier risk analysis',;
     'Food and beverage supply chain safety',;
     'Technology component sourcing risk';
@@ -57,8 +57,8 @@ export default function AISupplyChainRiskManagement() {
     'Geopolitical Risk Analysis',
     'Economic Instability Monitoring',
     'Natural Disaster Prediction',
-    'Supplier Financial Health',
-    'Regulatory Compliance Risk',
+    'Supplier Financial Health',;
+    'Regulatory Compliance Risk',;
     'Cybersecurity Threats',;
     'Transportation Disruptions',;
     'Quality Control Issues';
@@ -291,8 +291,8 @@ export default function AISupplyChainRiskManagement() {
             rel="noreferrer" 
             className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
           >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
+          </a>;
         </div>;
       </section>;
     </div>;

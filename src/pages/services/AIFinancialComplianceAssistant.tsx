@@ -40,8 +40,12 @@ export default function AIFinancialComplianceAssistant() {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
+
 
 
 };
@@ -72,8 +76,8 @@ export default function AIFinancialComplianceAssistant() {
       title: 'Centralized Compliance Hub',
       description: 'Single source of truth for all compliance-related data, policies, and procedures'
     },
-    {
-      icon: BarChart3,
+    {;
+      icon: BarChart3,;
       title: 'Advanced Analytics & Reporting',;
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions';
     };
@@ -81,8 +85,8 @@ export default function AIFinancialComplianceAssistant() {
 
   const benefits = [
     'Reduce compliance violations by 85%',
-    'Cut compliance costs by 60%',
-    'Improve audit efficiency by 70%',
+    'Cut compliance costs by 60%',;
+    'Improve audit efficiency by 70%',;
     'Ensure 99.9% regulatory accuracy',;
     'Streamline reporting processes',;
     'Enhance risk management capabilities';
@@ -143,8 +147,8 @@ export default function AIFinancialComplianceAssistant() {
         'On-premise deployment option',
         'Dedicated compliance consultant',
         'Custom training programs',
-        'White-label solutions'
-      ],
+        'White-label solutions';
+      ],;
       cta: 'Contact Sales',;
       popular: false;
     };
@@ -176,8 +180,8 @@ export default function AIFinancialComplianceAssistant() {
       description: 'Banking regulation compliance with automated risk calculations',
       icon: Scale
     },
-    {
-      title: 'IFRS/GAAP',
+    {;
+      title: 'IFRS/GAAP',;
       description: 'Accounting standards compliance with automated financial reporting',;
       icon: BookOpen;
     };
@@ -199,8 +203,8 @@ export default function AIFinancialComplianceAssistant() {
       description: 'State and federal insurance regulation compliance',
       icon: Shield
     },
-    {
-      title: 'Fintech Startups',
+    {;
+      title: 'Fintech Startups',;
       description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap;
     };
@@ -223,10 +227,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -270,10 +278,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -298,16 +310,22 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -334,10 +352,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -362,16 +384,22 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -398,10 +426,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -426,16 +458,22 @@ export default function AIFinancialComplianceAssistant() {
   x: -20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -459,10 +497,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -487,16 +529,22 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -523,10 +571,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -551,16 +603,22 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -619,10 +677,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -661,10 +723,14 @@ export default function AIFinancialComplianceAssistant() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -702,8 +768,8 @@ export default function AIFinancialComplianceAssistant() {
             >
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-          </motion.div>
+            </a>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

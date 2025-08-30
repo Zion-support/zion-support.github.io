@@ -5,8 +5,8 @@ export default function AIPrometheus() {
     'AI-powered Prometheus optimization',
     'Intelligent Prometheus management',
     'Automated Prometheus monitoring and alerting',
-    'Predictive analytics for Prometheus scaling',
-    'Smart Prometheus security and compliance',
+    'Predictive analytics for Prometheus scaling',;
+    'Smart Prometheus security and compliance',;
     'AI-driven Prometheus automation and orchestration',;
     'Real-time Prometheus analytics and insights',;
     'Custom AI models for Prometheus applications';
@@ -23,8 +23,8 @@ export default function AIPrometheus() {
       price: '$799/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Prometheus suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIPrometheus() {
 
   const useCases = [
     'Prometheus optimization',
-    'Prometheus management',
-    'Performance monitoring and analytics',
+    'Prometheus management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Prometheus scaling and management';
@@ -41,8 +41,8 @@ export default function AIPrometheus() {
 
   const benefits = [
     'Improve Prometheus performance by 50-80%',
-    'Reduce Prometheus query time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Prometheus query time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Prometheus reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Prometheus operations efficiently';
@@ -50,8 +50,8 @@ export default function AIPrometheus() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIPrometheus() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

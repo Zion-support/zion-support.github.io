@@ -22,8 +22,8 @@ export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All News', count: 45 },
-    { id: 'press-releases', name: 'Press Releases', count: 18 },
+    { id: 'all', name: 'All News', count: 45 },;
+    { id: 'press-releases', name: 'Press Releases', count: 18 },;
     { id: 'media-coverage', name: 'Media Coverage', count: 15 },;
     { id: 'awards', name: 'Awards & Recognition', count: 8 },;
     { id: 'thought-leadership', name: 'Thought Leadership', count: 4 };
@@ -91,8 +91,8 @@ export default function Press() {
       date: "2023-12-05",
       author: "Press Team",
       category: "press-releases",
-      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
+      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",;
+      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",;
       featured: false,;
       tags: ["Global Expansion", "Europe", "Market Growth"];
     };
@@ -138,8 +138,8 @@ export default function Press() {
       publication: "VentureBeat",
       date: "2023-12-12",
       author: "Emily Watson",
-      category: "media-coverage",
-      excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
+      category: "media-coverage",;
+      excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",;
       url: "https://venturebeat.com/zion-tech-group-startup",;
       featured: false;
     };
@@ -168,8 +168,8 @@ export default function Press() {
       id: 3,
       title: "Cybersecurity Excellence Award",
       organization: "InfoSec Awards",
-      year: "2023",
-      category: "awards",
+      year: "2023",;
+      category: "awards",;
       description: "Outstanding achievement in AI-powered cybersecurity solutions",;
       image: "/images/awards/infosec.png";
     };
@@ -182,8 +182,8 @@ export default function Press() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -194,9 +194,11 @@ export default function Press() {
   y: 20 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 };
     };
@@ -218,10 +220,14 @@ export default function Press() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -278,10 +284,14 @@ export default function Press() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -311,6 +321,8 @@ export default function Press() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -368,10 +380,14 @@ export default function Press() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -401,6 +417,8 @@ export default function Press() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -448,10 +466,14 @@ export default function Press() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -481,6 +503,8 @@ export default function Press() {
   scale: 1.02 
 
 
+
+
 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -499,6 +523,8 @@ export default function Press() {
               whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -521,6 +547,8 @@ export default function Press() {
   scale: 1.02 
 
 
+
+
 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -539,6 +567,8 @@ export default function Press() {
               whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -565,10 +595,14 @@ export default function Press() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -615,8 +649,8 @@ export default function Press() {
               whileTap={{ scale: 0.95 }}
             >
               Contact Media Team
-            </motion.button>
-          </motion.div>
+            </motion.button>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

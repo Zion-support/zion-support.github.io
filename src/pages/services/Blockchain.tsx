@@ -31,8 +31,8 @@ export default function Blockchain() {
       title: "Identity Management",
       description: "Self-sovereign identity solutions with privacy and security"
     },
-    {
-      icon: Network,
+    {;
+      icon: Network,;
       title: "Cross-Chain Interoperability",;
       description: "Seamless communication between different blockchain networks";
     };
@@ -81,8 +81,8 @@ export default function Blockchain() {
         "24/7 support",
         "Real-time monitoring",
         "White-label solutions",
-        "Dedicated blockchain engineer"
-      ],
+        "Dedicated blockchain engineer";
+      ],;
       cta: "Contact Sales",;
       popular: false;
     };
@@ -104,8 +104,8 @@ export default function Blockchain() {
       title: "Cost Reduction",
       description: "Eliminate intermediaries and reduce transaction costs"
     },
-    {
-      icon: Users,
+    {;
+      icon: Users,;
       title: "Trust & Compliance",;
       description: "Build trust through verifiable and auditable processes";
     };
@@ -125,8 +125,8 @@ export default function Blockchain() {
       examples: ["Product tracking", "Quality assurance", "Compliance reporting"]
     },
     {
-      icon: Shield,
-      title: "Healthcare",
+      icon: Shield,;
+      title: "Healthcare",;
       description: "Secure patient records and pharmaceutical supply chain management",;
       examples: ["Patient data", "Drug tracking", "Clinical trials"];
     };
@@ -162,10 +162,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -211,10 +215,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -239,16 +247,22 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -283,10 +297,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -311,16 +329,22 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -347,10 +371,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -379,16 +407,22 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -446,10 +480,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -474,16 +512,22 @@ export default function Blockchain() {
   x: index % 2 === 0 ? -30 : 30 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -511,10 +555,14 @@ export default function Blockchain() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -542,8 +590,8 @@ export default function Blockchain() {
                   Get Custom Quote
                 </RouterLink>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </div>;

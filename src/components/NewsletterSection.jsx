@@ -55,6 +55,8 @@ export function NewsletterSection() {
         
 
 
+
+
 }}/>
       </div>
 
@@ -65,10 +67,14 @@ export function NewsletterSection() {
   ease: "linear" 
 
 
+
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
+
 
 
 }}/>
@@ -77,9 +83,13 @@ export function NewsletterSection() {
   1] 
 
 
+
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
+
 
 
 }}/>
@@ -91,9 +101,13 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -116,14 +130,20 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -132,14 +152,20 @@ export function NewsletterSection() {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -154,14 +180,20 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}>
@@ -182,14 +214,20 @@ export function NewsletterSection() {
   height: 0 
 
 
+
+
 }} animate = {
   { opacity: 1,
   height: "auto" 
 
 
+
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }} transition={{ duration: 0.4 }}>
@@ -198,9 +236,13 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300">
@@ -221,14 +263,20 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>
@@ -251,14 +299,20 @@ export function NewsletterSection() {
   scale: 0.9 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.6 
+
+
 
 
 }}>
@@ -270,9 +324,13 @@ export function NewsletterSection() {
   scale: 0.9 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }} transition={{ duration: 0.5 }}>
@@ -292,14 +350,20 @@ export function NewsletterSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.7 
+
+
 
 
 }}>

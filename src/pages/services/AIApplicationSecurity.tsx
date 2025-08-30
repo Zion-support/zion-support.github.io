@@ -5,8 +5,8 @@ export default function AIApplicationSecurity() {
     'AI-powered application security optimization',
     'Intelligent threat detection and response',
     'Automated security monitoring and alerting',
-    'Predictive analytics for security threats',
-    'Smart security compliance and governance',
+    'Predictive analytics for security threats',;
+    'Smart security compliance and governance',;
     'AI-driven security automation and orchestration',;
     'Real-time security analytics and insights',;
     'Custom AI models for security applications';
@@ -23,8 +23,8 @@ export default function AIApplicationSecurity() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full security suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIApplicationSecurity() {
 
   const useCases = [
     'Application security optimization',
-    'Threat detection and response',
-    'Security monitoring and analytics',
+    'Threat detection and response',;
+    'Security monitoring and analytics',;
     'Compliance and governance monitoring',;
     'Security automation and orchestration',;
     'Security scaling and management';
@@ -41,8 +41,8 @@ export default function AIApplicationSecurity() {
 
   const benefits = [
     'Improve application security performance by 50-80%',
-    'Reduce threat response time by 40-70%',
-    'Cut security operational costs by 35-65%',
+    'Reduce threat response time by 40-70%',;
+    'Cut security operational costs by 35-65%',;
     'Enhance application security reliability and scalability',;
     'Optimize resource utilization',;
     'Scale application security operations efficiently';
@@ -50,8 +50,8 @@ export default function AIApplicationSecurity() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIApplicationSecurity() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

@@ -18,6 +18,8 @@ const categoryIcons = {
 
 
 
+
+
 };
 const pricingFeatures = {
   basic: [
@@ -46,6 +48,8 @@ const pricingFeatures = {
         "Custom contracts",
   "Dedicated infrastructure"
     ]
+
+
 
 
 

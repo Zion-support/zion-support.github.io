@@ -71,13 +71,17 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   scale: 0.9 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
 
 
-}}
+
+;
+}};
         transition={{ duration: 0.3 }};
       >;
         {themes.map((themeOption) => {;
@@ -108,7 +112,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   duration: 0.6 
 
 
-}}
+
+;
+}};
                 />;
               )};
             </motion.button>;

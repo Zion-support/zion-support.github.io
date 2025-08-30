@@ -25,6 +25,8 @@ const mockPost = {
     
 
 
+
+
 },
     authorId: "user1",
     category: "ai-tools",
@@ -255,9 +257,13 @@ export default function ForumPostPage() {
   160)
 
 
+
+
 } keywords = {
   `community, forum, discussion, ${post.tags.join(',
   ')
+
+
 
 
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>

@@ -38,14 +38,20 @@ export default function FuturisticHero() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { delay: item.delay,
   duration: 1 
+
+
 
 
 }} className={`absolute ${item.color} opacity-20`} style={{
@@ -72,15 +78,21 @@ export default function FuturisticHero() {
   y: 50 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 1 }} className="mb-8">
           <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" style = {
   { y,
   opacity 
+
+
 
 
 }}>
@@ -102,14 +114,20 @@ export default function FuturisticHero() {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 1,
   delay: 0.3 
+
+
 
 
 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -125,14 +143,20 @@ export default function FuturisticHero() {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 1,
   delay: 0.6 
+
+
 
 
 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
@@ -146,14 +170,20 @@ export default function FuturisticHero() {
   scale: 0.8 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.5,
   delay: 0.8 + index * 0.1 
+
+
 
 
 }} className="text-center group">
@@ -175,14 +205,20 @@ export default function FuturisticHero() {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 1,
   delay: 1 
+
+
 
 
 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -208,15 +244,21 @@ export default function FuturisticHero() {
   delay: 1.5 
 
 
+
+
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
   { y: [0, 10,
   0] 
 
 
+
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
@@ -225,9 +267,13 @@ export default function FuturisticHero() {
   0] 
 
 
+
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>

@@ -5,8 +5,8 @@ import { SEO } from "../../components/SEO";
 export default function AIAutonomousVehiclePlatform() {
   const features = [
     'Advanced computer vision and sensor fusion',
-    'Real-time decision making and path planning',
-    'Predictive maintenance and fleet optimization',
+    'Real-time decision making and path planning',;
+    'Predictive maintenance and fleet optimization',;
     'Multi-vehicle coordination and traffic management',;
     'Safety-first autonomous driving algorithms',;
     'Cloud-based vehicle monitoring and control';
@@ -49,8 +49,8 @@ export default function AIAutonomousVehiclePlatform() {
         'Custom autonomous algorithms',
         '24/7 dedicated support',
         'On-premise deployment options',
-        'Custom integrations and APIs',
-        'White-label solutions available',
+        'Custom integrations and APIs',;
+        'White-label solutions available',;
         'Regulatory compliance tools';
       ];
     };
@@ -58,16 +58,16 @@ export default function AIAutonomousVehiclePlatform() {
 
   const useCases = [
     'Ride-sharing and taxi services',
-    'Logistics and delivery fleets',
-    'Public transportation systems',
+    'Logistics and delivery fleets',;
+    'Public transportation systems',;
     'Mining and construction vehicles',;
     'Agricultural machinery automation',;
     'Emergency response vehicles';
   ];
 
   const benefits = [
-    'Reduce transportation costs by 40-60% through automation',
-    'Improve safety by eliminating human error factors',
+    'Reduce transportation costs by 40-60% through automation',;
+    'Improve safety by eliminating human error factors',;
     'Increase fleet efficiency and utilization rates',;
     'Enable 24/7 operation without driver fatigue',;
     'Reduce carbon emissions through optimized routing';
@@ -75,8 +75,8 @@ export default function AIAutonomousVehiclePlatform() {
 
   const industries = [
     'Transportation and Logistics',
-    'Automotive Manufacturing',
-    'Ride-sharing Services',
+    'Automotive Manufacturing',;
+    'Ride-sharing Services',;
     'Public Transit',;
     'Construction and Mining',;
     'Agriculture and Farming';
@@ -304,8 +304,8 @@ export default function AIAutonomousVehiclePlatform() {
             >
               Get Started Today
               <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
+            </a>;
+          </div>;
         </section>;
       </div>;
     </>;

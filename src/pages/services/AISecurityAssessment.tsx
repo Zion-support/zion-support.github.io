@@ -5,8 +5,8 @@ export default function AISecurityAssessment() {
     'AI-powered security assessment optimization',
     'Intelligent assessment strategy management and execution',
     'Automated security risk detection and evaluation',
-    'Predictive analytics for assessment needs',
-    'Smart assessment framework management',
+    'Predictive analytics for assessment needs',;
+    'Smart assessment framework management',;
     'AI-driven assessment automation and orchestration',;
     'Real-time assessment performance tracking',;
     'Custom AI models for assessment applications';
@@ -23,8 +23,8 @@ export default function AISecurityAssessment() {
       price: '$1,299/mo', 
       details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$3,199/mo', ;
       details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityAssessment() {
 
   const useCases = [
     'Security assessment optimization',
-    'Assessment strategy management and execution',
-    'Security risk detection and evaluation',
+    'Assessment strategy management and execution',;
+    'Security risk detection and evaluation',;
     'Assessment framework management and automation',;
     'Assessment automation and orchestration',;
     'Assessment scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityAssessment() {
 
   const benefits = [
     'Improve security assessment performance by 50-80%',
-    'Reduce assessment completion time by 40-70%',
-    'Cut security assessment costs by 35-65%',
+    'Reduce assessment completion time by 40-70%',;
+    'Cut security assessment costs by 35-65%',;
     'Enhance security assessment reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security assessment operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityAssessment() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityAssessment() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

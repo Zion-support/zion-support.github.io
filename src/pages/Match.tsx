@@ -47,8 +47,8 @@ const Match: React.FC = () => {;
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },
-    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },
+    { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 28 },;
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
@@ -128,8 +128,8 @@ const Match: React.FC = () => {;
       rating: 4.9,
       reviews: 112,
       price: "$2,799/mo",
-      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],
-      matchScore: 87,
+      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
+      matchScore: 87,;
       icon: Zap,;
       featured: true;
     };
@@ -159,10 +159,14 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -256,10 +260,14 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -284,16 +292,22 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -359,6 +373,8 @@ const Match: React.FC = () => {;
   '-')
 
 
+
+
 }`}
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"
                   >
@@ -409,10 +425,14 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -456,16 +476,22 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -492,10 +518,14 @@ const Match: React.FC = () => {;
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -523,8 +553,8 @@ const Match: React.FC = () => {;
               >
                 Browse All Services
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -5,8 +5,8 @@ export default function AISecurityMonitoring() {
     'AI-powered security monitoring optimization',
     'Intelligent monitoring strategy management and execution',
     'Automated security threat detection and assessment',
-    'Predictive analytics for monitoring needs',
-    'Smart monitoring framework management',
+    'Predictive analytics for monitoring needs',;
+    'Smart monitoring framework management',;
     'AI-driven monitoring automation and orchestration',;
     'Real-time monitoring performance tracking',;
     'Custom AI models for monitoring applications';
@@ -23,8 +23,8 @@ export default function AISecurityMonitoring() {
       price: '$799/mo', 
       details: ['Up to 50 systems', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited systems', 'Custom AI models', 'Full monitoring suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AISecurityMonitoring() {
 
   const useCases = [
     'Security monitoring optimization',
-    'Monitoring strategy management and execution',
-    'Security threat detection and assessment',
+    'Monitoring strategy management and execution',;
+    'Security threat detection and assessment',;
     'Monitoring framework management and automation',;
     'Monitoring automation and orchestration',;
     'Monitoring scaling and management';
@@ -41,8 +41,8 @@ export default function AISecurityMonitoring() {
 
   const benefits = [
     'Improve security monitoring performance by 50-80%',
-    'Reduce threat detection time by 40-70%',
-    'Cut security monitoring costs by 35-65%',
+    'Reduce threat detection time by 40-70%',;
+    'Cut security monitoring costs by 35-65%',;
     'Enhance security monitoring reliability and scalability',;
     'Optimize resource utilization',;
     'Scale security monitoring operations efficiently';
@@ -50,8 +50,8 @@ export default function AISecurityMonitoring() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AISecurityMonitoring() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

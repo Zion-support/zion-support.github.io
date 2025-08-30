@@ -5,8 +5,8 @@ export default function AIKafka() {
     'AI-powered Kafka optimization',
     'Intelligent Kafka management',
     'Automated Kafka monitoring and alerting',
-    'Predictive analytics for Kafka scaling',
-    'Smart Kafka security and compliance',
+    'Predictive analytics for Kafka scaling',;
+    'Smart Kafka security and compliance',;
     'AI-driven Kafka automation and orchestration',;
     'Real-time Kafka analytics and insights',;
     'Custom AI models for Kafka applications';
@@ -23,8 +23,8 @@ export default function AIKafka() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full Kafka suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIKafka() {
 
   const useCases = [
     'Kafka optimization',
-    'Kafka management',
-    'Performance monitoring and analytics',
+    'Kafka management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Kafka scaling and management';
@@ -41,8 +41,8 @@ export default function AIKafka() {
 
   const benefits = [
     'Improve Kafka performance by 50-80%',
-    'Reduce Kafka latency by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce Kafka latency by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance Kafka reliability and scalability',;
     'Optimize resource utilization',;
     'Scale Kafka operations efficiently';
@@ -50,8 +50,8 @@ export default function AIKafka() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIKafka() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

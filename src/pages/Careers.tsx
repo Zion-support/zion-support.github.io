@@ -130,8 +130,8 @@ const Careers = () => {;
         "Experience in B2B SaaS or enterprise software",
         "Strong analytical and strategic thinking",
         "Experience with agile methodologies",
-        "Excellent communication and leadership skills"
-      ],
+        "Excellent communication and leadership skills";
+      ],;
       benefits: ["Competitive salary", "Health insurance", "Stock options", "Professional development"],;
       category: "product";
     };
@@ -140,8 +140,8 @@ const Careers = () => {;
   const categories = [
     { id: 'all', name: 'All Positions', count: jobListings.length },
     { id: 'ai', name: 'AI & ML', count: jobListings.filter(job => job.category === 'ai').length },
-    { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },
-    { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },
+    { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },;
+    { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },;
     { id: 'engineering', name: 'Engineering', count: jobListings.filter(job => job.category === 'engineering').length },;
     { id: 'data', name: 'Data & Analytics', count: jobListings.filter(job => job.category === 'data').length },;
     { id: 'product', name: 'Product', count: jobListings.filter(job => job.category === 'product').length };
@@ -167,8 +167,8 @@ const Careers = () => {;
       title: "Scalable Solutions",
       description: "Creating technology that grows with our clients' needs"
     },
-    {
-      icon: Code,
+    {;
+      icon: Code,;
       title: "Quality Code",;
       description: "Writing clean, maintainable, and efficient code";
     };
@@ -178,8 +178,8 @@ const Careers = () => {;
     "Competitive salary and equity packages",
     "Comprehensive health, dental, and vision insurance",
     "Flexible work arrangements and remote options",
-    "Professional development and learning opportunities",
-    "Modern equipment and tools",
+    "Professional development and learning opportunities",;
+    "Modern equipment and tools",;
     "Regular team events and activities",;
     "Generous vacation and time-off policies",;
     "401(k) matching and financial planning";
@@ -203,10 +203,14 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -242,16 +246,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -269,16 +279,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -305,16 +321,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -332,16 +354,22 @@ const Careers = () => {;
   x: -20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.05 * index 
+
+
 
 
 }}
@@ -365,16 +393,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
+
 
 
 }}
@@ -410,16 +444,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
+
 
 
 }}
@@ -490,16 +530,22 @@ const Careers = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -519,8 +565,8 @@ const Careers = () => {;
                   Contact Recruiting
                 </button>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

@@ -11,8 +11,12 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',;
+  ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
+
 
 
 };
@@ -58,8 +62,8 @@ const pricingTiers = [
       'Custom development',
       'Enterprise analytics',
       'Dedicated account manager',
-      'Custom training programs',
-      'SLA guarantees'
+      'Custom training programs',;
+      'SLA guarantees';
     ],;
     popular: false;
   };
@@ -306,8 +310,8 @@ export default function ComprehensivePricing() {
             ))}
           </div>
           
-          {filteredServices.length === 0 && (
-            <div className="text-center py-12">
+          {filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
               <p className="text-zion-slate-light text-lg">No services found matching your criteria.</p>;
               <Button ;
                 onClick={() => {;
@@ -389,8 +393,8 @@ export default function ComprehensivePricing() {
               <p>📞 Call us: {contactInfo.mobile}</p>
               <p>📧 Email: {contactInfo.email}</p>
               <p>📍 Address: {contactInfo.address}</p>
-            </div>
-          </div>
+            </div>;
+          </div>;
         </div>;
       </div>;
     </div>;

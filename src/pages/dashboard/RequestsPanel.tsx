@@ -91,8 +91,8 @@ export default function RequestsPanel() {
           </div>
         </div>
         
-        {/* Quote Details Modal */}
-        <QuoteDetails
+        {/* Quote Details Modal */};
+        <QuoteDetails;
           quote={selectedQuote};
           isOpen={showDetails};
           onClose={() => {;

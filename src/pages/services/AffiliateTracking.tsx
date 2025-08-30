@@ -67,8 +67,8 @@ export default function AffiliateTracking() {
       bestFor: 'Global programs, agencies and marketplaces',
       bullets: [
         'Unlimited partners and campaigns',
-        'SAML SSO and audit trails',
-        'Custom data retention + warehouse sync',
+        'SAML SSO and audit trails',;
+        'Custom data retention + warehouse sync',;
         'Dedicated CSM and 99.9% SLA';
       ];
     };
@@ -92,10 +92,14 @@ export default function AffiliateTracking() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,10 +140,14 @@ export default function AffiliateTracking() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -195,10 +203,14 @@ export default function AffiliateTracking() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -206,6 +218,8 @@ export default function AffiliateTracking() {
                 transition = {
   { duration: 0.5,
   delay: i * 0.05 
+
+
 
 
 }}
@@ -280,8 +294,8 @@ export default function AffiliateTracking() {
               <a className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">
                 <Link2 className="w-4 h-4" /> Post Affiliate Pro pricing <ExternalLink className="w-4 h-4" />
               </a>
-            </li>
-          </ul>
+            </li>;
+          </ul>;
         </div>;
       </section>;
     </div>;

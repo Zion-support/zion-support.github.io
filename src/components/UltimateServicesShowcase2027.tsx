@@ -35,8 +35,8 @@ export const UltimateServicesShowcase2027 = () => {
             <p className="text-gray-300 mb-4">Connected devices and edge computing</p>
             <Link to="/services/iot-edge" className="text-cyan-400 hover:text-cyan-300">
               Learn More →
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </div>;
       </div>;
     </section>;

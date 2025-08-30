@@ -124,9 +124,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} className="text-center mb-8">
@@ -144,9 +148,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
@@ -156,6 +164,8 @@ export const AdvancedServiceComparison = () => {
             <select value={filters.category} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   category: e.target.value 
+
+
 
 
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -174,6 +184,8 @@ export const AdvancedServiceComparison = () => {
   complexity: e.target.value 
 
 
+
+
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
               <option value="all">All Levels</option>
               {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>))}
@@ -187,6 +199,8 @@ export const AdvancedServiceComparison = () => {
   priceRange: e.target.value 
 
 
+
+
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
               <option value="all">All Prices</option>
               {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>))}
@@ -198,6 +212,8 @@ export const AdvancedServiceComparison = () => {
             <select value={filters.technology} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   technology: e.target.value 
+
+
 
 
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -236,9 +252,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -247,9 +267,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.1 * index }}>
@@ -323,6 +347,8 @@ export const AdvancedServiceComparison = () => {
   '_blank')
 
 
+
+
 }>
                       Learn More
                     </Button>
@@ -339,9 +365,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.3 }} className="mt-8 bg-white rounded-lg shadow-lg p-6">
@@ -375,6 +405,8 @@ export const AdvancedServiceComparison = () => {
   '_blank')
 
 
+
+
 }>
               <Mail className="w-4 h-4 mr-2"/>
               Get Detailed Comparison
@@ -388,9 +420,13 @@ export const AdvancedServiceComparison = () => {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
@@ -406,6 +442,8 @@ export const AdvancedServiceComparison = () => {
   '_blank')
 
 
+
+
 }>
               <Mail className="w-4 h-4 mr-2"/>
               Get Started
@@ -413,6 +451,8 @@ export const AdvancedServiceComparison = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
+
 
 
 }>

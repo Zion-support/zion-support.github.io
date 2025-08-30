@@ -169,6 +169,8 @@ export default function Signup() {
   onInvalid)
 
 
+
+
 } className="space-y-6" noValidate>
                   <FormField control={form.control} name="displayName" render={({ field }) => (<FormItem>
                         <FormLabel className="text-zion-slate-light">Full Name</FormLabel>

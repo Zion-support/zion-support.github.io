@@ -167,8 +167,8 @@ export function Sidebar() {
     }
   ];
 
-  const toggleItem = (itemName: string) => {
-    setExpandedItems(prev => 
+  const toggleItem = (itemName: string) => {;
+    setExpandedItems(prev => ;
       prev.includes(itemName);
         ? prev.filter(name => name !== itemName);
         : [...prev, itemName];
@@ -269,8 +269,8 @@ export function Sidebar() {
               onClick={onClose}
             >
               Contact Support
-            </Link>
-          </div>
+            </Link>;
+          </div>;
         </div>;
       </div>;
     </div>;

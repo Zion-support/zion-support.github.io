@@ -19,8 +19,8 @@ export default function Sustainability() {
       title: 'Renewable Energy',
       description: 'Integrate solar, wind, and sustainable power sources'
     },
-    {
-      icon: Globe,
+    {;
+      icon: Globe,;
       title: 'Carbon Neutral',;
       description: 'Achieve net-zero emissions through smart technology';
     };
@@ -42,8 +42,8 @@ export default function Sustainability() {
       description: 'Real-time tracking and optimization of power usage',
       icon: BarChart3
     },
-    {
-      title: 'Carbon Footprint Analysis',
+    {;
+      title: 'Carbon Footprint Analysis',;
       description: 'Comprehensive environmental impact assessment',;
       icon: Globe;
     };
@@ -61,10 +61,14 @@ export default function Sustainability() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,10 +112,14 @@ export default function Sustainability() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -136,16 +144,22 @@ export default function Sustainability() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -172,10 +186,14 @@ export default function Sustainability() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -200,16 +218,22 @@ export default function Sustainability() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -240,10 +264,14 @@ export default function Sustainability() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -267,8 +295,8 @@ export default function Sustainability() {
                   Contact Green Team
                 </button>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

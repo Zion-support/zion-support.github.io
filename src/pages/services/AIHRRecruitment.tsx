@@ -5,8 +5,8 @@ export default function AIHRRecruitment() {
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
     'Automated interview scheduling and coordination',
-    'Predictive analytics for candidate success',
-    'Bias-free screening and diversity optimization',
+    'Predictive analytics for candidate success',;
+    'Bias-free screening and diversity optimization',;
     'Automated reference checking and verification',;
     'Integration with major ATS and HR platforms',;
     'Custom AI models for industry-specific hiring';
@@ -23,8 +23,8 @@ export default function AIHRRecruitment() {
       price: '$499/mo', 
       details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,299/mo', ;
       details: ['Unlimited job postings', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIHRRecruitment() {
 
   const useCases = [
     'High-volume recruitment and hiring',
-    'Technical talent acquisition',
-    'Executive search and placement',
+    'Technical talent acquisition',;
+    'Executive search and placement',;
     'Seasonal hiring optimization',;
     'Diversity and inclusion hiring',;
     'Remote workforce recruitment';
@@ -41,8 +41,8 @@ export default function AIHRRecruitment() {
 
   const benefits = [
     'Reduce time-to-hire by 40-60%',
-    'Improve candidate quality by 30-50%',
-    'Cut recruitment costs by 25-40%',
+    'Improve candidate quality by 30-50%',;
+    'Cut recruitment costs by 25-40%',;
     'Increase diversity in hiring by 35-55%',;
     'Enhance candidate experience',;
     'Scale recruitment without additional staff';
@@ -50,8 +50,8 @@ export default function AIHRRecruitment() {
 
   const industries = [
     'Technology & Software',
-    'Healthcare & Life Sciences',
-    'Financial Services',
+    'Healthcare & Life Sciences',;
+    'Financial Services',;
     'Manufacturing & Industrial',;
     'Retail & E-commerce',;
     'Professional Services';
@@ -165,8 +165,8 @@ export default function AIHRRecruitment() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

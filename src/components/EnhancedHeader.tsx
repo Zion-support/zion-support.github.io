@@ -96,8 +96,8 @@ export function EnhancedHeader() {
     { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
     { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
     { name: 'News', href: '/news', current: location.pathname === '/news' },
-    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
-    { name: 'Help', href: '/help', current: location.pathname === '/help' },
+    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },;
+    { name: 'Help', href: '/help', current: location.pathname === '/help' },;
     { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },;
     { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },;
     { name: 'Marketplace', href: '/marketplace', current: location.pathname === '/marketplace' },;
@@ -229,8 +229,8 @@ export function EnhancedHeader() {
       name: 'Biotech AI Drug Discovery', 
       href: '/services/biotech-ai-drug-discovery', 
       icon: Heart, 
-      description: 'AI-powered drug discovery', 
-      category: 'Emerging Tech', 
+      description: 'AI-powered drug discovery', ;
+      category: 'Emerging Tech', ;
       color: 'from-emerald-600 to-green-700',;
       badge: 'New';
     };
@@ -255,6 +255,8 @@ export function EnhancedHeader() {
   ease: "easeOut" 
 
 
+
+
 }}
       >
         <div className="container mx-auto px-4">
@@ -266,6 +268,8 @@ export function EnhancedHeader() {
                 whileHover = {
   { scale: 1.05,
   rotate: 5 
+
+
 
 
 }}
@@ -322,16 +326,22 @@ export function EnhancedHeader() {
   scale: 0.95 
 
 
+
+
 }}
                       animate = {
   { opacity: 1, y: 0,
   scale: 1 
 
 
+
+
 }}
                       exit = {
   { opacity: 0, y: -20,
   scale: 0.95 
+
+
 
 
 }}
@@ -490,16 +500,22 @@ export function EnhancedHeader() {
   height: 0 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
 
 
+
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
+
 
 
 }}
@@ -570,14 +586,16 @@ export function EnhancedHeader() {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          )}
+            </motion.div>;
+          )};
         </AnimatePresence>;
       </motion.header>;
     </>;
   );
 }
 
+export default EnhancedHeader;
+export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;

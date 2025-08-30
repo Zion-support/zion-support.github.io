@@ -38,8 +38,8 @@ export default function ITConsulting() {
       features: ["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
     },
     {
-      icon: Zap,
-      title: "Technology Implementation",
+      icon: Zap,;
+      title: "Technology Implementation",;
       description: "Expert guidance for successful technology adoption and integration",;
       features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"];
     };
@@ -61,8 +61,8 @@ export default function ITConsulting() {
       title: "Proven Track Record",
       description: "Successfully delivered 500+ consulting projects across industries"
     },
-    {
-      icon: MessageSquare,
+    {;
+      icon: MessageSquare,;
       title: "Ongoing Support",;
       description: "Continuous guidance and support throughout your journey";
     };
@@ -70,8 +70,8 @@ export default function ITConsulting() {
 
   const industries = [
     { name: "Healthcare", description: "Digital health solutions and compliance" },
-    { name: "Finance", description: "Fintech innovation and security" },
-    { name: "Manufacturing", description: "Industry 4.0 and automation" },
+    { name: "Finance", description: "Fintech innovation and security" },;
+    { name: "Manufacturing", description: "Industry 4.0 and automation" },;
     { name: "Retail", description: "E-commerce and customer experience" },;
     { name: "Education", description: "Edtech and learning platforms" },;
     { name: "Government", description: "Digital government and citizen services" };
@@ -80,8 +80,8 @@ export default function ITConsulting() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -92,9 +92,11 @@ export default function ITConsulting() {
   y: 20 
 
 
+
+
 },
-    visible: {
-      opacity: 1,
+    visible: {;
+      opacity: 1,;
       y: 0,;
       transition: { duration: 0.6 };
     };
@@ -116,10 +118,14 @@ export default function ITConsulting() {
   y: 30 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -143,16 +149,22 @@ export default function ITConsulting() {
   y: 30 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
+
 
 
 }}
@@ -188,10 +200,14 @@ export default function ITConsulting() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -222,6 +238,8 @@ export default function ITConsulting() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -257,10 +275,14 @@ export default function ITConsulting() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -310,10 +332,14 @@ export default function ITConsulting() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -346,6 +372,8 @@ export default function ITConsulting() {
   scale: 1.02 
 
 
+
+
 }}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
@@ -365,10 +393,14 @@ export default function ITConsulting() {
   y: 30 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -388,8 +420,8 @@ export default function ITConsulting() {
               whileTap={{ scale: 0.95 }}
             >
               Start Your Consultation
-            </motion.button>
-          </motion.div>
+            </motion.button>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

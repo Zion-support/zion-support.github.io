@@ -182,8 +182,8 @@ export default function DigitalTransformation() {
       title: 'Agile Implementation',
       description: 'Rapid deployment with iterative improvement cycles'
     },
-    {
-      icon: Search,
+    {;
+      icon: Search,;
       title: 'Performance Monitoring',;
       description: 'Track transformation progress and measure ROI';
     };
@@ -191,8 +191,8 @@ export default function DigitalTransformation() {
 
   const benefits = [
     'Increase operational efficiency by 40%',
-    'Reduce costs by 30% through automation',
-    'Improve customer experience and satisfaction',
+    'Reduce costs by 30% through automation',;
+    'Improve customer experience and satisfaction',;
     'Enable data-driven decision making',;
     'Accelerate time to market',;
     'Enhance competitive advantage';
@@ -214,8 +214,8 @@ export default function DigitalTransformation() {
       title: 'Cloud Migration',
       description: 'Migrate legacy systems to modern cloud platforms'
     },
-    {
-      icon: Data,
+    {;
+      icon: Data,;
       title: 'Data Analytics',;
       description: 'Implement advanced analytics and business intelligence';
     };
@@ -233,8 +233,8 @@ export default function DigitalTransformation() {
     {
       industry: 'Financial Services',
       description: 'Digital banking and fintech innovation'
-    },
-    {
+    },;
+    {;
       industry: 'Retail',;
       description: 'E-commerce and omnichannel retail transformation';
     };
@@ -243,8 +243,12 @@ export default function DigitalTransformation() {
   phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008,;
+  ;
+  ;
   Middletown DE 19709";
   ;
+
+
 
 
 };
@@ -252,8 +256,8 @@ export default function DigitalTransformation() {
     'Healthcare',
     'Finance',
     'Manufacturing',
-    'Retail',
-    'Education',
+    'Retail',;
+    'Education',;
     'Government',;
     'Technology',;
     'Transportation';
@@ -271,10 +275,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -319,10 +327,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -347,16 +359,22 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -382,10 +400,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -410,16 +432,22 @@ export default function DigitalTransformation() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -449,10 +477,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -477,16 +509,22 @@ export default function DigitalTransformation() {
   x: -20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -506,16 +544,22 @@ export default function DigitalTransformation() {
   x: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -539,10 +583,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -567,16 +615,22 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -602,10 +656,14 @@ export default function DigitalTransformation() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -626,8 +684,8 @@ export default function DigitalTransformation() {
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
                 Contact Sales
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

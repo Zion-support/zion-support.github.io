@@ -47,8 +47,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
   // Quick actions
   const quickActions = [
-    {
-      icon: MessageCircle,
+    {;
+      icon: MessageCircle,;
       label: 'Chat Support',;
       action: () => {;
         // Trigger chat support;
@@ -140,7 +140,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   ];
 
   // Scroll to top
-  const scrollToTop = useCallback(() => {
+  const scrollToTop = useCallback(() => {;
     window.scrollTo({;
       top: 0,;
       behavior: 'smooth';
@@ -165,16 +165,22 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   scale: 0 
+
+
 
 
 }}
@@ -192,10 +198,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0.8 
 
 
+
+
 }}
                       animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
+
 
 
 }}
@@ -204,10 +214,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0.8 
 
 
+
+
 }}
                       transition = {
   { delay: action.delay,
   duration: 0.2 
+
+
 
 
 }}
@@ -247,16 +261,22 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   opacity: 0 
 
 
+
+
 }}
                     animate = {
   { rotate: 0,
   opacity: 1 
 
 
+
+
 }}
                     exit = {
   { rotate: 90,
   opacity: 0 
+
+
 
 
 }}
@@ -272,16 +292,22 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   opacity: 0 
 
 
+
+
 }}
                     animate = {
   { rotate: 0,
   opacity: 1 
 
 
+
+
 }}
                     exit = {
   { rotate: -90,
   opacity: 0 
+
+
 
 
 }}
@@ -305,16 +331,22 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0,
   y: 20 
+
+
 
 
 }}
@@ -337,10 +369,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -348,6 +384,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   { delay: 1,
   duration: 0.3 
 
+;
+;
 
 }};
         onClick={() => {;
@@ -371,10 +409,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -382,6 +424,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   { delay: 1.2,
   duration: 0.3 
 
+;
+;
 
 }};
         onClick={() => {;
@@ -405,10 +449,14 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   scale: 0 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
+
 
 
 }}
@@ -416,6 +464,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   { delay: 1.4,
   duration: 0.3 
 
+;
+;
 
 }};
         onClick={() => {;
@@ -427,8 +477,8 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         title="Send Feedback"
-        aria-label="Open feedback form"
-      >
+        aria-label="Open feedback form";
+      >;
         <Star className="w-6 h-6 text-white" />;
       </motion.button>;
     </>;

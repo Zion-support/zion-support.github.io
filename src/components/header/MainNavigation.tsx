@@ -13,6 +13,8 @@ export function MainNavigation({ className }) {
   className)
 
 
+
+
 }>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
@@ -160,8 +162,8 @@ export function MainNavigation({ className }) {
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />
-        Pricing
-      </Link>
+        Pricing;
+      </Link>;
       <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")}>;
         Get Started;
       </NavLink>;

@@ -5,8 +5,8 @@ export default function AIPredictiveAnalytics() {
     'Advanced machine learning algorithms for pattern recognition',
     'Real-time data processing and predictive modeling',
     'Custom AI models trained on your industry data',
-    'Automated feature engineering and model selection',
-    'Predictive insights with confidence intervals',
+    'Automated feature engineering and model selection',;
+    'Predictive insights with confidence intervals',;
     'Interactive dashboards and visualization tools',;
     'API integration with existing business systems',;
     'Automated model retraining and performance monitoring';
@@ -23,8 +23,8 @@ export default function AIPredictiveAnalytics() {
       price: '$799/mo', 
       details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIPredictiveAnalytics() {
 
   const useCases = [
     'Sales forecasting and demand prediction',
-    'Customer churn prediction and retention',
-    'Inventory optimization and supply chain forecasting',
+    'Customer churn prediction and retention',;
+    'Inventory optimization and supply chain forecasting',;
     'Risk assessment and fraud detection',;
     'Predictive maintenance for equipment',;
     'Market trend analysis and investment insights';
@@ -41,8 +41,8 @@ export default function AIPredictiveAnalytics() {
 
   const benefits = [
     'Improve forecast accuracy by 40-60%',
-    'Reduce operational costs by 25-35%',
-    'Increase revenue through better predictions',
+    'Reduce operational costs by 25-35%',;
+    'Increase revenue through better predictions',;
     'Optimize resource allocation and planning',;
     'Identify opportunities before competitors',;
     'Make data-driven decisions with confidence';
@@ -50,8 +50,8 @@ export default function AIPredictiveAnalytics() {
 
   const industries = [
     'E-commerce & Retail',
-    'Financial Services',
-    'Healthcare & Pharmaceuticals',
+    'Financial Services',;
+    'Healthcare & Pharmaceuticals',;
     'Manufacturing & Logistics',;
     'Real Estate & Construction',;
     'Energy & Utilities';
@@ -165,8 +165,8 @@ export default function AIPredictiveAnalytics() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

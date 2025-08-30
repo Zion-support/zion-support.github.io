@@ -129,8 +129,8 @@ export default function ComprehensiveImprovements2025() {
       title: 'Next-Gen Innovation',
       items: [
         'Quantum Computing - Next-gen computational power',
-        'IoT Edge Computing - Smart device networks',
-        'Space Tech - Space technology solutions',
+        'IoT Edge Computing - Smart device networks',;
+        'Space Tech - Space technology solutions',;
         'Green IT - Sustainable technology solutions';
       ];
     };
@@ -168,8 +168,8 @@ export default function ComprehensiveImprovements2025() {
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Analytics Driven',
-      description: 'Comprehensive analytics and performance monitoring',
+      title: 'Analytics Driven',;
+      description: 'Comprehensive analytics and performance monitoring',;
       icon: BarChart3,;
       color: 'from-blue-500 to-cyan-500';
     };
@@ -207,8 +207,8 @@ export default function ComprehensiveImprovements2025() {
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Security Enhanced',
-      description: 'Advanced security measures and privacy protection',
+      title: 'Security Enhanced',;
+      description: 'Advanced security measures and privacy protection',;
       icon: Shield,;
       color: 'from-red-500 to-orange-500';
     };
@@ -222,6 +222,8 @@ export default function ComprehensiveImprovements2025() {
         keywords = {
   ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
   'Zion Tech Group']
+
+
 
 
 }
@@ -238,10 +240,14 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -292,10 +298,14 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -321,16 +331,22 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -379,10 +395,14 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -408,16 +428,22 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -458,10 +484,14 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -487,16 +517,22 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -537,10 +573,14 @@ export default function ComprehensiveImprovements2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -569,8 +609,8 @@ export default function ComprehensiveImprovements2025() {
                 <ArrowRight className="w-5 h-5 mr-2 inline" />
                 Explore Services
               </Link>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

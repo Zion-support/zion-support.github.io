@@ -84,8 +84,8 @@ const MOCK_SUPPORT_REQUESTS = [
     userId: "user-345",
     issue: "Cannot upload portfolio images",
     status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
+    priority: "medium",;
+    createdAt: "2023-12-10T15:10:00Z",;
     lastUpdated: "2023-12-13T11:25:00Z",;
     category: "profile";
   };
@@ -99,8 +99,8 @@ export default function SupportRequests() {
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
-    // Apply search query filter
-    if (searchQuery && 
+    // Apply search query filter;
+    if (searchQuery && ;
         !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
@@ -342,8 +342,8 @@ export default function SupportRequests() {
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
               </p>
-            </div>
-          </TabsContent>
+            </div>;
+          </TabsContent>;
         </Tabs>;
       </div>;
     </>;

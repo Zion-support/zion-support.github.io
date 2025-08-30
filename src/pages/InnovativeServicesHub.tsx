@@ -71,8 +71,8 @@ const InnovativeServicesHub: React.FC = () => {
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
-      color: 'from-emerald-600 to-green-600',
-      route: '/green-it',
+      color: 'from-emerald-600 to-green-600',;
+      route: '/green-it',;
       features: ['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],;
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' };
     };
@@ -98,8 +98,8 @@ const InnovativeServicesHub: React.FC = () => {
     {
       title: 'Autonomous Space Mining System',
       description: 'AI-powered space exploration and resource extraction',
-      category: 'Space Tech',
-      price: '$500,000',
+      category: 'Space Tech',;
+      price: '$500,000',;
       roi: '2000%',;
       delivery: '18 months';
     };
@@ -108,8 +108,8 @@ const InnovativeServicesHub: React.FC = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         staggerChildren: 0.1;
       };
     };
@@ -120,11 +120,13 @@ const InnovativeServicesHub: React.FC = () => {
   opacity: 0 
 
 
+
+
 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
+      opacity: 1,;
+      transition: {;
         duration: 0.5;
       };
     };
@@ -148,16 +150,22 @@ const InnovativeServicesHub: React.FC = () => {
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { y: 0,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -171,16 +179,22 @@ const InnovativeServicesHub: React.FC = () => {
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { y: 0,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -194,16 +208,22 @@ const InnovativeServicesHub: React.FC = () => {
   opacity: 0 
 
 
+
+
 }}
             animate = {
   { scale: 1,
   opacity: 1 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }}
@@ -232,16 +252,22 @@ const InnovativeServicesHub: React.FC = () => {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.6,
   delay: 0.8 
+
+
 
 
 }}
@@ -279,8 +305,8 @@ const InnovativeServicesHub: React.FC = () => {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
-          </p>
-        </div>
+          </p>;
+        </div>;
 ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
           {serviceCategories.map((category) => {;
@@ -293,6 +319,8 @@ const InnovativeServicesHub: React.FC = () => {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -343,8 +371,8 @@ const InnovativeServicesHub: React.FC = () => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-                >
-                  Explore {category.title}
+                >;
+                  Explore {category.title};
                   <ArrowRight className="w-5 h-5" />;
                 </a>;
               </motion.div>;
@@ -361,16 +389,22 @@ const InnovativeServicesHub: React.FC = () => {
   y: 20 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.6,
   delay: 1.2 
+
+
 
 
 }}
@@ -394,10 +428,14 @@ const InnovativeServicesHub: React.FC = () => {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -406,10 +444,14 @@ const InnovativeServicesHub: React.FC = () => {
   delay: 1.4 + index * 0.1 
 
 
+
+
 }}
               whileHover = {
   { y: -5,
   scale: 1.02 
+
+
 
 
 }}
@@ -457,16 +499,22 @@ const InnovativeServicesHub: React.FC = () => {
   y: 50 
 
 
+
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1.6 
+
+
 
 
 }}
@@ -521,8 +569,8 @@ const InnovativeServicesHub: React.FC = () => {
             >
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
-            </a>
-          </div>
+            </a>;
+          </div>;
         </div>;
       </motion.div>;
     </div>;

@@ -35,7 +35,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
     if (searchTerm) {
       const lowerQuery = searchTerm.toLowerCase();
-      filtered = filtered.filter(service => 
+      filtered = filtered.filter(service => ;
         service.name.toLowerCase().includes(lowerQuery) ||;
         service.description.toLowerCase().includes(lowerQuery) ||;
         service.tags.some(tag => tag.toLowerCase().includes(lowerQuery));
@@ -87,10 +87,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -108,16 +112,22 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -132,16 +142,22 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }}
@@ -218,16 +234,22 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -340,8 +362,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 </motion.div>
               ))}
             </div>
-            {filteredServices.length === 0 && (
-              <div className="text-center py-12">
+            {filteredServices.length === 0 && (;
+              <div className="text-center py-12">;
                 <p className="text-zinc-400 text-lg">No services found matching your criteria.</p>;
                 <button;
                   onClick={() => {;
@@ -366,10 +388,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -403,8 +429,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 <p>364 E Main St STE 1008 Middletown DE 19709</p>
                 <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>
               </div>
-            </motion.div>
-          </div>
+            </motion.div>;
+          </div>;
         </section>;
       </div>;
     </>;

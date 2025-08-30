@@ -9,9 +9,13 @@ const NotFound = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.8 }}>
@@ -21,14 +25,20 @@ const NotFound = () => {
   scale: 0.5 
 
 
+
+
 }} animate = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 1,
   delay: 0.2 
+
+
 
 
 }} className="text-9xl md:text-[12rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-8">
@@ -40,14 +50,20 @@ const NotFound = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
+
 
 
 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -58,14 +74,20 @@ const NotFound = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
+
 
 
 }} className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
@@ -78,14 +100,20 @@ const NotFound = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
+
+
 
 
 }} className="space-y-6 mb-16">
@@ -125,14 +153,20 @@ const NotFound = () => {
   y: 30 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.8,
   delay: 1 
+
+
 
 
 }} className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -153,6 +187,8 @@ const NotFound = () => {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 0.8,
   delay: 1.2 
+
+
 
 
 }} className="mt-16 p-6 bg-white/5 rounded-2xl border border-white/10">

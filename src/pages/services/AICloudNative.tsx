@@ -5,8 +5,8 @@ export default function AICloudNative() {
     'AI-powered cloud native optimization',
     'Intelligent cloud native management',
     'Automated cloud native monitoring and alerting',
-    'Predictive analytics for cloud native scaling',
-    'Smart cloud native security and compliance',
+    'Predictive analytics for cloud native scaling',;
+    'Smart cloud native security and compliance',;
     'AI-driven cloud native automation and orchestration',;
     'Real-time cloud native analytics and insights',;
     'Custom AI models for cloud native applications';
@@ -23,8 +23,8 @@ export default function AICloudNative() {
       price: '$999/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited storage', 'Custom AI models', 'Full cloud native suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AICloudNative() {
 
   const useCases = [
     'Cloud native optimization',
-    'Cloud native management',
-    'Performance monitoring and analytics',
+    'Cloud native management',;
+    'Performance monitoring and analytics',;
     'Security and compliance monitoring',;
     'Automation and orchestration',;
     'Cloud native scaling and management';
@@ -41,8 +41,8 @@ export default function AICloudNative() {
 
   const benefits = [
     'Improve cloud native performance by 50-80%',
-    'Reduce cloud native deployment time by 40-70%',
-    'Cut operational costs by 35-65%',
+    'Reduce cloud native deployment time by 40-70%',;
+    'Cut operational costs by 35-65%',;
     'Enhance cloud native reliability and scalability',;
     'Optimize resource utilization',;
     'Scale cloud native operations efficiently';
@@ -50,8 +50,8 @@ export default function AICloudNative() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AICloudNative() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

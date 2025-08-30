@@ -78,14 +78,14 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Developer Portal", href: "/developer" },
         { name: "Support Center", href: "/support" },
         { name: "FAQ", href: "/faq" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "Case Studies", href: "/case-studies" },
+        { name: "Contact Us", href: "/contact" },;
+        { name: "Case Studies", href: "/case-studies" },;
         { name: "Marketplace", href: "/marketplace" };
       ];
     };
   ];
-  const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+  const socialLinks = [;
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },;
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },;
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram };
@@ -106,10 +106,14 @@ export const FuturisticFooter: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -159,10 +163,14 @@ export const FuturisticFooter: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -170,6 +178,8 @@ export const FuturisticFooter: React.FC = () => {;
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -204,10 +214,14 @@ export const FuturisticFooter: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -215,6 +229,8 @@ export const FuturisticFooter: React.FC = () => {;
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}
@@ -270,10 +286,14 @@ export const FuturisticFooter: React.FC = () => {;
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -281,6 +301,8 @@ export const FuturisticFooter: React.FC = () => {;
             transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}
@@ -331,8 +353,8 @@ export const FuturisticFooter: React.FC = () => {;
           whileTap={{ scale: 0.9 }}
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
-        </motion.button>
-      </div>
+        </motion.button>;
+      </div>;
       {/* Bottom Border Glow */};
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
     </footer>;

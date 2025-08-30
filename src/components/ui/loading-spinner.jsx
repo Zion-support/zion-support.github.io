@@ -10,6 +10,8 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
     
 
 
+
+
 };
     const variantClasses = {
   default: 'text-zion-cyan',
@@ -19,16 +21,22 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
     
 
 
+
+
 };
     return (<div className = {
   cn("flex flex-col items-center gap-3",
   className)
 
 
+
+
 }>
       <motion.div className = {
   cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size],
   variantClasses[variant])
+
+
 
 
 } role="status" aria-label="Loading">
@@ -40,9 +48,13 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ delay: 0.2 }} className="text-zion-slate-light font-medium text-sm">

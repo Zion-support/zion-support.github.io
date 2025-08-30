@@ -47,8 +47,8 @@ export default function DataAnalytics() {
       title: 'Real-time Dashboards',
       description: 'Interactive visualizations that provide instant insights into your business performance.'
     },
-    {
-      icon: Zap,
+    {;
+      icon: Zap,;
       title: 'Automated Reporting',;
       description: 'Generate comprehensive reports automatically, saving time and ensuring consistency.';
     };
@@ -74,8 +74,8 @@ export default function DataAnalytics() {
       benefits: ['Pattern recognition', 'Anomaly detection', 'Customer segmentation', 'Market insights']
     },
     {
-      title: 'Performance Analytics',
-      description: 'Monitor and optimize business performance across all key metrics',
+      title: 'Performance Analytics',;
+      description: 'Monitor and optimize business performance across all key metrics',;
       icon: Activity,;
       benefits: ['KPI tracking', 'Performance optimization', 'Benchmarking', 'Goal alignment'];
     };
@@ -101,8 +101,8 @@ export default function DataAnalytics() {
       metrics: ['Patient Outcomes', 'Resource Utilization', 'Treatment Success Rate', 'Cost Efficiency']
     },
     {
-      industry: 'Manufacturing',
-      description: 'Predictive maintenance, quality control, and production optimization',
+      industry: 'Manufacturing',;
+      description: 'Predictive maintenance, quality control, and production optimization',;
       icon: Cpu,;
       metrics: ['Equipment Uptime', 'Quality Score', 'Production Efficiency', 'Cost Reduction'];
     };
@@ -124,8 +124,8 @@ export default function DataAnalytics() {
       title: 'Better Visibility',
       description: 'Gain comprehensive visibility into all aspects of your business performance'
     },
-    {
-      icon: Target,
+    {;
+      icon: Target,;
       title: 'Strategic Planning',;
       description: 'Develop informed strategies and plans based on predictive analytics and trends';
     };
@@ -148,10 +148,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -192,10 +196,14 @@ export default function DataAnalytics() {
   x: -20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -240,10 +248,14 @@ export default function DataAnalytics() {
   x: 20 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -294,10 +306,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -322,16 +338,22 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -357,10 +379,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -385,16 +411,22 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -430,10 +462,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -458,16 +494,22 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -503,10 +545,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -531,16 +577,22 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -566,10 +618,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -614,16 +670,22 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -649,10 +711,14 @@ export default function DataAnalytics() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -672,8 +738,8 @@ export default function DataAnalytics() {
               <button className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Schedule Consultation
               </button>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

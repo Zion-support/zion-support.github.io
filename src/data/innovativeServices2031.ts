@@ -86,8 +86,12 @@ const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",;
+  ;
+  ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
+
+
 
 
 };
@@ -803,8 +807,12 @@ export const innovativeAIServices2031: AIService[] = [
 export const allInnovativeServices2031 = {
   microSaas: innovativeMicroSaasServices2031,
   itInfrastructure: innovativeITInfrastructureServices2031,;
+  ;
+  ;
   ai: innovativeAIServices2031;
 ;
+
+
 
 
 };

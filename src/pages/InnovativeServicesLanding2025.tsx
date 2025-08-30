@@ -35,8 +35,8 @@ export default function InnovativeServicesLanding2025() {
       name: "AI Autonomous Research Assistant",
       description: "Self-directed AI research platform that accelerates research by 500% across multiple domains",
       price: "$1,999/month",
-      category: "Research & Development",
-      icon: Brain,
+      category: "Research & Development",;
+      icon: Brain,;
       color: "from-purple-500 to-pink-500",;
       benefits: ["500% research acceleration", "70% cost reduction", "24/7 research capability"];
     };
@@ -62,15 +62,15 @@ export default function InnovativeServicesLanding2025() {
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Edge Computing",
-      description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",
+      title: "Edge Computing",;
+      description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",;
       icon: Network,;
       color: "from-cyan-500 to-blue-500";
     };
   ];
 
-  const marketStats = [
-    { label: "Total Market Size", value: "$500B+", description: "Combined market opportunity" },
+  const marketStats = [;
+    { label: "Total Market Size", value: "$500B+", description: "Combined market opportunity" },;
     { label: "Growth Rate", value: "25-35%", description: "Annual market growth" },;
     { label: "ROI Potential", value: "200-500%", description: "Average customer ROI" },;
     { label: "Global Reach", value: "150+", description: "Countries served" };
@@ -88,10 +88,14 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -145,16 +149,22 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -185,10 +195,14 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -213,16 +227,22 @@ export default function InnovativeServicesLanding2025() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -255,10 +275,14 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -283,16 +307,22 @@ export default function InnovativeServicesLanding2025() {
   y: 30 
 
 
+
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }}
@@ -352,10 +382,14 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -378,16 +412,22 @@ export default function InnovativeServicesLanding2025() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }}
@@ -409,16 +449,22 @@ export default function InnovativeServicesLanding2025() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}
@@ -440,16 +486,22 @@ export default function InnovativeServicesLanding2025() {
   y: 30 
 
 
+
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }}
@@ -477,10 +529,14 @@ export default function InnovativeServicesLanding2025() {
   y: 20 
 
 
+
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -547,8 +603,8 @@ export default function InnovativeServicesLanding2025() {
                   Middletown DE 19709
                 </p>
               </div>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         </div>;
       </section>;
     </div>;

@@ -63,9 +63,13 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} className="mb-8">
@@ -80,14 +84,20 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.1 
+
+
 
 
 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -100,14 +110,20 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }} className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
@@ -120,14 +136,20 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
+
 
 
 }} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -149,9 +171,13 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -170,14 +196,20 @@ export default function AICodeReview() {
   y: 30 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -199,9 +231,13 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -219,14 +255,20 @@ export default function AICodeReview() {
   x: index % 2 === 0 ? -20 : 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="flex items-center space-x-4">
@@ -245,9 +287,13 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-12">
@@ -265,14 +311,20 @@ export default function AICodeReview() {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }} viewport={{ once: true }} className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-white/10 text-center hover:border-zion-cyan/50 transition-all duration-300">
@@ -291,9 +343,13 @@ export default function AICodeReview() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-3xl p-12">

@@ -61,6 +61,8 @@ export function PrimaryNav() {
   16rem)' 
 
 
+
+
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
   (sugg) => {
@@ -70,6 +72,8 @@ export function PrimaryNav() {
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
                 router(`/marketplace/listing/${sugg.id
+
+
 
 
 }`);
@@ -106,6 +110,8 @@ export function PrimaryNav() {
                   <Link href="/cart" className="relative p-1" aria-label = {
   t('nav.cart',
   'Cart')
+
+
 
 
 }>

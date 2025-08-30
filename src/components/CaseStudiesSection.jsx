@@ -133,6 +133,8 @@ export function CaseStudiesSection() {
   opacity: 0 
 
 
+
+
 },
         visible: {
             y: 0,
@@ -158,9 +160,13 @@ export function CaseStudiesSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -179,14 +185,20 @@ export function CaseStudiesSection() {
   scale: 0.8 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
+
 
 
 }} className="text-center p-3 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
@@ -204,6 +216,8 @@ export function CaseStudiesSection() {
           {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
   stiffness: 300 
+
+
 
 
 }} className="relative" onHoverStart={() => setHoveredCase(caseStudy.id)} onHoverEnd={() => setHoveredCase(null)}>
@@ -278,14 +292,20 @@ export function CaseStudiesSection() {
   y: 10 
 
 
+
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
 
 
+
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
+
 
 
 }} transition={{ duration: 0.3 }}>
@@ -296,9 +316,13 @@ export function CaseStudiesSection() {
   x: -10 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }} transition={{ delay: idx * 0.1 }}>
@@ -335,14 +359,20 @@ export function CaseStudiesSection() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
+
 
 
 }}>

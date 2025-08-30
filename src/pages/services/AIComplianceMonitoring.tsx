@@ -5,8 +5,8 @@ export default function AIComplianceMonitoring() {
     'AI-powered compliance monitoring optimization',
     'Intelligent regulatory compliance tracking',
     'Automated compliance reporting and alerting',
-    'Predictive analytics for compliance risks',
-    'Smart governance and policy management',
+    'Predictive analytics for compliance risks',;
+    'Smart governance and policy management',;
     'AI-driven compliance automation and orchestration',;
     'Real-time compliance analytics and insights',;
     'Custom AI models for compliance applications';
@@ -23,8 +23,8 @@ export default function AIComplianceMonitoring() {
       price: '$1,299/mo', 
       details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$2,999/mo', ;
       details: ['Unlimited regulations', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIComplianceMonitoring() {
 
   const useCases = [
     'Compliance monitoring optimization',
-    'Regulatory compliance tracking',
-    'Compliance reporting and analytics',
+    'Regulatory compliance tracking',;
+    'Compliance reporting and analytics',;
     'Governance and policy management',;
     'Compliance automation and orchestration',;
     'Compliance scaling and management';
@@ -41,8 +41,8 @@ export default function AIComplianceMonitoring() {
 
   const benefits = [
     'Improve compliance monitoring performance by 50-80%',
-    'Reduce compliance reporting time by 40-70%',
-    'Cut compliance operational costs by 35-65%',
+    'Reduce compliance reporting time by 40-70%',;
+    'Cut compliance operational costs by 35-65%',;
     'Enhance compliance reliability and scalability',;
     'Optimize resource utilization',;
     'Scale compliance operations efficiently';
@@ -50,8 +50,8 @@ export default function AIComplianceMonitoring() {
 
   const industries = [
     'Software Development',
-    'E-commerce & Retail',
-    'Financial Services',
+    'E-commerce & Retail',;
+    'Financial Services',;
     'Healthcare & Life Sciences',;
     'Media & Entertainment',;
     'Technology & SaaS';
@@ -165,8 +165,8 @@ export default function AIComplianceMonitoring() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;

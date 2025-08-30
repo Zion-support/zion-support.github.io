@@ -127,10 +127,14 @@ export default function EnhancedHeroSection() {
           
 
 
+
+
 }}
           transition = {
   { duration: 4,
   repeat: Infinity 
+
+
 
 
 }}
@@ -145,10 +149,14 @@ export default function EnhancedHeroSection() {
           
 
 
+
+
 }}
           transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
+
 
 
 }}
@@ -163,10 +171,14 @@ export default function EnhancedHeroSection() {
           
 
 
+
+
 }}
           transition = {
   { duration: 20,
   repeat: Infinity 
+
+
 
 
 }}
@@ -210,10 +222,14 @@ export default function EnhancedHeroSection() {
   x: -50 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -228,16 +244,22 @@ export default function EnhancedHeroSection() {
   y: 20 
 
 
+
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
+
 
 
 }}
@@ -279,10 +301,14 @@ export default function EnhancedHeroSection() {
   x: -20 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -324,16 +350,22 @@ export default function EnhancedHeroSection() {
   x: 50 
 
 
+
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
+
 
 
 }}
@@ -356,10 +388,14 @@ export default function EnhancedHeroSection() {
   360] 
 
 
+
+
 }}
                       transition = {
   { duration: 20,
   repeat: Infinity 
+
+
 
 
 }}
@@ -382,10 +418,14 @@ export default function EnhancedHeroSection() {
   y: 20 
 
 
+
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -412,10 +452,14 @@ export default function EnhancedHeroSection() {
   y: 20 
 
 
+
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }}
@@ -485,10 +529,14 @@ export default function EnhancedHeroSection() {
   0] 
 
 
+
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
+
+
 
 
 }}
@@ -500,16 +548,20 @@ export default function EnhancedHeroSection() {
   0] 
 
 
+
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
 
 
+
+
 }}
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
-          />
-        </motion.div>
+          />;
+        </motion.div>;
         <p className="text-xs text-zion-cyan/70 text-center mt-2">Scroll to explore</p>;
       </motion.div>;
     </section>;

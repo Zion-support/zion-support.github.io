@@ -365,8 +365,8 @@ export default function MicroSAASServicesPage() {
         starter: "$55/month",
         professional: "$109/month",
         enterprise: "$249/month"
-      },
-      freeTrial: "21 days",
+      },;
+      freeTrial: "21 days",;
       rating: 4.9,;
       reviewCount: 167;
     };
@@ -380,8 +380,8 @@ export default function MicroSAASServicesPage() {
     "Document Management",
     "Payments",
     "Marketing",
-    "Inventory",
-    "HR Management",
+    "Inventory",;
+    "HR Management",;
     "Accounting",;
     "E-commerce",;
     "Education";
@@ -556,8 +556,8 @@ export default function MicroSAASServicesPage() {
             <Button className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
               <Phone className="h-5 w-5 mr-2" />
               Call +1 302 464 0950
-            </Button>
-          </div>
+            </Button>;
+          </div>;
         </div>;
       </div>;
     </div>;

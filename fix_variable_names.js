@@ -54,3 +54,5 @@ console.log('Variable name fixing completed!');
 export default convertToValidVariableName;
 export default convertToValidVariableName;
 export default convertToValidVariableName;
+export default convertToValidVariableName;
+export default convertToValidVariableName;

@@ -121,6 +121,8 @@ export function InteractiveTestimonials() {
   scale: 0.95 
 
 
+
+
 },
         visible: {
             opacity: 1,
@@ -147,9 +149,13 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
+
 
 
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
@@ -176,14 +182,20 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
+
 
 
 }}>
@@ -194,14 +206,20 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
+
 
 
 }}>
@@ -217,14 +235,20 @@ export function InteractiveTestimonials() {
   x: 100 
 
 
+
+
 }} animate = {
   { opacity: 1,
   x: 0 
 
 
+
+
 }} exit = {
   { opacity: 0,
   x: -100 
+
+
 
 
 }} transition={{ duration: 0.5 }} className="text-center">
@@ -320,6 +344,8 @@ export function InteractiveTestimonials() {
   transition: { duration: 0.2 
 
 
+
+
 }
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>
               <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover:border-blue-500/40 transition-all duration-300 backdrop-blur-sm">
@@ -366,14 +392,20 @@ export function InteractiveTestimonials() {
   y: 20 
 
 
+
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
 
 
+
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
+
 
 
 }}>

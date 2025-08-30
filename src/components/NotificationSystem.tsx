@@ -56,8 +56,8 @@ interface NotificationSettings {
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5,
   position = 'top-right',
-  enableSound = true,
-  enableVibration = true,
+  enableSound = true,;
+  enableVibration = true,;
   autoDismiss = true,;
   defaultDuration = 5000;
 }) => {;
@@ -109,8 +109,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [notifications, settings.autoDismiss, settings.defaultDuration]);
 
   // Play notification sound
-  const playSound = useCallback(() => {
-    if (settings.sound && audioRef.current) {
+  const playSound = useCallback(() => {;
+    if (settings.sound && audioRef.current) {;
       try {;
         audioRef.current.play().catch(() => {;
           // Ignore autoplay restrictions;
@@ -139,7 +139,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   id: `notification-${Date.now()
 
 
-}-${Math.random().toString(36).substr(2, 9)}`,
+
+;
+}-${Math.random().toString(36).substr(2, 9)}`,;
       timestamp: new Date(),;
       read: false,;
       duration: notification.duration ?? settings.defaultDuration;
@@ -288,16 +290,22 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   y: -10 
 
 
+
+
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
+
+
 
 
 }}
@@ -373,16 +381,22 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   y: -10 
 
 
+
+
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
 
 
+
+
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
+
+
 
 
 }}
@@ -421,10 +435,14 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   x: 50 
 
 
+
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
+
+
 
 
 }}
@@ -433,11 +451,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   height: 0 
 
 
+
+
 }}
                       layout
                       className = {
   `p-4 rounded-xl ${getNotificationStyles(notification.type,
   notification.priority)
+
+
 
 
 } ${
@@ -474,8 +496,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             <span className="text-xs text-zion-slate/50">
                               {notification.timestamp.toLocaleTimeString()}
                             </span>
-                            
-                            <div className="flex items-center space-x-2">
+                            ;
+                            <div className="flex items-center space-x-2">;
                               {notification.action && (;
                                 <button;
                                   onClick={() => {;
@@ -504,8 +526,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                   ))
                 )}
               </AnimatePresence>
-            </div>
-          </motion.div>
+            </div>;
+          </motion.div>;
         )};
       </AnimatePresence>;
     </>;
@@ -532,8 +554,12 @@ export const notificationUtils = {
         title,
         message,
         priority: 'medium',;
+  ;
+  ;
   ...options;
       ;
+
+
 
 
 });

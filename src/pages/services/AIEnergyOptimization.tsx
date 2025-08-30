@@ -5,8 +5,8 @@ export default function AIEnergyOptimization() {
     'AI-powered energy consumption forecasting and optimization',
     'Real-time monitoring of energy usage across facilities',
     'Predictive maintenance for energy infrastructure',
-    'Smart grid integration and demand response optimization',
-    'Renewable energy integration and storage optimization',
+    'Smart grid integration and demand response optimization',;
+    'Renewable energy integration and storage optimization',;
     'Carbon footprint tracking and sustainability reporting',;
     'Custom AI models for industry-specific energy patterns',;
     'Integration with major building management systems';
@@ -23,8 +23,8 @@ export default function AIEnergyOptimization() {
       price: '$799/mo', 
       details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { ;
+      name: 'Enterprise', ;
       price: '$1,999/mo', ;
       details: ['Unlimited facilities', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] ;
     },;
@@ -32,8 +32,8 @@ export default function AIEnergyOptimization() {
 
   const useCases = [
     'Commercial building energy optimization',
-    'Manufacturing facility energy management',
-    'Data center power efficiency',
+    'Manufacturing facility energy management',;
+    'Data center power efficiency',;
     'Retail chain energy optimization',;
     'Healthcare facility energy management',;
     'Educational campus energy systems';
@@ -41,8 +41,8 @@ export default function AIEnergyOptimization() {
 
   const benefits = [
     'Reduce energy costs by 20-40%',
-    'Improve energy efficiency by 25-45%',
-    'Cut carbon emissions by 30-50%',
+    'Improve energy efficiency by 25-45%',;
+    'Cut carbon emissions by 30-50%',;
     'Optimize renewable energy utilization',;
     'Enhance equipment lifespan and reliability',;
     'Achieve sustainability and ESG goals';
@@ -50,8 +50,8 @@ export default function AIEnergyOptimization() {
 
   const industries = [
     'Commercial Real Estate',
-    'Manufacturing & Industrial',
-    'Data Centers & IT',
+    'Manufacturing & Industrial',;
+    'Data Centers & IT',;
     'Healthcare & Hospitals',;
     'Retail & Shopping Centers',;
     'Education & Universities';
@@ -165,8 +165,8 @@ export default function AIEnergyOptimization() {
             </a>
           </div>
           <div className="mt-4 text-sm text-gray-500">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </div>
+            Address: 364 E Main St STE 1008, Middletown DE 19709;
+          </div>;
         </div>;
       </section>;
     </div>;
