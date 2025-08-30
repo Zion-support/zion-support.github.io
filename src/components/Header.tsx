@@ -58,7 +58,9 @@ export function Header() {
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
-        { name: 'Pricing', href: '/pricing', icon: DollarSign }
+        { name: 'Enhanced Services 2025', href: '/enhanced-services-2025', icon: Star },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign },
+        { name: 'Enhanced Pricing', href: '/enhanced-pricing', icon: DollarSign }
       ]
     },
     {
@@ -131,7 +133,7 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black" aria-label="Zion Tech Group Home">
+          <Link to="/enhanced-home" className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black" aria-label="Zion Tech Group Home">
             <motion.div 
               className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center"
               whileHover={{ rotate: 360 }}

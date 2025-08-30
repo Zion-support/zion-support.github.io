@@ -7,6 +7,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const EnhancedHomePage = lazy(() => import('./pages/EnhancedHomePage').then(module => ({ default: module.default })));
 const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
 const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
@@ -21,7 +22,9 @@ const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default
 const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage').then(module => ({ default: module.RevolutionaryServicesPage })));
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025').then(module => ({ default: module.EnhancedNewServices2025 })));
+const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025').then(module => ({ default: module.default })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
+const EnhancedPricingPage = lazy(() => import('./pages/EnhancedPricingPage').then(module => ({ default: module.default })));
 
 // Loading component
 const PageLoader = () => (
@@ -73,13 +76,16 @@ export default function App() {
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/enhanced-home" element={<EnhancedHomePage />} />
                 <Route path="/services" element={<ServicesPage />} />
                 <Route path="/services/*" element={<ServicesPage />} />
                 <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
+                <Route path="/enhanced-services-2025" element={<EnhancedServicesShowcase2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/enhanced-pricing" element={<EnhancedPricingPage />} />
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />

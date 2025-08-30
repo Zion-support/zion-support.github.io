@@ -43,7 +43,8 @@ import {
   Code,
   Database,
   Network,
-  Server
+  Server,
+  Home
 } from 'lucide-react';
 
 export function Footer() {
@@ -55,6 +56,7 @@ export function Footer() {
       title: 'Company',
       icon: Building,
       links: [
+        { name: 'Home', path: '/enhanced-home', icon: Home },
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Story', path: '/about/story', icon: FileText },
         { name: 'Team', path: '/about/team', icon: Users },
@@ -76,7 +78,9 @@ export function Footer() {
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
         { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
         { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'New Services 2025', path: '/new-services-2025', icon: Star }
+        { name: 'New Services 2025', path: '/new-services-2025', icon: Star },
+        { name: 'Enhanced Services 2025', path: '/enhanced-services-2025', icon: Star },
+        { name: 'Enhanced Pricing', path: '/enhanced-pricing', icon: DollarSign }
       ]
     },
     {
