@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-import { specializedITInfrastructureServices2026 } from "../data/specializedITInfrastructureServices2026";
+import ultimateInnovativeServices2026 from "../data/ultimateInnovativeServices2026";
+import specializedITInfrastructureServices2026 from "../data/specializedITInfrastructureServices2026";
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');

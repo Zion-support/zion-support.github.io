@@ -774,7 +774,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     price: 6999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered threat detection",
       "Autonomous incident response",
       "Predictive security analytics",
@@ -786,14 +786,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Threat intelligence",
       "Compliance automation"
     ],
-    benefits[
+    benefits: [
       "99.99% threat detection rate",
       "Zero false positives",
       "Real-time incident response",
       "Predictive threat prevention",
       "Automated compliance management"
     ],
-    useCases[
+    useCases: [
       "Enterprise security",
       "Financial institutions",
       "Healthcare organizations",
@@ -803,14 +803,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "IoT networks",
       "Critical infrastructure"
     ],
-    targetAudience[
+    targetAudience: [
       "Enterprises",
       "Financial services",
       "Healthcare",
       "Government",
       "Technology companies"
     ],
-    tags["Cybersecurity", "AI", "Threat Detection", "Incident Response", "Security"],
+    tags: ["Cybersecurity", "AI", "Threat Detection", "Incident Response", "Security"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$6,999 - $19,999/month",
@@ -823,35 +823,35 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology["GPT-5", "Deep Learning", "Machine Learning", "NLP", "Computer Vision"],
-      integrations["SIEM", "EDR", "Firewalls", "IDS/IPS", "Cloud platforms"],
+      technology: ["GPT-5", "Deep Learning", "Machine Learning", "NLP", "Computer Vision"],
+      integrations: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Cloud platforms"],
       apiEndpoints: 250,
       uptime: "99.99%",
-      security["Zero Trust", "Encryption", "Multi-factor authentication"],
-      compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"]
+      security: ["Zero Trust", "Encryption", "Multi-factor authentication"],
+      compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"]
     },
-    competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Cisco"],
     marketTrend: "High Growth",
     aiModel: "Multi-modal security AI",
     trainingData: "Global threat intelligence",
     marketingContent: {
       headline: "Revolutionize Your Security with AI-Powered Cyber Defense",
       valueProposition: "Stay ahead of cyber threats with our AI-powered security platform that provides 99.99% threat detection and autonomous incident response.",
-      keyFeatures[
+      keyFeatures: [
         "AI-powered real-time threat detection and analysis",
         "Autonomous incident response and remediation",
         "Predictive security analytics and threat prevention",
         "Behavioral analysis for insider threat detection",
         "Zero-day threat prevention and mitigation"
       ],
-      competitiveAdvantages[
+      competitiveAdvantages: [
         "99.99% threat detection rate with zero false positives",
         "Autonomous incident response in milliseconds",
         "Predictive threat intelligence and prevention",
         "AI-powered behavioral analysis and anomaly detection",
         "Automated compliance management and reporting"
       ]
-
+    }
   },
   // Hyper-Intelligent Data Analytics Platform
   {
@@ -863,7 +863,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     price: 5999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered data processing",
       "Predictive analytics",
       "Real-time data visualization",
@@ -875,14 +875,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Interactive dashboards",
       "Data governance"
     ],
-    benefits[
+    benefits: [
       "10x faster data processing",
       "Automated insight generation",
       "Predictive business intelligence",
       "Real-time decision support",
       "Scalable analytics infrastructure"
     ],
-    useCases[
+    useCases: [
       "Business intelligence",
       "Market research",
       "Customer analytics",
@@ -892,14 +892,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Supply chain analytics",
       "Risk assessment"
     ],
-    targetAudience[
+    targetAudience: [
       "Enterprises",
       "Data scientists",
       "Business analysts",
       "Researchers",
       "Consultants"
     ],
-    tags["Data Analytics", "AI", "Machine Learning", "Business Intelligence", "Predictive Analytics"],
+    tags: ["Data Analytics", "AI", "Machine Learning", "Business Intelligence", "Predictive Analytics"],
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,999 - $15,999/month",
@@ -912,35 +912,35 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology["GPT-5", "TensorFlow", "PyTorch", "Apache Spark", "Kubernetes"],
-      integrations["Snowflake", "Databricks", "Tableau", "Power BI", "AWS"],
+      technology: ["GPT-5", "TensorFlow", "PyTorch", "Apache Spark", "Kubernetes"],
+      integrations: ["Snowflake", "Databricks", "Tableau", "Power BI", "AWS"],
       apiEndpoints: 200,
       uptime: "99.99%",
-      security["Data encryption", "Access control", "Audit logging"],
-      compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX"]
+      security: ["Data encryption", "Access control", "Audit logging"],
+      compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "SOX"]
     },
-    competitors["Tableau", "Power BI", "Qlik", "Looker", "Databricks"],
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker", "Databricks"],
     marketTrend: "High Growth",
     aiModel: "Multi-modal AI analytics",
     trainingData: "Multi-domain datasets",
     marketingContent: {
       headline: "Unlock the Power of Your Data with Hyper-Intelligent Analytics",
       valueProposition: "Transform your data into actionable insights with our AI-powered analytics platform that provides 10x faster processing and automated intelligence generation.",
-      keyFeatures[
+      keyFeatures: [
         "AI-powered data processing and analysis",
         "Predictive analytics and forecasting",
         "Natural language data queries and insights",
         "Automated business intelligence generation",
         "Real-time interactive dashboards and reporting"
       ],
-      competitiveAdvantages[
+      competitiveAdvantages: [
         "10x faster data processing and analysis",
         "Automated insight generation and recommendations",
         "Predictive business intelligence and forecasting",
         "Natural language interface for data exploration",
         "Scalable analytics infrastructure for  data volume"
       ]
-
+    }
   },
   // Autonomous IoT Edge Computing Platform
   {
@@ -952,7 +952,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     price: 4999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Edge AI processing",
       "Autonomous device management",
       "Real-time data processing",
@@ -964,16 +964,16 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Cloud integration",
       "Device orchestration"
     ],
-    benefits[
+    benefits: [
       "Real-time decision making",
       "Reduced latency",
       "Bandwidth optimization",
       "Enhanced security",
       "Scalable IoT deployment"
     ],
-    useCases[
-      "Smart cities",
-      "Industrial IoT",
+          useCases: [
+        "Smart cities",
+        "Industrial IoT",
       "Smart homes",
       "Healthcare monitoring",
       "Agriculture automation",
@@ -981,14 +981,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Energy management",
       "Environmental monitoring"
     ],
-    targetAudience[
-      "Manufacturing companies",
-      "Smart city planners",
+          targetAudience: [
+        "Manufacturing companies",
+        "Smart city planners",
       "Healthcare providers",
       "Agriculture companies",
       "Energy companies"
     ],
-    tags["IoT", "Edge Computing", "AI", "Automation", "Smart Cities"],
+          tags: ["IoT", "Edge Computing", "AI", "Automation", "Smart Cities"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $12,999/month",
@@ -1001,35 +1001,36 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology["TensorFlow Lite", "Edge TPU", "Kubernetes Edge", "5G", "LoRaWAN"],
-      integrations["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
+              technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes Edge", "5G", "LoRaWAN"],
+        integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
       apiEndpoints: 150,
       uptime: "99.95%",
-      security["Edge encryption", "Device authentication", "Secure boot"],
-      compliance["SOC 2", "ISO 27001", "GDPR", "Industry standards"]
-    },
-    competitors["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+              security: ["Edge encryption", "Device authentication", "Secure boot"],
+              compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry standards"]
+      },
+      competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
     marketTrend: "High Growth",
     aiModel: "Edge-optimized AI models",
     trainingData: "IoT sensor data",
     marketingContent: {
       headline: "Revolutionize IoT with Autonomous Edge Computing",
       valueProposition: "Bring AI to the edge with our autonomous IoT platform that enables real-time decision-making and intelligent automation for connected devices.",
-      keyFeatures[
-        "Edge AI processing for real-time decision making",
-        "Autonomous device management and orchestration",
+              keyFeatures: [
+          "Edge AI processing for real-time decision making",
+          "Autonomous device management and orchestration",
         "Intelligent automation and predictive maintenance",
         "Energy optimization and resource management",
         "Enhanced security and privacy at the edge"
       ],
-      competitiveAdvantages[
-        "Real-time decision making at the edge",
-        "Reduced latency and bandwidth usage",
+              competitiveAdvantages: [
+          "Real-time decision making at the edge",
+          "Reduced latency and bandwidth usage",
         "Autonomous device management and optimization",
         "Scalable IoT deployment architecture",
         "Advanced security and privacy protection"
       ]
-
-
+    }
+  }
 ];
-export default ULTIMATE_INNOVATIVE_SERVICES_2027;}}}}}}}
+
+export default ULTIMATE_INNOVATIVE_SERVICES_2027;

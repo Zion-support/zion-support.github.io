@@ -32,7 +32,7 @@ import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 // import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
 // import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
-import { FloatingActionButton } from './components/FloatingActionButton';
+import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 // import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 // import { ChatAssistant } from './components/ChatAssistant';
