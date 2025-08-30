@@ -73,57 +73,42 @@ const UltimateServicesShowcase2026 = () => {
             'Performance Monitoring': '📊'
         };
         return icons[category] || '🚀';
+    };
+    
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
+            }
+        }
     };
+    
     const itemVariants = {
-  hidden: { y: 20,
-  opacity: 0 
-
-
-
-
-
-
-},
+        hidden: { 
+            y: 20,
+            opacity: 0 
+        },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-
-
+            }
+        }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition={{ duration: 0.8 }}>
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold mb-6" 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
               {" "}Innovative Services 2026
@@ -136,34 +121,12 @@ const UltimateServicesShowcase2026 = () => {
           </motion.p>
 
           {/* Contact Information */}
-          <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition = {
-  { duration: 0.8,
-  delay: 0.4 
-
-
-
-
-
-
-}}>
+          <motion.div 
+            className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>

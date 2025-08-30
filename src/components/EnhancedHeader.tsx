@@ -97,22 +97,12 @@ export function EnhancedHeader() {
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
     { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
     { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
-<<<<<<< HEAD
     { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
     { name: 'News', href: '/news', current: location.pathname === '/news' },
     { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },
     { name: 'Help', href: '/help', current: location.pathname === '/help' },
     { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },
-=======
-    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },;
-    { name: 'News', href: '/news', current: location.pathname === '/news' },;
-    { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },;
-    { name: 'Help', href: '/help', current: location.pathname === '/help' },;
-    { name: 'FAQ', href: '/faq', current: location.pathname === '/faq' },;
-    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' },;
-    { name: 'Marketplace', href: '/marketplace', current: location.pathname === '/marketplace' },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    { name: 'Pricing', href: '/pricing', current: location.pathname === '/pricing' }
   ];
 
   // Enhanced services by category with better organization
@@ -289,7 +279,6 @@ export function EnhancedHeader() {
       color: 'from-slate-600 to-gray-700',
       badge: 'Featured'
     },
-<<<<<<< HEAD
     {
       name: 'Digital Twin',
       href: '/services/digital-twin',
@@ -327,30 +316,13 @@ export function EnhancedHeader() {
       category: 'Micro SaaS',
       color: 'from-purple-600 to-pink-700',
       badge: 'Popular'
-
-=======
-    { 
-      name: 'Biotech AI Drug Discovery', 
-      href: '/services/biotech-ai-drug-discovery', ;
-      icon: Heart, ;
-      description: 'AI-powered drug discovery', ;
-      category: 'Emerging Tech', ;
-      color: 'from-emerald-600 to-green-700',;
-      badge: 'New';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   return (
     <>
       {/* Matrix Rain Background */}
-<<<<<<< HEAD
       <div className="matrix-rain"></div>
-
-=======
-      <div className = "matrix-rain"></div>
-      
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Enhanced Header */}
       <motion.header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -360,22 +332,8 @@ export function EnhancedHeader() {
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-<<<<<<< HEAD
         transition={{ duration: 0.8, ease: "easeOut" }}
-
-=======
-        transition = {
-  { duration: 0.8,
-  ease: "easeOut" 
-
-
-
-
-
-
-}}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo */}
@@ -711,29 +669,18 @@ export function EnhancedHeader() {
                       to="/contact"
                       className="btn-neon-cyan w-full text-center"
                       onClick={() => setMobileMenuOpen(false)}
-
+                    >
                       Get Started Today
                     </Link>
                   </div>
-                </div>;
-              </div>;
-            </motion.div>;
-          )};
-        </AnimatePresence>;
-      </motion.header>;
-    </>;
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.header>
+    </>
   );
-</div>}
+}
 
-<<<<<<< HEAD
-export default EnhancedHeader;}}}}
-=======
 export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
-export default EnhancedHeader;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -57,14 +57,12 @@ import {
   ShieldCheck,
   Globe2,
   Bot
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 } from 'lucide-react';
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-<<<<<<< HEAD
       title: 'Core Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
@@ -95,55 +93,23 @@ export function EnhancedFooter() {
         { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Truck },
         { name: 'Government', href: '/solutions/government', icon: Building },
         { name: 'Education', href: '/solutions/education', icon: BookOpen }
-=======
-      title: "Services",
-      links: [
-        { name: "AI Services", href: "/ai-services", icon: Brain },
-        { name: "IT Services", href: "/it-services", icon: Cpu },
-        { name: "Micro SaaS", href: "/micro-saas", icon: ShoppingCart },
-        { name: "2025 Services", href: "/comprehensive-services-showcase-2025", icon: Star },
-        { name: "2026 Services", href: "/services2026", icon: TrendingUp },
-        { name: "2027 Services", href: "/services2027", icon: Rocket },
-        { name: "2029 Services", href: "/innovative-services-showcase-2029", icon: Sparkles },
       ]
-    },
-    {
-      title: "Solutions",
-      links: [
-        { name: "Enterprise", href: "/solutions/enterprise", icon: Building },
-        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
-        { name: "Finance", href: "/solutions/finance", icon: DollarSign },
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
-        { name: "Retail", href: "/solutions/retail", icon: ShoppingBag },
-        { name: "Education", href: "/solutions/education", icon: GraduationCap },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
     },
     {
       title: "Company",
       links: [
-<<<<<<< HEAD
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Workflow },
         { name: 'Partners', href: '/partners', icon: Users },
         { name: 'News & Updates', href: '/news', icon: FileText },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }
-=======
-        { name: "About Us", href: "/about", icon: Users },
-        { name: "Our Team", href: "/team", icon: Users },
-        { name: "Careers", href: "/careers", icon: Star },
-        { name: "Partners", href: "/partners", icon: Handshake },
-        { name: "News", href: "/news", icon: Newspaper },
-        { name: "Blog", href: "/blog", icon: BookOpen },
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       ]
-<<<<<<< HEAD
     },
     {
       title: "Resources",
       links: [
-<<<<<<< HEAD
         { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'API Reference', href: '/api', icon: Code },
         { name: 'Developer Portal', href: '/developer-portal', icon: Cpu },
@@ -189,7 +155,6 @@ export function EnhancedFooter() {
   ];
 
   const socialLinks = [
-<<<<<<< HEAD
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-500' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
@@ -198,8 +163,14 @@ export function EnhancedFooter() {
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
   ];
 
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com"
+  };
+
   return (
-<<<<<<< HEAD
     <footer className="bg-black/95 backdrop-blur-xl border-t border-cyan-500/30 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-50"></div>
@@ -214,46 +185,6 @@ export function EnhancedFooter() {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
-=======
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-400" },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-400" },
-    { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook, color: "hover:text-blue-600" },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram, color: "hover:text-pink-400" },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-400" },
-    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-400" },
-  ];
-
-  const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
-  };
-
-  return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50 overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-500/5 to-teal-500/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-16">
-        {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-          {/* Company info */}
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mr-4">
-                  <Zap className="w-6 h-6 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>

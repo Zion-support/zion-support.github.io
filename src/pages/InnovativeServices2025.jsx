@@ -149,7 +149,7 @@ const InnovativeServices2025 = () => {
                     useCases: ["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
                     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
                     competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
-
+                }
             ]
         },
         {
@@ -159,14 +159,14 @@ const InnovativeServices2025 = () => {
                 {
                     name: "Quantum Computing Consulting",
                     description: "Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.",
-                    features[
+                    features: [
                         "Quantum computing strategy development",
                         "Use case identification and validation",
                         "Vendor selection and evaluation",
                         "Implementation roadmap planning",
                         "Quantum workforce development"
                     ],
-                    benefits[
+                    benefits: [
                         "Future-ready technology strategy",
                         "Competitive advantage in emerging tech",
                         "Innovation leadership positioning",
@@ -175,21 +175,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$5,000 - $25,000/month",
                     marketPosition: "Premier quantum computing consulting for Fortune 500 companies",
-                    useCases["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],
-                    competitors["McKinsey", "BCG", "Deloitte"],
+                    useCases: ["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],
+                    competitors: ["McKinsey", "BCG", "Deloitte"],
                     competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus"
                 },
                 {
                     name: "Metaverse Development",
                     description: "Complete metaverse platform development including VR/AR experiences, 3D environments, and interactive digital spaces.",
-                    features[
+                    features: [
                         "Virtual reality platform development",
                         "Augmented reality applications",
                         "3D modeling and design",
                         "Interactive experience creation",
                         "Multi-user platform support"
                     ],
-                    benefits[
+                    benefits: [
                         "Innovation leadership in emerging tech",
                         "New revenue streams and business models",
                         "Enhanced customer engagement",
@@ -198,21 +198,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$8,000 - $60,000/month",
                     marketPosition: "Leading metaverse development for brands and enterprises",
-                    useCases["Brand marketing", "Virtual events", "Training and education", "Entertainment"],
-                    competitors["Meta", "Microsoft", "Unity"],
+                    useCases: ["Brand marketing", "Virtual events", "Training and education", "Entertainment"],
+                    competitors: ["Meta", "Microsoft", "Unity"],
                     competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions"
                 },
                 {
                     name: "Web3 Development",
                     description: "Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.",
-                    features[
+                    features: [
                         "Decentralized application development",
                         "Smart contract development",
                         "DeFi platform creation",
                         "NFT marketplace development",
                         "Blockchain integration services"
                     ],
-                    benefits[
+                    benefits: [
                         "Decentralized business models",
                         "Innovation in financial services",
                         "New revenue opportunities",
@@ -221,10 +221,10 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$6,000 - $45,000/month",
                     marketPosition: "Expert Web3 development for fintech and innovative businesses",
-                    useCases["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
-                    competitors["Consensys", "Chainlink Labs", "Alchemy"],
+                    useCases: ["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
+                    competitors: ["Consensys", "Chainlink Labs", "Alchemy"],
                     competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"
-
+                }
             ]
         },
         {
@@ -234,14 +234,14 @@ const InnovativeServices2025 = () => {
                 {
                     name: "Zero Trust Architecture",
                     description: "Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.",
-                    features[
+                    features: [
                         "Identity verification and authentication",
                         "Continuous access monitoring",
                         "Network segmentation",
                         "Threat detection and response",
                         "Compliance and audit support"
                     ],
-                    benefits[
+                    benefits: [
                         "Enhanced security posture",
                         "Reduced attack surface",
                         "Improved compliance",
@@ -250,21 +250,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$4,500 - $35,000/month",
                     marketPosition: "Leading zero trust implementation for enterprise organizations",
-                    useCases["Financial services", "Healthcare", "Government", "Technology companies"],
-                    competitors["Palo Alto Networks", "Cisco", "Microsoft"],
+                    useCases: ["Financial services", "Healthcare", "Government", "Technology companies"],
+                    competitors: ["Palo Alto Networks", "Cisco", "Microsoft"],
                     competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support"
                 },
                 {
                     name: "AI-Powered Cybersecurity",
                     description: "Next-generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real-time.",
-                    features[
+                    features: [
                         "AI-powered threat detection",
                         "Behavioral analysis and monitoring",
                         "Automated incident response",
                         "Predictive security analytics",
                         "Continuous learning and adaptation"
                     ],
-                    benefits[
+                    benefits: [
                         "Proactive threat prevention",
                         "Zero-day attack protection",
                         "Automated response capabilities",
@@ -273,12 +273,12 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$5,000 - $40,000/month",
                     marketPosition: "Advanced AI cybersecurity for high-security environments",
-                    useCases["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
-                    competitors["Darktrace", "CrowdStrike", "SentinelOne"],
+                    useCases: ["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
+                    competitors: ["Darktrace", "CrowdStrike", "SentinelOne"],
                     competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"
-
+                }
             ]
-
+        }
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}

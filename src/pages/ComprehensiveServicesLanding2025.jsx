@@ -17,35 +17,16 @@ const ComprehensiveServicesLanding2025 = () => {
         if (industry === 'all')
             return innovativeMicroSaasServices2025;
         const industryMap = {
-  <<<<<<< HEAD
-            'finance'['FinTech & AI', 'Cybersecurity & Quantum Computing'],
-            'healthcare'['Healthcare & AI'],
-            'manufacturing'['IoT & Edge Computing', 'Blockchain & Supply Chain'],
-            'energy'['Energy & Sustainability'],
-            'logistics'['Logistics & Transportation'],
-            'legal'['Legal Tech & AI'],
-  'marketing'['Marketing & AI']
-        
-
-};
-        return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category))};
-=======
-  'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
+            'finance': ['FinTech & AI', 'Cybersecurity & Quantum Computing'],
             'healthcare': ['Healthcare & AI'],
             'manufacturing': ['IoT & Edge Computing', 'Blockchain & Supply Chain'],
             'energy': ['Energy & Sustainability'],
             'logistics': ['Logistics & Transportation'],
             'legal': ['Legal Tech & AI'],
-  'marketing': ['Marketing & AI']
-        
-
-
-
-
-};
+            'marketing': ['Marketing & AI']
+        };
         return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category));
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const filteredServices = getServicesByIndustry(selectedIndustry);
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}

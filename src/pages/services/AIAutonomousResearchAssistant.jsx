@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe const AIAutonomousResearchAssistant = () => {
-=======
-import { MagnifyingGlassIcon, LightBulbIcon, ChartBarIcon, RocketLaunchIcon, AcademicCapIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
+
 const AIAutonomousResearchAssistant = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
@@ -13,7 +10,7 @@ const AIAutonomousResearchAssistant = () => {
           <div className="text-center">
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-600/20 rounded-full">
-                <MagnifyingGlassIcon className="h-12 w-12 text-blue-400"/>
+                <Search className="h-12 w-12 text-blue-400"/>
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -70,25 +67,25 @@ const AIAutonomousResearchAssistant = () => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                      <AcademicCapIcon className="h-5 w-5 text-white"/>
+                      <GraduationCap className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Academic Research</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <ChartBarIcon className="h-5 w-5 text-white"/>
+                      <BarChart3 className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Market Analysis</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                      <LightBulbIcon className="h-5 w-5 text-white"/>
+                      <Lightbulb className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Innovation Discovery</span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                      <GlobeAltIcon className="h-5 w-5 text-white"/>
+                      <Globe className="h-5 w-5 text-white"/>
                     </div>
                     <span className="text-lg font-semibold">Global Trends</span>
                   </div>
