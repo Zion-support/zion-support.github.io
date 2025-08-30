@@ -95,6 +95,7 @@ export function AppHeader() {
 
 
 
+
 }}
             >
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
@@ -139,6 +140,7 @@ export function AppHeader() {
 
 
 
+
 }}
                           animate = {
   { opacity: 1, y: 0,
@@ -148,10 +150,12 @@ export function AppHeader() {
 
 
 
+
 }}
                           exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
 
 
 
@@ -242,6 +246,7 @@ export function AppHeader() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -251,10 +256,12 @@ export function AppHeader() {
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 

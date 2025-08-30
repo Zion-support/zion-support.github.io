@@ -54,7 +54,7 @@ export default function NewServicesShowcase2025() {
     {
       name: 'AI Edge Computing Platform',
       description: 'Bring AI processing to the edge with intelligent device management, real-time data processing, and distributed computing capabilities.',
-      features: ['AI-powered edge management', 'Real-time data processing', 'Distributed AI deployment', 'Edge-to-cloud synchronization'],
+      features: ['AI-powered edge management', 'Real-time data processing', 'Distributed AI deployment', 'Edge-to-cloud synchronization'],;
       pricing: 'Starting at $499/mo',;
       benefits: ['80-90% reduction in latency', '60-70% cut in bandwidth costs', 'Enhanced data privacy and security'],;
       color: 'from-teal-600 via-cyan-600 to-blue-800',;
@@ -65,7 +65,7 @@ export default function NewServicesShowcase2025() {
 
   const industries = [
     'Manufacturing & Industry 4.0',
-    'Smart Cities & Infrastructure',
+    'Smart Cities & Infrastructure',;
     'Healthcare & Medical Devices',;
     'Financial Services & Banking',;
     'Energy & Utilities',;
@@ -82,8 +82,10 @@ export default function NewServicesShowcase2025() {
   ;
   ;
   ;
+  ;
   Middletown DE 19709';
   ;
+
 
 
 
@@ -289,7 +291,7 @@ export default function NewServicesShowcase2025() {
               className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
             >
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
+            </a>;
             <span className="text-gray-400">|</span>;
             <span className="text-gray-600">{contactInfo.address}</span>;
           </div>;

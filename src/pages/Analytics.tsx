@@ -61,7 +61,7 @@ const Analytics: React.FC = () => {
       description: "AI-powered forecasting and trend analysis for strategic planning",
       icon: TrendingUp,
       color: "from-purple-400 to-pink-500"
-    },
+    },;
     {;
       title: "Custom Dashboards",;
       description: "Build personalized dashboards tailored to your business needs",;
@@ -92,7 +92,7 @@ const Analytics: React.FC = () => {
       features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],
       path: "/services/ai-data-analytics"
     },
-    {
+    {;
       name: "Financial Analytics",;
       description: "Financial performance tracking and optimization",;
       icon: DollarSign,;
@@ -108,7 +108,7 @@ const Analytics: React.FC = () => {
     { icon: Zap, value: "1M+", label: "Data Points", description: "Processed daily" };
   ];
 
-  const integrations = [
+  const integrations = [;
     { name: "Google Analytics", icon: "🔍", description: "Website traffic and user behavior" },;
     { name: "Salesforce", icon: "☁️", description: "CRM data and sales metrics" },;
     { name: "Stripe", icon: "💳", description: "Payment and revenue data" },;
@@ -138,10 +138,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -204,6 +206,7 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -213,10 +216,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -249,10 +254,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -283,6 +290,7 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -292,10 +300,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -328,10 +338,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -362,6 +374,7 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -371,10 +384,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -424,10 +439,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -458,6 +475,7 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -467,10 +485,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -500,10 +520,12 @@ const Analytics: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -532,7 +554,7 @@ const Analytics: React.FC = () => {
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
-                Get Custom Quote
+                Get Custom Quote;
               </Link>;
             </div>;
           </motion.div>;

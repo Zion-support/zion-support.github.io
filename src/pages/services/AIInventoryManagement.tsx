@@ -65,7 +65,7 @@ export default function AIInventoryManagement() {
     {
       icon: PieChart,
       title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities."
+      description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities.";
     },;
     {;
       icon: Activity,;
@@ -98,7 +98,7 @@ export default function AIInventoryManagement() {
     {
       icon: TrendingUp,
       title: "Improved Cash Flow",
-      description: "Better inventory turnover rates and reduced capital tied up in excess stock."
+      description: "Better inventory turnover rates and reduced capital tied up in excess stock.";
     },;
     {;
       icon: Clock,;
@@ -156,7 +156,7 @@ export default function AIInventoryManagement() {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",
+        "On-premise deployment",;
         "SLA guarantees",;
         "24/7 support";
       ],;
@@ -189,7 +189,7 @@ export default function AIInventoryManagement() {
     {
       industry: "Food & Beverage",
       description: "Manage perishable inventory, track expiration dates, and optimize food waste reduction",
-      icon: Package
+      icon: Package;
     },;
     {;
       industry: "Automotive",;
@@ -216,7 +216,7 @@ export default function AIInventoryManagement() {
       platforms: ["Square", "Toast", "Lightspeed", "ShopKeep"]
     },
     {
-      name: "ERP Systems",
+      name: "ERP Systems",;
       platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"];
     },;
     {;
@@ -239,7 +239,7 @@ export default function AIInventoryManagement() {
     {
       metric: "60%",
       label: "Stockout Reduction",
-      description: "Decrease in stockout incidents"
+      description: "Decrease in stockout incidents";
     },;
     {;
       metric: "3x",;
@@ -269,10 +269,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -324,6 +326,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -333,10 +336,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -373,10 +378,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -407,6 +414,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -416,10 +424,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -466,10 +476,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -500,6 +512,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -509,10 +522,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -559,10 +574,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -593,6 +610,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -602,10 +620,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -670,10 +690,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -704,6 +726,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -713,10 +736,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -763,10 +788,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -797,6 +824,7 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -806,10 +834,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -850,10 +880,12 @@ export default function AIInventoryManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -877,7 +909,7 @@ export default function AIInventoryManagement() {
               </button>
               <button className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

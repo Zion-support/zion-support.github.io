@@ -28,6 +28,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     fixable: false,
   suggestedFix: ''
                 
+
 };
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
@@ -227,12 +228,15 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
         {isOpen && (<motion.div initial = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 }} className="fixed bottom-32 right-4 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
@@ -411,6 +415,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 lastChecked: link.lastChecked.toISOString(),
   fixable: link.fixable
                             
+
 }))
                         };
                         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });

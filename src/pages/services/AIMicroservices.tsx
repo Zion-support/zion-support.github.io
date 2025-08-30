@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIMicroservices() {
   const features = [
     'AI-powered microservices optimization',
-    'Intelligent microservices management',
+    'Intelligent microservices management',;
     'Automated microservices monitoring and alerting',;
     'Predictive analytics for microservices scaling',;
     'Smart microservices security and compliance',;
@@ -21,7 +21,7 @@ export default function AIMicroservices() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIMicroservices() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Microservices optimization',;
     'Microservices management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIMicroservices() {
     'Microservices scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve microservices performance by 50-80%',;
     'Reduce microservices deployment time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIMicroservices() {
     'Scale microservices operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIMicroservices() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-lime-600 text-lime-600 rounded-lg hover:bg-lime-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

@@ -41,7 +41,7 @@ export function EnhancedContact(...args[]):  {
 
   const services = [
     { value: 'general', label: 'General Inquiry' },
-    { value: 'ai-solutions', label: 'AI Solutions' },
+    { value: 'ai-solutions', label: 'AI Solutions' },;
     { value: 'cloud-infrastructure', label: 'Cloud Infrastructure' },;
     { value: 'cybersecurity', label: 'Cybersecurity' },;
     { value: 'digital-transformation', label: 'Digital Transformation' },;
@@ -62,7 +62,7 @@ export function EnhancedContact(...args[]):  {
 
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long'}
+      newErrors.message = 'Message must be at least 10 characters long'};
 ;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
@@ -122,7 +122,7 @@ export function EnhancedContact(...args[]):  {
       title: 'Address',
       value: '364 E Main St STE 1008, Middletown, DE 19709',
       description: 'Visit our office'
-    },
+    },;
     {;
       icon: Clock,;
       title: 'Business Hours',;
@@ -142,10 +142,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -166,6 +168,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
           >
@@ -181,10 +184,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -206,10 +211,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,10 +238,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -250,7 +259,7 @@ export function EnhancedContact(...args[]):  {
           </motion.button>
         </div>
       </motion.div>
-    )}
+    )};
 =======;
           >;
             Send Another Message;
@@ -274,10 +283,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -306,10 +317,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -332,10 +345,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -367,10 +382,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -412,10 +429,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -445,6 +464,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name 
@@ -464,6 +484,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -473,10 +494,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -509,6 +532,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email 
@@ -528,6 +552,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -537,10 +562,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -574,6 +601,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your phone number"
@@ -590,6 +618,7 @@ export function EnhancedContact(...args[]):  {
                     onChange = {
   (e) => handleInputChange('comp',
   e.target.value)
+
 }
 =======
                     id="company"
@@ -597,6 +626,7 @@ export function EnhancedContact(...args[]):  {
                     onChange = {
   (e) => handleInputChange('company',
   e.target.value)
+
 
 
 
@@ -622,12 +652,14 @@ export function EnhancedContact(...args[]):  {
                   onChange = {
   (e) => handleInputChange('service',
   e.target.value)
+
 }
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
 =======
                   onChange = {
   (e) => handleInputChange('service',
   e.target.value)
+
 
 
 
@@ -662,6 +694,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message 
@@ -681,6 +714,7 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -690,10 +724,12 @@ export function EnhancedContact(...args[]):  {
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -735,7 +771,7 @@ export function EnhancedContact(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </form>;
           </motion.div>;

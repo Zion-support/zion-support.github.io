@@ -15,7 +15,7 @@ export function ContactSection(...args[]):  {
       title: "Email",
       value: "kleber@ziontechgroup.com",
       link: "mailto:kleber@ziontechgroup.com"
-    },
+    },;
     {;
       icon: MapPin,;
       title: "Address",;
@@ -35,10 +35,12 @@ export function ContactSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -68,6 +70,7 @@ export function ContactSection(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -77,10 +80,12 @@ export function ContactSection(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -110,10 +115,12 @@ export function ContactSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -135,7 +142,7 @@ export function ContactSection(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <ArrowRight className="ml-2 h-5 w-5" />;
           </Link>;
@@ -147,6 +154,7 @@ export function ContactSection(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default ContactSection;
 
+export default ContactSection;
 export default ContactSection;
 export default ContactSection;
 export default ContactSection;

@@ -79,7 +79,7 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
         savings: '$2M annual savings'
       },
       industry: 'Manufacturing',
-      projectDuration: '8 months'
+      projectDuration: '8 months';
     };
   ];
 
@@ -155,7 +155,7 @@ const testimonials = [
     id: 5,
     name: "Lisa Wang",
     position: "Security Director, SecureNet",
-    company: "SecureNet",
+    company: "SecureNet",;
     avatar: "👩‍💻",;
     rating: 5,;
     content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",;
@@ -202,10 +202,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -232,14 +234,17 @@ export function InteractiveTestimonials() {
               initial = {
   { opacity: 0,
   x: 100 
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
 }}
               exit = {
   { opacity: 0,
   x: -100 
+
 }}
               transition={{ duration: 0.5 }}
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
@@ -345,10 +350,12 @@ export function InteractiveTestimonials() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
         {/* Category Filter */}
@@ -362,10 +369,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -382,6 +391,7 @@ export function InteractiveTestimonials() {
 
 
 
+;
 }};
         >;
           {categories.map((category) => (;
@@ -413,10 +423,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -427,6 +439,7 @@ export function InteractiveTestimonials() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -460,6 +473,7 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -469,10 +483,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   x: -50 
+
 
 
 
@@ -533,10 +549,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -547,6 +565,7 @@ export function InteractiveTestimonials() {
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -578,10 +597,12 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -597,6 +618,7 @@ export function InteractiveTestimonials() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -605,7 +627,7 @@ export function InteractiveTestimonials() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -620,4 +642,5 @@ export default InteractiveTestimonials;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default InteractiveTestimonials;
 export default InteractiveTestimonials;

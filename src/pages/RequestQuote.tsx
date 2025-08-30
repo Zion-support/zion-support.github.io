@@ -79,7 +79,7 @@ const industries = [
   'Manufacturing',
   'Retail',
   'Education',
-  'Government',
+  'Government',;
   'Non-profit',;
   'Real Estate',;
   'Transportation',;
@@ -88,7 +88,7 @@ const industries = [
   'Other';
 ];
 
-const compSizes = [
+const compSizes = [;
   '1-10 employees',;
   '11-50 employees',;
   '51-200 employees',;
@@ -98,7 +98,7 @@ const compSizes = [
 ];
 
 const projectTypes = [
-  'New Development',
+  'New Development',;
   'System Integration',;
   'Migration/Upgrade',;
   'Consulting',;
@@ -109,7 +109,7 @@ const projectTypes = [
 
 const services = [
   'AI & Machine Learning',
-  'Cloud & DevOps',
+  'Cloud & DevOps',;
   'Cybersecurity',;
   'IoT & Edge Computing',;
   'Quantum Computing',;
@@ -118,7 +118,7 @@ const services = [
   'Technology Consulting';
 ];
 
-const budgets = [
+const budgets = [;
   'Under $10,000',;
   '$10,000 - $50,000',;
   '$50,000 - $100,000',;
@@ -127,7 +127,7 @@ const budgets = [
   'Over $1,000,000';
 ];
 
-const timelines = [
+const timelines = [;
   'Immediate (1-2 weeks)',;
   'Quick (1-2 months)',;
   'Standard (3-6 months)',;
@@ -190,7 +190,7 @@ export default function RequestQuote(...args[]):  {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {;
     const { name, value } = e.target;
     setFormData(prev = > ({
-      ...prev,
+      ...prev,;
       [name]: value;
     }))};
 
@@ -198,7 +198,7 @@ export default function RequestQuote(...args[]):  {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(service)
-        ? prev.services.filter(s  => s !== service)
+        ? prev.services.filter(s  => s !== service);
         [...prev.services, service];
     }))};
 
@@ -206,12 +206,12 @@ export default function RequestQuote(...args[]):  {
     setExpandedSection(expandedSection === section ? null : section)};
 
   const nextStep = () => {
-    if (currentStep < totalSteps) {
+    if (currentStep < totalSteps) {;
       setCurrentStep(currentStep + 1)};
   };
 
   const prevStep = () => {
-    if (currentStep > 1) {
+    if (currentStep > 1) {;
       setCurrentStep(currentStep - 1)};
   };
 
@@ -291,7 +291,7 @@ export default function RequestQuote(...args[]):  {
 
 <<<<<<< HEAD
   const isStepValid = (step: number)  => {
-    switch (step) {
+    switch (step) {;
       case 1:;
         return formData.compName && formData.industry && formData.firstName && formData.lastName && formData.email;
 =======
@@ -322,7 +322,7 @@ export default function RequestQuote(...args[]):  {
   };
 
 <<<<<<< HEAD
-  const getStepTitle = (step: number)  => {
+  const getStepTitle = (step: number)  => {;
     switch (step) {;
       case 1: return 'Comp & Contact';
 =======
@@ -350,10 +350,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -382,6 +384,7 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -391,10 +394,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -451,10 +456,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -485,6 +492,7 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -494,10 +502,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -517,10 +527,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -700,10 +712,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -805,10 +819,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -901,10 +917,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -1062,6 +1080,7 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -1071,10 +1090,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -1127,6 +1148,7 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -1136,10 +1158,12 @@ export default function RequestQuote(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -1173,7 +1197,7 @@ export default function RequestQuote(...args[]):  {
         </motion.div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

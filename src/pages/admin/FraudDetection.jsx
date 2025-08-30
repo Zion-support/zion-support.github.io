@@ -45,6 +45,7 @@ export default function FraudDetection() {
                 actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0,
   <<<<<<< HEAD
             
+
 };
             setStats(newStats)}
 =======

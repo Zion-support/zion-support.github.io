@@ -270,3 +270,4 @@ export default {
 };
 
 export default for;
+export default for;

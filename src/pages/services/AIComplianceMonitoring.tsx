@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIComplianceMonitoring() {
   const features = [
     'AI-powered compliance monitoring optimization',
-    'Intelligent regulatory compliance tracking',
+    'Intelligent regulatory compliance tracking',;
     'Automated compliance reporting and alerting',;
     'Predictive analytics for compliance risks',;
     'Smart governance and policy management',;
@@ -21,7 +21,7 @@ export default function AIComplianceMonitoring() {
     { 
       name: 'Business', 
       price: '$1,299/mo', 
-      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 50 regulations', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIComplianceMonitoring() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Compliance monitoring optimization',;
     'Regulatory compliance tracking',;
     'Compliance reporting and analytics',;
@@ -39,7 +39,7 @@ export default function AIComplianceMonitoring() {
     'Compliance scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve compliance monitoring performance by 50-80%',;
     'Reduce compliance reporting time by 40-70%',;
     'Cut compliance operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIComplianceMonitoring() {
     'Scale compliance operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIComplianceMonitoring() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

@@ -45,7 +45,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some((tag: string)  => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )}
+      )};
 =======;
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -56,7 +56,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory)}
+      services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 
@@ -188,7 +188,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )} else if (activeTab === 'it') {
+      )} else if (activeTab === 'it') {;
 =======;
                 </a>;
               </div>;
@@ -299,7 +299,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )} else {
+      )} else {;
 =======;
                 </a>;
               </div>;
@@ -422,7 +422,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )}
+      )};
 =======;
                 </a>;
               </div>;
@@ -568,7 +568,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {getFilteredServices().map(renderServiceCard)}
           </div>
-
+;
           {/* No Results */};
           {getFilteredServices().length === 0 && (;
             <div className="text-center py-12">;
@@ -578,7 +578,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   setSearchTerm('');
 <<<<<<< HEAD
                   setSelectedCategory('all')}}
-                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors";
 =======;
                   setSelectedCategory('all');
                 }}
@@ -613,7 +613,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </>;
   )};
 =======

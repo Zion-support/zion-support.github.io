@@ -26,8 +26,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   ;
   ;
   ;
+  ;
   errorId: null;
     ;
+
 
 
 
@@ -93,8 +95,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   ;
   ;
   ;
+  ;
   userAgent: navigator.userAgent;
       ;
+
 
 
 
@@ -131,10 +135,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -158,6 +164,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
 
 
+
 }}
                 transition = {
   { 
@@ -165,6 +172,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                   repeat: Infinity,
   repeatDelay: 3
                 
+
 
 
 
@@ -263,7 +271,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
               {/* Help Text */}
               <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-                <p>
+                <p>;
                   If this problem persists, please contact our support team with the Error ID above.;
                 </p>;
               </div>;

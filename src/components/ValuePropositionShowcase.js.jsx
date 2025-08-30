@@ -144,6 +144,7 @@ export function ValuePropositionShowcase() {
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -158,6 +159,7 @@ export function ValuePropositionShowcase() {
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
 },
     visible: {
       scale: 1,
@@ -178,10 +180,12 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition={{ duration: 0.6 }}
         >
@@ -227,14 +231,17 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -249,6 +256,7 @@ export function ValuePropositionShowcase() {
                 whileHover = {
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
   0.3)" 
+
 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
@@ -267,14 +275,17 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -333,14 +344,17 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.7 
+
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -387,14 +401,17 @@ export function ValuePropositionShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
 }}
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">

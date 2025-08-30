@@ -29,3 +29,4 @@ export default autoTable;
 export default autoTable;
 export default autoTable;
 export default autoTable;
+export default autoTable;

@@ -36,7 +36,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
           </svg>
         </div>
         <button
-          type="submit"
+          type="submit";
           className="absolute inset-y-0 right-0 px-4 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors";
         >;
           Search;

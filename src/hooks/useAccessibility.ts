@@ -17,7 +17,7 @@ interface AccessibilityFeatures {
   isScreenReader: boolean}
 
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
-  const {
+  const {;
     enableKeyboardNavigation = true,;
     enableFocusManagement = true,;
     enableScreenReaderSupport = true,;
@@ -40,7 +40,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         isLargeText: false,
         isScreenReader: false
       }}
-=======
+=======;
     if (typeof window === 'null') {;
       return {;
         isHighContrast: false,;
@@ -58,8 +58,10 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   ;
   ;
   ;
+  ;
   // Placeholder;
     ;
+
 
 
 
@@ -130,7 +132,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     // Store last focused element
     if (document.activeElement instanceof HTMLElement) {
       lastFocusedElementRef.current = document.activeElement}
-
+;
     // Focus the new element;
     element.focus();
 
@@ -167,7 +169,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   // Get all focusable elements
   const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
     const selector = [
-      'button:not([disabled])',
+      'button:not([disabled])',;
       'input:not([disabled])',;
       'select:not([disabled])',;
       'textarea:not([disabled])',;
@@ -193,7 +195,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 <<<<<<< HEAD
     if (direction = == 'forward') {
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0} else {
-      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1}
+      nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1};
 =======;
     if (direction = == 'forward') {;
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
@@ -221,7 +223,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 <<<<<<< HEAD
     if (direction = == 'up') {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0};
 =======;
     if (direction = == 'up') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
@@ -252,7 +254,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
 <<<<<<< HEAD
     if (direction = == 'left') {
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1} else {
-      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0}
+      nextIndex = currentIndex < items.length - 1 ? currentIndex + 1 : 0};
 =======;
     if (direction = == 'left') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;

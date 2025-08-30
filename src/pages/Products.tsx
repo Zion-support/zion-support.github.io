@@ -28,7 +28,7 @@ const Products: React.FC = (): JSX.Element => {
             📞 Call +1 (302) 464-0950
           </a>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

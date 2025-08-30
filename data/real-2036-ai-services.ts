@@ -312,7 +312,7 @@ export const real2036AIServices = [
       'Traffic optimization',
       'Predictive maintenance'
     ],
-    useCases[
+    useCases[;
       'Autonomous vehicles',;
       'Fleet management',;
       'Traffic optimization',;

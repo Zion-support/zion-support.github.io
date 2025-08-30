@@ -42,7 +42,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
     "Risk management and portfolio optimization",
     "Multi-asset class trading (stocks, forex, crypto)",
     "Advanced technical and fundamental analysis",
-    "Automated trading strategies and backtesting",
+    "Automated trading strategies and backtesting",;
     "Real-time market data and news feeds",;
     "Portfolio performance tracking and analytics",;
     "Compliance and regulatory monitoring",;
@@ -61,7 +61,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
   const useCases = [
     "Individual retail traders",
-    "Professional day traders",
+    "Professional day traders",;
     "Hedge funds and asset managers",;
     "Institutional investors",;
     "Cryptocurrency traders",;
@@ -114,7 +114,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
         "High-frequency trading",
         "White-label solutions",
         "Dedicated infrastructure",
-        "Custom integrations",
+        "Custom integrations",;
         "Dedicated account manager",;
         "24/7 phone support";
       ],;
@@ -142,10 +142,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -200,10 +202,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -233,6 +237,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -242,10 +247,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -276,10 +283,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -309,6 +318,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -318,10 +328,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -352,10 +364,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -385,6 +399,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -394,10 +409,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -428,10 +445,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -461,6 +480,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -470,10 +490,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -541,10 +563,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -597,7 +621,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

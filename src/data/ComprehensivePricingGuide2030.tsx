@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     services = services.filter(service => {
       if (activeTab === 'it') {
         return service.hourlyRate >= priceRange[0] && service.hourlyRate <= priceRange[1]} else {
-        return service.price >= priceRange[0] && service.price <= priceRange[1]}
+        return service.price >= priceRange[0] && service.price <= priceRange[1]};
 =======;
     services = services.filter(service => {;
       if (activeTab === 'it') {;
@@ -57,7 +57,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
     // Filter by category
     if (selectedCategory !== 'all') {
-      services = services.filter(service => service.category === selectedCategory)}
+      services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
 
@@ -192,7 +192,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )} else if (activeTab === 'it') {
+      )} else if (activeTab === 'it') {;
 =======;
                 </a>;
               </div>;
@@ -285,7 +285,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )} else {
+      )} else {;
 =======;
                 </a>;
               </div>;
@@ -378,7 +378,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      )}
+      )};
 =======;
                 </a>;
               </div>;
@@ -521,6 +521,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }
                       className="flex-1"
                     />
@@ -532,6 +533,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                       onChange = {
   (e) => setPriceRange([parseInt(e.target.value),
   priceRange[1]])
+
 
 
 
@@ -570,8 +572,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   onClick = {
   () => {
                     setPriceRange([priceRangeData[0],;
+  ;
   priceRangeData[1]]);
                     setSelectedCategory('all')
+
 }}
                   className = "px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
 =======
@@ -583,9 +587,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   ;
   ;
+  ;
   priceRangeData[1]]);
                     setSelectedCategory('all');
                   
+
 
 
 
@@ -642,8 +648,10 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 onClick = {
   () => {
                   setPriceRange([priceRangeData[0],;
+  ;
   priceRangeData[1]]);
                   setSelectedCategory('all')
+
 }}
                 className = "px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
 =======
@@ -655,9 +663,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
   ;
   ;
   ;
+  ;
   priceRangeData[1]]);
                   setSelectedCategory('all');
                 
+
 
 
 
@@ -738,7 +748,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </>;
   )};
 =======

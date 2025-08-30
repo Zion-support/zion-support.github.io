@@ -58,7 +58,7 @@ export function Header() {
       ]
     },
     {
-      category: 'Innovation Hub',
+      category: 'Innovation Hub',;
       items: [;
         { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },;
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },;
@@ -111,6 +111,7 @@ export function Header() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -120,10 +121,12 @@ export function Header() {
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   y: 10 
+
 
 
 
@@ -232,6 +235,7 @@ export function Header() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -241,10 +245,12 @@ export function Header() {
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -276,6 +282,7 @@ export function Header() {
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -285,10 +292,12 @@ export function Header() {
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -370,7 +379,7 @@ export function Header() {
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
-                </Link>
+                </Link>;
               </div>;
             </motion.div>;
           )};
@@ -398,5 +407,5 @@ export function Header(...args[]):  {
 				</div>
 			</nav>
 		</header>
-	)}
+	)};
 ;

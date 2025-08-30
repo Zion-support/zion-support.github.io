@@ -47,7 +47,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {;
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
     if (metric <= thresholds[3]) return { score: 40, grade: 'D', color: 'text-red-400' };
     return { score: 20, grade: 'F', color: 'text-red-600' }}, []);
-  const updateMetrics = useCallback(() => {
+  const updateMetrics = useCallback(() => {;
     if ('performance' in window) {;
       const perf = performance;
       // First Contentful Paint
@@ -67,7 +67,7 @@ interface PerformanceMonitorProps {
 export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
   className = '',
   showDetails = false 
-}) => {
+}) => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     fcp: null,;
     lcp: null,;
@@ -152,8 +152,9 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
 
 
-
 ;
+;
+
 },;
       lcp: { good: 2500, needsImprovement: 4000 },;
       fid: { good: 100, needsImprovement: 300 },;
@@ -222,17 +223,19 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const domLoad = navigationEntry ? navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart : null;
       const windowLoad = navigationEntry ? navigationEntry.loadEventEnd - navigationEntry.navigationStart : null;
       const newMetrics = {
-  fcp, lcp, fid, cls, ttfb, domLoad,
+  fcp, lcp, fid, cls, ttfb, domLoad,;
   windowLoad ;
+
 };
       setMetrics(newMetrics);
       // Calculate scores
       const newScores = {
   fcp: fcp ? calculateScore(fcp, [1800, 3000, 4000, 5000]) : { score: 0, grade: 'F',
   color: 'text-gray-400' 
+
 },
         lcp: lcp ? calculateScore(lcp, [2500, 4000, 5000, 6000]) : { score: 0, grade: 'F', color: 'text-gray-400' },
-        fid: fid ? calculateScore(fid, [100, 300, 500, 1000]) : { score: 0, grade: 'F', color: 'text-gray-400' },
+        fid: fid ? calculateScore(fid, [100, 300, 500, 1000]) : { score: 0, grade: 'F', color: 'text-gray-400' },;
         cls: cls ? calculateScore(cls, [0.1, 0.25, 0.4, 0.5]) : { score: 0, grade: 'F', color: 'text-gray-400' };
       };
       setScores(newScores);
@@ -258,7 +261,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (entry.entryType === 'largest-contentful-paint' || 
               entry.entryType === 'first-input-delay' || 
               entry.entryType === 'layout-shift') {
-            updateMetrics()}
+            updateMetrics()};
         };
       });
       observer.observe({ entryTypes['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
@@ -292,14 +295,17 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             initial = {
   { opacity: 0,
   y: -50 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             exit = {
   { opacity: 0,
   y: -50 
+
 }}
             className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 p-4 bg-red-500 text-white rounded-lg shadow-lg flex items-center gap-3"
           >
@@ -321,14 +327,17 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             initial = {
   { opacity: 0,
   x: '-100%' 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 }}
             exit = {
   { opacity: 0,
   x: '-100%' 
+
 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-y-0 left-0 w-96 bg-zion-slate-dark border-r border-zion-purple/30 z-50 overflow-y-auto"
@@ -485,7 +494,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </>;
   )};
 // Simple refresh icon component
@@ -493,7 +502,7 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
   <svg width = {size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M23 4v6h-6"/>
     <path d="M1 20v-6h6"/>
-    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+    <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>;
   </svg>;
 );
 =======
@@ -507,10 +516,12 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -528,7 +539,7 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
           {getScoreIcon(performanceScore)}
           <span className={`text-2xl font-bold ${getScoreColor(performanceScore)}`}>
             {performanceScore}
-          </span>
+          </span>;
         </div>;
       </div>;
 ;
@@ -544,8 +555,10 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
   ;
   ;
   ;
+  ;
   ttfb: 'Time to First Byte';
             ;
+
 
 
 
@@ -556,7 +569,7 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
             return (
               <div key = {key} className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
-                  <div className={status.color}>{status.icon}</div>
+                  <div className={status.color}>{status.icon}</div>;
                   <span className="text-sm text-gray-300">{label}</span>;
                 </div>;
                 <span className="text-sm font-mono text-white">;
@@ -575,7 +588,7 @@ const RefreshCw: React.FC<{ size: number }> = ({ size }) => (
             <Zap className="w-4 h-4 text-cyan-400" />
             <span className={`font-semibold ${getScoreColor(performanceScore)}`}>
               {performanceScore >= 90 ? 'Excellent' : 
-               performanceScore >= 70 ? 'Good' : 
+               performanceScore >= 70 ? 'Good' : ;
                performanceScore >= 50 ? 'Needs Improvement' : 'Poor'};
             </span>;
           </div>;

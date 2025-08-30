@@ -17,7 +17,7 @@ export default function AIAnalytics(...args[]):  {
     {
       icon: Zap,
       title: 'Real-time Insights',
-      description: 'Instant data analysis and actionable intelligence'
+      description: 'Instant data analysis and actionable intelligence';
     },;
     {;
       icon: Eye,;
@@ -40,7 +40,7 @@ export default function AIAnalytics(...args[]):  {
     {
       title: 'Natural Language Processing',
       description: 'Text analysis and language understanding systems',
-      icon: Database
+      icon: Database;
     },;
     {;
       title: 'Computer Vision',;
@@ -64,10 +64,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -117,10 +119,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -151,6 +155,7 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -160,10 +165,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -196,10 +203,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -230,6 +239,7 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -239,10 +249,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -279,10 +291,12 @@ export default function AIAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -315,7 +329,7 @@ export default function AIAnalytics(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

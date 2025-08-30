@@ -338,7 +338,7 @@ export function MainSidebar(...args[]):  {
       title: 'Resources & Support',
       items[
         { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Developer Portal', href: '/developers', icon: Code },
+        { name: 'Developer Portal', href: '/developers', icon: Code },;
         { name: 'API Documentation', href: '/api-docs', icon: FileText },;
         { name: 'Case Studies', href: '/case-studies', icon: FileText },;
         { name: 'White Papers', href: '/white-papers', icon: FileText },;
@@ -359,7 +359,7 @@ export function MainSidebar(...args[]):  {
       text: 'kleber@ziontechgroup.com', 
       href: 'mailto:kleber@ziontechgroup.com',
       description: 'Email us for support'
-    },
+    },;
     { ;
       icon: MapPin, ;
       text: '364 E Main St STE 1008 Middletown DE 19709', ;
@@ -391,6 +391,7 @@ export function MainSidebar(...args[]):  {
         "fixed left-0 top-0 z-50 h-full w-80 bg-gradient-to-b from-zion-slate-dark via-zion-slate to-zion-slate-light border-r border-white/20 transform transition-all duration-300 ease-in-out lg:translate-x-0 shadow-2xl",
   isOpen ? "translate-x-0" : "-translate-x-full"
       )
+
 
 
 
@@ -436,7 +437,7 @@ export function MainSidebar(...args[]):  {
           {/* Navigation */}
           <nav className="flex-1 overflow-y-auto p-4 space-y-6">
             {navigationItems.map((section) => (
-              <div key={section.title}>
+              <div key={section.title}>;
                 <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">;
                   <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
                   {section.title};
@@ -463,6 +464,7 @@ export function MainSidebar(...args[]):  {
 
 
 
+
 }
                         >
                           <IconComponent className = {
@@ -471,6 +473,7 @@ export function MainSidebar(...args[]):  {
   <<<<<<< HEAD
                             isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
                           )
+
 } />
                           {item.name}
                         </Link>
@@ -480,7 +483,7 @@ export function MainSidebar(...args[]):  {
   isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
                           )
 
-
+;
 ;
 ;
 } />;
@@ -496,7 +499,7 @@ export function MainSidebar(...args[]):  {
           </nav>
 
           {/* Contact Info */}
-          <div className = "p-4 border-t border-white/20 bg-white/5">
+          <div className = "p-4 border-t border-white/20 bg-white/5">;
             <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">;
               <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>;
               Contact Information;
@@ -525,7 +528,7 @@ export function MainSidebar(...args[]):  {
                       </div>
                     </div>
                   </a>
-                )})}
+                )})};
 =======;
                       <div className="text-xs text-gray-400 mt-1">;
                         {contact.description};
@@ -554,7 +557,7 @@ export function MainSidebar(...args[]):  {
         </div>
       </div>
     </>
-  )}
+  )};
 =======;
             </div>;
           </div>;

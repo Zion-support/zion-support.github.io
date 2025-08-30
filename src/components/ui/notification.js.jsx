@@ -22,6 +22,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
             dismissible: notification.dismissible ?? true,
   duration: notification.duration ?? 5000
         
+
 };
         setNotifications(prev => {
             const updated = [newNotification, ...prev];
@@ -39,6 +40,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         removeNotification,
   clearAll
     
+
 };
     return (<NotificationContext.Provider value={value}>
       {children}
@@ -130,24 +132,29 @@ function NotificationItem({ notification }) {
     return (<motion.div layout initial = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
 }} transition = {
   {
             type: "spring",
             stiffness: 500,
             damping: 30,
   opacity: { duration: 0.2 
+
 }
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
       {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
   { duration: notification.duration / 1000,
   ease: "linear" 
+
 }}/>)}
 
       <div className="flex items-start gap-3">

@@ -203,44 +203,55 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
       {enableThemeToggle && (<motion.button initial = {
   { opacity: 0,
   scale: 0 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
           <AnimatePresence mode="wait">
             {currentTheme === 'light' && (<motion.div key="light" initial = {
   { opacity: 0,
   rotate: -90 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 }} transition={{ duration: 0.3 }}>
                 <Sun className="w-5 h-5 text-yellow-500"/>
               </motion.div>)}
             {currentTheme === 'dark' && (<motion.div key="dark" initial = {
   { opacity: 0,
   rotate: -90 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 }} transition={{ duration: 0.3 }}>
                 <Moon className="w-5 h-5 text-blue-400"/>
               </motion.div>)}
             {currentTheme === 'auto' && (<motion.div key="auto" initial = {
   { opacity: 0,
   rotate: -90 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 }} transition={{ duration: 0.3 }}>
                 <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
               </motion.div>)}
@@ -251,9 +262,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
       {enableResponsiveDesign && (<motion.div initial = {
   { opacity: 0,
   x: -50 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
           <div className="flex items-center space-x-2 text-sm">
             {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}
@@ -268,12 +281,15 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {
   { opacity: 0,
   scale: 0 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
@@ -283,9 +299,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
       <motion.button initial = {
   { opacity: 0,
   scale: 0 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
         <Palette className="w-5 h-5"/>
       </motion.button>
@@ -295,15 +313,19 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         {isVisible && (<motion.div initial = {
   { opacity: 0, y: 100,
   scale: 0.8 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, y: 100,
   scale: 0.8 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 }} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">
@@ -380,18 +402,21 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-   
+  
+
 }} animate = {
   {
                     y[0, -100, 0],
                     opacity[0.2, 0.5, 0.2],
-   
+  
+
 }} transition = {
   {
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
                     ease: "linear",
-   
+  
+
 }}/>))}
         </div>)}
     </>)};

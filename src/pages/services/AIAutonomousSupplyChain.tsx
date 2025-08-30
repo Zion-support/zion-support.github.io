@@ -63,7 +63,7 @@ const AIAutonomousSupplyChain = () => {
       description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
       icon: Shield,
       color: "from-yellow-500 to-orange-500"
-    },
+    },;
     {;
       title: "End-to-End Visibility",;
       description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
@@ -113,7 +113,7 @@ const AIAutonomousSupplyChain = () => {
         "Custom AI model development",
         "Global supply chain visibility",
         "Advanced analytics dashboard",
-        "Dedicated support team",
+        "Dedicated support team",;
         "SLA guarantees",;
         "On-premise deployment",;
         "White-label solutions";
@@ -136,7 +136,7 @@ const AIAutonomousSupplyChain = () => {
     {
       title: "Better Customer Service",
       description: "Faster delivery times and improved order accuracy",
-      metric: "50% faster delivery"
+      metric: "50% faster delivery";
     },;
     {;
       title: "Risk Mitigation",;
@@ -163,7 +163,7 @@ const AIAutonomousSupplyChain = () => {
       description: "Ensure critical medical supplies are always available and properly distributed",
       icon: Heart,
       color: "from-red-500 to-pink-500"
-    },
+    },;
     {;
       title: "Food & Beverage",;
       description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
@@ -187,10 +187,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -240,10 +242,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -275,6 +279,7 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -284,10 +289,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -320,10 +327,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -354,6 +363,7 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -363,10 +373,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -399,10 +411,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -433,6 +447,7 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -442,10 +457,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -476,10 +493,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -510,6 +529,7 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -519,10 +539,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -590,10 +612,12 @@ const AIAutonomousSupplyChain = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -650,7 +674,7 @@ const AIAutonomousSupplyChain = () => {
             </div>
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-blue-400 mb-4" />
-              <p className="text-gray-300">Address</p>
+              <p className="text-gray-300">Address</p>;
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;

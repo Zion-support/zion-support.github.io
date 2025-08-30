@@ -71,6 +71,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 message: messageContent,
   timestamp: new Date()
             
+
 };
             setCurrentMessages((prev) => [...prev, newMessage]);
             setPendingApiCallParams({ message: messageContent, conversationId })}
@@ -87,6 +88,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             message: guestMessage,
   timestamp: new Date()
         
+
 };
         setCurrentMessages((prev) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages
         setPendingApiCallParams({ message: guestMessage, conversationId });

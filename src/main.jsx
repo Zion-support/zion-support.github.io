@@ -48,6 +48,7 @@ const renderApp() {
                     <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
+
 }}>
                       <ViewModeProvider>
                         <AppLayout>
@@ -79,6 +80,7 @@ const renderApp() {
                                         <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
+
 
 
 
@@ -137,6 +139,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
                   <LanguageProvider authState = {
   { isAuthenticated: false,
   user: null 
+
 }}>
                     <AppLayout>
                       <App />

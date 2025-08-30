@@ -50,7 +50,7 @@ const AIHealthcareAnalytics = () => {
       icon: Users,
       title: "Population Health Analytics",
       description: "Large-scale analysis of population health data to identify trends, risk factors, and public health opportunities.",
-      benefits["Public health insights", "Epidemic prediction", "Resource allocation", "Preventive programs"]
+      benefits["Public health insights", "Epidemic prediction", "Resource allocation", "Preventive programs"];
     };
   ];
 
@@ -89,7 +89,7 @@ const AIHealthcareAnalytics = () => {
       name: "Healthcare Operations",
       description: "AI optimization of healthcare operations and resource management",
       icon: TrendingUp,
-      features["Resource optimization", "Staff scheduling", "Inventory management", "Cost analysis"]
+      features["Resource optimization", "Staff scheduling", "Inventory management", "Cost analysis"];
     };
   ];
 
@@ -142,7 +142,7 @@ const AIHealthcareAnalytics = () => {
         "SLA guarantees",
         "On-site deployment"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -166,7 +166,7 @@ const AIHealthcareAnalytics = () => {
       role: "Healthcare Administrator",
       comp: "Community Health Network",
       content: "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
-      rating: 5
+      rating: 5;
     };
   ];
 
@@ -183,7 +183,7 @@ const AIHealthcareAnalytics = () => {
     'AI-powered patient outcome prediction',
     'Real-time health monitoring and alerts',
     'Predictive analytics for disease prevention',
-    'Automated medical image analysis',
+    'Automated medical image analysis',;
     'Clinical decision support systems',;
     'Population health management',;
     'Drug interaction and safety monitoring',;
@@ -192,7 +192,7 @@ const AIHealthcareAnalytics = () => {
     'Regulatory compliance automation';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve patient outcomes by 35%',;
     'Reduce healthcare costs by 25%',;
     'Increase diagnostic accuracy by 40%',;
@@ -202,7 +202,7 @@ const AIHealthcareAnalytics = () => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const useCases = [
+  const useCases = [;
     'Hospital management and operations',;
     'Clinical research and trials',;
     'Telemedicine and remote care',;
@@ -227,7 +227,7 @@ const AIHealthcareAnalytics = () => {
     },
     {
       category: "Research",
-      examples["Clinical trial optimization", "Drug discovery", "Epidemiological studies", "Public health research"]
+      examples["Clinical trial optimization", "Drug discovery", "Epidemiological studies", "Public health research"];
     };
   ];
 
@@ -311,7 +311,7 @@ const AIHealthcareAnalytics = () => {
       price: '$3,999/mo',
       details: [
         'Unlimited patients',
-        'Full AI healthcare suite',
+        'Full AI healthcare suite',;
         'Custom algorithms',;
         'Dedicated support',;
         'White-label solutions',;
@@ -329,8 +329,10 @@ const AIHealthcareAnalytics = () => {
   ;
   ;
   ;
+  ;
   'CCPA'];
   ;
+
 
 
 
@@ -344,7 +346,7 @@ const AIHealthcareAnalytics = () => {
       solutions: ['Heart disease prediction', 'ECG analysis', 'Risk assessment', 'Treatment optimization']
     },
     {
-      specialty: 'Oncology',
+      specialty: 'Oncology',;
       solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching'];
     },;
     {;
@@ -563,14 +565,14 @@ const AIHealthcareAnalytics = () => {
             <p>🌐 <a href="https://ziontechgroup.com" className="text-green-400 hover:text-green-300">ziontechgroup.com</a></p>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 
 export default AIHealthcareAnalytics;
 =======
           <div className = "mt-4">
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">;
               Learn More <ExternalLink className="w-4 h-4 ml-2" />;
             </a>;
           </div>;

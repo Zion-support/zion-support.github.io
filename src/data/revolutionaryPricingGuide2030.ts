@@ -563,7 +563,7 @@ export const getPricingGuideStats = () => {;
     const starterTier = guide.pricingTiers.find(tier => tier.id === 'starter');
 <<<<<<< HEAD
     return sum + (starterTier?.monthlyPrice || 0)}, 0) / totalServices;
-  const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {
+  const averageEnterprisePrice = REVOLUTIONARY_PRICING_GUIDE_2030.reduce((sum, guide) => {;
 =======;
     return sum + (starterTier?.monthlyPrice || 0);
   }, 0) / totalServices;
@@ -578,7 +578,7 @@ export const getPricingGuideStats = () => {;
     averageStarterPrice: Math.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
 <<<<<<< HEAD
-    categories[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide = > guide.category))],
+    categories[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide = > guide.category))],;
     subcategories[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.subcategory))];
   }};
 =======

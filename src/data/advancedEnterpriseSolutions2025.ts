@@ -372,7 +372,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
 ];
 <<<<<<< HEAD
 export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
-  if (category === 'All') {
+  if (category === 'All') {;
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025};
   return ADVANCED_ENTERPRISE_SOLUTIONS_2025.filter(solution => solution.category === category)};
 export const getAllEnterpriseSolutions = (): EnterpriseSolution[] => {;

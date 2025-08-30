@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIKafka() {
   const features = [
     'AI-powered Kafka optimization',
-    'Intelligent Kafka management',
+    'Intelligent Kafka management',;
     'Automated Kafka monitoring and alerting',;
     'Predictive analytics for Kafka scaling',;
     'Smart Kafka security and compliance',;
@@ -21,7 +21,7 @@ export default function AIKafka() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIKafka() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Kafka optimization',;
     'Kafka management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIKafka() {
     'Kafka scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve Kafka performance by 50-80%',;
     'Reduce Kafka latency by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIKafka() {
     'Scale Kafka operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIKafka() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

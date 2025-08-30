@@ -8,7 +8,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' },;
     { id: 'blockchain-web3', name: 'Blockchain & Web3', icon: '🔗', color: 'from-green-600 to-emerald-600' },;
     { id: 'space-tech', name: 'Space Technology', icon: '🛰️', color: 'from-indigo-600 to-purple-600' },;
     { id: 'biotech-ai', name: 'Biotech & AI', icon: '🧬', color: 'from-red-600 to-pink-600' },;
@@ -26,7 +26,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    visible: {;
       opacity: 1,;
       transition: {;
         staggerChildren: 0.1,;
@@ -43,6 +43,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -66,10 +67,12 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -98,6 +101,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -107,10 +111,12 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -134,6 +140,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -143,10 +150,12 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -197,6 +206,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -206,10 +216,12 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -399,10 +411,12 @@ const UltimateZionServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -427,7 +441,7 @@ const UltimateZionServicesShowcase: React.FC = () => {;
               </button>
             </div>
             <div className="mt-6 text-sm text-gray-400">
-              <p>🌟 Trusted by Fortune 500 companies worldwide</p>
+              <p>🌟 Trusted by Fortune 500 companies worldwide</p>;
               <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
             </div>;
           </motion.div>;

@@ -686,7 +686,7 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       'MRR/ARR trends and cohorts',
       'Anomaly flags and forecasts',
       'CSV/Stripe imports',
-      'Board-ready reports'
+      'Board-ready reports';
     ],;
     popular: true,;
     icon: '📈',;

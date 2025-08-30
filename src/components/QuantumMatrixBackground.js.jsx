@@ -129,6 +129,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 border: '1px solid rgba(34, 221, 210,
   0.5)'
             
+
 }} animate = {
   {
                 scale[1, 1.2, 1],
@@ -136,12 +137,14 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 rotate[0, 180,
   360]
             
+
 }} transition = {
   {
                 duration: 8,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }}/>
 
           <motion.div className="absolute top-40 right-32 w-24 h-24" style = {
@@ -150,6 +153,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 clipPath: 'polygon(50% 0%, 0% 100%,
   100% 100%)'
             
+
 }} animate = {
   {
                 y[0, -20, 0],
@@ -157,12 +161,14 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 opacity[0.4, 0.8,
   0.4]
             
+
 }} transition = {
   {
                 duration: 6,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }}/>
 
           <motion.div className="absolute bottom-32 left-1/4 w-20 h-20 rounded-full" style = {
@@ -170,18 +176,21 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 background: 'conic-gradient(from 0deg, rgba(34, 221, 210, 0.4), rgba(139, 92, 246, 0.4), rgba(59, 130, 246, 0.4), rgba(34, 221, 210,
   0.4))'
             
+
 }} animate = {
   {
                 scale[1, 1.5, 1],
                 rotate[0, 180,
   360]
             
+
 }} transition = {
   {
                 duration: 10,
                 repeat: Infinity,
   ease: "linear"
             
+
 }}/>
 
           {/* Matrix Rain Effect */}
@@ -194,12 +203,14 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                     y['-100vh',
   '100vh']
                 
+
 }} transition = {
   {
                     duration: 20,
                     repeat: Infinity,
   ease: "linear"
                 
+
 }}>
                 {String.fromCharCode(0x30A0 + Math.random() * 96)}
               </motion.div>))}
@@ -214,18 +225,21 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             border: '1px solid rgba(34, 221, 210,
   0.2)'
         
+
 }} animate = {
   {
             scale[1, 1.5, 1],
             opacity[0.1, 0.3,
   0.1]
         
+
 }} transition = {
   {
             duration: 12,
             repeat: Infinity,
   ease: "easeInOut"
         
+
 }}/>
 
         <motion.div className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full" style = {
@@ -234,18 +248,21 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
             border: '1px solid rgba(139, 92, 246,
   0.2)'
         
+
 }} animate = {
   {
             scale[1, 1.3, 1],
             opacity[0.1, 0.25,
   0.1]
         
+
 }} transition = {
   {
             duration: 15,
             repeat: Infinity,
   ease: "easeInOut"
         
+
 }}/>
       </div>
 
@@ -260,12 +277,14 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 opacity[0.3, 0.8,
   0.3]
             
+
 }} transition = {
   {
                 duration: 4 + Math.random() * 4,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }}/>))}
       </div>
     </div>)};

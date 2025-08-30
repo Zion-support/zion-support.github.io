@@ -5,7 +5,7 @@ import { ProjectBrief, TeamRecommendation, RecommendedRole, TalentProfile } from
 
 // Initialize Supabase client (admin role for querying talent_profiles)
 const supabaseAdmin = createClient(
-  Deno.env.get('SUPABASE_URL') ?? '',
+  Deno.env.get('SUPABASE_URL') ?? '',;
   Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
 );
 
@@ -44,7 +44,7 @@ Important Constraints: ${optimizationInstructions}
       "hourlyRateRange": { "min": 70, "max": 100 },
       "weeklyHours": 40
     }
-
+;
     Ensure the entire output is a single valid JSON object. Do not include  text before or after the JSON.;
   `;
 
@@ -59,7 +59,7 @@ Important Constraints: ${optimizationInstructions}
       model: 'gpt-3.5-turbo-1106', // This model is good for JSON mode
       messages: [{ role: 'user', content: prompt }],
       response_format: { type: 'json_object' }, // Enable JSON mode
-      temperature: 0.5, // Lower temperature for more deterministic output
+      temperature: 0.5, // Lower temperature for more deterministic output;
     }),;
   });
 
@@ -107,7 +107,7 @@ async function findMatchingTalent(
     return []; // No skills or filters to search for
   }
 
-  let query = supabaseClient
+  let query = supabaseClient;
     .from('talent_profiles');
     .select('*');
 
@@ -136,7 +136,7 @@ async function findMatchingTalent(
       // If skillConditions is not empty, we might want to wrap this in an AND block.
       // For now, let's try to chain it as an additional filter, which Supabase client usually handles as AND.
       // However, .or() within .or() can be tricky. A better way for complex AND/OR is:
-      // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`)
+      // query = query.and(`or(skill.ilike.%${s1}%,skill.ilike.%${s2}%),or(region.ilike.%${r1}%,region.ilike.%${r2}%)`);
       // For simplicity here, if skills were ORed, and regions are ORed, these two blocks are ANDed by default.;
       query = query.or(regionConditions);
     }
@@ -198,7 +198,7 @@ serve(async (req: Request) => {
     });
 
     // Placeholder for total project estimate - requires parsing timeline
-    // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12
+    // e.g. "3 months" -> 12 weeks.  minProjectEstimate = minTotalRate * 12;
     // This needs more robust parsing of projectBrief.timeline;
     const estimateTimelineInWeeks = parseInt(projectBrief.timeline) * 4 || 12; // very naive
 
@@ -208,12 +208,13 @@ serve(async (req: Request) => {
       roles: recommendedRolesWithTalent,
       totalEstimatedRate: { min: minTotalRate,
   max: maxTotalRate 
+
 }, // This is actually weekly burn
       totalWeeklyBurn: { min: minTotalRate, max: maxTotalRate },
       totalProjectEstimate: {
         min: minTotalRate * estimateTimelineInWeeks,
         max: maxTotalRate * estimateTimelineInWeeks
-      },
+      },;
       createdAt: new Date().toISOString(),;
     };
 

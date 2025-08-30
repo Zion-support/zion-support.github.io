@@ -141,7 +141,7 @@ export default function Solutions(...args[]):  {
               >
                 View All Services
               </Link>
-            </div>
+            </div>;
           </div>;
         </div>;
       </section>;

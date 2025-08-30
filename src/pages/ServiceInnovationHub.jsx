@@ -94,9 +94,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -123,6 +125,7 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }>
                 Get Innovation Strategy
               </Button>
@@ -142,9 +145,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -169,6 +174,7 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -177,9 +183,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -233,9 +241,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -259,6 +269,7 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -267,9 +278,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -317,9 +330,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -350,9 +365,11 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -375,6 +392,7 @@ const ServiceInnovationHub = () => {
 
 
 
+
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Lead Innovation
@@ -382,6 +400,7 @@ const ServiceInnovationHub = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

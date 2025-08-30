@@ -156,14 +156,14 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
       url: '/services/ai-compliance-assistant',
       icon: '📋',
       features['Regulatory monitoring', 'Compliance reporting', 'Risk assessment'],
-      benefits['Automated compliance', 'Reduced risk']
+      benefits['Automated compliance', 'Reduced risk'];
     };
   ];
 
   const categories = ['all', 'AI-Powered Micro SAAS', 'Cloud & Infrastructure', 'Data & Analytics', 'Security & Compliance'];
 
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -186,10 +186,12 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -267,7 +269,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                 <p className="text-gray-300 mb-6">
                   Try adjusting your search terms or category filter
                 </p>
-                <button
+                <button;
                   onClick={() => {;
                     setSearchTerm('');
                     setSelectedCategory('all')}}
@@ -284,14 +286,17 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
                     initial = {
   { opacity: 0,
   y: 20 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                     className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
                   >
@@ -367,10 +372,12 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -431,7 +438,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {;
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

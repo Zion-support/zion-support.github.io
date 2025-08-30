@@ -56,6 +56,7 @@ export class ContentQualityAnalyzer {
             issues,
   recommendations
         
+
 };
         this.analyzedPages.set(pageUrl, metrics);
         return metrics;
@@ -329,6 +330,7 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
 
 
+
 };
       
       // Generate suggestions based on analysis
@@ -371,10 +373,12 @@ const ContentQualityAnalyzer = ({ content, onAnalysisComplete }) => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

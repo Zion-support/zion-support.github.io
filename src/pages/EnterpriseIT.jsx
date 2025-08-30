@@ -38,9 +38,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -64,6 +66,7 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -72,9 +75,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.1 
+
 
 
 
@@ -98,6 +103,7 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -106,9 +112,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.2 
+
 
 
 
@@ -132,6 +140,7 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -140,9 +149,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.3 
+
 
 
 
@@ -166,6 +177,7 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -174,9 +186,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.4 
+
 
 
 
@@ -200,6 +214,7 @@ export default function EnterpriseIT() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -208,9 +223,11 @@ export default function EnterpriseIT() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.5 
+
 
 
 

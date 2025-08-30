@@ -48,7 +48,7 @@ const AIAutonomousResearchAssistant = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Real-time Updates",
-      description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
+      description: "Continuous monitoring and updates on research topics with automated alerts and notifications.";
     },;
     {;
       icon: <Shield className="w-6 h-6" />,;
@@ -96,7 +96,7 @@ const AIAutonomousResearchAssistant = () => {
         "Unlimited research queries",
         "Custom AI model training",
         "Full database access",
-        "Dedicated support team",
+        "Dedicated support team",;
         "Advanced reporting & insights",;
         "API access",;
         "Custom integrations";
@@ -119,7 +119,7 @@ const AIAutonomousResearchAssistant = () => {
     {
       title: "Product Development",
       description: "Research user needs, market requirements, and technical feasibility for new product ideas.",
-      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />
+      icon: <Lightbulb className="w-8 h-8 text-yellow-500" />;
     },;
     {;
       title: "Policy Research",;
@@ -142,10 +142,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -201,10 +203,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -234,6 +238,7 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -243,10 +248,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -278,10 +285,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -311,6 +320,7 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -320,10 +330,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -357,10 +369,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -390,6 +404,7 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -399,10 +414,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -470,10 +487,12 @@ const AIAutonomousResearchAssistant = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -502,7 +521,7 @@ const AIAutonomousResearchAssistant = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>;
             </div>;
           </motion.div>;

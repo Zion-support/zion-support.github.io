@@ -97,9 +97,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -143,9 +145,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -160,9 +164,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -192,9 +198,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -216,9 +224,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -253,9 +263,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -299,9 +311,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -323,9 +337,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,9 +369,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -392,9 +410,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -416,9 +436,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -440,9 +462,11 @@ export default function CloudInfrastructure() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

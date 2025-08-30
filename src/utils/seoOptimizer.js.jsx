@@ -18,6 +18,7 @@ export class SEOOptimizer {
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant,
   and innovative IT services for the healthcare industry.'
     
+
 };
     static KEYWORD_MAPPINGS = {
   '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
@@ -38,6 +39,7 @@ export class SEOOptimizer {
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions',
   'medical technology']
     
+
 };
     static generateSEOData(path) {
         const title = this.generateTitle(path);
@@ -93,6 +95,7 @@ export class SEOOptimizer {
                 "url": "https://ziontechgroup.com",
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
             
+
 }
         };
         // Add specific structured data based on page type

@@ -146,6 +146,7 @@ const AIMarketingAutomation = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -169,9 +170,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -248,9 +251,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -273,6 +278,7 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -281,9 +287,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -318,9 +326,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,6 +353,7 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -351,9 +362,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -380,9 +393,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -405,6 +420,7 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -413,9 +429,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -442,9 +460,11 @@ const AIMarketingAutomation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

@@ -127,9 +127,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -169,9 +171,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -195,6 +199,7 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -203,9 +208,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -282,9 +289,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -308,6 +317,7 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -316,9 +326,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -367,9 +379,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -393,6 +407,7 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -401,9 +416,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -452,9 +469,11 @@ export default function NextGenServicesShowcase2025() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

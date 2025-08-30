@@ -165,6 +165,7 @@ const ComprehensivePricing = () => {
 
 
 
+
 }>
                   Get Started
                 </Button>
@@ -264,6 +265,7 @@ const ComprehensivePricing = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-3" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 
 
 

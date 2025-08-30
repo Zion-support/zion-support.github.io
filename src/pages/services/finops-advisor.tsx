@@ -412,7 +412,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
               >
-                Explore All Services
+                Explore All Services;
               </Link>;
             </div>;
           </div>;

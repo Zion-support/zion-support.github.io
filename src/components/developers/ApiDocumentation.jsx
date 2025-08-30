@@ -43,6 +43,7 @@ export function ApiDocumentation() {
 
 
 
+
 },
             { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
             { name: "category", type: "string", description: "Filter by job category" },
@@ -64,6 +65,7 @@ export function ApiDocumentation() {
 
 
 
+
 }
 });
 
@@ -80,6 +82,7 @@ headers = {
 
 
 
+
 }
 
 response = requests.get(
@@ -87,6 +90,7 @@ response = requests.get(
     params = {
   'limit': 10,
   'category': 'development'
+
 
 
 
@@ -118,6 +122,7 @@ print(data)`
 
 
 
+
 },
       "status": "active",
       "client_id": "user_xyz789",
@@ -142,6 +147,7 @@ print(data)`
 
 
 
+
 }
         ]} codeExamples = {
   {
@@ -150,6 +156,7 @@ print(data)`
   -H "Content-Type: application/json"`,
   javascript: `const jobId = 'job_abc123';
 const response = await fetch(\`https://ziontechgroup.com/api/v1/jobs/\${jobId
+
 
 
 
@@ -170,6 +177,7 @@ console.log(data);`,
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
+
 
 
 
@@ -205,6 +213,7 @@ print(data)`
 
 
 
+
 },
     "status": "active",
     "client_id": "user_xyz789",
@@ -219,6 +228,7 @@ print(data)`
   [
             { name: "title", type: "string", description: "Job title",
   required: true 
+
 
 
 
@@ -247,6 +257,7 @@ print(data)`
       "max": 10000,
   "currency": "USD"
     
+
 
 
 
@@ -289,6 +300,7 @@ headers = {
 
 
 
+
 }
 
 payload = {
@@ -301,6 +313,7 @@ payload = {
         'max': 10000,
   'currency': 'USD'
     
+
 
 
 
@@ -337,6 +350,7 @@ print(data)`
 
 
 
+
 },
     "status": "new",
     "client_id": "user_xyz789",
@@ -352,6 +366,7 @@ print(data)`
   [
             { name: "page", type: "integer",
   description: "Page number for pagination (default: 1)" 
+
 
 
 
@@ -377,6 +392,7 @@ print(data)`
 
 
 
+
 }
 });
 
@@ -393,6 +409,7 @@ headers = {
 
 
 
+
 }
 
 response = requests.get(
@@ -400,6 +417,7 @@ response = requests.get(
     params = {
   'skills': 'react,
   typescript'
+
 
 
 
@@ -429,6 +447,7 @@ print(data)`
 
 
 
+
 },
     // More talent profiles...
   ],
@@ -449,6 +468,7 @@ print(data)`
 
 
 
+
 }
         ]} codeExamples = {
   {
@@ -457,6 +477,7 @@ print(data)`
   -H "Content-Type: application/json"`,
   javascript: `const talentId = 'talent_abc123';
 const response = await fetch(\`https://ziontechgroup.com/api/v1/talent/\${talentId
+
 
 
 
@@ -477,6 +498,7 @@ console.log(data);`,
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
+
 
 
 
@@ -514,6 +536,7 @@ print(data)`
         "technologies"["react", "redux", "node.js"],
   "image_url": "https://example.com/portfolio/123.jpg"
       
+
 }
 =======
         "technologies": ["react", "redux", "node.js"],
@@ -548,6 +571,7 @@ print(data)`
 
 
 
+
 },
             { name: "project_name", type: "string", description: "Name of the project", required: true },
             { name: "project_summary", type: "string", description: "Brief summary of the project", required: true },
@@ -573,6 +597,7 @@ print(data)`
     "requester_name": "John Doe",
   "requester_email": "john@example.com"
   
+
 
 
 
@@ -612,6 +637,7 @@ headers = {
 
 
 
+
 }
 
 payload = {
@@ -624,6 +650,7 @@ payload = {
     'budget_max': 12000,
     'requester_name': 'John Doe',
   'requester_email': 'john@example.com'
+
 
 
 
@@ -664,6 +691,7 @@ print(data)`
 
 
 
+
 }
 }`
         }}/>
@@ -672,6 +700,7 @@ print(data)`
   [
             { name: "page", type: "integer",
   description: "Page number for pagination (default: 1)" 
+
 
 
 
@@ -696,6 +725,7 @@ print(data)`
 
 
 
+
 }
 });
 
@@ -706,6 +736,7 @@ console.log(data);`,
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
+
 
 
 
@@ -736,6 +767,7 @@ print(data)`
       "viewed_at": null,
   "replied_at": null
     
+
 
 
 
@@ -781,6 +813,7 @@ function verifyWebhookSignature(payload, signature, secret) {
   <<<<<<< HEAD
     Buffer.from(expectedSignature)
   )
+
 }
 =======
   Buffer.from(expectedSignature)
@@ -855,6 +888,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "status": "new",
   "match_score": 85
   
+
 
 
 
@@ -936,6 +970,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
         "field": "project_name",
   "message": "Project name is required"
       
+
 
 
 

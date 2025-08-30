@@ -306,6 +306,7 @@ export function ProductSubmissionForm() {
 
 
 
+
 } className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
@@ -329,6 +330,7 @@ export function ProductSubmissionForm() {
             title: form.getValues("title"),
   category: form.getValues("category")
         
+
 
 
 

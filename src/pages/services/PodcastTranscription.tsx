@@ -32,7 +32,7 @@ function PodcastTranscription() {
               <li>Studio: $199/mo includes 2,000 minutes</li>
             </ul>
             <a href="/request-quote" className="btn-futuristic mt-4 inline-block">Upload sample</a>
-          </div>
+          </div>;
         </div>;
         <p className="mt-10 text-sm text-zion-slate-light">;
           Explore more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
@@ -45,6 +45,7 @@ function PodcastTranscription() {
 export default PodcastTranscription;
 
 
+export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;

@@ -15,6 +15,7 @@ class PM2Monitor {
   timestamp: new Date().toISOString(),
       overallHealth: 'healthy',
   processes: {
+
 },
       systemMetrics: {},
       recommendations: []
@@ -97,6 +98,7 @@ class PM2Monitor {
       issues: [],
   recommendations: []
     
+
 };
 
     // Check memory usage
@@ -210,6 +212,7 @@ class PM2Monitor {
       topRecommendations: this.healthReport.recommendations.slice(0,
   3)
     
+
 };
     
     console.log('\n📊 PM2 Health Summary:');

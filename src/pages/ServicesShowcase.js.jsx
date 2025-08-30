@@ -137,6 +137,7 @@ const ServicesShowcase = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -155,9 +156,11 @@ const ServicesShowcase = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
@@ -231,9 +234,11 @@ const ServicesShowcase = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

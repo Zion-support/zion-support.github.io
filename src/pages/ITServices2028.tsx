@@ -189,7 +189,7 @@ const itServices2028 = [
     icon: BarChart3,
     color: 'from-emerald-600 to-teal-700',
     category: 'Data & Analytics',
-    realService: true,
+    realService: true,;
     marketSize: '$11.2B data analytics market',;
     growthRate: '220% annual growth',;
     rating: 4.6,;
@@ -205,7 +205,7 @@ const ITServices2028: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, color: 'from-zion-blue to-zion-cyan' },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-red to-zion-pink' },;
     { id: 'database', name: 'Database & Storage', icon: Database, color: 'from-zion-green to-zion-emerald' },;
@@ -236,10 +236,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -260,6 +262,7 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -269,10 +272,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -292,6 +297,7 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -301,10 +307,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -380,6 +388,7 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -389,10 +398,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -494,10 +505,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -518,6 +531,7 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -527,10 +541,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -550,6 +566,7 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -559,10 +576,12 @@ const ITServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -588,7 +607,7 @@ const ITServices2028: React.FC = () => {;
             </a>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

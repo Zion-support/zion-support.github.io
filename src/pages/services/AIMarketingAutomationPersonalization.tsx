@@ -5,7 +5,7 @@ import { Target, Mail, BarChart3, Users, CheckCircle, Zap, Sparkles, ArrowRight,
 export default function AIMarketingAutomationPersonalization() {
   const features = [
     'AI-powered customer segmentation with behavioral analysis',
-    'Dynamic content personalization across all marketing channels',
+    'Dynamic content personalization across all marketing channels',;
     'Predictive lead scoring and conversion optimization',;
     'Multi-channel campaign orchestration (email, SMS, social, web)',;
     'Real-time A/B testing with AI-driven optimization',;
@@ -14,7 +14,7 @@ export default function AIMarketingAutomationPersonalization() {
     'Integration with major CRM, e-commerce, and advertising platforms',;
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase conversion rates by 40-60% with personalization',;
     'Reduce customer acquisition costs by 30-50%',;
     'Improve email open rates by 25-40% with AI optimization',;
@@ -27,7 +27,7 @@ export default function AIMarketingAutomationPersonalization() {
     'Email Marketing Automation',
     'SMS & Push Notifications',
     'Social Media Advertising',
-    'Display & Retargeting Ads',
+    'Display & Retargeting Ads',;
     'Content Marketing',;
     'Search Engine Marketing',;
     'Influencer Marketing',;
@@ -40,7 +40,7 @@ export default function AIMarketingAutomationPersonalization() {
     'Customer Behavior Analysis',
     'Predictive Analytics',
     'Dynamic Content Generation',
-    'Smart Segmentation',
+    'Smart Segmentation',;
     'Lead Scoring & Qualification',;
     'Campaign Optimization',;
     'Personalization Engine',;
@@ -53,7 +53,7 @@ export default function AIMarketingAutomationPersonalization() {
     'Salesforce Marketing Cloud',
     'HubSpot Marketing Hub',
     'Mailchimp',
-    'Klaviyo',
+    'Klaviyo',;
     'Shopify',;
     'WooCommerce',;
     'Facebook Ads',;
@@ -64,7 +64,7 @@ export default function AIMarketingAutomationPersonalization() {
 
   const stack = [
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
-    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },
+    { name: 'TensorFlow', url: 'https://www.tensorflow.org/' },;
     { name: 'Scikit-learn', url: 'https://scikit-learn.org/' },;
     { name: 'Apache Spark', url: 'https://spark.apache.org/' },;
     { name: 'Kubernetes', url: 'https://kubernetes.io/' },;
@@ -253,7 +253,7 @@ export default function AIMarketingAutomationPersonalization() {
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
             </a>
-          </div>
+          </div>;
           <p className="text-slate-400 mt-6">;
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;

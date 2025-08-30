@@ -67,7 +67,7 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
         'OAuth 2.0', 'JWT', 'SAML', 'LDAP', 'MFA',
         'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
       ],
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500';
     };
   ];
 =======
@@ -109,7 +109,7 @@ const technologyCategories = [
     category: "Cloud & DevOps",
     technologies: [
       { name: "AWS", icon: "☁️", proficiency: 90 },
-      { name: "Azure", icon: "🔷", proficiency: 85 },
+      { name: "Azure", icon: "🔷", proficiency: 85 },;
       { name: "Google Cloud", icon: "🔵", proficiency: 80 },;
       { name: "Docker", icon: "🐳", proficiency: 90 },;
       { name: "Kubernetes", icon: "⚓", proficiency: 85 };
@@ -119,7 +119,7 @@ const technologyCategories = [
 ];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-const emergingTech = [
+const emergingTech = [;
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },;
   { name: "Blockchain", icon: "🔗", status: "Production" },;
   { name: "Edge Computing", icon: "🌐", status: "Development" },;
@@ -142,10 +142,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -165,7 +167,7 @@ export function TechnologyStackSection() {
 
         {/* Technology Categories */}
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
           {techCategories.map((category, index)  => {;
             const IconComponent = category.icon;
             return (
@@ -174,14 +176,17 @@ export function TechnologyStackSection() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
               >
@@ -206,10 +211,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -220,6 +227,7 @@ export function TechnologyStackSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -264,6 +272,7 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
                         />
                       </div>
@@ -290,10 +299,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -309,13 +320,14 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
           </h3>
 <<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">;
             {emergingTech.map((tech, index)  => {;
               const IconComponent = tech.icon;
               return (
@@ -342,10 +354,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -356,6 +370,7 @@ export function TechnologyStackSection() {
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -382,10 +397,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -396,6 +413,7 @@ export function TechnologyStackSection() {
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -446,10 +464,12 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -465,6 +485,7 @@ export function TechnologyStackSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -473,7 +494,7 @@ export function TechnologyStackSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -488,4 +509,5 @@ export default TechnologyStackSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default TechnologyStackSection;
 export default TechnologyStackSection;

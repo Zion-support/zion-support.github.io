@@ -37,6 +37,7 @@ export function ChatAssistantTrigger() {
   <<<<<<< HEAD
                 role: 'Virtual Assistant'
             
+
 }} onSendMessage={handleSendMessage}/>)}
     </>)}
 =======

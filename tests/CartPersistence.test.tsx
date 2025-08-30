@@ -11,14 +11,16 @@ vi.mock('next/router', () => ({
 }));
 <<<<<<< HEAD
 const item = {
-  id: '1', name: 'Test Item', price: 10,
+  id: '1', name: 'Test Item', price: 10,;
   quantity: 1 ;
+
 };
 function renderCart(user: ) {
   return render(
     <AuthContext.Provider value = {
   { user,
   isLoading: false 
+
 } as }>
 =======
 const item = {
@@ -27,7 +29,9 @@ const item = {
   ;
   ;
   ;
+  ;
   quantity: 1 ;
+
 
 
 
@@ -44,11 +48,12 @@ function renderCart(user: any) {
 
 
 
+
 } as any}>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
-          <Routes>
+          <Routes>;
             <Route path="/cart" element={<CartPage />} />;
             <Route path="/login" element={<div>Login Page</div>} />;
           </Routes>;
@@ -71,7 +76,7 @@ describe('cart persistence', () => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
-            <Routes>
+            <Routes>;
               <Route path="/cart" element={<CartPage />} />;
               <Route path="/login" element={<div>Login Page</div>} />;
             </Routes>;

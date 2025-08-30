@@ -75,9 +75,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -97,6 +99,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -105,9 +108,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -125,6 +130,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -133,9 +139,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -171,6 +179,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -179,9 +188,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -227,9 +238,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -253,6 +266,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -261,9 +275,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -287,6 +303,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -295,9 +312,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -337,6 +356,7 @@ const DigitalTransformation = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -345,9 +365,11 @@ const DigitalTransformation = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 

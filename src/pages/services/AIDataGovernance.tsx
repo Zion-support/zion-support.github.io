@@ -74,7 +74,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       title: "Automated Compliance Reporting",
       description: "Generate regulatory reports automatically with AI-powered accuracy and completeness",
       color: "from-indigo-500 to-purple-500"
-    },
+    },;
     {;
       icon: Users,;
       title: "Data Lineage Tracking",;
@@ -131,7 +131,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
-        "Custom development",
+        "Custom development",;
         "SLA guarantees",;
         "On-premise option";
       ],;
@@ -158,7 +158,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       title: "40% Cost Reduction",
       description: "Eliminate manual data governance processes and reduce risks",
       metric: "40%"
-    },
+    },;
     {;
       icon: Clock,;
       title: "Real-time Monitoring",;
@@ -197,7 +197,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       description: "Information security management system",
       icon: Lock,
       color: "from-indigo-500 to-purple-500"
-    },
+    },;
     {;
       name: "SOC 2",;
       description: "Service Organization Control 2 compliance",;
@@ -228,7 +228,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
       icon: ShieldCheck,
       color: "from-purple-500 to-pink-500"
     },
-    {
+    {;
       industry: "Technology",;
       title: "Intellectual Property",;
       description: "Protect trade secrets and proprietary data with advanced classification",;
@@ -258,10 +258,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -322,6 +324,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -331,10 +334,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -380,6 +385,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -389,10 +395,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -437,6 +445,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -446,10 +455,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -495,6 +506,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -504,10 +516,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -558,6 +572,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -567,10 +582,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -634,10 +651,12 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -663,7 +682,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

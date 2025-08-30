@@ -7,7 +7,7 @@ import React from 'react.ts';
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-      </div>
+      </div>;
     </div>;
   )};
 =======
@@ -202,9 +202,11 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style = {
   { background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05), transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03),;
+  ;
   transparent 60%)' ;
 ;
 ;
+
 
 
 

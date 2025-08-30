@@ -25,8 +25,10 @@ const contactInfo = {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
 
 
 
@@ -73,7 +75,7 @@ const pricingTiers = [
       'Full AI suite',
       '24/7 dedicated support',
       'Custom development',
-      'Enterprise analytics',
+      'Enterprise analytics',;
       'Dedicated account manager',;
       'Custom training programs',;
       'SLA guarantees';
@@ -320,7 +322,7 @@ export default function ComprehensivePricing(...args[]):  {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div>;
           ;
           {filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -330,7 +332,7 @@ export default function ComprehensivePricing(...args[]):  {
                   setSelectedCategory('all');
 <<<<<<< HEAD
                   setSelectedPriceRange('all')}}
-                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
+                className = "mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark";
 =======;
                   setSelectedPriceRange('all');
                 }}
@@ -416,7 +418,7 @@ export default function ComprehensivePricing(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

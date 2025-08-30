@@ -19,7 +19,9 @@ export function useToast(...args[]):  {
   ;
   ;
   ;
+  ;
   duration ;
+
 
 
 
@@ -31,7 +33,7 @@ export function useToast(...args[]):  {
     
     if (duration > 0) {
       setTimeout(() => {
-        setToasts(prev = > prev.filter(toast => toast.id !== id))}, duration)}
+        setToasts(prev = > prev.filter(toast => toast.id !== id))}, duration)};
     ;
     return id}, []);
 
@@ -60,7 +62,7 @@ export function useToast(...args[]):  {
 
 // Export a default toast function for backward compatibility
 <<<<<<< HEAD
-export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
+export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
   // In a real implementation, this would dispatch to a global toast system;
   console.log('Toast:', { title, description, variant, duration })};
 =======

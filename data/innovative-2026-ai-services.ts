@@ -303,7 +303,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
 export const getPopularAIServices = () => {;
   return innovative2026AIServices.filter(service => service.popular)};
 export const getAIServicesByCategory = (category: string) => {
-  return innovative2026AIServices.filter(service => 
+  return innovative2026AIServices.filter(service => ;
     service.category.toLowerCase().includes(category.toLowerCase());
   )};
 export const getPopularAIServices = () => {;

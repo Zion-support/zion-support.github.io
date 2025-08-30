@@ -36,7 +36,7 @@ import {
   ChevronUp
 } from 'lucide-react';
 
-const Cookies = () => {
+const Cookies = () => {;
   const [expandedSections, setExpandedSections] = useState({;
     essential: true,;
     functional: false,;
@@ -116,7 +116,7 @@ const Cookies = () => {
       icon: Heart,
       color: 'from-indigo-500 to-purple-500',
       examples: [
-        'Content preferences',
+        'Content preferences',;
         'Notification settings',;
         'Accessibility options',;
         'Theme selection';
@@ -168,7 +168,7 @@ const Cookies = () => {
       category: 'Marketing',
       provider: 'Facebook'
     },
-    {
+    {;
       name: 'preferences',;
       purpose: 'Stores your website preferences and settings',;
       duration: '1 year',;
@@ -209,10 +209,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -281,6 +283,7 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -290,10 +293,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
+
 
 
 
@@ -320,6 +325,7 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -329,10 +335,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.2 
+
 
 
 
@@ -359,6 +367,7 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -368,10 +377,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.3 
+
 
 
 
@@ -515,6 +526,7 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -524,10 +536,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -577,6 +591,7 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -586,10 +601,12 @@ const Cookies: React.FC = () => {
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -746,7 +763,7 @@ const Cookies: React.FC = () => {
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Privacy Policy
             </button>
-            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
+            <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">;
               Terms of Service;
             </button>;
           </div>;
@@ -759,6 +776,7 @@ const Cookies: React.FC = () => {
 
 export default Cookies;
 
+export default properly;
 export default properly;
 export default properly;
 export default properly;

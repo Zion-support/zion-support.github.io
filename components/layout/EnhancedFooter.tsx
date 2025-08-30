@@ -30,6 +30,7 @@ const footerNavigation = {
 		items[
 			{ name: 'AI Solutions',
   href: '/services/ai-solutions' 
+
 },
 =======
 		items: [
@@ -74,7 +75,7 @@ const footerNavigation = {
 		title: 'Support & Resources',
 		items[
 			{ name: 'Help Center', href: '/help' },
-			{ name: 'Contact Support', href: '/contact' },
+			{ name: 'Contact Support', href: '/contact' },;
 			{ name: 'Documentation', href: '/docs' },;
 			{ name: 'API Reference', href: '/api' },;
 			{ name: 'Terms of Service', href: '/terms' },;
@@ -99,7 +100,7 @@ const quickLinks = [;
 ];
 
 <<<<<<< HEAD
-const EnhancedFooter: React.FC = (): JSX.Element => {
+const EnhancedFooter: React.FC = (): JSX.Element => {;
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' })};
 =======
@@ -215,7 +216,7 @@ const EnhancedFooter: React.FC = () => {;
 							</Link>
 						))}
 					</div>
-				</div>
+				</div>;
 ;
 				{/* Bottom section */};
 				<div className="pt-8 border-t border-zion-blue-light">;
@@ -284,7 +285,7 @@ const EnhancedFooter: React.FC = () => {;
 				aria-label="Scroll to top"
 			>
 				<ArrowUp className="w-5 h-5" />
-			</button>
+			</button>;
 		</footer>;
 	)};
 =======

@@ -98,7 +98,7 @@ const categories = [
   HelpCircle,
   FileText,
   Video,
-  Truck,
+  Truck,;
   Briefcase;
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -150,7 +150,7 @@ const MICRO_SAAS_SERVICES = [
     price: 19,
     rating: 4.9,
     reviewCount: 234,
-    aiScore: 98,
+    aiScore: 98,;
     featured: true,;
     createdAt: '2024-01-10',;
     href: '/services/website-analytics',;
@@ -187,7 +187,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricing)}
+      filtered = filtered.filter(service => service.pricingModel === selectedPricing)};
     if (searchQuery.trim()) {;
       const query = searchQuery.toLowerCase();
 <<<<<<< HEAD
@@ -196,7 +196,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query)) ||
         service.subcategory?.toLowerCase().includes(query)
-      )}
+      )};
 =======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(query) ||;
@@ -230,10 +230,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -314,14 +316,17 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               initial = {
   { opacity: 0,
   height: 0 
+
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 }}
               className="space-y-2"
             >
@@ -356,7 +361,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           asChild 
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"
         >
-          <Link to={service.href}>
+          <Link to={service.href}>;
             Learn More;
             <ArrowRight className="ml-2 w-4 h-4" />;
           </Link>;
@@ -379,10 +384,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -406,6 +413,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -415,10 +423,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -566,7 +576,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
           <div className="flex flex-wrap gap-4">
             {pricingModels.map((pricing) => (
-              <Button
+              <Button;
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPricing('all');
@@ -586,7 +596,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         }`}>
           {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
-          ))}
+          ))};
         </div>;
         {filteredServices.length === 0 && (;
           <div className="text-center py-16">;
@@ -631,7 +641,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </Button>;
           </div>;

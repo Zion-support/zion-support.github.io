@@ -49,6 +49,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
+
 }_${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
@@ -182,9 +183,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -214,6 +217,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
@@ -222,9 +226,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
+
 }} exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
 
 
 
@@ -265,9 +271,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 

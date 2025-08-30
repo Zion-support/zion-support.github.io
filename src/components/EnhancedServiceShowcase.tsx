@@ -146,7 +146,7 @@ const services: Service[] = [
 const categories = [
   'All Services',
   'AI & Machine Learning',
-  'Emerging Tech',
+  'Emerging Tech',;
   'Cybersecurity',;
   'Cloud & DevOps',;
   'Blockchain & Web3',;
@@ -198,7 +198,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
           i < Math.floor(rating) 
             ? 'text-yellow-400 fill-current' 
             : 'text-gray-400'
-        }`}
+        }`};
       />;
     ))};
 =======
@@ -224,10 +224,12 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,6 +260,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -267,10 +270,12 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -306,6 +311,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
@@ -321,10 +327,12 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -339,6 +347,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { 
@@ -347,6 +356,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                   type: "spring",
   stiffness: 100
                 
+
 
 
 
@@ -435,6 +445,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -444,10 +455,12 @@ export const EnhancedServiceShowcase: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -483,7 +496,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

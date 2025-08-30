@@ -21,6 +21,7 @@ export default function PricingGuide() {
             'Emerging Tech': <Globe className="w-6 h-6"/>,
   'Managed Services': <Lock className="w-6 h-6"/>
         
+
 };
         return icons[category] || <Star className="w-6 h-6"/>};
     const formatPrice = (price) => {
@@ -31,6 +32,7 @@ export default function PricingGuide() {
         const comparisons = {
   'AI Development': { avg: price * 1.3,
   savings: 23 
+
 },
             'Cloud Services': { avg: price * 1.25, savings: 20 },
             'DevOps': { avg: price * 1.35, savings: 26 },

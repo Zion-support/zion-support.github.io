@@ -22,10 +22,12 @@ export function HeroSection() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -60,6 +62,7 @@ export function HeroSection() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -69,10 +72,12 @@ export function HeroSection() {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -105,6 +110,7 @@ export function HeroSection() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -114,10 +120,12 @@ export function HeroSection() {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -157,6 +165,7 @@ export function HeroSection() {
 
 
 
+
 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
@@ -165,6 +174,7 @@ export function HeroSection() {
             animate = {
   { y: [0, 12,
   0] 
+
 
 
 
@@ -179,6 +189,7 @@ export function HeroSection() {
 
 
 
+;
 }};
             className="w-1 h-3 bg-gray-400 rounded-full mt-2";
           ></motion.div>;

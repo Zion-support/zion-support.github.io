@@ -392,7 +392,7 @@ export default function UltimateServicesShowcase2025() {
         </div>
 
         {/* No Results Message */}
-        {filteredServices.length === 0 && (
+        {filteredServices.length === 0 && (;
           <div className="text-center py-16">;
             <div className="text-gray-400 text-xl mb-4">;
               No services found matching your criteria;
@@ -498,7 +498,7 @@ export default function UltimateServicesShowcase2025() {
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
-                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>
+                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</Link>;
               </div>;
             </div>;
           </div>;

@@ -40,3 +40,4 @@ export default async function handler(...args[]):  {
 export {}; // Keep it as a module
 
 export default handler;
+export default handler;

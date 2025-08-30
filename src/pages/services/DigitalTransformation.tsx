@@ -141,7 +141,7 @@ export default function DigitalTransformation(...args: []):  {
       description: "Leverage data insights to drive informed business decisions",
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
-    }
+    };
 =======;
     {;
       icon: Search,;
@@ -150,7 +150,7 @@ export default function DigitalTransformation(...args: []):  {
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-  const benefits = [
+  const benefits = [;
     'Increase operational efficiency by 40%',;
     'Reduce costs by 30% through automation',;
     'Improve customer experience and satisfaction',;
@@ -173,7 +173,7 @@ export default function DigitalTransformation(...args: []):  {
     {
       icon: Cloud,
       title: 'Cloud Migration',
-      description: 'Migrate legacy systems to modern cloud platforms'
+      description: 'Migrate legacy systems to modern cloud platforms';
     },;
     {;
       icon: Data,;
@@ -193,7 +193,7 @@ export default function DigitalTransformation(...args: []):  {
       description: 'Digital health records and telemedicine solutions'
     },
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services',;
       description: 'Digital banking and fintech innovation';
     },;
     {;
@@ -207,8 +207,9 @@ export default function DigitalTransformation(...args: []):  {
     email: "kleber@ziontechgroup.com",
 <<<<<<< HEAD
     address: "364 E Main St STE 1008,
-  Middletown DE 19709"
+  Middletown DE 19709";
   ;
+
 };
 =======
     address: "364 E Main St STE 1008,;
@@ -223,7 +224,7 @@ export default function DigitalTransformation(...args: []):  {
 };
   const industries = [
     'Healthcare',
-    'Finance',
+    'Finance',;
     'Manufacturing',;
     'Retail',;
     'Education',;
@@ -245,10 +246,12 @@ export default function DigitalTransformation(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -263,10 +266,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -311,10 +316,12 @@ export default function DigitalTransformation(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
 
@@ -330,10 +337,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -361,14 +370,17 @@ export default function DigitalTransformation(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -383,6 +395,7 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -392,10 +405,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -427,10 +442,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -461,6 +478,7 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -470,10 +488,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -516,10 +536,12 @@ export default function DigitalTransformation(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -538,14 +560,17 @@ export default function DigitalTransformation(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
@@ -570,10 +595,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -600,14 +627,17 @@ export default function DigitalTransformation(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
@@ -624,10 +654,12 @@ export default function DigitalTransformation(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
 
@@ -644,6 +676,7 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -653,10 +686,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -682,6 +717,7 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -691,10 +727,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -724,10 +762,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -762,6 +802,7 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -771,10 +812,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -802,10 +845,12 @@ export default function DigitalTransformation(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
@@ -819,10 +864,12 @@ export default function DigitalTransformation(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -864,7 +911,7 @@ export default function DigitalTransformation(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

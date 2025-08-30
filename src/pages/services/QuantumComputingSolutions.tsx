@@ -20,7 +20,7 @@ import { Atom,
 export default function QuantumComputingSolutions() {
   const features = [
     'Quantum algorithm optimization and development',
-    'Quantum machine learning and AI acceleration',
+    'Quantum machine learning and AI acceleration',;
     'Cryptography and security solutions',;
     'Financial modeling and risk analysis',;
     'Drug discovery and molecular simulation',;
@@ -29,7 +29,7 @@ export default function QuantumComputingSolutions() {
     'Quantum error correction and fault tolerance';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Solve complex problems 1000x faster than classical computers',;
     'Breakthrough discoveries in drug development and materials science',;
     'Unbreakable quantum encryption for ultimate security',;
@@ -56,7 +56,7 @@ export default function QuantumComputingSolutions() {
       description: 'Route optimization, inventory management, and demand forecasting',
       icon: Globe,
       useCases: ['Traveling salesman problem', 'Vehicle routing', 'Warehouse optimization', 'Supply chain resilience']
-    },
+    },;
     {;
       name: 'Cybersecurity',;
       description: 'Quantum-resistant cryptography and secure communications',;
@@ -80,7 +80,7 @@ export default function QuantumComputingSolutions() {
       features: ['Up to 1000 qubits', 'Custom quantum algorithms', 'Priority support', 'Dedicated quantum engineers', 'Custom integrations'],
       recommended: true
     },
-    {
+    {;
       plan: 'Government',;
       price: '$24,999',;
       period: '/month',;
@@ -91,7 +91,7 @@ export default function QuantumComputingSolutions() {
 
   const quantumTechnologies = [
     { name: 'IBM Q', url: 'https://quantum-computing.ibm.com/', category: 'Quantum Hardware' },
-    { name: 'Google Cirq', url: 'https://quantumai.google/cirq', category: 'Quantum Framework' },
+    { name: 'Google Cirq', url: 'https://quantumai.google/cirq', category: 'Quantum Framework' },;
     { name: 'Microsoft Q#', url: 'https://docs.microsoft.com/en-us/azure/quantum/', category: 'Quantum Language' },;
     { name: 'Amazon Braket', url: 'https://aws.amazon.com/braket/', category: 'Quantum Cloud' },;
     { name: 'Rigetti', url: 'https://www.rigetti.com/', category: 'Quantum Processors' },;
@@ -102,7 +102,7 @@ export default function QuantumComputingSolutions() {
 
   const researchAreas = [
     'Quantum machine learning and neural networks',
-    'Quantum optimization algorithms',
+    'Quantum optimization algorithms',;
     'Quantum error correction codes',;
     'Quantum cryptography protocols',;
     'Quantum simulation methods',;
@@ -132,10 +132,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -183,10 +185,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             transition = {
   { duration: 4,
   repeat: Infinity 
+
 
 
 
@@ -204,10 +208,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             transition = {
   { duration: 4, repeat: Infinity,
   delay: 2 
+
 
 
 
@@ -231,10 +237,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -265,10 +273,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -279,6 +289,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -318,10 +329,12 @@ export default function QuantumComputingSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -342,15 +355,18 @@ export default function QuantumComputingSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
               >
                 <div className="flex items-center mb-4">
@@ -386,10 +402,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -420,10 +438,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -434,6 +454,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -464,10 +485,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -498,10 +521,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -512,6 +537,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -545,10 +571,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -579,10 +607,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -593,6 +623,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -623,10 +654,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -661,10 +694,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -675,6 +710,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -736,10 +772,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -773,10 +811,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -787,6 +827,7 @@ export default function QuantumComputingSolutions() {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -814,10 +855,12 @@ export default function QuantumComputingSolutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -848,7 +891,7 @@ export default function QuantumComputingSolutions() {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="mt-6 text-sm text-slate-400">
+            <div className="mt-6 text-sm text-slate-400">;
               Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a>;
             </div>;
           </motion.div>;

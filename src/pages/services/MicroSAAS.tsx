@@ -38,7 +38,7 @@ const MicroSAAS = () => {
       price: "From $18,000/month",
       features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
     },
-    {
+    {;
       icon: Globe,;
       title: "Cloud Deployment",;
       description: "Scalable cloud infrastructure and deployment solutions",;
@@ -47,7 +47,7 @@ const MicroSAAS = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Lower development costs and faster time to market",;
     "Scalable architecture that grows with your business",;
     "Reduced infrastructure management overhead",;
@@ -68,7 +68,7 @@ const MicroSAAS = () => {
       description: "Node.js, Python, Java with microservices architecture",
       icon: Database,
       features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
-    },
+    },;
     {;
       name: "Cloud",;
       description: "AWS, Azure, GCP with containerization and orchestration",;
@@ -91,7 +91,7 @@ const MicroSAAS = () => {
     {
       title: "Education",
       description: "Learning management systems and educational technology platforms",
-      icon: Users
+      icon: Users;
     },;
     {;
       title: "E-commerce",;
@@ -281,7 +281,7 @@ const MicroSAAS = () => {
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Services;
             </a>;
           </div>;

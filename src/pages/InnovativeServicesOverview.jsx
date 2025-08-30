@@ -46,6 +46,7 @@ const InnovativeServicesOverview = () => {
                 'sustainability'['Energy', 'Climate', 'Sustainability',
   'Green Tech']
             
+
 };
 =======
   'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
@@ -75,6 +76,7 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
@@ -90,9 +92,11 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -175,6 +179,7 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -183,9 +188,11 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -249,6 +256,7 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -257,9 +265,11 @@ const InnovativeServicesOverview = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 

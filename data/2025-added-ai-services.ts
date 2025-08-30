@@ -10,6 +10,7 @@ const contact = {
 
 
 
+
 }
 export const addedAIServices2025: InnovativeAIService[] = [
   {
@@ -82,7 +83,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     realService: true,
     technology['Vector DB', 'Policy engine', 'Eval harness'],
     integrations['BigQuery', 'Snowflake', 'Databricks', 'SIEMs'],
-    useCases['Model launches', 'Vendor AI due diligence', 'Policy tracking'],
+    useCases['Model launches', 'Vendor AI due diligence', 'Policy tracking'],;
 =======;
     category: 'AI Governance',;
     realService: true,;

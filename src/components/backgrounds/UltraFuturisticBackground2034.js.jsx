@@ -18,6 +18,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             holographic['#ff6b6b', '#4ecdc4', '#45b7d1',
   '#96ceb4']
         
+
 };
         const selectedColors = colors[theme];
         // Create particles
@@ -129,5 +130,6 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
             opacity: intensity,
   filter: theme === 'quantum' ? 'blur(0.5px)' : 'none'
         
+
 }}/>)};
 export default UltraFuturisticBackground2034;

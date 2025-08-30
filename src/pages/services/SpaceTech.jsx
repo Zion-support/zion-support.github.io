@@ -116,10 +116,12 @@ export default function SpaceTech() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
           >
@@ -160,10 +162,12 @@ export default function SpaceTech() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -184,14 +188,17 @@ export default function SpaceTech() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
               >
@@ -221,10 +228,12 @@ export default function SpaceTech() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -245,14 +254,17 @@ export default function SpaceTech() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
@@ -274,10 +286,12 @@ export default function SpaceTech() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -298,14 +312,17 @@ export default function SpaceTech() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
               >
@@ -327,10 +344,12 @@ export default function SpaceTech() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
           >

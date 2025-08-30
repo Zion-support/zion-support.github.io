@@ -85,6 +85,7 @@ transition = {};
 
 
 
+
 }}
           animate = {
   { opacity: 1, scale: 1,
@@ -94,10 +95,12 @@ transition = {};
 
 
 
+
 }}
           exit = {
   { opacity: 0, scale: 0,
   y: 20 
+
 
 
 
@@ -116,6 +119,7 @@ transition = {};
 
 
 
+
 }}
           whileTap={{ scale: 0.95 }}
           transition = {
@@ -124,6 +128,7 @@ transition = {};
             stiffness: 400,
   damping: 17
           
+
 
 
 
@@ -141,6 +146,7 @@ transition = {};
 ;
 export default ScrollToTop;
 
+export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;
 export default ScrollToTop;

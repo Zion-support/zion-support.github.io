@@ -67,7 +67,7 @@ export default function AIContentMarketingSuite() {
     {
       icon: Zap,
       title: 'Automated Content Distribution',
-      description: 'Intelligent scheduling and multi-channel distribution that reaches your audience at the optimal time across all platforms.'
+      description: 'Intelligent scheduling and multi-channel distribution that reaches your audience at the optimal time across all platforms.';
     },;
     {;
       icon: Eye,;
@@ -94,7 +94,7 @@ export default function AIContentMarketingSuite() {
       description: 'Create content in text, image, video, and audio formats with AI assistance',
       icon: FileText,
       benefits: ['Text generation', 'Image creation', 'Video editing', 'Audio transcription']
-    },
+    },;
     {;
       title: 'Analytics & Insights',;
       description: 'Comprehensive performance tracking and AI-powered recommendations',;
@@ -121,7 +121,7 @@ export default function AIContentMarketingSuite() {
       description: 'Scale content production, maintain quality across clients, and deliver results faster with AI assistance',
       icon: Users,
       metrics: ['Production Speed', 'Client Satisfaction', 'Content Quality', 'Project Delivery']
-    },
+    },;
     {;
       industry: 'Publishing & Media',;
       description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',;
@@ -144,7 +144,7 @@ export default function AIContentMarketingSuite() {
     {
       icon: Users,
       title: 'Higher Engagement',
-      description: 'Increase audience engagement by 35-50% with personalized, optimized content that resonates.'
+      description: 'Increase audience engagement by 35-50% with personalized, optimized content that resonates.';
     },;
     {;
       icon: DollarSign,;
@@ -194,7 +194,7 @@ export default function AIContentMarketingSuite() {
         'Unlimited content',
         'Custom AI models',
         'White-label solution',
-        'Dedicated support',
+        'Dedicated support',;
         'Custom development',;
         'Advanced analytics';
       ],;
@@ -224,10 +224,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -267,10 +269,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -301,6 +305,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -310,10 +315,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -345,10 +352,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -379,6 +388,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -388,10 +398,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -433,10 +445,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -467,6 +481,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -476,10 +491,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -521,10 +538,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -555,6 +574,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -564,10 +584,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -599,10 +621,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -633,6 +657,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -642,10 +667,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -709,10 +736,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -764,6 +793,7 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -773,10 +803,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -808,10 +840,12 @@ export default function AIContentMarketingSuite() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -871,7 +905,7 @@ export default function AIContentMarketingSuite() {
               <p className="text-slate-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-              </p>
+              </p>;
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>;
             </div>;
           </div>;

@@ -46,7 +46,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     {
       icon: Shield,
       title: 'Secure Operations',
-      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
+      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.';
     };
   ];
 
@@ -69,7 +69,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     {
       title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
-      icon: Users
+      icon: Users;
     };
   ];
 
@@ -78,7 +78,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     'Improve process efficiency by 60%',
     'Eliminate manual errors and delays',
     '24/7 automated operations',
-    'Scalable infrastructure for growth',
+    'Scalable infrastructure for growth',;
     'Real-time monitoring and analytics';
   ];
 
@@ -89,7 +89,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
     'Retail',
     'Logistics',
     'Technology',
-    'Energy',
+    'Energy',;
     'Education';
   ];
 
@@ -110,7 +110,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
       name: 'Dr. Emily Watson',
       role: 'CEO, HealthTech Solutions',
       content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
-      rating: 5
+      rating: 5;
     };
   ];
 
@@ -175,14 +175,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
                 >
@@ -216,14 +219,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
                 >
@@ -257,14 +263,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="flex items-start space-x-3"
                 >
@@ -295,14 +304,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                   whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-400/50 transition-all duration-300"
                 >
@@ -332,14 +344,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
                 >
@@ -436,7 +451,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

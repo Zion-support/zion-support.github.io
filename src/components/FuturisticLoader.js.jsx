@@ -5,12 +5,14 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
         medium: 'w-16 h-16',
   large: 'w-24 h-24'
     
+
 };
     const textSizes = {
   small: 'text-sm',
         medium: 'text-lg',
   large: 'text-xl'
     
+
 };
     const renderLoader = () => {
         switch (variant) {
@@ -28,6 +30,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             <div className="absolute inset-0 rounded-full border border-cyan-500/10 animate-spin" style = {
   { animationDirection: 'reverse',
   animationDuration: '3s' 
+
 }}></div>
           </div>);
             case 'neural':
@@ -100,6 +103,7 @@ export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant
             <div className="absolute inset-0 rounded-full border-4 border-blue-500/20 border-t-blue-500 animate-spin" style = {
   { animationDirection: 'reverse',
   animationDuration: '2s' 
+
 }}></div>
           </div>)}
     };

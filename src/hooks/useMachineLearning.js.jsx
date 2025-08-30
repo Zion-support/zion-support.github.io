@@ -88,7 +88,6 @@ export const useMachineLearning = (_initialConfig) => {
         const averageResponseTime = predictions.filter(p => p.processingTime).length > 0
             ? predictions.reduce((sum, p) => sum + (p.processingTime || 0), 0) / predictions.filter(p => p.processingTime).length
             : 0;
-        const trainingJobsRunning = trainingJobs.filter(j => j.status === 'running').length;
         const trainingJobsFailed = trainingJobs.filter(j => j.status === 'failed').length;
         setMetrics({
             totalModels,
@@ -112,6 +111,7 @@ export const useMachineLearning = (_initialConfig) => {
         const newModel = {
   ...model,
   id: `model-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
             version: '1.0.0',
             accuracy: 0,
@@ -154,14 +154,12 @@ export const useMachineLearning = (_initialConfig) => {
         const interval = setInterval(() => {
             setTrainingJobs(prev => prev.map(job => {
                 if (job.id === trainingJob.id && job.status === 'running') {
-                    const newLoss = job.metrics.loss.length > 0 ? job.metrics.loss[job.metrics.loss.length - 1] * 0.95 : 1.0;
                     const newAccuracy = job.metrics.accuracy.length > 0 ? Math.min(job.metrics.accuracy[job.metrics.accuracy.length - 1] + 0.01, 0.99) : 0.5;
                     if (newProgress >= 100) {
                         // Training completed
                         clearInterval(interval);
                         trainingIntervalsRef.current.delete(trainingJob.id);
                         // Update model with new metrics
-                        const finalPrecision = finalAccuracy * 0.95;
                         const finalF1Score = (2 * finalPrecision * finalRecall) / (finalPrecision + finalRecall);
                         updateModelMetrics(modelId, {
                             accuracy: finalAccuracy,
@@ -246,6 +244,7 @@ export const useMachineLearning = (_initialConfig) => {
                     confidence,
   processingTime: Date.now() - startTime
                 
+
 };
                 setPredictions(prev => prev.map(p => p.id === predictionRequest.id ? completedRequest : p));
                 predictionTimeoutsRef.current.delete(predictionRequest.id);
@@ -302,6 +301,7 @@ export const useMachineLearning = (_initialConfig) => {
             exportTimestamp: new Date().toISOString(),
   version: '1.0'
         
+
 };
         trackEvent('ml', 'model', 'exported', null, { modelId });
         return JSON.stringify(exportData, null, 2)}, [models, trackEvent]);
@@ -311,6 +311,7 @@ export const useMachineLearning = (_initialConfig) => {
                 const importedModel = {
   ...importData.model,
   id: `imported-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
                     status: 'ready'
                 };

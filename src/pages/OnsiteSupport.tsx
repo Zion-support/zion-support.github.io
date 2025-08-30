@@ -89,7 +89,7 @@ export default function OnsiteSupport(...args[]):  {
       description: 'Staff training and strategic consultation',
       icon: Users,
       color: 'from-purple-500 to-pink-500',
-      services: [
+      services: [;
         'User training programs',;
         'Best practices guidance',;
         'Technology consulting',;
@@ -126,7 +126,7 @@ export default function OnsiteSupport(...args[]):  {
       icon: Building,
       color: 'from-purple-500 to-pink-500',
       areas: [
-        'Major metropolitan areas',
+        'Major metropolitan areas',;
         'Enterprise client locations',;
         'Strategic partnerships',;
         'Emergency response';
@@ -167,7 +167,7 @@ export default function OnsiteSupport(...args[]):  {
       color: 'from-purple-500 to-pink-500',
       features: [
         '1-hour response time',
-        '24/7 availability',
+        '24/7 availability',;
         'Dedicated support team',;
         'Custom maintenance plans',;
         'Strategic consultation';
@@ -204,7 +204,7 @@ export default function OnsiteSupport(...args[]):  {
       icon: CheckCircle,
 <<<<<<< HEAD
       title: 'Preventive Maintenance',
-      description: 'Regular checkups to prevent issues before they occur'
+      description: 'Regular checkups to prevent issues before they occur';
     };
   ];
 
@@ -216,7 +216,7 @@ export default function OnsiteSupport(...args[]):  {
 =======
       color: 'from-orange-500 to-red-500'
     },
-    {
+    {;
       step: '5',;
       title: 'Follow-up',;
       description: 'Post-resolution support and documentation',;
@@ -233,7 +233,7 @@ export default function OnsiteSupport(...args[]):  {
       phone: '+1 302 464 0950',
       address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    {
+    {;
       title: 'Emergency Support',;
       description: '24/7 emergency response hotline',;
       email: 'emergency@ziontechgroup.com',;
@@ -262,10 +262,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -312,10 +314,12 @@ export default function OnsiteSupport(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -331,6 +335,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -340,10 +345,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -375,6 +382,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -384,10 +392,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -414,20 +424,24 @@ export default function OnsiteSupport(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
 =======
                 initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -442,10 +456,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
 
 
 
@@ -482,10 +498,12 @@ export default function OnsiteSupport(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -501,6 +519,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -510,10 +529,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -537,6 +558,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -546,10 +568,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -599,6 +623,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -608,10 +633,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
 
 
 
@@ -638,14 +665,17 @@ export default function OnsiteSupport(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center"
 =======
@@ -653,6 +683,7 @@ export default function OnsiteSupport(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -667,10 +698,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
 
 
 
@@ -699,10 +732,12 @@ export default function OnsiteSupport(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -718,6 +753,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -727,10 +763,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
 
 
 
@@ -754,6 +792,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -763,10 +802,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
 
 
 
@@ -797,6 +838,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -806,10 +848,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1.1 
+
 
 
 
@@ -835,14 +879,17 @@ export default function OnsiteSupport(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
               >
@@ -870,10 +917,12 @@ export default function OnsiteSupport(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
           >
@@ -915,6 +964,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -924,10 +974,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.2 
+
 
 
 
@@ -951,6 +1003,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -960,10 +1013,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.3 + index * 0.1 
+
 
 
 
@@ -1019,6 +1074,7 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -1028,10 +1084,12 @@ export default function OnsiteSupport(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.4 
+
 
 
 
@@ -1047,7 +1105,7 @@ export default function OnsiteSupport(...args[]):  {
             Don't let technical issues slow down your business. Contact us today to schedule 
             onsite support or discuss your technical needs.
           </p>
-          <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">
+          <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 mx-auto">;
             <span>Schedule Onsite Support</span>;
             <ArrowRight className="w-4 h-4" />;
           </button>;

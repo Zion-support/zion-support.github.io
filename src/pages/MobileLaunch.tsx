@@ -60,7 +60,7 @@ const MobileLaunch: React.FC = () => {
       description: "Enterprise-grade security with end-to-end encryption and privacy controls",
       icon: Shield,
       color: "from-green-400 to-emerald-500"
-    },
+    },;
     {;
       title: "Smart Notifications",;
       description: "Intelligent alerts that adapt to your preferences and schedule",;
@@ -87,7 +87,7 @@ const MobileLaunch: React.FC = () => {
       description: "Comprehensive data visualization and business intelligence tools",
       icon: BarChart3,
       features: ["Interactive charts", "Custom reports", "Data export"]
-    },
+    },;
     {;
       name: "Services",;
       description: "Access to all Zion Tech Group services and solutions",;
@@ -111,7 +111,7 @@ const MobileLaunch: React.FC = () => {
       link: "#",
       featured: true
     },
-    {
+    {;
       platform: "Web App",;
       icon: "🌐",;
       description: "Access via browser",;
@@ -150,10 +150,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -208,6 +210,7 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -217,10 +220,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -298,10 +303,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -332,6 +339,7 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -341,10 +349,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -377,10 +387,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -410,6 +422,7 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -419,10 +432,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -464,10 +479,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -497,6 +514,7 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -506,10 +524,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -556,10 +576,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -589,6 +611,7 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -598,10 +621,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -630,10 +655,12 @@ const MobileLaunch: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -663,7 +690,7 @@ const MobileLaunch: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
                 Get Support
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" />;
               </Link>;
             </div>;
           </motion.div>;

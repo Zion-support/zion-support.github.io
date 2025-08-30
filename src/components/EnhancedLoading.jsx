@@ -8,22 +8,8 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
   <<<<<<< HEAD
         xl: 'w-16 h-16'
     
+
 };
-    const renderDots = () => (<div className="flex space-x-1">
-      {[0, 1, 2].map((i) => (<motion.div key={i} className={`${sizeClasses[size]} bg-blue-400 rounded-full`} animate = {
-  {
-                scale[1, 1.2, 1],
-                opacity[0.5, 1,
-  0.5]
-            
-}} transition = {
-  {
-                duration: 1.4,
-                repeat: Infinity,
-  delay: i * 0.2
-            
-}}/>))}
-    </div>);
     const renderBars = () => (<div className="flex space-x-1">
       {[0, 1, 2, 3].map((i) => (<motion.div key={i} className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-400 rounded-full`} animate = {
   {
@@ -31,12 +17,14 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
                 opacity[0.5, 1,
   0.5]
             
+
 }} transition = {
   {
                 duration: 1.2,
                 repeat: Infinity,
   delay: i * 0.1
             
+
 }}/>))}
     </div>);
 =======

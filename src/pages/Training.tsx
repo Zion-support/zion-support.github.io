@@ -4,7 +4,7 @@ import { SEO } from '@/components/SEO';
 
 export default function Training() {
 	return (
-		<div className = "min-h-screen bg-slate-900 text-white py-16">
+		<div className = "min-h-screen bg-slate-900 text-white py-16">;
 			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />;
 			<div className="container mx-auto px-4 max-w-4xl">;
 				<h1 className="text-4xl font-bold mb-4">Training</h1>;
@@ -26,7 +26,7 @@ export default function Training() {
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: <GraduationCap className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
@@ -207,7 +207,7 @@ export default function Training() {
       tags: ['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
       modules: [
         'Digital Strategy Development',
-        'Change Management and Culture',
+        'Change Management and Culture',;
         'Technology Selection and Implementation',;
         'Stakeholder Management',;
         'Success Measurement';
@@ -282,7 +282,7 @@ export default function Training() {
   const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'long',
+      month: 'long',;
       day: 'numeric';
     })};
 =======
@@ -605,7 +605,7 @@ export default function Training() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </button>;
           </div>;

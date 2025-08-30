@@ -118,6 +118,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         const newEvent = {
   ...event,
   id: `event-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
             timestamp: new Date()
         };
@@ -143,6 +144,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         const newRule = {
   ...rule,
   id: `rule-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
             lastChecked: new Date(),
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours
@@ -203,6 +205,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 status: rule.status,
   violations: rule.violations.length
             
+
 })),
             recommendations[]
         };
@@ -232,6 +235,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 details: event.details,
   status: event.status
             
+
 }))
         };
         trackEvent('security', 'audit', 'exported');

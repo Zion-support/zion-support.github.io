@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityOrchestration() {
   const features = [
     'AI-powered security orchestration optimization',
-    'Intelligent security workflow management and execution',
+    'Intelligent security workflow management and execution',;
     'Automated security process coordination and automation',;
     'Predictive analytics for orchestration needs',;
     'Smart orchestration framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityOrchestration() {
     { 
       name: 'Business', 
       price: '$1,299/mo', 
-      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] 
+      details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityOrchestration() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security orchestration optimization',;
     'Security workflow management and execution',;
     'Security process coordination and automation',;
@@ -39,7 +39,7 @@ export default function AISecurityOrchestration() {
     'Orchestration scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security orchestration performance by 50-80%',;
     'Reduce orchestration completion time by 40-70%',;
     'Cut security orchestration costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityOrchestration() {
     'Scale security orchestration operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityOrchestration() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

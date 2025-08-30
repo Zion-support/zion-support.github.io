@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIVirtualReality() {
   const features = [
     'AI-powered VR optimization',
-    'Intelligent VR content management',
+    'Intelligent VR content management',;
     'Automated VR monitoring and alerting',;
     'Predictive analytics for VR scaling',;
     'Smart VR security and compliance',;
@@ -21,7 +21,7 @@ export default function AIVirtualReality() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIVirtualReality() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'VR optimization',;
     'VR content management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIVirtualReality() {
     'VR scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve VR performance by 50-80%',;
     'Reduce VR development time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIVirtualReality() {
     'Scale VR operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIVirtualReality() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

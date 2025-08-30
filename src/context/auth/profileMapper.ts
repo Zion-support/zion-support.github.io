@@ -38,7 +38,7 @@ export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): 
     avatar: profile.avatar_url || supabaseUser.user_metadata?.avatar_url,
     role: profile.role,
     isEmailVerified: profile.is_email_verified || false,
-    createdAt: profile.created_at || supabaseUser.created_at,
+    createdAt: profile.created_at || supabaseUser.created_at,;
     updatedAt: profile.updated_at || supabaseUser.updated_at;
   }};
 =======

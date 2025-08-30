@@ -121,7 +121,7 @@ export default function Compliance(...args[]):  {
 =======
       validity: 'Ongoing compliance',
       scope: 'Healthcare data protection',
-      benefits: [
+      benefits: [;
         'Healthcare industry access',;
         'Patient data protection',;
         'Regulatory compliance',;
@@ -186,7 +186,7 @@ export default function Compliance(...args[]):  {
       description: 'Secure software development and application security',
       icon: Code,
       color: 'from-orange-500 to-red-500',
-      standards: [
+      standards: [;
         'OWASP Top 10',;
         'Secure SDLC',;
         'Code Review Standards',;
@@ -252,7 +252,7 @@ export default function Compliance(...args[]):  {
         'Certification achievement'
       ],
       duration: '6-8 weeks',
-      deliverables['Compliance certificate', 'Audit report', 'Ongoing maintenance plan']
+      deliverables['Compliance certificate', 'Audit report', 'Ongoing maintenance plan'];
     };
   ];
 
@@ -299,7 +299,7 @@ export default function Compliance(...args[]):  {
       icon: AlertTriangle,
       color: 'from-orange-500 to-red-500',
       frequency: 'As needed',
-      process: [
+      process: [;
         'Incident detection and reporting',;
         'Compliance impact assessment',;
         'Regulatory notification procedures',;
@@ -357,7 +357,7 @@ export default function Compliance(...args[]):  {
         'Evidence collection',
         'Finding management',
         'Remediation tracking'
-      ]
+      ];
     };
   ];
 
@@ -380,7 +380,7 @@ export default function Compliance(...args[]):  {
       phone: '+1 302 464 0950',
       responseTime: '24-48 hours'
     },
-    {
+    {;
       title: 'Audit Requests',;
       description: 'Request compliance audits or assessments',;
       email: 'audit@ziontechgroup.com',;
@@ -432,10 +432,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -470,6 +472,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -479,10 +482,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -514,6 +519,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -523,10 +529,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -550,6 +558,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -559,10 +568,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
 
 
 
@@ -588,7 +599,7 @@ export default function Compliance(...args[]):  {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">100%</div>
                   <div className="text-slate-400">Audit Success Rate</div>
-                </div>
+                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-cyan-400">&lt; 24h</div>
                   <div className = "text-slate-400">Remediation Time</div>
@@ -630,14 +641,17 @@ export default function Compliance(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -711,14 +725,17 @@ export default function Compliance(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -768,14 +785,17 @@ export default function Compliance(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
                 >
@@ -830,14 +850,17 @@ export default function Compliance(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
@@ -877,14 +900,17 @@ export default function Compliance(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -950,6 +976,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -959,10 +986,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -986,6 +1015,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -995,10 +1025,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -1046,6 +1078,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -1055,10 +1088,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
 
 
 
@@ -1082,6 +1117,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -1091,10 +1127,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
 
 
 
@@ -1144,6 +1182,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -1153,10 +1192,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
 
 
 
@@ -1180,6 +1221,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -1189,10 +1231,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
 
 
 
@@ -1226,6 +1270,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -1235,10 +1280,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1.1 
+
 
 
 
@@ -1262,6 +1309,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -1271,10 +1319,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 1.2 + index * 0.1 
+
 
 
 
@@ -1324,10 +1374,12 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1342,6 +1394,7 @@ export default function Compliance(...args[]):  {
 
 
 
+
 }}
           className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8 text-center"
         >
@@ -1349,7 +1402,7 @@ export default function Compliance(...args[]):  {
             Continuous Compliance Excellence
           </h2>
           <p className="text-slate-300 max-w-4xl mx-auto">
-            Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes, 
+            Compliance is an ongoing journey, not a destination. We continuously monitor regulatory changes, ;
             update our processes, and enhance our compliance posture to ensure we always meet and exceed ;
             industry standards and regulatory requirements.;
           </p>;

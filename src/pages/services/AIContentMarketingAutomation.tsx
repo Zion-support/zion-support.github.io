@@ -34,7 +34,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
     "Intelligent audience targeting and segmentation",
     "Real-time performance analytics and optimization",
     "SEO-optimized content creation",
-    "Social media scheduling and automation",
+    "Social media scheduling and automation",;
     "Email marketing campaign automation",;
     "Content calendar management",;
     "Brand voice consistency maintenance",;
@@ -53,7 +53,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
   const useCases = [
     "E-commerce content marketing",
-    "B2B lead generation campaigns",
+    "B2B lead generation campaigns",;
     "Social media management",;
     "Email marketing automation",;
     "Blog and article creation",;
@@ -104,7 +104,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
         "Custom AI model training",
         "Advanced audience targeting",
         "White-label solutions",
-        "API access",
+        "API access",;
         "Dedicated account manager",;
         "24/7 phone support";
       ],;
@@ -132,10 +132,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -190,10 +192,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -223,6 +227,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -232,10 +237,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -266,10 +273,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -299,6 +308,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -308,10 +318,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -342,10 +354,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -375,6 +389,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -384,10 +399,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -455,10 +472,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -488,6 +507,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -497,10 +517,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -531,10 +553,12 @@ export default function AIContentMarketingAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -587,7 +611,7 @@ export default function AIContentMarketingAutomation(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

@@ -41,7 +41,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       title: 'Compliance Ready',
       description: 'Built-in regulatory compliance and governance frameworks',
       color: 'from-purple-500 to-pink-500'
-    },
+    },;
     {;
       icon: TrendingUp,;
       title: 'Cost Efficiency',;
@@ -75,7 +75,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       description: 'Decentralized finance applications and protocols',
       price: 'From $20,000',
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
-    }
+    };
 =======;
       title: 'DeFi Solutions',;
       description: 'Decentralized finance applications and protocols',;
@@ -85,7 +85,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const useCases = [
+  const useCases = [;
     { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },;
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;
@@ -114,10 +114,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -174,10 +176,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -208,6 +212,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -217,10 +222,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -252,10 +259,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -285,6 +294,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -294,10 +304,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -342,10 +354,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -376,6 +390,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -385,10 +400,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -420,10 +437,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -460,7 +479,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

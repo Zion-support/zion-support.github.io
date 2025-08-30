@@ -52,8 +52,6 @@ const EnhancedHero = () => {
         setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
     const goToSlide = (index) => {
         setCurrentSlide(index)};
-    const toggleMute = () => {
-        setIsMuted(!isMuted)};
     const toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
@@ -72,23 +70,29 @@ const EnhancedHero = () => {
             <motion.div key={currentSlide} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} transition={{ duration: 0.5 }} className="space-y-6">
               {/* Icon */}
               <motion.div initial = {
   { scale: 0,
   rotate: -180 
+
 }} animate = {
   { scale: 1,
   rotate: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }} className="text-8xl mb-6">
                 {heroSlides[currentSlide].icon}
               </motion.div>
@@ -97,12 +101,15 @@ const EnhancedHero = () => {
               <motion.h1 initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }} className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
                 {heroSlides[currentSlide].title}
               </motion.h1>
@@ -111,12 +118,15 @@ const EnhancedHero = () => {
               <motion.h2 initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }} className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-300 leading-tight">
                 {heroSlides[currentSlide].subtitle}
               </motion.h2>
@@ -125,12 +135,15 @@ const EnhancedHero = () => {
               <motion.p initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }} className="text-lg sm:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
                 {heroSlides[currentSlide].description}
               </motion.p>
@@ -139,21 +152,26 @@ const EnhancedHero = () => {
               <motion.div initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
 }} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
                   <motion.div animate = {
   { x[0, 5,
   0] 
+
 }} transition = {
   { duration: 1.5,
   repeat: Infinity 
+
 }} className="ml-2">
                     →
                   </motion.div>

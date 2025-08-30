@@ -6,17 +6,20 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
         md: "w-8 h-8",
   lg: "w-12 h-12"
     
+
 };
     const textSizes = {
   sm: "text-sm",
         md: "text-base",
   lg: "text-lg"
     
+
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
 }}>
         <Loader2 className={`${sizeClasses[size]} text-zion-cyan`}/>
       </motion.div>
@@ -33,12 +36,14 @@ export function LoadingFallback({ message = "Loading...", size = "md", className
                 opacity[0.5, 1,
   0.5]
             
+
 }} transition = {
   {
                 duration: 1.4,
                 repeat: Infinity,
   delay: index * 0.2
             
+
 }}/>))}
       </motion.div>
     </div>)}

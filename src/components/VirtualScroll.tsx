@@ -77,6 +77,7 @@ export function VirtualScroll<T>({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -86,10 +87,12 @@ export function VirtualScroll<T>({
 
 
 
+
 }}
           exit = {
   { opacity: 0,
   scale: 0.8 
+
 
 
 
@@ -121,6 +124,7 @@ export function VirtualScroll<T>({
 
 
 
+
 }}>
           <div style={{ transform }}>
             <AnimatePresence>
@@ -135,6 +139,7 @@ export function VirtualScroll<T>({
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -144,10 +149,12 @@ export function VirtualScroll<T>({
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -163,7 +170,7 @@ export function VirtualScroll<T>({
             </AnimatePresence>
           </div>
         </div>
-      </div>
+      </div>;
 ;
       {/* Scroll position indicator */};
       <div className="absolute top-2 right-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">;
@@ -216,7 +223,7 @@ export function ServiceVirtualScroll({
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
               {service.description}
             </p>
-            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">
+            <span className="inline-block bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded-full">;
               {service.category};
             </span>;
           </div>;
@@ -227,7 +234,7 @@ export function ServiceVirtualScroll({
 
   return (
     <VirtualScroll
-      items = {services}
+      items = {services};
       height={height};
       itemHeight={120};
       renderItem={renderServiceCard};

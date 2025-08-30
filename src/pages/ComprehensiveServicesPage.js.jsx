@@ -14,7 +14,6 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
     const getServiceTypeColor = (type) => {
@@ -23,6 +22,7 @@ export default function ComprehensiveServicesPage() {
             'IT Services': 'bg-green-100 text-green-800',
   'AI Services': 'bg-purple-100 text-purple-800'
         
+
 };
         return colorMap[type] || 'bg-gray-100 text-gray-800'};
     return (<div className="min-h-screen bg-zion-blue-dark">

@@ -152,6 +152,7 @@ export function FeaturedListingsSection() {
             backgroundImage: `radial-gradient(circle at 75% 25%, currentColor 1px, transparent 1px)`,
   backgroundSize: '60px 60px'
         
+
 }}/>
       </div>
 
@@ -160,17 +161,21 @@ export function FeaturedListingsSection() {
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
   { scale[1, 1.2,
   1] 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}/>
       </div>
       
@@ -178,9 +183,11 @@ export function FeaturedListingsSection() {
         <motion.div className="text-center mb-16" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Projects</span>
@@ -195,12 +202,15 @@ export function FeaturedListingsSection() {
         <motion.div className="flex flex-wrap justify-center gap-3 mb-12" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}>
           {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${selectedCategory === category
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg'
@@ -307,14 +317,17 @@ export function FeaturedListingsSection() {
                         initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} 
                         exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         transition={{ duration: 0.3 }}
                       >
@@ -327,10 +340,12 @@ export function FeaturedListingsSection() {
                               initial = {
   { opacity: 0,
   x: -10 
+
 }} 
                               animate = {
   { opacity: 1,
   x: 0 
+
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -349,10 +364,12 @@ export function FeaturedListingsSection() {
                               initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} 
                               animate = {
   { opacity: 1,
   scale: 1 
+
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -380,12 +397,15 @@ export function FeaturedListingsSection() {
       <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
         <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
           <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">

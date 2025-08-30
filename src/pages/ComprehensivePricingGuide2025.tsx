@@ -46,13 +46,13 @@ const ComprehensivePricingGuide2025: React.FC = () => {;
     { id: 'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Project Management').length },
     { id: 'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Human Resources').length },
     { id: 'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Cybersecurity').length },
-    { id: 'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Data Management').length },
+    { id: 'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Data Management').length },;
     { id: 'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -72,7 +72,7 @@ const ComprehensivePricingGuide2025: React.FC = () => {;
     });
 
   const getInnovationColor = (level: string) => {
-    switch (level) {
+    switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
       case 'Advanced':
@@ -161,7 +161,7 @@ export default function ComprehensivePricingGuide2025() {
         'Custom API Development',
         'White-label Solutions',
         'Dedicated Account Manager',
-        'Custom Training Programs',
+        'Custom Training Programs',;
         'SLA Guarantees';
       ],;
       popular: false,;
@@ -208,7 +208,7 @@ export default function ComprehensivePricingGuide2025() {
       title: 'Data & Analytics',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
-      services: [
+      services: [;
         { name: 'Data Analytics Platform', price: '$300-3000', description: 'Monthly subscription' },;
         { name: 'Business Intelligence', price: '$500-5000', description: 'Monthly service' },;
         { name: 'Data Migration', price: '$1000-10000', description: 'One-time project' },;
@@ -235,7 +235,7 @@ export default function ComprehensivePricingGuide2025() {
       icon: Factory,
       color: 'from-orange-500 to-red-500',
       pricing: 'Volume-based pricing for production scale'
-    },
+    },;
     {;
       title: 'Retail & E-commerce',;
       icon: ShoppingCart,;
@@ -250,8 +250,10 @@ export default function ComprehensivePricingGuide2025() {
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 
 
 
@@ -275,10 +277,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -348,10 +352,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -382,6 +388,7 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -391,10 +398,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -464,10 +473,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -498,6 +509,7 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -507,10 +519,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -557,10 +571,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -591,6 +607,7 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -600,10 +617,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -645,10 +664,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -758,10 +779,12 @@ export default function ComprehensivePricingGuide2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -863,14 +886,17 @@ export default function ComprehensivePricingGuide2025() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
               className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
             >
@@ -937,14 +963,17 @@ export default function ComprehensivePricingGuide2025() {
                         initial = {
   { opacity: 0,
   height: 0 
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 }}
                         className="mt-4 pt-4 border-t border-gray-200"
                       >
@@ -1097,10 +1126,12 @@ export default function ComprehensivePricingGuide2025() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1197,7 +1228,7 @@ export default function ComprehensivePricingGuide2025() {
               </div>
             </div>
           </div>
-          
+          ;
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>

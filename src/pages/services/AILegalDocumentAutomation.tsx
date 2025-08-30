@@ -48,7 +48,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
     {
       icon: Eye,
       title: "Document Review",
-      description: "Automated document review with risk assessment and compliance validation"
+      description: "Automated document review with risk assessment and compliance validation";
     };
   ];
 
@@ -99,7 +99,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
         "Integration with legal systems",
         "Performance analytics",
         "Custom automation rules"
-      ]
+      ];
     };
   ];
 
@@ -116,7 +116,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
     'AI-powered contract generation and review',
     'Legal compliance checking and validation',
     'Automated risk assessment and mitigation',
-    'Multi-jurisdiction legal framework support',
+    'Multi-jurisdiction legal framework support',;
     'Real-time legal document collaboration',;
     'Advanced clause library and templates',;
     'Automated contract renewal reminders',;
@@ -126,7 +126,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce legal document creation time by 85%',;
     'Minimize legal risks and compliance issues',;
     'Cut legal costs by up to 60%',;
@@ -135,7 +135,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
     'Provide 24/7 legal document assistance';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Contract management and automation',;
     'Legal document review and analysis',;
     'Compliance monitoring and reporting',;
@@ -173,7 +173,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
       price: '$1,999/mo',
       details: [
         'Unlimited documents',
-        'Full AI legal automation',
+        'Full AI legal automation',;
         'Custom legal frameworks',;
         'Dedicated legal support',;
         'API integrations',;
@@ -191,8 +191,10 @@ export default function AILegalDocumentAutomation(...args[]):  {
   ;
   ;
   ;
+  ;
   'HIPAA'];
   ;
+
 
 
 
@@ -276,14 +278,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -305,10 +310,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -329,14 +336,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -371,10 +381,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -395,14 +407,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
                 >
@@ -421,10 +436,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -445,14 +462,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
                 >
@@ -473,10 +493,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -497,14 +519,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 text-center"
                 >
@@ -523,10 +548,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-6 text-white"
@@ -537,14 +564,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
               className="text-xl text-cyan-100 mb-8"
             >
@@ -555,14 +585,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
@@ -591,10 +624,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -613,10 +648,12 @@ export default function AILegalDocumentAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition={{ duration: 0.6 }}
                 className="text-center"
@@ -630,14 +667,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
                 className="text-center"
               >
@@ -650,14 +690,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
                 className="text-center"
               >
@@ -671,14 +714,17 @@ export default function AILegalDocumentAutomation(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 }}
               className="text-center mt-12"
             >
@@ -695,7 +741,7 @@ export default function AILegalDocumentAutomation(...args[]):  {
   )}
 =======
           <div className="mt-4">
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">;
               Learn More <ExternalLink className="w-4 h-4 ml-2" />;
             </a>;
           </div>;

@@ -64,7 +64,7 @@ export const GlobalPresenceSection: React.FC = (): JSX.Element => {
       timezone: 'AEST (UTC+10)',
       services['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
       teamSize: '10+',
-      established: '2022'
+      established: '2022';
     };
   ];
 =======
@@ -90,7 +90,7 @@ const globalOffices = [
     icon: "🇸🇬",
     description: "APAC market expansion and support"
   },
-  {
+  {;
     city: "Toronto",;
     country: "Canada",;
     type: "North American Hub",;
@@ -121,10 +121,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -149,14 +151,17 @@ export function GlobalPresenceSection() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
           className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
 =======
@@ -168,10 +173,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -187,9 +194,10 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        >
+        >;
           {globalStats.map((stat, index)  => {;
             const IconComponent = stat.icon;
             return (
@@ -216,14 +224,17 @@ export function GlobalPresenceSection() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
             >
@@ -246,10 +257,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -260,6 +273,7 @@ export function GlobalPresenceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -284,10 +298,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -298,6 +314,7 @@ export function GlobalPresenceSection() {
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -335,10 +352,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -349,6 +368,7 @@ export function GlobalPresenceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -378,10 +398,12 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -397,6 +419,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -405,7 +428,7 @@ export function GlobalPresenceSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -420,4 +443,5 @@ export default GlobalPresenceSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default GlobalPresenceSection;
 export default GlobalPresenceSection;

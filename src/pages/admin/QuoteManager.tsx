@@ -47,14 +47,15 @@ export default function QuoteManager(...args[]):  {
     in_review: quotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
     accepted: quotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
     responded: quotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
-  closed: quotes.filter((q: QuoteRequest)  => q.status === 'closed').length
+  closed: quotes.filter((q: QuoteRequest)  => q.status === 'closed').length;
   ;
+
 };
 
   const handleViewDetails = (quote: QuoteRequest)  => {
 =======
   new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
-    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,
+    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,;
     accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,;
     responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
   ;
@@ -152,7 +153,7 @@ export default function QuoteManager(...args[]):  {
               </TabsContent>
             </Tabs>
           </div>
-        </div>
+        </div>;
         ;
         {/* Quote Details Modal */};
         <QuoteDetails;

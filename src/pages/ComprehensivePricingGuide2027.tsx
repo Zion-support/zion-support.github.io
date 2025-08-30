@@ -84,7 +84,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 
   // Filter services
   const filtered = allServices.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       
@@ -94,7 +94,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
         if (max) {
           matchesPrice = service.price >= min && service.price <= max} else {
           matchesPrice = service.price >= min}
-      }
+      };
       ;
       return matchesSearch && matchesCategory && matchesPrice});
 
@@ -108,11 +108,11 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
     'all',
     '0-1000',
     '1000-2500',
-    '2500-5000',
+    '2500-5000',;
     '5000+';
   ];
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
     switch (category) {;
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -128,7 +128,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
       default: return <Target className = "w-5 h-5" />};
   };
 
-  const getInnovationLevelColor = (level: string)  => {
+  const getInnovationLevelColor = (level: string)  => {;
     switch (level) {;
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -143,7 +143,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
       newExpanded.add(serviceId)}
     setExpandedServices(newExpanded)};
 
-  const getPriceRangeLabel = (range: string)  => {
+  const getPriceRangeLabel = (range: string)  => {;
     switch (range) {;
       case '0-1000': return '$0 - $1,000/month';
       case '1000-2500': return '$1,000 - $2,500/month';
@@ -166,10 +166,12 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -309,7 +311,7 @@ export default function ComprehensivePricingGuide2027() {
           name: "AI Customer Support Automation",
           description: "Intelligent customer support with AI automation",
           price: "$349",
-          period: "/month",
+          period: "/month",;
           features: ["Chatbot integration", "Ticket routing", "Knowledge base", "Sentiment analysis", "Performance metrics", "Multi-channel support"],;
           popular: false,;
           link: "/services/ai-customer-support-automation";
@@ -360,7 +362,7 @@ export default function ComprehensivePricingGuide2027() {
         "Custom AI development",
         "On-premise deployment",
         "24/7 dedicated support",
-        "Custom integrations",
+        "Custom integrations",;
         "Advanced analytics",;
         "Compliance automation",;
         "Strategic consulting";
@@ -391,7 +393,7 @@ export default function ComprehensivePricingGuide2027() {
       competitor2: "$1,299/month",
       savings: "56-69%"
     },
-    {
+    {;
       feature: "Cloud DevOps",;
       zion: "$599/month",;
       competitor1: "$1,199/month",;
@@ -415,14 +417,17 @@ export default function ComprehensivePricingGuide2027() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
         >
@@ -474,14 +479,17 @@ export default function ComprehensivePricingGuide2027() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.3 
+
 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-6"
         >
@@ -522,14 +530,17 @@ export default function ComprehensivePricingGuide2027() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 hover:border-blue-500/50 transition-all duration-300"
             >
@@ -559,10 +570,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -619,10 +632,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -653,6 +668,7 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -662,10 +678,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.1 
+
 
 
 
@@ -695,6 +713,7 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                       whileInView = {
   { opacity: 1,
@@ -704,10 +723,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                       transition = {
   { duration: 0.8,
   delay: serviceIndex * 0.1 
+
 
 
 
@@ -780,10 +801,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -814,6 +837,7 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -823,10 +847,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -875,14 +901,17 @@ export default function ComprehensivePricingGuide2027() {
                   initial = {
   { opacity: 0,
   height: 0 
+
 }}
                   animate = {
   { opacity: 1,
   height: 'auto' 
+
 }}
                   exit = {
   { opacity: 0,
   height: 0 
+
 }}
                   transition={{ duration: 0.3 }}
                   className="border-t border-white/20 p-6"
@@ -1042,10 +1071,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1076,7 +1107,7 @@ export default function ComprehensivePricingGuide2027() {
             className="text-center py-12"
           >
             <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-            <button
+            <button;
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('all');
@@ -1124,10 +1155,12 @@ export default function ComprehensivePricingGuide2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1151,14 +1184,17 @@ export default function ComprehensivePricingGuide2027() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 text-center"
         >
@@ -1201,7 +1237,7 @@ export default function ComprehensivePricingGuide2027() {
             </a>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </div>;
   )};
 
@@ -1222,7 +1258,7 @@ export default ComprehensivePricingGuide2027;
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
-                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-zion-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
               </div>;
             </div>;
           </div>;

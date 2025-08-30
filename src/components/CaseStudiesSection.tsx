@@ -50,7 +50,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
         'Enhanced patient data protection'
       ],
       logo: '🏥',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500';
     };
   ];
 =======
@@ -93,7 +93,7 @@ const caseStudies = [
     challenge: "Lack of transparency in food supply chain",
     solution: "Implemented blockchain-based tracking system",
     results: [
-      "100% supply chain visibility",
+      "100% supply chain visibility",;
       "Reduced fraud by 99%",;
       "Improved customer trust by 80%";
     ],;
@@ -117,10 +117,12 @@ export function CaseStudiesSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -146,10 +148,12 @@ export function CaseStudiesSection() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
               key={study.id}
@@ -162,10 +166,12 @@ export function CaseStudiesSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -177,6 +183,7 @@ export function CaseStudiesSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -247,10 +254,12 @@ export function CaseStudiesSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -266,6 +275,7 @@ export function CaseStudiesSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -274,7 +284,7 @@ export function CaseStudiesSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -289,4 +299,5 @@ export default CaseStudiesSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default CaseStudiesSection;
 export default CaseStudiesSection;

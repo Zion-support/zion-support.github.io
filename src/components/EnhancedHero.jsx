@@ -52,8 +52,6 @@ const EnhancedHero = () => {
         setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)};
     const goToSlide = (index) => {
         setCurrentSlide(index)};
-    const toggleMute = () => {
-        setIsMuted(!isMuted)};
     const toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
@@ -77,6 +75,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -85,9 +84,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -103,6 +104,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { scale: 1,
   rotate: 0 
@@ -111,9 +113,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -132,6 +136,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -140,9 +145,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -161,6 +168,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -169,9 +177,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -190,6 +200,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -198,9 +209,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -219,9 +232,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -235,6 +250,7 @@ const EnhancedHero = () => {
 
 
 
+
 }} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
@@ -242,9 +258,11 @@ const EnhancedHero = () => {
                   <motion.div animate = {
   { x[0, 5,
   0] 
+
 }} transition = {
   { duration: 1.5,
   repeat: Infinity 
+
 }} className="ml-2">
 =======
                   <motion.div animate = {
@@ -255,9 +273,11 @@ const EnhancedHero = () => {
 
 
 
+
 }} transition = {
   { duration: 1.5,
   repeat: Infinity 
+
 
 
 

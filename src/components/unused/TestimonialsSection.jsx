@@ -53,6 +53,7 @@ export function TestimonialsSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -78,9 +79,11 @@ export function TestimonialsSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -133,6 +136,7 @@ export function TestimonialsSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -141,9 +145,11 @@ export function TestimonialsSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 

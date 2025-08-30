@@ -7,7 +7,7 @@ export default function Products(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 =======
-const Products: React.FC = () => (
+const Products: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
 			<h1 className="text-4xl font-bold mb-4">Marketplace - Products</h1>;
@@ -22,7 +22,7 @@ const Products: React.FC = () => (
     { id: 'hardware', name: 'Hardware', icon: Cpu },
     { id: 'software', name: 'Software', icon: Database },
     { id: 'services', name: 'Services', icon: Users },
-    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'security', name: 'Security', icon: Shield },;
     { id: 'cloud', name: 'Cloud', icon: Cloud };
   ];
 
@@ -91,7 +91,7 @@ const Products: React.FC = () => (
       rating: 4.5,
       reviews: 78,
       image: 'https://via.placeholder.com/300x200/0891b2/ffffff?text=IoT+Kit',
-      features['Sensors', 'Gateway', 'Cloud API']
+      features['Sensors', 'Gateway', 'Cloud API'];
     };
   ];
 
@@ -110,10 +110,12 @@ const Products: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
@@ -158,10 +160,12 @@ const Products: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -193,14 +197,17 @@ const Products: React.FC = () => (
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -274,7 +281,7 @@ const Products: React.FC = () => (
               <div className="text-zion-slate-light text-xl mb-4">
                 No products found matching your criteria
               </div>
-              <button
+              <button;
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSearchQuery('')}}
@@ -294,10 +301,12 @@ const Products: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -323,5 +332,5 @@ const Products: React.FC = () => (
           </motion.div>
         </div>
       </section>
-    </div>
+    </div>;
   )};

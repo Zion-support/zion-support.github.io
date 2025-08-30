@@ -70,7 +70,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 <<<<<<< HEAD
   autoAnalyze = true,
   showDetails = false,
-  onAnalysisComplete
+  onAnalysisComplete;
 }) => {;
   const [analysis, setAnalysis] = useState<any>(null);
 =======
@@ -149,7 +149,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       accessibility: 85,
       bestPractices: 88,
       seoScore: 87,
-      coreWebVitals: {
+      coreWebVitals: {;
         lcp: 2.8,;
         fid: 45,;
         cls: 0.08;
@@ -223,8 +223,9 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     return analysis?.suggestions.sort((a, b) => {
 <<<<<<< HEAD
       const priorityOrder = {
-  high: 3, medium: 2,
+  high: 3, medium: 2,;
   low: 1 ;
+
 };
       return priorityOrder[b.priority] - priorityOrder[a.priority]}) || []}, [analysis]);
 =======
@@ -234,7 +235,9 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   ;
   ;
   ;
+  ;
   low: 1 ;
+
 
 
 
@@ -259,7 +262,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           Analyze SEO
         </button>
       </div>
-    )}
+    )};
 =======;
           className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors";
         >;
@@ -435,6 +438,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -444,10 +448,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -505,10 +511,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -549,6 +557,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -558,10 +567,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -595,7 +606,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             )}
           </AnimatePresence>
         </>
-      ) : null}
+      ) : null};
     </div>;
   )};
 

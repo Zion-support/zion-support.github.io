@@ -10,8 +10,9 @@ describe('apiClient interceptor', () => {
   it('logs out on 401 and redirects', async () => {
 <<<<<<< HEAD
     const error = {
-  response: { status: 401,
+  response: { status: 401,;
   data: {;
+
 } } } as any;
     const redirect = jest.spyOn(window.location, 'assign').mockImplementation(() => {});
     
@@ -22,7 +23,9 @@ describe('apiClient interceptor', () => {
   ;
   ;
   ;
+  ;
   data: {;
+
 
 
 

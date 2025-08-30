@@ -125,7 +125,7 @@ const MicroCRM = () => {
     {
       icon: Shield,
       title: 'Data Security',
-      description: 'Enterprise-grade security for customer data protection'
+      description: 'Enterprise-grade security for customer data protection';
     },;
     {;
       icon: Cloud,;
@@ -134,7 +134,7 @@ const MicroCRM = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase sales productivity by 40%',;
     'Improve customer retention by 60%',;
     'Reduce lead response time by 80%',;
@@ -157,7 +157,7 @@ const MicroCRM = () => {
     {
       icon: MessageSquare,
       title: 'Customer Support',
-      description: 'Track customer issues and support requests'
+      description: 'Track customer issues and support requests';
     },;
     {;
       icon: UserPlus,;
@@ -176,7 +176,7 @@ const MicroCRM = () => {
       description: 'Streamline sales processes and tracking'
     },
     {
-      industry: 'Real Estate',
+      industry: 'Real Estate',;
       description: 'Manage property listings and client relationships';
     },;
     {;
@@ -200,10 +200,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -254,10 +256,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -288,6 +292,7 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -297,10 +302,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -332,10 +339,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -366,6 +375,7 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -375,10 +385,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -414,10 +426,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -448,6 +462,7 @@ const MicroCRM = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -457,10 +472,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -486,6 +503,7 @@ const MicroCRM = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -495,10 +513,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -528,10 +548,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -562,6 +584,7 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -571,10 +594,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -606,10 +631,12 @@ const MicroCRM = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -631,7 +658,7 @@ const MicroCRM = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

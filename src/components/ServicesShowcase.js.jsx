@@ -15,6 +15,7 @@ const categoryColors = {
     'E-commerce': 'from-indigo-500 to-purple-600',
   'EdTech': 'from-teal-500 to-green-600'
 
+
 };
 const features = [
     "AI-Powered Automation",

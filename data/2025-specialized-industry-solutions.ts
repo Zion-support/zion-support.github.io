@@ -418,7 +418,7 @@ export const getSolutionsByCategory = (category: string) => {;
   return specializedIndustrySolutions2025.filter((s) => s.category === category)};
 export const getPopularIndustrySolutions = () =>
   specializedIndustrySolutions2025
-    .filter((s) => !!s.popular)
+    .filter((s) => !!s.popular);
 =======;
   return specializedIndustrySolutions2025.filter((s) => s.industry === industry);
 };

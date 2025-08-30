@@ -43,7 +43,7 @@ export default function ServicesPage() {
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
     { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
-    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
+    { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },;
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-zion-green to-zion-cyan' },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },;
     { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple' },;
@@ -144,10 +144,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -192,6 +194,7 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -201,10 +204,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -225,6 +230,7 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -234,10 +240,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -258,6 +266,7 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -267,10 +276,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -300,10 +311,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -339,6 +352,7 @@ export default function ServicesPage() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -348,10 +362,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -420,10 +436,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -438,13 +456,14 @@ export default function ServicesPage() {
 
 
 
+
 }}
                     whileHover={{ y: -10 }}
                   >
                     {/* Service Header */}
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
+                        <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>;
                           {(() => {;
                             const IconComponent = getCategoryIcon(service.category);
                             return IconComponent ? <IconComponent className = "w-6 h-6 text-white" /> : null})()}
@@ -534,7 +553,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <div className="text-6xl mb-4">🔍</div>
+                <div className="text-6xl mb-4">🔍</div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-zion-slate-light mb-6">;
                   Try adjusting your search criteria or browse all categories;
@@ -545,7 +564,7 @@ export default function ServicesPage() {
                     setSelectedCategory('all');
 <<<<<<< HEAD
                     setSelectedPriceRange('all')}}
-                  className = "btn-futuristic px-6 py-3"
+                  className = "btn-futuristic px-6 py-3";
 =======;
                     setSelectedPriceRange('all');
                   }}
@@ -573,10 +592,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -606,6 +627,7 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -615,10 +637,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -667,10 +691,12 @@ export default function ServicesPage() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -715,7 +741,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

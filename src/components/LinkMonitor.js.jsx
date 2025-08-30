@@ -52,6 +52,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 type: 'redirect',
   reason: 'Automatically fixed broken internal link'
             
+
 };
             setFixedLinks(prev => [...prev, fix])}
     };
@@ -78,6 +79,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             brokenLinks: brokenLinks,
   fixedLinks: fixedLinks
         
+
 };
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
@@ -162,6 +164,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 <button onClick = {
   () => fixBrokenLink(link.url,
   link)
+
 } className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700">
                   Fix
                 </button>

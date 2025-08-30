@@ -18,6 +18,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
                 postalCode: '19801',
   addressCountry: 'US'
             
+
 },
             contactPoint: {
                 '@type': 'ContactPoint',
@@ -143,6 +144,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
       <meta name="keywords" content = {
   keywords.join(',
   ')
+
 }/>
       <meta name="author" content={author}/>
       <meta name="robots" content="index, follow"/>

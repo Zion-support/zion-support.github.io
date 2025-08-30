@@ -24,7 +24,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     'AI-powered candidate sourcing and matching',
     'Intelligent resume parsing and skill extraction',
     'Automated candidate screening and assessment',
-    'Predictive candidate success modeling',
+    'Predictive candidate success modeling',;
     'Advanced interview scheduling and coordination',;
     'Real-time candidate engagement tracking',;
     'Automated reference checking and verification',;
@@ -33,7 +33,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     'Multi-channel recruitment campaign management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce time-to-hire by 60%',;
     'Improve candidate quality by 45%',;
     'Reduce recruitment costs by 40%',;
@@ -42,7 +42,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     'Improve candidate experience significantly';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Enterprise talent acquisition',;
     'Tech recruitment and hiring',;
     'Healthcare staffing solutions',;
@@ -55,7 +55,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     "LinkedIn, Indeed, Glassdoor",
     "Workday, BambooHR, ADP",
     "Greenhouse, Lever, Workable",
-    "Slack, Microsoft Teams, Email",
+    "Slack, Microsoft Teams, Email",;
     "Calendly, Zoom, Google Meet";
   ];
 
@@ -86,7 +86,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
     { 
       name: 'Talent Professional', 
       price: '$799/mo', 
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise Talent', ;
@@ -141,15 +141,18 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all duration-300"
               >
@@ -169,10 +172,12 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -193,15 +198,18 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
               >
@@ -237,15 +245,18 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
               >
@@ -266,10 +277,12 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -290,15 +303,18 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
               >
@@ -316,10 +332,12 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -340,15 +358,18 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular 
@@ -401,10 +422,12 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -466,7 +489,7 @@ const AIHRTalentAcquisition: React.FC = (): JSX.Element => {
             Ready to revolutionize your hiring process? Contact us today to learn how AI-powered talent acquisition can transform your organization.
           </p>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

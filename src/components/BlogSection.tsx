@@ -10,7 +10,7 @@ export function BlogSection(...args[]):  {
       date: '2024-01-15',
       readTime: '8 min read'
     },
-    {
+    {;
       id: '2',;
       title: 'Building Scalable Web Applications',;
       excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
@@ -47,7 +47,7 @@ export function BlogSection(...args[]):  {
         </div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </article>;
           ))};

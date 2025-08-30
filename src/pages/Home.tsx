@@ -11,7 +11,7 @@ import { LoadingSpinner  } from '@/components/ui/LoadingSpinner';
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() => 
-    [...Array(20)].map((_, i) => ({
+    [...Array(20)].map((_, i) => ({;
       id: i,;
       left: `${Math.random() * 100}%`,;
       top: `${Math.random() * 100}%`,;
@@ -32,7 +32,7 @@ const LoadingFallback = ({ message }: { message: string })  => (
         </div>
         <p className="text-slate-400 mt-4">{message}</p>
       </div>
-    </div>
+    </div>;
   </div>;
 );
 =======
@@ -67,12 +67,15 @@ const LoadingFallback = ({ message }: { message: string })  => (
 
 
 
+
 }}
           style = {
   {
             left: particle.left,
             top: particle.top,;
   ;
+  ;
+
 
 }};
         />;
@@ -130,7 +133,7 @@ const serviceCategories = [
     icon: "💝",
     href: "/services/ai-customer-success-platform",
     count: 5,
-    color: "from-yellow-500 to-orange-600"
+    color: "from-yellow-500 to-orange-600";
   };
 ];
 
@@ -143,13 +146,14 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.2
-    }
+    };
   };
 };
 
 const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
   visible: {
     opacity: 1,
@@ -157,7 +161,7 @@ const itemVariants = {
     transition: {
       duration: 0.6,
       ease: "easeOut"
-    }
+    };
   };
 };
 
@@ -185,7 +189,7 @@ const stats = [
     icon: Star,
     value: "24/7",
     label: "Expert Support",
-    description: "Always available"
+    description: "Always available";
   };
 ];
 
@@ -225,7 +229,7 @@ const aiServices = [
       "Automated Response",
       "Zero Trust Architecture",
       "Compliance Monitoring"
-    ]
+    ];
   };
 ];
 =======
@@ -251,7 +255,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       description: "Scalable software solutions tailored to your needs",
       icon: Zap,
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
-    },
+    },;
     {;
       title: "Digital Transformation",;
       description: "Modernize your infrastructure for the future",;
@@ -286,10 +290,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,6 +349,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -352,10 +359,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -376,6 +385,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -385,10 +395,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   x: -50 
+
 
 
 
@@ -450,7 +462,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                       : 'bg-cyan-400/30 hover:bg-cyan-400/50'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
-                />
+                />;
               ))};
             </div>;
           </div>;
@@ -486,10 +498,12 @@ const StatsSection = React.memo(() => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -504,6 +518,7 @@ const StatsSection = React.memo(() => {;
 
 
 
+
 }}
               viewport={{ once: true }}
               className="text-center"
@@ -511,7 +526,7 @@ const StatsSection = React.memo(() => {;
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>;
               <div className="text-gray-300">{stat.label}</div>;
             </motion.div>;
           ))};
@@ -540,7 +555,7 @@ const FeaturedServices = React.memo(() => {
       path: "/it-services",
       features: ["Multi-cloud Strategy", "DevOps Automation", "Security & Compliance", "24/7 Monitoring"]
     },
-    {
+    {;
       title: "Micro SAAS Solutions",;
       description: "Custom software solutions for specific business needs",;
       icon: Zap,;
@@ -561,10 +576,12 @@ const FeaturedServices = React.memo(() => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -595,6 +612,7 @@ const FeaturedServices = React.memo(() => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -604,10 +622,12 @@ const FeaturedServices = React.memo(() => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -646,7 +666,7 @@ const FeaturedServices = React.memo(() => {
                 className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
               >
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4" />;
               </Link>;
             </motion.div>;
           ))};
@@ -677,7 +697,7 @@ const whyChooseUs = [
   {
     icon: Heart,
     title: "Customer Success",
-    description: "98% customer satisfaction with dedicated success managers"
+    description: "98% customer satisfaction with dedicated success managers";
   };
 ];
 
@@ -702,7 +722,7 @@ const trustSignals = [
   {
     icon: Star,
     label: "99.9% Uptime",
-    description: "Enterprise-grade reliability"
+    description: "Enterprise-grade reliability";
   };
 ];
 
@@ -736,6 +756,7 @@ export default function Home = () => {;
         viewport = {
   { once: true,
   margin: "-100px" 
+
 }}
         transition={{ duration: 0.8 }}
       >
@@ -745,12 +766,14 @@ export default function Home = () => {;
             initial = {
   { y: 30,
   opacity: 0 
+
 }}
             whileInView = {
   { y: 0,
   opacity: 1 
+
 }}
-            viewport={{ once: true }}
+            viewport={{ once: true }};
 =======;
   const handleGetStarted = () => {;
     // Handle get started action;
@@ -777,10 +800,12 @@ export default function Home = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: isVisible ? 1 : 0,
   y: isVisible ? 0 : 20 
+
 
 
 
@@ -806,24 +831,29 @@ export default function Home = () => {;
                 initial = {
   { y: 30,
   opacity: 0 
+
 }}
                 whileInView = {
   { y: 0,
   opacity: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
                 whileHover = {
   { y: -8,
   scale: 1.02 
+
 }}
                 transition = {
   { type: "spring", stiffness: 300,
   damping: 20 
+
 }}
               >
                 <Link to={category.href} className="block h-full">
@@ -880,7 +910,7 @@ export default function Home = () => {;
                 to="/pricing"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
               >
-                View Pricing
+                View Pricing;
               </Link>;
             </div>;
           </motion.div>;
@@ -900,6 +930,7 @@ export default function Home = () => {;
         viewport = {
   { once: true,
   margin: "-100px" 
+
 }}
         transition={{ duration: 0.8 }}
       >
@@ -909,10 +940,12 @@ export default function Home = () => {;
             initial = {
   { y: 30,
   opacity: 0 
+
 }}
             whileInView = {
   { y: 0,
   opacity: 1 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -931,10 +964,12 @@ export default function Home = () => {;
               initial = {
   { x: -30,
   opacity: 0 
+
 }}
               whileInView = {
   { x: 0,
   opacity: 1 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -970,10 +1005,12 @@ export default function Home = () => {;
               initial = {
   { x: 30,
   opacity: 0 
+
 }}
               whileInView = {
   { x: 0,
   opacity: 1 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -1015,6 +1052,7 @@ export default function Home = () => {;
         viewport = {
   { once: true,
   margin: "-100px" 
+
 }}
         transition={{ duration: 0.8 }}
       >
@@ -1119,5 +1157,5 @@ export default function Home = () => {;
         <FloatingCTA />
       </Suspense>
     </div>
-  )}
+  )};
 ;

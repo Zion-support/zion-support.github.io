@@ -58,7 +58,7 @@ export default function AICustomerFeedbackAnalytics() {
     {
       icon: PieChart,
       title: "Advanced Segmentation",
-      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies."
+      description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies.";
     },;
     {;
       icon: Activity,;
@@ -91,7 +91,7 @@ export default function AICustomerFeedbackAnalytics() {
     {
       icon: TrendingUp,
       title: "Increased Revenue",
-      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value."
+      description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value.";
     },;
     {;
       icon: Clock,;
@@ -146,7 +146,7 @@ export default function AICustomerFeedbackAnalytics() {
         "Dedicated account manager",
         "White-label solutions",
         "Advanced security features",
-        "Custom reporting",
+        "Custom reporting",;
         "On-premise deployment options",;
         "SLA guarantees";
       ],;
@@ -179,7 +179,7 @@ export default function AICustomerFeedbackAnalytics() {
     {
       industry: "Education",
       description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",
-      icon: Award
+      icon: Award;
     },;
     {;
       industry: "Manufacturing",;
@@ -206,7 +206,7 @@ export default function AICustomerFeedbackAnalytics() {
       platforms: ["Twitter", "Facebook", "Instagram", "LinkedIn"]
     },
     {
-      name: "Review Platforms",
+      name: "Review Platforms",;
       platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"];
     },;
     {;
@@ -236,10 +236,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -288,10 +290,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -322,6 +326,7 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -331,10 +336,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -381,10 +388,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -415,6 +424,7 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -424,10 +434,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -474,10 +486,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -508,6 +522,7 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -517,10 +532,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -585,10 +602,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -619,6 +638,7 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -628,10 +648,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -678,10 +700,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -712,6 +736,7 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -721,10 +746,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -765,10 +792,12 @@ export default function AICustomerFeedbackAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -792,7 +821,7 @@ export default function AICustomerFeedbackAnalytics() {
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

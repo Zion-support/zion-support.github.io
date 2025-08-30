@@ -142,6 +142,7 @@ const ServicesShowcase = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -165,9 +166,11 @@ const ServicesShowcase = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -251,9 +254,11 @@ const ServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

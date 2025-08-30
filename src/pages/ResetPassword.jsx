@@ -19,8 +19,6 @@ export default function ResetPasswordPage() {
             // Consider redirecting to an error page or login page
         }
     }, [token]);
-    const handleConfirmPasswordChange = (e) => {
-        setConfirmPassword(e.target.value)};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');

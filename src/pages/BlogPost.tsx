@@ -61,6 +61,7 @@ function BlogPost(...args[]):  {
         publishDate: "2024-01-10",
   slug: "ai-cybersecurity"
       
+
 },
       {
         id: "3",
@@ -70,7 +71,7 @@ function BlogPost(...args[]):  {
         readTime: "7 min read",
         publishDate: "2024-01-05",
         slug: "quantum-computing-business"
-      }
+      };
     ];
   };
 
@@ -93,10 +94,12 @@ function BlogPost(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -146,14 +149,17 @@ function BlogPost(...args[]):  {
                 initial = {
   { opacity: 0,
   x: -20 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
               >
                 {/* Featured Image */}
@@ -193,14 +199,17 @@ function BlogPost(...args[]):  {
                 initial = {
   { opacity: 0,
   x: 20 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: 0.8 
+
 }}
               >
                 {/* Author Info */}
@@ -243,10 +252,12 @@ function BlogPost(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
@@ -264,14 +275,17 @@ function BlogPost(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate/30 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
               >
@@ -314,10 +328,12 @@ function BlogPost(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -345,7 +361,7 @@ function BlogPost(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 ;
 export default BlogPost;
 =======
@@ -356,7 +372,7 @@ const BlogPost: React.FC = () => {
 			<div className="container mx-auto max-w-3xl px-6">
 				<h1 className="text-3xl font-bold mb-4">Blog Post</h1>
 				<p className="text-slate-300">Coming soon.</p>
-			</div>
+			</div>;
 		</div>;
 	);
 };
@@ -365,4 +381,5 @@ export default BlogPost;
 ;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default BlogPost;
 export default BlogPost;

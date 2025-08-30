@@ -11,7 +11,7 @@ export default function MobileAppRoutes() {
       <Route path="redirect" element={<OpenAppRedirect />} />
       <Route path="" element={<MobileAppPage />} />
     </Routes>
-=======
+=======;
     <>;
       <Route path = "launch" element={<MobileLaunchPage />} />;
     </>;

@@ -94,7 +94,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       title: "5G & IoT Integration",
       description: "Seamless connectivity with 5G networks and IoT device ecosystems",
       color: "from-indigo-500 to-purple-500"
-    },
+    },;
     {;
       icon: Shield,;
       title: "Edge Security",;
@@ -150,7 +150,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
         "Advanced security features",
         "Multi-tenant support",
         "Dedicated support team",
-        "Custom development",
+        "Custom development",;
         "SLA guarantees",;
         "On-premise option";
       ],;
@@ -177,7 +177,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       title: "99.9% Uptime",
       description: "Distributed architecture ensures high availability and reliability",
       metric: "99.9%"
-    },
+    },;
     {;
       icon: Users,;
       title: "Global Scale",;
@@ -208,7 +208,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       icon: Factory,
       color: "from-purple-500 to-pink-500"
     },
-    {
+    {;
       industry: "Healthcare",;
       title: "Remote Monitoring",;
       description: "Real-time patient monitoring and emergency response systems",;
@@ -235,7 +235,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
       cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
       icon: Satellite,
       color: "from-purple-500 to-pink-500"
-    },
+    },;
     {;
       region: "Latin America",;
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
@@ -265,10 +265,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -329,6 +331,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -338,10 +341,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -387,6 +392,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -396,10 +402,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -444,6 +452,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -453,10 +462,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -507,6 +518,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -516,10 +528,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -571,6 +585,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -580,10 +595,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -647,10 +664,12 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -670,7 +689,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

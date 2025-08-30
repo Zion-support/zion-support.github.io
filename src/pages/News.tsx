@@ -25,7 +25,7 @@ export default function News() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = [
+  const categories = [;
     { id: 'all', name: 'All News', count: 0 },;
     { id: 'ai', name: 'AI & Technology', count: 0 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },;
@@ -114,7 +114,7 @@ export default function News(...args[]):  {
       category: 'Sustainability',
       tags['Sustainability', 'Green Tech', 'Environment'],
       featured: false,
-      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400'
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400';
     };
   ];
 
@@ -124,7 +124,7 @@ export default function News(...args[]):  {
     'Comp News',
     'Research',
     'Awards',
-    'Partnerships',
+    'Partnerships',;
     'Sustainability';
   ];
 
@@ -150,7 +150,7 @@ export default function News(...args[]):  {
 =======
       title: 'Edge Computing Solutions for IoT Deployments',
       excerpt: 'New edge computing platform enables real-time processing for IoT devices, reducing latency and improving performance in industrial applications.',
-      category: 'cloud',
+      category: 'cloud',;
       author: 'David Kim',;
       date: '2024-11-18',;
       readTime: '5 min read',;
@@ -190,10 +190,12 @@ export default function News(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,10 +260,12 @@ export default function News(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,10 +347,12 @@ export default function News(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -495,10 +501,12 @@ export default function News(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -646,7 +654,7 @@ export default function News(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

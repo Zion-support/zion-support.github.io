@@ -118,7 +118,7 @@ const solutionCategories = [
     color: 'from-indigo-500 to-purple-600',
     solutions[
       'Process Automation',
-      'Customer Experience',
+      'Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
       'Change Management',;
@@ -199,7 +199,7 @@ const industrySolutions = [
     solutions[
       'Digital Services',
       'Data Security',
-      'Process Automation',
+      'Process Automation',;
       'Citizen Engagement',;
       'Regulatory Compliance',;
       'Infrastructure Management';
@@ -274,7 +274,7 @@ const featuredSolutions = [
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
-      'Improved scalability'
+      'Improved scalability';
     ],;
     price: 'Starting at $1,800/month',;
     implementation: '8-16 weeks',;
@@ -311,10 +311,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -400,10 +402,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -420,7 +424,7 @@ export default function Solutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index)  => {
+            {solutionCategories.map((category, index)  => {;
 =======;
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
@@ -440,6 +444,7 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -449,10 +454,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -485,7 +492,7 @@ export default function Solutions(...args[]):  {
                     </div>
                   </Link>
                 </motion.div>
-              )})}
+              )})};
 =======;
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
                       </div>;
@@ -511,10 +518,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -531,7 +540,7 @@ export default function Solutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index)  => {
+            {industrySolutions.map((industry, index)  => {;
 =======;
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
@@ -551,6 +560,7 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -560,10 +570,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -596,7 +608,7 @@ export default function Solutions(...args[]):  {
                     </Link>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                       View {industry.industry} Solutions;
                       <ArrowRight className="ml-2 h-4 w-4" />;
@@ -622,10 +634,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -642,7 +656,7 @@ export default function Solutions(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index)  => {
+            {filteredSolutions.map((solution, index)  => {;
 =======;
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
@@ -662,6 +676,7 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -671,10 +686,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -748,7 +765,7 @@ export default function Solutions(...args[]):  {
                     </Link>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                       Learn More;
                       <ArrowRight className="ml-2 h-4 w-4" />;
@@ -774,10 +791,12 @@ export default function Solutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -815,7 +834,7 @@ export default function Solutions(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

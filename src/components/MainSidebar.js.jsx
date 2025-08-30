@@ -71,6 +71,7 @@ export function MainSidebar() {
   isActive(item.href)
                     ? "bg-zion-purple/20 text-zion-cyan"
                     : "text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan")
+
 }>
                     {item.icon}
                     <span>{item.label}</span>

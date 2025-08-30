@@ -13,6 +13,7 @@ export default function AdminDashboard() {
         "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
   "url": "https://app.ziontechgroup.com/features/admin-dashboard"
     
+
 };
     return (<>
       <SEO title="Admin Dashboard" description="Gain insight into your marketplace with powerful administration tools." keywords="admin dashboard, analytics, manage listings" canonical="https://app.ziontechgroup.com/features/admin-dashboard"/>

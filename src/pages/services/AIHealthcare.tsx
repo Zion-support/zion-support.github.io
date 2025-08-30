@@ -3,7 +3,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 export default function AIHealthcare() {
   const features = [
     'AI-powered medical image analysis and diagnosis',
-    'Intelligent patient data analysis and risk assessment',
+    'Intelligent patient data analysis and risk assessment',;
     'Automated medical record processing and coding',;
     'Predictive analytics for patient outcomes',;
     'Drug interaction and adverse event monitoring',;
@@ -21,7 +21,7 @@ export default function AIHealthcare() {
     { 
       name: 'Medium Practice', 
       price: '$999/mo', 
-      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Health System', ;
@@ -30,7 +30,7 @@ export default function AIHealthcare() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Medical imaging and radiology analysis',;
     'Patient diagnosis and treatment planning',;
     'Electronic health record optimization',;
@@ -39,7 +39,7 @@ export default function AIHealthcare() {
     'Medical research and data analysis';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve diagnostic accuracy by 20-35%',;
     'Reduce medical errors by 30-50%',;
     'Cut administrative costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AIHealthcare() {
     'Scale healthcare operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Hospitals & Health Systems',;
     'Medical Practices & Clinics',;
     'Radiology & Imaging Centers',;
@@ -163,7 +163,7 @@ export default function AIHealthcare() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

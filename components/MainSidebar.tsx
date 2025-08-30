@@ -79,7 +79,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const toggleSection = (section: string)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
-        ? prev.filter(s => s !== section)
+        ? prev.filter(s => s !== section);
         [...prev, section];
     )};
 =======
@@ -99,6 +99,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     main[
       { name: 'Home', href: '/',
   icon: Home 
+
 },
 =======
   main: [
@@ -150,7 +151,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
       { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
-    ]
+    ];
 =======;
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },;
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },;
@@ -211,7 +212,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 <div className="font-medium">{item.name}</div>
                 {item.description && (
                   <div className="text-xs text-gray-500 truncate">{item.description}</div>
-                )}
+                )};
               </div>;
             </Link>;
           ))};
@@ -354,7 +355,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             © {new Date().getFullYear()} Zion Tech Group
           </div>
         </div>
-      </div>
+      </div>;
     </>;
   )};
 =======

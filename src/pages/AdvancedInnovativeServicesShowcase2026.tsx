@@ -25,7 +25,7 @@ import { Brain,
  } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026  } from "../data/advancedInnovativeServices2026";
 
-const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
+const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
@@ -58,7 +58,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )}
+      )};
 =======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -86,7 +86,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -103,8 +103,9 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 },
-    visible: {
+    visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -134,6 +135,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { y: 0,
@@ -143,10 +145,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -166,6 +170,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { y: 0,
@@ -175,10 +180,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -198,6 +205,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { scale: 1,
@@ -207,10 +215,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -245,6 +255,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -254,10 +265,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
         transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -329,6 +342,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -447,6 +461,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -456,10 +471,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1 
+
 
 
 
@@ -521,7 +538,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
             </a>
           </div>
         </div>
-      </motion.div>
+      </motion.div>;
     </div>;
   )};
 =======

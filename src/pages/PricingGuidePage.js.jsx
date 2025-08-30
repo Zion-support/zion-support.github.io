@@ -158,6 +158,7 @@ export default function PricingGuidePage() {
                   <CardDescription className="text-gray-600 mb-4 overflow-hidden text-ellipsis" style = {
   { display: '-webkit-box', WebkitLineClamp: 3,
   WebkitBoxOrient: 'vertical' 
+
 }}>
                     {service.description}
                   </CardDescription>

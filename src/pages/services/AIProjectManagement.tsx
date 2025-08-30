@@ -50,7 +50,7 @@ export default function AIProjectManagement() {
     {
       icon: BarChart3,
       title: "Performance Analytics",
-      description: "Real-time project analytics and predictive performance insights."
+      description: "Real-time project analytics and predictive performance insights.";
     },;
     {;
       icon: Clock,;
@@ -59,7 +59,7 @@ export default function AIProjectManagement() {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increase project completion rates by 30-50% with AI insights",;
     "Reduce project delays by 40-60% through predictive analytics",;
     "Improve team productivity by 25-40% with automation",;
@@ -92,7 +92,7 @@ export default function AIProjectManagement() {
     {
       phase: "Control",
       description: "AI-driven change management and project adjustment recommendations",
-      icon: TrendingUp
+      icon: TrendingUp;
     },;
     {;
       phase: "Closure",;
@@ -115,7 +115,7 @@ export default function AIProjectManagement() {
       description: "Campaign management, content planning, and performance tracking"
     },
     {
-      industry: "Healthcare",
+      industry: "Healthcare",;
       description: "Clinical trial management, patient care coordination, and facility projects";
     },;
     {;
@@ -144,10 +144,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -206,10 +208,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -240,6 +244,7 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -249,10 +254,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -284,10 +291,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -321,6 +330,7 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -330,10 +340,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -390,10 +402,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -424,6 +438,7 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -433,10 +448,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -470,10 +487,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -504,6 +523,7 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -513,10 +533,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -550,10 +572,12 @@ export default function AIProjectManagement() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -583,7 +607,7 @@ export default function AIProjectManagement() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-teal-400/30 text-teal-300 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-300"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>;
             </div>;
           </motion.div>;

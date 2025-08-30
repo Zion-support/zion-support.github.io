@@ -32,6 +32,7 @@ const mockUser = {
 
 
 
+
 },
         {
             id: "badge2",
@@ -132,6 +133,7 @@ export default function CommunityProfilePage() {
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
   `community, forum, profile, user profile,
   ${user.name
+
 }`}/>
 =======
         </div>);
@@ -139,6 +141,7 @@ export default function CommunityProfilePage() {
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
   `community, forum, profile, user profile,
   ${user.name
+
 
 
 

@@ -17,7 +17,7 @@ const IoTServices = () => {
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
     },
-    {
+    {;
       title: "IoT Data Management",;
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",;
       price: "From $6,500/month",;
@@ -38,7 +38,7 @@ const IoTServices = () => {
       description: "AI-powered IoT intelligence and automation",
       icon: BarChart3,
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
-    },
+    },;
     {;
       name: "Security & Privacy",;
       description: "Enterprise-grade IoT security solutions",;
@@ -47,7 +47,7 @@ const IoTServices = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Real-time monitoring and control capabilities",;
     "Improved operational efficiency and automation",;
     "Enhanced data collection and insights",;
@@ -210,7 +210,7 @@ const IoTServices = () => {
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Services;
             </a>;
           </div>;

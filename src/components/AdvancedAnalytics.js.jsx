@@ -84,9 +84,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.1 }} className="p-6 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-xl">
           <div className="text-2xl font-bold text-zion-blue">
             {formatNumber(analyticsData.visitors)}
@@ -98,9 +100,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.2 }} className="p-6 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-xl">
           <div className="text-2xl font-bold text-zion-purple">
             {formatNumber(analyticsData.conversions)}
@@ -112,9 +116,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.3 }} className="p-6 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-xl">
           <div className="text-2xl font-bold text-zion-cyan">
             {formatCurrency(analyticsData.revenue)}
@@ -126,9 +132,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.4 }} className="p-6 bg-gradient-to-br from-zion-slate/20 to-zion-blue/20 border border-zion-slate/30 rounded-xl">
           <div className="text-2xl font-bold text-zion-slate-light">
             {analyticsData.bounceRate.toFixed(1)}%
@@ -144,9 +152,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   x: -20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: 0.5 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
           <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
             Top Pages
@@ -172,9 +182,11 @@ export function AdvancedAnalytics() {
         <motion.div initial = {
   { opacity: 0,
   x: 20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: 0.6 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
           <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
             Traffic Sources
@@ -197,9 +209,11 @@ export function AdvancedAnalytics() {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.7 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Device Types
@@ -223,9 +237,11 @@ export function AdvancedAnalytics() {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.8 }} className="p-6 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 border border-zion-blue/20 rounded-xl">
         <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
           Performance Insights

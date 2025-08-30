@@ -12,7 +12,6 @@ export const PageHero = ({
   stats = []
 }) => {
 <<<<<<< HEAD
-  const displayFeatures = features.length > 0 ? features : defaultFeatures;
   const displayStats = stats.length > 0 ? stats : [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     { value: '500+', label: 'Happy Clients' },

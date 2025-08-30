@@ -29,22 +29,28 @@ const FloatingActionButton = ({ className = '' }) => {
         {isOpen && (<motion.div initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} exit = {
   { opacity: 0,
   scale: 0.8 
+
 }} className="absolute bottom-16 right-0 mb-2 space-y-3">
             {actionItems.map((item, index) => (<motion.div key={item.label} initial = {
   { opacity: 0,
   x: 20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} exit = {
   { opacity: 0,
   x: 20 
+
 }} transition={{ delay: index * 0.1 }} className="flex items-center space-x-3">
                 <motion.button onClick={item.action} className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label={item.label}>
                   <item.icon className="w-5 h-5"/>
@@ -52,9 +58,11 @@ const FloatingActionButton = ({ className = '' }) => {
                 <motion.span initial = {
   { opacity: 0,
   x: -10 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap">
                   {item.label}
                 </motion.span>
@@ -67,23 +75,29 @@ const FloatingActionButton = ({ className = '' }) => {
           {isOpen ? (<motion.div key="close" initial = {
   { rotate: -90,
   opacity: 0 
+
 }} animate = {
   { rotate: 0,
   opacity: 1 
+
 }} exit = {
   { rotate: 90,
   opacity: 0 
+
 }} transition={{ duration: 0.2 }}>
               <XMarkIcon className="w-6 h-6"/>
             </motion.div>) : (<motion.div key="open" initial = {
   { rotate: 90,
   opacity: 0 
+
 }} animate = {
   { rotate: 0,
   opacity: 1 
+
 }} exit = {
   { rotate: -90,
   opacity: 0 
+
 }} transition={{ duration: 0.2 }}>
               <PlusIcon className="w-6 h-6"/>
             </motion.div>)}

@@ -96,7 +96,7 @@ export const ChatAssistant({ ;
       recognitionRef.current.lang = 'en-US';
 
 <<<<<<< HEAD
-      recognitionRef.current.onresult = (event) => {
+      recognitionRef.current.onresult = (event) => {;
 =======;
       recognitionRef.current.onresult = (event: any) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -136,10 +136,11 @@ export const ChatAssistant({ ;
   'Technical support'
           ]
         
+
 }
 =======
             'Tell me about your AI solutions',
-            'What quantum computing services do you offer?',
+            'What quantum computing services do you offer?',;
             'How can I get started with your platform?',;
   'What are your pricing plans?';
           ];
@@ -327,8 +328,9 @@ export const ChatAssistant({ ;
   id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
-      timestamp: new Date(),
-   ;
+      timestamp: new Date(),;
+  ;
+
 };
 
     setMessages(prev => [...prev, userMessage]);
@@ -348,7 +350,8 @@ export const ChatAssistant({ ;
         metadata: {
           confidence: 0.95,
           suggestions: generateSuggestions(content),
-   
+  
+;
 };
       };
 
@@ -360,8 +363,9 @@ export const ChatAssistant({ ;
   id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
-        timestamp: new Date(),
-   ;
+        timestamp: new Date(),;
+  ;
+
 };
       
       setMessages(prev => [...prev, errorMessage]);
@@ -377,7 +381,7 @@ export const ChatAssistant({ ;
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
       'I\'d be happy to help you with that. Let me provide some details.',
-      'That\'s an interesting point. Here\'s what I know about that subject.',
+      'That\'s an interesting point. Here\'s what I know about that subject.',;
       'I can definitely assist you with that. Let me share some relevant information.',;
     ];
     
@@ -389,7 +393,7 @@ export const ChatAssistant({ ;
       'Tell me more',
       'Can you explain that differently?',
       'What are the next steps?',
-      'Show me examples',
+      'Show me examples',;
       'How does this work?';
     ];
     
@@ -403,10 +407,11 @@ export const ChatAssistant({ ;
   id: Date.now().toString(),
         type: 'user',
   content: `Uploaded file: ${file.name
+
 }`,
         timestamp: new Date(),
         metadata: {
-          sources: [file.name],
+          sources: [file.name],;
         };
       };
       setMessages(prev = > [...prev, fileMessage])};
@@ -419,7 +424,7 @@ export const ChatAssistant({ ;
   // Handle enter key
   const handleKeyPress = useCallback((e: React.KeyboardEvent)  => {
     if (e.key === 'Enter' && !e.shiftKey) {
-=======
+=======;
   // Toggle mute;
   const toggleMute = () => {;
     setIsMuted(!isMuted);
@@ -442,7 +447,7 @@ export const ChatAssistant({ ;
   const exportChat = useCallback(() => {
     const chatData = messages.map(msg => ({
       type: msg.type,
-      content: msg.content,
+      content: msg.content,;
       timestamp: msg.timestamp.toISOString(),;
     }));
 =======
@@ -474,14 +479,16 @@ export const ChatAssistant({ ;
     'bottom-left': 'bottom-4 left-4',
 <<<<<<< HEAD
     'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4',
-   ;
+    'top-left': 'top-4 left-4',;
+  ;
+
 };
 
   const themeClasses = {
   light: 'bg-white text-gray-900 border-gray-200',
-    dark: 'bg-gray-900 text-white border-gray-700',
-   ;
+    dark: 'bg-gray-900 text-white border-gray-700',;
+  ;
+
 };
 
   return (
@@ -506,7 +513,7 @@ export const ChatAssistant({ ;
             <div className="flex items-center space-x-2">
               <Bot className="w-5 h-5 text-blue-500" />
               <span className="font-semibold">AI Assistant</span>
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />;
 =======;
     'top-right': 'top-4 right-4',;
   ;
@@ -540,13 +547,15 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
           transition = {
   { duration: 2,
-  repeat: Infinity 
+  repeat: Infinity ;
 ;
 ;
 ;
+
 
 
 }};
@@ -566,6 +575,7 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
         animate = {
   { opacity: 1, scale: 1,
@@ -575,10 +585,12 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
         exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 
 
 
@@ -653,6 +665,7 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
               animate = {
   { height: 'auto',
@@ -662,10 +675,12 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
               exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -714,10 +729,12 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -787,10 +804,12 @@ export const ChatAssistant({ ;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -929,7 +948,7 @@ export const ChatAssistant({ ;
             </>
           )}
         </div>
-      )}
+      )};
     </div>;
   )};
 =======
@@ -973,7 +992,7 @@ export const ChatAssistant({ ;
                   ) : (
                     <Send className="w-4 h-4" />
                   )}
-                </button>
+                </button>;
               </div>;
             </div>;
           </>;

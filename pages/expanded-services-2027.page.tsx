@@ -103,7 +103,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               type="text"
               placeholder="Search services..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => setSearchTerm(e.target.value)};
               className="px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400";
             />;
             ;
@@ -113,7 +113,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 setSelectedCategory(e.target.value);
 <<<<<<< HEAD
                 setSelectedSubcategory('all')}}
-              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400";
 =======;
                 setSelectedSubcategory('all');
               }}
@@ -277,7 +277,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
             </div>
           </div>
         </div>
-      </main>
+      </main>;
     </div>;
   )};
 =======

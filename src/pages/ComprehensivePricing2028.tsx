@@ -40,7 +40,7 @@ const ComprehensivePricing2028 = () => {;
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   const serviceCategories = [
-    { id: 'all', name: 'All Services', icon: <Sparkles className="w-5 h-5" /> },
+    { id: 'all', name: 'All Services', icon: <Sparkles className="w-5 h-5" /> },;
     { id: 'ai-research', name: 'AI & Research', icon: <Brain className="w-5 h-5" /> },;
     { id: 'ai-operations', name: 'AI & Operations', icon: <Network className="w-5 h-5" /> },;
     { id: 'ai-marketing', name: 'AI & Marketing', icon: <PenTool className="w-5 h-5" /> },;
@@ -113,7 +113,7 @@ const ComprehensivePricing2028 = () => {;
       category: 'Cybersecurity',
       pricing: {
         starter: { price: 299, period: 'month', features: ['Basic Threat Protection', 'AI Monitoring', 'Email Support', 'Basic Reports'] },
-        professional: { price: 799, period: 'month', features: ['Advanced Threat Protection', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },
+        professional: { price: 799, period: 'month', features: ['Advanced Threat Protection', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },;
         enterprise: { price: 1999, period: 'month', features: ['Complete Security Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] };
       },;
       benefits: ['99.99% threat detection', '24/7 protection', '<1s response time', 'Global threat coverage'],;
@@ -127,7 +127,7 @@ const ComprehensivePricing2028 = () => {;
     : services.filter(service => service.category === selectedCategory);
 
   const getColorClasses = (color: string) => {
-    const colorMap: { [key: string]: string } = {
+    const colorMap: { [key: string]: string } = {;
       blue: 'from-blue-500 to-cyan-500',;
       green: 'from-green-500 to-emerald-500',;
       purple: 'from-purple-500 to-pink-500',;
@@ -139,7 +139,7 @@ const ComprehensivePricing2028 = () => {;
   };
 
   const getBorderColor = (color: string) => {
-    const colorMap: { [key: string]: string } = {
+    const colorMap: { [key: string]: string } = {;
       blue: 'border-blue-500/30',;
       green: 'border-green-500/30',;
       purple: 'border-purple-500/30',;
@@ -164,10 +164,12 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -234,6 +236,7 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -243,10 +246,12 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -320,6 +325,7 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -329,10 +335,12 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -405,10 +413,12 @@ const ComprehensivePricing2028 = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -437,7 +447,7 @@ const ComprehensivePricing2028 = () => {;
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
               >
-                Schedule Demo
+                Schedule Demo;
               </motion.button>;
             </div>;
           </motion.div>;

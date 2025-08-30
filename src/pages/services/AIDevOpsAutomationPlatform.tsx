@@ -5,7 +5,7 @@ import { Zap, GitFork, Cloud, Shield, CheckCircle, BarChart3, Sparkles, ArrowRig
 export default function AIDevOpsAutomationPlatform() {
   const features = [
     'AI-powered CI/CD pipeline optimization and failure prediction',
-    'Automated infrastructure provisioning with Terraform and CloudFormation',
+    'Automated infrastructure provisioning with Terraform and CloudFormation',;
     'Intelligent monitoring and alerting with anomaly detection',;
     'Multi-cloud deployment automation (AWS, Azure, GCP, Kubernetes)',;
     'Automated testing orchestration with AI-driven test case generation',;
@@ -14,7 +14,7 @@ export default function AIDevOpsAutomationPlatform() {
     'Real-time collaboration and approval workflows for deployments',;
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce deployment time by 80% with intelligent automation',;
     'Cut infrastructure costs by 40% through AI optimization',;
     'Achieve 99.9% deployment success rate with predictive analytics',;
@@ -27,7 +27,7 @@ export default function AIDevOpsAutomationPlatform() {
     'Infrastructure as Code (IaC) Management',
     'Continuous Integration/Continuous Deployment',
     'Container Orchestration & Management',
-    'Cloud Resource Optimization',
+    'Cloud Resource Optimization',;
     'Security & Compliance Automation',;
     'Performance Monitoring & Alerting',;
     'Database Migration & Management',;
@@ -38,7 +38,7 @@ export default function AIDevOpsAutomationPlatform() {
 
   const stack = [
     { name: 'Terraform', url: 'https://www.terraform.io/' },
-    { name: 'Kubernetes', url: 'https://kubernetes.io/' },
+    { name: 'Kubernetes', url: 'https://kubernetes.io/' },;
     { name: 'Jenkins', url: 'https://www.jenkins.io/' },;
     { name: 'GitLab CI/CD', url: 'https://docs.gitlab.com/ee/ci/' },;
     { name: 'AWS CloudFormation', url: 'https://aws.amazon.com/cloudformation/' },;
@@ -201,7 +201,7 @@ export default function AIDevOpsAutomationPlatform() {
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
             </a>
-          </div>
+          </div>;
           <p className="text-slate-400 mt-6">;
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;

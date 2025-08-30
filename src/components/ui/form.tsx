@@ -6,9 +6,9 @@ interface FormProps extends React.PropsWithChildren<{}> {
   onSubmit?: (e: React.FormEvent)  => void}
 
 export function FormItem(...args[]):  {
-  return <div className="space-y-2">{children}</div>}
+  return <div className = "space-y-2">{children}</div>}
 
-interface FormLabelProps extends React.PropsWithChildren<{}> {
+interface FormLabelProps extends React.PropsWithChildren<{}> {;
 ;
   children: React.ReactNode;
   className?: string}
@@ -16,7 +16,7 @@ interface FormLabelProps extends React.PropsWithChildren<{}> {
 export function FormLabel(...args[]):  {
   return <label className = {`block text-sm font-medium ${className}`}>{children}</label>}
 
-interface FormFieldProps extends React.PropsWithChildren<{}> {
+interface FormFieldProps extends React.PropsWithChildren<{}> {;
 ;
   control;name: string;
   render: (props)  => React.ReactNode}

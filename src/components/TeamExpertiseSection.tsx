@@ -61,7 +61,7 @@ export const TeamExpertiseSection: React.FC = (): JSX.Element => {
       description: 'Research scientists and engineers pushing the boundaries of technology.',
       certifications['PhD Computer Science', 'Patent Holders', 'Research Publications'],
       experience: '20+ years',
-      projects: '50+'
+      projects: '50+';
     };
   ];
 =======
@@ -95,7 +95,7 @@ const teamExpertise = [
     title: "Research Publications",
     description: "Published research in leading AI, quantum computing, and blockchain journals",
     count: "30+"
-  },
+  },;
   {;
     icon: "🚀",;
     title: "Successful Projects",;
@@ -107,7 +107,7 @@ const teamExpertise = [
 
 const coreExpertise = [
   "Artificial Intelligence & Machine Learning",
-  "Quantum Computing & Algorithms",
+  "Quantum Computing & Algorithms",;
   "Blockchain & Web3 Technologies",;
   "Cloud Infrastructure & DevOps",;
   "Cybersecurity & Compliance",;
@@ -130,10 +130,12 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -157,17 +159,20 @@ export function TeamExpertiseSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >
+        >;
           {stats.map((stat, index)  => {;
             const IconComponent = stat.icon;
             return (
@@ -195,10 +200,12 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -214,6 +221,7 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -224,7 +232,7 @@ export function TeamExpertiseSection() {
         </motion.div>
 
         {/* Expertise Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {expertise.map((item, index)  => {;
             const IconComponent = item.icon;
             return (
@@ -233,14 +241,17 @@ export function TeamExpertiseSection() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
               >
@@ -295,10 +306,12 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -309,6 +322,7 @@ export function TeamExpertiseSection() {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -337,10 +351,12 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -351,6 +367,7 @@ export function TeamExpertiseSection() {
               transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
 
 
 
@@ -373,10 +390,12 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -392,6 +411,7 @@ export function TeamExpertiseSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -400,7 +420,7 @@ export function TeamExpertiseSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -415,4 +435,5 @@ export default TeamExpertiseSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default TeamExpertiseSection;
 export default TeamExpertiseSection;

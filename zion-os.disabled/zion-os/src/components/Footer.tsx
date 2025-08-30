@@ -35,7 +35,7 @@ export default function Footer() {
     {
       title: 'Resources',
       links: [
-        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Case Studies', href: '/case-studies' },;
         { name: 'White Papers', href: '/white-papers' },;
         { name: 'Documentation', href: '/docs' },;
         { name: 'Webinars', href: '/webinars' },;
@@ -119,7 +119,7 @@ export default function Footer() {
                 Cookie Policy
               </Link>
               <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200">
-                Accessibility
+                Accessibility;
               </Link>;
             </div>;
           </div>;

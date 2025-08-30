@@ -5,7 +5,7 @@ export default function AIDigitalTwinPlatform() {
     'AI-powered digital twin creation and management',
     'Real-time IoT sensor data integration',
     'Predictive maintenance and failure prediction',
-    '3D visualization and augmented reality support',
+    '3D visualization and augmented reality support',;
     'Multi-physics simulation and modeling',;
     'Automated anomaly detection and alerts',;
     'Historical data analysis and trend prediction',;
@@ -14,7 +14,7 @@ export default function AIDigitalTwinPlatform() {
     'Scalable cloud-based infrastructure';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce operational costs by 25-40%',;
     'Improve equipment uptime by 30-50%',;
     'Cut maintenance costs by 20-35%',;
@@ -35,7 +35,7 @@ export default function AIDigitalTwinPlatform() {
       price: '$1,299/mo', 
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
@@ -44,7 +44,7 @@ export default function AIDigitalTwinPlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Manufacturing process optimization',;
     'Smart city infrastructure monitoring',;
     'Healthcare facility management',;
@@ -53,7 +53,7 @@ export default function AIDigitalTwinPlatform() {
     'Building automation and management';
   ];
 
-  const industries = [
+  const industries = [;
     'Manufacturing & Industry 4.0',;
     'Smart Cities & Infrastructure',;
     'Healthcare & Medical Devices',;
@@ -287,7 +287,7 @@ export default function AIDigitalTwinPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

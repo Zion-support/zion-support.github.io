@@ -67,7 +67,7 @@ export default function AISupplyChainOptimization(...args[]):  {
     {
       icon: PieChart,
       title: "Cost Optimization",
-      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement."
+      description: "Identify cost-saving opportunities across transportation, warehousing, and procurement.";
     },;
     {;
       icon: Activity,;
@@ -110,7 +110,7 @@ export default function AISupplyChainOptimization(...args[]):  {
     {
       icon: TrendingUp,
       title: "Increased Revenue",
-      description: "Improve customer satisfaction and increase sales through better inventory availability and faster delivery."
+      description: "Improve customer satisfaction and increase sales through better inventory availability and faster delivery.";
     },;
     {;
       icon: Clock,;
@@ -158,7 +158,7 @@ export default function AISupplyChainOptimization(...args[]):  {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",
+        "On-premise deployment",;
         "SLA guarantees",;
         "24/7 support";
       ],;
@@ -187,7 +187,7 @@ export default function AISupplyChainOptimization(...args[]):  {
     {
       title: 'Supplier Management',
       description: 'Intelligent supplier selection and performance monitoring',
-      benefits['Improve supplier performance', 'Reduce supply chain risks', 'Optimize procurement costs']
+      benefits['Improve supplier performance', 'Reduce supply chain risks', 'Optimize procurement costs'];
     };
   ];
 
@@ -196,7 +196,7 @@ export default function AISupplyChainOptimization(...args[]):  {
     { name: 'Predictive Analytics', description: 'Forecast supply chain disruptions and demand patterns' },
     { name: 'IoT Integration', description: 'Real-time data collection from connected devices and sensors' },
     { name: 'Blockchain', description: 'Secure and transparent supply chain tracking and verification' },
-    { name: 'Cloud Computing', description: 'Scalable and secure cloud-based optimization platform' },
+    { name: 'Cloud Computing', description: 'Scalable and secure cloud-based optimization platform' },;
     { name: 'API Integration', description: 'Seamless integration with existing ERP and logistics systems' };
   ];
 
@@ -220,13 +220,13 @@ export default function AISupplyChainOptimization(...args[]):  {
     {
       title: 'Enhanced Visibility',
       description: 'Real-time visibility into supply chain operations for better decision-making',
-      icon: Activity
+      icon: Activity;
     };
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO ;
 =======;
     {;
       industry: "Healthcare",;
@@ -253,7 +253,7 @@ export default function AISupplyChainOptimization(...args[]):  {
       platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
     },
     {
-      name: "Analytics",
+      name: "Analytics",;
       platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"];
     },;
     {;
@@ -276,7 +276,7 @@ export default function AISupplyChainOptimization(...args[]):  {
     {
       metric: "95%",
       label: "Forecast Accuracy",
-      description: "AI-powered demand prediction accuracy"
+      description: "AI-powered demand prediction accuracy";
     },;
     {;
       metric: "40%",;
@@ -295,7 +295,7 @@ export default function AISupplyChainOptimization(...args[]):  {
       areas: ["Stock Optimization", "Reorder Points", "Safety Stock", "ABC Analysis"]
     },
     {
-      category: "Transportation",
+      category: "Transportation",;
       areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"];
     },;
     {;
@@ -321,10 +321,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
@@ -337,10 +339,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -396,6 +400,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -405,10 +410,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -441,10 +448,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -456,10 +465,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -487,14 +498,17 @@ export default function AISupplyChainOptimization(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
 =======
@@ -506,6 +520,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -515,10 +530,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -548,10 +565,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -563,10 +582,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -594,14 +615,17 @@ export default function AISupplyChainOptimization(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
 =======
@@ -613,6 +637,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -622,10 +647,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -667,10 +694,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -701,6 +730,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -710,10 +740,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -760,10 +792,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -794,6 +828,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -803,10 +838,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -868,10 +905,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -883,10 +922,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -913,14 +954,17 @@ export default function AISupplyChainOptimization(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -947,10 +991,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -970,14 +1016,17 @@ export default function AISupplyChainOptimization(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -999,10 +1048,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -1022,14 +1073,17 @@ export default function AISupplyChainOptimization(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
@@ -1048,10 +1102,12 @@ export default function AISupplyChainOptimization(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
@@ -1092,6 +1148,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -1101,10 +1158,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -1184,10 +1243,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1218,6 +1279,7 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -1227,10 +1289,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -1271,10 +1335,12 @@ export default function AISupplyChainOptimization(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1298,7 +1364,7 @@ export default function AISupplyChainOptimization(...args[]):  {
               </button>
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

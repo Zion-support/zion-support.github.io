@@ -123,9 +123,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -159,9 +161,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -176,9 +180,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -220,9 +226,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,9 +266,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -315,9 +325,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -342,9 +354,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -419,9 +433,11 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -443,6 +459,7 @@ const AdvancedAnalyticsDashboard = () => {
 
 
 
+
 }>
               <Rocket className="w-5 h-5 mr-2"/>
               Request Access
@@ -450,6 +467,7 @@ const AdvancedAnalyticsDashboard = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

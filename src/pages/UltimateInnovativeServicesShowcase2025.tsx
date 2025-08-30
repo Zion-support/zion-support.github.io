@@ -57,7 +57,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )}
+      )};
 =======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -143,10 +143,12 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -166,10 +168,12 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,10 +195,12 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -235,7 +241,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-            </div>
+            </div>;
 ;
             {/* Category Filter */};
             <div className="flex gap-2">;
@@ -245,7 +251,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
                   setSelectedCategory(e.target.value);
 <<<<<<< HEAD
                   setSelectedSubcategory('all')}}
-                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className = "px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
 =======;
                   setSelectedSubcategory('all');
                 }}
@@ -299,10 +305,12 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -484,7 +492,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

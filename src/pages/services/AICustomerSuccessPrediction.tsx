@@ -56,7 +56,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       icon: Users,
       title: 'Behavioral Analytics',
-      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.'
+      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.';
     },;
     {;
       icon: Zap,;
@@ -83,7 +83,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       description: 'AI-driven recommendations for customer success actions',
       icon: Zap,
       benefits: ['Actionable insights', 'Timing optimization', 'Resource allocation', 'Success probability']
-    },
+    },;
     {;
       title: 'Integration Hub',;
       description: 'Seamless integration with your existing CRM, support, and analytics tools',;
@@ -110,7 +110,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
       icon: DollarSign,
       metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
-    },
+    },;
     {;
       industry: 'Healthcare',;
       description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',;
@@ -133,7 +133,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       icon: Users,
       title: 'Improve Customer Satisfaction',
-      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.'
+      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.';
     },;
     {;
       icon: Zap,;
@@ -183,7 +183,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
-        'Dedicated support',
+        'Dedicated support',;
         'Custom development',;
         'Advanced security';
       ],;
@@ -206,12 +206,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
-      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores']
+      metrics['Reduce risk by 30%', 'Increase product adoption by 45%', 'Improve satisfaction scores'];
     };
   ];
 
   const integrations = [
-    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',
+    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;
     'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
   ];
 
@@ -236,10 +236,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -278,10 +280,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -324,6 +328,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -333,10 +338,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -368,10 +375,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -402,6 +411,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -411,10 +421,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -456,10 +468,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -490,6 +504,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -499,10 +514,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -544,10 +561,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -578,6 +597,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -587,10 +607,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -622,10 +644,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -656,6 +680,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -665,10 +690,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -732,10 +759,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -787,6 +816,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -796,10 +826,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -831,10 +863,12 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -920,7 +954,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

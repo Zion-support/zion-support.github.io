@@ -93,7 +93,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         message: 'Please update your password to maintain account security.',
         timestamp: new Date(Date.now() - 1000 * 60 * 60), // 1 hour ago
         read: false,
-        priority: 'high',
+        priority: 'high',;
         category: 'security',;
         action: {;
           label: 'Update Now',;
@@ -238,7 +238,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         {unreadCount > 0 && (
           <motion.div
             initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            animate={{ scale: 1 }};
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold";
           >;
             {unreadCount > 9 ? '9+' : unreadCount};
@@ -259,6 +259,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -268,10 +269,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
         exit = {
   { opacity: 0,
   x: 300 
+
 
 
 
@@ -331,6 +334,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
               animate = {
   { height: 'auto',
@@ -340,10 +344,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
               exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -398,6 +404,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -407,10 +414,12 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -433,7 +442,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                           <p className={`text-sm font-medium ${!notification.read ? 'text-gray-900' : 'text-gray-700'}`}>
                             {notification.title}
                           </p>
-                          <p className="text-sm text-gray-600 mt-1">
+                          <p className="text-sm text-gray-600 mt-1">;
                             {notification.message};
                           </p>;
                           ;
@@ -450,7 +459,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
                           )}
                         </div>
                         
-                        <div className="flex items-center gap-2 ml-3">
+                        <div className="flex items-center gap-2 ml-3">;
                           <span className="text-xs text-gray-400">;
                             {formatTimestamp(notification.timestamp)};
                           </span>;
@@ -486,7 +495,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {;
         {notifications.length > 0 && (
           <div className="p-3 border-t border-gray-200 bg-gray-50">
             <div className="flex items-center justify-between text-xs text-gray-500">
-              <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>
+              <span>{notifications.length} notification{notifications.length !== 1 ? 's' : ''}</span>;
               <span>{unreadCount} unread</span>;
             </div>;
           </div>;

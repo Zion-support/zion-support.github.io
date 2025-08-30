@@ -76,7 +76,7 @@ const steps = [
             "Post-launch support"
         ],
         duration: "Ongoing",
-        success: "100% client retention"
+        success: "100% client retention";
     };
 ];
 const stats = [
@@ -153,7 +153,7 @@ const stats = [
     bgColor: "from-zion-purple-light/20 to-zion-purple/20",
     details: [
       "Comprehensive testing",
-      "Documentation delivery",
+      "Documentation delivery",;
       "Training and handover",;
       "Post-launch support";
     ],;
@@ -179,7 +179,7 @@ export function HowItWorksSection() {
             transition: {
                 staggerChildren: 0.2,
                 delayChildren: 0.1
-            }
+            };
         };
     };
 
@@ -187,12 +187,14 @@ export function HowItWorksSection() {
     const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
-},
+
+},;
         visible: { opacity: 1, y: 0 };
     };
     const statsVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
+
 },
         visible: {
             opacity: 1,
@@ -200,7 +202,7 @@ export function HowItWorksSection() {
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-            }
+            };
         };
     };
     return (<section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
@@ -211,11 +213,12 @@ export function HowItWorksSection() {
             backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
   backgroundSize: '40px 40px'
         
+
 }}/>
 =======
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    visible: {;
       opacity: 1,;
       transition: {;
         staggerChildren: 0.2,;
@@ -232,9 +235,10 @@ export function HowItWorksSection() {
 
 
 
+
 },
     visible: {
-      opacity: 1,
+      opacity: 1,;
       scale: 1,;
       transition: {;
         duration: 0.5,;
@@ -257,6 +261,7 @@ export function HowItWorksSection() {
 
 
 
+
 }} />
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
@@ -266,17 +271,21 @@ export function HowItWorksSection() {
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
   { scale: [1, 1.2,
   1] 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}/>
 =======
         <motion.div 
@@ -285,6 +294,7 @@ export function HowItWorksSection() {
           transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 
 
 
@@ -303,6 +313,7 @@ export function HowItWorksSection() {
 
 
 
+
 }}
         />
         <motion.div 
@@ -310,6 +321,7 @@ export function HowItWorksSection() {
           animate = {
   { scale: [1, 1.2,
   1] 
+
 
 
 
@@ -324,6 +336,7 @@ export function HowItWorksSection() {
 
 
 
+
 }}
         />
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -333,9 +346,11 @@ export function HowItWorksSection() {
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
 =======
         <motion.div 
@@ -348,10 +363,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -386,6 +403,7 @@ export function HowItWorksSection() {
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
   { duration: 2,
   delay: 0.5 
+
 }}/>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
@@ -401,6 +419,7 @@ export function HowItWorksSection() {
                 transition = {
   { type: "spring",
   stiffness: 300 
+
 }}
 =======
               <motion.div
@@ -413,6 +432,7 @@ export function HowItWorksSection() {
                 transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -459,14 +479,17 @@ export function HowItWorksSection() {
                         initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} 
                         exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         transition={{ duration: 0.3 }}
                       >
@@ -479,10 +502,12 @@ export function HowItWorksSection() {
                               initial = {
   { opacity: 0,
   x: -10 
+
 }} 
                               animate = {
   { opacity: 1,
   x: 0 
+
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -516,6 +541,7 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                       animate = {
   { opacity: 1, y: 0,
@@ -525,10 +551,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                       exit = {
   { opacity: 0, y: 10,
   scale: 0.95 
+
 
 
 
@@ -562,12 +590,15 @@ export function HowItWorksSection() {
         <motion.div className="text-center mt-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
 =======
 
@@ -582,10 +613,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -596,6 +629,7 @@ export function HowItWorksSection() {
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -621,12 +655,15 @@ export function HowItWorksSection() {
         <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}>
           <div className="text-center p-6 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-4">
@@ -651,7 +688,7 @@ export function HowItWorksSection() {
           </div>
         </motion.div>
       </div>
-    </section>
+    </section>;
 =======;
             </div>;
           </div>;

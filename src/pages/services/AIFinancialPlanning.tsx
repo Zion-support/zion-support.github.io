@@ -73,7 +73,7 @@ export default function AIFinancialPlanning() {
     {
       icon: AlertCircle,
       title: "Financial Health Monitoring",
-      description: "Real-time monitoring of your financial health with predictive insights and alerts."
+      description: "Real-time monitoring of your financial health with predictive insights and alerts.";
     },;
     {;
       icon: Activity,;
@@ -106,7 +106,7 @@ export default function AIFinancialPlanning() {
     {
       icon: TrendingUp,
       title: "Investment Growth",
-      description: "Optimize investment portfolios and maximize returns with AI-driven recommendations."
+      description: "Optimize investment portfolios and maximize returns with AI-driven recommendations.";
     },;
     {;
       icon: Clock,;
@@ -162,7 +162,7 @@ export default function AIFinancialPlanning() {
         "Dedicated support",
         "Advanced reporting",
         "API access",
-        "Custom integrations",
+        "Custom integrations",;
         "Multi-account support",;
         "Tax filing assistance";
       ],;
@@ -195,7 +195,7 @@ export default function AIFinancialPlanning() {
     {
       industry: "Tax Planning",
       description: "Optimize tax strategies and maximize deductions throughout the year",
-      icon: Receipt
+      icon: Receipt;
     },;
     {;
       industry: "Investment Management",;
@@ -222,7 +222,7 @@ export default function AIFinancialPlanning() {
       platforms: ["TurboTax", "H&R Block", "TaxAct", "Credit Karma Tax"]
     },
     {
-      name: "Payment Platforms",
+      name: "Payment Platforms",;
       platforms: ["PayPal", "Venmo", "Square", "Stripe"];
     },;
     {;
@@ -245,7 +245,7 @@ export default function AIFinancialPlanning() {
     {
       metric: "90%",
       label: "Goal Achievement",
-      description: "Users achieve their financial goals"
+      description: "Users achieve their financial goals";
     },;
     {;
       metric: "3x",;
@@ -264,7 +264,7 @@ export default function AIFinancialPlanning() {
       areas: ["Portfolio Analysis", "Risk Assessment", "Asset Allocation", "Market Insights"]
     },
     {
-      category: "Tax Planning",
+      category: "Tax Planning",;
       areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"];
     },;
     {;
@@ -294,10 +294,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -349,6 +351,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -358,10 +361,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -398,10 +403,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -432,6 +439,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -441,10 +449,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -491,10 +501,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -525,6 +537,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -534,10 +547,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -576,10 +591,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -610,6 +627,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -619,10 +637,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -669,10 +689,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -703,6 +725,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -712,10 +735,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -780,10 +805,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -814,6 +841,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -823,10 +851,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -873,10 +903,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -907,6 +939,7 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -916,10 +949,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -960,10 +995,12 @@ export default function AIFinancialPlanning() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -987,7 +1024,7 @@ export default function AIFinancialPlanning() {
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

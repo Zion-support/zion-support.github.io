@@ -60,7 +60,7 @@ export default function AICybersecurityPlatform() {
     {
       icon: Zap,
       title: 'Automated Incident Response',
-      description: 'Intelligent automation that responds to security incidents within seconds, containing threats and minimizing potential damage automatically.'
+      description: 'Intelligent automation that responds to security incidents within seconds, containing threats and minimizing potential damage automatically.';
     },;
     {;
       icon: Eye,;
@@ -87,7 +87,7 @@ export default function AICybersecurityPlatform() {
       description: 'Intelligent network monitoring and intrusion prevention systems',
       icon: Network,
       benefits: ['Traffic analysis', 'Anomaly detection', 'DDoS protection', 'VPN management']
-    },
+    },;
     {;
       title: 'Cloud Security',;
       description: 'Comprehensive cloud infrastructure protection and compliance monitoring',;
@@ -114,7 +114,7 @@ export default function AICybersecurityPlatform() {
       description: 'Protect industrial control systems, secure supply chains, and prevent operational disruption from cyber threats',
       icon: Cpu,
       metrics: ['OT Security', 'Supply Chain Protection', 'Operational Continuity', 'Threat Prevention']
-    },
+    },;
     {;
       industry: 'Government',;
       description: 'Secure critical infrastructure, protect classified information, and ensure national security with advanced AI cybersecurity',;
@@ -137,7 +137,7 @@ export default function AICybersecurityPlatform() {
     {
       icon: DollarSign,
       title: 'Reduced Security Costs',
-      description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.'
+      description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.';
     },;
     {;
       icon: Users,;
@@ -187,7 +187,7 @@ export default function AICybersecurityPlatform() {
         'Unlimited endpoints',
         'Custom AI models',
         'White-label solution',
-        'Dedicated support',
+        'Dedicated support',;
         'Custom development',;
         'Advanced analytics';
       ],;
@@ -217,10 +217,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -260,10 +262,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -294,6 +298,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -303,10 +308,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -338,10 +345,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -372,6 +381,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -381,10 +391,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -426,10 +438,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -460,6 +474,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -469,10 +484,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -514,10 +531,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,6 +567,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -557,10 +577,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -592,10 +614,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -626,6 +650,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -635,10 +660,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -702,10 +729,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -757,6 +786,7 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -766,10 +796,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -801,10 +833,12 @@ export default function AICybersecurityPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -864,7 +898,7 @@ export default function AICybersecurityPlatform() {
               <p className="text-slate-300">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-              </p>
+              </p>;
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>;
             </div>;
           </div>;

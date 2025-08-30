@@ -16,6 +16,7 @@ export function ServiceDetails({ country }) {
   // Default for other countries
             "default"["Major metropolitan areas"]
         
+
 };
         return dataCenters[country] || dataCenters["default"]};
 =======
@@ -51,6 +52,7 @@ export function ServiceDetails({ country }) {
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
 <<<<<<< HEAD
         
+
 };
         return regions[country] || regions["default"]};
     // Get region-specific instructions
@@ -65,6 +67,7 @@ export function ServiceDetails({ country }) {
             "Singapore": "SGT",
   "default": "Local timezone"
         
+
 };
 =======
         

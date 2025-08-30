@@ -689,7 +689,7 @@ export const enhancedInnovativeServices2027Categories = [
   'Metaverse Solutions',
   'Sustainable Tech',
   'NeuroTech Solutions',
-  'Fusion Energy Solutions',
+  'Fusion Energy Solutions',;
   'OceanTech Solutions',;
   'AgriTech Solutions',;
   'Smart City Solutions',;

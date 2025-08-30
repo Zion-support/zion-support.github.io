@@ -28,7 +28,7 @@ export function EnhancedSEO({
   const defaultKeywords = [
     'AI services',
     'IT consulting',
-    'technology solutions',
+    'technology solutions',;
     'digital transformation',;
     'cloud computing',;
     'cybersecurity',;
@@ -57,6 +57,7 @@ export function EnhancedSEO({
 
 
 
+
 },
     "contactPoint": {
       "@type": "ContactPoint",
@@ -76,7 +77,7 @@ export function EnhancedSEO({
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
-    "serviceType": [
+    "serviceType": [;
       "AI Services",;
       "IT Consulting",;
       "Digital Transformation",;
@@ -102,6 +103,7 @@ export function EnhancedSEO({
       <meta name="keywords" content = {
   allKeywords.join(',
   ')
+
 
 
 
@@ -145,7 +147,7 @@ export function EnhancedSEO({
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
-<<<<<<< HEAD
+<<<<<<< HEAD;
     </Helmet>;
   )};
 =======
@@ -196,7 +198,7 @@ export function EnhancedSEO({
             "serviceType": section,
             "areaServed": "Worldwide",
             "hasOfferCatalog": {
-              "@type": "OfferCatalog",
+              "@type": "OfferCatalog",;
               "name": "Zion Tech Group Services";
             };
           })};

@@ -18,7 +18,7 @@ const AIPredictiveMaintenance: React.FC = () => {
     {
       icon: AlertTriangle,
       title: 'Early Warning System',
-      description: 'Proactive alerts before equipment failure'
+      description: 'Proactive alerts before equipment failure';
     },;
     {;
       icon: BarChart3,;
@@ -41,7 +41,7 @@ const AIPredictiveMaintenance: React.FC = () => {
     {
       title: 'Transportation',
       description: 'Fleet maintenance and vehicle optimization',
-      icon: '🚚'
+      icon: '🚚';
     },;
     {;
       title: 'Healthcare',;
@@ -50,7 +50,7 @@ const AIPredictiveMaintenance: React.FC = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce unplanned downtime by up to 75%',;
     'Extend equipment lifespan and reliability',;
     'Lower maintenance costs and labor requirements',;
@@ -78,10 +78,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -132,10 +134,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -165,6 +169,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -174,10 +179,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -209,10 +216,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +251,7 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -251,10 +261,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -288,10 +300,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,10 +333,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -352,10 +368,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -390,10 +408,12 @@ const AIPredictiveMaintenance: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,7 +433,7 @@ const AIPredictiveMaintenance: React.FC = () => {
                 Start Predictive Journey
               </button>
               <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

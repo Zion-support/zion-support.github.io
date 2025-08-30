@@ -23,7 +23,7 @@ export function SEO({
   image = '/images/zion-tech-group-og.jpg',
   type = 'website',
   publishedTime,
-  modifiedTime,
+  modifiedTime,;
   author = 'Zion Tech Group',;
   section,;
   tags = [],;
@@ -54,6 +54,7 @@ export function SEO({
     "name": "Zion Tech Group",
     "url": siteUrl,
   "logo": `${siteUrl
+
 
 
 
@@ -114,7 +115,7 @@ export function SEO({
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "Service",
+            "@type": "Service",;
             "name": "Cloud & DevOps",;
             "description": "Scalable cloud infrastructure and development operations";
           };
@@ -139,6 +140,7 @@ export function SEO({
 
 
 
+
 },
     "publisher": {
       "@type": "Organization",
@@ -152,7 +154,7 @@ export function SEO({
     "datePublished": publishedTime || new Date().toISOString(),
     "dateModified": modifiedTime || new Date().toISOString(),
     "author": {
-      "@type": "Organization",
+      "@type": "Organization",;
       "name": author;
     },;
     ...(type === 'article' && {;
@@ -200,6 +202,7 @@ export function SEO({
 
 
 
+
 } />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
@@ -225,7 +228,7 @@ export function SEO({
       </script>
       {/* Additional SEO Meta Tags */}
       <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech" />;
       <meta name="apple-mobile-web-app-capable" content="yes" />;
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
       ;
@@ -247,7 +250,7 @@ export function SEO({
       
       {/* Business Information */}
       <meta name="business:contact_data:street_address" content="364 E Main St STE 1008" />
-      <meta name="business:contact_data:locality" content="Middletown" />
+      <meta name="business:contact_data:locality" content="Middletown" />;
       <meta name="business:contact_data:region" content="DE" />;
       <meta name="business:contact_data:postal_code" content="19709" />;
       <meta name="business:contact_data:country_name" content="United States" />;

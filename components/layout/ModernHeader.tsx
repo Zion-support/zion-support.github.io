@@ -22,7 +22,7 @@ const ModernHeader: React.FC = () => {;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
-  const serviceCategories = [
+  const serviceCategories = [;
     { name: 'AI Services', icon: Cpu, href: '/services/ai', description: 'Intelligent automation & AI solutions' },;
     { name: 'IT Solutions', icon: Shield, href: '/services/it', description: 'Comprehensive IT infrastructure' },;
     { name: 'SAAS Platforms', icon: Database, href: '/services/saas', description: 'Custom software solutions' },;
@@ -43,6 +43,7 @@ const ModernHeader: React.FC = () => {;
       transition = {
   { duration: 0.6,
   ease: "easeOut" 
+
 
 
 
@@ -101,6 +102,7 @@ const ModernHeader: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1, y: 0,
@@ -110,10 +112,12 @@ const ModernHeader: React.FC = () => {;
 
 
 
+
 }}
                     exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
 
 
 
@@ -207,6 +211,7 @@ const ModernHeader: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -216,10 +221,12 @@ const ModernHeader: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -255,7 +262,7 @@ const ModernHeader: React.FC = () => {;
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </motion.header>;
   )};
 =======

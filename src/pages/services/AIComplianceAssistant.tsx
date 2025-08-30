@@ -9,7 +9,7 @@ export default function AIComplianceAssistant(...args[]):  {
     'ISO 27001',
     'HIPAA',
     'GDPR',
-    'PCI DSS',
+    'PCI DSS',;
     'NIST CSF',;
   ];
 =======
@@ -44,19 +44,19 @@ import {
 <<<<<<< HEAD
     'Policy drafting and gap analysis with citations',
     'Evidence collection and auditor-ready reports',
-    'Vendor risk questionnaires (SIG Lite, CAIQ)',
+    'Vendor risk questionnaires (SIG Lite, CAIQ)',;
     'Automated control mapping and task workflows',;
   ];
 
   const pricing = [
     'Starter: From $1,000/month (single framework)',
-    'Growth: From $2,500/month (multi-framework + workflows)',
+    'Growth: From $2,500/month (multi-framework + workflows)',;
     'Enterprise: Custom + SSO, DLP, private deployments',;
   ];
 
   const links = [
     { label: 'NIST CSF', url: 'https://www.nist.gov/cyberframework' },
-    { label: 'SOC 2', url: 'https://www.aicpa.org/resources/article/soc-2-frequently-asked-questions' },
+    { label: 'SOC 2', url: 'https://www.aicpa.org/resources/article/soc-2-frequently-asked-questions' },;
     { label: 'ISO 27001', url: 'https://www.iso.org/standard/27001' },;
   ];
 
@@ -114,7 +114,7 @@ import {
     {
       icon: Users,
       title: "Training & Certification",
-      description: "Automated compliance training programs with progress tracking and certification management."
+      description: "Automated compliance training programs with progress tracking and certification management.";
     },;
     {;
       icon: Clock,;
@@ -147,7 +147,7 @@ import {
     {
       icon: BarChart3,
       title: "Performance Analytics",
-      description: "Track compliance metrics and identify areas for improvement with detailed analytics."
+      description: "Track compliance metrics and identify areas for improvement with detailed analytics.";
     },;
     {;
       icon: TrendingUp,;
@@ -180,7 +180,7 @@ import {
     {
       name: "PCI DSS (Payment Card Industry Data Security Standard)",
       description: "Payment card data security standards",
-      icon: Cpu
+      icon: Cpu;
     },;
     {;
       name: "ISO 27001",;
@@ -213,7 +213,7 @@ import {
     {
       industry: "Manufacturing",
       description: "Ensure regulatory compliance and quality standards",
-      icon: Shield
+      icon: Shield;
     },;
     {;
       industry: "Education",;
@@ -243,10 +243,12 @@ import {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -322,10 +324,12 @@ import {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -357,6 +361,7 @@ import {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -366,10 +371,12 @@ import {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -416,10 +423,12 @@ import {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -451,6 +460,7 @@ import {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -460,10 +470,12 @@ import {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -510,10 +522,12 @@ import {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -545,6 +559,7 @@ import {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -554,10 +569,12 @@ import {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -604,10 +621,12 @@ import {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -639,6 +658,7 @@ import {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -648,10 +668,12 @@ import {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -698,10 +720,12 @@ import {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -725,7 +749,7 @@ import {
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

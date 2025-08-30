@@ -24,8 +24,10 @@ export default function LoadingSpinner(...args[]):  {
   ;
   ;
   ;
+  ;
   xl: 'w-16 h-16';
   ;
+
 
 
 
@@ -39,8 +41,10 @@ export default function LoadingSpinner(...args[]):  {
   ;
   ;
   ;
+  ;
   gray: 'border-gray-400 border-t-transparent';
   ;
+
 
 
 
@@ -57,6 +61,7 @@ export default function LoadingSpinner(...args[]):  {
 
 
 
+
 }>
       <div className = {
   cn(
@@ -64,6 +69,7 @@ export default function LoadingSpinner(...args[]):  {
         sizeClasses[size],
   colorClasses[color]
       )
+
 
 
 
@@ -88,7 +94,7 @@ export default function LoadingSpinner(...args[]):  {
 export function SkeletonLoader(...args[]):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index)  => (;
 =======;
         >;
           {text};
@@ -120,6 +126,7 @@ export function SkeletonLoader({
           transition = {
   { delay: index * 0.1,
   duration: 0.3 
+
 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
         />
@@ -133,6 +140,7 @@ export function ButtonLoader(...args[]):  {
     <div className = {
   cn('inline-flex items-center',
   className)
+
 }>
       <LoadingSpinner size={size} color="white" />
       <span className="ml-2">Loading...</span>
@@ -148,8 +156,9 @@ export function PageLoaderOverlay(...args[]):  {
 
 
 
-
 ;
+;
+
 }};
           className={`${height} bg-white/10 rounded-lg animate-pulse`};
         />;
@@ -171,9 +180,10 @@ export function ButtonLoader({
   cn('inline-flex items-center',
   className)
 
+;
+;
+;
 
-;
-;
 
 }>;
       <LoadingSpinner size={size} color="white" />;
@@ -209,6 +219,7 @@ export function PageLoaderOverlay({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -218,10 +229,12 @@ export function PageLoaderOverlay({
 
 
 
+
 }}
           transition = {
   { delay: 0.3,
   duration: 0.3 
+
 
 
 
@@ -238,7 +251,7 @@ export function PageLoaderOverlay({
   )}
 
 // Content loading placeholder
-export function ContentPlaceholder(...args[]):  {
+export function ContentPlaceholder(...args[]):  {;
 =======;
         >;
           {text};
@@ -264,8 +277,10 @@ export function ContentPlaceholder({
   ;
   ;
   ;
+  ;
   grid: 'grid grid-cols-2 md:grid-cols-4 gap-4';
   ;
+
 
 
 
@@ -288,10 +303,12 @@ export function ContentPlaceholder({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,10 +336,12 @@ export function ContentPlaceholder({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -349,10 +368,12 @@ export function ContentPlaceholder({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -375,10 +396,12 @@ export function ContentPlaceholder({
             initial = {
   { opacity: 0,
   y: 10 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ delay: index * 0.1 }}
             className="h-4 bg-white/10 rounded animate-pulse" />
@@ -395,6 +418,7 @@ export function ContentPlaceholder({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -404,6 +428,7 @@ export function ContentPlaceholder({
 
 
 
+;
 }};
             transition={{ delay: index * 0.1 }};
             className="h-4 bg-white/10 rounded animate-pulse" />;
@@ -426,6 +451,7 @@ export function AppLoadingSpinner() {
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style = {
   { animationDirection: 'reverse',
   animationDuration: '1.5s' 
+
 
 
 
@@ -467,6 +493,7 @@ export function AppLoadingSpinner() {
 
 
 
+
 }}
           >
             <span 
@@ -474,6 +501,7 @@ export function AppLoadingSpinner() {
   {
                 position: 'absolute',
   top: `${Math.cos(index * Math.PI / 2) * 60
+
 
 
 
@@ -500,10 +528,12 @@ export function AppLoadingSpinner() {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -533,9 +563,9 @@ export function AppLoadingSpinner() {
   {
               duration: 1.5,
               repeat: Infinity,
-              delay: i * 0.2,
-  
-;
+              delay: i * 0.2,;
+  ;
+
 }};
           />;
         ))};

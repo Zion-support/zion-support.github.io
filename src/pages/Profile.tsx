@@ -126,7 +126,7 @@ const Profile: React.FC = () => {;
   const industries = [
     'Technology',
     'Healthcare',
-    'Finance',
+    'Finance',;
     'Manufacturing',;
     'Retail',;
     'Education',;
@@ -180,11 +180,11 @@ const Profile: React.FC = () => {;
 <<<<<<< HEAD
   const handleNotificationToggle = (key: keyof NotificationSettings)  => {
     setNotifications(prev => ({
-      ...prev,
+      ...prev,;
       [key]: !prev[key];
     }))};
 
-  const getPasswordStrength = (password: string)  => {
+  const getPasswordStrength = (password: string)  => {;
 =======;
   const handleNotificationToggle = (key: keyof NotificationSettings) => {;
     setNotifications(prev => ({;
@@ -228,10 +228,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -281,6 +283,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -290,10 +293,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 + index * 0.1 
+
 
 
 
@@ -334,6 +339,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -351,6 +357,7 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   lastName: e.target.value 
+
 
 
 
@@ -380,6 +387,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -397,6 +405,7 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   phone: e.target.value 
+
 
 
 
@@ -422,12 +431,14 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   comp: e.target.value 
+
 }))}
 =======
                 value={profile.company}
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   company: e.target.value 
+
 
 
 
@@ -454,6 +465,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
               disabled={!isEditing}
               className="w-full px-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -471,6 +483,7 @@ const Profile: React.FC = () => {;
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
   industry: e.target.value 
+
 
 
 
@@ -502,6 +515,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -525,6 +539,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
               disabled={!isEditing}
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
@@ -539,6 +554,7 @@ const Profile: React.FC = () => {;
             onChange = {
   (e) => setProfile(prev => ({ ...prev,
   bio: e.target.value 
+
 
 
 
@@ -589,6 +605,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -598,10 +615,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 + index * 0.1 
+
 
 
 
@@ -629,7 +648,7 @@ const Profile: React.FC = () => {;
                 <div className="mt-3 flex items-center gap-2 text-yellow-400 text-sm">
                   <CheckCircle className="w-4 h-4" />
                   Earned
-                </div>
+                </div>;
               )};
             </motion.div>;
           ))};
@@ -648,10 +667,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -687,6 +708,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
@@ -716,6 +738,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
               >
@@ -735,6 +758,7 @@ const Profile: React.FC = () => {;
   'bg-')
                           : 'bg-slate-600/30'
                       
+
 
 
 
@@ -767,6 +791,7 @@ const Profile: React.FC = () => {;
                 onClick = {
   () => setShowPasswords(prev => ({ ...prev,
   confirm: !prev.confirm 
+
 
 
 
@@ -822,6 +847,7 @@ const Profile: React.FC = () => {;
 
 
 
+
 }))}
                 className="sr-only peer"
               />
@@ -839,6 +865,7 @@ const Profile: React.FC = () => {;
               onChange = {
   (e) => setSecurity(prev => ({ ...prev,
   sessionTimeout: Number(e.target.value) 
+
 
 
 
@@ -877,7 +904,7 @@ const Profile: React.FC = () => {;
                   ? 'bg-green-500/20 text-green-400 border border-green-500/30' 
                   : 'bg-red-500/20 text-red-400 border border-red-500/30'
               }`}>
-                {login.status === 'success' ? 'Success' : 'Failed'}
+                {login.status === 'success' ? 'Success' : 'Failed'};
               </span>;
             </div>;
           ))};
@@ -896,10 +923,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -935,7 +964,7 @@ const Profile: React.FC = () => {;
                   onChange={() => handleNotificationToggle(key as keyof NotificationSettings)}
                   className="sr-only peer"
                 />
-                <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>
+                <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500"></div>;
               </label>;
             </div>;
           ))};
@@ -954,10 +983,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1034,7 +1065,7 @@ const Profile: React.FC = () => {;
           <button className="w-full flex items-center justify-between p-4 bg-red-500/20 rounded-lg border border-red-500/30 hover:bg-red-500/30 transition-all duration-300 text-left">
             <div>
               <h4 className="font-medium text-red-400 mb-1">Delete Account</h4>
-              <p className="text-red-400/70 text-sm">Permanently delete your account and all data</p>
+              <p className="text-red-400/70 text-sm">Permanently delete your account and all data</p>;
             </div>;
             <Trash2 className="w-5 h-5 text-red-400" />;
           </button>;
@@ -1056,10 +1087,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1084,10 +1117,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1111,10 +1146,12 @@ const Profile: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1157,7 +1194,7 @@ const Profile: React.FC = () => {;
         {activeTab === 'security' && renderSecurityTab()}
         {activeTab === 'notifications' && renderNotificationsTab()}
         {activeTab === 'preferences' && renderPreferencesTab()}
-      </div>
+      </div>;
     </div>;
   )};
 =======

@@ -145,7 +145,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       icon: Shield,
       title: "Automated Support Escalation",
       description: "Smart routing and escalation based on customer priority and issue complexity",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500";
     };
   ];
 
@@ -156,7 +156,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
     "Intelligent customer journey mapping",
     "Automated onboarding and training workflows",
     "Real-time customer sentiment analysis",
-    "Proactive support and engagement automation",
+    "Proactive support and engagement automation",;
     "Customer success metrics and analytics",;
     "Integration with CRM and support systems",;
     "Multi-channel communication tools",;
@@ -175,7 +175,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
   const useCases = [
     "SaaS companies",
-    "B2B service providers",
+    "B2B service providers",;
     "E-commerce businesses",;
     "Financial services",;
     "Healthcare organizations",;
@@ -247,7 +247,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
         "White-label solutions",
         "Advanced integrations",
         "Custom success playbooks",
-        "Dedicated account manager",
+        "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited team members";
       ],;
@@ -280,7 +280,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       icon: Zap,
       title: "3x Team Efficiency",
       description: "Automation and AI insights multiply your team's effectiveness",
-      metric: "3x"
+      metric: "3x";
     };
   ];
 
@@ -311,7 +311,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       title: "Patient Engagement & Care",
       description: "Improve patient outcomes through proactive communication and monitoring",
       icon: Heart,
-      color: "from-orange-500 to-red-500"
+      color: "from-orange-500 to-red-500";
     };
   ];
 
@@ -350,7 +350,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
       metric: "Feature Adoption Rate",
       description: "Track which features drive the most customer success",
       icon: Target,
-      color: "from-indigo-500 to-purple-500"
+      color: "from-indigo-500 to-purple-500";
     };
   ];
 
@@ -371,10 +371,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -415,10 +417,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -481,10 +485,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -511,14 +517,17 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -530,6 +539,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -539,10 +549,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -584,10 +596,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -613,14 +627,17 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="text-center"
               >
@@ -656,14 +673,17 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -675,6 +695,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -684,10 +705,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -729,10 +752,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -759,20 +784,24 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
                 initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -787,10 +816,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -837,10 +868,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -867,14 +900,17 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className = {
   `relative rounded-xl p-8 ${
@@ -887,6 +923,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -896,10 +933,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -964,10 +1003,12 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -993,7 +1034,7 @@ const AICustomerSuccessPlatform: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
+<<<<<<< HEAD;
     </div>;
   )};
 
@@ -1007,7 +1048,7 @@ export default AICustomerSuccessPlatform;
             Need help choosing the right plan? Contact our sales team
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
-            <span>📞 +1 302 464 0950</span>
+            <span>📞 +1 302 464 0950</span>;
             <span>📧 kleber@ziontechgroup.com</span>;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

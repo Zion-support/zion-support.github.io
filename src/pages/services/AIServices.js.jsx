@@ -41,9 +41,11 @@ const AIServices = () => {
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             AI Services for
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
@@ -53,12 +55,15 @@ const AIServices = () => {
           <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}>
             Harness the power of artificial intelligence to transform your business operations, 
             enhance customer experiences, and drive innovation across all departments.
@@ -66,12 +71,15 @@ const AIServices = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}>
             <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
               Start Your AI Journey
@@ -94,12 +102,15 @@ const AIServices = () => {
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }} viewport={{ once: true }}>
                 <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-pink-600"/>
@@ -126,12 +137,15 @@ const AIServices = () => {
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {
   { opacity: 0,
   x: -20 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }} viewport={{ once: true }}>
                   <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center mr-4">
                     <TrendingUp className="w-4 h-4 text-pink-600"/>

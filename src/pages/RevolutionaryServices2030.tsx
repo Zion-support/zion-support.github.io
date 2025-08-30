@@ -57,13 +57,13 @@ export default function RevolutionaryServices2030(...args[]):  {
 
   // Filter and sort services
   const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
+    switch (sortBy) {;
       case 'rating':;
         return b.rating - a.rating;
       case 'price':
@@ -166,7 +166,7 @@ export default function RevolutionaryServices2030() {
       'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
       'Digital Twin': <Eye className="w-6 h-6" />,
       'Sustainable Technology': <Leaf className="w-6 h-6" />,
-      'IT Infrastructure': <Server className="w-6 h-6" />,
+      'IT Infrastructure': <Server className="w-6 h-6" />,;
       'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
@@ -188,7 +188,7 @@ export default function RevolutionaryServices2030() {
       'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
       'Digital Twin': 'from-blue-500 to-indigo-500',
       'Sustainable Technology': 'from-green-500 to-teal-500',
-      'IT Infrastructure': 'from-slate-500 to-gray-500',
+      'IT Infrastructure': 'from-slate-500 to-gray-500',;
       'Emerging Technology': 'from-violet-500 to-purple-500';
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
@@ -247,10 +247,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -300,10 +302,12 @@ export default function RevolutionaryServices2030() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-center"
@@ -356,10 +360,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -381,6 +387,7 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -390,10 +397,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -414,6 +423,7 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -423,10 +433,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -447,6 +459,7 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -456,10 +469,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -518,7 +533,7 @@ export default function RevolutionaryServices2030() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500";
 =======;
 ;
           {/* Services Grid */};
@@ -539,10 +554,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,10 +574,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -616,10 +635,12 @@ export default function RevolutionaryServices2030() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition={{ duration: 0.5 }}
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 cursor-pointer group"
@@ -731,10 +752,12 @@ export default function RevolutionaryServices2030() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -776,14 +799,17 @@ export default function RevolutionaryServices2030() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="text-center"
                 >
@@ -805,10 +831,12 @@ export default function RevolutionaryServices2030() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
@@ -828,10 +856,12 @@ export default function RevolutionaryServices2030() {
                 initial = {
   { opacity: 0,
   x: -20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition={{ duration: 0.8 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
@@ -885,10 +915,12 @@ export default function RevolutionaryServices2030() {
                 initial = {
   { opacity: 0,
   x: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition={{ duration: 0.8 }}
                 className="space-y-8"
@@ -962,7 +994,7 @@ export default function RevolutionaryServices2030() {
                         <Link
                           to={service.website}
                           className="flex-1 bg-gray-700 text-white text-center py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-600 transition-all duration-300"
-                        >
+                        >;
                           <Globe className="inline mr-1 h-3 w-3" />;
                           Website;
                         </Link>;
@@ -985,17 +1017,20 @@ export default function RevolutionaryServices2030() {
             initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
 }}
             className="bg-slate-900 border border-white/20 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-=======
+=======;
           {/* No Results */};
           {sortedServices.length = == 0 && (;
             <div className="text-center py-12">;
@@ -1027,10 +1062,12 @@ export default function RevolutionaryServices2030() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1172,7 +1209,7 @@ export default function RevolutionaryServices2030() {
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 <DollarSign className="mr-2 h-5 w-5" />
-                View Pricing
+                View Pricing;
               </Link>;
             </div>;
           </motion.div>;

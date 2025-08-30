@@ -53,7 +53,7 @@ const testimonials = [
     industry: "Healthcare",
     project: "Cloud Migration & Optimization"
   }
-=======
+=======;
     company: "Healthcare Innovations",;
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;
@@ -137,6 +137,7 @@ export function TestimonialsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -146,10 +147,12 @@ export function TestimonialsSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -179,7 +182,7 @@ export function TestimonialsSection(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;

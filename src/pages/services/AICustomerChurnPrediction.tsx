@@ -30,7 +30,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     {
       icon: Target,
       title: "Proactive Interventions",
-      description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking."
+      description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking.";
     },;
     {;
       icon: Users,;
@@ -77,7 +77,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       period: "",
       features["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
-    }
+    };
 =======;
       price: "Custom",;
       period: "",;
@@ -109,10 +109,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -162,10 +164,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -196,10 +200,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -210,6 +216,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -241,10 +248,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -275,10 +284,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -289,6 +300,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -319,10 +331,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,10 +367,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -367,6 +383,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -394,10 +411,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -428,10 +447,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -442,6 +463,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -504,10 +526,12 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -575,7 +599,7 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

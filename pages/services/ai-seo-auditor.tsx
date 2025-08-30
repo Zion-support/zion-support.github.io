@@ -9,7 +9,7 @@ export default function AISEOAuditor(...args[]):  {
         <meta name="description" content="Automate on-site SEO audits and fixes with autonomous agents." />
       </Helmet>
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />;
         <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />;
         <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />;
         <div className="absolute inset-0 beams opacity-[0.06]" />;
@@ -29,7 +29,7 @@ export default function AISEOAuditor(...args[]):  {
         </div>
       </main>
     </div>
-  )}
+  )};
 =======;
           <Link href="/services"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Back to Services</a></Link>;
           <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>;

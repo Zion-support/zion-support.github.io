@@ -87,6 +87,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
 
 
 
+
 }
         },
         open: {
@@ -106,6 +107,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
                 duration: 0.2,
   ease: 'easeInOut'
             
+
 
 
 

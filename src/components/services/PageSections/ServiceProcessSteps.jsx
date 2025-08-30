@@ -111,6 +111,7 @@ export const ServiceProcessSteps = () => {
   <<<<<<< HEAD
       indigo: 'bg-indigo-100 text-indigo-600 border-indigo-200'
     
+
 };
     return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200'};
 =======
@@ -134,6 +135,7 @@ export const ServiceProcessSteps = () => {
   <<<<<<< HEAD
       indigo: 'from-indigo-500 to-indigo-600'
     
+
 };
     return gradientMap[color] || 'from-gray-500 to-gray-600'};
 =======

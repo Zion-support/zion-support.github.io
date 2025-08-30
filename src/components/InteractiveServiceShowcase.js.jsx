@@ -120,6 +120,7 @@ const InteractiveServiceShowcase = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -133,6 +134,7 @@ const InteractiveServiceShowcase = () => {
     const categoryVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
 },
         visible: {
             scale: 1,
@@ -149,9 +151,11 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 30 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
             Explore Our{' '}
@@ -169,9 +173,11 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="flex flex-wrap justify-center gap-4 mb-16" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {categories.map((category) => (<button key={category.id} onClick={() => setActiveCategory(category.id)} className={`group flex items-center gap-3 px-6 py-4 rounded-2xl font-semibold transition-all duration-300 ${activeCategory === category.id
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-xl shadow-zion-cyan/25'
@@ -248,12 +254,15 @@ const InteractiveServiceShowcase = () => {
         <motion.div className="text-center mt-20" initial = {
   { opacity: 0,
   y: 30 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}>
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-blue/10 backdrop-blur-md p-12 rounded-3xl border border-zion-cyan/20">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -21,6 +21,7 @@ const categoryIcons = {
 
 
 
+
 };
 const pricingFeatures = {
   <<<<<<< HEAD
@@ -53,6 +54,7 @@ const pricingFeatures = {
         "Custom contracts",
   "Dedicated infrastructure"
     ]
+
 
 
 

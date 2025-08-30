@@ -73,7 +73,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "Secure your cloud infrastructure and applications",
       features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
       color: "from-zion-indigo to-zion-purple"
-    }
+    };
 =======;
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
@@ -83,7 +83,7 @@ export default function CybersecuritySolutions(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const threatTypes = [
+  const threatTypes = [;
     { id: 'all', name: 'All Threats', icon: Shield },;
     { id: 'malware', name: 'Malware', icon: Bug },;
     { id: 'phishing', name: 'Phishing', icon: Target },;
@@ -141,7 +141,7 @@ export default function CybersecuritySolutions(...args[]):  {
       impact: "Critical",
       solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
       icon: Bug
-    }
+    };
 =======;
       type: "malware",;
       impact: "Critical",;
@@ -188,7 +188,7 @@ export default function CybersecuritySolutions(...args[]):  {
       description: "U.S. government framework for cybersecurity risk management",
       requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
-    }
+    };
 =======;
       name: "NIST Cybersecurity Framework",;
       description: "U.S. government framework for cybersecurity risk management",;
@@ -206,7 +206,7 @@ export default function CybersecuritySolutions(...args[]):  {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -223,6 +223,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -259,10 +260,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -317,10 +320,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -354,6 +359,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -395,10 +401,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -424,10 +432,12 @@ export default function CybersecuritySolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -442,6 +452,7 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -449,8 +460,9 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
-
 ;
+;
+
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
@@ -472,7 +484,7 @@ export default function CybersecuritySolutions(...args[]):  {
                   <Icon className="w-5 h-5" />
                   {threat.name}
                 </button>
-              )})}
+              )})};
 =======;
                   }`};
                 >;
@@ -500,6 +512,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -555,10 +568,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -592,6 +607,7 @@ export default function CybersecuritySolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -636,10 +652,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -695,10 +713,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -787,10 +807,12 @@ export default function CybersecuritySolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -825,7 +847,7 @@ export default function CybersecuritySolutions(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

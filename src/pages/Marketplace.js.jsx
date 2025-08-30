@@ -126,6 +126,7 @@ export default function Marketplace() {
             selectedAvailability,
   selectedRating
         
+
 }} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
           </div>
           

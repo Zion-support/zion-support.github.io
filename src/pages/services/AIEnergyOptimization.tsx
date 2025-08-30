@@ -3,7 +3,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
 export default function AIEnergyOptimization() {
   const features = [
     'AI-powered energy consumption forecasting and optimization',
-    'Real-time monitoring of energy usage across facilities',
+    'Real-time monitoring of energy usage across facilities',;
     'Predictive maintenance for energy infrastructure',;
     'Smart grid integration and demand response optimization',;
     'Renewable energy integration and storage optimization',;
@@ -21,7 +21,7 @@ export default function AIEnergyOptimization() {
     { 
       name: 'Professional', 
       price: '$799/mo', 
-      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] 
+      details: ['Up to 25 facilities', 'Advanced AI optimization', 'Custom analytics', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIEnergyOptimization() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Commercial building energy optimization',;
     'Manufacturing facility energy management',;
     'Data center power efficiency',;
@@ -39,7 +39,7 @@ export default function AIEnergyOptimization() {
     'Educational campus energy systems';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce energy costs by 20-40%',;
     'Improve energy efficiency by 25-45%',;
     'Cut carbon emissions by 30-50%',;
@@ -48,7 +48,7 @@ export default function AIEnergyOptimization() {
     'Achieve sustainability and ESG goals';
   ];
 
-  const industries = [
+  const industries = [;
     'Commercial Real Estate',;
     'Manufacturing & Industrial',;
     'Data Centers & IT',;
@@ -163,7 +163,7 @@ export default function AIEnergyOptimization() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

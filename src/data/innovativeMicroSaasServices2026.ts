@@ -763,7 +763,7 @@ export const SPECIALIZED_SERVICES_2026 = [
     price: 1999,
     currency: "$",
     pricingModel: "monthly",
-    marketPrice: "$1,999 - $6,999/month",
+    marketPrice: "$1,999 - $6,999/month",;
     contactInfo: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;

@@ -32,7 +32,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
           <li>Startup: $49/mo per domain</li>
           <li>Business: $149/mo up to 5 domains</li>
           <li>Enterprise: custom, DPA + SSO</li>
-        </ul>
+        </ul>;
       </div>;
     </section>;
     <section className="container mx-auto px-4 pb-16">;

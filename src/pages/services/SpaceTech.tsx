@@ -22,7 +22,7 @@ const SpaceTech = () => {
       description: "Ground-based space infrastructure and support systems.",
       price: "From $35,000/month",
       features: ["Ground stations", "Mission control", "Data processing", "Communication systems"],
-      icon: Database
+      icon: Database;
     };
   ];
 
@@ -44,7 +44,7 @@ const SpaceTech = () => {
       name: "Space Security",
       description: "Cybersecurity and protection for space systems",
       icon: Shield,
-      features: ["Threat detection", "Secure communications", "System protection", "Compliance"]
+      features: ["Threat detection", "Secure communications", "System protection", "Compliance"];
     };
   ];
 
@@ -53,7 +53,7 @@ const SpaceTech = () => {
     "Advanced environmental monitoring capabilities",
     "Enhanced data collection and analysis",
     "Improved communication infrastructure",
-    "Innovation in space technology applications",
+    "Innovation in space technology applications",;
     "Support for scientific research and exploration";
   ];
 
@@ -69,7 +69,7 @@ const SpaceTech = () => {
 =======
       icon: Navigation,
       title: 'Space Navigation',
-      description: 'Advanced positioning and navigation systems for space missions'
+      description: 'Advanced positioning and navigation systems for space missions';
     },;
     {;
       icon: Telescope,;
@@ -78,7 +78,7 @@ const SpaceTech = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Enable global connectivity and coverage',;
     'Provide critical Earth observation data',;
     'Support space exploration missions',;
@@ -101,7 +101,7 @@ const SpaceTech = () => {
     {
       icon: Star,
       title: 'Space Research',
-      description: 'Scientific research and space exploration support'
+      description: 'Scientific research and space exploration support';
     },;
     {;
       icon: Globe2,;
@@ -120,7 +120,7 @@ const SpaceTech = () => {
       description: 'Climate change tracking and natural disaster monitoring'
     },
     {
-      industry: 'Agriculture',
+      industry: 'Agriculture',;
       description: 'Crop monitoring and precision agriculture support';
     },;
     {;
@@ -144,10 +144,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -202,10 +204,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -246,6 +250,7 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -255,10 +260,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -308,10 +315,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -352,6 +361,7 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -361,10 +371,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -444,10 +456,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -478,6 +492,7 @@ const SpaceTech = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -487,10 +502,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -516,6 +533,7 @@ const SpaceTech = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -525,10 +543,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -558,10 +578,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -592,6 +614,7 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -601,10 +624,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -657,10 +682,12 @@ const SpaceTech = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -682,7 +709,7 @@ const SpaceTech = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

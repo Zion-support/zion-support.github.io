@@ -58,7 +58,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   enableSound = true,
   enableVibration = true,
   autoDismiss = true,
-  defaultDuration = 5000
+  defaultDuration = 5000;
 }) => {;
   const [notifications, setNotifications] = useState<any>([]);
   const [settings, setSettings] = useState<any>({
@@ -102,7 +102,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     
 <<<<<<< HEAD
     notifications.forEach(notification = > {
-      if (notification.duration !== 0) {
+      if (notification.duration !== 0) {;
         const timeout = setTimeout(() => {;
           dismissNotification(notification.id)}, notification.duration || settings.defaultDuration);
         timeouts.push(timeout)}
@@ -154,9 +154,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   ...notification,
   id: `notification-${Date.now()
 
+;
+;
+;
 
-;
-;
 
 }-${Math.random().toString(36).substr(2, 9)}`,;
       timestamp: new Date(),;
@@ -165,7 +166,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     };
 
 <<<<<<< HEAD
-    setNotifications(prev = > {
+    setNotifications(prev = > {;
 =======;
     setNotifications(prev = > {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -183,7 +184,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
   // Mark notification as read
   const markAsRead = useCallback((id: string)  => {
-    setNotifications(prev => 
+    setNotifications(prev => ;
       prev.map(n => n.id === id ? { ...n, read: true } : n);
     )}, []);
 
@@ -196,7 +197,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
     setNotifications([])}, []);
 
   // Get notification icon
-  const getNotificationIcon = (type: NotificationType, priority: string)  => {
+  const getNotificationIcon = (type: NotificationType, priority: string)  => {;
 =======;
   const dismissNotification = useCallback((id: string) => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -336,6 +337,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1, scale: 1,
@@ -345,10 +347,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
+
 
 
 
@@ -430,6 +434,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1, scale: 1,
@@ -439,10 +444,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
             exit = {
   { opacity: 0, scale: 0.9,
   y: -10 
+
 
 
 
@@ -487,10 +494,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -505,11 +514,13 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 
 
+
 }}
                       layout
                       className = {
   `p-4 rounded-xl ${getNotificationStyles(notification.type,
   notification.priority)
+
 
 
 
@@ -547,7 +558,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                           
                           <div className="flex items-center justify-between mt-3">
                             <span className="text-xs text-zion-slate/50">
-                              {notification.timestamp.toLocaleTimeString()}
+                              {notification.timestamp.toLocaleTimeString()};
                             </span>;
                             ;
                             <div className="flex items-center space-x-2">;
@@ -557,7 +568,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                                     notification.action!.onClick();
 <<<<<<< HEAD
                                     markAsRead(notification.id)}}
-                                  className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
+                                  className = "text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors";
 =======;
                                     markAsRead(notification.id);
                                   }}
@@ -588,7 +599,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </>;
   )};
 
@@ -596,7 +607,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 export const useNotifications = () => {
   const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>)  => {
     if ((window as ).addNotification) {
-      (window as ).addNotification(notification)}
+      (window as ).addNotification(notification)};
 =======;
             </div>;
           </motion.div>;
@@ -629,7 +640,8 @@ export const notificationUtils = {
         priority: 'medium',
   ...options
       
-})}
+
+})};
 =======;
         priority: 'medium',;
   ;

@@ -47,7 +47,7 @@ export function ActiveFiltersBar({ filters, onRemoveFilter, onClearAll }: Active
         Clear all
       </button>
     </div>
-  )}
+  )};
 =======;
         className="text-sm text-zion-slate-light hover:text-zion-cyan transition-colors underline";
       >;

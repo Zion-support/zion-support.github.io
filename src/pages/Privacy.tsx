@@ -45,7 +45,7 @@ export default function Privacy() {
       icon: Users,
       title: 'User Control',
       description: 'You have full control over your personal data and can request changes or deletion.'
-    }
+    };
 =======;
     {;
       icon: Users,;
@@ -87,7 +87,7 @@ export default function Privacy() {
 =======
       title: 'Technical Data',
       description: 'Device information and technical specifications',
-      examples: ['IP address', 'Browser type', 'Device information']
+      examples: ['IP address', 'Browser type', 'Device information'];
     },;
     {;
       title: 'Communication Data',;
@@ -119,7 +119,7 @@ export default function Privacy() {
       purpose: 'Compliance',
       description: 'To comply with legal obligations and industry regulations'
     }
-=======
+=======;
       description: 'To analyze usage patterns and improve our services and user experience.';
     },;
     {;
@@ -153,13 +153,13 @@ export default function Privacy() {
     },
     {
       right: 'Restriction',
-      description: 'Request restriction of processing in certain situations'
+      description: 'Request restriction of processing in certain situations';
     };
   ];
 
   return (
     <div className = "min-h-screen bg-slate-900">
-=======
+=======;
       description: 'Object to processing of your personal data in certain situations.';
     },;
     {;
@@ -190,10 +190,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
 =======
@@ -209,10 +211,12 @@ export default function Privacy() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -230,14 +234,17 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Your privacy is our priority. Learn how we protect and manage your personal information.
@@ -247,14 +254,17 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             Last updated: {lastUpdated}
@@ -279,10 +289,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -295,10 +307,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -319,15 +333,18 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
 =======
@@ -340,6 +357,7 @@ export default function Privacy() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -349,10 +367,12 @@ export default function Privacy() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -390,10 +410,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -406,10 +428,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -430,15 +454,18 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -451,6 +478,7 @@ export default function Privacy() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -460,10 +488,12 @@ export default function Privacy() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -508,10 +538,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -524,10 +556,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -548,15 +582,18 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700"
 =======
@@ -564,6 +601,7 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -578,10 +616,12 @@ export default function Privacy() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -615,10 +655,12 @@ export default function Privacy() {
               initial = {
   { opacity: 0,
   x: -30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -635,10 +677,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -669,6 +713,7 @@ export default function Privacy() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -678,10 +723,12 @@ export default function Privacy() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -711,10 +758,12 @@ export default function Privacy() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -763,10 +812,12 @@ export default function Privacy() {
               initial = {
   { opacity: 0,
   x: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -779,10 +830,12 @@ export default function Privacy() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -834,10 +887,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -850,10 +905,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -873,15 +930,18 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -903,10 +963,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -925,10 +987,12 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   x: -30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
@@ -958,10 +1022,12 @@ export default function Privacy() {
                 initial = {
   { opacity: 0,
   x: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
@@ -997,10 +1063,12 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -1012,15 +1080,18 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Our privacy team is here to help with  questions or concerns about your data
@@ -1030,15 +1101,18 @@ export default function Privacy() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -1070,10 +1144,12 @@ export default function Privacy() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1100,7 +1176,7 @@ export default function Privacy() {
                 href="/contact"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                General Contact
+                General Contact;
               </a>;
             </div>;
           </motion.div>;

@@ -67,7 +67,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
       icon: Clock,
       title: "Real-time Monitoring",
       description: "Live dashboard showing workflow status and performance metrics",
-      color: "from-yellow-500 to-orange-500"
+      color: "from-yellow-500 to-orange-500";
     };
   ];
 
@@ -128,7 +128,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
     'AI-powered workflow automation and orchestration',
     'Intelligent process optimization and decision making',
     'Real-time workflow monitoring and analytics',
-    'Automated task assignment and resource allocation',
+    'Automated task assignment and resource allocation',;
     'Predictive workflow failure prevention',;
     'Multi-system integration and synchronization',;
     'Advanced workflow templates and customization',;
@@ -138,7 +138,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase workflow efficiency by 70%',;
     'Reduce manual errors by 85%',;
     'Improve process completion time by 60%',;
@@ -147,7 +147,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
     'Provide real-time process visibility';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Enterprise process automation',;
     'Manufacturing workflow optimization',;
     'Healthcare process management',;
@@ -165,7 +165,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
     { 
       name: 'Workflow Professional', 
       price: '$1,299/mo', 
-      details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'Workflow Enterprise', ;
@@ -205,14 +205,17 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -248,14 +251,17 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="text-center"
               >
@@ -290,14 +296,17 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -338,14 +347,17 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className={`relative rounded-xl p-8 ${
                   plan.popular 
@@ -399,10 +411,12 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -501,7 +515,7 @@ const AIWorkflowOrchestrator: React.FC = (): JSX.Element => {
             Ready to revolutionize your workflow automation? Contact us today to learn how AI-powered orchestration can transform your business operations.
           </p>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

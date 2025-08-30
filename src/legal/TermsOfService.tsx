@@ -123,7 +123,7 @@ const TermsOfService = () => {
           ← Back to Home
         </a>
       </div>
-    </div>
+    </div>;
 =======;
           ← Back to Home;
         </a>;

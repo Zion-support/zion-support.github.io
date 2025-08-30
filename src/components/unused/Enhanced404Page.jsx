@@ -20,9 +20,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -33,6 +35,7 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
         <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {
   { delay: 0.2, type: "spring",
   stiffness: 200 
+
 
 
 
@@ -54,9 +57,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -74,9 +79,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -94,9 +101,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -114,9 +123,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -136,9 +147,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -170,9 +183,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -192,9 +207,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -223,9 +240,11 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

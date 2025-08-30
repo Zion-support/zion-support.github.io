@@ -37,7 +37,7 @@ export default function LoginErrorFallback(...args[]):  {
         </button>
       </div>
     </div>
-  )}
+  )};
 =======;
           <RefreshCw className="w-4 h-4" />;
           Try Again;

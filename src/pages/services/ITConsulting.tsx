@@ -175,7 +175,7 @@ export default function ITConsulting(...args: []):  {
     {
       icon: Shield,
       title: 'Security Consulting',
-      description: 'Develop comprehensive cybersecurity strategies and policies'
+      description: 'Develop comprehensive cybersecurity strategies and policies';
     },;
     {;
       icon: Cloud,;
@@ -184,7 +184,7 @@ export default function ITConsulting(...args: []):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Optimize IT infrastructure and reduce costs by 25%',;
     'Improve system performance and reliability',;
     'Enhance cybersecurity posture and compliance',;
@@ -207,7 +207,7 @@ export default function ITConsulting(...args: []):  {
     {
       icon: Brain,
       title: 'Technology Advisory',
-      description: 'Expert guidance on technology selection and implementation'
+      description: 'Expert guidance on technology selection and implementation';
     },;
     {;
       icon: Scale,;
@@ -226,7 +226,7 @@ export default function ITConsulting(...args: []):  {
       description: 'HIPAA-compliant IT infrastructure and systems'
     },
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services',;
       description: 'Secure, compliant financial technology solutions';
     },;
     {;
@@ -250,10 +250,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -304,10 +306,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -338,6 +342,7 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -347,10 +352,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -382,10 +389,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -416,6 +425,7 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -425,10 +435,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -464,10 +476,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -494,14 +508,17 @@ export default function ITConsulting(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
@@ -525,6 +542,7 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -534,10 +552,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -563,6 +583,7 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -572,10 +593,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -606,10 +629,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -640,6 +665,7 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -649,10 +675,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -676,10 +704,12 @@ export default function ITConsulting(...args: []):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -704,14 +734,17 @@ export default function ITConsulting(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
@@ -737,10 +770,12 @@ export default function ITConsulting(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -762,7 +797,7 @@ export default function ITConsulting(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

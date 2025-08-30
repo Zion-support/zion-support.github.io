@@ -80,11 +80,11 @@ export default function Team(...args[]):  {
       avatar: '/avatars/priya-patel.jpg',
       linkedin: 'https://linkedin.com/in/priya-patel',
       github: 'https://github.com/priya-patel',
-      email: 'priya@ziontechgroup.com'
+      email: 'priya@ziontechgroup.com';
     };
   ];
 =======
-const Team: React.FC = () => (
+const Team: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
 			<h1 className="text-4xl font-bold mb-4">Our Team</h1>;
@@ -129,7 +129,7 @@ const Team: React.FC = () => (
       icon: Globe,
       title: 'Sustainability',
       description: 'Green IT and environmental solutions',
-      color: 'from-emerald-600 to-teal-600'
+      color: 'from-emerald-600 to-teal-600';
     };
   ];
 
@@ -152,7 +152,7 @@ const Team: React.FC = () => (
     {
       icon: Zap,
       title: 'Excellence',
-      description: 'We deliver world-class solutions with attention to detail'
+      description: 'We deliver world-class solutions with attention to detail';
     };
   ];
 
@@ -170,10 +170,12 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
@@ -184,14 +186,17 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
@@ -204,14 +209,17 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-slate-300"
           >
@@ -238,10 +246,12 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -256,14 +266,17 @@ const Team: React.FC = () => (
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -325,10 +338,12 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -343,14 +358,17 @@ const Team: React.FC = () => (
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -372,10 +390,12 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -390,14 +410,17 @@ const Team: React.FC = () => (
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -419,10 +442,12 @@ const Team: React.FC = () => (
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
@@ -450,5 +475,5 @@ const Team: React.FC = () => (
         </div>
       </section>
     </div>
-  )}
+  )};
 ;

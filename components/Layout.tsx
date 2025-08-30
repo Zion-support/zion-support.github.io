@@ -22,7 +22,7 @@ export default function Layout(...args[]):  {
       </main>
       <EnhancedFooter />
     </div>
-  )}
+  )};
 =======;
       <main className="flex-grow">;
         {children};

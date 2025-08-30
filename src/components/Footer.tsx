@@ -141,7 +141,7 @@ const footerSections = [
       { name: 'FAQ', path: '/faq', icon: HelpCircle },
       { name: 'Blog', path: '/blog', icon: BookOpen },
       { name: 'News', path: '/news', icon: Newspaper },
-      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },;
       { name: 'Pricing', path: '/pricing', icon: DollarSign },;
       { name: 'Contact Support', path: '/contact', icon: MessageCircle },;
       { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },;
@@ -150,7 +150,7 @@ const footerSections = [
   };
 ];
 
-const socialLinks = [
+const socialLinks = [;
   { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },;
   { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },;
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },;
@@ -247,7 +247,7 @@ export function Footer() {
         { name: 'Login', path: '/login', icon: HelpCircle },
         { name: 'Help Center', path: '/help', icon: HelpCircle },
         { name: 'Support', path: '/support', icon: HelpCircle }
-      ]
+      ];
     };
   ];
 
@@ -281,6 +281,7 @@ export function Footer() {
               delay: i * 0.2,
   ease: "easeInOut"
             
+
 
 
 
@@ -413,6 +414,7 @@ export function Footer() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -422,10 +424,12 @@ export function Footer() {
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.8 
+
 
 
 
@@ -442,7 +446,7 @@ export function Footer() {
         )}
       </AnimatePresence>
     </footer>
-  )}
+  )};
 =======;
             <ArrowUp className="w-6 h-6" />;
           </motion.button>;

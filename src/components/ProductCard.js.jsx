@@ -47,7 +47,6 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
                 imageUrl,
             })}
     };
-    const isTablet = useMediaQuery('(max-width: 1200px)');
     const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
       <button className="absolute top-2 right-2 p-1 rounded-full bg-background/70" onClick={() => toggle(product.id)} aria-label={active ? 'Remove from favorites' : 'Add to favorites'}>

@@ -22,7 +22,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   enabled = true,
   showControls = true,
   autoDetect = true,
-  onSettingsChange,
+  onSettingsChange,;
 }) => {;
   const location = useLocation();
   const [isMobile, setIsMobile] = useState(false);
@@ -115,7 +115,8 @@ export function MobileExperienceEnhancer({
 
 
 
-},
+
+},;
         pixelRatio: window.devicePixelRatio || 1,;
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',;
         touchSupport: 'ontouchstart' in window,;
@@ -147,7 +148,7 @@ export function MobileExperienceEnhancer({
 
     const detectOrientation = () => {
       if (window.innerHeight > window.innerWidth) {
-        setOrientation('portrait')} else {
+        setOrientation('portrait')} else {;
         setOrientation('landscape')};
     };
 
@@ -180,13 +181,13 @@ export function MobileExperienceEnhancer({
 <<<<<<< HEAD
     // Check for mobile network
     const isSlowConnection = navigator.connection && 
-      (navigator.connection.effectiveType === 'slow-2g' || 
+      (navigator.connection.effectiveType === 'slow-2g' || ;
        navigator.connection.effectiveType === '2g' ||;
        navigator.connection.effectiveType === '3g');
 
     setSettings(prev = > ({
       ...prev,
-      touchOptimized: hasTouchSupport,
+      touchOptimized: hasTouchSupport,;
       mobilePerformance: isSlowConnection || false,;
     }))}, [autoDetect, enabled]);
 
@@ -196,7 +197,7 @@ export function MobileExperienceEnhancer({
 
     // Add touch-action CSS for better touch handling
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = `;
       .touch-optimized {;
         touch-action: manipulation;
         -webkit-touch-callout: none;
@@ -235,14 +236,15 @@ export function MobileExperienceEnhancer({
   useEffect(() => {
     if (!enabled || !settings.gestureSupport || !isMobile) return;
 
-    const handleTouchStart = (event: TouchEvent)  => {
+    const handleTouchStart = (event: TouchEvent)  => {;
       if (event.touches.length === 1) {;
         const touch = event.touches[0];
         touchStartRef.current = {
   x: touch.clientX,
           y: touch.clientY,
           time: Date.now(),
-   
+  
+;
 }};
     };
 
@@ -250,7 +252,6 @@ export function MobileExperienceEnhancer({
       if (!touchStartRef.current || event.changedTouches.length !== 1) return;
 
       const touch = event.changedTouches[0];
-      const deltaY = touch.clientY - touchStartRef.current.y;
       const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
       const velocity = distance / deltaTime;
 
@@ -261,7 +262,7 @@ export function MobileExperienceEnhancer({
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
           gesture = deltaX > 0 ? 'swipe-right' : 'swipe-left'} else {
           gesture = deltaY > 0 ? 'swipe-down' : 'swipe-up'}
-
+;
         // Handle gestures;
         handleGesture(gesture, { deltaX, deltaY, velocity });
         
@@ -309,8 +310,10 @@ export function MobileExperienceEnhancer({
   ;
   ;
   ;
+  ;
   time: Date.now();
         ;
+
 
 
 
@@ -348,9 +351,11 @@ export function MobileExperienceEnhancer({
         direction,
         timestamp: Date.now(),
         coordinates: { x: touch.clientX,;
+  ;
   y: touch.clientY ;
 ;
 ;
+
 
 
 
@@ -427,7 +432,7 @@ export function MobileExperienceEnhancer({
 
     // Add mobile navigation styles
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = `;
       .mobile-nav {;
         position: fixed;
         bottom: 0;
@@ -490,7 +495,7 @@ export function MobileExperienceEnhancer({
     const navItems = [
       { href: '/', label: 'Home', icon: '🏠' },
       { href: '/services', label: 'Services', icon: '⚙️' },
-      { href: '/about', label: 'About', icon: 'ℹ️' },
+      { href: '/about', label: 'About', icon: 'ℹ️' },;
       { href: '/contact', label: 'Contact', icon: '📞' },;
     ];
 
@@ -499,7 +504,7 @@ export function MobileExperienceEnhancer({
       link.href = item.href;
       link.className = `nav-item ${location.pathname === item.href ? 'active' : ''}`;
       link.innerHTML = `
-        <span class="nav-icon">${item.icon}</span>
+        <span class="nav-icon">${item.icon}</span>;
         <span>${item.label}</span>;
       `;
       nav.appendChild(link)});
@@ -522,7 +527,7 @@ export function MobileExperienceEnhancer({
           img.loading = 'lazy'}
         
         // Add decoding attribute
-        if (!img.decoding) {
+        if (!img.decoding) {;
           img.decoding = 'async'};
       })};
 
@@ -540,7 +545,7 @@ export function MobileExperienceEnhancer({
 
     // Reduce animations on mobile
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = `;
       .mobile-performance * {;
         animation-duration: 0.3s !important;
         transition-duration: 0.3s !important}
@@ -559,7 +564,7 @@ export function MobileExperienceEnhancer({
     let ticking = false;
     const handleScroll = () => {
       if (!ticking) {
-        requestAnimationFrame(() => {
+        requestAnimationFrame(() => {;
           // Handle scroll optimizations here;
           ticking = false});
         ticking = true};
@@ -709,7 +714,7 @@ export function MobileExperienceEnhancer({
   // Toggle mobile settings
   const toggleSetting = useCallback((key: keyof MobileSettings)  => {
     setSettings(prev => ({
-      ...prev,
+      ...prev,;
       [key]: !prev[key],;
     }))}, []);
 
@@ -733,8 +738,9 @@ export function MobileExperienceEnhancer({
       responsiveImages: true,
       mobilePerformance: true,
 <<<<<<< HEAD
-      offlineSupport: false,
-   ;
+      offlineSupport: false,;
+  ;
+
 })}, []);
 =======
       gestureHistory: true,
@@ -831,6 +837,7 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -840,10 +847,12 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -949,10 +958,12 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1060,6 +1071,7 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -1069,10 +1081,12 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -1091,6 +1105,7 @@ export function MobileExperienceEnhancer({
                             onChange = {
   (e) => setSettings(prev => ({ ...prev,
   touchSensitivity: e.target.value as any 
+
 
 
 
@@ -1119,6 +1134,7 @@ export function MobileExperienceEnhancer({
 
 
 
+
 }))}
                             className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
                           >
@@ -1137,6 +1153,7 @@ export function MobileExperienceEnhancer({
                             onChange = {
   (e) => setSettings(prev => ({ ...prev,
   deviceOrientation: e.target.value as any 
+
 
 
 
@@ -1194,7 +1211,7 @@ export function MobileExperienceEnhancer({
           </motion.div>
         )}
       </AnimatePresence>
-
+;
       {/* Global Mobile Styles */};
       <style jsx global>{`;
         .mobile-touch-targets button,;
@@ -1232,5 +1249,6 @@ export function MobileExperienceEnhancer({
   )};
 
 // Export default component
+export default MobileExperienceEnhancer;
 export default MobileExperienceEnhancer;
 export default MobileExperienceEnhancer;

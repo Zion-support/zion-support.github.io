@@ -13,10 +13,12 @@ export default function Demo(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
@@ -56,14 +58,17 @@ export default function Demo(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
               onClick={() => setActiveDemo(service.id)}
@@ -104,10 +109,12 @@ export default function Demo(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.5 }}
             className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
@@ -282,7 +289,7 @@ export default function Demo(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             <button type="button" className="rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 font-semibold">Request Demo</button>;
           </form>;

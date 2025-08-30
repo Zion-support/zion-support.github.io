@@ -91,12 +91,14 @@ const ComprehensiveServicesShowcase = () => {
                 'enterprise-digital-twin-iot'['Enterprise', 'Digital Twin',
   'IoT']
             
+
 };
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')))});
     const fadeInUp = {
   initial: { opacity: 0,
   y: 60 
+
 },
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
@@ -150,9 +152,11 @@ const ComprehensiveServicesShowcase = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -445,6 +449,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -453,9 +458,11 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -518,6 +525,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -526,9 +534,11 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -868,9 +878,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -884,9 +896,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
 
 
+
 }} whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -985,6 +999,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
@@ -993,9 +1008,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1161,9 +1178,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1202,6 +1221,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -1210,9 +1230,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -1275,6 +1297,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -1283,9 +1306,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -1315,6 +1340,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -1323,9 +1349,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
+
 
 
 
@@ -1368,4 +1396,5 @@ export default ServiceCard;
 export default ServiceCard;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ServiceCard;
 export default ServiceCard;

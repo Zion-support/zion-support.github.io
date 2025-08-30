@@ -84,9 +84,11 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -107,6 +109,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -115,9 +118,11 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0.8 
+
 
 
 
@@ -144,6 +149,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 
 
+
 }} animate = {
   {
                     x: Math.random() * window.innerWidth,
@@ -152,12 +158,14 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                     scale[0, 1,
   0]
                 
+
 }} transition = {
   {
 =======
                     scale: [0, 1,
   0]
                 
+
 
 
 
@@ -170,6 +178,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                     repeat: Infinity,
   ease: "linear"
                 
+
 
 
 
@@ -200,9 +209,11 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

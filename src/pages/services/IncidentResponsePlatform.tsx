@@ -17,7 +17,7 @@ export default function IncidentResponsePlatform(...args: []):  {
             <h3 className="font-semibold mb-2">Automated Playbooks</h3>
             <p className="text-slate-300 text-sm">Respond consistently with reusable workflows and approvals.</p>
           </div>
-          <div className="rounded-xl border border-slate-700 bg-slate-800/50 p-6">
+          <div className="rounded-xl border border-slate-700 bg-slate-800/50 p-6">;
             <h3 className="font-semibold mb-2">Audit & Reporting</h3>;
             <p className="text-slate-300 text-sm">Maintain evidence trails with exportable compliance reports.</p>;
           </div>;

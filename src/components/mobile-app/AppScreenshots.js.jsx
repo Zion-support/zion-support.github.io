@@ -10,9 +10,7 @@ const mockScreenshots = [
     { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ];
 export const AppScreenshots = () => {
-    const scroll = (direction) => {
-        if (scrollContainerRef.current) {
-            const scrollAmount = 300;
+    const scrollAmount = 300;
             scrollContainerRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",
@@ -35,6 +33,7 @@ export const AppScreenshots = () => {
           <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
   { scrollbarWidth: "none",
   msOverflowStyle: "none" 
+
 }}>
             {mockScreenshots.map((screenshot) => (<div key={screenshot.id} className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">
                 <img loading="lazy" src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-cover"/>

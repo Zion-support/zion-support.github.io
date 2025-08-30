@@ -1,34 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Users, Video, Mic, MicOff, VideoOff, MessageSquare, FileText, Monitor, X, Maximize2, Minimize2, Plus, MoreVertical, PhoneOff, ScreenShare, Square, Hand, Clock, CheckCircle, UserPlus } from 'lucide-react';
-const mockChatMessages = [
-    {
-        id: '1',
-        senderId: '1',
-        senderName: 'Sarah Johnson',
-        message: 'Welcome everyone to our quarterly review meeting!',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        type: 'text',
-        reactions[]
-    },
-    {
-        id: '2',
-        senderId: '2',
-        senderName: 'Michael Chen',
-        message: 'Thanks Sarah! I have some questions about the Q4 metrics.',
-        timestamp: '2024-01-15T10:01:00.000Z',
-        type: 'text',
-        reactions[{ emoji: '👍', count: 2 }]
-    },
-    {
-        id: '3',
-        senderId: '1',
-        senderName: 'Sarah Johnson',
-        message: 'Perfect! I\'ll share the presentation now.',
-        timestamp: '2024-01-15T10:02:00.000Z',
-        type: 'text',
-        reactions[]
-    }
-];
 const mockMeetings = [
     {
         id: '1',
@@ -81,6 +52,7 @@ export function AdvancedCollaborationPlatform() {
                 type: 'text',
   reactions[]
             
+
 };
             setChatMessages(prev => [...prev, newMessage]);
             setChatMessage('')}

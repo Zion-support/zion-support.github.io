@@ -66,12 +66,14 @@ const statusColors = {
 
 
 
+
 };
 const priorityColors = {
   'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
   'critical': 'bg-red-500 text-white'
+
 
 
 

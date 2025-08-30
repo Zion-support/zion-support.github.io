@@ -95,9 +95,11 @@ const TalentDirectory = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -117,6 +119,7 @@ const TalentDirectory = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -125,9 +128,11 @@ const TalentDirectory = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -145,6 +150,7 @@ const TalentDirectory = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -153,9 +159,11 @@ const TalentDirectory = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -203,6 +211,7 @@ const TalentDirectory = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -211,9 +220,11 @@ const TalentDirectory = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 

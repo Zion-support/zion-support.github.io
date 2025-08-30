@@ -104,6 +104,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
   <<<<<<< HEAD
             'Research': TrendingUp
         
+
 };
         return iconMap[category] || Globe};
 =======
@@ -184,6 +185,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }))} className={filters.verified ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
               <Shield className="w-4 h-4 mr-1"/>
               Verified Only
@@ -192,6 +194,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick = {
   () => setFilters(prev => ({ ...prev,
   featured: !prev.featured 
+
 
 
 
@@ -212,6 +215,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                         [...prev.category,
   category]
                 
+
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
 =======
                         : [...prev.category,
@@ -243,6 +247,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -251,9 +256,11 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }} transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
 
 
 
@@ -313,6 +320,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }}>
               {filteredAndSortedItems.map((item, index) => (<div key={item.id} className="w-full flex-shrink-0">
                   <Card3D item={item} index={index} onClick={() => handleCardClick(item)} onAction={handleActionClick} getStatusColor={getStatusColor} getComplexityColor={getComplexityColor} getCategoryIcon={getCategoryIcon} isCarousel={true}/>
@@ -338,6 +346,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -346,9 +355,11 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -460,12 +471,15 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
   { opacity: 0,
   y: 50 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }} whileHover={{ scale: 1.02 }}>
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
 =======
@@ -479,6 +493,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -487,9 +502,11 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -504,6 +521,7 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
             rotateY,
   transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'
         
+
 
 
 

@@ -458,7 +458,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
 ];
 <<<<<<< HEAD
 export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
-  if (industry === 'All') {
+  if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;

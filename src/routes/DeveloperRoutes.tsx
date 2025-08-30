@@ -16,7 +16,7 @@ export default function DeveloperRoutes() {
       <Route path="getting-started" element={<ApiGettingStarted />} />
       <Route path="webhooks" element={<ApiWebhooks />} />
       <Route path="samples" element={<ApiSampleCode />} />
-      <Route path="errors" element={<ApiErrorCodes />} />
+      <Route path="errors" element={<ApiErrorCodes />} />;
     </Routes>;
   );
 }

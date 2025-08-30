@@ -3,7 +3,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
 export default function AIEducation() {
   const features = [
     'AI-powered personalized learning paths and recommendations',
-    'Intelligent assessment and adaptive testing',
+    'Intelligent assessment and adaptive testing',;
     'Automated content generation and curriculum optimization',;
     'Predictive analytics for student performance',;
     'Smart tutoring and homework assistance',;
@@ -21,7 +21,7 @@ export default function AIEducation() {
     { 
       name: 'School District', 
       price: '$399/mo', 
-      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] 
+      details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] ;
     },;
     { ;
       name: 'University', ;
@@ -30,7 +30,7 @@ export default function AIEducation() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'K-12 personalized learning and tutoring',;
     'Higher education course optimization',;
     'Corporate training and skill development',;
@@ -39,7 +39,7 @@ export default function AIEducation() {
     'Professional certification and licensing';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve student performance by 25-40%',;
     'Reduce learning time by 30-50%',;
     'Increase engagement and retention by 40-60%',;
@@ -48,7 +48,7 @@ export default function AIEducation() {
     'Scale educational programs without additional staff';
   ];
 
-  const industries = [
+  const industries = [;
     'K-12 Education',;
     'Higher Education',;
     'Corporate Training',;
@@ -163,7 +163,7 @@ export default function AIEducation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

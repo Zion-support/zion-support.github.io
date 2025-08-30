@@ -26,7 +26,7 @@ export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
-    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },
+    { number: '25+', label: 'Countries Served', description: 'Global presence and reach' },;
     { number: '99%', label: 'Client Satisfaction', description: 'Consistent high-quality delivery' };
   ];
 
@@ -53,7 +53,7 @@ export default function About() {
       icon: Security,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
-      color: 'from-red-500 to-orange-500'
+      color: 'from-red-500 to-orange-500';
     };
   ];
 
@@ -84,7 +84,7 @@ export default function About() {
       role: 'Cybersecurity Director',
       bio: 'Former government cybersecurity specialist with expertise in threat intelligence.',
       expertise: ['Cybersecurity', 'Compliance', 'Risk Management'],
-      image: '/images/team/emily-watson.jpg'
+      image: '/images/team/emily-watson.jpg';
     };
   ];
 
@@ -112,7 +112,7 @@ export default function About() {
     {
       year: '2025',
       title: 'AI Ethics Leadership',
-      description: 'Recognized as industry leader in responsible AI development.'
+      description: 'Recognized as industry leader in responsible AI development.';
     };
   ];
 
@@ -137,10 +137,12 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -151,14 +153,17 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation
@@ -168,14 +173,17 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <Link 
@@ -202,10 +210,12 @@ const About: React.FC = () => {
               initial = {
   { opacity: 0,
   x: -30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -243,10 +253,12 @@ const About: React.FC = () => {
               initial = {
   { opacity: 0,
   x: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -283,10 +295,12 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -307,15 +321,18 @@ const About: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -338,10 +355,12 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -362,15 +381,18 @@ const About: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -392,10 +414,12 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -416,15 +440,18 @@ const About: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
@@ -457,10 +484,12 @@ const About: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -483,15 +512,18 @@ const About: React.FC = () => {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 }}
                 >
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
@@ -515,7 +547,7 @@ const About: React.FC = () => {
             <div>
               <h3 className="text-xl font-bold text-white mb-4">Website</h3>
               <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                https://ziontechgroup.com
+                https://ziontechgroup.com;
               </a>;
             </div>;
           </div>;

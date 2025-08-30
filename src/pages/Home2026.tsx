@@ -175,7 +175,7 @@ const Home2026: React.FC = () => {;
       color: "from-yellow-500 to-amber-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
     },
-    {
+    {;
       title: "Sustainability",;
       icon: Heart,;
       description: "Green technology and ESG compliance solutions",;
@@ -239,6 +239,7 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   {
@@ -246,6 +247,7 @@ const Home2026: React.FC = () => {;
                 repeat: Infinity,
   ease: "easeInOut"
               
+
 
 
 
@@ -270,10 +272,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -367,10 +371,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -389,10 +395,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -419,6 +427,7 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -428,10 +437,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -463,10 +474,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -496,6 +509,7 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -505,10 +519,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -560,10 +576,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -594,6 +612,7 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -603,10 +622,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -682,10 +703,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -752,6 +775,7 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -761,10 +785,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -802,10 +828,12 @@ const Home2026: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -871,7 +899,7 @@ const Home2026: React.FC = () => {;
                   <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 text-sm">
                     ziontechgroup.com
                   </a>
-                </div>
+                </div>;
               </div>;
             </div>;
           </motion.div>;

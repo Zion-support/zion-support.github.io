@@ -97,10 +97,12 @@ const Testimonials: React.FC = () => {;
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -137,6 +139,7 @@ const Testimonials: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -146,10 +149,12 @@ const Testimonials: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   x: -100 
+
 
 
 
@@ -241,6 +246,7 @@ const Testimonials: React.FC = () => {;
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -250,10 +256,12 @@ const Testimonials: React.FC = () => {;
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -283,7 +291,7 @@ const Testimonials: React.FC = () => {;
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

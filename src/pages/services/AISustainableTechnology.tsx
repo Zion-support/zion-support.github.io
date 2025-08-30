@@ -5,7 +5,7 @@ export default function AISustainableTechnology() {
     'AI-powered energy consumption optimization',
     'Real-time sustainability monitoring and reporting',
     'Intelligent carbon footprint tracking and reduction',
-    'Advanced waste management and recycling optimization',
+    'Advanced waste management and recycling optimization',;
     'Automated sustainability compliance monitoring',;
     'Real-time environmental impact assessment',;
     'Advanced resource efficiency optimization',;
@@ -14,7 +14,7 @@ export default function AISustainableTechnology() {
     'Comprehensive sustainability dashboard and reporting';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce energy consumption by 25-40%',;
     'Lower carbon footprint by 30-50%',;
     'Improve resource efficiency by 35%',;
@@ -23,7 +23,7 @@ export default function AISustainableTechnology() {
     'Enable data-driven environmental decisions';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Manufacturing and industrial sustainability',;
     'Commercial building energy management',;
     'Data center and IT sustainability',;
@@ -41,7 +41,7 @@ export default function AISustainableTechnology() {
     { 
       name: 'Sustainability Professional', 
       price: '$799/mo', 
-      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise Sustainability', ;
@@ -147,7 +147,7 @@ export default function AISustainableTechnology() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-zion-slate-light">;
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
           </div>;

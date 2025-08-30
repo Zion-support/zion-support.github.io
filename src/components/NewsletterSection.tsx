@@ -32,7 +32,7 @@ const NewsletterSection: React.FC = () => {;
     {
       icon: TrendingUp,
       title: "Industry Insights",
-      description: "Get exclusive access to tech trends and analysis"
+      description: "Get exclusive access to tech trends and analysis";
     },;
     {;
       icon: Zap,;
@@ -54,10 +54,12 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -85,7 +87,7 @@ const NewsletterSection: React.FC = () => {;
           </motion.div>
         </div>
       </section>
-    )}
+    )};
 =======;
               Subscribe Another Email;
             </button>;
@@ -110,10 +112,12 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -142,6 +146,7 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -151,10 +156,12 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -190,6 +197,7 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -199,10 +207,12 @@ const NewsletterSection: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -270,7 +280,7 @@ const NewsletterSection: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

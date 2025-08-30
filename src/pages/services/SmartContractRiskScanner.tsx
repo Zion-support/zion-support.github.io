@@ -58,7 +58,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       title: 'Risk Assessment Engine',
       description: 'Advanced risk scoring and prioritization for identified vulnerabilities',
       benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
-    },
+    },;
     {;
       icon: Code,;
       title: 'Smart Contract Analysis',;
@@ -85,7 +85,7 @@ export default function SmartContractRiskScanner(...args: []):  {
       description: 'Detect improper access control and permission vulnerabilities',
       icon: Lock,
       features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
-    },
+    },;
     {;
       title: 'Logic Vulnerabilities',;
       description: 'Identify logical flaws and business logic vulnerabilities',;
@@ -140,7 +140,7 @@ export default function SmartContractRiskScanner(...args: []):  {
         'White-label solutions',
         'Dedicated infrastructure',
         '24/7 dedicated support',
-        'Custom integrations',
+        'Custom integrations',;
         'On-premise deployment',;
         'Compliance certifications';
       ],;
@@ -157,8 +157,10 @@ export default function SmartContractRiskScanner(...args: []):  {
   ;
   ;
   ;
+  ;
   roi: '300-500% within 6 months';
   ;
+
 
 
 
@@ -168,7 +170,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
   const supportedNetworks = [
     'Ethereum',
-    'Binance Smart Chain',
+    'Binance Smart Chain',;
     'Polygon',;
     'Solana',;
     'Avalanche',;
@@ -177,7 +179,7 @@ export default function SmartContractRiskScanner(...args: []):  {
     'Base';
   ];
 
-  const securityStandards = [
+  const securityStandards = [;
     'OWASP Top 10',;
     'Smart Contract Security Verification Standard',;
     'Ethereum Security Best Practices',;
@@ -206,10 +208,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -274,10 +278,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -309,10 +315,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,6 +351,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -352,10 +361,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -399,10 +410,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -433,6 +446,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -442,10 +456,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -489,10 +505,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -523,6 +541,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -532,10 +551,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -566,10 +587,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -600,6 +623,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -609,10 +633,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -643,10 +669,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -677,6 +705,7 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -686,10 +715,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -757,10 +788,12 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -791,7 +824,7 @@ export default function SmartContractRiskScanner(...args: []):  {
                 whileTap={{ scale: 0.95 }}
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Contact Security Team
+                Contact Security Team;
               </motion.button>;
             </div>;
           </motion.div>;

@@ -6,6 +6,7 @@ const SidebarProvider({ children }) {
     return (<SidebarContext.Provider value = {
   { isSidebarOpen, setIsSidebarOpen,
   toggleSidebar 
+
 }}>
       {children}
     </SidebarContext.Provider>)}

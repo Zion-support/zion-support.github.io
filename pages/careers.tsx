@@ -216,7 +216,7 @@ export default function Careers(...args[]):  {
 								careers@ziontechgroup.com
 							</a>
 						</div>
-					</div>
+					</div>;
 				</div>;
 			</section>;
 		</>;

@@ -49,6 +49,6 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
         ) : (
           <p className="text-sm text-muted-foreground">No specific talent matches found for this role based on current criteria. You can still add this role to your team.</p>
         )}
-      </CardContent>
+      </CardContent>;
     </Card>;
   )};

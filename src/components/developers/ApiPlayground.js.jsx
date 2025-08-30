@@ -28,6 +28,7 @@ export function ApiPlayground({ method, path, params = [] }) {
   method,
   headers: {
                 Authorization: `Bearer ${apiKey
+
 }`,
                 "Content-Type": "application/json",
             },
@@ -54,6 +55,7 @@ export function ApiPlayground({ method, path, params = [] }) {
       {params.map((p) => (<Input key={p.name} value={paramValues[p.name] || ""} onChange = {
   (e) => handleParamChange(p.name,
   e.target.value)
+
 } placeholder={p.name}/>))}
       {method !== "GET" && method !== "DELETE" && (<Textarea value={body} onChange={(e) => setBody(e.target.value)} className="font-mono"/>)}
       <Button onClick={sendRequest} disabled={loading}>
@@ -63,4 +65,5 @@ export function ApiPlayground({ method, path, params = [] }) {
     </div>)}
 export default ApiPlayground;
 
+export default ApiPlayground;
 export default ApiPlayground;

@@ -40,7 +40,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
     "Automated task assignment and prioritization",
     "Real-time progress tracking and analytics",
     "Risk prediction and mitigation strategies",
-    "Smart time estimation and deadline management",
+    "Smart time estimation and deadline management",;
     "Collaborative team communication tools",;
     "Advanced reporting and insights",;
     "Integration with development tools",;
@@ -59,7 +59,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
   const useCases = [
     "Software development teams",
-    "Marketing agencies",
+    "Marketing agencies",;
     "Construction companies",;
     "Consulting firms",;
     "Healthcare organizations",;
@@ -112,7 +112,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
         "White-label solutions",
         "Advanced integrations",
         "Custom workflow automation",
-        "Dedicated account manager",
+        "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited team members";
       ],;
@@ -140,10 +140,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -198,10 +200,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +235,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -240,10 +245,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -274,10 +281,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -307,6 +316,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -316,10 +326,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -350,10 +362,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -383,6 +397,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -392,10 +407,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -426,10 +443,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -459,6 +478,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -468,10 +488,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -539,10 +561,12 @@ export default function AIProjectManagementPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -595,7 +619,7 @@ export default function AIProjectManagementPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

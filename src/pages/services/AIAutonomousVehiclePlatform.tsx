@@ -3,7 +3,7 @@ import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCir
 import { SEO } from "../../components/SEO";
 
 export default function AIAutonomousVehiclePlatform() {
-  const features = [
+  const features = [;
     'Advanced computer vision and sensor fusion',;
     'Real-time decision making and path planning',;
     'Predictive maintenance and fleet optimization',;
@@ -47,7 +47,7 @@ export default function AIAutonomousVehiclePlatform() {
       details: [
         'Unlimited vehicle management',
         'Custom autonomous algorithms',
-        '24/7 dedicated support',
+        '24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
@@ -56,7 +56,7 @@ export default function AIAutonomousVehiclePlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Ride-sharing and taxi services',;
     'Logistics and delivery fleets',;
     'Public transportation systems',;
@@ -73,7 +73,7 @@ export default function AIAutonomousVehiclePlatform() {
     'Reduce carbon emissions through optimized routing';
   ];
 
-  const industries = [
+  const industries = [;
     'Transportation and Logistics',;
     'Automotive Manufacturing',;
     'Ride-sharing Services',;
@@ -302,7 +302,7 @@ export default function AIAutonomousVehiclePlatform() {
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
             >
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="ml-2 w-5 h-5" />;
             </a>;
           </div>;

@@ -56,7 +56,7 @@ export default function DSRPortal() {
     {
       icon: Clock,
       title: "Workflow Automation",
-      description: "Automated workflows for request validation, processing, and response generation."
+      description: "Automated workflows for request validation, processing, and response generation.";
     },;
     {;
       icon: CheckCircle,;
@@ -89,7 +89,7 @@ export default function DSRPortal() {
     {
       icon: Users,
       title: "Customer Trust",
-      description: "Build and maintain customer trust through transparent data rights management."
+      description: "Build and maintain customer trust through transparent data rights management.";
     },;
     {;
       icon: Award,;
@@ -122,7 +122,7 @@ export default function DSRPortal() {
     {
       right: "Right to Restriction",
       description: "Individuals can request limitation of data processing",
-      icon: Lock
+      icon: Lock;
     },;
     {;
       right: "Right to Object",;
@@ -155,7 +155,7 @@ export default function DSRPortal() {
     {
       industry: "Education",
       description: "Manage student data rights and educational privacy compliance",
-      icon: GraduationCap
+      icon: GraduationCap;
     },;
     {;
       industry: "Real Estate",;
@@ -185,10 +185,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -237,10 +239,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -272,6 +276,7 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -281,10 +286,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -331,10 +338,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -366,6 +375,7 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -375,10 +385,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -425,10 +437,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -460,6 +474,7 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -469,10 +484,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -519,10 +536,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -554,6 +573,7 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -563,10 +583,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -613,10 +635,12 @@ export default function DSRPortal() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -640,7 +664,7 @@ export default function DSRPortal() {
               </button>
               <button className="border border-indigo-500 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

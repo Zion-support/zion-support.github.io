@@ -46,9 +46,11 @@ const AIServices = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -68,6 +70,7 @@ const AIServices = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -76,9 +79,11 @@ const AIServices = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -96,6 +101,7 @@ const AIServices = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -104,9 +110,11 @@ const AIServices = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -139,6 +147,7 @@ const AIServices = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -147,9 +156,11 @@ const AIServices = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -186,6 +197,7 @@ const AIServices = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -194,9 +206,11 @@ const AIServices = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 

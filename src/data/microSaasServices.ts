@@ -1270,7 +1270,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       verified: true
     },
     images["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-01-15T10:00:00.000Z"
+    createdAt: "2024-01-15T10:00:00.000Z";
   };
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | null  => {;
@@ -1282,7 +1282,7 @@ export const MICRO_SAAS_CATEGORIES = [
   'AI Development',
   'FinTech',
   'HealthTech',
-  'E-commerce',
+  'E-commerce',;
   'EdTech';
 ];
 export const PRICING_TIERS = [
@@ -1299,15 +1299,16 @@ export const PRICING_TIERS = [
   {
     name: 'Enterprise',
     price: 299,
-    features['Custom features', '24/7 support', 'Unlimited users']
+    features['Custom features', '24/7 support', 'Unlimited users'];
   };
 ];
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',
   phone: '+1 (555) 123-4567',
   address: '123 Tech Street, Innovation City,
-  IC 12345'
+  IC 12345';
 ;
+
 };
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[]  => {;
   return MICRO_SAAS_SERVICES.filter(service => service.category === category)};

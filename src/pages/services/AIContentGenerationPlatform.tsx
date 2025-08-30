@@ -69,7 +69,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       title: 'Team Collaboration',
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
       benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
-    }
+    };
 =======;
       icon: Users,;
       title: 'Team Collaboration',;
@@ -104,7 +104,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       title: 'Business Content',
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
       metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
-    }
+    };
 =======;
       industry: 'Corporate Communications',;
       title: 'Business Content',;
@@ -132,7 +132,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       title: 'Quality Improvement',
       description: 'Consistent, high-quality content that resonates with your target audience.',
       value: '95%+'
-    },
+    },;
     {;
       icon: TrendingUp,;
       title: 'Scalability',;
@@ -147,7 +147,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
     'Stable Diffusion',
     'Natural Language Processing',
     'Computer Vision',
-    'Speech Synthesis',
+    'Speech Synthesis',;
     'Machine Learning',;
     'Cloud Computing',;
     'Real-time Processing',;
@@ -203,7 +203,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Custom templates',
         'Dedicated support',
         'Highest quality output',
-        'Advanced analytics',
+        'Advanced analytics',;
         'Custom integrations',;
         'SLA guarantees';
       ],;
@@ -231,10 +231,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +288,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -295,10 +298,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -339,10 +344,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -376,6 +383,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -385,10 +393,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -428,10 +438,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -464,6 +476,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -473,10 +486,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -519,10 +534,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -555,6 +572,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -564,10 +582,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -600,10 +620,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -636,6 +658,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -645,10 +668,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -676,10 +701,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -712,6 +739,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -721,10 +749,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -791,10 +821,12 @@ export default function AIContentGenerationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -838,7 +870,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

@@ -1,43 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, RefreshCw, X, Maximize2, Minimize2, Calendar, Activity } from 'lucide-react';
-const mockInsights = [
-    {
-        id: 'insight-1',
-        type: 'prediction',
-        title: 'Revenue Growth Prediction',
-        description: 'Based on current trends, monthly revenue is predicted to reach $3.2M by Q2 2024, representing a 15% increase.',
-        confidence: 87,
-        impact: 'high',
-        category: 'Financial',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        actionable: true,
-        actions['Increase marketing budget', 'Optimize pricing strategy', 'Expand sales team']
-    },
-    {
-        id: 'insight-2',
-        type: 'anomaly',
-        title: 'Customer Churn Anomaly',
-        description: 'Unusual spike in customer churn rate detected in the SaaS segment. 23% higher than historical average.',
-        confidence: 92,
-        impact: 'high',
-        category: 'Customer',
-        timestamp: '2024-01-15T09:30:00.000Z',
-        actionable: true,
-        actions['Investigate customer feedback', 'Review product updates', 'Enhance support response']
-    },
-    {
-        id: 'insight-3',
-        type: 'opportunity',
-        title: 'Market Expansion Opportunity',
-        description: 'AI analysis suggests high potential for expansion into the APAC region with estimated 40% market opportunity.',
-        confidence: 78,
-        impact: 'medium',
-        category: 'Growth',
-        timestamp: '2024-01-15T08:45:00.000Z',
-        actionable: true,
-        actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
-    }
-];
 const mockModels = [
     {
         id: 'model-1',

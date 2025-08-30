@@ -35,6 +35,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 },
         visible: {
             opacity: 1,
@@ -54,9 +55,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -76,6 +79,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -84,9 +88,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -106,6 +112,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -114,9 +121,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -148,6 +157,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -156,9 +166,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -270,9 +282,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -289,6 +303,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -297,9 +312,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -317,6 +334,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -325,9 +343,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -350,6 +370,7 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -358,9 +379,11 @@ const EnhancedServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -391,6 +414,7 @@ const EnhancedServicesShowcase = () => {
           <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 

@@ -45,7 +45,7 @@ export default function AICustomerSupport() {
     {
       icon: BarChart3,
       title: 'Predictive Analytics',
-      description: 'Identify support trends and proactively address common customer issues'
+      description: 'Identify support trends and proactively address common customer issues';
     },;
     {;
       icon: Zap,;
@@ -54,7 +54,7 @@ export default function AICustomerSupport() {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce response time by 80% with instant AI support',;
     'Increase customer satisfaction scores by 45%',;
     'Cut support costs by 60% through automation',;
@@ -109,7 +109,7 @@ export default function AICustomerSupport() {
         'White-label solution',
         'Dedicated account manager',
         'SLA guarantees',
-        'Advanced security features',
+        'Advanced security features',;
         'Custom workflows',;
         'Multi-language support';
       ],;
@@ -140,10 +140,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -184,10 +186,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -218,6 +222,7 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -227,10 +232,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -262,10 +269,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -296,6 +305,7 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -305,10 +315,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -337,10 +349,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -371,6 +385,7 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -380,10 +395,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -447,10 +464,12 @@ export default function AICustomerSupport() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -473,7 +492,7 @@ export default function AICustomerSupport() {
                 </button>
                 <button className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
                   Schedule Demo
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

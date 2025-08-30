@@ -29,7 +29,7 @@ export default function AIContentGenerator(...args[]):  {
     {
       icon: Globe,
       title: "Multi-language Support",
-      description: "Generate content in over 50 languages with native-level quality and cultural adaptation."
+      description: "Generate content in over 50 languages with native-level quality and cultural adaptation.";
     };
   ];
 
@@ -62,7 +62,7 @@ export default function AIContentGenerator(...args[]):  {
     {
       icon: Video,
       title: "Video Scripts",
-      description: "Scripts for YouTube, TikTok, and marketing videos"
+      description: "Scripts for YouTube, TikTok, and marketing videos";
     };
   ];
 
@@ -118,7 +118,7 @@ export default function AIContentGenerator(...args[]):  {
 =======
       icon: Target,
       title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'
+      description: 'Content tailored to specific demographics, industries, and customer personas';
     },;
     {;
       icon: BarChart3,;
@@ -128,7 +128,7 @@ export default function AIContentGenerator(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase content production by 10x with AI assistance',;
     'Improve SEO rankings by 45% with optimized content',;
     'Reduce content creation costs by 60%',;
@@ -183,7 +183,7 @@ export default function AIContentGenerator(...args[]):  {
         'Custom AI model training',
         'White-label solution',
         'Dedicated account manager',
-        'SLA guarantees',
+        'SLA guarantees',;
         'Advanced security features',;
         'Custom integrations';
       ],;
@@ -214,10 +214,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,10 +260,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -292,6 +296,7 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -301,10 +306,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -343,14 +350,17 @@ export default function AIContentGenerator(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                 >
@@ -384,14 +394,17 @@ export default function AIContentGenerator(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300"
                 >
@@ -418,10 +431,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -452,6 +467,7 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -461,10 +477,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -493,10 +511,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -527,6 +547,7 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -536,10 +557,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -603,10 +626,12 @@ export default function AIContentGenerator(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -637,7 +662,7 @@ export default function AIContentGenerator(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

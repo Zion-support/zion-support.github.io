@@ -17,6 +17,7 @@ export default function HelpCenter() {
             articles[
                 { title: 'How to create your first account',
   href: '/help/create-account' 
+
 },
 =======
             articles: [
@@ -157,6 +158,7 @@ export default function HelpCenter() {
                   <Link to = {
   `/help/${article.toLowerCase().replace(/\s+/g,
   '-')
+
 
 
 

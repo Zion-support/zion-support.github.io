@@ -132,6 +132,7 @@ export const useVirtualScroll = (items, options) => {
 
 
 
+
 },
         onScroll: handleScroll
     };
@@ -141,6 +142,7 @@ export const useVirtualScroll = (items, options) => {
             height: state.totalHeight,
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
+
 
 
 

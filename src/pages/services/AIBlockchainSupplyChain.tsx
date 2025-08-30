@@ -48,7 +48,7 @@ const AIBlockchainSupplyChain = () => {
     {
       icon: Globe,
       title: "Global Integration",
-      description: "Seamless integration with existing ERP systems and global trading partners"
+      description: "Seamless integration with existing ERP systems and global trading partners";
     };
   ];
 
@@ -92,7 +92,7 @@ const AIBlockchainSupplyChain = () => {
         "Advanced security",
         "Multi-tenant architecture"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -115,7 +115,7 @@ const AIBlockchainSupplyChain = () => {
     {
       industry: "Pharmaceuticals",
       description: "Combat counterfeit drugs and ensure regulatory compliance with blockchain verification and AI monitoring",
-      benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]
+      benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"];
     };
   ];
 
@@ -126,7 +126,7 @@ const AIBlockchainSupplyChain = () => {
     "IoT Integration",
     "Cloud Computing",
     "API Integration",
-    "Real-time Analytics",
+    "Real-time Analytics",;
     "Predictive Modeling";
   ];
 
@@ -146,10 +146,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
@@ -183,10 +185,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -207,15 +211,18 @@ const AIBlockchainSupplyChain = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -237,10 +244,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -261,15 +270,18 @@ const AIBlockchainSupplyChain = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
@@ -326,10 +338,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -350,15 +364,18 @@ const AIBlockchainSupplyChain = () => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
@@ -388,10 +405,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -412,15 +431,18 @@ const AIBlockchainSupplyChain = () => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -441,10 +463,12 @@ const AIBlockchainSupplyChain = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -496,7 +520,7 @@ const AIBlockchainSupplyChain = () => {
             364 E Main St STE 1008 Middletown DE 19709
           </p>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

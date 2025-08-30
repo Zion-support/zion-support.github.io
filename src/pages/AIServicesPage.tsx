@@ -270,7 +270,7 @@ const aiServices = [
     growthRate: '160% annual growth',
     rating: 4.7,
     reviews: 89,
-    customers: 156
+    customers: 156;
   };
 ];
 =======
@@ -388,7 +388,7 @@ const AIServices = [
         features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
         icon: <FileText className="h-8 w-8 text-zion-blue"/>,
         category: "Content",
-        link: "/request-quote?service=ai-content"
+        link: "/request-quote?service=ai-content";
     };
 ];
 =======
@@ -448,7 +448,7 @@ const AIServices = [
     {
       title: 'Predictive Maintenance',
       description: 'Prevent equipment failures with AI insights',
-      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
+      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety'];
     },;
     {;
       title: 'AI-Driven Marketing',;
@@ -472,7 +472,7 @@ const AIServices = [
       solution: 'ML-powered risk assessment',
       results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
     },
-    {
+    {;
       company: 'HealthTech Solutions',;
       industry: 'Healthcare',;
       challenge: 'Patient data analysis',;
@@ -542,6 +542,7 @@ const AIServicesPage: React.FC = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -551,10 +552,12 @@ const AIServicesPage: React.FC = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -593,6 +596,7 @@ const AIServicesPage: React.FC = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -602,10 +606,12 @@ const AIServicesPage: React.FC = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -659,7 +665,7 @@ const AIServicesPage: React.FC = () => {
                 to="/services" 
                 className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
-                View All Services
+                View All Services;
               </Link>;
             </div>;
           </div>;

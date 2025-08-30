@@ -42,13 +42,13 @@ export default function Webinars() {
     { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, count: 0 },
     { id: 'digital-transformation', name: 'Digital Transformation', icon: Rocket, count: 0 },
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 0 },
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },;
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 };
   ];
 
   const upcomingWebinars = [
 =======
-    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
+    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },;
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },;
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },;
@@ -129,7 +129,7 @@ export default function Webinars() {
       tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-applications-roi/register',
       watchUrl: null,
-      isLive: false
+      isLive: false;
     };
   ];
 
@@ -204,7 +204,7 @@ export default function Webinars() {
       watchUrl: '/webinars/edge-computing-iot-enterprise-2024/watch',
       isLive: false,
       recordingUrl: '/webinars/edge-computing-iot-enterprise-2024/recording',
-      slidesUrl: '/webinars/edge-computing-iot-enterprise-2024/slides'
+      slidesUrl: '/webinars/edge-computing-iot-enterprise-2024/slides';
     };
   ];
 
@@ -212,12 +212,12 @@ export default function Webinars() {
   React.useEffect(()  => {
     const allWebinars = [...upcomingWebinars, ...pastWebinars];
     const categoryCounts = categories.map(cat => ({
-      ...cat,
+      ...cat,;
       count: cat.id === 'all' ? allWebinars.length: allWebinars.filter(wp  => wp.category === cat.id).length;
     }))}, []);
 
   const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {;
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
@@ -226,7 +226,7 @@ export default function Webinars() {
   const stats = [
     { label: 'Webinars Delivered', value: '100+', icon: Video },
     { label: 'Attendees Served', value: '25K+', icon: Users },
-    { label: 'Expert Speakers', value: '15+', icon: Star },
+    { label: 'Expert Speakers', value: '15+', icon: Star },;
     { label: 'Topics Covered', value: '20+', icon: BookOpen };
   ];
 
@@ -234,8 +234,9 @@ export default function Webinars() {
   email: 'webinars@ziontechgroup.com',
     phone: '+1 302 464 0950',
     address: '364 E Main St STE 1008,
-  Middletown DE 19709'
+  Middletown DE 19709';
   ;
+
 };
 
   return (
@@ -246,7 +247,7 @@ export default function Webinars() {
       />
       
 =======
-      currentAttendees: 189,
+      currentAttendees: 189,;
       featured: false,;
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
       thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
@@ -316,10 +317,12 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
@@ -332,10 +335,12 @@ export default function Webinars() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,14 +358,17 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
@@ -370,14 +378,17 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
@@ -390,14 +401,17 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -483,10 +497,12 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -501,14 +517,17 @@ export default function Webinars() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -622,10 +641,12 @@ export default function Webinars() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
@@ -647,10 +668,12 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -665,14 +688,17 @@ export default function Webinars() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group cursor-pointer"
                 onClick={() => setSelectedCategory(category.id)}
@@ -697,10 +723,12 @@ export default function Webinars() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
@@ -818,7 +846,7 @@ export default function Webinars() {
       <section className="py-16 bg-zion-slate-light">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            {filteredWebinars.length === 0 ? (
+            {filteredWebinars.length === 0 ? (;
               <div className="text-center py-20">;
                 <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />;
                 <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>;
@@ -847,10 +875,12 @@ export default function Webinars() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -943,7 +973,7 @@ export default function Webinars() {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             )};
           </div>;

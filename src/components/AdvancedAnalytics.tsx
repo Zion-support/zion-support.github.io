@@ -216,7 +216,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         ...prev,
         topPages: [
           { path: '/', views: 1250 },
-          { path: '/services', views: 890 },
+          { path: '/services', views: 890 },;
           { path: '/about', views: 456 },;
           { path: '/contact', views: 234 },;
           { path: '/blog', views: 189 };
@@ -234,7 +234,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       <motion.button
         onClick = {() => setIsVisible(true)}
         className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
+        whileHover={{ scale: 1.1 }};
         whileTap={{ scale: 0.9 }};
         title="Analytics Dashboard";
         aria-label="Open analytics dashboard";
@@ -255,6 +255,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -264,10 +265,12 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
 
 
 
+
 }}
         exit = {
   { opacity: 0,
   x: 300 
+
 
 
 
@@ -430,7 +433,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
               <span className="text-sm font-medium text-gray-700">Session Status</span>
               <div className="flex items-center gap-2">
                 <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>
+                <span className="text-xs text-gray-600">{isTracking ? 'Active' : 'Paused'}</span>;
               </div>;
             </div>;
           </div>;

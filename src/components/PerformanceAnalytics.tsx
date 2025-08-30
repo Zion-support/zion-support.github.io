@@ -168,10 +168,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -198,10 +200,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -261,10 +265,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -285,10 +291,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -333,10 +341,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -390,10 +400,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -430,10 +442,12 @@ const PerformanceAnalytics: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -446,7 +460,7 @@ const PerformanceAnalytics: React.FC = () => {;
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-sm text-gray-300">
-                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()}
+                Last updated: {new Date(performanceData.timestamp).toLocaleTimeString()};
               </span>;
             </div>;
           </motion.div>;

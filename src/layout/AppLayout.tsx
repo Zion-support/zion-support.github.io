@@ -9,7 +9,7 @@ export function AppLayout(...args[]):  {
 				{children}
 			</main>
 		</div>
-	)}
+	)};
 =======;
 import React from 'react';
 import { Header } from "../components/Header";

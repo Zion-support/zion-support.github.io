@@ -74,7 +74,7 @@ export default function ProductsIndex(...args[]):  {
         </section>
       </main>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

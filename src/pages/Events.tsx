@@ -24,7 +24,7 @@ const Events: React.FC = () => {
       title: "Cloud Infrastructure Workshop",
       date: "May 10-12, 2024",
       location: "Austin, TX",
-      description: "Hands-on workshop covering cloud architecture, deployment strategies, and optimization techniques."
+      description: "Hands-on workshop covering cloud architecture, deployment strategies, and optimization techniques.";
     };
   ];
 
@@ -160,7 +160,7 @@ const events = [
     attendees: 400,
     price: "$249",
     highlights: [
-      "Transformation roadmaps",
+      "Transformation roadmaps",;
       "Change management strategies",;
       "Technology selection",;
       "Success metrics";
@@ -234,10 +234,12 @@ export default function Events() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -325,6 +327,7 @@ export default function Events() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -334,11 +337,12 @@ export default function Events() {
 
 
 
+
 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+            >;
               <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>;
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
@@ -357,6 +361,7 @@ export default function Events() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -366,10 +371,12 @@ export default function Events() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -455,7 +462,7 @@ export default function Events() {
                       >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
+                      </Link>;
                       <div className="text-right">;
                         <div className="text-sm text-zion-slate-light">Contact us for details</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
@@ -504,6 +511,7 @@ export default function Events() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -513,11 +521,12 @@ export default function Events() {
 
 
 
+
 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="mb-12"
-            >
+            >;
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>;
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
@@ -536,6 +545,7 @@ export default function Events() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -545,10 +555,12 @@ export default function Events() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -597,7 +609,7 @@ export default function Events() {
                       >
                         View Event Details
                         <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
+                      </Link>;
                       <div className="text-right">;
                         <div className="text-sm text-zion-slate-light">Contact us for future events</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
@@ -623,10 +635,12 @@ export default function Events() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -656,7 +670,7 @@ export default function Events() {
                 href="/services"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
               >
-                View Our Services
+                View Our Services;
               </Link>;
             </div>;
           </motion.div>;

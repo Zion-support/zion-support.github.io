@@ -47,7 +47,9 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   ;
   ;
   ;
+  ;
   id ;
+
 
 
 
@@ -73,13 +75,14 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     <NotificationContext.Provider value = {
   { notifications, addNotification, removeNotification,
   clearAll 
+
 }}>
       {children}
-      <NotificationContainer />
+      <NotificationContainer />;
     </NotificationContext.Provider>;
   )};
 
-const NotificationContainer: React.FC = (): JSX.Element => {
+const NotificationContainer: React.FC = (): JSX.Element => {;
 =======;
   const removeNotification = (id: string) => {;
     setNotifications(prev => prev.filter(n => n.id !== id));
@@ -94,9 +97,10 @@ const NotificationContainer: React.FC = (): JSX.Element => {
   { notifications, addNotification, removeNotification,
   clearAll 
 
+;
+;
+;
 
-;
-;
 
 }}>;
       {children};
@@ -125,10 +129,12 @@ const NotificationContainer: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 
 
 
@@ -143,6 +149,7 @@ const NotificationContainer: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { 
@@ -151,6 +158,7 @@ const NotificationContainer: React.FC = () => {;
               type: "spring",
   stiffness: 200
             
+
 
 
 
@@ -174,10 +182,12 @@ const NotificationContainer: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,7 +201,7 @@ const NotificationContainer: React.FC = () => {;
           <Bell className="w-4 h-4" />
           <span>Clear All</span>
         </motion.button>
-      )}
+      )};
     </div>;
   )};
 
@@ -287,7 +297,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         >
           <X className="w-4 h-4" />
         </button>
-      </div>
+      </div>;
     </motion.div>;
   )};
 =======
@@ -307,13 +317,14 @@ export const notify = {
 <<<<<<< HEAD
     console.log('Success notification: ', { title, message,
   ...options 
+
 })},
   error: (title: string, message: string, options?: Partial<Notification>)  => {
     console.log('Error notification: ', { title, message, ...options })},
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
     console.log('Warning notification: ', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Info notification:', { title, message, ...options })}
+    console.log('Info notification:', { title, message, ...options })};
 =======;
     console.log('Success notification:', { title, message,;
   ;

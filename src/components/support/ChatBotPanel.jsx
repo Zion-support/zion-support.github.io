@@ -196,6 +196,7 @@ export function ChatBotPanel() {
 
 
 
+
 }>
             Suggested questions:
           </p>
@@ -208,6 +209,7 @@ export function ChatBotPanel() {
           <p className = {
   cn("text-sm mb-2 font-medium",
   theme === "dark" ? "text-gray-300" : "text-gray-600")
+
 
 
 
@@ -234,6 +236,7 @@ export function ChatBotPanel() {
 
 
 
+
 }>
         <form onSubmit={(e) => {
             e.preventDefault();
@@ -245,6 +248,7 @@ export function ChatBotPanel() {
 =======
             handleSendMessage();
         
+
 }} className="flex items-center gap-2">
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
   cn("flex-1",
@@ -252,6 +256,7 @@ export function ChatBotPanel() {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
+
 
 
 

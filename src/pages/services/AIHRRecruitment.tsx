@@ -3,7 +3,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 export default function AIHRRecruitment() {
   const features = [
     'AI-powered candidate sourcing and matching',
-    'Intelligent resume parsing and skill extraction',
+    'Intelligent resume parsing and skill extraction',;
     'Automated interview scheduling and coordination',;
     'Predictive analytics for candidate success',;
     'Bias-free screening and diversity optimization',;
@@ -21,7 +21,7 @@ export default function AIHRRecruitment() {
     { 
       name: 'Professional', 
       price: '$499/mo', 
-      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] 
+      details: ['Up to 200 job postings', 'Advanced AI features', 'Custom integrations', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIHRRecruitment() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'High-volume recruitment and hiring',;
     'Technical talent acquisition',;
     'Executive search and placement',;
@@ -39,7 +39,7 @@ export default function AIHRRecruitment() {
     'Remote workforce recruitment';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce time-to-hire by 40-60%',;
     'Improve candidate quality by 30-50%',;
     'Cut recruitment costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AIHRRecruitment() {
     'Scale recruitment without additional staff';
   ];
 
-  const industries = [
+  const industries = [;
     'Technology & Software',;
     'Healthcare & Life Sciences',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIHRRecruitment() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

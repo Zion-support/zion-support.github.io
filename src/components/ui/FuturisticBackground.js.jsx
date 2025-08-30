@@ -172,6 +172,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
         
+
 }}/>)}
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
@@ -181,6 +182,7 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
             color: color,
   textShadow: `
           ${glowSize
+
 } ${color},
           0 0 30px ${color},
           0 0 40px ${color}
@@ -204,6 +206,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
   {
             background: `linear-gradient(45deg, transparent 30%,
   ${glowColor
+
 }20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
         }}/>

@@ -91,9 +91,11 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -121,6 +123,7 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -129,9 +132,11 @@ export default function RequestQuote() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -149,6 +154,7 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -157,9 +163,11 @@ export default function RequestQuote() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -177,6 +185,7 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -185,9 +194,11 @@ export default function RequestQuote() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -216,9 +227,11 @@ export default function RequestQuote() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -346,9 +359,11 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,9 +384,11 @@ export default function RequestQuote() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -398,9 +415,11 @@ export default function RequestQuote() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -433,6 +452,7 @@ export default function RequestQuote() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -441,9 +461,11 @@ export default function RequestQuote() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -492,6 +514,7 @@ export default function RequestQuote() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -500,9 +523,11 @@ export default function RequestQuote() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 

@@ -68,7 +68,7 @@ export default function ServiceDetail(...args[]):  {
 					</section>
 				)}
 				<div className="mt-10 flex gap-3">
-					<Link href="/request-quote/" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a quote</Link>
+					<Link href="/request-quote/" className="inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Request a quote</Link>;
 					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>;
 				</div>;
 			</main>;

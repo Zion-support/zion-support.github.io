@@ -83,7 +83,7 @@ export const SERVICE_CATEGORIES = [
   "Digital Twin",
   "AI Simulation",
   "Content Creation",
-  "HR & Talent",
+  "HR & Talent",;
   "Sustainability",;
   "Manufacturing",;
   "Retail",;
@@ -120,16 +120,17 @@ export const calculateServiceStats = () => {
     categories: SERVICE_CATEGORIES.length,
 <<<<<<< HEAD
     pricingTiers: PRICING_TIERS.map(tier  => ({
-      ...tier,
+      ...tier,;
   count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => {;
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
         return false
+
 }).length
     })),
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
-=======
+=======;
     pricingTiers: PRICING_TIERS.map(tier => ({;
       ...tier,;
   ;
@@ -161,7 +162,7 @@ export const calculateServiceStats = () => {
         service.supportLevel.toLowerCase() === level.id
       ).length
     }))
-=======
+=======;
     supportLevels: SUPPORT_LEVELS.map(level => ({;
       ...level,;
       count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
@@ -176,25 +177,25 @@ export const calculateServiceStats = () => {
 // Get services by category
 <<<<<<< HEAD
 export const getServicesByCategory = (category: string)  => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '));
   )};
 
 // Get services by price range
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number)  => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
   )};
 
 // Get services by innovation level
 export const getServicesByInnovationLevel = (level: string)  => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
     service.innovationLevel.toLowerCase() === level.toLowerCase();
   )};
 
 // Get services by support level
 export const getServicesBySupportLevel = (level: string)  => {
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
     service.supportLevel.toLowerCase() === level.toLowerCase();
   )};
 
@@ -204,7 +205,7 @@ export const searchTerm = query.toLowerCase();
     service.title.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-    service.category.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm) ||;
     service.subcategory.toLowerCase().includes(searchTerm);
   )};
 =======
@@ -260,7 +261,7 @@ export const getFeaturedServices = (limit: number = 10) => {;
 <<<<<<< HEAD
 export const getTrendingServices = (limit: number = 10) => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025
-    .filter(service => service.betaAccess || service.launchDate?.includes('2025'))
+    .filter(service => service.betaAccess || service.launchDate?.includes('2025'));
     .sort((a, b) => b.price - a.price) // Higher price often indicates more demand;
     .slice(0, limit)};
 =======
@@ -290,12 +291,12 @@ export const getServicesByIndustry = (industry: string)  => {
     'cybersecurity'['Cybersecurity', 'AI Security', 'Quantum Security'],
     'blockchain'['Blockchain', 'DeFi & NFTs', 'Supply Chain & Sustainability'],
     'quantum'['Quantum Computing', 'Quantum AI', 'Quantum Security', 'Quantum Finance', 'Quantum Chemistry'],
-    'iot'['IoT & Edge Computing', 'Edge AI'],
+    'iot'['IoT & Edge Computing', 'Edge AI'],;
     'ai'['AI & Analytics', 'AI & Customer Experience', 'AI & Business Automation', 'AI & Robotics'];
   };
   
   const categories = industryMap[industry.toLowerCase()] || [];
-  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service = > 
+  return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service = > ;
     categories.some(category => service.category.includes(category));
   )};
 =======
@@ -347,7 +348,7 @@ export const getServiceRecommendations = (preferences: {;
   if (preferences.supportLevel) {
     recommendations = recommendations.filter(service => 
       service.supportLevel.toLowerCase() === preferences.supportLevel!.toLowerCase()
-    )}
+    )};
 =======;
     recommendations = recommendations.filter(service => ;
       service.innovationLevel.toLowerCase() === preferences.innovationLevel!.toLowerCase();

@@ -8,7 +8,6 @@ const CloudDevOpsServices = () => {
     const categories = ['all', 'Cloud Management', 'Container Orchestration', 'DevOps Automation', 'Serverless', 'Infrastructure', 'Security'];
     const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
     const filteredServices = cloudDevOpsServices.filter(service => {
-        const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
         const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
         return matchesSearch && matchesCategory && matchesPricing});
     const getCategoryIcon = (category) => {

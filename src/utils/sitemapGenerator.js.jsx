@@ -5,6 +5,7 @@ export class SitemapGenerator {
   outputPath: './public/sitemap.xml',
   ...config
         
+
 };
     }
     /**
@@ -13,7 +14,6 @@ export class SitemapGenerator {
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlsetClose = '</urlset>';
         const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
@@ -29,7 +29,6 @@ export class SitemapGenerator {
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
@@ -77,6 +76,7 @@ Crawl-delay: 1`;
             urls: urls.map(url => ({
                 ...url,
   fullUrl: `${baseUrl
+
 }${url.url}`,
                 lastmod: url.lastmod || new Date().toISOString()
             }))
@@ -183,6 +183,7 @@ export const defaultSitemapConfig = {
         // Main pages
         { url: '/', changefreq: 'daily',
   priority: 1.0 
+
 },
         { url: '/about', changefreq: 'monthly', priority: 0.8 },
         { url: '/contact', changefreq: 'monthly', priority: 0.8 },
@@ -246,4 +247,5 @@ export const generator = new SitemapGenerator(config);
 };
 export default SitemapGenerator;
 
+export default to;
 export default to;

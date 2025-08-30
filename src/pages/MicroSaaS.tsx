@@ -77,7 +77,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
       href: 'https://ziontechgroup.com/micro-saas'
     },
     {
-      icon: ShoppingCart,
+      icon: ShoppingCart,;
       name: 'Checkout A/B Optimizer',;
       desc: 'Low-code experiments for checkout steps, fields, and copy; integrates with Stripe/Shopify.',
       pricing: 'From $99/mo',
@@ -153,7 +153,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

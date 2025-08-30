@@ -18,7 +18,7 @@ export default function IoTEdge(...args: []):  {
     {
       icon: Zap,
       title: 'Real-time Processing',
-      description: 'Instant data analysis and decision making'
+      description: 'Instant data analysis and decision making';
     },;
     {;
       icon: Database,;
@@ -41,7 +41,7 @@ export default function IoTEdge(...args: []):  {
     {
       title: '5G Integration',
       description: 'High-speed connectivity for IoT applications',
-      icon: Wifi
+      icon: Wifi;
     },;
     {;
       title: 'Security & Compliance',;
@@ -65,10 +65,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -118,10 +120,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -152,6 +156,7 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -161,10 +166,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -197,10 +204,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +240,7 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -240,10 +250,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -284,10 +296,12 @@ export default function IoTEdge(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -308,14 +322,17 @@ export default function IoTEdge(...args: []):  {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -340,10 +357,12 @@ export default function IoTEdge(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -368,7 +387,7 @@ export default function IoTEdge(...args: []):  {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-300">
                   Contact IoT Team
-                </button>
+                </button>;
               </div>;
             </div>;
           </motion.div>;

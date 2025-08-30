@@ -649,6 +649,7 @@ export const SERVICE_PRICING_TIERS = {
     features["Core functionality", "Basic support", "Standard integrations", "Community forum"],
   priceRange: "$19 - $99/month"
   
+
 },
 =======
     features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],
@@ -691,6 +692,7 @@ export const ZION_TECH_GROUP_CONTACT = {
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008,
   Middletown DE 19709"
+
 
 
 

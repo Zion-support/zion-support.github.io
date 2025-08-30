@@ -42,6 +42,7 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -64,9 +65,11 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -246,6 +249,7 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -254,9 +258,11 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -418,6 +424,7 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -426,9 +433,11 @@ export default function NextGenInnovativeServices() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 

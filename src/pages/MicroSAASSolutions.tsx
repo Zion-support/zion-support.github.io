@@ -62,7 +62,7 @@ export default function MicroSAASSolutions(...args[]):  {
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
       features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-    }
+    };
 =======;
       title: "Analytics & Reporting",;
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
@@ -86,7 +86,7 @@ export default function MicroSAASSolutions(...args[]):  {
     {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
-      icon: BarChart3
+      icon: BarChart3;
     },;
     {;
       title: "Security",;
@@ -119,7 +119,7 @@ export default function MicroSAASSolutions(...args[]):  {
     {
       name: "Retail",
       description: "E-commerce and point-of-sale solutions",
-      icon: Building
+      icon: Building;
     },;
     {;
       name: "Real Estate",;
@@ -150,7 +150,7 @@ export default function MicroSAASSolutions(...args[]):  {
       icon: Cpu,
       duration: "8-16 weeks"
     },
-    {
+    {;
       step: 4,;
       title: "Testing & Deployment",;
       description: "Comprehensive testing and production deployment",;
@@ -366,7 +366,7 @@ export default function MicroSAASSolutions(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </div>;
           </div>;

@@ -78,7 +78,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       features["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
       link: "/services/ai-business-intelligence-platform",
       category: "Analytics"
-    }
+    };
 =======;
       price: "From $1,499/month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
@@ -112,7 +112,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
     {
       title: "Retail & E-commerce",
       description: "Customer analytics, inventory optimization, and personalized marketing",
-      icon: Users
+      icon: Users;
     },;
     {;
       title: "Energy & Utilities",;
@@ -123,7 +123,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
   const advancedTechnologies = [
     "Machine Learning & Deep Neural Networks",
-    "Natural Language Processing (NLP)",
+    "Natural Language Processing (NLP)",;
     "Computer Vision & Image Recognition",;
     "Predictive Analytics & Forecasting",;
     "Robotic Process Automation (RPA)",;
@@ -155,10 +155,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -206,10 +208,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -240,6 +244,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -249,10 +254,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -313,10 +320,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -347,6 +356,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -356,10 +366,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -391,10 +403,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -425,6 +439,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -434,10 +449,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -466,10 +483,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -490,6 +509,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -499,10 +519,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -523,6 +545,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -532,10 +555,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -574,10 +599,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -606,10 +633,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -633,6 +662,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -642,10 +672,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -668,6 +700,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -677,10 +710,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -704,6 +739,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -713,10 +749,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -736,7 +774,7 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

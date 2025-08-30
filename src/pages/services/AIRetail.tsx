@@ -3,7 +3,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
 export default function AIRetail() {
   const features = [
     'AI-powered customer behavior analysis and personalization',
-    'Intelligent inventory management and demand forecasting',
+    'Intelligent inventory management and demand forecasting',;
     'Automated pricing optimization and dynamic pricing',;
     'Real-time customer sentiment and feedback analysis',;
     'Predictive analytics for sales and customer lifetime value',;
@@ -21,7 +21,7 @@ export default function AIRetail() {
     { 
       name: 'Medium Retailer', 
       price: '$799/mo', 
-      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Retailer', ;
@@ -30,7 +30,7 @@ export default function AIRetail() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'E-commerce optimization and conversion rate improvement',;
     'Brick-and-mortar store analytics and optimization',;
     'Inventory management and supply chain optimization',;
@@ -39,7 +39,7 @@ export default function AIRetail() {
     'Omnichannel retail experience enhancement';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase sales conversion rates by 20-40%',;
     'Improve customer retention by 30-50%',;
     'Reduce inventory costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AIRetail() {
     'Scale retail operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'E-commerce & Online Retail',;
     'Brick & Mortar Stores',;
     'Fashion & Apparel',;
@@ -163,7 +163,7 @@ export default function AIRetail() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

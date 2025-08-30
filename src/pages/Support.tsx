@@ -39,7 +39,7 @@ const Support = () => {;
     { id: 'ai', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, color: 'from-blue-500 to-cyan-600' },
     { id: 'security', name: 'Security', icon: Shield, color: 'from-red-500 to-orange-600' },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-600' },
+    { id: 'infrastructure', name: 'Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-600' },;
     { id: 'quantum', name: 'Quantum Tech', icon: Star, color: 'from-indigo-500 to-purple-600' };
   ];
 
@@ -86,7 +86,7 @@ const Support = () => {;
       color: 'from-indigo-500 to-purple-600'
     }
 =======
-      id: 'security',
+      id: 'security',;
       name: 'Security & Compliance',;
       icon: Shield,;
       description: 'Security concerns, compliance questions, and access control',;
@@ -128,7 +128,7 @@ const Support = () => {;
 =======
       id: 'ticket',
       name: 'Support Ticket',
-      icon: Ticket,
+      icon: Ticket,;
       description: 'Create a detailed support ticket for tracking and follow-up',;
       responseTime: 'Within 4 hours',;
       availability: '24/7',;
@@ -170,18 +170,18 @@ const Support = () => {;
       icon: Zap,
       color: 'from-orange-500 to-red-600',
       link: '/api',
-      endpoints: '100+ endpoints'
+      endpoints: '100+ endpoints';
     };
   ];
 
-  const filteredIssues = selectedCategory === 'all' 
+  const filteredIssues = selectedCategory === 'all' ;
     ? commonIssues ;
     : commonIssues.filter(issue => issue.category === selectedCategory);
 
   const filteredSearchIssues = searchQuery 
     ? filteredIssues.filter(issue => 
         issue.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        issue.description.toLowerCase().includes(searchQuery.toLowerCase())
+        issue.description.toLowerCase().includes(searchQuery.toLowerCase());
       );
     : filteredIssues;
 
@@ -194,7 +194,7 @@ const Support = () => {;
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-=======
+=======;
       title: 'Status Page',;
       description: 'Check system status and maintenance schedules',;
       icon: Globe,;
@@ -227,7 +227,7 @@ const Support = () => {;
     {
       question: 'How do I upgrade my service plan?',
       answer: 'You can upgrade your service plan through your account dashboard, or contact our billing team for assistance with custom enterprise plans.',
-      category: 'billing'
+      category: 'billing';
     },;
     {;
       question: 'Do you offer training for new users?',;
@@ -246,8 +246,10 @@ const Support = () => {;
   ;
   ;
   ;
+  ;
   message: '';
   ;
+
 
 
 
@@ -282,10 +284,12 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -326,7 +330,7 @@ const Support = () => {;
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">24/7</div>
                   <div className="text-slate-400">Support Available</div>
-                </div>
+                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-cyan-400">&lt; 2min</div>
                   <div className = "text-slate-400">Response Time</div>
@@ -348,6 +352,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -357,10 +362,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -384,6 +391,7 @@ const Support = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -393,10 +401,12 @@ const Support = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -441,14 +451,17 @@ const Support = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -473,6 +486,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -482,10 +496,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -509,6 +525,7 @@ const Support = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -518,10 +535,12 @@ const Support = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -593,14 +612,17 @@ const Support = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -617,6 +639,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -626,10 +649,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -653,6 +678,7 @@ const Support = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -662,10 +688,12 @@ const Support = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -721,14 +749,17 @@ const Support = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 text-center"
                 >
@@ -745,6 +776,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -754,10 +786,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -852,6 +886,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -861,10 +896,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -888,6 +925,7 @@ const Support = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -897,10 +935,12 @@ const Support = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -935,6 +975,7 @@ const Support = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -944,10 +985,12 @@ const Support = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.2 
+
 
 
 
@@ -982,7 +1025,7 @@ const Support = () => {;
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

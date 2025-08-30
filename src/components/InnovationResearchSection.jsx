@@ -192,6 +192,7 @@ export function InnovationResearchSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -220,9 +221,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -247,6 +250,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -255,9 +259,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -282,6 +288,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -290,9 +297,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -312,6 +321,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -320,9 +330,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -390,6 +402,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
@@ -398,9 +411,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 
 
 
@@ -454,6 +469,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -462,9 +478,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -484,6 +502,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -492,9 +511,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -536,6 +557,7 @@ export function InnovationResearchSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -544,9 +566,11 @@ export function InnovationResearchSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 

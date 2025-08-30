@@ -41,7 +41,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       title: 'Identity-Based Security',
       description: 'Security policies based on user identity and context',
       color: 'from-purple-500 to-pink-500'
-    },
+    },;
     {;
       icon: ShieldCheck,;
       title: 'Micro-Segmentation',;
@@ -68,7 +68,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
       description: 'Micro-segmentation and network isolation strategies',
       price: 'From $20,000',
       features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
-    },
+    },;
     {;
       title: 'Continuous Monitoring',;
       description: 'Real-time security monitoring and threat detection',;
@@ -77,7 +77,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     { name: 'Enhanced Security', icon: Shield, description: 'Reduce attack surface and improve threat detection' },;
     { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },;
     { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },;
@@ -106,10 +106,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -166,10 +168,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -200,6 +204,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -209,10 +214,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -244,10 +251,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -278,6 +287,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -287,10 +297,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -335,10 +347,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,6 +383,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -378,10 +393,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -413,10 +430,12 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -445,7 +464,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </motion.button>;
             </div>;
           </motion.div>;

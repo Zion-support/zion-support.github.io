@@ -214,6 +214,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -242,9 +243,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -269,6 +272,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -277,9 +281,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -304,6 +310,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -312,9 +319,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -334,6 +343,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -342,9 +352,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -380,6 +392,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -388,9 +401,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -410,6 +425,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -418,9 +434,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -495,6 +513,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
@@ -503,9 +522,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 
 
 
@@ -567,6 +588,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -575,9 +597,11 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 

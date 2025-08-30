@@ -28,6 +28,7 @@ const mockPost = {
 
 
 
+
 },
     authorId: "user1",
     category: "ai-tools",
@@ -248,9 +249,11 @@ export default function ForumPostPage() {
 
 
 
+
 } keywords = {
   `community, forum, discussion, ${post.tags.join(',
   ')
+
 
 
 

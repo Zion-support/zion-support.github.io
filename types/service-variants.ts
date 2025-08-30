@@ -92,7 +92,7 @@ export type ServiceVariant = | 'default'
   | 'space-futuristic'
   | 'consulting-futuristic'
   | 'api-futuristic'
-  | 'integration-futuristic'
+  | 'integration-futuristic';
   | 'monitoring-futuristic';
   | 'backup-futuristic';
   | 'analytics-futuristic';

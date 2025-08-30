@@ -32,6 +32,8 @@ async function apiRequest<T>(
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -74,6 +76,8 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -108,6 +112,7 @@ export const api = {
 
 
 
+
 }),
   
   post: (endpoint: string, data: , headers?: Record<string, string>) => 
@@ -118,7 +123,7 @@ export const api = {
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
   
   delete: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'DELETE', headers }),
+    apiClient(endpoint, { method: 'DELETE', headers }),;
 =======;
   put: (endpoint: string, data: any, headers?: Record<string, string>) => ;
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),;

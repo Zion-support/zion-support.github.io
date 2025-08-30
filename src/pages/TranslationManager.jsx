@@ -200,9 +200,11 @@ export default function TranslationManager() {
 
 
 
+
 } dir={lang.code === 'ar' ? 'rtl' : 'ltr'} className="min-h-20"/>) : (<Input value={editedTranslations[key][lang.code] || ''} onChange = {
   (e) => handleChange(lang.code, key,
   e.target.value)
+
 
 
 

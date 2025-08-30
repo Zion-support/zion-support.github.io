@@ -69,7 +69,7 @@ export const InnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)}
+          setIsVisible(true)};
 =======;
 export const InnovativeServicesShowcase2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -112,8 +112,10 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 
 
 
@@ -141,10 +143,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
 
 
 
@@ -183,6 +187,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -192,10 +197,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -217,7 +224,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
               All Categories
             </button>
             {serviceCategories2027.map((category)  => {
-=======
+=======;
                   : 'bg-zion-slate-light/50 text-gray-300 hover:bg-zion-slate-light/70 hover:text-white';
               }`};
             >;
@@ -240,7 +247,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
                   {Icon && <Icon className="w-4 h-4" />}
                   {category}
                 </button>
-              )})}
+              )})};
 =======;
                   }`};
                 >;
@@ -259,14 +266,17 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 =======
@@ -278,6 +288,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -287,10 +298,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -311,6 +324,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   isVisible ? { opacity: 1,
@@ -320,10 +334,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -398,6 +414,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -407,10 +424,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -489,6 +508,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -498,10 +518,12 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -555,7 +577,7 @@ export const InnovativeServicesShowcase2027: React.FC = () => {;
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

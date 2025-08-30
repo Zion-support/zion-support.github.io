@@ -48,7 +48,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       icon: Zap,
       title: 'Real-Time Monitoring',
-      description: 'Continuous patient monitoring with instant alerts for critical health changes'
+      description: 'Continuous patient monitoring with instant alerts for critical health changes';
     },;
     {;
       icon: Eye,;
@@ -101,7 +101,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         'Full AI suite',
         'Custom AI models',
         'Dedicated support team',
-        'Advanced compliance',
+        'Advanced compliance',;
         'On-premise options',;
         'SLA guarantees',;
         'Custom integrations';
@@ -124,7 +124,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       icon: Clock,
       title: '24/7 Patient Monitoring',
-      description: 'Continuous monitoring ensures patient safety around the clock'
+      description: 'Continuous monitoring ensures patient safety around the clock';
     },;
     {;
       icon: BarChart3,;
@@ -147,7 +147,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     {
       title: 'Treatment Optimization',
       description: 'AI recommends optimal treatment plans based on patient data and outcomes',
-      icon: Heart
+      icon: Heart;
     },;
     {;
       title: 'Drug Safety Monitoring',;
@@ -156,7 +156,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
     };
   ];
 
-  const complianceStandards = [
+  const complianceStandards = [;
     'HIPAA Compliant',;
     'FDA Approved',;
     'ISO 13485',;
@@ -184,10 +184,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -235,10 +237,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -269,6 +273,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -278,10 +283,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -314,10 +321,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -348,6 +357,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -357,10 +367,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -393,10 +405,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -427,6 +441,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -436,10 +451,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -472,10 +489,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -506,6 +525,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -515,10 +535,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -548,10 +570,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -582,6 +606,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -591,10 +616,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -659,10 +686,12 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -688,7 +717,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
               </button>
             </div>
             
-            <p className="text-gray-400 mt-6">
+            <p className="text-gray-400 mt-6">;
               No credit card required • 30-day free trial • HIPAA compliant;
             </p>;
           </motion.div>;

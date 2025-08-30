@@ -162,12 +162,11 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
       icon: '🛡️',
       popular: false,
       roi: '320%',
-      delivery: '2-4 weeks'
+      delivery: '2-4 weeks';
     };
   ];
 
   const filteredServices = services.filter(service => {;
-    const matchesIndustry = selectedIndustry === 'all' || service.industry === selectedIndustry;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     
@@ -206,10 +205,12 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
             >
@@ -349,14 +350,17 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
                     service.popular
@@ -484,7 +488,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
             </div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

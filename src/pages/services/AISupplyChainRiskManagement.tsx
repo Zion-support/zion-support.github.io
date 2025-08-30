@@ -5,7 +5,7 @@ export default function AISupplyChainRiskManagement() {
     'AI-powered supply chain risk assessment and monitoring',
     'Real-time global supply chain disruption alerts',
     'Predictive analytics for supply chain vulnerabilities',
-    'Automated risk scoring and prioritization',
+    'Automated risk scoring and prioritization',;
     'Multi-tier supplier risk analysis',;
     'Geopolitical and economic risk integration',;
     'Supply chain resilience optimization',;
@@ -14,7 +14,7 @@ export default function AISupplyChainRiskManagement() {
     'Advanced visualization and reporting dashboards';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce supply chain disruptions by 60-80%',;
     'Cut risk assessment time by 90%',;
     'Improve supplier selection accuracy by 75%',;
@@ -35,7 +35,7 @@ export default function AISupplyChainRiskManagement() {
       price: '$799/mo', 
       features: ['Up to 500 suppliers', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
@@ -44,7 +44,7 @@ export default function AISupplyChainRiskManagement() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Manufacturing supply chain risk management',;
     'Retail inventory risk assessment',;
     'Healthcare supply chain monitoring',;
@@ -55,7 +55,7 @@ export default function AISupplyChainRiskManagement() {
 
   const riskCategories = [
     'Geopolitical Risk Analysis',
-    'Economic Instability Monitoring',
+    'Economic Instability Monitoring',;
     'Natural Disaster Prediction',;
     'Supplier Financial Health',;
     'Regulatory Compliance Risk',;
@@ -289,7 +289,7 @@ export default function AISupplyChainRiskManagement() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
+            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

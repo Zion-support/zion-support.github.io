@@ -14,7 +14,7 @@ export function Switch({
   checked = false,
   onCheckedChange,
   disabled = false,
-  className,
+  className,;
   id,;
   'aria-label': ariaLabel,;
   ...props;
@@ -45,6 +45,7 @@ export function Switch({
 
 
 
+
 }
       id={id}
       {...props}
@@ -54,10 +55,11 @@ export function Switch({
   cn(
           'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',
   checked ? 'translate-x-5' : 'translate-x-0'
-        )
+        );
 ;
 ;
 ;
+
 
 
 };

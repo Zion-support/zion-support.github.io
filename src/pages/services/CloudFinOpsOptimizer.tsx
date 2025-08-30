@@ -28,7 +28,7 @@ export default function CloudFinOpsOptimizer = () => {
     {
       icon: TrendingUp2,
       title: 'Predictive Modeling',
-      description: 'Forecast future costs and identify optimization trends'
+      description: 'Forecast future costs and identify optimization trends';
     },;
     {;
       icon: Lightbulb,;
@@ -38,7 +38,7 @@ export default function CloudFinOpsOptimizer = () => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce cloud costs by 40-60%',;
     'Improve resource efficiency by 50%',;
     'Automate 80% of optimization tasks',;
@@ -61,7 +61,7 @@ export default function CloudFinOpsOptimizer = () => {
     {
       icon: BarChart3,
       title: 'Real-time Dashboards',
-      description: 'Live monitoring and reporting of cloud costs and performance'
+      description: 'Live monitoring and reporting of cloud costs and performance';
     },;
     {;
       icon: Target,;
@@ -80,7 +80,7 @@ export default function CloudFinOpsOptimizer = () => {
       description: 'Scale efficiently while controlling costs'
     },
     {
-      industry: 'E-commerce',
+      industry: 'E-commerce',;
       description: 'Balance performance with cost optimization';
     },;
     {;
@@ -104,10 +104,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -158,10 +160,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -192,6 +196,7 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -201,10 +206,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -236,10 +243,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -270,6 +279,7 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -279,10 +289,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -318,10 +330,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -352,6 +366,7 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -361,10 +376,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -390,6 +407,7 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -399,10 +417,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -432,10 +452,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -466,6 +488,7 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -475,10 +498,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -510,10 +535,12 @@ export default function CloudFinOpsOptimizer = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -543,7 +570,7 @@ export default function CloudFinOpsOptimizer = () => {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

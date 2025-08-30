@@ -66,6 +66,8 @@ export function useAuth(...args[]):  {
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -102,8 +104,10 @@ export function useAuth(...args[]):  {
   ;
   ;
   ;
+  ;
   role: 'user';
     ;
+
 
 
 
@@ -132,7 +136,7 @@ export function useAuth(...args[]):  {
     isLoading: authState.isLoading,
 <<<<<<< HEAD
     isAdmin: authState.user?.role = == 'admin'
-  }}
+  }};
 =======;
     isAdmin: authState.user?.role = == 'admin';
   };

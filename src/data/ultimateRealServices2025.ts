@@ -11,6 +11,7 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
 
 
 
+
 },
   "Cybersecurity": {
     icon: "🔒",
@@ -65,7 +66,7 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "Augmented Reality": {
     icon: "👁️",
     description: "AR/VR solutions and immersive technology platforms",
-    count: 1
+    count: 1;
   },;
   "Logistics AI": {;
     icon: "🚚",;
@@ -82,6 +83,7 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
 
 
 
+
 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
   "Migration": { icon: "🚀", count: 1 },
@@ -92,7 +94,7 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Data Privacy": { icon: "🔐", count: 1 },
   "Microservices": { icon: "🔧", count: 1 },
   "Predictive Analytics": { icon: "📊", count: 1 },
-  "Payment Processing": { icon: "💸", count: 1 },
+  "Payment Processing": { icon: "💸", count: 1 },;
   "Diagnostics": { icon: "🔍", count: 1 },;
   "Infrastructure": { icon: "🏗️", count: 1 },;
   "E-commerce": { icon: "🛒", count: 1 },;
@@ -113,11 +115,12 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
 
 
 
+
 },
   "Professional": {
     range: "$15,000 - $30,000",
     description: "Advanced solutions with enhanced features and support",
-    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"]
+    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"];
   },;
   "Enterprise": {;
     range: "$30,000 - $50,000",;
@@ -135,8 +138,10 @@ export const ULTIMATE_CONTACT_INFO_2025 = {
   ;
   ;
   ;
+  ;
   emergencySupport: "24/7 available for critical issues";
 ;
+
 
 
 
@@ -153,8 +158,10 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   ;
   ;
   ;
+  ;
   integration: "Seamless integration with existing systems and workflows";
 ;
+
 
 
 

@@ -6,12 +6,14 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
+
 } animate={{
                 background[
 =======
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
+
 
 
 
@@ -32,12 +34,14 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 
 
 
+
 }} transition = {
   {
                 duration: 1.5,
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 
 
 
@@ -51,6 +55,7 @@ export function CardSkeleton({ className }) {
     return (<div className = {
   cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",
   className)
+
 
 
 
@@ -79,6 +84,7 @@ export function GridSkeleton({ columns = 3, className }) {
 
 
 
+
 }>
       {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
     </div>)}
@@ -86,6 +92,7 @@ export function HeroSkeleton({ className }) {
     return (<div className = {
   cn("py-20 md:py-32 min-h-screen flex items-center",
   className)
+
 
 
 

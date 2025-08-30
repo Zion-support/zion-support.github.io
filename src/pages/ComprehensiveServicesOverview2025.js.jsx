@@ -35,6 +35,7 @@ const ComprehensiveServicesOverview2025 = () => {
             'Energy & Sustainability': '⚡',
   'Logistics & Transportation': '🚚'
         
+
 };
         return icons[category] || '🚀'};
     const getCategoryColor = (category) => {
@@ -52,6 +53,7 @@ const ComprehensiveServicesOverview2025 = () => {
             'Energy & Sustainability': 'from-green-500 to-teal-500',
   'Logistics & Transportation': 'from-orange-500 to-red-500'
         
+
 };
         return colors[category] || 'from-gray-500 to-slate-500'};
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

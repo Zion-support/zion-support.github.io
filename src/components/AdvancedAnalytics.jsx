@@ -89,9 +89,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -113,9 +115,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -137,9 +141,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -161,9 +167,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -189,9 +197,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -227,9 +237,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -262,9 +274,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -298,9 +312,11 @@ export function AdvancedAnalytics() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

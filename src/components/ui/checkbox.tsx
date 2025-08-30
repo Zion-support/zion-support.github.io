@@ -21,7 +21,7 @@ export function Checkbox(...args[]):  {
       />
       {label && <span className="text-sm text-gray-700">{label}</span>}
     </label>
-  )}
+  )};
 =======;
         disabled={disabled};
         className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2";

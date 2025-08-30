@@ -100,7 +100,6 @@ export const AccessibilityProvider = ({ children }) => {
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
-    const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {
   isHighContrast,
@@ -111,7 +110,8 @@ export const AccessibilityProvider = ({ children }) => {
         toggleLargeText,
         focusTrap,
         announceToScreenReader,
-   
+  
+
 };
     return (<AccessibilityContext.Provider value={value}>
       {children}

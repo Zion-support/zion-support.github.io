@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityConsulting() {
   const features = [
     'AI-powered security consulting optimization',
-    'Intelligent consulting strategy management and execution',
+    'Intelligent consulting strategy management and execution',;
     'Automated security analysis and recommendations',;
     'Predictive analytics for consulting needs',;
     'Smart consulting framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityConsulting() {
     { 
       name: 'Business', 
       price: '$1,999/mo', 
-      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] 
+      details: ['Up to 50 hours/month', 'Advanced AI features', 'Enhanced consulting', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityConsulting() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security consulting optimization',;
     'Consulting strategy management and execution',;
     'Security analysis and recommendations',;
@@ -39,7 +39,7 @@ export default function AISecurityConsulting() {
     'Consulting scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security consulting performance by 50-80%',;
     'Reduce consulting delivery time by 40-70%',;
     'Cut security consulting costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityConsulting() {
     'Scale security consulting operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityConsulting() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-cyan-600 text-cyan-600 rounded-lg hover:bg-cyan-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

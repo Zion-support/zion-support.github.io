@@ -29,13 +29,13 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: '🌐' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: '🌍' },
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: '✍️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: '🛡️' },;
     { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' };
   ];
 
   const filteredServices = allServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 =======;
   const filteredServices = ULTIMATE_REAL_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -45,7 +45,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
     return matchesCategory && matchesSearch});
 
   const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
+    switch (sortBy) {;
       case 'rating':;
         return b.rating - a.rating;
       case 'price':
@@ -71,13 +71,14 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
+      };
     };
   };
 
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -86,7 +87,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
         duration: 0.5,
         ease: "easeOut"
       }
-    }
+    };
 =======;
   const getCategoryIcon = (category: string) => {;
     if (category === 'all') return <Rocket className="w-6 h-6" />;
@@ -173,14 +174,17 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             {categories.map((category)  => (
@@ -304,7 +308,7 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {;
             </Link>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

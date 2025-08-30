@@ -19,7 +19,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 export function Tabs(...args[]):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: string)  => {
+  const handleTabChange = (tab: string)  => {;
 =======;
 export function Tabs({ children, defaultValue, value, onValueChange, className = '' }: TabsProps) {;
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
@@ -36,6 +36,7 @@ export function Tabs({ children, defaultValue, value, onValueChange, className =
     <TabsContext.Provider value = {
   { activeTab,
   setActiveTab: handleTabChange 
+
 }}>
       <div className={className}>
         {children}
@@ -51,8 +52,9 @@ interface TabsListProps extends React.PropsWithChildren<{}> {
 
 
 
-
 ;
+;
+
 }}>;
       <div className={className}>;
         {children};
@@ -101,7 +103,7 @@ export function TabsTrigger({ children, value, className = '' }: TabsTriggerProp
     </button>
   )}
 
-interface TabsContentProps extends React.PropsWithChildren<{}> {
+interface TabsContentProps extends React.PropsWithChildren<{}> {;
 =======;
       } ${className}`};
       onClick={() => context.setActiveTab(value)};
@@ -130,7 +132,7 @@ export function TabsContent({ children, value, className = '' }: TabsContentProp
     <div className = {`mt-4 ${className}`}>
       {children}
     </div>
-  )}
+  )};
 =======;
     <div className = {`mt-4 ${className}`}>;
       {children};

@@ -135,7 +135,7 @@ export default function Help(...args[]):  {
           type: 'guide'
         },
         {
-          title: 'Account Settings',
+          title: 'Account Settings',;
           description: 'Managing your account preferences and settings',;
           url: '/help/billing/account-settings',;
           type: 'guide';
@@ -177,13 +177,13 @@ export default function Help(...args[]):  {
       icon: BookOpen,
       color: 'from-amber-500 to-orange-600',
       href: '/documentation',
-      available: true
+      available: true;
     };
   ];
 
   const supportHours = [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST', available: true },
-    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },
+    { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST', available: true },;
     { day: 'Sunday', hours: 'Emergency support only', available: false };
   ];
 
@@ -191,7 +191,7 @@ export default function Help(...args[]):  {
     ? helpCategories.flatMap(category => 
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
-        ).map(article => ({ ...category, article }))
+        ).map(article => ({ ...category, article }));
       );
     [];
 
@@ -199,7 +199,7 @@ export default function Help(...args[]):  {
     ? helpCategories: helpCategories.filter(category  => category.id === selectedCategory);
 
   return (
-    <div className = "min-h-screen bg-slate-900">
+    <div className = "min-h-screen bg-slate-900">;
 =======;
       description: 'Send us an email for detailed inquiries',;
       icon: Mail,;
@@ -214,7 +214,7 @@ export default function Help(...args[]):  {
     { day: 'Sunday', hours: 'Emergency Support Only', available: false };
   ];
 
-  const filteredCategories = helpCategories.filter(category =>
+  const filteredCategories = helpCategories.filter(category =>;
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     category.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
     category.articles.some(article =>;
@@ -245,10 +245,12 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   scale: 0.5 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 }}
             transition={{ duration: 0.8 }}
 =======
@@ -264,10 +266,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -285,10 +289,12 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -299,14 +305,17 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             We're here to help you succeed with our services
@@ -318,14 +327,17 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <div className="relative">
@@ -360,10 +372,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -376,10 +390,12 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -395,14 +411,17 @@ export default function Help(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -420,6 +439,7 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -429,10 +449,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -476,10 +498,12 @@ export default function Help(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -499,14 +523,17 @@ export default function Help(...args[]):  {
                     initial = {
   { opacity: 0,
   x: -20 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 }}
                     transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                     className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                   >
@@ -524,10 +551,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -581,10 +610,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -610,6 +641,7 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -619,10 +651,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -667,10 +701,12 @@ export default function Help(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition={{ duration: 0.8 }}
               >
@@ -694,6 +730,7 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -703,10 +740,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -756,10 +795,12 @@ export default function Help(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -779,15 +820,18 @@ export default function Help(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="group"
                 >
@@ -839,10 +883,12 @@ export default function Help(...args[]):  {
               initial = {
   { opacity: 0,
   x: -30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -887,10 +933,12 @@ export default function Help(...args[]):  {
               initial = {
   { opacity: 0,
   x: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -968,10 +1016,12 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -987,10 +1037,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1039,15 +1091,18 @@ export default function Help(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -1063,6 +1118,7 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -1072,10 +1128,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1128,10 +1186,12 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -1143,15 +1203,18 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Our support team is ready to help you succeed with our services
@@ -1161,15 +1224,18 @@ export default function Help(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -1201,10 +1267,12 @@ export default function Help(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1230,7 +1298,7 @@ export default function Help(...args[]):  {
                 href="mailto:support@ziontechgroup.com"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
-                Send Email
+                Send Email;
               </a>;
             </div>;
           </motion.div>;

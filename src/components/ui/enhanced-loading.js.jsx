@@ -7,12 +7,14 @@ const sizeClasses = {
     lg: 'w-16 h-16',
   xl: 'w-24 h-24'
 
+
 };
 const iconSizes = {
   sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
   xl: 'w-12 h-12'
+
 
 };
 export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Loading...', showIcons = true, className = '' }) {
@@ -29,6 +31,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
     const iconVariants = {
   hidden: { scale: 0,
   opacity: 0 
+
 },
         visible: {
             scale: 1,
@@ -56,6 +59,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }
         }
     };
@@ -67,6 +71,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }
         }
     };
@@ -78,6 +83,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }
         }
     };
@@ -115,6 +121,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-blue-dark to-zion-purple rounded-full flex items-center justify-center shadow-2xl border border-zion-cyan/20`} animate={{ rotate: 360 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "linear" 
+
 }}>
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
           <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`}/>
@@ -129,12 +136,14 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                     width: sizeClasses[size],
   height: sizeClasses[size]
                 
+
 }} animate = {
   {
                     rotate[0, 360],
                     scale[0.8, 1.2,
   0.8]
                 
+
 }} transition = {
   {
                     duration: 4,
@@ -142,6 +151,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                     ease: "easeInOut",
   delay: index * 0.5
                 
+
 }}>
                 <div className="w-full h-full flex items-center justify-center">
                   <Icon className={`${iconSizes[size]} text-zion-purple-light opacity-60`}/>
@@ -154,9 +164,11 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
   { opacity[0.5, 1,
   0.5] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}>
             {text}
           </motion.p>
@@ -164,12 +176,14 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
   { scale[1, 1.5,
   1] 
+
 }} transition = {
   {
                     duration: 1.5,
                     repeat: Infinity,
   delay: i * 0.2
                 
+
 }}/>))}
           </motion.div>
         </motion.div>)}

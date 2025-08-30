@@ -91,7 +91,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />;
               </a>;
               <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">;
                 <Youtube className="h-5 w-5" />;
@@ -152,7 +152,7 @@ const Footer: React.FC = () => {;
     },
     {
       title: "Support",
-      links: [
+      links: [;
         { label: "Contact Us", path: "/contact" },;
         { label: "Help Center", path: "/help" },;
         { label: "Support", path: "/support" },;
@@ -169,7 +169,7 @@ const Footer: React.FC = () => {;
   ];
 
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -186,9 +186,10 @@ const Footer: React.FC = () => {;
 
 
 
+
 },
     visible: {
-      y: 0,
+      y: 0,;
       opacity: 1,;
       transition: {;
         duration: 0.5,;
@@ -316,6 +317,7 @@ const Footer: React.FC = () => {;
                     transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -513,7 +515,7 @@ const Footer: React.FC = () => {;
               <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
               <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
-              <span className="w-1 h-1 bg-zion-cyan rounded-full" />
+              <span className="w-1 h-1 bg-zion-cyan rounded-full" />;
               <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>;
             </div>;
           </div>;
@@ -523,6 +525,7 @@ const Footer: React.FC = () => {;
   );
 }
 
+export default Footer;
 export default Footer;
 export default Footer;
 export default Footer;

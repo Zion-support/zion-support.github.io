@@ -292,7 +292,7 @@ export const advancedMicroSaasServices2025 = [
     tags['AI', 'API Management', 'Security', 'Monitoring'],
     website: 'https://ziontechgroup.com/api-guardian-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$3.9B',;

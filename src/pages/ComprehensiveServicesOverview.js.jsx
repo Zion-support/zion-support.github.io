@@ -41,11 +41,13 @@ const categoryColors = {
     'AI & Cloud Management': 'from-blue-500 to-cyan-500',
   'AI & DevOps': 'from-orange-500 to-red-500'
 
+
 };
 const supportLevelColors = {
   'premium': 'bg-gradient-to-r from-blue-500 to-cyan-500',
     'enterprise': 'bg-gradient-to-r from-purple-500 to-pink-500',
   'basic': 'bg-gradient-to-r from-green-500 to-emerald-500'
+
 
 };
 export default function ComprehensiveServicesOverview() {
@@ -215,9 +217,11 @@ export default function ComprehensiveServicesOverview() {
                 {filteredServices.map((service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
   x: -20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: index * 0.05 }}>
                     <Card className="bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                       <CardHeader>

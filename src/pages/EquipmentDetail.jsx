@@ -186,6 +186,7 @@ export default function EquipmentDetail() {
 
 
 
+
 } disabled={quantity <= 1 || !equipment.inStock}>
                       -
                     </button>

@@ -78,7 +78,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
       root.style.fontSize = '120%'} else {
       root.style.fontSize = '100%'}
 
-    // Reduced motion
+    // Reduced motion;
     if (newSettings.reducedMotion) {;
       root.style.setProperty('--animation-duration', '0.01ms');
       root.style.setProperty('--transition-duration', '0.01ms')} else {
@@ -91,12 +91,13 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   <<<<<<< HEAD
         protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
-  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
+  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
       ;
+
 };
       root.style.filter = filters[newSettings.colorBlindness]} else {
       root.style.filter = 'none'}
-=======
+=======;
   protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',;
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',;
   ;
@@ -122,8 +123,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'extra-large': '1.25rem';
     ;
+
 
 
 
@@ -208,8 +211,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 <<<<<<< HEAD
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value)  => {
     const newSettings = {
-  ...settings,
+  ...settings,;
   [key]: value ;
+
 };
 =======
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
@@ -219,7 +223,9 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   ;
   ;
   ;
+  ;
   [key]: value ;
+
 
 
 
@@ -242,8 +248,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   ;
   ;
   ;
+  ;
   fontSize: 'font size';
     ;
+
 
 
 
@@ -266,8 +274,10 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
   ;
   ;
   ;
+  ;
   fontSize: 'medium';
     ;
+
 
 
 
@@ -325,6 +335,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -334,10 +345,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   x: 300 
+
 
 
 
@@ -387,6 +400,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.highContrast ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -413,6 +427,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.largeText ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -434,6 +449,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('reducedMotion',
   !settings.reducedMotion)
+
 
 
 
@@ -468,6 +484,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }
                       className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
                     >
@@ -487,6 +504,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onChange = {
   (e) => updateSetting('colorBlindness',
   e.target.value)
+
 
 
 
@@ -523,6 +541,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }
                       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                         settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-slate-300 dark:bg-slate-600'
@@ -544,6 +563,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('focusIndicator',
   !settings.focusIndicator)
+
 
 
 
@@ -580,6 +600,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
                       onClick = {
   () => updateSetting('screenReader',
   !settings.screenReader)
+
 
 
 
@@ -648,6 +669,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -657,10 +679,12 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -685,7 +709,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {;
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={togglePanel}
         />
-      )}
+      )};
     </>;
   )};
 =======

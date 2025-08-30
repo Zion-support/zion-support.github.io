@@ -51,9 +51,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -80,6 +82,7 @@ const ServiceComparison = () => {
 
 
 
+
 }>
                 Get Expert Help
               </Button>
@@ -99,9 +102,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -126,6 +131,7 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -134,9 +140,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -174,9 +182,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -200,6 +210,7 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -208,9 +219,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -235,9 +248,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -268,9 +283,11 @@ const ServiceComparison = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -293,6 +310,7 @@ const ServiceComparison = () => {
 
 
 
+
 }>
                 <Users className="w-5 h-5 mr-2"/>
                 Get Expert Consultation
@@ -300,6 +318,7 @@ const ServiceComparison = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

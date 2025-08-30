@@ -33,7 +33,7 @@ export default function InnovativeServicesLanding2025() {
     },
     {
       name: "AI Autonomous Research Assistant",
-      description: "Self-directed AI research platform that accelerates research by 500% across multiple domains",
+      description: "Self-directed AI research platform that accelerates research by 500% across multiple domains",;
       price: "$1,999/month",;
       category: "Research & Development",;
       icon: Brain,;
@@ -60,7 +60,7 @@ export default function InnovativeServicesLanding2025() {
       description: "Next-generation cybersecurity implementing zero-trust architecture with AI-powered threat detection",
       icon: Shield,
       color: "from-red-500 to-pink-500"
-    },
+    },;
     {;
       title: "Edge Computing",;
       description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",;
@@ -91,10 +91,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -154,6 +156,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -163,10 +166,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -203,10 +208,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -237,6 +244,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -246,10 +254,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -288,10 +298,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -322,6 +334,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -331,10 +344,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -400,10 +415,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -432,6 +449,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -441,10 +459,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -472,6 +492,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -481,10 +502,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -512,6 +535,7 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -521,10 +545,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -558,10 +584,12 @@ export default function InnovativeServicesLanding2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -629,7 +657,7 @@ export default function InnovativeServicesLanding2025() {
                 <p className="text-gray-300">
                   364 E Main St STE 1008<br />
                   Middletown DE 19709
-                </p>
+                </p>;
               </div>;
             </div>;
           </motion.div>;

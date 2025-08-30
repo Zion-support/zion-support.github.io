@@ -31,7 +31,7 @@ import { Users,
 export default function AICustomerExperiencePlatform(...args[]):  {
   const features = [
     'AI-powered sentiment analysis and emotion detection',
-    'Real-time customer journey mapping and optimization',
+    'Real-time customer journey mapping and optimization',;
     'Intelligent chatbot with natural language processing',;
     'Personalized recommendation engine',;
     'Omnichannel customer interaction tracking',;
@@ -64,7 +64,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       title: 'Enterprise CX Suite',
       description: 'Complete enterprise customer experience management with advanced AI capabilities',
       price: 'From $20,000',
-      features['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      features['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support'];
     };
   ];
 
@@ -87,7 +87,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     {
       title: 'Product Development Insights',
       description: 'Customer feedback analysis and product improvement recommendations',
-      benefits['Faster product iteration', 'Better feature prioritization', 'Improved market fit']
+      benefits['Faster product iteration', 'Better feature prioritization', 'Improved market fit'];
     };
   ];
 
@@ -97,7 +97,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     { name: 'Predictive Analytics', description: 'Forecast customer needs and behavior patterns' },
     { name: 'Real-time Processing', description: 'Instant customer interaction analysis and response' },
     { name: 'API Integration', description: 'Seamless integration with existing business systems' },
-    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' }
+    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' };
 =======;
     { ;
       name: 'Enterprise', ;
@@ -106,7 +106,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'E-commerce customer experience optimization',;
     'SaaS product user engagement tracking',;
     'Financial services customer journey mapping',;
@@ -116,7 +116,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase customer satisfaction scores by 25-40%',;
     'Improve customer retention rates by 30-50%',;
     'Reduce customer service costs by 35-45%',;
@@ -125,7 +125,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Gain actionable insights for product development';
   ];
 
-  const metrics = [
+  const metrics = [;
     'Customer Satisfaction Score (CSAT)',;
     'Net Promoter Score (NPS)',;
     'Customer Effort Score (CES)',;
@@ -237,10 +237,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -260,14 +262,17 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
@@ -288,10 +293,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -311,14 +318,17 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -345,10 +355,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -368,14 +380,17 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -401,10 +416,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -424,14 +441,17 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -454,10 +474,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -477,14 +499,17 @@ export default function AICustomerExperiencePlatform(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
@@ -503,10 +528,12 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
@@ -568,7 +595,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       </section>
     </div>
   )}
-=======
+=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

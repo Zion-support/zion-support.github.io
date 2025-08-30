@@ -12,6 +12,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 
 
 
+
 };
         const multiplier = intensityMultiplier[glowIntensity];
         const baseStyles = {
@@ -21,6 +22,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
                 text: 'text-zion-cyan',
                 glow: `shadow-[0_0_20px_rgba(0,255,255,
   ${multiplier
+
 
 
 
@@ -67,6 +69,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
   <<<<<<< HEAD
             xl: 'px-8 py-4 text-xl'
         
+
 };
         return sizeStyles[size]};
     const styles = getVariantStyles();
@@ -96,9 +99,11 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -117,6 +122,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 
 
 
+
 }}/>
 
       {/* Content */}
@@ -124,6 +130,7 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         {loading && (<motion.div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full" animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: 'linear' 
+
 
 
 

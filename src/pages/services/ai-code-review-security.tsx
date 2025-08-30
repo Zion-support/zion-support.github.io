@@ -20,10 +20,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -52,10 +54,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -107,14 +111,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -135,10 +142,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -180,14 +189,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -215,10 +227,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -246,14 +260,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                   whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"
@@ -273,10 +290,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -318,14 +337,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -353,10 +375,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -380,14 +404,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                   whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                   transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -406,10 +433,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -480,14 +509,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
@@ -537,14 +569,17 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               viewport={{ once: true }}
               className="text-center mt-12"
@@ -566,10 +601,12 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -613,7 +650,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   );
 };

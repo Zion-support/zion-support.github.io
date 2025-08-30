@@ -121,11 +121,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 <<<<<<< HEAD
   const formatPrice = (pricing: ExpandedService2027['pricing'])  => {
-    if (pricing.model === 'Transaction Fees + Governance') {
+    if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees'};
     return `$${pricing.basePrice.toLocaleString()}/month`};
 
-  const renderServiceCard = (service: ExpandedService2027)  => {
+  const renderServiceCard = (service: ExpandedService2027)  => {;
 =======;
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
@@ -150,10 +150,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -239,6 +241,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -248,10 +251,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -350,11 +355,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               </a>
             </div>
           </div>
-        </div>
+        </div>;
       </motion.div>;
     )};
 
-  const renderServiceList = (service: ExpandedService2027)  => {
+  const renderServiceList = (service: ExpandedService2027)  => {;
 =======;
               </a>;
             </div>;
@@ -380,10 +385,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -464,7 +471,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
               </a>
             </div>
           </div>
-        </div>
+        </div>;
       </motion.div>;
     )};
 =======
@@ -498,10 +505,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -525,6 +534,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -534,10 +544,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -560,6 +572,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -569,10 +582,12 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -725,7 +740,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {;
             </a>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

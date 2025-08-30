@@ -14,3 +14,4 @@ function DisputeDetailPage() {
 export default DisputeDetailPage;
 
 export default DisputeDetailPage;
+export default DisputeDetailPage;

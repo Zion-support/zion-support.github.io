@@ -46,6 +46,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             requirements['Requirement 1', 'Requirement 2'],
   violations[]
         
+
 };
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);
@@ -154,12 +155,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-6">
               {/* Key Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -236,12 +240,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           {activeTab === 'events' && (<motion.div key="events" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Security Events</h3>
@@ -252,6 +259,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 details: 'Test security event',
   status: 'new'
             
+
 })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                   Add Test Event
                 </button>
@@ -280,6 +288,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                         <select value={event.status} onChange = {
   (e) => updateEventStatus(event.id,
   e.target.value)
+
 } className="text-sm border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                           <option value="new">New</option>
                           <option value="investigating">Investigating</option>
@@ -301,12 +310,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           {activeTab === 'compliance' && (<motion.div key="compliance" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Compliance Rules</h3>
@@ -356,12 +368,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           {activeTab === 'threats' && (<motion.div key="threats" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Threat Intelligence</h3>
               
@@ -408,12 +423,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           {activeTab === 'reports' && (<motion.div key="reports" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Reports & Analytics</h3>
               
@@ -456,12 +474,15 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         {showSettings && (<motion.div initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Security Configuration</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

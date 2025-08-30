@@ -429,7 +429,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
     { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
     { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
@@ -468,7 +468,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'Revolutionary': 3 ;
+
 
 
 
@@ -495,7 +497,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -512,9 +514,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 },
     visible: {
-      y: 0,
+      y: 0,;
       opacity: 1,;
       transition: {;
         duration: 0.5,;
@@ -570,10 +573,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -615,6 +620,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -624,10 +630,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -741,6 +749,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }
                   className="flex-1 h-2 bg-zion-slate-600 rounded-lg appearance-none cursor-pointer slider"
                 />
@@ -752,6 +761,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
 
 
 
@@ -922,6 +932,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   ;
   ;
   ;
+  ;
   () => {;
                   setSearchTerm('');
                   setActiveCategory('all');
@@ -929,6 +940,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   10000]);
                   setInnovationLevel('all');
                 
+
 
 
 
@@ -963,6 +975,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -972,10 +985,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -1145,7 +1160,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       </button>
                     </div>
                   </div>
-                </div>
+                </div>;
               </div>;
             </motion.div>;
           </motion.div>;

@@ -28,7 +28,7 @@ export default function EnterpriseSolutions(...args: []):  {
     {
       icon: Cloud,
       title: 'Cloud Integration',
-      description: 'Multi-cloud and hybrid cloud deployment options'
+      description: 'Multi-cloud and hybrid cloud deployment options';
     },;
     {;
       icon: Monitor,;
@@ -37,7 +37,7 @@ export default function EnterpriseSolutions(...args: []):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Scale to support thousands of users and systems',;
     'Ensure enterprise-grade security and compliance',;
     'Optimize performance for large-scale operations',;
@@ -60,7 +60,7 @@ export default function EnterpriseSolutions(...args: []):  {
     {
       icon: Brain,
       title: 'AI & Analytics',
-      description: 'Advanced AI and analytics for enterprise insights'
+      description: 'Advanced AI and analytics for enterprise insights';
     },;
     {;
       icon: Scale,;
@@ -79,7 +79,7 @@ export default function EnterpriseSolutions(...args: []):  {
       description: 'Secure, compliant government technology solutions'
     },
     {
-      industry: 'Healthcare',
+      industry: 'Healthcare',;
       description: 'HIPAA-compliant enterprise healthcare systems';
     },;
     {;
@@ -103,10 +103,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -157,10 +159,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,6 +195,7 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -200,10 +205,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -235,10 +242,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -269,6 +278,7 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -278,10 +288,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -317,10 +329,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -351,6 +365,7 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -360,10 +375,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -389,6 +406,7 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -398,10 +416,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -431,10 +451,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -465,6 +487,7 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -474,10 +497,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -509,10 +534,12 @@ export default function EnterpriseSolutions(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -534,7 +561,7 @@ export default function EnterpriseSolutions(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

@@ -32,7 +32,7 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Starter: $299/mo up to 1k chats</li>
           <li>Growth: $899/mo up to 10k chats</li>
           <li>Enterprise: custom, SSO + analytics</li>
-        </ul>
+        </ul>;
       </div>;
     </section>;
     <section className="container mx-auto px-4 pb-16">;

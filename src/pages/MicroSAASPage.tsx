@@ -58,7 +58,7 @@ const MicroSAASPage = () => {
       features['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],
       useCases['B2B Applications', 'Enterprise Software', 'Multi-user Platforms', 'SaaS Products'],
       pricing: 'Starting from $1,500/month'
-    }
+    };
 =======;
       icon: <Users className="w-8 h-8" />,;
       features: ['Single Sign-On', 'Role-based Access', 'Multi-tenancy', 'User Analytics'],;
@@ -71,7 +71,7 @@ const MicroSAASPage = () => {
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration';
   ];
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -87,8 +87,9 @@ const MicroSAASPage = () => {
 
 
 
+
 },
-    visible: {
+    visible: {;
       opacity: 1,;
       y: 0,;
       transition: {;
@@ -109,10 +110,12 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -225,6 +228,7 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -234,10 +238,12 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.3 
+
 
 
 
@@ -267,6 +273,7 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -276,10 +283,12 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -303,6 +312,7 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -312,10 +322,12 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -369,6 +381,7 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -378,10 +391,12 @@ const MicroSAASPage = () => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 
@@ -413,7 +428,7 @@ const MicroSAASPage = () => {
             </Link>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

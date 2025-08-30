@@ -8,7 +8,7 @@ const ModernFooter: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = [
+  const serviceCategories = [;
     { name: 'AI Services', icon: Cpu, href: '/services/ai' },;
     { name: 'IT Solutions', icon: Shield, href: '/services/it' },;
     { name: 'SAAS Platforms', icon: Database, href: '/services/saas' },;
@@ -18,7 +18,7 @@ const ModernFooter: React.FC = () => {;
   ];
 
   const quickLinks = [
-    { name: 'About Us', href: '/about' },
+    { name: 'About Us', href: '/about' },;
     { name: 'Our Team', href: '/about#team' },;
     { name: 'Case Studies', href: '/case-studies' },;
     { name: 'Blog', href: '/blog' },;
@@ -70,6 +70,7 @@ const ModernFooter: React.FC = () => {;
                     whileHover = {
   { scale: 1.1,
   y: -2 
+
 
 
 
@@ -208,7 +209,7 @@ const ModernFooter: React.FC = () => {;
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </footer>;
   )};
 =======

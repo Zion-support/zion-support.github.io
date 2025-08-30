@@ -70,7 +70,7 @@ export default function Pricing(...args[]):  {
         'Custom SLA Agreements'
       ],
       color: 'from-amber-500 to-orange-600',
-      popular: false
+      popular: false;
     };
   ];
 
@@ -98,14 +98,15 @@ export default function Pricing(...args[]):  {
       name: '24/7 Support',
       description: 'Round-the-clock technical support',
       price: { monthly: 400, annual: 3600 },
-      icon: Clock
+      icon: Clock;
     };
   ];
 
   const savings = {
   monthly: 0,
-  annual: 20
+  annual: 20;
   ;
+
 };
 
 export default function Pricing() {
@@ -129,10 +130,12 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -143,14 +146,17 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Choose the perfect plan for your business technology needs
@@ -160,14 +166,17 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             No hidden fees • Cancel time • 30-day money-back guarantee
@@ -183,10 +192,12 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
 =======
@@ -224,7 +235,7 @@ const servicePricing = [
   {
     category: 'Micro SaaS Solutions',
     icon: ShoppingCart,
-    services: [
+    services: [;
       { name: 'Micro CRM', price: '$49/month', description: 'Customer relationship management' },;
       { name: 'Helpdesk Platform', price: '$79/month', description: 'Customer support system' },;
       { name: 'Website Analytics', price: '$29/month', description: 'Performance tracking & insights' },;
@@ -248,10 +259,12 @@ export default function Pricing() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -304,15 +317,18 @@ export default function Pricing() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className={`relative group ${
                   tier.popular ? 'lg:scale-105' : ''
@@ -334,6 +350,7 @@ export default function Pricing() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -343,10 +360,12 @@ export default function Pricing() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -373,6 +392,7 @@ export default function Pricing() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -382,10 +402,12 @@ export default function Pricing() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 + index * 0.1 
+
 
 
 
@@ -456,6 +478,7 @@ export default function Pricing() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -465,10 +488,12 @@ export default function Pricing() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -495,6 +520,7 @@ export default function Pricing() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -504,10 +530,12 @@ export default function Pricing() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.7 + categoryIndex * 0.1 
+
 
 
 
@@ -534,6 +562,7 @@ export default function Pricing() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -543,10 +572,12 @@ export default function Pricing() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.8 + categoryIndex * 0.1 + serviceIndex * 0.05 
+
 
 
 
@@ -562,6 +593,7 @@ export default function Pricing() {
                         to = {
   `/services/${service.name.toLowerCase().replace(/\s+/g,
   '-')
+
 
 
 
@@ -624,10 +656,12 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -648,6 +682,7 @@ export default function Pricing() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -657,10 +692,12 @@ export default function Pricing() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -704,6 +741,7 @@ export default function Pricing() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -713,10 +751,12 @@ export default function Pricing() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.2 
+
 
 
 
@@ -740,15 +780,18 @@ export default function Pricing() {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
               >
@@ -786,10 +829,12 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -826,15 +871,18 @@ export default function Pricing() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700"
               >
@@ -853,10 +901,12 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -868,15 +918,18 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Choose your plan and start transforming your business with cutting-edge technology
@@ -886,15 +939,18 @@ export default function Pricing() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -921,7 +977,7 @@ export default function Pricing() {
                 to="/case-studies"
                 className="px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20 font-semibold"
               >
-                View Case Studies
+                View Case Studies;
               </Link>;
             </div>;
           </div>;

@@ -9,6 +9,7 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
       <input type="number" min={1} value={item.quantity} onChange = {
   e => onUpdateQuantity?.(item.id, parseInt(e.target.value || '1',
   10))
+
 } className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
       <span className="w-20 text-right">
         ${(item.price * item.quantity).toFixed(2)}

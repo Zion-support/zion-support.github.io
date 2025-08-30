@@ -3,14 +3,14 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
 const apiClient = axios.create({
-  baseURL: '/api',
+  baseURL: '/api',;
   withCredentials: true,;
 });
 
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
-    if (error.response?.status = == 401) {
+    if (error.response?.status = == 401) {;
       try {;
         await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {

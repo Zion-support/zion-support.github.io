@@ -47,8 +47,10 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
 
 
 
@@ -80,7 +82,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
     {
       icon: Database,
       title: 'Centralized Compliance Hub',
-      description: 'Single source of truth for all compliance-related data, policies, and procedures'
+      description: 'Single source of truth for all compliance-related data, policies, and procedures';
     },;
     {;
       icon: BarChart3,;
@@ -89,7 +91,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce compliance violations by 85%',;
     'Cut compliance costs by 60%',;
     'Improve audit efficiency by 70%',;
@@ -151,7 +153,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
         'Enterprise integrations',
         'Advanced AI models',
         'On-premise deployment option',
-        'Dedicated compliance consultant',
+        'Dedicated compliance consultant',;
         'Custom training programs',;
         'White-label solutions';
       ],;
@@ -184,7 +186,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
     {
       title: 'Basel III',
       description: 'Banking regulation compliance with automated risk calculations',
-      icon: Scale
+      icon: Scale;
     },;
     {;
       title: 'IFRS/GAAP',;
@@ -207,7 +209,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
     {
       title: 'Insurance Companies',
       description: 'State and federal insurance regulation compliance',
-      icon: Shield
+      icon: Shield;
     },;
     {;
       title: 'Fintech Startups',;
@@ -236,10 +238,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -289,10 +293,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -323,6 +329,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -332,10 +339,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -368,10 +377,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -402,6 +413,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -411,10 +423,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -447,10 +461,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -481,6 +497,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -490,10 +507,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -523,10 +542,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +578,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -566,10 +588,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -602,10 +626,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -636,6 +662,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -645,10 +672,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -713,10 +742,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -761,10 +792,12 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -811,7 +844,7 @@ export default function AIFinancialComplianceAssistant(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </motion.div>;

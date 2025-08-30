@@ -33,6 +33,7 @@ export const AccessibilityProvider = ({ children }) => {
   <<<<<<< HEAD
             colorBlindMode
         
+
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
 =======
@@ -88,6 +89,7 @@ export const AccessibilityProvider = ({ children }) => {
 
 
 
+
 };
     return (<AccessibilityContext.Provider value={value}>
       {children}
@@ -131,6 +133,7 @@ export const AccessibilityPanel = () => {
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -139,9 +142,11 @@ export const AccessibilityPanel = () => {
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 

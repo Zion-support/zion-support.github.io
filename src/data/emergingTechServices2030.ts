@@ -1033,7 +1033,7 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
-    trending: true
+    trending: true;
   };
 ];
 
@@ -1042,17 +1042,17 @@ export const getEmergingTechServicesByCategory = (category: string): EmergingTec
   return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category)};
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[]  => {
-  return EMERGING_TECH_SERVICES_2030.filter(service => 
+  return EMERGING_TECH_SERVICES_2030.filter(service => ;
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice;
   )};
 
 export const getEmergingTechFeaturedServices = (limit: number = 10): EmergingTechService2030[] => {
-  return EMERGING_TECH_SERVICES_2030
+  return EMERGING_TECH_SERVICES_2030;
     .filter(service => service.featured);
     .slice(0, limit)};
 
 export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTechService2030[] => {
-  return EMERGING_TECH_SERVICES_2030
+  return EMERGING_TECH_SERVICES_2030;
     .filter(service => service.trending);
     .slice(0, limit)};
 
@@ -1060,7 +1060,7 @@ export const searchEmergingTechServices = (query: string): EmergingTechService20
   const lowercaseQuery = query.toLowerCase();
   return EMERGING_TECH_SERVICES_2030.filter(service = >
     service.title.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   )};
 
@@ -1069,7 +1069,7 @@ export const getEmergingTechServicesByInnovationLevel = (level: string): Emergin
 
 export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[]  => {;
   const lowercaseTech = technology.toLowerCase();
-  return EMERGING_TECH_SERVICES_2030.filter(service = >
+  return EMERGING_TECH_SERVICES_2030.filter(service = >;
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech));
   )};
 =======
@@ -1138,7 +1138,7 @@ export const getEmergingTechServicesStats = () => {;
     featuredCount,
     trendingCount,
 <<<<<<< HEAD
-    categories[...new Set(EMERGING_TECH_SERVICES_2030.map(service = > service.category))],
+    categories[...new Set(EMERGING_TECH_SERVICES_2030.map(service = > service.category))],;
     subcategories[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))];
   }};
 =======

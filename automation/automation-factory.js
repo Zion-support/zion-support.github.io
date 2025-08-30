@@ -33,6 +33,7 @@ class AutomationFactory {
   <<<<<<< HEAD
         totalScripts: this.scripts.size
       
+
 };
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {
       this.log(`Error saving status: ${error.message}`)}
@@ -59,6 +60,7 @@ class AutomationFactory {
     const scriptTypes = {
   'lint-monitor': { file: 'lint-monitor.js',
   description: 'Continuous lint monitoring' 
+
 
 
 
@@ -96,6 +98,7 @@ class CodeQualityMonitor {
   <<<<<<< HEAD
       lastUpdated: new Date().toISOString()
     
+
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
 =======
@@ -239,6 +242,7 @@ class PerformanceOptimizer {
         dependencies: dependencyAnalysis,
   recommendations: this.generateRecommendations()
       
+
 
 
 

@@ -109,7 +109,7 @@ const TermsOfService = () => {;
       title: 'Changes to Terms',
       icon: AlertTriangle,
       content: `We reserve the right to modify these Terms at any time. We will notify users of significant changes via email or through our website. Continued use of our services constitutes acceptance of the modified Terms.`
-    },
+    },;
     {;
       id: 'contact',;
       title: 'Contact Information',;
@@ -142,7 +142,7 @@ const TermsOfService = () => {;
     {
       title: 'Liability Limits',
       description: 'Our liability is limited to the amount paid for services in the 12 months prior to the claim',
-      icon: AlertTriangle
+      icon: AlertTriangle;
     },;
     {;
       title: 'Termination Rights',;
@@ -165,7 +165,7 @@ const TermsOfService = () => {;
     {
       step: '3',
       title: 'Mediation',
-      description: 'For complex disputes, engage in mediation with a neutral third party'
+      description: 'For complex disputes, engage in mediation with a neutral third party';
     },;
     {;
       step: '4',;
@@ -196,10 +196,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -262,14 +264,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -312,14 +317,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -370,14 +378,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -423,14 +434,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.5 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -458,14 +472,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -508,14 +525,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.7 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -561,14 +581,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.8 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -608,14 +631,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.9 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -643,14 +669,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.0 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -678,14 +707,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.1 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -713,14 +745,17 @@ const TermsOfService = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.2 
+
 }}
               viewport={{ once: true }}
             >
@@ -747,7 +782,7 @@ const TermsOfService = () => {;
           </div>
 <<<<<<< HEAD
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======
@@ -765,6 +800,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -774,10 +810,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -802,6 +840,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -811,10 +850,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -847,6 +888,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -856,10 +898,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -883,6 +927,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -892,10 +937,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -928,6 +975,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -937,10 +985,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -978,6 +1028,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -987,10 +1038,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -1014,6 +1067,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -1023,10 +1077,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -1059,6 +1115,7 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -1068,10 +1125,12 @@ const TermsOfService = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -1103,7 +1162,7 @@ const TermsOfService = () => {;
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-colors">
                   Request Clarification
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

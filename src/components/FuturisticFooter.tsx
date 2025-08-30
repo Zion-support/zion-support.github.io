@@ -25,7 +25,7 @@ import { Phone,
   Zap as ZapIcon
 <<<<<<< HEAD
  } from 'lucide-react';
-export const FuturisticFooter: React.FC = (): JSX.Element => {
+export const FuturisticFooter: React.FC = (): JSX.Element => {;
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' })};
 =======
@@ -82,7 +82,7 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
         { name: "Developer Portal", href: "/developer" },
-        { name: "Support Center", href: "/support" },
+        { name: "Support Center", href: "/support" },;
         { name: "FAQ", href: "/faq" },;
         { name: "Contact Us", href: "/contact" },;
         { name: "Case Studies", href: "/case-studies" },;
@@ -115,10 +115,12 @@ export const FuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -174,10 +176,12 @@ export const FuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -188,6 +192,7 @@ export const FuturisticFooter: React.FC = () => {;
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -228,10 +233,12 @@ export const FuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +249,7 @@ export const FuturisticFooter: React.FC = () => {;
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -303,10 +311,12 @@ export const FuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -317,6 +327,7 @@ export const FuturisticFooter: React.FC = () => {;
             transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -374,7 +385,7 @@ export const FuturisticFooter: React.FC = () => {;
         </motion.button>
       </div>
       {/* Bottom Border Glow */}
-      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />
+      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
     </footer>;
   )};
 =======

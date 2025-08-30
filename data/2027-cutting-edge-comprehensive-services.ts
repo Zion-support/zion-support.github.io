@@ -698,7 +698,7 @@ export const searchServices = (query: string) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
     service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
+    service.category.toLowerCase().includes(lowercaseQuery) ||;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   )};
 =======

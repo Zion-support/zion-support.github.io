@@ -151,6 +151,7 @@ export default function ProfilePage() {
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
         
+
 }}/>
             {/* Placeholder for other sidebar elements */}
           </div>

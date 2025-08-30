@@ -95,10 +95,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -208,10 +210,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -226,10 +230,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
                   whileHover = {
   { y: -10,
   scale: 1.02 
+
 
 
 
@@ -354,7 +360,7 @@ export default function InnovativeServices2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
+              initial={{ opacity: 0 }};
               animate={{ opacity: 1 }};
               className="text-center py-16";
             >;
@@ -385,10 +391,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -440,10 +448,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -467,10 +477,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -494,10 +506,12 @@ export default function InnovativeServices2027() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -509,7 +523,7 @@ export default function InnovativeServices2027() {
               className="text-center"
             >
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </motion.div>;
           </div>;

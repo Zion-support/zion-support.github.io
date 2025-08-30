@@ -81,10 +81,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -216,6 +218,7 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -225,10 +228,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -364,7 +369,7 @@ export default function ZionCuttingEdgeServices2029() {
                 )}
               </motion.div>
             ))}
-          </div>
+          </div>;
 ;
           {filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -407,10 +412,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -438,6 +445,7 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -447,10 +455,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.1 
+
 
 
 
@@ -477,6 +487,7 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -486,10 +497,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.2 
+
 
 
 
@@ -516,6 +529,7 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -525,10 +539,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
               transition = {
   { duration: 0.5,
   delay: 0.3 
+
 
 
 
@@ -561,10 +577,12 @@ export default function ZionCuttingEdgeServices2029() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -621,7 +639,7 @@ export default function ZionCuttingEdgeServices2029() {
               <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Our Services</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
+                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>;
                 <li><a href="https://ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Main Website</a></li>;
                 <li><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">Get Quote</a></li>;
               </ul>;

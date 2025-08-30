@@ -58,6 +58,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     confidence: 0.85 + Math.random() * 0.1,
   suggestions: randomResponse.suggestions
                 
+
 }
             };
             setMessages(prev => [...prev, aiMessage]);
@@ -75,6 +76,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             timestamp: new Date(),
   status: 'sending'
         
+
 };
         setMessages(prev => [...prev, userMessage]);
         onMessageSend?.(userMessage.content);
@@ -117,15 +119,19 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             <motion.div className={`absolute bottom-4 right-4 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl overflow-hidden ${isMinimized ? 'w-80 h-16' : 'w-96 h-[600px]'}`} initial = {
   { opacity: 0, y: 20,
   scale: 0.95 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, y: 20,
   scale: 0.95 
+
 }} transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
 }}>
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30 bg-zion-blue/20">
@@ -162,12 +168,15 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 {showSettings && !isMinimized && (<motion.div className="p-4 border-b border-zion-blue-light/30 bg-zion-blue/10" initial = {
   { height: 0,
   opacity: 0 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 }} transition={{ duration: 0.2 }}>
                     <div className="space-y-3">
                       <div className="flex items-center justify-between">
@@ -191,9 +200,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   {messages.map((message) => (<motion.div key={message.id} className={`flex gap-3 ${message.type === 'user' ? 'justify-end' : 'justify-start'}`} initial = {
   { opacity: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.3 }}>
                       {message.type === 'assistant' && (<div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center flex-shrink-0">
                           <Bot className="w-5 h-5 text-white"/>
@@ -237,9 +248,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                   {isTyping && (<motion.div className="flex gap-3" initial = {
   { opacity: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.3 }}>
                       <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">
                         <Bot className="w-5 h-5 text-white"/>

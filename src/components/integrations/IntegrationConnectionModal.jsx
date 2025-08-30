@@ -58,6 +58,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 
 
 
+
 })}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
@@ -66,6 +67,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   pushNotes: checked 
+
 
 
 
@@ -84,6 +86,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
 
 
 
+
 })}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
@@ -92,6 +95,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   syncApplicantData: checked 
+
 
 
 

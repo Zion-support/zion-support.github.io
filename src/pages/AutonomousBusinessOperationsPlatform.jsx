@@ -105,9 +105,11 @@ const AutonomousBusinessOperationsPlatform = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Platform Features
@@ -122,9 +124,11 @@ const AutonomousBusinessOperationsPlatform = () => {
             {features.map((feature, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }}/>
                                                 ,
                                                     <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -150,6 +154,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -913,6 +918,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                                                             type: "website",
   url: "https://ziontechgroup.com/autonomous-business-operations-platform"
                                                         
+
 }}/>
       
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">

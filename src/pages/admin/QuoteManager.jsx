@@ -27,6 +27,7 @@ export default function QuoteManager() {
 
 
 
+
 };
     const handleViewDetails = (quote) => {
         setSelectedQuote(quote);

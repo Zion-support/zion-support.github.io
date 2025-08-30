@@ -29,7 +29,7 @@ export default function Signup(...args[]):  {
 <<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
-      ...formData,
+      ...formData,;
       [e.target.name]: e.target.value;
     })};
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -62,7 +62,7 @@ export default function Signup(...args[]):  {
     {
       icon: <Zap className="h-6 w-6 text-zion-purple" />,
       title: "Lightning Fast",
-      description: "Optimized performance for seamless user experience across all devices"
+      description: "Optimized performance for seamless user experience across all devices";
     },;
     {;
       icon: <Users className="h-6 w-6 text-zion-cyan" />,;
@@ -70,7 +70,7 @@ export default function Signup(...args[]):  {
       description: "Built-in tools for seamless team communication and project management";
     };
   ];
-  const benefits = [
+  const benefits = [;
     "Access to cutting-edge AI solutions",;
     "24/7 customer support",;
     "Free consultation session",;
@@ -93,10 +93,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -126,6 +128,7 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -135,10 +138,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -373,6 +378,7 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -382,10 +388,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -414,6 +422,7 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -423,10 +432,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.8,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -460,6 +471,7 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -469,10 +481,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.8,
   delay: 1 + index * 0.1 
+
 
 
 
@@ -497,6 +511,7 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -506,10 +521,12 @@ export default function Signup(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1.5 
+
 
 
 
@@ -535,7 +552,7 @@ export default function Signup(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </motion.div>;
           </motion.div>;

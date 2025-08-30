@@ -66,7 +66,7 @@ export function ProductListingCard({
     if (onRequestQuote) {
 <<<<<<< HEAD
       onRequestQuote(listing.id)} else {
-      router(`/request-quote?listing = ${listing.id}`)}
+      router(`/request-quote?listing = ${listing.id}`)};
 =======;
       onRequestQuote(listing.id);
     } else {
@@ -79,7 +79,7 @@ export function ProductListingCard({
 
   return (
     <div
-      data-testid = "equipment-link"
+      data-testid = "equipment-link";
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`};
       onClick={handleViewListing};
       tabIndex={0};
@@ -169,7 +169,7 @@ export function ProductListingCard({
                 {formatPrice()}
               </span>
             )}
-          </div>
+          </div>;
           ;
           <div className="flex gap-2">;
             <Button;
@@ -179,7 +179,7 @@ export function ProductListingCard({
                 e.stopPropagation();
 <<<<<<< HEAD
                 router(`${detailBasePath}/${listing.id}`)}}
-              disabled = {loading}
+              disabled = {loading};
 =======;
                 router(`${detailBasePath}/${listing.id}`);
               }}
@@ -211,7 +211,7 @@ export function ProductListingCard({
             )}
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======
@@ -226,6 +226,7 @@ export function ProductListingCard({
 
 export default React.memo(ProductListingCard);
 
+export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

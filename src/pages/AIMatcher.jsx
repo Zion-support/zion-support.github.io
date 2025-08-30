@@ -122,12 +122,6 @@ const AIMatcher = () => {
             icon: Users
         }
     ];
-    const handleNext = () => {
-        if (currentStep < questions.length) {
-            setCurrentStep(currentStep + 1)}
-        else {
-            generateRecommendations()}
-    };
     const handlePrevious = () => {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1)}
@@ -172,9 +166,11 @@ const AIMatcher = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -207,6 +203,7 @@ const AIMatcher = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
@@ -215,9 +212,11 @@ const AIMatcher = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   x: -20 
+
 
 
 
@@ -245,6 +244,7 @@ const AIMatcher = () => {
                 {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {
   () => handleAnswer(questions[currentStep - 1].id,
   option)
+
 
 
 
@@ -282,9 +282,11 @@ const AIMatcher = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -310,6 +312,7 @@ const AIMatcher = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -318,9 +321,11 @@ const AIMatcher = () => {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -378,9 +383,11 @@ const AIMatcher = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

@@ -135,6 +135,7 @@ export default function UpdatePassword() {
                   <form onSubmit = {
   form.handleSubmit(onSubmit,
   onInvalid)
+
 } className="space-y-6">
                     <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
                           <FormLabel className="text-zion-slate-light">New Password</FormLabel>

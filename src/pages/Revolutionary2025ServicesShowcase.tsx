@@ -116,7 +116,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )}
+      )};
 =======;
       filtered = filtered.filter(service =>;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -126,7 +126,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)}
+      filtered = filtered.filter(service => service.category === selectedCategory)};
     if (selectedPriceRange !== 'all') {;
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {;
@@ -159,7 +159,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
   const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
-        ? prev.filter(id => id !== serviceId)
+        ? prev.filter(id => id !== serviceId);
         [...prev, serviceId];
     )};
 =======
@@ -186,10 +186,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -321,10 +323,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -352,10 +356,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -387,6 +393,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -396,10 +403,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -432,6 +441,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -441,10 +451,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -487,10 +499,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -518,10 +532,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -561,6 +577,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -570,10 +587,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -612,6 +631,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -621,10 +641,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -675,10 +697,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -785,6 +809,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -794,10 +819,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -860,6 +887,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -869,10 +897,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -1039,10 +1069,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1087,6 +1119,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1096,10 +1129,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1150,6 +1185,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1159,10 +1195,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -1248,10 +1286,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1277,6 +1317,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1286,10 +1327,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1314,6 +1357,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1323,10 +1367,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1351,6 +1397,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1360,10 +1407,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -1390,10 +1439,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1429,6 +1480,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1438,10 +1490,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1476,6 +1530,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1485,10 +1540,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1541,10 +1598,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1567,6 +1626,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1576,10 +1636,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1601,6 +1663,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1610,10 +1673,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1635,6 +1700,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1644,10 +1710,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -1671,10 +1739,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1698,6 +1768,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1707,10 +1778,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1733,6 +1806,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1742,10 +1816,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1781,10 +1857,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1807,6 +1885,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1816,10 +1895,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1841,6 +1922,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1850,10 +1932,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1875,6 +1959,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1884,10 +1969,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -1911,10 +1998,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1938,6 +2027,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1947,10 +2037,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1973,6 +2065,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1982,10 +2075,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -2019,10 +2114,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -2082,10 +2179,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -2119,6 +2218,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -2128,10 +2228,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -2164,6 +2266,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -2173,10 +2276,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -2209,6 +2314,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -2218,10 +2324,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -2268,10 +2376,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -2297,6 +2407,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2306,10 +2417,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -2334,6 +2447,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2343,10 +2457,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -2371,6 +2487,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2380,10 +2497,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -2436,10 +2555,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -2462,6 +2583,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2471,10 +2593,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -2496,6 +2620,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2505,10 +2630,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -2530,6 +2657,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2539,10 +2667,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -2577,10 +2707,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -2613,6 +2745,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2622,10 +2755,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -2657,6 +2792,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -2666,10 +2802,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -2738,7 +2876,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </a>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

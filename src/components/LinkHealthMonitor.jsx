@@ -110,6 +110,7 @@ const LinkHealthMonitor = () => {
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -118,9 +119,11 @@ const LinkHealthMonitor = () => {
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 

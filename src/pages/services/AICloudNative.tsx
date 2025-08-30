@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AICloudNative() {
   const features = [
     'AI-powered cloud native optimization',
-    'Intelligent cloud native management',
+    'Intelligent cloud native management',;
     'Automated cloud native monitoring and alerting',;
     'Predictive analytics for cloud native scaling',;
     'Smart cloud native security and compliance',;
@@ -21,7 +21,7 @@ export default function AICloudNative() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AICloudNative() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Cloud native optimization',;
     'Cloud native management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AICloudNative() {
     'Cloud native scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve cloud native performance by 50-80%',;
     'Reduce cloud native deployment time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AICloudNative() {
     'Scale cloud native operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AICloudNative() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-sky-600 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

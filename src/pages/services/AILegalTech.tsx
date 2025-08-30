@@ -3,7 +3,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
 export default function AILegalTech() {
   const features = [
     'AI-powered contract analysis and risk assessment',
-    'Intelligent legal document generation and review',
+    'Intelligent legal document generation and review',;
     'Automated compliance monitoring and reporting',;
     'Predictive analytics for case outcomes',;
     'Legal research automation and citation checking',;
@@ -21,7 +21,7 @@ export default function AILegalTech() {
     { 
       name: 'Small Firm', 
       price: '$799/mo', 
-      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'] 
+      details: ['Up to 500 documents/month', 'Advanced AI features', 'Custom templates', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AILegalTech() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Contract review and risk assessment',;
     'Legal document automation',;
     'Compliance monitoring and reporting',;
@@ -39,7 +39,7 @@ export default function AILegalTech() {
     'Regulatory compliance management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce document review time by 70-85%',;
     'Improve accuracy and consistency by 90%',;
     'Cut legal costs by 30-50%',;
@@ -48,7 +48,7 @@ export default function AILegalTech() {
     'Scale legal operations without additional staff';
   ];
 
-  const industries = [
+  const industries = [;
     'Corporate Law',;
     'Real Estate Law',;
     'Healthcare Law',;
@@ -163,7 +163,7 @@ export default function AILegalTech() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

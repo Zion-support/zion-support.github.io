@@ -53,6 +53,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
   <<<<<<< HEAD
                 reason: 'Automatically fixed broken internal link'
             
+
 };
             setFixedLinks(prev => [...prev, fix])}
 =======
@@ -90,6 +91,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             brokenLinks: brokenLinks,
   fixedLinks: fixedLinks
         
+
 
 
 
@@ -179,6 +181,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 <button onClick = {
   () => fixBrokenLink(link.url,
   link)
+
 
 
 

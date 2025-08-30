@@ -63,6 +63,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
   item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover:text-white")
+
 }>
             <div className="relative">
               <item.icon className="h-5 w-5 mb-1"/>

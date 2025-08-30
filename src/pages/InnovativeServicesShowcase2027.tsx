@@ -15,7 +15,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
   const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
   const filteredServices = allServices
-    .filter(service => 
+    .filter(service => ;
       (selectedCategory === 'All' || service.category === selectedCategory) &&;
       (searchQuery === '' || ;
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -24,7 +24,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
     );
     .sort((a, b) => b[sortBy] - a[sortBy]);
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -40,9 +40,10 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 },
     visible: {
-      y: 0,
+      y: 0,;
       opacity: 1,;
       transition: {;
         duration: 0.5,;
@@ -58,6 +59,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 },
     visible: {
       scale: 1,
@@ -68,7 +70,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       }
     },
     hover: {
-      scale: 1.05,
+      scale: 1.05,;
       y: -10,;
       transition: {;
         duration: 0.2,;
@@ -107,10 +109,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -130,6 +134,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -139,10 +144,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -162,6 +169,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -171,10 +179,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -196,6 +206,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -205,10 +216,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -244,6 +257,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -253,10 +267,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
+
 
 
 
@@ -346,6 +362,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -355,10 +372,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -381,6 +400,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                         onClick = {
   () => window.open(service.website,
   '_blank')
+
 
 
 
@@ -505,6 +525,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }
                               className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
                             >
@@ -544,6 +565,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -553,10 +575,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 
 
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1.2 
+
 
 
 
@@ -591,7 +615,7 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         </div>
       </motion.section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

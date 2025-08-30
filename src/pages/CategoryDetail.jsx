@@ -65,6 +65,7 @@ export default function CategoryDetail() {
 
 
 
+
 },
         'talents': {
             title: "Talents",

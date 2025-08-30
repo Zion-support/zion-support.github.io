@@ -28,7 +28,7 @@ const projectBriefSchema = z.object({
   lockBudget: z.boolean().optional(),
   talentFilters: z.object({ // New
     verifiedOnly: z.boolean().optional(),
-    regions: z.string().optional(), // Comma-separated string for now
+    regions: z.string().optional(), // Comma-separated string for now;
   }).optional(),;
 });
 
@@ -60,7 +60,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
 
   const steps = [
     { name: 'Project Basics', fields: ['projectName', 'goals'] },
-    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },
+    { name: 'Details', fields: ['timeline', 'budget', 'techStack'] },;
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
 
@@ -88,7 +88,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       talentFilters: { // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
         regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
-   
+  
+;
 };
     };
     setProjectBriefSubmitted(projectBriefData);
@@ -96,7 +97,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     try {
       const response = await fetch('/api/team-builder/generate', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(projectBriefData),;
       });
 
@@ -117,7 +118,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
+  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {;
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return;
@@ -133,14 +134,15 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved
                                                 // If not saving briefs, this might be null or another identifier.
       // teamRecommendationId: teamRecommendation?.id,
-  // If recommendations are saved and have an ID
+  // If recommendations are saved and have an ID;
     ;
+
 };
 
     try {
       const response = await fetch('/api/team-builder/invite', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(invitePayload),;
       });
 
@@ -164,7 +166,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       <TeamRecommendationDisplay
         recommendation = {teamRecommendation}
         projectBrief={projectBriefSubmitted}
-        onInviteTalent={handleInviteTalent}
+        onInviteTalent={handleInviteTalent};
       />;
     );
   };
@@ -364,7 +366,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
             </form>
           </Card>
         )}
-      </div>
+      </div>;
     </AppLayout>;
   );
 };

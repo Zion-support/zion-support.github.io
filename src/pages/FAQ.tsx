@@ -162,7 +162,7 @@ export default function FAQ() {
           question: 'What happens in case of a security incident?',
           answer: 'We have comprehensive incident response procedures including immediate notification, containment, investigation, and resolution. We provide detailed incident reports and work to prevent future occurrences.'
         }
-      ]
+      ];
     };
   ];
 
@@ -171,7 +171,7 @@ export default function FAQ() {
     questions: category.questions.filter(q  =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+    );
 =======;
           question: "Do you comply with industry regulations?",;
           answer: "Yes, we maintain compliance with various industry regulations including SOC2, GDPR, HIPAA, and others. We can help you achieve and maintain compliance for your specific industry requirements.";
@@ -221,7 +221,7 @@ export default function FAQ() {
       value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
       description: '24/7 emergency support available',
       action: null,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500';
     };
   ];
 
@@ -245,10 +245,12 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -259,14 +261,17 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Find answers to common questions about our services, pricing, and how we can help transform your business
@@ -278,14 +283,17 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <div className="relative">
@@ -312,15 +320,18 @@ export default function FAQ() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.1 
+
 }}
               >
                 <div className="text-center mb-12">
@@ -330,7 +341,7 @@ export default function FAQ() {
                   <h2 className="text-3xl font-bold text-white mb-4">{category.name}</h2>
                 </div>
                 
-                <div className="max-w-4xl mx-auto space-y-4">
+                <div className="max-w-4xl mx-auto space-y-4">;
                   {category.questions.map((item, index) => {;
                     const globalIndex = categoryIndex * 100 + index;
                     const isOpen = openItems.includes(globalIndex);
@@ -341,22 +352,25 @@ export default function FAQ() {
                         initial = {
   { opacity: 0,
   y: 20 
+
 }}
                         whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                         viewport={{ once: true }}
                         transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                         className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 overflow-hidden"
                       >
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors duration-200"
-=======
+=======;
       icon: MessageCircle,;
       title: "Live Chat",;
       description: "Chat with our team",;
@@ -386,10 +400,12 @@ export default function FAQ() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -438,10 +454,12 @@ export default function FAQ() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -456,6 +474,7 @@ export default function FAQ() {
 
 
 
+
 }}
             >
               {filteredFAQ.map((category, categoryIndex) => (
@@ -464,7 +483,7 @@ export default function FAQ() {
                     {category.category === "General" && <Users className="w-6 h-6 text-blue-600" />}
                     {category.category === "Services" && <Zap className="w-6 h-6 text-blue-600" />}
                     {category.category === "Pricing & Billing" && <CheckCircle className="w-6 h-6 text-blue-600" />}
-                    {category.category === "Support & Maintenance" && <Clock className="w-6 h-6 text-blue-600" />}
+                    {category.category === "Support & Maintenance" && <Clock className="w-6 h-6 text-blue-600" />};
                     {category.category === "Technology & Security" && <Shield className="w-6 h-6 text-blue-600" />};
                     {category.category};
                   </h2>;
@@ -484,6 +503,7 @@ export default function FAQ() {
 
 
 
+
 }}
                           animate = {
   { opacity: 1,
@@ -493,10 +513,12 @@ export default function FAQ() {
 
 
 
+
 }}
                           transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -521,19 +543,23 @@ export default function FAQ() {
                               initial = {
   { height: 0,
   opacity: 0 
+
 }}
                               animate = {
   { height: 'auto',
   opacity: 1 
+
 }}
                               exit = {
   { height: 0,
   opacity: 0 
+
 }}
 =======
                               initial = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -548,10 +574,12 @@ export default function FAQ() {
 
 
 
+
 }}
                               exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -571,7 +599,7 @@ export default function FAQ() {
                         </AnimatePresence>
                       </motion.div>
                     )})}
-=======
+=======;
                               <p className="text-slate-600 leading-relaxed">;
                                 {item.answer};
                               </p>;
@@ -598,10 +626,12 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -621,15 +651,18 @@ export default function FAQ() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -666,10 +699,12 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -681,15 +716,18 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Let's discuss how our AI-powered solutions can transform your business operations
@@ -699,15 +737,18 @@ export default function FAQ() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -740,6 +781,7 @@ export default function FAQ() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -749,10 +791,12 @@ export default function FAQ() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -776,6 +820,7 @@ export default function FAQ() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -785,10 +830,12 @@ export default function FAQ() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -823,6 +870,7 @@ export default function FAQ() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -832,10 +880,12 @@ export default function FAQ() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -856,7 +906,7 @@ export default function FAQ() {
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Consultation
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

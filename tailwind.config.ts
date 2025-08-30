@@ -12,6 +12,7 @@ const config: Config = {
 
 
 
+
 }",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
@@ -185,7 +186,7 @@ const config: Config = {
         "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
         "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
         "spin-slow": "spin 3s linear infinite",
-        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",;
         "float": "float 6s ease-in-out infinite",;
         "matrix-rain": "matrix-rain 20s linear infinite",;
       },;

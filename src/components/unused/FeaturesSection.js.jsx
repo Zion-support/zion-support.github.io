@@ -52,6 +52,7 @@ export function FeaturesSection() {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -72,9 +73,11 @@ export function FeaturesSection() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
             Why Choose Zion Tech Group?
@@ -109,12 +112,15 @@ export function FeaturesSection() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 }} className="mt-16 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">

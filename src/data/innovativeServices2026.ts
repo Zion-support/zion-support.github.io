@@ -628,7 +628,7 @@ export const serviceCategories = [
     name: 'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-  }
+  };
 =======;
   {;
     name: 'Emerging Technologies',;

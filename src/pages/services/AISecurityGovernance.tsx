@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityGovernance() {
   const features = [
     'AI-powered security governance optimization',
-    'Intelligent governance policy management and enforcement',
+    'Intelligent governance policy management and enforcement',;
     'Automated security compliance monitoring and reporting',;
     'Predictive analytics for governance needs',;
     'Smart governance framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityGovernance() {
     { 
       name: 'Business', 
       price: '$1,799/mo', 
-      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] 
+      details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityGovernance() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security governance optimization',;
     'Governance policy management and enforcement',;
     'Security compliance monitoring and reporting',;
@@ -39,7 +39,7 @@ export default function AISecurityGovernance() {
     'Governance scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security governance performance by 50-80%',;
     'Reduce governance compliance time by 40-70%',;
     'Cut security governance costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityGovernance() {
     'Scale security governance operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityGovernance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

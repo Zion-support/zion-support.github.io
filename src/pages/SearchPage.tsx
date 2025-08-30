@@ -129,7 +129,7 @@ const categories = [
   { id: 'all', name: 'All Categories', icon: Grid, count: 0 },
   { id: 'services', name: 'Services', icon: Code, count: 0 },
   { id: 'talent', name: 'Talent', icon: Users, count: 0 },
-  { id: 'equipment', name: 'Equipment', icon: Cpu, count: 0 },
+  { id: 'equipment', name: 'Equipment', icon: Cpu, count: 0 },;
   { id: 'companies', name: 'Companies', icon: Building, count: 0 };
 ];
 
@@ -139,8 +139,9 @@ const filters = {
   location['Remote', 'On-site', 'Hybrid'],
   priceRange['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
   rating['4.5+', '4.0+',
-  '3.5+']
+  '3.5+'];
 ;
+
 };
 
 export default function SearchPage(...args[]):  {
@@ -316,7 +317,7 @@ export default function SearchPage(...args[]):  {
 
   const filterOptions = [
     { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
-    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
+    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },;
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },;
     { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 0 },;
@@ -341,7 +342,7 @@ export default function SearchPage(...args[]):  {
     
     const filtered = mockSearchResults.filter(item => 
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
       item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     );
     
@@ -376,7 +377,7 @@ export default function SearchPage(...args[]):  {
     if (activeFilters.location.length > 0) {
       filtered = filtered.filter(item => activeFilters.location.includes(item.location || 'Remote'))}
 
-    if (activeFilters.rating.length > 0) {
+    if (activeFilters.rating.length > 0) {;
       filtered = filtered.filter(item => {;
         if (!item.rating) return false;
         return activeFilters.rating.some(ratingFilter = > {;
@@ -389,7 +390,7 @@ export default function SearchPage(...args[]):  {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value)
+        ? prev[filterType].filter(v => v !== value);
         [...prev[filterType], value];
     }))};
 
@@ -398,7 +399,7 @@ export default function SearchPage(...args[]):  {
       type[],
       category[],
       location[],
-      priceRange[],
+      priceRange[],;
       rating[];
     })};
 
@@ -410,7 +411,7 @@ export default function SearchPage(...args[]):  {
   };
 
 <<<<<<< HEAD
-  const getTypeIcon = (type: string)  => {
+  const getTypeIcon = (type: string)  => {;
     switch (type) {;
       case 'service': return Code;
       case 'talent': return Users;
@@ -419,7 +420,7 @@ export default function SearchPage(...args[]):  {
       default: return Code}
   };
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
     switch (category) {;
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -483,10 +484,12 @@ export default function SearchPage(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition={{ duration: 0.6 }}
 =======
@@ -503,10 +506,12 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -535,6 +540,7 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -544,10 +550,12 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.1 
+
 
 
 
@@ -569,14 +577,17 @@ export default function SearchPage(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
         >
           <form onSubmit={handleSearch} className="relative">
@@ -604,14 +615,17 @@ export default function SearchPage(...args[]):  {
             initial = {
   { opacity: 0,
   x: -20 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
           >
             <div className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
@@ -640,6 +654,7 @@ export default function SearchPage(...args[]):  {
                         onChange = {
   () => toggleFilter('type',
   type)
+
 }
                         className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -661,6 +676,7 @@ export default function SearchPage(...args[]):  {
                         onChange = {
   () => toggleFilter('category',
   category)
+
 }
                         className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -682,6 +698,7 @@ export default function SearchPage(...args[]):  {
                         onChange = {
   () => toggleFilter('location',
   location)
+
 }
                         className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -703,6 +720,7 @@ export default function SearchPage(...args[]):  {
                         onChange = {
   () => toggleFilter('rating',
   rating)
+
 }
                         className="w-4 h-4 text-zion-cyan bg-white/10 border-zion-cyan/20 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -723,14 +741,17 @@ export default function SearchPage(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             >
               <div className="flex items-center gap-4">
@@ -750,6 +771,7 @@ export default function SearchPage(...args[]):  {
                             onClick = {
   () => toggleFilter(key as keyof typeof activeFilters,
   value)
+
 }
                             className="hover:text-zion-cyan-light"
                           >
@@ -814,14 +836,17 @@ export default function SearchPage(...args[]):  {
                         initial = {
   { opacity: 0,
   y: 20 
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
 }}
                         transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }}
                       >
                         <Link
@@ -900,14 +925,17 @@ export default function SearchPage(...args[]):  {
                         initial = {
   { opacity: 0,
   x: -20 
+
 }}
                         animate = {
   { opacity: 1,
   x: 0 
+
 }}
                         transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }}
                       >
                         <Link
@@ -1041,6 +1069,7 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -1050,10 +1079,12 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -1104,10 +1135,12 @@ export default function SearchPage(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1224,7 +1257,7 @@ export default function SearchPage(...args[]):  {
                   <button className="px-3 py-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed">
                     Next
                   </button>
-                </nav>
+                </nav>;
               </div>;
             )};
           </div>;

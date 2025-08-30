@@ -15,6 +15,7 @@ export const ThemeProvider({ children }) {
     const value = {
   theme,
   setTheme: () => { 
+
 },
     };
     return (<ThemeContext.Provider value={value}>

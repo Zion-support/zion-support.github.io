@@ -28,7 +28,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   useEffect(()  => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
-      try {
+      try {;
         if (typeof window !== 'null') {;
           const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
           if (auth) {

@@ -71,7 +71,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: 'Data Protection',
       description: 'Comprehensive data loss prevention and encryption with AI-driven security policy enforcement.',
       benefits['Data encryption', 'DLP policies', 'Access controls', 'Compliance monitoring']
-    }
+    };
 =======;
       icon: Database,;
       title: 'Data Protection',;
@@ -106,7 +106,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: 'Customer Data Protection',
       description: 'Secure online transactions and customer information with advanced fraud detection and threat prevention.',
       metrics['95% reduction in fraud losses', '100% secure transactions', 'Real-time threat blocking']
-    }
+    };
 =======;
       industry: 'E-commerce',;
       title: 'Customer Data Protection',;
@@ -134,7 +134,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: 'Cost Savings',
       description: 'Reduce cybersecurity costs while improving protection and compliance.',
       value: '40-60%'
-    },
+    },;
     {;
       icon: Target,;
       title: 'Accuracy',;
@@ -149,7 +149,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
     'Natural Language Processing',
     'Behavioral Analytics',
     'Threat Intelligence Feeds',
-    'Dark Web Monitoring',
+    'Dark Web Monitoring',;
     'Real-time Processing',;
     'Cloud Security',;
     'Zero Trust Architecture',;
@@ -204,7 +204,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
         'Dedicated security team',
         'SLA guarantees',
         'On-site support',
-        'Custom development',
+        'Custom development',;
         'Advanced compliance',;
         'White-label options';
       ],;
@@ -232,10 +232,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,10 +288,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -304,8 +308,9 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-8";
           >;
             <div className="text-center">;
               <div className="text-3xl font-bold text-white mb-2">99.9%</div>;
@@ -339,10 +344,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -376,6 +383,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -385,10 +393,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -428,10 +438,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -464,6 +476,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -473,10 +486,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -519,10 +534,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -555,6 +572,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -564,10 +582,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -600,10 +620,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -636,6 +658,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -645,10 +668,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -676,10 +701,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -712,6 +739,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -721,10 +749,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -791,10 +821,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -838,7 +870,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

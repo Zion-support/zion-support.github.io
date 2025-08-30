@@ -61,7 +61,7 @@ export default function AICybersecuritySuite(...args[]):  {
       title: "Compliance Automation",
       description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
       icon: CheckCircle,
-      benefits: [
+      benefits: [;
         "GDPR compliance",;
         "SOC 2 automation",;
         "HIPAA compliance",;
@@ -116,7 +116,7 @@ export default function AICybersecuritySuite(...args[]):  {
         "Enterprise security",
         "24/7 dedicated support",
         "Custom security models",
-        "White-label solutions",
+        "White-label solutions",;
         "On-premise deployment",;
         "SLA guarantees";
       ],;
@@ -155,7 +155,7 @@ export default function AICybersecuritySuite(...args[]):  {
     },
     {
       industry: "Government",
-      applications: [
+      applications: [;
         "Classified data protection",;
         "National security",;
         "Compliance automation",;
@@ -198,7 +198,7 @@ export default function AICybersecuritySuite(...args[]):  {
       title: 'Data Protection',
       description: 'Advanced encryption and data loss prevention with AI-powered monitoring',
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
 =======;
       title: "Compliance Coverage",;
       description: "Automated compliance for all major frameworks",;
@@ -231,7 +231,7 @@ export default function AICybersecuritySuite(...args[]):  {
       title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
-      features['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
+      features['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting'];
     };
   ];
 
@@ -254,7 +254,7 @@ export default function AICybersecuritySuite(...args[]):  {
     {
       title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
-      features['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
+      features['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review'];
     };
   ];
 
@@ -277,7 +277,7 @@ export default function AICybersecuritySuite(...args[]):  {
     {
       title: 'Cost Optimization',
       description: 'Reduce security costs by 40% while improving protection through intelligent automation',
-      icon: TrendingUp
+      icon: TrendingUp;
     };
   ];
 
@@ -286,7 +286,7 @@ export default function AICybersecuritySuite(...args[]):  {
     { name: 'Natural Language Processing', description: 'AI-powered analysis of security logs and reports' },
     { name: 'Behavioral Analytics', description: 'User and system behavior monitoring for anomaly detection' },
     { name: 'Threat Intelligence', description: 'Real-time threat feeds and global security intelligence' },
-    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },
+    { name: 'Automated Response', description: 'Intelligent automation for threat containment and response' },;
     { name: 'Cloud-Native Security', description: 'Built for modern cloud and hybrid environments' };
   ];
 
@@ -306,10 +306,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
@@ -322,10 +324,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -385,10 +389,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -419,6 +425,7 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -428,10 +435,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -462,10 +471,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -477,10 +488,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -507,14 +520,17 @@ export default function AICybersecuritySuite(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
 =======
@@ -526,6 +542,7 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -535,10 +552,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -567,10 +586,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -582,10 +603,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -612,14 +635,17 @@ export default function AICybersecuritySuite(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
 =======
@@ -631,6 +657,7 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -640,10 +667,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -682,10 +711,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
 =======
@@ -697,10 +728,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -727,14 +760,17 @@ export default function AICybersecuritySuite(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
 =======
@@ -746,6 +782,7 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -755,10 +792,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -791,10 +830,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -814,14 +855,17 @@ export default function AICybersecuritySuite(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -843,10 +887,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -866,14 +912,17 @@ export default function AICybersecuritySuite(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
@@ -893,10 +942,12 @@ export default function AICybersecuritySuite(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
@@ -909,10 +960,12 @@ export default function AICybersecuritySuite(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -981,7 +1034,7 @@ export default function AICybersecuritySuite(...args[]):  {
     </div>
   )}
 =======
-                Contact Security Experts
+                Contact Security Experts;
               </motion.button>;
             </div>;
           </motion.div>;

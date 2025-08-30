@@ -77,9 +77,11 @@ export default function RetailSolutions() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
@@ -111,9 +113,11 @@ export default function RetailSolutions() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               AI-Powered Retail Technology
@@ -128,12 +132,15 @@ export default function RetailSolutions() {
             {features.map((feature, index) => (<motion.div key={feature.title} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white"/>
@@ -151,9 +158,11 @@ export default function RetailSolutions() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Choose Our Retail Solutions?
@@ -167,9 +176,11 @@ export default function RetailSolutions() {
             <motion.div initial = {
   { opacity: 0,
   x: -20 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
               <div className="space-y-4">
@@ -183,9 +194,11 @@ export default function RetailSolutions() {
             <motion.div initial = {
   { opacity: 0,
   x: 20 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
               <div className="space-y-4">
@@ -205,9 +218,11 @@ export default function RetailSolutions() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Retail Categories
@@ -222,12 +237,15 @@ export default function RetailSolutions() {
             {retailTypes.map((type, index) => (<motion.div key={type} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">
                 <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>
                 <h3 className="font-semibold">{type}</h3>
@@ -242,9 +260,11 @@ export default function RetailSolutions() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Retail Business?

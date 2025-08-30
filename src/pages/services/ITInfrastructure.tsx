@@ -28,7 +28,7 @@ export default function ITInfrastructure(...args: []):  {
     {
       icon: Monitor,
       title: 'Monitoring & Alerting',
-      description: '24/7 infrastructure monitoring with proactive alerting'
+      description: '24/7 infrastructure monitoring with proactive alerting';
     },;
     {;
       icon: Cloud,;
@@ -37,7 +37,7 @@ export default function ITInfrastructure(...args: []):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Achieve 99.9% infrastructure uptime',;
     'Reduce operational costs by 35%',;
     'Improve system performance by 60%',;
@@ -60,7 +60,7 @@ export default function ITInfrastructure(...args: []):  {
     {
       icon: Router,
       title: 'Network Security',
-      description: 'Firewalls, VPNs, intrusion detection, and threat prevention'
+      description: 'Firewalls, VPNs, intrusion detection, and threat prevention';
     },;
     {;
       icon: Database2,;
@@ -79,7 +79,7 @@ export default function ITInfrastructure(...args: []):  {
       description: 'HIPAA-compliant infrastructure for medical facilities'
     },
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services',;
       description: 'Secure, high-availability infrastructure for banking';
     },;
     {;
@@ -103,10 +103,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -157,10 +159,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,6 +195,7 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -200,10 +205,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -235,10 +242,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -269,6 +278,7 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -278,10 +288,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -317,10 +329,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -355,6 +369,7 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -364,10 +379,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -393,6 +410,7 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -402,10 +420,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -435,10 +455,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -470,6 +492,7 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -479,10 +502,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -514,10 +539,12 @@ export default function ITInfrastructure(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -539,7 +566,7 @@ export default function ITInfrastructure(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

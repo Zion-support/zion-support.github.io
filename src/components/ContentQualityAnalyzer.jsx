@@ -144,6 +144,7 @@ const ContentQualityAnalyzer = () => {
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -152,9 +153,11 @@ const ContentQualityAnalyzer = () => {
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 

@@ -363,7 +363,7 @@ const workflowSolutions = [
     timeline: "16-28 weeks",
     category: "Task Management",
     technologies["AI", "Task Management", "Optimization", "Analytics"]
-  }
+  };
 =======;
     price: "From $100,000",;
     timeline: "16-28 weeks",;
@@ -395,7 +395,7 @@ const workflowTechnologies = [
     useCase: "Workflow Control",
     reliability: "High"
   },
-  {
+  {;
     name: "Predictive Analytics",;
     description: "AI-powered analytics for workflow optimization",;
     icon: BarChart3,;
@@ -425,7 +425,7 @@ const successStories = [
   },
   {
     id: 3,
-    comp: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",;
     industry: "Healthcare",;
     challenge: "Needed AI workflow automation for patient care processes",;
     solution: "Built AI-powered workflow automation system for healthcare",;
@@ -456,7 +456,7 @@ const processSteps = [
     icon: Wrench,
     duration: "16-40 weeks"
   },
-  {
+  {;
     step: 4,;
     title: "Testing & Optimization",;
     description: "Test systems and optimize performance",;
@@ -490,7 +490,7 @@ const workflowBenefits = [
     description: "AI workflows scale efficiently with business growth",
     icon: Rocket,
     examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
-  }
+  };
 =======;
     title: "Scalability",;
     description: "AI workflows scale efficiently with business growth",;
@@ -535,10 +535,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +559,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -566,10 +569,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -621,10 +626,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -652,6 +659,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -661,10 +669,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -707,10 +717,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -738,6 +750,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -747,10 +760,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -794,10 +809,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -825,6 +842,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -834,10 +852,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -878,10 +898,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -926,6 +948,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -935,10 +958,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1007,10 +1032,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1038,6 +1065,7 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -1047,10 +1075,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1108,10 +1138,12 @@ export default function AIWorkflowAutomation(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1146,7 +1178,7 @@ export default function AIWorkflowAutomation(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

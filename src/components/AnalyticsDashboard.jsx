@@ -101,6 +101,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 <<<<<<< HEAD
             handleDashboardInteraction('time_range_changed',
   { timeRange: e.target.value 
+
 })}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
 =======
             handleDashboardInteraction('time_range_changed',

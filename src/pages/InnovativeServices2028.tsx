@@ -113,10 +113,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -220,6 +222,7 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -229,10 +232,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -303,6 +308,7 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -312,10 +318,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -410,10 +418,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -444,6 +454,7 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -453,10 +464,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -525,10 +538,12 @@ export default function InnovativeServices2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -583,7 +598,7 @@ export default function InnovativeServices2028(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

@@ -6,8 +6,6 @@ import { Gift, ArrowRight, ExternalLink } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, } from "@/components/ui/dialog";
 <<<<<<< HEAD
 const RedeemTokensCard() {
-=======
-const RedeemTokensCard() {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const { wallet, spendTokens } = useWallet();
     const [open, setOpen] = useState(false);

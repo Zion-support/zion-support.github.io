@@ -62,6 +62,7 @@ export const quantumFlowProPricing: ServicePricing = {
       volumeDiscounts["10% off annual billing",
   "20% off 2+ year contracts"]
     
+
 },
     {
       name: "Professional",
@@ -122,7 +123,7 @@ export const quantumFlowProPricing: ServicePricing = {
     annualDiscount: "20% off annual billing",
     enterpriseDiscount: "Up to 40% off for enterprise contracts",
     startupProgram: "50% off for qualified startups (first year)",
-    referralProgram: "15% commission for successful referrals"
+    referralProgram: "15% commission for successful referrals";
   };
 };
 
@@ -155,6 +156,7 @@ export const neuroSyncAIPricing: ServicePricing = {
       marketComparison: "60% below market average",
   volumeDiscounts["15% off annual billing"]
     
+
 },
     {
       name: "Professional",
@@ -214,7 +216,7 @@ export const neuroSyncAIPricing: ServicePricing = {
     annualDiscount: "25% off annual billing",
     enterpriseDiscount: "Up to 35% off for enterprise contracts",
     startupProgram: "60% off for qualified startups (first year)",
-    referralProgram: "20% commission for successful referrals"
+    referralProgram: "20% commission for successful referrals";
   };
 };
 
@@ -247,6 +249,7 @@ export const blockchainForgePricing: ServicePricing = {
       marketComparison: "50% below market average",
   volumeDiscounts["20% off annual billing"]
     
+
 },
     {
       name: "Professional",
@@ -307,14 +310,14 @@ export const blockchainForgePricing: ServicePricing = {
     annualDiscount: "30% off annual billing",
     enterpriseDiscount: "Up to 45% off for enterprise contracts",
     startupProgram: "70% off for qualified startups (first year)",
-    referralProgram: "25% commission for successful referrals"
+    referralProgram: "25% commission for successful referrals";
   };
 };
 
 // Export all pricing guides
 export const ALL_PRICING_GUIDES_2026 = [
   quantumFlowProPricing,
-  neuroSyncAIPricing,
+  neuroSyncAIPricing,;
   blockchainForgePricing;
 ];
 
@@ -334,8 +337,9 @@ export const marketSummary2026 = {
     "Advanced edge computing capabilities",
     "Ethical AI framework integration",
   "Comprehensive compliance automation"
-  ]
+  ];
 ;
+
 };
 =======
   pricingStrategy: {

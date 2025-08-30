@@ -68,6 +68,7 @@ export function PrimaryNav() {
 
 
 
+
 }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion = {
   (sugg) => {
@@ -78,6 +79,7 @@ export function PrimaryNav() {
                 // Product listings with IDs go to product detail page
 <<<<<<< HEAD
                 router.push(`/marketplace/listing/${sugg.id
+
 }`)}
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                 // Documentation suggestions navigate directly to their path
@@ -128,6 +130,7 @@ export function PrimaryNav() {
                   <Link href="/cart" className="relative p-1" aria-label = {
   t('nav.cart',
   'Cart')
+
 
 
 

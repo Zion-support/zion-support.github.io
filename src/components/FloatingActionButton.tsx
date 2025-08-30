@@ -168,6 +168,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -177,10 +178,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0 
+
 
 
 
@@ -204,10 +207,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                       animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 
 
 
@@ -222,10 +227,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                       transition = {
   { delay: action.delay,
   duration: 0.2 
+
 
 
 
@@ -271,6 +278,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                     animate = {
   { rotate: 0,
@@ -280,10 +288,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                     exit = {
   { rotate: 90,
   opacity: 0 
+
 
 
 
@@ -305,6 +315,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                     animate = {
   { rotate: 0,
@@ -314,10 +325,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
                     exit = {
   { rotate: -90,
   opacity: 0 
+
 
 
 
@@ -347,6 +360,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -356,10 +370,12 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -388,6 +404,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -397,13 +414,15 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         transition = {
   { delay: 1,
-  duration: 0.3 
+  duration: 0.3 ;
 ;
 ;
 ;
+
 
 
 }};
@@ -431,6 +450,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -440,13 +460,15 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         transition = {
   { delay: 1.2,
-  duration: 0.3 
+  duration: 0.3 ;
 ;
 ;
 ;
+
 
 
 }};
@@ -474,6 +496,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -483,13 +506,15 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
 
 
 
+
 }}
         transition = {
   { delay: 1.4,
-  duration: 0.3 
+  duration: 0.3 ;
 ;
 ;
 ;
+
 
 
 }};
@@ -500,7 +525,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
         }}
         className = "fixed top-6 left-6 z-50 flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileTap={{ scale: 0.9 }};
         title="Send Feedback";
         aria-label="Open feedback form";
       >;

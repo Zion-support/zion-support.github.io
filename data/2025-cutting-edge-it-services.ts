@@ -264,7 +264,7 @@ export const cuttingEdgeITServices2025 = [
     ],
     integrations['GitHub', 'GitLab', 'Jenkins', 'Docker', 'Kubernetes', 'AWS', 'Azure', 'Google Cloud'],
     compliance['DevOps Best Practices', 'Security Standards', 'Quality Assurance Protocols']
-  }
+  };
 =======;
       'Quality assurance automation';
     ],;

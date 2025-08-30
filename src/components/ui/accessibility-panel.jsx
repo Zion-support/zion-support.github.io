@@ -92,12 +92,14 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 };
             // Add notification
             const notification = {
   id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g,
   ' $1').toLowerCase()
+
 
 
 
@@ -125,6 +127,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 };
         setSettings(defaultSettings);
         const notification = {
@@ -134,6 +137,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
   <<<<<<< HEAD
             timestamp: Date.now()
         
+
 };
         setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []);
 =======
@@ -196,9 +200,11 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -212,9 +218,11 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 
 
 
@@ -257,6 +265,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     High Contrast
                   </label>
@@ -269,6 +278,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.largeText} onChange = {
   (e) => updateSetting('largeText',
   e.target.checked)
+
 
 
 
@@ -307,6 +317,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 } className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -334,6 +345,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Reduced Motion
                   </label>
@@ -346,6 +358,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
+
 
 
 
@@ -375,6 +388,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Focus Indicator
                   </label>
@@ -386,6 +400,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
+
 
 
 
@@ -418,9 +433,11 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 
 
 
@@ -434,9 +451,11 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
 
 
 
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 
 
 

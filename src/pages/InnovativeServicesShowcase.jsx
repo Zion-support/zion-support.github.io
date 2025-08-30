@@ -27,6 +27,7 @@ const InnovativeServicesShowcase = () => {
 
 
 
+
 };
     // Combine all services
     const allServices = [
@@ -51,6 +52,7 @@ const InnovativeServicesShowcase = () => {
   <<<<<<< HEAD
             'Digital Twin': <Cpu className="h-5 w-5"/>
         
+
 };
         return categoryIcons[category] || <Zap className="h-5 w-5"/>};
 =======

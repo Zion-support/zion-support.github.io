@@ -61,12 +61,14 @@ const statusColors = {
     'completed': 'bg-zion-emerald text-white',
   'on-hold': 'bg-zion-slate text-white'
 
+
 };
 const priorityColors = {
   'low': 'bg-zion-emerald text-white',
     'medium': 'bg-zion-gold text-white',
     'high': 'bg-zion-orange text-white',
   'critical': 'bg-red-500 text-white'
+
 
 };
 export function ProjectManagementDashboard() {

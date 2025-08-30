@@ -68,7 +68,7 @@ export default function EnhancedServicesShowcase2025() {
     return enhancedServicesCatalog2025
       .filter(service => 
         (selectedCategory === 'all' || service.category === selectedCategory) &&
-        (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
       );
@@ -98,8 +98,10 @@ export default function EnhancedServicesShowcase2025() {
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 
 
 
@@ -120,10 +122,12 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -244,7 +248,7 @@ export default function EnhancedServicesShowcase2025() {
           </Link>
           <Link
             to="/contact"
-            className="flex-1 btn-neon-cyan text-center text-sm py-2"
+            className="flex-1 btn-neon-cyan text-center text-sm py-2";
           >;
             Get Started;
           </Link>;
@@ -266,10 +270,12 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -340,7 +346,7 @@ export default function EnhancedServicesShowcase2025() {
           </Link>
           <Link
             to="/contact"
-            className="btn-neon-cyan text-sm py-2 px-4"
+            className="btn-neon-cyan text-sm py-2 px-4";
           >;
             Get Started;
           </Link>;
@@ -370,10 +376,12 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -412,6 +420,7 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -421,10 +430,12 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -594,10 +605,12 @@ export default function EnhancedServicesShowcase2025() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -640,7 +653,7 @@ export default function EnhancedServicesShowcase2025() {
                 to="/pricing"
                 className="btn-neon text-lg px-8 py-4"
               >
-                View Pricing
+                View Pricing;
               </Link>;
             </div>;
           </motion.div>;

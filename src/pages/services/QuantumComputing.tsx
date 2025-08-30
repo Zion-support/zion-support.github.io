@@ -27,7 +27,7 @@ export default function QuantumComputing(...args: []):  {
     {
       icon: Brain2,
       title: 'Quantum Machine Learning',
-      description: 'AI and ML enhanced by quantum computing power'
+      description: 'AI and ML enhanced by quantum computing power';
     },;
     {;
       icon: Database2,;
@@ -36,7 +36,7 @@ export default function QuantumComputing(...args: []):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Solve complex problems exponentially faster',;
     'Enable breakthroughs in scientific research',;
     'Provide unbreakable quantum encryption',;
@@ -59,7 +59,7 @@ export default function QuantumComputing(...args: []):  {
     {
       icon: HardDrive,
       title: 'Quantum Software Solutions',
-      description: 'Quantum software development and deployment'
+      description: 'Quantum software development and deployment';
     },;
     {;
       icon: Server2,;
@@ -78,7 +78,7 @@ export default function QuantumComputing(...args: []):  {
       description: 'Portfolio optimization and risk assessment'
     },
     {
-      industry: 'Materials Science',
+      industry: 'Materials Science',;
       description: 'New material discovery and simulation';
     },;
     {;
@@ -108,10 +108,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -162,10 +164,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -196,6 +200,7 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -205,10 +210,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -240,10 +247,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -274,6 +283,7 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -283,10 +293,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -322,10 +334,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -356,6 +370,7 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -365,10 +380,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -394,6 +411,7 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -403,10 +421,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -436,10 +456,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -470,6 +492,7 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -479,10 +502,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -514,10 +539,12 @@ export default function QuantumComputing(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -539,7 +566,7 @@ export default function QuantumComputing(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

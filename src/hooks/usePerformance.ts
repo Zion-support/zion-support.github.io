@@ -85,7 +85,7 @@ export function usePerformance(...args[]):  {
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
-      }))}
+      }))};
 =======;
       setMetrics(prev = > ({;
         ...prev,;
@@ -109,8 +109,9 @@ export function usePerformance(...args[]):  {
 
 
 
-
 ;
+;
+
 },;
       lcp: { good: 2500, poor: 4000 },;
       fid: { good: 100, poor: 300 },;

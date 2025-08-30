@@ -192,7 +192,7 @@ export default function Contact(...args[]):  {
 							>
 								Learn More About Us →
 							</Link>
-						</div>
+						</div>;
 					</div>;
 				</div>;
 			</section>;

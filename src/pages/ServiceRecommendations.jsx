@@ -79,9 +79,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -108,6 +110,7 @@ const ServiceRecommendations = () => {
 
 
 
+
 }>
                 Learn More
               </Button>
@@ -127,9 +130,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -154,6 +159,7 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -162,9 +168,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -202,9 +210,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -228,6 +238,7 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -236,9 +247,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -277,9 +290,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -303,6 +318,7 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -311,9 +327,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -338,9 +356,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -371,9 +391,11 @@ const ServiceRecommendations = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -396,6 +418,7 @@ const ServiceRecommendations = () => {
 
 
 
+
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Start Your Transformation
@@ -403,6 +426,7 @@ const ServiceRecommendations = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityAnalytics() {
   const features = [
     'AI-powered security analytics optimization',
-    'Intelligent threat intelligence and analysis',
+    'Intelligent threat intelligence and analysis',;
     'Automated security data processing and insights',;
     'Predictive analytics for security trends',;
     'Smart security reporting and visualization',;
@@ -21,7 +21,7 @@ export default function AISecurityAnalytics() {
     { 
       name: 'Business', 
       price: '$1,299/mo', 
-      details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'] 
+      details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityAnalytics() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security analytics optimization',;
     'Threat intelligence and analysis',;
     'Security data processing and insights',;
@@ -39,7 +39,7 @@ export default function AISecurityAnalytics() {
     'Security analytics scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security analytics performance by 50-80%',;
     'Reduce data processing time by 40-70%',;
     'Cut security analytics costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityAnalytics() {
     'Scale security analytics operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityAnalytics() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

@@ -50,7 +50,7 @@ const AIWorkflowOrchestrator = () => {
     {
       icon: BarChart3,
       title: "Advanced Analytics",
-      description: "Comprehensive insights into workflow performance and optimization opportunities"
+      description: "Comprehensive insights into workflow performance and optimization opportunities";
     },;
     {;
       icon: Users,;
@@ -59,7 +59,7 @@ const AIWorkflowOrchestrator = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Reduce manual workflow processing by up to 80%",;
     "Improve decision accuracy with AI-powered insights",;
     "Scale operations without proportional cost increases",;
@@ -82,7 +82,7 @@ const AIWorkflowOrchestrator = () => {
     {
       title: "Manufacturing",
       description: "Optimize production scheduling and quality control processes",
-      icon: Settings
+      icon: Settings;
     },;
     {;
       title: "Retail",;
@@ -127,7 +127,7 @@ const AIWorkflowOrchestrator = () => {
       description: "Tailored solutions for large organizations with specific requirements",
       features: [
         "Unlimited workflow executions",
-        "Custom AI model training",
+        "Custom AI model training",;
         "Dedicated security team",;
         "24/7 phone support",;
         "Custom development",;
@@ -157,10 +157,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -207,6 +209,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -216,10 +219,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -243,6 +248,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -252,10 +258,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -288,6 +296,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -297,10 +306,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -324,6 +335,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -333,10 +345,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.05 * index 
+
 
 
 
@@ -366,6 +380,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -375,10 +390,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -402,6 +419,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -411,10 +429,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -447,6 +467,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -456,10 +477,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -483,6 +506,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -492,10 +516,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -560,6 +586,7 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -569,10 +596,12 @@ const AIWorkflowOrchestrator = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -593,7 +622,7 @@ const AIWorkflowOrchestrator = () => {
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Demo
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

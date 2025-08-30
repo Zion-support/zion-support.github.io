@@ -215,6 +215,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -223,9 +224,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0.8 
+
 
 
 
@@ -250,9 +253,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 
 
 
@@ -266,9 +271,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} transition = {
   { duration: 0.2,
   ease: "easeOut" 
+
 
 
 
@@ -307,6 +314,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
@@ -315,9 +323,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -333,6 +343,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 <<<<<<< HEAD
                     setFilters(prev => ({ ...prev,
   category: selected 
+
 }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
 =======
                     setFilters(prev => ({ ...prev,
@@ -362,6 +373,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }))} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                         <option value={0}>Any Rating</option>
                         <option value={3}>3+ Stars</option>
@@ -381,6 +393,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 
 
 
+
 }))} className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"/>
                       </div>
                     </div>
@@ -391,6 +404,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                         <input type="checkbox" checked={filters.featured} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   featured: e.target.checked 
+
 
 
 
@@ -418,6 +432,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 <<<<<<< HEAD
                         performSearch(search,
   filters)
+
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white">
 =======
                         performSearch(search,
@@ -447,6 +462,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
 <<<<<<< HEAD
                         performSearch(suggestion,
   filters)
+
 }} className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colors duration-200 text-zinc-300 hover:text-white flex items-center justify-between group">
 =======
                         performSearch(suggestion,

@@ -3,7 +3,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
 export default function AIPredictiveAnalytics() {
   const features = [
     'Advanced machine learning algorithms for pattern recognition',
-    'Real-time data processing and predictive modeling',
+    'Real-time data processing and predictive modeling',;
     'Custom AI models trained on your industry data',;
     'Automated feature engineering and model selection',;
     'Predictive insights with confidence intervals',;
@@ -21,7 +21,7 @@ export default function AIPredictiveAnalytics() {
     { 
       name: 'Professional', 
       price: '$799/mo', 
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] 
+      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIPredictiveAnalytics() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Sales forecasting and demand prediction',;
     'Customer churn prediction and retention',;
     'Inventory optimization and supply chain forecasting',;
@@ -39,7 +39,7 @@ export default function AIPredictiveAnalytics() {
     'Market trend analysis and investment insights';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve forecast accuracy by 40-60%',;
     'Reduce operational costs by 25-35%',;
     'Increase revenue through better predictions',;
@@ -48,7 +48,7 @@ export default function AIPredictiveAnalytics() {
     'Make data-driven decisions with confidence';
   ];
 
-  const industries = [
+  const industries = [;
     'E-commerce & Retail',;
     'Financial Services',;
     'Healthcare & Pharmaceuticals',;
@@ -163,7 +163,7 @@ export default function AIPredictiveAnalytics() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

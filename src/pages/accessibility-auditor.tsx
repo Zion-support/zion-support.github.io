@@ -33,7 +33,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
     {
       title: "Real-time Monitoring",
       description: "Continuous monitoring and alerting for accessibility issues",
-      icon: "📊"
+      icon: "📊";
     },;
     {;
       title: "Compliance Reporting",;
@@ -64,7 +64,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
       category: "Technical Accessibility",
       items["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
     }
-=======
+=======;
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
     },;
     {;
@@ -254,7 +254,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

@@ -3,7 +3,7 @@ import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, 
 import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {
-  const features = [
+  const features = [;
     'AI-powered 3D world generation and design',;
     'Intelligent avatar creation and customization',;
     'Real-time virtual environment optimization',;
@@ -47,7 +47,7 @@ export default function AIMetaverseDevelopmentPlatform() {
       details: [
         'Unlimited virtual worlds',
         'Custom AI algorithms',
-        '24/7 dedicated support',
+        '24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
         'White-label solutions available',;
@@ -56,7 +56,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Virtual events and conferences',;
     'Gaming and entertainment platforms',;
     'Virtual real estate and architecture',;
@@ -73,7 +73,7 @@ export default function AIMetaverseDevelopmentPlatform() {
     'Build sustainable metaverse economies and ecosystems';
   ];
 
-  const industries = [
+  const industries = [;
     'Gaming and Entertainment',;
     'Real Estate and Architecture',;
     'Education and Training',;
@@ -302,7 +302,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
             >
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="ml-2 w-5 h-5" />;
             </a>;
           </div>;

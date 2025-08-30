@@ -40,6 +40,7 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }
 							return (
 								<div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-shadow">
@@ -220,7 +221,7 @@ export default function ResearchDevelopment(...args[]):  {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							Join Our Team <span aria-hidden="true">→</span>
-						</Link>
+						</Link>;
 					</div>;
 				</div>;
 			</section>;

@@ -61,7 +61,7 @@ export default function InnovativeServicesShowcase2028(...args[]):  {
   Bot,
   GitFork,
   Eye as EyeIcon,
-  Sparkles as SparklesIcon,
+  Sparkles as SparklesIcon,;
   Zap as ZapIcon;
 } from 'lucide-react';
 import { ADVANCED_AI_SERVICES_2028 } from "../data/advancedAIServices2028";
@@ -91,7 +91,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   const filteredServices = selectedCategory === 'all' ;
     ? allServices: allServices.filter(s  => s.type === selectedCategory);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
     switch (category) {;
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -115,7 +115,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
       'from-red-600 to-orange-600',
       'from-indigo-600 to-purple-600',
       'from-yellow-600 to-orange-600',
-      'from-teal-600 to-blue-600',
+      'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
     ];
     return colors[Math.abs(category.length) % colors.length]};
@@ -134,7 +134,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
   });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -151,8 +151,9 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 },
-    visible: {
+    visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -176,10 +177,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -371,10 +374,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -405,6 +410,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -414,10 +420,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -486,10 +494,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -609,7 +619,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {;
         </div>
       </footer>
     </div>
-  )}
+  )};
 =======;
             </p>;
           </div>;

@@ -7,4 +7,5 @@ export default function NewProductsPage() {
     return (<DynamicListingPage title="New Products" description="Explore our latest products priced for today's market." categorySlug="new-products" detailBasePath="/product" listings={listings} categoryFilters={CATEGORY_FILTERS} initialPrice = {
   { min: 0,
   max: 5000 
+
 }}/>)}

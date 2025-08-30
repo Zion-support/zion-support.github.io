@@ -51,7 +51,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
     { id: 'Brain-Computer Interfaces', name: 'BCI', icon: Eye, color: 'from-red-500 to-orange-600' },
     { id: 'Synthetic Biology', name: 'Synthetic Biology', icon: Dna, color: 'from-emerald-500 to-teal-600' },
     { id: 'Fusion Energy', name: 'Fusion Energy', icon: Zap, color: 'from-yellow-500 to-orange-600' },
-    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },
+    { id: 'Space Mining', name: 'Space Mining', icon: Rocket, color: 'from-indigo-500 to-purple-600' },;
     { id: 'Digital Twins', name: 'Digital Twins', icon: Eye, color: 'from-cyan-500 to-blue-600' },;
     { id: 'Metaverse Infrastructure', name: 'Metaverse', icon: Globe, color: 'from-pink-500 to-rose-600' },;
     { id: 'Autonomous Systems', name: 'Autonomous', icon: Car, color: 'from-gray-500 to-slate-600' },;
@@ -71,7 +71,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
       return () => clearInterval(interval)}
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
 =======;
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
@@ -112,10 +112,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -218,6 +220,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -227,10 +230,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   x: -100 
+
 
 
 
@@ -332,6 +337,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -341,10 +347,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -467,10 +475,12 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
+
 
 
 
@@ -483,8 +493,9 @@ const EmergingTechShowcase2025: React.FC = () => {;
 
 
 
-
 ;
+;
+
 }};
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto";
               onClick={(e) => e.stopPropagation()};
@@ -580,7 +591,7 @@ const EmergingTechShowcase2025: React.FC = () => {;
                       </motion.button>
                     </div>
                   </div>
-                )})()}
+                )})()};
 =======;
                       >;
                         Close;

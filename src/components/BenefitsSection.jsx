@@ -85,6 +85,7 @@ export function BenefitsSection() {
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -99,6 +100,7 @@ export function BenefitsSection() {
   const statsVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
 },
     visible: {
       scale: 1,
@@ -119,6 +121,7 @@ export function BenefitsSection() {
           backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
   backgroundSize: '60px 60px'
         
+
 }}/>
       </div>
       
@@ -130,6 +133,7 @@ export function BenefitsSection() {
           transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 }}
         />
         <motion.div 
@@ -138,6 +142,7 @@ export function BenefitsSection() {
           transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 }}
         />
         <motion.div 
@@ -145,10 +150,12 @@ export function BenefitsSection() {
           animate = {
   { scale[1, 1.2,
   1] 
+
 }} 
           transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}
         />
       </div>
@@ -159,10 +166,12 @@ export function BenefitsSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }} 
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.6 }}
@@ -210,6 +219,7 @@ export function BenefitsSection() {
               transition = {
   { type: "spring",
   stiffness: 300 
+
 }}
             >
               <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
@@ -241,14 +251,17 @@ export function BenefitsSection() {
                       initial = {
   { opacity: 0,
   height: 0 
+
 }} 
                       animate = {
   { opacity: 1,
   height: "auto" 
+
 }} 
                       exit = {
   { opacity: 0,
   height: 0 
+
 }} 
                       transition={{ duration: 0.3 }}
                     >
@@ -259,10 +272,12 @@ export function BenefitsSection() {
                           initial = {
   { opacity: 0,
   x: -10 
+
 }} 
                           animate = {
   { opacity: 1,
   x: 0 
+
 }} 
                           transition={{ delay: idx * 0.1 }}
                         >
@@ -289,15 +304,18 @@ export function BenefitsSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }} 
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }} 
           viewport={{ once: true }} 
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

@@ -86,9 +86,11 @@ export default function RequestQuote() {
           <motion.div initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">
               <Calculator className="w-10 h-10 text-white"/>
@@ -106,12 +108,15 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }} className="flex items-center justify-center space-x-3 text-white/80">
                 <Clock className="w-5 h-5 text-cyan-400"/>
                 <span>24-Hour Response</span>
@@ -119,12 +124,15 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }} className="flex items-center justify-center space-x-3 text-white/80">
                 <CheckCircle className="w-5 h-5 text-green-400"/>
                 <span>Free Consultation</span>
@@ -132,12 +140,15 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }} className="flex items-center justify-center space-x-3 text-white/80">
                 <Calculator className="w-5 h-5 text-purple-400"/>
                 <span>Detailed Estimate</span>
@@ -156,9 +167,11 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   x: -30 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                 <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>
                 
@@ -276,9 +289,11 @@ export default function RequestQuote() {
                   {submissionStatus === 'success' && (<motion.div initial = {
   { opacity: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>
                       <span className="text-green-400">
@@ -289,9 +304,11 @@ export default function RequestQuote() {
                   {submissionStatus === 'error' && (<motion.div initial = {
   { opacity: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>
                       <span className="text-red-400">
@@ -308,9 +325,11 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   x: 30 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
                 <div className="space-y-4">
@@ -333,12 +352,15 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   x: 30 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>
                 <div className="space-y-4">
@@ -377,12 +399,15 @@ export default function RequestQuote() {
               <motion.div initial = {
   { opacity: 0,
   x: 30 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>
                 <div className="space-y-4">

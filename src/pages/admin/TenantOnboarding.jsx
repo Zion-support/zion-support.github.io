@@ -33,8 +33,6 @@ export default function TenantOnboarding() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
-    const handleSwitchChange = (name, checked) => {
-        setFormData(prev => ({ ...prev, [name]: checked }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -46,6 +44,7 @@ export default function TenantOnboarding() {
   <<<<<<< HEAD
                 headline: "AI Hiring Assistant",
   subtitle: `Find the best talent for your ${formData.industry || "comp"
+
 }`,
 =======
   headline: "AI Hiring Assistant",
@@ -145,6 +144,7 @@ export default function TenantOnboarding() {
 
 
 
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry"/>
@@ -168,12 +168,14 @@ export default function TenantOnboarding() {
                       <Select name="comp_size" value={formData.comp_size} onValueChange = {
   (value) => handleSelectChange("comp_size",
   value)
+
 }>
 =======
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select name="company_size" value={formData.company_size} onValueChange = {
   (value) => handleSelectChange("company_size",
   value)
+
 
 
 
@@ -223,6 +225,7 @@ export default function TenantOnboarding() {
 
 
 
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme"/>
@@ -252,6 +255,7 @@ export default function TenantOnboarding() {
 
 
 
+
 }/>
                     </div>
                   </TabsContent>
@@ -264,11 +268,13 @@ export default function TenantOnboarding() {
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "comp"
+
 } className="rounded-r-none"/>
 =======
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "company"
+
 
 
 

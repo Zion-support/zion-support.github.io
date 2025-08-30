@@ -13,7 +13,6 @@ export default function ComprehensiveServicesPage() {
     const [selectedPricingTier, setSelectedPricingTier] = useState('all');
     const filteredServices = useMemo(() => {
         return COMPREHENSIVE_SERVICES.filter(service => {
-            const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
             const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === selectedPricingTier;
             return matchesSearch && matchesCategory && matchesPricing})}, [searchTerm, selectedCategory, selectedPricingTier]);
     return (<div className="min-h-screen bg-zion-blue-dark">

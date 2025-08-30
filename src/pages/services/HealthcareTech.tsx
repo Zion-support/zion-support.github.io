@@ -41,7 +41,7 @@ export default function HealthcareTech(...args: []):  {
       title: 'AI Diagnostics',
       description: 'Machine learning algorithms for accurate disease detection',
       color: 'from-purple-500 to-pink-500'
-    },
+    },;
     {;
       icon: Activity,;
       title: 'Predictive Analytics',;
@@ -68,7 +68,7 @@ export default function HealthcareTech(...args: []):  {
       description: 'Advanced analytics for population health and clinical insights',
       price: 'From $20,000',
       features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']
-    },
+    },;
     {;
       title: 'Medical Device Integration',;
       description: 'IoT integration for medical devices and wearables',;
@@ -77,7 +77,7 @@ export default function HealthcareTech(...args: []):  {
     };
   ];
 
-  const applications = [
+  const applications = [;
     { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;
@@ -106,10 +106,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -166,10 +168,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -200,6 +204,7 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -209,10 +214,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -244,10 +251,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -278,6 +287,7 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -287,10 +297,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -335,10 +347,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,6 +383,7 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -378,10 +393,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -413,10 +430,12 @@ export default function HealthcareTech(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -445,7 +464,7 @@ export default function HealthcareTech(...args: []):  {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
               >
-                View Case Studies
+                View Case Studies;
               </motion.button>;
             </div>;
           </motion.div>;

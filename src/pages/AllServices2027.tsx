@@ -33,7 +33,7 @@ const AllServices2027: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const categories = [
+  const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
     { id: 'AI Services', name: 'AI Services', icon: Brain, color: 'from-purple-500 to-pink-600' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },;
@@ -43,7 +43,7 @@ const AllServices2027: React.FC = () => {;
   ];
 
 <<<<<<< HEAD
-  const filteredServices = innovativeServices2027.filter(service => 
+  const filteredServices = innovativeServices2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
@@ -52,7 +52,7 @@ const AllServices2027: React.FC = () => {;
       return {
               count: innovativeServices2027.length,
       avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
       }};
     const services = innovativeServices2027.filter(s => s.category === categoryId);
           return {
@@ -83,7 +83,7 @@ const AllServices2027: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -100,8 +100,9 @@ const AllServices2027: React.FC = () => {;
 
 
 
+
 },
-    visible: {
+    visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -133,10 +134,12 @@ const AllServices2027: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -203,7 +206,7 @@ const AllServices2027: React.FC = () => {;
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category)  => {
+            {categories.map((category)  => {;
 =======;
               specific business challenges and drive innovation.;
             </p>;
@@ -243,7 +246,7 @@ const AllServices2027: React.FC = () => {;
                     </div>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                       <span>Avg. Rating:</span>;
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
@@ -396,7 +399,7 @@ const AllServices2027: React.FC = () => {;
             </a>
           </div>
         </div>
-      </section>
+      </section>;
     </>;
   )};
 
@@ -404,7 +407,7 @@ const AllServices2027: React.FC = () => {;
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string)  => {
     switch (category) {
-      case 'AI Services':
+      case 'AI Services':;
 =======;
             </a>;
           </div>;
@@ -507,7 +510,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             Contact
           </Link>
         </div>
-      </div>
+      </div>;
     </motion.div>;
   )};
 =======

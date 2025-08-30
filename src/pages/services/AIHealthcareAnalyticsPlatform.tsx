@@ -34,7 +34,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
       title: 'Real-time Monitoring',
       description: 'Continuous patient monitoring with instant alerts for critical changes',
       color: 'from-yellow-500 to-orange-500'
-    },
+    },;
     {;
       icon: Target,;
       title: 'Treatment Optimization',;
@@ -87,7 +87,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
         'Custom AI models',
         'Research analytics tools',
         'White-label solution',
-        'Dedicated support team',
+        'Dedicated support team',;
         '24/7 phone support',;
         'SLA guarantees';
       ],;
@@ -112,7 +112,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
       title: 'Specialty Clinics',
       description: 'Disease-specific analytics, treatment optimization, and patient outcome tracking',
       metrics['Optimize treatment plans by 50%', 'Reduce complications by 30%', 'Improve recovery times by 25%']
-    }
+    };
 =======;
     {;
       title: 'Specialty Clinics',;
@@ -142,7 +142,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
     {
       icon: DollarSign,
       title: '20% Cost Reduction',
-      description: 'Optimize resource allocation and reduce unnecessary procedures'
+      description: 'Optimize resource allocation and reduce unnecessary procedures';
     },;
     {;
       icon: Clock,;
@@ -171,10 +171,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -239,6 +241,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -248,10 +251,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -295,6 +300,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -304,10 +310,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -351,6 +359,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -360,10 +369,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -442,6 +453,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -451,10 +463,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -503,6 +517,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -512,10 +527,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -553,10 +570,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -582,6 +601,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -591,10 +611,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -619,6 +641,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -628,10 +651,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -662,10 +687,12 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -748,7 +775,7 @@ const AIHealthcareAnalyticsPlatform: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

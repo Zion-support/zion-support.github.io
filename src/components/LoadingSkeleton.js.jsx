@@ -8,20 +8,24 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
         lg: 'rounded-lg',
   full: 'rounded-full'
     
+
 };
     return (<div className = {
   cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)
+
 } style = {
   {
             width: width,
             height: height,
-   
+  
+
 }}/>)}
 export function CardSkeleton({ className, showImage = true, showTitle = true, showDescription = true, showActions = true, lines = 2 }) {
     return (<div className = {
   cn('space-y-4',
   className)
+
 }>
       {showImage && (<Skeleton className="w-full h-48 rounded-lg"/>)}
       
@@ -32,6 +36,7 @@ export function CardSkeleton({ className, showImage = true, showTitle = true, sh
             {Array.from({ length: lines }).map((_, i) => (<Skeleton key={i} className = {
   cn("h-4",
   i === lines - 1 ? "w-2/3" : "w-full")
+
 }/>))}
           </div>)}
         
@@ -45,6 +50,7 @@ export function ListSkeleton({ className, items = 3, showAvatar = true, showTitl
     return (<div className = {
   cn('space-y-4',
   className)
+
 }>
       {Array.from({ length: items }).map((_, i) => (<div key={i} className="flex gap-4 items-start">
           {showAvatar && (<Skeleton className="w-12 h-12 rounded-full flex-shrink-0"/>)}
@@ -65,6 +71,7 @@ export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = t
     return (<div className = {
   cn('space-y-3',
   className)
+
 }>
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">
           {Array.from({ length: columns }).map((_, i) => (<Skeleton key={i} className="h-5 flex-1"/>))}
@@ -75,6 +82,7 @@ export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = t
             {Array.from({ length: columns }).map((_, colIndex) => (<Skeleton key={colIndex} className = {
   cn("h-4",
   colIndex === 0 ? "w-1/3" : "flex-1")
+
 }/>))}
           </div>))}
       </div>
@@ -83,6 +91,7 @@ export function GridSkeleton({ className, items = 6, columns = 3, gap = 4, showI
     return (<div className = {
   cn('grid gap-4',
   className)
+
 } style={{
             gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
             gap: `${gap * 0.25}rem`
@@ -93,6 +102,7 @@ export function HeroSkeleton({ className, showImage = true, showTitle = true, sh
     return (<div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
+
 }>
       {showImage && (<div className="lg:w-1/2">
           <Skeleton className="w-full h-96 rounded-2xl"/>
@@ -121,6 +131,7 @@ export function Shimmer({ className }) {
     return (<div className = {
   cn('relative overflow-hidden',
   className)
+
 }>
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"/>
     </div>)}

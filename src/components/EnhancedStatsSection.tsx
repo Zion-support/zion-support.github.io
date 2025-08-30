@@ -104,7 +104,7 @@ export default function EnhancedStatsSection(...args[]):  {
 <<<<<<< HEAD
         clearInterval(timer)}
       setCountedValues(prev = > ({
-        ...prev,
+        ...prev,;
         [target]: Math.floor(current);
       }))}, 16);
 =======
@@ -157,6 +157,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 
 
+
 }}
           animate={controls}
           variants = {
@@ -167,6 +168,7 @@ export default function EnhancedStatsSection(...args[]):  {
   transition: {
                 duration: 0.6
               
+
 
 
 
@@ -198,6 +200,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 
 
+
 }}
               animate={controls}
               variants = {
@@ -209,6 +212,7 @@ export default function EnhancedStatsSection(...args[]):  {
                     duration: 0.6,
   delay: index * 0.1
                   
+
 
 
 
@@ -233,6 +237,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 
 
+
 }}
                 transition={{ duration: 0.3 }}
               >
@@ -252,6 +257,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 
 
+
 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -266,6 +272,7 @@ export default function EnhancedStatsSection(...args[]):  {
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -310,6 +317,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
 
 
+
 }}
           animate={controls}
           variants = {
@@ -321,6 +329,7 @@ export default function EnhancedStatsSection(...args[]):  {
                 duration: 0.6,
   delay: 0.6
               
+
 
 
 
@@ -366,7 +375,7 @@ export default function EnhancedStatsSection(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </div>;
           </div>;

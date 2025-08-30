@@ -59,6 +59,7 @@ const AdvancedInnovativeServicesShowcase2025 = () => {
             'AI & Analytics': '📊',
   'AI & Customer Experience': '💬'
         
+
 };
         return icons[category] || '🚀'};
     const getServiceTypeColor = (type) => {

@@ -161,6 +161,7 @@ export function WebhooksManager() {
                       <Switch aria-label="Toggle webhook" checked={webhook.is_active} onCheckedChange = {
   () => handleToggleStatus(webhook.id,
   webhook.is_active)
+
 }/>
                       <span className="ml-2 text-sm">
                         {webhook.is_active ? "Active" : "Inactive"}

@@ -106,7 +106,7 @@ export const serviceCategories2027 = [
   'Autonomous AI',
   'Quantum Computing',
   'Quantum Finance',
-  'Space Technology',
+  'Space Technology',;
   'Quantum Space',;
   'Biotechnology',;
   'Quantum Medicine',;
@@ -116,7 +116,7 @@ export const serviceCategories2027 = [
 ];
 <<<<<<< HEAD
 export const getServicesByCategory = (category: string): InnovativeService2027[]  => {
-  if (category === 'All') {
+  if (category === 'All') {;
     return innovativeServices2027};
   return innovativeServices2027.filter(service => service.category === category)};
 =======

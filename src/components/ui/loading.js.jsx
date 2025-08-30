@@ -7,24 +7,12 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
         lg: 'w-8 h-8',
   xl: 'w-12 h-12'
     
+
 };
-    const renderDots = () => (<div className="flex space-x-1">
-      <div className = {
-  cn('bg-current rounded-full animate-bounce',
-  sizeClasses[size])
-} style={{ animationDelay: '0ms' }}/>
-      <div className = {
-  cn('bg-current rounded-full animate-bounce',
-  sizeClasses[size])
-} style={{ animationDelay: '150ms' }}/>
-      <div className = {
-  cn('bg-current rounded-full animate-bounce',
-  sizeClasses[size])
-} style={{ animationDelay: '300ms' }}/>
-    </div>);
     const renderSkeleton = () => (<div className = {
   cn('bg-current rounded animate-pulse',
   sizeClasses[size])
+
 }/>);
     const renderContent = () => {
         switch (variant) {
@@ -40,6 +28,7 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
     return (<div className = {
   cn('flex flex-col items-center justify-center gap-3',
   className)
+
 }>
       {renderContent()}
       {text && (<p className="text-sm text-zion-slate-light animate-pulse">{text}</p>)}
@@ -49,6 +38,7 @@ export function Skeleton({ className, ...props }) {
     return (<div className = {
   cn('animate-pulse rounded-md bg-zion-slate-light/20',
   className)
+
 } {...props}/>)}
 // Page loading component
 export function PageLoading() {

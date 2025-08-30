@@ -74,7 +74,7 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
             The AI could not determine specific roles based on the provided brief. You might want to refine your project goals or scope.
           </AlertDescription>
         </Alert>
-      )}
+      )};
     </div>;
   )};
 
@@ -85,6 +85,6 @@ const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: 
       {icon}
       <h4 className="ml-1.5 font-medium">{title}</h4>
     </div>
-    <p className="font-semibold text-primary text-base pl-1">{value}</p>
+    <p className="font-semibold text-primary text-base pl-1">{value}</p>;
   </Card>;
 );

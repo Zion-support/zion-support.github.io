@@ -32,7 +32,7 @@ const QuantumAIPlatform = () => {
       description: "Comprehensive collection of quantum algorithms for optimization, machine learning, cryptography, and scientific computing.",
       benefits: ["Access to cutting-edge quantum algorithms", "Optimized for current quantum hardware", "Continuous algorithm updates"]
 =======
-      benefits: [
+      benefits: [;
         "Molecular modeling",;
         "Chemical reaction simulation",;
         "Material property prediction",;
@@ -89,7 +89,7 @@ const QuantumAIPlatform = () => {
         "Custom quantum hardware",
         "24/7 dedicated support",
         "White-label solutions",
-        "On-premise deployment",
+        "On-premise deployment",;
         "SLA guarantees",;
         "Quantum strategy consulting";
       ],;
@@ -135,7 +135,7 @@ const QuantumAIPlatform = () => {
       name: "Scientific Research",
       description: "Physics simulations, climate modeling, and computational chemistry",
       icon: Globe,
-      examples: ["Physics simulations", "Climate modeling", "Computational chemistry", "Material science"]
+      examples: ["Physics simulations", "Climate modeling", "Computational chemistry", "Material science"];
     };
   ];
 
@@ -186,7 +186,7 @@ const QuantumAIPlatform = () => {
         "SLA guarantees",
         "On-site deployment"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -210,7 +210,7 @@ const QuantumAIPlatform = () => {
       role: "Lead Scientist",
       comp: "PharmaTech Solutions",
       content: "Quantum machine learning has revolutionized our drug discovery process. We're finding new compounds in weeks instead of months.",
-      rating: 5
+      rating: 5;
     };
   ];
 
@@ -219,7 +219,7 @@ const QuantumAIPlatform = () => {
     "Quantum parallelism",
     "Quantum entanglement benefits",
     "Quantum tunneling optimization",
-    "Quantum superposition computing",
+    "Quantum superposition computing",;
     "Quantum error correction";
   ];
 
@@ -232,7 +232,7 @@ const QuantumAIPlatform = () => {
         canonical="https://ziontechgroup.com/services/quantum-ai-platform"
 =======
       industry: "Energy & Utilities",
-      applications: [
+      applications: [;
         "Grid optimization",;
         "Energy trading",;
         "Resource allocation",;
@@ -259,7 +259,7 @@ const QuantumAIPlatform = () => {
       description: "Process multiple possibilities simultaneously using superposition",
       icon: CpuIcon,
       metric: "∞"
-    },
+    },;
     {;
       title: "Quantum Entanglement",;
       description: "Leverage quantum correlations for secure communication",;
@@ -296,10 +296,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -358,10 +360,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -392,6 +396,7 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -401,10 +406,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -487,10 +494,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -521,6 +530,7 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -530,10 +540,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -642,10 +654,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -676,6 +690,7 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -685,10 +700,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -765,10 +782,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -799,6 +818,7 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -808,10 +828,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -883,10 +905,12 @@ const QuantumAIPlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -916,7 +940,7 @@ const QuantumAIPlatform = () => {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
-                Contact Quantum Experts
+                Contact Quantum Experts;
               </motion.button>;
             </div>;
           </motion.div>;

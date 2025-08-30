@@ -15,6 +15,7 @@ export const PASSWORD_STRENGTH = {
 
 
 
+
 };
 
 /**
@@ -32,6 +33,7 @@ export const PASSWORD_COLORS = {
 
 
 
+
 };
 
 /**
@@ -43,6 +45,7 @@ export const PASSWORD_LABELS = {
   [PASSWORD_STRENGTH.MEDIUM]: 'Medium',
   [PASSWORD_STRENGTH.STRONG]: 'Strong',
   [PASSWORD_STRENGTH.VERY_STRONG]: 'Very Strong'
+
 
 
 

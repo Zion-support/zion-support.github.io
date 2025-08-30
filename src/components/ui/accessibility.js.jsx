@@ -60,6 +60,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   ...settings,
   [key]: value !== null ? value : !settings[key]
         
+
 };
         saveSettings(newSettings)}, [settings, saveSettings]);
     // Reset to defaults
@@ -72,6 +73,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             fontSize: 16,
   colorBlindMode: 'normal'
         
+
 };
         saveSettings(defaults)}, [saveSettings]);
     // Font size controls
@@ -107,15 +109,19 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             <motion.div className="absolute top-4 right-4 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl p-6 max-h-[calc(100vh-2rem)] overflow-y-auto" initial = {
   { opacity: 0, x: 300,
   scale: 0.95 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.95 
+
 }} transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
 }}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -176,6 +182,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <select value={settings.colorBlindMode} onChange = {
   (e) => toggleSetting('colorBlindMode',
   e.target.value)
+
 } className="ml-8 px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -254,6 +261,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   0);
             white-space: nowrap;
             border: 0
+
 }
 
           .high-contrast {
@@ -300,6 +308,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       <svg style = {
   { position: 'absolute', width: 0,
   height: 0 
+
 }}>
         <defs>
           <filter id="protanopia-filter">

@@ -136,7 +136,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       ],
       benefits['Environmental impact', 'Cost savings', 'Regulatory compliance'],
       color: 'from-zion-blue to-zion-green'
-    }
+    };
 =======;
         'Green data centers';
       ],;
@@ -168,10 +168,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -223,6 +225,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -232,10 +235,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -267,10 +272,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -301,6 +308,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -310,10 +318,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -385,10 +395,12 @@ const InnovativeServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -422,7 +434,7 @@ const InnovativeServices: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

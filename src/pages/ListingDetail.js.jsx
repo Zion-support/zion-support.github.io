@@ -59,6 +59,7 @@ export default function ListingDetail() {
                     {listing.images.map((image, index) => (<div key={index} onClick={() => setSelectedImageIndex(index)} className = {
   cn("w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
   index === selectedImageIndex ? "border-zion-purple" : "border-transparent")
+
 }>
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
                       </div>))}
@@ -126,6 +127,7 @@ export default function ListingDetail() {
                       {[...Array(5)].map((_, i) => (<Star key={i} className = {
   cn("h-5 w-5",
   i < Math.floor(listing.rating) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light")
+
 }/>))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
@@ -150,6 +152,7 @@ export default function ListingDetail() {
                     title: "Payment Processing",
   description: "Redirecting to secure checkout..."
                 
+
 })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}

@@ -74,7 +74,7 @@ const DigitalTransformation = () => {;
       icon: Shield,
       features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
       color: "from-yellow-500 to-orange-500"
-    }
+    };
 =======;
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
       icon: Shield,;
@@ -130,7 +130,7 @@ const DigitalTransformation = () => {;
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
       activities[
-        "Phased rollout execution",
+        "Phased rollout execution",;
         "Change management implementation",;
         "Performance monitoring",;
         "Continuous optimization",;
@@ -158,7 +158,7 @@ const DigitalTransformation = () => {;
       name: "Marcus Johnson",
       role: "CTO, DigitalFirst Inc",
       rating: 5
-    }
+    };
 =======;
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
       name: "Marcus Johnson",;
@@ -228,6 +228,7 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -237,10 +238,12 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -282,6 +285,7 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -291,10 +295,12 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -350,6 +356,7 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -359,10 +366,12 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -401,10 +410,12 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
   height: 'auto' 
+
 
 
 
@@ -455,6 +466,7 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -464,10 +476,12 @@ const DigitalTransformation = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -515,7 +529,7 @@ const DigitalTransformation = () => {;
             </button>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

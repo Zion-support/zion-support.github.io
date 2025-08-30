@@ -5,7 +5,7 @@ export default function AIFinancialRiskManagement() {
     'AI-powered credit risk assessment and scoring',
     'Real-time market risk monitoring and alerts',
     'Intelligent fraud detection and prevention',
-    'Advanced portfolio risk analysis and optimization',
+    'Advanced portfolio risk analysis and optimization',;
     'Predictive risk modeling and scenario analysis',;
     'Automated compliance monitoring and reporting',;
     'Multi-asset class risk management',;
@@ -14,7 +14,7 @@ export default function AIFinancialRiskManagement() {
     'Advanced stress testing and stress scenarios';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce credit losses by 40-60%',;
     'Improve risk-adjusted returns by 25%',;
     'Detect fraud with 99.5% accuracy',;
@@ -23,7 +23,7 @@ export default function AIFinancialRiskManagement() {
     'Automate 90% of risk assessment tasks';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Commercial banking and lending',;
     'Investment management and wealth advisory',;
     'Insurance risk assessment',;
@@ -41,7 +41,7 @@ export default function AIFinancialRiskManagement() {
     { 
       name: 'Risk Professional', 
       price: '$1,999/mo', 
-      details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise Risk', ;
@@ -147,7 +147,7 @@ export default function AIFinancialRiskManagement() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-zion-slate-light">;
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
           </div>;

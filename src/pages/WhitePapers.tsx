@@ -40,7 +40,7 @@ export default function WhitePapers() {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
 =======
-    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },
+    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },;
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
@@ -177,14 +177,14 @@ export default function WhitePapers() {
       fileSize: '3.3 MB',
       format: 'PDF',
       downloadUrl: '/white-papers/edge-computing-iot-enterprise-2023.pdf',
-      readMore: '/white-papers/edge-computing-iot-enterprise-2023'
+      readMore: '/white-papers/edge-computing-iot-enterprise-2023';
     };
   ];
 
   // Calculate category counts
   React.useEffect(()  => {
     const categoryCounts = categories.map(cat => ({
-      ...cat,
+      ...cat,;
       count: cat.id === 'all' ? whitePapers.length: whitePapers.filter(wp  => wp.category === cat.id).length;
     }))}, []);
 
@@ -199,7 +199,7 @@ export default function WhitePapers() {
       publishDate: '2025-01-08',
       readTime: '22 min',
       downloads: 8930,
-      rating: 4.5,
+      rating: 4.5,;
       featured: false,;
       tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
@@ -220,7 +220,7 @@ export default function WhitePapers() {
       description: 'Current threats and emerging security challenges',
       icon: <Shield className="w-6 h-6" />,
       link: '/insights/cybersecurity-2025'
-    },
+    },;
     {;
       title: 'Cloud Migration Success Stories',;
       description: 'Real-world examples of successful cloud transformations',;
@@ -253,7 +253,7 @@ export default function WhitePapers() {
   const stats = [
     { label: 'White Papers Published', value: '25+', icon: FileText },
     { label: 'Total Downloads', value: '50K+', icon: Download },
-    { label: 'Industry Recognition', value: '15+ Awards', icon: Award },
+    { label: 'Industry Recognition', value: '15+ Awards', icon: Award },;
     { label: 'Research Partners', value: '20+ Universities', icon: Users };
   ];
 
@@ -263,7 +263,7 @@ export default function WhitePapers() {
         title="White Papers - Zion Tech Group"
         description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
       />
-      
+      ;
 =======;
   const formatDate = (dateString: string) => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
@@ -292,10 +292,12 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
@@ -307,14 +309,17 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
@@ -324,14 +329,17 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
@@ -344,14 +352,17 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -420,14 +431,17 @@ export default function WhitePapers() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -514,10 +528,12 @@ export default function WhitePapers() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
@@ -540,10 +556,12 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -558,14 +576,17 @@ export default function WhitePapers() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -589,10 +610,12 @@ export default function WhitePapers() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
@@ -637,7 +660,7 @@ export default function WhitePapers() {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             />
-            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
               Subscribe;
             </button>;
           </div>;

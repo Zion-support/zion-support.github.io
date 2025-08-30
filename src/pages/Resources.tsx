@@ -44,7 +44,7 @@ const Resources: React.FC = (): JSX.Element => {;
     { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
     { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
     { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },
+    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;
     { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
   ];
 
@@ -201,12 +201,12 @@ const Resources: React.FC = (): JSX.Element => {;
       featured: false,
       fileSize: '2.8 MB',
       fileType: 'PDF',
-      downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf'
+      downloadUrl: 'https://ziontechgroup.com/resources/healthcare-ai-case.pdf';
     };
   ];
 
   const filteredResources = resources.filter(resource => {;
-    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          resource.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          resource.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch});
@@ -224,7 +224,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
   const getResourceIcon = (type: string)  => {
     switch (type) {
-      case 'White Paper':
+      case 'White Paper':;
       case 'Research Paper':;
         return FileText;
       case 'Case Study':
@@ -277,7 +277,7 @@ const Resources: React.FC = (): JSX.Element => {;
       href: '/training'
     },
     {
-      id: 'community',
+      id: 'community',;
       title: 'Community Forum',;
       icon: Users,;
       description: 'Connect with peers and experts',;
@@ -292,8 +292,10 @@ const Resources: React.FC = (): JSX.Element => {;
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 
 
 
@@ -316,10 +318,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -368,10 +372,12 @@ const Resources: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -380,7 +386,7 @@ const Resources: React.FC = (): JSX.Element => {;
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {featuredResources.map((resource, index)  => {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
@@ -389,14 +395,17 @@ const Resources: React.FC = (): JSX.Element => {;
                     initial = {
   { opacity: 0,
   y: 20 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                     className="group"
                   >
@@ -482,10 +491,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -505,7 +516,7 @@ const Resources: React.FC = (): JSX.Element => {;
           </motion.div>
 
 <<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
             {regularResources.map((resource, index)  => {;
               const ResourceIcon = getResourceIcon(resource.type);
               return (
@@ -514,14 +525,17 @@ const Resources: React.FC = (): JSX.Element => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="group"
                 >
@@ -554,6 +568,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -563,10 +578,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -658,10 +675,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -693,6 +712,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -702,10 +722,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -760,10 +782,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -795,6 +819,7 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -804,10 +829,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -854,10 +881,12 @@ const Resources: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -935,7 +964,7 @@ const Resources: React.FC = (): JSX.Element => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

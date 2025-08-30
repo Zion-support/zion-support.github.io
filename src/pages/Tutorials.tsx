@@ -21,7 +21,7 @@ const Tutorials = () => {
       description: "Complex topics for experienced users",
       color: "from-red-500 to-pink-500",
       count: "8"
-    },
+    },;
     {;
       title: "Expert",;
       description: "Cutting-edge research and techniques",;
@@ -64,7 +64,7 @@ const Tutorials = () => {
     {
       title: "AI Model Optimization",
       description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
-      category: "Expert",
+      category: "Expert",;
       duration: "75 min",;
       instructor: "Dr. Emily Watson",;
       rating: 4.6,;
@@ -99,7 +99,7 @@ const Tutorials = () => {
       students: "567"
     },
     {
-      title: "Machine Learning Model Deployment",
+      title: "Machine Learning Model Deployment",;
       category: "Advanced",;
       duration: "65 min",;
       instructor: "Michael Rodriguez",;
@@ -123,7 +123,7 @@ const Tutorials = () => {
       duration: "8 weeks",
       level: "Intermediate to Expert"
     },
-    {
+    {;
       title: "Quantum Computing Engineer",;
       description: "Learn quantum algorithms and applications",;
       courses: 5,;
@@ -318,7 +318,7 @@ const Tutorials = () => {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </button>;
           </div>;

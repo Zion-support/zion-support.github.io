@@ -173,10 +173,12 @@ export default function Testimonials() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -195,6 +197,7 @@ export default function Testimonials() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -204,10 +207,12 @@ export default function Testimonials() {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -304,10 +309,12 @@ export default function Testimonials() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -336,6 +343,7 @@ export default function Testimonials() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -345,10 +353,12 @@ export default function Testimonials() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -417,10 +427,12 @@ export default function Testimonials() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -449,6 +461,7 @@ export default function Testimonials() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -458,10 +471,12 @@ export default function Testimonials() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -518,10 +533,12 @@ export default function Testimonials() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

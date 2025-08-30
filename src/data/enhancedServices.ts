@@ -1144,7 +1144,7 @@ export const ENHANCED_SERVICES: ProductListing[] = [
       email: "kleber@ziontechgroup.com"
     },
     images["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2024-09-05T11:20:00.000Z",
+    createdAt: "2024-09-05T11:20:00.000Z",;
     rating: 4.7,;
     reviewCount: 78,;
     location: "Global",;
@@ -1236,7 +1236,7 @@ export const MORE_ENHANCED_SERVICES: ProductListing[] = [
     reviewCount: 28,
     link: "https://ziontechgroup.com/services/pdf-render-api"
   }
-=======
+=======;
     images: ["https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500"],;
     createdAt: "2025-02-01T08:00:00.000Z",;
     rating: 4.7,;
@@ -1260,7 +1260,7 @@ export const ENHANCED_SERVICE_CATEGORIES = [
   { label: 'Business Intelligence', value: 'business-intelligence' },
   { label: 'Development & DevOps', value: 'development-devops' },
   { label: 'Digital Transformation', value: 'digital-transformation' },
-  { label: 'Healthcare Technology', value: 'healthcare-tech' },
+  { label: 'Healthcare Technology', value: 'healthcare-tech' },;
   { label: 'Financial Technology', value: 'fintech' },;
   { label: 'Blockchain', value: 'blockchain' },;
   { label: 'Quantum Computing', value: 'quantum-computing' },;
@@ -1274,9 +1274,10 @@ export const SERVICE_PRICING_TIERS = {
   basic: { range: "$500 - $2,000",
   description: "Essential services for small businesses and startups" 
 
+;
+;
+;
 
-;
-;
 
 },;
   professional: { range: "$2,000 - $8,000", description: "Advanced solutions for growing companies and mid-market" },;
@@ -1293,8 +1294,10 @@ export const CONTACT_INFO = {
   ;
   ;
   ;
+  ;
   domain: "ziontechgroup.com";
 ;
+
 
 
 

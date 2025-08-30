@@ -60,6 +60,7 @@ export default function CategoryDetail() {
             description: "On-demand IT support, consulting, development, and more",
   icon: <Briefcase className="w-6 h-6"/>
         
+
 },
         'talents': {
             title: "Talents",

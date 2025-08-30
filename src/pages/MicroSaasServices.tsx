@@ -25,7 +25,7 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 						</p>
 					</div>
 				</div>
-			</div>
+			</div>;
 </>;
 	)};
 =======

@@ -11,7 +11,7 @@ interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
 export function FavoriteButton(...args[]):  {
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite = (e: React.MouseEvent)  => {
+  const handleToggleFavorite = (e: React.MouseEvent)  => {;
 =======;
 export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
   const [isFavorited, setIsFavorited] = useState(false);
@@ -46,7 +46,7 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
         }`} 
       />
     </button>
-  )}
+  )};
 =======;
         className={`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';

@@ -360,7 +360,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-    {
+    {;
       name: 'Contact',;
       href: '/contact',;
       icon: Phone,;
@@ -441,6 +441,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                           animate = {
   { opacity: 1, y: 0,
@@ -450,10 +451,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                           exit = {
   { opacity: 0, y: 10,
   scale: 0.95 
+
 
 
 
@@ -567,6 +570,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -576,10 +580,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -637,6 +643,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                                 animate = {
   { opacity: 1,
@@ -646,10 +653,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                                 exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -711,7 +720,7 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
       </nav>
 
       {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>
+      <div className="h-20"></div>;
     </>;
   )};
 =======

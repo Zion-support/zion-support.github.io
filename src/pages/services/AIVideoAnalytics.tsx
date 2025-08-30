@@ -3,7 +3,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
 export default function AIVideoAnalytics() {
   const features = [
     'Real-time video analysis with AI-powered object detection',
-    'Advanced facial recognition and person tracking',
+    'Advanced facial recognition and person tracking',;
     'Behavioral analysis and anomaly detection',;
     'Automated video summarization and highlights',;
     'Multi-camera synchronization and analytics',;
@@ -21,7 +21,7 @@ export default function AIVideoAnalytics() {
     { 
       name: 'Professional', 
       price: '$599/mo', 
-      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] 
+      details: ['Up to 50 cameras', 'Advanced AI analytics', '30-day storage', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIVideoAnalytics() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Retail analytics and customer behavior tracking',;
     'Security surveillance and threat detection',;
     'Manufacturing quality control and safety monitoring',;
@@ -39,7 +39,7 @@ export default function AIVideoAnalytics() {
     'Sports analytics and performance tracking';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce security incidents by 60-80%',;
     'Improve operational efficiency by 30-50%',;
     'Cut manual monitoring costs by 70-90%',;
@@ -48,7 +48,7 @@ export default function AIVideoAnalytics() {
     'Scale security operations without additional staff';
   ];
 
-  const industries = [
+  const industries = [;
     'Retail & Shopping Centers',;
     'Manufacturing & Industrial',;
     'Healthcare & Hospitals',;
@@ -163,7 +163,7 @@ export default function AIVideoAnalytics() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

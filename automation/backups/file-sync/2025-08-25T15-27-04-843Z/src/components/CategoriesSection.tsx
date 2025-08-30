@@ -27,7 +27,7 @@ const categories = [
     gradient: "from-zion-cyan-light to-zion-cyan",
   },
   {
-    title: "Digital Transformation",
+    title: "Digital Transformation",;
     description: "Business modernization and digital strategy",;
     icon: <TrendingUp className="w-10 h-10" />,;
     link: "/all-services",;
@@ -41,7 +41,7 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-    title: "Comprehensive Services",
+    title: "Comprehensive Services",;
     link: "/comprehensive-services";
   },;
   {;
@@ -53,7 +53,7 @@ interface CategoriesSectionProps {
   showTitle?: boolean}
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
+  visible: {;
     opacity: 1,;
     transition: {;
       staggerChildren: 0.1,;
@@ -69,9 +69,10 @@ const itemVariants = {
 
 
 
+
 },
   visible: {
-    y: 0,
+    y: 0,;
     opacity: 1,;
     transition: {;
       duration: 0.5,;
@@ -94,6 +95,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}></div>
       </div>
       
@@ -109,10 +111,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -157,10 +161,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -171,6 +177,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -208,10 +215,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -222,6 +231,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -240,7 +250,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />;
           </Link>;

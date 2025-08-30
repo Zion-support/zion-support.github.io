@@ -455,7 +455,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     },
     roi: "1200-2500%",
     estimatedDelivery: "48-60 weeks",
-    contactInfo: {
+    contactInfo: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;
       website: "https://ziontechgroup.com",;

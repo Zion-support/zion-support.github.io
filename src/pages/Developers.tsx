@@ -68,7 +68,7 @@ export default function Developers() {
       status: 'Beta'
     },
     {
-      name: 'AI Security API',
+      name: 'AI Security API',;
       description: 'Integrate AI-powered security and compliance features',;
       category: 'Security',;
       endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],;
@@ -103,7 +103,7 @@ export default function Developers() {
       documentation: '/docs/sdk/java'
     },
     {
-      name: 'Go',
+      name: 'Go',;
       description: 'Go SDK for high-performance applications',;
       version: 'v1.2.0',;
       downloads: '8K+',;
@@ -134,7 +134,7 @@ export default function Developers() {
       href: '/docs',
       category: 'Reference'
     },
-    {
+    {;
       name: 'Code Examples',;
       description: 'Ready-to-use code samples and tutorials',;
       icon: Terminal,;
@@ -165,7 +165,7 @@ export default function Developers() {
       action: 'Get Started',
       href: '/docs/quickstart'
     },
-    {
+    {;
       step: 4,;
       title: 'Make First Call',;
       description: 'Test your integration with our sample endpoints',;
@@ -486,7 +486,7 @@ export default function Developers() {
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
               >
                 Contact Support
-                <ArrowRight className="ml-2 w-4 h-4" />
+                <ArrowRight className="ml-2 w-4 h-4" />;
               </Link>;
             </div>;
           </div>;

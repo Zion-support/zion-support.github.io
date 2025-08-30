@@ -91,7 +91,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       color: 'text-yellow-400'
     },
     {
-      title: 'Avg Session',
+      title: 'Avg Session',;
       value: '2m 47s',;
       change: 0.0,;
       changeType: 'neutral',;
@@ -114,7 +114,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
-=======
+=======;
     setChartData(prev = > ({;
       ...prev,;
       datasets: [{;
@@ -125,7 +125,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     }));
 
     // Update metrics with new random values
-    setMetrics(prev = > prev.map(metric => ({
+    setMetrics(prev = > prev.map(metric => ({;
       ...metric,;
       change: Math.random() > 0.5 ? ;
         (Math.random() * 20 - 10) : ;
@@ -177,9 +177,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
         'rgba(245, 158, 11, 1)'
       ],;
   ;
+  ;
   borderWidth: 2;
     ;
 ;
+
 
 
 
@@ -203,9 +205,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       borderWidth: 3,
       fill: true,;
   ;
+  ;
   tension: 0.4;
     ;
 ;
+
 
 
 
@@ -266,7 +270,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       {/* Metrics Cards */}
       {showMetrics && (
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index)  => {
+          {metrics.map((metric, index)  => {;
 =======;
 ;
       {/* Metrics Cards */};
@@ -286,10 +290,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -313,7 +319,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
                 <p className="text-zinc-400 text-sm">{metric.title}</p>
               </motion.div>
-            )})}
+            )})};
 =======;
                 </div>;
                 ;
@@ -379,6 +385,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -388,10 +395,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -418,6 +427,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
 
 
+
 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
                               style={{ maxHeight: '200px' }}
@@ -428,7 +438,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div>;
                   )};
 ;
                   {activeChart === 'pie' && (;
@@ -458,7 +468,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                               strokeWidth="2"
                             />
                           )})}
-=======
+=======;
                               key = {index};
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`};
                               fill={pieChartData.datasets[0].backgroundColor[index]};
@@ -524,6 +534,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   lineChartData.datasets[0].data.map((value,
   index) => 
                             `${index * 85.7 + 42.85
+
 
 
 
@@ -597,7 +608,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             </p>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

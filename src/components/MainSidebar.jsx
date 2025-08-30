@@ -76,6 +76,7 @@ export function MainSidebar() {
 
 
 
+
 }>
                     {item.icon}
                     <span>{item.label}</span>

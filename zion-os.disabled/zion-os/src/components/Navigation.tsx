@@ -94,7 +94,7 @@ export function Navigation() {
                 Docs
               </a>
               <button className="w-full mt-4 btn-primary text-sm">
-                Get Started
+                Get Started;
               </button>;
             </div>;
           </div>;

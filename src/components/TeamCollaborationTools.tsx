@@ -158,7 +158,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showProjects = true,
   showCommunication = true,
   showFileSharing = true,
-  maxItems = 20
+  maxItems = 20;
 }) => {;
   const [activeTab, setActiveTab] = useState<any>('team');
   const [teamMembers, setTeamMembers] = useState<any>([]);
@@ -188,54 +188,6 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   // Sample data
   useEffect(() => {
 <<<<<<< HEAD
-    const sampleProjects: Project[] = [
-      {
-        id: '1',
-        name: 'AI Platform Development',
-        description: 'Building a comprehensive AI platform for enterprise clients with machine learning capabilities',
-        status: 'active',
-        priority: 'high',
-        progress: 65,
-        startDate: '2024-01-01',
-        endDate: '2024-06-30',
-        teamMembers['Sarah Johnson', 'Alex Wong'],
-        tasks[],
-        budget: 500000,
-        client: 'TechCorp Inc.',
-        tags['AI', 'Machine Learning', 'Platform']
-      },
-      {
-        id: '2',
-        name: 'Cloud Migration',
-        description: 'Migrating legacy systems to cloud infrastructure with zero downtime',
-        status: 'active',
-        priority: 'critical',
-        progress: 45,
-        startDate: '2024-02-01',
-        endDate: '2024-08-31',
-        teamMembers['Michael Chen', 'Alex Wong'],
-        tasks[],
-        budget: 750000,
-        client: 'Global Enterprises',
-        tags['Cloud', 'Migration', 'Infrastructure']
-      },
-      {
-        id: '3',
-        name: 'Security Audit',
-        description: 'Comprehensive security assessment and vulnerability remediation',
-        status: 'review',
-        priority: 'high',
-        progress: 90,
-        startDate: '2024-01-15',
-        endDate: '2024-03-15',
-        teamMembers['David Kim'],
-        tasks[],
-        budget: 150000,
-        client: 'SecureBank',
-        tags['Security', 'Audit', 'Compliance']
-      }
-    ];
-
     const sampleMessages: Message[] = [
       {
         id: '1',
@@ -439,10 +391,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -462,10 +416,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -487,10 +443,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -515,10 +473,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -543,10 +503,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -576,10 +538,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -686,10 +650,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -709,10 +675,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -734,10 +702,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -762,10 +732,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -790,10 +762,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -823,10 +797,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -882,6 +858,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                       transition = {
   { duration: 1,
   delay: index * 0.1 
+
 
 
 
@@ -952,10 +929,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -975,10 +954,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1000,10 +981,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1028,10 +1011,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1061,10 +1046,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1102,6 +1089,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
                           onClick = {
   () => handleMessageReaction(message.id,
   reaction.type)
+
 
 
 
@@ -1170,10 +1158,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1193,10 +1183,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1218,10 +1210,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1246,10 +1240,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1274,10 +1270,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1307,10 +1305,12 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1376,7 +1376,7 @@ export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
             </div>
           </div>
         </motion.div>
-      )}
+      )};
     </div>;
   )};
 =======

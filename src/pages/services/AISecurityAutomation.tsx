@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityAutomation() {
   const features = [
     'AI-powered security automation optimization',
-    'Intelligent workflow automation and orchestration',
+    'Intelligent workflow automation and orchestration',;
     'Automated security response and remediation',;
     'Predictive analytics for automation opportunities',;
     'Smart security process optimization',;
@@ -21,7 +21,7 @@ export default function AISecurityAutomation() {
     { 
       name: 'Business', 
       price: '$1,499/mo', 
-      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] 
+      details: ['Up to 200 workflows', 'Advanced AI features', 'Enhanced automation', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityAutomation() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security automation optimization',;
     'Workflow automation and orchestration',;
     'Security response and remediation',;
@@ -39,7 +39,7 @@ export default function AISecurityAutomation() {
     'Automation scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security automation performance by 50-80%',;
     'Reduce manual task time by 40-70%',;
     'Cut security operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityAutomation() {
     'Scale security automation operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityAutomation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

@@ -11,7 +11,7 @@ export default function ApiPlayground() {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
 
-  const categories = [
+  const categories = [;
     { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },;
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
@@ -203,7 +203,7 @@ export default function ApiPlayground() {
             status: "active",
             last_reading: 22.5
           }
-        ],
+        ],;
         total: 1;
       },;
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',;
@@ -664,7 +664,7 @@ export default function ApiPlayground() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </button>;
           </div>;

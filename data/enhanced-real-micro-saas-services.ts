@@ -61,7 +61,7 @@ export const getServicesByCategory = (category: string) => {;
 	return enhancedRealMicroSaasServices.filter((s) => s.category === category)};
 export const getPopularServices = () =>
 	enhancedRealMicroSaasServices
-		.filter((s) => !!s.popular)
+		.filter((s) => !!s.popular);
 =======;
 	return enhancedRealMicroSaasServices.filter((s) => s.category === category);
 };

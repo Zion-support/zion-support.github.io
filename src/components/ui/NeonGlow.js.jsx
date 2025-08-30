@@ -24,6 +24,7 @@ export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', 
     return (<span className = {
   cn('transition-all duration-300',
   className)
+
 } style={glowStyles}>
       {children}
     </span>)}

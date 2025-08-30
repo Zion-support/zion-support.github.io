@@ -66,7 +66,7 @@ const AISalesCopilot = () => {
     {
       icon: BarChart3,
       title: "Performance Insights",
-      description: "Real-time sales metrics and performance optimization recommendations."
+      description: "Real-time sales metrics and performance optimization recommendations.";
     },;
     {;
       icon: Zap,;
@@ -81,7 +81,7 @@ const AISalesCopilot = () => {
     { name: "HubSpot", description: "Seamless marketing and sales alignment" },
     { name: "Pipedrive", description: "Pipeline management and deal tracking" },
     { name: "Microsoft Dynamics", description: "Enterprise CRM integration" },
-    { name: "Zoho CRM", description: "Small business CRM solution" },
+    { name: "Zoho CRM", description: "Small business CRM solution" },;
     { name: "Slack", description: "Team communication and notifications" };
   ];
 
@@ -148,7 +148,7 @@ const AISalesCopilot = () => {
     {
       icon: Clock,
       title: "Time Optimization",
-      description: "Reduce manual work and focus on building relationships and closing deals."
+      description: "Reduce manual work and focus on building relationships and closing deals.";
     },;
     {;
       icon: Award,;
@@ -194,7 +194,7 @@ const AISalesCopilot = () => {
     {
       stage: "Closing",
       description: "AI-assisted deal closing with optimized pricing and negotiation",
-      icon: CheckCircle
+      icon: CheckCircle;
     },;
     {;
       stage: "Retention",;
@@ -227,7 +227,7 @@ const AISalesCopilot = () => {
     {
       industry: "Financial Services",
       description: "Investment and insurance sales with compliance support",
-      icon: DollarSign
+      icon: DollarSign;
     },;
     {;
       industry: "Healthcare",;
@@ -267,10 +267,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -370,10 +372,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -405,6 +409,7 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -414,10 +419,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -474,10 +481,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -509,6 +518,7 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -518,10 +528,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -595,10 +607,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -630,6 +644,7 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -639,10 +654,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -708,10 +725,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -743,6 +762,7 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -752,10 +772,12 @@ const AISalesCopilot = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -811,7 +833,7 @@ const AISalesCopilot = () => {
             <p>🌐 <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 
@@ -828,10 +850,12 @@ export default AISalesCopilot;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -855,7 +879,7 @@ export default AISalesCopilot;
               </button>
               <button className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

@@ -29,10 +29,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -69,10 +71,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -87,12 +91,14 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }}
               viewport={{ once: true }}
               whileHover = {
   { 
                 y: -5,
   transition: { duration: 0.3 
+
 
 
 
@@ -134,6 +140,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -143,10 +150,12 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.5,
   delay: itemIndex * 0.1 
+
 
 
 
@@ -170,6 +179,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
 
 
 
+
 }`}
                 className="relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:from-zion-blue hover:to-zion-purple transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-slate-dark"
                 aria-label={`Learn more about ${service.category} services`}
@@ -184,7 +194,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

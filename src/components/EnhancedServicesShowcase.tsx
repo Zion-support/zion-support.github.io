@@ -36,15 +36,18 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
     initial = {
   { opacity: 0,
   y: 20 
+
 }}
     whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
     viewport={{ once: true }}
     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
     className="group relative"
   >
@@ -56,6 +59,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
         borderColor: 'rgba(34, 221, 210,
   0.5)'
       
+
 }}
       transition={{ duration: 0.3 }}
     >
@@ -95,10 +99,12 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
             initial = {
   { opacity: 0,
   x: -20 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 }}
             transition={{ delay: featureIndex * 0.1 }}
           >
@@ -144,7 +150,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
         className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         initial={false}
       />
-    </motion.div>
+    </motion.div>;
   </motion.div>;
 );
 
@@ -237,7 +243,7 @@ export default function EnhancedServicesShowcase(...args[]):  {
 
   const filteredServices = services.filter(service => {;
     const matchesSearch = searchTerm === '' || 
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
@@ -256,10 +262,12 @@ export default function EnhancedServicesShowcase(...args[]):  {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
 export const EnhancedServicesShowcase: React.FC = () => {
@@ -329,7 +337,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       description: 'Automate sales processes and boost conversion rates with AI',
       price: 'From $1,500/month',
       path: '/services/ai-sales-copilot',
-      icon: Brain,
+      icon: Brain,;
       category: 'Sales AI',;
       features: ['Lead scoring', 'CRM automation', 'Sales analytics', 'Predictive insights'],;
       benefits: ['Reduce admin time by 40-60%', 'Improve conversion rates', 'Shorten sales cycles'],;
@@ -339,7 +347,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -356,8 +364,9 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 },
-    visible: {
+    visible: {;
       opacity: 1,;
       y: 0,;
       transition: {;
@@ -386,10 +395,12 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -415,15 +426,18 @@ export const EnhancedServicesShowcase: React.FC = () => {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
 =======
@@ -435,6 +449,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
           viewport = {
   { once: true,
   margin: "-100px" 
+
 
 
 
@@ -531,10 +546,12 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -545,6 +562,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -567,15 +585,18 @@ export const EnhancedServicesShowcase: React.FC = () => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
             >
 <<<<<<< HEAD
@@ -607,7 +628,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
           ) : (
             <div className="text-center py-16">
               <div className="text-zion-slate-light text-lg">No services found matching your criteria.</div>
-              <button
+              <button;
                 onClick={() => {;
                   setSelectedCategory('All');
                   setSearchTerm('')}}
@@ -625,14 +646,17 @@ export const EnhancedServicesShowcase: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
             className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
           >
@@ -672,7 +696,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
             >
               Call +1 302 464 0950
             </a>
-          </div>
+          </div>;
           <div className="mt-6 text-zion-slate-light">;
             Questions? Email <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:underline">kleber@ziontechgroup.com</a>;
           </div>;

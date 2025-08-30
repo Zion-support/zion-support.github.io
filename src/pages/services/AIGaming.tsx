@@ -3,7 +3,7 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIGaming() {
   const features = [
     'AI-powered player behavior analysis and personalization',
-    'Intelligent game difficulty adjustment and balancing',
+    'Intelligent game difficulty adjustment and balancing',;
     'Automated content generation and procedural creation',;
     'Predictive analytics for player engagement and retention',;
     'Real-time matchmaking and player pairing optimization',;
@@ -21,7 +21,7 @@ export default function AIGaming() {
     { 
       name: 'Mid-size Studio', 
       price: '$799/mo', 
-      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 100,000 players', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Studio', ;
@@ -30,7 +30,7 @@ export default function AIGaming() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Player engagement and retention optimization',;
     'Game difficulty and balance adjustment',;
     'Content generation and procedural creation',;
@@ -39,7 +39,7 @@ export default function AIGaming() {
     'Monetization and in-game economy optimization';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase player engagement by 35-55%',;
     'Improve player retention by 40-60%',;
     'Cut development costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AIGaming() {
     'Scale gaming operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Mobile Gaming',;
     'PC Gaming',;
     'Console Gaming',;
@@ -163,7 +163,7 @@ export default function AIGaming() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

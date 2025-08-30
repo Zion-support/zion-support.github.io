@@ -45,7 +45,7 @@ const Match: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categories = [
+  const categories = [;
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 32 },;
@@ -126,7 +126,7 @@ const Match: React.FC = () => {;
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
-      reviews: 112,
+      reviews: 112,;
       price: "$2,799/mo",;
       features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
       matchScore: 87,;
@@ -162,10 +162,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -265,10 +267,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -299,6 +303,7 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -308,10 +313,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -383,6 +390,7 @@ const Match: React.FC = () => {;
 
 
 
+
 }`}
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"
                   >
@@ -436,10 +444,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -489,6 +499,7 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -498,10 +509,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -534,10 +547,12 @@ const Match: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -566,7 +581,7 @@ const Match: React.FC = () => {;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
-                Browse All Services
+                Browse All Services;
               </Link>;
             </div>;
           </motion.div>;

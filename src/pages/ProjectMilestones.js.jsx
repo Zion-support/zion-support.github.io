@@ -14,3 +14,4 @@ function ProjectMilestones() {
 export default ProjectMilestones;
 
 export default ProjectMilestones;
+export default ProjectMilestones;

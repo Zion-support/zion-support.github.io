@@ -29,6 +29,7 @@ export const BundleAnalyzer = () => {
 
 
 
+
 },
                     {
                         name: 'animation-vendor',
@@ -149,9 +150,11 @@ export const BundleAnalyzer = () => {
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 
 
 
@@ -165,9 +168,11 @@ export const BundleAnalyzer = () => {
 
 
 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 
 
 

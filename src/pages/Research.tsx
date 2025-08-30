@@ -9,7 +9,7 @@ export default function Research() {
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },;
     { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },;
     { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },;
@@ -207,7 +207,7 @@ export default function Research() {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-        }
+        };
       ],;
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
       featured: true,;
@@ -281,13 +281,13 @@ export default function Research() {
 <<<<<<< HEAD
   const formatDate = (dateString: string)  => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
+      year: 'numeric',;
       month: 'short';
     })};
 
   const formatFunding = (amount: number)  => {
     if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {
+      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
       return `$${(amount / 1000).toFixed(0)}K`};
     return `$${amount.toLocaleString()}`};
 =======
@@ -629,7 +629,7 @@ export default function Research() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </button>;
           </div>;

@@ -51,7 +51,7 @@ export default function InterviewAssessmentAI() {
     {
       icon: Users,
       title: "Candidate Matching",
-      description: "AI-driven candidate-job fit analysis and recommendation engine."
+      description: "AI-driven candidate-job fit analysis and recommendation engine.";
     },;
     {;
       icon: Clock,;
@@ -84,7 +84,7 @@ export default function InterviewAssessmentAI() {
     {
       icon: Star,
       title: "Quality Hires",
-      description: "Improve hire quality and retention with better candidate-job matching."
+      description: "Improve hire quality and retention with better candidate-job matching.";
     },;
     {;
       icon: Award,;
@@ -117,7 +117,7 @@ export default function InterviewAssessmentAI() {
     {
       type: "Behavioral Analysis",
       description: "Assess past behavior patterns and situational responses",
-      icon: TrendingUp
+      icon: TrendingUp;
     },;
     {;
       type: "Cognitive Ability",;
@@ -150,7 +150,7 @@ export default function InterviewAssessmentAI() {
     {
       industry: "Education",
       description: "Teaching, administration, and educational leadership assessments",
-      icon: GraduationCap
+      icon: GraduationCap;
     },;
     {;
       industry: "Manufacturing",;
@@ -180,10 +180,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -232,10 +234,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -267,6 +271,7 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -276,10 +281,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -326,10 +333,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -361,6 +370,7 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -370,10 +380,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -420,10 +432,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -455,6 +469,7 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -464,10 +479,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -514,10 +531,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -549,6 +568,7 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -558,10 +578,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -608,10 +630,12 @@ export default function InterviewAssessmentAI() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -635,7 +659,7 @@ export default function InterviewAssessmentAI() {
               </button>
               <button className="border border-emerald-500 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

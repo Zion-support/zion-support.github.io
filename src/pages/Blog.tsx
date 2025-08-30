@@ -27,7 +27,7 @@ export default function Blog() {
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 6 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 5 },
     { id: 'innovation', name: 'Innovation', icon: Lightbulb, count: 3 },
-    { id: 'transformation', name: 'Digital Transformation', icon: Rocket, count: 2 }
+    { id: 'transformation', name: 'Digital Transformation', icon: Rocket, count: 2 };
 =======;
     { id: 'all', name: 'All Posts', count: 45 },;
     { id: 'ai', name: 'AI & Machine Learning', count: 18 },;
@@ -70,7 +70,7 @@ export default function Blog() {
       readTime: '10 min read',
 <<<<<<< HEAD
       image: '/images/blog/cloud-native-dev.jpg',
-      featured: true
+      featured: true;
     };
   ];
 
@@ -133,7 +133,7 @@ export default function Blog() {
       author: 'Jennifer Kim',
       date: 'November 25, 2024',
       readTime: '6 min read',
-      image: '/images/blog/ai-ethics.jpg'
+      image: '/images/blog/ai-ethics.jpg';
     };
   ];
 
@@ -144,7 +144,7 @@ export default function Blog() {
     ? [...featuredPosts, ...recentPosts].filter(post => 
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.author.toLowerCase().includes(searchQuery.toLowerCase())
+        post.author.toLowerCase().includes(searchQuery.toLowerCase());
       );
     : [];
 
@@ -168,10 +168,12 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
 =======
@@ -199,7 +201,7 @@ export default function Blog() {
       excerpt: 'Understanding how edge computing is transforming IoT deployments and improving performance.',
       category: 'cloud',
       author: 'Lisa Chen',
-      date: '2025-01-03',
+      date: '2025-01-03',;
       readTime: '9 min read',;
       views: 389,;
       featured: false,;
@@ -238,10 +240,12 @@ export default function Blog() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,14 +262,17 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Insights, trends, and expert perspectives on technology innovation
@@ -277,14 +284,17 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <div className="relative">
@@ -309,10 +319,12 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -347,10 +359,12 @@ export default function Blog() {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       {filteredPosts.filter(post => post.featured).length > 0 && (
@@ -365,10 +379,12 @@ export default function Blog() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -395,15 +411,18 @@ export default function Blog() {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="group"
                 >
@@ -425,10 +444,12 @@ export default function Blog() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -439,6 +460,7 @@ export default function Blog() {
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -499,10 +521,12 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       {/* All Posts Grid */}
@@ -517,10 +541,12 @@ export default function Blog() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,10 +574,12 @@ export default function Blog() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -574,15 +602,18 @@ export default function Blog() {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="group"
 =======
@@ -594,10 +625,12 @@ export default function Blog() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -608,6 +641,7 @@ export default function Blog() {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -670,10 +704,12 @@ export default function Blog() {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -712,10 +748,12 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       <section className="py-20 px-4">
@@ -729,10 +767,12 @@ export default function Blog() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -751,15 +791,18 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Let's discuss how our expertise can help you achieve your technology goals
@@ -769,15 +812,18 @@ export default function Blog() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -815,7 +861,7 @@ export default function Blog() {
               </button>
             </div>
             
-            <p className="text-sm text-slate-400 mt-4">
+            <p className="text-sm text-slate-400 mt-4">;
               No spam, unsubscribe at any time. We respect your privacy.;
             </p>;
           </motion.div>;

@@ -71,6 +71,7 @@ export const EnhancedContact = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -84,6 +85,7 @@ export const EnhancedContact = () => {
     const cardVariants = {
   hidden: { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -140,9 +142,11 @@ export const EnhancedContact = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 

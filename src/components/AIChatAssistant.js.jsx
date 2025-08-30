@@ -36,6 +36,7 @@ export function AIChatAssistant() {
             content: inputValue,
   timestamp: new Date()
         
+
 };
         setMessages(prev => [...prev, userMessage]);
         setInputValue('');
@@ -49,6 +50,7 @@ export function AIChatAssistant() {
                 content: randomResponse,
   timestamp: new Date()
             
+
 };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false)}, 1500 + Math.random() * 1000)};

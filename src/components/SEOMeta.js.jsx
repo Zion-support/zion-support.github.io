@@ -19,6 +19,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "postalCode": "19709",
   "addressCountry": "US"
         
+
 },
         "contactPoint": {
             "@type": "ContactPoint",

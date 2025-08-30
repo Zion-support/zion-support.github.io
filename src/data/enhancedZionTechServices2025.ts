@@ -774,7 +774,7 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       currency: "$",
       features: ["Autonomous research", "Data analysis", "Report generation", "Custom methodologies", "24/7 support"]
     },
-    link: "https://ziontechgroup.com/ai-research-assistant",
+    link: "https://ziontechgroup.com/ai-research-assistant",;
     contactInfo: {;
       phone: "+1 302 464 0950",;
       email: "kleber@ziontechgroup.com",;

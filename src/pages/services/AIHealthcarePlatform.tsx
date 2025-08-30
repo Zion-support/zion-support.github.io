@@ -58,7 +58,7 @@ const AIHealthcarePlatform = () => {
     {
       icon: <Pill className="w-8 h-8 text-orange-400" />,
       title: "Drug Discovery",
-      description: "AI-powered drug discovery and development for faster pharmaceutical breakthroughs"
+      description: "AI-powered drug discovery and development for faster pharmaceutical breakthroughs";
     },;
     {;
       icon: <Database className="w-8 h-8 text-cyan-400" />,;
@@ -77,7 +77,7 @@ const AIHealthcarePlatform = () => {
       description: "Faster diagnosis and treatment"
     },
     {
-      metric: "24/7",
+      metric: "24/7",;
       description: "Continuous health monitoring";
     },;
     {;
@@ -110,7 +110,7 @@ const AIHealthcarePlatform = () => {
     {
       title: "Mental Health",
       description: "AI-driven mental health assessment, therapy support, and wellness monitoring",
-      icon: <Brain className="w-6 h-6 text-purple-400" />
+      icon: <Brain className="w-6 h-6 text-purple-400" />;
     },;
     {;
       title: "Research & Development",;
@@ -143,7 +143,7 @@ const AIHealthcarePlatform = () => {
     {
       name: "SOC 2 Type II",
       status: "100%",
-      icon: <Eye className="w-5 h-5 text-cyan-400" />
+      icon: <Eye className="w-5 h-5 text-cyan-400" />;
     },;
     {;
       name: "HITECH Act",;
@@ -167,10 +167,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -193,6 +195,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -202,10 +205,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -225,6 +230,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -234,10 +240,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -259,6 +267,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -268,10 +277,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -304,10 +315,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -350,10 +363,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -409,10 +424,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -437,6 +454,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -446,10 +464,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -484,10 +504,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -512,6 +534,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -521,10 +544,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -557,10 +582,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -585,6 +612,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -594,10 +622,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -646,10 +676,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -674,6 +706,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -683,10 +716,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -720,10 +755,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -747,10 +784,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -799,6 +838,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -808,10 +848,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.1 
+
 
 
 
@@ -868,6 +910,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -877,10 +920,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -937,10 +982,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -962,6 +1009,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -971,10 +1019,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -996,10 +1046,12 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1014,6 +1066,7 @@ const AIHealthcarePlatform = () => {
 
 
 
+
 }}
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -1021,7 +1074,7 @@ const AIHealthcarePlatform = () => {
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg">
               Start Your Healthcare Journey
             </Link>
-            <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
+            <Link to="/pricing" className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">;
               View Pricing;
             </Link>;
           </motion.div>;

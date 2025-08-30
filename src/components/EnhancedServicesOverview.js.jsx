@@ -22,7 +22,8 @@ const ServiceCategory = ({ category, services }) => {
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,
             'Real Estate & Property': <Home className="w-6 h-6"/>,
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
-   
+  
+
 };
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>};
     const getCategoryColor = (categoryName) => {
@@ -38,7 +39,8 @@ const ServiceCategory = ({ category, services }) => {
             'Supply Chain & Logistics': 'from-teal-500 to-green-600',
             'Real Estate & Property': 'from-amber-500 to-yellow-600',
             'Legal & Compliance': 'from-slate-500 to-gray-600',
-   
+  
+
 };
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
     return (<div className="space-y-6">
@@ -111,6 +113,7 @@ const ServiceCategory = ({ category, services }) => {
                   <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 }>
                     Get Started
                   </Button>
@@ -249,12 +252,14 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
         <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com',
   '_blank')
+
 }>
           Contact Sales Team
         </Button>
         <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 }>
           Visit Our Website
         </Button>
@@ -281,6 +286,7 @@ export default function EnhancedServicesOverview() {
           <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 }>
             Get Started Today
           </Button>

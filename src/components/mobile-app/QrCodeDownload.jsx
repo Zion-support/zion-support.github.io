@@ -18,6 +18,7 @@ export const QrCodeDownload = () => {
 
 
 
+
 },
     android: {
       name: 'Google Play Store',

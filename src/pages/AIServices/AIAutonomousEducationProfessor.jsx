@@ -53,9 +53,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -103,9 +105,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -131,6 +135,7 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -139,9 +144,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -169,9 +176,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -195,6 +204,7 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -203,9 +213,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -230,9 +242,11 @@ export default function AIAutonomousEducationProfessor() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

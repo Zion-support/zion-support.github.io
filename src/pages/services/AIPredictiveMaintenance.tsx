@@ -5,7 +5,7 @@ export default function AIPredictiveMaintenance() {
     'AI-powered equipment health monitoring and analysis',
     'Real-time predictive maintenance scheduling',
     'Intelligent failure prediction and prevention',
-    'Advanced sensor data analysis and processing',
+    'Advanced sensor data analysis and processing',;
     'Automated maintenance workflow optimization',;
     'Real-time equipment performance tracking',;
     'Advanced anomaly detection and alerting',;
@@ -14,7 +14,7 @@ export default function AIPredictiveMaintenance() {
     'Comprehensive maintenance history and analytics';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce unplanned downtime by 70-90%',;
     'Lower maintenance costs by 25-40%',;
     'Extend equipment lifespan by 20-30%',;
@@ -23,7 +23,7 @@ export default function AIPredictiveMaintenance() {
     'Enable proactive maintenance planning';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Manufacturing and industrial equipment',;
     'HVAC and building management systems',;
     'Transportation and fleet management',;
@@ -41,7 +41,7 @@ export default function AIPredictiveMaintenance() {
     { 
       name: 'Maintenance Professional', 
       price: '$999/mo', 
-      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise Maintenance', ;
@@ -147,7 +147,7 @@ export default function AIPredictiveMaintenance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-zion-slate-light">;
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
           </div>;

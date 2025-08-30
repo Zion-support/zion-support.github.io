@@ -129,10 +129,12 @@ export default function EnhancedHeroSection(...args[]):  {
             opacity[0.3, 0.6,
   0.3]
           
+
 }}
           transition = {
   { duration: 4,
   repeat: Infinity 
+
 }}
         ></motion.div>
         <motion.div 
@@ -143,10 +145,12 @@ export default function EnhancedHeroSection(...args[]):  {
             opacity[0.6, 0.3,
   0.6]
           
+
 }}
           transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
 }}
         ></motion.div>
         <motion.div 
@@ -157,10 +161,12 @@ export default function EnhancedHeroSection(...args[]):  {
             scale[1, 1.1,
   1]
           
+
 }}
           transition = {
   { duration: 20,
   repeat: Infinity 
+
 }}
 =======
           animate = {
@@ -174,10 +180,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 4,
   repeat: Infinity 
+
 
 
 
@@ -198,10 +206,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
 
 
 
@@ -222,10 +232,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 20,
   repeat: Infinity 
+
 
 
 
@@ -249,7 +261,8 @@ export default function EnhancedHeroSection(...args[]):  {
   {
               y[0, -20, 0],
               opacity[0.4, 1, 0.4],
-   
+  
+
 }}
             transition = {
   {
@@ -287,10 +300,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -311,6 +326,7 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -320,10 +336,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -371,10 +389,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -422,6 +442,7 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -431,10 +452,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -459,10 +482,12 @@ export default function EnhancedHeroSection(...args[]):  {
                       animate = {
   { rotate[0,
   360] 
+
 }}
                       transition = {
   { duration: 20,
   repeat: Infinity 
+
 }}
 =======
                       animate = {
@@ -473,10 +498,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
                       transition = {
   { duration: 20,
   repeat: Infinity 
+
 
 
 
@@ -506,10 +533,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -542,10 +571,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -617,10 +648,12 @@ export default function EnhancedHeroSection(...args[]):  {
           animate = {
   { y[0, 10,
   0] 
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}
           className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center cursor-pointer hover:border-zion-cyan transition-colors duration-300"
         >
@@ -628,10 +661,12 @@ export default function EnhancedHeroSection(...args[]):  {
             animate = {
   { y[0, 12,
   0] 
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
           />
@@ -649,10 +684,12 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -670,6 +707,7 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 2,
@@ -679,7 +717,8 @@ export default function EnhancedHeroSection(...args[]):  {
 
 
 
-}}
+
+}};
             className="w-1 h-3 bg-zion-cyan rounded-full mt-2";
           />;
         </motion.div>;

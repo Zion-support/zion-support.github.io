@@ -10,5 +10,5 @@ export function useToast(...args[]):  {
     return toast(message, options)
   }
 
-  return { showToast }
+  return { showToast };
 };

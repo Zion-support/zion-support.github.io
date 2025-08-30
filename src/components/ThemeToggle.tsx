@@ -79,7 +79,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         aria-label="Switch to system theme"
       >
         <Monitor className="h-5 w-5" />
-      </button>
+      </button>;
 =======;
   const handleThemeChange = (newTheme: Theme) => {;
     setTheme(newTheme);
@@ -109,14 +109,16 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
 
+;
+;
+;
 
-;
-;
 
 }};
         transition={{ duration: 0.3 }};
@@ -148,9 +150,10 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   { type: "spring", bounce: 0.2,
   duration: 0.6 
 
+;
+;
+;
 
-;
-;
 
 }};
                 />;

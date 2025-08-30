@@ -37,7 +37,7 @@ export const SecurityComplianceSection: React.FC = (): JSX.Element => {
       icon: Server,
       title: 'Network Security',
       description: 'Advanced network protection with intrusion detection and prevention.',
-      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions']
+      benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
     };
   ];
 =======
@@ -77,7 +77,7 @@ const securityFeatures = [
     status: "Implemented",
     color: "from-indigo-500 to-purple-600"
   },
-  {
+  {;
     title: "End-to-End Encryption",;
     description: "256-bit AES encryption for all data in transit and at rest",;
     icon: "🔐",;
@@ -108,7 +108,7 @@ const complianceFeatures = [
   },
   {
     category: "Monitoring & Auditing",
-    features: [
+    features: [;
       "24/7 security monitoring",;
       "Comprehensive audit logs",;
       "Real-time alerts",;
@@ -131,10 +131,12 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -158,17 +160,20 @@ export function SecurityComplianceSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >
+        >;
           {securityMetrics.map((metric, index)  => {;
             const IconComponent = metric.icon;
             return (
@@ -191,10 +196,12 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -205,6 +212,7 @@ export function SecurityComplianceSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -233,7 +241,7 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {/* Security Features Grid */}
-        <div className="grid md: grid-cols-2 gap-8 mb-16">
+        <div className="grid md: grid-cols-2 gap-8 mb-16">;
           {securityFeatures.map((feature, index)  => {;
             const IconComponent = feature.icon;
             return (
@@ -242,14 +250,17 @@ export function SecurityComplianceSection() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300"
               >
@@ -277,10 +288,12 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -291,6 +304,7 @@ export function SecurityComplianceSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -325,21 +339,24 @@ export function SecurityComplianceSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
           className="mb-16"
         >
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;
             {complianceFrameworks.map((framework, index)  => {;
               const IconComponent = framework.icon;
               return (
@@ -365,10 +382,12 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -384,13 +403,14 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
               Security Performance Metrics
             </h3>
-            
+            ;
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">;
               <div className="text-center">;
                 <div className="text-4xl font-bold text-blue-400 mb-2">99.99%</div>;
@@ -423,10 +443,12 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -442,6 +464,7 @@ export function SecurityComplianceSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -450,7 +473,7 @@ export function SecurityComplianceSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -465,4 +488,5 @@ export default SecurityComplianceSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default SecurityComplianceSection;
 export default SecurityComplianceSection;

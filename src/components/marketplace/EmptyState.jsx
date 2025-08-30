@@ -103,21 +103,25 @@ export function CategoriesEmptyState({ onRetry }) {
     return (<EmptyState type="categories" action = {
   onRetry ? { label: 'Refresh Categories',
   onClick: onRetry 
+
 } : null}/>)}
 export function TalentEmptyState({ onRetry }) {
     return (<EmptyState type="talent" action = {
   onRetry ? { label: 'Reset Filters',
   onClick: onRetry 
+
 } : null}/>)}
 export function EquipmentEmptyState({ onRetry }) {
     return (<EmptyState type="equipment" action = {
   onRetry ? { label: 'Refresh Listings',
   onClick: onRetry 
+
 } : null}/>)}
 export function ServerErrorState({ onRetry }) {
     return (<EmptyState type="error" action = {
   onRetry ? { label: 'Retry',
   onClick: onRetry 
+
 } : null}/>)}
 =======
     return (<EmptyState type="categories" action = {
@@ -128,6 +132,7 @@ export function ServerErrorState({ onRetry }) {
 
 
 
+
 } : null}/>);
 }
 export function TalentEmptyState({ onRetry }) {
@@ -139,12 +144,14 @@ export function TalentEmptyState({ onRetry }) {
 
 
 
+
 } : null}/>);
 }
 export function EquipmentEmptyState({ onRetry }) {
     return (<EmptyState type="equipment" action = {
   onRetry ? { label: 'Refresh Listings',
   onClick: onRetry 
+
 
 
 
@@ -161,6 +168,7 @@ export function SearchEmptyState({ onRetry }) {
 
 
 
+
 } : null}/>);
 }
 export function NetworkErrorState({ onRetry }) {
@@ -172,12 +180,14 @@ export function NetworkErrorState({ onRetry }) {
 
 
 
+
 } : null}/>);
 }
 export function ServerErrorState({ onRetry }) {
     return (<EmptyState type="error" action = {
   onRetry ? { label: 'Retry',
   onClick: onRetry 
+
 
 
 

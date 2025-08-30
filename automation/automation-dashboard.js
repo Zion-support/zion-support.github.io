@@ -70,6 +70,7 @@ class AutomationDashboard {
   <<<<<<< HEAD
         uptime: system.uptime
       
+
 };
       this.metrics.set(name, metrics)}
 =======
@@ -291,6 +292,7 @@ class AutomationDashboard {
         totalAlerts: this.alerts.length,
   averageSuccessRate: this.calculateAverageSuccessRate()
       
+
 
 
 

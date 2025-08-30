@@ -36,7 +36,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
     {
       icon: <Globe className="h-6 w-6 text-teal-500" />,
       title: "Multi-platform Access",
-      description: "Access your dashboards from where with responsive web and mobile interfaces"
+      description: "Access your dashboards from where with responsive web and mobile interfaces";
     };
   ];
 
@@ -89,7 +89,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
         "On-premise options",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -108,7 +108,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
     },
     {
       metric: "3x",
-      description: "Increase in team productivity and collaboration"
+      description: "Increase in team productivity and collaboration";
     };
   ];
 
@@ -272,7 +272,7 @@ const AIBusinessIntelligenceDashboard: React.FC = (): JSX.Element => {
             </p>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 

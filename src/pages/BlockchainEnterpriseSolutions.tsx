@@ -363,7 +363,7 @@ const blockchainSolutions = [
     timeline: "18-30 weeks",
     category: "Integration",
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]
-  }
+  };
 =======;
     price: "From $200,000",;
     timeline: "18-30 weeks",;
@@ -395,7 +395,7 @@ const blockchainTechnologies = [
     useCase: "Network Security",
     reliability: "High"
   },
-  {
+  {;
     name: "Cryptography",;
     description: "Advanced cryptographic security solutions",;
     icon: Lock,;
@@ -425,7 +425,7 @@ const successStories = [
   },
   {
     id: 3,
-    comp: "Healthcare Identity Solutions",
+    comp: "Healthcare Identity Solutions",;
     industry: "Healthcare",;
     challenge: "Needed secure patient identity management system",;
     solution: "Built blockchain-based identity management platform",;
@@ -456,7 +456,7 @@ const processSteps = [
     icon: Wrench,
     duration: "16-48 weeks"
   },
-  {
+  {;
     step: 4,;
     title: "Testing & Deployment",;
     description: "Test blockchain systems and deploy to production",;
@@ -490,7 +490,7 @@ const blockchainBenefits = [
     description: "Blockchain eliminates intermediaries and reduces operational costs",
     icon: TrendingUp,
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-  }
+  };
 =======;
     title: "Cost Reduction",;
     description: "Blockchain eliminates intermediaries and reduces operational costs",;
@@ -535,10 +535,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +559,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -566,10 +569,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -621,10 +626,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -652,6 +659,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -661,10 +669,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -707,10 +717,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -738,6 +750,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -747,10 +760,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -794,10 +809,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -825,6 +842,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -834,10 +852,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -878,10 +898,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -926,6 +948,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -935,10 +958,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1007,10 +1032,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1038,6 +1065,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -1047,10 +1075,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1108,10 +1138,12 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1146,7 +1178,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

@@ -3,7 +3,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
 export default function AIHRTalentPlatform() {
   const features = [
     'AI-powered candidate screening and matching',
-    'Automated resume parsing and skill assessment',
+    'Automated resume parsing and skill assessment',;
     'Intelligent interview scheduling and feedback',;
     'Employee performance analytics and insights',;
     'Predictive turnover analysis and retention strategies',;
@@ -12,7 +12,7 @@ export default function AIHRTalentPlatform() {
     'Compliance monitoring and reporting';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce time-to-hire by 60%',;
     'Improve candidate quality by 40%',;
     'Reduce hiring costs by 30%',;
@@ -33,7 +33,7 @@ export default function AIHRTalentPlatform() {
       price: '$399/mo', 
       features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$999/mo', ;
@@ -42,7 +42,7 @@ export default function AIHRTalentPlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Recruitment and talent acquisition',;
     'Employee performance management',;
     'Learning and development',;
@@ -53,7 +53,7 @@ export default function AIHRTalentPlatform() {
 
   const platformModules = [
     'Talent Acquisition',
-    'Performance Management',
+    'Performance Management',;
     'Learning & Development',;
     'Workforce Analytics',;
     'Employee Engagement',;
@@ -311,7 +311,7 @@ export default function AIHRTalentPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

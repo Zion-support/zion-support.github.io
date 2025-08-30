@@ -201,9 +201,11 @@ const AdvancedServiceRecommendation = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className="text-center mb-8">
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
           AI-Powered Service Recommendation Engine
@@ -218,9 +220,11 @@ const AdvancedServiceRecommendation = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">
           <Brain className="w-6 h-6 text-zion-cyan"/>
@@ -233,6 +237,7 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.industry} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   industry: e.target.value 
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Industry</option>
               {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>))}
@@ -244,6 +249,7 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.compSize} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   compSize: e.target.value 
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Comp Size</option>
               {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
@@ -255,6 +261,7 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.budget} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   budget: e.target.value 
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Budget Range</option>
               {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>))}
@@ -266,6 +273,7 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.timeline} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   timeline: e.target.value 
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Timeline</option>
               {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>))}
@@ -277,6 +285,7 @@ const AdvancedServiceRecommendation = () => {
             <select value={clientProfile.technologyMaturity} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
   technologyMaturity: e.target.value 
+
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Technology Maturity</option>
               {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>))}
@@ -293,6 +302,7 @@ const AdvancedServiceRecommendation = () => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
   goal] 
+
 }))}
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
@@ -311,6 +321,7 @@ const AdvancedServiceRecommendation = () => {
                 if (e.target.checked) {
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
   challenge] 
+
 }))}
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
@@ -337,9 +348,11 @@ const AdvancedServiceRecommendation = () => {
       {showResults && (<motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.2 }}>
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations
@@ -349,9 +362,11 @@ const AdvancedServiceRecommendation = () => {
             {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {
   { opacity: 0,
   x: -20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: 0.1 * index }}>
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -429,6 +444,7 @@ const AdvancedServiceRecommendation = () => {
                           <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark" onClick = {
   () => window.open(rec.service.link,
   '_blank')
+
 }>
                             Learn More
                             <ArrowRight className="w-4 h-4 ml-2"/>
@@ -445,9 +461,11 @@ const AdvancedServiceRecommendation = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
               <h3 className="text-3xl font-bold mb-4">Ready to Get Started?</h3>
@@ -459,6 +477,7 @@ const AdvancedServiceRecommendation = () => {
                 <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',
   '_blank')
+
 }>
                   <Users className="w-5 h-5 mr-2"/>
                   Get Expert Consultation
@@ -466,6 +485,7 @@ const AdvancedServiceRecommendation = () => {
                 <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 }>
                   <Zap className="w-5 h-5 mr-2"/>
                   Call Now

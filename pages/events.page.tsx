@@ -143,7 +143,7 @@ const events = [
     attendees: 400,
     price: "$249",
     highlights[
-      "Transformation roadmaps",
+      "Transformation roadmaps",;
       "Change management strategies",;
       "Technology selection",;
       "Success metrics";
@@ -220,10 +220,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -325,10 +327,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -345,7 +349,7 @@ export default function Events(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {
+              {upcomingEvents.map((event, index)  => {;
 =======;
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
@@ -365,6 +369,7 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -374,10 +379,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -471,7 +478,7 @@ export default function Events(...args[]):  {
                       </div>
                     </div>
                   </motion.div>
-                )})}
+                )})};
 =======;
                         <div className="text-sm text-zion-slate-light">Contact us for details</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
@@ -499,10 +506,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -519,7 +528,7 @@ export default function Events(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {
+              {pastEvents.map((event, index)  => {;
 =======;
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
@@ -539,6 +548,7 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -548,10 +558,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -608,7 +620,7 @@ export default function Events(...args[]):  {
                       </div>
                     </div>
                   </motion.div>
-                )})}
+                )})};
 =======;
                         <div className="text-sm text-zion-slate-light">Contact us for future events</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
@@ -635,10 +647,12 @@ export default function Events(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -676,7 +690,7 @@ export default function Events(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

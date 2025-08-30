@@ -209,7 +209,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Sustainable Technology'),
       marketSize: '$1.2 trillion by 2027',
       avgROI: '300-800%',
-      innovationLevel: 'Advanced'
+      innovationLevel: 'Advanced';
     };
   ];
 
@@ -259,10 +259,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -371,10 +373,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -389,10 +393,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -490,6 +496,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -499,10 +506,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -587,10 +596,12 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -632,7 +643,7 @@ export default function ComprehensiveServicesOverview2026(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

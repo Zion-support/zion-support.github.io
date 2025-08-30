@@ -48,7 +48,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       icon: Shield,
       title: 'Risk Assessment & Mitigation',
-      description: 'AI continuously monitors project risks and provides proactive recommendations'
+      description: 'AI continuously monitors project risks and provides proactive recommendations';
     },;
     {;
       icon: Zap,;
@@ -100,7 +100,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
         'Full AI suite',
         'Custom integrations',
         'Dedicated support manager',
-        'Advanced security features',
+        'Advanced security features',;
         'Custom AI model training',;
         'On-premise deployment options',;
         'SLA guarantees';
@@ -123,7 +123,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       icon: BarChart3,
       title: '40% Cost Reduction',
-      description: 'Eliminate waste through AI-driven efficiency improvements'
+      description: 'Eliminate waste through AI-driven efficiency improvements';
     },;
     {;
       icon: Users,;
@@ -146,7 +146,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
     {
       title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
-      icon: Building
+      icon: Building;
     },;
     {;
       title: 'Event Planning',;
@@ -174,10 +174,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -225,10 +227,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -259,6 +263,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -268,10 +273,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -304,10 +311,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -338,6 +347,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -347,10 +357,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -383,10 +395,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -417,6 +431,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -426,10 +441,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -462,10 +479,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -496,6 +515,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -505,10 +525,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -573,10 +595,12 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -610,7 +634,7 @@ export default function AIProjectManagementPlatform(...args: []):  {
         </div>
       </section>
     </div>
-=======
+=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;

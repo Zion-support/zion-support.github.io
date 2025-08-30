@@ -76,7 +76,7 @@ export default function Index(...args[]):  {
       title: "Mobile App",
       description: "Take Zion with you on the go with our mobile app for iOS and Android",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
-      link: "/mobile-launch"
+      link: "/mobile-launch";
     };
   ];
 
@@ -186,7 +186,7 @@ export default function Index(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </div>;

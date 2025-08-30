@@ -5,7 +5,7 @@ import { MessageCircle, Bot, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, 
 export default function AICustomerSupportAutomation() {
   const features = [
     '24/7 AI chatbot with human-like conversations',
-    'Multi-language support (50+ languages)',
+    'Multi-language support (50+ languages)',;
     'Intelligent ticket routing and prioritization',;
     'Sentiment analysis and emotion detection',;
     'Automated response generation with brand voice',;
@@ -37,7 +37,7 @@ export default function AICustomerSupportAutomation() {
       conversations: 'Up to 10,000 conversations/month',
       features: ['Advanced AI with sentiment analysis', 'Unlimited integrations', 'Priority support', 'Custom branding', 'Advanced analytics']
     },
-    {
+    {;
       name: 'Enterprise',;
       price: '$499',;
       period: '/mo',;
@@ -46,7 +46,7 @@ export default function AICustomerSupportAutomation() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'E-commerce businesses',;
     'SaaS companies',;
     'Financial services',;
@@ -328,7 +328,7 @@ export default function AICustomerSupportAutomation() {
                   className="text-slate-300 hover:text-green-400 inline-flex items-center"
                 >
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
-                </a>
+                </a>;
               </div>;
             </div>;
           </div>;

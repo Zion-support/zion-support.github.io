@@ -178,7 +178,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
         'Smart Factory Solutions'
       ],
       href: '/revolutionary-services-2030',
-      featured: false
+      featured: false;
     };
   };
 
@@ -188,7 +188,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
     const query = searchQuery.toLowerCase();
     return serviceCategories.filter(category = >
       category.title.toLowerCase().includes(query) ||
-      category.description.toLowerCase().includes(query) ||
+      category.description.toLowerCase().includes(query) ||;
       category.services.some(service => service.toLowerCase().includes(query));
     )}, [searchQuery]);
 =======
@@ -325,10 +325,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,6 +415,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -422,10 +425,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -482,14 +487,17 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.05 
+
 }}
                 className="group bg-slate-800/40 backdrop-blur border border-slate-700/30 hover:border-cyan-400/30 transition-all duration-300 rounded-xl p-5 hover:shadow-lg hover:shadow-cyan-400/5"
               >
@@ -557,6 +565,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -566,10 +575,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -694,6 +705,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -703,10 +715,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -738,10 +752,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -796,7 +812,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

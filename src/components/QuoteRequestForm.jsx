@@ -183,6 +183,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
                 className={errors.firstName ? 'border-red-500' : ''}
                 placeholder="Enter your first name"
@@ -202,6 +203,7 @@ export const QuoteRequestForm = () => {
                 onChange = {
   (e) => handleChange('lastName',
   e.target.value)
+
 
 
 
@@ -234,6 +236,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
                 className={errors.email ? 'border-red-500' : ''}
                 placeholder="your.email@company.com"
@@ -258,6 +261,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
                 placeholder="+1 (555) 123-4567"
               />
@@ -276,6 +280,7 @@ export const QuoteRequestForm = () => {
               onChange = {
   (e) => handleChange('comp',
   e.target.value)
+
 }
               className={errors.comp ? 'border-red-500' : ''}
               placeholder="Your Comp Inc."
@@ -284,6 +289,7 @@ export const QuoteRequestForm = () => {
               onChange = {
   (e) => handleChange('company',
   e.target.value)
+
 
 
 
@@ -309,6 +315,7 @@ export const QuoteRequestForm = () => {
               onValueChange = {
   (value) => handleChange('serviceType',
   value)
+
 
 
 
@@ -347,6 +354,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
               className={errors.projectDescription ? 'border-red-500' : ''}
               placeholder="Please describe your project requirements, goals, and  specific needs..."
@@ -368,6 +376,7 @@ export const QuoteRequestForm = () => {
                 onValueChange = {
   (value) => handleChange('timeline',
   value)
+
 
 
 
@@ -397,6 +406,7 @@ export const QuoteRequestForm = () => {
                 onValueChange = {
   (value) => handleChange('budget',
   value)
+
 
 
 
@@ -434,6 +444,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
               >
                 <SelectTrigger>
@@ -458,6 +469,7 @@ export const QuoteRequestForm = () => {
                 onValueChange = {
   (value) => handleChange('contactMethod',
   value)
+
 
 
 
@@ -491,6 +503,7 @@ export const QuoteRequestForm = () => {
 
 
 
+
 }
                 className="mt-1"
               />
@@ -514,6 +527,7 @@ export const QuoteRequestForm = () => {
                 onCheckedChange = {
   (checked) => handleChange('agreeToMarketing',
   checked)
+
 
 
 

@@ -18,6 +18,7 @@ export default function GenericPage(...args[]):  {
 
 
 
+
 }}>
       <Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -29,6 +30,7 @@ export default function GenericPage(...args[]):  {
         <span style = {
   {margin:'0 8px',
   color:'#9ca3af'
+
 
 
 
@@ -47,6 +49,7 @@ export default function GenericPage(...args[]):  {
 
 
 
+
 }}>
         <h2 style={{marginBottom:8}}>How we can help</h2>
         <ul style={{paddingLeft:18}}>
@@ -58,7 +61,7 @@ export default function GenericPage(...args[]):  {
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
       </section>
     </main>
-  )}
+  )};
 =======;
           <li>Cloud, DevOps, data, and cybersecurity services</li>;
         </ul>;

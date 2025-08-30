@@ -72,6 +72,7 @@ const UltimateServicesShowcase2026 = () => {
             'IT Asset Management': '📱',
   'Performance Monitoring': '📊'
         
+
 };
         return icons[category] || '🚀'};
     const containerVariants = {
@@ -86,6 +87,7 @@ const UltimateServicesShowcase2026 = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -103,9 +105,11 @@ const UltimateServicesShowcase2026 = () => {
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -115,12 +119,15 @@ const UltimateServicesShowcase2026 = () => {
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}>
             Discover our comprehensive collection of 20+ cutting-edge innovative services, 
             from AI-powered business solutions to enterprise IT infrastructure. 
@@ -131,12 +138,15 @@ const UltimateServicesShowcase2026 = () => {
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}>
             <h3 className="text-2xl font-bold mb-4 text-cyan-400">Contact Zion Tech Group</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -208,9 +218,11 @@ const UltimateServicesShowcase2026 = () => {
             {filteredServices.map((service, index) => (<motion.div key={service.id} variants={itemVariants} className="group" whileHover = {
   { scale: 1.02,
   y: -5 
+
 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 }}>
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">
                   {/* Service Header */}
@@ -309,9 +321,11 @@ const UltimateServicesShowcase2026 = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Transform</span> Your Business?

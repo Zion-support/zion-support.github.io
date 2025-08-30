@@ -84,7 +84,7 @@ const ServicesCatalog: React.FC = () => {;
           <p className="text-slate-300">Mobile: <a className="underline" href="tel:+13024640950">+1 302 464 0950</a> • Email: <a className="underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
           <p className="text-slate-400 mt-1">364 E Main St STE 1008, Middletown DE 19709</p>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

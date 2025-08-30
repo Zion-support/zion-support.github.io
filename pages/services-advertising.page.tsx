@@ -11,8 +11,10 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
 
 
 
@@ -25,7 +27,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     'Transparent pricing with market references',
     'Fast onboarding with templates and playbooks',
     'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',
+    '24/7 support with SLAs',;
     'Proven architectures and reference implementations',;
     'No long-term lock-in; cancel time',
     'SOC 2-aligned processes and data handling',
@@ -35,7 +37,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' }
+    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
 =======;
     'Transparent pricing with market references',;
     'Fast onboarding with templates and playbooks',;
@@ -53,7 +55,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
-  const anchors = [
+  const anchors = [;
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },;
     { title: 'Security', href: '#ai-guardrails-safety' },;
     { title: 'Observability', href: '#status-page-slo-monitor' },;
@@ -141,7 +143,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     },
     {
       title: 'Observability & APM',
-      links[
+      links[;
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;
         { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' };
@@ -154,6 +156,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     privacy[
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
+
 },
 =======
   privacy: [
@@ -178,7 +181,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     seo[
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
-    ]
+    ];
 =======;
     ],;
     seo: [;
@@ -191,7 +194,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
     return (
 <<<<<<< HEAD
       <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    )}
+    )};
 =======;
       <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>;
     );
@@ -593,7 +596,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </section>;

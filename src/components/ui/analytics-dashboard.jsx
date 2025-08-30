@@ -55,9 +55,11 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -113,6 +115,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }%` }}/>
               </div>
             </div>)}
@@ -140,6 +143,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.activeUsers,
   12000)
+
 
 
 
@@ -177,6 +181,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }%` }}/>
               </div>
             </div>)}
@@ -209,6 +214,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }%` }}/>
               </div>
             </div>)}
@@ -225,6 +231,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -233,9 +240,11 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 

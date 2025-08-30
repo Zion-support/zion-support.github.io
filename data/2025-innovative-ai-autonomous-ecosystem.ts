@@ -307,7 +307,7 @@ export const innovative2025AIAutonomousEcosystem = [
     targetAudience: 'Healthcare providers, radiologists, medical imaging professionals, healthcare administrators',
     competitiveAdvantage: 'First autonomous healthcare diagnostics platform with AI-powered medical imaging analysis',
     contact: 'kleber@ziontechgroup.com',
-    mobile: '+1 302 464 0950',
+    mobile: '+1 302 464 0950',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup.com',;
     slug: '/ai-autonomous-healthcare-diagnostics-2025',;

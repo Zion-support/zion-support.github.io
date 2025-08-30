@@ -312,7 +312,7 @@ export const real2036ITServices = [
       'Predictive recovery planning',
       'Reduced recovery time'
     ],
-    useCases[
+    useCases[;
       'Data center recovery',;
       'Cloud recovery',;
       'Application recovery',;

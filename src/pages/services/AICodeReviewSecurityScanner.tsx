@@ -33,7 +33,7 @@ const AICodeReviewSecurityScanner = () => {
       title: 'Intelligent Risk Scoring',
       description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.',
       benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
-    },
+    },;
     {;
       icon: GitBranch,;
       title: 'Git Integration & Workflow',;
@@ -85,7 +85,7 @@ const AICodeReviewSecurityScanner = () => {
         'Custom AI models',
         'White-label solutions',
         '24/7 dedicated support',
-        'Advanced integrations',
+        'Advanced integrations',;
         'Custom workflows',;
         'On-premise deployment';
       ],;
@@ -112,7 +112,7 @@ const AICodeReviewSecurityScanner = () => {
       description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',
       icon: Eye,
       benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
-    },
+    },;
     {;
       title: 'Compliance & Auditing',;
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',;
@@ -139,7 +139,7 @@ const AICodeReviewSecurityScanner = () => {
       description: 'Secure authentication mechanisms and prevent unauthorized access.',
       icon: Lock,
       examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
-    },
+    },;
     {;
       title: 'Insecure Dependencies',;
       description: 'Identify and update vulnerable third-party libraries and dependencies.',;
@@ -162,10 +162,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -224,10 +226,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -258,6 +262,7 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -267,10 +272,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -317,10 +324,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -351,6 +360,7 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -360,10 +370,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -403,10 +415,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -437,6 +451,7 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -446,10 +461,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -517,10 +534,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -551,6 +570,7 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -560,10 +580,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -607,10 +629,12 @@ const AICodeReviewSecurityScanner = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -641,7 +665,7 @@ const AICodeReviewSecurityScanner = () => {
                 className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
               >
                 Contact Sales
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5" />;
               </motion.button>;
             </div>;
           </motion.div>;

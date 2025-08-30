@@ -47,7 +47,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
       url: '/services/ai-iot-edge-computing-platform',
       icon: '🌐',
       category: 'IoT & Edge Computing',
-      benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%', 'Real-time decision making']
+      benefits['Reduce latency by 90%', 'Lower bandwidth costs by 70%', 'Real-time decision making'];
     };
   ];
 
@@ -70,10 +70,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -109,10 +111,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -133,14 +137,17 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 group"
@@ -216,10 +223,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -271,14 +280,17 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -299,10 +311,12 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -346,7 +360,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

@@ -94,7 +94,7 @@ export function EnhancedHeader() {
     { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
     { name: 'Blog', href: '/blog', current: location.pathname === '/blog' },
     { name: 'Careers', href: '/careers', current: location.pathname === '/careers' },
-    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },
+    { name: 'Partners', href: '/partners', current: location.pathname === '/partners' },;
     { name: 'News', href: '/news', current: location.pathname === '/news' },;
     { name: 'Case Studies', href: '/case-studies', current: location.pathname === '/case-studies' },;
     { name: 'Help', href: '/help', current: location.pathname === '/help' },;
@@ -227,7 +227,7 @@ export function EnhancedHeader() {
     },
     { 
       name: 'Biotech AI Drug Discovery', 
-      href: '/services/biotech-ai-drug-discovery', 
+      href: '/services/biotech-ai-drug-discovery', ;
       icon: Heart, ;
       description: 'AI-powered drug discovery', ;
       category: 'Emerging Tech', ;
@@ -258,6 +258,7 @@ export function EnhancedHeader() {
 
 
 
+
 }}
       >
         <div className="container mx-auto px-4">
@@ -269,6 +270,7 @@ export function EnhancedHeader() {
                 whileHover = {
   { scale: 1.05,
   rotate: 5 
+
 
 
 
@@ -331,6 +333,7 @@ export function EnhancedHeader() {
 
 
 
+
 }}
                       animate = {
   { opacity: 1, y: 0,
@@ -340,10 +343,12 @@ export function EnhancedHeader() {
 
 
 
+
 }}
                       exit = {
   { opacity: 0, y: -20,
   scale: 0.95 
+
 
 
 
@@ -508,6 +513,7 @@ export function EnhancedHeader() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -517,10 +523,12 @@ export function EnhancedHeader() {
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -592,7 +600,7 @@ export function EnhancedHeader() {
                       Get Started Today
                     </Link>
                   </div>
-                </div>
+                </div>;
               </div>;
             </motion.div>;
           )};
@@ -602,6 +610,7 @@ export function EnhancedHeader() {
   );
 }
 
+export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;
 export default EnhancedHeader;

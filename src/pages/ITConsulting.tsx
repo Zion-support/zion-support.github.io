@@ -42,7 +42,7 @@ export default function ITConsulting(...args[]):  {
       title: "Technology Implementation",
       description: "Expert guidance for successful technology adoption and integration",
       features["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
-    }
+    };
 =======;
       icon: Zap,;
       title: "Technology Implementation",;
@@ -66,7 +66,7 @@ export default function ITConsulting(...args[]):  {
     {
       icon: Award,
       title: "Proven Track Record",
-      description: "Successfully delivered 500+ consulting projects across industries"
+      description: "Successfully delivered 500+ consulting projects across industries";
     },;
     {;
       icon: MessageSquare,;
@@ -75,7 +75,7 @@ export default function ITConsulting(...args[]):  {
     };
   ];
 
-  const industries = [
+  const industries = [;
     { name: "Healthcare", description: "Digital health solutions and compliance" },;
     { name: "Finance", description: "Fintech innovation and security" },;
     { name: "Manufacturing", description: "Industry 4.0 and automation" },;
@@ -85,7 +85,7 @@ export default function ITConsulting(...args[]):  {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -102,6 +102,7 @@ export default function ITConsulting(...args[]):  {
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -129,10 +130,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -162,6 +165,7 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -171,10 +175,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
 
 
 
@@ -216,10 +222,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -253,6 +261,7 @@ export default function ITConsulting(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -294,10 +303,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,10 +364,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -395,6 +408,7 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
               >
                 <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
@@ -417,10 +431,12 @@ export default function ITConsulting(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -449,7 +465,7 @@ export default function ITConsulting(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </motion.button>;
           </motion.div>;

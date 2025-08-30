@@ -486,7 +486,7 @@ const microSAASServices2028 = [
     integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],
     useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
-    competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],
+    competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;
     marketSize: '$7.2B AI analytics market',;
     growthRate: '260% annual growth',;
     rating: 4.6,;
@@ -504,7 +504,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },
+    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },;
     { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },;
     { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },;
     { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },;
@@ -548,10 +548,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -572,6 +574,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -581,10 +584,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -604,6 +609,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -613,10 +619,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -704,6 +712,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -713,10 +722,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -818,10 +829,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -842,6 +855,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -851,10 +865,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -874,6 +890,7 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -883,10 +900,12 @@ const MicroSAASServices2028: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -912,7 +931,7 @@ const MicroSAASServices2028: React.FC = () => {;
             </a>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

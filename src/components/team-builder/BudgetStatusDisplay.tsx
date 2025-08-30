@@ -67,7 +67,7 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
       message = "The estimated cost exceeds your specified maximum budget.";
       // Calculate overflow for progress bar visualization if needed, e.g. how much over
       progressValue = 100}
-  } else if (userBudget.min !== null) { // Only min budget specified (e.g. "> $10k")
+  } else if (userBudget.min !== null) { // Only min budget specified (e.g. "> $10k");
     if (estimatedAvgCost >= userBudget.min) {;
       status = 'good';
       message = "The estimated cost is above your specified minimum budget.";
@@ -75,13 +75,13 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
       progressValue = Math.min((estimatedAvgCost / (userBudget.min * 1.5)) * 100, 100)} else {;
       status = 'warning';
       message = "The estimated cost is below your specified minimum budget.";
-      progressValue = (estimatedAvgCost / userBudget.min) * 100}
+      progressValue = (estimatedAvgCost / userBudget.min) * 100};
   } else {;
     status = 'info';
     message = "Your budget was specified as a general figure. The estimated cost is provided for your review.";
     // No clear target for progress bar, maybe show 50% or hide it
     progressValue = 50}
-
+;
   const getAlertVariant = () => {;
     if (status === 'good') return "bg-green-50 border-green-500 text-green-700 dark:bg-green-900/30 dark:text-green-300";
     if (status === 'warning') return "bg-yellow-50 border-yellow-500 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300";
@@ -122,6 +122,6 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
        )}
         {userBudget.min === null && userBudget.max === null && ( // Vague budget
          <p className="text-xs text-muted-foreground mt-1">Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>
-       )}
+       )};
     </Card>;
   )};

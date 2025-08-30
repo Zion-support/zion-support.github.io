@@ -8,7 +8,7 @@ const Header: React.FC = () => {;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const navigation = [
+  const navigation = [;
     { name: 'Home', path: '/' },;
     { name: 'About', path: '/about' },;
     { name: 'Services', path: '/services' },;
@@ -70,7 +70,7 @@ const Header: React.FC = () => {;
       {isOpen && (
         <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/10 rounded-lg shadow-xl z-50">
           <div className="p-4">
-            <div className="grid grid-cols-1 gap-2">
+            <div className="grid grid-cols-1 gap-2">;
               {items.map((item) => (;
                 <Link;
                   key={item.path};
@@ -86,7 +86,7 @@ const Header: React.FC = () => {;
                   <div>
                     <div className="font-medium">{item.name}</div>
                   </div>
-                </Link>
+                </Link>;
               ))};
             </div>;
           </div>;
@@ -165,6 +165,7 @@ const Header: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -174,10 +175,12 @@ const Header: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -217,7 +220,7 @@ const Header: React.FC = () => {;
                   onClick={closeMenu}
                 >
                   Get Started
-                </Link>
+                </Link>;
               </div>;
             </nav>;
           </motion.div>;

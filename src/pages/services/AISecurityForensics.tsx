@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityForensics() {
   const features = [
     'AI-powered security forensics optimization',
-    'Intelligent digital evidence analysis and processing',
+    'Intelligent digital evidence analysis and processing',;
     'Automated incident investigation and reconstruction',;
     'Predictive analytics for forensic needs',;
     'Smart forensics framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityForensics() {
     { 
       name: 'Business', 
       price: '$1,999/mo', 
-      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] 
+      details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityForensics() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security forensics optimization',;
     'Digital evidence analysis and processing',;
     'Incident investigation and reconstruction',;
@@ -39,7 +39,7 @@ export default function AISecurityForensics() {
     'Forensics scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security forensics performance by 50-80%',;
     'Reduce investigation time by 40-70%',;
     'Cut security forensics costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityForensics() {
     'Scale security forensics operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityForensics() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

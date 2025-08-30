@@ -32,7 +32,7 @@ const RagSearch: React.FC = (): JSX.Element => (
           <li>Starter: $699/mo up to 100k tokens/day</li>
           <li>Growth: $1,999/mo up to 1M tokens/day</li>
           <li>Enterprise: custom, VPC + SSO</li>
-        </ul>
+        </ul>;
       </div>;
     </section>;
     <section className="container mx-auto px-4 pb-16">;

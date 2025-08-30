@@ -32,7 +32,7 @@ export const SERVICE_CATEGORIES_2030 = [
   "Cybersecurity",
   "Cloud & DevOps",
   "Quantum Computing",
-  "IoT & Edge Computing",
+  "IoT & Edge Computing",;
   "Blockchain & Web3",;
   "Digital Twin",;
   "Space Technology",;
@@ -64,6 +64,7 @@ export const SERVICE_STATISTICS_2030 = {
 =======
   ).length,;
   ;
+  ;
   emergingTechServices: COMPREHENSIVE_SERVICES_INDEX_2030.filter(service => ;
     service.category === 'Emerging Technology';
   ).length;
@@ -73,6 +74,7 @@ export const SERVICE_STATISTICS_2030 = {
 
 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 
 };
 

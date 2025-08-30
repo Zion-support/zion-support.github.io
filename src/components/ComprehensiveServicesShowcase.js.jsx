@@ -51,8 +51,6 @@ export function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('micro-saas');
   const [selectedService, setSelectedService] = useState(null);
 
-  const currentServices = currentCategory?.services || [];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -67,6 +65,7 @@ export function ComprehensiveServicesShowcase() {
   const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -81,6 +80,7 @@ export function ComprehensiveServicesShowcase() {
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
 },
     visible: {
       scale: 1,
@@ -101,10 +101,12 @@ export function ComprehensiveServicesShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition={{ duration: 0.6 }}
         >
@@ -150,14 +152,17 @@ export function ComprehensiveServicesShowcase() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
         >
           {serviceCategories.map((category) => (
@@ -199,6 +204,7 @@ export function ComprehensiveServicesShowcase() {
                   boxShadow: "0 20px 40px rgba(0, 0, 0,
   0.3)"
                 
+
 }}
               >
                 {/* Service Header */}
@@ -288,14 +294,17 @@ export function ComprehensiveServicesShowcase() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
@@ -339,14 +348,17 @@ export function ComprehensiveServicesShowcase() {
               initial = {
   { scale: 0.9,
   opacity: 0 
+
 }}
               animate = {
   { scale: 1,
   opacity: 1 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 }}
               onClick={(e) => e.stopPropagation()}
             >

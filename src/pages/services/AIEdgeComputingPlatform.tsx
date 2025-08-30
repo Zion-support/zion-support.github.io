@@ -5,7 +5,7 @@ export default function AIEdgeComputingPlatform() {
     'AI-powered edge device management and optimization',
     'Real-time data processing at the edge',
     'Distributed AI model deployment and inference',
-    'Edge-to-cloud synchronization and analytics',
+    'Edge-to-cloud synchronization and analytics',;
     'Automatic load balancing and failover',;
     'Edge security and threat detection',;
     'IoT device integration and management',;
@@ -14,7 +14,7 @@ export default function AIEdgeComputingPlatform() {
     'Scalable edge infrastructure management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce latency by 80-90%',;
     'Cut bandwidth costs by 60-70%',;
     'Improve data privacy and security',;
@@ -35,7 +35,7 @@ export default function AIEdgeComputingPlatform() {
       price: '$1,199/mo', 
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$3,499/mo', ;
@@ -44,7 +44,7 @@ export default function AIEdgeComputingPlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Smart city infrastructure',;
     'Industrial IoT monitoring',;
     'Autonomous vehicle systems',;
@@ -53,7 +53,7 @@ export default function AIEdgeComputingPlatform() {
     'Energy grid optimization';
   ];
 
-  const industries = [
+  const industries = [;
     'Smart Cities & Infrastructure',;
     'Manufacturing & Industry 4.0',;
     'Transportation & Logistics',;
@@ -287,7 +287,7 @@ export default function AIEdgeComputingPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

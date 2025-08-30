@@ -41,7 +41,7 @@ const MicroSAASServicesPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </>;
   )};
 

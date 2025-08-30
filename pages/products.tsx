@@ -25,7 +25,7 @@ import { Brain,
 const Products: NextPage = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const productCategories = [
+  const productCategories = [;
     { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },;
     { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },;
     { id: 'saas', name: 'SaaS Platforms', icon: Cloud, color: 'from-green-600 to-teal-600' },;
@@ -196,7 +196,7 @@ const Products: NextPage = () => {;
         'Faster blockchain development',
         'Reduced deployment time',
         'Enhanced security',
-        'Multi-chain compatibility'
+        'Multi-chain compatibility';
       ],;
       icon: Network,;
       color: 'from-violet-600 to-purple-600',;
@@ -247,7 +247,7 @@ const Products: NextPage = () => {;
               ✉️ Request Demo
             </a>
           </div>
-        </div>
+        </div>;
       </div>;
 ;
       {/* Category Filter */};
@@ -274,7 +274,7 @@ const Products: NextPage = () => {;
 
         {/* Products Grid */}
         <div className="grid lg: grid-cols-2 gap-8">
-          {filteredProducts.map((product)  => {
+          {filteredProducts.map((product)  => {;
 =======;
                 }`};
               >;
@@ -355,7 +355,7 @@ const Products: NextPage = () => {;
                   </a>
                 </div>
               </div>
-            )})}
+            )})};
 =======;
                   >;
                     💰 View Pricing;
@@ -548,7 +548,7 @@ const Products: NextPage = () => {;
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

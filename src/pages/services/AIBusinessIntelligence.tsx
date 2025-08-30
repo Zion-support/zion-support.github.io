@@ -46,7 +46,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     {
       icon: Zap,
       title: "Automated Insights",
-      description: "Automatically discover patterns, anomalies, and actionable insights from your data."
+      description: "Automatically discover patterns, anomalies, and actionable insights from your data.";
     };
   ];
 
@@ -55,7 +55,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     "Reduce operational costs by 20-30% with automated analytics",
     "Improve decision-making speed by 60%",
     "Enhance customer satisfaction through personalized insights",
-    "Identify new market opportunities faster than competitors"
+    "Identify new market opportunities faster than competitors";
 =======;
     {;
       icon: Zap,;
@@ -64,7 +64,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increase revenue by 15-25% through data-driven decision making",;
     "Reduce operational costs by 20-30% with optimized processes",;
     "Improve customer satisfaction by 35% with personalized insights",;
@@ -90,14 +90,14 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
     },
     {
       industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization"
+      description: "Predictive maintenance, quality control, and supply chain optimization";
     };
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 =======
-      industry: "Manufacturing",
+      industry: "Manufacturing",;
       description: "Predictive maintenance, quality control, and supply chain optimization";
     },;
     {;
@@ -131,10 +131,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -189,10 +191,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -219,14 +223,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -239,6 +246,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -248,10 +256,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -284,10 +294,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -314,14 +326,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   x: -20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="flex items-start space-x-3"
@@ -347,6 +362,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -356,10 +372,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -417,10 +435,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -447,14 +467,17 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
@@ -467,6 +490,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -476,10 +500,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -509,10 +535,12 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,7 +576,7 @@ const AIBusinessIntelligence: React.FC = (): JSX.Element => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

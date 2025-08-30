@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIMySQL() {
   const features = [
     'AI-powered MySQL query optimization',
-    'Intelligent database indexing and partitioning',
+    'Intelligent database indexing and partitioning',;
     'Automated MySQL performance monitoring',;
     'Predictive analytics for database scaling',;
     'Smart MySQL security and compliance',;
@@ -21,7 +21,7 @@ export default function AIMySQL() {
     { 
       name: 'Business', 
       price: '$599/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIMySQL() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'MySQL query optimization',;
     'Database indexing and partitioning',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIMySQL() {
     'Database scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve query performance by 50-80%',;
     'Reduce storage costs by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIMySQL() {
     'Scale MySQL operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIMySQL() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

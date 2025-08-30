@@ -38,6 +38,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
               <ModelViewer src={modelUrl} alt="3d model" camera-controls style = {
   { width: '100%',
   height: '100%' 
+
 }}/>
             </Suspense>
           </AspectRatio>

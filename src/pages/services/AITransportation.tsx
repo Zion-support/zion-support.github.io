@@ -3,7 +3,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 export default function AITransportation() {
   const features = [
     'AI-powered route optimization and fleet management',
-    'Intelligent traffic prediction and congestion avoidance',
+    'Intelligent traffic prediction and congestion avoidance',;
     'Automated vehicle maintenance and predictive diagnostics',;
     'Real-time logistics optimization and delivery tracking',;
     'Predictive analytics for demand forecasting',;
@@ -21,7 +21,7 @@ export default function AITransportation() {
     { 
       name: 'Medium Fleet', 
       price: '$999/mo', 
-      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 100 vehicles', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Fleet', ;
@@ -30,7 +30,7 @@ export default function AITransportation() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Fleet management and route optimization',;
     'Public transportation optimization',;
     'Logistics and supply chain management',;
@@ -39,7 +39,7 @@ export default function AITransportation() {
     'Freight and cargo transportation';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce fuel costs by 15-30%',;
     'Improve delivery efficiency by 25-40%',;
     'Cut maintenance costs by 20-35%',;
@@ -48,7 +48,7 @@ export default function AITransportation() {
     'Scale transportation operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Logistics & Freight',;
     'Public Transportation',;
     'Ride-sharing & Mobility',;
@@ -163,7 +163,7 @@ export default function AITransportation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

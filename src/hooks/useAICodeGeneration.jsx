@@ -77,6 +77,7 @@ export const useAICodeGeneration = () => {
 
 
 
+
 };
             setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
@@ -374,11 +375,6 @@ console.log("Language:", "${options.language}");`};
             })}
         return issues};
     // Helper functions for code optimization
-    const optimizeForSecurity = (code) => {
-        return code
-            .replace(/innerHTML/g, 'textContent')
-            .replace(/eval/g, '// eval() removed for security - use alternatives')
-            .replace(/localStorage/g, '// Consider security implications of localStorage')};
     const optimizeForAccessibility = (code) => {
         return code
             .replace(/<div>/g, '<div role="main">')

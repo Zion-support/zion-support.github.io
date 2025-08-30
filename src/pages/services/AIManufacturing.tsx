@@ -3,7 +3,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
 export default function AIManufacturing() {
   const features = [
     'AI-powered predictive maintenance and equipment monitoring',
-    'Intelligent quality control and defect detection',
+    'Intelligent quality control and defect detection',;
     'Automated production planning and optimization',;
     'Real-time supply chain and inventory management',;
     'Predictive analytics for production efficiency',;
@@ -21,7 +21,7 @@ export default function AIManufacturing() {
     { 
       name: 'Medium Manufacturer', 
       price: '$1,299/mo', 
-      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Manufacturer', ;
@@ -30,7 +30,7 @@ export default function AIManufacturing() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Production line optimization and monitoring',;
     'Quality control and defect prevention',;
     'Predictive maintenance and equipment management',;
@@ -39,7 +39,7 @@ export default function AIManufacturing() {
     'Workforce safety and compliance';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve production efficiency by 25-40%',;
     'Reduce equipment downtime by 30-50%',;
     'Cut quality defects by 40-60%',;
@@ -48,7 +48,7 @@ export default function AIManufacturing() {
     'Scale manufacturing operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Automotive Manufacturing',;
     'Electronics & Semiconductors',;
     'Food & Beverage Processing',;
@@ -163,7 +163,7 @@ export default function AIManufacturing() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

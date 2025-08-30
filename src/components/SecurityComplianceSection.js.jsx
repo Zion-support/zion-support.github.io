@@ -110,6 +110,7 @@ export function SecurityComplianceSection() {
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -133,9 +134,11 @@ export function SecurityComplianceSection() {
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Security & <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Compliance</span>
@@ -150,12 +153,15 @@ export function SecurityComplianceSection() {
             {securityStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
@@ -170,12 +176,15 @@ export function SecurityComplianceSection() {
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry Certifications & Standards
@@ -184,12 +193,15 @@ export function SecurityComplianceSection() {
             {securityStandards.map((standard, index) => (<motion.div key={standard.name} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStandard(selectedStandard === index ? null : index)}>
                   {/* Header */}
@@ -253,12 +265,15 @@ export function SecurityComplianceSection() {
                     {selectedStandard === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}
                         <div className="mb-4">
@@ -294,12 +309,15 @@ export function SecurityComplianceSection() {
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Compliance Frameworks & Controls
@@ -308,12 +326,15 @@ export function SecurityComplianceSection() {
             {complianceFrameworks.map((framework, index) => (<motion.div key={framework.name} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFramework(selectedFramework === index ? null : index)}>
                   {/* Header */}
@@ -377,12 +398,15 @@ export function SecurityComplianceSection() {
                     {selectedFramework === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} transition={{ duration: 0.3 }}>
                         {/* All Controls */}
                         <div className="mb-4">
@@ -418,12 +442,15 @@ export function SecurityComplianceSection() {
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Advanced Security Features
@@ -432,12 +459,15 @@ export function SecurityComplianceSection() {
             {securityFeatures.map((feature, index) => (<motion.div key={feature.title} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedFeature(selectedFeature === index ? null : index)}>
                   {/* Icon */}
@@ -478,12 +508,15 @@ export function SecurityComplianceSection() {
                     {selectedFeature === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} transition={{ duration: 0.3 }}>
                         {/* All Features */}
                         <div className="mb-4">
@@ -513,12 +546,15 @@ export function SecurityComplianceSection() {
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">

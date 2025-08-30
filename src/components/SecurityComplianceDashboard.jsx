@@ -47,6 +47,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             requirements['Requirement 1', 'Requirement 2'],
   violations[]
         
+
 };
 =======
             requirements: ['Requirement 1', 'Requirement 2'],
@@ -170,6 +171,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -178,9 +180,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -267,6 +271,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -275,9 +280,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -293,6 +300,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 details: 'Test security event',
   status: 'new'
             
+
 
 
 
@@ -331,6 +339,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 } className="text-sm border border-gray-300 dark:border-gray-600 rounded px-2 py-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                           <option value="new">New</option>
                           <option value="investigating">Investigating</option>
@@ -357,6 +366,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -365,9 +375,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -427,6 +439,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -435,9 +448,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -494,6 +509,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -502,9 +518,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -557,6 +575,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -565,9 +584,11 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 

@@ -39,7 +39,7 @@ export default function Categories() {
       color: 'from-zion-green to-zion-emerald',
       count: 36
     },
-    {
+    {;
       id: 'development',;
       name: 'Development',;
       icon: <Code className="w-8 h-8" />,;
@@ -58,6 +58,7 @@ export default function Categories() {
         talent: 8,
   equipment: 3
       
+
 
 
 
@@ -186,7 +187,7 @@ export default function Categories() {
       },
       {
         name: 'API Development',
-        description: 'RESTful APIs and microservices',
+        description: 'RESTful APIs and microservices',;
         icon: <Network className="w-6 h-6" />,;
         services: 13,;
         talent: 8,;
@@ -213,7 +214,7 @@ export default function Categories() {
       featured: true
     },
     {
-      type: 'equipment',
+      type: 'equipment',;
       title: 'High-Performance GPU Cluster',;
       category: 'AI & Machine Learning',;
       rating: 4.7,;
@@ -394,7 +395,7 @@ export default function Categories() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </div>;

@@ -136,6 +136,7 @@ export function CaseStudiesSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -164,9 +165,11 @@ export function CaseStudiesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,6 +194,7 @@ export function CaseStudiesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -199,9 +203,11 @@ export function CaseStudiesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -222,6 +228,7 @@ export function CaseStudiesSection() {
           {caseStudies.map((caseStudy, index) => (<motion.div key={caseStudy.id} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -302,6 +309,7 @@ export function CaseStudiesSection() {
 
 
 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
@@ -310,9 +318,11 @@ export function CaseStudiesSection() {
 
 
 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 
 
 
@@ -329,9 +339,11 @@ export function CaseStudiesSection() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -374,6 +386,7 @@ export function CaseStudiesSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -382,9 +395,11 @@ export function CaseStudiesSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 

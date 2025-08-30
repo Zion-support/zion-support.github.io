@@ -915,7 +915,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     integrations["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
     freeTier: false,
     trialPeriod: "7 days"
-  }
+  };
 =======;
     setupTime: "24 hours",;
     integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],;

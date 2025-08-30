@@ -53,7 +53,7 @@ export const PricingSection: React.FC = (): JSX.Element => {
         '24/7 phone support'
       ],
       popular: false,
-      icon: Shield
+      icon: Shield;
     };
   ];
 =======
@@ -101,7 +101,7 @@ const pricingTiers = [
       "Unlimited Storage",
       "Custom Analytics",
       "White-label Solutions",
-      "Advanced Security",
+      "Advanced Security",;
       "Custom Development",;
       "SLA Guarantee";
     ],;
@@ -125,10 +125,12 @@ export function PricingSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -147,7 +149,7 @@ export function PricingSection() {
         </motion.div>
 
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-3 gap-8 mb-12">
+        <div className="grid md: grid-cols-3 gap-8 mb-12">;
           {plans.map((plan, index)  => {;
             const IconComponent = plan.icon;
             return (
@@ -156,14 +158,17 @@ export function PricingSection() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
@@ -188,10 +193,12 @@ export function PricingSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -202,6 +209,7 @@ export function PricingSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -284,10 +292,12 @@ export function PricingSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -298,6 +308,7 @@ export function PricingSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -317,7 +328,7 @@ export function PricingSection() {
             <span className="text-sm">→</span>
           </Link>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -332,4 +343,5 @@ export default PricingSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default PricingSection;
 export default PricingSection;

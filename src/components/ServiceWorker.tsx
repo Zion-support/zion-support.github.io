@@ -89,6 +89,7 @@ export function ServiceWorker() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -98,10 +99,12 @@ export function ServiceWorker() {
 
 
 
+
 }}
           exit = {
   { opacity: 0,
   y: -50 
+
 
 
 
@@ -131,7 +134,7 @@ export function ServiceWorker() {
                 onClick={handleUpdate}
                 className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
               >
-                Update
+                Update;
               </button>;
             )};
           </div>;

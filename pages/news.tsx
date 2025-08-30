@@ -251,7 +251,7 @@ export default function News(...args[]):  {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							Learn more <span aria-hidden="true">→</span>
-						</Link>
+						</Link>;
 					</div>;
 				</div>;
 			</section>;

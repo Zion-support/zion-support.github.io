@@ -68,7 +68,7 @@ export default function CybersecurityServices() {
       icon: Lock,
       features: [
         "Data encryption at rest and in transit",
-        "Data loss prevention",
+        "Data loss prevention",;
         "Backup and recovery",;
         "Compliance frameworks (GDPR, HIPAA, SOC2)";
       ],;
@@ -76,7 +76,7 @@ export default function CybersecurityServices() {
       duration: "4-10 weeks";
     };
   ];
-  const securityTechnologies = [
+  const securityTechnologies = [;
     { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },;
     { name: "EDR", description: "Endpoint Detection and Response", icon: Server },;
     { name: "NGFW", description: "Next-Generation Firewall", icon: Network },;
@@ -121,7 +121,7 @@ export default function CybersecurityServices() {
       description: "National Institute of Standards and Technology",
       icon: Target,
       color: "from-cyan-500 to-blue-600"
-    }
+    };
 =======;
       name: "NIST",;
       description: "National Institute of Standards and Technology",;
@@ -148,10 +148,12 @@ export default function CybersecurityServices() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -320,7 +322,7 @@ export default function CybersecurityServices() {
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
-                Explore All Services
+                Explore All Services;
               </Link>;
             </div>;
           </div>;

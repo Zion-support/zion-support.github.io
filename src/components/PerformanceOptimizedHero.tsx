@@ -35,7 +35,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.",
   ctaText = "Explore Our Services",
   ctaLink = "/services",
-  features = [
+  features = [;
     { icon: Brain, text: "AI-Powered Solutions", color: "from-purple-500 to-pink-500" },;
     { icon: Cloud, text: "Cloud Infrastructure", color: "from-blue-500 to-cyan-500" },;
     { icon: Shield, text: "Cybersecurity", color: "from-green-500 to-emerald-500" },;
@@ -68,9 +68,10 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
 
 
+
 },
     visible: {
-      opacity: 1,
+      opacity: 1,;
       y: 0,;
       transition: {;
         duration: 0.8,;
@@ -81,9 +82,11 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const itemVariants = {
   hidden: { opacity: 0,;
+  ;
   y: 30 ;
 ;
 ;
+
 
 
 
@@ -93,9 +96,11 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
   const featureVariants = {
   hidden: { opacity: 0,;
+  ;
   scale: 0.8 ;
 ;
 ;
+
 
 
 
@@ -232,6 +237,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
 
 
 
+
 }}
         />
         <motion.div
@@ -251,9 +257,10 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   delay: 1
           
 
+;
+;
+;
 
-;
-;
 
 }};
         />;

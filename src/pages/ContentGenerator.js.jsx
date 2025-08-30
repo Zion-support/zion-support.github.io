@@ -120,6 +120,7 @@ export default function ContentGenerator() {
                     <Input id="topic" placeholder = {
   contentType === 'blog' ? "e.g., Hiring AI Freelancers" : "e.g.,
   May Platform Updates"
+
 } className="bg-zion-blue border border-zion-blue-light text-white" value={topic} onChange={(e) => setTopic(e.target.value)}/>
                   </div>
                   
@@ -186,6 +187,7 @@ export default function ContentGenerator() {
                 __html: previewContent.body
                     .replace(/^#{1,
   6
+
 }\s+(.+)$/gm, "<h$1>$2</h$1>")
                     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
                     .replace(/\*(.+?)\*/g, "<em>$1</em>")

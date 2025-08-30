@@ -148,7 +148,7 @@ const events = [
       "Technology selection",
       "Success metrics"
     ],
-    image: "/images/digital-transformation-summit.jpg"
+    image: "/images/digital-transformation-summit.jpg";
   };
 ];
 
@@ -163,8 +163,7 @@ export default function Events(...args[]):  {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredEvents = events.filter(event => {;
-    const matchesCategory = selectedCategory === 'All' || event.category === selectedCategory;
-    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
     
@@ -182,7 +181,7 @@ export default function Events(...args[]):  {
       day: 'numeric'
     })};
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
     switch (category) {;
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -195,7 +194,7 @@ export default function Events(...args[]):  {
 
   const getStatusBadge = (status: string)  => {
     if (status === 'upcoming') {
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>} else {
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>} else {;
       return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>};
   };
 
@@ -208,10 +207,12 @@ export default function Events(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
@@ -303,10 +304,12 @@ export default function Events(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -316,7 +319,7 @@ export default function Events(...args[]):  {
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {upcomingEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -325,14 +328,17 @@ export default function Events(...args[]):  {
                     initial = {
   { opacity: 0,
   y: 20 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
@@ -434,10 +440,12 @@ export default function Events(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
@@ -447,7 +455,7 @@ export default function Events(...args[]):  {
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
               {pastEvents.map((event, index)  => {;
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -456,14 +464,17 @@ export default function Events(...args[]):  {
                     initial = {
   { opacity: 0,
   y: 20 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
@@ -527,10 +538,12 @@ export default function Events(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -562,5 +575,5 @@ export default function Events(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 ;

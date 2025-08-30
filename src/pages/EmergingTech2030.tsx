@@ -39,7 +39,7 @@ import { emergingTechServices2030 } from "../data/emergingTechServices2030";
 
 export default function EmergingTech2030(...args[]):  {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -56,8 +56,9 @@ export default function EmergingTech2030(...args[]):  {
 
 
 
+
 },
-    visible: {
+    visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -76,8 +77,10 @@ export default function EmergingTech2030(...args[]):  {
   ;
   ;
   ;
+  ;
   'Fusion Energy': Zap;
   ;
+
 
 
 
@@ -174,7 +177,7 @@ export default function EmergingTech2030(...args[]):  {
             </motion.div>
 
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index)  => {
+              {emergingTechServices2030.map((service, index)  => {;
 =======;
               </p>;
             </motion.div>;
@@ -239,6 +242,7 @@ export default function EmergingTech2030(...args[]):  {
 
 
 
+
 }`}
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group"
 <<<<<<< HEAD
@@ -247,7 +251,7 @@ export default function EmergingTech2030(...args[]):  {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </motion.div>
-                )})}
+                )})};
 =======;
                     >;
                       Learn More;
@@ -386,7 +390,7 @@ export default function EmergingTech2030(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </motion.div>;

@@ -29,7 +29,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       icon: Lock,
       title: "Security Controls",
-      description: "Comprehensive security control monitoring including encryption, authentication, and network security."
+      description: "Comprehensive security control monitoring including encryption, authentication, and network security.";
     },;
     {;
       icon: Clock,;
@@ -62,7 +62,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       icon: Users,
       title: "Privacy",
-      description: "Data handling, consent management, and privacy controls"
+      description: "Data handling, consent management, and privacy controls";
     },;
     {;
       icon: FileText,;
@@ -112,7 +112,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
         "Full SOC2 framework support",
         "Custom control frameworks",
         "White-label solutions",
-        "Dedicated compliance manager",
+        "Dedicated compliance manager",;
         "Advanced integrations",;
         "Unlimited users",;
         "Custom training";
@@ -135,7 +135,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       title: "Improve Security Posture",
       description: "Strengthen your security controls and risk management with continuous monitoring.",
-      icon: Shield
+      icon: Shield;
     },;
     {;
       title: "Build Customer Trust",;
@@ -168,7 +168,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       step: "05",
       title: "Audit Preparation",
-      description: "Prepare for external audit with complete documentation and evidence"
+      description: "Prepare for external audit with complete documentation and evidence";
     },;
     {;
       step: "06",;
@@ -200,10 +200,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -264,6 +266,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -273,10 +276,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -320,6 +325,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -329,10 +335,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -376,6 +384,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -385,10 +394,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -432,6 +443,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -441,10 +453,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -490,6 +504,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -499,10 +514,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -569,10 +586,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -599,7 +618,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
-                </Link>
+                </Link>;
               </div>;
             </motion.div>;
           </div>;

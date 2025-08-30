@@ -216,9 +216,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -234,6 +236,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
@@ -242,9 +245,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 
 
 
@@ -261,6 +266,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
@@ -269,9 +275,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 
 
 
@@ -288,6 +296,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   rotate: 0 
@@ -296,9 +305,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} exit = {
   { opacity: 0,
   rotate: 90 
+
 
 
 
@@ -319,9 +330,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -346,6 +359,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -354,9 +368,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
 
 
 
@@ -376,9 +392,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -398,9 +416,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 
 
 
@@ -414,9 +434,11 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
 
 
 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 
 
 
@@ -500,11 +522,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                     y: Math.random() * window.innerHeight,
   <<<<<<< HEAD
                 
+
 }} animate = {
   {
                     y[0, -100, 0],
                     opacity[0.2, 0.5, 0.2],
-   
+  
+
 }} transition={{
 =======
   

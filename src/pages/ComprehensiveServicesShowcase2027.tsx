@@ -121,12 +121,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
+        website: service.website,;
         contactInfo: service.contactInfo;
       })});
 
     // Add services from ALL_REVOLUTIONARY_SERVICES_2026
-    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service = > {
+    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service = > {;
 =======;
         status: service.status,;
         marketPrice: service.marketPrice,;
@@ -160,7 +160,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
         status: service.status,
         marketPrice: service.marketPrice,
         estimatedDelivery: service.estimatedDelivery,
-        website: service.website,
+        website: service.website,;
         contactInfo: service.contactInfo;
       })});
 =======
@@ -267,10 +267,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -372,6 +374,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -381,10 +384,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -497,6 +502,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -506,10 +512,12 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -689,7 +697,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {;
             <p>Visit us at: <a href="https://ziontechgroup.com" className="text-purple-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

@@ -24,6 +24,7 @@ export function ITServiceRequestHero(...args[]):  {
   const containerVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
     visible: {
       opacity: 1,
@@ -31,25 +32,26 @@ export function ITServiceRequestHero(...args[]):  {
       transition: {
         duration: 0.6,
         staggerChildren: 0.2
-      }
+      };
     };
   };
 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5 };
     };
   };
 
   const features = [
     { icon: Clock, text: "24/7 Availability", color: "text-zion-cyan" },
     { icon: Globe, text: "Global Coverage", color: "text-zion-purple" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-cyan-light" },;
     { icon: Zap, text: "Fast Response", color: "text-zion-purple-light" };
   ];
 
@@ -72,10 +74,12 @@ export function ITServiceRequestHero(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -146,10 +150,12 @@ export function ITServiceRequestHero(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -160,6 +166,7 @@ export function ITServiceRequestHero(...args[]):  {
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -228,7 +235,7 @@ export function ITServiceRequestHero(...args[]):  {
         </div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

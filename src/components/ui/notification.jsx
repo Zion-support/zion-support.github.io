@@ -27,6 +27,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
 
 
 
+
 };
         setNotifications(prev => {
             const updated = [newNotification, ...prev];
@@ -44,6 +45,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         removeNotification,
   clearAll
     
+
 
 
 
@@ -145,6 +147,7 @@ function NotificationItem({ notification }) {
 
 
 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
@@ -153,9 +156,11 @@ function NotificationItem({ notification }) {
 
 
 
+
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
 
 
 
@@ -172,12 +177,14 @@ function NotificationItem({ notification }) {
 
 
 
+
 }
         }} className={`relative overflow-hidden border rounded-xl p-4 backdrop-blur-sm ${getTypeClasses(notification.type)}`}>
       {/* Progress Bar */}
       {notification.duration && notification.duration > 0 && (<motion.div className={`absolute top-0 left-0 h-1 ${getProgressColor(notification.type)}`} initial={{ width: '100%' }} animate={{ width: '0%' }} transition = {
   { duration: notification.duration / 1000,
   ease: "linear" 
+
 
 
 

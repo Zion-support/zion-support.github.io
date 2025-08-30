@@ -91,9 +91,6 @@ export const blogPosts = [
   }
 ];
 
-export const getBlogPostsByCategory = (category) => {
-  return blogPosts.filter(post => post.category === category)};
-
 export const getRecentBlogPosts = (limit = 3) => {
   return blogPosts
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))

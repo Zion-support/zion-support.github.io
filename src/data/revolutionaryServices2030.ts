@@ -572,7 +572,7 @@ export const REVOLUTIONARY_SERVICES_2030: ProductListing[] = [
     competitors["Gartner", "Forrester", "IDC"],
     roi: "500% within 12 months",
     setupTime: "6-8 weeks",
-    integrations["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"]
+    integrations["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"];
   };
 ];
 
@@ -593,7 +593,7 @@ export const REVOLUTIONARY_SERVICE_CATEGORIES = [
   "IoT & Edge Computing",
   "Digital Twin",
   "Sustainable Technology",
-  "IT Infrastructure",
+  "IT Infrastructure",;
   "Emerging Technology";
 ];
 
@@ -615,8 +615,9 @@ export const REVOLUTIONARY_SERVICE_STATISTICS = {
   ).length,
   emergingTechServices: REVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category === 'Emerging Technology'
-  ).length
+  ).length;
 ;
+
 };
 
 // Featured Revolutionary Services

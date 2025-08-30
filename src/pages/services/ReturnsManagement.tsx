@@ -56,7 +56,7 @@ function ReturnsManagement() {
               <a href="/request-quote" className="btn-futuristic mt-6 inline-block">Request demo</a>
             </div>
           ))}
-        </div>
+        </div>;
 ;
         <p className="mt-10 text-sm text-zion-slate-light">;
           Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
@@ -69,6 +69,7 @@ function ReturnsManagement() {
 export default ReturnsManagement;
 
 
+export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;

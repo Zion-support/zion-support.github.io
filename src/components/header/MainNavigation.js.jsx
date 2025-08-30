@@ -9,6 +9,7 @@ export function MainNavigation({ className }) {
     return (<nav className = {
   cn("hidden md:flex items-center space-x-6",
   className)
+
 }>
       <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home

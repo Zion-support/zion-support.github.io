@@ -530,6 +530,7 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+
 };
 
 // Alias exports for backward compatibility

@@ -209,7 +209,7 @@ const AIAutonomousBusinessOperations = () => {
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence and reporting",
       benefits["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
-    }
+    };
 =======;
       icon: BarChart3,;
       title: "Advanced Analytics",;
@@ -250,7 +250,7 @@ const AIAutonomousBusinessOperations = () => {
       industry: "Consulting",
       applications["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
       icon: Briefcase
-    }
+    };
 =======;
     {;
       industry: "Consulting",;
@@ -301,7 +301,7 @@ const AIAutonomousBusinessOperations = () => {
         "Enterprise-grade automation",
         "Custom AI models",
         "Dedicated support team",
-        "Advanced security & compliance",
+        "Advanced security & compliance",;
         "White-label options",;
         "Custom development",;
         "On-premise deployment";
@@ -317,8 +317,10 @@ const AIAutonomousBusinessOperations = () => {
   ;
   ;
   ;
+  ;
   website: "https://ziontechgroup.com";
   ;
+
 
 
 
@@ -347,10 +349,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -375,6 +379,7 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -384,10 +389,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -411,6 +418,7 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -420,10 +428,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -445,6 +455,7 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -454,10 +465,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -496,10 +509,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -561,10 +576,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -575,6 +592,7 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -606,10 +624,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -642,10 +662,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -656,6 +678,7 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -706,10 +729,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -740,10 +765,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -754,6 +781,7 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -794,10 +822,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -832,10 +862,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -846,6 +878,7 @@ const AIAutonomousBusinessOperations = () => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -909,10 +942,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -941,10 +976,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -955,6 +992,7 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.1 
+
 
 
 
@@ -979,10 +1017,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -993,6 +1033,7 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -1017,10 +1058,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1031,6 +1074,7 @@ const AIAutonomousBusinessOperations = () => {
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
 
 
 
@@ -1056,10 +1100,12 @@ const AIAutonomousBusinessOperations = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1070,6 +1116,7 @@ const AIAutonomousBusinessOperations = () => {
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -1087,7 +1134,7 @@ const AIAutonomousBusinessOperations = () => {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

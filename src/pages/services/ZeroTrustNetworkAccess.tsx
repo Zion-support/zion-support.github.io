@@ -59,7 +59,7 @@ const ZeroTrustNetworkAccess = () => {
     {
       icon: Key,
       title: 'Encrypted Communication',
-      description: 'End-to-end encryption for all data in transit and at rest'
+      description: 'End-to-end encryption for all data in transit and at rest';
     },;
     {;
       icon: Monitor,;
@@ -68,7 +68,7 @@ const ZeroTrustNetworkAccess = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Eliminate network perimeter vulnerabilities',;
     'Reduce attack surface by 90%',;
     'Enable secure remote work from anywhere',;
@@ -87,7 +87,7 @@ const ZeroTrustNetworkAccess = () => {
       description: 'Protected access to patient records and medical systems'
     },
     {
-      industry: 'Government',
+      industry: 'Government',;
       description: 'Secure access to classified systems and citizen data';
     },;
     {;
@@ -110,7 +110,7 @@ const ZeroTrustNetworkAccess = () => {
     {
       icon: Globe2,
       title: 'Network Security',
-      description: 'Encrypted tunnels, micro-segmentation, and traffic inspection'
+      description: 'Encrypted tunnels, micro-segmentation, and traffic inspection';
     },;
     {;
       icon: Database,;
@@ -134,10 +134,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -188,10 +190,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -222,6 +226,7 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -231,10 +236,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -266,10 +273,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -300,6 +309,7 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -309,10 +319,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -348,10 +360,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -382,6 +396,7 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -391,10 +406,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -420,6 +437,7 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -429,10 +447,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -462,10 +482,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -496,6 +518,7 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -505,10 +528,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -540,10 +565,12 @@ const ZeroTrustNetworkAccess = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -565,7 +592,7 @@ const ZeroTrustNetworkAccess = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

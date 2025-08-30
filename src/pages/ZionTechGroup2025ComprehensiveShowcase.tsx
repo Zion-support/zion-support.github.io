@@ -61,7 +61,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
   }, [searchQuery, selectedCategory, priceRange, sortBy]);
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },
+    { id: 'all', name: 'All Services', icon: Globe, color: 'bg-gray-500' },;
     { id: 'AI Solutions', name: 'AI Solutions', icon: Brain, color: 'bg-purple-500' },;
     { id: 'Micro SaaS', name: 'Micro SaaS', icon: Zap, color: 'bg-blue-500' },;
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'bg-red-500' },;
@@ -99,10 +99,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -129,6 +131,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -138,10 +141,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -163,6 +168,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -172,10 +178,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -248,6 +256,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
@@ -258,6 +267,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
                   onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value) || 10000])
+
 
 
 
@@ -302,10 +312,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -320,10 +332,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -432,6 +446,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -441,10 +456,12 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -544,12 +561,14 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
   ;
   ;
   ;
+  ;
   () => {;
                   setSearchQuery('');
                   setSelectedCategory('all');
                   setPriceRange([0,
   10000]);
                 
+
 
 
 
@@ -593,7 +612,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {;
               </a>
             </div>
             <div className="mt-8 text-gray-400">
-              <p>Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Visit us at: 364 E Main St STE 1008, Middletown DE 19709</p>;
               <p>Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 underline">ziontechgroup.com</a></p>;
             </div>;
           </div>;

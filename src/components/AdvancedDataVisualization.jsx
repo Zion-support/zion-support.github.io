@@ -99,6 +99,7 @@ export function AdvancedDataVisualization() {
 
 
 
+
 },${280 - (item.value / maxValue) * 280}`).join(' ')}/>
           {filteredData.map((item, index) => (<circle key={item.id} cx={(index / (filteredData.length - 1)) * 800} cy={280 - (item.value / maxValue) * 280} r="6" fill={colors[0]} className="cursor-pointer hover:r-8 transition-all duration-200"/>))}
         </svg>
@@ -126,6 +127,7 @@ export function AdvancedDataVisualization() {
 
 
 
+
 }deg)`,
                         clipPath: `polygon(50% 50%, 50% 0%, ${50 + Math.cos((angle * Math.PI) / 180) * 50}% ${50 + Math.sin((angle * Math.PI) / 180) * 50}%)`
                     }} title={`${item.name}: ${percentage.toFixed(1)}%`}/>)})}
@@ -145,6 +147,7 @@ export function AdvancedDataVisualization() {
           <path fill={colors[0]} fillOpacity="0.3" stroke={colors[0]} strokeWidth="2" d = {
   `M 0,
   ${280
+
 
 
 
@@ -265,6 +268,7 @@ export function AdvancedDataVisualization() {
 
 
 
+
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
                   <span className="text-sm text-zion-slate">Show Legend</span>
                 </label>
@@ -277,6 +281,7 @@ export function AdvancedDataVisualization() {
 
 
 
+
 }))} className="rounded border-zion-slate-light text-zion-cyan focus:ring-zion-cyan"/>
                   <span className="text-sm text-zion-slate">Show Grid</span>
                 </label>
@@ -284,6 +289,7 @@ export function AdvancedDataVisualization() {
                   <input type="checkbox" checked={chartConfig.animate} onChange = {
   (e) => setChartConfig(prev => ({ ...prev,
   animate: e.target.checked 
+
 
 
 

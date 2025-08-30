@@ -20,8 +20,10 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   ;
   ;
   ;
+  ;
   lg: 'w-16 h-16';
   ;
+
 
 
 
@@ -32,8 +34,9 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   <<<<<<< HEAD
     sm: 'text-xs',
     md: 'text-sm',
-  lg: 'text-base'
+  lg: 'text-base';
   ;
+
 };
 =======
   sm: 'text-xs',
@@ -71,6 +74,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 
 
 
+
 }}
         />
         {/* Logo text */}
@@ -91,6 +95,7 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 
 
 
+
 }}
             transition = {
   { duration: 2,
@@ -100,7 +105,8 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
 
 
 
-}}
+
+}};
           >;
             {text};
           </motion.div>;
@@ -128,7 +134,7 @@ export function SkeletonLoader({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-          className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
+          className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`};
           style={{;
             width: `${Math.random() * 40 + 60}%`;
           }};
@@ -150,7 +156,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-full" />
           <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
         </div>
-        {/* Button skeleton */}
+        {/* Button skeleton */};
         <div className="flex gap-3 pt-4">;
           <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse flex-1" />;
           <div className="h-10 bg-zion-blue-light/20 rounded-xl animate-pulse w-24" />;
@@ -187,7 +193,7 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
         <div className="h-6 bg-zion-blue-light/20 rounded-lg animate-pulse w-2/3" />
       </div>
       {/* Content skeleton */}
-      <GridSkeleton columns={3} rows={2} />
+      <GridSkeleton columns={3} rows={2} />;
       {/* Footer skeleton */};
       <div className="space-y-3">;
         <div className="h-4 bg-zion-blue-light/20 rounded-lg animate-pulse w-1/2" />;

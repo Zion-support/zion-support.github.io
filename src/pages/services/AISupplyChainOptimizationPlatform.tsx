@@ -36,7 +36,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     {
       icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,
       title: "Performance Analytics",
-      description: "Comprehensive reporting and analytics for continuous improvement"
+      description: "Comprehensive reporting and analytics for continuous improvement";
     };
   ];
 
@@ -89,7 +89,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
         "Custom integrations",
         "White-label solutions"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -108,7 +108,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     },
     {
       metric: "90%",
-      description: "Faster response to supply chain disruptions"
+      description: "Faster response to supply chain disruptions";
     };
   ];
 
@@ -127,7 +127,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
     },
     {
       title: "Healthcare Supply Chain",
-      description: "Ensure critical medical supplies reach their destination on time"
+      description: "Ensure critical medical supplies reach their destination on time";
     };
   ];
 
@@ -312,7 +312,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 

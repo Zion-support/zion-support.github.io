@@ -43,7 +43,7 @@ const Services2026: React.FC = () => {;
     { id: 'all', name: 'All Services', icon: GitFork, count: allServices.length },
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter(s => s.category === 'AI & Analytics').length },
     { id: 'Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter(s => s.category === 'Cybersecurity').length },;
     { id: 'IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter(s => s.category === 'IoT & Edge Computing').length },;
     { id: 'AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter(s => s.category === 'AI & Content').length },;
     { id: 'Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter(s => s.category === 'Digital Twin').length },;
@@ -82,7 +82,9 @@ const Services2026: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'Advanced': 1 ;
+
 
 
 
@@ -132,10 +134,12 @@ const Services2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -245,10 +249,12 @@ const Services2026: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -335,10 +341,12 @@ const Services2026: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -513,7 +521,7 @@ const Services2026: React.FC = () => {;
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm text-slate-400 mb-4">
             Questions? Call <a className="text-cyan-300 hover:text-cyan-200" href="tel:+13024640950">+1 302 464 0950</a> or email <a className="text-cyan-300 hover:text-cyan-200" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>
-          </div>
+          </div>;
           <div className="text-sm text-slate-500">;
             Visit our main site: <a className="text-cyan-300 hover:text-cyan-200" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>;
           </div>;

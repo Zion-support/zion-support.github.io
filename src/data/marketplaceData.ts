@@ -158,7 +158,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'DataGenius Consulting',
       rating: 4.7,
-      verified: true
+      verified: true;
     },;
     location: 'Remote',;
     availability: 'available',;
@@ -192,7 +192,7 @@ export const marketplaceCategories = [
     name: 'Services',
     description: 'Professional services and consulting',
     count: marketplaceItems.filter(item  => item.category === 'services').length
-  }
+  };
 =======;
     id: 'services',;
     name: 'Services',;
@@ -245,7 +245,7 @@ export const marketplaceFilters = [
       { value: 'out-of-stock', label: 'Out of Stock' }
     ]
   }
-=======
+=======;
     options: [;
       { value: 'available', label: 'Available' },;
       { value: 'limited', label: 'Limited' },;

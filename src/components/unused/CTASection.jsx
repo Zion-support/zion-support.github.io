@@ -20,6 +20,7 @@ export function CTASection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -45,9 +46,11 @@ export function CTASection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -119,6 +122,7 @@ export function CTASection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -127,9 +131,11 @@ export function CTASection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 

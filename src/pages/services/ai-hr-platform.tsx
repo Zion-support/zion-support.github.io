@@ -18,7 +18,7 @@ const AIHRPlatform: React.FC = () => {
     {
       icon: Target,
       title: 'Performance Analytics',
-      description: 'Data-driven insights for better decisions'
+      description: 'Data-driven insights for better decisions';
     },;
     {;
       icon: Shield,;
@@ -41,7 +41,7 @@ const AIHRPlatform: React.FC = () => {
     {
       title: 'Learning & Development',
       description: 'Personalized training and skill development',
-      icon: '🎓'
+      icon: '🎓';
     },;
     {;
       title: 'Employee Engagement',;
@@ -50,7 +50,7 @@ const AIHRPlatform: React.FC = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce time-to-hire by 50% with AI screening',;
     'Improve candidate quality and retention rates',;
     'Automate routine HR tasks and workflows',;
@@ -78,10 +78,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -132,10 +134,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -165,6 +169,7 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -174,10 +179,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -209,10 +216,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +251,7 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -251,10 +261,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -288,10 +300,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,10 +333,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -352,10 +368,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -390,10 +408,12 @@ const AIHRPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,7 +433,7 @@ const AIHRPlatform: React.FC = () => {
                 Start HR Transformation
               </button>
               <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
-                Request Demo
+                Request Demo;
               </button>;
             </div>;
           </motion.div>;

@@ -78,6 +78,7 @@ const ComprehensivePricingShowcase2025 = () => {
             'AI & Analytics': '📊',
   'AI & Customer Experience': '💬'
         
+
 };
         return icons[category] || '🚀'};
     const getPriceDisplay = (service) => {

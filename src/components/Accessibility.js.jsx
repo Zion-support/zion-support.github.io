@@ -32,6 +32,7 @@ export const AccessibilityProvider = ({ children }) => {
             fontSize,
   colorBlindMode
         
+
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
     // Apply accessibility settings to document
@@ -65,6 +66,7 @@ export const AccessibilityProvider = ({ children }) => {
         setFontSize,
   setColorBlindMode
     
+
 };
     return (<AccessibilityContext.Provider value={value}>
       {children}
@@ -103,12 +105,15 @@ export const AccessibilityPanel = () => {
             <motion.div initial = {
   { scale: 0.9,
   opacity: 0 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 }} className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
               {/* Header */}
               <div className="flex items-center justify-between mb-6">

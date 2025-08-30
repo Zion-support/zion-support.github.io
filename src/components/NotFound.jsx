@@ -26,9 +26,11 @@ const NotFound = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -40,9 +42,11 @@ const NotFound = () => {
         <motion.div className="mb-8" animate = {
   { scale[1, 1.1,
   1] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}>
 =======
         <motion.div className="mb-8" animate = {
@@ -53,9 +57,11 @@ const NotFound = () => {
 
 
 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -100,9 +106,11 @@ const NotFound = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -136,9 +144,11 @@ const NotFound = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

@@ -164,9 +164,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         return (<motion.div key={field.name} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className="space-y-2">
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
           {field.label}
@@ -183,6 +185,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {field.type === 'textarea' ? (<textarea name={field.name} value={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.value)
+
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
                         ? 'border-green-500 focus:ring-green-200'
@@ -190,6 +193,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.value)
+
 } onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
                         ? 'border-green-500 focus:ring-green-200'
@@ -203,6 +207,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
               <input type="checkbox" name={field.name} checked={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.checked)
+
 } className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
               <span className="text-sm text-gray-600 dark:text-gray-400">
                 {field.placeholder}
@@ -210,6 +215,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.value)
+
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
                         ? 'border-green-500 focus:ring-green-200'
@@ -231,9 +237,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         {fieldValidation?.isTouched && fieldValidation.message && (<motion.p initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} className="text-sm text-red-600 dark:text-red-400">
             {fieldValidation.message}
           </motion.p>)}
@@ -242,9 +250,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         return (<motion.div initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>
         <h3 className="text-2xl font-bold text-green-800 dark:text-green-200 mb-2">
@@ -257,9 +267,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     return (<motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">
@@ -302,12 +314,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
           {Object.values(validation).some(v => !v.isValid && v.isTouched) && (<motion.div initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">
               <p className="text-sm text-red-600 dark:text-red-400">
                 Please fix the errors above before submitting the form.

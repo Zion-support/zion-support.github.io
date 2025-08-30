@@ -79,9 +79,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -108,6 +110,7 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }>
                 Get Consultation
               </Button>
@@ -127,9 +130,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -154,6 +159,7 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -162,9 +168,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -205,9 +213,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +241,7 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -239,9 +250,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -281,9 +294,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -307,6 +322,7 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -315,9 +331,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -342,9 +360,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -375,9 +395,11 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -400,6 +422,7 @@ const ServicePortfolioDashboard = () => {
 
 
 
+
 }>
                 <Rocket className="w-5 h-5 mr-2"/>
                 Get Portfolio Strategy
@@ -407,6 +430,7 @@ const ServicePortfolioDashboard = () => {
               <Button className="border-white text-white hover:bg-white hover:text-zion-purple text-lg px-8 py-4" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

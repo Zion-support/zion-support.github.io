@@ -194,6 +194,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -202,9 +203,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -220,6 +223,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     <select onChange = {
   (e) => handleFilterChange(column.key, e.target.value,
   'contains')
+
 
 
 
@@ -273,9 +277,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -289,11 +295,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 
+
 }>
                 {enableSelection && (<div className="w-8 mr-2">
                     <input type="checkbox" checked={selectedItems.has(String(item.id || JSON.stringify(item)))} onChange = {
   (e) => handleSelectionChange(item,
   e.target.checked)
+
 
 
 
@@ -338,6 +346,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 
+
 } disabled={currentPage === 1} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                 Previous
               </button>
@@ -353,6 +362,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
               <button onClick = {
   () => setCurrentPage(prev => Math.min(totalPages,
   prev + 1))
+
 
 
 

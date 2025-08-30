@@ -56,6 +56,7 @@ export function NewsletterSection() {
 
 
 
+
 }}/>
       </div>
 
@@ -65,17 +66,21 @@ export function NewsletterSection() {
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
   { scale[1, 1.2,
   1] 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}/>
 =======
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
@@ -86,10 +91,12 @@ export function NewsletterSection() {
 
 
 
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 
 
 
@@ -104,9 +111,11 @@ export function NewsletterSection() {
 
 
 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 
 
 
@@ -125,9 +134,11 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -156,6 +167,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -164,9 +176,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -181,6 +195,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -189,9 +204,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -212,6 +229,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -220,9 +238,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -249,6 +269,7 @@ export function NewsletterSection() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: "auto" 
@@ -257,9 +278,11 @@ export function NewsletterSection() {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -274,9 +297,11 @@ export function NewsletterSection() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -303,6 +328,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -311,9 +337,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -342,6 +370,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -350,9 +379,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.6 
+
 
 
 
@@ -370,9 +401,11 @@ export function NewsletterSection() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -398,6 +431,7 @@ export function NewsletterSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -406,9 +440,11 @@ export function NewsletterSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.7 
+
 
 
 

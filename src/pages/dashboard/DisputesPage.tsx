@@ -17,7 +17,7 @@ function DisputesPage(...args[]):  {
         
       </>
     </ProtectedRoute>
-  )}
+  )};
 =======;
         ;
         <DisputeDashboard />;
@@ -30,6 +30,7 @@ function DisputesPage(...args[]):  {
 
 export default DisputesPage;
 
+export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;
 export default DisputesPage;

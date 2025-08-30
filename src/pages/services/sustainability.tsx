@@ -41,7 +41,7 @@ export default function Sustainability(...args: []):  {
       title: 'Sustainable Growth',
       description: 'Business growth strategies that prioritize environmental responsibility',
       color: 'from-indigo-500 to-purple-500'
-    }
+    };
 =======;
     {;
       icon: Globe,;
@@ -76,7 +76,7 @@ export default function Sustainability(...args: []):  {
       description: 'ESG reporting and sustainability metrics dashboard',
       price: 'From $5,000',
       features: ['Data collection', 'Report generation', 'Stakeholder communication', 'Compliance']
-    }
+    };
 =======;
     {;
       title: 'Carbon Footprint Analysis',;
@@ -91,7 +91,7 @@ export default function Sustainability(...args: []):  {
     { name: 'Waste Management', icon: Recycle, description: 'Optimize waste reduction and recycling' },
     { name: 'Water Conservation', icon: Globe, description: 'Smart water management systems' },
     { name: 'Carbon Offsetting', icon: Leaf, description: 'Carbon credit and offset programs' },
-    { name: 'Sustainable Supply Chain', icon: Network, description: 'Green procurement and logistics' },
+    { name: 'Sustainable Supply Chain', icon: Network, description: 'Green procurement and logistics' },;
     { name: 'Employee Engagement', icon: Users, description: 'Sustainability training and programs' };
   ];
 
@@ -119,10 +119,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -179,10 +181,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -209,14 +213,17 @@ export default function Sustainability(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
 =======
@@ -228,6 +235,7 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -237,10 +245,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -274,10 +284,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -304,20 +316,24 @@ export default function Sustainability(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
 =======
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 
 
 
@@ -332,10 +348,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -377,10 +395,12 @@ export default function Sustainability(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -401,14 +421,17 @@ export default function Sustainability(...args: []):  {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -435,10 +458,12 @@ export default function Sustainability(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -490,7 +515,7 @@ export default function Sustainability(...args: []):  {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300">
                   Contact Green Team
-                </button>
+                </button>;
               </div>;
             </div>;
           </motion.div>;

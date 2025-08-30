@@ -25,8 +25,10 @@ export function LoadingSpinner(...args[]):  {
   ;
   ;
   ;
+  ;
   lg: 'w-32 h-32';
   ;
+
 
 
 
@@ -51,11 +53,13 @@ export function LoadingSpinner(...args[]):  {
             scale[1, 1.1,
   1]
           
+
 }}
           transition = {
   { 
             rotate: { duration: 2, repeat: Infinity,
   ease: "linear" 
+
 },
 =======
             scale: [1, 1.1,
@@ -70,6 +74,7 @@ export function LoadingSpinner(...args[]):  {
   { 
             rotate: { duration: 2, repeat: Infinity,
   ease: "linear" 
+
 
 
 
@@ -103,10 +108,12 @@ export function LoadingSpinner(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 3,
   repeat: Infinity 
+
 
 
 
@@ -124,10 +131,12 @@ export function LoadingSpinner(...args[]):  {
             animate = {
   { opacity[0.3, 0.6,
   0.3] 
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}
 =======
             animate = {
@@ -138,10 +147,12 @@ export function LoadingSpinner(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -159,10 +170,12 @@ export function LoadingSpinner(...args[]):  {
           animate = {
   { opacity[0.5, 1,
   0.5] 
+
 }}
           transition = {
   { duration: 1.5,
   repeat: Infinity 
+
 }}
 =======
           animate = {
@@ -173,10 +186,12 @@ export function LoadingSpinner(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 1.5,
   repeat: Infinity 
+
 
 
 
@@ -201,6 +216,7 @@ export function LoadingSpinner(...args[]):  {
                 opacity[0.5, 1,
   0.5]
               
+
 }}
               transition = {
   {
@@ -208,6 +224,7 @@ export function LoadingSpinner(...args[]):  {
                 repeat: Infinity,
   delay: index * 0.2
               
+
 }}
             />
           ))}
@@ -227,6 +244,7 @@ export function LoadingSpinner(...args[]):  {
 
 
 
+
 }}
               transition = {
   {
@@ -239,6 +257,7 @@ export function LoadingSpinner(...args[]):  {
 
 
 
+;
 }};
             />;
           ))};
@@ -268,10 +287,12 @@ export function PageLoader(...args[]):  {
               opacity[0.3, 0.6,
   0.3]
             
+
 }}
             transition = {
   { duration: 4,
   repeat: Infinity 
+
 }}
           />
           <motion.div
@@ -282,10 +303,12 @@ export function PageLoader(...args[]):  {
               opacity[0.6, 0.3,
   0.6]
             
+
 }}
             transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
 }}
 =======
             animate = {
@@ -299,10 +322,12 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 4,
   repeat: Infinity 
+
 
 
 
@@ -323,10 +348,12 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 4, repeat: Infinity,
   delay: 1 
+
 
 
 
@@ -347,10 +374,12 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -373,6 +402,7 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
@@ -386,10 +416,12 @@ export function PageLoader(...args[]):  {
             animate = {
   { opacity[0.7, 1,
   0.7] 
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}
 =======
             animate = {
@@ -400,10 +432,12 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -421,10 +455,12 @@ export function PageLoader(...args[]):  {
             animate = {
   { opacity[0.5, 1,
   0.5] 
+
 }}
             transition = {
   { duration: 2, repeat: Infinity,
   delay: 0.5 
+
 }}
 =======
             animate = {
@@ -435,10 +471,12 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 2, repeat: Infinity,
   delay: 0.5 
+
 
 
 
@@ -465,6 +503,7 @@ export function PageLoader(...args[]):  {
 
 
 
+
 }}
               />
 <<<<<<< HEAD
@@ -475,7 +514,7 @@ export function PageLoader(...args[]):  {
     </div>
   )}
 
-interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
+interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {;
 =======;
             </div>;
           </div>;
@@ -503,6 +542,7 @@ export function SkeletonLoader(...args[]):  {
             backgroundPosition['200% 0',
   '-200% 0']
           
+
 }}
           transition = {
   {
@@ -513,6 +553,7 @@ export function SkeletonLoader(...args[]):  {
             backgroundPosition: ['200% 0',
   '-200% 0']
           
+
 
 
 
@@ -531,6 +572,7 @@ export function SkeletonLoader(...args[]):  {
 
 
 
+
 }}
           style = {
   {
@@ -538,6 +580,7 @@ export function SkeletonLoader(...args[]):  {
   <<<<<<< HEAD
             backgroundSize: '200% 100%'
           
+
 }}
         />
       ))}
@@ -547,7 +590,7 @@ export function SkeletonLoader(...args[]):  {
   backgroundSize: '200% 100%'
           
 
-
+;
 ;
 ;
 }};

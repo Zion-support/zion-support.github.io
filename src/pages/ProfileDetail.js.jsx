@@ -160,6 +160,7 @@ export default function ProfileDetail() {
             professional_title: profileData?.professional_title || '',
   hourly_rate: profileData?.hourly_rate || 0
         
+
 }}/>
             {/* Contact Information */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">

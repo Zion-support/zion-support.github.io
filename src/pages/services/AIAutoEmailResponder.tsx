@@ -18,7 +18,7 @@ export default function AIAutoEmailResponder(...args[]):  {
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 mt-10">
+        <div className="grid gap-8 md:grid-cols-2 mt-10">;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>;
             <ul className="space-y-2 text-sm text-zion-slate-light">;
@@ -42,7 +42,7 @@ export default function AIAutoEmailResponder(...args[]):  {
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://openai.com/pricing" target="_blank" rel="noreferrer">OpenAI pricing</a>,
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">Google Workspace</a>,
               <a className="text-cyan-400 hover:text-cyan-300 ml-2" href="https://aws.amazon.com/bedrock/pricing/" target="_blank" rel="noreferrer">AWS Bedrock</a>
-            </p>
+            </p>;
           </div>;
         </div>;
 ;
@@ -63,7 +63,7 @@ export default function AIAutoEmailResponder(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
           </div>;

@@ -41,16 +41,16 @@ export default function InnovativeServicesShowcase2026(...args[]):  {
     { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' },
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' },
     { id: 'DevOps & Infrastructure', name: 'DevOps & Infrastructure', icon: Cpu, color: 'from-green-500 to-emerald-500' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', icon: Heart, color: 'from-rose-500 to-pink-500' },;
     { id: 'AI & Edge Computing', name: 'AI & Edge Computing', icon: Zap, color: 'from-amber-500 to-yellow-500' };
   ];
   const filteredServices = INNOVATIVE_SERVICES.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     return matchesCategory && matchesSearch});
   const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
+    switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
       case 'innovation':
@@ -134,7 +134,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
+      };
     };
   };
 
@@ -145,8 +145,10 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
     ;
+
 
 
 
@@ -180,10 +182,12 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -290,6 +294,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -299,10 +304,12 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -451,10 +458,12 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -549,7 +558,7 @@ const InnovativeServicesShowcase2026: React.FC = () => {;
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

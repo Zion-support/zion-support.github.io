@@ -292,7 +292,7 @@ export const advancedITServices2025 = [
     tags['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
     website: 'https://ziontechgroup.com/quantum-migration-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$15.7B',;

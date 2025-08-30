@@ -9,6 +9,7 @@ const MessagingProvider({ children }) {
             isRead: false,
   <<<<<<< HEAD
         
+
 };
         setMessages(prev => [...prev, newMessage])};
 =======

@@ -127,9 +127,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -146,6 +148,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -154,9 +157,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -176,6 +181,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -184,9 +190,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -206,6 +214,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -214,9 +223,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -237,6 +248,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -245,9 +257,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -275,9 +289,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -301,6 +317,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -309,9 +326,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -337,9 +356,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -365,6 +386,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -373,9 +395,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -427,9 +451,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -454,9 +480,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -486,9 +514,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -505,6 +535,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -513,9 +544,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -533,6 +566,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -541,9 +575,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -567,6 +603,7 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -575,9 +612,11 @@ const AICodeReviewAssistant = () => {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -608,6 +647,7 @@ const AICodeReviewAssistant = () => {
             <motion.div className="mt-8 text-sm text-gray-400" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 

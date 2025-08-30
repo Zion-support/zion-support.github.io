@@ -39,6 +39,7 @@ export default function Payments() {
                     <Button onClick = {
   () => window.open('https://stripe.com',
   '_blank')
+
 } className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
                       Manage Payment Methods
                     </Button>

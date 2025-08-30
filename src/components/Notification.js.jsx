@@ -8,6 +8,7 @@ const notificationStyles = {
         textColor: 'text-zion-emerald',
   iconColor: 'text-zion-emerald'
     
+
 },
     error: {
         icon: XCircle,

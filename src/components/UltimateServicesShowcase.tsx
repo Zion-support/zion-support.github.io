@@ -82,8 +82,10 @@ const contact = {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
 
 
 
@@ -109,7 +111,7 @@ const categories = [
     services: enterpriseITInfrastructureServices2025
   },
   {
-    id: 'micro-saas',
+    id: 'micro-saas',;
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;
     icon: <Code className="w-8 h-8" />,;
@@ -125,8 +127,10 @@ const innovationLevelColors = {
   ;
   ;
   ;
+  ;
   'Emerging': 'from-green-600 to-emerald-700';
 ;
+
 
 
 
@@ -141,8 +145,10 @@ const patentStatusColors = {
   ;
   ;
   ;
+  ;
   'Open Source': 'from-purple-600 to-violet-700';
 ;
+
 
 
 
@@ -171,7 +177,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    visible: {;
       opacity: 1,;
       transition: {;
         staggerChildren: 0.1,;
@@ -188,9 +194,10 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 },
     visible: {
-      opacity: 1,
+      opacity: 1,;
       y: 0,;
       transition: {;
         duration: 0.6,;
@@ -213,10 +220,12 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -265,6 +274,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -274,10 +284,12 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -435,6 +447,7 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -444,10 +457,12 @@ export function UltimateServicesShowcase(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -603,7 +618,7 @@ export function UltimateServicesShowcase(...args[]):  {
         </div>
       )}
     </section>
-  )}
+  )};
 =======;
             </div>;
           </div>;
@@ -614,6 +629,7 @@ export function UltimateServicesShowcase(...args[]):  {
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;

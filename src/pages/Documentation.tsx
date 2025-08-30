@@ -28,7 +28,7 @@ export default function Documentation() {
   const docCategories = [
 =======
   const categories = [
-    { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },
+    { id: 'all', name: 'All Documentation', icon: <BookOpen className="w-5 h-5" />, count: 0 },;
     { id: 'getting-started', name: 'Getting Started', icon: <BookOpen className="w-5 h-5" />, count: 12 },;
     { id: 'api', name: 'API Reference', icon: <Code className="w-5 h-5" />, count: 28 },;
     { id: 'guides', name: 'User Guides', icon: <FileText className="w-5 h-5" />, count: 45 },;
@@ -92,7 +92,7 @@ export default function Documentation() {
         { title: 'Security Audit Process', readTime: '25 min', difficulty: 'Intermediate' },
         { title: 'Compliance Requirements', readTime: '20 min', difficulty: 'Intermediate' },
         { title: 'Incident Response Guide', readTime: '30 min', difficulty: 'Advanced' }
-      ]
+      ];
     };
   ];
 
@@ -123,7 +123,7 @@ export default function Documentation() {
       description: 'Client libraries for popular programming languages',
       version: 'v2.0.0',
       status: 'Stable',
-      languages: 8
+      languages: 8;
     };
   ];
 
@@ -159,11 +159,11 @@ export default function Documentation() {
 <<<<<<< HEAD
       difficulty: 'Intermediate',
       views: '6.7k',
-      rating: 4.7
+      rating: 4.7;
     };
   };
 
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (type: string) => {;
     switch (type) {;
       case 'api': return <Api className="w-4 h-4" />;
       case 'guide': return <BookOpen className="w-4 h-4" />;
@@ -180,7 +180,7 @@ export default function Documentation() {
     ? docCategories.flatMap(category => 
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
-        ).map(article => ({ ...category, article }))
+        ).map(article => ({ ...category, article }));
       );
     : [];
 
@@ -206,7 +206,7 @@ export default function Documentation() {
       category: 'examples',
       type: 'examples',
       difficulty: 'intermediate',
-      readTime: '30 min',
+      readTime: '30 min',;
       lastUpdated: '2025-01-08',;
       views: 5670,;
       rating: 4.5,;
@@ -230,7 +230,7 @@ export default function Documentation() {
       link: '/api-playground',
       featured: true
     },
-    {
+    {;
       title: 'Community Forum',;
       description: 'Connect with other developers and get help',;
       type: 'community',;
@@ -307,10 +307,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   scale: 0.5 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -321,10 +323,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -335,14 +339,17 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Everything you need to get started with our services
@@ -354,14 +361,17 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <div className="relative">
@@ -387,10 +397,12 @@ export default function Documentation() {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -410,14 +422,17 @@ export default function Documentation() {
                     initial = {
   { opacity: 0,
   x: -20 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 }}
                     transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                     className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
                   >
@@ -441,10 +456,12 @@ export default function Documentation() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition={{ duration: 0.8 }}
               >
@@ -472,10 +489,12 @@ export default function Documentation() {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -495,15 +514,18 @@ export default function Documentation() {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="group"
                 >
@@ -555,10 +577,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -578,15 +602,18 @@ export default function Documentation() {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -634,10 +661,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -658,15 +687,18 @@ export default function Documentation() {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="group"
                 >
@@ -714,10 +746,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -759,15 +793,18 @@ export default function Documentation() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -802,10 +839,12 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -817,15 +856,18 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Can't find what you're looking for? Our support team is here to help
@@ -835,15 +877,18 @@ export default function Documentation() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -897,7 +942,7 @@ export default function Documentation() {
             <a 
               href="/help"
               className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >
+            >;
               Help Center;
             </a>;
           </div>;

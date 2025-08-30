@@ -39,8 +39,10 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
 
 
 
@@ -78,7 +80,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
-    },
+    },;
     {;
       icon: Shield,;
       title: 'Content Plagiarism Detection',;
@@ -133,7 +135,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         'Custom AI models',
         'White-label options',
         'Dedicated support',
-        'Custom integrations',
+        'Custom integrations',;
         'Advanced reporting',;
         'SLA guarantees';
       ],;
@@ -156,7 +158,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     {
       title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads']
+      metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
     },;
     {;
       title: 'Technical Content',;
@@ -187,7 +189,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       comp: 'Creative Content Studio',
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
       rating: 5
-    }
+    };
 =======;
       role: 'Content Creator',;
       company: 'Creative Content Studio',;
@@ -219,10 +221,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -282,10 +286,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -316,6 +322,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -325,10 +332,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -369,10 +378,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -403,6 +414,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -412,10 +424,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -453,10 +467,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -487,6 +503,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -496,10 +513,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -559,6 +578,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -568,10 +588,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -603,10 +625,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -637,6 +661,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -646,10 +671,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -688,10 +715,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -749,7 +778,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span>Visit Website</span>
-                </a>
+                </a>;
               </div>;
             </motion.div>;
           </div>;

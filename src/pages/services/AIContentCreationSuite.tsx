@@ -5,7 +5,7 @@ export default function AIContentCreationSuite() {
     'AI-powered text generation and editing',
     'Automated image creation and editing',
     'Video content generation and optimization',
-    'Multi-language content localization',
+    'Multi-language content localization',;
     'SEO-optimized content creation',;
     'Brand voice consistency management',;
     'Content performance analytics',;
@@ -14,7 +14,7 @@ export default function AIContentCreationSuite() {
     'Content collaboration and workflow management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase content production by 10x',;
     'Reduce content creation costs by 60%',;
     'Improve content engagement by 45%',;
@@ -23,7 +23,7 @@ export default function AIContentCreationSuite() {
     'Optimize content for better SEO performance';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Marketing and advertising agencies',;
     'E-commerce and retail brands',;
     'Publishing and media companies',;
@@ -61,7 +61,7 @@ export default function AIContentCreationSuite() {
       price: '$1,299/mo',
       details: [
         'Unlimited content creation',
-        'Full AI content suite',
+        'Full AI content suite',;
         'Custom AI models',;
         'Dedicated support',;
         'API access',;
@@ -79,8 +79,10 @@ export default function AIContentCreationSuite() {
   ;
   ;
   ;
+  ;
   'COPPA'];
   ;
+
 
 
 
@@ -94,7 +96,7 @@ export default function AIContentCreationSuite() {
       solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
     },
     {
-      type: 'Visual Content',
+      type: 'Visual Content',;
       solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets'];
     },;
     {;
@@ -258,7 +260,7 @@ export default function AIContentCreationSuite() {
             </a>
           </div>
           <div className="mt-4">
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">
+            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark">;
               Learn More <ExternalLink className="w-4 h-4 ml-2" />;
             </a>;
           </div>;

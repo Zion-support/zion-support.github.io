@@ -136,6 +136,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
   #0f172a 100%)'
         
+
 }}/>)}
 =======
             cancelAnimationFrame(animationFrameId);
@@ -146,6 +147,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }) {
             background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%,
   #0f172a 100%)'
         
+
 
 
 

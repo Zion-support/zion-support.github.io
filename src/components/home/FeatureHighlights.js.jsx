@@ -53,6 +53,7 @@ export function FeatureHighlights() {
     const itemVariants = {
   hidden: { opacity: 0, y: 30,
   scale: 0.95 
+
 },
         visible: {
             opacity: 1,
@@ -67,6 +68,7 @@ export function FeatureHighlights() {
     const achievementVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
+
 },
         visible: {
             opacity: 1,
@@ -77,6 +79,7 @@ export function FeatureHighlights() {
     const techVariants = {
   hidden: { opacity: 0,
   x: -20 
+
 },
         visible: {
             opacity: 1,
@@ -96,9 +99,11 @@ export function FeatureHighlights() {
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Why Industry Leaders
@@ -118,6 +123,7 @@ export function FeatureHighlights() {
                 y: -10,
                 scale: 1.02,
   transition: { duration: 0.3 
+
 }
             }} className="group">
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
@@ -155,9 +161,11 @@ export function FeatureHighlights() {
         <motion.div className="bg-gradient-to-r from-zion-blue/20 to-zion-purple/20 rounded-3xl p-8 md:p-12 border border-zion-blue-light/20 mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">
@@ -183,9 +191,11 @@ export function FeatureHighlights() {
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h3 className="text-3xl font-bold text-white mb-8">
             Cutting-Edge Technology Stack
@@ -195,6 +205,7 @@ export function FeatureHighlights() {
             {technologies.map((tech, index) => (<motion.div key={index} variants={techVariants} className="px-6 py-3 bg-zion-blue/20 border border-zion-blue-light/30 rounded-full text-zion-cyan hover:bg-zion-blue/30 hover:border-zion-blue-light/50 transition-all duration-300 cursor-pointer" whileHover = {
   { scale: 1.05,
   y: -2 
+
 }}>
                 {tech}
               </motion.div>))}
@@ -204,12 +215,15 @@ export function FeatureHighlights() {
           <motion.div initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.3 
+
 }}>
             <div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-10 py-4 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Explore Our Technology

@@ -25,8 +25,9 @@ const Separator = React.forwardRef<
 
 
 
+
 }
-      {...props}
+      {...props};
     />;
   );
 );

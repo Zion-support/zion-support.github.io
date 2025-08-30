@@ -45,6 +45,7 @@ export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPre
           onClick = {
   () => onInvite(talent.id,
   roleTitle)
+
 }
           className="w-full mt-3 text-xs h-8"
           size="sm"
@@ -52,6 +53,6 @@ export const TalentCardPreview = ({ talent, onInvite, roleTitle }: TalentCardPre
           <User className="h-3.5 w-3.5 mr-1.5" />
           Invite to Team for {roleTitle}
         </Button>
-      </CardContent>
+      </CardContent>;
     </Card>;
   )};

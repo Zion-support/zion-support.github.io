@@ -1,44 +1,6 @@
 import React from 'react';
 import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
 const AIBusinessIntelligence = () => {
-    const biSolutions = [
-        {
-            title: "Sales Analytics",
-            description: "Comprehensive sales performance and forecasting",
-            icon: TrendingUp,
-            capabilities: ["Sales forecasting", "Performance tracking", "Pipeline analysis", "Revenue optimization"]
-        },
-        {
-            title: "Customer Analytics",
-            description: "Deep insights into customer behavior and preferences",
-            icon: Users,
-            capabilities: ["Customer segmentation", "Behavior analysis", "Lifetime value", "Churn prediction"]
-        },
-        {
-            title: "Financial Analytics",
-            description: "Financial performance and risk analysis",
-            icon: PieChart,
-            capabilities: ["Financial reporting", "Risk assessment", "Budget analysis", "Cost optimization"]
-        },
-        {
-            title: "Operational Analytics",
-            description: "Operational efficiency and process optimization",
-            icon: Cpu,
-            capabilities: ["Process optimization", "Efficiency metrics", "Resource allocation", "Performance monitoring"]
-        },
-        {
-            title: "Market Analytics",
-            description: "Market trends and competitive intelligence",
-            icon: Globe,
-            capabilities: ["Market research", "Competitive analysis", "Trend forecasting", "Opportunity identification"]
-        },
-        {
-            title: "Predictive Analytics",
-            description: "Future-focused insights and forecasting",
-            icon: Lightbulb,
-            capabilities: ["Trend prediction", "Risk forecasting", "Opportunity identification", "Scenario planning"]
-        }
-    ];
     const benefits = [
         "Data-driven decision making across all business areas",
         "Real-time insights and instant access to critical information",

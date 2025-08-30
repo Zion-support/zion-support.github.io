@@ -47,14 +47,14 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
       avatar: '👨‍💻',
       rating: 5,
       quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
-      metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture']
+      metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
     };
   ];
 
   const successMetrics = [
     { label: 'Client Satisfaction', value: '98%', icon: Heart },
     { label: 'Project Success Rate', value: '99%', icon: CheckCircle },
-    { label: 'Client Retention', value: '95%', icon: Users },
+    { label: 'Client Retention', value: '95%', icon: Users },;
     { label: 'Average Rating', value: '4.9/5', icon: Star };
   ];
 =======
@@ -103,7 +103,7 @@ const successStories = [
       "Improved patient outcomes by 30%",
       "Reduced administrative overhead by 50%",
       "Enhanced data accuracy by 95%"
-    ],
+    ],;
     testimonial: "The AI platform revolutionized how we handle patient data and make decisions.",;
     author: "Dr. Emily Rodriguez",;
     position: "Chief Medical Officer",;
@@ -127,10 +127,12 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -153,17 +155,20 @@ export function ClientSuccessStoriesSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
-        >
+        >;
           {successMetrics.map((metric, index)  => {;
             const IconComponent = metric.icon;
             return (
@@ -195,10 +200,12 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -209,6 +216,7 @@ export function ClientSuccessStoriesSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -293,10 +301,12 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -307,6 +317,7 @@ export function ClientSuccessStoriesSection() {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -350,10 +361,12 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,6 +382,7 @@ export function ClientSuccessStoriesSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -377,7 +391,7 @@ export function ClientSuccessStoriesSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -392,4 +406,5 @@ export default ClientSuccessStoriesSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ClientSuccessStoriesSection;
 export default ClientSuccessStoriesSection;

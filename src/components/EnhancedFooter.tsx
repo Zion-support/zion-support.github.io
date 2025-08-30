@@ -100,7 +100,7 @@ export function EnhancedFooter() {
         { name: 'Documentation', href: '/docs', icon: FileText },
         { name: 'API Reference', href: '/api', icon: Code },
         { name: 'Developer Portal', href: '/developer', icon: Cpu },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
+        { name: 'Help Center', href: '/help', icon: HelpCircle },;
         { name: 'FAQ', href: '/faq', icon: MessageCircle },;
         { name: 'Training', href: '/training', icon: BookOpen },;
         { name: 'Webinars', href: '/webinars', icon: Users },;
@@ -109,7 +109,7 @@ export function EnhancedFooter() {
     };
   ];
 
-  const socialLinks = [
+  const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },;
@@ -125,8 +125,10 @@ export function EnhancedFooter() {
   ;
   ;
   ;
+  ;
   hours: 'Mon-Fri: 9AM-6PM EST';
   ;
+
 
 
 
@@ -286,10 +288,12 @@ export function EnhancedFooter() {
 
 
 
+
 }}
           animate = {
   { scale: 1,
   opacity: 1 
+
 
 
 
@@ -304,11 +308,12 @@ export function EnhancedFooter() {
 
 
 
+
 }}
         >
           <Link
             to="/contact"
-            className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"
+            className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group";
           >;
             <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />;
           </Link>;
@@ -318,6 +323,7 @@ export function EnhancedFooter() {
   );
 }
 
+export default EnhancedFooter;
 export default EnhancedFooter;
 export default EnhancedFooter;
 export default EnhancedFooter;

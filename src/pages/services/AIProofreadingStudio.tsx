@@ -32,7 +32,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
           <li>Creator: $29/mo per seat</li>
           <li>Team: $149/mo up to 10 seats</li>
           <li>Enterprise: custom, SSO + DLP</li>
-        </ul>
+        </ul>;
       </div>;
     </section>;
     <section className="container mx-auto px-4 pb-16">;

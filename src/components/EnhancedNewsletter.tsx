@@ -9,7 +9,7 @@ interface NewsletterFormData {
   interests: string[];
   frequency: 'weekly' | 'monthly' | 'quarterly'}
 
-const interests = [
+const interests = [;
   { id: 'ai-solutions', label: 'AI Solutions', icon: Zap },;
   { id: 'cloud-services', label: 'Cloud Services', icon: Shield },;
   { id: 'cybersecurity', label: 'Cybersecurity', icon: Shield },;
@@ -49,7 +49,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 <<<<<<< HEAD
     if (formData.interests.length === 0) {
-      newErrors.interests = 'Please select at least one interest'}
+      newErrors.interests = 'Please select at least one interest'};
 =======;
     if (formData.interests.length = == 0) {;
       newErrors.interests = 'Please select at least one interest';
@@ -107,7 +107,7 @@ export const EnhancedNewsletter: React.FC = () => {;
       setErrors(prev = > ({ ...prev, interests: null }))};
   };
 
-  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {
+  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {;
 =======;
       setErrors(prev => ({ ...prev, interests: null }));
     }
@@ -120,7 +120,7 @@ export const EnhancedNewsletter: React.FC = () => {;
     // Clear error when user starts typing
     if (errors[field]) {
 <<<<<<< HEAD
-      setErrors(prev = > ({ ...prev, [field]: null }))}
+      setErrors(prev = > ({ ...prev, [field]: null }))};
 =======;
       setErrors(prev => ({ ...prev, [field]: null }));
     }
@@ -138,10 +138,12 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -163,7 +165,7 @@ export const EnhancedNewsletter: React.FC = () => {;
           <span>Check your email for a confirmation message</span>
         </div>
       </motion.div>
-    )}
+    )};
 =======;
         <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">;
           <Mail className="h-4 w-4" />;
@@ -188,6 +190,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
           className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mb-4"
         >
@@ -203,10 +206,12 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -228,10 +233,12 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -254,10 +261,12 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -281,6 +290,7 @@ export const EnhancedNewsletter: React.FC = () => {;
               onChange = {
   (e) => handleInputChange('firstName',
   e.target.value)
+
 
 
 
@@ -318,6 +328,7 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }
               className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors ${
                 errors.email
@@ -342,7 +353,7 @@ export const EnhancedNewsletter: React.FC = () => {;
             Areas of Interest * (Select all that apply)
           </label>
           <div className="grid grid-cols-2 md: grid-cols-3 gap-3">
-            {interests.map((interest)  => {
+            {interests.map((interest)  => {;
 =======;
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">;
             Areas of Interest * (Select all that apply);
@@ -370,7 +381,7 @@ export const EnhancedNewsletter: React.FC = () => {;
                   <Icon className={`h-4 w-4 ${isSelected ? 'text-blue-600' : 'text-slate-500'}`} />
                   <span className="text-sm font-medium">{interest.label}</span>
                 </motion.button>
-              )})}
+              )})};
 =======;
                   whileTap={{ scale: 0.98 }};
                 >;
@@ -412,6 +423,7 @@ export const EnhancedNewsletter: React.FC = () => {;
                   onChange = {
   (e) => handleInputChange('frequency',
   e.target.value)
+
 
 
 
@@ -475,10 +487,12 @@ export const EnhancedNewsletter: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -500,7 +514,7 @@ export const EnhancedNewsletter: React.FC = () => {;
           By subscribing, you agree to receive marketing emails from Zion Tech Group. 
           You can unsubscribe at  time. We respect your privacy and will never share your information.
         </p>
-      </motion.form>
+      </motion.form>;
     </div>;
   )};
 =======

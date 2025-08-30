@@ -3,7 +3,7 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
 export default function AIDocumentIntelligence() {
   const features = [
     'Advanced OCR with 99.5% accuracy across 50+ languages',
-    'Intelligent document classification and routing',
+    'Intelligent document classification and routing',;
     'AI-powered data extraction from complex forms',;
     'Automated compliance checking and validation',;
     'Real-time document processing and indexing',;
@@ -21,7 +21,7 @@ export default function AIDocumentIntelligence() {
     { 
       name: 'Professional', 
       price: '$399/mo', 
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] 
+      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIDocumentIntelligence() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Invoice processing and expense management',;
     'Contract analysis and legal document review',;
     'Insurance claims processing and validation',;
@@ -39,7 +39,7 @@ export default function AIDocumentIntelligence() {
     'HR documents and employee onboarding';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce manual data entry by 80-90%',;
     'Improve processing accuracy by 95%',;
     'Cut document processing costs by 60%',;
@@ -142,7 +142,7 @@ export default function AIDocumentIntelligence() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

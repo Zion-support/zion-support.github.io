@@ -161,7 +161,7 @@ export const ModernUIEnhancer: React.FC = () => {;
 <<<<<<< HEAD
     style.textContent = `
       .shadow-elevation-1 {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)}
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)};
 =======;
     style.textContent = `;
       .shadow-elevation-1 {;
@@ -282,7 +282,7 @@ export const ModernUIEnhancer: React.FC = () => {;
         ...particle,
         x: particle.x + particle.vx,
         y: particle.y + particle.vy,
-        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,
+        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,;
         vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy;
       })))};
 =======
@@ -384,6 +384,7 @@ export const ModernUIEnhancer: React.FC = () => {;
 
 
 
+
 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
@@ -407,6 +408,7 @@ export const ModernUIEnhancer: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1, y: 0,
@@ -416,10 +418,12 @@ export const ModernUIEnhancer: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0, y: 20,
   scale: 0.95 
+
 
 
 
@@ -615,12 +619,14 @@ export const ModernUIEnhancer: React.FC = () => {;
                 top: particle.y,
   <<<<<<< HEAD
               
+
 }}
               animate = {
   {
                 scale[1, 1.5, 1],
                 opacity[0.6, 1, 0.6],
-   
+  
+
 }}
               transition={{
 =======
@@ -646,6 +652,7 @@ export const ModernUIEnhancer: React.FC = () => {;
 
 
 
+
 }}
             />
           ))}
@@ -662,7 +669,8 @@ export const ModernUIEnhancer: React.FC = () => {;
   {
               scale[1, 1.2, 1],
               rotate[0, 180, 360],
-   
+  
+
 }}
             transition = {
   {
@@ -670,10 +678,11 @@ export const ModernUIEnhancer: React.FC = () => {;
               repeat: Infinity,
   ease: "easeInOut"
             
+
 }}
           />
         </div>
-      )}
+      )};
     </>;
   )};
 =======
@@ -693,8 +702,9 @@ export const ModernUIEnhancer: React.FC = () => {;
 
 
 
-
 ;
+;
+
 }};
           />;
         </div>;

@@ -46,6 +46,7 @@ const Tabs({ children, defaultValue, value, onValueChange, className = '' }) {
 
 
 
+
 }}>
       <div className={className}>
         {children}

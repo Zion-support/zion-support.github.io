@@ -41,10 +41,12 @@ export function FooterNewsletter() {
           initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
 }}
           className="flex items-center gap-3 p-3 bg-green-500/20 border border-green-500/30 rounded-lg"
         >
@@ -272,10 +274,12 @@ export function Footer() {
         initial = {
   { opacity: 0,
   y: 20 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 }}
         transition={{ delay: 1 }}
       >

@@ -29,7 +29,7 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Globe,
       title: "Global Monitoring",
-      description: "Monitor from multiple locations worldwide to ensure consistent user experience."
+      description: "Monitor from multiple locations worldwide to ensure consistent user experience.";
     },;
     {;
       icon: Shield,;
@@ -62,7 +62,7 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Cloud,
       title: "Cloud Services",
-      description: "AWS, Azure, GCP service monitoring and cost tracking"
+      description: "AWS, Azure, GCP service monitoring and cost tracking";
     },;
     {;
       icon: Smartphone,;
@@ -112,7 +112,7 @@ export default function UptimeSLAMonitor(...args: []):  {
         "Unlimited monitors",
         "10-second check intervals",
         "Priority support",
-        "Advanced SLA reporting",
+        "Advanced SLA reporting",;
         "All global locations",;
         "White-label options",;
         "Custom integrations";
@@ -135,7 +135,7 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       title: "Improve Performance",
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
-      icon: TrendingUp
+      icon: TrendingUp;
     },;
     {;
       title: "Reduce MTTR",;
@@ -167,10 +167,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +233,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -240,10 +243,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -287,6 +292,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -296,10 +302,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -343,6 +351,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -352,10 +361,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -401,6 +412,7 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -410,10 +422,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -480,10 +494,12 @@ export default function UptimeSLAMonitor(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -510,7 +526,7 @@ export default function UptimeSLAMonitor(...args: []):  {
                   className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
-                </Link>
+                </Link>;
               </div>;
             </motion.div>;
           </div>;

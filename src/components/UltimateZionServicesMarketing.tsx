@@ -62,7 +62,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
     },
     { 
       id: 'it-services', 
-      name: 'Enterprise IT Services', 
+      name: 'Enterprise IT Services', ;
       icon: '🖥️', ;
       color: 'from-gray-600 to-slate-600',;
       description: 'Advanced infrastructure and DevOps solutions',;
@@ -93,10 +93,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -122,6 +124,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -131,10 +134,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -157,6 +162,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -166,10 +172,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -210,6 +218,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
@@ -219,10 +228,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -277,10 +288,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }} 
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -305,7 +318,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
             ))}
           </motion.div>
         </div>
-      </section>
+      </section>;
 ;
       {/* Category Overview */};
       {selectedCategory !== 'all' && (;
@@ -326,10 +339,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -351,7 +366,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
                         <div className="text-purple-400 font-semibold">Market Size</div>
                         <div className="text-white text-lg">{category.marketSize}</div>
                       </div>
-                      <div className="bg-white/10 rounded-lg p-4">
+                      <div className="bg-white/10 rounded-lg p-4">;
                         <div className="text-purple-400 font-semibold">Growth Rate</div>;
                         <div className="text-white text-lg">{category.growthRate}</div>;
                       </div>;
@@ -377,10 +392,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -415,6 +432,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
   {
                   hidden: { opacity: 0,
   y: 20 
+
 
 
 
@@ -568,10 +586,12 @@ const UltimateZionServicesMarketing: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -597,7 +617,7 @@ const UltimateZionServicesMarketing: React.FC = () => {;
             </div>
             <div className="mt-6 text-sm text-gray-400">
               <p>🌟 Trusted by Fortune 500 companies worldwide</p>
-              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>
+              <p>🔒 SOC 2 Type II certified • HIPAA compliant • GDPR ready</p>;
               <p>🌍 Global support • 24/7 availability • Enterprise-grade security</p>;
             </div>;
           </motion.div>;

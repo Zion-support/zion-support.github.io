@@ -26,7 +26,7 @@ import { DollarSign,
 import { servicesCatalog  } from "../data/servicesCatalog";
 import { innovativeServices2027  } from "../data/innovativeServices2027";
 
-export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
+export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
 import { servicesCatalog } from "../data/servicesCatalog";
@@ -68,7 +68,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       }))
     ),
     ...innovativeServices2027.map(service  => ({
-      ...service,
+      ...service,;
       source: 'innovative',;
       category: service.category,;
       features: service.features || [],;
@@ -112,6 +112,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
 
@@ -120,8 +121,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 =======
 
 
-
 ;
+;
+
 };
 
   const getPriceRange = (price: string) => {;
@@ -157,7 +159,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
       'HealthTech Solutions': Heart,
       'EdTech Solutions': BookOpen,
       'GreenTech Solutions': Leaf,
-      'SpaceTech Solutions': Rocket,
+      'SpaceTech Solutions': Rocket,;
       'Robotics & Automation': Cpu,;
       'AR/VR Solutions': Eye,;
       'Biotech Solutions': Dna,;
@@ -186,10 +188,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
 
 
 
@@ -228,6 +232,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -237,10 +242,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -321,14 +328,17 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
   y: 0 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
 =======
@@ -340,6 +350,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -349,10 +360,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -373,6 +386,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   isVisible ? { opacity: 1,
@@ -382,10 +396,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 20 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -487,6 +503,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   isVisible ? { opacity: 1,
@@ -496,10 +513,12 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
 
 
 
+
 } : { opacity: 0, y: 30 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -553,7 +572,7 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

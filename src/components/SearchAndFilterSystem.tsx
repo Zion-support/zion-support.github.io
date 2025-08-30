@@ -165,8 +165,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       'development': 'text-green-400',
 <<<<<<< HEAD
       'consulting': 'text-yellow-400',
-  'digital-transformation': 'text-cyan-400'
+  'digital-transformation': 'text-cyan-400';
     ;
+
 };
     return colors[category as keyof typeof colors] || 'text-zinc-400'};
 =======
@@ -203,6 +204,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }
             placeholder={placeholder}
             className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 backdrop-blur-md"
@@ -229,6 +231,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -238,10 +241,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -351,10 +356,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }}
             animate = {
   { height: 'auto',
   opacity: 1 
+
 
 
 
@@ -369,10 +376,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }}
             transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
 
 
 
@@ -466,10 +475,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,7 +559,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             Clear all filters
           </button>
         </motion.div>
-      )}
+      )};
     </div>;
   )};
 =======

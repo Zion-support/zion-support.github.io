@@ -12,6 +12,7 @@ export function InteractiveMap() {
           {locations.map((loc) => (<a key={loc.name} href={`https://${loc.subdomain}`} className="absolute inline-flex items-center justify-center w-4 h-4 bg-zion-cyan rounded-full" style = {
   { top: loc.top,
   left: loc.left 
+
 }} title={`Visit ${loc.name}`}/>))}
         </div>
       </div>

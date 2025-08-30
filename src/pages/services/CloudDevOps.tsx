@@ -24,7 +24,7 @@ export default function CloudDevOps(...args[]):  {
     {
       icon: Monitor,
       title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring, alerting, and centralized logging solutions'
+      description: 'Comprehensive monitoring, alerting, and centralized logging solutions';
     },;
     {;
       icon: Shield,;
@@ -33,7 +33,7 @@ export default function CloudDevOps(...args[]):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Deploy 10x faster with automated pipelines',;
     'Reduce infrastructure costs by 40%',;
     'Achieve 99.9% uptime with monitoring',;
@@ -66,7 +66,7 @@ export default function CloudDevOps(...args[]):  {
       title: '24/7 Managed Services',
       description: 'Round-the-clock monitoring, maintenance, and support',
       price: 'From $2,500/month',
-      features['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports']
+      features['Proactive monitoring', 'Incident response', 'Regular maintenance', 'Performance reports'];
     };
   ];
 
@@ -76,7 +76,7 @@ export default function CloudDevOps(...args[]):  {
     { name: 'GCP', icon: Gcp, description: 'Google Cloud Platform' },
     { name: 'Kubernetes', icon: Kubernetes, description: 'Container orchestration' },
     { name: 'Docker', icon: Docker, description: 'Containerization' },
-    { name: 'Terraform', icon: Settings, description: 'Infrastructure as Code' }
+    { name: 'Terraform', icon: Settings, description: 'Infrastructure as Code' };
 =======;
     {;
       icon: Database,;
@@ -95,7 +95,7 @@ export default function CloudDevOps(...args[]):  {
       description: 'Multi-tenant applications with automated scaling'
     },
     {
-      industry: 'Financial Services',
+      industry: 'Financial Services',;
       description: 'Secure, compliant cloud infrastructure for banking applications';
     },;
     {;
@@ -120,10 +120,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -174,10 +176,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -208,6 +212,7 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -217,10 +222,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -252,10 +259,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +295,7 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -295,10 +305,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -334,10 +346,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -368,6 +382,7 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -377,10 +392,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -406,6 +423,7 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -415,10 +433,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -448,10 +468,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -482,6 +504,7 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -491,10 +514,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -534,10 +559,12 @@ export default function CloudDevOps(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -557,14 +584,17 @@ export default function CloudDevOps(...args[]):  {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -591,10 +621,12 @@ export default function CloudDevOps(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -624,7 +656,7 @@ export default function CloudDevOps(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

@@ -24,7 +24,6 @@ const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage
 const Marketplace = React.lazy(() => import('./pages/Marketplace.tsx'));
 
 // Support pages
-const Security = React.lazy(() => import('./pages/Security.tsx'));
 const SystemStatus = React.lazy(() => import('./pages/SystemStatus.tsx'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility.tsx'));
 
@@ -121,4 +120,5 @@ function App() {
 
 export default App;
 
+export default App;
 export default App;

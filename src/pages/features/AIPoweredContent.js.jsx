@@ -16,6 +16,7 @@ export default function AIPoweredContent() {
         "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.",
   "url": "https://app.ziontechgroup.com/features/ai-content-generation"
     
+
 };
     const { markAiExplored } = useAdvancedOnboardingStatus();
     useEffect(() => {

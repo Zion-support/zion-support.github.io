@@ -39,6 +39,7 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -47,9 +48,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { delay: item.delay,
   duration: 1 
+
 
 
 
@@ -82,9 +85,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -94,6 +99,7 @@ export default function FuturisticHero() {
           <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" style = {
   { y,
   opacity 
+
 
 
 
@@ -121,6 +127,7 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -129,9 +136,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 1,
   delay: 0.3 
+
 
 
 
@@ -153,6 +162,7 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -161,9 +171,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 1,
   delay: 0.6 
+
 
 
 
@@ -183,6 +195,7 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -191,9 +204,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.8 + index * 0.1 
+
 
 
 
@@ -221,6 +236,7 @@ export default function FuturisticHero() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -229,9 +245,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 1,
   delay: 1 
+
 
 
 
@@ -259,25 +277,31 @@ export default function FuturisticHero() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 1,
   delay: 1.5 
+
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
   { y[0, 10,
   0] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
             <motion.div animate = {
   { y[0, 12,
   0] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
 =======
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 1,
   delay: 1.5 
+
 
 
 
@@ -292,9 +316,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -309,9 +335,11 @@ export default function FuturisticHero() {
 
 
 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -332,11 +360,13 @@ export default function FuturisticHero() {
                 opacity: Math.random(),
   <<<<<<< HEAD
             
+
 }} animate = {
   {
                 y[0, -100],
                 opacity[0, 1, 0],
-   
+  
+
 }} transition={{
 =======
   

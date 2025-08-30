@@ -7,17 +7,20 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
         md: 'w-8 h-8',
   lg: 'w-12 h-12'
     
+
 };
     const textSizes = {
   sm: 'text-sm',
         md: 'text-base',
   lg: 'text-lg'
     
+
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
 }} className={`${sizeClasses[size]} text-zion-purple`}>
         <Loader2 className="w-full h-full"/>
       </motion.div>
@@ -25,12 +28,15 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
       <motion.p initial = {
   { opacity: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { delay: 0.2,
   duration: 0.3 
+
 }} className={`${textSizes[size]} text-zion-slate-light text-center`}>
         {message}
       </motion.p>
@@ -38,6 +44,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { delay: 0.4,
   duration: 0.3 
+
 }}>
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
   {
@@ -45,12 +52,14 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
                 opacity[0.5, 1,
   0.5]
             
+
 }} transition = {
   {
                 duration: 1.5,
                 repeat: Infinity,
   delay: i * 0.2
             
+
 }}/>))}
       </motion.div>
     </div>)}
@@ -65,6 +74,7 @@ export function InlineLoading({ message = "Loading..." }) {
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
 }} className="w-4 h-4 text-zion-purple">
         <Loader2 className="w-full h-full"/>
       </motion.div>

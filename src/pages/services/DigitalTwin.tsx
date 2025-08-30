@@ -28,7 +28,7 @@ export default function DigitalTwin(...args: []):  {
     {
       icon: Globe,
       title: "Data Synchronization",
-      description: "Real-time data sync between physical and digital representations"
+      description: "Real-time data sync between physical and digital representations";
     },;
     {;
       icon: Cpu,;
@@ -49,7 +49,7 @@ export default function DigitalTwin(...args: []):  {
       title: "Smart Cities",
       description: "Monitor infrastructure, traffic patterns, and environmental conditions",
       benefits: ["Traffic optimization", "Infrastructure monitoring", "Environmental tracking"]
-    },
+    },;
     {;
       icon: Cloud,;
       title: "Healthcare",;
@@ -60,7 +60,7 @@ export default function DigitalTwin(...args: []):  {
 
   const technologies = [
     { name: "IoT Sensors", icon: "📡", description: "High-precision sensors for data collection" },
-    { name: "Edge Computing", icon: "⚡", description: "Local processing for real-time decisions" },
+    { name: "Edge Computing", icon: "⚡", description: "Local processing for real-time decisions" },;
     { name: "5G Networks", icon: "🌐", description: "Ultra-fast connectivity for data transmission" },;
     { name: "AI/ML Models", icon: "🤖", description: "Advanced algorithms for predictions" },;
     { name: "Cloud Platform", icon: "☁️", description: "Scalable data storage and processing" },;
@@ -110,7 +110,7 @@ export default function DigitalTwin(...args: []):  {
         "Unlimited digital twins",
         "Custom AI models",
         "24/7 phone support",
-        "Advanced security",
+        "Advanced security",;
         "Multi-site management",;
         "Dedicated support team";
       ],;
@@ -133,7 +133,7 @@ export default function DigitalTwin(...args: []):  {
     {
       icon: Database,
       title: "Cost Reduction",
-      description: "Reduce operational costs by 30-40% through intelligent optimization"
+      description: "Reduce operational costs by 30-40% through intelligent optimization";
     },;
     {;
       icon: Globe,;
@@ -164,10 +164,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -219,10 +221,12 @@ export default function DigitalTwin(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -243,14 +247,17 @@ export default function DigitalTwin(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
@@ -272,10 +279,12 @@ export default function DigitalTwin(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -296,14 +305,17 @@ export default function DigitalTwin(...args: []):  {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -325,10 +337,12 @@ export default function DigitalTwin(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -349,14 +363,17 @@ export default function DigitalTwin(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
@@ -402,10 +419,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -437,6 +456,7 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -446,10 +466,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -482,10 +504,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -517,6 +541,7 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -526,10 +551,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -572,10 +599,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -606,6 +635,7 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -615,10 +645,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -686,10 +718,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -721,6 +755,7 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -730,10 +765,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -766,10 +803,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -801,6 +840,7 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -810,10 +850,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -846,10 +888,12 @@ export default function DigitalTwin(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -880,7 +924,7 @@ export default function DigitalTwin(...args: []):  {
                   className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
                 >
                   Explore Services
-                </Link>
+                </Link>;
               </div>;
             </motion.div>;
           </div>;

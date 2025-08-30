@@ -85,7 +85,7 @@ export const EnhancedPricingComparison = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

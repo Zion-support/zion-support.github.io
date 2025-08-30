@@ -30,8 +30,10 @@ const Skeleton: React.FC<SkeletonProps> = ({
   ;
   ;
   ;
+  ;
   card: 'w-full h-32 rounded-lg';
   ;
+
 
 
 
@@ -62,12 +64,14 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
+
 }
             initial={animated ? { opacity: 0.5 } : {}}
 <<<<<<< HEAD
             animate = {
   animated ? { opacity[0.5, 1,
   0.5] 
+
 } : {}}
             transition = {
   {
@@ -76,6 +80,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
               ease: 'easeInOut',
   delay: index * 0.1
             
+
 }}
           />
         ))}
@@ -90,6 +95,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
+
 } : {}}
             transition = {
   {
@@ -99,9 +105,10 @@ const Skeleton: React.FC<SkeletonProps> = ({
   delay: index * 0.1
             
 
+;
+;
+;
 
-;
-;
 
 }};
           />;
@@ -124,6 +131,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
       animate = {
   animated ? { opacity[0.5, 1,
   0.5] 
+
 } : {}}
       transition = {
   {
@@ -131,7 +139,8 @@ const Skeleton: React.FC<SkeletonProps> = ({
         repeat: Infinity,
   ease: 'easeInOut'
       
-}}
+
+}};
     />;
   )};
 =======
@@ -143,15 +152,17 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 
 
+
 } : {}}
       transition = {
   {
         duration: 1.5,
-        repeat: Infinity,
+        repeat: Infinity,;
   ease: 'easeInOut';
       ;
 ;
 ;
+
 
 
 
@@ -171,9 +182,10 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
 
 
 
+
 }>
     <Skeleton variant="rectangular" height={24} width="60%" />
-    <Skeleton variant="text" lines={3} />
+    <Skeleton variant="text" lines={3} />;
     <div className="flex space-x-2">;
       <Skeleton variant="circular" width={32} height={32} />;
       <Skeleton variant="circular" width={32} height={32} />;
@@ -190,6 +202,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className = {
   cn('space-y-3',
   className)
+
 
 
 
@@ -212,7 +225,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
       </div>
     ))}
   </div>
-=======
+=======;
         {Array.from({ length: columns }).map((_, colIndex) => (;
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
@@ -230,6 +243,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   <div className = {
   cn('space-y-4',
   className)
+
 }>
     {Array.from({ length: items }).map((_, index)  => (
 =======
@@ -241,12 +255,13 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 
 
+
 }>
     {Array.from({ length: items }).map((_, index) => (
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 space-y-2">;
           <Skeleton variant="rectangular" height={16} width="80%" />;
           <Skeleton variant="rectangular" height={12} width="60%" />;
         </div>;
@@ -273,6 +288,7 @@ export const GridSkeleton: React.FC<{
 
 
 
+
 } style={{
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
 <<<<<<< HEAD
@@ -280,7 +296,7 @@ export const GridSkeleton: React.FC<{
     {Array.from({ length: rows * columns }).map((_, index)  => (
       <Skeleton key={index} variant="card" height={itemHeight} />
     ))}
-  </div>
+  </div>;
 =======;
   }}>;
     {Array.from({ length: rows * columns }).map((_, index) => (;

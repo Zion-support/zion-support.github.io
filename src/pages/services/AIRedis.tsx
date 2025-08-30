@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIRedis() {
   const features = [
     'AI-powered Redis optimization',
-    'Intelligent Redis management',
+    'Intelligent Redis management',;
     'Automated Redis monitoring and alerting',;
     'Predictive analytics for Redis scaling',;
     'Smart Redis security and compliance',;
@@ -21,7 +21,7 @@ export default function AIRedis() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIRedis() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Redis optimization',;
     'Redis management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIRedis() {
     'Redis scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve Redis performance by 50-80%',;
     'Reduce Redis latency by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIRedis() {
     'Scale Redis operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIRedis() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

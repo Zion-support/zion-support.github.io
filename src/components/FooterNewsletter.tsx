@@ -84,7 +84,7 @@ export const FooterNewsletter: React.FC = () => {;
         <p className="text-xs text-gray-400 mt-4">
           We respect your privacy. Unsubscribe at  time.
         </p>
-      </div>
+      </div>;
     </div>;
   )};
 =======

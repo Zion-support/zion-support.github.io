@@ -264,7 +264,7 @@ export const cuttingEdgeAIServices2025 = [
     ],
     integrations['Creative software', 'Design tools', 'Marketing platforms', 'Content management systems', 'Collaboration tools'],
     compliance['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'Intellectual property protection']
-  }
+  };
 =======;
       'Creative problem-solving and ideation';
     ],;

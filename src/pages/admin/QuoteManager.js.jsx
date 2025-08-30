@@ -22,6 +22,7 @@ export default function QuoteManager() {
         responded: quotes.filter(q => q.status === 'responded').length,
   closed: quotes.filter(q => q.status === 'closed').length
     
+
 };
     const handleViewDetails = (quote) => {
         setSelectedQuote(quote);

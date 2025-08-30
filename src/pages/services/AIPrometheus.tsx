@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIPrometheus() {
   const features = [
     'AI-powered Prometheus optimization',
-    'Intelligent Prometheus management',
+    'Intelligent Prometheus management',;
     'Automated Prometheus monitoring and alerting',;
     'Predictive analytics for Prometheus scaling',;
     'Smart Prometheus security and compliance',;
@@ -21,7 +21,7 @@ export default function AIPrometheus() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIPrometheus() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Prometheus optimization',;
     'Prometheus management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIPrometheus() {
     'Prometheus scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve Prometheus performance by 50-80%',;
     'Reduce Prometheus query time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIPrometheus() {
     'Scale Prometheus operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIPrometheus() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-yellow-600 text-yellow-600 rounded-lg hover:bg-yellow-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

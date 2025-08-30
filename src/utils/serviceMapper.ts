@@ -75,7 +75,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     technicalSpecs: {
       technology: service.technology,
       integrations: service.integrations,
-      apiEndpoints: 200, // Default value
+      apiEndpoints: 200, // Default value;
       uptime: "99.9%", // Default value;
       security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security;
     },;

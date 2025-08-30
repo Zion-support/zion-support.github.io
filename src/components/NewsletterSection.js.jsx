@@ -51,6 +51,7 @@ export function NewsletterSection() {
             backgroundImage: `radial-gradient(circle at 25% 75%, currentColor 1px, transparent 1px)`,
   backgroundSize: '50px 50px'
         
+
 }}/>
       </div>
 
@@ -59,17 +60,21 @@ export function NewsletterSection() {
         <motion.div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30" animate={{ rotate: 360 }} transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30" animate={{ rotate: -360 }} transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
+
 }}/>
         <motion.div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20" animate = {
   { scale[1, 1.2,
   1] 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}/>
       </div>
       
@@ -77,9 +82,11 @@ export function NewsletterSection() {
         <motion.div className="text-center max-w-5xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           {/* Enhanced header */}
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-gradient-to-br from-zion-cyan to-zion-blue mb-8 shadow-lg">
@@ -98,22 +105,28 @@ export function NewsletterSection() {
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}>
             {stats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-2xl font-bold text-zion-cyan mb-1">{stat.value}</div>
                 <div className="text-zion-slate-light text-sm">{stat.label}</div>
@@ -124,12 +137,15 @@ export function NewsletterSection() {
           <motion.div className="mb-8" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
             <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors">
               <span className="text-sm font-medium">
@@ -146,19 +162,24 @@ export function NewsletterSection() {
             {showBenefits && (<motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto" initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: "auto" 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} transition={{ duration: 0.4 }}>
                 {benefits.map((benefit, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: index * 0.1 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r from-zion-cyan to-zion-purple mb-3">
                       <div className="text-white">
@@ -175,12 +196,15 @@ export function NewsletterSection() {
           {!isSubscribed ? (<motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}>
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
                 <input type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-1 px-6 py-4 rounded-xl border border-zion-blue-light/30 bg-zion-blue-dark/50 text-white placeholder:text-zion-slate-light/50 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg" required/>
@@ -199,12 +223,15 @@ export function NewsletterSection() {
               <motion.div className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan px-6 py-3 rounded-xl mb-6" initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.6 
+
 }}>
                 <Gift className="w-5 h-5"/>
                 <span className="font-medium">New subscribers get 20% off their first service!</span>
@@ -212,9 +239,11 @@ export function NewsletterSection() {
             </motion.div>) : (<motion.div className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 px-8 py-4 rounded-xl mb-6" initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} transition={{ duration: 0.5 }}>
               <CheckCircle className="w-6 h-6"/>
               <div className="text-left">
@@ -230,12 +259,15 @@ export function NewsletterSection() {
           <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.7 
+
 }}>
             <p className="text-zion-slate-light/70 text-sm mb-4">
               No spam, unsubscribe at  time. We respect your privacy.

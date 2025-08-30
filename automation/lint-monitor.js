@@ -165,6 +165,7 @@ class LintMonitor {
 
 
 
+
 };
     
     this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
@@ -179,6 +180,7 @@ class LintMonitor {
       autoFixes: 0,
   filesWatched: 0
     
+
 
 
 

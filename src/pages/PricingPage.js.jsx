@@ -16,6 +16,7 @@ const categoryIcons = {
     'E-commerce': ShoppingCart,
   'EdTech': GraduationCap
 
+
 };
 const pricingFeatures = {
   basic[
@@ -44,6 +45,7 @@ const pricingFeatures = {
         "Custom contracts",
   "Dedicated infrastructure"
     ]
+
 
 };
 const comparisonFeatures = [

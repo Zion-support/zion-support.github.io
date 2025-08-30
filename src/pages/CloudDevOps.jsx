@@ -245,10 +245,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -267,6 +269,7 @@ export default function CloudDevOps() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -276,10 +279,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -331,10 +336,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -362,6 +369,7 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -371,10 +379,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -416,10 +426,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -447,6 +459,7 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -456,10 +469,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -500,10 +515,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,6 +565,7 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -557,10 +575,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -629,10 +649,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -660,6 +682,7 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -669,10 +692,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -730,10 +755,12 @@ export default function CloudDevOps() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

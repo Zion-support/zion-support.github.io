@@ -115,8 +115,9 @@ ${sitemapEntries};
 
 
 
+
 }/search?q={search_term_string}`
-        },
+        },;
         "query-input": "required name=search_term_string";
       },;
       "sameAs": [;
@@ -136,6 +137,7 @@ export const defaultSitemapConfig: SitemapConfig = {
     // Main pages
     { url: '/', priority: 1.0,
   changefreq: 'daily' 
+
 
 
 
@@ -175,7 +177,7 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/blog', priority: 0.6, changefreq: 'weekly' },
     { url: '/careers', priority: 0.6, changefreq: 'weekly' },
     { url: '/partners', priority: 0.5, changefreq: 'monthly' },
-    { url: '/news', priority: 0.5, changefreq: 'weekly' },
+    { url: '/news', priority: 0.5, changefreq: 'weekly' },;
     { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },;
     { url: '/help-center', priority: 0.5, changefreq: 'monthly' },;
     { url: '/faq', priority: 0.5, changefreq: 'monthly' },;

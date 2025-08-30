@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityOperations() {
   const features = [
     'AI-powered security operations optimization',
-    'Intelligent security monitoring and alerting',
+    'Intelligent security monitoring and alerting',;
     'Automated incident detection and response',;
     'Predictive analytics for security threats',;
     'Smart security orchestration and automation',;
@@ -21,7 +21,7 @@ export default function AISecurityOperations() {
     { 
       name: 'Business', 
       price: '$1,799/mo', 
-      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 10,000 events/day', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityOperations() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security operations optimization',;
     'Security monitoring and alerting',;
     'Incident detection and response',;
@@ -39,7 +39,7 @@ export default function AISecurityOperations() {
     'Security scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security operations performance by 50-80%',;
     'Reduce incident response time by 40-70%',;
     'Cut security operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityOperations() {
     'Scale security operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityOperations() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

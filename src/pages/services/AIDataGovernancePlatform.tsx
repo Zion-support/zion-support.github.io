@@ -5,7 +5,7 @@ export default function AIDataGovernancePlatform() {
     'AI-powered data discovery and classification',
     'Automated data quality assessment and monitoring',
     'Intelligent data lineage tracking and visualization',
-    'Advanced data privacy and compliance automation',
+    'Advanced data privacy and compliance automation',;
     'Real-time data access control and monitoring',;
     'Automated data retention policy enforcement',;
     'AI-driven data catalog and metadata management',;
@@ -14,7 +14,7 @@ export default function AIDataGovernancePlatform() {
     'Advanced data masking and anonymization';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Ensure 100% regulatory compliance (GDPR, CCPA, HIPAA)',;
     'Reduce data governance costs by 50%',;
     'Improve data quality by 80%',;
@@ -23,7 +23,7 @@ export default function AIDataGovernancePlatform() {
     'Streamline data access management';
   ];
 
-  const complianceFrameworks = [
+  const complianceFrameworks = [;
     'GDPR (General Data Protection Regulation)',;
     'CCPA (California Consumer Privacy Act)',;
     'HIPAA (Health Insurance Portability and Accountability Act)',;
@@ -41,7 +41,7 @@ export default function AIDataGovernancePlatform() {
     { 
       name: 'Enterprise Governance', 
       price: '$1,299/mo', 
-      details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support'] 
+      details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support'] ;
     },;
     { ;
       name: 'Global Compliance', ;
@@ -147,7 +147,7 @@ export default function AIDataGovernancePlatform() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-zion-slate-light">;
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
           </div>;

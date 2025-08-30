@@ -37,7 +37,7 @@ export function PrimaryNav(...args[]):  {
     // context not available
   }
 
-  const cartCount = useSelector((s: RootState)  =>
+  const cartCount = useSelector((s: RootState)  =>;
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
   );
 
@@ -101,7 +101,7 @@ export function PrimaryNav() {
       ]
     },
     {
-      category: 'Innovation Hub',
+      category: 'Innovation Hub',;
       items: [;
         { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },;
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },;
@@ -154,6 +154,7 @@ export function PrimaryNav() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -163,10 +164,12 @@ export function PrimaryNav() {
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   y: 10 
+
 
 
 
@@ -263,6 +266,7 @@ export function PrimaryNav() {
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
   { width: 'clamp(12rem, 20vw,
   16rem)' 
+
 }}>
               <EnhancedSearchInput
                 value={query}
@@ -270,17 +274,19 @@ export function PrimaryNav() {
                 onSelectSuggestion = {
   (sugg) => {
                   // // // // console.log('PrimaryNav search suggestion selected:',;
+  ;
   sugg);
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id
+
 }`)} else if (sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
                     router.push(`/blog/${sugg.slug}`)} else {
-                    // Default: search results page with slug
+                    // Default: search results page with slug;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
                   setQuery('');
                   
@@ -307,6 +313,7 @@ export function PrimaryNav() {
                     aria-label = {
   t('nav.cart',
   'Cart')
+
 }
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
@@ -396,6 +403,7 @@ export function PrimaryNav() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -405,10 +413,12 @@ export function PrimaryNav() {
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -468,7 +478,7 @@ export function PrimaryNav() {
                   >
                     Contact
                   </Link>
-                </div>
+                </div>;
               </div>;
             </motion.div>;
           )};

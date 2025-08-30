@@ -39,7 +39,7 @@ export default function RequestsPanel(...args[]):  {
     
     // If status is new, mark as viewed
 <<<<<<< HEAD
-    if (quote.status = == 'new') {
+    if (quote.status = == 'new') {;
       markAsViewed(quote.id)};
   };
 
@@ -99,7 +99,7 @@ export default function RequestsPanel(...args[]):  {
               </TabsContent>
             </Tabs>
           </div>
-        </div>
+        </div>;
         ;
         {/* Quote Details Modal */};
         <QuoteDetails;

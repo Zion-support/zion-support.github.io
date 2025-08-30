@@ -314,6 +314,7 @@ export class ContentOptimizer {
         <p>Summary and call-to-action for further engagement.</p>
       `
         
+
 };
         return templates[contentType] || templates.service;
     }

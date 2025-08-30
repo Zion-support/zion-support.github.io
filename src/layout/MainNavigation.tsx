@@ -163,7 +163,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
       href: '/contact',
       name: 'Contact',
       matches: (path: string)  => path.startsWith('/contact')
-    }
+    };
 =======;
       key: 'contact',;
       href: '/contact',;
@@ -205,6 +205,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -214,10 +215,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -244,7 +247,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
               </div>
             </motion.div>
           )}
-        </AnimatePresence>
+        </AnimatePresence>;
       </div>;
     )};
 =======
@@ -305,6 +308,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -314,10 +318,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   x: '100%' 
+
 
 
 
@@ -394,7 +400,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className = '
         )}
       </AnimatePresence>
     </nav>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

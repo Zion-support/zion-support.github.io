@@ -48,3 +48,4 @@ export default convertToValidVariableName;
 export default convertToValidVariableName;
 export default convertToValidVariableName;
 export default content;
+export default content;

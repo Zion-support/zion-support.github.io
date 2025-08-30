@@ -85,6 +85,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
   <<<<<<< HEAD
             'Launch': Award
         
+
 };
         return iconMap[category] || Calendar};
 =======
@@ -173,6 +174,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 } className="text-zinc-400 hover:text-white p-2">
               <ZoomOut className="w-4 h-4"/>
             </Button>
@@ -180,6 +182,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             <Button size="sm" variant="ghost" onClick = {
   () => setZoomLevel(prev => Math.min(2,
   prev + 0.1))
+
 
 
 
@@ -219,6 +222,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
@@ -227,9 +231,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -244,6 +250,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 <<<<<<< HEAD
                 setFilters(prev => ({ ...prev,
   status: selected 
+
 }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
 =======
                 setFilters(prev => ({ ...prev,
@@ -270,6 +277,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 <<<<<<< HEAD
                 setFilters(prev => ({ ...prev,
   category: selected 
+
 }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
 =======
                 setFilters(prev => ({ ...prev,
@@ -299,6 +307,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 <<<<<<< HEAD
                 setFilters(prev => ({ ...prev,
   priority: selected 
+
 }))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
 =======
                 setFilters(prev => ({ ...prev,
@@ -323,6 +332,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <input type="range" min="0" max="100" value={filters.progress || 0} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   progress: Number(e.target.value) 
+
 
 
 
@@ -353,6 +363,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }}/>
           </div>
         </div>)}
@@ -376,6 +387,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -384,9 +396,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -401,9 +415,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         : 'border-zion-blue-light/30'}`} animate = {
   isCurrent ? { scale[1, 1.1,
   1] 
+
 } : {}} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}>
 =======
                         : 'border-zion-blue-light/30'}`} animate = {
@@ -414,9 +430,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 } : {}} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -433,6 +451,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                         <motion.circle cx="32" cy="32" r="28" stroke="currentColor" strokeWidth="2" fill="none" className="text-zion-cyan" strokeDasharray={2 * Math.PI * 28} strokeDashoffset={2 * Math.PI * 28 * (1 - event.metadata.progress / 100)} initial={{ strokeDashoffset: 2 * Math.PI * 28 }} animate={{ strokeDashoffset: 2 * Math.PI * 28 * (1 - event.metadata.progress / 100) }} transition = {
   { duration: 1,
   ease: "easeOut" 
+
 
 
 
@@ -494,6 +513,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 } className="px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-xs text-zinc-300 focus:border-zion-cyan focus:outline-none" onClick={(e) => e.stopPropagation()}>
                           <option value="upcoming">Upcoming</option>
                           <option value="in-progress">In Progress</option>
@@ -534,6 +554,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -542,9 +563,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} transition = {
   { duration: 0.4,
   delay: index * 0.05 
+
 
 
 
@@ -591,6 +614,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -599,9 +623,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} transition = {
   { duration: 0.3,
   delay: index * 0.1 
+
 
 
 
@@ -633,6 +659,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -641,9 +668,11 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 

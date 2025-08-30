@@ -292,7 +292,7 @@ export const advancedAIServices2025 = [
     tags['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
     website: 'https://ziontechgroup.com/cybersecurity-ai',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$173.5B',;

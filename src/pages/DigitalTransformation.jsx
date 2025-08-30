@@ -73,9 +73,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -120,6 +122,7 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -128,9 +131,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -157,9 +162,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -184,6 +191,7 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -192,9 +200,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -236,9 +246,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -261,6 +273,7 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -269,9 +282,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -299,9 +314,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -347,6 +364,7 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -355,9 +373,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -388,9 +408,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,6 +435,7 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -421,9 +444,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -455,9 +480,11 @@ export default function DigitalTransformation() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

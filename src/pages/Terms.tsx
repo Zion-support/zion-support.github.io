@@ -44,7 +44,7 @@ export default function Terms() {
     {
       title: 'Intellectual Property',
       content: 'All content, software, and materials provided by Zion Tech Group are protected by intellectual property rights. Users may not copy, modify, or distribute our proprietary materials without permission.',
-      icon: Lock
+      icon: Lock;
 =======;
     {;
       icon: Globe,;
@@ -68,7 +68,7 @@ export default function Terms() {
 <<<<<<< HEAD
       title: 'Limitation of Liability',
       content: 'Zion Tech Group shall not be liable for  indirect, incidental, special, or consequential damages arising from the use of our services, including but not limited to data loss or business interruption.',
-      icon: AlertTriangle
+      icon: AlertTriangle;
     };
   ];
 
@@ -77,7 +77,7 @@ export default function Terms() {
     'Using our services for illegal or harmful purposes',
     'Interfering with the operation of our services',
     'Attempting to reverse engineer our software',
-    'Sharing account credentials with unauthorized users',
+    'Sharing account credentials with unauthorized users',;
     'Violating  applicable laws or regulations';
   ];
 
@@ -86,7 +86,7 @@ export default function Terms() {
     'Non-payment of service fees',
     'Engagement in prohibited activities',
     'Breach of security or privacy policies',
-    'Failure to comply with legal requirements',
+    'Failure to comply with legal requirements',;
     'Mutual agreement to terminate services';
   ];
 
@@ -101,7 +101,7 @@ export default function Terms() {
       description: 'Ensure all content you provide is accurate, lawful, and does not infringe on others\' rights.'
     },
     {
-      obligation: 'Payment Terms',
+      obligation: 'Payment Terms',;
       description: 'Pay all fees and charges in accordance with agreed payment schedules.';
     },;
     {;
@@ -112,7 +112,7 @@ export default function Terms() {
 
   const prohibitedActivities = [
     'Attempting to gain unauthorized access to our systems or other users\' accounts',
-    'Transmitting viruses, malware, or other harmful code',
+    'Transmitting viruses, malware, or other harmful code',;
     'Interfering with the proper functioning of our services',;
     'Using our services for illegal or fraudulent activities',;
     'Reverse engineering or attempting to extract source code',;
@@ -133,7 +133,7 @@ export default function Terms() {
       description: 'Phone and email support with faster response times',
       response: '4-8 hours',
       included: false
-    },
+    },;
     {;
       level: 'Premium Support',;
       description: 'Dedicated support team and 24/7 emergency response',;
@@ -164,10 +164,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
 =======
@@ -183,10 +185,12 @@ export default function Terms() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -204,14 +208,17 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Please read these terms carefully before using our services
@@ -221,14 +228,17 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             Last updated: {lastUpdated}
@@ -254,10 +264,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -270,10 +282,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -294,15 +308,18 @@ export default function Terms() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
 =======
@@ -315,6 +332,7 @@ export default function Terms() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -324,10 +342,12 @@ export default function Terms() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -366,10 +386,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -400,6 +422,7 @@ export default function Terms() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -409,10 +432,12 @@ export default function Terms() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -448,10 +473,12 @@ export default function Terms() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -486,10 +513,12 @@ export default function Terms() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -536,10 +565,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -552,10 +583,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -577,21 +610,25 @@ export default function Terms() {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="flex items-start space-x-3"
 =======
                   initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -606,10 +643,12 @@ export default function Terms() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -638,10 +677,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -662,15 +703,18 @@ export default function Terms() {
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="flex items-start space-x-3"
                 >
@@ -692,10 +736,12 @@ export default function Terms() {
               initial = {
   { opacity: 0,
   x: -30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -708,10 +754,12 @@ export default function Terms() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -760,10 +808,12 @@ export default function Terms() {
               initial = {
   { opacity: 0,
   x: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -776,10 +826,12 @@ export default function Terms() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -831,10 +883,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -908,10 +962,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -983,10 +1039,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -999,10 +1057,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -1021,10 +1081,12 @@ export default function Terms() {
                 initial = {
   { opacity: 0,
   x: -30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
@@ -1054,10 +1116,12 @@ export default function Terms() {
                 initial = {
   { opacity: 0,
   x: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
@@ -1093,10 +1157,12 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -1108,15 +1174,18 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             By using our services, you agree to these terms. Contact us if you have  questions.
@@ -1126,15 +1195,18 @@ export default function Terms() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <a 
@@ -1165,10 +1237,12 @@ export default function Terms() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1195,7 +1269,7 @@ export default function Terms() {
                 href="/privacy"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                Privacy Policy
+                Privacy Policy;
               </a>;
             </div>;
           </motion.div>;

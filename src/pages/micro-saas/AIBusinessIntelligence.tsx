@@ -17,7 +17,7 @@ export default function AIBusinessIntelligence(...args[]):  {
     {
       icon: Zap,
       title: 'Automated Intelligence',
-      description: 'Smart automation of business processes'
+      description: 'Smart automation of business processes';
     },;
     {;
       icon: Eye,;
@@ -40,7 +40,7 @@ export default function AIBusinessIntelligence(...args[]):  {
     {
       title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
-      icon: Database
+      icon: Database;
     },;
     {;
       title: 'Automated Reporting',;
@@ -64,10 +64,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -117,10 +119,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -151,6 +155,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -160,10 +165,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -196,10 +203,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -230,6 +239,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -239,10 +249,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -279,10 +291,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -312,6 +326,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -321,10 +336,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -363,6 +380,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -372,10 +390,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -423,6 +443,7 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -432,10 +453,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -483,10 +506,12 @@ export default function AIBusinessIntelligence(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -519,7 +544,7 @@ export default function AIBusinessIntelligence(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

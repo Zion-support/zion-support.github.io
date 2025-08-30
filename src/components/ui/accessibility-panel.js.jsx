@@ -87,12 +87,14 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             const newSettings = {
   ...prev,
   [key]: value 
+
 };
             // Add notification
             const notification = {
   id: Date.now().toString(),
                 message: `${key.replace(/([A-Z])/g,
   ' $1').toLowerCase()
+
 } ${value ? 'enabled' : 'disabled'}`,
                 type: 'success',
                 timestamp: Date.now()
@@ -110,6 +112,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             focusIndicator: true,
   keyboardNavigation: true
         
+
 };
         setSettings(defaultSettings);
         const notification = {
@@ -118,6 +121,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
             type: 'info',
   timestamp: Date.now()
         
+
 };
         setNotifications(prev => [notification, ...prev.slice(0, 2)])}, []);
     const increaseFontSize = useCallback(() => {
@@ -164,15 +168,19 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
         {isOpen && (<motion.div initial = {
   { opacity: 0,
   x: 300 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} exit = {
   { opacity: 0,
   x: 300 
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 }} className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto">
             {/* Header */}
             <div className="sticky top-0 bg-zion-blue-dark/80 backdrop-blur-sm border-b border-zion-cyan/30 p-6">
@@ -205,6 +213,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.highContrast} onChange = {
   (e) => updateSetting('highContrast',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     High Contrast
                   </label>
@@ -217,6 +226,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.largeText} onChange = {
   (e) => updateSetting('largeText',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Large Text
                   </label>
@@ -245,6 +255,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                   <select value={settings.colorBlindMode} onChange = {
   (e) => updateSetting('colorBlindMode',
   e.target.value)
+
 } className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50">
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -267,6 +278,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.reducedMotion} onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Reduced Motion
                   </label>
@@ -279,6 +291,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Screen Reader Support
                   </label>
@@ -298,6 +311,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.focusIndicator} onChange = {
   (e) => updateSetting('focusIndicator',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Focus Indicator
                   </label>
@@ -309,6 +323,7 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
                     <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
+
 } className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"/>
                     Keyboard Navigation
                   </label>
@@ -331,15 +346,19 @@ const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsCh
           {notifications.map((notification) => (<motion.div key={notification.id} initial = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, x: 300,
   scale: 0.8 
+
 }} transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 }} className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${notification.type === 'success'
                 ? 'bg-green-500/20 border-green-500 text-green-300'
                 : notification.type === 'warning'

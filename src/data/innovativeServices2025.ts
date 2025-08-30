@@ -155,7 +155,7 @@ export const getServicesByPriceRange = (minPrice: number, maxPrice: number): Inn
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice)};
 
 export const getTopRatedServices = (limit: number = 5): InnovativeService2025[] => {
-  return INNOVATIVE_SERVICES_2025
+  return INNOVATIVE_SERVICES_2025;
     .sort((a, b) => b.rating - a.rating);
     .slice(0, limit)};
 

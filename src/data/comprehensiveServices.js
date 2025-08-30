@@ -312,9 +312,6 @@ export const pricingTiers = [
   }
 ];
 
-export const getServicesByCategory = (category) => {
-  return comprehensiveServices.filter(service => service.category === category)};
-
 export const getPopularServices = () => {
   return comprehensiveServices.filter(service => service.popular)};
 

@@ -325,7 +325,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
             }
           ]
         }
-      ]
+      ];
     };
   ];
 
@@ -352,10 +352,12 @@ const PricingComparison: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -402,14 +404,17 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.2 
+
 }}
                 viewport={{ once: true }}
               >
@@ -429,14 +434,17 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                       initial = {
   { opacity: 0,
   y: 20 
+
 }}
                       whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                       transition = {
   { duration: 0.6,
   delay: serviceIndex * 0.1 
+
 }}
                       viewport={{ once: true }}
                     >
@@ -449,7 +457,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+                      <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">;
                         {service.plans.map((plan, planIndex)  => {;
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (
@@ -458,14 +466,17 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                               initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                               whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                               transition = {
   { duration: 0.5,
   delay: planIndex * 0.1 
+
 }}
                               viewport={{ once: true }}
                               className={`relative rounded-xl p-8 transition-all duration-300 ${
@@ -521,6 +532,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
                                   to = {
   `/services/${service.name.toLowerCase().replace(/\s+/g,
   '-')
+
 }`}
                                   className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300"
                                 >
@@ -545,10 +557,12 @@ const PricingComparison: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -609,10 +623,12 @@ const PricingComparison: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -648,7 +664,7 @@ const PricingComparison: React.FC = (): JSX.Element => {;
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

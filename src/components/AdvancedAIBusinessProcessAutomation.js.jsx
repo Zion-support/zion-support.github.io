@@ -200,7 +200,6 @@ export function AdvancedAIBusinessProcessAutomation() {
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p))};
     const filteredProcesses = businessProcesses.filter(process => {
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             process.description.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesStatus && matchesSearch});

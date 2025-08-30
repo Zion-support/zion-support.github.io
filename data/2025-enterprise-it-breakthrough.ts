@@ -264,7 +264,7 @@ export const enterpriseITBreakthroughServices2025 = [
     ],
     integrations['Data center infrastructure', 'Cloud platforms', 'Monitoring systems', 'Security tools', 'Enterprise systems'],
     compliance['SOC2', 'ISO 27001', 'Data center standards', 'Security standards', 'Enterprise requirements']
-  }
+  };
 =======;
       'Enterprise infrastructure management';
     ],;

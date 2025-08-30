@@ -34,7 +34,7 @@ const categories = [
   },
 <<<<<<< HEAD
 =======
-  {
+  {;
     title: "Digital Transformation",;
     description: "Business modernization and digital strategy",;
     icon: "📈",;
@@ -67,7 +67,7 @@ const specialServices = [
     link: "/cybersecurity"
   }
 =======
-    title: "Comprehensive Services",
+    title: "Comprehensive Services",;
     link: "/comprehensive-services";
   },;
   {;
@@ -90,13 +90,14 @@ export function CategoriesSection(...args[]):  {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1
-      }
+      };
     };
   };
 
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -104,13 +105,14 @@ export function CategoriesSection(...args[]):  {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
+      };
     };
   };
 
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
 },
     visible: {
       scale: 1,
@@ -118,13 +120,13 @@ export function CategoriesSection(...args[]):  {
       transition: {
         duration: 0.4,
         ease: "easeOut"
-      }
+      };
     };
   };
 =======
 const containerVariants = {
   hidden: { opacity: 0 },
-  visible: {
+  visible: {;
     opacity: 1,;
     transition: {;
       staggerChildren: 0.1,;
@@ -141,9 +143,10 @@ const itemVariants = {
 
 
 
+
 },
   visible: {
-    y: 0,
+    y: 0,;
     opacity: 1,;
     transition: {;
       duration: 0.5,;
@@ -172,6 +175,7 @@ const itemVariants = {
 
 
 
+
 }}></div>
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       </div>
@@ -188,10 +192,12 @@ const itemVariants = {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -226,6 +232,7 @@ const itemVariants = {
               transition = {
   { type: "spring",
   stiffness: 300 
+
 }}
             >
               <Link to={category.link} className="group block h-full">
@@ -236,6 +243,7 @@ const itemVariants = {
                   transition = {
   { type: "spring", stiffness: 400,
   damping: 10 
+
 }}
                 >
                   {/* Icon with enhanced background */}
@@ -271,15 +279,18 @@ const itemVariants = {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
 =======
           className="mt-12"
@@ -291,10 +302,12 @@ const itemVariants = {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -305,6 +318,7 @@ const itemVariants = {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -334,15 +348,18 @@ const itemVariants = {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}
 =======
           className="mt-12 flex justify-center"
@@ -354,10 +371,12 @@ const itemVariants = {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -368,6 +387,7 @@ const itemVariants = {
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -388,7 +408,7 @@ const itemVariants = {
       </div>
     </section>
   )}
-=======
+=======;
             View All Categories;
             <span className="text-sm group-hover:translate-x-1 transition-transform duration-300">→</span>;
           </Link>;

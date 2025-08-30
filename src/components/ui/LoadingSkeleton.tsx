@@ -31,11 +31,12 @@ export function Skeleton({
         transition = {
   {
           duration: 1.5,
-          repeat: Infinity,
+          repeat: Infinity,;
   ease: "easeInOut";
         ;
 ;
 ;
+
 
 
 
@@ -79,7 +80,7 @@ export function CardSkeleton({
       <div className="space-y-3">
         <Skeleton className="h-6 w-3/4" />
         {Array.from({ length: lines }).map((_, index) => (
-          <Skeleton 
+          <Skeleton ;
             key={index} ;
             className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} ;
           />;
@@ -120,7 +121,7 @@ export function TableSkeleton({
                 <Skeleton 
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
-                />
+                />;
               ))};
             </div>;
           </div>;
@@ -148,7 +149,7 @@ export function ListSkeleton({
           {showAvatar && (
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
           )}
-          <div className="flex-1 space-y-2">
+          <div className="flex-1 space-y-2">;
             <Skeleton className="h-4 w-3/4" />;
             <Skeleton className="h-3 w-1/2" />;
           </div>;
@@ -175,7 +176,7 @@ export function GridSkeleton({
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: items }).map((_, index) => (
         <CardSkeleton 
-          key={index} 
+          key={index} ;
           lines={3} ;
           showImage={showImage};
           showAvatar={false};

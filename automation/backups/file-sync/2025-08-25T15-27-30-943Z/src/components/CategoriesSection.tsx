@@ -48,7 +48,7 @@ const categories = [
     stats: "100+ Innovations"
   },
   {
-    title: "AI Hiring Platform",
+    title: "AI Hiring Platform",;
     description: "AI-powered recruitment and talent acquisition tools",;
     icon: <ZapIcon className="w-10 h-10" />,;
     link: "/zion-hire-ai",;
@@ -74,7 +74,7 @@ const specialServices = [
     link: "/cloud-solutions",
     icon: <Globe className="w-5 h-5" />,
     description: "Scalable cloud infrastructure"
-  },
+  },;
   {;
     title: "Security Services",;
     link: "/security-services",;
@@ -86,7 +86,7 @@ interface CategoriesSectionProps {
   showTitle?: boolean}
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -102,6 +102,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -128,10 +129,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -212,6 +215,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -221,10 +225,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -245,6 +251,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -254,10 +261,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.5 + index * 0.1 
+
 
 
 
@@ -294,6 +303,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -303,10 +313,12 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -325,7 +337,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />;
           </Link>;

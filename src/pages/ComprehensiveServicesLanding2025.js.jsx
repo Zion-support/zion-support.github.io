@@ -25,6 +25,7 @@ const ComprehensiveServicesLanding2025 = () => {
             'legal'['Legal Tech & AI'],
   'marketing'['Marketing & AI']
         
+
 };
         return allEnhancedServices.filter(service => industryMap[industry]?.includes(service.category))};
     const filteredServices = getServicesByIndustry(selectedIndustry);

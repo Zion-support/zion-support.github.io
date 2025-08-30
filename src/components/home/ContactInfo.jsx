@@ -7,8 +7,6 @@ import { FuturisticCard, NeonText } from "@/components/ui/FuturisticBackground";
 import { Phone, Mail, MapPin, Globe, Clock, Users, Shield, Zap, ExternalLink } from "lucide-react";
 export function ContactInfo() {
 <<<<<<< HEAD
-    const compStats = [
-=======
     const companyStats = [
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         {

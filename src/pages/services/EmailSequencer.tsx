@@ -1,7 +1,7 @@
 import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from 'lucide-react';
 
 export default function EmailSequencer() {
-	const features = [
+	const features = [;
 		'Multi-step sequences with A/B testing',;
 		'AI subject line and body suggestions',;
 		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',;
@@ -74,7 +74,7 @@ export default function EmailSequencer() {
 						{references.map((ref) => (
 							<a key={ref.href} href={ref.href} target="_blank" rel="noopener noreferrer" className="flex items-center p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
 								<LinkIcon className="w-4 h-4 text-zion-cyan mr-2" />
-								<span className="text-white text-sm">{ref.label}</span>
+								<span className="text-white text-sm">{ref.label}</span>;
 							</a>;
 						))};
 					</div>;

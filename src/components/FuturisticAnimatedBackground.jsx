@@ -26,6 +26,7 @@ export const FuturisticAnimatedBackground = ({ className = '', intensity = 'medi
             multi['#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff8000',
   '#8000ff']
         
+
 };
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

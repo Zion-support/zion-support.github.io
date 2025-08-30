@@ -30,8 +30,9 @@ export const AccessibilityEnhancer: React.FC = () => {;
   // Apply accessibility settings
   const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = {
-  ...settings,
+  ...settings,;
   ...newSettings ;
+
 };
     setSettings(updatedSettings);
     
@@ -51,8 +52,10 @@ const DEFAULT_SETTINGS: AccessibilitySettings = {
   ;
   ;
   ;
+  ;
   focusIndicator: true;
 ;
+
 
 
 
@@ -111,7 +114,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
 
@@ -119,7 +122,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       // Tab navigation enhancement
       if (event.key = == 'Tab') {
-        const focusableElements = document.querySelectorAll(
+        const focusableElements = document.querySelectorAll(;
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
         );
         
@@ -159,7 +162,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   // Arrow key navigation helper
   const navigateWithArrows = (container: Element, direction: string) => {
-    const focusableElements = Array.from(container.querySelectorAll(
+    const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
 
@@ -226,7 +229,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
-      /* High contrast mode */
+      /* High contrast mode */;
       .high-contrast {;
         --text-primary: #ffffff !important;
         --text-secondary: #e5e7eb !important;
@@ -325,7 +328,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         onClick = {togglePanel}
         className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
         aria-label="Toggle accessibility options"
-        title="Accessibility Options"
+        title="Accessibility Options";
 =======;
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {;
     const root = document.documentElement;
@@ -382,7 +385,9 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   ;
   ;
   ;
+  ;
   [key]: value ;
+
 
 
 
@@ -517,10 +522,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 
 
 
@@ -535,10 +542,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
               transition = {
   { type: "spring", bounce: 0.2,
   duration: 0.6 
+
 
 
 
@@ -560,7 +569,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
                   aria-label="Close accessibility panel"
                 >
-                  <X className="w-5 h-5 text-gray-500" />
+                  <X className="w-5 h-5 text-gray-500" />;
                 </button>;
               </div>;
 ;
@@ -576,7 +585,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                       onClick={() => setActiveTab(tab.id)}
                       className={`flex-1 flex items-center justify-center space-x-2 px-4 py-3 text-sm font-medium transition-colors ${
                         isActive
-                          ? 'text-cyan-600 border-b-2 border-cyan-500 bg-cyan-50 dark:bg-cyan-900/20'
+                          ? 'text-cyan-600 border-b-2 border-cyan-500 bg-cyan-50 dark:bg-cyan-900/20';
                           : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200';
                       }`};
                     >;
@@ -690,6 +699,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -699,10 +709,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
 
 
 
@@ -782,6 +794,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -791,10 +804,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
 
 
 
@@ -874,6 +889,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -883,10 +899,12 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   x: -20 
+
 
 
 
@@ -964,7 +982,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
                   >
                     Reset to Defaults
                   </button>
-                </div>
+                </div>;
               </div>;
             </motion.div>;
           </motion.div>;

@@ -12,8 +12,6 @@ const ComprehensiveServicesShowcase2025 = () => {
     const industries = ['all', ...Array.from(new Set(SPECIALIZED_INDUSTRY_SOLUTIONS_2025.map(service => service.industry)))];
     // Filter services based on selection
     const filteredServices = allServices.filter(service => {
-        const matchesIndustry = selectedIndustry === 'all' ||
-            ('industry' in service ? service.industry === selectedIndustry : true);
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
@@ -30,6 +28,7 @@ const ComprehensiveServicesShowcase2025 = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -47,9 +46,11 @@ const ComprehensiveServicesShowcase2025 = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">

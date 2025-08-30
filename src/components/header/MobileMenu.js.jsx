@@ -31,6 +31,7 @@ export function MobileMenu({ className }) {
     return (<div className = {
   cn("md:hidden",
   className)
+
 }>
       {/* Mobile menu button */}
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-purple/20" aria-label={isOpen ? 'Close menu' : 'Open menu'}>
@@ -57,6 +58,7 @@ export function MobileMenu({ className }) {
   isActive
                         ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/40"
                         : "hover:bg-zion-purple/10 hover:text-zion-cyan")
+
 }>
                     <Icon className="w-5 h-5"/>
                     <span className="font-medium">{item.label}</span>

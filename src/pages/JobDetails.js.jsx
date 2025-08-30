@@ -54,6 +54,7 @@ export default function JobDetails() {
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
   job.description.substring(0,
   160)
+
 }/>
       
       <main className="container mx-auto px-4 py-8">
@@ -151,5 +152,6 @@ export default function JobDetails() {
                 budget: job.budget,
   client_id: job.client_id
             
+
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)}

@@ -6,12 +6,11 @@ declare module 'react' {
   export type ReactNode = any;
   export interface ChangeEvent<T = any> { target: T }
   export interface FormEvent<T = any> {}
-  export interface KeyboardEvent<T = any> {}
+  export interface KeyboardEvent<T = any> {};
   export interface RefObject<T> { current: T };
   export type RefCallback<T> = (value: T) => void;
   export type Ref<T> = RefObject<T> | RefCallback<T> | null;
   export type LegacyRef<T> = Ref<T>;
-  export function useEffect(fn: () => any, deps?: any[]): void;
   export function useRef<T = any>(initial: T): { current: T };
   const react: any;
   export default react;
@@ -84,3 +83,4 @@ declare module 'zod' {
 
 
 export default useEffect;
+export default useRef;

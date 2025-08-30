@@ -35,7 +35,7 @@ import { Brain,
 export default function AIMarketingAutomation(...args[]):  {
   const features = [
     'AI-powered audience segmentation and targeting',
-    'Predictive customer behavior analysis',
+    'Predictive customer behavior analysis',;
     'Automated content personalization and optimization',;
     'Multi-channel campaign orchestration',;
     'Real-time performance optimization',;
@@ -104,7 +104,7 @@ export default function AIMarketingAutomation(...args[]):  {
       cta: "Contact Sales",
       popular: false
     }
-=======
+=======;
       name: 'Enterprise',;
       price: '$799',;
       period: '/mo',;
@@ -114,7 +114,7 @@ export default function AIMarketingAutomation(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const useCases = [
+  const useCases = [;
     'E-commerce businesses',;
     'B2B SaaS companies',;
     'Digital agencies',;
@@ -186,14 +186,17 @@ export default function AIMarketingAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-rose-500 transition-all duration-300"
               >
@@ -222,14 +225,17 @@ export default function AIMarketingAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="text-center"
               >
@@ -258,14 +264,17 @@ export default function AIMarketingAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-rose-500 transition-all duration-300"
               >
@@ -294,14 +303,17 @@ export default function AIMarketingAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
@@ -351,10 +363,12 @@ export default function AIMarketingAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -498,7 +512,7 @@ export default function AIMarketingAutomation(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

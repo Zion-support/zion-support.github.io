@@ -17,7 +17,7 @@ export default function CustomerFeedbackSurveys(...args[]):  {
           AI highlights themes, predicts churn risk, and recommends actions.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 mt-10">
+        <div className="grid gap-8 md:grid-cols-2 mt-10">;
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;
             <h2 className="text-xl font-semibold mb-3">Features</h2>;
             <ul className="space-y-2 text-sm text-zion-slate-light">;
@@ -51,7 +51,7 @@ export default function CustomerFeedbackSurveys(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
           <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>;
           <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;

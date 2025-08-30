@@ -145,7 +145,7 @@ export default function NotFound(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             .;
           </p>;

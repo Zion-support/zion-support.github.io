@@ -3,7 +3,7 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
 export default function AIRealEstate() {
   const features = [
     'AI-powered property valuation and market analysis',
-    'Intelligent property matching and recommendations',
+    'Intelligent property matching and recommendations',;
     'Automated market trend forecasting',;
     'Predictive analytics for investment opportunities',;
     'Smart contract automation and management',;
@@ -21,7 +21,7 @@ export default function AIRealEstate() {
     { 
       name: 'Small Agency', 
       price: '$599/mo', 
-      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 500 properties', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIRealEstate() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Residential property valuation and sales',;
     'Commercial real estate investment analysis',;
     'Property management and optimization',;
@@ -39,7 +39,7 @@ export default function AIRealEstate() {
     'Development project feasibility studies';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve property valuation accuracy by 25-40%',;
     'Reduce time-to-sale by 30-50%',;
     'Increase commission revenue by 20-35%',;
@@ -48,7 +48,7 @@ export default function AIRealEstate() {
     'Scale operations without additional staff';
   ];
 
-  const industries = [
+  const industries = [;
     'Residential Real Estate',;
     'Commercial Real Estate',;
     'Property Management',;
@@ -163,7 +163,7 @@ export default function AIRealEstate() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

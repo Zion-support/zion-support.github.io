@@ -75,7 +75,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       route: '/green-it',
       features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
       stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
-    }
+    };
 =======;
       color: 'from-emerald-600 to-green-600',;
       route: '/green-it',;
@@ -103,7 +103,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       delivery: '12 months'
     },
     {
-      title: 'Autonomous Space Mining System',
+      title: 'Autonomous Space Mining System',;
       description: 'AI-powered space exploration and resource extraction',;
       category: 'Space Tech',;
       price: '$500,000',;
@@ -113,7 +113,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -130,8 +130,9 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 },
-    visible: {
+    visible: {;
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -161,6 +162,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { y: 0,
@@ -170,10 +172,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -193,6 +197,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { y: 0,
@@ -202,10 +207,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -225,6 +232,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { scale: 1,
@@ -234,10 +242,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -272,6 +282,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -281,10 +292,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -330,7 +343,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         </div>
 
         <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {serviceCategories.map((category)  => {
+          {serviceCategories.map((category)  => {;
 =======;
           </p>;
         </div>;
@@ -347,6 +360,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -406,7 +420,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
-            )})}
+            )})};
 =======;
                 >;
                   Explore {category.title};
@@ -430,6 +444,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -439,10 +454,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         transition = {
   { duration: 0.6,
   delay: 1.2 
+
 
 
 
@@ -472,10 +489,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -490,10 +509,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -547,6 +568,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -556,10 +578,12 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         transition = {
   { duration: 0.8,
   delay: 1.6 
+
 
 
 
@@ -621,7 +645,7 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             </a>
           </div>
         </div>
-      </motion.div>
+      </motion.div>;
     </div>;
   )};
 =======

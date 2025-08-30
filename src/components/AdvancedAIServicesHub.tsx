@@ -107,7 +107,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', icon: Cpu },
+    { id: 'all', name: 'All Services', icon: Cpu },;
     { id: 'project-management', name: 'Project Management', icon: Brain },;
     { id: 'customer-support', name: 'Customer Support', icon: Users },;
     { id: 'finance', name: 'Financial Analytics', icon: TrendingUp },;
@@ -148,10 +148,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -178,10 +180,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -227,10 +231,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -268,10 +274,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -293,6 +301,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -302,10 +311,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
                 exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -386,10 +397,12 @@ const AdvancedAIServicesHub: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,7 +426,7 @@ const AdvancedAIServicesHub: React.FC = () => {;
                 Get Started
               </button>
               <button className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </div>;

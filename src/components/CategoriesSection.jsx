@@ -93,6 +93,7 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -106,6 +107,7 @@ export function CategoriesSection({ showTitle = true }) {
     const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
 
 
 
@@ -138,9 +140,11 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -163,11 +167,13 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }}>
               <Link to={category.link} className="group block h-full">
                 <motion.div className="rounded-2xl overflow-hidden h-full border border-zion-blue-light/30 bg-zion-blue-dark/80 backdrop-blur-sm p-8 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark" variants={cardVariants} whileHover={{ scale: 1.02 }} transition = {
   { type: "spring", stiffness: 400,
   damping: 10 
+
 
 
 
@@ -223,6 +229,7 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -231,9 +238,11 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -250,6 +259,7 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -258,9 +268,11 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -292,6 +304,7 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -300,9 +313,11 @@ export function CategoriesSection({ showTitle = true }) {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: 0.5 
+
 
 
 

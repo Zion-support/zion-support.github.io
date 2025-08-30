@@ -29,6 +29,7 @@ export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, r
 
 
 
+
 }>
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>

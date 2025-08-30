@@ -37,7 +37,6 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     // Handle text changes
     const handleTextChange = useCallback((event) => {
         const newContent = event.target.value;
-        const selectionEnd = event.target.selectionEnd;
         const selectedText = newContent.slice(selectionStart, selectionEnd);
         setEditorState(prev => {
             const change = {
@@ -301,9 +300,11 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {
   { opacity: 0,
   x: 20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} className="p-3 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">
                     <div className="flex items-start justify-between mb-2">
                       <span className={`text-xs px-2 py-1 rounded-full ${suggestion.type === 'grammar' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
@@ -392,12 +393,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
           {collaboration.activeCursors.map(({ x, y, user }) => (<motion.div key={user.id} initial = {
   { opacity: 0,
   scale: 0 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
 }} className="absolute w-4 h-4" style = {
   {
                     left: x,
@@ -405,6 +409,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                     transform: 'translate(-50%,
   -50%)'
                 
+
 }}>
               <div className="w-full h-full rounded-full border-2 border-white shadow-lg" style={{ backgroundColor: user.color }}></div>
               <div className="absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap">

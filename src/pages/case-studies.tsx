@@ -162,7 +162,7 @@ const caseStudies = [
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
-  }
+  };
 =======;
     technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
     duration: "15 months",;
@@ -205,10 +205,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -297,6 +299,7 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -306,10 +309,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -426,10 +431,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -467,7 +474,7 @@ export default function CaseStudies(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

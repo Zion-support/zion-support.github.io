@@ -370,7 +370,7 @@ export default function CloudDevOps(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
-                Explore All Services
+                Explore All Services;
               </Link>;
             </div>;
           </div>;

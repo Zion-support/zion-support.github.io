@@ -8,7 +8,8 @@ const defaultContent = {
         icon: <ShoppingCart className="w-16 h-16 text-gray-500"/>,
         title: 'No Products Available',
         description: 'We\'re loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!',
-   
+  
+
 },
     categories: {
         icon: <Lightbulb className="w-16 h-16 text-gray-500"/>,
@@ -49,7 +50,6 @@ const defaultContent = {
 export function EmptyState({ type, title, description, action, icon }) {
     const { t } = useTranslation();
     const content = defaultContent[type];
-    const displayDescription = description || content.description;
     const displayIcon = icon || content.icon;
     return (<div className="flex flex-col items-center justify-center py-12 px-6 text-center">
       <div className="mb-4">
@@ -102,19 +102,23 @@ export function CategoriesEmptyState({ onRetry }) {
     return (<EmptyState type="categories" action = {
   onRetry ? { label: 'Refresh Categories',
   onClick: onRetry 
+
 } : null}/>)}
 export function TalentEmptyState({ onRetry }) {
     return (<EmptyState type="talent" action = {
   onRetry ? { label: 'Reset Filters',
   onClick: onRetry 
+
 } : null}/>)}
 export function EquipmentEmptyState({ onRetry }) {
     return (<EmptyState type="equipment" action = {
   onRetry ? { label: 'Refresh Listings',
   onClick: onRetry 
+
 } : null}/>)}
 export function ServerErrorState({ onRetry }) {
     return (<EmptyState type="error" action = {
   onRetry ? { label: 'Retry',
   onClick: onRetry 
+
 } : null}/>)}

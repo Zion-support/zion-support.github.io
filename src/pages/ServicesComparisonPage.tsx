@@ -34,7 +34,7 @@ export default function ServicesComparisonPage(...args[]):  {
         </div>
       </div>
     </>
-  )}
+  )};
 =======;
             <p className="text-lg">This page is under development. Please check back soon for detailed service comparisons.</p>;
           </div>;

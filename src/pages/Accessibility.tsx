@@ -79,7 +79,7 @@ export default function Accessibility() {
         'Error prevention and recovery',
         'Multiple ways to complete tasks',
         'Reduced distractions mode'
-      ]
+      ];
     };
   ];
 =======
@@ -100,7 +100,7 @@ export default function Accessibility() {
 					If you encounter accessibility barriers, please contact us at
 					{' '}<a className="text-cyan-400 underline" href="mailto:info@ziontechgroup.com">info@ziontechgroup.com</a>.
 				</p>
-				<h2 className="text-2xl font-semibold mt-8 mb-3">Compatibility</h2>
+				<h2 className="text-2xl font-semibold mt-8 mb-3">Compatibility</h2>;
 				<p className="text-zinc-300">;
 					We support modern browsers and assistive technologies. We continuously test and improve ;
 					the experience to ensure a high level of accessibility across platforms.;
@@ -138,7 +138,7 @@ export default function Accessibility() {
       description: 'European accessibility requirements for ICT products and services',
       status: 'Fully Compliant',
       icon: CheckCircle,
-      color: 'text-green-400'
+      color: 'text-green-400';
     };
   ];
 
@@ -165,7 +165,7 @@ export default function Accessibility() {
       name: 'Mobile Accessibility',
       description: 'Optimized for mobile assistive technologies',
       icon: Smartphone,
-      examples: ['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch']
+      examples: ['iOS VoiceOver', 'Android TalkBack', 'Switch Control', 'AssistiveTouch'];
     };
   ];
 
@@ -192,7 +192,7 @@ export default function Accessibility() {
       name: 'Focus Highlighter',
       icon: CheckCircle,
       description: 'Highlight keyboard focus for better navigation',
-      shortcut: 'Tab key navigation'
+      shortcut: 'Tab key navigation';
     };
   ];
 
@@ -274,14 +274,17 @@ export default function Accessibility() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -321,14 +324,17 @@ export default function Accessibility() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
@@ -364,14 +370,17 @@ export default function Accessibility() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -416,14 +425,17 @@ export default function Accessibility() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -521,5 +533,5 @@ export default function Accessibility() {
           </div>
         </section>
       </div>
-    </>
+    </>;
   )};

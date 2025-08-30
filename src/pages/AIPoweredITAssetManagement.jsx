@@ -81,10 +81,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -108,6 +110,7 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -117,10 +120,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -141,6 +146,7 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -150,10 +156,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -175,6 +183,7 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -184,10 +193,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -224,10 +235,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -253,6 +266,7 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -262,10 +276,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -300,10 +316,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -329,6 +347,7 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -338,10 +357,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -376,10 +397,12 @@ const AIPoweredITAssetManagement = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

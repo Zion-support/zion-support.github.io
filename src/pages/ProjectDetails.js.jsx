@@ -160,7 +160,6 @@ function ProjectDetailsContent() {
     if (!isClient && !isTalent) {
         router.push("/unauthorized");
         return null}
-    const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
     return (<>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>

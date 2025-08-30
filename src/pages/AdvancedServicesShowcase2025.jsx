@@ -70,6 +70,7 @@ const AdvancedServicesShowcase2025 = () => {
   <<<<<<< HEAD
             'Network Security': '🛡️'
         
+
 };
         return icons[category] || '🚀'};
 =======
@@ -100,6 +101,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -122,6 +124,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }}/>
 
       {/* Hero Section */}
@@ -135,9 +138,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -157,6 +162,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -165,9 +171,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -187,6 +195,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -195,9 +204,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -229,6 +240,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -237,9 +249,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -269,6 +283,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -277,9 +292,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
+
 
 
 
@@ -431,6 +448,7 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -439,9 +457,11 @@ const AdvancedServicesShowcase2025 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 1 
+
 
 
 

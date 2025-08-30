@@ -9,8 +9,9 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com';
   ;
+
 };
 
   return (
@@ -54,7 +55,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
               <h3 className="text-blue-400 font-semibold mb-2">Mobile</h3>
               <a href={`tel:${contactInfo.mobile}`} className="text-white hover:text-blue-300 transition-colors">
                 {contactInfo.mobile}
-              </a>
+              </a>;
 =======;
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -154,7 +155,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s => s.category === 'Sustainability').length, icon: '🌱' },
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },
-    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s => s.category === 'Autonomous Vehicles').length, icon: '🚗' },
+    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s => s.category === 'Autonomous Vehicles').length, icon: '🚗' },;
     { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s => s.category === 'Healthcare').length, icon: '🏥' },;
     { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s => s.category === 'Financial Services').length, icon: '💰' },;
     { id: 'Marketing', name: 'Marketing', count: allServices.filter(s => s.category === 'Marketing').length, icon: '📢' },;
@@ -188,7 +189,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'Advanced': 1 ;
+
 
 
 
@@ -210,7 +213,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
   };
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -227,9 +230,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 },
     visible: {
-      y: 0,
+      y: 0,;
       opacity: 1,;
       transition: {;
         duration: 0.5,;
@@ -257,7 +261,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       'Sustainability': Leaf,
       'Blockchain': Link,
       'Metaverse': Globe,
-      'Autonomous Vehicles': Car,
+      'Autonomous Vehicles': Car,;
       'Healthcare': Heart,;
       'Financial Services': DollarSign,;
       'Marketing': MessageCircle,;
@@ -283,10 +287,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -380,6 +386,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }
                   className="flex-1"
                 />
@@ -391,6 +398,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
 
 
 
@@ -579,10 +587,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -663,6 +673,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -672,10 +683,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -732,10 +745,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -793,7 +808,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
+<<<<<<< HEAD;
     </div>;
   )};
 =======
@@ -817,6 +832,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -826,10 +842,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -907,7 +925,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   <button className="flex-1 px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
                     Contact Sales
                   </button>
-                </div>
+                </div>;
               </div>;
             </motion.div>;
           </motion.div>;

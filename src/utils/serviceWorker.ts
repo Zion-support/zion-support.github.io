@@ -123,7 +123,7 @@ export class ServiceWorkerManager {
     notification.innerHTML = `
       <div class="flex items-center space-x-3">
         <span>🔄 New version available</span>
-        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
+        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">;
           Update;
         </button>;
         <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;

@@ -12,7 +12,7 @@ interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
   className?: string}
 
 export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
-  message = 'Loading amazing experiences...',
+  message = 'Loading amazing experiences...',;
   showProgress = false,;
   progress = 0,;
   variant = 'default',;
@@ -26,7 +26,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     'Loading AI-powered insights...',
     'Optimizing cloud infrastructure...',
     'Securing your digital assets...',
-    'Innovating the future of tech...',
+    'Innovating the future of tech...',;
     'Connecting global networks...',;
     'Building autonomous systems...',;
     'Unleashing quantum capabilities...',;
@@ -37,7 +37,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
 
   useEffect(() => {
 <<<<<<< HEAD
-    if (variant = == 'ai' || variant === 'tech' || variant === 'global') {
+    if (variant = == 'ai' || variant === 'tech' || variant === 'global') {;
       const interval = setInterval(() => {;
         setMessageIndex((prevIndex) => (prevIndex + 1) % loadingMessages.length)}, 3000); // Change message every 3 seconds
       return () => clearInterval(interval)}
@@ -64,6 +64,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -81,6 +83,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -98,6 +102,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -121,6 +127,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
 
 
 
+
 }}
       >
         {variant !== 'default' && (
@@ -129,6 +136,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             initial = {
   { opacity: 0,
   scale: 0.5 
+
 
 
 
@@ -143,10 +151,12 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
 
 
 
+
 }}
             transition = {
   { duration: 0.5, repeat: Infinity,
   repeatType: 'reverse' 
+
 
 
 
@@ -170,6 +180,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -179,10 +190,12 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -206,7 +219,7 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             transition={{ duration: 0.5 }}
           ></motion.div>
         </div>
-      )}
+      )};
     </div>;
   )};
 =======
@@ -252,7 +265,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
         >
           <EnhancedLoadingSpinner message={message} showProgress={progress !== null} progress={progress} variant={variant} size="xl" />
         </motion.div>
-      )}
+      )};
     </AnimatePresence>;
   )};
 =======

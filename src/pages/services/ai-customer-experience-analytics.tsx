@@ -20,10 +20,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -52,10 +54,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -107,14 +111,17 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
@@ -135,10 +142,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -166,14 +175,17 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                   whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="text-center bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-xl p-8 border border-green-500/30"
@@ -193,10 +205,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -238,14 +252,17 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
@@ -273,10 +290,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -347,14 +366,17 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className={`relative rounded-xl p-8 ${
@@ -404,14 +426,17 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               viewport={{ once: true }}
               className="text-center mt-12"
@@ -433,10 +458,12 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -480,7 +507,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   );
 };

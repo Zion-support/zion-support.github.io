@@ -34,12 +34,15 @@ export default function FuturisticHero() {
       {floatingIcons.map((item, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { delay: item.delay,
   duration: 1 
+
 }} className={`absolute ${item.color} opacity-20`} style={{
                 left: `${20 + index * 15}%`,
                 top: `${30 + (index % 2) * 20}%`,
@@ -52,7 +55,8 @@ export default function FuturisticHero() {
   {
             left: mousePosition.x - 8,
             top: mousePosition.y - 8,
-   
+  
+
 }}/>
 
       {/* Main Content */}
@@ -61,13 +65,16 @@ export default function FuturisticHero() {
         <motion.div initial = {
   { opacity: 0,
   y: 50 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 1 }} className="mb-8">
           <motion.h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6" style = {
   { y,
   opacity 
+
 }}>
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary
@@ -85,12 +92,15 @@ export default function FuturisticHero() {
           <motion.p initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 1,
   delay: 0.3 
+
 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our comprehensive suite of cutting-edge micro SaaS services, 
             AI solutions, and emerging technologies. From quantum computing to 
@@ -102,12 +112,15 @@ export default function FuturisticHero() {
         <motion.div initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 1,
   delay: 0.6 
+
 }} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
           {[
             { value: '200+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8"/>, color: 'text-cyan-400' },
@@ -117,12 +130,15 @@ export default function FuturisticHero() {
         ].map((stat, index) => (<motion.div key={stat.label} initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.8 + index * 0.1 
+
 }} className="text-center group">
               <div className={`${stat.color} mb-3 group-hover:scale-110 transition-transform duration-300`}>
                 {stat.icon}
@@ -140,12 +156,15 @@ export default function FuturisticHero() {
         <motion.div initial = {
   { opacity: 0,
   y: 30 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 1,
   delay: 1 
+
 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
             <span className="relative z-10 flex items-center">
@@ -167,20 +186,25 @@ export default function FuturisticHero() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 1,
   delay: 1.5 
+
 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div animate = {
   { y[0, 10,
   0] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
             <motion.div animate = {
   { y[0, 12,
   0] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
           </motion.div>
         </motion.div>
@@ -193,18 +217,21 @@ export default function FuturisticHero() {
                 x: Math.random() * window.innerWidth,
                 y: Math.random() * window.innerHeight,
                 opacity: Math.random(),
-   
+  
+
 }} animate = {
   {
                 y[0, -100],
                 opacity[0, 1, 0],
-   
+  
+
 }} transition = {
   {
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-   
+  
+
 }}/>))}
       </div>
     </section>)}

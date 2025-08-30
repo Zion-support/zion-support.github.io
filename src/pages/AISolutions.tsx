@@ -67,7 +67,7 @@ export default function AISolutions(...args[]):  {
       title: "Data Intelligence",
       description: "Transform raw data into actionable business insights",
       features["Data Mining", "Business Intelligence", "Real-time Analytics", "Data Visualization"],
-      color: "from-zion-indigo to-zion-purple"
+      color: "from-zion-indigo to-zion-purple";
     };
   ];
 
@@ -76,7 +76,7 @@ export default function AISolutions(...args[]):  {
     { id: 'healthcare', name: 'Healthcare', icon: Monitor },
     { id: 'finance', name: 'Finance', icon: BarChart3 },
     { id: 'retail', icon: Smartphone, name: 'Retail' },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Cpu },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Cpu },;
     { id: 'logistics', name: 'Logistics', icon: Network };
   ];
 
@@ -121,7 +121,7 @@ export default function AISolutions(...args[]):  {
       description: "AI-driven product and content recommendations for enhanced user experience",
       industry: "retail",
       benefits["Increased Sales", "Customer Engagement", "Personalization", "Conversion Rate"],
-      icon: Target
+      icon: Target;
     };
   ];
 
@@ -160,14 +160,14 @@ export default function AISolutions(...args[]):  {
       name: "Federated Learning",
       description: "Distributed AI training while preserving data privacy",
       applications["Healthcare", "Finance", "IoT Devices", "Privacy-Sensitive Applications"],
-      icon: Shield
+      icon: Shield;
     };
   ];
 
   const successMetrics = [
     { metric: "95%", label: "Accuracy Rate", description: "Our AI models achieve industry-leading accuracy" },
     { metric: "10x", label: "Faster Processing", description: "Significant speed improvements over traditional methods" },
-    { metric: "40%", label: "Cost Reduction", description: "Average cost savings for our clients" },
+    { metric: "40%", label: "Cost Reduction", description: "Average cost savings for our clients" },;
     { metric: "24/7", label: "Availability", description: "AI systems work around the clock" };
   ];
 
@@ -177,18 +177,19 @@ export default function AISolutions(...args[]):  {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-      }
+      };
     };
   };
 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 20 
+
 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6 };
     };
   };
 
@@ -210,10 +211,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -258,10 +261,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -290,6 +295,7 @@ export default function AISolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 }}
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -321,10 +327,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -343,14 +351,16 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-          >
+          >;
             {industries.map((industry)  => {;
               const Icon = industry.icon;
               return (
@@ -385,6 +395,7 @@ export default function AISolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 }}
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -421,10 +432,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -453,6 +466,7 @@ export default function AISolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -487,10 +501,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -536,10 +552,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -617,10 +635,12 @@ export default function AISolutions(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -657,7 +677,7 @@ export default function AISolutions(...args[]):  {
         description="Enterprise AI solutions including machine learning, computer vision, NLP, and intelligent automation."
       />
       <section className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">AI Solutions</h1>
+        <h1 className="text-4xl font-bold mb-4">AI Solutions</h1>;
         <p className="text-lg text-gray-300 max-w-3xl">;
           We design and implement end-to-end AI systems that deliver measurable business outcomes: demand forecasting,;
           intelligent search, fraud detection, personalization, autonomous process optimization, and more.;

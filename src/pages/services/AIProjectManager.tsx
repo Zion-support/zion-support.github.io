@@ -6,7 +6,7 @@ import { Calendar, Users, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phon
 export default function AIProjectManager() {
   const features = [
     'AI-powered project planning and scheduling',
-    'Automated resource allocation and team management',
+    'Automated resource allocation and team management',;
     'Real-time progress tracking with predictive analytics',;
     'Intelligent risk assessment and mitigation',;
     'Automated stakeholder communication and reporting',;
@@ -15,7 +15,7 @@ export default function AIProjectManager() {
     'Advanced analytics and performance insights';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce project planning time by 70%',;
     'Improve project delivery success rate by 40%',;
     'Automate routine project management tasks',;
@@ -36,7 +36,7 @@ export default function AIProjectManager() {
       price: '$299/mo', 
       features: ['Up to 50 projects', '25 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$799/mo', ;
@@ -67,10 +67,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -111,10 +113,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -144,6 +148,7 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -153,10 +158,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -187,10 +194,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -220,6 +229,7 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -229,10 +239,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -263,10 +275,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -296,6 +310,7 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -305,10 +320,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -368,10 +385,12 @@ export default function AIProjectManager() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -392,7 +411,7 @@ export default function AIProjectManager() {
                 </button>
                 <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                   Schedule Demo
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

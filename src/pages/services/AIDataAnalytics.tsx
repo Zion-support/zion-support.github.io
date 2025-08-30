@@ -51,7 +51,7 @@ export default function AIDataAnalytics() {
     {
       icon: TrendingUp,
       title: "Performance Tracking",
-      description: "Monitor KPIs and track business performance with intelligent alerts."
+      description: "Monitor KPIs and track business performance with intelligent alerts.";
     },;
     {;
       icon: Shield,;
@@ -60,7 +60,7 @@ export default function AIDataAnalytics() {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increase data-driven decision making by 60-80% with AI insights",;
     "Improve business performance by 25-45% through predictive analytics",;
     "Reduce analysis time by 70-90% with automated processing",;
@@ -93,7 +93,7 @@ export default function AIDataAnalytics() {
     {
       type: "Real-Time Analytics",
       description: "Live data processing and instant insights delivery",
-      icon: Activity
+      icon: Activity;
     },;
     {;
       type: "Big Data Analytics",;
@@ -116,7 +116,7 @@ export default function AIDataAnalytics() {
       description: "Patient outcome prediction, treatment optimization, and resource planning"
     },
     {
-      industry: "Manufacturing",
+      industry: "Manufacturing",;
       description: "Predictive maintenance, quality control, and supply chain optimization";
     },;
     {;
@@ -145,10 +145,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -207,10 +209,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -241,6 +245,7 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -250,10 +255,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -285,10 +292,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -322,6 +331,7 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -331,10 +341,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -391,10 +403,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -425,6 +439,7 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -434,10 +449,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -471,10 +488,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -505,6 +524,7 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -514,10 +534,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -551,10 +573,12 @@ export default function AIDataAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -584,7 +608,7 @@ export default function AIDataAnalytics() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>;
             </div>;
           </motion.div>;

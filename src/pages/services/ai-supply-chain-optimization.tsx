@@ -370,7 +370,7 @@ export default function AISupplyChainOptimization(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
               >
-                Explore All Services
+                Explore All Services;
               </Link>;
             </div>;
           </div>;

@@ -48,10 +48,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
     return (<div style = {
   { height: containerHeight,
   overflow: 'auto' 
+
 }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
       <div style = {
   { height: items.length * itemHeight,
   position: 'relative' 
+
 }}>
 =======
         setScrollTop(e.currentTarget.scrollTop);
@@ -64,10 +66,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
 
 
 
+
 }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
       <div style = {
   { height: items.length * itemHeight,
   position: 'relative' 
+
 
 
 

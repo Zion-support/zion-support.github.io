@@ -5,7 +5,7 @@ export default function AIQuantumMachineLearning() {
     'Quantum-enhanced machine learning algorithms',
     'Hybrid quantum-classical computing solutions',
     'Advanced quantum neural network optimization',
-    'Real-time quantum algorithm execution',
+    'Real-time quantum algorithm execution',;
     'Quantum machine learning model training',;
     'Advanced quantum data processing and analysis',;
     'Quantum-enhanced optimization algorithms',;
@@ -14,7 +14,7 @@ export default function AIQuantumMachineLearning() {
     'Comprehensive quantum computing analytics';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Solve complex problems 100x faster than classical computing',;
     'Improve machine learning accuracy by 40-60%',;
     'Enable previously impossible computational tasks',;
@@ -23,7 +23,7 @@ export default function AIQuantumMachineLearning() {
     'Enable breakthrough innovations in AI and ML';
   ];
 
-  const useCases = [
+  const useCases = [;
     'Drug discovery and pharmaceutical research',;
     'Financial modeling and risk assessment',;
     'Climate modeling and environmental research',;
@@ -41,7 +41,7 @@ export default function AIQuantumMachineLearning() {
     { 
       name: 'Quantum Professional', 
       price: '$4,999/mo', 
-      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] 
+      details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise Quantum', ;
@@ -147,7 +147,7 @@ export default function AIQuantumMachineLearning() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-zion-slate-light">;
             Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="text-zion-cyan hover:underline">ziontechgroup.com</a>;
           </div>;

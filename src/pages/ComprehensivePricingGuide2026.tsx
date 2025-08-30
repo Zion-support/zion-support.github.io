@@ -38,7 +38,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
   const filtered = ALL_PRICING_GUIDES_2026;
     
     if (selectedService !== 'all') {
-      filtered = filtered.filter(service => service.serviceName === selectedService)}
+      filtered = filtered.filter(service => service.serviceName === selectedService)};
     ;
     return filtered}, [selectedService]);
 
@@ -84,10 +84,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -111,6 +113,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -120,10 +123,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -146,6 +151,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -155,10 +161,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -238,6 +246,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -247,10 +256,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -316,6 +327,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -325,10 +337,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
                       transition = {
   { duration: 0.6,
   delay: (index * 0.1) + (tierIndex * 0.1) 
+
 
 
 
@@ -472,10 +486,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -530,10 +546,12 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -574,7 +592,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {;
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 =======

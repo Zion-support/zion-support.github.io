@@ -57,8 +57,10 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
 
 
 
@@ -90,7 +92,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     {
       icon: Database,
       title: 'Real-time Patient Monitoring',
-      description: 'Continuous monitoring and alerting for critical health indicators'
+      description: 'Continuous monitoring and alerting for critical health indicators';
     },;
     {;
       icon: BarChart3,;
@@ -99,7 +101,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce readmission rates by 35%',;
     'Improve early detection by 60%',;
     'Cut healthcare costs by 25%',;
@@ -161,7 +163,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
         'Advanced AI models',
         'On-premise deployment option',
         'Dedicated healthcare consultant',
-        'Custom training programs',
+        'Custom training programs',;
         'White-label solutions',;
         'Multi-tenant architecture';
       ],;
@@ -194,7 +196,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     {
       title: 'Pediatrics',
       description: 'Childhood disease prediction and growth monitoring',
-      icon: Users
+      icon: Users;
     },;
     {;
       title: 'Geriatrics',;
@@ -217,7 +219,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     {
       title: 'Research Institutions',
       description: 'Advanced analytics for clinical research and drug development',
-      icon: TestTube
+      icon: TestTube;
     },;
     {;
       title: 'Insurance Companies',;
@@ -226,7 +228,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
     };
   ];
 
-  const complianceFeatures = [
+  const complianceFeatures = [;
     'HIPAA Compliance',;
     'HITECH Act Support',;
     'SOC 2 Type II Certified',;
@@ -255,10 +257,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -308,10 +312,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -342,6 +348,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -351,10 +358,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -387,10 +396,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -421,6 +432,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -430,10 +442,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -466,10 +480,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -500,6 +516,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -509,10 +526,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -542,10 +561,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -576,6 +597,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -585,10 +607,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -618,10 +642,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -652,6 +678,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -661,10 +688,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -697,10 +726,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -731,6 +762,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -740,10 +772,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -808,10 +842,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -856,10 +892,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -906,7 +944,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </motion.div>;

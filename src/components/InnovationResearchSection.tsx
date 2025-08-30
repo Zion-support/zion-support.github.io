@@ -61,7 +61,7 @@ export const InnovationResearchSection: React.FC = (): JSX.Element => {
       description: 'Creating clean energy solutions for a sustainable future.',
       focus['Solar Technology', 'Energy Storage', 'Smart Grids', 'Carbon Capture'],
       publications: '22+',
-      patents: '11'
+      patents: '11';
     };
   ];
 =======
@@ -87,7 +87,7 @@ const researchAreas = [
     progress: 90,
     color: "from-green-500 to-emerald-500"
   },
-  {
+  {;
     icon: "🌐",;
     title: "Edge Computing",;
     description: "Distributed computing and IoT optimization",;
@@ -122,7 +122,7 @@ export function IconComponent = stat.icon;
 
 <<<<<<< HEAD
         {/* Research Areas Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {researchAreas.map((area, index)  => {;
             const IconComponent = area.icon;
             return (
@@ -138,10 +138,12 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -152,6 +154,7 @@ export function IconComponent = stat.icon;
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -177,10 +180,12 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -191,6 +196,7 @@ export function IconComponent = stat.icon;
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -226,6 +232,7 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
                         />
                       </div>
@@ -247,10 +254,12 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -261,6 +270,7 @@ export function IconComponent = stat.icon;
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -311,10 +321,12 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -330,6 +342,7 @@ export function IconComponent = stat.icon;
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -338,7 +351,7 @@ export function IconComponent = stat.icon;
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -353,4 +366,5 @@ export default InnovationResearchSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default IconComponent;
 export default IconComponent;

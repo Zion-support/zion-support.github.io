@@ -122,12 +122,6 @@ const AIMatcher = () => {
             icon: Users
         }
     ];
-    const handleNext = () => {
-        if (currentStep < questions.length) {
-            setCurrentStep(currentStep + 1)}
-        else {
-            generateRecommendations()}
-    };
     const handlePrevious = () => {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1)}
@@ -167,9 +161,11 @@ const AIMatcher = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">
               <Brain className="w-10 h-10 text-white"/>
@@ -192,12 +188,15 @@ const AIMatcher = () => {
         {currentStep <= questions.length ? (<motion.div key={currentStep} initial = {
   { opacity: 0,
   x: 20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} exit = {
   { opacity: 0,
   x: -20 
+
 }} transition={{ duration: 0.3 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-8">
             {/* Progress Bar */}
             <div className="mb-8">
@@ -220,6 +219,7 @@ const AIMatcher = () => {
                 {questions[currentStep - 1].options.map((option, index) => (<button key={index} onClick = {
   () => handleAnswer(questions[currentStep - 1].id,
   option)
+
 } className={`w-full text-left p-4 rounded-lg border transition-all duration-200 ${answers[questions[currentStep - 1].id] === option
                     ? 'border-blue-500 bg-blue-500/20 text-blue-300'
                     : 'border-slate-600 hover:border-slate-500 text-gray-300 hover:text-white hover:bg-slate-700/50'}`}>
@@ -247,9 +247,11 @@ const AIMatcher = () => {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="space-y-8">
             <div className="text-center mb-12">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-4">
@@ -265,12 +267,15 @@ const AIMatcher = () => {
               {recommendations.map((solution, index) => (<motion.div key={solution.name} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
@@ -318,9 +323,11 @@ const AIMatcher = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Need More Personalized Guidance?

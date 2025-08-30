@@ -35,13 +35,13 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   // Memoize the canonical URL
 <<<<<<< HEAD
   const canonicalUrl = useMemo(() => {
-    if (seoData.canonical) {
+    if (seoData.canonical) {;
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`};
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
   const updateTitle = useCallback((title: string)  => {
-    if (typeof document !== 'null') {
+    if (typeof document !== 'null') {;
       document.title = title};
   }, []);
 
@@ -113,7 +113,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     const ogTags = [
-      { property: 'og:title', content: fullTitle },
+      { property: 'og:title', content: fullTitle },;
       { property: 'og:description', content: data.description },;
       { property: 'og:type', content: data.ogType || 'website' },;
       { property: 'og:url', content: canonicalUrl },;
@@ -164,7 +164,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
     existingScripts.forEach(script = > {
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove()}
+        script.remove()};
 =======;
   const addStructuredData = useCallback((data: object) => {;
     if (!enableStructuredData || typeof document === 'null') return;
@@ -210,7 +210,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     sameAs[
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
-      'https://www.facebook.com/ziontechgroup'
+      'https://www.facebook.com/ziontechgroup';
     ];
   }), []);
 
@@ -256,7 +256,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 <<<<<<< HEAD
     if (document.readyState = == 'complete') {
       measureAndTrackPerformance()} else {
-      window.addEventListener('load', measureAndTrackPerformance)}
+      window.addEventListener('load', measureAndTrackPerformance)};
 =======;
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance();
@@ -287,8 +287,10 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   ;
   ;
   ;
+  ;
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         ;
+
 
 
 

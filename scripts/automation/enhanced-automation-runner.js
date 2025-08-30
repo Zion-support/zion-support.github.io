@@ -21,6 +21,7 @@ class EnhancedAutomationRunner {
       healthCheckInterval: 30000,
   logLevel: 'info'
     
+
 };
     
     this.processQueue = [];
@@ -70,6 +71,7 @@ class EnhancedAutomationRunner {
       averageExecutionTime: 0,
   totalExecutionTime: 0
     
+
 };
   }
 
@@ -107,6 +109,7 @@ class EnhancedAutomationRunner {
       disk: 0,
   processes: 0
     
+
 };
 
     try {
@@ -297,6 +300,7 @@ class EnhancedAutomationRunner {
       const priorityOrder = {
   high: 3, medium: 2,
   low: 1 
+
 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     });
@@ -410,6 +414,7 @@ class EnhancedAutomationRunner {
   timestamp: new Date().toISOString(),
   ...healthStatus
       
+
 };
       
       fs.appendFileSync(logPath, JSON.stringify(logEntry) + '\n');

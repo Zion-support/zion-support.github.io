@@ -52,7 +52,7 @@ export default function PricingPage(...args[]):  {
         'Unlimited Users',
         'Advanced Compliance',
         'Dedicated Account Manager',
-        'SLA Guarantees',
+        'SLA Guarantees',;
         'On-Premise Options';
       ],;
       cta: 'Contact Sales',;
@@ -85,7 +85,7 @@ export default function PricingPage(...args[]):  {
       description: 'Complete cloud infrastructure migration',
       price: 'From $10,000',
       features['Architecture Design', 'Data Migration', 'Performance Optimization']
-    }
+    };
 =======;
       name: 'Cloud Migration',;
       description: 'Complete cloud infrastructure migration',;
@@ -119,7 +119,7 @@ export default function PricingPage(...args[]):  {
     {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
-    }
+    };
 =======;
     },;
     {;
@@ -296,7 +296,7 @@ export default function PricingPage(...args[]):  {
         </section>
       </main>
     </>
-  )}
+  )};
 =======;
             </div>;
           </div>;

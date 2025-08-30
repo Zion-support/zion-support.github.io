@@ -109,6 +109,7 @@ export function HowItWorksSection() {
   const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
     visible: {
       y: 0,
@@ -123,6 +124,7 @@ export function HowItWorksSection() {
   const cardVariants = {
   hidden: { scale: 0.95,
   opacity: 0 
+
 },
     visible: {
       scale: 1,
@@ -142,6 +144,7 @@ export function HowItWorksSection() {
 
 
 
+
 },
         visible: {
             opacity: 1,
@@ -156,6 +159,7 @@ export function HowItWorksSection() {
     const statsVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
+
 
 
 
@@ -185,6 +189,7 @@ export function HowItWorksSection() {
                               radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%,
   transparent 50%)`
           
+
 }}
         />
       </div>
@@ -197,10 +202,12 @@ export function HowItWorksSection() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -225,10 +232,12 @@ export function HowItWorksSection() {
 
 
 
+
 }} 
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -248,10 +257,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                         whileInView = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -262,6 +273,7 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -283,10 +295,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                         whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -297,6 +311,7 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -317,10 +332,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                         whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -331,6 +348,7 @@ export function HowItWorksSection() {
                         transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -372,12 +390,14 @@ export function HowItWorksSection() {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 }}
                 style = {
   {
                   background: hoveredStep === index 
                     ? `linear-gradient(135deg,
   ${step.bgColor
+
 })` 
                     : null
                 }}
@@ -410,10 +430,12 @@ export function HowItWorksSection() {
                     initial = {
   { opacity: 0,
   y: 10 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -439,14 +461,17 @@ export function HowItWorksSection() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           viewport={{ once: true }}
         >
@@ -457,14 +482,17 @@ export function HowItWorksSection() {
               initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
               whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
               viewport={{ once: true }}
             >
@@ -483,14 +511,17 @@ export function HowItWorksSection() {
           initial = {
   { opacity: 0,
   y: 30 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
           viewport={{ once: true }}
         >
@@ -525,6 +556,7 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                                             animate = {
   { opacity: 1,
@@ -534,10 +566,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                                             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -588,10 +622,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -602,6 +638,7 @@ export function HowItWorksSection() {
                     transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -634,6 +671,7 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                             >
                                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
@@ -661,10 +699,12 @@ export function HowItWorksSection() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -675,6 +715,7 @@ export function HowItWorksSection() {
                     transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 

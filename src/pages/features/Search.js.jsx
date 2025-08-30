@@ -13,6 +13,7 @@ export default function SearchFeature() {
         "description": "Quickly locate products, services and talent using intelligent search filters.",
   "url": "https://app.ziontechgroup.com/features/search"
     
+
 };
     return (<>
       <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>

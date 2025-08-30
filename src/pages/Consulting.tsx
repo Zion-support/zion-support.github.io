@@ -39,7 +39,7 @@ const Consulting = () => {
       title: "Digital Innovation",
       description: "Emerging technology consulting and innovation acceleration",
       features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-    }
+    };
 =======;
       icon: Zap,;
       title: "Digital Innovation",;
@@ -73,7 +73,7 @@ const Consulting = () => {
     {
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
-      icon: Globe
+      icon: Globe;
     },;
     {;
       title: "Government",;
@@ -82,7 +82,7 @@ const Consulting = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Expert guidance from industry professionals",;
     "Proven methodologies and best practices",;
     "Customized solutions for your specific needs",;
@@ -105,7 +105,7 @@ const Consulting = () => {
     {
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
-      duration: "3-6 weeks"
+      duration: "3-6 weeks";
     },;
     {;
       phase: "Implementation",;
@@ -292,7 +292,7 @@ const Consulting = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

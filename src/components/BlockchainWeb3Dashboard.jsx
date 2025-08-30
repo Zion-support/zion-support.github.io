@@ -41,6 +41,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }`
                 };
                 await mintNFT(contracts[1]?.address || '', metadata);
@@ -154,6 +155,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -162,9 +164,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -184,6 +188,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 events['Event1',
   'Event2']
             
+
 })} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
 =======
                 abi: [],
@@ -248,6 +253,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -256,9 +262,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -318,6 +326,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -326,9 +335,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -346,6 +357,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 apy: 12.5,
   rewards: '125'
             
+
 
 
 
@@ -408,6 +420,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -416,9 +429,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -512,6 +527,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -520,9 +536,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -544,6 +562,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>
                 </div>
                 
@@ -559,6 +578,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows={3}/>
                 </div>
                 
@@ -569,6 +589,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   <input type="url" value={nftForm.image} onChange = {
   (e) => setNftForm(prev => ({ ...prev,
   image: e.target.value 
+
 
 
 
@@ -602,6 +623,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
@@ -610,9 +632,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -634,6 +658,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>
                 </div>
                 
@@ -649,6 +674,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1"/>
                 </div>
                 
@@ -659,6 +685,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                   <textarea value={transactionForm.data} onChange = {
   (e) => setTransactionForm(prev => ({ ...prev,
   data: e.target.value 
+
 
 
 

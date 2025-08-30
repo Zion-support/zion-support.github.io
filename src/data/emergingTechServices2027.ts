@@ -406,7 +406,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     compliance["Research Standards", "Data Privacy", "Ethical AI", "Academic Guidelines"],
     support["24/7 Support", "Research Collaboration", "Training", "Custom Development"]
   }
-=======
+=======;
     technologyStack: ["Python", "NEST", "Brian", "PyNN", "Custom Hardware"],;
     useCases: ["Edge AI", "IoT Processing", "Robotic Control", "Neuromorphic Research"],;
     integrations: ["Intel Loihi", "IBM TrueNorth", "Custom Chips", "IoT Platforms", "Robotics Systems"],;

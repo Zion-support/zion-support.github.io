@@ -56,7 +56,7 @@ const Careers = () => {;
 <<<<<<< HEAD
       salary: "$90K - $140K",
       description: "Protect our systems and clients from emerging cyber threats.",
-      requirements: ["CISSP certification", "3+ years security", "Threat hunting experience"]
+      requirements: ["CISSP certification", "3+ years security", "Threat hunting experience"];
     };
   ];
 
@@ -79,7 +79,7 @@ const Careers = () => {;
     {
       icon: <Award className="w-8 h-8 text-yellow-400" />,
       title: "Career Growth",
-      description: "Continuous learning, mentorship, and clear career progression paths"
+      description: "Continuous learning, mentorship, and clear career progression paths";
     };
   ];
 
@@ -88,7 +88,7 @@ const Careers = () => {;
     "Client Success",
     "Continuous Learning",
     "Diversity & Inclusion",
-    "Ethical AI",
+    "Ethical AI",;
     "Sustainability";
   ];
 
@@ -107,10 +107,12 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
@@ -122,14 +124,17 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
@@ -140,14 +145,17 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
             className="flex flex-wrap justify-center gap-4"
           >
@@ -174,10 +182,12 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -196,14 +206,17 @@ const Careers = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/10 transition-all duration-300"
@@ -289,7 +302,7 @@ const Careers = () => {;
       description: "Lead product strategy and development for our innovative technology solutions and services.",
       requirements: [
         "Experience in B2B SaaS or enterprise software",
-        "Strong analytical and strategic thinking",
+        "Strong analytical and strategic thinking",;
         "Experience with agile methodologies",;
         "Excellent communication and leadership skills";
       ],;
@@ -299,7 +312,7 @@ const Careers = () => {;
   ];
 
   const categories = [
-    { id: 'all', name: 'All Positions', count: jobListings.length },
+    { id: 'all', name: 'All Positions', count: jobListings.length },;
     { id: 'ai', name: 'AI & ML', count: jobListings.filter(job => job.category === 'ai').length },;
     { id: 'security', name: 'Security', count: jobListings.filter(job => job.category === 'security').length },;
     { id: 'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job => job.category === 'cloud').length },;
@@ -326,7 +339,7 @@ const Careers = () => {;
     {
       icon: Cloud,
       title: "Scalable Solutions",
-      description: "Creating technology that grows with our clients' needs"
+      description: "Creating technology that grows with our clients' needs";
     },;
     {;
       icon: Code,;
@@ -337,7 +350,7 @@ const Careers = () => {;
 
   const benefits = [
     "Competitive salary and equity packages",
-    "Comprehensive health, dental, and vision insurance",
+    "Comprehensive health, dental, and vision insurance",;
     "Flexible work arrangements and remote options",;
     "Professional development and learning opportunities",;
     "Modern equipment and tools",;
@@ -367,10 +380,12 @@ const Careers = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -410,10 +425,12 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -432,14 +449,17 @@ const Careers = () => {;
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-8 hover:bg-white/10 transition-all duration-300"
@@ -462,6 +482,7 @@ const Careers = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -471,10 +492,12 @@ const Careers = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -498,6 +521,7 @@ const Careers = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -507,10 +531,12 @@ const Careers = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -541,10 +567,12 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -563,14 +591,17 @@ const Careers = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-lg p-8 hover:bg-white/10 transition-all duration-300 border border-white/10"
@@ -592,6 +623,7 @@ const Careers = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -601,10 +633,12 @@ const Careers = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -628,6 +662,7 @@ const Careers = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -637,10 +672,12 @@ const Careers = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.05 * index 
+
 
 
 
@@ -670,6 +707,7 @@ const Careers = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -679,10 +717,12 @@ const Careers = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -724,6 +764,7 @@ const Careers = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -733,10 +774,12 @@ const Careers = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -804,10 +847,12 @@ const Careers = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -839,6 +884,7 @@ const Careers = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -848,10 +894,12 @@ const Careers = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -872,7 +920,7 @@ const Careers = () => {;
                 </button>
                 <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
                   Contact Recruiting
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

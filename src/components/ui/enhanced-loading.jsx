@@ -12,12 +12,14 @@ const sizeClasses = {
 
 
 
+
 };
 const iconSizes = {
   sm: 'w-4 h-4',
     md: 'w-6 h-6',
     lg: 'w-8 h-8',
   xl: 'w-12 h-12'
+
 
 
 
@@ -39,6 +41,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
     const iconVariants = {
   hidden: { scale: 0,
   opacity: 0 
+
 
 
 
@@ -82,6 +85,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }
         }
     };
@@ -103,6 +107,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }
         }
     };
@@ -119,6 +124,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 
 
 
@@ -166,6 +172,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }}>
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
           <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`}/>
@@ -181,12 +188,14 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
   <<<<<<< HEAD
                     height: sizeClasses[size]
                 
+
 }} animate = {
   {
                     rotate[0, 360],
                     scale[0.8, 1.2,
   0.8]
                 
+
 }} transition={{
 =======
   height: sizeClasses[size]
@@ -206,6 +215,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -214,6 +224,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                     ease: "easeInOut",
   delay: index * 0.5
                 
+
 
 
 
@@ -232,9 +243,11 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
           <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
   { opacity[0.5, 1,
   0.5] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}>
             {text}
           </motion.p>
@@ -242,6 +255,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
             {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
   { scale[1, 1.5,
   1] 
+
 }} transition = {
   {
 =======
@@ -253,9 +267,11 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 
@@ -273,6 +289,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 
 
+
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -280,6 +297,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                     repeat: Infinity,
   delay: i * 0.2
                 
+
 
 
 

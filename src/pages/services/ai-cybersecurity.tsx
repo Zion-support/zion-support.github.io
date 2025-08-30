@@ -18,7 +18,7 @@ const AICybersecurity: React.FC = () => {
     {
       icon: Lock,
       title: 'Intelligent Access Control',
-      description: 'AI-driven authentication and authorization systems'
+      description: 'AI-driven authentication and authorization systems';
     },;
     {;
       icon: Eye,;
@@ -41,7 +41,7 @@ const AICybersecurity: React.FC = () => {
     {
       title: 'Vulnerability Assessment',
       description: 'AI-powered vulnerability scanning and assessment',
-      icon: '🛡️'
+      icon: '🛡️';
     },;
     {;
       title: 'Security Automation',;
@@ -50,7 +50,7 @@ const AICybersecurity: React.FC = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Real-time threat detection and response',;
     'Reduced false positives with AI accuracy',;
     '24/7 automated security monitoring',;
@@ -78,10 +78,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -132,10 +134,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -165,6 +169,7 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -174,10 +179,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -209,10 +216,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +251,7 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -251,10 +261,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -288,10 +300,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,10 +333,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -352,10 +368,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -390,10 +408,12 @@ const AICybersecurity: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,7 +433,7 @@ const AICybersecurity: React.FC = () => {
                 Start Security Assessment
               </button>
               <button className="px-8 py-4 border border-red-400/30 text-red-300 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200">
-                Contact Security Team
+                Contact Security Team;
               </button>;
             </div>;
           </motion.div>;

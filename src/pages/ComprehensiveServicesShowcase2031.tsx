@@ -148,7 +148,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
     { id: 'AI Operations', name: 'AI Operations', count: allServices.filter(s => s.category === 'AI Operations').length, icon: '⚙️' },
     { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️' },
     { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🔒' },
-    { id: 'Data & Analytics', name: 'Data & Analytics', count: allServices.filter(s => s.category === 'Data & Analytics').length, icon: '📈' },
+    { id: 'Data & Analytics', name: 'Data & Analytics', count: allServices.filter(s => s.category === 'Data & Analytics').length, icon: '📈' },;
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
@@ -164,8 +164,10 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
   ;
   ;
   ;
+  ;
   website: "https://ziontechgroup.com";
   ;
+
 
 
 
@@ -230,10 +232,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -254,6 +258,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -263,10 +268,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -286,6 +293,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -295,10 +303,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -329,6 +339,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -338,10 +349,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -367,10 +380,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -398,6 +413,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -407,10 +423,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -447,6 +465,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -456,10 +475,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -536,6 +557,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -545,10 +567,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -572,6 +596,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -581,10 +606,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -687,6 +714,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -696,10 +724,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
         transition = {
   { duration: 0.8,
   delay: 0.8 
+
 
 
 
@@ -761,6 +791,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -770,10 +801,12 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -910,7 +943,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {;
                   className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 text-center"
                 >
                   🌐 Visit Website
-                </a>
+                </a>;
               </div>;
             </motion.div>;
           </motion.div>;

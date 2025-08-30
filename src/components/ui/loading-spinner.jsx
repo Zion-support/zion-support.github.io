@@ -13,6 +13,7 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
 
 
 
+
 };
     const variantClasses = {
   default: 'text-zion-cyan',
@@ -20,6 +21,7 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
         secondary: 'text-zion-purple',
   white: 'text-white'
     
+
 
 
 
@@ -34,10 +36,12 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
 
 
 
+
 }>
       <motion.div className = {
   cn('animate-spin rounded-full border-2 border-current border-t-transparent', sizeClasses[size],
   variantClasses[variant])
+
 
 
 
@@ -55,9 +59,11 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

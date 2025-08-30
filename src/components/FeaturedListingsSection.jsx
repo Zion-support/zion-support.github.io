@@ -119,6 +119,7 @@ export function FeaturedListingsSection() {
   <<<<<<< HEAD
     hidden: { y: 30,
   opacity: 0 
+
 },
 =======
   hidden: { y: 20,
@@ -161,10 +162,12 @@ export function FeaturedListingsSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }} 
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.6 }}
@@ -190,10 +193,12 @@ export function FeaturedListingsSection() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -214,6 +219,7 @@ export function FeaturedListingsSection() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -223,10 +229,12 @@ export function FeaturedListingsSection() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -257,6 +265,7 @@ export function FeaturedListingsSection() {
               transition = {
   { type: "spring",
   stiffness: 300 
+
 }}
               className="group relative"
             >
@@ -352,14 +361,17 @@ export function FeaturedListingsSection() {
                         initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} 
                         exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} 
                         transition={{ duration: 0.3 }}
                       >
@@ -372,10 +384,12 @@ export function FeaturedListingsSection() {
                               initial = {
   { opacity: 0,
   x: -10 
+
 }} 
                               animate = {
   { opacity: 1,
   x: 0 
+
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -394,10 +408,12 @@ export function FeaturedListingsSection() {
                               initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} 
                               animate = {
   { opacity: 1,
   scale: 1 
+
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -421,15 +437,18 @@ export function FeaturedListingsSection() {
           initial = {
   { opacity: 0,
   y: 20 
+
 }} 
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }} 
           viewport={{ once: true }} 
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
 =======
           initial = {
@@ -440,6 +459,7 @@ export function FeaturedListingsSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -449,10 +469,12 @@ export function FeaturedListingsSection() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 

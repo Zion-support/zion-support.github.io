@@ -99,6 +99,7 @@ export default function CartPage() {
 
 
 
+
 } className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove

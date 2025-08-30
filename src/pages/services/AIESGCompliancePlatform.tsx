@@ -5,7 +5,7 @@ export default function AIESGCompliancePlatform() {
     'AI-powered ESG data collection and analysis',
     'Automated compliance reporting and monitoring',
     'Real-time sustainability performance tracking',
-    'Carbon footprint calculation and optimization',
+    'Carbon footprint calculation and optimization',;
     'Social responsibility metrics and reporting',;
     'Governance risk assessment and monitoring',;
     'Regulatory compliance automation',;
@@ -14,7 +14,7 @@ export default function AIESGCompliancePlatform() {
     'Custom sustainability dashboard creation';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce ESG reporting time by 85%',;
     'Improve compliance accuracy by 90%',;
     'Cut carbon emissions tracking costs by 70%',;
@@ -35,7 +35,7 @@ export default function AIESGCompliancePlatform() {
       price: '$899/mo', 
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$2,999/mo', ;
@@ -44,7 +44,7 @@ export default function AIESGCompliancePlatform() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Corporate sustainability reporting',;
     'ESG investment portfolio analysis',;
     'Supply chain sustainability tracking',;
@@ -55,7 +55,7 @@ export default function AIESGCompliancePlatform() {
 
   const esgCategories = [
     'Environmental Impact Assessment',
-    'Carbon Footprint Management',
+    'Carbon Footprint Management',;
     'Renewable Energy Tracking',;
     'Waste Management Analytics',;
     'Social Responsibility Metrics',;
@@ -289,7 +289,7 @@ export default function AIESGCompliancePlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

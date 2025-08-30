@@ -10,6 +10,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 },
         visible: {
             opacity: 1,
@@ -32,6 +33,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
     const iconVariants = {
   hidden: { scale: 0.8,
   opacity: 0 
+
 
 
 
@@ -67,12 +69,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }
         }
     };
     const badgeVariants = {
   hidden: { scale: 0,
   opacity: 0 
+
 
 
 
@@ -98,6 +102,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }}>
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
             ⭐ Most Popular
@@ -113,6 +118,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }} animate = {
   { scale: 1,
   rotate: 0 
@@ -121,9 +127,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }} transition = {
   { delay: 0.3, type: "spring",
   stiffness: 300 
+
 
 
 
@@ -144,9 +152,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
   { y[0, -5,
   0] 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}>
 =======
         <motion.div className="relative z-10 text-6xl mb-6 text-center" variants={iconVariants} whileHover="hover" animate = {
@@ -157,9 +167,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }} transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 
 
 
@@ -215,9 +227,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
   { x[0, 5,
   0] 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 }}>
 =======
               <motion.span className="group-hover:translate-x-2 transition-transform duration-300" animate = {
@@ -228,9 +242,11 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 
 
 
+
 }} transition = {
   { duration: 2,
   repeat: Infinity 
+
 
 
 

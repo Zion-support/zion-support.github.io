@@ -188,7 +188,7 @@ import {
   SkipForward2Dodecagon
 <<<<<<< HEAD
  } from 'lucide-react';
-export const FuturisticNavigation: React.FC = (): JSX.Element => {
+export const FuturisticNavigation: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
 export const FuturisticNavigation: React.FC = () => {;
@@ -214,7 +214,7 @@ export const FuturisticNavigation: React.FC = () => {;
   const handleSearch = (e: React.FormEvent)  => {;
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`}
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
 =======;
     setActiveDropdown(null);
   }, [location.pathname]);
@@ -288,7 +288,7 @@ export const FuturisticNavigation: React.FC = () => {;
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
-      dropdown[
+      dropdown[;
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' },;
         { name: 'Micro SAAS 2028', href: '/micro-saas-2028', icon: Zap, description: 'Advanced micro SAAS solutions' },;
         { name: 'IT Services 2028', href: '/it-services-2028', icon: Server, description: 'Next-generation IT services' },;
@@ -316,10 +316,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -356,6 +358,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -365,10 +368,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
+
 
 
 
@@ -393,6 +398,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -402,10 +408,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.15 
+
 
 
 
@@ -433,6 +441,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -442,10 +451,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.5,
   delay: (index + 2) * 0.1 
+
 
 
 
@@ -477,6 +488,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                         animate = {
   { opacity: 1, y: 0,
@@ -486,10 +498,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                         exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
+
 
 
 
@@ -516,6 +530,7 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                                 animate = {
   { opacity: 1,
@@ -525,10 +540,12 @@ export const FuturisticNavigation: React.FC = () => {;
 
 
 
+
 }}
                                 transition = {
   { duration: 0.3,
   delay: subIndex * 0.05 
+
 
 
 
@@ -604,7 +621,7 @@ export const FuturisticNavigation: React.FC = () => {;
             </div>
           </div>
         </div>
-      </header>
+      </header>;
     </>;
   )};
 =======

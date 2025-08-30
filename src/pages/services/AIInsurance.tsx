@@ -3,7 +3,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 export default function AIInsurance() {
   const features = [
     'AI-powered risk assessment and underwriting automation',
-    'Intelligent claims processing and fraud detection',
+    'Intelligent claims processing and fraud detection',;
     'Automated policy management and customer service',;
     'Predictive analytics for risk modeling and pricing',;
     'Real-time customer behavior analysis and risk scoring',;
@@ -21,7 +21,7 @@ export default function AIInsurance() {
     { 
       name: 'Medium Insurer', 
       price: '$1,299/mo', 
-      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 100,000 policies', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Large Insurer', ;
@@ -30,7 +30,7 @@ export default function AIInsurance() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Automated underwriting and risk assessment',;
     'Claims processing and fraud detection',;
     'Customer service and policy management',;
@@ -39,7 +39,7 @@ export default function AIInsurance() {
     'Customer retention and cross-selling';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce claims processing time by 60-80%',;
     'Improve fraud detection accuracy by 40-60%',;
     'Cut operational costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AIInsurance() {
     'Scale insurance operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Property & Casualty Insurance',;
     'Life & Health Insurance',;
     'Auto Insurance',;
@@ -163,7 +163,7 @@ export default function AIInsurance() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

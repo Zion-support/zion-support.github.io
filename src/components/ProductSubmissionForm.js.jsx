@@ -100,7 +100,8 @@ export function ProductSubmissionForm() {
                 author: {
                     name: user.displayName || "Anonymous Creator",
                     id: user.id,
-   
+  
+
 },
                 createdAt: new Date().toISOString(),
             };
@@ -295,6 +296,7 @@ export function ProductSubmissionForm() {
                   <FormControl>
                     <Input type="file" accept="model/gltf-binary,
   .glb" onChange={handleModelChange
+
 } className="cursor-pointer"/>
                   </FormControl>
                   <FormDescription>
@@ -318,6 +320,7 @@ export function ProductSubmissionForm() {
             title: form.getValues("title"),
   category: form.getValues("category")
         
+
 }}/>
       </TabsContent>
     </Tabs>)}

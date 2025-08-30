@@ -61,6 +61,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             ...settings,
   [key]: value !== null ? value : !settings[key]
         
+
 };
         saveSettings(newSettings)}, [settings, saveSettings]);
 =======
@@ -86,6 +87,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
   <<<<<<< HEAD
             colorBlindMode: 'normal'
         
+
 };
         saveSettings(defaults)}, [saveSettings]);
 =======
@@ -137,9 +139,11 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 
 
+
 }} animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 
 
 
@@ -153,9 +157,11 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
 
 
 
+
 }} transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
 
 
 
@@ -221,6 +227,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
                   <select value={settings.colorBlindMode} onChange = {
   (e) => toggleSetting('colorBlindMode',
   e.target.value)
+
 
 
 
@@ -305,6 +312,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             white-space: nowrap;
 <<<<<<< HEAD
             border: 0
+
 }
 =======
             border: 0;
@@ -360,6 +368,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
       <svg style = {
   { position: 'absolute', width: 0,
   height: 0 
+
 
 
 

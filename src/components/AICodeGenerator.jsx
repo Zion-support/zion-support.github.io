@@ -145,6 +145,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -153,9 +154,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -176,6 +179,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
                 </div>
 
@@ -188,6 +192,7 @@ export const AICodeGenerator = () => {
                     <select value={form.language} onChange = {
   (e) => setForm(prev => ({ ...prev,
   language: e.target.value 
+
 
 
 
@@ -212,6 +217,7 @@ export const AICodeGenerator = () => {
                     <select value={form.framework || ''} onChange = {
   (e) => setForm(prev => ({ ...prev,
   framework: e.target.value || null 
+
 
 
 
@@ -242,6 +248,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">
                       <option value="functional">Functional</option>
                       <option value="oop">OOP</option>
@@ -257,6 +264,7 @@ export const AICodeGenerator = () => {
                     <select value={form.quality} onChange = {
   (e) => setForm(prev => ({ ...prev,
   quality: e.target.value 
+
 
 
 
@@ -285,6 +293,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -293,9 +302,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -312,6 +323,7 @@ export const AICodeGenerator = () => {
                         <input type="checkbox" checked={form[key]} onChange = {
   (e) => setForm(prev => ({ ...prev,
   [key]: e.target.checked 
+
 
 
 
@@ -343,9 +355,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -384,6 +398,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -392,9 +407,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -427,9 +444,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -500,6 +519,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -508,9 +528,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -550,6 +572,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -558,9 +581,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -591,6 +616,7 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -599,9 +625,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -634,9 +662,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -655,9 +685,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -715,9 +747,11 @@ export const AICodeGenerator = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

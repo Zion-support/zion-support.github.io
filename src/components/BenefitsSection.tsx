@@ -77,7 +77,7 @@ const benefits: Benefit[] = [
       "Bulk discount options",
       "Transparent cost structure"
     ]
-  },
+  },;
 =======;
       "Competitive pricing",;
       "Bulk discount options",;
@@ -94,7 +94,7 @@ export function BenefitsSection(...args[]):  {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
+    visible: {;
       opacity: 1,;
       transition: {;
         staggerChildren: 0.2,;
@@ -107,14 +107,16 @@ export function BenefitsSection(...args[]):  {
   const statsVariants = {
   hidden: { opacity: 0,
   y: 20 
-},
+
+},;
     visible: { opacity: 1, y: 0 };
   };
 
   const itemVariants = {
   hidden: { opacity: 0,
   x: -20 
-},
+
+},;
     visible: { opacity: 1, x: 0 };
   };
 
@@ -128,9 +130,11 @@ export function BenefitsSection(...args[]):  {
 
   const statsVariants = {
   hidden: { opacity: 0,;
+  ;
   y: 20 ;
 ;
 ;
+
 
 
 
@@ -140,9 +144,11 @@ export function BenefitsSection(...args[]):  {
 
   const itemVariants = {
   hidden: { opacity: 0,;
+  ;
   y: 20 ;
 ;
 ;
+
 
 
 
@@ -164,6 +170,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }} />
       </div>
 
@@ -175,6 +182,7 @@ export function BenefitsSection(...args[]):  {
           transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
+
 
 
 
@@ -193,6 +201,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
         />
         <motion.div 
@@ -201,10 +210,12 @@ export function BenefitsSection(...args[]):  {
           animate = {
   { scale[1, 1.2,
   1] 
+
 }}
           transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 }}
 =======
           animate = {
@@ -215,10 +226,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
+
 
 
 
@@ -240,10 +253,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -313,6 +328,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
               >
                 <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group h-full">
@@ -349,6 +365,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -358,10 +375,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -382,10 +401,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
                             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -422,6 +443,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -431,10 +453,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -460,6 +484,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -469,10 +494,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -501,6 +528,7 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -510,10 +538,12 @@ export function BenefitsSection(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -538,7 +568,7 @@ export function BenefitsSection(...args[]):  {
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======
@@ -552,6 +582,7 @@ export function BenefitsSection(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default BenefitsSection
+export default BenefitsSection;
 export default BenefitsSection;
 export default BenefitsSection;
 export default BenefitsSection;

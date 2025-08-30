@@ -13,10 +13,12 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
 
 
 
+
 };
     return (<div className = {
   cn('bg-muted', roundedClasses[rounded], animated && 'animate-pulse',
   className)
+
 
 
 
@@ -28,6 +30,7 @@ export function Skeleton({ className, width, height, rounded = 'md', animated = 
             height: height,
   <<<<<<< HEAD
         
+
 }}/>)}
 =======
   
@@ -39,6 +42,7 @@ export function CardSkeleton({ className, showImage = true, showTitle = true, sh
     return (<div className = {
   cn('space-y-4',
   className)
+
 
 
 
@@ -59,6 +63,7 @@ export function CardSkeleton({ className, showImage = true, showTitle = true, sh
 
 
 
+
 }/>))}
           </div>)}
         
@@ -72,6 +77,7 @@ export function ListSkeleton({ className, items = 3, showAvatar = true, showTitl
     return (<div className = {
   cn('space-y-4',
   className)
+
 
 
 
@@ -102,6 +108,7 @@ export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = t
 
 
 
+
 }>
       {showHeader && (<div className="flex gap-4 pb-2 border-b border-border">
           {Array.from({ length: columns }).map((_, i) => (<Skeleton key={i} className="h-5 flex-1"/>))}
@@ -112,6 +119,7 @@ export function TableSkeleton({ className, rows = 5, columns = 4, showHeader = t
             {Array.from({ length: columns }).map((_, colIndex) => (<Skeleton key={colIndex} className = {
   cn("h-4",
   colIndex === 0 ? "w-1/3" : "flex-1")
+
 
 
 
@@ -130,6 +138,7 @@ export function GridSkeleton({ className, items = 6, columns = 3, gap = 4, showI
 
 
 
+
 } style={{
             gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
             gap: `${gap * 0.25}rem`
@@ -140,6 +149,7 @@ export function HeroSkeleton({ className, showImage = true, showTitle = true, sh
     return (<div className = {
   cn('flex flex-col lg:flex-row gap-8 items-center',
   className)
+
 
 
 
@@ -173,6 +183,7 @@ export function Shimmer({ className }) {
     return (<div className = {
   cn('relative overflow-hidden',
   className)
+
 
 
 

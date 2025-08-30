@@ -20,7 +20,7 @@ export function Accordion(...args[]):  {
       setOpenItems(prev => 
         prev.includes(value) 
           ? prev.filter(item => item !== value)
-          [...prev, value]
+          [...prev, value];
       )};
   };
 
@@ -35,7 +35,7 @@ export function Accordion(...args[]):  {
         return child})}
 =======
 export function Accordion({ 
-  children, 
+  children, ;
   className = '', ;
   type = 'single',;
   defaultValue ;
@@ -83,7 +83,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 export function AccordionItem({ 
   children, 
   className = '',
-  isOpen = false,
+  isOpen = false,;
   onToggle;
 }: AccordionItemProps) {;
   return (;
@@ -121,7 +121,7 @@ export function AccordionTrigger(...args[]):  {
     </button>
   )}
 
-interface AccordionContentProps extends React.PropsWithChildren<{}> {
+interface AccordionContentProps extends React.PropsWithChildren<{}> {;
 =======;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';
@@ -146,7 +146,7 @@ export function AccordionContent(...args[]):  {
     </div>
   )}
 =======
-export function AccordionContent({ 
+export function AccordionContent({ ;
   children, ;
   className = '',;
   isOpen = false;

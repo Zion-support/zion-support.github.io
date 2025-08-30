@@ -125,7 +125,7 @@ const quickActions = [
     path: '/help',
     icon: HelpCircle,
     color: 'bg-zion-purple'
-  },
+  },;
   {;
     label: 'Documentation',;
     path: '/docs',;
@@ -158,7 +158,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'hidden'}
-
+;
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
@@ -181,7 +181,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
 <<<<<<< HEAD
   const isActive = (path: string)  => {
-    if (path === '/') {
+    if (path === '/') {;
       return activePath === '/'};
     return activePath.startsWith(path)};
 =======
@@ -205,6 +205,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
           animate = {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
   0.1)' : 'transparent' 
+
 
 
 
@@ -272,10 +273,12 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { height: 'auto',
   opacity: 1 
+
 
 
 
@@ -290,10 +293,12 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.3,
   ease: 'easeInOut' 
+
 
 
 
@@ -309,7 +314,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
               </motion.div>
             )}
           </AnimatePresence>
-        )}
+        )};
       </div>;
     )};
 =======
@@ -351,6 +356,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
               transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
 
 
 
@@ -455,7 +461,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </>;
   )};
 =======

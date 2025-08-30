@@ -17,8 +17,9 @@ const Status: React.FC = (): JSX.Element => {
   overall: 'operational',
     uptime: '99.9%',
     lastIncident: '2024-01-15',
-  responseTime: '45ms'
+  responseTime: '45ms';
   ;
+
 };
 
   const services = [
@@ -62,7 +63,7 @@ const Status: React.FC = (): JSX.Element => {
       status: 'operational',
       uptime: '99.8%',
       responseTime: '150ms',
-      lastCheck: '1 minute ago'
+      lastCheck: '1 minute ago';
     };
   ];
 
@@ -86,12 +87,12 @@ const Status: React.FC = (): JSX.Element => {
       title: 'Email Service Interruption',
       description: 'Temporary email delivery delays',
       status: 'resolved',
-      duration: '1 hour'
+      duration: '1 hour';
     };
   ];
 
   const getStatusIcon = (status: string)  => {
-    switch (status) {
+    switch (status) {;
       case 'operational':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
@@ -103,7 +104,7 @@ const Status: React.FC = (): JSX.Element => {
   };
 
   const getStatusColor = (status: string)  => {
-    switch (status) {
+    switch (status) {;
       case 'operational':;
         return 'text-green-500';
       case 'degraded':
@@ -260,12 +261,12 @@ const Status: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======
 const Status: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />;
 		<div className="text-center text-white">;
 			<h1 className="text-4xl font-bold mb-4">System Status</h1>;

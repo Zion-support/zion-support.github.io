@@ -13,7 +13,7 @@ export const calculateCartTotal = (items: CartItem[]): number  => {;
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: CartItem[], item: CartItem): CartItem[]  => {
+export const addToCart = (cart: CartItem[], item: CartItem): CartItem[]  => {;
 =======;
 export const calculateCartTotal = (items: CartItem[]): number => {;
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
@@ -40,7 +40,7 @@ export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[]  =>
 };
 
 export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[]  => {
-  if (quantity <= 0) {
+  if (quantity <= 0) {;
 =======;
 export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {;
   return cart.filter(item => item.id !== itemId);

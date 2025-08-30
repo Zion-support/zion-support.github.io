@@ -175,7 +175,7 @@ const WebsiteAnalytics = () => {
     {
       icon: MapPin,
       title: 'Geographic Analytics',
-      description: 'User location and regional performance data'
+      description: 'User location and regional performance data';
     },;
     {;
       icon: Device,;
@@ -184,7 +184,7 @@ const WebsiteAnalytics = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve website conversion rates by 35%',;
     'Reduce bounce rates by 25%',;
     'Optimize user experience based on data',;
@@ -207,7 +207,7 @@ const WebsiteAnalytics = () => {
     {
       icon: TrendingUp,
       title: 'Conversion Tracking',
-      description: 'Track conversions and optimize funnels'
+      description: 'Track conversions and optimize funnels';
     },;
     {;
       icon: Search,;
@@ -226,7 +226,7 @@ const WebsiteAnalytics = () => {
       description: 'Measure campaign performance and ROI'
     },
     {
-      industry: 'Content',
+      industry: 'Content',;
       description: 'Analyze content engagement and user preferences';
     },;
     {;
@@ -250,10 +250,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -304,10 +306,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -338,6 +342,7 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -347,10 +352,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -382,10 +389,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -416,6 +425,7 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -425,10 +435,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -464,10 +476,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -498,6 +512,7 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -507,10 +522,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -536,6 +553,7 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -545,10 +563,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -578,10 +598,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -612,6 +634,7 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -621,10 +644,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -656,10 +681,12 @@ const WebsiteAnalytics = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -681,7 +708,7 @@ const WebsiteAnalytics = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

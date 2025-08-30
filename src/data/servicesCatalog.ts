@@ -10,7 +10,7 @@ export type ServiceItem = {;
 	href: string; // internal path or external URL
 <<<<<<< HEAD
 	external?: boolean};
-export type ServiceCategory = {
+export type ServiceCategory = {;
 =======;
 	external?: boolean;
 };

@@ -11,6 +11,7 @@ const defaultConfig = {
         email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
     
+
 }
 };
 const WhitelabelContext = createContext(defaultConfig);
@@ -19,6 +20,7 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
     const mergedConfig = {
   ...defaultConfig,
   ...config 
+
 };
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}

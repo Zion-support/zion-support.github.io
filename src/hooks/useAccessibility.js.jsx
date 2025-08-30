@@ -35,6 +35,7 @@ export const useAccessibility = () => {
         const updatedPreferences = {
   ...preferences,
   ...newPreferences 
+
 };
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences))}, [preferences]);
@@ -42,6 +43,7 @@ export const useAccessibility = () => {
         const updatedSettings = {
   ...settings,
   ...newSettings 
+
 };
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings))}, [settings]);

@@ -372,7 +372,7 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
 ];
 <<<<<<< HEAD
 export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[]  => {
-  if (category === 'All') {
+  if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025};
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
 export const getAllNextGenAIServices = (): NextGenAIService[] => {;

@@ -225,8 +225,7 @@ export default function Marketplace() {
         }
     ];
     const filteredProducts = marketplaceProducts.filter(product => {
-        const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-        let matchesPrice = true;
+        const matchesPrice = true;
         if (selectedPriceRange === 'free') {
             matchesPrice = product.price === 0}
         else if (selectedPriceRange === 'under-100') {

@@ -43,7 +43,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
     { id: 'ai-services', name: 'AI Services', icon: Brain },
     { id: 'it-services', name: 'IT Services', icon: Server },
     { id: 'micro-saas', name: 'Micro SaaS', icon: Rocket },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
     { id: 'cloud', name: 'Cloud Solutions', icon: Cloud };
   ];
 
@@ -51,7 +51,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
     { id: 'all', name: 'All Pricing' },
     { id: 'monthly', name: 'Monthly' },
     { id: 'yearly', name: 'Yearly' },
-    { id: 'one-time', name: 'One-time' },
+    { id: 'one-time', name: 'One-time' },;
     { id: 'usage-based', name: 'Usage-based' };
   ];
 
@@ -126,12 +126,11 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
       features['Data classification', 'Privacy controls', 'Audit trails', 'GDPR compliance'],
       icon: Database,
       rating: 4.5,
-      reviewCount: 67
+      reviewCount: 67;
     };
   ];
 
   const filteredServices = services.filter(service => {;
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -153,10 +152,12 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
             >
@@ -228,14 +229,17 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
                 >
@@ -285,7 +289,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>
-                <button
+                <button;
                   onClick={() => {;
                     setSelectedCategory('all');
                     setSelectedPricing('all');
@@ -356,7 +360,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {;
             </div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

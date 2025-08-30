@@ -158,7 +158,7 @@ export default function ContactForm() {
         
         <button
           type="submit"
-          disabled={isSubmitting}
+          disabled={isSubmitting};
           className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-4 rounded-lg font-semibold text-lg transition-colors duration-200";
         >;
           {isSubmitting ? 'Sending Message...' : 'Send Message'};

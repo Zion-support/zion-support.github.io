@@ -69,10 +69,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -93,6 +95,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -102,10 +105,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -128,6 +133,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -137,10 +143,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -166,10 +174,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -199,6 +209,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -208,10 +219,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -243,10 +256,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -276,6 +291,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -285,10 +301,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: categoryIndex * 0.2 
+
 
 
 
@@ -320,6 +338,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                         whileInView = {
   { opacity: 1,
@@ -329,10 +348,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                         transition = {
   { duration: 0.4,
   delay: partnerIndex * 0.1 
+
 
 
 
@@ -373,10 +394,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -406,6 +429,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -415,10 +439,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -462,10 +488,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -487,6 +515,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -496,10 +525,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -521,6 +552,7 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -530,10 +562,12 @@ export default function Partners(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -555,7 +589,7 @@ export default function Partners(...args[]):  {
               >
                 partnerships@ziontechgroup.com
               </a>
-            </motion.div>
+            </motion.div>;
           </div>;
         </section>;
       </main>;

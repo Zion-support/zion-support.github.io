@@ -23,7 +23,7 @@ const ResearchDevelopment: React.FC = () => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedArea, setSelectedArea] = useState('all');
 
-  const researchAreas = [
+  const researchAreas = [;
     { id: 'all', name: 'All Areas', icon: Flask },;
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },;
     { id: 'quantum', name: 'Quantum Computing', icon: Atom },;
@@ -124,7 +124,7 @@ const ResearchDevelopment: React.FC = () => {;
         'Sustainable technology practices'
       ]
     }
-=======
+=======;
       outcomes: [;
         'Reduced energy consumption',;
         'Green computing standards',;
@@ -156,7 +156,7 @@ const ResearchDevelopment: React.FC = () => {;
       doi: '10.1109/MSEC.2024.00001'
     },
     {
-      title: 'AI-Driven Drug Discovery: Current State and Future Directions',
+      title: 'AI-Driven Drug Discovery: Current State and Future Directions',;
       authors: 'Dr. Maria Garcia, Dr. Robert Johnson, Dr. Amanda Lee',;
       journal: 'Science',;
       year: 2023,;
@@ -183,7 +183,7 @@ const ResearchDevelopment: React.FC = () => {;
       type: 'Government',
       focus: 'Space technology development',
       duration: '2024-2028'
-    },
+    },;
     {;
       name: 'Google Research',;
       type: 'Industry',;
@@ -206,10 +206,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -262,10 +264,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -292,6 +296,7 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -301,10 +306,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -370,10 +377,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -400,6 +409,7 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -409,10 +419,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -466,10 +478,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -496,6 +510,7 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -505,10 +520,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -549,10 +566,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -595,6 +614,7 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -604,10 +624,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -640,10 +662,12 @@ const ResearchDevelopment: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -670,7 +694,7 @@ const ResearchDevelopment: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

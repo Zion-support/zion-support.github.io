@@ -592,7 +592,7 @@ export const searchSpecializedServices = (query: string) => {;
 <<<<<<< HEAD
   return specializedInnovativeServices2027.filter(service = > 
     service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||;
     service.category.toLowerCase().includes(lowercaseQuery);
   )};
 =======

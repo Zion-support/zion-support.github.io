@@ -78,6 +78,7 @@ const UltimateServicesShowcase2026 = () => {
   <<<<<<< HEAD
             'Performance Monitoring': '📊'
         
+
 };
         return icons[category] || '🚀'};
 =======
@@ -108,6 +109,7 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -130,9 +132,11 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -152,6 +156,7 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -160,9 +165,11 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -183,6 +190,7 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -191,9 +199,11 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -275,9 +285,11 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -386,9 +398,11 @@ const UltimateServicesShowcase2026 = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

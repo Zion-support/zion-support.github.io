@@ -139,12 +139,15 @@ const ContentQualityAnalyzer = () => {
           <motion.div initial = {
   { scale: 0.9,
   opacity: 0 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
+
 }} exit = {
   { scale: 0.9,
   opacity: 0 
+
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 text-white">

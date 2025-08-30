@@ -32,7 +32,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
           <li>Assessment: $5,000 one-time</li>
           <li>Implementation: from $25,000</li>
           <li>Managed run: from $3,000/mo</li>
-        </ul>
+        </ul>;
       </div>;
     </section>;
     <section className="container mx-auto px-4 pb-16">;

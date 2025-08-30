@@ -53,6 +53,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 
 
+
 };
         setMetrics(mockMetrics);
         setIsAnalyzing(false)}, []);
@@ -91,6 +92,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 
 
+
 }
         };
         setSeoAnalysis(mockSEO);
@@ -116,6 +118,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             criticalIssues: Math.floor(Math.random() * 3),
   warnings: Math.floor(Math.random() * 5) + 1
         
+
 
 
 
@@ -165,6 +168,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
@@ -173,9 +177,11 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 
 
+
 }} exit = {
   { opacity: 0,
   x: -400 
+
 
 
 

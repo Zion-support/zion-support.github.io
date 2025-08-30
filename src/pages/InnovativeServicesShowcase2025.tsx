@@ -240,7 +240,7 @@ export default function InnovativeServicesShowcase2025() {
         'Real-time quantum algorithm execution'
       ],
       benefits: [
-        'Solve complex problems 100x faster than classical computing',
+        'Solve complex problems 100x faster than classical computing',;
         'Improve machine learning accuracy by 40-60%',;
         'Enable previously impossible computational tasks';
       ],;
@@ -252,7 +252,7 @@ export default function InnovativeServicesShowcase2025() {
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -272,7 +272,7 @@ export default function InnovativeServicesShowcase2025() {
     });
 
   const getInnovationColor = (level: string) => {
-    switch (level) {
+    switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100';
       case 'Advanced':
@@ -303,10 +303,12 @@ export default function InnovativeServicesShowcase2025() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -328,10 +330,12 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -391,6 +395,7 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -400,10 +405,12 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -423,6 +430,7 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -432,10 +440,12 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -507,6 +517,7 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -516,10 +527,12 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -603,14 +616,17 @@ export default function InnovativeServicesShowcase2025() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
 =======
@@ -623,6 +639,7 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -632,10 +649,12 @@ export default function InnovativeServicesShowcase2025() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -723,14 +742,17 @@ export default function InnovativeServicesShowcase2025() {
                 initial = {
   { opacity: 0,
   x: -20 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
@@ -821,10 +843,12 @@ export default function InnovativeServicesShowcase2025() {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -921,7 +945,7 @@ export default function InnovativeServicesShowcase2025() {
               </div>
             </div>
           </div>
-          
+          ;
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>

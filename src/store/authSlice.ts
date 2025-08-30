@@ -25,6 +25,8 @@ const initialState: AuthState = {
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -36,7 +38,7 @@ const initialState: AuthState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {
+  reducers: {;
     setLoggedIn: (state, action: PayloadAction<boolean>)  => {;
       state.isLoggedIn = action.payload;
     },

@@ -222,9 +222,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -263,9 +265,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,9 +323,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -336,9 +342,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -428,9 +436,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -445,9 +455,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -540,9 +552,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -697,9 +711,11 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -721,6 +737,7 @@ const AdvancedServiceInnovationHub = () => {
 
 
 
+
 }>
               <Users className="w-5 h-5 mr-2"/>
               Get Innovation Strategy
@@ -728,6 +745,7 @@ const AdvancedServiceInnovationHub = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

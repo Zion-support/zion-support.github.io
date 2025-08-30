@@ -7,7 +7,8 @@ const MessagingProvider({ children }) {
             content,
             timestamp: new Date(),
             isRead: false,
-   
+  
+
 };
         setMessages(prev => [...prev, newMessage])};
     const markAsRead = (id) => {
@@ -19,7 +20,8 @@ const MessagingProvider({ children }) {
             unreadCount,
             sendMessage,
             markAsRead,
-   
+  
+
 }}>
       {children}
     </MessagingContext.Provider>)}

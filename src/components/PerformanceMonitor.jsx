@@ -137,10 +137,12 @@ export const PerformanceMonitor = () => {
       initial = {
   { opacity: 0,
   y: 20 
+
 }}
       animate = {
   { opacity: 1,
   y: 0 
+
 }}
       className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-zinc-700 rounded-lg p-4 text-white text-sm max-w-xs z-50"
     >

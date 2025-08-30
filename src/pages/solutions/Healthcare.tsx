@@ -45,7 +45,7 @@ export default function HealthcareSolutions(...args: []):  {
       title: 'Population Health',
       description: 'Analytics and insights for population health management and preventive care',
       features: ['Health Trends Analysis', 'Preventive Care', 'Population Risk Assessment', 'Intervention Planning'],
-      href: '/services/data-analytics'
+      href: '/services/data-analytics';
     };
   ];
 
@@ -54,7 +54,7 @@ export default function HealthcareSolutions(...args: []):  {
     'Enhanced operational efficiency and cost reduction',
     'Better compliance with healthcare regulations',
     'Increased patient satisfaction and engagement',
-    'Data-driven clinical decision making',
+    'Data-driven clinical decision making',;
     'Streamlined administrative processes';
   ];
 
@@ -65,7 +65,7 @@ export default function HealthcareSolutions(...args: []):  {
     'Mental Health',
     'Pediatrics',
     'Geriatrics',
-    'Oncology',
+    'Oncology',;
     'Cardiology';
   ];
 
@@ -84,10 +84,12 @@ export default function HealthcareSolutions(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -126,10 +128,12 @@ export default function HealthcareSolutions(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -150,14 +154,17 @@ export default function HealthcareSolutions(...args: []):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
@@ -199,10 +206,12 @@ export default function HealthcareSolutions(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -224,14 +233,17 @@ export default function HealthcareSolutions(...args: []):  {
                   initial = {
   { opacity: 0,
   x: -20 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="flex items-start space-x-3"
                 >
@@ -247,14 +259,17 @@ export default function HealthcareSolutions(...args: []):  {
                   initial = {
   { opacity: 0,
   x: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="flex items-start space-x-3"
                 >
@@ -274,10 +289,12 @@ export default function HealthcareSolutions(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -298,14 +315,17 @@ export default function HealthcareSolutions(...args: []):  {
                 initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 text-center border border-slate-700 hover:border-slate-600 transition-all duration-300"
               >
@@ -323,10 +343,12 @@ export default function HealthcareSolutions(...args: []):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -358,7 +380,7 @@ export default function HealthcareSolutions(...args: []):  {
 =======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Healthcare Solutions - Zion Tech Group" description="Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms." />
-      <section className="container mx-auto px-4 py-16">
+      <section className="container mx-auto px-4 py-16">;
         <h1 className="text-4xl font-bold mb-4">Healthcare Solutions</h1>;
         <p className="text-lg text-gray-300 max-w-3xl">;
           Accelerate outcomes with AI diagnostics, care management analytics, FHIR-based integrations, and HIPAA-compliant data flows.;

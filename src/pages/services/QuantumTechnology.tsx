@@ -17,7 +17,7 @@ const QuantumTechnology = () => {
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
     },
-    {
+    {;
       title: "Quantum Cryptography",;
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;
       price: "From $42,000/month",;
@@ -38,7 +38,7 @@ const QuantumTechnology = () => {
       description: "AI algorithms leveraging quantum properties",
       icon: BarChart3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
-    },
+    },;
     {;
       name: "Quantum Communications",;
       description: "Secure communication using quantum principles",;
@@ -47,7 +47,7 @@ const QuantumTechnology = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Exponential speedup for complex computational problems",;
     "Unbreakable encryption and enhanced security",;
     "Advanced machine learning and AI capabilities",;
@@ -251,7 +251,7 @@ const QuantumTechnology = () => {
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Services;
             </a>;
           </div>;

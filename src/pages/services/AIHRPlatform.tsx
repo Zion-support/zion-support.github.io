@@ -40,7 +40,7 @@ export default function AIHRPlatform(...args[]):  {
     "Automated interview scheduling and coordination",
     "Performance analytics and employee insights",
     "Predictive analytics for retention and engagement",
-    "Skills gap analysis and training recommendations",
+    "Skills gap analysis and training recommendations",;
     "Automated onboarding and offboarding",;
     "Employee sentiment analysis and feedback",;
     "Compliance monitoring and reporting",;
@@ -59,7 +59,7 @@ export default function AIHRPlatform(...args[]):  {
 
   const useCases = [
     "Enterprise HR departments",
-    "Recruitment agencies",
+    "Recruitment agencies",;
     "Startups and scale-ups",;
     "Remote-first companies",;
     "Healthcare organizations",;
@@ -112,7 +112,7 @@ export default function AIHRPlatform(...args[]):  {
         "Advanced workforce planning",
         "White-label solutions",
         "Custom integrations",
-        "Dedicated account manager",
+        "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited employees";
       ],;
@@ -140,10 +140,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -198,10 +200,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +235,7 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -240,10 +245,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -274,10 +281,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -307,6 +316,7 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -316,10 +326,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -350,10 +362,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -383,6 +397,7 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -392,10 +407,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -426,10 +443,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -458,6 +477,7 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -467,10 +487,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -538,10 +560,12 @@ export default function AIHRPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -594,7 +618,7 @@ export default function AIHRPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

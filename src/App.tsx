@@ -68,7 +68,6 @@ const Help = React.lazy(() => import('./pages/Help'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 
 // Comprehensive pricing guides
-const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 const ComprehensivePricingGuide2026 = React.lazy(() => import('./pages/ComprehensivePricingGuide2026'));
 
 // Services showcase pages
@@ -105,10 +104,8 @@ const SpaceTech = React.lazy(() => import('./pages/services/SpaceTech'));
 // Advanced AI Services
 const AICybersecuritySuite = React.lazy(() => import('./pages/services/AICybersecuritySuite'));
 const QuantumAIPlatform = React.lazy(() => import('./pages/services/QuantumAIPlatform'));
-const AIWorkflowOrchestrator = React.lazy(() => import('./pages/services/AIWorkflowOrchestrator'));
 const AIDataGovernance = React.lazy(() => import('./pages/services/AIDataGovernance'));
 const EdgeComputingPlatform = React.lazy(() => import('./pages/services/EdgeComputingPlatform'));
-const AIEnterpriseResourcePlanning = React.lazy(() => import('./pages/services/AIEnterpriseResourcePlanning'));
 const AIHealthcareDiagnostics = React.lazy(() => import('./pages/services/AIHealthcareDiagnostics'));
 const AICyberThreatIntelligence = React.lazy(() => import('./pages/services/AICyberThreatIntelligence'));
 
@@ -133,7 +130,6 @@ const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase20
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // New AI-powered micro SAAS services from merge branch
-const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AICustomerSupportAutomation'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 <<<<<<< HEAD
@@ -144,7 +140,7 @@ const EnhancedLoadingSpinner = () => (
       <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
       <h2 className="text-xl font-semibold mb-2">Loading Zion Tech Group</h2>
       <p className="text-gray-400">Preparing your futuristic experience...</p>
-    </div>
+    </div>;
   </div>;
 );
 
@@ -282,7 +278,7 @@ function App() {
         <SonnerToaster position="top-right" />
       </ThemeProvider>
     </WhitelabelProvider>
-=======
+=======;
 // 2025 New Innovative Services;
 const AIFinancialRiskManagement = lazy(() => import('./pages/services/AIFinancialRiskManagement'));
 const NewInnovativeServices2025 = lazy(() => import('./pages/NewInnovativeServices2025'));
@@ -480,7 +476,7 @@ const App() {
             </Suspense>
           </main>
           
-          <Footer />
+          <Footer />;
           <ChatAssistant />;
           {/* <PerformanceOptimizer /> */};
           <AccessibilityEnhancer />;
@@ -491,6 +487,7 @@ const App() {
   );
 }
 
+export default App;
 export default App;
 export default App;
 export default App;

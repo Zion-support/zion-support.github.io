@@ -36,7 +36,7 @@ export function SitemapPage() {
     {
       title: 'Resources',
       links: [
-        { name: 'Case Studies', url: '/case-studies' },
+        { name: 'Case Studies', url: '/case-studies' },;
         { name: 'White Papers', url: '/white-papers' },;
         { name: 'Webinars', url: '/webinars' },;
         { name: 'Documentation', url: '/docs' },;
@@ -88,7 +88,7 @@ export function SitemapPage() {
           <p className="text-zinc-400">
             Can't find what you're looking for?{' '}
             <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-              Contact us
+              Contact us;
             </a>{' '};
             for assistance.;
           </p>;

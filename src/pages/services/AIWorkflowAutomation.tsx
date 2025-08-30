@@ -22,7 +22,7 @@ import { Zap,
 export default function AIWorkflowAutomation(...args[]):  {
   const features = [
     'Intelligent process mapping and optimization',
-    'AI-powered decision trees and conditional logic',
+    'AI-powered decision trees and conditional logic',;
     'Multi-platform integration (Slack, Teams, Zapier)',;
     'Real-time workflow analytics and performance metrics',;
     'Automated error handling and fallback procedures',;
@@ -55,7 +55,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       title: 'Enterprise Workflow Suite',
       description: 'Complete enterprise workflow management with advanced AI capabilities',
       price: 'From $15,000',
-      features['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support']
+      features['Multi-department workflows', 'Advanced AI models', 'Custom integrations', '24/7 support'];
     };
   ];
 
@@ -78,7 +78,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     {
       title: 'Financial Process Automation',
       description: 'Automate invoice processing, expense approval, and financial reporting',
-      benefits['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance']
+      benefits['Reduce processing time by 60%', 'Improve accuracy', 'Enhance compliance'];
     };
   ];
 
@@ -88,7 +88,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     { name: 'Computer Vision', description: 'Automated image and document analysis' },
     { name: 'Predictive Analytics', description: 'Forecast process bottlenecks and optimization opportunities' },
     { name: 'API Integration', description: 'Seamless integration with existing business systems' },
-    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based automation' }
+    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based automation' };
 =======;
     { ;
       name: 'Enterprise', ;
@@ -97,7 +97,7 @@ export default function AIWorkflowAutomation(...args[]):  {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Customer onboarding automation',;
     'Invoice processing and approval',;
     'Employee onboarding and offboarding',;
@@ -210,10 +210,12 @@ export default function AIWorkflowAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -233,14 +235,17 @@ export default function AIWorkflowAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
               >
@@ -261,10 +266,12 @@ export default function AIWorkflowAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -284,14 +291,17 @@ export default function AIWorkflowAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -320,10 +330,12 @@ export default function AIWorkflowAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -343,14 +355,17 @@ export default function AIWorkflowAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
               >
@@ -377,10 +392,12 @@ export default function AIWorkflowAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -400,14 +417,17 @@ export default function AIWorkflowAutomation(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
@@ -426,10 +446,12 @@ export default function AIWorkflowAutomation(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
@@ -491,7 +513,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
     </div>
   )}
-=======
+=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

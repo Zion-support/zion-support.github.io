@@ -18,7 +18,7 @@ const Contact: React.FC = (): JSX.Element => {;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     setFormData({
-      ...formData,
+      ...formData,;
       [e.target.name]: e.target.value;
     })};
 
@@ -69,7 +69,7 @@ const Contact: React.FC = (): JSX.Element => {;
       details: 'https://ziontechgroup.com',
       description: 'Explore our services and solutions',
       action: 'Visit Site',
-      href: 'https://ziontechgroup.com'
+      href: 'https://ziontechgroup.com';
     };
   ];
 
@@ -105,14 +105,14 @@ const Contact: React.FC = (): JSX.Element => {;
         'Zero Trust Network Architecture',
         'AI Cybersecurity Suite',
         'AI Compliance Assistant'
-      ]
+      ];
     };
   ];
 
   const quickLinks = [
     { title: 'AI Services Showcase', url: '/ai-services-showcase', icon: '🚀' },
     { title: 'All Services', url: '/all-services', icon: '📋' },
-    { title: 'Pricing', url: '/pricing', icon: '💰' },
+    { title: 'Pricing', url: '/pricing', icon: '💰' },;
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' };
   ];
 
@@ -134,10 +134,12 @@ const Contact: React.FC = () => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -175,10 +177,12 @@ const Contact: React.FC = () => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -200,14 +204,17 @@ const Contact: React.FC = () => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
@@ -239,7 +246,7 @@ const Contact: React.FC = () => {
             <a 
               href="mailto:kleber@ziontechgroup.com" 
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
+            >;
               ✉️ Send Email;
             </a>;
           </div>;
@@ -257,10 +264,12 @@ const Contact: React.FC = () => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -298,10 +307,12 @@ const Contact: React.FC = () => {
                 initial = {
   { opacity: 0,
   x: -20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -452,10 +463,12 @@ const Contact: React.FC = () => {
                 initial = {
   { opacity: 0,
   x: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
@@ -536,10 +549,12 @@ const Contact: React.FC = () => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -569,7 +584,7 @@ const Contact: React.FC = () => {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

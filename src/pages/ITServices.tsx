@@ -19,7 +19,7 @@ const ITServices: React.FC = (): JSX.Element => {
     ,
     { icon: Cloud, title: 'Cloud Landing Zones', desc: 'Secure multi-account landing zones with guardrails, budgets, CI/CD and golden patterns.', price: '$8,000 - $65,000+' },
     { icon: Server, title: 'Database Reliability Engineering', desc: 'HA/DR, performance tuning, migrations and observability for Postgres, MySQL and SQL Server.', price: '$4,000 - $45,000+' },
-    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' }
+    { icon: Shield, title: 'Zero Trust Enablement', desc: 'Network segmentation, identity-aware proxies, device posture and continuous verification.', price: '$6,000 - $60,000+' };
 =======;
     { icon: Building, title: 'Enterprise SaaS Rollouts', desc: 'Okta SSO, RBAC, tenant provisioning, and SOC2-aligned configuration baselines at scale.', price: '$5,000 - $70,000+' };
     ,;
@@ -31,7 +31,7 @@ const ITServices: React.FC = (): JSX.Element => {
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">;
         <h1 className="text-4xl font-bold sm:text-5xl">Enterprise-grade IT services, delivered with startup speed</h1>;
         <p className="mt-4 max-w-2xl text-slate-300">From modernization to managed services, we design and operate robust, secure and cost-efficient platforms.</p>;
         <div className="mt-8 flex flex-wrap gap-3">;
@@ -78,7 +78,7 @@ const ITServices: React.FC = (): JSX.Element => {
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

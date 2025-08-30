@@ -59,10 +59,12 @@ const Tabs = ({ tabs, activeTab, onTabChange }) => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

@@ -59,7 +59,7 @@ export default function HelpdeskPlatform() {
     {
       icon: BarChart3,
       title: "Analytics & Reporting",
-      description: "Real-time insights into support performance and customer satisfaction metrics."
+      description: "Real-time insights into support performance and customer satisfaction metrics.";
     },;
     {;
       icon: Clock,;
@@ -92,7 +92,7 @@ export default function HelpdeskPlatform() {
     {
       icon: Star,
       title: "Higher Customer Satisfaction",
-      description: "Improve CSAT scores through faster resolution and personalized support."
+      description: "Improve CSAT scores through faster resolution and personalized support.";
     },;
     {;
       icon: Award,;
@@ -125,7 +125,7 @@ export default function HelpdeskPlatform() {
     {
       channel: "Self-Service Portal",
       description: "Knowledge base and FAQ management for customer self-help",
-      icon: Search
+      icon: Search;
     },;
     {;
       channel: "Mobile App",;
@@ -158,7 +158,7 @@ export default function HelpdeskPlatform() {
     {
       industry: "Education",
       description: "Student and faculty support for educational institutions",
-      icon: GraduationCap
+      icon: GraduationCap;
     },;
     {;
       industry: "Manufacturing",;
@@ -188,10 +188,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -240,10 +242,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -275,6 +279,7 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -284,10 +289,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -334,10 +341,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,6 +378,7 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -378,10 +388,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -428,10 +440,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -463,6 +477,7 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -472,10 +487,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -522,10 +539,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +576,7 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -566,10 +586,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -616,10 +638,12 @@ export default function HelpdeskPlatform() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -643,7 +667,7 @@ export default function HelpdeskPlatform() {
               </button>
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

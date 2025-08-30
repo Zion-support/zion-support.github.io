@@ -37,7 +37,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             
 <<<<<<< HEAD
             setCounts(prev = > ({
-              ...prev,
+              ...prev,;
               [stat.label]: Math.floor(current);
             }))}, 50)})}, 500);
 =======
@@ -66,10 +66,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -100,10 +102,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -118,12 +122,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 
 
+
 }}
               viewport={{ once: true }}
               whileHover = {
   { 
                 y: -8,
   transition: { duration: 0.3 
+
 
 
 
@@ -155,6 +161,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
 
 
+
 }}
                 viewport={{ once: true }}
               >
@@ -176,7 +183,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

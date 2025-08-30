@@ -63,9 +63,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -113,9 +115,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -141,6 +145,7 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -149,9 +154,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -179,9 +186,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -205,6 +214,7 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -213,9 +223,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -240,9 +252,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -266,6 +280,7 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -274,9 +289,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -303,9 +320,11 @@ export default function AIAutonomousCodeReview() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

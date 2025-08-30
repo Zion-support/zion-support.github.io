@@ -24,6 +24,7 @@ export const BundleAnalyzer = () => {
                         type: 'vendor',
   optimization: 'good'
                     
+
 },
                     {
                         name: 'animation-vendor',
@@ -139,15 +140,19 @@ export const BundleAnalyzer = () => {
         {isOpen && (<motion.div initial = {
   { opacity: 0, y: 20,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 }} exit = {
   { opacity: 0, y: 20,
   scale: 0.9 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 }} className="fixed top-4 right-20 z-50 w-96 bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden" role="dialog" aria-label="Bundle Analysis">
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">

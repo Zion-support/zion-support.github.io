@@ -137,6 +137,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
                 chainId: 1,
   isConnected: true
             
+
 };
             setWallet(mockWallet);
             trackEvent('blockchain', 'wallet', 'connected', null, { network: mockWallet.network })}
@@ -168,6 +169,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         const newContract = {
   ...contract,
   id: `contract-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
             lastInteraction: new Date()
         };
@@ -349,6 +351,7 @@ export const useBlockchainWeb3 = (initialConfig) => {
         const newPosition = {
   ...position,
   id: `defi-${Date.now()
+
 }-${Math.random().toString(36).substr(2, 9)}`,
             startDate: new Date(),
             lastUpdate: new Date()

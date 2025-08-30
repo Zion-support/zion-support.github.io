@@ -44,7 +44,7 @@ export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({
       </div>
       
       {/* Footer */}
-      <FuturisticFooter />
+      <FuturisticFooter />;
     </div>;
   )};
 =======

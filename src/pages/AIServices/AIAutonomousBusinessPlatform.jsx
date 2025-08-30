@@ -75,9 +75,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -125,9 +127,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -153,6 +157,7 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -161,9 +166,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -191,9 +198,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -217,6 +226,7 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -225,9 +235,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -252,9 +264,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -280,6 +294,7 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -288,9 +303,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -318,9 +335,11 @@ export default function AIAutonomousBusinessPlatform() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

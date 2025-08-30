@@ -141,7 +141,7 @@ const categories = [
   { id: 'ai-solutions', name: 'AI Solutions', icon: Code, color: 'from-cyan-500 to-blue-600' },
   { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Globe, color: 'from-blue-500 to-purple-600' },
   { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-600' },
-  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },
+  { id: 'digital-transformation', name: 'Digital Transformation', icon: Building, color: 'from-green-500 to-cyan-600' },;
   { id: 'consulting', name: 'IT Consulting', icon: TrendingUp, color: 'from-orange-500 to-green-600' };
 ];
 
@@ -194,7 +194,7 @@ export function EnhancedSearch({
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
-<<<<<<< HEAD = ======
+<<<<<<< HEAD = ======;
   const popularSearches = [;
     'AI Business Intelligence',;
     'Cloud DevOps',;
@@ -220,11 +220,11 @@ export function EnhancedSearch({
 
     const searchResults = searchData
       .filter(item => {
-        const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||
+        const matchesQuery = item.title.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.description.toLowerCase().includes(debouncedQuery.toLowerCase()) ||;
                            item.tags.some(tag => tag.toLowerCase().includes(debouncedQuery.toLowerCase()));
         
-        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&
+        const matchesFilters = filters.type.length === 0 || filters.type.includes(item.type) &&;
                               filters.category.length === 0 || filters.category.includes(item.category) &&;
                               filters.tags.length === 0 || filters.tags.some(tag => item.tags.includes(tag));
         
@@ -239,7 +239,7 @@ export function EnhancedSearch({
     const handleClickOutside = (event: MouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
-=======
+=======;
       try {;
         setRecentSearches(JSON.parse(saved));
       } catch (error) {
@@ -265,7 +265,7 @@ export function EnhancedSearch({
   useEffect(() => {
 <<<<<<< HEAD
     const handleKeyDown = (event: KeyboardEvent)  => {
-      if (event.key === 'Escape') {
+      if (event.key === 'Escape') {;
         setIsOpen(false)} else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {;
         event.preventDefault();
         setIsOpen(true);
@@ -276,7 +276,7 @@ export function EnhancedSearch({
     return () => document.removeEventListener('keydown', handleKeyDown)}, []);
 
   const handleSearch = useCallback((searchQuery: string)  => {
-    if (searchQuery.trim()) {
+    if (searchQuery.trim()) {;
       // Add to recent searches;
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
       setRecentSearches(updated);
@@ -385,7 +385,7 @@ export function EnhancedSearch({
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
-        ? prev[filterType].filter(v => v !== value)
+        ? prev[filterType].filter(v => v !== value);
         [...prev[filterType], value];
     }))};
 
@@ -394,7 +394,7 @@ export function EnhancedSearch({
 
   const getTypeIcon = (type: string)  => {
     switch (type) {
-=======
+=======;
   const toggleFilter = (filterType: keyof SearchFilter, value: string) => {;
     setFilters(prev => ({;
       ...prev,;
@@ -441,7 +441,7 @@ export function EnhancedSearch({
               <X className="w-4 h-4 text-gray-400" />
             </button>
           )}
-        </div>
+        </div>;
 =======;
       default: return <Search className="h-4 w-4" />;
     }
@@ -494,6 +494,7 @@ export function EnhancedSearch({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -503,10 +504,12 @@ export function EnhancedSearch({
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -546,6 +549,7 @@ export function EnhancedSearch({
 
 
 
+
 }}
                   animate = {
   { height: 'auto',
@@ -555,10 +559,12 @@ export function EnhancedSearch({
 
 
 
+
 }}
                   exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -578,6 +584,7 @@ export function EnhancedSearch({
                             onClick = {
   () => toggleFilter('type',
   type)
+
 
 
 
@@ -611,6 +618,7 @@ export function EnhancedSearch({
 
 
 
+
 }
                             className={`px-3 py-1 text-xs rounded-full transition-colors ${
                               filters.category.includes(category.name)
@@ -637,7 +645,7 @@ export function EnhancedSearch({
                     <div>
                       <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">
                         <Clock className="h-4 w-4" />
-                        Recent Searches
+                        Recent Searches;
                       </h4>;
                       <div className="space-y-2">;
                         {recentSearches.map((search, index) => (;
@@ -660,7 +668,7 @@ export function EnhancedSearch({
                   <div>
                     <h4 className="text-sm font-medium text-gray-900 mb-2 flex items-center gap-2">
                       <TrendingUp className="h-4 w-4" />
-                      Popular Searches
+                      Popular Searches;
                     </h4>;
                     <div className="flex flex-wrap gap-2">;
                       {popularSearches.map((search, index) => (;
@@ -765,7 +773,7 @@ export function EnhancedSearch({
             )}
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </div>;
   )};
 =======

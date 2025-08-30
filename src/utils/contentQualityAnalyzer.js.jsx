@@ -55,6 +55,7 @@ export class ContentQualityAnalyzer {
             issues,
   recommendations
         
+
 };
         this.analyzedPages.set(pageUrl, metrics);
         return metrics;

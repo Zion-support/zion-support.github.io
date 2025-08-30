@@ -31,6 +31,7 @@ export const useAnalytics = (config = {}) => {
             userAgent: navigator.userAgent,
   deviceInfo: getDeviceInfo()
         
+
 };
         setCurrentSession(session);
         trackEvent('session', 'start', 'session_started')}, []);
@@ -75,6 +76,7 @@ export const useAnalytics = (config = {}) => {
             sessionId: currentSession.id,
   metadata
         
+
 };
         setEvents(prev => [...prev, event]);
         updateSessionActivity()}, [isTracking, currentSession]);
@@ -95,6 +97,7 @@ export const useAnalytics = (config = {}) => {
                 title: document.title,
   referrer: document.referrer
             
+
 }
         };
         setEvents(prev => [...prev, event]);
@@ -118,6 +121,7 @@ export const useAnalytics = (config = {}) => {
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
   firstInputDelay: 0 // Will be updated by FID observer
             
+
 };
             setPerformanceMetrics(metrics);
             trackEvent('performance', 'metrics_captured', 'performance_tracking', null, { metrics })}
@@ -272,8 +276,6 @@ export const useAnalytics = (config = {}) => {
         stopTracking
     }};
 // Utility functions
-const generateEventId = () => {
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
 const getDeviceInfo = () => {
     const userAgent = navigator.userAgent;
     let deviceType = 'desktop';

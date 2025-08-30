@@ -122,9 +122,11 @@ export default function NextGenServicesShowcase2025() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Next-Generation
@@ -154,9 +156,11 @@ export default function NextGenServicesShowcase2025() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary Enterprise Solutions
@@ -170,12 +174,15 @@ export default function NextGenServicesShowcase2025() {
             {featuredServices.map((service, index) => (<motion.div key={service.id} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 }} className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm group hover:border-cyan-500/50 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400/50' : ''}`}>
                 {service.popular && (<div className="absolute -top-3 left-8">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -242,9 +249,11 @@ export default function NextGenServicesShowcase2025() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Innovative Micro-SaaS Solutions
@@ -258,12 +267,15 @@ export default function NextGenServicesShowcase2025() {
             {microSaasServices.map((service, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-semibold mb-3">
@@ -302,9 +314,11 @@ export default function NextGenServicesShowcase2025() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced IT Infrastructure
@@ -318,12 +332,15 @@ export default function NextGenServicesShowcase2025() {
             {infrastructureServices.map((service, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-semibold mb-3">
@@ -362,9 +379,11 @@ export default function NextGenServicesShowcase2025() {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?

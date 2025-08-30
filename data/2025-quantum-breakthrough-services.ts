@@ -264,7 +264,7 @@ export const quantumBreakthroughServices2025 = [
     ],
     integrations['Energy management systems', 'Smart grid infrastructure', 'Renewable energy systems', 'Utility platforms', 'Monitoring systems'],
     compliance['Energy regulations', 'Grid standards', 'SOC2', 'ISO 27001', 'Energy safety standards']
-  }
+  };
 =======;
       'Grid stability management';
     ],;

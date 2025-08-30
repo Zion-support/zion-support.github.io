@@ -61,6 +61,7 @@ export function CartProvider({ children }) {
         dispatch,
   <<<<<<< HEAD
     
+
 };
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>}
 =======

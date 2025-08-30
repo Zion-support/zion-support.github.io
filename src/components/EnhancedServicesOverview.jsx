@@ -24,6 +24,7 @@ const ServiceCategory = ({ category, services }) => {
             'Legal & Compliance': <Lock className="w-6 h-6"/>,
   <<<<<<< HEAD
         
+
 };
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>};
 =======
@@ -48,6 +49,7 @@ const ServiceCategory = ({ category, services }) => {
             'Legal & Compliance': 'from-slate-500 to-gray-600',
   <<<<<<< HEAD
         
+
 };
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
 =======
@@ -127,6 +129,7 @@ const ServiceCategory = ({ category, services }) => {
                   <Button size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 
 
 
@@ -275,12 +278,14 @@ const ContactSection = () => (<section className="py-16 bg-gradient-to-br from-z
 
 
 
+
 }>
           Contact Sales Team
         </Button>
         <Button size="lg" variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 
 
 
@@ -312,6 +317,7 @@ export default function EnhancedServicesOverview() {
           <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
+
 
 
 

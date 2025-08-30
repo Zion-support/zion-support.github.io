@@ -41,7 +41,7 @@ export default function CaseStudies(...args[]):  {
     { id: 'manufacturing', name: 'Manufacturing', icon: Building },
     { id: 'retail', name: 'Retail & E-commerce', icon: ShoppingCart },
     { id: 'technology', name: 'Technology', icon: Brain },
-    { id: 'energy', name: 'Energy & Utilities', icon: Zap },
+    { id: 'energy', name: 'Energy & Utilities', icon: Zap },;
     { id: 'government', name: 'Government', icon: Shield };
   ];
 
@@ -54,7 +54,7 @@ export default function CaseStudies(...args[]):  {
     { id: 'iot-edge', name: 'IoT & Edge Computing', icon: Zap },
     { id: 'blockchain', name: 'Blockchain Solutions', icon: Shield },
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart }
-=======
+=======;
     { id: 'all', name: 'All Industries', icon: Building, count: 0 },;
     { id: 'healthcare', name: 'Healthcare', icon: Heart, count: 0 },;
     { id: 'finance', name: 'Financial Services', icon: DollarSign, count: 0 },;
@@ -63,7 +63,7 @@ export default function CaseStudies(...args[]):  {
     { id: 'government', name: 'Government', icon: Building, count: 0 };
   ];
 
-  const services = [
+  const services = [;
     { id: 'all', name: 'All Services', icon: Zap, count: 0 },;
     { id: 'ai', name: 'AI Solutions', icon: Brain, count: 0 },;
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },;
@@ -181,12 +181,11 @@ export default function CaseStudies(...args[]):  {
       },
       duration: '9 months',
       teamSize: '14',
-      readMore: '/case-studies/blockchain-supply-chain'
+      readMore: '/case-studies/blockchain-supply-chain';
     };
   ];
 
   const filteredCaseStudies = caseStudies.filter(study => {;
-    const matchesService = selectedService === 'all' || study.services.includes(selectedService);
     const matchesSearch = study.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          study.client.toLowerCase().includes(searchQuery.toLowerCase());
     
@@ -195,7 +194,7 @@ export default function CaseStudies(...args[]):  {
   const stats = [
     { label: 'Projects Completed', value: '150+', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%', icon: Star },
-    { label: 'Average ROI', value: '340%', icon: TrendingUp },
+    { label: 'Average ROI', value: '340%', icon: TrendingUp },;
     { label: 'Time to Value', value: '6 months', icon: Clock };
   ];
 
@@ -213,10 +212,12 @@ export default function CaseStudies(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
@@ -228,14 +229,17 @@ export default function CaseStudies(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
@@ -245,14 +249,17 @@ export default function CaseStudies(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
@@ -265,14 +272,17 @@ export default function CaseStudies(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
@@ -295,7 +305,7 @@ export default function CaseStudies(...args[]):  {
         '30% reduction in response times',
         'Scalable IoT infrastructure',
         'Improved public safety'
-      ],
+      ],;
       duration: '14 months',;
       teamSize: '20 engineers',;
       technologies: ['IoT', 'Edge Computing', 'Kubernetes', 'MQTT', 'Time Series DB'],;
@@ -343,10 +353,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -429,14 +441,17 @@ export default function CaseStudies(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
 =======
@@ -456,10 +471,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -522,10 +539,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -623,10 +642,12 @@ export default function CaseStudies(...args[]):  {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center py-20"
@@ -649,10 +670,12 @@ export default function CaseStudies(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
@@ -672,10 +695,12 @@ export default function CaseStudies(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -711,7 +736,7 @@ export default function CaseStudies(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

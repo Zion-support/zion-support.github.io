@@ -52,6 +52,7 @@ export function AccessibilityMenu() {
   <<<<<<< HEAD
             soundEnabled: true
         
+
 };
         setSettings(defaultSettings)};
 =======
@@ -81,9 +82,11 @@ export function AccessibilityMenu() {
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 
 
 
@@ -97,9 +100,11 @@ export function AccessibilityMenu() {
 
 
 
+
 }} transition = {
   { type: "spring", stiffness: 300,
   damping: 30 
+
 
 
 

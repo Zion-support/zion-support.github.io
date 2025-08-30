@@ -33,8 +33,6 @@ export default function TenantOnboarding() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
-    const handleSwitchChange = (name, checked) => {
-        setFormData(prev => ({ ...prev, [name]: checked }))};
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
@@ -45,6 +43,7 @@ export default function TenantOnboarding() {
             const landingPageCopy = {
   headline: "AI Hiring Assistant",
   subtitle: `Find the best talent for your ${formData.industry || "comp"
+
 }`,
                 cta: "Get Started"
             };
@@ -130,6 +129,7 @@ export default function TenantOnboarding() {
                       <Select name="industry" value={formData.industry} onValueChange = {
   (value) => handleSelectChange("industry",
   value)
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select industry"/>
@@ -152,6 +152,7 @@ export default function TenantOnboarding() {
                       <Select name="comp_size" value={formData.comp_size} onValueChange = {
   (value) => handleSelectChange("comp_size",
   value)
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select comp size"/>
@@ -190,6 +191,7 @@ export default function TenantOnboarding() {
                       <Select name="theme_preset" value={formData.theme_preset} onValueChange = {
   (value) => handleSelectChange("theme_preset",
   value)
+
 }>
                         <SelectTrigger>
                           <SelectValue placeholder="Select theme"/>
@@ -214,6 +216,7 @@ export default function TenantOnboarding() {
                       <Switch id="is_co_branded" checked={formData.is_co_branded} onCheckedChange = {
   (checked) => handleSwitchChange("is_co_branded",
   checked)
+
 }/>
                     </div>
                   </TabsContent>
@@ -225,6 +228,7 @@ export default function TenantOnboarding() {
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "comp"
+
 } className="rounded-r-none"/>
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com

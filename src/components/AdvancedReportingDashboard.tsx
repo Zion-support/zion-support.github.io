@@ -63,7 +63,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   showMetrics = true,
   showFilters = true,
   showCharts = true,
-  maxReports = 15
+  maxReports = 15;
 }) => {;
   const [reports, setReports] = useState<any>([]);
   const [filteredReports, setFilteredReports] = useState<any>([]);
@@ -227,7 +227,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )}
+      )};
 =======;
       filtered = filtered.filter(r => ;
         r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -259,7 +259,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   ;
   ;
   ;
+  ;
   critical: 4 ;
+
 
 
 
@@ -280,7 +282,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 <<<<<<< HEAD
       if (sortOrder === 'asc') {
         return aValue > bValue ? 1 : -1} else {
-        return aValue < bValue ? 1 : -1}
+        return aValue < bValue ? 1 : -1};
 =======;
       if (sortOrder = == 'asc') {;
         return aValue > bValue ? 1 : -1;
@@ -301,17 +303,18 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     totalDownloads: reports.reduce((sum, r)  => sum + r.downloads, 0),
     averageRating: reports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
     topCategories: (()  => {
-      const catCounts = reports.reduce((acc,
+      const catCounts = reports.reduce((acc,;
   r) => {;
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc
+
 }, {} as Record<string, any>);
 =======
   totalReports: reports.length,
     activeReports: reports.filter(r = > r.status === 'active').length,
     totalViews: reports.reduce((sum, r) => sum + r.views, 0),
     totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
-    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,
+    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,;
     topCategories: (() => {;
       const catCounts = reports.reduce((acc,;
   ;
@@ -354,6 +357,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+;
 },;
       operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },;
       performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },;
@@ -475,10 +479,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -500,10 +506,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -526,10 +534,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -552,10 +562,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -583,10 +595,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -614,6 +628,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
                         className="h-2 bg-zion-cyan rounded-full"
                       />
@@ -634,10 +649,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -670,10 +687,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -791,10 +810,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -843,6 +864,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }
                   className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
                 >
@@ -857,6 +879,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }
                   className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
                 >
@@ -866,6 +889,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   onClick = {
   () => handleReportAction(report.id,
   'share')
+
 
 
 
@@ -949,6 +973,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
@@ -963,6 +988,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }
                   className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
                 >
@@ -972,6 +998,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   onClick = {
   () => exportReport(report,
   'csv')
+
 
 
 
@@ -1028,6 +1055,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -1037,10 +1065,12 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -1090,7 +1120,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </div>;
   )};
 =======

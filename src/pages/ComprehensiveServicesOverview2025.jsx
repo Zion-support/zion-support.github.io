@@ -36,6 +36,7 @@ const ComprehensiveServicesOverview2025 = () => {
   <<<<<<< HEAD
             'Logistics & Transportation': '🚚'
         
+
 };
         return icons[category] || '🚀'};
 =======
@@ -65,6 +66,7 @@ const ComprehensiveServicesOverview2025 = () => {
   <<<<<<< HEAD
             'Logistics & Transportation': 'from-orange-500 to-red-500'
         
+
 };
         return colors[category] || 'from-gray-500 to-slate-500'};
 =======

@@ -24,6 +24,7 @@ const mockPost = {
     isAnswered: true,
   isFeatured: true
 
+
 };
 export default function EditPostPage() {
     const { postId } = useParams();
@@ -66,6 +67,7 @@ export default function EditPostPage() {
         tags: post.tags.join(",
   ")
     
+
 };
     const handleSubmit = async (values) => {
         try {

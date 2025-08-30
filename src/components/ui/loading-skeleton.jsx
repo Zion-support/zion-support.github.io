@@ -5,11 +5,13 @@ export function Skeleton({ className, ...props }) {
     return (<div className = {
   cn("animate-pulse rounded-md bg-zion-slate/20",
   className)
+
 } {...props}/>)}
 =======
     return (<div className = {
   cn("animate-pulse rounded-md bg-zion-slate/20",
   className)
+
 
 
 

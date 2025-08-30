@@ -82,6 +82,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                 matrix['#00ff41', '#00ff00', '#39ff14', '#7fff00',
   '#bfff00']
             
+
 };
             return colors[variant][Math.floor(Math.random() * colors[variant].length)]}
         // Initialize particles
@@ -116,7 +117,6 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             ctx.lineWidth = 0.5;
             for (let i = 0; i < particlesRef.current.length; i++) {
                 for (let j = i + 1; j < particlesRef.current.length; j++) {
-                    const dy = particlesRef.current[i].y - particlesRef.current[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < 100) {
                         ctx.beginPath();
@@ -190,6 +190,7 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
                         : 'linear-gradient(180deg, #000000 0%, #1a0033 50%,
   #000000 100%)'
         
+
 }}/>
       
       {/* Overlay effects */}
@@ -209,12 +210,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             opacity[0.3, 0.6,
   0.3]
         
+
 }} transition = {
   {
             duration: 8,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
         <motion.div className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full" animate = {
   {
@@ -222,12 +225,14 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             opacity[0.2, 0.5,
   0.2]
         
+
 }} transition = {
   {
             duration: 6,
             repeat: Infinity,
   ease: "easeInOut"
         
+
 }}/>
         <motion.div className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45" animate = {
   {
@@ -235,15 +240,18 @@ export const FuturisticAnimatedBackground = ({ variant = 'cyberpunk', intensity 
             scale[1, 1.1,
   1]
         
+
 }} transition = {
   {
             duration: 10,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
       </div>
     </div>)};
 export default FuturisticAnimatedBackground;
 
+export default getParticleColor;
 export default getParticleColor;

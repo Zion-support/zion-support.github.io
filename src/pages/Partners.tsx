@@ -64,7 +64,7 @@ export default function Partners() {
         'Project delivery support',
         'Referral commission programs'
       ],
-      color: 'from-orange-600 to-red-600'
+      color: 'from-orange-600 to-red-600';
     };
   ];
 
@@ -83,7 +83,7 @@ export default function Partners() {
     },
     {
       title: 'Market Expansion',
-      description: 'Expand your reach into new industries and geographies',
+      description: 'Expand your reach into new industries and geographies',;
       icon: Globe,;
       partners: [;
         { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },;
@@ -120,10 +120,12 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   scale: 0.5 
+
 }}
             animate = {
   { opacity: 1,
   scale: 1 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -134,10 +136,12 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -148,14 +152,17 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Join our ecosystem of technology innovators and business leaders
@@ -165,14 +172,17 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             Together, we're transforming industries through AI and technology
@@ -188,10 +198,12 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -211,15 +223,18 @@ export default function Partners() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -264,10 +279,12 @@ export default function Partners() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -298,10 +315,12 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -331,10 +350,12 @@ export default function Partners() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -366,10 +387,12 @@ export default function Partners() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -408,10 +431,12 @@ export default function Partners() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -435,10 +460,12 @@ export default function Partners() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -468,10 +495,12 @@ export default function Partners() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -495,15 +524,18 @@ export default function Partners() {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -538,10 +570,12 @@ export default function Partners() {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -562,15 +596,18 @@ export default function Partners() {
                   initial = {
   { opacity: 0,
   y: 30 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   viewport={{ once: true }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                   className="text-center group"
                 >
@@ -603,7 +640,7 @@ export default function Partners() {
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
               >
-                Contact Partnership Team
+                Contact Partnership Team;
               </a>;
             </div>;
           </div>;

@@ -6,12 +6,15 @@ const ServiceCard = ({ service, index, isVisible }) => {
     return (<motion.div initial = {
   { opacity: 0, y: 50,
   scale: 0.9 
+
 }} animate = {
   isVisible ? { opacity: 1, y: 0,
   scale: 1 
+
 } : {}} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
@@ -28,13 +31,15 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 x[0, Math.random() * 100 - 50],
                 y[0, Math.random() * 100 - 50],
                 opacity[0.6, 0.2, 0.6],
-   
+  
+
 }} transition = {
   {
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
-   
+  
+
 }} style={{
                 left: `${20 + Math.random() * 60}%`,
                 top: `${20 + Math.random() * 60}%`,
@@ -174,9 +179,11 @@ export const FuturisticServicesShowcase = () => {
         <motion.div initial = {
   { opacity: 0,
   y: -50 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -219,12 +226,15 @@ export const FuturisticServicesShowcase = () => {
         <motion.div initial = {
   { opacity: 0,
   y: 50 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 }} className="text-center mt-20">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">

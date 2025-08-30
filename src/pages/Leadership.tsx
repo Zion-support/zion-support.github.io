@@ -58,7 +58,7 @@ export default function Leadership() {
     {
       name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',;
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',;
       expertise: ['Machine Learning', 'Deep Learning', 'AI Ethics', 'Research & Development'],;
       linkedin: 'https://linkedin.com/in/emilywatson',;
@@ -81,7 +81,7 @@ export default function Leadership() {
     {
       icon: Shield,
       title: 'Trust & Security',
-      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
+      description: 'We maintain the highest standards of security and ethical AI practices in everything we do.';
     },;
     {;
       icon: Globe,;
@@ -104,7 +104,7 @@ export default function Leadership() {
     {
       metric: '95%',
       label: 'Client Satisfaction',
-      description: 'Consistently high satisfaction ratings from our clients'
+      description: 'Consistently high satisfaction ratings from our clients';
     },;
     {;
       metric: '25+',;
@@ -334,7 +334,7 @@ export default function Leadership() {
                 <p className="text-slate-300 text-sm">
                   kleber@ziontechgroup.com<br />
                   We'll respond within 24 hours
-                </p>
+                </p>;
               </div>;
             </div>;
           </div>;

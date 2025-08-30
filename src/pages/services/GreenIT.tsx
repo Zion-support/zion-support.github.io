@@ -47,7 +47,7 @@ export default function GreenIT() {
     {
       icon: Cloud,
       title: 'Green Cloud Solutions',
-      description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
+      description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.';
     },;
     {;
       icon: Recycle,;
@@ -74,7 +74,7 @@ export default function GreenIT() {
       description: 'Implement intelligent power management systems for optimal energy usage',
       icon: Gauge,
       benefits: ['Automated power optimization', 'Real-time monitoring', 'Predictive maintenance']
-    },
+    },;
     {;
       title: 'Green Software Development',;
       description: 'Develop energy-efficient software applications and optimize existing systems',;
@@ -101,7 +101,7 @@ export default function GreenIT() {
       description: 'Green campus technology and sustainable educational IT infrastructure',
       icon: GraduationCap,
       metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
-    },
+    },;
     {;
       industry: 'Manufacturing',;
       description: 'Smart manufacturing with energy-efficient automation and monitoring',;
@@ -124,7 +124,7 @@ export default function GreenIT() {
     {
       icon: Globe,
       title: 'Environmental Impact',
-      description: 'Reduce carbon footprint and contribute to environmental conservation'
+      description: 'Reduce carbon footprint and contribute to environmental conservation';
     },;
     {;
       icon: Award,;
@@ -153,10 +153,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -273,10 +275,12 @@ export default function GreenIT() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -327,10 +331,12 @@ export default function GreenIT() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -387,10 +393,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -421,6 +429,7 @@ export default function GreenIT() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -430,10 +439,12 @@ export default function GreenIT() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -465,10 +476,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -499,6 +512,7 @@ export default function GreenIT() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -508,10 +522,12 @@ export default function GreenIT() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -553,10 +569,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -587,6 +605,7 @@ export default function GreenIT() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -596,10 +615,12 @@ export default function GreenIT() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -641,10 +662,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -675,6 +698,7 @@ export default function GreenIT() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -684,10 +708,12 @@ export default function GreenIT() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -719,10 +745,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -773,6 +801,7 @@ export default function GreenIT() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -782,10 +811,12 @@ export default function GreenIT() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -817,10 +848,12 @@ export default function GreenIT() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -841,7 +874,7 @@ export default function GreenIT() {
                 Start Your Green IT Journey
               </button>
               <button className="px-8 py-4 border border-green-400 text-green-400 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
-                Schedule Consultation
+                Schedule Consultation;
               </button>;
             </div>;
           </motion.div>;

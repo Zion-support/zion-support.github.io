@@ -26,7 +26,7 @@ interface AccessibilitySettings {
 
 <<<<<<< HEAD
 export const EnhancedAccessibility: React.FC = (): JSX.Element => {
-=======
+=======;
 interface EnhancedAccessibilityProps {;
   enabled?: boolean;
   showControls?: boolean;
@@ -100,13 +100,13 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
   const toggleSetting = (key: keyof AccessibilitySettings)  => {
     setSettings(prev => ({
-      ...prev,
+      ...prev,;
       [key]: !prev[key];
     }))};
 
 <<<<<<< HEAD
   const handleKeyDown = (e: React.KeyboardEvent)  => {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape') {;
       setIsOpen(false)};
   };
 =======
@@ -235,7 +235,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   ;
   ;
   ;
+  ;
   highContrast: !settings.highContrast ;
+
 
 
 
@@ -257,7 +259,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   ;
   ;
   ;
+  ;
   largeText: !settings.largeText ;
+
 
 
 
@@ -315,10 +319,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -346,10 +352,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -369,10 +377,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -413,6 +423,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 
 
+
 }}
               animate = {
   { opacity: 1, scale: 1,
@@ -422,10 +433,12 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 
 
+
 }}
               exit = {
   { opacity: 0, scale: 0.9,
   y: 20 
+
 
 
 
@@ -446,7 +459,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                   className="p-2 text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800"
                   aria-label="Close accessibility panel"
                 >
-                  <X className="w-6 h-6" />
+                  <X className="w-6 h-6" />;
                 </button>;
               </div>;
 ;
@@ -454,7 +467,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">;
                 {Object.entries(settings).map(([key, value]) => {;
                   const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                  const Icon = key === 'highContrast' ? Contrast : 
+                  const Icon = key === 'highContrast' ? Contrast : ;
                               key === 'largeText' ? Type : ;
                               key === 'reducedMotion' ? Eye : ;
                               key === 'screenReader' ? Volume2 : ;
@@ -477,7 +490,9 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   ;
   ;
   ;
+  ;
   [key]: !value ;
+
 
 
 
@@ -494,7 +509,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
                         aria-checked={value}
                         aria-label={`Toggle ${label}`}
                       >
-                        <span
+                        <span;
                           className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${;
                             value ? 'translate-x-6' : 'translate-x-1';
                           }`};
@@ -547,7 +562,7 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         {announcements.map((announcement, index) => (
           <div key={index}>{announcement}</div>
         ))}
-      </div>
+      </div>;
     </>;
   )};
 =======

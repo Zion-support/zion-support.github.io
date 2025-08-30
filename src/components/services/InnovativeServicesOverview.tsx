@@ -19,7 +19,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
 }) => {;
   const [activeTab, setActiveTab] = useState('featured');
 
-  const tabs = [
+  const tabs = [;
     { id: 'featured', label: 'Featured', count: 3 },;
     { id: 'ai', label: 'AI Services', count: getServicesByCategory('AI Services').length },;
     { id: 'it', label: 'IT Services', count: getServicesByCategory('IT Services').length },;
@@ -33,7 +33,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
     
     if (category) {
       services = getServicesByCategory(category)} else {
-      switch (activeTab) {
+      switch (activeTab) {;
         case 'featured':;
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3);
           break;
@@ -54,7 +54,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           break;
         default:
           services = INNOVATIVE_SERVICES_2025}
-    }
+    };
     ;
     return services.slice(0, maxServices)}, [activeTab, category, maxServices]);
 
@@ -98,7 +98,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         <div className="flex space-x-2">
           <button className="flex-1 bg-blue-600 text-white py-2 px-3 rounded text-sm hover:bg-blue-700 transition-colors">
             Get Quote
-          </button>
+          </button>;
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-3 rounded text-sm hover:bg-blue-50 transition-colors">;
             Details;
           </button>;
@@ -222,7 +222,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
             </a>
           </div>
         )}
-      </div>
+      </div>;
     </div>;
   )};
 =======

@@ -91,9 +91,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -123,6 +125,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -131,9 +134,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -159,9 +164,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 
 
 
@@ -175,9 +182,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -242,6 +251,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -250,9 +260,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
 
 
 
@@ -267,6 +279,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
@@ -275,9 +288,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} exit = {
   { opacity: 0,
   scale: 0 
+
 
 
 
@@ -299,6 +314,7 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -307,9 +323,11 @@ export default function FuturisticServicesShowcase() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 

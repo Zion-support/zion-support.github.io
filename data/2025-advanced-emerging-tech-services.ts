@@ -292,7 +292,7 @@ export const advancedEmergingTechServices2025 = [
     tags['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
     website: 'https://ziontechgroup.com/quantum-metaverse-pro',
     contact: {
-      phone: '+1 302 464 0950',
+      phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
     },;
     marketSize: '$6.8B',;

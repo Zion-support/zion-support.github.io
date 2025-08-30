@@ -138,7 +138,7 @@ export default function Layout(...args[]):  {
         </main>
       </div>
     </div>
-  )}
+  )};
 =======;
         <main className="flex-1 md:ml-64">;
           {children};

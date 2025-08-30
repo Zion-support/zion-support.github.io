@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIIdentityManagement() {
   const features = [
     'AI-powered identity management optimization',
-    'Intelligent authentication and authorization',
+    'Intelligent authentication and authorization',;
     'Automated identity verification and validation',;
     'Predictive analytics for identity threats',;
     'Smart compliance and governance monitoring',;
@@ -21,7 +21,7 @@ export default function AIIdentityManagement() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIIdentityManagement() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Identity management optimization',;
     'Authentication and authorization',;
     'Identity verification and validation',;
@@ -39,7 +39,7 @@ export default function AIIdentityManagement() {
     'Identity scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve identity management performance by 50-80%',;
     'Reduce authentication time by 40-70%',;
     'Cut identity operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIIdentityManagement() {
     'Scale identity operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIIdentityManagement() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

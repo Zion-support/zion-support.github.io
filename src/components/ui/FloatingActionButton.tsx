@@ -24,7 +24,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       color: 'from-green-500 to-emerald-500',
       delay: 0.2
     },
-    {
+    {;
       icon: Mail,;
       label: 'Email',;
       href: 'mailto:info@ziontechgroup.com',;
@@ -54,6 +54,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -63,10 +64,12 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
         transition = {
   { delay: 0.5,
   duration: 0.3 
+
 
 
 
@@ -89,6 +92,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -98,10 +102,12 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
         transition = {
   { delay: 0.6,
   duration: 0.3 
+
 
 
 
@@ -123,6 +129,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
               animate = {
   { rotate: 0,
@@ -132,10 +139,12 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
               exit = {
   { rotate: 90,
   opacity: 0 
+
 
 
 
@@ -157,6 +166,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
               animate = {
   { rotate: 0,
@@ -166,10 +176,12 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
               exit = {
   { rotate: -90,
   opacity: 0 
+
 
 
 
@@ -200,10 +212,12 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
                 animate = {
   { opacity: 1, x: 0,
   scale: 1 
+
 
 
 
@@ -218,6 +232,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
 
 
 
+
 }}
                 transition = {
   { 
@@ -226,6 +241,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   type: "spring",
   stiffness: 200
                 
+
 
 
 
@@ -245,7 +261,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
             ))}
           </div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </div>;
   )};
 =======

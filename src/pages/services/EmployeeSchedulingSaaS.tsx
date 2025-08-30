@@ -29,7 +29,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Smartphone,
       title: "Mobile App",
-      description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
+      description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out.";
     },;
     {;
       icon: Globe,;
@@ -62,7 +62,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Settings,
       title: "Custom Rules",
-      description: "Configurable business rules for scheduling, overtime, and compliance"
+      description: "Configurable business rules for scheduling, overtime, and compliance";
     },;
     {;
       icon: FileText,;
@@ -112,7 +112,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         "Unlimited employees",
         "Custom scheduling algorithms",
         "Advanced compliance tools",
-        "White-label options",
+        "White-label options",;
         "Dedicated account manager",;
         "Custom training",;
         "On-premise options";
@@ -135,7 +135,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
-      icon: TrendingUp
+      icon: TrendingUp;
     },;
     {;
       title: "Ensure Compliance",;
@@ -168,7 +168,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Settings,
       title: "Services",
-      description: "Manage appointment-based scheduling for professional services"
+      description: "Manage appointment-based scheduling for professional services";
     },;
     {;
       icon: BarChart3,;
@@ -200,10 +200,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -264,6 +266,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -273,10 +276,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -320,6 +325,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -329,10 +335,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -376,6 +384,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -385,10 +394,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -432,6 +443,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -441,10 +453,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -490,6 +504,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -499,10 +514,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -569,10 +586,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -599,7 +618,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
                 >
                   Contact Sales
-                </Link>
+                </Link>;
               </div>;
             </motion.div>;
           </div>;

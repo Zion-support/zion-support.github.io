@@ -9,6 +9,7 @@ const meta = {
       </MemoryRouter>)
     ]
 
+
 };
 export default meta;
 export const Grid = {
@@ -17,6 +18,7 @@ export const Grid = {
   'grid');
         return <Marketplace />;
     
+
 }
 };
 export const List = {
@@ -25,5 +27,6 @@ export const List = {
   'list');
         return <Marketplace />;
     
+
 }
 };

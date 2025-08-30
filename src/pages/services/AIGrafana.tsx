@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIGrafana() {
   const features = [
     'AI-powered Grafana optimization',
-    'Intelligent Grafana management',
+    'Intelligent Grafana management',;
     'Automated Grafana monitoring and alerting',;
     'Predictive analytics for Grafana scaling',;
     'Smart Grafana security and compliance',;
@@ -21,7 +21,7 @@ export default function AIGrafana() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIGrafana() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Grafana optimization',;
     'Grafana management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIGrafana() {
     'Grafana scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve Grafana performance by 50-80%',;
     'Reduce Grafana dashboard load time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIGrafana() {
     'Scale Grafana operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIGrafana() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

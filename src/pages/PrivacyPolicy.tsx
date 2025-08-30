@@ -93,7 +93,7 @@ const PrivacyPolicy = () => {;
       title: 'Changes to This Policy',
       icon: AlertTriangle,
       content: `We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.`
-    },
+    },;
     {;
       id: 'contact',;
       title: 'Contact Us',;
@@ -120,7 +120,7 @@ const PrivacyPolicy = () => {;
       examples: ['IP address, device information', 'Browser type and version', 'Operating system'],
       purpose: 'Security, fraud prevention, service optimization',
       retention: '1 year from collection'
-    },
+    },;
     {;
       category: 'Communication Data',;
       examples: ['Support tickets, chat logs', 'Email communications', 'Feedback and surveys'],;
@@ -153,7 +153,7 @@ const PrivacyPolicy = () => {;
     {
       measure: 'Employee Training',
       description: 'Regular security training for all employees to ensure data protection awareness',
-      icon: Users
+      icon: Users;
     },;
     {;
       measure: 'Incident Response',;
@@ -184,10 +184,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -297,14 +299,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -312,6 +317,7 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -326,10 +332,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -360,6 +368,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -369,10 +378,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -405,6 +416,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -414,10 +426,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -455,6 +469,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -464,10 +479,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -491,6 +508,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -500,10 +518,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -553,6 +573,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -562,10 +583,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -589,6 +612,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -598,10 +622,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -634,6 +660,7 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -643,10 +670,12 @@ const PrivacyPolicy = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -699,14 +728,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -745,14 +777,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -798,14 +833,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.5 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -856,14 +894,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -888,14 +929,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.7 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -920,14 +964,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.8 
+
 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -969,14 +1016,17 @@ const PrivacyPolicy = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.9 
+
 }}
               viewport={{ once: true }}
             >
@@ -1019,14 +1069,14 @@ const PrivacyPolicy = () => {;
             </motion.div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======
               <div className = "mt-8">
                 <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors">
                   Contact Privacy Team
-                </button>
+                </button>;
               </div>;
             </motion.div>;
           </div>;

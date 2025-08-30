@@ -190,6 +190,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -218,9 +219,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -245,6 +248,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -253,9 +257,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -280,6 +286,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -288,9 +295,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -310,6 +319,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -318,9 +328,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -385,6 +397,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
@@ -393,9 +406,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 
 
 
@@ -436,6 +451,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -444,9 +460,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -466,6 +484,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -474,9 +493,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -522,6 +543,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
@@ -530,9 +552,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 
 
 
@@ -559,6 +583,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -567,9 +592,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -589,6 +616,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -597,9 +625,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 
 
 
@@ -635,6 +665,7 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -643,9 +674,11 @@ export function GlobalPresenceSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 

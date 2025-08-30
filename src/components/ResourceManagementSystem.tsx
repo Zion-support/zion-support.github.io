@@ -86,7 +86,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   showStats = true,
   showFilters = true,
   showCharts = true,
-  maxResources = 20
+  maxResources = 20;
 }) => {;
   const [resources, setResources] = useState<any>([]);
   const [filteredResources, setFilteredResources] = useState<any>([]);
@@ -228,7 +228,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )}
+      )};
 =======;
       filtered = filtered.filter(r => ;
         r.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -252,10 +252,11 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     currentUtilization: resources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
     averageCost: resources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,
     topDepartments: (()  => {
-      const deptCounts = resources.reduce((acc,
+      const deptCounts = resources.reduce((acc,;
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;
         return acc
+
 }, {} as Record<string, any>);
 =======
   totalResources: resources.length,
@@ -264,7 +265,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     maintenanceResources: resources.filter(r => r.status === 'maintenance').length,
     totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
     currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
+    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,;
     topDepartments: (() => {;
       const deptCounts = resources.reduce((acc,;
   ;
@@ -339,13 +340,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0,
+      minimumFractionDigits: 0,;
       maximumFractionDigits: 0;
     }).format(amount)};
 
   // Get utilization color
   const getUtilizationColor = (utilization: number)  => {
-=======
+=======;
   const formatCurrency = (amount: number) => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
@@ -418,10 +419,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -443,10 +446,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -469,10 +474,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -495,10 +502,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -526,10 +535,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -553,10 +564,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -580,10 +593,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -616,10 +631,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -708,10 +725,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -806,6 +825,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
 
 
+
 }}
                   className={`h-2 rounded-full transition-all duration-300 ${
                     resource.utilization >= 90 ? 'bg-red-500' :
@@ -872,7 +892,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
             Add Resource
           </button>
         </motion.div>
-      )}
+      )};
     </div>;
   )};
 =======

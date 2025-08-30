@@ -65,6 +65,7 @@ export default function JobDetails() {
 
 
 
+
 }/>
       
       <main className="container mx-auto px-4 py-8">
@@ -163,6 +164,7 @@ export default function JobDetails() {
   <<<<<<< HEAD
                 client_id: job.client_id
             
+
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)}
 =======

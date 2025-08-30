@@ -50,9 +50,11 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
     return (<motion.div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.6 }}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
@@ -98,6 +100,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.totalUsers,
   15000)
+
 }%` }}/>
               </div>
             </div>)}
@@ -125,6 +128,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.activeUsers,
   12000)
+
 }%` }}/>
               </div>
             </div>)}
@@ -152,6 +156,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.revenue,
   500000)
+
 }%` }}/>
               </div>
             </div>)}
@@ -179,6 +184,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full transition-all duration-500" style = {
   { width: `${calculateProgress(metrics.growth,
   25)
+
 }%` }}/>
               </div>
             </div>)}
@@ -190,12 +196,15 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} transition={{ duration: 0.3 }}>
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>
             <p className="text-zinc-300 text-sm">

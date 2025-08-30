@@ -94,7 +94,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
+    };
 =======;
       company: "BioTech Innovations",;
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
@@ -132,7 +132,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const getCategoryColor = (category: string)  => {
     const colors = [
       'from-blue-600 to-cyan-600',
-      'from-purple-600 to-pink-600',
+      'from-purple-600 to-pink-600',;
       'from-green-600 to-emerald-600',;
       'from-red-600 to-orange-600',;
       'from-indigo-600 to-purple-600',;
@@ -180,10 +180,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -207,6 +209,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -216,10 +219,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -240,6 +245,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -249,10 +255,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -295,6 +303,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -304,10 +313,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -339,10 +350,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -370,6 +383,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -379,10 +393,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -461,6 +477,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -470,10 +487,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -506,10 +525,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -536,10 +557,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -620,10 +643,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -649,6 +674,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -658,10 +684,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -688,6 +716,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -697,10 +726,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -727,6 +758,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -736,10 +768,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -766,6 +800,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -775,10 +810,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -805,6 +842,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -814,10 +852,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -844,6 +884,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -853,10 +894,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -889,6 +932,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -898,10 +942,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -1045,10 +1091,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1074,6 +1122,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1083,10 +1132,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -1117,6 +1168,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1126,10 +1178,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -1160,6 +1214,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -1169,10 +1224,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -1202,6 +1259,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -1211,10 +1269,12 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -1235,7 +1295,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </Button>;
           </motion.div>;

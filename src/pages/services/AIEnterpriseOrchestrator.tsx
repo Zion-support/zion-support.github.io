@@ -64,7 +64,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
       title: "Enterprise Security Suite",
       description: "AI-powered threat detection and response with zero-trust architecture",
       icon: Shield,
-      benefits[
+      benefits[;
         "99.9% threat detection rate",;
         "Zero-day attack prevention",;
         "Automated incident response",;
@@ -117,7 +117,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
         "Enterprise security",
         "24/7 dedicated support",
         "Custom AI models",
-        "White-label solutions",
+        "White-label solutions",;
         "On-premise deployment",;
         "SLA guarantees";
       ],;
@@ -156,7 +156,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
     },
     {
       industry: "Retail",
-      applications[
+      applications[;
         "Customer behavior analysis",;
         "Inventory optimization",;
         "Personalized marketing",;
@@ -184,10 +184,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -247,10 +249,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -281,6 +285,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -290,10 +295,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -337,10 +344,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -371,6 +380,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -380,10 +390,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -451,10 +463,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -485,6 +499,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -494,10 +509,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -533,10 +550,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -574,7 +593,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

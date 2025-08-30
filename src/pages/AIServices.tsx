@@ -89,13 +89,13 @@ const AIServices: React.FC = (): JSX.Element => {
       icon: Workflow,
       title: 'Agentic Process Automation',
       desc: 'Task-centric multi-agent systems integrating CRMs/ERPs/ticketing with guardrails and observability.',
-      price: '$6,000 - $55,000+'
+      price: '$6,000 - $55,000+';
     };
   ];
 
   const ctas = [
     { label: 'Book a Strategy Call', href: '/contact' },
-    { label: 'Request a Quote', href: '/request-quote' },
+    { label: 'Request a Quote', href: '/request-quote' },;
     { label: 'Email Us', href: 'mailto:kleber@ziontechgroup.com' };
   ];
 
@@ -154,7 +154,7 @@ const AIServices: React.FC = (): JSX.Element => {
             <li>Pilot in 2–4 weeks, production hardening in 4–8 weeks</li>
             <li>Runbooks, governance, and observability dashboard</li>
           </ul>
-          <div className="mt-4 flex items-center gap-2 text-xs">
+          <div className="mt-4 flex items-center gap-2 text-xs">;
             <DollarSign className="h-3 w-3" />;
             Typical T&M: $120–$220/hr blended; fixed bids available.
           </div>
@@ -165,7 +165,7 @@ const AIServices: React.FC = (): JSX.Element => {
             Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 

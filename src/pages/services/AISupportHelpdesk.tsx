@@ -29,7 +29,7 @@ export default function AISupportHelpdesk(...args[]):  {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Fully responsive support platform accessible on  device with native mobile apps."
+      description: "Fully responsive support platform accessible on  device with native mobile apps.";
     },;
     {;
       icon: Globe,;
@@ -62,7 +62,7 @@ export default function AISupportHelpdesk(...args[]):  {
     {
       icon: Clock,
       title: "24/7 Availability",
-      description: "Round-the-clock support without human intervention"
+      description: "Round-the-clock support without human intervention";
     },;
     {;
       icon: Users,;
@@ -112,7 +112,7 @@ export default function AISupportHelpdesk(...args[]):  {
         "Unlimited agents",
         "Custom AI models",
         "White-label solutions",
-        "Dedicated support manager",
+        "Dedicated support manager",;
         "Advanced security",;
         "Custom training",;
         "On-premise options";
@@ -135,7 +135,7 @@ export default function AISupportHelpdesk(...args[]):  {
     {
       title: "Scale Support Operations",
       description: "Handle unlimited support requests without increasing headcount or response times.",
-      icon: Globe
+      icon: Globe;
     },;
     {;
       title: "Gain Actionable Insights",;
@@ -168,7 +168,7 @@ export default function AISupportHelpdesk(...args[]):  {
     {
       icon: Smartphone,
       title: "Mobile App",
-      description: "Native mobile apps for iOS and Android with push notifications"
+      description: "Native mobile apps for iOS and Android with push notifications";
     },;
     {;
       icon: Users,;
@@ -200,10 +200,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -264,6 +266,7 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -273,10 +276,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -320,6 +325,7 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -329,10 +335,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -376,6 +384,7 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -385,10 +394,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -432,6 +443,7 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -441,10 +453,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -490,6 +504,7 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -499,10 +514,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -569,10 +586,12 @@ export default function AISupportHelpdesk(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -607,7 +626,7 @@ export default function AISupportHelpdesk(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

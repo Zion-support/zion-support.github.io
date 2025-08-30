@@ -1,32 +1,6 @@
 import SEO from "../SEO";
 const Mobile = () => {
 <<<<<<< HEAD
-    const mobileServices = [
-        {
-            title: "iOS Development",
-            description: "Native iPhone and iPad applications using Swift and SwiftUI",
-            icon: "🍎",
-            features["Swift & SwiftUI", "App Store optimization", "iOS-specific features", "Performance tuning"]
-        },
-        {
-            title: "Android Development",
-            description: "Native Android applications using Kotlin and Jetpack Compose",
-            icon: "🤖",
-            features["Kotlin & Jetpack Compose", "Google Play optimization", "Material Design 3", "Android features"]
-        },
-        {
-            title: "Cross-Platform",
-            description: "Single codebase for iOS and Android using React Native or Flutter",
-            icon: "📱",
-            features["React Native", "Flutter", "Shared codebase", "Native performance"]
-        },
-        {
-            title: "Mobile Web",
-            description: "Responsive web applications optimized for mobile devices",
-            icon: "🌐",
-            features["Mobile-first design", "Progressive Web Apps", "Responsive layouts", "Touch optimization"]
-        }
-    ];
     const mobileBenefits = [
         {
             title: "Increased Engagement",

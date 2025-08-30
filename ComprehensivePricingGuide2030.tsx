@@ -48,7 +48,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 <<<<<<< HEAD
   const cats = services.reduce((acc, service) => {
-      if (!acc.includes(service.category)) {
+      if (!acc.includes(service.category)) {;
         acc.push(service.category)};
       return acc}, [] as string[]);
     return ['all', ...cats]}, [services]);
@@ -71,13 +71,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedPricingModel !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)}
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)};
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
-      case 'AI & Analytics':
+      case 'AI & Analytics':;
       case 'AI & Sales':;
       case 'AI & Compliance':;
       case 'AI & Communication':;
@@ -97,7 +97,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
   const getCategoryColor = (category: string)  => {
     switch (category) {
-      case 'AI & Analytics':
+      case 'AI & Analytics':;
       case 'AI & Sales':;
       case 'AI & Compliance':;
       case 'AI & Communication':;
@@ -165,7 +165,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
         'Advanced security features',
         'SLA guarantees',
         'Dedicated account manager',
-        'Custom development',
+        'Custom development',;
         'On-premise deployment options';
       ],;
       color: 'from-indigo-500 to-purple-600',;
@@ -196,7 +196,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       description: 'IoT market by 2027',
       color: 'from-green-500 to-emerald-600'
     },
-    {
+    {;
       title: 'Quantum Computing',;
       value: '$65.0B',;
       growth: '+48.2%',;
@@ -226,10 +226,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -254,6 +256,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -263,10 +266,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -287,6 +292,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -296,10 +302,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -338,10 +346,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -365,6 +375,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -374,10 +385,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -411,10 +424,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -438,6 +453,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -447,10 +463,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -518,10 +536,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -563,7 +583,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
           {/* Services Grid */}
           <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)  => {
+            {filteredServices.map((service, index)  => {;
 =======;
           </div>;
 ;
@@ -585,6 +605,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -594,10 +615,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -681,7 +704,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                     </Link>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                     >;
                       Get Quote;
@@ -701,7 +724,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   setSelectedCategory('all');
 <<<<<<< HEAD
                   setSelectedPricingModel('all')}}
-                className = "text-cyan-400 hover:text-cyan-300 transition-colors"
+                className = "text-cyan-400 hover:text-cyan-300 transition-colors";
 =======;
                   setSelectedPricingModel('all');
                 }}
@@ -728,10 +751,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -752,6 +777,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -761,10 +787,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -786,6 +814,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -795,10 +824,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -847,10 +878,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -871,6 +904,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -880,10 +914,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -905,6 +941,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -914,10 +951,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -965,6 +1004,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -974,10 +1014,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -1028,7 +1070,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

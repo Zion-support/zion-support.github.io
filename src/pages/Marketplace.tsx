@@ -29,7 +29,7 @@ const Marketplace: React.FC = () => {;
     { id: 'cybersecurity', name: 'Cybersecurity', count: 12 },
     { id: 'cloud', name: 'Cloud & DevOps', count: 15 },
     { id: 'iot', name: 'IoT & Edge Computing', count: 10 },
-    { id: 'blockchain', name: 'Blockchain', count: 6 },
+    { id: 'blockchain', name: 'Blockchain', count: 6 },;
     { id: 'healthcare', name: 'Healthcare Tech', count: 9 };
   ];
 
@@ -110,11 +110,11 @@ const Marketplace: React.FC = () => {;
       users: 156,
       features: ["Cost optimization", "Resource management", "Budget tracking", "Automated scaling"],
       image: "☁️",
-      badge: "Cost Effective"
+      badge: "Cost Effective";
     };
   ];
 
-  const filteredSolutions = solutions.filter(solution => {
+  const filteredSolutions = solutions.filter(solution => {;
     const matchesSearch = solution.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          solution.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || solution.category === selectedCategory;
@@ -122,7 +122,7 @@ const Marketplace: React.FC = () => {;
   });
 
   const sortedSolutions = [...filteredSolutions].sort((a, b) => {
-    switch (sortBy) {
+    switch (sortBy) {;
       case 'price-low':;
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
@@ -151,10 +151,12 @@ const Marketplace: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-6xl font-bold text-white mb-6"
@@ -166,14 +168,17 @@ const Marketplace: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
           >
@@ -184,14 +189,17 @@ const Marketplace: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
             className="flex flex-wrap justify-center gap-4"
           >
@@ -274,14 +282,17 @@ const Marketplace: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
@@ -367,7 +378,7 @@ const Marketplace: React.FC = () => {;
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-semibold text-white mb-2">No solutions found</h3>
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories.</p>
-              <button
+              <button;
                 onClick={() => {;
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -388,10 +399,12 @@ const Marketplace: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -409,7 +422,7 @@ const Marketplace: React.FC = () => {;
             </button>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   );
 };
@@ -419,7 +432,7 @@ const Marketplace: React.FC = () => (
 		<div className="max-w-3xl mx-auto px-4 text-white">
 			<h1 className="text-4xl font-bold mb-6">Marketplace</h1>
 			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>
+				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>;
 				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>;
 				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>;
 				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>;

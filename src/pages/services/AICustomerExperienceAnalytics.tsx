@@ -62,7 +62,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
       icon: BarChart3,
       title: 'Advanced Reporting',
       description: 'Comprehensive analytics dashboard with customizable reports and automated insights delivery.',
-      benefits['Custom dashboards', 'Automated reporting', 'KPI tracking', 'Performance optimization']
+      benefits['Custom dashboards', 'Automated reporting', 'KPI tracking', 'Performance optimization'];
     };
   ];
 
@@ -95,7 +95,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
     'AI-powered customer journey mapping and analysis',
     'Real-time sentiment analysis and emotion detection',
     'Predictive customer behavior modeling',
-    'Automated customer feedback collection and analysis',
+    'Automated customer feedback collection and analysis',;
     'Multi-channel experience tracking and optimization',;
     'Intelligent customer segmentation and personalization',;
     'Advanced customer lifetime value prediction',;
@@ -105,7 +105,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase customer satisfaction scores by 45%',;
     'Reduce customer churn by 60%',;
     'Improve customer lifetime value by 35%',;
@@ -114,7 +114,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
     'Enable data-driven customer experience decisions';
   ];
 
-  const useCases = [
+  const useCases = [;
     'E-commerce customer experience optimization',;
     'SaaS product user experience improvement',;
     'Banking and financial services CX',;
@@ -181,7 +181,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
     { 
       name: 'CX Professional', 
       price: '$999/mo', 
-      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
+      details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] ;
     },;
     { ;
       name: 'CX Enterprise', ;
@@ -210,10 +210,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -237,14 +239,17 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300"
               >
@@ -279,10 +284,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -305,14 +312,17 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300"
               >
@@ -345,10 +355,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -371,14 +383,17 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="text-center"
               >
@@ -401,10 +416,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -427,14 +444,17 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
                 initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-pink-400/50 transition-all duration-300 text-center"
               >
@@ -452,10 +472,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
@@ -478,14 +500,17 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -542,10 +567,12 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -591,7 +618,7 @@ export default function AICustomerExperienceAnalytics(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             Ready to revolutionize your customer experience? Contact us today to learn how AI-powered analytics can transform your business.;
           </p>;

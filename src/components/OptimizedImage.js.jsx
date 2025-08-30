@@ -61,8 +61,10 @@ export const OptimizedImage = ({ src, alt, className = '', placeholder = 'data:i
       {isLoaded && !hasError && (<motion.div initial = {
   { opacity: 0,
   scale: 1.1 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} transition={{ duration: 0.3 }} className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent pointer-events-none"/>)}
     </div>)};

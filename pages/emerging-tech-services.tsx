@@ -18,7 +18,7 @@ const EmergingTechServices: NextPage = () => {;
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<any>('innovation');
 
-  const categories = [
+  const categories = [;
     { id: 'all', name: 'All Technologies', color: 'from-blue-500 to-purple-600' },;
     { id: 'Quantum Technology', name: 'Quantum Technology', color: 'from-purple-500 to-pink-600' },;
     { id: 'Space Technology', name: 'Space Technology', color: 'from-indigo-500 to-blue-600' },;
@@ -290,7 +290,7 @@ const EmergingTechServices: NextPage = () => {;
             </a>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

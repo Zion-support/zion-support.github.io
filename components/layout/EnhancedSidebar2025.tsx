@@ -233,7 +233,7 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-          { name: 'Training Programs', href: '/training' },
+          { name: 'Training Programs', href: '/training' },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
         ];
@@ -260,7 +260,7 @@ export default function EnhancedSidebar2025(...args[]):  {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
 
-  const filteredServices = sidebarSections.flatMap(section =>
+  const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
       item.subItems?.filter(child =>;
         child.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -282,7 +282,7 @@ export default function EnhancedSidebar2025(...args[]):  {
     if (isOpen) {
       document.body.style.overflow = 'hidden'} else {
       document.body.style.overflow = 'unset'}
-
+;
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
@@ -311,6 +311,7 @@ export default function EnhancedSidebar2025(...args[]):  {
         transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 
 
 
@@ -400,6 +401,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -409,10 +411,12 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -459,6 +463,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 
 
+
 }}
                                 animate = {
   { opacity: 1,
@@ -468,10 +473,12 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 
 
+
 }}
                                 exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -542,7 +549,7 @@ export default function EnhancedSidebar2025(...args[]):  {
         </div>
       </motion.div>
     </>
-  )}
+  )};
 =======;
             </div>;
           </div>;

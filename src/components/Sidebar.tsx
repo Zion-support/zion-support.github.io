@@ -49,7 +49,7 @@ export function Sidebar: React.FC = () => {;
   const toggleSection = (sectionTitle: string)  => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
-        ? prev.filter(title => title !== sectionTitle)
+        ? prev.filter(title => title !== sectionTitle);
         [...prev, sectionTitle];
     )};
 
@@ -198,7 +198,7 @@ export function Sidebar: React.FC = () => {;
         { name: 'Comp', path: '/comp', icon: Building, description: 'Comp information' },
         { name: 'Innovation', path: '/innovation', icon: Lightbulb, description: 'Innovation initiatives' },
         { name: 'Talent', path: '/talent', icon: Users, description: 'Talent solutions' }
-      ]
+      ];
     };
   ];
 
@@ -249,6 +249,7 @@ export function Sidebar: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -258,10 +259,12 @@ export function Sidebar: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -282,7 +285,7 @@ export function Sidebar: React.FC = () => {;
                 }`}
                 onClick={() => setIsOpen(false)}
               >
-                <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
+                <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />;
                 <span>{child.name}</span>;
               </Link>;
             ))};
@@ -325,6 +328,7 @@ export function Sidebar: React.FC = () => {;
               transition = {
   { type: 'spring', damping: 25,
   stiffness: 200 
+
 
 
 
@@ -400,7 +404,7 @@ export function Sidebar: React.FC = () => {;
             <Link
               to="/contact"
               className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-            >
+            >;
               Get Started;
             </Link>;
           </div>;

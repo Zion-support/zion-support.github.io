@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AICybersecurity() {
   const features = [
     'AI-powered cybersecurity optimization',
-    'Intelligent threat detection and response',
+    'Intelligent threat detection and response',;
     'Automated security monitoring and alerting',;
     'Predictive analytics for security threats',;
     'Smart security compliance and governance',;
@@ -21,7 +21,7 @@ export default function AICybersecurity() {
     { 
       name: 'Business', 
       price: '$1,299/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AICybersecurity() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Cybersecurity optimization',;
     'Threat detection and response',;
     'Security monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AICybersecurity() {
     'Security scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security performance by 50-80%',;
     'Reduce threat response time by 40-70%',;
     'Cut security operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AICybersecurity() {
     'Scale security operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AICybersecurity() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

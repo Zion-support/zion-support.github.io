@@ -244,12 +244,12 @@ const InteractiveUserExperience: React.FC = () => {;
 
 <<<<<<< HEAD
   const toggleAccessibilityFeature = useCallback((id: string)  => {
-    setAccessibilityFeatures(prev => prev.map(feature => 
+    setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
     ))}, []);
 
   const getActivityIcon = (category: UserActivity['category'])  => {
-    switch (category) {
+    switch (category) {;
 =======;
   const toggleAccessibilityFeature = useCallback((id: string) => {;
     setAccessibilityFeatures(prev => prev.map(feature => ;
@@ -346,6 +346,7 @@ const InteractiveUserExperience: React.FC = () => {;
 
 
 
+
 }
                             size="sm"
                           >
@@ -358,6 +359,7 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   e.target.value)
+
 
 
 
@@ -382,6 +384,7 @@ const InteractiveUserExperience: React.FC = () => {;
                             onChange = {
   (e) => updatePreference(preference.id,
   parseInt(e.target.value))
+
 
 
 
@@ -595,7 +598,7 @@ const InteractiveUserExperience: React.FC = () => {;
             </CardContent>
           </Card>
         </TabsContent>
-      </Tabs>
+      </Tabs>;
     </div>;
   )};
 =======

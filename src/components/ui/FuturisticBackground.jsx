@@ -173,6 +173,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
         
+
 }}/>)}
 =======
             window.removeEventListener('resize', resizeCanvas);
@@ -183,6 +184,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
         
+
 
 
 
@@ -199,6 +201,7 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
             color: color,
   textShadow: `
           ${glowSize
+
 
 
 
@@ -227,6 +230,7 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
   {
             background: `linear-gradient(45deg, transparent 30%,
   ${glowColor
+
 
 
 

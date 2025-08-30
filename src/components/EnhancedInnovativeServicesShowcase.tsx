@@ -43,7 +43,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

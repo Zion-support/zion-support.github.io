@@ -65,7 +65,7 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       icon: PieChart,
       title: "Predictive Performance Insights",
-      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities."
+      description: "AI-powered predictions for employee potential, retention risk, and career development opportunities.";
     },;
     {;
       icon: Activity,;
@@ -98,7 +98,7 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       icon: TrendingUp,
       title: "Enhanced Productivity",
-      description: "Optimize team performance through data-driven insights and targeted development programs."
+      description: "Optimize team performance through data-driven insights and targeted development programs.";
     },;
     {;
       icon: Clock,;
@@ -156,7 +156,7 @@ export default function AIEmployeePerformanceAnalytics() {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",
+        "On-premise deployment",;
         "SLA guarantees",;
         "24/7 support";
       ],;
@@ -189,7 +189,7 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       industry: "Manufacturing",
       description: "Monitor production efficiency, quality metrics, and operational performance across manufacturing teams",
-      icon: Settings
+      icon: Settings;
     },;
     {;
       industry: "Finance",;
@@ -216,7 +216,7 @@ export default function AIEmployeePerformanceAnalytics() {
       platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"]
     },
     {
-      name: "Learning Platforms",
+      name: "Learning Platforms",;
       platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"];
     },;
     {;
@@ -239,7 +239,7 @@ export default function AIEmployeePerformanceAnalytics() {
     {
       metric: "60%",
       label: "Time Savings",
-      description: "Reduction in manual performance review time"
+      description: "Reduction in manual performance review time";
     },;
     {;
       metric: "3.2x",;
@@ -258,7 +258,7 @@ export default function AIEmployeePerformanceAnalytics() {
       indicators: ["Error Rates", "Customer Satisfaction", "Code Reviews", "Quality Scores"]
     },
     {
-      category: "Collaboration Metrics",
+      category: "Collaboration Metrics",;
       indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"];
     },;
     {;
@@ -288,10 +288,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,6 +345,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -352,10 +355,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -392,10 +397,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -426,6 +433,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -435,10 +443,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -485,10 +495,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -519,6 +531,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -528,10 +541,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -570,10 +585,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -604,6 +621,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -613,10 +631,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -663,10 +683,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -697,6 +719,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -706,10 +729,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -774,10 +799,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -808,6 +835,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -817,10 +845,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -867,10 +897,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -901,6 +933,7 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -910,10 +943,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -954,10 +989,12 @@ export default function AIEmployeePerformanceAnalytics() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -981,7 +1018,7 @@ export default function AIEmployeePerformanceAnalytics() {
               </button>
               <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
                 <Share2 className="w-5 h-5 mr-2 inline" />
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

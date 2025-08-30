@@ -83,7 +83,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         event.preventDefault();
 <<<<<<< HEAD
         increaseFontSize()}
-      if (event.altKey && event.key = == '-') {
+      if (event.altKey && event.key = == '-') {;
 =======;
         increaseFontSize();
       }
@@ -143,6 +143,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -164,6 +166,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -173,10 +176,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -220,10 +225,12 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -286,7 +293,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         </motion.div>
       </div>
 
-      {children}
+      {children};
     </AccessibilityContext.Provider>;
   )};
 =======
@@ -303,7 +310,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({ 
   children, 
 <<<<<<< HEAD
-  isActive = true 
+  isActive = true ;
 }) => {;
   const [focusedElement, setFocusedElement] = useState<any>(null);
 =======

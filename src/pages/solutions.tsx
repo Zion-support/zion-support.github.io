@@ -25,7 +25,7 @@ const Solutions: React.FC = (): JSX.Element => {;
     { id: 'healthcare', name: 'Healthcare', icon: Shield },
     { id: 'finance', name: 'Financial Services', icon: Lock },
     { id: 'manufacturing', name: 'Manufacturing', icon: Building },
-    { id: 'retail', name: 'Retail & E-commerce', icon: Users },
+    { id: 'retail', name: 'Retail & E-commerce', icon: Users },;
     { id: 'technology', name: 'Technology', icon: Brain };
   ];
 
@@ -154,7 +154,7 @@ const Solutions: React.FC = (): JSX.Element => {;
       ],
       icon: Database,
       demo: true,
-      trial: false
+      trial: false;
     };
   ];
 
@@ -177,10 +177,12 @@ const Solutions: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
             >
@@ -230,14 +232,17 @@ const Solutions: React.FC = (): JSX.Element => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
                 >
@@ -309,10 +314,12 @@ const Solutions: React.FC = (): JSX.Element => {;
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -342,7 +349,7 @@ const Solutions: React.FC = (): JSX.Element => {;
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

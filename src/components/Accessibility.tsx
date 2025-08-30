@@ -102,8 +102,9 @@ export function Accessibility() {
 <<<<<<< HEAD
   const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
     const newSettings = {
-  ...settings,
+  ...settings,;
   [key]: value ;
+
 };
 =======
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
@@ -113,7 +114,9 @@ export function Accessibility() {
   ;
   ;
   ;
+  ;
   [key]: value ;
+
 
 
 
@@ -147,8 +150,10 @@ export function Accessibility() {
   ;
   ;
   ;
+  ;
   theme: 'auto';
     ;
+
 
 
 
@@ -184,10 +189,12 @@ export function Accessibility() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -202,10 +209,12 @@ export function Accessibility() {
 
 
 
+
 }}
             transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
 
 
 
@@ -277,6 +286,7 @@ export function Accessibility() {
 
 
 
+
 }
                     className="sr-only"
                   />
@@ -303,6 +313,7 @@ export function Accessibility() {
                     onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
+
 
 
 
@@ -339,6 +350,7 @@ export function Accessibility() {
 
 
 
+
 }
                       className={`p-2 rounded-md text-xs font-medium transition-colors ${
                         settings.theme === theme
@@ -367,6 +379,7 @@ export function Accessibility() {
                     onChange = {
   (e) => updateSetting('soundEnabled',
   e.target.checked)
+
 
 
 
@@ -412,7 +425,7 @@ export function Accessibility() {
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
               >
-                Reset to Defaults
+                Reset to Defaults;
               </button>;
             </div>;
           </motion.div>;

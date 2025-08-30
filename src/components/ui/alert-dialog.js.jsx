@@ -11,6 +11,7 @@ const AlertDialog({ children, open, onOpenChange }) {
     return (<AlertDialogContext.Provider value = {
   { isOpen,
   setIsOpen 
+
 }}>
       <div className="relative">
         {children}

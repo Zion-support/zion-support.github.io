@@ -82,7 +82,7 @@ const MOCK_SUPPORT_REQUESTS = [
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
-    issue: "Cannot upload portfolio images",
+    issue: "Cannot upload portfolio images",;
     status: "resolved",;
     priority: "medium",;
     createdAt: "2023-12-10T15:10:00Z",;
@@ -340,7 +340,7 @@ export default function SupportRequests() {
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
-                These support requests have been waiting for an agent response for over 24 hours.
+                These support requests have been waiting for an agent response for over 24 hours.;
               </p>;
             </div>;
           </TabsContent>;

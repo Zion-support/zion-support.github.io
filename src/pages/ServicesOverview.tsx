@@ -189,7 +189,7 @@ export default function ServicesOverview(...args[]):  {
           link: '/services/finops-advisor',
           popular: false
         }
-      ]
+      ];
     };
   ];
 
@@ -220,7 +220,7 @@ export default function ServicesOverview(...args[]):  {
       description: 'Enterprise blockchain implementation and consulting',
       price: 'From $20,000',
       link: '/services/blockchain-enterprise-solutions',
-      icon: Lock
+      icon: Lock;
     };
   ];
 
@@ -239,10 +239,12 @@ export default function ServicesOverview(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
@@ -285,7 +287,7 @@ export default function ServicesOverview(...args[]):  {
   EyeOff,
   AlertTriangle,
   CheckCircle2,
-  XCircle,
+  XCircle,;
   Info as InfoIcon;
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
@@ -342,7 +344,7 @@ const serviceCategories = [
     count: 0
   },
   {
-    id: 'Emerging Tech',
+    id: 'Emerging Tech',;
     name: 'Emerging Technologies',;
     icon: Sparkles,;
     color: 'from-yellow-600 to-orange-600',;
@@ -376,10 +378,12 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -445,7 +449,7 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
           {/* CTA Button */}
           <a
             href={service.href}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center"
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold text-center block hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg flex items-center justify-center";
           >;
             {service.ctaLabel};
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -466,10 +470,12 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
 
 
 
+
 }}
       animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -499,10 +505,12 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
@@ -527,14 +535,17 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: serviceIndex * 0.1 
+
 }}
                   className={`bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border ${
                     service.popular ? 'border-blue-500 shadow-lg shadow-blue-500/20' : 'border-slate-600'
@@ -579,10 +590,12 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -602,14 +615,17 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center hover:border-blue-500 transition-all duration-300"
               >
@@ -638,10 +654,12 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
@@ -683,14 +701,17 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
               >
@@ -712,16 +733,18 @@ const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | '
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-=======
+=======;
             {service.ctaLabel};
             <ArrowRight className="w-4 h-4 ml-2" />;
           </a>;
@@ -781,7 +804,7 @@ const ServicesSidebar = ({ ;
               {categoriesWithCounts.reduce((sum, cat) => sum + cat.count, 0)}
             </span>
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between">;
             <span>Categories</span>;
             <span className="font-semibold text-gray-900">{categoriesWithCounts.length}</span>;
           </div>;
@@ -843,10 +866,12 @@ export default function ServicesOverview() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -949,6 +974,7 @@ export default function ServicesOverview() {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -958,10 +984,12 @@ export default function ServicesOverview() {
 
 
 
+
 }}
                     exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -1105,7 +1133,7 @@ export default function ServicesOverview() {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

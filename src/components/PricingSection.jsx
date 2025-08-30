@@ -123,6 +123,7 @@ export function PricingSection() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -151,9 +152,11 @@ export function PricingSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -190,6 +193,7 @@ export function PricingSection() {
           {plans.map((plan, index) => (<motion.div key={plan.name} variants={itemVariants} whileHover={{ y: -8 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -259,6 +263,7 @@ export function PricingSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -267,9 +272,11 @@ export function PricingSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -288,6 +295,7 @@ export function PricingSection() {
           {addons.map((addon, index) => (<motion.div key={addon.name} variants={itemVariants} whileHover={{ y: -4 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -334,6 +342,7 @@ export function PricingSection() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -342,9 +351,11 @@ export function PricingSection() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 

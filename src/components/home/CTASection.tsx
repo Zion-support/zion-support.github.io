@@ -18,7 +18,7 @@ const CTASection: React.FC = (): JSX.Element => {
     {
       icon: Calendar,
       title: "Flexible Plans",
-      description: "Scale up or down as your business grows"
+      description: "Scale up or down as your business grows";
     },;
     {;
       icon: Star,;
@@ -47,10 +47,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -77,6 +79,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -86,10 +89,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -111,6 +116,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -120,10 +126,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -148,6 +156,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -157,10 +166,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -181,6 +192,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -190,10 +202,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -223,6 +237,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -232,10 +247,12 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.8 
+
 
 
 
@@ -274,6 +291,7 @@ const CTASection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           viewport={{ once: true }}
         >
@@ -286,7 +304,7 @@ const CTASection: React.FC = (): JSX.Element => {
             <div className="text-zion-cyan font-bold text-lg">Government</div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

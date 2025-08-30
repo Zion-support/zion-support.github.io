@@ -148,7 +148,7 @@ export function FeatureCTAs(...args[]):  {
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
     {
-      title: "Micro SAAS Hub",
+      title: "Micro SAAS Hub",;
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",;
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
       link: "/micro-saas",;
@@ -231,7 +231,7 @@ export function FeatureCTAs(...args[]):  {
         </div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </div>;
           </div>;

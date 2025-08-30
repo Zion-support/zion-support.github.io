@@ -130,7 +130,7 @@ export class APIDocGeneratorService {
         coverage: 0,
         languages[],
         frameworks[]
-      }
+      };
 =======;
         totalEndpoints: 0,;
         coverage: 0,;
@@ -150,13 +150,13 @@ export class APIDocGeneratorService {
       // Generate examples if requested
       if (config.includeExamples) {
         documentation.examples = await this.generateExamples(documentation.endpoints)}
-      // Calculate coverage
+      // Calculate coverage;
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints)} catch (error) {;
       console.error('Error generating documentation:', error);
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length}
-    return documentation}
+    return documentation};
   private async analyzeSourceCode(sourcePath: string): Promise<{;
     endpoints: APIEndpoint[];
     schemas: APISchema[];
@@ -179,7 +179,7 @@ export class APIDocGeneratorService {
         endpoints.push(...this.analyzeJavaScriptFile(file))} else if (extension = == 'py') {;
         languages.push('python');
         frameworks.push('django', 'flask', 'fastapi');
-        endpoints.push(...this.analyzePythonFile(file))} else if (extension = == 'java') {
+        endpoints.push(...this.analyzePythonFile(file))} else if (extension = == 'java') {;
 =======;
         endpoints.push(...this.analyzeJavaScriptFile(file));
       } else if (extension = == 'py') {;

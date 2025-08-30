@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityTraining() {
   const features = [
     'AI-powered security training optimization',
-    'Intelligent training strategy management and execution',
+    'Intelligent training strategy management and execution',;
     'Automated security skill assessment and certification',;
     'Predictive analytics for training needs',;
     'Smart training framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityTraining() {
     { 
       name: 'Business', 
       price: '$599/mo', 
-      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] 
+      details: ['Up to 100 users', 'Advanced AI features', 'Enhanced training', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityTraining() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security training optimization',;
     'Training strategy management and execution',;
     'Security skill assessment and certification',;
@@ -39,7 +39,7 @@ export default function AISecurityTraining() {
     'Training scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security training performance by 50-80%',;
     'Reduce training completion time by 40-70%',;
     'Cut security training costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityTraining() {
     'Scale security training operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityTraining() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

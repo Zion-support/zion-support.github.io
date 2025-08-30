@@ -40,7 +40,7 @@ export default function AILegalResearchPlatform(...args[]):  {
     "Automated legal citation checking and validation",
     "Real-time legal precedent tracking",
     "Advanced search with natural language queries",
-    "Legal document generation and templates",
+    "Legal document generation and templates",;
     "Compliance monitoring and risk assessment",;
     "Multi-jurisdiction legal research",;
     "Legal trend analysis and predictions",;
@@ -59,7 +59,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 
   const useCases = [
     "Law firms and attorneys",
-    "Corporate legal departments",
+    "Corporate legal departments",;
     "Legal research institutions",;
     "Government agencies",;
     "Compliance officers",;
@@ -112,7 +112,7 @@ export default function AILegalResearchPlatform(...args[]):  {
         "White-label solutions",
         "Advanced analytics and reporting",
         "Custom integrations",
-        "Dedicated account manager",
+        "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited users";
       ],;
@@ -140,10 +140,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -198,10 +200,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +235,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -240,10 +245,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -274,10 +281,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -307,6 +316,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -316,10 +326,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -350,10 +362,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -383,6 +397,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -392,10 +407,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -426,10 +443,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -459,6 +478,7 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -468,10 +488,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -539,10 +561,12 @@ export default function AILegalResearchPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -595,7 +619,7 @@ export default function AILegalResearchPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

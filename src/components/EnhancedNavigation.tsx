@@ -151,6 +151,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }
                     className="flex items-center space-x-1 text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
                     aria-expanded={activeDropdown === item.label}
@@ -183,6 +184,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
@@ -192,10 +194,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
                         exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -308,6 +312,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -317,10 +322,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -357,6 +364,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
                           animate = {
   { opacity: 1,
@@ -366,10 +374,12 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
 }}
                           exit = {
   { opacity: 0,
   y: -10 
+
 
 
 
@@ -415,7 +425,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 <div className="flex items-center space-x-4 text-slate-400">
                   <MapPin className="w-4 h-4" />
                   <span>123 Tech Street, Digital City</span>
-                </div>
+                </div>;
               </div>;
             </div>;
           </motion.div>;

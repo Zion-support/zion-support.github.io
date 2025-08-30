@@ -70,7 +70,7 @@ const featuredListings = [
   {
     id: 4,
     title: "IoT Edge Computing Platform",
-    description: "Real-time IoT data processing and analytics at the edge for instant insights.",
+    description: "Real-time IoT data processing and analytics at the edge for instant insights.",;
     category: "IoT",;
     price: "$449/month",;
     image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",;
@@ -112,7 +112,7 @@ const featuredServices = [
     price: 'From $3,500',
     image: '🔒',
     link: '/services/cybersecurity',
-    features['Security Audits', 'Threat Detection', 'Incident Response']
+    features['Security Audits', 'Threat Detection', 'Incident Response'];
   };
 ];
 
@@ -131,14 +131,14 @@ export function FeaturedListingsSection(...args[]):  {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-      }
+      };
     };
   };
 
   const renderStars = (rating: number)  => {
     return Array.from({ length: 5 }, (_, i)  => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
+        ★;
       </span>;
     ))};
 
@@ -155,10 +155,12 @@ export function FeaturedListingsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -200,10 +202,12 @@ export function FeaturedListingsSection(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -214,6 +218,7 @@ export function FeaturedListingsSection(...args[]):  {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -272,10 +277,12 @@ export function FeaturedListingsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +293,7 @@ export function FeaturedListingsSection(...args[]):  {
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -304,7 +312,7 @@ export function FeaturedListingsSection(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <span className="text-xl">→</span>;
           </Link>;

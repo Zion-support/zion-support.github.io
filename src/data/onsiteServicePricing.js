@@ -197,9 +197,6 @@ export const additionalServices = [
   }
 ];
 
-export const getServicesByCategory = (category) => {
-  return onsiteServicePricing.filter(service => service.category === category)};
-
 export const getPopularServices = () => {
   return onsiteServicePricing.filter(service => service.popular)};
 

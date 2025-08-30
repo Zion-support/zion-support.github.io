@@ -61,13 +61,13 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
     { id: 'AI & Project Management', name: 'AI & PM', icon: Workflow, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Project Management').length },
     { id: 'AI & Human Resources', name: 'AI & HR', icon: Users, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Human Resources').length },
     { id: 'AI & Cybersecurity', name: 'AI & Security', icon: Shield, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Cybersecurity').length },
-    { id: 'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Data Management').length },
+    { id: 'AI & Data Management', name: 'AI & Data', icon: Database, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Data Management').length },;
     { id: 'AI & Business Process', name: 'AI & Process', icon: Cpu, count: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category === 'AI & Business Process').length },;
   ];
 
   const filteredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025
     .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -88,7 +88,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
       }
     });
 
-  const toggleServiceSelection = (serviceId: string) => {
+  const toggleServiceSelection = (serviceId: string) => {;
     if (selectedServices.includes(serviceId)) {;
       setSelectedServices(selectedServices.filter(id => id !== serviceId));
     } else {
@@ -98,7 +98,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
     }
   };
 
-  const toggleFeatureExpansion = (feature: string) => {
+  const toggleFeatureExpansion = (feature: string) => {;
     if (expandedFeatures.includes(feature)) {;
       setExpandedFeatures(expandedFeatures.filter(f => f !== feature));
     } else {
@@ -107,7 +107,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
   };
 
   const getInnovationColor = (level: string) => {
-    switch (level) {
+    switch (level) {;
       case 'Revolutionary':;
         return 'text-purple-600 bg-purple-100 border-purple-200';
       case 'Advanced':
@@ -134,13 +134,13 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
     return 'text-purple-600 bg-purple-100 border-purple-200';
   };
 
-  const selectedServicesData = selectedServices.map(id => 
+  const selectedServicesData = selectedServices.map(id => ;
     INNOVATIVE_MICRO_SAAS_SERVICES_2025.find(service => service.id === id);
   ).filter(Boolean);
 
   const allFeatures = Array.from(new Set(
     selectedServicesData.flatMap(service => 
-      service ? [...service.features, ...service.benefits] : []
+      service ? [...service.features, ...service.benefits] : [];
     );
   ));
 
@@ -154,10 +154,12 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -341,10 +343,12 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition={{ duration: 0.3 }}
                 className={`p-4 border rounded-lg cursor-pointer transition-all duration-200 ${
@@ -574,14 +578,17 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-white rounded-xl shadow-lg border border-gray-200"
                 >
@@ -687,10 +694,12 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -787,7 +796,7 @@ const ServicesComparisonMatrix2025: React.FC = () => {;
               </div>
             </div>
           </div>
-          
+          ;
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">;
             <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
           </div>

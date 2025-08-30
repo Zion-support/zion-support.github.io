@@ -38,6 +38,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 },
         visible: {
             opacity: 1,
@@ -66,6 +67,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }
         }
     };
@@ -81,12 +83,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 1.2,
   1]
         
+
 }} transition = {
   {
             duration: 20,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
         <motion.div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
   {
@@ -95,12 +99,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 0.8,
   1]
         
+
 }} transition = {
   {
             duration: 25,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
         <motion.div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
   {
@@ -109,6 +115,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 1.1,
   1]
         
+
 }} transition = {
   {
 =======
@@ -124,12 +131,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} transition = {
   {
             duration: 20,
             repeat: Infinity,
   ease: "linear"
         
+
 
 
 
@@ -148,12 +157,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} transition = {
   {
             duration: 25,
             repeat: Infinity,
   ease: "linear"
         
+
 
 
 
@@ -172,6 +183,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -179,6 +191,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             repeat: Infinity,
   ease: "linear"
         
+
 
 
 
@@ -202,6 +215,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }}/>
       </div>
 
@@ -218,6 +232,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} className="mr-2">
               🚀
             </motion.span>
@@ -229,6 +244,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 
 
 
@@ -288,6 +304,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             rotate[0, 180,
   360]
         
+
 }} transition = {
   {
 =======
@@ -297,6 +314,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             rotate: [0, 180,
   360]
         
+
 
 
 
@@ -316,6 +334,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             x[0, 20,
   0]
         
+
 }} transition={{
 =======
 
@@ -334,6 +353,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -341,6 +361,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             repeat: Infinity,
   ease: "easeInOut"
         
+
 
 
 
@@ -360,6 +381,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 
 
+
 }} transition = {
   {
             type: "spring",
@@ -367,6 +389,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   <<<<<<< HEAD
             damping: 30
         
+
 }}/>
     </section>)};
 =======

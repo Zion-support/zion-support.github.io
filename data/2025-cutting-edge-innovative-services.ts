@@ -508,11 +508,11 @@ export const getServicesByCategory2025 = (category: string) => {;
 <<<<<<< HEAD
   return cuttingEdgeInnovativeServices2025.filter((s) => s.category === category)};
 export const getPopularServices2025 = () =>
-  cuttingEdgeInnovativeServices2025
+  cuttingEdgeInnovativeServices2025;
     .filter((s) => !!s.popular);
     .sort((a, b) => (b.rating || 0) - (a.rating || 0));
 export const getServicesByTechnology = (technology: string) => {
-  return cuttingEdgeInnovativeServices2025.filter((s) => 
+  return cuttingEdgeInnovativeServices2025.filter((s) => ;
     s.technology.some(t => t.toLowerCase().includes(technology.toLowerCase()));
   )};
 =======

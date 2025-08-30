@@ -71,7 +71,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
     { id: 'neuromorphic-ai', name: 'Neuromorphic AI', icon: BrainIcon, color: 'from-zion-pink to-zion-purple' },
     { id: 'synthetic-biology', name: 'Synthetic Biology', icon: Dna, color: 'from-zion-green to-zion-blue' },
     { id: 'space-technology', name: 'Space Technology', icon: Space, color: 'from-zion-blue to-zion-purple' },
-    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },
+    { id: 'advanced-materials', name: 'Advanced Materials', icon: Layers, color: 'from-zion-orange to-zion-red' },;
     { id: 'brain-computer-interface', name: 'Brain-Computer Interface', icon: Monitor, color: 'from-zion-purple to-zion-pink' },;
     { id: 'digital-twin', name: 'Digital Twin', icon: Globe2, color: 'from-zion-cyan to-zion-green' },;
     { id: 'extended-reality', name: 'Extended Reality', icon: Smartphone, color: 'from-zion-orange to-zion-purple' },;
@@ -132,7 +132,9 @@ export default function UltimateInnovativeServices2026(...args[]):  {
   ;
   ;
   ;
+  ;
   'Advanced': 1 ;
+
 
 
 
@@ -179,10 +181,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -325,10 +329,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -343,10 +349,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -444,6 +452,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
                           animate = {
   { opacity: 1,
@@ -453,10 +462,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
                           exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -526,7 +537,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4">🔍</div>;
               <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
               <p className="text-zion-slate-300 mb-6">;
                 Try adjusting your search criteria or browse all our innovative services.;
@@ -537,7 +548,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
                   setSelectedCategory('all');
 <<<<<<< HEAD
                   setSelectedPriceRange('all')}}
-                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors"
+                className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors";
 =======;
                   setSelectedPriceRange('all');
                 }}
@@ -563,10 +574,12 @@ export default function UltimateInnovativeServices2026(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -608,7 +621,7 @@ export default function UltimateInnovativeServices2026(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

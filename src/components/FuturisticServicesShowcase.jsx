@@ -11,6 +11,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 
 
+
 }} animate = {
   isVisible ? { opacity: 1, y: 0,
   scale: 1 
@@ -19,9 +20,11 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 
 
+
 } : {}} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -44,12 +47,14 @@ const ServiceCard = ({ service, index, isVisible }) => {
                 x[0, Math.random() * 100 - 50],
                 y[0, Math.random() * 100 - 50],
                 opacity[0.6, 0.2, 0.6],
-   
+  
+
 }} transition = {
   {
 =======
             {[...Array(8)].map((_,
   i) => (<motion.div key={i
+
 } className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
   {
                 x: [0, Math.random() * 100 - 50],
@@ -209,9 +214,11 @@ export const FuturisticServicesShowcase = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -264,6 +271,7 @@ export const FuturisticServicesShowcase = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -272,9 +280,11 @@ export const FuturisticServicesShowcase = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 

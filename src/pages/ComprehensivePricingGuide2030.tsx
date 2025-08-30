@@ -46,7 +46,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
   const services = INNOVATIVE_SERVICES_2025;
 
   const cats = services.reduce((acc, service) => {
-      if (!acc.includes(service.category)) {
+      if (!acc.includes(service.category)) {;
         acc.push(service.category)};
       return acc}, [] as string[]);
     return ['all', ...cats]}, [services]);
@@ -59,7 +59,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
       filtered = filtered.filter(service => service.category === selectedCategory)}
 
     if (selectedPricingModel !== 'all') {
-      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)}
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)};
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
 
@@ -70,7 +70,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
       case 'AI & Compliance':
       case 'AI & Communication':
       case 'AI & Customer Experience':
-      case 'AI & Content':
+      case 'AI & Content':;
       case 'AI & Finance':;
         return Brain;
       case 'Cloud & DevOps':
@@ -90,7 +90,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
       case 'AI & Compliance':
       case 'AI & Communication':
       case 'AI & Customer Experience':
-      case 'AI & Content':
+      case 'AI & Content':;
       case 'AI & Finance':;
         return 'from-purple-600 to-pink-600';
       case 'Cloud & DevOps':
@@ -203,7 +203,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       ],
       color: 'from-indigo-500 to-purple-600',
       popular: false,
-      bestFor: 'Large enterprises, government agencies, Fortune 500 companies'
+      bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
     };
   ];
 
@@ -234,7 +234,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
       value: '$65.0B',
       growth: '+48.2%',
       description: 'Quantum market by 2030',
-      color: 'from-indigo-500 to-purple-600'
+      color: 'from-indigo-500 to-purple-600';
     };
   ];
 
@@ -255,10 +255,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
@@ -273,14 +275,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
@@ -291,14 +296,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               className="flex flex-wrap justify-center gap-4"
             >
@@ -330,10 +338,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -395,10 +405,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       {/* Search and Filter */}
@@ -452,10 +464,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -476,14 +490,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
 =======
@@ -496,6 +513,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -505,10 +523,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -540,10 +560,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
@@ -557,14 +579,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
                   tier.popular 
@@ -622,10 +647,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
@@ -661,7 +688,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
           {/* Services Grid */}
           <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)  => {
+            {filteredServices.map((service, index)  => {;
 =======;
       {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
@@ -679,14 +706,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
 =======
@@ -694,6 +724,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                   initial = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -708,10 +739,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -802,11 +835,11 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
-              <button
+              <button;
                 onClick={() => {;
                   setSelectedCategory('all');
                   setSelectedPricingModel('all')}}
-                className = "text-cyan-400 hover:text-cyan-300 transition-colors"
+                className = "text-cyan-400 hover:text-cyan-300 transition-colors";
 =======;
                       <Mail className="w-4 h-4" />;
                       Get Quote;
@@ -844,10 +877,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
@@ -858,14 +893,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               className="text-xl text-slate-300 mb-8"
             >
@@ -877,14 +915,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
             >
@@ -905,10 +946,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -970,6 +1013,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -979,10 +1023,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -1027,10 +1073,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
@@ -1048,10 +1096,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1069,14 +1119,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
               className="text-xl text-slate-300 mb-8"
             >
@@ -1088,14 +1141,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
@@ -1133,14 +1189,17 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }}
               className="flex flex-wrap justify-center gap-4"
             >
@@ -1186,7 +1245,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======
@@ -1210,7 +1269,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 <div className="text-gray-300">AI & Machine Learning</div>
                 <div className="text-gray-300">Cybersecurity Solutions</div>
                 <div className="text-gray-300">Cloud & DevOps</div>
-                <div className="text-gray-300">IT Infrastructure</div>
+                <div className="text-gray-300">IT Infrastructure</div>;
               </div>;
             </div>;
           </div>;

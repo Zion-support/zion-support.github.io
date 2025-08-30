@@ -91,7 +91,7 @@ const IoTEdgeComputing = () => {
     {
       icon: Shield,
       title: 'Edge Security',
-      description: 'Advanced security for edge devices and data'
+      description: 'Advanced security for edge devices and data';
     },;
     {;
       icon: Cloud,;
@@ -100,7 +100,7 @@ const IoTEdgeComputing = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce latency by 90% with edge processing',;
     'Lower bandwidth costs by 60%',;
     'Improve data privacy and security',;
@@ -123,7 +123,7 @@ const IoTEdgeComputing = () => {
     {
       icon: Database,
       title: 'Edge Data Management',
-      description: 'Local data storage and management solutions'
+      description: 'Local data storage and management solutions';
     },;
     {;
       icon: Monitor,;
@@ -142,7 +142,7 @@ const IoTEdgeComputing = () => {
       description: 'Urban infrastructure monitoring and management'
     },
     {
-      industry: 'Agriculture',
+      industry: 'Agriculture',;
       description: 'Precision farming and crop monitoring';
     },;
     {;
@@ -166,10 +166,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -220,10 +222,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -254,6 +258,7 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -263,10 +268,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -298,10 +305,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -332,6 +341,7 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -341,10 +351,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -380,10 +392,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -414,6 +428,7 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -423,10 +438,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -452,6 +469,7 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -461,10 +479,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -494,10 +514,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -528,6 +550,7 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -537,10 +560,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -572,10 +597,12 @@ const IoTEdgeComputing = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -597,7 +624,7 @@ const IoTEdgeComputing = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-teal-500/30 text-teal-400 font-semibold rounded-lg hover:bg-teal-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

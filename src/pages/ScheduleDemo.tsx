@@ -35,7 +35,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     preferredTime: '',
     attendees: '1-5',
     services[],
-    message: ''
+    message: '';
 =======;
     preferredDate: '',;
     preferredTime: '',;
@@ -55,7 +55,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
   const availableServices = [
     { id: 'ai-business-intelligence', name: 'AI Business Intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
-    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },
+    { id: 'ai-healthcare', name: 'AI Healthcare Platform', icon: Shield, description: 'Medical AI & Diagnostics' },;
     { id: 'ai-content-creation', name: 'AI Content Creation', icon: MessageCircle, description: 'Content Generation & Optimization' },;
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, description: 'Quantum AI & Optimization' },;
     { id: 'iot-edge', name: 'IoT Edge Computing', icon: Cloud, description: 'IoT & Real-time Processing' },;
@@ -69,7 +69,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(serviceId)
-        ? prev.services.filter(id  => id !== serviceId)
+        ? prev.services.filter(id  => id !== serviceId);
         [...prev.services, serviceId];
     }))};
 
@@ -111,10 +111,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -170,7 +172,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
           </div>
         </motion.div>
       </div>
-    )}
+    )};
 =======;
               Contact Us;
             </a>;
@@ -201,10 +203,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -255,6 +259,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -264,10 +269,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -297,6 +304,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your first name"
@@ -313,6 +321,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   lastName: e.target.value 
+
 
 
 
@@ -342,6 +351,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter your email"
@@ -359,12 +369,14 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   comp: e.target.value 
+
 }))}
 =======
                         value={formData.company}
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   company: e.target.value 
+
 
 
 
@@ -388,6 +400,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       onChange = {
   (e) => setFormData(prev => ({ ...prev,
   phone: e.target.value 
+
 
 
 
@@ -417,6 +430,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         min={new Date().toISOString().split('T')[0]}
@@ -432,6 +446,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
   preferredTime: e.target.value 
+
 
 
 
@@ -457,6 +472,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       onChange = {
   (e) => setFormData(prev => ({ ...prev,
   attendees: e.target.value 
+
 
 
 
@@ -509,6 +525,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }))}
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -549,6 +566,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -558,10 +576,12 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -643,7 +663,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

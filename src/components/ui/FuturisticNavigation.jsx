@@ -62,9 +62,11 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -96,9 +98,11 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -119,6 +123,7 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
@@ -127,9 +132,11 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} exit = {
   { opacity: 0, y: 10,
   scale: 0.95 
+
 
 
 
@@ -155,9 +162,11 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -188,6 +197,7 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -196,9 +206,11 @@ export default function FuturisticNavigation() {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 

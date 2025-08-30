@@ -158,8 +158,9 @@ export default function SystemStatus() {
   const systemStatus = {
   overall: 'operational',
     uptime: '99.99%',
-  lastIncident: '2025-01-15T10:30:00Z'
+  lastIncident: '2025-01-15T10:30:00Z';
   ;
+
 };
 
   const services = [
@@ -225,7 +226,7 @@ export default function SystemStatus() {
       uptime: '99.95%',
       responseTime: '85ms',
       lastIncident: null,
-      icon: <BarChart3 className="w-6 h-6" />
+      icon: <BarChart3 className="w-6 h-6" />;
     };
   ];
 
@@ -276,12 +277,12 @@ export default function SystemStatus() {
           time: '2025-01-10T16:45:00Z',
           message: 'Issue resolved, response times normalized'
         }
-      ]
+      ];
     };
   ];
 
   const getStatusColor = (status: string)  => {
-    switch (status) {
+    switch (status) {;
       case 'operational':;
         return 'text-green-500';
       case 'degraded':
@@ -295,7 +296,7 @@ export default function SystemStatus() {
   };
 
   const getStatusIcon = (status: string)  => {
-    switch (status) {
+    switch (status) {;
       case 'operational':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'degraded':
@@ -309,7 +310,7 @@ export default function SystemStatus() {
   };
 
   const getSeverityColor = (severity: string)  => {
-    switch (severity) {
+    switch (severity) {;
       case 'critical':;
         return 'bg-red-500';
       case 'major':
@@ -327,7 +328,7 @@ export default function SystemStatus() {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
-      hour: '2-digit',
+      hour: '2-digit',;
       minute: '2-digit';
     })};
 
@@ -378,10 +379,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -404,6 +407,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -413,10 +417,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -437,6 +443,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -446,10 +453,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -474,6 +483,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -483,10 +493,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -557,6 +569,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -566,10 +579,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -589,6 +604,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -598,10 +614,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
 
 
 
@@ -660,6 +678,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -669,10 +688,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1.4 
+
 
 
 
@@ -693,6 +714,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -702,10 +724,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: 1.6 + index * 0.1 
+
 
 
 
@@ -779,6 +803,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -788,10 +813,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.8 
+
 
 
 
@@ -845,6 +872,7 @@ export default function SystemStatus() {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -854,10 +882,12 @@ export default function SystemStatus() {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 2.0 
+
 
 
 
@@ -892,7 +922,7 @@ export default function SystemStatus() {
         </motion.div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

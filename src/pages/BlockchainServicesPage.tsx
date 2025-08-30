@@ -144,7 +144,7 @@ const BlockchainServicesPage = () => {;
         "Asset interoperability",
         "Multi-chain wallets",
         "Atomic swaps",
-        "Network monitoring"
+        "Network monitoring";
       ],;
       icon: Globe,;
       category: "Interoperability",;
@@ -160,7 +160,7 @@ const BlockchainServicesPage = () => {;
     { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
     { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
     { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
-    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },;
     { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length };
   ];
 
@@ -269,6 +269,7 @@ const BlockchainServicesPage = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -278,10 +279,12 @@ const BlockchainServicesPage = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -416,6 +419,7 @@ const BlockchainServicesPage = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -425,10 +429,12 @@ const BlockchainServicesPage = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -470,7 +476,7 @@ const BlockchainServicesPage = () => {;
             </button>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

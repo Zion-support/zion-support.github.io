@@ -886,6 +886,7 @@ export const pricingSubcategories2027 = {
   ;
   ;
   ;
+  ;
   'Simulation'];
 ;
 
@@ -893,5 +894,6 @@ export const pricingSubcategories2027 = {
 
 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 
 };

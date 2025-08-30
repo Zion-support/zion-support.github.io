@@ -44,7 +44,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
         this.maxLife = Math.random() * 100 + 50;
         this.life = this.maxLife;
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`}
-
+;
       update() {;
         this.x += this.vx;
         this.y += this.vy;
@@ -92,7 +92,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       update() {
         this.offset += 0.5}
 
-      draw() {
+      draw() {;
         if (ctx) {;
           ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
           ctx.lineWidth = 1;
@@ -130,7 +130,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       update() {
         this.offset += this.speed}
 
-      draw() {
+      draw() {;
         if (ctx) {;
           ctx.strokeStyle = 'rgba(150, 100, 255, 0.3)';
           ctx.lineWidth = 2;
@@ -141,7 +141,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 <<<<<<< HEAD
             if (x = == 0) {
               ctx.moveTo(x, y)} else {
-              ctx.lineTo(x, y)}
+              ctx.lineTo(x, y)};
 =======;
             if (x = == 0) {;
               ctx.moveTo(x, y);
@@ -231,7 +231,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 <<<<<<< HEAD
         if (i = == 0) {
           ctx.moveTo(x, y)} else {
-          ctx.lineTo(x, y)}
+          ctx.lineTo(x, y)};
 =======;
         if (i = == 0) {;
           ctx.moveTo(x, y);
@@ -254,7 +254,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 <<<<<<< HEAD
         if (i = == 0) {
           ctx.moveTo(x, y)} else {
-          ctx.lineTo(x, y)}
+          ctx.lineTo(x, y)};
 =======;
         if (i = == 0) {;
           ctx.moveTo(x, y);
@@ -294,6 +294,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
 
 
 
+
 }}
       />
       
@@ -307,7 +308,7 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
       <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
-  )}
+  )};
 =======;
       {/* Animated orbs */};
       <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />;

@@ -11,6 +11,7 @@ class EnhancedErrorBoundary extends Component {
             errorId: null,
   showStackTrace: false
         
+
 }}
     static getDerivedStateFromError(error) {
         return {
@@ -40,6 +41,7 @@ class EnhancedErrorBoundary extends Component {
                 message: error.message,
   stack: error.stack
             
+
 },
             errorInfo: {
                 componentStack: errorInfo.componentStack
@@ -87,9 +89,11 @@ class EnhancedErrorBoundary extends Component {
           <motion.div initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-white">

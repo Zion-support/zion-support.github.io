@@ -12,6 +12,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 
 
 
+
 };
     const textSizes = {
   sm: 'text-sm',
@@ -23,11 +24,13 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 
 
 
+
 };
     return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
 
 
 
@@ -45,9 +48,11 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -61,6 +66,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 
 
 
+
 }} className={`${textSizes[size]} text-zion-slate-light text-center`}>
         {message}
       </motion.p>
@@ -69,6 +75,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { delay: 0.4,
   duration: 0.3 
+
 }}>
         {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {
   {
@@ -76,11 +83,13 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
                 opacity[0.5, 1,
   0.5]
             
+
 }} transition={{
 =======
       <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { delay: 0.4,
   duration: 0.3 
+
 
 
 
@@ -98,6 +107,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
 
 
 
+
 }} transition = {
   {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -105,6 +115,7 @@ export function LoadingFallback({ message = "Loading...", size = 'md', className
                 repeat: Infinity,
   delay: i * 0.2
             
+
 
 
 
@@ -124,6 +135,7 @@ export function InlineLoading({ message = "Loading..." }) {
       <motion.div animate={{ rotate: 360 }} transition = {
   { duration: 1, repeat: Infinity,
   ease: "linear" 
+
 
 
 

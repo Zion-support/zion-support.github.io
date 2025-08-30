@@ -24,6 +24,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
 
 
+
 }}
       animate = {
   { opacity: 1,
@@ -33,10 +34,12 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
 
 
+
 }}
       transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -59,11 +62,13 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
 
 
+
 }
           }}
           initial = {
   { opacity: 0,
   y: 30 
+
 
 
 
@@ -78,10 +83,12 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -111,7 +118,7 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
           {/* Hover indicator */}
           <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
         </motion.div>
-      ))}
+      ))};
     </motion.div>;
   )};
 =======

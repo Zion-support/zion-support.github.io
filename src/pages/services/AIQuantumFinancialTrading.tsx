@@ -56,7 +56,7 @@ const AIQuantumFinancialTrading = () => {
       description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
       icon: Lock,
       color: "from-yellow-500 to-orange-500"
-    },
+    },;
     {;
       title: "Portfolio Analytics",;
       description: "Advanced portfolio performance tracking with quantum-enhanced optimization",;
@@ -115,7 +115,7 @@ const AIQuantumFinancialTrading = () => {
         "Custom quantum computing integration",
         "Dedicated support team",
         "Custom compliance modules",
-        "Multi-tenant architecture",
+        "Multi-tenant architecture",;
         "Advanced analytics dashboard",;
         "SLA guarantees",;
         "On-premise deployment";
@@ -146,7 +146,7 @@ const AIQuantumFinancialTrading = () => {
       industry: "Retail Traders",
       description: "Access institutional-grade trading tools and AI insights previously available only to large firms",
       benefits["Professional-grade tools", "AI-powered insights", "Risk management"]
-    }
+    };
 =======;
     {;
       title: "Cost Savings",;
@@ -163,7 +163,7 @@ const AIQuantumFinancialTrading = () => {
     "Blockchain Security",
     "Real-time Analytics",
     "Cloud Infrastructure",
-    "API Integration",
+    "API Integration",;
     "Predictive Modeling";
   ];
 
@@ -188,10 +188,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
             initial = {
@@ -202,10 +204,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -246,10 +250,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
             initial = {
@@ -260,10 +266,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -292,10 +300,12 @@ const AIQuantumFinancialTrading = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
                 initial = {
@@ -306,6 +316,7 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -315,10 +326,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -330,6 +343,7 @@ const AIQuantumFinancialTrading = () => {
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -352,10 +366,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
             initial = {
@@ -366,10 +382,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -398,15 +416,18 @@ const AIQuantumFinancialTrading = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className = {
   `relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
@@ -422,6 +443,7 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -431,10 +453,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -465,10 +489,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -499,6 +525,7 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -508,10 +535,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -575,10 +604,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -599,15 +630,18 @@ const AIQuantumFinancialTrading = () => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
@@ -637,10 +671,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -661,15 +697,18 @@ const AIQuantumFinancialTrading = () => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -691,10 +730,12 @@ const AIQuantumFinancialTrading = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
             initial = {
@@ -705,10 +746,12 @@ const AIQuantumFinancialTrading = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -768,13 +811,13 @@ const AIQuantumFinancialTrading = () => {
             364 E Main St STE 1008 Middletown DE 19709
           </p>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======
             <div className = "flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
-              <p className="text-gray-300">Address</p>
+              <p className="text-gray-300">Address</p>;
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;

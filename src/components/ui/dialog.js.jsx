@@ -11,6 +11,7 @@ const Dialog({ children, open, onOpenChange }) {
     return (<DialogContext.Provider value = {
   { isOpen,
   setIsOpen 
+
 }}>
       <div className="relative">
         {children}

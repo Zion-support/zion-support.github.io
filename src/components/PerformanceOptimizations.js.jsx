@@ -47,10 +47,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 400 }) => {
     return (<div style = {
   { height: containerHeight,
   overflow: 'auto' 
+
 }} onScroll={handleScroll} className="border border-zion-slate/20 rounded-lg">
       <div style = {
   { height: items.length * itemHeight,
   position: 'relative' 
+
 }}>
         {visibleItems.map((item) => (<div key={item.id || item.index} style={item.style} className="p-3 border-b border-zion-slate/10 hover:bg-zion-slate/5 transition-colors">
             <div className="flex items-center justify-between">

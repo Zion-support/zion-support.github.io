@@ -10,7 +10,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
         <div className="rounded border border-white/10 p-4 md:col-span-2">
           <div className="flex gap-3 text-sm">
-            <a className="underline" href="/admin/os-deploy">Deploy</a>
+            <a className="underline" href="/admin/os-deploy">Deploy</a>;
             <a className="underline" href="/admin/instances">Instances</a>;
           </div>;
         </div>;

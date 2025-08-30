@@ -63,7 +63,7 @@ export default function AIAutonomousBusinessIntelligence() {
     {
       icon: BarChart3,
       title: "Multi-dimensional Analysis",
-      description: "Comprehensive analysis across multiple business dimensions including financial, operational, and market factors."
+      description: "Comprehensive analysis across multiple business dimensions including financial, operational, and market factors.";
     },;
     {;
       icon: Eye,;
@@ -96,7 +96,7 @@ export default function AIAutonomousBusinessIntelligence() {
     {
       icon: Cpu,
       title: "Advanced AI Models",
-      description: "State-of-the-art machine learning algorithms trained on industry-specific data."
+      description: "State-of-the-art machine learning algorithms trained on industry-specific data.";
     },;
     {;
       icon: Database,;
@@ -129,7 +129,7 @@ export default function AIAutonomousBusinessIntelligence() {
     {
       icon: Lightbulb,
       title: "Innovation Intelligence",
-      description: "AI-powered identification of new opportunities and innovation pathways."
+      description: "AI-powered identification of new opportunities and innovation pathways.";
     },;
     {;
       icon: Rocket,;
@@ -162,7 +162,7 @@ export default function AIAutonomousBusinessIntelligence() {
     {
       icon: GraduationCap,
       title: "Educational Institutions",
-      description: "Autonomous student performance analysis and educational program optimization."
+      description: "Autonomous student performance analysis and educational program optimization.";
     },;
     {;
       icon: Home,;
@@ -190,10 +190,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -241,10 +243,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -275,6 +279,7 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -284,10 +289,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -320,10 +327,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -354,6 +363,7 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -363,10 +373,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -399,10 +411,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -433,6 +447,7 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -442,10 +457,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -478,10 +495,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -512,6 +531,7 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -521,10 +541,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -557,10 +579,12 @@ export default function AIAutonomousBusinessIntelligence() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -590,7 +614,7 @@ export default function AIAutonomousBusinessIntelligence() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
               >
-                Schedule Consultation
+                Schedule Consultation;
               </motion.button>;
             </div>;
           </motion.div>;

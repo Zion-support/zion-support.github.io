@@ -70,7 +70,7 @@ export default function AIServices(...args[]):  {
       icon: Cloud,
       features[
         "ML pipeline automation",
-        "Model versioning and deployment",
+        "Model versioning and deployment",;
         "Scalable training infrastructure",;
         "Monitoring and alerting systems";
       ],;
@@ -79,7 +79,7 @@ export default function AIServices(...args[]):  {
     };
   ];
 
-  const aiTechnologies = [
+  const aiTechnologies = [;
     { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;
     { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;
     { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;
@@ -109,7 +109,7 @@ export default function AIServices(...args[]):  {
       industry: "Retail",
       applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
-    }
+    };
 =======;
     {;
       industry: "Retail",;
@@ -309,7 +309,7 @@ export default function AIServices(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

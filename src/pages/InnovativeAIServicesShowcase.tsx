@@ -83,7 +83,7 @@ export default function InnovativeAIServicesShowcase() {
       features: [
         'AI-powered demand forecasting and inventory optimization',
         'Real-time supply chain visibility and tracking',
-        'Automated route optimization and logistics planning',
+        'Automated route optimization and logistics planning',;
         'Supplier performance analytics and risk assessment';
       ],;
       benefits: ['20-30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],;
@@ -111,10 +111,12 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -137,6 +139,7 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -146,10 +149,12 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 
 
 
@@ -173,6 +178,7 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -182,10 +188,12 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -215,6 +223,7 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -224,10 +233,12 @@ export default function InnovativeAIServicesShowcase() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -368,7 +379,7 @@ export default function InnovativeAIServicesShowcase() {
               target="_blank" 
               rel="noreferrer" 
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
-            >
+            >;
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
             </a>;
           </div>;

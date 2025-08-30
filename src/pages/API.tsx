@@ -51,7 +51,7 @@ const API: React.FC = () => {
       path: '/api/v1/analytics',
       description: 'Get analytics data',
       auth: 'Required'
-    },
+    },;
     {;
       method: 'PUT',;
       path: '/api/v1/user/profile',;
@@ -74,7 +74,7 @@ const API: React.FC = () => {
     {
       icon: Globe,
       title: 'Global CDN',
-      description: 'Worldwide edge locations for fast access'
+      description: 'Worldwide edge locations for fast access';
     },;
     {;
       icon: Database,;
@@ -91,6 +91,7 @@ response = requests.post(url, json = {
   "text": "Your text here",
   "analysis_type": "sentiment"
 
+
 })
 
 print(response.json())`,
@@ -98,17 +99,17 @@ print(response.json())`,
   },
   {
     title: 'Cloud Resource Management',
-    language: 'JavaScript',
+    language: 'JavaScript',;
     description: 'Example of managing cloud resources through our infrastructure API.',;
     code: `const api = axios.create({
-    baseURL: 'https://api.ziontechgroup.com/v1/cloud',
+    baseURL: 'https://api.ziontechgroup.com/v1/cloud',;
     headers: {'Authorization': 'Bearer YOUR_API_KEY'};
 });
 
 const createInstance = async () => {
     const response = await api.post('/instances', {
         type: 'compute',
-        size: 'medium',
+        size: 'medium',;
         region: 'us-east-1';
     });
     return response.data};`,
@@ -128,10 +129,11 @@ def check_threat(ip_address):
   "ip": ip_address,
   "check_type": "comprehensive"
     
+
 })
     
     return response.json()`,
-    category: 'Security'
+    category: 'Security';
   };
 ];
 
@@ -139,7 +141,7 @@ export default function API(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 =======
-  const sdks = [
+  const sdks = [;
     { name: 'JavaScript/Node.js', icon: '🔷' },;
     { name: 'Python', icon: '🐍' },;
     { name: 'Java', icon: '☕' },;
@@ -168,10 +170,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -222,10 +226,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -255,6 +261,7 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -264,10 +271,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -299,10 +308,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -332,6 +343,7 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -341,10 +353,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -390,10 +404,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -423,6 +439,7 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -432,10 +449,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -474,10 +493,12 @@ export default function API(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -505,7 +526,7 @@ export default function API(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

@@ -33,7 +33,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     {
       icon: Shield,
       title: "Multi-Layer Security",
-      description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection."
+      description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection.";
     },;
     {;
       icon: Target,;
@@ -50,7 +50,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     "Comply with PCI DSS, SOC 2, and GDPR requirements";
   ];
 
-  const useCases = [
+  const useCases = [;
     "Credit Card Fraud",;
     "Banking & Financial Services",;
     "E-commerce & Retail",;
@@ -89,7 +89,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       period: "",
       features["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
       popular: false
-    }
+    };
 =======;
       price: "Custom",;
       period: "",;
@@ -121,10 +121,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -174,10 +176,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -208,10 +212,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -222,6 +228,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -253,10 +260,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -287,10 +296,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -301,6 +312,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -331,10 +343,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -365,10 +379,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -379,6 +395,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -409,10 +426,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -443,10 +462,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -457,6 +478,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -484,10 +506,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -518,10 +542,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -532,6 +558,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -594,10 +621,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -665,7 +694,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

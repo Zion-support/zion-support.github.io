@@ -804,7 +804,7 @@ export const innovativeAIServices2025ExpansionV2 = [
     compliance['SOC 2 Type II, ISO 27001, GDPR, Legal industry standards'],
     link: 'https://ziontechgroup.com/ai-legal-analysis',
     icon: '⚖️',
-    color: 'from-gray-500 to-slate-600',
+    color: 'from-gray-500 to-slate-600',;
     popular: false,;
     launchDate: '2024-05-15',;
     customers: 480,;

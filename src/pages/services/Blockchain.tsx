@@ -27,7 +27,7 @@ export default function Blockchain(...args[]):  {
     {
       icon: Target,
       title: "Identity Management",
-      description: "Self-sovereign identity solutions with privacy and security"
+      description: "Self-sovereign identity solutions with privacy and security";
     },;
     {;
       icon: Network,;
@@ -77,7 +77,7 @@ export default function Blockchain(...args[]):  {
         "Custom blockchain solutions",
         "Private blockchain networks",
         "24/7 support",
-        "Real-time monitoring",
+        "Real-time monitoring",;
         "White-label solutions",;
         "Dedicated blockchain engineer";
       ],;
@@ -100,7 +100,7 @@ export default function Blockchain(...args[]):  {
     {
       icon: BarChart3,
       title: "Cost Reduction",
-      description: "Eliminate intermediaries and reduce transaction costs"
+      description: "Eliminate intermediaries and reduce transaction costs";
     },;
     {;
       icon: Users,;
@@ -121,7 +121,7 @@ export default function Blockchain(...args[]):  {
       title: "Supply Chain",
       description: "Track products from origin to destination with full transparency",
       examples: ["Product tracking", "Quality assurance", "Compliance reporting"]
-    },
+    },;
     {;
       icon: Shield,;
       title: "Healthcare",;
@@ -153,10 +153,12 @@ export default function Blockchain(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -177,14 +179,17 @@ export default function Blockchain(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -208,10 +213,12 @@ export default function Blockchain(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -232,14 +239,17 @@ export default function Blockchain(...args[]):  {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -266,10 +276,12 @@ export default function Blockchain(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -297,10 +309,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,10 +367,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -387,6 +403,7 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -396,10 +413,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -440,10 +459,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -474,6 +495,7 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -483,10 +505,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -519,10 +543,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +583,7 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -566,10 +593,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -633,10 +662,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -667,6 +698,7 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -676,10 +708,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -713,10 +747,12 @@ export default function Blockchain(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -753,7 +789,7 @@ export default function Blockchain(...args[]):  {
         </section>
       </div>
     </div>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

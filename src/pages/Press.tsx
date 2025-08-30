@@ -87,7 +87,7 @@ export default function Press(...args[]):  {
       id: 6,
       title: "Zion Tech Group Expands Global Operations to Europe",
       date: "2023-12-05",
-      author: "Press Team",
+      author: "Press Team",;
       category: "press-releases",;
       excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",;
       content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",;
@@ -133,7 +133,7 @@ export default function Press(...args[]):  {
       title: 'Product Brochures',
       description: 'Detailed product information and specifications',
       formats['PDF'],
-      download: '/media/product-brochures.zip'
+      download: '/media/product-brochures.zip';
     };
   ];
 
@@ -142,7 +142,7 @@ export default function Press(...args[]):  {
     { label: 'Team Members', value: '150+', icon: Users },
     { label: 'Countries Served', value: '25+', icon: Globe },
     { label: 'AI Models Deployed', value: '500+', icon: TrendingUp },
-    { label: 'Client Satisfaction', value: '98%', icon: Star },
+    { label: 'Client Satisfaction', value: '98%', icon: Star },;
     { label: 'Industry Awards', value: '15+', icon: Award };
   ];
 
@@ -156,6 +156,7 @@ export default function Press(...args[]):  {
       twitter: 'https://twitter.com/ziontechgroup',
   github: 'https://github.com/ziontechgroup'
     
+;
 };
   };
 
@@ -170,7 +171,7 @@ export default function Press(...args[]):  {
       id: 4,
       title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",
       publication: "VentureBeat",
-      date: "2023-12-12",
+      date: "2023-12-12",;
       author: "Emily Watson",;
       category: "media-coverage",;
       excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",;
@@ -200,7 +201,7 @@ export default function Press(...args[]):  {
     },
     {
       id: 3,
-      title: "Cybersecurity Excellence Award",
+      title: "Cybersecurity Excellence Award",;
       organization: "InfoSec Awards",;
       year: "2023",;
       category: "awards",;
@@ -214,7 +215,7 @@ export default function Press(...args[]):  {
     : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -231,6 +232,7 @@ export default function Press(...args[]):  {
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -250,10 +252,12 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
@@ -266,10 +270,12 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,14 +292,17 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.1 
+
 }}
             className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
           >
@@ -303,14 +312,17 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
           >
@@ -323,14 +335,17 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
@@ -354,10 +369,12 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl font-bold text-center mb-16 text-white"
@@ -372,14 +389,17 @@ export default function Press(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
               >
@@ -414,14 +434,17 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
             className="text-center mt-12"
           >
@@ -441,10 +464,12 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -477,6 +502,7 @@ export default function Press(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -540,10 +566,12 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -576,6 +604,7 @@ export default function Press(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -625,10 +654,12 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
       <section className="py-20 bg-zion-slate-dark">
@@ -643,10 +674,12 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -667,14 +700,17 @@ export default function Press(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300"
               >
@@ -724,10 +760,12 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
@@ -824,6 +862,7 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -842,6 +881,7 @@ export default function Press(...args[]):  {
               whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -870,6 +910,7 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             >
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -888,6 +929,7 @@ export default function Press(...args[]):  {
               whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -917,10 +959,12 @@ export default function Press(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
@@ -933,10 +977,12 @@ export default function Press(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -965,7 +1011,7 @@ export default function Press(...args[]):  {
       </section>
     </div>
   )}
-=======
+=======;
               Contact Media Team;
             </motion.button>;
           </motion.div>;

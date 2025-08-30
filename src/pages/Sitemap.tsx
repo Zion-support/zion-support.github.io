@@ -94,7 +94,7 @@ export default function SitemapPage() {
         { name: "Accessibility", path: "/accessibility", description: "Accessibility statement" },
         { name: "Security", path: "/security", description: "Security practices" },
         { name: "Compliance", path: "/compliance", description: "Regulatory compliance" }
-      ]
+      ];
     };
   ];
 
@@ -105,13 +105,13 @@ export default function SitemapPage() {
     { name: "AI Solutions", path: "/ai-services", description: "Discover AI capabilities", icon: Brain },
     { name: "Pricing Guide", path: "/pricing-guide", description: "View pricing options", icon: DollarSign },
     { name: "Support Center", path: "/help", description: "Get help and support", icon: HelpCircle },
-    { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },
+    { name: "Documentation", path: "/docs", description: "Technical resources", icon: BookOpen },;
     { name: "Contact Sales", path: "/contact", description: "Talk to our experts", icon: Phone };
   ];
 
   const contactInfo = [
     { icon: Phone, text: "+1 302 464 0950", href: "tel:+13024640950" },
-    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },
+    { icon: Mail, text: "kleber@ziontechgroup.com", href: "mailto:kleber@ziontechgroup.com" },;
     { icon: MapPin, text: "364 E Main St STE 1008, Middletown DE 19709", href: "#" };
   ];
 =======
@@ -263,10 +263,12 @@ const sitemapSections: SitemapSection[] = [
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -334,6 +336,7 @@ const sitemapSections: SitemapSection[] = [
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -343,10 +346,12 @@ const sitemapSections: SitemapSection[] = [
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -457,6 +462,7 @@ const sitemapSections: SitemapSection[] = [
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -466,10 +472,12 @@ const sitemapSections: SitemapSection[] = [
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -503,7 +511,7 @@ const sitemapSections: SitemapSection[] = [
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

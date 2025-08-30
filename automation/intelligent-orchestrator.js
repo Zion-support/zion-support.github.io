@@ -91,12 +91,14 @@ class IntelligentOrchestrator {
         const priorityOrder = {
   high: 3, medium: 2,
   low: 1 
+
 };
         return priorityOrder[b.priority] - priorityOrder[a.priority]});
 =======
         const priorityOrder = {
   high: 3, medium: 2,
   low: 1 
+
 
 
 
@@ -148,6 +150,7 @@ class IntelligentOrchestrator {
       lastBuildTime: null,
   codeComplexity: 0
     
+
 
 
 
@@ -263,6 +266,7 @@ class IntelligentOrchestrator {
 
 
 
+
 },
       learningData: {},
       recommendations[]
@@ -319,6 +323,7 @@ class IntelligentOrchestrator {
       learningDataSize: this.learningData.size,
   report: this.generateIntelligenceReport()
     
+
 
 
 

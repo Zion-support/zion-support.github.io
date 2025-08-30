@@ -267,7 +267,7 @@ export function Sidebar() {
               to="/contact"
               className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
               onClick={onClose}
-            >
+            >;
               Contact Support;
             </Link>;
           </div>;

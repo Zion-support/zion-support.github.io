@@ -52,7 +52,7 @@ export const SEO: React.FC<SEOProps> = ({
   ogLocale = 'en_US',
   twitterCard = 'summary_large_image',
   twitterCreator = '@ziontechgroup',
-  twitterSite = '@ziontechgroup',
+  twitterSite = '@ziontechgroup',;
 }) => {;
   const location = useLocation();
   const currentImage = image || `${window.location.origin}/og-image.jpg`;
@@ -103,7 +103,7 @@ export const SEO: React.FC<SEOProps> = ({
     description: description || routeMetadata.description,
     keywords[...new Set([...keywords, ...routeMetadata.keywords])],
     image: currentImage,
-    type,
+    type,;
     section: section || routeMetadata.section,;
   }), [title, description, keywords, currentImage, type, section, routeMetadata]);
 
@@ -115,6 +115,7 @@ export const SEO: React.FC<SEOProps> = ({
       name: 'Zion Tech Group',
       url: window.location.origin,
   logo: `${window.location.origin
+
 }/logo.png`,
       description: finalMetadata.description,
       address: {
@@ -197,7 +198,7 @@ export const SEO: React.FC<SEOProps> = ({
     },
     "serviceArea": {
       "@type": "GeoCircle",
-      "geoMidpoint": {
+      "geoMidpoint": {;
         "@type": "GeoCoordinates",;
         "latitude": 39.4496,;
         "longitude": -75.7163;
@@ -272,7 +273,7 @@ export const SEO: React.FC<SEOProps> = ({
     { name: "apple-mobile-web-app-status-bar-style", content: appleMobileWebAppStatusBarStyle },
     
     // Security and performance meta tags
-    { name: "referrer", content: "strict-origin-when-cross-origin" },
+    { name: "referrer", content: "strict-origin-when-cross-origin" },;
     { name: "format-detection", content: "telephone=no" },;
     { name: "mobile-web-app-capable", content: "yes" },;
     ;
@@ -323,7 +324,7 @@ export const SEO: React.FC<SEOProps> = ({
     
     // Prefetch non-critical resources
     ...prefetch.map(resource => ({ rel: "prefetch", href: resource })),
-    
+    ;
     // Alternative languages;
     { rel: "alternate", hreflang: "en", href: canonicalUrl },;
     { rel: "alternate", hreflang: "x-default", href: canonicalUrl };
@@ -406,7 +407,7 @@ export const SEO: React.FC<SEOProps> = ({
         },
         areaServed: 'Worldwide',
         serviceType: finalMetadata.section,
-      }}
+      }};
 ;
     return baseStructuredData};
 
@@ -450,7 +451,7 @@ export const SEO: React.FC<SEOProps> = ({
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
       { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },
-      { name: 'application-name', content: 'Zion Tech Group' },
+      { name: 'application-name', content: 'Zion Tech Group' },;
       { name: 'msapplication-config', content: '/browserconfig.xml' },;
     ];
 
@@ -459,13 +460,13 @@ export const SEO: React.FC<SEOProps> = ({
       metaTags.push(
         { property: 'article:published_time', content: publishedTime },
         { property: 'article:modified_time', content: modifiedTime || publishedTime },
-        { property: 'article:author', content: author || 'Zion Tech Group' },
+        { property: 'article:author', content: author || 'Zion Tech Group' },;
         { property: 'article:section', content: finalMetadata.section };
       );
 
       // Add article tags
       tags.forEach(tag = > {
-        metaTags.push({ property: 'article:tag', content: tag })})}
+        metaTags.push({ property: 'article:tag', content: tag })})};
 ;
     return metaTags};
 
@@ -495,7 +496,7 @@ export const SEO: React.FC<SEOProps> = ({
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { rel: 'manifest', href: '/site.webmanifest' },
       
-      // RSS feed
+      // RSS feed;
       { rel: 'alternate', type: 'application/rss+xml', title: 'RSS Feed', href: '/rss.xml' },;
     ];
 
@@ -586,11 +587,13 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content = {
   finalMetadata.keywords.join(',
   ')
+
 } />
       <meta name="author" content={author || 'Zion Tech Group'} />
       <meta name="robots" content = {
   noindex ? 'noindex, nofollow' : 'index,
   follow'
+
 } />
 =======
       {/* Basic HTML tags */}
@@ -621,7 +624,7 @@ export const SEO: React.FC<SEOProps> = ({
 <<<<<<< HEAD
       {/* Additional meta tags */}
       <meta name="theme-color" content="#007bff" />
-      <meta name="msapplication-TileColor" content="#007bff" />
+      <meta name="msapplication-TileColor" content="#007bff" />;
 =======;
       {/* Additional performance optimizations */};
       <style>;
@@ -675,7 +678,7 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Structured data */}
       <script type = "application/ld+json">
         {JSON.stringify(structuredData || generateStructuredData())}
-      </script>
+      </script>;
     </Helmet>;
   )};
 

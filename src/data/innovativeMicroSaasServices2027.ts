@@ -501,6 +501,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
     useCases["Climate Prediction", "Risk Assessment", "Sustainability Planning", "Environmental Monitoring"],
     integrations["Weather APIs", "Satellite Systems", "IoT Platforms", "Analytics Tools"],
     compliance["Environmental Standards", "Climate Protocols", "Data Accuracy", "Scientific Validation"],
-    support["24/7 Support", "Scientific Consultation", "Implementation", "Training"]
+    support["24/7 Support", "Scientific Consultation", "Implementation", "Training"];
   };
 ];

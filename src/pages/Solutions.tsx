@@ -123,7 +123,7 @@ const solutionCategories = [
     color: 'from-indigo-500 to-purple-600',
     solutions: [
       'Process Automation',
-      'Customer Experience',
+      'Customer Experience',;
       'Legacy Modernization',;
       'Digital Strategy',;
       'Change Management',;
@@ -205,7 +205,7 @@ const industrySolutions = [
     solutions: [
       'Digital Services',
       'Data Security',
-      'Process Automation',
+      'Process Automation',;
       'Citizen Engagement',;
       'Regulatory Compliance',;
       'Infrastructure Management';
@@ -340,7 +340,7 @@ const industrySolutions = [
       ],
       icon: Database,
       demo: true,
-      trial: false
+      trial: false;
     };
   ];
 
@@ -363,10 +363,12 @@ const industrySolutions = [
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
             >
@@ -450,7 +452,7 @@ const featuredSolutions = [
       '50% infrastructure cost reduction',
       '99.9% uptime guarantee',
       'Faster deployment cycles',
-      'Improved scalability'
+      'Improved scalability';
     ],;
     price: 'Starting at $1,800/month',;
     implementation: '8-16 weeks',;
@@ -488,10 +490,12 @@ export default function Solutions() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -550,14 +554,17 @@ export default function Solutions() {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
 =======
@@ -573,6 +580,7 @@ export default function Solutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -582,11 +590,12 @@ export default function Solutions() {
 
 
 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+          >;
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>;
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
@@ -605,6 +614,7 @@ export default function Solutions() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -614,10 +624,12 @@ export default function Solutions() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -642,7 +654,7 @@ export default function Solutions() {
                           </div>
                         ))}
                       </div>
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">;
                         <span className="text-sm font-medium">Learn More</span>;
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />;
                       </div>;
@@ -667,6 +679,7 @@ export default function Solutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -676,11 +689,12 @@ export default function Solutions() {
 
 
 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+          >;
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>;
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
@@ -699,6 +713,7 @@ export default function Solutions() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -708,10 +723,12 @@ export default function Solutions() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -736,7 +753,7 @@ export default function Solutions() {
                   <div className="mt-4">
                     <Link
                       to={`/solutions/${industry.industry.toLowerCase()}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300";
                     >;
                       View {industry.industry} Solutions;
                       <ArrowRight className="ml-2 h-4 w-4" />;
@@ -761,6 +778,7 @@ export default function Solutions() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -770,11 +788,12 @@ export default function Solutions() {
 
 
 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="mb-12 text-center"
-          >
+          >;
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>;
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
@@ -793,6 +812,7 @@ export default function Solutions() {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -802,10 +822,12 @@ export default function Solutions() {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -885,10 +907,12 @@ export default function Solutions() {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -918,7 +942,7 @@ export default function Solutions() {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 
@@ -947,10 +971,12 @@ export default Solutions;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -980,7 +1006,7 @@ export default Solutions;
                 to="/case-studies"
                 className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
               >
-                View Case Studies
+                View Case Studies;
               </Link>;
             </div>;
           </motion.div>;

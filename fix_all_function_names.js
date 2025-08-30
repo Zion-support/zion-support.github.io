@@ -17,6 +17,7 @@ function fileName = path.basename(filePath, path.extname(filePath));
           0: "Zero",
   <<<<<<< HEAD
         
+
 };
         return numberWords[digit] || `_${digit}`});
 =======
@@ -77,6 +78,7 @@ async function fixedCount = 0;
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();
 
+export default fileName;
 export default fileName;
 export default fileName;
 export default fileName;

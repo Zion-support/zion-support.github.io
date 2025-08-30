@@ -11,12 +11,14 @@ export const AuthRoutes = {
 
 
 
+
 };
 // Dashboard routes
 export const DashboardRoutes = {
   dashboard: '/dashboard',
     profile: '/profile',
   settings: '/settings'
+
 
 
 
@@ -35,12 +37,14 @@ export const MarketplaceRoutes = {
 
 
 
+
 };
 // Talent routes
 export const TalentRoutes = {
   talent: '/talent',
     talents: '/talents',
   talentProfile: '/talent/:id'
+
 
 
 
@@ -59,11 +63,13 @@ export const AdminRoutes = {
 
 
 
+
 };
 // Mobile app routes
 export const MobileAppRoutes = {
   mobileLaunch: '/mobile-launch',
   openApp: '/open-app'
+
 
 
 
@@ -90,11 +96,13 @@ export const ContentRoutes = {
 
 
 
+
 };
 // Error routes
 export const ErrorRoutes = {
   notFound: '/404',
   error: '/error'
+
 
 
 
@@ -113,6 +121,7 @@ export const EnterpriseRoutes = {
 
 
 
+
 };
 // Community routes
 export const CommunityRoutes = {
@@ -125,12 +134,14 @@ export const CommunityRoutes = {
 
 
 
+
 };
 // Developer routes
 export const DeveloperRoutes = {
   api: '/api',
     docs: '/docs',
   developer: '/developer'
+
 
 
 

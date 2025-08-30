@@ -174,6 +174,7 @@ const EmergingTech = () => {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -210,9 +211,11 @@ const EmergingTech = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -301,9 +304,11 @@ const EmergingTech = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -328,6 +333,7 @@ const EmergingTech = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -336,9 +342,11 @@ const EmergingTech = () => {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -376,9 +384,11 @@ const EmergingTech = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

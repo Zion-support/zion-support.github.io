@@ -153,7 +153,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
       icon: Building,
       color: "from-indigo-500 to-purple-500",
       link: "/enterprise",
-      category: "Business"
+      category: "Business";
     };
   ];
 
@@ -162,7 +162,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
     { name: "Security", count: 8, color: "from-red-500 to-orange-500" },
     { name: "Infrastructure", count: 12, color: "from-blue-500 to-cyan-500" },
     { name: "Consulting", count: 6, color: "from-yellow-500 to-orange-500" },
-    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },
+    { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },;
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };
   ];
 
@@ -174,10 +174,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4"
@@ -185,7 +187,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
       title: "Micro SaaS",
       description: "Ready-to-Deploy Solutions",
       icon: Code,
-      color: "from-zion-purple to-zion-cyan",
+      color: "from-zion-purple to-zion-cyan",;
       bgColor: "bg-zion-purple/10",;
       borderColor: "border-zion-purple/20",;
       path: "/micro-saas",;
@@ -195,7 +197,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -212,10 +214,11 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 },
     visible: { 
       opacity: 1, 
-      y: 0, 
+      y: 0, ;
       scale: 1,;
       transition: {;
         duration: 0.5,;
@@ -229,11 +232,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
       y: -8, 
       scale: 1.02,
       transition: {
-        duration: 0.3,
+        duration: 0.3,;
   ease: "easeOut";
       ;
 ;
 ;
+
 
 
 
@@ -261,10 +265,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +292,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan mb-6"
@@ -297,14 +304,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
             className="text-lg text-gray-300 max-w-2xl mx-auto"
           >
@@ -320,14 +330,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
               whileHover={{ y: -5 }}
               className="group"
@@ -401,6 +414,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                       whileInView = {
   { opacity: 1,
@@ -410,10 +424,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                       transition = {
   { duration: 0.4,
   delay: 0.1 + idx * 0.1 
+
 
 
 
@@ -444,6 +460,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                       whileInView = {
   { opacity: 1,
@@ -453,10 +470,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                       transition = {
   { duration: 0.4,
   delay: 0.2 + idx * 0.1 
+
 
 
 
@@ -497,14 +516,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
           className="bg-gradient-to-r from-slate-700 to-slate-600 rounded-2xl p-8 border border-slate-500"
         >
@@ -520,14 +542,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }}
                 className="text-center group cursor-pointer"
               >
@@ -548,14 +573,17 @@ const QuickAccess: React.FC = (): JSX.Element => {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 }}
           className="text-center mt-12"
 =======
@@ -569,6 +597,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
@@ -578,10 +607,12 @@ const QuickAccess: React.FC = (): JSX.Element => {
 
 
 
+
 }}
           transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -614,7 +645,7 @@ const QuickAccess: React.FC = (): JSX.Element => {
             </div>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 =======

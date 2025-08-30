@@ -61,7 +61,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 <<<<<<< HEAD
   showFilters = true,
   showStats = true,
-  maxProjects = 10
+  maxProjects = 10;
 }) => {;
   const [projects, setProjects] = useState<any>([]);
   const [filteredProjects, setFilteredProjects] = useState<any>([]);
@@ -218,7 +218,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )}
+      )};
 =======;
       filtered = filtered.filter(p => ;
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -240,8 +240,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     onHold: projects.filter(p  => p.status === 'on-hold').length,
     totalBudget: projects.reduce((sum, p)  => sum + p.budget, 0),
     averageProgress: projects.reduce((sum, p)  => sum + p.progress,
-  0) / projects.length || 0
+  0) / projects.length || 0;
   ;
+
 };
 
   // Get status color and icon
@@ -252,7 +253,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   total: projects.length,
     active: projects.filter(p => p.status === 'active').length,
     completed: projects.filter(p => p.status === 'completed').length,
-    onHold: projects.filter(p => p.status === 'on-hold').length,
+    onHold: projects.filter(p => p.status === 'on-hold').length,;
     totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),;
     averageProgress: projects.reduce((sum, p) => sum + p.progress,;
   ;
@@ -313,13 +314,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0,
+      minimumFractionDigits: 0,;
       maximumFractionDigits: 0;
     }).format(amount)};
 
   // Calculate days remaining
   const getDaysRemaining = (endDate: string)  => {
-=======
+=======;
   const formatCurrency = (amount: number) => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
@@ -392,10 +393,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -417,10 +420,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -443,10 +448,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -469,10 +476,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -495,10 +504,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -521,10 +532,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -597,10 +610,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -683,6 +698,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
 
 
+
 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
@@ -754,7 +770,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             Create Project
           </button>
         </motion.div>
-      )}
+      )};
     </div>;
   )};
 =======

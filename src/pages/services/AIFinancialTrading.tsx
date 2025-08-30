@@ -3,7 +3,7 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target
 export default function AIFinancialTrading() {
   const features = [
     'AI-powered market analysis and trend prediction',
-    'Intelligent portfolio optimization and risk management',
+    'Intelligent portfolio optimization and risk management',;
     'Automated trading strategies and execution',;
     'Real-time market data processing and insights',;
     'Predictive analytics for asset performance',;
@@ -21,7 +21,7 @@ export default function AIFinancialTrading() {
     { 
       name: 'Professional Trader', 
       price: '$799/mo', 
-      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] 
+      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support'] ;
     },;
     { ;
       name: 'Institutional', ;
@@ -30,7 +30,7 @@ export default function AIFinancialTrading() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Stock market trading and analysis',;
     'Cryptocurrency trading and portfolio management',;
     'Forex trading and currency analysis',;
@@ -39,7 +39,7 @@ export default function AIFinancialTrading() {
     'Portfolio management and rebalancing';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve trading performance by 20-40%',;
     'Reduce portfolio risk by 25-45%',;
     'Increase returns through optimized strategies',;
@@ -48,7 +48,7 @@ export default function AIFinancialTrading() {
     'Scale trading operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Individual Trading',;
     'Professional Trading',;
     'Institutional Investment',;
@@ -163,7 +163,7 @@ export default function AIFinancialTrading() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

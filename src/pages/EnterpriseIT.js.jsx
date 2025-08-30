@@ -33,9 +33,11 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.5 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Server className="w-6 h-6 text-cyan-400"/>
@@ -49,12 +51,15 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.1 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-cyan-400"/>
@@ -68,12 +73,15 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.2 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-cyan-400"/>
@@ -87,12 +95,15 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.3 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-cyan-400"/>
@@ -106,12 +117,15 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.4 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Globe className="w-6 h-6 text-cyan-400"/>
@@ -125,12 +139,15 @@ export default function EnterpriseIT() {
             <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.5,
   delay: 0.5 
+
 }} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-6 border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                 <Building2 className="w-6 h-6 text-cyan-400"/>

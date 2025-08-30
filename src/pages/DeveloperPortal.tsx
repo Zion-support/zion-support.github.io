@@ -60,7 +60,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and tutorials',
       category: 'Learning'
-    },
+    },;
     {;
       icon: Download,;
       title: 'SDKs & Libraries',;
@@ -87,7 +87,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
-    },
+    },;
     {;
       title: 'Code Samples',;
       description: 'Real-world implementation examples',;
@@ -102,7 +102,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json';
   };
 });
 
@@ -149,10 +149,12 @@ const data = await response.json();
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -203,10 +205,12 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -236,6 +240,7 @@ const data = await response.json();
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -245,10 +250,12 @@ const data = await response.json();
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -283,10 +290,12 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -311,14 +320,17 @@ const data = await response.json();
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
               >
@@ -365,14 +377,17 @@ const data = await response.json();
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300"
               >
@@ -422,6 +437,7 @@ const data = await response.json();
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -431,10 +447,12 @@ const data = await response.json();
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -477,10 +495,12 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -510,6 +530,7 @@ const data = await response.json();
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -519,10 +540,12 @@ const data = await response.json();
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -558,10 +581,12 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -588,6 +613,7 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -597,10 +623,12 @@ const data = await response.json();
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -654,10 +682,12 @@ const data = await response.json();
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -683,7 +713,7 @@ const data = await response.json();
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

@@ -202,9 +202,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
+
 
 
 
@@ -222,9 +224,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
   opacity: 0 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
+
 }}>
 =======
       </motion.div>);
@@ -237,9 +241,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} animate = {
   { scale: 1,
   opacity: 1 
+
 
 
 
@@ -285,6 +291,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
@@ -293,9 +300,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -312,6 +321,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                       <input type="number" value={value} onChange = {
   (e) => setThresholds(prev => ({ ...prev,
   [key]: Number(e.target.value) 
+
 
 
 
@@ -341,6 +351,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }`}>
                 {metrics.fps}
               </div>
@@ -355,6 +366,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Memory', metrics.memory.percentage,
   thresholds.memory)
+
 
 
 
@@ -379,6 +391,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }`}>
                 {metrics.renderTime}ms
               </div>
@@ -393,6 +406,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               <div className = {
   `text-lg font-bold ${getMetricColor('Network', metrics.networkLatency,
   thresholds.networkLatency)
+
 
 
 
@@ -413,9 +427,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
+
 
 
 
@@ -438,6 +454,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }`}>
                       {metrics.cpuUsage}%
                     </span>
@@ -454,6 +471,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     <span className = {
   `text-xs font-medium ${getMetricColor('Disk', metrics.diskUsage,
   thresholds.diskUsage)
+
 
 
 
@@ -503,6 +521,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
@@ -511,9 +530,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 
+
 }} exit = {
   { opacity: 0,
   x: -20 
+
 
 
 

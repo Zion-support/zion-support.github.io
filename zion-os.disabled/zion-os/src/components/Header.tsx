@@ -6,7 +6,7 @@ export default function Header() {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
+    { name: 'Services', href: '/services' },;
     { name: 'AI Solutions', href: '/ai-solutions' },;
     { name: 'Quantum Computing', href: '/quantum-computing' },;
     { name: 'Research & Development', href: '/research-development' },;
@@ -14,7 +14,7 @@ export default function Header() {
     { name: 'News', href: '/news' },;
     { name: 'Contact', href: '/contact' },;
   ];
-  const services = [
+  const services = [;
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },;
     { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },;
     { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },;
@@ -129,7 +129,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
-                </Link>
+                </Link>;
               </div>;
             </div>;
           </div>;

@@ -64,6 +64,7 @@ export default function ListingDetail() {
 
 
 
+
 }>
                         <ImageWithRetry src={image} alt={`${listing.title} - image ${index + 1}`} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>
                       </div>))}
@@ -136,6 +137,7 @@ export default function ListingDetail() {
 
 
 
+
 }/>))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
@@ -161,6 +163,7 @@ export default function ListingDetail() {
   <<<<<<< HEAD
                     description: "Redirecting to secure checkout..."
                 
+
 })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
 =======
   description: "Redirecting to secure checkout..."

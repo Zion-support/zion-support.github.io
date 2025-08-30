@@ -17,7 +17,7 @@ export default function Infrastructure(...args[]):  {
     {
       icon: Shield,
       title: 'Security First',
-      description: 'Protect your infrastructure with enterprise-grade security'
+      description: 'Protect your infrastructure with enterprise-grade security';
     },;
     {;
       icon: Zap,;
@@ -40,7 +40,7 @@ export default function Infrastructure(...args[]):  {
     {
       title: 'Cloud Migration',
       description: 'Seamless transition to cloud infrastructure',
-      icon: Cloud
+      icon: Cloud;
     },;
     {;
       title: 'Disaster Recovery',;
@@ -64,10 +64,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -117,10 +119,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -151,6 +155,7 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -160,10 +165,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -196,10 +203,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -230,6 +239,7 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -239,10 +249,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -279,10 +291,12 @@ export default function Infrastructure(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -315,7 +329,7 @@ export default function Infrastructure(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

@@ -241,7 +241,7 @@ export const real2026Q2Additions = [
     integrations['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors['Atera', 'NinjaOne'],
     price: '$4',
-    period: '/device/month',
+    period: '/device/month',;
     trialDays: 14,;
     setupTime: 'Fast',;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;

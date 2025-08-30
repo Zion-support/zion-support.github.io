@@ -64,6 +64,7 @@ export function ServicesShowcase() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -89,9 +90,11 @@ export function ServicesShowcase() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -146,6 +149,7 @@ export function ServicesShowcase() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -154,9 +158,11 @@ export function ServicesShowcase() {
 
 
 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
+
 
 
 

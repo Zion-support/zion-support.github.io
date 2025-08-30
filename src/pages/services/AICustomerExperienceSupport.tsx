@@ -5,7 +5,7 @@ import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRigh
 export default function AICustomerExperienceSupport() {
   const features = [
     'AI-powered chatbot with 95% accuracy and natural language processing',
-    'Intelligent ticket routing and priority classification',
+    'Intelligent ticket routing and priority classification',;
     'Automated customer sentiment analysis and satisfaction tracking',;
     'Multi-channel support integration (email, chat, phone, social media)',;
     'Predictive customer behavior analysis and proactive support',;
@@ -14,7 +14,7 @@ export default function AICustomerExperienceSupport() {
     'Integration with CRM, helpdesk, and e-commerce platforms',;
   ];
 
-  const benefits = [
+  const benefits = [;
     'Increase customer satisfaction scores by 35-50%',;
     'Reduce support response time by 80% with AI automation',;
     'Cut support costs by 40-60% through intelligent automation',;
@@ -27,7 +27,7 @@ export default function AICustomerExperienceSupport() {
     'Live Chat & Messaging',
     'Email Support Automation',
     'Phone Support Integration',
-    'Social Media Monitoring',
+    'Social Media Monitoring',;
     'Self-Service Knowledge Base',;
     'Video Call Support',;
     'Mobile App Support',;
@@ -40,7 +40,7 @@ export default function AICustomerExperienceSupport() {
     'Natural Language Processing',
     'Sentiment Analysis',
     'Intent Recognition',
-    'Automated Responses',
+    'Automated Responses',;
     'Smart Escalation',;
     'Predictive Analytics',;
     'Customer Segmentation',;
@@ -53,7 +53,7 @@ export default function AICustomerExperienceSupport() {
     'Salesforce Service Cloud',
     'Zendesk Support',
     'HubSpot Service Hub',
-    'Intercom',
+    'Intercom',;
     'Freshdesk',;
     'Shopify',;
     'WooCommerce',;
@@ -64,7 +64,7 @@ export default function AICustomerExperienceSupport() {
 
   const stack = [
     { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },
-    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },
+    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;
     { name: 'Twilio', url: 'https://www.twilio.com/' },;
     { name: 'Intercom', url: 'https://www.intercom.com/' },;
     { name: 'Zendesk', url: 'https://www.zendesk.com/' },;
@@ -253,7 +253,7 @@ export default function AICustomerExperienceSupport() {
             <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
               Call +1 302 464 0950
             </a>
-          </div>
+          </div>;
           <p className="text-slate-400 mt-6">;
             Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;

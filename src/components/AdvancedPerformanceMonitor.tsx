@@ -21,7 +21,7 @@ interface PerformanceAlert {
   timestamp: number}
 
 export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
-  const [metrics, setMetrics] = useState<any>({
+  const [metrics, setMetrics] = useState<any>({;
     fps: 0,;
     memory: 0,;
     loadTime: 0,;
@@ -47,7 +47,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
         frameCount = 0;
-        lastTime = currentTime}
+        lastTime = currentTime};
       ;
       requestAnimationFrame(countFrames)};
 
@@ -55,9 +55,8 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
   // Memory monitoring
 <<<<<<< HEAD
-  const memory = (performance as ).memory;
-      const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
-      setMetrics(prev = > ({ ...prev, memory: memoryUsage }))}
+  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
+      setMetrics(prev = > ({ ...prev, memory: memoryUsage }))};
 =======;
   const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
       setMetrics(prev => ({ ...prev, memory: memoryUsage }));
@@ -71,7 +70,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-        setMetrics(prev = > ({ ...prev, loadTime }))}
+        setMetrics(prev = > ({ ...prev, loadTime }))};
     };
   }, []);
 
@@ -83,7 +82,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       const end = performance.now();
       const latency = end - start;
       setMetrics(prev = > ({ ...prev, networkLatency: latency }))} catch (error) {
-      // If health check fails, use a default value
+      // If health check fails, use a default value;
       setMetrics(prev  => ({ ...prev, networkLatency: 0 }))};
   }, []);
 
@@ -100,7 +99,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
         const cpuUsage = Math.min(100, (frameCount / 60) * 100);
         setMetrics(prev => ({ ...prev, cpuUsage }));
         frameCount = 0;
-        lastTime = currentTime}
+        lastTime = currentTime};
       ;
       requestAnimationFrame(measureFrame)};
     
@@ -235,7 +234,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
       >
         <Activity className="w-5 h-5 text-cyan-400" />
       </motion.button>
-    )}
+    )};
 =======;
         whileHover={{ scale: 1.1 }};
         whileTap={{ scale: 0.9 }};
@@ -257,6 +256,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         animate = {
   { opacity: 1,
@@ -266,10 +266,12 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
 
 
+
 }}
         exit = {
   { opacity: 0,
   y: 20 
+
 
 
 
@@ -348,6 +350,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -357,10 +360,12 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   x: -20 
+
 
 
 
@@ -385,7 +390,7 @@ export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
             </div>
           </div>
         )}
-      </motion.div>
+      </motion.div>;
     </AnimatePresence>;
   )};
 =======

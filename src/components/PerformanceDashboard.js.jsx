@@ -39,6 +39,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             DOMLOAD: <Activity className="w-4 h-4"/>,
   WINDOWLOAD: <Activity className="w-4 h-4"/>
         
+
 };
         return icons[metricName] || <Activity className="w-4 h-4"/>};
     const getMetricDescription = (metricName) => {
@@ -51,6 +52,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             DOMLOAD: 'DOM Content Loaded - DOM ready time',
   WINDOWLOAD: 'Window Load - Full page load time'
         
+
 };
         return descriptions[metricName] || 'Performance metric'};
     const formatMetricValue = (metricName, value) => {
@@ -62,12 +64,15 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
     return (<motion.div className = {
   cn('fixed bottom-4 right-4 z-50 max-w-sm',
   className)
+
 } initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.3 }}>
       <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
         <CardHeader className="pb-3">
@@ -93,6 +98,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
               <span className = {
   cn('text-2xl font-bold',
   getScoreColor(performanceScore))
+
 }>
                 {performanceScore}
               </span>
@@ -108,12 +114,15 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
           {isExpanded && (<motion.div initial = {
   { height: 0,
   opacity: 0 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 }} transition={{ duration: 0.3 }}>
               <CardContent className="pt-0 space-y-3">
                 {/* Metrics Grid */}
@@ -137,6 +146,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
   rating === 'good' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
                     rating === 'needs-improvement' ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' :
                         'bg-red-500/20 text-red-400 border-red-500/30')
+
 }>
                           {rating}
                         </Badge>
@@ -170,11 +180,13 @@ export function PerformanceIndicator({ className }) {
     return (<div className = {
   cn('flex items-center gap-2',
   className)
+
 }>
       <div className = {
   cn('w-2 h-2 rounded-full',
   performanceScore >= 90 ? 'bg-green-500' :
             performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500')
+
 }/>
       <span className="text-xs text-zion-slate-light">
         {performanceScore}/100

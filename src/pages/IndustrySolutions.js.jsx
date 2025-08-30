@@ -8,7 +8,6 @@ const IndustrySolutions = () => {
     const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Logistics', 'Real Estate', 'Energy', 'Cybersecurity', 'Legal', 'Media', 'Transportation'];
     const solutionTypes = ['all', 'Digital Health', 'FinTech', 'Industry 4.0', 'Digital Commerce', 'EdTech', 'Supply Chain', 'PropTech', 'Energy Tech', 'Security', 'LegalTech', 'MediaTech', 'Mobility'];
     const filteredSolutions = industrySolutions.filter(solution => {
-        const matchesIndustry = selectedIndustry === 'all' || solution.industry === selectedIndustry;
         const matchesSolutionType = selectedSolutionType === 'all' || solution.solutionType === selectedSolutionType;
         return matchesSearch && matchesIndustry && matchesSolutionType});
     const formatPrice = (price, model) => {

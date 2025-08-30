@@ -97,7 +97,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
 		return () => clearInterval(interval)}, [isPlaying]);
 	const getStatusColor = (status: string)  => {
-		switch (status) {
+		switch (status) {;
 =======;
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
@@ -135,10 +135,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 						whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -162,6 +164,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 						whileInView = {
   { opacity: 1,
@@ -171,10 +174,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 						transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -224,6 +229,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 							animate = {
   { opacity: 1,
@@ -233,10 +239,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 							exit = {
   { opacity: 0,
   x: -100 
+
 
 
 
@@ -279,10 +287,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 													animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -324,6 +334,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 												scale[1, 1.1,
   1]
 											
+
 }}
 											transition = {
   { 
@@ -339,6 +350,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 											transition = {
   { 
@@ -347,6 +359,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 												repeat: Infinity,
   ease: "linear" 
 											
+
 
 
 
@@ -382,6 +395,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 								whileInView = {
   { opacity: 1,
@@ -391,10 +405,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 
 
 
+
 }}
 								transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -428,7 +444,7 @@ export default function FuturisticServicesShowcase(...args[]):  {
 				</div>
 			</div>
 		</div>
-	)}
+	)};
 =======;
 						))};
 					</div>;

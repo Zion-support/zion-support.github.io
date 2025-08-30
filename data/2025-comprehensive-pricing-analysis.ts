@@ -354,8 +354,9 @@ export const getMarketInsights = () => {
     mostAffordableCategory: 'IoT & Edge Computing',
 <<<<<<< HEAD
     highestROI: '1000% (Quantum Neural Network Platform)',
-  fastestPayback: '2-4 months (DeFi Trading Platform)'
+  fastestPayback: '2-4 months (DeFi Trading Platform)';
   ;
+
 };
   return insights};
 export const getCompetitiveLandscape = () => {
@@ -363,7 +364,7 @@ export const getCompetitiveLandscape = () => {
     aiServices['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],
     quantumComputing['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],
     cybersecurity['CrowdStrike', 'SentinelOne', 'Darktrace', 'Palo Alto Networks'],
-    manufacturing['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],
+    manufacturing['Siemens', 'Rockwell Automation', 'ABB', 'GE Digital'],;
     blockchain['Chainalysis', 'ConsenSys', 'Alchemy', 'Infura'];
   }};
 =======
@@ -379,7 +380,7 @@ export const getCompetitiveLandscape = () => {
 };
   return insights;
 };
-export const getCompetitiveLandscape = () => {
+export const getCompetitiveLandscape = () => {;
   return {;
     aiServices: ['IBM Watson', 'Google AI', 'Microsoft Azure AI', 'Amazon SageMaker'],;
     quantumComputing: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'D-Wave'],;

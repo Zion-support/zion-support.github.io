@@ -23,6 +23,7 @@ export default function ComprehensiveServicesPage() {
   <<<<<<< HEAD
             'AI Services': 'bg-purple-100 text-purple-800'
         
+
 };
         return colorMap[type] || 'bg-gray-100 text-gray-800'};
 =======

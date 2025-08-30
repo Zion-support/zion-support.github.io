@@ -107,7 +107,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
   const getCategoryIcon = (category: string)  => {
     switch (category) {
-      case 'AI & Analytics':
+      case 'AI & Analytics':;
       case 'AI & Customer Experience':;
       case 'AI & Supply Chain':;
       case 'AI & Legal Tech':;
@@ -284,6 +284,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -293,10 +294,12 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -415,7 +418,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))};
           </div>;
           {filteredServices.length === 0 && (;
             <div className="text-center py-16">;
@@ -426,7 +429,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                   setSelectedInnovationLevel('all');
 <<<<<<< HEAD
                   setSearchTerm('')}}
-                className = "text-zion-cyan hover:text-zion-cyan-light font-medium"
+                className = "text-zion-cyan hover:text-zion-cyan-light font-medium";
 =======;
                   setSearchTerm('');
                 }}
@@ -467,7 +470,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
             </a>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

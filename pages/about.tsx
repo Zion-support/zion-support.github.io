@@ -168,7 +168,7 @@ export default function About(...args[]):  {
 								Explore Our Services <span aria-hidden="true">→</span>
 							</Link>
 						</div>
-					</div>
+					</div>;
 				</div>;
 		</section>;
 		</>;

@@ -17,7 +17,7 @@ const DigitalTransformation = () => {
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-    {
+    {;
       title: "Change Management",;
       description: "Guide your team through digital adoption and transformation.",;
       price: "From $8,000/month",;
@@ -38,7 +38,7 @@ const DigitalTransformation = () => {
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-    },
+    },;
     {;
       name: "Technology",;
       description: "Modernize your technology stack and infrastructure",;
@@ -47,7 +47,7 @@ const DigitalTransformation = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increased operational efficiency and productivity",;
     "Enhanced customer experience and satisfaction",;
     "Improved data insights and decision making",;
@@ -210,7 +210,7 @@ const DigitalTransformation = () => {
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </a>
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
               View All Services;
             </a>;
           </div>;

@@ -49,7 +49,7 @@ const AIQuantumComputingPlatform = () => {
     {
       icon: Rocket,
       title: "Future-Ready Architecture",
-      description: "Built for the quantum future with scalable infrastructure and continuous innovation"
+      description: "Built for the quantum future with scalable infrastructure and continuous innovation";
     };
   ];
 
@@ -69,7 +69,7 @@ const AIQuantumComputingPlatform = () => {
     'AI-powered quantum algorithm optimization',
     'Hybrid quantum-classical computing solutions',
     'Quantum machine learning frameworks',
-    'Real-time quantum circuit simulation',
+    'Real-time quantum circuit simulation',;
     'Quantum error correction and optimization',;
     'Multi-qubit system management',;
     'Quantum cryptography and security',;
@@ -78,7 +78,7 @@ const AIQuantumComputingPlatform = () => {
     'Advanced quantum analytics and visualization';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Solve complex problems 1000x faster',;
     'Reduce computational costs by 60-80%',;
     'Enable breakthrough scientific discoveries',;
@@ -122,7 +122,7 @@ const AIQuantumComputingPlatform = () => {
         "Advanced security",
         "Multi-tenant architecture"
       ],
-      popular: false
+      popular: false;
     };
   ];
 
@@ -145,7 +145,7 @@ const AIQuantumComputingPlatform = () => {
     {
       industry: "Climate Science",
       description: "Model complex climate systems and predict environmental changes with quantum accuracy",
-      benefits["Accurate climate modeling", "Faster predictions", "Better policy decisions"]
+      benefits["Accurate climate modeling", "Faster predictions", "Better policy decisions"];
     };
   ];
 
@@ -156,7 +156,7 @@ const AIQuantumComputingPlatform = () => {
     "Quantum Error Correction",
     "Quantum-Classical Hybrid",
     "Quantum Networking",
-    "Real-time Analytics",
+    "Real-time Analytics",;
     "Advanced Optimization";
   ];
 
@@ -168,7 +168,7 @@ const AIQuantumComputingPlatform = () => {
         keywords="Quantum Computing, AI Quantum, Quantum Platform, Quantum Supremacy, Quantum Algorithms, AI Computing"
       />
 
-=======
+=======;
     { ;
       name: 'Enterprise', ;
       price: '$7,999/mo', ;
@@ -177,7 +177,7 @@ const AIQuantumComputingPlatform = () => {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Drug discovery and molecular modeling',;
     'Financial portfolio optimization',;
     'Cryptography and cybersecurity',;
@@ -186,7 +186,7 @@ const AIQuantumComputingPlatform = () => {
     'Supply chain optimization';
   ];
 
-  const industries = [
+  const industries = [;
     'Pharmaceuticals & Healthcare',;
     'Financial Services & Banking',;
     'Cybersecurity & Defense',;
@@ -206,10 +206,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
@@ -243,10 +245,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -267,15 +271,18 @@ const AIQuantumComputingPlatform = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -297,10 +304,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -321,15 +330,18 @@ const AIQuantumComputingPlatform = () => {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
@@ -386,10 +398,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -410,15 +424,18 @@ const AIQuantumComputingPlatform = () => {
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
               >
@@ -448,10 +465,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -472,15 +491,18 @@ const AIQuantumComputingPlatform = () => {
                 initial = {
   { opacity: 0,
   scale: 0.8 
+
 }}
                 whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
               >
@@ -501,10 +523,12 @@ const AIQuantumComputingPlatform = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -557,7 +581,7 @@ const AIQuantumComputingPlatform = () => {
           </p>
 <<<<<<< HEAD
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 
@@ -567,7 +591,7 @@ export default AIQuantumComputingPlatform;
             href = "https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

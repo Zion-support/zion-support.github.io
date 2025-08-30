@@ -117,7 +117,7 @@ declare module 'react-hook-form' {
 =======
     handleSubmit: any
     register: any
-    formState: any
+    formState: any;
     [key: string]: any;
   };
   export function useFormContext<;

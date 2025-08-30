@@ -93,9 +93,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -115,6 +117,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -123,9 +126,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -143,6 +148,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -151,9 +157,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -181,9 +189,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -207,6 +217,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -215,9 +226,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -245,9 +258,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -271,6 +286,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
@@ -279,9 +295,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -312,9 +330,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -338,6 +358,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -346,9 +367,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -376,9 +399,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -403,12 +428,15 @@ const FiveGEnterpriseSolutions = () => {
         ].map((tech, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }} className="text-center">
 =======
             { icon: GitFork, name: "Management", description: "Network orchestration" }
@@ -420,6 +448,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -428,9 +457,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -459,9 +490,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -490,6 +523,7 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
@@ -498,9 +532,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.2 
+
 
 
 
@@ -528,9 +564,11 @@ const FiveGEnterpriseSolutions = () => {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

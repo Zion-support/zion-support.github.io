@@ -48,7 +48,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
       description: "Post-quantum cryptography integrated with AI-powered threat detection and response",
       icon: Shield,
       color: "from-green-500 to-emerald-500"
-    },
+    },;
     {;
       title: "Quantum Machine Learning",;
       description: "Quantum-enhanced ML algorithms for complex optimization problems and predictive analytics",;
@@ -71,7 +71,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
     {
       title: "Climate Modeling",
       description: "Complex environmental simulations and prediction models",
-      icon: Globe
+      icon: Globe;
     },;
     {;
       title: "Supply Chain Optimization",;
@@ -121,7 +121,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
         "Full quantum advantage",
         "Unlimited qubits simulation",
         "Custom algorithm development",
-        "24/7 dedicated support",
+        "24/7 dedicated support",;
         "On-premise deployment",;
         "Custom integrations";
       ],;
@@ -145,10 +145,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -203,10 +205,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -236,6 +240,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -245,10 +250,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -282,10 +289,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -315,6 +324,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -324,10 +334,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -359,10 +371,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -392,6 +406,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -401,10 +416,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -472,10 +489,12 @@ const AIQuantumHybridPlatform: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -536,7 +555,7 @@ const AIQuantumHybridPlatform: React.FC = () => {
                   className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300"
                 >
                   Request Demo
-                </motion.button>
+                </motion.button>;
               </form>;
             </div>;
           </div>;

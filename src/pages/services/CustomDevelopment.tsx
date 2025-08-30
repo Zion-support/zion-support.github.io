@@ -51,7 +51,7 @@ export default function CustomDevelopment(...args[]):  {
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
       icon: Workflow,
       features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
-    }
+    };
 =======;
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
@@ -86,7 +86,7 @@ export default function CustomDevelopment(...args[]):  {
       description: 'Modern database solutions for data storage and management.',
       icon: Database,
       stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
-    }
+    };
 =======;
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
@@ -110,7 +110,7 @@ export default function CustomDevelopment(...args[]):  {
     {
       title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
-      icon: Shield
+      icon: Shield;
     },;
     {;
       title: 'Support & Maintenance',;
@@ -139,10 +139,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -189,10 +191,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -223,6 +227,7 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -232,10 +237,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -283,10 +290,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -317,6 +326,7 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -326,10 +336,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -368,10 +380,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -401,6 +415,7 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -410,10 +425,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -445,10 +462,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -479,6 +498,7 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -488,10 +508,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -519,10 +541,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -557,6 +581,7 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -566,10 +591,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -601,10 +628,12 @@ export default function CustomDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -639,7 +668,7 @@ export default function CustomDevelopment(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

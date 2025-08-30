@@ -4,7 +4,7 @@ const sampleTitles = [
   'AI-Powered Analytics Platform',
   'Cybersecurity Assessment Tool',
   'Cloud Migration Service',
-  'IoT Edge Computing Solution',
+  'IoT Edge Computing Solution',;
   'Quantum Computing Hardware',;
   'Data Science Consulting',;
   'Blockchain Development Service',;
@@ -17,7 +17,7 @@ const sampleDescriptions = [
   'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',
   'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',
   'Professional cloud migration service including planning, execution, and optimization.',
-  'IoT platform with edge computing capabilities for real-time data processing.',
+  'IoT platform with edge computing capabilities for real-time data processing.',;
   'State-of-the-art quantum computing components for research and development.',;
   'Expert data science consulting services for machine learning and analytics projects.',;
   'Blockchain development and implementation services for decentralized applications.',;
@@ -30,7 +30,7 @@ const sampleTags = [
   ['AI', 'Analytics', 'Business Intelligence'],
   ['Security', 'Cybersecurity', 'Monitoring'],
   ['Cloud', 'Migration', 'Enterprise'],
-  ['IoT', 'Edge Computing', 'Real-time'],
+  ['IoT', 'Edge Computing', 'Real-time'],;
   ['Quantum', 'Research', 'Hardware'],;
   ['Data Science', 'Machine Learning', 'Consulting'],;
   ['Blockchain', 'Development', 'DApps'],;
@@ -39,7 +39,7 @@ const sampleTags = [
   ['Network', 'Security', 'Threat Detection'];
 ];
 
-const sampleImages = [
+const sampleImages = [;
   'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',;
   'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
   'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',;
@@ -62,7 +62,7 @@ const locations = [;
 
 const sellerNames = [
   'TechCorp Solutions',
-  'SecureNet Professionals',
+  'SecureNet Professionals',;
   'QuantumTech Labs',;
   'CloudMasters Inc',;
   'IoT Solutions Pro',;
@@ -100,7 +100,7 @@ export function generateRandomListing(): MarketplaceItem {
     featured: Math.random() > 0.7,
     seller: {
       name: sellerName || 'Default Seller',
-      rating: 4.0 + Math.random() * 1.0,
+      rating: 4.0 + Math.random() * 1.0,;
       verified: Math.random() > 0.3;
     },;
     location: location || 'Remote',;

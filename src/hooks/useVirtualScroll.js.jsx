@@ -127,6 +127,7 @@ export const useVirtualScroll = (items, options) => {
             position: 'relative',
   willChange: state.isScrolling ? 'scroll-position' : 'auto'
         
+
 },
         onScroll: handleScroll
     };
@@ -136,6 +137,7 @@ export const useVirtualScroll = (items, options) => {
             height: state.totalHeight,
             position: 'relative',
   transform: `translateY(${virtualScrollParams.offsetY
+
 }px)`
         }
     };

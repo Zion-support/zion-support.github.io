@@ -10,6 +10,7 @@ const contact = {
 
 
 
+
 }
 export const addedITServices2025: AdvancedITService[] = [
   {
@@ -66,7 +67,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'Per-route policies',
       'Just-in-time access',
       'Session recording',
-      'SIEM integration'
+      'SIEM integration';
     ],;
     popular: true,;
     icon: '🔐',;

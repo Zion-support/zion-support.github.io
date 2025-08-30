@@ -40,8 +40,10 @@ export default function AIIncidentPostmortems(...args[]):  {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
   ;
+
 
 
 
@@ -73,7 +75,7 @@ export default function AIIncidentPostmortems(...args[]):  {
     {
       icon: Users,
       title: 'Team Collaboration Tools',
-      description: 'Built-in communication and collaboration features for incident response teams'
+      description: 'Built-in communication and collaboration features for incident response teams';
     },;
     {;
       icon: Database,;
@@ -82,7 +84,7 @@ export default function AIIncidentPostmortems(...args[]):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce incident resolution time by 60%',;
     'Improve team productivity by 45%',;
     'Decrease repeat incidents by 80%',;
@@ -139,7 +141,7 @@ export default function AIIncidentPostmortems(...args[]):  {
         'Unlimited team members',
         'Enterprise integrations',
         'Advanced analytics',
-        'Custom AI models',
+        'Custom AI models',;
         'On-premise deployment option',;
         'Dedicated account manager';
       ],;
@@ -162,7 +164,7 @@ export default function AIIncidentPostmortems(...args[]):  {
     {
       title: 'Security Teams',
       description: 'Enhance security incident response with AI-powered threat analysis',
-      icon: Shield
+      icon: Shield;
     },;
     {;
       title: 'Customer Support',;
@@ -191,10 +193,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -244,10 +248,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -278,6 +284,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -287,10 +294,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -323,10 +332,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -357,6 +368,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -366,10 +378,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -399,10 +413,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -433,6 +449,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -442,10 +459,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -510,10 +529,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -544,6 +565,7 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -553,10 +575,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -589,10 +613,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -637,10 +663,12 @@ export default function AIIncidentPostmortems(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -687,7 +715,7 @@ export default function AIIncidentPostmortems(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </motion.div>;

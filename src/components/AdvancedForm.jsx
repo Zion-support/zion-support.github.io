@@ -174,9 +174,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -203,6 +205,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 } onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus:outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched
                     ? fieldValidation.isValid
                         ? 'border-green-500 focus:ring-green-200'
@@ -210,6 +213,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.value)
+
 
 
 
@@ -233,6 +237,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 } className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"/>
               <span className="text-sm text-gray-600 dark:text-gray-400">
                 {field.placeholder}
@@ -240,6 +245,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </div>) : (<input type={isPasswordField && showPassword[field.name] ? 'text' : field.type} name={field.name} value={fieldValue} onChange = {
   (e) => handleFieldChange(field.name,
   e.target.value)
+
 
 
 
@@ -271,9 +277,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 
 
 
@@ -292,9 +300,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -313,9 +323,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     return (<motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
 =======
       </motion.div>);
@@ -328,9 +340,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -384,6 +398,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -392,9 +407,11 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 

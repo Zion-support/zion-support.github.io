@@ -55,14 +55,14 @@ export function ServicesShowcase(...args[]):  {
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red', count: servicesByCategory['Cybersecurity']?.length || 0 },
     { id: 'Healthcare', name: 'Healthcare', icon: Users, color: 'from-zion-pink to-zion-purple', count: servicesByCategory['Healthcare']?.length || 0 },
     { id: 'Finance', name: 'Finance', icon: DollarSign, color: 'from-zion-green to-zion-blue', count: servicesByCategory['Finance']?.length || 0 },
-    { id: 'Manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple', count: servicesByCategory['Manufacturing']?.length || 0 },
+    { id: 'Manufacturing', name: 'Manufacturing', icon: Server, color: 'from-zion-blue to-zion-purple', count: servicesByCategory['Manufacturing']?.length || 0 },;
     { id: 'Sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-orange to-zion-green', count: servicesByCategory['Sustainability']?.length || 0 };
   ];
 
   const toggleCategory = (category: string)  => {
     setExpandedCategories(prev => 
       prev.includes(category) 
-        ? prev.filter(c => c !== category)
+        ? prev.filter(c => c !== category);
         [...prev, category];
     )};
 
@@ -75,7 +75,7 @@ export function ServicesShowcase(...args[]):  {
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices: allServices.filter(service  => 
+    ? allServices: allServices.filter(service  => ;
         service.category.toLowerCase().includes(selectedCategory.toLowerCase());
       );
 =======
@@ -234,7 +234,7 @@ export function ServicesShowcase() {
       color: "from-orange-500 to-yellow-600"
     },
     {
-      icon: ShoppingCart,
+      icon: ShoppingCart,;
       title: "Affiliate Tracking",;
       description: "Partner revenue platform",;
       href: "/services/affiliate-tracking",;
@@ -244,7 +244,7 @@ export function ServicesShowcase() {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -261,8 +261,9 @@ export function ServicesShowcase() {
 
 
 
+
 },
-    visible: {
+    visible: {;
       opacity: 1,;
       y: 0,;
       transition: {;
@@ -285,10 +286,12 @@ export function ServicesShowcase() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -325,6 +328,7 @@ export function ServicesShowcase() {
 
 
 
+
 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         >
@@ -336,6 +340,7 @@ export function ServicesShowcase() {
               whileHover = {
   { y: -8,
   scale: 1.02 
+
 
 
 
@@ -387,10 +392,12 @@ export function ServicesShowcase() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -401,6 +408,7 @@ export function ServicesShowcase() {
           transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -435,7 +443,7 @@ export function ServicesShowcase() {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </div>;
           </div>;

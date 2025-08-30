@@ -78,6 +78,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
         
+
 }}/>)};
 =======
             cancelAnimationFrame(animationId);
@@ -88,6 +89,7 @@ export const FuturisticMatrixBackground = ({ intensity = 'medium', color = '#00f
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
         
+
 
 
 

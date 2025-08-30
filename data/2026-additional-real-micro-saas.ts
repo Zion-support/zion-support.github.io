@@ -77,7 +77,7 @@ export const additionalRealMicroSaas2026 = [
 			'OAuth/API key auth middleware',
 			'Quota, rate limits, and usage logs',
 			'Staging and production environments',
-			'Examples for Node/Next.js, Python'
+			'Examples for Node/Next.js, Python';
 		],;
 		pricing: { starter: '$129/month' },;
 		link: 'https://ziontechgroup.com/services/chatgpt-integration-plugin-starter',;

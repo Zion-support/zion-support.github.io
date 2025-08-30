@@ -28,7 +28,7 @@ export function LoginContent(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </a>;
           </p>;

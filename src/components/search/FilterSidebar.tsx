@@ -72,7 +72,7 @@ export function FilterSidebar(...args[]):  {
               
               <div className="space-y-2">
                 {group.options.map((option) => {
-=======
+=======;
           {filters.map((group) => (;
             <div key={group.key} className="space-y-3">;
               <h4 className="font-medium text-white">{group.title}</h4>;
@@ -97,6 +97,7 @@ export function FilterSidebar(...args[]):  {
 
 
 
+
 }
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -110,7 +111,7 @@ export function FilterSidebar(...args[]):  {
                         )}
                       </span>
                     </label>
-                  )})}
+                  )})};
 =======;
                             ({option.count});
                           </span>;

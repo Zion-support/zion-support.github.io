@@ -219,7 +219,7 @@ export default function HelpCenter(...args[]):  {
 
     const filtered = faqData.filter(faq => 
       faq.question.toLowerCase().includes(query.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(query.toLowerCase()) ||;
       faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()));
     );
     setFilteredFAQs(filtered)};
@@ -227,7 +227,7 @@ export default function HelpCenter(...args[]):  {
   const toggleFAQ = (id: string)  => {;
     setExpandedFAQ(expandedFAQ === id ? null : id)};
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: string)  => {;
     switch (category) {;
       case 'getting-started': return BookOpen;
       case 'services': return Code;
@@ -310,7 +310,7 @@ export default function HelpCenter(...args[]):  {
       icon: HelpCircle,
       description: 'Common issues and solutions',
       color: 'from-yellow-500 to-orange-500',
-      articles: [
+      articles: [;
         { title: 'Common Error Codes', type: 'reference', readTime: '15 min' },;
         { title: 'Performance Issues', type: 'guide', readTime: '20 min' },;
         { title: 'Connection Problems', type: 'guide', readTime: '18 min' },;
@@ -341,7 +341,7 @@ export default function HelpCenter(...args[]):  {
       views: '1.2k',
       rating: 4.7
     },
-    {
+    {;
       title: 'Cloud Migration Best Practices',;
       duration: '28:20',;
       thumbnail: '/api/placeholder/300/200',;
@@ -376,7 +376,7 @@ export default function HelpCenter(...args[]):  {
       action: 'Call Now'
     },
     {
-      icon: Users,
+      icon: Users,;
       title: 'Community Forum',;
       description: 'Connect with other users',;
       availability: '24/7',;
@@ -390,7 +390,7 @@ export default function HelpCenter(...args[]):  {
     : helpCategories.filter(cat => cat.id === selectedCategory);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: string)  => {;
     switch (category) {;
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';
@@ -422,10 +422,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -469,14 +471,17 @@ export default function HelpCenter(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
@@ -487,14 +492,17 @@ export default function HelpCenter(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.4,
   delay: 0.3 + index * 0.1 
+
 }}
               >
                 <Link
@@ -522,14 +530,17 @@ export default function HelpCenter(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
+
 }}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
@@ -540,14 +551,17 @@ export default function HelpCenter(...args[]):  {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.4,
   delay: 0.5 + index * 0.1 
+
 }}
               >
                 <Link
@@ -574,14 +588,17 @@ export default function HelpCenter(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           animate = {
   { opacity: 1,
   y: 0 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.6 
+
 }}
         >
           <div className="max-w-4xl mx-auto">
@@ -632,6 +649,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -641,10 +659,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -669,6 +689,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -678,10 +699,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -709,14 +732,17 @@ export default function HelpCenter(...args[]):  {
                           initial = {
   { height: 0,
   opacity: 0 
+
 }}
                           animate = {
   { height: 'auto',
   opacity: 1 
+
 }}
                           exit = {
   { height: 0,
   opacity: 0 
+
 }}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden"
@@ -758,10 +784,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -776,10 +804,11 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
             >
               <div className="flex flex-wrap justify-center gap-3 mb-12">
-                <button
+                <button;
                   onClick={() => {;
                     setSearchQuery('');
                     setSelectedCategory('all');
@@ -815,6 +844,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -824,10 +854,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -888,6 +920,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -897,10 +930,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -924,6 +959,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
@@ -933,10 +969,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: 0.1 * index 
+
 
 
 
@@ -988,6 +1026,7 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -997,10 +1036,12 @@ export default function HelpCenter(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -1029,7 +1070,7 @@ export default function HelpCenter(...args[]):  {
         </section>
       </div>
     </div>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

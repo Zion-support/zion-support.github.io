@@ -24,7 +24,7 @@ const CloudServices = () => {
       price: "From $6,500/month",
       features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"],
       icon: Shield
-    }
+    };
 =======;
       description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",;
       price: "From $6,500/month",;
@@ -53,7 +53,7 @@ const CloudServices = () => {
       description: "AI-first cloud platform with advanced analytics",
       icon: Globe,
       features["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]
-    }
+    };
 =======;
       name: "Google Cloud Platform",;
       description: "AI-first cloud platform with advanced analytics",;
@@ -63,7 +63,7 @@ const CloudServices = () => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const benefits = [
+  const benefits = [;
     "Scalable infrastructure that grows with your business",;
     "Reduced capital expenditure and operational costs",;
     "Enhanced security and compliance capabilities",;
@@ -231,7 +231,7 @@ const CloudServices = () => {
             </a>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

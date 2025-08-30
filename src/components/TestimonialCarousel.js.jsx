@@ -77,7 +77,6 @@ export function TestimonialCarousel() {
             setDirection(1);
             setCurrentIndex((prev) => (prev + 1) % testimonials.length)}, 5000);
         return () => clearInterval(timer)}, []);
-    const swipeConfidenceThreshold = 10000;
     const swipePower = (offset, velocity) => {
         return Math.abs(offset) * velocity};
     const paginate = (newDirection) => {
@@ -99,9 +98,11 @@ export function TestimonialCarousel() {
         <motion.div className="text-center mb-16" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Users Say</span>
@@ -118,14 +119,17 @@ export function TestimonialCarousel() {
   {
             x: { type: "spring", stiffness: 300,
   damping: 30 
+
 },
             opacity: { duration: 0.2 }
         }} drag="x" dragConstraints = {
   { left: 0,
   right: 0 
+
 }} dragElastic={1} onDragEnd = {
   (e, { offset,
   velocity 
+
 }) => {
             const swipe = swipePower(offset.x, velocity.x);
             if (swipe < -swipeConfidenceThreshold) {
@@ -203,12 +207,15 @@ export function TestimonialCarousel() {
         <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
           <div className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
             <div className="text-3xl font-bold text-zion-cyan mb-2">98%</div>

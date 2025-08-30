@@ -1,7 +1,7 @@
 import { Smartphone, MessageSquare, Users, BarChart2, ArrowRight, Check, Phone, Mail } from 'lucide-react';
 
 export default function MobileSurvey() {
-  const features = [
+  const features = [;
     'Mobile-first NPS/CSAT/CES templates',;
     'QR code and link campaigns',;
     'AI topic clustering and sentiment',;
@@ -60,7 +60,7 @@ export default function MobileSurvey() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2"/> +1 302 464 0950</a>;
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com</a>;
           </div>;

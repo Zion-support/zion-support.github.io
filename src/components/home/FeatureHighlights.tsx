@@ -41,7 +41,7 @@ const highlights = [
     features['Data Protection', 'Access Control', 'Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',
     bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20'
+    borderColor: 'border-zion-blue/20';
   };
 ];
 
@@ -69,7 +69,7 @@ const features = [
   {
     icon: "🤖",
     title: "AI-Powered Intelligence",
-    description: "Smart automation and predictive analytics that adapt to your business requirements"
+    description: "Smart automation and predictive analytics that adapt to your business requirements";
   },;
   {;
     icon: "📊",;
@@ -81,11 +81,11 @@ const features = [
 const achievements = [
   { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
   { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
-  { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
+  { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },;
   { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' };
 ];
 
-const technologies = [
+const technologies = [;
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics';
 ];
 
@@ -97,13 +97,14 @@ export function FeatureHighlights(...args[]):  {
       transition: {
         staggerChildren: 0.15,
         delayChildren: 0.1
-      }
+      };
     };
   };
 
   const itemVariants = {
   hidden: { opacity: 0, y: 30,
   scale: 0.95 
+
 },
     visible: {
       opacity: 1,
@@ -112,29 +113,31 @@ export function FeatureHighlights(...args[]):  {
       transition: {
         duration: 0.6,
         ease: "easeOut"
-      }
+      };
     };
   };
 
   const achievementVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
+
 },
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5 };
     };
   };
 
   const techVariants = {
   hidden: { opacity: 0,
   x: -20 
+
 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5 };
     };
   };
 
@@ -151,10 +154,12 @@ export function FeatureHighlights(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -189,6 +194,7 @@ export function FeatureHighlights(...args[]):  {
                 y: -10, 
                 scale: 1.02,
   transition: { duration: 0.3 
+
 }
               }}
               className="group"
@@ -247,10 +253,12 @@ export function FeatureHighlights(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -261,6 +269,7 @@ export function FeatureHighlights(...args[]):  {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -350,10 +359,12 @@ export function FeatureHighlights(...args[]):  {
           initial = {
   { opacity: 0,
   y: 20 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
 =======
         <motion.div 
@@ -366,10 +377,12 @@ export function FeatureHighlights(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -386,6 +399,7 @@ export function FeatureHighlights(...args[]):  {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -396,7 +410,7 @@ export function FeatureHighlights(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             <span className="text-2xl">→</span>;
           </div>;

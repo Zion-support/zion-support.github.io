@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityTesting() {
   const features = [
     'AI-powered security testing optimization',
-    'Intelligent testing strategy management and execution',
+    'Intelligent testing strategy management and execution',;
     'Automated security vulnerability detection and assessment',;
     'Predictive analytics for testing needs',;
     'Smart testing framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityTesting() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
+      details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityTesting() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security testing optimization',;
     'Testing strategy management and execution',;
     'Security vulnerability detection and assessment',;
@@ -39,7 +39,7 @@ export default function AISecurityTesting() {
     'Testing scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security testing performance by 50-80%',;
     'Reduce testing completion time by 40-70%',;
     'Cut security testing costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityTesting() {
     'Scale security testing operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityTesting() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

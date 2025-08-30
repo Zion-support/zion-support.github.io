@@ -73,6 +73,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
   <<<<<<< HEAD
             colorBlindness: 'none'
         
+
 };
         setSettings(defaultSettings)};
 =======
@@ -126,6 +127,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   x: 0 
@@ -134,9 +136,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   x: -400 
+
 
 
 
@@ -176,9 +180,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -192,12 +198,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
                         <input type="checkbox" checked={settings.highContrast} onChange = {
   (e) => updateSetting('highContrast',
   e.target.checked)
+
 
 
 
@@ -225,6 +233,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 } className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"/>
                     </div>
 
@@ -233,6 +242,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.reducedMotion} onChange = {
   (e) => updateSetting('reducedMotion',
   e.target.checked)
+
 
 
 
@@ -257,6 +267,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -265,9 +276,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -286,6 +299,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 } className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                         <option value="none">None</option>
                         <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -299,6 +313,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
                         <input type="checkbox" checked={settings.focusIndicator} onChange = {
   (e) => updateSetting('focusIndicator',
   e.target.checked)
+
 
 
 
@@ -323,9 +338,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -339,12 +356,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
                         <input type="checkbox" checked={settings.screenReader} onChange = {
   (e) => updateSetting('screenReader',
   e.target.checked)
+
 
 
 
@@ -381,9 +400,11 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -397,12 +418,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 
 
+
 }} className="space-y-4">
                     <div>
                       <label className="flex items-center space-x-3">
                         <input type="checkbox" checked={settings.keyboardNavigation} onChange = {
   (e) => updateSetting('keyboardNavigation',
   e.target.checked)
+
 
 
 

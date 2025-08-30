@@ -18,7 +18,7 @@ const AIContentCreation: React.FC = () => {
     {
       icon: Video,
       title: 'AI Video Creation',
-      description: 'Produce engaging video content automatically'
+      description: 'Produce engaging video content automatically';
     },;
     {;
       icon: PenTool,;
@@ -41,7 +41,7 @@ const AIContentCreation: React.FC = () => {
     {
       title: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content',
-      icon: '📊'
+      icon: '📊';
     },;
     {;
       title: 'Product Descriptions',;
@@ -50,7 +50,7 @@ const AIContentCreation: React.FC = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Save time with automated content generation',;
     'Maintain consistent brand voice and style',;
     'Scale content production without additional staff',;
@@ -78,10 +78,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -132,10 +134,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -165,6 +169,7 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -174,10 +179,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -209,10 +216,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +251,7 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -251,10 +261,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -288,10 +300,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -319,10 +333,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -352,10 +368,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -390,10 +408,12 @@ const AIContentCreation: React.FC = () => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -413,7 +433,7 @@ const AIContentCreation: React.FC = () => {
                 Start Creating Now
               </button>
               <button className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-200">
-                Schedule Demo
+                Schedule Demo;
               </button>;
             </div>;
           </motion.div>;

@@ -340,9 +340,10 @@ export const PRICING_ANALYSIS_2030 = {
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
   
+
 },
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
-    if (!acc[service.category]) {
+    if (!acc[service.category]) {;
       acc[service.category] = []};
     acc[service.category].push(service.basePrice);
     return acc}, {} as Record<string, any>),
@@ -355,7 +356,7 @@ export const PRICING_ANALYSIS_2030 = {
 =======
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  
+  ;
 ;
 ;
 ;
@@ -395,9 +396,11 @@ export const PAYMENT_OPTIONS_2030 = {
     "Custom integrations",;
   ;
   ;
+  ;
   "SLA guarantees";
   ];
 ;
+
 
 
 
@@ -415,8 +418,10 @@ export const PRICING_CONTACT_2030 = {
   ;
   ;
   ;
+  ;
   responseTime: "Within 24 hours for pricing inquiries";
 ;
+
 
 
 

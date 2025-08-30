@@ -24,10 +24,11 @@ const Progress: React.FC<{ value: number; className?: string }> = ({ value, clas
       className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
       style = {
   { width: `${Math.min(100, Math.max(0,
-  value))
+  value));
 ;
 ;
 ;
+
 
 
 }%` }};
@@ -53,7 +54,7 @@ export const PerformanceOptimizer: React.FC = () => {;
     fid: 0,
     cls: 0,
     ttfb: 0
-=======
+=======;
 interface OptimizationSuggestion {;
   id: string;
   title: string;
@@ -65,7 +66,7 @@ interface OptimizationSuggestion {;
 }
 
 const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
     loadTime: 0,;
     memoryUsage: 0,;
     cpuUsage: 0,;
@@ -81,7 +82,7 @@ const PerformanceOptimizer: React.FC = () => {
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry) => {;
           if (entry.isIntersecting) {;
             const target = entry.target as HTMLElement;
             
@@ -124,7 +125,7 @@ const PerformanceOptimizer: React.FC = () => {
     
     // Simulate performance monitoring
     const interval = setInterval(() => {
-      setMetrics(prev => ({
+      setMetrics(prev => ({;
         loadTime: Math.random() * 3000 + 500,;
         memoryUsage: Math.random() * 100,;
         cpuUsage: Math.random() * 80,;
@@ -248,7 +249,7 @@ const PerformanceOptimizer: React.FC = () => {
     // Preconnect to external domains
     const domains = [
       'https://fonts.googleapis.com',
-      'https://fonts.gstatic.com',
+      'https://fonts.gstatic.com',;
       'https://cdn.gpteng.co';
     ];
 
@@ -262,7 +263,7 @@ const PerformanceOptimizer: React.FC = () => {
 
     // DNS prefetch for critical resources
     const dnsPrefetchDomains = [
-      '//ziontechgroup.com',
+      '//ziontechgroup.com',;
       '//api.ziontechgroup.com';
     ];
 
@@ -291,7 +292,7 @@ const PerformanceOptimizer: React.FC = () => {
 
   // Debounced scroll handler for performance
   const debouncedScrollHandler = useCallback(
-    debounce(() => {
+    debounce(() => {;
       // Handle scroll-based optimizations;
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       
@@ -480,7 +481,7 @@ const PerformanceOptimizer: React.FC = () => {
       {activeOptimizations.length > 0 && (
         <Alert>
           <AlertTriangle className="h-4 w-4" />
-          <AlertDescription>
+          <AlertDescription>;
             {activeOptimizations.length} optimization(s) are currently being applied. ;
             This may take a few moments to complete.;
           </AlertDescription>;
@@ -534,7 +535,7 @@ const PerformanceOptimizer: React.FC = () => {
   // Add CSS for lazy loading
   useEffect(() => {
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = `;
       .lazy {;
         opacity: 0;
         transition: opacity 0.3s;

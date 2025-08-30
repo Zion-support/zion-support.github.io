@@ -15,6 +15,7 @@ export default function Careers() {
                 description: "Join our frontend team to build beautiful, responsive,
   and accessible user interfaces for our AI-powered marketplace."
             
+
 },
             {
                 title: "AI Research Engineer",

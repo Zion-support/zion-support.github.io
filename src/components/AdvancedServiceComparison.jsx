@@ -122,9 +122,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -148,9 +150,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -163,6 +167,7 @@ export const AdvancedServiceComparison = () => {
             <select value={filters.category} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   category: e.target.value 
+
 
 
 
@@ -187,6 +192,7 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
               <option value="all">All Levels</option>
               {COMPLEXITY_LEVELS.map(level => (<option key={level} value={level}>{level}</option>))}
@@ -203,6 +209,7 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }))} className="w-full p-2 border border-zion-slate-light rounded-md">
               <option value="all">All Prices</option>
               {PRICE_RANGES.map(range => (<option key={range} value={range}>{range}</option>))}
@@ -214,6 +221,7 @@ export const AdvancedServiceComparison = () => {
             <select value={filters.technology} onChange = {
   (e) => setFilters(prev => ({ ...prev,
   technology: e.target.value 
+
 
 
 
@@ -258,9 +266,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -275,9 +285,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -357,6 +369,7 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }>
                       Learn More
                     </Button>
@@ -376,9 +389,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -418,6 +433,7 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }>
               <Mail className="w-4 h-4 mr-2"/>
               Get Detailed Comparison
@@ -434,9 +450,11 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -458,6 +476,7 @@ export const AdvancedServiceComparison = () => {
 
 
 
+
 }>
               <Mail className="w-4 h-4 mr-2"/>
               Get Started
@@ -465,6 +484,7 @@ export const AdvancedServiceComparison = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 
 
 

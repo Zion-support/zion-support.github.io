@@ -46,7 +46,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     {
       icon: Search,
       title: "Security & Compliance",
-      description: "Enterprise-grade security with regulatory compliance and audit trails"
+      description: "Enterprise-grade security with regulatory compliance and audit trails";
     },;
     {;
       icon: Eye,;
@@ -97,7 +97,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
       price: "From $5,999/month",
       features[
         "Custom strategy development",
-        "Advanced modeling",
+        "Advanced modeling",;
         "Performance analytics",;
         "Research reports",;
         "Expert consultation",;
@@ -108,7 +108,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
   const supportedAssets = [
     "Stocks & Equities",
-    "Bonds & Fixed Income",
+    "Bonds & Fixed Income",;
     "Foreign Exchange (Forex)",;
     "Commodities",;
     "Cryptocurrencies",;
@@ -117,7 +117,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     "Alternative Investments";
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increase trading returns by 25-40%",;
     "Reduce portfolio risk by 30%",;
     "24/7 automated trading",;
@@ -126,7 +126,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     "Scalable operations";
   ];
 
-  const technologies = [
+  const technologies = [;
     "Machine Learning Algorithms",;
     "Deep Neural Networks",;
     "Natural Language Processing",;
@@ -158,10 +158,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -209,10 +211,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -243,6 +247,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -252,10 +257,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -287,10 +294,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -321,6 +330,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -330,10 +340,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -377,10 +389,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -411,6 +425,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -420,10 +435,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -452,10 +469,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -486,6 +505,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -495,10 +515,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -529,10 +551,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -563,6 +587,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -572,10 +597,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -604,10 +631,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -628,6 +657,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -637,10 +667,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -661,6 +693,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -670,10 +703,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -712,10 +747,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -744,10 +781,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -771,6 +810,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -780,10 +820,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -806,6 +848,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -815,10 +858,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -842,6 +887,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -851,10 +897,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -874,7 +922,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </div>;

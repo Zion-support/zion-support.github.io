@@ -72,7 +72,7 @@ const FinOpsAdvisor = () => {
     {
       icon: LineChart,
       title: 'Trend Analysis',
-      description: 'Predictive analytics for future cost planning'
+      description: 'Predictive analytics for future cost planning';
     },;
     {;
       icon: Target2,;
@@ -81,7 +81,7 @@ const FinOpsAdvisor = () => {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     'Reduce cloud costs by 30-50%',;
     'Improve resource utilization by 40%',;
     'Achieve better budget predictability',;
@@ -104,7 +104,7 @@ const FinOpsAdvisor = () => {
     {
       icon: CreditCard,
       title: 'Budget Planning',
-      description: 'Strategic budget planning and forecasting'
+      description: 'Strategic budget planning and forecasting';
     },;
     {;
       icon: Receipt,;
@@ -123,7 +123,7 @@ const FinOpsAdvisor = () => {
       description: 'Manage complex multi-cloud environments'
     },
     {
-      industry: 'E-commerce',
+      industry: 'E-commerce',;
       description: 'Balance performance with cost efficiency';
     },;
     {;
@@ -149,10 +149,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -203,10 +205,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -237,6 +241,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -246,10 +251,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -281,10 +288,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -315,6 +324,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -324,10 +334,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -363,10 +375,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -397,6 +411,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -406,10 +421,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -435,6 +452,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -444,10 +462,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -477,10 +497,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -511,6 +533,7 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -520,10 +543,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -555,10 +580,12 @@ export default function FinOpsAdvisor(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -580,7 +607,7 @@ export default function FinOpsAdvisor(...args: []):  {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
-                Contact Sales
+                Contact Sales;
               </button>;
             </div>;
           </motion.div>;

@@ -118,9 +118,11 @@ const AdvancedAnalyticsDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} className="mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
@@ -144,16 +146,20 @@ const AdvancedAnalyticsDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {metrics.map((metric, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.1 * index }}>
             <Card className="h-full hover:shadow-lg transition-shadow">
               <CardHeader className="pb-3">
@@ -185,9 +191,11 @@ const AdvancedAnalyticsDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.2 }} className="mb-8">
         <Card>
           <CardHeader>
@@ -213,9 +221,11 @@ const AdvancedAnalyticsDashboard = () => {
                   {servicePerformance.map((service, index) => (<motion.tr key={index} initial = {
   { opacity: 0,
   x: -20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
                       <td className="py-3 px-4">
                         <div className="font-medium text-zion-blue-dark">{service.name}</div>
@@ -260,9 +270,11 @@ const AdvancedAnalyticsDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.3 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
@@ -277,9 +289,11 @@ const AdvancedAnalyticsDashboard = () => {
               {categoryDistribution.map((category, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   x: -20 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-4 h-4 bg-gradient-to-r ${category.color} rounded-full`}></div>
@@ -344,9 +358,11 @@ const AdvancedAnalyticsDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ delay: 0.4 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Get Detailed Analytics</h3>
@@ -358,6 +374,7 @@ const AdvancedAnalyticsDashboard = () => {
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access',
   '_blank')
+
 }>
               <Rocket className="w-5 h-5 mr-2"/>
               Request Access
@@ -365,6 +382,7 @@ const AdvancedAnalyticsDashboard = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
+
 }>
               <Shield className="w-5 h-5 mr-2"/>
               Schedule Demo

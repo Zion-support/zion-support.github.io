@@ -17,7 +17,7 @@ export function Button(...args[]):  {
 export function Button({ 
   children, 
   variant = 'default', 
-  size = 'md',
+  size = 'md',;
   asChild = false,;
   className = '', ;
   onClick,;
@@ -33,8 +33,10 @@ export function Button({
   ;
   ;
   ;
+  ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
   ;
+
 
 
 
@@ -48,8 +50,10 @@ export function Button({
   ;
   ;
   ;
+  ;
   icon: 'w-10 h-10 p-0';
   ;
+
 
 
 
@@ -69,7 +73,7 @@ export function Button({
     >
       {children}
     </button>
-  )}
+  )};
 =======;
       onClick={onClick};
       disabled={disabled};
@@ -87,8 +91,10 @@ export const buttonVariants = {
   ;
   ;
   ;
+  ;
   link: 'text-zion-cyan hover:underline focus:ring-zion-cyan';
 ;
+
 
 
 

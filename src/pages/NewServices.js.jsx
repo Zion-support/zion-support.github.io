@@ -32,6 +32,7 @@ export function NewServices() {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -62,9 +63,11 @@ export function NewServices() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
             Revolutionary Tech Services
@@ -133,12 +136,15 @@ export function NewServices() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }} className="mb-12">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category
@@ -153,12 +159,15 @@ export function NewServices() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }} className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-zion-cyan">
             Featured Revolutionary Services
@@ -343,12 +352,15 @@ export function NewServices() {
         <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
 }} className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -381,9 +393,11 @@ export function NewServices() {
           <motion.div initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="flex justify-between items-start mb-6">
               <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
@@ -488,4 +502,5 @@ export function NewServices() {
     </div>)}
 export default NewServices;
 
+export default NewServices;
 export default NewServices;

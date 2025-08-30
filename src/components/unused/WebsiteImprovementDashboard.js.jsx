@@ -48,6 +48,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   // 50-150ms
             timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
         
+
 };
         setMetrics(mockMetrics);
         setIsAnalyzing(false)}, []);
@@ -76,6 +77,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 ogTags: Math.random() > 0.2,
   twitterTags: Math.random() > 0.4
             
+
 }
         };
         setSeoAnalysis(mockSEO);
@@ -96,6 +98,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             criticalIssues: Math.floor(Math.random() * 3),
   warnings: Math.floor(Math.random() * 5) + 1
         
+
 };
         setAccessibilityReport(mockAccessibility);
         setIsAnalyzing(false)}, []);
@@ -135,12 +138,15 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         {isOpen && (<motion.div initial = {
   { opacity: 0,
   x: -400 
+
 }} animate = {
   { opacity: 1,
   x: 0 
+
 }} exit = {
   { opacity: 0,
   x: -400 
+
 }} className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">

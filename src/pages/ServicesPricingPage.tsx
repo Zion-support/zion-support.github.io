@@ -37,7 +37,7 @@ const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
-  "24/7 Support",
+  "24/7 Support",;
   "Global Coverage",;
   "Custom Integration",;
   "Training & Documentation",;
@@ -66,7 +66,7 @@ export default function ServicesPricingPage() {
       'Digital Transformation': <Building className="h-5 w-5" />,
       'Edge Computing': <Globe className="h-5 w-5" />,
       'API Management': <Zap className="h-5 w-5" />,
-      'Blockchain & Web3': <Zap className="h-5 w-5" />,
+      'Blockchain & Web3': <Zap className="h-5 w-5" />,;
       'Mobile Development': <Smartphone className="h-5 w-5" />,;
       'E-commerce': <ShoppingCart className="h-5 w-5" />,;
       'Healthcare Technology': <Heart className="h-5 w-5" />,;
@@ -147,6 +147,7 @@ export default function ServicesPricingPage() {
                     onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
   '_blank')
+
 
 
 
@@ -263,6 +264,7 @@ export default function ServicesPricingPage() {
 
 
 
+
 }
                           >
                             <ExternalLink className="h-4 w-4" />
@@ -360,6 +362,7 @@ export default function ServicesPricingPage() {
 
 
 
+
 }
             >
               <Mail className="h-5 w-5 mr-2" />
@@ -377,6 +380,7 @@ export default function ServicesPricingPage() {
 
 
 
+
 }
             >
               <Phone className="h-5 w-5 mr-2" />
@@ -387,7 +391,7 @@ export default function ServicesPricingPage() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </Button>;
           </div>;

@@ -61,6 +61,7 @@ export function HomepagePromotion() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -89,9 +90,11 @@ export function HomepagePromotion() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -183,9 +186,11 @@ export function HomepagePromotion() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

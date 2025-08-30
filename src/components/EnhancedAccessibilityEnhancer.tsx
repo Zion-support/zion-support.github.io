@@ -362,7 +362,9 @@ export default function EnhancedAccessibilityEnhancer({
   ;
   ;
   ;
+  ;
   AAA: 0 ;
+
 
 
 
@@ -465,9 +467,11 @@ export default function EnhancedAccessibilityEnhancer({
         text: '#000000',
         primary: '#3b82f6',;
   ;
+  ;
   secondary: '#64748b';
       ;
 ;
+
 
 
 
@@ -530,6 +534,7 @@ export default function EnhancedAccessibilityEnhancer({
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -539,10 +544,12 @@ export default function EnhancedAccessibilityEnhancer({
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -682,10 +689,12 @@ export default function EnhancedAccessibilityEnhancer({
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -756,6 +765,7 @@ export default function EnhancedAccessibilityEnhancer({
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -765,10 +775,12 @@ export default function EnhancedAccessibilityEnhancer({
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -794,7 +806,9 @@ export default function EnhancedAccessibilityEnhancer({
   ;
   ;
   ;
+  ;
   fontSize: parseInt(e.target.value) ;
+
 
 
 
@@ -825,7 +839,9 @@ export default function EnhancedAccessibilityEnhancer({
   ;
   ;
   ;
+  ;
   lineHeight: parseFloat(e.target.value) ;
+
 
 
 
@@ -896,7 +912,7 @@ export default function EnhancedAccessibilityEnhancer({
                 </div>
               </div>
             </motion.div>
-          </motion.div>
+          </motion.div>;
         )};
       </AnimatePresence>;
 ;

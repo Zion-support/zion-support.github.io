@@ -5,12 +5,14 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
         md: 'w-12 h-12',
   lg: 'w-16 h-16'
     
+
 };
     const colorClasses = {
   primary: 'text-zion-purple',
         secondary: 'text-zion-cyan',
   white: 'text-white'
     
+
 };
     const spinnerVariants = {
   animate: {
@@ -20,6 +22,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 repeat: Infinity,
   ease: "linear"
             
+
 }
         }
     };
@@ -32,6 +35,7 @@ export function PerformanceOptimizedLoader({ size = 'md', color = 'primary', tex
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }
         }
     };

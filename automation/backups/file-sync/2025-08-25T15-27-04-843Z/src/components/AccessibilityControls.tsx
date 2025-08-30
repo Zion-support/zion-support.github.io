@@ -36,7 +36,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
     announceToScreenReader(`${key.replace(/([A-Z])/g, ' $1').toLowerCase()} ${value ? 'enabled' : 'disabled'}`)};
   const getPositionClasses = () => {
     switch (position) {
-      case 'top-right':
+      case 'top-right':;
 =======;
   const toggleExpanded = () => {;
     setIsExpanded(!isExpanded);
@@ -118,6 +118,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 
 
 
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -131,6 +132,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('largeText',
   e.target.checked)
+
 
 
 
@@ -163,6 +165,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 
 
 
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -190,6 +193,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 
 
 
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -203,6 +207,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('keyboardNavigation',
   e.target.checked)
+
 
 
 
@@ -235,6 +240,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 
 
 
+
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -254,7 +260,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
             </div>
           </div>
         </div>
-      )}
+      )};
     </div>;
   )};
 =======

@@ -67,7 +67,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com";
 =======;
         mobile: string;
         email: string;
@@ -83,8 +83,10 @@ const CONTACT = {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
 
 
 
@@ -559,7 +561,7 @@ export const enhancedServices2025: EnhancedService[] = [
     ],
     technology['AI/ML', 'Automation', 'Security Orchestration', 'Real-time Analytics'],
     integrations['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
-    useCases['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],
+    useCases['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],;
     targetAudience: 'Security teams, IT operations, SOC analysts, Compliance officers',;
     marketPosition: 'Competes with PagerDuty, ServiceNow; adds AI-powered automation and security focus',
     competitors['PagerDuty', 'ServiceNow', 'VictorOps', 'OpsGenie'],
@@ -683,7 +685,7 @@ export const enhancedServices2025: EnhancedService[] = [
     ],
     technology['AI/ML', 'Predictive Analytics', 'Automation', 'CRM Integration'],
     integrations['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
-    useCases['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],
+    useCases['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],;
     targetAudience: 'Customer success teams, SaaS companies, Customer support managers, Growth teams',;
     marketPosition: 'Competes with Gainsight, Totango; adds AI-powered automation and predictive analytics',
     competitors['Gainsight', 'Totango', 'ChurnZero', 'CustomerSuccessBox'],

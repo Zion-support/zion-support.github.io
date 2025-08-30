@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices  } from "../src/data/innovativeServices2025";
-const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
+const InnovativeServicesShowcase: React.FC = (): JSX.Element => {;
 =======;
 import React, { useState, useMemo } from 'react';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from "../src/data/innovativeServices2025";
@@ -12,7 +12,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
   const [priceRange, setPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('rating');
   const categories = ['all', 'AI Services', 'IT Services', 'Micro SAAS', 'Business', 'Development'];
-  const priceRanges = [
+  const priceRanges = [;
     { label: 'All Prices', value: 'all' },;
     { label: 'Under $100', value: '0-100' },;
     { label: '$100 - $500', value: '100-500' },;
@@ -34,7 +34,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )}
+      )};
 =======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -46,13 +46,13 @@ const InnovativeServicesShowcase: React.FC = () => {;
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
-    // Filter by price range
+    // Filter by price range;
     if (priceRange !== 'all') {;
       const [min, max] = priceRange.split('-').map(Number);
 <<<<<<< HEAD
       if (priceRange = == '3000+') {
         filtered = filtered.filter(service => service.price >= 3000)} else {
-        filtered = filtered.filter(service => service.price >= min && service.price <= max)}
+        filtered = filtered.filter(service => service.price >= min && service.price <= max)};
 =======;
       if (priceRange = == '3000+') {;
         filtered = filtered.filter(service => service.price >= 3000);
@@ -136,7 +136,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
         <div className="flex space-x-3">
           <button className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
             Get Quote
-          </button>
+          </button>;
           <button className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">;
             Learn More;
           </button>;
@@ -282,7 +282,7 @@ const InnovativeServicesShowcase: React.FC = () => {;
             </button>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

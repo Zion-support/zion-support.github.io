@@ -3,7 +3,7 @@ import { Trophy, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 export default function AISports() {
   const features = [
     'AI-powered performance analysis and optimization',
-    'Intelligent training program design and monitoring',
+    'Intelligent training program design and monitoring',;
     'Automated injury prevention and risk assessment',;
     'Predictive analytics for player development',;
     'Real-time game strategy and tactical analysis',;
@@ -21,7 +21,7 @@ export default function AISports() {
     { 
       name: 'Professional Team', 
       price: '$599/mo', 
-      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
+      details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'] ;
     },;
     { ;
       name: 'Major League', ;
@@ -30,7 +30,7 @@ export default function AISports() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Player performance analysis and optimization',;
     'Training program design and monitoring',;
     'Injury prevention and risk assessment',;
@@ -39,7 +39,7 @@ export default function AISports() {
     'Fan engagement and marketing optimization';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve player performance by 20-40%',;
     'Reduce injury risk by 30-50%',;
     'Cut training costs by 25-40%',;
@@ -48,7 +48,7 @@ export default function AISports() {
     'Scale sports operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Professional Sports Teams',;
     'College & University Athletics',;
     'Youth Sports Organizations',;
@@ -163,7 +163,7 @@ export default function AISports() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

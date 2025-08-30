@@ -31,7 +31,7 @@ export function Select({
     </select>
   )}
 
-interface SelectItemProps extends React.PropsWithChildren<{}> {
+interface SelectItemProps extends React.PropsWithChildren<{}> {;
 =======;
       onChange={onChange};
       disabled={disabled};
@@ -53,7 +53,7 @@ export function SelectItem(...args[]):  {
     </option>
   )}
 
-interface SelectTriggerProps extends React.PropsWithChildren<{}> {
+interface SelectTriggerProps extends React.PropsWithChildren<{}> {;
 =======;
     <option value = {value}>;
       {children};

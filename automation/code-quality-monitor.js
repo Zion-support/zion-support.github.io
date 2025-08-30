@@ -16,6 +16,7 @@ class CodeQualityMonitor {
       performance: 0,
   lastUpdated: new Date().toISOString()
     
+
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
   log(message) {

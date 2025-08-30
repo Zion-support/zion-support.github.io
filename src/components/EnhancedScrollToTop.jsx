@@ -26,6 +26,7 @@ const EnhancedScrollToTop = () => {
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
@@ -34,9 +35,11 @@ const EnhancedScrollToTop = () => {
 
 
 
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 
 
 

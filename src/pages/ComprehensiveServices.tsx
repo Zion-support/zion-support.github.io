@@ -41,8 +41,9 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
   const contact = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 };
 
   const microSaaS = [
@@ -101,7 +102,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
       desc: 'Usage metering, subscription plans, rate limiting, and Stripe billing for your public/private APIs.',
       price: '$199–$899/mo + 1% usage',
       cta: 'https://ziontechgroup.com/comprehensive-services',
-      features['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations']
+      features['Per-endpoint metering', 'Self-serve developer portal', 'JWT/OAuth2 auth', 'Stripe/Chargebee integrations'];
     };
   ];
 
@@ -160,7 +161,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
       desc: 'eBPF-powered observability, microsegmentation, and ZTNA rollout across hybrid networks.',
       price: 'Engagements from $18,000',
       cta: 'https://ziontechgroup.com/services/zero-trust-network-architecture',
-      features['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification']
+      features['eBPF flow visibility', 'Microsegmentation policy design', 'ZTNA rollout', 'Continuous verification'];
     };
   ];
 
@@ -219,7 +220,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
       desc: 'End-to-end ML lifecycle with experiment tracking, model registry, deployment, and evaluations.',
       price: '$2,499–$9,999/mo',
       cta: 'https://ziontechgroup.com/comprehensive-services',
-      features['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs']
+      features['Feature store and lineage', 'Canary and shadow deploys', 'Live evals and guardrails', 'Cost and latency SLOs'];
     };
   ];
 =======
@@ -263,10 +264,12 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -306,7 +309,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
           </motion.div>
         </div>
       </section>
-
+;
 <<<<<<< HEAD;
   const Section: React.FC<{ icon: React.ReactNode; title: string; description: string; items: { title: string; desc: string; price: string; cta: string; features: string[]}[]; gradient: string}>
     = ({ icon, title, description, items, gradient }) => (
@@ -347,6 +350,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -356,10 +360,12 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -392,10 +398,12 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -426,6 +434,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -435,10 +444,12 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -486,6 +497,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                 >
@@ -497,7 +509,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
         </section>
-      </div>
+      </div>;
     </>;
   )};
 =======
@@ -516,10 +528,12 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -548,7 +562,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
               >
-                Get Custom Quote
+                Get Custom Quote;
               </Link>;
             </div>;
           </motion.div>;
@@ -560,4 +574,5 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ComprehensiveServices;
+export default design;
 export default design;

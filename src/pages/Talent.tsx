@@ -7,11 +7,11 @@ const Talent: React.FC = (): JSX.Element => {
       <div className="max-w-3xl text-center text-white">
         <h1 className="text-4xl font-bold mb-4">Talent</h1>
         <p className="text-lg text-gray-300">Discover top-tier technology talent for your projects.</p>
-      </div>
+      </div>;
     </div>;
   )};
 =======
-const Talent: React.FC = () => (
+const Talent: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
 			<h1 className="text-4xl font-bold mb-4">Talent</h1>;

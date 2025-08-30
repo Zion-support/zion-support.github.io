@@ -209,6 +209,7 @@ export function ClientSuccessStoriesSection() {
     const itemVariants = {
   hidden: { y: 30,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -232,9 +233,11 @@ export function ClientSuccessStoriesSection() {
         <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Client <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
@@ -249,12 +252,15 @@ export function ClientSuccessStoriesSection() {
             {overallStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   scale: 0.8 
+
 }} whileInView = {
   { opacity: 1,
   scale: 1 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
                 <div className="text-zion-cyan mb-2 flex justify-center">
                   {stat.icon}
@@ -269,12 +275,15 @@ export function ClientSuccessStoriesSection() {
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Industry <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Performance</span>
@@ -284,12 +293,15 @@ export function ClientSuccessStoriesSection() {
             {industryStats.map((stat, index) => (<motion.div key={index} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} onHoverStart={() => setHoveredIndustry(index)} onHoverEnd={() => setHoveredIndustry(null)} whileHover={{ y: -4 }} className="p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20">
                 <h4 className="text-xl font-bold text-white mb-4">{stat.industry}</h4>
                 
@@ -315,12 +327,15 @@ export function ClientSuccessStoriesSection() {
         <motion.div className="mb-20" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}>
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Featured <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Success Stories</span>
@@ -330,12 +345,15 @@ export function ClientSuccessStoriesSection() {
             {successStories.map((story, index) => (<motion.div key={story.id} initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }} whileHover={{ y: -4 }} className="relative">
                 <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedStory(selectedStory === story.id ? null : story.id)}>
                   {/* Header */}
@@ -400,12 +418,15 @@ export function ClientSuccessStoriesSection() {
                     {selectedStory === story.id && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} animate = {
   { opacity: 1, height: "auto",
   y: 0 
+
 }} exit = {
   { opacity: 0, height: 0,
   y: 10 
+
 }} transition={{ duration: 0.3 }}>
                         {/* Detailed Metrics */}
                         <div className="mb-4">
@@ -457,12 +478,15 @@ export function ClientSuccessStoriesSection() {
         <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} viewport={{ once: true }} transition = {
   { duration: 0.6,
   delay: 0.5 
+
 }}>
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">

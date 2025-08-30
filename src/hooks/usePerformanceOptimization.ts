@@ -15,7 +15,7 @@ interface UsePerformanceOptimizationOptions {
   enableFPSMonitoring?: boolean;
   threshold?: number}
 
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
+export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
   const {;
     enableLazyLoading = true,;
     enableIntersectionObserver = true,;
@@ -87,7 +87,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     if (!enableMemoryManagement) return;
 
 <<<<<<< HEAD
-    const checkMemoryUsage = () => {
+    const checkMemoryUsage = () => {;
       if ('memory' in performance) {;
         const memory = (performance as ).memory;
 =======

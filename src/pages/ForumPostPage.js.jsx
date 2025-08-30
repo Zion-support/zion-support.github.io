@@ -23,6 +23,7 @@ const mockPost = {
         avatar: "https://i.pravatar.cc/150?img=3",
   role: "Verified Talent"
     
+
 },
     authorId: "user1",
     category: "ai-tools",
@@ -238,9 +239,11 @@ export default function ForumPostPage() {
       <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {
   post.content.substring(0,
   160)
+
 } keywords = {
   `community, forum, discussion, ${post.tags.join(',
   ')
+
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       
       <div className="container py-8">

@@ -50,7 +50,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     {
       icon: Shield,
       title: "Data Security",
-      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
+      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit.";
     },;
     {;
       icon: Users,;
@@ -59,7 +59,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Improve decision-making speed by 80%",;
     "Reduce manual reporting by 90%",;
     "Identify business opportunities 3x faster",;
@@ -111,7 +111,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Custom AI models",
         "White-label dashboards",
         "24/7 dedicated support",
-        "Unlimited data sources",
+        "Unlimited data sources",;
         "Advanced security features",;
         "Custom integrations",;
         "SLA guarantees";
@@ -134,7 +134,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       description: "Risk assessment, fraud detection, and portfolio optimization"
     },
     {
-      industry: "Manufacturing",
+      industry: "Manufacturing",;
       description: "Predictive maintenance, quality control, and supply chain optimization";
     },;
     {;
@@ -162,10 +162,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -210,10 +212,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -245,6 +249,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -254,10 +259,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -290,10 +297,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -324,6 +333,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -333,10 +343,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -366,10 +378,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -400,6 +414,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -409,10 +424,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -479,10 +496,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -513,6 +532,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -522,10 +542,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -555,10 +577,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -599,10 +623,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -650,7 +676,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

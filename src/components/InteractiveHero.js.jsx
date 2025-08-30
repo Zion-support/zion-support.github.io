@@ -33,6 +33,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     const itemVariants = {
   hidden: { opacity: 0,
   y: 30 
+
 },
         visible: {
             opacity: 1,
@@ -51,6 +52,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
                 repeat: Infinity,
   ease: "easeInOut"
             
+
 }
         }
     };
@@ -65,12 +67,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 1.2,
   1]
         
+
 }} transition = {
   {
             duration: 20,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
         <motion.div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
   {
@@ -79,12 +83,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 0.8,
   1]
         
+
 }} transition = {
   {
             duration: 25,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
         <motion.div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
   {
@@ -93,12 +99,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             scale[1, 1.1,
   1]
         
+
 }} transition = {
   {
             duration: 18,
             repeat: Infinity,
   ease: "linear"
         
+
 }}/>
       </div>
 
@@ -112,6 +120,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
           `,
   backgroundSize: '50px 50px'
         
+
 }}/>
       </div>
 
@@ -123,6 +132,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             <motion.span animate={{ rotate: 360 }} transition = {
   { duration: 2, repeat: Infinity,
   ease: "linear" 
+
 }} className="mr-2">
               🚀
             </motion.span>
@@ -134,6 +144,7 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             {title.split(' ').map((word, index) => (<motion.span key={index} className="inline-block mr-4" whileHover={{ scale: 1.05 }} transition = {
   { type: "spring",
   stiffness: 300 
+
 }}>
                 {word === 'Zion' ? (<span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     {word}
@@ -187,12 +198,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             rotate[0, 180,
   360]
         
+
 }} transition = {
   {
             duration: 8,
             repeat: Infinity,
   ease: "easeInOut"
         
+
 }}/>
 
       <motion.div className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm" animate = {
@@ -201,12 +214,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             x[0, 20,
   0]
         
+
 }} transition = {
   {
             duration: 12,
             repeat: Infinity,
   ease: "easeInOut"
         
+
 }}/>
 
       {/* Mouse Follower Effect */}
@@ -216,12 +231,14 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
             y: mousePosition.y - 8,
   scale: isHovered ? 2 : 1
         
+
 }} transition = {
   {
             type: "spring",
             stiffness: 500,
   damping: 30
         
+
 }}/>
     </section>)};
 export default InteractiveHero;

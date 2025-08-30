@@ -48,7 +48,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Zap,
       title: 'High-Frequency Trading',
-      description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies'
+      description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies';
     },;
     {;
       icon: Eye,;
@@ -101,7 +101,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         'Custom AI models',
         'White-label solutions',
         'Dedicated support',
-        'Advanced compliance',
+        'Advanced compliance',;
         'Unlimited portfolio size',;
         'On-premise options',;
         'SLA guarantees';
@@ -124,7 +124,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Target,
       title: 'Risk-Adjusted Returns',
-      description: 'AI optimizes for the best risk-reward ratio in  market condition'
+      description: 'AI optimizes for the best risk-reward ratio in  market condition';
     },;
     {;
       icon: BarChart3,;
@@ -147,7 +147,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       title: 'Forex Trading',
       description: 'Real-time currency pair analysis and automated forex strategies',
-      icon: Globe
+      icon: Globe;
     },;
     {;
       title: 'Commodities',;
@@ -182,10 +182,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -236,6 +238,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -245,10 +248,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -278,10 +283,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -312,6 +319,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -321,10 +329,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -357,10 +367,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -391,6 +403,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -400,10 +413,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -436,10 +451,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -470,6 +487,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -479,10 +497,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -515,10 +535,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -549,6 +571,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -558,10 +581,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -626,10 +651,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -663,7 +690,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         </div>
       </section>
     </div>
-=======
+=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;

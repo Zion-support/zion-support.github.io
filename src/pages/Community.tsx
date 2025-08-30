@@ -72,7 +72,7 @@ export default function Community() {
     {
       title: 'Digital Transformation',
       description: 'Business transformation strategies and technology adoption',
-      icon: Rocket,
+      icon: Rocket,;
       color: 'from-green-600 to-emerald-600',;
       topics: 620,;
       posts: 4100,;
@@ -108,7 +108,7 @@ export default function Community() {
       title: 'DevOps Best Practices Meetup',
       description: 'Local meetup for DevOps professionals to share experiences',
       date: 'March 28, 2025',
-      location: 'New York, NY',
+      location: 'New York, NY',;
       type: 'Meetup',;
       attendees: 75,;
       icon: Cloud,;
@@ -147,7 +147,7 @@ export default function Community() {
       author: 'Lisa Thompson',
       category: 'Cloud & DevOps',
       replies: 28,
-      views: 650,
+      views: 650,;
       lastActivity: '1 day ago',;
       tags: ['Multi-Cloud', 'Cost Optimization', 'DevOps'],;
       icon: Cloud,;
@@ -178,7 +178,7 @@ export default function Community() {
       href: '/community/members',
       color: 'from-purple-500 to-pink-500'
     },
-    {
+    {;
       title: 'Resource Library',;
       description: 'Access shared resources, templates, and tools',;
       icon: Download,;
@@ -238,10 +238,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -278,6 +280,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -287,10 +290,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 + index * 0.1 
+
 
 
 
@@ -321,6 +326,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -330,10 +336,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -357,6 +365,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -366,10 +375,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.4 + index * 0.1 
+
 
 
 
@@ -505,6 +516,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -514,10 +526,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -541,6 +555,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -550,10 +565,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
+
 
 
 
@@ -622,6 +639,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -631,10 +649,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.7 
+
 
 
 
@@ -658,6 +678,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -667,10 +688,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 + index * 0.1 
+
 
 
 
@@ -741,6 +764,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -750,10 +774,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 0.9 
+
 
 
 
@@ -777,6 +803,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -786,10 +813,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 1.0 + index * 0.1 
+
 
 
 
@@ -827,6 +856,7 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -836,10 +866,12 @@ export default function Community(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.6,
   delay: 1.1 
+
 
 
 
@@ -868,7 +900,7 @@ export default function Community(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </Link>;
           </div>;

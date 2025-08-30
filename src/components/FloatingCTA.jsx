@@ -44,6 +44,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
@@ -52,9 +53,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 
 
 
@@ -75,9 +78,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -96,9 +101,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 
 
 
@@ -112,9 +119,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 
 
 
@@ -179,9 +188,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -200,9 +211,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 
 
 
@@ -216,9 +229,11 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
 
 
 
+
 }} transition = {
   { type: "spring", damping: 25,
   stiffness: 300 
+
 
 
 

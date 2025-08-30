@@ -152,7 +152,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Cybersecurity': <Shield className="w-6 h-6" />,
       'Cloud & DevOps': <Cloud className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
-      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,
+      'IoT & Edge Computing': <Wifi className="w-6 h-6" />,;
       'Blockchain & Web3': <Network className="w-6 h-6" />,;
       'Digital Twin': <Eye className="w-6 h-6" />,;
       'Space Technology': <Satellite className="w-6 h-6" />,;
@@ -186,7 +186,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Cybersecurity': 'from-red-500 to-orange-500',
       'Cloud & DevOps': 'from-blue-500 to-cyan-500',
       'Quantum Computing': 'from-indigo-500 to-purple-500',
-      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',
+      'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
       'Digital Twin': 'from-blue-500 to-indigo-500',;
       'Space Technology': 'from-purple-500 to-pink-500',;
@@ -246,10 +246,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -418,6 +420,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -427,10 +430,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.05 
+
 
 
 
@@ -558,10 +563,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -591,10 +598,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -658,10 +667,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -741,6 +752,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -750,10 +762,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -879,7 +893,7 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
         </div>
       )}
     </>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

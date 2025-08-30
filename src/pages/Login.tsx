@@ -22,7 +22,7 @@ export default function Login(...args[]):  {
 <<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
-      ...formData,
+      ...formData,;
       [e.target.name]: e.target.value;
     })};
 
@@ -54,7 +54,7 @@ export default function Login(...args[]):  {
     {
       icon: <Users className="h-6 w-6 text-zion-cyan" />,
       title: "Team Collaboration",
-      description: "Built-in tools for seamless team communication and project management"
+      description: "Built-in tools for seamless team communication and project management";
     };
   ];
 
@@ -68,10 +68,12 @@ export default function Login(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-8"
@@ -84,7 +86,7 @@ export default function Login(...args[]):  {
               Sign in to your account to continue
             </p>
           </motion.div>
-=======
+=======;
     { icon: Brain, title: 'AI-Powered Solutions', description: 'Advanced artificial intelligence services' },;
     { icon: Cloud, title: 'Cloud Infrastructure', description: 'Scalable cloud computing solutions' },;
     { icon: Shield, title: 'Enterprise Security', description: 'Military-grade cybersecurity protection' },;
@@ -113,10 +115,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -143,14 +147,17 @@ export default function Login(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             {/* Email Field */}
@@ -296,14 +303,17 @@ export default function Login(...args[]):  {
             initial = {
   { opacity: 0,
   x: 30 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -324,6 +334,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
           animate = {
   { opacity: 1,
@@ -333,10 +344,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
           transition = {
   { duration: 0.5,
   delay: 0.2 
+
 
 
 
@@ -366,14 +379,17 @@ export default function Login(...args[]):  {
                   initial = {
   { opacity: 0,
   x: 30 
+
 }}
                   animate = {
   { opacity: 1,
   x: 0 
+
 }}
                   transition = {
   { duration: 0.8,
   delay: 0.6 + index * 0.1 
+
 }}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -393,14 +409,17 @@ export default function Login(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 1 
+
 }}
             >
               <div>
@@ -435,10 +454,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -471,10 +492,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -508,7 +531,7 @@ export default function Login(...args[]):  {
               </div>
             </div>
             <div className="mt-2 text-sm text-blue-100">
-              <MapPin className="h-4 w-4 inline mr-2" />
+              <MapPin className="h-4 w-4 inline mr-2" />;
               123 Innovation Drive, Tech Valley, CA 94000;
             </div>;
           </div>;

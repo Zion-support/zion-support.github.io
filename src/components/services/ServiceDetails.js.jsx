@@ -15,6 +15,7 @@ export function ServiceDetails({ country }) {
   // Default for other countries
             "default"["Major metropolitan areas"]
         
+
 };
         return dataCenters[country] || dataCenters["default"]};
     // Get region-specific image
@@ -30,6 +31,7 @@ export function ServiceDetails({ country }) {
   // Default placeholder
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
         
+
 };
         return regions[country] || regions["default"]};
     // Get region-specific instructions

@@ -46,15 +46,16 @@ export const securityConfig = {
     'form-action': ["'self'"],
     'frame-ancestors': ["'self'"],
     'upgrade-insecure-requests': [],
-   
+  
+
 },
 
   // Security Headers
   headers: {
-    'X-Content-Type-Options': 'nosniff',
+    'X-Content-Type-Options': 'nosniff',;
     'X-Frame-Options': 'DENY',;
     'X-XSS-Protection': '1; mode = block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',;
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',;
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
   },
@@ -95,14 +96,14 @@ export const securityConfig = {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       sameSite: 'strict',
-    },
+    },;
   },;
 };
 
 // Helper function to generate CSP header string
 export const generateCSPHeader = (): string => {
   return Object.entries(securityConfig.csp)
-    .map(([key, values]) => {
+    .map(([key, values]) => {;
       if (Array.isArray(values)) {;
         return `${key} ${values.join(' ')}`;
       }
@@ -113,7 +114,7 @@ export const generateCSPHeader = (): string => {
 
 // Security middleware for Express/Node.js
 export const securityMiddleware = (req: , res: , next: ) => {
-  // Set security headers
+  // Set security headers;
   Object.entries(securityConfig.headers).forEach(([key, value]) => {;
     res.setHeader(key, value);
   });
@@ -128,13 +129,13 @@ export const securityMiddleware = (req: , res: , next: ) => {
 export const sanitizeInput = (input: string): string => {
   return input
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;
     .replace(/on\w+=/gi, '') // Remove event handlers;
     .trim();
 };
 
 // XSS Protection
-export const escapeHtml = (text: string): string => {
+export const escapeHtml = (text: string): string => {;
   const map: { [key: string]: string } = {;
     '&': '&amp;',
     '<': '&lt;',

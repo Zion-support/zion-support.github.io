@@ -30,8 +30,6 @@ export function CollaborationPlatform() {
         const interval = setInterval(() => {
             setMeetingDuration(prev => prev + 1)}, 1000);
         return () => clearInterval(interval)}, []);
-    const toggleAudio = () => {
-        setLocalUser(prev => ({ ...prev, isAudioOn: !prev.isAudioOn }))};
     const toggleMute = () => {
         setLocalUser(prev => ({ ...prev, isMuted: !prev.isMuted }))};
     const toggleRecording = () => {
@@ -44,6 +42,7 @@ export function CollaborationPlatform() {
                 message: newMessage,
   timestamp: new Date()
             
+
 
 
 

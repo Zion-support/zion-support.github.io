@@ -23,7 +23,7 @@ import { innovativeAIServices2030  } from "../data/innovativeAIServices2030";
 import { innovativeCybersecurityServices2030  } from "../data/innovativeCybersecurityServices2030";
 import { innovativeCloudDevOpsServices2030  } from "../data/innovativeCloudDevOpsServices2030";
 
-const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {
+const InnovativeServicesShowcase2030: React.FC = (): JSX.Element => {;
 =======;
 } from 'lucide-react';
 import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
@@ -68,10 +68,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -178,6 +180,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -187,10 +190,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -315,7 +320,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div>;
 ;
           {filteredServices.length === 0 && (;
             <div className="text-center py-12">;
@@ -325,7 +330,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
                   setSearchTerm('');
 <<<<<<< HEAD
                   setActiveCategory('all')}}
-                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+                className = "bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors";
 =======;
                   setActiveCategory('all');
                 }}
@@ -351,10 +356,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -406,6 +413,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -415,10 +423,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -451,10 +461,12 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -537,7 +549,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-      </section>
+      </section>;
     </div>;
   )};
 =======

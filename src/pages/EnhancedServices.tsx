@@ -37,7 +37,7 @@ const EnhancedServices = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </>;
   )};
 =======

@@ -90,9 +90,11 @@ const TalentDirectory = () => {
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition={{ duration: 0.8 }}>
             Top Technology
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
@@ -102,12 +104,15 @@ const TalentDirectory = () => {
           <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}>
             Connect with world-class technology professionals and experts in AI, cloud computing, 
             cybersecurity, and more. Find the perfect talent for your next project.
@@ -115,12 +120,15 @@ const TalentDirectory = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }} className="max-w-2xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
@@ -158,12 +166,15 @@ const TalentDirectory = () => {
             {talents.map((talent, index) => (<motion.div key={talent.id} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100" initial = {
   { opacity: 0,
   y: 20 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 }} transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }} viewport={{ once: true }}>
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">

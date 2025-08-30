@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AITravel() {
   const features = [
     'AI-powered travel optimization',
-    'Intelligent travel planning and management',
+    'Intelligent travel planning and management',;
     'Automated travel monitoring and alerting',;
     'Predictive analytics for travel scaling',;
     'Smart travel security and compliance',;
@@ -21,7 +21,7 @@ export default function AITravel() {
     { 
       name: 'Business', 
       price: '$799/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AITravel() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Travel optimization',;
     'Travel planning and management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AITravel() {
     'Travel scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve travel performance by 50-80%',;
     'Reduce travel planning time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AITravel() {
     'Scale travel operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AITravel() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

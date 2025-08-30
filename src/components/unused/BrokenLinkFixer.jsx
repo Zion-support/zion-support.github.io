@@ -33,6 +33,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
 
 
+
 };
                 // Determine if link is fixable
                 if (href.startsWith('#')) {
@@ -237,6 +238,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
@@ -245,9 +247,11 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
 
 
 
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 
 
 
@@ -431,6 +435,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                                 lastChecked: link.lastChecked.toISOString(),
   fixable: link.fixable
                             
+
 
 
 

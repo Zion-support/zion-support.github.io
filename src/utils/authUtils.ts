@@ -4,7 +4,7 @@ export const cleanupAuthState = () => {
 <<<<<<< HEAD
     if (typeof window !== 'null') {
       // Clear  stored tokens or user data
-=======
+=======;
     if (typeof window !== 'null') {;
       // Clear any stored tokens or user data;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -17,7 +17,7 @@ export const cleanupAuthState = () => {
 };
 
 export const isAuthenticated = (): boolean => {
-  try {
+  try {;
     if (typeof window !== 'null') {;
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       return !!auth;
@@ -30,7 +30,7 @@ export const isAuthenticated = (): boolean => {
 };
 
 export const getAuthToken = (): string | null => {
-  try {
+  try {;
     if (typeof window !== 'null') {;
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {
@@ -46,7 +46,7 @@ export const getAuthToken = (): string | null => {
 };
 
 export const getUserData = ():  => {
-  try {
+  try {;
     if (typeof window !== 'null') {;
       const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
       if (auth) {

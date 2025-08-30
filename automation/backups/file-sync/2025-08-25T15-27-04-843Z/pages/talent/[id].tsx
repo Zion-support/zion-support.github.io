@@ -12,7 +12,7 @@ interface TalentProfileWithSocial extends TalentProfile {
 // Simple error component to replace Next.js ErrorPage
 const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   <div className = "min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">
-    <div className="text-center">
+    <div className="text-center">;
       <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>;
       <p className="text-xl">;
         {statusCode === 404 ? 'Talent not found' : 'Something went wrong'};
@@ -21,7 +21,7 @@ const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
   </div>;
 );
 // Simple loading component
-const ProfileLoadingState: React.FC = () => (
+const ProfileLoadingState: React.FC = () => (;
   <div className="min-h-screen bg-zion-blue py-8 text-white flex items-center justify-center">;
     <div className="text-center">;
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>;
@@ -52,7 +52,7 @@ const TalentProfilePage: React.FC = () => {;
               linkedin: 'https://linkedin.com/in/talent',
               github: 'https://github.com/talent'
             }
-=======
+=======;
             skills: ['React', 'TypeScript', 'Node.js'],;
             availability_type: 'Full-time',;
             social: {;
@@ -109,7 +109,7 @@ const TalentProfilePage: React.FC = () => {;
             </div>
           </div>
         )}
-      </div>
+      </div>;
     </main>;
   )};
 =======

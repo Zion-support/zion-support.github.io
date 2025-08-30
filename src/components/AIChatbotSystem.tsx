@@ -54,7 +54,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
   showSettings = true,
   maxMessages = 50,
-  autoScroll = true
+  autoScroll = true;
 }) => {;
   const [messages, setMessages] = useState<any>([]);
 =======
@@ -97,8 +97,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           relatedServices['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],
   estimatedResponseTime: 2
         
+
 }
-=======
+=======;
           suggestions: ['Tell me about your services', 'Get a quote', 'Technical support', 'Contact information'],;
           relatedServices: ['AI Consulting', 'Cloud Solutions', 'Digital Transformation'],;
   estimatedResponseTime: 2;
@@ -149,7 +150,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",
         suggestions['Strategy development', 'Implementation process', 'Change management', 'ROI examples'],
         relatedServices['Digital Transformation', 'Process Optimization', 'Change Management']
-      }
+      };
 =======;
       {;
         content: "Digital transformation is our specialty! We help businesses modernize their technology stack, improve processes, and enhance customer experiences. Our approach includes strategy development, implementation, and change management.",;
@@ -173,9 +174,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         suggestions: randomResponse.suggestions,
         relatedServices: randomResponse.relatedServices,;
   ;
+  ;
   estimatedResponseTime: 1 + Math.random() * 2;
       ;
 ;
+
 
 
 
@@ -202,8 +205,10 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   ;
   ;
   ;
+  ;
   status: 'sent';
     ;
+
 
 
 
@@ -235,8 +240,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
-
 ;
+;
+
 }`,;
         sender: 'user',;
         timestamp: new Date(),;
@@ -255,7 +261,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   const rateResponse = (messageId: string, rating: 'positive' | 'negative')  => {
     setMessages(prev => prev.map(msg => 
       msg.id === messageId 
-        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
+        ? { ...msg, metadata: { ...msg.metadata, userRating: rating } };
         : msg;
     ))};
 =======
@@ -303,10 +309,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }}
             animate = {
   { opacity: 1, scale: 1,
   y: 0 
+
 
 
 
@@ -321,10 +329,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }}
             transition = {
   { duration: 0.3,
   ease: 'easeOut' 
+
 
 
 
@@ -384,6 +394,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }}
                   animate = {
   { height: 'auto',
@@ -393,10 +404,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }}
                   exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -413,6 +426,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         onClick = {
   () => setSettings(prev => ({ ...prev,
   voiceEnabled: !prev.voiceEnabled 
+
 
 
 
@@ -435,6 +449,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                         onClick = {
   () => setSettings(prev => ({ ...prev,
   autoResponse: !prev.autoResponse 
+
 
 
 
@@ -468,10 +483,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -544,6 +561,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
 
 
+
 }
                             className="p-1 text-zinc-400 hover:text-green-400 transition-colors"
                             aria-label="Rate response positively"
@@ -554,6 +572,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                             onClick = {
   () => rateResponse(message.id,
   'negative')
+
 
 
 
@@ -675,7 +694,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </>;
   )};
 =======

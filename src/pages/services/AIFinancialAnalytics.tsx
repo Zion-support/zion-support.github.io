@@ -3,7 +3,7 @@ import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, P
 export default function AIFinancialAnalytics() {
   const features = [
     'AI-powered financial forecasting and trend analysis',
-    'Real-time market data integration and analysis',
+    'Real-time market data integration and analysis',;
     'Automated financial reporting and compliance',;
     'Risk assessment and portfolio optimization',;
     'Predictive analytics for investment decisions',;
@@ -12,7 +12,7 @@ export default function AIFinancialAnalytics() {
     'Secure, SOC 2 compliant data handling';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve investment returns by 25-40%',;
     'Reduce financial analysis time by 80%',;
     'Automate compliance and reporting',;
@@ -33,7 +33,7 @@ export default function AIFinancialAnalytics() {
       price: '$499/mo', 
       features: ['Up to 50 portfolios', 'Advanced AI analytics', 'Real-time alerts', 'Priority support', 'Custom dashboards'],
       popular: true
-    },
+    },;
     { ;
       name: 'Enterprise', ;
       price: '$1,299/mo', ;
@@ -42,7 +42,7 @@ export default function AIFinancialAnalytics() {
     };
   ];
 
-  const useCases = [
+  const useCases = [;
     'Investment portfolio management',;
     'Financial planning and advisory',;
     'Risk management and compliance',;
@@ -53,7 +53,7 @@ export default function AIFinancialAnalytics() {
 
   const analyticsTypes = [
     'Portfolio Performance Analysis',
-    'Risk Assessment & Management',
+    'Risk Assessment & Management',;
     'Market Trend Prediction',;
     'Asset Allocation Optimization',;
     'Compliance & Regulatory Reporting',;
@@ -311,7 +311,7 @@ export default function AIFinancialAnalytics() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold";
           >;
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
           </a>;

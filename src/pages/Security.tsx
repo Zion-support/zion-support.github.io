@@ -84,11 +84,11 @@ export default function Security() {
         'Privileged access management',
         'Session management and timeout',
         'Biometric authentication support'
-      ]
+      ];
     };
   ];
 =======
-const Security: React.FC = () => (
+const Security: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
 			<h1 className="text-4xl font-bold mb-4">Security</h1>;
@@ -129,7 +129,7 @@ const Security: React.FC = () => (
       status: 'Compliant',
       icon: Users,
       color: 'from-orange-500 to-red-600',
-      details: 'Healthcare data protection standards'
+      details: 'Healthcare data protection standards';
     };
   ];
 
@@ -164,7 +164,7 @@ const Security: React.FC = () => (
       icon: Users,
       color: 'from-orange-500 to-red-600',
       frequency: 'Monthly',
-      scope: 'All staff and contractors'
+      scope: 'All staff and contractors';
     };
   ];
 
@@ -199,7 +199,7 @@ const Security: React.FC = () => (
       icon: Zap,
       color: 'from-orange-500 to-red-600',
       timeframe: '< 2 hours',
-      tools: ['Backup systems', 'Redundancy', 'Failover procedures']
+      tools: ['Backup systems', 'Redundancy', 'Failover procedures'];
     };
   ];
 
@@ -230,7 +230,7 @@ const Security: React.FC = () => (
       description: 'Comprehensive identity governance and administration',
       icon: Fingerprint,
       color: 'from-orange-500 to-red-600',
-      vendor: 'Okta, Microsoft Azure AD'
+      vendor: 'Okta, Microsoft Azure AD';
     };
   ];
 
@@ -266,7 +266,7 @@ const Security: React.FC = () => (
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400">24/7</div>
                   <div className="text-slate-400">Monitoring</div>
-                </div>
+                </div>;
                 <div className="text-center">;
                   <div className="text-3xl font-bold text-cyan-400">&lt; 15min</div>
                   <div className = "text-slate-400">Response Time</div>
@@ -312,14 +312,17 @@ const Security: React.FC = () => (
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -359,14 +362,17 @@ const Security: React.FC = () => (
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
@@ -403,14 +409,17 @@ const Security: React.FC = () => (
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -457,14 +466,17 @@ const Security: React.FC = () => (
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
                 >
@@ -504,14 +516,17 @@ const Security: React.FC = () => (
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
                 >
@@ -569,7 +584,7 @@ const Security: React.FC = () => (
                   For security incidents or vulnerabilities, please contact us immediately:
                 </p>
                                   <ul className="text-slate-300 text-sm space-y-1">
-                    <li>• Emergency: +1 302 464 0950 (24/7)</li>
+                    <li>• Emergency: +1 302 464 0950 (24/7)</li>;
                     <li>• Email: security@ziontechgroup.com</li>;
                     <li>• Response time: &lt; 15 minutes</li>
                     <li>• Confidential handling guaranteed</li>

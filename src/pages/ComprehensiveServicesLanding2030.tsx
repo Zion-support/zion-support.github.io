@@ -72,7 +72,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
       'AI & Education': <Users className="w-6 h-6" />,
       'AI & Entertainment': <Star className="w-6 h-6" />,
       'Cybersecurity': <Shield className="w-6 h-6" />,
-      'Cloud & DevOps': <Cloud className="w-6 h-6" />,
+      'Cloud & DevOps': <Cloud className="w-6 h-6" />,;
       'Quantum Computing': <Zap className="w-6 h-6" />,;
       'IoT & Edge Computing': <Database className="w-6 h-6" />,;
       'Blockchain & Web3': <Lock className="w-6 h-6" />,;
@@ -96,7 +96,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
       'AI & Education': 'from-blue-500 to-indigo-500',
       'AI & Entertainment': 'from-purple-500 to-pink-500',
       'Cybersecurity': 'from-red-500 to-orange-500',
-      'Cloud & DevOps': 'from-blue-500 to-cyan-500',
+      'Cloud & DevOps': 'from-blue-500 to-cyan-500',;
       'Quantum Computing': 'from-indigo-500 to-purple-500',;
       'IoT & Edge Computing': 'from-teal-500 to-cyan-500',;
       'Blockchain & Web3': 'from-yellow-500 to-orange-500',;
@@ -145,10 +145,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -199,10 +201,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -306,6 +310,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -315,10 +320,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -347,6 +354,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }
                           className="flex-1"
                         />
@@ -358,6 +366,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
                           onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
 
 
 
@@ -388,6 +397,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }
                           className="flex-1"
                         />
@@ -399,6 +409,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
                           onChange = {
   (e) => setAiScoreRange([aiScoreRange[0],
   parseInt(e.target.value)])
+
 
 
 
@@ -430,10 +441,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -467,6 +480,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -476,10 +490,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -559,10 +575,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -590,6 +608,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -599,10 +618,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.2 
+
 
 
 
@@ -650,10 +671,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -723,6 +746,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               animate = {
   { scale: 1,
@@ -732,10 +756,12 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
 
 
 
+
 }}
               exit = {
   { scale: 0.9,
   opacity: 0 
+
 
 
 
@@ -852,7 +878,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
         )}
       </div>
     </>
-  )}
+  )};
 =======;
             </motion.div>;
           </motion.div>;

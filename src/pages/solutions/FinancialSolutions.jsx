@@ -82,9 +82,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -126,9 +128,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -153,6 +157,7 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -161,9 +166,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -191,9 +198,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -217,9 +226,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -243,9 +254,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -275,9 +288,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -302,6 +317,7 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
@@ -310,9 +326,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 
 
 
@@ -337,9 +355,11 @@ export default function FinancialSolutions() {
 
 
 
+
 }} whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 

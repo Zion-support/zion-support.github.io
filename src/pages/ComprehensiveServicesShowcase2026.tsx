@@ -29,7 +29,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2026,
-    ...COMPREHENSIVE_IT_SERVICES_2026,
+    ...COMPREHENSIVE_IT_SERVICES_2026,;
     ...COMPREHENSIVE_AI_SERVICES_2026;
   ];
 
@@ -41,12 +41,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     { id: 'Cybersecurity', name: 'Cybersecurity', icon: ShieldCheckIcon, count: allServices.filter(s => s.tags.includes('Cybersecurity') || s.tags.includes('Security')).length },
     { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: CloudIcon, count: allServices.filter(s => s.tags.includes('Cloud') || s.tags.includes('DevOps')).length },
     { id: 'Blockchain & Web3', name: 'Blockchain & Web3', icon: GlobeAltIcon, count: allServices.filter(s => s.tags.includes('Blockchain') || s.tags.includes('Web3')).length },
-    { id: 'Healthcare', name: 'Healthcare', icon: BeakerIcon, count: allServices.filter(s => s.tags.includes('Healthcare') || s.tags.includes('Medical')).length },
+    { id: 'Healthcare', name: 'Healthcare', icon: BeakerIcon, count: allServices.filter(s => s.tags.includes('Healthcare') || s.tags.includes('Medical')).length },;
     { id: 'Finance', name: 'Finance', icon: CurrencyDollarIcon, count: allServices.filter(s => s.tags.includes('Finance') || s.tags.includes('Trading')).length };
   ];
 
   const filteredServices = allServices.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
@@ -54,7 +54,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     return matchesCategory && matchesSearch && matchesPrice;
   });
 
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'Micro SaaS': return CubeIcon;
       case 'IT Services': return CpuChipIcon;
@@ -68,7 +68,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     }
   };
 
-  const formatPrice = (price: number, model: string) => {
+  const formatPrice = (price: number, model: string) => {;
     if (model === 'monthly') {;
       return `$${price.toLocaleString()}/month`;
     } else if (model = == 'project') {;
@@ -156,10 +156,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -259,10 +261,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +290,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -295,10 +300,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -319,6 +326,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -328,10 +336,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -414,6 +424,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
                   animate = {
   { opacity: 1,
@@ -423,10 +434,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -470,6 +483,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 onChange = {
   (e) => setPriceRange([priceRange[0],
   parseInt(e.target.value)])
+
 }
                 className="w-full"
               />
@@ -484,14 +498,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group"
               >
@@ -587,13 +604,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
             <div className="text-center py-12">
               <p className="text-gray-400 text-lg">No services found matching your criteria.</p>
               <button
-                onClick = {
+                onClick = {;
   () => {;
                   setSelectedCategory('all');
                   setSearchTerm('');
                   setPriceRange([0,
   100000]);
                 
+
 }}
                 className = "mt-4 text-blue-400 hover:text-blue-300 underline"
               >
@@ -611,10 +629,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -672,7 +692,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
           </p>
         </div>
       </footer>
-    </div>
+    </div>;
 =======;
             {filteredServices.length === 0 && (;
               <div className="text-center py-12">;
@@ -703,10 +723,12 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -741,7 +763,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
               </div>
               <div className="mt-8 text-zinc-400">
                 <p>364 E Main St STE 1008 Middletown DE 19709</p>
-                <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>
+                <p className="text-sm mt-2">Available 24/7 for enterprise clients</p>;
               </div>;
             </motion.div>;
           </div>;
@@ -755,13 +777,13 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 // Icon components
 const PhoneIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />;
   </svg>;
 );
 
 const EnvelopeIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className = {className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />;
   </svg>;
 );
 

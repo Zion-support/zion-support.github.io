@@ -38,6 +38,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             epochs: 100,
   optimizer: 'adam'
         
+
 };
         try {
             await startTraining(modelId, hyperparameters);
@@ -167,12 +168,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'overview' && (<motion.div key="overview" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-6">
               {/* Key Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -272,12 +276,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'models' && (<motion.div key="models" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">AI Models</h3>
@@ -294,22 +301,27 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 {showCreateModel && (<motion.div initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Create New Model</h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                       <input type="text" placeholder="Model Name" value={newModelForm.name} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   name: e.target.value 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
                       <select value={newModelForm.type} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   type: e.target.value 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                         <option value="classification">Classification</option>
                         <option value="regression">Regression</option>
@@ -321,6 +333,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <select value={newModelForm.framework} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   framework: e.target.value 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                         <option value="tensorflow">TensorFlow</option>
                         <option value="pytorch">PyTorch</option>
@@ -344,12 +357,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 {showImportModel && (<motion.div initial = {
   { opacity: 0,
   height: 0 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 }} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
                     <h4 className="font-medium text-gray-900 dark:text-white mb-3">Import Model</h4>
                     <input type="file" accept=".json" onChange={handleImportModel} className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-50 file:text-purple-700 hover:file:bg-purple-100"/>
@@ -428,12 +444,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'training' && (<motion.div key="training" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Training Jobs</h3>
               
@@ -512,12 +531,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'predictions' && (<motion.div key="predictions" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Make Predictions</h3>
               
@@ -527,6 +549,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                   <select value={predictionForm.modelId} onChange = {
   (e) => setPredictionForm(prev => ({ ...prev,
   modelId: e.target.value 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                     <option value="">Select a deployed model</option>
                     {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>
@@ -541,6 +564,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
   (e) => setPredictionForm(prev => ({ ...prev,
   input: e.target.value 
+
 }))} rows={3} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
               </div>
 
@@ -589,12 +613,15 @@ export const MachineLearningDashboard = ({ className = '' }) => {
           {activeTab === 'analytics' && (<motion.div key="analytics" initial = {
   { opacity: 0,
   y: 20 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 }} className="space-y-4">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Analytics</h3>
               

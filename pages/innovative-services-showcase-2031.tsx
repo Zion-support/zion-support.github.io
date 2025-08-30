@@ -27,7 +27,7 @@ import {
  } from 'lucide-react';
 
 <<<<<<< HEAD
-const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
+const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;
   const scrollToContact = () => {;
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
 =======
@@ -457,7 +457,7 @@ const InnovativeServicesShowcase2031: React.FC = () => {;
             </div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 =======

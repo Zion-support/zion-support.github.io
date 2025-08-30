@@ -140,10 +140,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -175,6 +177,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -184,10 +187,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
               exit = {
   { opacity: 0,
   x: -100 
+
 
 
 
@@ -209,10 +214,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                   animate = {
   { rotate[0,
   360] 
+
 }}
                   transition = {
   { duration: 20,
   repeat: Infinity 
+
 }}
 =======
                   animate = {
@@ -223,10 +230,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 20,
   repeat: Infinity 
+
 
 
 
@@ -271,10 +280,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
                         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -360,10 +371,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -374,6 +387,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           transition = {
   { duration: 0.6,
   delay: 0.3 
+
 
 
 
@@ -403,10 +417,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -417,6 +433,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -446,10 +463,12 @@ export default function EnhancedTestimonialsSection(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -460,6 +479,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
           transition = {
   { duration: 0.6,
   delay: 0.5 
+
 
 
 
@@ -494,7 +514,7 @@ export default function EnhancedTestimonialsSection(...args[]):  {
         </motion.div>
       </div>
     </section>
-  )}
+  )};
 =======;
             </div>;
           </div>;

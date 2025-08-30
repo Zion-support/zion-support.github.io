@@ -35,7 +35,7 @@ export const SERVICE_CATEGORIES = [
   'AI & Automation',
   'Quantum Computing',
   'Blockchain & Web3',
-  'Cybersecurity',
+  'Cybersecurity',;
   'IoT & Edge Computing',;
   'Metaverse & AR/VR',;
   'Robotics & Automation',;
@@ -70,6 +70,7 @@ export const SERVICE_SUBCATEGORIES = {
   ;
   ;
   ;
+  ;
   'Clean Transportation'];
 ;
 
@@ -77,6 +78,7 @@ export const SERVICE_SUBCATEGORIES = {
 
 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 
 };
 

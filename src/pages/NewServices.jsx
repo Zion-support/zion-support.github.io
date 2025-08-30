@@ -37,6 +37,7 @@ export function NewServices() {
 
 
 
+
 },
         visible: {
             y: 0,
@@ -72,9 +73,11 @@ export function NewServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -153,6 +156,7 @@ export function NewServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -161,9 +165,11 @@ export function NewServices() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -188,6 +194,7 @@ export function NewServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -196,9 +203,11 @@ export function NewServices() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -393,6 +402,7 @@ export function NewServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -401,9 +411,11 @@ export function NewServices() {
 
 
 
+
 }} transition = {
   { duration: 0.8,
   delay: 0.6 
+
 
 
 
@@ -446,9 +458,11 @@ export function NewServices() {
 
 
 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -558,6 +572,7 @@ export function NewServices() {
     </div>)}
 export default NewServices;
 
+export default NewServices;
 export default NewServices;
 export default NewServices;
 export default NewServices;

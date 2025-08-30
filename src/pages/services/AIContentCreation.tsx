@@ -52,7 +52,7 @@ export default function AIContentCreation() {
     {
       icon: BarChart3,
       title: "Performance Analytics",
-      description: "Content performance tracking and optimization recommendations."
+      description: "Content performance tracking and optimization recommendations.";
     },;
     {;
       icon: Shield,;
@@ -61,7 +61,7 @@ export default function AIContentCreation() {
     };
   ];
 
-  const benefits = [
+  const benefits = [;
     "Increase content production by 300-500% with AI automation",;
     "Improve content engagement by 40-80% through AI optimization",;
     "Reduce content creation time by 70-90%",;
@@ -94,7 +94,7 @@ export default function AIContentCreation() {
     {
       type: "Visual Content",
       description: "AI-generated images, infographics, and visual storytelling elements",
-      icon: Image
+      icon: Image;
     },;
     {;
       type: "Video Scripts",;
@@ -117,7 +117,7 @@ export default function AIContentCreation() {
       description: "Client content creation, social media management, and campaign content"
     },
     {
-      industry: "Publishing",
+      industry: "Publishing",;
       description: "Article generation, content curation, and editorial assistance";
     },;
     {;
@@ -146,10 +146,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -208,10 +210,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -242,6 +246,7 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -251,10 +256,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -286,10 +293,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -323,6 +332,7 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                     whileInView = {
   { opacity: 1,
@@ -332,10 +342,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                     transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -392,10 +404,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -426,6 +440,7 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -435,10 +450,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -472,10 +489,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -506,6 +525,7 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -515,10 +535,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -552,10 +574,12 @@ export default function AIContentCreation() {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -585,7 +609,7 @@ export default function AIContentCreation() {
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-300"
               >
-                Contact Sales
+                Contact Sales;
               </motion.button>;
             </div>;
           </motion.div>;

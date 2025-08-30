@@ -259,7 +259,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
         { name: 'Terms of Service', href: '/terms', featured: false },
         { name: 'Privacy Policy', href: '/privacy', featured: false }
       ]
-    }
+    };
 =======;
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
@@ -273,8 +273,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
   <<<<<<< HEAD
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+    address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 };
 
   const socialLinks = [
@@ -282,14 +283,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },;
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' };
   ];
 
   const quickActions = [
     { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },;
     { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' };
   ];
 
@@ -298,7 +299,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'Support Portal', href: '/support', description: 'Technical assistance' },
     { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
     { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-    { name: 'Training', href: '/training', description: 'Learning resources' },
+    { name: 'Training', href: '/training', description: 'Learning resources' },;
     { name: 'Webinars', href: '/webinars', description: 'Educational sessions' };
   ];
 
@@ -307,7 +308,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'Terms of Service', href: '/terms', description: 'Service terms' },
     { name: 'Cookie Policy', href: '/cookies', description: 'Cookie usage' },
     { name: 'Accessibility', href: '/accessibility', description: 'Accessibility statement' },
-    { name: 'Security', href: '/security', description: 'Security practices' },
+    { name: 'Security', href: '/security', description: 'Security practices' },;
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' };
   ];
 
@@ -321,7 +322,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
         to={href}
         className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
       >
-        {name}
+        {name};
       </Link>;
     );
   };
@@ -342,10 +343,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.6 }}
               className="flex items-center justify-center space-x-3 mb-6"
@@ -361,14 +364,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 }}
               className="text-xl text-slate-300 max-w-3xl mx-auto"
             >
@@ -381,14 +387,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.3 
+
 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
           >
@@ -399,7 +408,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
                 className={`group p-6 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 text-center`}
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
-                  <action.icon className="w-6 h-6 text-white" />
+                  <action.icon className="w-6 h-6 text-white" />;
 =======;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   ;
@@ -412,7 +421,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
 
 };
 
-  const socialLinks = [
+  const socialLinks = [;
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },;
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },;
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-400' },;
@@ -421,7 +430,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' };
   ];
 
-  const quickActions = [
+  const quickActions = [;
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, featured: true },;
     { name: 'View Pricing', href: '/pricing', icon: DollarSign, featured: false },;
     { name: 'Schedule Demo', href: '/demo', icon: Play, featured: false },;
@@ -471,14 +480,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="space-y-4"
               >
@@ -514,14 +526,17 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 0.8 
+
 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           >
@@ -605,18 +620,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.6,
   delay: 1 
+
 }}
             className="border-t border-slate-700/50 pt-8"
           >
-            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">;
               <div className="flex items-center space-x-4 text-sm text-slate-400">;
                 <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
                 <span>•</span>
@@ -640,6 +658,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -649,10 +668,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -782,7 +803,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
             </div>
           </div>
         </section>
-      </div>
+      </div>;
 ;
       {/* Bottom Footer */};
       <div className="border-t border-slate-700/50">;
@@ -801,7 +822,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {;
                 className="p-2 bg-slate-700/50 rounded-lg text-gray-400 hover:text-cyan-400 hover:bg-slate-600/50 transition-all duration-300 transform hover:scale-110"
                 aria-label="Scroll to top"
               >
-                <ArrowUpRight className="w-5 h-5 rotate-45" />
+                <ArrowUpRight className="w-5 h-5 rotate-45" />;
               </button>;
             </div>;
           </div>;

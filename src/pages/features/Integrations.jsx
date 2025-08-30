@@ -19,6 +19,7 @@ export default function IntegrationsFeature() {
 
 
 
+
 };
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {

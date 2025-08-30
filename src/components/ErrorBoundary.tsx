@@ -23,8 +23,9 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
 <<<<<<< HEAD
-      errorId: '',
-   ;
+      errorId: '',;
+  ;
+
 };
 =======
       showStack: false,;
@@ -85,8 +86,9 @@ export class ErrorBoundary extends Component<Props, State> {
         userAgent: navigator.userAgent,
 <<<<<<< HEAD
         url: window.location.href,
-        userId: this.getUserId(),
-   ;
+        userId: this.getUserId(),;
+  ;
+
 };
 =======
         url: window.location.href,;
@@ -117,7 +119,7 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   private getUserId = (): string | null => {
-    try {
+    try {;
       // Get user ID from your auth system;
       const user = localStorage.getItem('user');
       return user ? JSON.parse(user).id : null;
@@ -132,7 +134,7 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
+      errorId: '',;
 =======;
     this.setState({;
       hasError: false,;
@@ -155,7 +157,7 @@ Message: ${this.state.error?.message}
 Stack: ${this.state.error?.stack}
 Component Stack: ${this.state.errorInfo?.componentStack}
 URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
+User Agent: ${navigator.userAgent};
 Timestamp: ${new Date().toISOString()};
     `;
 
@@ -166,7 +168,7 @@ Timestamp: ${new Date().toISOString()};
     if (this.state.error && this.state.errorInfo) {
       const errorText = `
 Error Details:
-Message: ${this.state.error.message}
+Message: ${this.state.error.message};
 Stack: ${this.state.error.stack};
 Component Stack: ${this.state.errorInfo.componentStack};
 Error ID: ${this.state.errorId};
@@ -257,10 +259,12 @@ User Agent: ${navigator.userAgent};
 
 
 
+
 }}
           animate = {
   { opacity: 1,
   scale: 1 
+
 
 
 
@@ -375,6 +379,7 @@ User Agent: ${navigator.userAgent};
 
 
 
+
 }}
                         animate = {
   { height: 'auto',
@@ -384,10 +389,12 @@ User Agent: ${navigator.userAgent};
 
 
 
+
 }}
                         exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -475,7 +482,7 @@ User Agent: ${navigator.userAgent};
             </div>
 
             {/* Footer */}
-            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
+            <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">;
               <p className="text-center text-sm text-gray-500">;
                 If this problem continues, please contact our support team with the Error ID above.;
               </p>;
@@ -522,7 +529,7 @@ export const withErrorBoundary = <P extends object>(
 )  => {
   const WrappedComponent = (props: P)  => (
     <ErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
+      <Component {...props} />;
     </ErrorBoundary>;
   );
 

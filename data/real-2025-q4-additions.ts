@@ -43,8 +43,10 @@ const contact = {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
 
 
 
@@ -277,7 +279,7 @@ export const real2025Q4Additions = [
       'Evals and drift tracking',
       'Human-in-the-loop approvals',
       'Observability and cost caps',
-      'SDKs for Node/Python'
+      'SDKs for Node/Python';
     ],;
     popular: true,;
     icon: '🧠',;

@@ -26,6 +26,7 @@ const ComprehensiveServicesLanding2025 = () => {
             'legal'['Legal Tech & AI'],
   'marketing'['Marketing & AI']
         
+
 };
         return innovativeMicroSaasServices2025.filter(service => industryMap[industry]?.includes(service.category))};
 =======

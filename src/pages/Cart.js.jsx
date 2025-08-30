@@ -88,6 +88,7 @@ export default function CartPage() {
               <input type="number" min={1} value={item.quantity} onChange = {
   e => updateQuantity(item.id, parseInt(e.target.value || '1',
   10))
+
 } className="w-16 bg-transparent border border-input rounded p-1 text-center"/>
               <Button variant="outline" size="sm" onClick={() => removeItem(item.id)}>
                 Remove

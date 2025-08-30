@@ -5,28 +5,6 @@ import { Badge } from "../components/ui/badge";
 import { Link } from "react-router-dom";
 import { Settings, BarChart3, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight, Zap as Cpu, Cloud, Smartphone, TrendingUp as Activity } from "lucide-react";
 import { TrustedBySection } from "../components/TrustedBySection.js.jsx";
-const iotBenefits = [
-    {
-        title: "Real-time Monitoring",
-        description: "Monitor your assets and processes in real-time for immediate insights and rapid response",
-        icon: <Activity className="h-6 w-6"/>
-    },
-    {
-        title: "Data-Driven Decisions",
-        description: "Make informed decisions based on comprehensive data collection and advanced analytics",
-        icon: <BarChart3 className="h-6 w-6"/>
-    },
-    {
-        title: "Operational Efficiency",
-        description: "Automate processes and optimize operations to reduce costs and improve productivity",
-        icon: <Zap className="h-6 w-6"/>
-    },
-    {
-        title: "Predictive Maintenance",
-        description: "Prevent equipment failures with predictive analytics and proactive maintenance scheduling",
-        icon: <TrendingUp className="h-6 w-6"/>
-    }
-];
 const iotUseCases = [
     {
         title: "Smart Manufacturing",

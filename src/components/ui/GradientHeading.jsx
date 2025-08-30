@@ -8,6 +8,7 @@ export function GradientHeading({ children, variant = 'primary', size = '2xl', c
   <<<<<<< HEAD
             custom: customGradient || 'bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'
         
+
 };
         return gradients[variant]};
 =======
@@ -35,11 +36,13 @@ export function GradientHeading({ children, variant = 'primary', size = '2xl', c
   <<<<<<< HEAD
             '6xl': 'text-6xl'
         
+
 };
         return sizes[size]};
     return (<h1 className = {
   cn('font-bold leading-tight', getSizeClasses(), getGradientClasses(),
   className)
+
 }>
 =======
   '6xl': 'text-6xl'
@@ -54,6 +57,7 @@ export function GradientHeading({ children, variant = 'primary', size = '2xl', c
     return (<h1 className = {
   cn('font-bold leading-tight', getSizeClasses(), getGradientClasses(),
   className)
+
 
 
 

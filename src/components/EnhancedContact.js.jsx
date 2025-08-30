@@ -66,6 +66,7 @@ export const EnhancedContact = () => {
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
+
 },
         visible: {
             y: 0,
@@ -79,6 +80,7 @@ export const EnhancedContact = () => {
     const cardVariants = {
   hidden: { scale: 0.9,
   opacity: 0 
+
 },
         visible: {
             scale: 1,
@@ -125,9 +127,11 @@ export const EnhancedContact = () => {
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
   { opacity: 0,
   scale: 0.9 
+
 }} animate = {
   { opacity: 1,
   scale: 1 
+
 }} transition={{ duration: 0.5 }}>
         <div className="text-center max-w-md mx-auto px-4">
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6"/>

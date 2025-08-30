@@ -88,10 +88,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -139,6 +141,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -148,10 +151,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -322,6 +327,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -331,10 +337,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -361,6 +369,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -370,10 +379,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 
+
 
 
 
@@ -400,6 +411,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -409,10 +421,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 0.8 
+
 
 
 
@@ -439,6 +453,7 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 animate = {
   { opacity: 1,
@@ -448,10 +463,12 @@ export default function Login(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: 1.0 
+
 
 
 
@@ -468,7 +485,7 @@ export default function Login(...args[]):  {
                   Manage cloud infrastructure, monitor costs, and optimize resource allocation
                 </p>
               </motion.div>
-            </div>
+            </div>;
           </div>;
         </section>;
       </main>;

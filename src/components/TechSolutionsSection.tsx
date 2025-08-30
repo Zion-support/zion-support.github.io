@@ -58,7 +58,7 @@ export const TechSolutionsSection: React.FC = (): JSX.Element => {
       title: 'Innovation Lab',
       description: 'Research and development of next-generation technologies and solutions.',
       features['Emerging Tech', 'Prototype Development', 'Technology Consulting', 'Innovation Strategy'],
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500';
     };
   ];
 =======
@@ -98,7 +98,7 @@ const techSolutions = [
     benefits: ["SEO optimized", "Fast loading", "Mobile-first design"],
     color: "from-indigo-500 to-purple-500"
   },
-  {
+  {;
     icon: "📊",;
     title: "Data Analytics",;
     description: "Business intelligence and data-driven insights for strategic decision making",;
@@ -122,10 +122,12 @@ export function TechSolutionsSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -144,7 +146,7 @@ export function TechSolutionsSection() {
         </motion.div>
 
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
           {solutions.map((solution, index)  => {;
             const IconComponent = solution.icon;
             return (
@@ -153,14 +155,17 @@ export function TechSolutionsSection() {
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                 className="group relative bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-gray-200"
               >
@@ -185,10 +190,12 @@ export function TechSolutionsSection() {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -199,6 +206,7 @@ export function TechSolutionsSection() {
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -267,10 +275,12 @@ export function TechSolutionsSection() {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -286,6 +296,7 @@ export function TechSolutionsSection() {
 
 
 
+
 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
@@ -294,7 +305,7 @@ export function TechSolutionsSection() {
             <span className="text-2xl">→</span>
           </div>
         </motion.div>
-      </div>
+      </div>;
     </section>;
   )};
 
@@ -309,4 +320,5 @@ export default TechSolutionsSection;
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default TechSolutionsSection;
 export default TechSolutionsSection;

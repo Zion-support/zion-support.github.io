@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AIBlockchain() {
   const features = [
     'AI-powered blockchain optimization',
-    'Intelligent smart contract management',
+    'Intelligent smart contract management',;
     'Automated blockchain monitoring and alerting',;
     'Predictive analytics for blockchain scaling',;
     'Smart blockchain security and compliance',;
@@ -21,7 +21,7 @@ export default function AIBlockchain() {
     { 
       name: 'Business', 
       price: '$999/mo', 
-      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
+      details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AIBlockchain() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Blockchain optimization',;
     'Smart contract management',;
     'Performance monitoring and analytics',;
@@ -39,7 +39,7 @@ export default function AIBlockchain() {
     'Blockchain scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve blockchain performance by 50-80%',;
     'Reduce transaction processing time by 40-70%',;
     'Cut operational costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AIBlockchain() {
     'Scale blockchain operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AIBlockchain() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-sky-600 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

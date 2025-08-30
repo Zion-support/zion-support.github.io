@@ -43,6 +43,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 };
         try {
             await startTraining(modelId, hyperparameters);
@@ -177,6 +178,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -185,9 +187,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -297,6 +301,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -305,9 +310,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -334,6 +341,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -342,9 +350,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -361,10 +371,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"/>
                       <select value={newModelForm.type} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   type: e.target.value 
+
 
 
 
@@ -381,6 +393,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                       <select value={newModelForm.framework} onChange = {
   (e) => setNewModelForm(prev => ({ ...prev,
   framework: e.target.value 
+
 
 
 
@@ -414,6 +427,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   height: 'auto' 
@@ -422,9 +436,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -513,6 +529,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -521,9 +538,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -612,6 +631,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -620,9 +640,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 
@@ -642,6 +664,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }))} className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white">
                     <option value="">Select a deployed model</option>
                     {models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>
@@ -656,6 +679,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <textarea placeholder="Enter input data (JSON format)" value={predictionForm.input} onChange = {
   (e) => setPredictionForm(prev => ({ ...prev,
   input: e.target.value 
+
 
 
 
@@ -714,6 +738,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
@@ -722,9 +747,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 
 
+
 }} exit = {
   { opacity: 0,
   y: -20 
+
 
 
 

@@ -372,7 +372,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
 ];
 <<<<<<< HEAD
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
-  if (category === 'All') {
+  if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025};
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;

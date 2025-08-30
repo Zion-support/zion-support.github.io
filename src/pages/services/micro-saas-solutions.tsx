@@ -401,7 +401,7 @@ export default function MicroSAASSolutions(...args: []):  {
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"
               >
-                Explore All Services
+                Explore All Services;
               </Link>;
             </div>;
           </div>;

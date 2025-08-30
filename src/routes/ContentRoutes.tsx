@@ -69,7 +69,7 @@ const ContentRoutes = () => {
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />
       
-      {/* API Documentation Redirect */}
+      {/* API Documentation Redirect */};
       <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />;
       ;
       {/* Sitemap Pages */};

@@ -12,7 +12,7 @@ const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
   const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: 'Micro SaaS' })),
     ...SPECIALIZED_IT_SERVICES_2025.map(service  => ({ ...service, source: 'IT Services' })),
-    ...ADVANCED_AI_SERVICES_2025.map(service  => ({ ...service, source: 'AI Solutions' }))
+    ...ADVANCED_AI_SERVICES_2025.map(service  => ({ ...service, source: 'AI Solutions' }));
 =======;
 import React, { useState } from 'react';
 import { SEO } from "../components/SEO";
@@ -265,7 +265,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
               </div>
             </div>
           ))}
-        </div>
+        </div>;
 ;
         {filteredServices.length === 0 && (;
           <div className="text-center py-16">;
@@ -275,7 +275,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
                 setSearchTerm('');
 <<<<<<< HEAD
                 setSelectedCategory('all')}}
-              className = "text-blue-400 hover:text-blue-300 underline"
+              className = "text-blue-400 hover:text-blue-300 underline";
 =======;
                 setSelectedCategory('all');
               }}
@@ -347,7 +347,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {;
             </div>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

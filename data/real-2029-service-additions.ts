@@ -11,7 +11,7 @@ export const real2029ServiceAdditions = [
       'Priority triage and SLA routing',
       'PII redaction and safety guardrails',
       'CRM/helpdesk sync (HubSpot, Zendesk)',
-      'Weekly insights and KPI dashboard'
+      'Weekly insights and KPI dashboard';
     ],;
     popular: true,;
     icon: '📧',;

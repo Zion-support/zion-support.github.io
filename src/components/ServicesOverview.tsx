@@ -127,7 +127,7 @@ export function ServicesOverview(...args[]):  {
       color: 'from-zion-pink to-zion-purple',
       description: 'Healthcare artificial intelligence solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
-    }
+    };
 =======;
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;
@@ -156,10 +156,12 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -194,6 +196,7 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -203,10 +206,12 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -262,10 +267,12 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -291,6 +298,7 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -300,10 +308,12 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -386,10 +396,12 @@ export function ServicesOverview(...args[]):  {
 
 
 
+
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -455,7 +467,7 @@ export function ServicesOverview(...args[]):  {
         </motion.div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

@@ -39,7 +39,7 @@ export default function EnhancedNavigation2025(...args[]):  {
 			href: '/about',
 			children[
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
-				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },;
 				{ name: 'Careers', href: '/careers', description: 'Join our team' },;
 				{ name: 'Contact', href: '/contact', description: 'Get in touch' },;
 			];
@@ -238,7 +238,7 @@ export default function EnhancedNavigation2025(...args[]):  {
 				</div>
 			)}
 		</nav>
-	)}
+	)};
 =======;
 						</div>;
 					</div>;

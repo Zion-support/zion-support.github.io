@@ -1,29 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react';
-const mockPerformanceAlerts = [
-    {
-        id: '1',
-        type: 'performance',
-        severity: 'medium',
-        title: 'High CPU Usage Detected',
-        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
-        timestamp: '2024-01-15T10:00:00.000Z',
-        affected['Web Server 1', 'Application Server 2'],
-        recommendations['Scale horizontally', 'Optimize database queries', 'Review background processes'],
-        status: 'active'
-    },
-    {
-        id: '2',
-        type: 'scalability',
-        severity: 'high',
-        title: 'Database Connection Pool Near Capacity',
-        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
-        timestamp: '2024-01-15T09:45:00.000Z',
-        affected['Database Cluster', 'Application Servers'],
-        recommendations['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'],
-        status: 'acknowledged'
-    }
-];
 const mockScalabilityMetrics = [
     {
         id: '1',

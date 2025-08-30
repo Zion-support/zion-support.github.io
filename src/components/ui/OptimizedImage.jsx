@@ -81,6 +81,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
 
 
 
+
 } style={{
             width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'
@@ -92,6 +93,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
       <img ref={imgRef} src={currentSrc} alt={alt} width={width} height={height} className = {
   cn('w-full h-full transition-opacity duration-300', getObjectFitClass(),
   isLoaded ? 'opacity-100' : 'opacity-0')
+
 
 
 
@@ -125,16 +127,19 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
   <<<<<<< HEAD
         xl: 'w-16 h-16'
     
+
 };
     return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className = {
   cn(sizeClasses[size], 'rounded-full',
   className)
+
 } {...props}/>)}
 // Hero image component
 export function HeroImage({ src, alt, className, ...props }) {
     return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
   cn('w-full',
   className)
+
 } priority {...props}/>)}
 =======
   xl: 'w-16 h-16'
@@ -152,6 +157,7 @@ export function HeroImage({ src, alt, className, ...props }) {
 
 
 
+
 } {...props}/>);
 }
 // Hero image component
@@ -159,6 +165,7 @@ export function HeroImage({ src, alt, className, ...props }) {
     return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className = {
   cn('w-full',
   className)
+
 
 
 

@@ -84,7 +84,7 @@ export default function Search() {
       comp: 'Zion Tech Group',
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
-    }
+    };
 =======;
       location: 'Remote',;
       company: 'Zion Tech Group',;
@@ -337,7 +337,7 @@ export default function Search() {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           )};

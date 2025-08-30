@@ -84,6 +84,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }
             };
             setMessages(prev => [...prev, aiMessage]);
@@ -101,6 +102,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             timestamp: new Date(),
   status: 'sending'
         
+
 
 
 
@@ -153,9 +155,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} animate = {
   { opacity: 1, y: 0,
   scale: 1 
+
 
 
 
@@ -169,9 +173,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} transition = {
   { duration: 0.3,
   ease: "easeOut" 
+
 
 
 
@@ -218,6 +224,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} animate = {
   { height: 'auto',
   opacity: 1 
@@ -226,9 +233,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} exit = {
   { height: 0,
   opacity: 0 
+
 
 
 
@@ -262,9 +271,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -318,9 +329,11 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 
+
 }} animate = {
   { opacity: 1,
   y: 0 
+
 
 
 

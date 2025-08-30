@@ -41,7 +41,7 @@ export function AppHeader(...args[]):  {
       try {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate search
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`} finally {
-        setIsSearching(false)}
+        setIsSearching(false)};
     };
   };
 
@@ -51,7 +51,7 @@ export function AppHeader(...args[]):  {
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
     { name: 'Comp', href: '/about', current: false, hasDropdown: true },
-    { name: 'Support', href: '/help', current: false, hasDropdown: true },
+    { name: 'Support', href: '/help', current: false, hasDropdown: true },;
     { name: 'Contact', href: '/contact', current: false },;
   ];
 
@@ -74,7 +74,7 @@ export function AppHeader(...args[]):  {
     { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
     { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
     { name: 'AI Autonomous Operations', href: '/services/ai-autonomous-business-operations', icon: Bot, description: 'Fully autonomous business operations' },
-    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },
+    { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', icon: Atom, description: 'Next-generation computational power' },;
 =======;
     { name: 'Services', href: '/services', current: false, hasDropdown: true },;
     { name: 'Solutions', href: '/solutions', current: false, hasDropdown: true },;
@@ -165,7 +165,7 @@ export function AppHeader(...args[]):  {
       color: 'from-indigo-500 to-purple-500'
     },
     { 
-      name: 'Revolutionary Services 2030', 
+      name: 'Revolutionary Services 2030', ;
       href: '/revolutionary-services-2030', ;
       icon: Rocket, ;
       description: 'Future Technology Solutions',;
@@ -248,7 +248,7 @@ export function AppHeader(...args[]):  {
       description: 'Small to medium business growth',
       featured: false
     },
-    {
+    {;
       name: 'Startup Solutions',;
       href: '/solutions',;
       icon: Rocket,;
@@ -289,14 +289,14 @@ export function AppHeader(...args[]):  {
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
         { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' }
-      ]
+      ];
     };
   ];
 
   const quickLinks = [
     { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025', icon: Star, description: 'Latest cutting-edge solutions' },
     { name: 'Services Showcase', href: '/revolutionary-services-showcase-2030', icon: TrendingUp, description: 'Future-ready services' },
-    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },
+    { name: 'Pricing Guide 2030', href: '/pricing-2030', icon: DollarSign, description: 'Advanced pricing strategies' },;
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },;
   ];
 
@@ -321,7 +321,7 @@ export function AppHeader(...args[]):  {
         { name: 'Press', href: '/press', description: 'Media resources' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
         { name: 'White Papers', href: '/white-papers', description: 'In-depth research' }
-      ]
+      ];
     };
   ];
 
@@ -346,14 +346,14 @@ export function AppHeader(...args[]):  {
         { name: 'Training', href: '/training', description: 'Learning resources' },
         { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
         { name: 'Community', href: '/community', description: 'User community' }
-      ]
+      ];
     };
   ];
 
   const supportLinks = [
     { name: 'FAQ', href: '/faq', icon: HelpCircle },
     { name: 'Blog', href: '/blog', icon: BookOpen },
-    { name: 'Support', href: '/support', icon: MessageCircle },
+    { name: 'Support', href: '/support', icon: MessageCircle },;
     { name: 'Documentation', href: '/docs', icon: BookOpen },;
   ];
 
@@ -368,6 +368,7 @@ export function AppHeader(...args[]):  {
       description: 'In-depth research and analysis',
   featured: true
     
+
 },
     {
       name: 'Webinars',
@@ -404,7 +405,7 @@ export function AppHeader(...args[]):  {
       description: 'Join our community',
       featured: false
     },
-    {
+    {;
       name: 'Developers',;
       href: '/developers',;
       icon: Code,;
@@ -417,7 +418,7 @@ export function AppHeader(...args[]):  {
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
     { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Careers', href: '/careers', icon: Users },;
     { name: 'Partners', href: '/partners', icon: HeartHandshake },;
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar },;
     { name: 'Community', href: '/community', icon: Users },;
@@ -432,8 +433,10 @@ export function AppHeader(...args[]):  {
   ;
   ;
   ;
+  ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
 
 
 
@@ -480,7 +483,7 @@ export function AppHeader(...args[]):  {
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
-                    </button>
+                    </button>;
 =======;
                   {item.hasDropdown ? (;
                     <div className="relative">;
@@ -791,14 +794,17 @@ export function AppHeader(...args[]):  {
               initial = {
   { opacity: 0,
   height: 0 
+
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
+
 }}
               exit = {
   { opacity: 0,
   height: 0 
+
 }}
               transition={{ duration: 0.3 }}
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
@@ -835,7 +841,7 @@ export function AppHeader(...args[]):  {
               </form>
 
               {/* Mobile Navigation */}
-              <nav className="space-y-4">
+              <nav className="space-y-4">;
                 {navigation.map((item) => (;
                   <div key={item.name}>;
                     {item.hasDropdown ? (;
@@ -972,14 +978,17 @@ export function AppHeader(...args[]):  {
             initial = {
   { opacity: 0,
   x: '100%' 
+
 }}
             animate = {
   { opacity: 1,
   x: 0 
+
 }}
             exit = {
   { opacity: 0,
   x: '100%' 
+
 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 lg:hidden"
@@ -1091,7 +1100,7 @@ export function AppHeader(...args[]):  {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
 =======;
       {/* Click outside to close dropdowns */};
       {(servicesDropdownOpen || solutionsDropdownOpen || resourcesDropdownOpen) && (;

@@ -3,7 +3,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 export default function AISecurityImplementation() {
   const features = [
     'AI-powered security implementation optimization',
-    'Intelligent implementation strategy management and execution',
+    'Intelligent implementation strategy management and execution',;
     'Automated security solution deployment and configuration',;
     'Predictive analytics for implementation needs',;
     'Smart implementation framework management',;
@@ -21,7 +21,7 @@ export default function AISecurityImplementation() {
     { 
       name: 'Business', 
       price: '$1,799/mo', 
-      details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support'] 
+      details: ['Up to 10 projects/month', 'Advanced AI features', 'Enhanced implementation', 'Priority support'] ;
     },;
     { ;
       name: 'Enterprise', ;
@@ -30,7 +30,7 @@ export default function AISecurityImplementation() {
     },;
   ];
 
-  const useCases = [
+  const useCases = [;
     'Security implementation optimization',;
     'Implementation strategy management and execution',;
     'Security solution deployment and configuration',;
@@ -39,7 +39,7 @@ export default function AISecurityImplementation() {
     'Implementation scaling and management';
   ];
 
-  const benefits = [
+  const benefits = [;
     'Improve security implementation performance by 50-80%',;
     'Reduce implementation completion time by 40-70%',;
     'Cut security implementation costs by 35-65%',;
@@ -48,7 +48,7 @@ export default function AISecurityImplementation() {
     'Scale security implementation operations efficiently';
   ];
 
-  const industries = [
+  const industries = [;
     'Software Development',;
     'E-commerce & Retail',;
     'Financial Services',;
@@ -163,7 +163,7 @@ export default function AISecurityImplementation() {
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-pink-600 text-pink-600 rounded-lg hover:bg-pink-50 transition-colors">
               <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
             </a>
-          </div>
+          </div>;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

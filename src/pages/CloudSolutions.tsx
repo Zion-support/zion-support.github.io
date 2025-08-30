@@ -42,7 +42,7 @@ export default function CloudSolutions(...args[]):  {
       title: "DevOps Automation",
       description: "Streamline your development and deployment processes with automation",
       features["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
-    }
+    };
 =======;
       icon: Zap,;
       title: "DevOps Automation",;
@@ -66,7 +66,7 @@ export default function CloudSolutions(...args[]):  {
     {
       icon: Lock,
       title: "Enhanced Security",
-      description: "Enterprise-grade security with advanced threat protection and compliance"
+      description: "Enterprise-grade security with advanced threat protection and compliance";
     },;
     {;
       icon: Users,;
@@ -75,7 +75,7 @@ export default function CloudSolutions(...args[]):  {
     };
   ];
 
-  const technologies = [
+  const technologies = [;
     { name: "AWS", logo: "AWS", description: "Amazon Web Services" },;
     { name: "Azure", logo: "Azure", description: "Microsoft Azure" },;
     { name: "GCP", logo: "GCP", description: "Google Cloud Platform" },;
@@ -85,7 +85,7 @@ export default function CloudSolutions(...args[]):  {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -102,6 +102,7 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -129,10 +130,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -162,6 +165,7 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -171,10 +175,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.3 
+
 
 
 
@@ -216,10 +222,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -253,6 +261,7 @@ export default function CloudSolutions(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -294,10 +303,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -353,10 +364,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -412,10 +425,12 @@ export default function CloudSolutions(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -444,7 +459,7 @@ export default function CloudSolutions(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </motion.button>;
           </motion.div>;

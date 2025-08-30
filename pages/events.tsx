@@ -258,7 +258,7 @@ export default function Events(...args[]):  {
 							className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors"
 						>
 							View Services <span aria-hidden="true">→</span>
-						</Link>
+						</Link>;
 					</div>;
 				</div>;
 			</section>;

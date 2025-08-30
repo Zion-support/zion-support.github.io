@@ -84,13 +84,13 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
       pricing = pricing.filter(p => 
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
+        p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
   const getCategoryIcon = (category: string)  => {
     switch (category) {
-      case 'Cybersecurity':
+      case 'Cybersecurity':;
 =======;
       pricing = pricing.filter(p => ;
         p.serviceName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -173,10 +173,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
         animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -248,6 +250,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -257,10 +260,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -325,6 +330,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -334,10 +340,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -399,6 +407,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       animate = {
   { opacity: 1,
@@ -408,10 +417,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
                       exit = {
   { opacity: 0,
   height: 0 
+
 
 
 
@@ -537,7 +548,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
               </a>
             </div>
           </div>
-        </div>
+        </div>;
       </motion.div>;
     )};
 =======
@@ -571,10 +582,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -598,6 +611,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -607,10 +621,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
+
 
 
 
@@ -633,6 +649,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -642,10 +659,12 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
+
 
 
 
@@ -772,7 +791,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {;
             </a>
           </div>
         </div>
-      </div>
+      </div>;
     </div>;
   )};
 =======

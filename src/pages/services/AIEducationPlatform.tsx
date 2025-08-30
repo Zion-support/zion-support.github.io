@@ -41,7 +41,7 @@ export default function AIEducationPlatform(...args[]):  {
     "Automated assessment and grading",
     "Real-time student progress tracking",
     "Adaptive learning algorithms",
-    "Interactive virtual classrooms",
+    "Interactive virtual classrooms",;
     "AI tutoring and homework help",;
     "Content creation and curation",;
     "Student engagement analytics",;
@@ -60,7 +60,7 @@ export default function AIEducationPlatform(...args[]):  {
 
   const useCases = [
     "K-12 schools and districts",
-    "Higher education institutions",
+    "Higher education institutions",;
     "Corporate training programs",;
     "Online learning platforms",;
     "Special education programs",;
@@ -113,7 +113,7 @@ export default function AIEducationPlatform(...args[]):  {
         "White-label solutions",
         "Advanced integrations",
         "Custom content creation",
-        "Dedicated account manager",
+        "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited users";
       ],;
@@ -141,10 +141,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -199,10 +201,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -232,6 +236,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -241,10 +246,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -275,10 +282,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -308,6 +317,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -317,10 +327,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -351,10 +363,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -384,6 +398,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -393,10 +408,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -427,10 +444,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -460,6 +479,7 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -469,10 +489,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -540,10 +562,12 @@ export default function AIEducationPlatform(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -596,7 +620,7 @@ export default function AIEducationPlatform(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;

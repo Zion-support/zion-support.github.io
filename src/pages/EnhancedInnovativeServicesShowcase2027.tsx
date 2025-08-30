@@ -36,7 +36,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('name');
   const filteredServices = enhancedInnovativeServices2027.filter(service => {;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch});
@@ -67,7 +67,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]):  {
   ChevronLeft,
   Play,
   Eye,
-  X,
+  X,;
   Beaker;
 } from 'lucide-react';
 import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027 } from "../data/enhancedInnovativeServices2027";
@@ -105,7 +105,9 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
   ;
   ;
   ;
+  ;
   'Innovative': 1 ;
+
 
 
 
@@ -177,10 +179,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -395,6 +399,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               animate = {
   { opacity: 1,
@@ -404,10 +409,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
               transition = {
   { duration: 0.5,
   delay: index * 0.1 
+
 
 
 
@@ -486,6 +493,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
             animate = {
   { opacity: 1,
@@ -495,10 +503,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
             exit = {
   { opacity: 0,
   scale: 0.9 
+
 
 
 
@@ -555,10 +565,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -619,10 +631,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -676,10 +690,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -781,10 +797,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }}
                     animate = {
   { opacity: 1,
   x: 0 
+
 
 
 
@@ -952,6 +970,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
 
 
 
+
 }
           >
             <ExternalLink className="w-5 h-5" />
@@ -961,7 +980,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             <span>Visit Zion Tech Group</span>;
           </motion.button>;

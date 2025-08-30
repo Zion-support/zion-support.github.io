@@ -49,7 +49,7 @@ const features = [
   "Multi-cloud Support",
   "API-First Architecture",
   "Scalable Infrastructure",
-  "Custom Integrations",
+  "Custom Integrations",;
   "White-label Solutions",;
   "Comprehensive Documentation",;
   "24/7 Technical Support",;
@@ -72,7 +72,7 @@ const benefits = [
   {
     icon: <TrendingUp className="h-6 w-6"/>,
     title: "Proven ROI",
-    description: "Average 300% ROI within 6 months of implementation"
+    description: "Average 300% ROI within 6 months of implementation";
   },;
   {;
     icon: <CheckCircle className="h-6 w-6"/>,;
@@ -88,8 +88,10 @@ const contactInfo = {
   ;
   ;
   ;
+  ;
   website: 'https://ziontechgroup.com';
 ;
+
 
 
 
@@ -389,7 +391,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
         </div>
       </div>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;
@@ -400,6 +402,7 @@ export function ComprehensiveServicesShowcase2027(...args[]):  {
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
+export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;
 export default ComprehensiveServicesShowcase2027;

@@ -239,7 +239,7 @@ export default function Services(...args: []):  {
           rating: 4.9,
           reviewCount: 234
         }
-      ]
+      ];
     };
   ];
 
@@ -284,7 +284,7 @@ export default function Services(...args: []):  {
       icon: Rocket,
       description: 'Advanced space technology and satellite solutions',
       href: '/services/space-tech',
-      color: 'from-slate-600 to-gray-600'
+      color: 'from-slate-600 to-gray-600';
     };
   ];
 
@@ -317,7 +317,7 @@ export default function Services(...args: []):  {
     {
       icon: Lightbulb,
       title: 'Continuous Innovation',
-      description: 'Ongoing R&D investment in emerging technologies'
+      description: 'Ongoing R&D investment in emerging technologies';
     };
   ];
 
@@ -368,7 +368,7 @@ const Services: React.FC = () => {
               <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
                 <li>CRM integration (HubSpot, Salesforce)</li>
                 <li>Sequence testing and analytics</li>
-                <li>Compliance guardrails</li>
+                <li>Compliance guardrails</li>;
               </ul>;
               <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>;
               <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>;
@@ -379,7 +379,7 @@ const Services: React.FC = () => {
               <ul className = "text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
                 <li>Auto-priority and routing</li>
                 <li>Knowledge base suggestions</li>
-                <li>First-response macros</li>
+                <li>First-response macros</li>;
               </ul>;
               <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>;
               <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>;
@@ -432,10 +432,12 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.8 }}
           >
@@ -446,14 +448,17 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Comprehensive AI-powered solutions and technology services designed to transform your business and drive innovation
@@ -463,14 +468,17 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <Link 
@@ -497,10 +505,12 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -520,15 +530,18 @@ const Services: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: categoryIndex * 0.1 
+
 }}
               >
                 <div className="text-center mb-12">
@@ -546,15 +559,18 @@ const Services: React.FC = () => {
                       initial = {
   { opacity: 0,
   x: serviceIndex % 2 === 0 ? -30 : 30 
+
 }}
                       whileInView = {
   { opacity: 1,
   x: 0 
+
 }}
                       viewport={{ once: true }}
                       transition = {
   { duration: 0.8,
   delay: serviceIndex * 0.1 
+
 }}
                       className="group"
                     >
@@ -609,10 +625,12 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -632,15 +650,18 @@ const Services: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="group"
               >
@@ -672,10 +693,12 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -695,15 +718,18 @@ const Services: React.FC = () => {
                 initial = {
   { opacity: 0,
   y: 30 
+
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.8,
   delay: index * 0.1 
+
 }}
                 className="text-center group"
               >
@@ -726,10 +752,12 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -741,15 +769,18 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.2 
+
 }}
           >
             Let's discuss how our AI-powered solutions can revolutionize your operations and drive growth
@@ -759,15 +790,18 @@ const Services: React.FC = () => {
             initial = {
   { opacity: 0,
   y: 30 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             viewport={{ once: true }}
             transition = {
   { duration: 0.8,
   delay: 0.4 
+
 }}
           >
             <Link 
@@ -787,7 +821,7 @@ const Services: React.FC = () => {
       </section>
     </div>
 =======
-        <div className="mt-16">
+        <div className="mt-16">;
           <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">;
             📞 Call +1 (302) 464-0950;
           </a>;

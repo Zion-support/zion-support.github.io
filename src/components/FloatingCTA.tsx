@@ -128,14 +128,14 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
       title: "Schedule Demo",
       description: "Book a consultation",
       action: "Book Now",
-      color: "from-purple-500 to-pink-500"
+      color: "from-purple-500 to-pink-500";
     };
   ];
 
   const quickServices = [
     { name: "AI Solutions", icon: Brain, link: "/ai-services" },
     { name: "Cybersecurity", icon: Shield, link: "/cybersecurity" },
-    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },
+    { name: "Cloud Services", icon: Cloud, link: "/cloud-solutions" },;
     { name: "Digital Transformation", icon: Zap, link: "/digital-transformation" };
   ];
 
@@ -151,6 +151,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
         transition = {
   { duration: 0.3,
   delay: 2 
+
 
 
 
@@ -182,6 +183,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 animate = {
   { opacity: 1, scale: 1,
@@ -191,10 +193,12 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
 
 
 
+
 }}
                 exit = {
   { opacity: 0, scale: 0.8,
   y: 10 
+
 
 
 
@@ -273,18 +277,22 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
               initial = {
   { scale: 0.8, opacity: 0,
   y: 50 
+
 }}
               animate = {
   { scale: 1, opacity: 1,
   y: 0 
+
 }}
               exit = {
   { scale: 0.8, opacity: 0,
   y: 50 
+
 }}
               transition = {
   { duration: 0.3,
   type: "spring" 
+
 }}
               className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-8 max-w-2xl w-full border border-slate-600 shadow-2xl"
               onClick={(e) => e.stopPropagation()}
@@ -311,14 +319,17 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                     initial = {
   { opacity: 0,
   y: 20 
+
 }}
                     animate = {
   { opacity: 1,
   y: 0 
+
 }}
                     transition = {
   { duration: 0.4,
   delay: index * 0.1 
+
 }}
                     className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-6 border border-slate-500 hover:border-cyan-400 transition-all duration-300 group cursor-pointer"
                   >
@@ -345,14 +356,17 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                       initial = {
   { opacity: 0,
   x: -20 
+
 }}
                       animate = {
   { opacity: 1,
   x: 0 
+
 }}
                       transition = {
   { duration: 0.4,
   delay: 0.4 + index * 0.1 
+
 }}
                       className="flex items-center p-4 bg-slate-700 rounded-xl border border-slate-500 hover:border-cyan-400 transition-all duration-300 group"
                     >
@@ -371,14 +385,17 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 20 
+
 }}
                 animate = {
   { opacity: 1,
   y: 0 
+
 }}
                 transition = {
   { duration: 0.4,
   delay: 0.6 
+
 }}
                 className="w-full px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
               >
@@ -406,7 +423,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
             </motion.div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence>;
     </>;
   )};
 

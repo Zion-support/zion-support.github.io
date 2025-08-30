@@ -47,6 +47,7 @@ class AutomationDashboard {
 
 
 
+
 },
       processes: this.processes.map(proc => ({
         name: proc.name,

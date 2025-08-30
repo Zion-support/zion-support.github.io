@@ -39,10 +39,11 @@ export default function PricingGuide(...args[]):  {
 
   const currencyRates = {
   USD: { symbol: '$',
-  rate: 1 
+  rate: 1 ;
 ;
 ;
 ;
+
 
 
 },;
@@ -116,7 +117,7 @@ export default function PricingGuide(...args[]):  {
       notIncluded[],
       cta: "Contact Sales",
       popular: false
-    }
+    };
 =======;
       ],;
       notIncluded: [],;
@@ -158,7 +159,7 @@ export default function PricingGuide(...args[]):  {
     {
       category: "IT Infrastructure",
       icon: Cpu,
-      services[
+      services[;
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },;
         { name: "Digital Twin", price: "From $899/month", description: "Virtual infrastructure modeling" },;
         { name: "IT Consulting", price: "From $299/hour", description: "Strategic IT guidance" },;
@@ -400,7 +401,7 @@ export default function PricingGuide(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </div>;

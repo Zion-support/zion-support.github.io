@@ -42,7 +42,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       title: "Performance Optimization",
       description: "Intelligent suggestions for code optimization, memory management, and performance improvements.",
       benefits: ["Performance insights", "Memory leak detection", "Optimization recommendations"]
-    },
+    },;
     {;
       icon: TrendingUp,;
       title: "Quality Metrics",;
@@ -104,7 +104,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
         "Custom AI models",
         "Advanced security features",
         "API access",
-        "Dedicated support",
+        "Dedicated support",;
         "Custom integrations",;
         "SLA guarantee";
       ],;
@@ -127,7 +127,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
     {
       title: "Security Compliance",
       description: "Meet security requirements and compliance standards with automated security scanning.",
-      icon: Shield
+      icon: Shield;
     },;
     {;
       title: "Performance Optimization",;
@@ -369,7 +369,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
                 Call +1 302 464 0950
               </a>
             </div>
-            <p className="text-sm text-gray-400 mt-6">
+            <p className="text-sm text-gray-400 mt-6">;
               Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a>;
             </p>;
           </div>;

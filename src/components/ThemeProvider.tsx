@@ -13,7 +13,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
 <<<<<<< HEAD
-  if (context = == null) {
+  if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider')};
   return context};
 =======
@@ -53,7 +53,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 <<<<<<< HEAD
       if (theme = == 'system') {
         effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'} else {
-        effectiveTheme = theme}
+        effectiveTheme = theme};
 =======;
       if (theme = == 'system') {;
         effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -91,6 +91,8 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   ;
   ;
   ;
+  ;
+
 
 
 
@@ -101,7 +103,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return (
 <<<<<<< HEAD
     <ThemeContext.Provider value = {value}>
-      {children}
+      {children};
     </ThemeContext.Provider>;
   )};
 =======

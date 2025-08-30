@@ -34,7 +34,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       title: 'Real-time Optimization',
       description: 'Quantum algorithms for complex optimization problems in logistics and finance',
       color: 'from-yellow-500 to-orange-500'
-    },
+    },;
     {;
       icon: Target,;
       title: 'Quantum Simulation',;
@@ -87,7 +87,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         'Custom quantum hardware access',
         'Dedicated quantum team',
         '24/7 phone support',
-        'Custom integrations',
+        'Custom integrations',;
         'On-premise deployment options',;
         'Research partnerships';
       ],;
@@ -105,7 +105,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
     {
       title: 'Pharmaceutical Research',
       description: 'Drug discovery, molecular modeling, and protein folding simulations',
-      metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs']
+      metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs'];
     },;
     {;
       title: 'Logistics & Supply Chain',;
@@ -134,7 +134,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
     {
       icon: DollarSign,
       title: 'Competitive Advantage',
-      description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities'
+      description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities';
     },;
     {;
       icon: Clock,;
@@ -163,10 +163,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -231,6 +233,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -240,10 +243,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -287,6 +292,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -296,10 +302,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -343,6 +351,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -352,10 +361,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -434,6 +445,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -443,10 +455,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -495,6 +509,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -504,10 +519,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
+
 
 
 
@@ -545,10 +562,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -574,6 +593,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -583,10 +603,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.2 
+
 
 
 
@@ -611,6 +633,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               whileInView = {
   { opacity: 1,
@@ -620,10 +643,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
               transition = {
   { duration: 0.6,
   delay: 0.4 
+
 
 
 
@@ -654,10 +679,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -734,7 +761,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
                 <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
                 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white transition-colors">
                   ziontechgroup.com
-                </a>
+                </a>;
               </div>;
             </div>;
           </div>;

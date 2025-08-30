@@ -142,7 +142,7 @@ const researchAreas = [
       'Container Orchestration',
       'Serverless Computing',
       'Multi-cloud Strategies',
-      'Cloud Security',
+      'Cloud Security',;
       'DevOps Automation';
     ],;
     publications: 20,;
@@ -253,7 +253,7 @@ const researchProjects = [
     funding: '$350,000',
     outcomes[
       'AI ethics framework',
-      'Responsible AI guidelines',
+      'Responsible AI guidelines',;
       '4 research publications',;
       'Industry standards contribution';
     ],;
@@ -306,7 +306,7 @@ const publications = [
   {
     id: 5,
     title: 'Security-First Cloud Architecture Patterns',
-    authors['Dr. Lisa Garcia', 'Dr. David Kim'],
+    authors['Dr. Lisa Garcia', 'Dr. David Kim'],;
     journal: 'Cloud Computing Security',;
     year: 2026,;
     citations: 38,;
@@ -359,7 +359,7 @@ const patents = [
   {
     id: 5,
     title: 'Cloud Security Architecture Pattern',
-    inventors['Dr. Lisa Garcia'],
+    inventors['Dr. Lisa Garcia'],;
     filingDate: '2026-02-15',;
     status: 'Pending',;
     patentNumber: 'US 2026/0098765',;
@@ -420,10 +420,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -509,10 +511,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -529,7 +533,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)  => {
+            {researchAreas.map((area, index)  => {;
 =======;
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
@@ -549,6 +553,7 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -558,10 +563,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -605,7 +612,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
                       <div className="text-xs text-zion-slate-light">Projects</div>;
@@ -631,10 +638,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -651,7 +660,7 @@ export default function ResearchDevelopment(...args[]):  {
           </motion.div>
 
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => {
+            {filteredProjects.map((project, index)  => {;
 =======;
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
@@ -672,6 +681,7 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                   whileInView = {
   { opacity: 1,
@@ -681,10 +691,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -770,7 +782,7 @@ export default function ResearchDevelopment(...args[]):  {
                     </div>
                   </div>
                 </motion.div>
-              )})}
+              )})};
 =======;
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
@@ -796,10 +808,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -826,6 +840,7 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -835,10 +850,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -904,10 +921,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -934,6 +953,7 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                 whileInView = {
   { opacity: 1,
@@ -943,10 +963,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 
 
 
@@ -1019,10 +1041,12 @@ export default function ResearchDevelopment(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -1060,7 +1084,7 @@ export default function ResearchDevelopment(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

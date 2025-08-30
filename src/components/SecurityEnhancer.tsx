@@ -58,7 +58,7 @@ interface SecurityCheck {
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance'}
 
 const SecurityEnhancer: React.FC = (): JSX.Element => {
-  const [metrics, setMetrics] = useState<any>({
+  const [metrics, setMetrics] = useState<any>({;
     overallScore: 85,;
     vulnerabilities: 3,;
     threatsBlocked: 127,;
@@ -174,19 +174,19 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   const mitigateThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
-        ? { ...threat, status: 'mitigated' as const }
+        ? { ...threat, status: 'mitigated' as const };
         : threat;
     ))}, []);
 
   const resolveThreat = useCallback((threatId: string)  => {
     setThreats(prev => prev.map(threat => 
       threat.id === threatId 
-        ? { ...threat, status: 'resolved' as const }
+        ? { ...threat, status: 'resolved' as const };
         : threat;
     ))}, []);
 
   const getThreatIcon = (type: SecurityThreat['type'])  => {
-    switch (type) {
+    switch (type) {;
 =======;
   const mitigateThreat = useCallback((threatId: string) => {;
     setThreats(prev => prev.map(threat => ;
@@ -457,7 +457,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
             Consider running a comprehensive security audit and implementing the suggested improvements.
           </AlertDescription>
         </Alert>
-      )}
+      )};
     </div>;
   )};
 =======

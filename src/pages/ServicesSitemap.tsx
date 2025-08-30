@@ -145,7 +145,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           pricing: "Custom pricing",
           features["Carbon tracking", "Energy optimization", "Waste reduction", "Environmental monitoring"]
         }
-      ]
+      ];
     };
   ];
 
@@ -153,7 +153,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
     { title: "AI Services Showcase", url: "/ai-services-showcase", description: "Explore our AI solutions" },
     { title: "Comprehensive Services", url: "/comprehensive-services", description: "View all services" },
     { title: "Pricing Guide", url: "/pricing", description: "Transparent pricing information" },
-    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },
+    { title: "Contact Sales", url: "/contact", description: "Get expert consultation" },;
     { title: "Request Quote", url: "/request-quote", description: "Get custom pricing" };
   ];
 
@@ -174,10 +174,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               animate = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
             >
@@ -213,10 +215,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -237,14 +241,17 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
+
 }}
                   viewport={{ once: true }}
                 >
@@ -272,10 +279,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -296,14 +305,17 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                   initial = {
   { opacity: 0,
   y: 20 
+
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
                   transition = {
   { duration: 0.6,
   delay: categoryIndex * 0.1 
+
 }}
                   viewport={{ once: true }}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
@@ -324,14 +336,17 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
                         initial = {
   { opacity: 0,
   scale: 0.9 
+
 }}
                         whileInView = {
   { opacity: 1,
   scale: 1 
+
 }}
                         transition = {
   { duration: 0.5,
   delay: serviceIndex * 0.1 
+
 }}
                         viewport={{ once: true }}
                         className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
@@ -383,10 +398,12 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
               initial = {
   { opacity: 0,
   y: 20 
+
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -430,7 +447,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
             </motion.div>
           </div>
         </section>
-      </div>
+      </div>;
     </>;
   )};
 

@@ -186,6 +186,7 @@ class AuthService {
 
 
 
+
 };
       
       this.user = updatedUser;
@@ -256,6 +257,7 @@ class AuthService {
       moderator: ['read:all', 'write:all',
   'moderate:content']
     
+
 
 
 

@@ -72,7 +72,7 @@ export default function QuantumTechnology(...args[]):  {
       description: "Ultra-sensitive detection using quantum phenomena",
       features["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
       color: "from-zion-indigo to-zion-purple"
-    }
+    };
 =======;
       title: "Quantum Sensors",;
       description: "Ultra-sensitive detection using quantum phenomena",;
@@ -82,7 +82,7 @@ export default function QuantumTechnology(...args[]):  {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
-  const applications = [
+  const applications = [;
     { id: 'all', name: 'All Applications', icon: Globe },;
     { id: 'finance', name: 'Financial Services', icon: BarChart3 },;
     { id: 'healthcare', name: 'Healthcare', icon: Monitor },;
@@ -134,7 +134,7 @@ export default function QuantumTechnology(...args[]):  {
       category: "research",
       benefits["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
       icon: Brain
-    }
+    };
 =======;
       description: "Quantum-enhanced machine learning and neural networks",;
       category: "research",;
@@ -181,7 +181,7 @@ export default function QuantumTechnology(...args[]):  {
       description: "Quantum bits using neutral atoms for computation",
       advantages["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
       icon: Atom
-    }
+    };
 =======;
       name: "Neutral Atoms",;
       description: "Quantum bits using neutral atoms for computation",;
@@ -199,7 +199,7 @@ export default function QuantumTechnology(...args[]):  {
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
       transition: {;
@@ -216,6 +216,7 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+;
 },;
     visible: {;
       opacity: 1,;
@@ -252,10 +253,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             animate = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -310,10 +313,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -347,6 +352,7 @@ export default function QuantumTechnology(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -388,10 +394,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -417,10 +425,12 @@ export default function QuantumTechnology(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -435,6 +445,7 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
@@ -442,8 +453,9 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
-
 ;
+;
+
 }};
             transition={{ duration: 0.6 }};
             viewport={{ once: true }};
@@ -465,7 +477,7 @@ export default function QuantumTechnology(...args[]):  {
                   <Icon className="w-5 h-5" />
                   {app.name}
                 </button>
-              )})}
+              )})};
 =======;
                   }`};
                 >;
@@ -493,6 +505,7 @@ export default function QuantumTechnology(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -539,10 +552,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -576,6 +591,7 @@ export default function QuantumTechnology(...args[]):  {
                 whileHover = {
   { y: -5,
   scale: 1.02 
+
 
 
 
@@ -620,10 +636,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -679,10 +697,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -771,10 +791,12 @@ export default function QuantumTechnology(...args[]):  {
 
 
 
+
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
+
 
 
 
@@ -809,7 +831,7 @@ export default function QuantumTechnology(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )};
 =======;
             </div>;
           </motion.div>;

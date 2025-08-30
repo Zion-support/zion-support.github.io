@@ -235,6 +235,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
 
 
+
 };
         setAnalysis(analysisResult);
         setIsAnalyzing(false)}, [targetElements]);
@@ -338,6 +339,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
 
 
+
 }} animate = {
   { opacity: 1, scale: 1,
   y: 0 
@@ -346,9 +348,11 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
 
 
 
+
 }} exit = {
   { opacity: 0, scale: 0.8,
   y: 20 
+
 
 
 
@@ -561,6 +565,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         const report = JSON.stringify(analysis, null, 2);
                         const blob = new Blob([report],
   { type: 'application/json' 
+
 
 
 

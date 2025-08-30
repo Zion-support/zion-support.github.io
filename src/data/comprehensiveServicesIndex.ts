@@ -36,7 +36,7 @@ export const SERVICE_CATEGORIES = [
   'Quantum Computing',
   'AR/VR & Immersive Tech',
   '5G & Telecommunications',
-  'Space Technology',
+  'Space Technology',;
   'Neuromorphic Computing',;
   'Digital Twin & Simulation',;
   'Synthetic Biology',;
@@ -76,8 +76,10 @@ export const CONTACT_INFO = {
   ;
   ;
   ;
+  ;
   Middletown DE 19709';
 ;
+
 
 
 
@@ -94,8 +96,10 @@ export const SERVICE_STATS = {
   ;
   ;
   ;
+  ;
   pricingModels: PRICING_MODELS.length;
 ;
+
 
 
 
@@ -112,12 +116,12 @@ export const getServicesByInnovationLevel = (level: string)  => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
 
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number)  => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => 
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
   )};
 
 export const getServicesByTags = (tags: string[])  => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   )};
 
@@ -125,7 +129,7 @@ export const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >
     service.title.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
+    service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm);
   )};
 =======

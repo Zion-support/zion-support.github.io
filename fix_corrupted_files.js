@@ -76,3 +76,4 @@ export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;
+export default fixCorruptedFile;

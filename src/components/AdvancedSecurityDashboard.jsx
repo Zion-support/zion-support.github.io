@@ -1,41 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react';
 <<<<<<< HEAD
-const mockComplianceRequirements = [
-    {
-        id: '1',
-        framework: 'SOC2',
-        requirement: 'Access Control Management',
-        status: 'compliant',
-        lastAudit: '2024-01-01T00:00:00.000Z',
-        nextAudit: '2024-12-31T00:00:00.000Z',
-        riskLevel: 'low',
-        description: 'Ensure proper access controls are in place for all systems and applications.',
-        controls['Multi-factor authentication', 'Role-based access control', 'Regular access reviews']
-    },
-    {
-        id: '2',
-        framework: 'ISO27001',
-        requirement: 'Information Security Policy',
-        status: 'in_progress',
-        lastAudit: '2023-12-01T00:00:00.000Z',
-        nextAudit: '2024-06-01T00:00:00.000Z',
-        riskLevel: 'medium',
-        description: 'Develop and maintain comprehensive information security policies.',
-        controls['Policy documentation', 'Employee training', 'Regular policy reviews']
-    },
-    {
-        id: '3',
-        framework: 'GDPR',
-        requirement: 'Data Protection Impact Assessment',
-        status: 'non_compliant',
-        lastAudit: '2023-11-01T00:00:00.000Z',
-        nextAudit: '2024-02-01T00:00:00.000Z',
-        riskLevel: 'high',
-        description: 'Conduct DPIA for all new data processing activities.',
-        controls['Risk assessment', 'Mitigation planning', 'Documentation']
-    }
-];
 const mockSecurityMetrics = [
     {
         id: '1',
