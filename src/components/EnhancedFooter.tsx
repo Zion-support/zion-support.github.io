@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Zap,
   Brain,
@@ -51,53 +50,13 @@ import {
   Instagram,
   Youtube,
   ExternalLink,
-  Users
-=======
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram,
-  Github,
-  Youtube,
-  ArrowRight,
-  Star,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Users,
-  Award,
-  TrendingUp,
-  Lightbulb,
-  Rocket,
-  Target,
   CheckCircle,
-  Heart,
-  MessageCircle,
-  HelpCircle,
-  BookOpen,
-  ShoppingCart,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  BarChart3,
-  Code,
-  Server,
-  Smartphone,
+  Lightbulb,
   Chip,
   Wifi,
   ShieldCheck,
   Globe2,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles
+  Bot
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 } from 'lucide-react';
 export function EnhancedFooter() {

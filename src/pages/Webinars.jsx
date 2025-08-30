@@ -50,7 +50,7 @@ export default function Webinars() {
       date: "April 19, 2025",
       duration: "60 minutes",
       speaker: "Dr. Robert Johnson"
-
+    }
   ];
 
   return (
@@ -125,9 +125,5 @@ export default function Webinars() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

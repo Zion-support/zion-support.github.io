@@ -10,6 +10,8 @@ export default function HelpCenter() {
         setExpandedCategories(prev => prev.includes(category)
             ? prev.filter(c => c !== category)
             : [...prev, category]);
+    };
+    
     const helpCategories = {
   'getting-started': {
             title: 'Getting Started',
@@ -72,7 +74,7 @@ export default function HelpCenter() {
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
             ]
-
+        }
     };
     const popularArticles = [
         'How to create your first account',
@@ -207,5 +209,6 @@ export default function HelpCenter() {
           </div>
         </section>
       </div>
-    </>);
-}
+    </>
+  );
+  }

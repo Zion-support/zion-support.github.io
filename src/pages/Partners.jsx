@@ -34,8 +34,8 @@ export default function Partners() {
       title: 'Academic Partners',
       description: 'Partner with universities and research institutions for innovation',
       icon: '🎓',
-<<<<<<< HEAD
       benefits: ['Research collaboration', 'Talent pipeline', 'Innovation programs']
+    }
   ];
   const existingPartners = [
     {
@@ -79,7 +79,7 @@ export default function Partners() {
       category: 'Research Partner',
       description: 'Innovation in emerging technologies',
       year: '2022'
-
+    }
   ];
   const benefits = [
     {
@@ -101,7 +101,7 @@ export default function Partners() {
       icon: Globe,
       title: 'Global Reach',
       description: 'Expand your business presence across multiple countries and regions'
-
+    }
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
@@ -269,9 +269,5 @@ export default function Partners() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
-}}}}}
-=======
-  )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}

@@ -5,7 +5,6 @@ interface SEOProps {
   title: string;
   description: string;
   keywords?: string;
-<<<<<<< HEAD
   ogImage?: string;
   canonicalUrl?: string;
   ogType?: 'website' | 'article' | 'product' | 'profile' | 'book';
@@ -31,64 +30,10 @@ export function SEO({
     noindex ? 'noindex' : 'index',
     nofollow ? 'nofollow' : 'follow'
   ].join(',');
-=======
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'service';
-  noindex?: boolean;
-  structuredData?: object;
-  children?: React.ReactNode;
-}
-
-export function SEO({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
-  type = 'website',
-  noindex = false,
-  structuredData 
-}: SEOProps) {
-  const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const defaultImage = '/images/zion-tech-group-og.jpg';
-  const defaultUrl = 'https://ziontechgroup.com';
-  
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Leading provider of AI-powered business solutions, IT services, and innovative technology solutions for modern enterprises.",
-    "foundingDate": "2014",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "category": "Technology Services"
-    }
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -163,24 +108,7 @@ export function SEO({
       <meta name="yandex-verification" content="your-yandex-verification-code" />
     </Helmet>
   );
-}}
-=======
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url || defaultUrl} />
-      <meta property="og:image" content={image || defaultImage} />
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
+}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image || defaultImage} />

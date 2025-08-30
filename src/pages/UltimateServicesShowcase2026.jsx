@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
 import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
-=======
-// import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-// import { enterpriseITInfrastructureServices2026 } from "../data/2025-enterprise-it-infrastructure-services";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -52,12 +47,7 @@ const UltimateServicesShowcase2026 = () => {
                 return b.rating - a.rating;
             case 'name':
             default:
-<<<<<<< HEAD
                 return a.name.localeCompare(b.name);
-
-=======
-                return a.name.localeCompare(b.name)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -80,23 +70,9 @@ const UltimateServicesShowcase2026 = () => {
             'Storage Management': '💾',
             'Virtualization': '🖥️',
             'IT Asset Management': '📱',
-  <<<<<<< HEAD
             'Performance Monitoring': '📊'
-        
-
-};
-        return icons[category] || '🚀'};
-=======
-  'Performance Monitoring': '📊'
-        
-
-
-
-
-};
+        };
         return icons[category] || '🚀';
-    };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -153,42 +129,9 @@ const UltimateServicesShowcase2026 = () => {
               {" "}Innovative Services 2026
             </span>
           </motion.h1>
-<<<<<<< HEAD
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
             Discover our comprehensive collection of 20+ cutting-edge innovative services,
             from AI-powered business solutions to enterprise IT infrastructure.
-=======
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}} transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-
-
-
-
-
-}}>
-            Discover our comprehensive collection of 20+ cutting-edge innovative services, 
-            from AI-powered business solutions to enterprise IT infrastructure. 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Each service is designed to transform your business and drive innovation with real, market-ready solutions.
           </motion.p>
 
