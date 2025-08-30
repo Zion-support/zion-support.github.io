@@ -113,13 +113,13 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
+              <li><Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Enterprise Automation</Link></li>
+              <li><Link to="/services/ai-cybersecurity-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity Intelligence</Link></li>
+              <li><Link to="/services/ai-financial-trading-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Financial Trading</Link></li>
+              <li><Link to="/services/ai-healthcare-predictive-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare Analytics</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
               <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 

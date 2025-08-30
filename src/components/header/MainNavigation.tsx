@@ -104,11 +104,11 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+                    <li><Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Enterprise Automation</Link></li>
                     <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
                     <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
                     <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
                     <li><Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
-                    <li><Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Customer Support</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -133,9 +133,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
                     <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
-                    <li><Link to="/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
-                    <li><Link to="/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
-                    <li><Link to="/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
+                    <li><Link to="/services/ai-cybersecurity-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity Intelligence</Link></li>
+                    <li><Link to="/services/ai-healthcare-predictive-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare Analytics</Link></li>
+                    <li><Link to="/services/ai-financial-trading-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Financial Trading</Link></li>
                     <li><Link to="/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
                   </ul>
                 </div>

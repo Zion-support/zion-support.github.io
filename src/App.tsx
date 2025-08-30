@@ -40,6 +40,12 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Innovative Services 2025
+const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
+const AICybersecurityIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-cybersecurity-intelligence-platform'));
+const AIFinancialTradingAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-analytics-platform'));
+const AIHealthcarePredictiveAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-predictive-analytics-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeNewServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeNewServicesShowcase2025'));
@@ -172,6 +178,12 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
+                    <Route path="/services/ai-cybersecurity-intelligence-platform" element={<AICybersecurityIntelligencePlatform />} />
+                    <Route path="/services/ai-financial-trading-analytics-platform" element={<AIFinancialTradingAnalyticsPlatform />} />
+                    <Route path="/services/ai-healthcare-predictive-analytics-platform" element={<AIHealthcarePredictiveAnalyticsPlatform />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
