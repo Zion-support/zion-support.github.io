@@ -77,6 +77,10 @@ const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/MicroSAASSolutions'));
 const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
+const EnhancedMicroSAASServices2025 = createLazyComponent(() => import('./pages/EnhancedMicroSAASServices2025'));
+const ComprehensiveITServices2025 = createLazyComponent(() => import('./pages/ComprehensiveITServices2025'));
+const AdvancedAIServices2025 = createLazyComponent(() => import('./pages/AdvancedAIServices2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // Additional pages
 const Partners = createLazyComponent(() => import('./pages/Partners'));
@@ -295,6 +299,10 @@ function App() {
                     <Route path="/micro-saas" element={<MicroSaaS />} />
                     <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                     <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+                    <Route path="/enhanced-micro-saas-2025" element={<EnhancedMicroSAASServices2025 />} />
+                    <Route path="/comprehensive-it-services-2025" element={<ComprehensiveITServices2025 />} />
+                    <Route path="/advanced-ai-services-2025" element={<AdvancedAIServices2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
                     <Route path="/mobile-launch" element={<MobileLaunch />} />
                     <Route path="/analytics" element={<Analytics />} />
                     <Route path="/match" element={<Match />} />
