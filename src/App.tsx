@@ -10,6 +10,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
+import { ComprehensiveServicesPage } from './pages/ComprehensiveServicesPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/*" element={<ServicesPage />} />
+            <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/solutions/*" element={<SolutionsPage />} />
             <Route path="/about" element={<AboutPage />} />

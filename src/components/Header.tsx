@@ -52,7 +52,8 @@ export function Header() {
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
-        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket }
+        { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe }
       ]
     },
     {

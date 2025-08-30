@@ -158,15 +158,15 @@ export function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-sm">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-3 text-sm">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>Silicon Valley, CA</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 

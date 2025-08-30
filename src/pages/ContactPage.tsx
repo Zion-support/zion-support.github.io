@@ -68,21 +68,21 @@ export function ContactPage() {
   const contactMethods = [
     {
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+1 302 464 0950',
       icon: Phone,
       description: 'Call us anytime',
       color: 'from-blue-500 to-cyan-600'
     },
     {
       title: 'Email',
-      value: 'contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
       icon: Mail,
       description: 'Send us a message',
       color: 'from-purple-500 to-pink-600'
     },
     {
       title: 'Office',
-      value: 'Silicon Valley, CA',
+      value: '364 E Main St STE 1008 Middletown DE 19709',
       icon: MapPin,
       description: 'Visit our headquarters',
       color: 'from-green-500 to-teal-600'
@@ -361,17 +361,17 @@ export function ContactPage() {
             <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6">Quick Actions</h3>
               <div className="space-y-4">
-                <a
-                  href="tel:+15551234567"
-                  className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
-                >
+                                  <a
+                    href="tel:+13024640950"
+                    className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
+                  >
                   <Phone className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
                   <span className="text-white">Call Now</span>
                   <ArrowRight className="w-4 h-4 text-gray-400 ml-auto group-hover:translate-x-1 transition-transform" />
                 </a>
                 
                 <a
-                  href="mailto:contact@ziontechgroup.com"
+                  href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
                 >
                   <Mail className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />

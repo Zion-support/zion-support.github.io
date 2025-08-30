@@ -332,15 +332,15 @@ export function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-cyan-100">
               <div className="flex items-center justify-center space-x-3">
                 <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <Mail className="w-5 h-5" />
-                <span>contact@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
                 <MapPin className="w-5 h-5" />
-                <span>Silicon Valley, CA</span>
+                <span>364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
 

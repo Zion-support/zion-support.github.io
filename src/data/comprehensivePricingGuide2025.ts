@@ -1,556 +1,616 @@
-export interface ComprehensivePricingService {
+export interface ServicePricing {
   id: string;
   title: string;
-  description: string;
   category: string;
-  subcategory: string;
-  basePrice: number;
-  currency: string;
-  pricingModel: string;
-  pricingTiers: {
+  pricing: {
     starter: number;
     professional: number;
     enterprise: number;
-    custom: string;
+    currency: string;
+    billing: string;
   };
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-  estimatedDelivery: string;
-  supportLevel: string;
+  marketPrice: {
+    low: number;
+    high: number;
+    average: number;
+    currency: string;
+  };
+  roi: {
+    conservative: string;
+    aggressive: string;
+    average: string;
+  };
+  features: {
+    starter: string[];
+    professional: string[];
+    enterprise: string[];
+  };
+  targetAudience: string[];
+  competitors: string[];
+  marketSize: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
   };
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-  marketSize?: string;
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
 }
 
-export const COMPREHENSIVE_PRICING_GUIDE_2025: ComprehensivePricingService[] = [
-  // AI-Powered Financial Services
+export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+  // AI Business Intelligence Platform
   {
-    id: "ai-credit-risk-assessment",
-    title: "AI Credit Risk Assessment Platform",
-    description: "Advanced AI-powered platform that analyzes credit risk using machine learning algorithms, alternative data sources, and real-time market conditions to provide accurate risk assessments.",
-    category: "AI & FinTech",
-    subcategory: "Credit Risk",
-    basePrice: 1899,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 1899,
-      professional: 3999,
-      enterprise: 7999,
-      custom: "Contact Sales"
+    id: "ai-business-intelligence-platform",
+    title: "AI Business Intelligence Platform",
+    category: "AI & Analytics",
+    pricing: {
+      starter: 999,
+      professional: 2999,
+      enterprise: 8999,
+      currency: "$",
+      billing: "monthly"
     },
-    features: [
-      "Real-time credit scoring",
-      "Alternative data analysis",
-      "Machine learning risk models",
-      "Regulatory compliance tools",
-      "Custom risk parameters",
-      "API integration",
-      "Real-time monitoring",
-      "Automated reporting",
-      "Multi-lender support",
-      "Fraud detection"
+    marketPrice: {
+      low: 1999,
+      high: 8999,
+      average: 5499,
+      currency: "$"
+    },
+    roi: {
+      conservative: "250%",
+      aggressive: "400%",
+      average: "325%"
+    },
+    features: {
+      starter: [
+        "AI-powered data analysis",
+        "Basic dashboard creation",
+        "Data integration (up to 5 sources)",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced analytics",
+        "Custom dashboards",
+        "API access",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Unlimited data sources",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Marketing teams",
+      "Sales teams"
     ],
-    benefits: [
-      "Reduce default rates by 35%",
-      "Improve approval accuracy by 45%",
-      "Faster credit decisions",
-      "Compliance automation",
-      "Cost-effective risk management"
-    ],
-    marketPrice: "$1,899 - $8,999/month",
-    roi: "300-500%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+    marketSize: "$25.5B (2025)",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["Experian", "Equifax", "TransUnion", "Plaid", "Stripe", "Square"],
-      apiEndpoints: 200,
-      uptime: "99.95%",
-      security: ["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption", "Multi-factor authentication"]
-    },
-    competitors: ["FICO", "VantageScore", "Credit Karma", "Experian Boost"],
-    marketSize: "$12.4 billion by 2025",
-    useCases: [
-      "Bank lending decisions",
-      "Credit card approvals",
-      "Small business loans",
-      "Mortgage applications",
-      "Personal loans"
-    ],
-    targetAudience: [
-      "Banks and credit unions",
-      "FinTech companies",
-      "Lending platforms",
-      "Credit bureaus",
-      "Insurance companies"
-    ],
-    tags: ["AI", "FinTech", "Credit Risk", "Machine Learning", "Compliance"]
+    }
   },
 
-  // AI-Powered Healthcare Solutions
+  // Quantum AI Optimization Platform
   {
-    id: "ai-medical-imaging-analysis",
-    title: "AI Medical Imaging Analysis Platform",
-    description: "Advanced AI platform for medical image analysis that uses deep learning to detect diseases, analyze scans, and provide diagnostic assistance to healthcare professionals.",
-    category: "AI & Healthcare",
-    subcategory: "Medical Imaging",
-    basePrice: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 2499,
-      professional: 4999,
-      enterprise: 9999,
-      custom: "Contact Sales"
-    },
-    features: [
-      "Multi-modality image analysis",
-      "Disease detection algorithms",
-      "Radiology report generation",
-      "Integration with PACS systems",
-      "Real-time analysis",
-      "Custom model training",
-      "Compliance reporting",
-      "Mobile app access",
-      "API for EHR integration",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy by 25%",
-      "Reduce reading time by 60%",
-      "Early disease detection",
-      "Standardized reporting",
-      "Cost-effective diagnostics"
-    ],
-    marketPrice: "$2,499 - $6,999/month",
-    roi: "400-600%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
-      integrations: ["DICOM", "PACS", "Epic", "Cerner", "Allscripts", "HL7 FHIR"],
-      apiEndpoints: 300,
-      uptime: "99.99%",
-      security: ["HIPAA", "SOC 2", "HITECH", "End-to-end encryption", "Audit logging"]
-    },
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Azure Health", "NVIDIA Clara"],
-    marketSize: "$45.8 billion by 2025",
-    useCases: [
-      "X-ray analysis",
-      "CT scan interpretation",
-      "MRI analysis",
-      "Ultrasound imaging",
-      "Pathology slides"
-    ],
-    targetAudience: [
-      "Hospitals and clinics",
-      "Radiology practices",
-      "Medical imaging centers",
-      "Healthcare networks",
-      "Research institutions"
-    ],
-    tags: ["AI", "Healthcare", "Medical Imaging", "Deep Learning", "Radiology"]
-  },
-
-  // Quantum Computing Solutions
-  {
-    id: "quantum-optimization-platform",
-    title: "Quantum Optimization Platform",
-    description: "Advanced quantum computing platform that solves complex optimization problems in logistics, finance, and manufacturing using quantum algorithms and hybrid quantum-classical approaches.",
+    id: "quantum-ai-optimization-platform",
+    title: "Quantum AI Optimization Platform",
     category: "Quantum Computing",
-    subcategory: "Optimization",
-    basePrice: 15999,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 15999,
-      professional: 29999,
-      enterprise: 49999,
-      custom: "Contact Sales"
+    pricing: {
+      starter: 1999,
+      professional: 4999,
+      enterprise: 15000,
+      currency: "$",
+      billing: "monthly"
     },
-    features: [
-      "Quantum algorithm library",
-      "Hybrid quantum-classical computing",
-      "Real-time optimization",
-      "Custom algorithm development",
-      "Performance benchmarking",
-      "API access",
-      "Cloud-based quantum access",
-      "Expert consultation",
-      "Training and support",
-      "Performance analytics"
-    ],
-    benefits: [
-      "Solve previously intractable problems",
-      "1000x faster optimization",
-      "Breakthrough computational power",
-      "Competitive advantage",
-      "Future-proof technology"
-    ],
-    marketPrice: "$15,999 - $45,000/month",
-    roi: "500-1000%",
-    innovationLevel: "Revolutionary",
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    marketPrice: {
+      low: 4999,
+      high: 15000,
+      average: 9999,
+      currency: "$"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "React", "PostgreSQL"],
-      integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
-      apiEndpoints: 800,
-      uptime: "99.9%",
-      security: ["Quantum encryption", "SOC 2", "FedRAMP", "End-to-end encryption"]
+    roi: {
+      conservative: "300%",
+      aggressive: "500%",
+      average: "400%"
     },
-    competitors: ["IBM Quantum", "Google Quantum", "D-Wave", "Rigetti", "IonQ"],
-    marketSize: "$65.2 billion by 2030",
-    useCases: [
-      "Supply chain optimization",
-      "Portfolio optimization",
-      "Route planning",
-      "Manufacturing scheduling",
-      "Drug discovery"
-    ],
+    features: {
+      starter: [
+        "Basic quantum algorithms",
+        "Standard optimization",
+        "API access",
+        "Email support",
+        "Basic security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced quantum algorithms",
+        "Custom optimization",
+        "Performance analytics",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom quantum models",
+        "Hybrid computing",
+        "Dedicated infrastructure",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
     targetAudience: [
-      "Fortune 500 companies",
+      "Financial institutions",
+      "Logistics companies",
+      "Manufacturing firms",
       "Research institutions",
-      "Government agencies",
-      "Financial institutions",
-      "Pharmaceutical companies"
+      "Government agencies"
     ],
-    tags: ["Quantum Computing", "Optimization", "AI", "Research", "Innovation"]
-  },
-
-  // Edge AI Computing Platform
-  {
-    id: "edge-ai-computing-platform",
-    title: "Edge AI Computing Platform",
-    description: "Distributed AI computing platform that brings machine learning capabilities to edge devices, enabling real-time AI processing without cloud dependency for IoT and mobile applications.",
-    category: "Edge Computing",
-    subcategory: "AI Processing",
-    basePrice: 3499,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 3499,
-      professional: 6999,
-      enterprise: 14999,
-      custom: "Contact Sales"
-    },
-    features: [
-      "Edge AI model deployment",
-      "Real-time inference",
-      "Model optimization",
-      "Device management",
-      "Data synchronization",
-      "Offline processing",
-      "Custom model training",
-      "Performance monitoring",
-      "Security framework",
-      "Scalable architecture"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs",
-      "Enhanced privacy",
-      "Offline operation",
-      "Real-time processing"
-    ],
-    marketPrice: "$3,499 - $9,999/month",
-    roi: "300-600%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
+    competitors: ["D-Wave", "IBM Quantum", "Google Quantum AI"],
+    marketSize: "$8.7B (2025)",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX Runtime", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Kubernetes", "Docker"],
-      apiEndpoints: 400,
-      uptime: "99.95%",
-      security: ["SOC 2", "ISO 27001", "End-to-end encryption", "Device authentication"]
-    },
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-    marketSize: "$43.7 billion by 2025",
-    useCases: [
-      "Autonomous vehicles",
-      "Smart cities",
-      "Industrial IoT",
-      "Healthcare monitoring",
-      "Retail analytics"
-    ],
-    targetAudience: [
-      "IoT device manufacturers",
-      "Smart city developers",
-      "Industrial companies",
-      "Healthcare providers",
-      "Retail chains"
-    ],
-    tags: ["Edge Computing", "AI", "IoT", "Real-time", "Distributed"]
+    }
   },
 
-  // Blockchain DeFi Platform
+  // AI-Powered Cybersecurity Platform
   {
-    id: "blockchain-defi-platform",
-    title: "Blockchain DeFi Platform",
-    description: "Comprehensive decentralized finance platform that provides lending, borrowing, trading, and yield farming services using smart contracts and blockchain technology.",
-    category: "Blockchain",
-    subcategory: "DeFi",
-    basePrice: 5999,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 5999,
-      professional: 11999,
-      enterprise: 24999,
-      custom: "Contact Sales"
-    },
-    features: [
-      "Smart contract development",
-      "DeFi protocol integration",
-      "Yield optimization",
-      "Risk management",
-      "Liquidity pools",
-      "Cross-chain bridges",
-      "Mobile app access",
-      "Analytics dashboard",
-      "API integration",
-      "Security auditing"
-    ],
-    benefits: [
-      "Eliminate intermediaries",
-      "Reduce transaction costs",
-      "Global accessibility",
-      "Transparent operations",
-      "Programmable money"
-    ],
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "400-800%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technicalSpecs: {
-      technology: ["Ethereum", "Solidity", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["MetaMask", "WalletConnect", "Uniswap", "Compound", "Aave"],
-      apiEndpoints: 300,
-      uptime: "99.9%",
-      security: ["Smart contract audits", "Multi-sig wallets", "Encryption", "Access controls"]
-    },
-    competitors: ["Uniswap", "Compound", "Aave", "MakerDAO", "Curve Finance"],
-    marketSize: "$162.6 billion by 2025",
-    useCases: [
-      "Decentralized lending",
-      "Yield farming",
-      "DEX trading",
-      "Stablecoin creation",
-      "Cross-border payments"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Crypto exchanges",
-      "Investment firms",
-      "Developers",
-      "Traders"
-    ],
-    tags: ["Blockchain", "DeFi", "Smart Contracts", "Cryptocurrency", "Finance"]
-  },
-
-  // AI-Powered Cybersecurity Mesh
-  {
-    id: "ai-cybersecurity-mesh",
-    title: "AI Cybersecurity Mesh Platform",
-    description: "Next-generation cybersecurity platform that creates a distributed security architecture using AI to provide comprehensive protection across all digital assets and environments.",
+    id: "ai-cybersecurity-platform",
+    title: "AI-Powered Cybersecurity Platform",
     category: "Cybersecurity",
-    subcategory: "Security Mesh",
-    basePrice: 7999,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 7999,
-      professional: 15999,
-      enterprise: 29999,
-      custom: "Contact Sales"
+    pricing: {
+      starter: 999,
+      professional: 1999,
+      enterprise: 5999,
+      currency: "$",
+      billing: "monthly"
     },
-    features: [
-      "Distributed security architecture",
-      "AI threat detection",
-      "Zero-trust implementation",
-      "Behavioral analytics",
-      "Automated response",
-      "Compliance monitoring",
-      "Real-time monitoring",
-      "Incident response",
-      "Security analytics",
-      "24/7 SOC support"
-    ],
-    benefits: [
-      "Comprehensive protection",
-      "Reduce attack surface",
-      "Automated threat response",
-      "Compliance automation",
-      "Cost-effective security"
-    ],
-    marketPrice: "$7,999 - $25,000/month",
-    roi: "400-700%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    marketPrice: {
+      low: 1999,
+      high: 5999,
+      average: 3999,
+      currency: "$"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
-      integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud platforms", "Identity providers"],
-      apiEndpoints: 500,
-      uptime: "99.99%",
-      security: ["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"]
+    roi: {
+      conservative: "200%",
+      aggressive: "350%",
+      average: "275%"
     },
-    competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Cisco", "Fortinet"],
-    marketSize: "$67.8 billion by 2025",
-    useCases: [
-      "Enterprise security",
-      "Cloud security",
-      "IoT protection",
-      "Critical infrastructure",
-      "Government security"
-    ],
+    features: {
+      starter: [
+        "Basic threat detection",
+        "Email security",
+        "Basic monitoring",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced threat detection",
+        "Behavioral analysis",
+        "Incident response",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Zero-trust architecture",
+        "Advanced analytics",
+        "Compliance tools",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
     targetAudience: [
-      "Large enterprises",
-      "Government agencies",
+      "Enterprise companies",
       "Financial institutions",
       "Healthcare organizations",
-      "Critical infrastructure"
+      "Government agencies",
+      "Educational institutions"
     ],
-    tags: ["Cybersecurity", "AI", "Zero Trust", "Security Mesh", "Threat Detection"]
-  },
-
-  // Metaverse Development Platform
-  {
-    id: "metaverse-development-platform",
-    title: "Metaverse Development Platform",
-    description: "Comprehensive platform for building, deploying, and managing virtual worlds, digital twins, and immersive experiences using AR/VR, AI, and blockchain technologies.",
-    category: "Metaverse",
-    subcategory: "Development Platform",
-    basePrice: 4499,
-    currency: "$",
-    pricingModel: "monthly",
-    pricingTiers: {
-      starter: 4499,
-      professional: 8999,
-      enterprise: 17999,
-      custom: "Contact Sales"
-    },
-    features: [
-      "3D world building tools",
-      "Avatar creation system",
-      "Virtual asset marketplace",
-      "Social interaction tools",
-      "AI-powered NPCs",
-      "Blockchain integration",
-      "Multi-platform support",
-      "Analytics dashboard",
-      "Content management",
-      "Monetization tools"
-    ],
-    benefits: [
-      "Create immersive experiences",
-      "Monetize virtual assets",
-      "Engage users globally",
-      "Reduce development time",
-      "Scalable virtual worlds"
-    ],
-    marketPrice: "$4,499 - $12,000/month",
-    roi: "300-600%",
-    innovationLevel: "Advanced",
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketSize: "$45.2B (2025)",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+    }
+  },
+
+  // IoT Edge Computing Platform
+  {
+    id: "iot-edge-computing-platform",
+    title: "IoT Edge Computing Platform",
+    category: "IoT & Edge Computing",
+    pricing: {
+      starter: 799,
+      professional: 1499,
+      enterprise: 4999,
+      currency: "$",
+      billing: "monthly"
     },
-    technicalSpecs: {
-      technology: ["Unity", "Unreal Engine", "React", "Node.js", "PostgreSQL", "Redis"],
-      integrations: ["Meta Quest", "HTC Vive", "Steam VR", "WebXR", "Blockchain networks"],
-      apiEndpoints: 350,
-      uptime: "99.9%",
-      security: ["SOC 2", "Content protection", "User privacy", "Asset security"]
+    marketPrice: {
+      low: 1499,
+      high: 4999,
+      average: 3249,
+      currency: "$"
     },
-    competitors: ["Roblox", "Decentraland", "The Sandbox", "Meta", "Microsoft"],
-    marketSize: "$82.5 billion by 2025",
-    useCases: [
-      "Virtual events",
-      "Gaming platforms",
-      "Virtual real estate",
-      "Training simulations",
-      "Social networking"
-    ],
+    roi: {
+      conservative: "180%",
+      aggressive: "300%",
+      average: "240%"
+    },
+    features: {
+      starter: [
+        "Basic device management",
+        "Data processing",
+        "Basic analytics",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced analytics",
+        "Real-time processing",
+        "API gateway",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom protocols",
+        "Advanced monitoring",
+        "Scalable architecture",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
     targetAudience: [
-      "Game developers",
-      "Event organizers",
-      "Real estate companies",
-      "Educational institutions",
-      "Brands and marketers"
+      "Manufacturing companies",
+      "Automotive industry",
+      "Smart city projects",
+      "Healthcare providers",
+      "Energy companies"
     ],
-    tags: ["Metaverse", "AR/VR", "3D", "Blockchain", "Social"]
+    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Particle"],
+    marketSize: "$18.7B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Blockchain Web3 Development Platform
+  {
+    id: "blockchain-web3-platform",
+    title: "Blockchain Web3 Development Platform",
+    category: "Blockchain & Web3",
+    pricing: {
+      starter: 1499,
+      professional: 2499,
+      enterprise: 7999,
+      currency: "$",
+      billing: "monthly"
+    },
+    marketPrice: {
+      low: 2499,
+      high: 7999,
+      average: 5249,
+      currency: "$"
+    },
+    roi: {
+      conservative: "220%",
+      aggressive: "400%",
+      average: "310%"
+    },
+    features: {
+      starter: [
+        "Basic smart contracts",
+        "Single chain support",
+        "Basic tools",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Multi-chain support",
+        "Advanced tools",
+        "API management",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom chains",
+        "Advanced analytics",
+        "White-label solution",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Startups",
+      "Enterprises",
+      "Developers",
+      "Financial institutions",
+      "Gaming companies"
+    ],
+    competitors: ["Alchemy", "Infura", "QuickNode", "Moralis"],
+    marketSize: "$12.8B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Marketing Automation
+  {
+    id: "ai-marketing-automation",
+    title: "AI-Powered Marketing Automation",
+    category: "Marketing & Sales",
+    pricing: {
+      starter: 499,
+      professional: 899,
+      enterprise: 2999,
+      currency: "$",
+      billing: "monthly"
+    },
+    marketPrice: {
+      low: 899,
+      high: 2999,
+      average: 1949,
+      currency: "$"
+    },
+    roi: {
+      conservative: "150%",
+      aggressive: "250%",
+      average: "200%"
+    },
+    features: {
+      starter: [
+        "Basic automation",
+        "Email marketing",
+        "Simple campaigns",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced automation",
+        "Multi-channel campaigns",
+        "Analytics dashboard",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom AI models",
+        "Advanced analytics",
+        "White-label solution",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Marketing teams",
+      "E-commerce businesses",
+      "B2B companies",
+      "Agencies",
+      "Startups"
+    ],
+    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
+    marketSize: "$35.8B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Cloud-Native DevOps Platform
+  {
+    id: "cloud-native-devops-platform",
+    title: "Cloud-Native DevOps Platform",
+    category: "Cloud & DevOps",
+    pricing: {
+      starter: 999,
+      professional: 1799,
+      enterprise: 5999,
+      currency: "$",
+      billing: "monthly"
+    },
+    marketPrice: {
+      low: 1799,
+      high: 5999,
+      average: 3899,
+      currency: "$"
+    },
+    roi: {
+      conservative: "200%",
+      aggressive: "350%",
+      average: "275%"
+    },
+    features: {
+      starter: [
+        "Basic CI/CD",
+        "Container management",
+        "Basic monitoring",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced CI/CD",
+        "Multi-cloud support",
+        "Advanced monitoring",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom workflows",
+        "Advanced analytics",
+        "White-label solution",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Development teams",
+      "DevOps engineers",
+      "System administrators",
+      "Startups",
+      "Enterprises"
+    ],
+    competitors: ["GitLab", "Jenkins", "CircleCI", "Spinnaker"],
+    marketSize: "$28.9B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Customer Service Platform
+  {
+    id: "ai-customer-service-platform",
+    title: "AI-Powered Customer Service Platform",
+    category: "Customer Service",
+    pricing: {
+      starter: 699,
+      professional: 1299,
+      enterprise: 3999,
+      currency: "$",
+      billing: "monthly"
+    },
+    marketPrice: {
+      low: 1299,
+      high: 3999,
+      average: 2649,
+      currency: "$"
+    },
+    roi: {
+      conservative: "180%",
+      aggressive: "280%",
+      average: "230%"
+    },
+    features: {
+      starter: [
+        "Basic chatbots",
+        "Ticket management",
+        "Simple analytics",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced chatbots",
+        "Multi-channel support",
+        "Advanced analytics",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom AI models",
+        "Advanced integrations",
+        "White-label solution",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Customer service teams",
+      "E-commerce businesses",
+      "SaaS companies",
+      "Enterprises",
+      "Support agencies"
+    ],
+    competitors: ["Zendesk", "Intercom", "Freshdesk", "Help Scout"],
+    marketSize: "$22.4B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Data Privacy & Compliance Platform
+  {
+    id: "data-privacy-compliance-platform",
+    title: "Data Privacy & Compliance Platform",
+    category: "Compliance & Governance",
+    pricing: {
+      starter: 999,
+      professional: 1899,
+      enterprise: 5999,
+      currency: "$",
+      billing: "monthly"
+    },
+    marketPrice: {
+      low: 1899,
+      high: 5999,
+      average: 3949,
+      currency: "$"
+    },
+    roi: {
+      conservative: "150%",
+      aggressive: "250%",
+      average: "200%"
+    },
+    features: {
+      starter: [
+        "Basic compliance tools",
+        "Data mapping",
+        "Simple reporting",
+        "Email support",
+        "Standard security"
+      ],
+      professional: [
+        "All starter features",
+        "Advanced compliance",
+        "Automated workflows",
+        "Advanced reporting",
+        "Priority support",
+        "Advanced security"
+      ],
+      enterprise: [
+        "All professional features",
+        "Custom compliance",
+        "Advanced analytics",
+        "White-label solution",
+        "24/7 support",
+        "Enterprise security"
+      ]
+    },
+    targetAudience: [
+      "Compliance officers",
+      "Legal teams",
+      "Data protection officers",
+      "Enterprises",
+      "Healthcare organizations"
+    ],
+    competitors: ["OneTrust", "TrustArc", "Privacera", "BigID"],
+    marketSize: "$15.6B (2025)",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   }
 ];
 
-export const PRICING_CATEGORIES = [
-  "AI & FinTech",
-  "AI & Healthcare",
-  "Quantum Computing",
-  "Edge Computing",
-  "Blockchain",
-  "Cybersecurity",
-  "Metaverse"
-];
-
-export const PRICING_TIERS = [
-  { name: "Starter", description: "Essential features for small teams", color: "bg-green-500" },
-  { name: "Professional", description: "Advanced features for growing businesses", color: "bg-blue-500" },
-  { name: "Enterprise", description: "Full-featured solution for large organizations", color: "bg-purple-500" },
-  { name: "Custom", description: "Tailored solution for specific needs", color: "bg-red-500" }
-];
+export default COMPREHENSIVE_PRICING_GUIDE_2025;

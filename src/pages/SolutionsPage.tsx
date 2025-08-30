@@ -334,15 +334,15 @@ export function SolutionsPage() {
               <div className="flex items-center justify-center space-x-6 text-sm">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>contact@ziontechgroup.com</span>
+                  <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>Silicon Valley, CA</span>
+                  <span>364 E Main St STE 1008 Middletown DE 19709</span>
                 </div>
               </div>
             </div>
