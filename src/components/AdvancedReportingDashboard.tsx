@@ -23,18 +23,28 @@ import React, { useEffect, useState } from 'react';
 interface ReportData {
   id: string;
   title: string;
-  type: string;
+  type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
   category: string;
   data: any;
   lastUpdated: string;
-  status: string;
-  priority: string;
+  status: 'active' | 'archived' | 'draft';
+  priority: 'low' | 'medium' | 'high' | 'critical';
   tags: string[];
   description: string;
   author: string;
   views: number;
   downloads: number;
   rating: number;
+}
+
+interface ReportMetrics {
+  totalReports: number;
+  activeReports: number;
+  totalViews: number;
+  totalDownloads: number;
+  averageRating: number;
+  topCategories: Array<{ name: string; count: number; percentage: number }>;
+  recentActivity: Array<{ action: string; timestamp: string; user: string }>;
 }
 
 interface AdvancedReportingDashboardProps {
@@ -47,7 +57,6 @@ interface AdvancedReportingDashboardProps {
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true,
   showFilters = true,
-  showCharts = true,
   maxReports = 15
 }) => {
   const [reports, setReports] = useState<ReportData[]>([]);
@@ -57,7 +66,6 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [selectedStatus, setSelectedStatus] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list' | 'detailed'>('grid');
-  const [showReportForm, setShowReportForm] = useState(false);
   const [selectedReport, setSelectedReport] = useState<ReportData | null>(null);
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 'title'>('date');
