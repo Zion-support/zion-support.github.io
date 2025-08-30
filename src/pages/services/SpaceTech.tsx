@@ -1,4 +1,3 @@
-import React from 'react';
 import { Rocket, Satellite, Globe, Zap, BarChart3, Activity, Shield, Database } from 'lucide-react';
 
 const SpaceTech = () => {

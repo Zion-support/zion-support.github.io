@@ -1,4 +1,3 @@
-import React from 'react';
 import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu } from 'lucide-react';
 
 const GreenIT = () => {

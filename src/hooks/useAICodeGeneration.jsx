@@ -254,7 +254,7 @@ interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
 }
 
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
-  const [state, setState] = useState<any>(null);
+  const [state, setState] = useStateg<div>(null);
 
   useEffect(() => {
     // TODO: Implement initialization logic

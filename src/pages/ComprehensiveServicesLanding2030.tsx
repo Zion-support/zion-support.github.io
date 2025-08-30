@@ -28,7 +28,7 @@ export default function ComprehensiveServicesLanding2030() {
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 50000]);
   const [aiScoreRange, setAiScoreRange] = useState<[number, number]>([80, 100]);
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useStateg<div>(null);
   const [showModal, setShowModal] = useState(false);
 
   // Filter services based on category, search, price, and AI score

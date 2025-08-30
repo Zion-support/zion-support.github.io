@@ -7,7 +7,7 @@ import { specializedInnovativeServices2027 } from '../../data/2027-specialized-i
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {
   'AI & Autonomous Systems': Brain,
   'Quantum Computing & AI': Cpu,
   'Blockchain & Web3': Database,

@@ -21,7 +21,7 @@ interface Service {
   id: string;
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentTypeg<div>;
   gradient: string;
   features: string[];
   price: string;

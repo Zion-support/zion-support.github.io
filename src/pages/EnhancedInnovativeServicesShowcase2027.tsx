@@ -35,7 +35,7 @@ import {
   List
 } from 'lucide-react';
 import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories } from '../data/enhancedInnovativeServices2027';
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentTypeg<div> } = {
   'Web3 Solutions': Globe,
   'Metaverse Solutions': Eye,
   'Sustainable Tech': Leaf,

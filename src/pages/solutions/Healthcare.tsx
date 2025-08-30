@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';

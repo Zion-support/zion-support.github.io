@@ -1,4 +1,3 @@
-import React from 'react';
 // Next.js routing - no need for react-router-dom
 import NotFound from '@/pages/NotFound';
 
