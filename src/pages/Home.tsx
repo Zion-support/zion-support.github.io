@@ -57,7 +57,26 @@ export default function Home() {
       icon: Brain,
       href: '/services/ai-enterprise-orchestrator',
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
+      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration'],
+      price: '$12,000/month'
+    },
+    {
+      name: 'AI Edge Computing Platform',
+      description: 'Real-time AI processing at the edge for instant decision making',
+      icon: Cpu,
+      href: '/services/AI-Edge-Computing-Platform',
+      color: 'from-blue-600 to-cyan-600',
+      features: ['Real-time processing', 'Distributed intelligence', 'IoT integration'],
+      price: '$7,500/month'
+    },
+    {
+      name: 'AI Digital Twin Platform',
+      description: 'Intelligent digital replicas with AI-powered predictive analytics',
+      icon: Eye,
+      href: '/services/AI-Digital-Twin-Platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Real-time simulation', 'AI analytics', '3D visualization'],
+      price: '$8,500/month'
     },
     {
       name: 'AI Cybersecurity Suite',
@@ -65,23 +84,8 @@ export default function Home() {
       icon: Shield,
       href: '/services/ai-cybersecurity-suite',
       color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
-    },
-    {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
-      icon: Atom,
-      href: '/services/quantum-ai-platform',
-      color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
-    },
-    {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,
-      href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
+      features: ['Threat detection', 'Real-time response', 'Compliance automation'],
+      price: '$8,500/month'
     }
   ];
 
@@ -284,6 +288,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
                 <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">

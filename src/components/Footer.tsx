@@ -82,26 +82,53 @@ export function Footer() {
             <p className="text-zion-slate-light text-sm leading-relaxed">
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
+              Based in Middletown, DE with global reach.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="LinkedIn">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="Facebook">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="YouTube">
                 <Youtube className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </a>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-zion-cyan" />
+                <a href="tel:+13024640950" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-5 h-5 text-zion-cyan" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-5 h-5 text-zion-cyan mt-1" />
+                <div className="text-zion-slate-light">
+                  <div>364 E Main St STE 1008</div>
+                  <div>Middletown, DE 19709</div>
+                </div>
+              </div>
             </div>
           </div>
 
