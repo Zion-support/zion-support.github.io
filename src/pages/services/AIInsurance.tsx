@@ -1,4 +1,4 @@
-import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 } from 'lucide-react';
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, FileText } from 'lucide-react';
 
 export default function AIInsurance() {
   const features = [

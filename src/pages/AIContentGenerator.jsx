@@ -1,10 +1,8 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SEO } from "@/components/SEO";
-import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Type, Video, ShoppingBag, Mail } from 'lucide-react';
 
 export default function AIContentGenerator() {
     const features = [

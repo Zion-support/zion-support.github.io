@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Server, 
-  GitFork, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Smartphone,
-  Monitor,
-  Code,
-  FileText,
-  Truck,
-  Wrench
-} from 'lucide-react';
+import { Cloud, Server, GitFork, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Activity, Database, Monitor, Code, FileText, Wrench } from 'lucide-react';
 
 const cloudDevOpsSolutions = [
   {

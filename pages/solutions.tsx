@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle, Globe, Lock, Database } from 'lucide-react'
+import { Brain, Cloud, Shield, Zap, Users, TrendingUp, CheckCircle } from 'lucide-react';
 
 export default function Solutions() {
   const solutions = [

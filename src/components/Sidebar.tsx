@@ -1,41 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Rocket, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe,
-  ChevronDown,
-  ChevronRight,
-  Briefcase,
-  Phone,
-  Building,
-  FileText,
-  TestTube,
-  BarChart3,
-  Database,
-  Monitor,
-  Code
-} from 'lucide-react';
+import { Menu, X, Home, Zap, Brain, Shield, Cloud, Cpu, Rocket, Users, ShoppingCart, BookOpen, HelpCircle, DollarSign, Target, TrendingUp, Globe, ChevronDown, ChevronRight, Briefcase, Phone, Building, FileText, BarChart3, Database, Code } from 'lucide-react';
 
 interface SidebarItem {
   title: string;

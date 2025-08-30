@@ -1,30 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Leaf, 
-  Zap, 
-  Shield, 
-  Globe, 
-  TrendingUp, 
-  Settings,
-  Database,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Sun,
-  Wind,
-  Battery,
-  Recycle,
-  Tree,
-  Lightbulb,
-  Gauge,
-  Target,
-  Award,
-  BarChart3
-} from 'lucide-react';
+import { Leaf, Zap, Shield, Globe, TrendingUp, Database, Cloud, CheckCircle, Sun, Recycle, Gauge, Target, Award } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function GreenIT() {

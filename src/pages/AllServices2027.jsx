@@ -2,14 +2,8 @@ import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Input } from "@/components/ui/input";
-import { 
-    Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, 
-    ShoppingCart, GraduationCap, Phone, Mail, MapPin, Globe, 
-    CheckCircle, Star, TrendingUp, Zap, Users, Search, Filter,
-    ArrowRight, Award, Clock, Target, Rocket, Lightbulb
-} from "lucide-react";
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';import { Input } from "@/components/ui/input";
+import { Brain, Shield, BarChart3, Phone, Mail, MapPin, Globe, CheckCircle, Star, TrendingUp, Zap, Users, Search, Filter, ArrowRight, Target, Rocket, Lightbulb } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 // Import all service data

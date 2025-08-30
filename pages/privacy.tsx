@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Shield, Eye, Lock, Database, Users, ArrowRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react';
 
 
 export default function Privacy() {

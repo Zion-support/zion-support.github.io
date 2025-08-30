@@ -1,4 +1,4 @@
-import { Leaf, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, TrendingUp, Zap, Target, Clock, Shield, Sun } from 'lucide-react';
+import { Leaf, ArrowRight, Check, ExternalLink, Phone, Mail, Globe, Zap, Target, Sun } from 'lucide-react';
 
 export default function AISustainableTechnology() {
   const features = [

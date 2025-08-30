@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Shield, 
-  Brain, 
-  Smartphone, 
-  Server, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Target,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  FileText,
-  Clock,
-  Eye,
-  AlertTriangle
-} from 'lucide-react';
+import { Heart, Shield, Brain, Smartphone, Zap, CheckCircle, ArrowRight, Star, Users, Lock, Activity, FileText } from 'lucide-react';
 
 const healthcareSolutions = [
   {

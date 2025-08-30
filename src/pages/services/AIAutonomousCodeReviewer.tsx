@@ -1,27 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Code, 
-  Shield, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  CheckCircle, 
-  Star,
-  ArrowRight,
-  Github,
-  Gitlab,
-  Slack,
-  MessageSquare,
-  BarChart3,
-  Settings,
-  Lock,
-  Globe,
-  Smartphone,
-  Database
-} from 'lucide-react';
+import { Code, Shield, Zap, TrendingUp, Users, CheckCircle, ArrowRight, Github, Gitlab, Slack, MessageSquare } from 'lucide-react';
 
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [

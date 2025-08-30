@@ -1,28 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Users, 
-  Calendar, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  GitBranch,
-  AlertTriangle,
-  Star,
-  DollarSign,
-  Globe,
-  Smartphone,
-  Cloud
-} from 'lucide-react';
+import { Brain, Users, Calendar, TrendingUp, Shield, Zap, CheckCircle, Clock, Target, BarChart3, MessageSquare, GitBranch } from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

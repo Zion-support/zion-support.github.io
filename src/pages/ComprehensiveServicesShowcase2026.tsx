@@ -1,32 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Network,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  TrendingUp,
-  Users,
-  Clock,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+import { Search, Filter, Star, Zap, Brain, Shield, Cpu, Network, Phone, Mail, MapPin, ExternalLink, TrendingUp, CheckCircle } from 'lucide-react';
 import { SEO } from '../components/SEO';
-import { 
-  revolutionaryMicroSaasServices2026,
-  revolutionaryITInfrastructureServices2026,
-  revolutionaryAIServices2026,
-  ALL_REVOLUTIONARY_SERVICES_2026
-} from '../data/comprehensiveServices2026';
-const ComprehensiveServicesShowcase2026: React.FC = () => {
+import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices2026';const ComprehensiveServicesShowcase2026: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');

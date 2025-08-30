@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Calculator, 
-  Check, 
-  X, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Cpu, 
-  ShoppingCart,
-  MessageCircle,
-  Users,
-  TrendingUp,
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3,
-  Rocket,
-  Leaf,
-  Lock,
-  Heart,
-  Globe,
-  Atom,
-  Satellite
-} from 'lucide-react';
+import { Calculator, Check, X, Zap, Brain, Cloud, Shield, Cpu, MessageCircle, BarChart3, Rocket } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function PricingGuide() {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+import { FlaskConical, Users, Star, Search, Brain, Cloud, Shield, Database, Zap, Calendar, MapPin, DollarSign, FileText, Network, Cpu, Star as StarIcon } from 'lucide-react';
 
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');

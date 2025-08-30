@@ -1,17 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Loader2, 
-  CheckCircle, 
-  AlertCircle, 
-  Zap, 
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Shield
-} from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';

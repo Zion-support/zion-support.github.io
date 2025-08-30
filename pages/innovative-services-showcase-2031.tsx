@@ -1,26 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  innovativeMicroSaasServices2031, 
-  innovativeITInfrastructureServices2031, 
-  innovativeAIServices2031 
-} from '../src/data/innovativeServices2031';
-import { 
-  Brain, 
-  Cloud, 
-  CheckCircle, 
-  TrendingUp, 
-  Users, 
-  Phone,
-  Mail,
-  Globe,
-  MapPin,
-  ArrowRight,
-  Rocket,
-  Target,
-  Award,
-  Clock
-} from 'lucide-react';
+import { innovativeMicroSaasServices2031 } from '../src/data/innovativeServices2031';import { Brain, Cloud, CheckCircle, TrendingUp, Phone, Mail, Globe, MapPin, ArrowRight, Rocket } from 'lucide-react';
 
 const InnovativeServicesShowcase2031: React.FC = () => {
   const scrollToContact = () => {

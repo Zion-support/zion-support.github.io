@@ -1,33 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Brain,
-  Cloud,
-  Lock,
-  Users,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Cpu,
-  Network,
-  FileText
-} from 'lucide-react';
+import { BarChart3, TrendingUp, Database, Zap, Shield, Brain, Users, CheckCircle, PieChart, LineChart, Activity, Target, Eye, Search, Cpu } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function DataAnalytics() {

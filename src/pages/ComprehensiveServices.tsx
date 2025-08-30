@@ -1,33 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Database, 
-  Rocket, 
-  Target, 
-  Users, 
-  BarChart3,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Workflow,
-  Atom,
-  MessageCircle,
-  PenTool,
-  Calendar,
-  Heart,
-  DollarSign,
-  ShoppingBag,
-  Settings,
-  Globe,
-  Award,
-  TrendingUp
-} from 'lucide-react';
+import { Brain, Cloud, Cpu, Rocket, Users, BarChart3, CheckCircle, ArrowRight, Star, Workflow, Atom, Globe, Award, TrendingUp } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const ComprehensiveServices: React.FC = () => {

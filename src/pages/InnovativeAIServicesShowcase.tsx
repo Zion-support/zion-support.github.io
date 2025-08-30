@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Zap, Sparkles, TrendingUp, Route, Users, PenTool, 
-  CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
-  BarChart3, Shield, Briefcase, Package, Target
-} from 'lucide-react';
+import { Zap, Sparkles, TrendingUp, Route, Users, PenTool, CheckCircle, ArrowRight, ExternalLink, Shield, Target } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function InnovativeAIServicesShowcase() {

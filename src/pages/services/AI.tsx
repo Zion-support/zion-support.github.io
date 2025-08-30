@@ -1,28 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cpu, 
-  Zap, 
-  Target, 
-  Users, 
-  Shield, 
-  TrendingUp, 
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
-  Lock,
-  BarChart3,
-  Eye,
-  MessageSquare,
-  Heart,
-  DollarSign,
-  Factory,
-  ShoppingCart
-} from 'lucide-react';
+import { Brain, Cpu, Zap, Target, CheckCircle, ArrowRight, Play, Code, Cloud, Eye, MessageSquare, Heart, DollarSign, Factory, ShoppingCart } from 'lucide-react';
 
 export default function AIServices() {
   const aiServices = [

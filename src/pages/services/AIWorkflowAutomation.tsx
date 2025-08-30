@@ -1,4 +1,4 @@
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 } from 'lucide-react';
+import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain } from 'lucide-react';
 
 export default function AIWorkflowAutomation() {
   const features = [

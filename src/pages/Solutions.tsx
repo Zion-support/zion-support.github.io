@@ -1,39 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Shield,
-  Cloud,
-  TrendingUp,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  BarChart3,
-  FileImage,
-  MessageCircle,
-  Video,
-  FileText,
-  Heart,
-  PanelLeft,
-  ShoppingCart,
-  Settings,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Target,
-  Award,
-  Clock,
-  DollarSign,
-  Search,
-  Filter
-} from 'lucide-react';
+import { Brain, Shield, Cloud, TrendingUp, Zap, Globe, Cpu, Network, Code, Rocket, Heart, ShoppingCart, CheckCircle, ArrowRight, Star, Clock, DollarSign, Search, Filter } from 'lucide-react';
 
 const solutionCategories = [
   {

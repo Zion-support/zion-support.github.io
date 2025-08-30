@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { TrendingUp, Award, Users, Clock } from 'lucide-react';
+
 
 interface Stat {
   number: string;

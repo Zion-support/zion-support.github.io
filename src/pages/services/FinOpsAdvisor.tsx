@@ -1,47 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  DollarSign, 
-  TrendingDown, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  Calculator,
-  PieChart,
-  LineChart,
-  Target,
-  Wallet,
-  PiggyBank,
-  CreditCard,
-  Receipt
-} from 'lucide-react';
+import { DollarSign, TrendingDown, CheckCircle, ArrowRight, Play, Settings, Target, Calculator, PieChart, LineChart, Target, Wallet, PiggyBank, CreditCard, Receipt } from 'lucide-react';
 
 const FinOpsAdvisor = () => {
   const features = [

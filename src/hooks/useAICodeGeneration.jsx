@@ -473,8 +473,7 @@ console.log("Language:", "${options.language}");`;
     };
     // Helper functions for test generation
     const generateJestTests = (_code) => {
-        return `import { render, screen, fireEvent } from '@testing-library/react';
-import GeneratedComponent from './GeneratedComponent';
+        return `import { render, screen } from '@testing-library/react';import GeneratedComponent from './GeneratedComponent';
 
 describe('GeneratedComponent', () => {
   it('renders without crashing', () => {

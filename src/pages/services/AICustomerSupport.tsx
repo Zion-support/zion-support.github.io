@@ -1,24 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  MessageCircle, 
-  Headphones, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Clock,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Globe,
-  Target,
-  Smartphone,
-  Mail,
-  Phone,
-  Bot
-} from 'lucide-react';
+import { MessageCircle, Zap, Brain, CheckCircle, BarChart3, Target, Bot } from 'lucide-react';
 
 export default function AICustomerSupport() {
   const features = [

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from 'lucide-react';
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3 } from 'lucide-react';
 
 const QuantumTechnology = () => {
   const quantumServices = [

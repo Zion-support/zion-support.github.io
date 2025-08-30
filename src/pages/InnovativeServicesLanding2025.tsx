@@ -1,15 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart, 
-  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp, 
-  Atom, Network, Eye, PenTool, Heart, Building, Truck, 
-  Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
-  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
-  CheckCircle, Clock, Users as UsersIcon, Zap as ZapIcon,
-  Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon
-} from 'lucide-react';
+import { Brain, Shield, Users, TrendingUp, Atom, Network, Smartphone, Mail, Zap, Star, Rocket, Globe, ArrowRight, FileText, CheckCircle, Users as UsersIcon, Zap as ZapIcon, Award, TrendingUp as TrendingUpIcon, Globe as GlobeIcon } from 'lucide-react';
 
 export default function InnovativeServicesLanding2025() {
   const featuredServices = [

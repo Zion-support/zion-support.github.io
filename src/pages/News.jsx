@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe } from 'lucide-react';
+import { Calendar, ArrowRight, Search, Clock, Globe } from 'lucide-react';
 
 const News = () => {
   const [searchTerm, setSearchTerm] = useState('');

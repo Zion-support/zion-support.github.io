@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  Briefcase, 
-  Cpu, 
-  Shield, 
-  Zap, 
-  Clock,
-  Rocket,
-  Target,
-  TrendingUp,
-  Award,
-  Globe
-} from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Cpu, Shield, Zap, Clock, Rocket, Target, TrendingUp } from 'lucide-react';
 
 export function FeatureCTAs() {
   const features = [

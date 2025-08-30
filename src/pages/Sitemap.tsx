@@ -1,44 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Home, 
-  Users, 
-  Building, 
-  BookOpen, 
-  MessageCircle, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  ShoppingCart, 
-  BarChart3, 
-  Code, 
-  Globe, 
-  ArrowRight, 
-  Star,
-  FileText,
-  Calendar,
-  HelpCircle,
-  Settings,
-  Target,
-  TrendingUp,
-  Heart,
-  Award,
-  Rocket,
-  Atom,
-  Lock,
-  Database,
-  Network,
-  Smartphone,
-  Wifi,
-  Leaf,
-  Factory,
-  City,
-  Car,
-  Building2,
-  DollarSign
-} from 'lucide-react';
+import { Home, Users, Building, BookOpen, MessageCircle, Zap, Brain, Cloud, Shield, ShoppingCart, Code, Globe, ArrowRight, Star, FileText, Calendar, HelpCircle, Target, TrendingUp, Rocket, Network, DollarSign } from 'lucide-react';
 
 interface SitemapSection {
   title: string;

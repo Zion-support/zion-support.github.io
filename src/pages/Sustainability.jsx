@@ -1,52 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Leaf, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  Sun,
-  Wind,
-  Droplets,
-  Recycle,
-  Tree,
-  Cloud,
-  Battery,
-  Thermometer
-} from 'lucide-react';
+import { Leaf, Zap, Shield, CheckCircle, ArrowRight, Star, Award, Code, FileText, Wrench, Gauge, Network, Building, Car, TrendingUp, Sun, Wind, Droplets, Recycle, Tree, Battery } from 'lucide-react';
 
 const sustainabilitySolutions = [
   {

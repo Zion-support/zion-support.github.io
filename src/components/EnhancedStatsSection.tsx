@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Users, 
-  Globe, 
-  TrendingUp, 
-  Star, 
-  Zap, 
-  Shield,
-  Award,
-  Rocket
-} from 'lucide-react';
+import { Users, TrendingUp, Star, Zap, Shield, Award, Rocket } from 'lucide-react';
 
 interface Stat {
   id: string;

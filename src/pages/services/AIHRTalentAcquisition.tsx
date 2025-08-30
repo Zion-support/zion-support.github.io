@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Search, TrendingUp, Zap, Target, Clock, Briefcase, Globe } from 'lucide-react';
+import { Users, Check, Phone, Mail, Zap, Target, Globe } from 'lucide-react';
 
 export default function AIHRTalentAcquisition() {
   const features = [

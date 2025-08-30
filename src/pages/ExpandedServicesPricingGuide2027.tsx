@@ -1,72 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ChevronDown, 
-  ChevronUp,
-  Star,
-  Users,
-  Globe,
-  Lock,
-  Code,
-  BarChart3,
-  Target,
-  Rocket,
-  Lightbulb,
-  Award,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Eye,
-  Handshake,
-  Building,
-  ShieldCheck,
-  Network2,
-  Smartphone as Mobile,
-  Server as Infrastructure,
-  Monitor as Analytics,
-  Zap as Lightning,
-  Users2,
-  Award as Trophy,
-  Clock as Time,
-  DollarSign as Money,
-  TrendingUp as Growth,
-  Eye as Vision,
-  Handshake as Partnership,
-  Building as Enterprise,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  CheckCircle,
-  ArrowRight,
-  Shield,
-  Brain,
-  Cloud,
-  Database,
-  Smartphone,
-  Server,
-  Monitor,
-  Cpu,
-  Network,
-  Smartphone as IoT,
-  Server as Edge,
-  Monitor as Healthcare,
-  Cpu as FinTech,
-  ChevronRight,
-  Info,
-  AlertTriangle,
-  Zap
-} from 'lucide-react';
+import { Search, Filter, BarChart3, Rocket, Award, Clock, DollarSign, TrendingUp, Eye, Handshake, Building, Smartphone as Mobile, Server as Infrastructure, Monitor as Analytics, Zap as Lightning, Award as Trophy, Clock as Time, DollarSign as Money, TrendingUp as Growth, Eye as Vision, Handshake as Partnership, Building as Enterprise, Phone, Mail, MapPin, ExternalLink, CheckCircle, Shield, Cloud, Smartphone, Server, Monitor, Cpu, Smartphone as IoT, Server as Edge, Monitor as Healthcare, Cpu as FinTech, Info, Zap } from 'lucide-react';
 import { SEO } from '@/components/SEO';
-import { 
-  ALL_EXPANDED_SERVICES_PRICING,
-  type ExpandedServicePricing 
-} from '@/data/expandedServicesPricing2027';
-
+import { ALL_EXPANDED_SERVICES_PRICING } from '@/data/expandedServicesPricing2027';
 const ExpandedServicesPricingGuide2027: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

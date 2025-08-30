@@ -1,30 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  Shield, 
-  AlertTriangle, 
-  Brain, 
-  Zap, 
-  Eye, 
-  Users, 
-  Globe,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Lock,
-  Search,
-  Activity,
-  BarChart3,
-  Clock,
-  DollarSign,
-  Target,
-  Award,
-  Network,
-  Database,
-  Cpu,
-  Fingerprint
-} from 'lucide-react';
+import { Shield, Brain, Eye, Star, CheckCircle, ArrowRight, Search, Activity, Clock, DollarSign, Target, Network, Database } from 'lucide-react';
 
 export default function AICybersecurityThreatIntelligence() {
   const features = [

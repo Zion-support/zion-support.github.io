@@ -1,56 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  // Blockchain icon removed - not available in lucide-react
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  Download,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  BarChart3,
-  PieChart,
-  Activity,
-  Gauge,
-  ShieldCheck,
-  X
-} from 'lucide-react';
+import { Brain, Shield, Globe, Cpu, Network, Search, Filter, Star, DollarSign, CheckCircle, Play, BookOpen, Phone, Mail, MapPin, Globe as GlobeIcon, Atom, Factory, Satellite, Eye, Download, Lightbulb, X } from 'lucide-react';
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
@@ -157,7 +107,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   }, [allServices]);
 
   const filteredServices = useMemo(() => {
-    let filtered = allServices.filter(service => {
+    const filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           service.category.toLowerCase().includes(searchTerm.toLowerCase());

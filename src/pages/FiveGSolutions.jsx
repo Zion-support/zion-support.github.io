@@ -1,52 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Wifi, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  Signal,
-  Smartphone,
-  Monitor,
-  Cloud,
-  Satellite,
-  Antenna,
-  Router,
-  Tower
-} from 'lucide-react';
+import { Zap, CheckCircle, ArrowRight, Star, Users, Globe, Clock, Code, FileText, Wrench, Gauge, Network, Server, Building, Factory, Layers, Signal, Cloud, Antenna, Tower } from 'lucide-react';
 
 const fiveGSolutions = [
   {

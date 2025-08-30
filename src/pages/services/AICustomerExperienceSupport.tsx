@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Heart, Headphones, CheckCircle, Zap, Sparkles, ArrowRight, Bot, Users, Star, Clock, TrendingUp } from 'lucide-react';
+import { Heart, Headphones, CheckCircle, Zap, ArrowRight, Bot, Users, TrendingUp } from 'lucide-react';
 
 export default function AICustomerExperienceSupport() {
   const features = [

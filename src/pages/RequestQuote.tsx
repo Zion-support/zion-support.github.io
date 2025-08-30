@@ -1,41 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calculator, 
-  Send, 
-  CheckCircle, 
-  AlertCircle, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Calendar, 
-  FileText, 
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  Building, 
-  Globe, 
-  Target, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronUp,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Network,
-  Server,
-  Rocket,
-  Users as Team,
-  Award,
-  TrendingUp,
-  Lightbulb,
-  CheckSquare,
-  Square,
-  Info,
-  HelpCircle
-} from 'lucide-react';
+import { Calculator, Send, CheckCircle, Users, FileText, MessageCircle, Phone, Building, Target, Star, ArrowRight, Cloud, Users as Team, Award, TrendingUp, Info } from 'lucide-react';
 
 interface QuoteForm {
   // Company Information

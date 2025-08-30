@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Link, 
-  Coins, 
-  Shield, 
-  Zap, 
-  Database, 
-  Globe, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Lock, 
-  Network, 
-  Wallet, 
-  BarChart3,
-  Star,
-  Award,
-  Target,
-  Rocket,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Users,
-  Clock,
-  Check
-} from 'lucide-react';
+import { Coins, Shield, Zap, Database, Globe, CheckCircle, ArrowRight, Network, Rocket, Users, Clock, Check } from 'lucide-react';
 
 const BlockchainServicesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

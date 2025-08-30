@@ -1,26 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Target, 
-  Award, 
-  Globe, 
-  Rocket, 
-  Cpu, 
-  Database, 
-  Lock,
-  CheckCircle,
-  TrendingUp,
-  Star,
-  Clock,
-  BarChart3,
-  Lightbulb
-} from 'lucide-react'
+import { ArrowRight, Zap, Shield, Cloud, Brain, Users, CheckCircle, Star, Clock } from 'lucide-react';
 
 export default function Index() {
 	const features = [

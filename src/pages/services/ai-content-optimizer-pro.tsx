@@ -1,28 +1,7 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircle, 
-  TrendingUp, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Target, 
-  Users, 
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  Shield,
-  Brain,
-  Search,
-  PenTool,
-  Eye,
-  Share2
-} from 'lucide-react';
+import { CheckCircle, TrendingUp, Globe, BarChart3, Phone, Mail, MapPin, ExternalLink, Star, Shield, Brain, Search, PenTool } from 'lucide-react';
 
 const AIContentOptimizerPro: React.FC = () => {
   const contactInfo = {

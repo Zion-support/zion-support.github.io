@@ -1,50 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Mail as MailIcon,
-  MapPin,
-  Phone,
-  Rocket,
-  Search,
-  Star,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Globe,
-  TrendingUp,
-  Award,
-  Users,
-  Clock,
-  DollarSign,
-  Target,
-  CheckCircle,
-  ArrowUpRight,
-  BookOpen,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  BarChart3,
-  Code,
-  Palette,
-  Smartphone,
-  Monitor,
-  Server,
-  Wifi,
-  Satellite,
-  Leaf,
-  Building,
-  FlaskConical,
-  SortAsc,
-  SortDesc,
-  X
-} from 'lucide-react';
+import { ChevronLeft, ChevronRight, MapPin, Phone, Rocket, Search, Star, Zap, Shield, Cloud, Brain, Globe, TrendingUp, Users, DollarSign, CheckCircle, ArrowUpRight, BookOpen, Lightbulb, Cpu, Network, Eye, Code, Palette, Monitor, Server, Wifi, Satellite, Leaf, Building, FlaskConical, SortAsc, SortDesc, X } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030 } from '../data/revolutionaryServices2030';
 

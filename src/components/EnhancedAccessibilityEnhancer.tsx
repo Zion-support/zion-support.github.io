@@ -1,38 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Sun, 
-  Moon, 
-  Contrast, 
-  Type, 
-  Move, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info,
-  Accessibility,
-  Braille,
-  Headphones,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Zap,
-  Shield,
-  Target,
-  Award,
-  BarChart3,
-  Palette,
-  RotateCcw,
-  Save,
-  Loader2
-} from 'lucide-react';
+import { Keyboard, Contrast, Type, Move, Settings, X, CheckCircle, Accessibility, Headphones, Shield, Target, Award, RotateCcw, Save, Loader2 } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

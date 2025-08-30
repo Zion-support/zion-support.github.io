@@ -1,37 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Target,
-  Lightbulb,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Phone,
-  Mail,
-  MapPin,
-  BarChart3,
-  MessageCircle,
-  Calendar,
-  AlertTriangle,
-  Star
-} from 'lucide-react';
+import { Brain, TrendingUp, Users, Zap, Database, CheckCircle, Activity, Target, Phone, Mail, MapPin } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AICustomerSuccessPrediction() {

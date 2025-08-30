@@ -1,4 +1,4 @@
-import { Wrench, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Clock, Shield, Settings } from 'lucide-react';
+import { Wrench, ArrowRight, Check, ExternalLink, Phone, Mail, AlertTriangle, TrendingUp, Zap, Target, Settings } from 'lucide-react';
 
 export default function AIPredictiveMaintenance() {
   const features = [

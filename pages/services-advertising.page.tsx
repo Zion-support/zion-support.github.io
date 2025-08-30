@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, ExternalLink } from 'lucide-react';
 export default function ServicesAdvertisingPage() {
   const contact = {
     mobile: '+1 302 464 0950',

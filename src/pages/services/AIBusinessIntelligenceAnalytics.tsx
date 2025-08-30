@@ -1,29 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Play,
-  Settings,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  FileText,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  PieChart,
-  LineChart,
-  Activity as ActivityIcon
-} from 'lucide-react';
+import { Brain, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Play, Settings, Activity, PieChart, Activity as ActivityIcon } from 'lucide-react';
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = [

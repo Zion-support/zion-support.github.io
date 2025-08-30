@@ -1,28 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Heart, 
-  Brain, 
-  Activity, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  Users,
-  Smartphone,
-  Cloud,
-  Database,
-  Cpu,
-  Lock,
-  Eye,
-  PieChart,
-  TrendingUp,
-  AlertTriangle
-} from 'lucide-react';
+import { Heart, Brain, Activity, Shield, Zap, CheckCircle, Clock, Target, BarChart3, Eye, AlertTriangle } from 'lucide-react';
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [

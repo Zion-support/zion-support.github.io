@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
+import { Calendar, User, ArrowRight, Clock } from 'lucide-react';
 
 export default function Blog() {
   const blogPosts = [

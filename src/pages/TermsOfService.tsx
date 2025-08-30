@@ -1,25 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  FileText, 
-  Shield, 
-  Users, 
-  Globe, 
-  Lock, 
-  AlertTriangle, 
- 
-  CheckCircle, 
-  ArrowRight, 
-  Download, 
-  Calendar,
-  Mail,
-  Phone,
-  ExternalLink,
-  Scale,
-  Gavel,
-  BookOpen
-} from 'lucide-react';
+import { FileText, Shield, Users, Globe, Lock, AlertTriangle, CheckCircle, ArrowRight, Download, Calendar, Mail, Phone, Gavel, BookOpen } from 'lucide-react';
 
 const TermsOfService = () => {
   const lastUpdated = '2025-01-15';

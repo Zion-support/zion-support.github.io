@@ -1,28 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
-import { 
-  Code, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Globe, 
-  Building, 
-  Rocket, 
-  Cpu, 
-  BarChart3,
-  Database,
-  Cloud,
-  Lock,
-  Smartphone,
-  Target,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain
-} from 'lucide-react';
+import { Code, Zap, Users, TrendingUp, Shield, Building, Rocket, Cpu, BarChart3, Cloud, Target, CheckCircle } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
   const services = [

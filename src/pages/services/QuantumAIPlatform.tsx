@@ -1,34 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Server,
-  Globe,
-  Clock,
-  BarChart3,
-  Cpu,
-  Lock,
-  Eye,
-  Target,
-  Rocket,
-  Sparkles,
-  Atom,
-  Infinity,
-  CpuIcon,
-  CircuitBoard
-} from 'lucide-react';
+import { Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, Network, Atom, CpuIcon } from 'lucide-react';
 
 export default function QuantumAIPlatform() {
   const features = [

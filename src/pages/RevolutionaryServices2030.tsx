@@ -1,42 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Zap, 
-  Cpu, 
-  Heart, 
-  Globe, 
-  Shield, 
-  Lock,
-  TrendingUp,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  DollarSign,
-  Users,
-  Target,
-  Award,
-  Lightbulb,
-  Gauge,
-  BarChart3,
-  Settings,
-  Database,
-  Network,
-  Code,
-  Palette,
-  Gamepad2,
-  Music
-} from 'lucide-react';
+import { Brain, Rocket, Cpu, Globe, Shield, Lock, Star, CheckCircle, Phone, Mail, MapPin, DollarSign, Target, Gauge, BarChart3 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "@/data/revolutionaryServices2030";
 import { EMERGING_TECH_SERVICES_2030 } from "@/data/emergingTechServices2030";
-import { REVOLUTIONARY_PRICING_GUIDE_2030 } from "@/data/revolutionaryPricingGuide2030";
 
 export default function RevolutionaryServices2030() {
   const [selectedCategory, setSelectedCategory] = useState('all');

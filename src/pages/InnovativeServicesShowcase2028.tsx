@@ -1,44 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Globe, 
-  Lock, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Code,
-  Palette,
-  Target,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search,
-  Clock,
-  Wifi,
-  Chip,
-  Database as DatabaseIcon,
-  ShieldCheck,
-  Bot,
-  GitFork,
-  Eye as EyeIcon,
-  Sparkles as SparklesIcon,
-  Zap as ZapIcon
-} from 'lucide-react';
+import { Brain, Shield, Cloud, Zap, TrendingUp, Database, Server, Rocket, Star, CheckCircle, Phone, Mail, MapPin, ExternalLink, Search, Clock, Database as DatabaseIcon, Zap as ZapIcon } from 'lucide-react';
 import { ADVANCED_AI_SERVICES_2028 } from '../data/advancedAIServices2028';
 import { COMPREHENSIVE_IT_INFRASTRUCTURE_2028 } from '../data/comprehensiveITInfrastructure2028';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2028 } from '../data/innovativeMicroSaasServices2028';

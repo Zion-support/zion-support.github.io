@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory, getServicesByPriceRange, getTopRatedServices } from '../src/data/innovativeServices2025';
-const InnovativeServicesShowcase: React.FC = () => {
+import { INNOVATIVE_SERVICES_2025 } from '../src/data/innovativeServices2025';const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');

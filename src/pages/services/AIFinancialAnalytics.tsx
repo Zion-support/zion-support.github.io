@@ -1,4 +1,4 @@
-import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart } from 'lucide-react';
+import { TrendingUp, Shield, CheckCircle, ExternalLink, Phone, Mail, Target, Zap, PieChart } from 'lucide-react';
 
 export default function AIFinancialAnalytics() {
   const features = [

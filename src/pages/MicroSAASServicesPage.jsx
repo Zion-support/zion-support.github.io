@@ -91,25 +91,11 @@ import {SEO} from '@/components/SEO';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Badge} from '@/components/ui/badge';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
             type} MicroSaasService 
 } from '@/data/microSaasServices';
-import {Star,
-            Clock,
-            Users,
-            Zap,
-            Shield,
-            Globe,
-            TrendingUp,
-            CheckCircle,
-            ExternalLink,
-            Play,
-            FileText,
-            MessageCircle,
-            ArrowRight,
-            Sparkles} from 'lucide-react';
+import { Star, Users, Zap, Shield, Globe, TrendingUp, CheckCircle, ExternalLink } from 'lucide-react';
 import {Link} from 'react-router-dom';
 
 export default function MicroSaasServicesPage() {}

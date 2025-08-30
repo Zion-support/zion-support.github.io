@@ -1,26 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  DollarSign, 
-  Users, 
-  Heart, 
-  Zap, 
-  Brain,
-  Shield,
-  Cloud,
-  Code,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Globe,
-  Award,
-  Lightbulb
-} from 'lucide-react';
+import { MapPin, Clock, DollarSign, Users, Brain, Shield, Cloud, Code, ArrowRight, CheckCircle } from 'lucide-react';
 
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

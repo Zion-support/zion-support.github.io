@@ -1,22 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Newspaper, 
-  Calendar, 
-  User, 
-  ArrowRight, 
-  Download, 
-  Mail, 
-  Phone,
-  Globe,
-  Award,
-  TrendingUp,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Rocket
-} from 'lucide-react';
+import { Newspaper, Calendar, ArrowRight, Download, Mail, Phone, Globe, Award, Users } from 'lucide-react';
 
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');

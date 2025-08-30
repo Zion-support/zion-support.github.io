@@ -1,34 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Atom, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Monitor,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server
-} from 'lucide-react';
+import { Atom, Zap, Shield, CheckCircle, ArrowRight, Star, Database, Code, FileText, Wrench, Brain, Target, Rocket, Lightbulb, Network, Server } from 'lucide-react';
 
 const quantumSolutions = [
   {

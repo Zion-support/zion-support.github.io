@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  BookOpen, 
-  Users, 
-  Smartphone, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  FileText,
-  Clock,
-  Eye,
-  Video,
-  Headphones,
-  Monitor,
-  Brain,
-  Code
-} from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Smartphone, BarChart3, CheckCircle, ArrowRight, Star, Target, Globe, FileText, Video, Monitor, Brain, Code } from 'lucide-react';
 
 const educationSolutions = [
   {

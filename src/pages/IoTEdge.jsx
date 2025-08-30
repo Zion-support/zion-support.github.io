@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Wifi, 
-  Server, 
-  Smartphone, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Monitor,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu
-} from 'lucide-react';
+import { Wifi, Server, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Activity, Code, FileText, Wrench, Cpu } from 'lucide-react';
 
 const iotEdgeSolutions = [
   {

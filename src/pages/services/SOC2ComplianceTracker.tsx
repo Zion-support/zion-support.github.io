@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell } from 'lucide-react';
+import { Shield, CheckCircle, FileText, Users, BarChart3, Lock, Clock, TrendingUp, Award } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function SOC2ComplianceTracker() {

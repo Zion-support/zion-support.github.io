@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import { motion } from 'framer-motion';
 const ContentOptimizer = ({ content, onOptimize }) => {
   const [optimizedContent, setOptimizedContent] = useState('');
   const [isOptimizing, setIsOptimizing] = useState(false);

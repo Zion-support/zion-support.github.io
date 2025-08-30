@@ -1,27 +1,7 @@
 import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Globe, 
-  Zap, 
-  Database, 
-  Smartphone, 
-  Code, 
-  Lock, 
-  TrendingUp,
-  Rocket,
-  Cpu,
-  Network,
-  Palette,
-  BarChart3,
-  Sparkles,
-  Target,
-  Users,
-  CheckCircle
-} from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, Code, TrendingUp, Rocket, Network, BarChart3, Sparkles, Target, Users, CheckCircle } from 'lucide-react';
 
 const Products: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');

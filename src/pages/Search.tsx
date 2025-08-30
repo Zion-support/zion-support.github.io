@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight } from 'lucide-react';
+import { Search as SearchIcon, Filter, MapPin, Server, Users, Building, Star, ArrowRight } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 
 export default function Search() {
@@ -98,7 +98,7 @@ export default function Search() {
     await new Promise(resolve => setTimeout(resolve, 500));
     
     // Filter results based on search query and category
-    let filteredResults = mockResults.filter(result => {
+    const filteredResults = mockResults.filter(result => {
       const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                           result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));

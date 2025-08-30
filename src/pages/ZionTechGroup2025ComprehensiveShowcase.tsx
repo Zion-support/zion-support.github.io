@@ -1,25 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  ChevronDown,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Target,
-  Lightbulb
-} from 'lucide-react';
+import { Search, Filter, Shield, Cloud, Brain, Zap, Globe, Phone, Mail, MapPin, ExternalLink, ChevronDown, CheckCircle, TrendingUp, Target, Lightbulb } from 'lucide-react';
 import { zionTechGroup2025Services, ZionService, getServicesByCategory, getServicesByPriceRange, searchServices } from '../data/zionTechGroup2025ComprehensiveServices';
 
 const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {

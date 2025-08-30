@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon } from 'lucide-react';
+import { Volume2, VolumeX, Braille } from 'lucide-react';
 
 interface AccessibilityContextType {
   highContrast: boolean;

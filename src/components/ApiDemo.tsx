@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { api, ApiResponse } from '@/services/api';
-
+import { api } from '@/services/api';
 interface User {
   id: number;
   name: string;

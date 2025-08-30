@@ -1,19 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion'
-import { 
-  Handshake, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Users, 
-  Globe,
-  Award,
-  Zap,
-  Cpu,
-  Database,
-  Lock,
-  Rocket
-} from 'lucide-react'
+import { Handshake, Shield, Cloud, Brain, Award, Zap, Database, Rocket } from 'lucide-react';
 
 export default function Partners() {
   const title = 'Partners — Zion Tech Group'
