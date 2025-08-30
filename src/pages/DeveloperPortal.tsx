@@ -163,7 +163,7 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
 });
 
 const data = await response.json();
-console.log(data);`,
+// // // // console.log(data);`,
       icon: Code
     },
     {

@@ -341,11 +341,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
         case 'download':
           // Simulate download
-          console.log(`Downloading ${report.title}`);
+          // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
           // Simulate share
-          console.log(`Sharing ${report.title}`);
+          // // // // console.log(`Sharing ${report.title}`);
           break;
         case 'print':
           // Simulate print
