@@ -55,6 +55,7 @@ interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
   language?: string;
+}
 
 export function ChatAssistant({
   enabled = true,

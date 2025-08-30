@@ -28,6 +28,7 @@ import {
   Phone,
   Mail,
   MapPin
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
@@ -63,10 +64,12 @@ const Services2026: React.FC = () => {
         s.category.toLowerCase().includes(q) ||
         s.tags?.some(t => t.toLowerCase().includes(q))
       );
+    }
 
     // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(s => s.category === selectedCategory);
+    }
 
     // Sort services
     switch (sortBy) {
@@ -113,7 +116,7 @@ const Services2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-
+            >
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2026 Services
               </h1>
@@ -165,7 +168,7 @@ const Services2026: React.FC = () => {
                       ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300'
                       : 'bg-slate-800/50 border-slate-600/50 text-slate-300 hover:border-cyan-400/50 hover:text-cyan-300'
                   }`}
-
+                >
                   <category.icon className="w-4 h-4" />
                   <span className="font-medium">{category.name}</span>
                   <span className="text-xs bg-slate-700/50 px-2 py-1 rounded-full">{category.count}</span>
@@ -180,7 +183,7 @@ const Services2026: React.FC = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="bg-slate-800/70 border border-slate-600/50 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-
+              >
                 <option value="innovation">Innovation Level</option>
                 <option value="price">Price</option>
                 <option value="roi">ROI</option>
@@ -371,7 +374,7 @@ const Services2026: React.FC = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-
+                >
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -428,7 +431,7 @@ const Services2026: React.FC = () => {
                   <Link
                     to="/contact"
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
-
+                  >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
@@ -436,7 +439,7 @@ const Services2026: React.FC = () => {
                   <Link
                     to="/request-quote"
                     className="inline-flex items-center px-6 py-3 border border-cyan-400/40 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-200"
-
+                  >
                     Request Quote
                   </Link>
                 </div>
@@ -461,4 +464,4 @@ const Services2026: React.FC = () => {
   );
 };
 
-export default Services2026;}}}}
+export default Services2026;

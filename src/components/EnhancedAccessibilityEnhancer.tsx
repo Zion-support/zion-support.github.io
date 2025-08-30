@@ -337,13 +337,13 @@ export default function EnhancedAccessibilityEnhancer() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
-
+          >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-
+            >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
                 <div className="flex items-center space-x-3">
@@ -362,7 +362,7 @@ export default function EnhancedAccessibilityEnhancer() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-zion-slate-800 rounded-lg transition-colors"
-
+                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -374,7 +374,7 @@ export default function EnhancedAccessibilityEnhancer() {
                   <button
                     onClick={() => setFontSize(prev => Math.min(prev + 2, 24))}
                     className="p-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all"
-
+                  >
                     <ZoomIn className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Increase Text</span>
                   </button>
@@ -382,7 +382,7 @@ export default function EnhancedAccessibilityEnhancer() {
                   <button
                     onClick={() => setFontSize(prev => Math.max(prev - 2, 12))}
                     className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
-
+                  >
                     <ZoomOut className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Decrease Text</span>
                   </button>
@@ -390,7 +390,7 @@ export default function EnhancedAccessibilityEnhancer() {
                   <button
                     onClick={() => setContrastMode(prev => prev === 'normal' ? 'high' : 'normal')}
                     className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all"
-
+                  >
                     <Contrast className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Toggle Contrast</span>
                   </button>
@@ -398,7 +398,7 @@ export default function EnhancedAccessibilityEnhancer() {
                   <button
                     onClick={() => setReducedMotion(!reducedMotion)}
                     className="p-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
-
+                  >
                     {reducedMotion ? (
                       <Eye className="w-6 h-6 mx-auto mb-2" />
                     ) : (
@@ -419,13 +419,13 @@ export default function EnhancedAccessibilityEnhancer() {
                     {accessibilityFeatures.map((feature) => (
                       <div
                         key={feature.id}
-                        className={`p-4 rounded-xl border transition-all ${
-                          activeFeatures.has(feature.id)
-                            ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
-                            : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
-                        }`}
-
-                        <div className="flex items-start justify-between">
+                                              className={`p-4 rounded-xl border transition-all ${
+                        activeFeatures.has(feature.id)
+                          ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
+                          : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
+                      }`}
+                    >
+                      <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
                               <span className={`px-2 py-1 text-xs font-medium rounded-full ${
@@ -472,7 +472,7 @@ export default function EnhancedAccessibilityEnhancer() {
                       onClick={runAccessibilityAudit}
                       disabled={isAuditing}
                       className="px-4 py-2 bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark disabled:opacity-50 transition-colors"
-
+                    >
                       {isAuditing ? 'Auditing...' : 'Run Audit'}
                     </button>
                   </div>

@@ -75,7 +75,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'performance',
         action: {
           label: 'View Details',
-          onClick: () => // // console.log('View Details clicked')
+          onClick: () => {
+            // console.log('View Details clicked')
+          }
         }
       },
       {
@@ -99,7 +101,9 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'security',
         action: {
           label: 'Update Now',
-          onClick: () => // // console.log('Update Now clicked')
+          onClick: () => {
+            // console.log('Update Now clicked')
+          }
         }
       }
     ];
@@ -112,7 +116,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   useEffect(() => {
     if (enabled) {
       generateSampleNotifications();
-
+    }
   }, [enabled, generateSampleNotifications]);
 
   // Auto-expire notifications
@@ -123,12 +127,14 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         const filtered = prev.filter(notification => {
           if (notification.expiresAt && notification.expiresAt < now) {
             return false;
+          }
 
           return true;
         });
 
         if (filtered.length !== prev.length) {
           setUnreadCount(filtered.filter(n => !n.read).length);
+        }
 
         return filtered;
       });
@@ -192,7 +198,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         return <Award className="w-5 h-5 text-purple-500" />;
       default:
         return <Info className="w-5 h-5 text-gray-500" />;
-
+    }
   };
 
   // Get priority color
@@ -206,7 +212,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         return 'border-l-blue-500';
       default:
         return 'border-l-gray-500';
-
+    }
   };
 
   // Format timestamp

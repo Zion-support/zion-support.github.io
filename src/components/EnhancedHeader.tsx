@@ -79,8 +79,8 @@ export function EnhancedHeader() {
         window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
       } finally {
         setIsSearching(false);
-
-
+      }
+    }
   };
 
   // Enhanced navigation with better organization
@@ -607,7 +607,7 @@ export function EnhancedHeader() {
                       to="/contact"
                       className="btn-neon-cyan w-full text-center"
                       onClick={() => setMobileMenuOpen(false)}
-
+                    >
                       Get Started Today
                     </Link>
                   </div>
@@ -617,8 +617,8 @@ export function EnhancedHeader() {
           )}
         </AnimatePresence>
       </motion.header>
-    </>
-  );
-</div>}
+          </>
+    );
+}
 
-export default EnhancedHeader;}}}}
+export default EnhancedHeader;

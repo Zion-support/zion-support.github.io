@@ -206,7 +206,7 @@ export function MobileExperienceEnhancer() {
       gesture: 'Long press',
       action: 'Context Menu',
       enabled: false
-
+    }
   ];
 
   // Touch event handlers
@@ -225,7 +225,7 @@ export function MobileExperienceEnhancer() {
         Math.pow(touch2.clientY - touch1.clientY, 2)
       );
       setPinchDistance(distance);
-
+    }
   }, [mobileGestures]);
 
   const handleTouchMove = useCallback((e: React.TouchEvent) => {
@@ -243,6 +243,7 @@ export function MobileExperienceEnhancer() {
       if (pinchDistance > 0) {
         const scale = distance / pinchDistance;
         document.documentElement.style.setProperty('--mobile-zoom', scale.toString());
+      }
 
       // Handle rotation
       const angle = Math.atan2(
@@ -250,7 +251,7 @@ export function MobileExperienceEnhancer() {
         touch2.clientX - touch1.clientX
       ) * 180 / Math.PI;
       setRotationAngle(angle);
-
+    }
   }, [mobileGestures, pinchDistance]);
 
   const handleTouchEnd = useCallback((e: React.TouchEvent) => {
@@ -269,13 +270,14 @@ export function MobileExperienceEnhancer() {
         handleSwipe('left');
       } else if (diffX < -50) {
         handleSwipe('right');
-
+      }
     } else {
       if (diffY > 50) {
         handleSwipe('up');
       } else if (diffY < -50) {
         handleSwipe('down');
-
+      }
+    }
 
     setTouchStart(null);
     setTouchEnd(null);
@@ -305,8 +307,8 @@ export function MobileExperienceEnhancer() {
           // Refresh
           // // console.log('Swipe down - Refresh');
           break;
-
-
+      }
+    }
   }, [touchGestures]);
 
   // Apply mobile optimizations
@@ -317,6 +319,7 @@ export function MobileExperienceEnhancer() {
         newSet.add(optimizationId);
       } else {
         newSet.delete(optimizationId);
+      }
 
       return newSet;
     });
@@ -331,6 +334,7 @@ export function MobileExperienceEnhancer() {
         } else {
           document.documentElement.classList.remove('touch-optimized');
           document.documentElement.style.removeProperty('--touch-target-size');
+        }
 
         break;
 
@@ -343,6 +347,7 @@ export function MobileExperienceEnhancer() {
           document.documentElement.classList.add('mobile-layout');
         } else {
           document.documentElement.classList.remove('mobile-layout');
+        }
 
         break;
 
@@ -352,6 +357,7 @@ export function MobileExperienceEnhancer() {
           document.documentElement.classList.add('mobile-performance');
         } else {
           document.documentElement.classList.remove('mobile-performance');
+        }
 
         break;
 
@@ -360,10 +366,11 @@ export function MobileExperienceEnhancer() {
           document.documentElement.classList.add('mobile-visual');
         } else {
           document.documentElement.classList.remove('mobile-visual');
+        }
 
         break;
-
-  }, []);
+      }
+    }, []);
 
   // Toggle touch gesture
   const toggleTouchGesture = useCallback((gestureId: string, enabled: boolean) => {
@@ -373,6 +380,7 @@ export function MobileExperienceEnhancer() {
         newSet.add(gestureId);
       } else {
         newSet.delete(gestureId);
+      }
 
       return newSet;
     });
@@ -399,7 +407,7 @@ export function MobileExperienceEnhancer() {
     } else {
       document.documentElement.classList.remove('theme-auto');
       document.documentElement.classList.add(`theme-${mobileTheme}`);
-
+    }
   }, [mobileTheme]);
 
   // Auto-optimize for mobile
@@ -431,7 +439,7 @@ export function MobileExperienceEnhancer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open Mobile Experience Settings"
-
+      >
         <Smartphone className="w-6 h-6 text-white" />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
@@ -447,13 +455,13 @@ export function MobileExperienceEnhancer() {
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
-
+          >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-
+            >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
                 <div className="flex items-center space-x-3">
@@ -472,7 +480,7 @@ export function MobileExperienceEnhancer() {
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-2 hover:bg-gray-100 dark:hover:bg-zion-slate-800 rounded-lg transition-colors"
-
+                >
                   <X className="w-6 h-6" />
                 </button>
               </div>
@@ -508,15 +516,15 @@ export function MobileExperienceEnhancer() {
                   <button
                     onClick={() => setMobileFontSize(prev => Math.min(prev + 2, 24))}
                     className="p-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-xl hover:from-blue-600 hover:to-blue-700 transition-all"
-
+                  >
                     <ZoomIn className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Increase Text</span>
                   </button>
 
                   <button
                     onClick={() => setMobileFontSize(prev => Math.max(prev - 2, 12))}
-                    className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all"
-
+                    className="p-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-blue-700 transition-all"
+                  >
                     <ZoomOut className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">Decrease Text</span>
                   </button>
@@ -524,7 +532,7 @@ export function MobileExperienceEnhancer() {
                   <button
                     onClick={() => setMobileSpacing(prev => prev === 1 ? 1.5 : prev === 1.5 ? 2 : 1)}
                     className="p-4 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-xl hover:from-purple-600 hover:to-purple-700 transition-all"
-
+                  >
                     <Layout className="w-6 h-6 mx-auto mb-2" />
                     <span className="text-sm font-medium">
                       Spacing: {mobileSpacing === 1 ? 'Normal' : mobileSpacing === 1.5 ? 'Wide' : 'Extra Wide'}
@@ -534,7 +542,7 @@ export function MobileExperienceEnhancer() {
                   <button
                     onClick={() => setMobileLayout(prev => prev === 'grid' ? 'list' : prev === 'list' ? 'compact' : 'grid')}
                     className="p-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all"
-
+                  >
                     {mobileLayout === 'grid' ? (
                       <Grid className="w-6 h-6 mx-auto mb-2" />
                     ) : mobileLayout === 'list' ? (
