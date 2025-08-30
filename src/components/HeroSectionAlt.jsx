@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, Rocket, Users, TrendingUp, Shield, Zap, Star, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";

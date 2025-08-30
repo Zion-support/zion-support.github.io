@@ -83,7 +83,7 @@ export default function UpdatePassword() {
             setTimeout(() => {
                 navigate("/login")}, 3000)}
         catch (error) {
-            console.error("Password update error:", error);
+            // // console.error("Password update error:", error);
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",

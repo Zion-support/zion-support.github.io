@@ -21,7 +21,7 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
       
       // Reset after 3 seconds
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
-      console.error('Newsletter subscription failed:', error)} finally {
+      // // console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false)}
   };
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
 
 export const PageHero = ({ 

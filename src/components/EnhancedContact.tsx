@@ -96,7 +96,7 @@ export function EnhancedContact(...args[]):  {
         service: 'general',
         message: ''
       })} catch (error) {
-      console.error('Error submitting form:', error)} finally {
+      // // console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
   };
 

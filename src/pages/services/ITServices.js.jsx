@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ComputerDesktopIcon, ServerIcon, ShieldCheckIcon, CogIcon, WrenchScrewdriverIcon, CloudIcon } from '@heroicons/react/24/outline';
 const ITServices = () => {

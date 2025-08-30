@@ -37,7 +37,7 @@ export default function CartPage() {
                     body: JSON.stringify({ id, quantity: qty }),
                 })}
             catch (err) {
-                console.error('Failed to update cart', err)}
+                // // console.error('Failed to update cart', err)}
         }
         setCartLoading(false)}, [reduxItems];
     useEffect(() => {

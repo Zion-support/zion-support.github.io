@@ -23,7 +23,7 @@ export function UpcomingInterviewsCard() {
                     .slice(0, 3); // Take only the next 3 interviews
                 setUpcomingInterviews(upcoming)}
             catch (error) {
-                console.error("Error loading upcoming interviews:", error)}
+                // // console.error("Error loading upcoming interviews:", error)}
             finally {
                 setIsLoading(false)}
         };

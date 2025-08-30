@@ -27,7 +27,7 @@ export const QrCodeDownload = () => {
       await navigator.clipboard.writeText(url);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000)} catch (err) {
-      console.error('Failed to copy: ', err)}
+      // // console.error('Failed to copy: ', err)}
   };
 
   const handleShare = async (platform) => {
@@ -41,7 +41,7 @@ export const QrCodeDownload = () => {
           text: text,
           url: url
         })} catch (err) {
-        console.error('Error sharing:', err)}
+        // // console.error('Error sharing:', err)}
     } else {
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}

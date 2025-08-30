@@ -1,4 +1,3 @@
-import React from 'react';
 import { Download, Star, Users, Award } from 'lucide-react';
 
 export const AppStoreBanner = () => {

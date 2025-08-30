@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {

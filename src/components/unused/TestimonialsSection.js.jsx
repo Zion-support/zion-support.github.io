@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { StarIcon } from '@heroicons/react/24/solid';
 export function TestimonialsSection() {

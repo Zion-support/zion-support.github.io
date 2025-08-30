@@ -1,4 +1,3 @@
-import React from 'react';
 import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileText, Star, Clock } from 'lucide-react';
 
 export const ServiceProcessSteps = () => {

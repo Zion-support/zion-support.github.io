@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap } from 'lucide-react';
 export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
     const indicators = [

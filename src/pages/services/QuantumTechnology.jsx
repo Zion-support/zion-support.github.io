@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { CubeIcon, CpuChipIcon, BoltIcon, GlobeAltIcon, RocketLaunchIcon, ShieldCheckIcon } from '@heroicons/react/24/outline';
 const QuantumTechnology = () => {

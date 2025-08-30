@@ -22,13 +22,13 @@ export const useAccessibility = () => {
             try {
                 setPreferences(JSON.parse(savedPreferences))}
             catch (error) {
-                console.warn('Failed to parse accessibility preferences:', error)}
+                // // console.warn('Failed to parse accessibility preferences:', error)}
         }
         if (savedSettings) {
             try {
                 setSettings(JSON.parse(savedSettings))}
             catch (error) {
-                console.warn('Failed to parse accessibility settings:', error)}
+                // // console.warn('Failed to parse accessibility settings:', error)}
         }
     }, []);
     // Save preferences to localStorage

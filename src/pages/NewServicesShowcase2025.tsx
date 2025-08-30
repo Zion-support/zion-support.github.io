@@ -1,6 +1,4 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3, 
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,

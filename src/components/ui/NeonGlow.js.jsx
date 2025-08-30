@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 export function NeonGlow({ children, color = 'zion-cyan', intensity = 'medium', className = '', customColor }) {
     const getGlowStyles = () => {

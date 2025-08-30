@@ -27,7 +27,7 @@ export function PWAUpdater() {
         });
       }
     } catch (error) {
-      console.log('Service worker not available');
+      // // console.log('Service worker not available');
     }
   };
 
@@ -37,7 +37,7 @@ export function PWAUpdater() {
       // Reload the page to apply updates
       window.location.reload();
     } catch (error) {
-      console.error('Update failed:', error);
+      // // console.error('Update failed:', error);
       setIsUpdating(false);
     }
   };

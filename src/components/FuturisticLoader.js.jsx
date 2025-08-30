@@ -1,4 +1,3 @@
-import React from 'react';
 export const FuturisticLoader = ({ size = 'medium', text = 'Loading...', variant = 'matrix' }) => {
     const sizeClasses = {
         small: 'w-8 h-8',

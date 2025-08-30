@@ -48,7 +48,7 @@ export default function ContentGenerator() {
             setPreviewContent(data);
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
-            console.error("Error generating content:", error);
+            // // console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.")}
         finally {
             setIsGenerating(false)}
@@ -74,7 +74,7 @@ export default function ContentGenerator() {
                 throw error;
             toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
-            console.error("Error sending test newsletter:", error);
+            // // console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.")}
     };
     // Check if user is still loading

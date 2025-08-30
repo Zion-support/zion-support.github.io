@@ -1,4 +1,3 @@
-import React from 'react';
 import { SEO } from "@/components/SEO";
 import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
 const AISolutions = () => {

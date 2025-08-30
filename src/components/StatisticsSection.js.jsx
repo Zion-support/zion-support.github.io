@@ -1,4 +1,3 @@
-import React from 'react';
 import { Users, Globe, TrendingUp, Award } from 'lucide-react';
 const stats = [
     {

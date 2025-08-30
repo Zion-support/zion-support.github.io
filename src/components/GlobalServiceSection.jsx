@@ -1,4 +1,3 @@
-import React from 'react';
 import { Globe, Clock, Users, Shield, Zap, CheckCircle } from 'lucide-react';
 
 export const GlobalServiceSection = () => {

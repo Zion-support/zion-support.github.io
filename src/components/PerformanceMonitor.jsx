@@ -80,7 +80,7 @@ export const PerformanceMonitor = () => {
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }))}
         });
         fcpObserver.observe({ entryTypes['paint'] })} catch (e) {
-        console.warn('FCP observer failed:', e)}
+        // // console.warn('FCP observer failed:', e)}
 
       // Largest Contentful Paint
       try {
@@ -91,7 +91,7 @@ export const PerformanceMonitor = () => {
             setMetrics(prev => ({ ...prev, lcp: Math.round(lastEntry.startTime) }))}
         });
         lcpObserver.observe({ entryTypes['largest-contentful-paint'] })} catch (e) {
-        console.warn('LCP observer failed:', e)}
+        // // console.warn('LCP observer failed:', e)}
 
       // First Input Delay
       try {
@@ -103,7 +103,7 @@ export const PerformanceMonitor = () => {
               setMetrics(prev => ({ ...prev, fid: Math.round(fid) }))}
           })});
         fidObserver.observe({ entryTypes['first-input'] })} catch (e) {
-        console.warn('FID observer failed:', e)}
+        // // console.warn('FID observer failed:', e)}
 
       // Cumulative Layout Shift
       try {
@@ -115,7 +115,7 @@ export const PerformanceMonitor = () => {
           });
           setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }))});
         clsObserver.observe({ entryTypes['layout-shift'] })} catch (e) {
-        console.warn('CLS observer failed:', e)}
+        // // console.warn('CLS observer failed:', e)}
     }
 
     // Time to First Byte (from navigation timing)

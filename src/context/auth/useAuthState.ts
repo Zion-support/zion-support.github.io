@@ -42,7 +42,7 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error)} finally {
+        // // console.error('Error checking auth state:', error)} finally {
         setIsLoading(false)}
     };
 

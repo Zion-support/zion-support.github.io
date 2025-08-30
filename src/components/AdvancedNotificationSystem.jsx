@@ -12,8 +12,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
-            { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
+            { label: 'View Details', action: () => // // console.log('View project'), variant: 'primary' },
+            { label: 'Archive', action: () => // // console.log('Archive'), variant: 'secondary' }
         ]
     },
     {
@@ -27,8 +27,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
-            { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
+            { label: 'Review Activity', action: () => // // console.log('Review security'), variant: 'primary' },
+            { label: 'Dismiss', action: () => // // console.log('Dismiss'), variant: 'secondary' }
         ]
     },
     {
@@ -42,8 +42,8 @@ const mockNotifications = [
         isRead: false,
         isArchived: false,
         actions[
-            { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
-            { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
+            { label: 'Investigate', action: () => // // console.log('Investigate'), variant: 'primary' },
+            { label: 'Acknowledge', action: () => // // console.log('Acknowledge'), variant: 'secondary' }
         ]
     },
     {
@@ -57,8 +57,8 @@ const mockNotifications = [
         isRead: true,
         isArchived: false,
         actions[
-            { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
-            { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }
+            { label: 'Deploy Now', action: () => // // console.log('Deploy'), variant: 'primary' },
+            { label: 'Schedule', action: () => // // console.log('Schedule'), variant: 'secondary' }
         ]
     }
 ];

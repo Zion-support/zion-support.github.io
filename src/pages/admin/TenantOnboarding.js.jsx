@@ -85,7 +85,7 @@ export default function TenantOnboarding() {
                 is_co_branded: true
             })}
         catch (error) {
-            console.error("Error creating tenant:", error);
+            // // console.error("Error creating tenant:", error);
             toast.error("Failed to create tenant", {
                 description: error.message
             })}

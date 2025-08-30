@@ -1,4 +1,3 @@
-import React from 'react';
 import SEO from '../SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';

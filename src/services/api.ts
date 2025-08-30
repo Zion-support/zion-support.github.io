@@ -80,7 +80,7 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
     
     return await response.json();
   } catch (error) {
-    console.error('API request failed:', error);
+    // // console.error('API request failed:', error);
     throw error;
   }
 }

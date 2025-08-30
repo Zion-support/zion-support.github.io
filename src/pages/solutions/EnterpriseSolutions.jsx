@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 export default function EnterpriseSolutions() {

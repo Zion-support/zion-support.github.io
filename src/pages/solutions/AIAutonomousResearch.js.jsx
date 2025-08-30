@@ -1,4 +1,3 @@
-import React from 'react';
 import { Brain, Zap, Target, Shield, Users, Globe, Cpu, Lightbulb, BarChart3 } from 'lucide-react';
 const AIAutonomousResearch = () => {
     const researchFeatures = [
