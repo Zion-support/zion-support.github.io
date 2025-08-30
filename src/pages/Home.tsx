@@ -51,35 +51,35 @@ export default function Home() {
 
   const featuredServices = [
     {
-      name: 'AI Enterprise Orchestrator',
-      description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
+      name: 'AI Enterprise Automation Hub',
+      description: 'Transform business operations with intelligent automation and AI-powered workflows',
       icon: Brain,
-      href: '/services/ai-enterprise-orchestrator',
+      href: '/services/ai-enterprise-automation-hub',
       color: 'from-purple-600 to-pink-600',
-      features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
+      features: ['Process automation', 'Multi-agent coordination', 'Enterprise integration']
     },
     {
-      name: 'AI Cybersecurity Suite',
-      description: 'AI-powered threat detection and response for comprehensive security',
+      name: 'AI Cybersecurity Intelligence Platform',
+      description: 'Next-generation AI-powered cybersecurity with real-time threat detection',
       icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
+      href: '/services/ai-cybersecurity-intelligence-platform',
       color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
+      features: ['AI threat detection', 'Zero-day prevention', 'Compliance automation']
     },
     {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
+      name: 'Quantum AI Financial Trading Platform',
+      description: 'Revolutionary quantum computing-powered trading with AI market analysis',
       icon: Atom,
-      href: '/services/quantum-ai-platform',
-      color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
+      href: '/services/quantum-ai-financial-trading-platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Quantum algorithms', 'High-frequency trading', 'Risk management']
     },
     {
-      name: 'AI Healthcare Analytics',
+      name: 'AI Healthcare Analytics Platform',
       description: 'Predictive diagnostics and care optimization powered by AI',
       icon: Heart,
       href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
+      color: 'from-blue-600 to-cyan-600',
       features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
   ];
