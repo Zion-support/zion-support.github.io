@@ -206,7 +206,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     setChatHistory([])};
 
   return (
-    <>
+    <div>
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
@@ -498,5 +498,5 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )};

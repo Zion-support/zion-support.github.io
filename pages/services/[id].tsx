@@ -68,7 +68,7 @@ export default function ServiceDetail(...args[]):  {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (
-		<>
+		<div>
 			<Helmet>
 				<title>{title}</title>
 				<meta name="description" content={description} />
@@ -92,6 +92,6 @@ export default function ServiceDetail(...args[]):  {
 					<Link href="/contact/" className="inline-block rounded border px-4 py-2 text-blue-700 hover:bg-blue-50">Contact us</Link>
 				</div>
 			</main>
-		</>
+		</div>
 	)
 }

@@ -251,15 +251,15 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
           >
             {isAnalyzing ? (
-              <>
+              <div>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 <span>Analyzing...</span>
-              </>
+              </div>
             ) : (
-              <>
+              <div>
                 <RefreshCw className="w-4 h-4" />
                 <span>Refresh</span>
-              </>
+              </div>
             )}
           </button>
         </div>
@@ -271,7 +271,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <p className="text-zion-slate/60">Analyzing your page...</p>
         </div>
       ) : analysis ? (
-        <>
+        <div>
           {/* Overall Score */}
           <div className="mb-8">
             <div className="flex items-center justify-between mb-4">
@@ -481,7 +481,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               </motion.div>
             )}
           </AnimatePresence>
-        </>
+        </div>
       ) : null}
     </div>
   )};

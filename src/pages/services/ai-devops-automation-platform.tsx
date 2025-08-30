@@ -4,7 +4,7 @@ import { motion  } from 'framer-motion.ts';
 
 const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
   return (
-    <>
+    <div>
       <SEO
         title="AI-Powered DevOps Automation Platform | Zion Tech Group"
         description="Advanced AI-driven DevOps automation platform. Reduce deployment time by 80%, decrease failures by 90%, and optimize CI/CD pipelines with intelligent automation and GitOps workflows."
@@ -438,7 +438,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -22,7 +22,6 @@ import { Users,
   Database
  } from 'lucide-react';
 
-export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -116,8 +115,8 @@ export default function About() {
     }
   ];
 
-const About: React.FC = () => {
-  return (
+  const About: React.FC = () => {
+    return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
@@ -410,8 +409,9 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
-  )}
+  );
+}
 
 export default About;

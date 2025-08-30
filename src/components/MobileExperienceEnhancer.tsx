@@ -470,7 +470,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   if (!enabled) return null;
 
   return (
-    <>
+    <div>
       {/* Mobile Experience Controls Button */}
       {showControls && isMobile && (
         <button
@@ -616,7 +616,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           📱 Mobile
         </div>
       )}
-    </>
+    </div>
   )};
 
 // Export default component

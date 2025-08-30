@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function DigitalTwin(...args: []):  {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
         <meta name="description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
@@ -313,6 +313,6 @@ export default function DigitalTwin(...args: []):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Progress  } from '@/components/ui/progress';
 import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert'; // AlertTitle not used, but kept for consistency
 import { Badge  } from '@/components/ui/badge'; // Badge not used, but kept for consistency
@@ -110,13 +111,13 @@ export const BudgetStatusDisplay = ({ projectBriefBudget, estimatedCost }: Budge
       </div>
       <AlertDescription className="text-sm mb-3">{message}</AlertDescription>
       {userBudget.max !== null && userBudget.max !== Infinity && userBudget.max > 0 && (
-        <>
+        <div>
           <Progress value={progressValue} className={`w-full h-2.5 ${getProgressColor()}`} />
           <div className="flex justify-between text-xs text-muted-foreground mt-1">
             <span>Your Max: ${userBudget.max.toLocaleString()}</span>
             <span>Est. Avg: ${estimatedAvgCost.toLocaleString()}</span>
           </div>
-        </>
+        </div>
       )}
        {userBudget.max === null && userBudget.min !== null && ( // Only min specified
          <p className="text-xs text-muted-foreground mt-1">Your Min: ${userBudget.min.toLocaleString()} | Est. Avg: ${estimatedAvgCost.toLocaleString()}</p>

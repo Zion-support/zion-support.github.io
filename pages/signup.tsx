@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { useState  } from 'react.ts'
@@ -17,7 +18,7 @@ import { User,
   Cloud
  } from 'lucide-react'
 
-export default function Signup(...args[]):  {
+export default function Signup(...args[]: any):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -113,7 +114,7 @@ export default function Signup(...args[]):  {
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -550,6 +551,6 @@ export default function Signup(...args[]):  {
           </div>
         </section>
       </main>
-    </>
+    </div>
   )
 }

@@ -3,7 +3,7 @@ import { SEO  } from '@/components/SEO';
 
 const MicroSAASServicesPage = () => {
   return (
-    <>
+    <div>
       <SEO 
         title="Micro SAAS Services - Zion Tech Group"
         description="Specialized micro SAAS solutions for niche business needs and targeted industry solutions."
@@ -42,7 +42,7 @@ const MicroSAASServicesPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )};
 
 export default MicroSAASServicesPage;

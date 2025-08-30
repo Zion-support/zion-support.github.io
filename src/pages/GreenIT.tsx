@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 const GreenIT = () => {
   return (
-    <>
+    <div>
       <SEO 
         title="Green IT Solutions - Zion Tech Group"
         description="Sustainable technology solutions for a greener future. Eco-friendly IT services and green computing solutions."
@@ -37,6 +37,6 @@ const GreenIT = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )};
 export default GreenIT;

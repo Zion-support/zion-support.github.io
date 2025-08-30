@@ -152,10 +152,10 @@ const NewsletterSection: React.FC = (): JSX.Element => {
                       Subscribing...
                     </div>
                   ) : (
-                    <>
+                    <div>
                       Subscribe Now
                       <ArrowRight className="ml-2 w-5 h-5" />
-                    </>
+                    </div>
                   )}
                 </button>
               </form>

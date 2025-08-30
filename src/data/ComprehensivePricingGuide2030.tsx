@@ -324,7 +324,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const priceRangeData = getPriceRange();
 
   return (
-    <>
+    <div>
       <SEO
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group"
         description="Explore our complete pricing guide for micro SAAS, IT infrastructure, and AI services. Compare prices, ROI, and market data to find the perfect solution for your business."
@@ -605,7 +605,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )};
 
 export default ComprehensivePricingGuide2030;

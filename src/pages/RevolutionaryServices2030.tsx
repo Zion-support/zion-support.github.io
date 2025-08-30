@@ -136,7 +136,7 @@ export default function RevolutionaryServices2030(...args[]):  {
     return colorMap[category] || 'from-gray-500 to-slate-500'};
 
   return (
-    <>
+    <div>
       <SEO
         title="Revolutionary Services 2030 - Zion Tech Group"
         description="Discover the future of technology with Zion Tech Group's revolutionary micro SAAS, IT, and AI services for 2030. Cutting-edge solutions with proven ROI and rapid deployment."
@@ -708,5 +708,5 @@ export default function RevolutionaryServices2030(...args[]):  {
           </motion.div>
         </div>
       )}
-    </>
+    </div>
   )}

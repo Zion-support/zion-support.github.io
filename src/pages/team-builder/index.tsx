@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: ) {
+    } catch (error: any) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: ) {
+    } catch (error: any) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }
@@ -167,10 +167,9 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     );
   };
 
-  // In the main return of TeamBuilderPage:
+  // In the main return of TeamBuilderPage: any
   // Remove the step-based rendering for the last step (results view)
-  // Instead, conditionally render the form or the recommendation display:
-
+  // Instead, conditionally render the form or the recommendation display: any
   return (
     <AppLayout>
       <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl"> {/* Increased max-width */}
@@ -202,7 +201,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
             <form onSubmit={handleSubmit(onSubmit)}>
               <CardContent className="space-y-6">
                 {currentStep === 0 && (
-                  <>
+                  <div>
                     <div>
                       <Label htmlFor="projectName">Project Name</Label>
                       <Controller
@@ -221,10 +220,10 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
                       />
                       {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
-                  </>
+                  </div>
                 )}
                 {currentStep === 1 && (
-                  <>
+                  <div>
                     <div>
                       <Label htmlFor="timeline">Timeline</Label>
                       <Controller
@@ -331,7 +330,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}
                       </div>
                     </div>
-                  </>
+                  </div>
                 )}
                 {currentStep === 2 && (
                   <div>

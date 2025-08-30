@@ -415,15 +415,15 @@ export function EnhancedContact(...args[]):  {
                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover:from-zion-cyan-dark hover:to-zion-purple-dark disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                  <>
+                  <div>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                     <span>Sending Message...</span>
-                  </>
+                  </div>
                 ) : (
-                  <>
+                  <div>
                     <Send className="w-5 h-5" />
                     <span>Send Message</span>
-                  </>
+                  </div>
                 )}
               </motion.button>
             </form>

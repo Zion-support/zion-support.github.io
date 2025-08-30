@@ -325,7 +325,7 @@ const ComprehensiveServices: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )};
 
 export default ComprehensiveServices;

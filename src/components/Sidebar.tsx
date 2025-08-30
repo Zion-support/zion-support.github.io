@@ -265,7 +265,7 @@ export function Sidebar(...args[]):  {
   };
 
   return (
-    <>
+    <div>
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}
@@ -327,7 +327,7 @@ export function Sidebar(...args[]):  {
               </div>
             </motion.div>
           </motion.div>
-        </>
+        </div>
       )}
     </AnimatePresence>
   )}

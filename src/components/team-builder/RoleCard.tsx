@@ -1,3 +1,4 @@
+import React from 'react';
 import { RecommendedRole  } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
@@ -33,7 +34,7 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
       </CardHeader>
       <CardContent>
         {role.matchedTalent && role.matchedTalent.length > 0 ? (
-          <>
+          <div>
             <h4 className="text-sm font-medium text-muted-foreground mb-2.5">Suggested Talent ({role.matchedTalent.length}):</h4>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-3">
               {role.matchedTalent.map((talent)  => (
@@ -45,7 +46,7 @@ export const RoleCard = ({ role, onInviteTalent }: RoleCardProps) => {
                 />
               ))}
             </div>
-          </>
+          </div>
         ) : (
           <p className="text-sm text-muted-foreground">No specific talent matches found for this role based on current criteria. You can still add this role to your team.</p>
         )}

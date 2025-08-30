@@ -1,3 +1,4 @@
+import React from 'react';
 import { TeamRecommendation, ProjectBrief  } from '@/types';
 import { RoleCard  } from './RoleCard';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';

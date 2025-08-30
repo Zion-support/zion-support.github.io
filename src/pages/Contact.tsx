@@ -3,7 +3,7 @@ import { SEO  } from '../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 
-const Contact: React.FC = (): JSX.Element => {
+const Contact: React.FC = () => {
   const [activeTab, setActiveTab] = useState('general');
   const [formData, setFormData] = useState({
     name: '',
@@ -16,13 +16,14 @@ const Contact: React.FC = (): JSX.Element => {
     timeline: ''
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    })};
+    });
+  };
 
-  const handleSubmit = (e: React.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
@@ -36,7 +37,8 @@ const Contact: React.FC = (): JSX.Element => {
       message: '',
       budget: '',
       timeline: ''
-    })};
+    });
+  };
 
   const contactMethods = [
     {
@@ -116,9 +118,8 @@ const Contact: React.FC = (): JSX.Element => {
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
 
-const Contact: React.FC = () => {
   return (
-    <>
+    <div>
       <SEO
         title="Contact Us | Zion Tech Group - Get Expert Consultation"
         description="Contact Zion Tech Group for expert consultation on AI-powered micro SAAS, cloud infrastructure, data analytics, and security solutions. Get in touch today!"
@@ -503,7 +504,8 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  )};
+    </div>
+  );
+}
 
 export default Contact;

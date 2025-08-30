@@ -25,7 +25,7 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
     document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' })};
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Innovative Services 2031 - Zion Tech Group | Cutting-Edge Micro SAAS, IT & AI Solutions</title>
         <meta name="description" content="Discover Zion Tech Group's revolutionary 2031 services portfolio featuring quantum computing, AI-powered solutions, and next-generation IT infrastructure. Transform your business with our innovative micro SAAS, IT services, and AI solutions." />
@@ -444,7 +444,7 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )};
 
 export default InnovativeServicesShowcase2031;

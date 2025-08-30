@@ -477,7 +477,7 @@ export default function EnhancedAccessibilityEnhancer({
   if (!enabled) return null;
 
   return (
-    <>
+    <div>
       {/* Floating Accessibility Button */}
       {showControls && (
         <motion.button
@@ -821,6 +821,6 @@ export default function EnhancedAccessibilityEnhancer({
           cursor: pointer;
         }
       `}</style>
-    </>
+    </div>
   );
 }

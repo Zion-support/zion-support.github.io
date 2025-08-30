@@ -1,3 +1,4 @@
+import React from 'react';
 export interface EmergingTechnologyService {
   id: string;
   name: string;

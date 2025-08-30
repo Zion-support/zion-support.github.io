@@ -389,7 +389,7 @@ const AIServices = [
 
 const AIServicesPage: React.FC = () => {
   return (
-    <>
+    <div>
       <SEO 
         title="AI Services - Zion Tech Group"
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
@@ -428,7 +428,7 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

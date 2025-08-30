@@ -1,3 +1,4 @@
+import React from 'react';
 export const innovativeAIServices2025ExpansionV2 = [
   // AI Consciousness Evolution Platform
   {

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface QuantumAIService {
   id: string;
   name: string;

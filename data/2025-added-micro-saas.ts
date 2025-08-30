@@ -1,3 +1,4 @@
+import React from 'react';
 import type { InnovativeMicroSaasService } from './2025-innovative-real-micro-saas-services'
 const contact = {
   mobile: '+1 302 464 0950',

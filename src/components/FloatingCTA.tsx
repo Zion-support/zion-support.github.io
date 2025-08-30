@@ -142,7 +142,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {
   if (!isVisible) return null;
 
   return (
-    <>
+    <div>
       {/* Floating Action Button */}
       <motion.div
         className="fixed bottom-6 right-6 z-50"
@@ -335,7 +335,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   )};
 
 export default FloatingCTA;

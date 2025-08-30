@@ -115,7 +115,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="AI Autonomous Business Operations Platform | Zion Tech Group"
         description="Transform your business with AI-powered autonomous operations. Reduce costs by 40%, improve efficiency by 60%, and achieve 24/7 automated operations."
@@ -392,7 +392,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )};
 
 export default AutonomousBusinessOperationsPlatform;

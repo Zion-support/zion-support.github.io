@@ -1,3 +1,4 @@
+import React from 'react';
 export interface ComprehensivePricingItem2027 {
 
   id: string;

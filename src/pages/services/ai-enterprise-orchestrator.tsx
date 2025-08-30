@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Enterprise Orchestrator - Zion Tech Group</title>
         <meta name="description" content="Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation." />
@@ -234,6 +234,6 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

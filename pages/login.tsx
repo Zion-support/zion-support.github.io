@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { useState  } from 'react.ts'
@@ -13,7 +14,7 @@ import { Mail,
   ArrowRight
  } from 'lucide-react'
 
-export default function Login(...args[]):  {
+export default function Login(...args[]: any):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -69,7 +70,7 @@ export default function Login(...args[]):  {
   const description = 'Access your Zion Tech Group account to manage AI, cloud, and cybersecurity solutions.'
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -355,6 +356,6 @@ export default function Login(...args[]):  {
           </div>
         </section>
       </main>
-    </>
+    </div>
   )
 }

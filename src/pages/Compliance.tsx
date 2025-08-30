@@ -312,7 +312,7 @@ export default function Compliance(...args[]):  {
   ];
 
   return (
-    <>
+    <div>
       <SEO 
         title="Compliance - Zion Tech Group"
         description="Zion Tech Group maintains comprehensive compliance with international standards including ISO 27001, SOC 2 Type II, GDPR, and HIPAA. Learn about our compliance framework and certifications."
@@ -670,5 +670,5 @@ export default function Compliance(...args[]):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )}

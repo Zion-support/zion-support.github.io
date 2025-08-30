@@ -1,3 +1,4 @@
+import React from 'react';
 export interface CuttingEdgeAIService2026 {
   id: string;
   title: string;

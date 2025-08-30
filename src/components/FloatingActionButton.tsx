@@ -156,7 +156,7 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
   if (!enabled) return null;
 
   return (
-    <>
+    <div>
       {/* Main Floating Action Button */}
       <AnimatePresence>
         {isVisible && (
@@ -307,6 +307,6 @@ export function FloatingActionButton({ enabled = true }: FloatingActionButtonPro
       >
         <Star className="w-6 h-6 text-white" />
       </motion.button>
-    </>
+    </div>
   );
 }

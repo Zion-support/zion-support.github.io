@@ -90,7 +90,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Voice recognition setup
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).webkitSpeechRecognition;
+      const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
@@ -320,7 +320,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           </div>
 
           {!isMinimized && (
-            <>
+            <div>
               {/* Messages */}
               <div className="flex-1 overflow-y-auto p-4 space-y-4">
                 {messages.map((message) => (
@@ -492,7 +492,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                   </button>
                 </div>
               </div>
-            </>
+            </div>
           )}
         </div>
       )}

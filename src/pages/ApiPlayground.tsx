@@ -492,15 +492,15 @@ export default function ApiPlayground() {
                               className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
                             >
                               {isLoading ? (
-                                <>
+                                <div>
                                   <RefreshCw className="w-5 h-5 animate-spin" />
                                   Testing...
-                                </>
+                                </div>
                               ) : (
-                                <>
+                                <div>
                                   <Play className="w-5 h-5" />
                                   Test API
-                                </>
+                                </div>
                               )}
                             </button>
                           </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIService {
   id: string;

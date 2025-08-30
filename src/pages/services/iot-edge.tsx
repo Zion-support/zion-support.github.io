@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function IoTEdge(...args: []):  {
   return (
-    <>
+    <div>
       <Helmet>
         <title>IoT & Edge Computing - Zion Tech Group</title>
         <meta name="description" content="Connect, monitor, and optimize your IoT devices with edge computing solutions. Real-time data processing and intelligent device management." />
@@ -347,6 +347,6 @@ export default function IoTEdge(...args: []):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

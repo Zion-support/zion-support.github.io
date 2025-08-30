@@ -295,7 +295,7 @@ export default function PricingGuide(...args[]):  {
                   ))}
                   
                   {plan.notIncluded.length > 0 && (
-                    <>
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
                       {plan.notIncluded.map((feature, featureIndex)  => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
@@ -303,7 +303,7 @@ export default function PricingGuide(...args[]):  {
                           <span className="text-sm">{feature}</span>
                         </div>
                       ))}
-                    </>
+                    </div>
                   )}
                 </div>
               </div>

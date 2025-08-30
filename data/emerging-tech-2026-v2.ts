@@ -1,3 +1,4 @@
+import React from 'react';
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {
   id: string;

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface BiotechAIService {
   id: string;
   name: string;

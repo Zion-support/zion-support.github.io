@@ -237,7 +237,7 @@ export function EnhancedHeader() {
   ];
 
   return (
-    <>
+    <div>
       {/* Matrix Rain Background */}
       <div className="matrix-rain"></div>
       
@@ -534,7 +534,7 @@ export function EnhancedHeader() {
           )}
         </AnimatePresence>
       </motion.header>
-    </>
+    </div>
   );
 }
 

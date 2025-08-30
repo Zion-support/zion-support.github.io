@@ -288,7 +288,7 @@ export const AccessibilityEnhancer: React.FC = () => {
   }, []);
 
   return (
-    <>
+    <div>
       {/* Accessibility Toggle Button */}
       <button
         onClick={togglePanel}
@@ -429,7 +429,7 @@ export const AccessibilityEnhancer: React.FC = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface AdvancedCybersecurityService {
   id: string;
   name: string;

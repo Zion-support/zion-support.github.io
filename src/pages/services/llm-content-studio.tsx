@@ -5,7 +5,7 @@ import { Link  } from 'react-router-dom.ts';
 
 export default function LLMContentStudio(...args: []):  {
   return (
-    <>
+    <div>
       <Helmet>
         <title>LLM Content Studio - Zion Tech Group</title>
         <meta name="description" content="Create high-quality, on-brand content with our AI-powered LLM Content Studio. Generate articles, marketing copy, and creative content at scale." />
@@ -410,6 +410,6 @@ export default function LLMContentStudio(...args: []):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

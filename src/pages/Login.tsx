@@ -155,15 +155,15 @@ export default function Login(...args[]):  {
               className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
-                <>
+                <div>
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                   Signing In...
-                </>
+                </div>
               ) : (
-                <>
+                <div>
                   Sign In
                   <ArrowRight className="h-5 w-5" />
-                </>
+                </div>
               )}
             </button>
 

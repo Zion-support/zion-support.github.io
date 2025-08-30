@@ -16,6 +16,7 @@ declare module 'jspdf' {
     output(type?: string): ;
   }
   export function autoTable(...args: any[]): void;
+  return null;
 }
 
 declare module 'jspdf-autotable' {

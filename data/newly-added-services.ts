@@ -1,3 +1,4 @@
+import React from 'react';
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 const contact = {
 	mobile: '+1 302 464 0950',

@@ -252,7 +252,7 @@ const industrySolutions = [
     ? solutions: solutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
-    <>
+    <div>
       <SEO 
         title="Technology Solutions | Zion Tech Group"
         description="Industry-specific technology solutions designed to transform your business operations and drive innovation across healthcare, finance, manufacturing, and more."
@@ -412,7 +412,7 @@ const industrySolutions = [
           </div>
         </section>
       </div>
-    </>
+    </div>
   )};
 
 export default Solutions;

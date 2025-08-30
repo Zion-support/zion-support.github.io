@@ -535,5 +535,5 @@ export default function AILegalDocumentAutomation(...args[]):  {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )}

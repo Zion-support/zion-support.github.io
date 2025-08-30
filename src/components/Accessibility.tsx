@@ -132,7 +132,7 @@ export function Accessibility() {
   };
 
   return (
-    <>
+    <div>
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -325,6 +325,6 @@ export function Accessibility() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 }

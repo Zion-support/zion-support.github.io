@@ -289,10 +289,10 @@ export default function Blog() {
                     </div>
                   </motion.article>
                 ))}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {/* Search Results or Recent Posts */}
       <section className="py-20 bg-slate-800/50">

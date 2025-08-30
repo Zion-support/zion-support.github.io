@@ -722,7 +722,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
               >
                 {viewMode === 'grid' ? (
                   // Grid View
-                  <>
+                  <div>
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -779,10 +779,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       Learn More
                       <ArrowRight className="w-4 h-4" />
                     </button>
-                  </>
+                  </div>
                 ) : (
                   // List View
-                  <>
+                  <div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-2">
                         <div className="flex items-center gap-3">
@@ -823,7 +823,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </button>
                     </div>
-                  </>
+                  </div>
                 )}
               </motion.div>
             ))}

@@ -110,7 +110,7 @@ export default function Partners(...args[]):  {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -356,6 +356,6 @@ export default function Partners(...args[]):  {
           </div>
         </section>
       </main>
-    </>
+    </div>
   )
 }

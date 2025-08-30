@@ -51,7 +51,7 @@ export default function Index(...args[]):  {
 	]
 
 	return (
-		<>
+		<div>
 			{/* Hero Section */}
 			<section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 sm:py-32 overflow-hidden">
 				{/* Animated Background Elements */}
@@ -166,6 +166,6 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
-		</>
+		</div>
 	)
 }

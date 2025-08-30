@@ -118,7 +118,7 @@ const Contact: React.FC = (): JSX.Element => {
 
 const Contact: React.FC = () => {
   return (
-    <>
+    <div>
       <SEO
         title="Contact Us | Zion Tech Group - Get Expert Consultation"
         description="Contact Zion Tech Group for expert consultation on AI-powered micro SAAS, cloud infrastructure, data analytics, and security solutions. Get in touch today!"
@@ -503,7 +503,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   )};
 
 export default Contact;
