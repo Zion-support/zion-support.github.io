@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
 
-export default function Research(...args[]):  {
+export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
@@ -45,13 +45,13 @@ export default function Research(...args[]):  {
       startDate: '2024-01-01',
       endDate: '2025-12-31',
       leadResearcher: 'Dr. Elena Vasquez',
-      team['Dr. Elena Vasquez', 'Dr. Michael Chen', 'Sarah Johnson', 'Alex Rodriguez'],
+      team: ['Dr. Elena Vasquez', 'Dr. Michael Chen', 'Sarah Johnson', 'Alex Rodriguez'],
       funding: 2500000,
       institution: 'MIT',
       abstract: 'This research investigates the potential of quantum machine learning algorithms to solve complex financial optimization problems that are computationally intractable for classical computers.',
       methodology: 'Hybrid quantum-classical approach using variational quantum algorithms',
-      expectedOutcomes['Quantum advantage demonstration', 'Financial model improvements', 'Patent applications'],
-      publications[
+      expectedOutcomes: ['Quantum advantage demonstration', 'Financial model improvements', 'Patent applications'],
+      publications: [
         {
           title: 'Quantum Algorithms for Portfolio Optimization',
           journal: 'Nature Quantum Information',
@@ -60,7 +60,7 @@ export default function Research(...args[]):  {
           citations: 23
         }
       ],
-      tags['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
+      tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
       progress: 65,
       impact: 'high'
@@ -75,13 +75,13 @@ export default function Research(...args[]):  {
       startDate: '2023-06-01',
       endDate: '2024-11-30',
       leadResearcher: 'Dr. Sarah Chen',
-      team['Dr. Sarah Chen', 'Dr. James Wilson', 'Lisa Anderson', 'David Kim'],
+      team: ['Dr. Sarah Chen', 'Dr. James Wilson', 'Lisa Anderson', 'David Kim'],
       funding: 1800000,
       institution: 'Stanford University',
       abstract: 'This project addresses the critical need for privacy-preserving machine learning in healthcare by developing novel federated learning approaches.',
       methodology: 'Differential privacy, secure multi-party computation, federated averaging',
-      expectedOutcomes['Privacy-preserving framework', 'Healthcare AI models', 'Open-source toolkit'],
-      publications[
+      expectedOutcomes: ['Privacy-preserving framework', 'Healthcare AI models', 'Open-source toolkit'],
+      publications: [
         {
           title: 'Privacy-Preserving Federated Learning in Healthcare',
           journal: 'Nature Machine Intelligence',
@@ -97,7 +97,7 @@ export default function Research(...args[]):  {
           citations: 18
         }
       ],
-      tags['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
+      tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
       progress: 100,
       impact: 'very-high'
@@ -112,13 +112,13 @@ export default function Research(...args[]):  {
       startDate: '2024-03-01',
       endDate: '2025-08-31',
       leadResearcher: 'Michael Rodriguez',
-      team['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
+      team: ['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
       funding: 1200000,
       institution: 'Carnegie Mellon University',
       abstract: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',
       methodology: 'Threat modeling, security architecture design, prototype development, penetration testing',
-      expectedOutcomes['Zero-trust framework', 'Security prototypes', 'Best practices guide'],
-      publications[
+      expectedOutcomes: ['Zero-trust framework', 'Security prototypes', 'Best practices guide'],
+      publications: [
         {
           title: 'Zero-Trust Security for Industrial IoT',
           journal: 'IEEE Security & Privacy',
@@ -127,7 +127,7 @@ export default function Research(...args[]):  {
           citations: 12
         }
       ],
-      tags['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
+      tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
       progress: 40,
       impact: 'high'
@@ -142,14 +142,14 @@ export default function Research(...args[]):  {
       startDate: '2025-01-01',
       endDate: '2026-12-31',
       leadResearcher: 'Dr. David Thompson',
-      team['Dr. David Thompson', 'Dr. Lisa Chen', 'Marcus Rodriguez', 'Jennifer Kim'],
+      team: ['Dr. David Thompson', 'Dr. Lisa Chen', 'Marcus Rodriguez', 'Jennifer Kim'],
       funding: 3000000,
       institution: 'UC Berkeley',
       abstract: 'This research focuses on creating efficient AI models that can run on edge devices in autonomous vehicles while maintaining high accuracy and reliability.',
       methodology: 'Model compression, knowledge distillation, edge computing optimization, real-time inference',
-      expectedOutcomes['Edge AI framework', 'Autonomous vehicle models', 'Performance benchmarks'],
-      publications[],
-      tags['Edge Computing', 'Autonomous Vehicles', 'AI Optimization', 'Real-time Systems', 'Computer Vision'],
+      expectedOutcomes: ['Edge AI framework', 'Autonomous vehicle models', 'Performance benchmarks'],
+      publications: [],
+      tags: ['Edge Computing', 'Autonomous Vehicles', 'AI Optimization', 'Real-time Systems', 'Computer Vision'],
       featured: false,
       progress: 15,
       impact: 'medium'
@@ -164,13 +164,13 @@ export default function Research(...args[]):  {
       startDate: '2023-01-01',
       endDate: '2024-06-30',
       leadResearcher: 'Dr. Robert Kim',
-      team['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
+      team: ['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
       funding: 900000,
       institution: 'Columbia University',
       abstract: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',
       methodology: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation',
-      expectedOutcomes['Blockchain framework', 'Supply chain pilots', 'Industry partnerships'],
-      publications[
+      expectedOutcomes: ['Blockchain framework', 'Supply chain pilots', 'Industry partnerships'],
+      publications: [
         {
           title: 'Blockchain-Enabled Supply Chain Transparency',
           journal: 'Journal of Supply Chain Management',
@@ -179,7 +179,7 @@ export default function Research(...args[]):  {
           citations: 28
         }
       ],
-      tags['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
+      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
       progress: 100,
       impact: 'medium'
@@ -194,13 +194,13 @@ export default function Research(...args[]):  {
       startDate: '2024-09-01',
       endDate: '2026-08-31',
       leadResearcher: 'Dr. Jennifer Park',
-      team['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
+      team: ['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
       funding: 2200000,
       institution: 'Georgia Tech',
       abstract: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',
       methodology: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design',
-      expectedOutcomes['Neuromorphic framework', 'Energy-efficient models', 'Hardware prototypes'],
-      publications[
+      expectedOutcomes: ['Neuromorphic framework', 'Energy-efficient models', 'Hardware prototypes'],
+      publications: [
         {
           title: 'Neuromorphic Computing for Edge AI Applications',
           journal: 'Nature Electronics',
@@ -209,7 +209,7 @@ export default function Research(...args[]):  {
           citations: 19
         }
       ],
-      tags['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
+      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
       progress: 55,
       impact: 'high'

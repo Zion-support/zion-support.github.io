@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { SEO  } from '@/components/SEO';
 import { Shield, 
   Lock, 
@@ -13,9 +13,9 @@ import { Shield,
   Clock,
   CheckCircle,
   AlertTriangle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
-export default function Privacy(...args[]):  {
+export default function Privacy() {
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
@@ -44,7 +44,7 @@ export default function Privacy(...args[]):  {
   const dataCategories = [
     {
       title: 'Personal Information',
-      items[
+      items: [
         'Name and contact information (email, phone, address)',
         'Comp and job title information',
         'Professional credentials and certifications',
@@ -53,7 +53,7 @@ export default function Privacy(...args[]):  {
     },
     {
       title: 'Technical Information',
-      items[
+      items: [
         'IP address and device information',
         'Browser type and version',
         'Operating system and platform',
@@ -62,7 +62,7 @@ export default function Privacy(...args[]):  {
     },
     {
       title: 'Business Information',
-      items[
+      items: [
         'Project requirements and specifications',
         'Service usage and performance data',
         'Payment and billing information',
@@ -521,4 +521,5 @@ export default function Privacy(...args[]):  {
         </div>
       </section>
     </div>
-  )}
+  )
+}

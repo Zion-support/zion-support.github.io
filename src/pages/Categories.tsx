@@ -1,7 +1,6 @@
-import React, { useState } from 'react.ts';
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight  } from 'lucide-react.ts';
+import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight } from 'lucide-react';
 
-export default function Categories(...args[]):  {
+export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const mainCategories = [
@@ -50,7 +49,7 @@ export default function Categories(...args[]):  {
   ];
 
   const subCategories = {
-    'ai-ml'[
+    'ai-ml': [
       {
         name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
@@ -84,7 +83,7 @@ export default function Categories(...args[]):  {
         equipment: 1
       }
     ],
-    'cloud'[
+    'cloud': [
       {
         name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
@@ -110,7 +109,7 @@ export default function Categories(...args[]):  {
         equipment: 1
       }
     ],
-    'cybersecurity'[
+    'cybersecurity': [
       {
         name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
@@ -136,7 +135,7 @@ export default function Categories(...args[]):  {
         equipment: 3
       }
     ],
-    'data'[
+    'data': [
       {
         name: 'Business Intelligence',
         description: 'Data visualization and business analytics',

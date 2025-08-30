@@ -5,10 +5,11 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsparser from '@typescript-eslint/parser';
+
 export default [
   js.configs.recommended,
   {
-    files['**/*.{js,jsx}'],
+    files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
@@ -46,7 +47,7 @@ export default [
     }
   },
   {
-    files['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
@@ -87,7 +88,7 @@ export default [
     }
   },
   {
-    ignores[
+    ignores: [
       'node_modules/',
       '.next/',
       'out/',

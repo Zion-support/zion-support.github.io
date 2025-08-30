@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -23,7 +23,7 @@ import { Check,
   ExternalLink,
   DollarSign,
   Clock
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
@@ -42,7 +42,7 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args[]):  {
+export default function ServicesPricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all' 

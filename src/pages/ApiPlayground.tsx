@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react';
 
-export default function ApiPlayground(...args[]):  {
+export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -41,7 +41,7 @@ export default function ApiPlayground(...args[]):  {
       status: 'stable',
       rateLimit: '1000 requests/hour',
       authentication: 'Bearer Token',
-      parameters[
+      parameters: [
         { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
         { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
         { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
@@ -49,14 +49,14 @@ export default function ApiPlayground(...args[]):  {
       requestExample: {
         text: "I love this new AI technology! It's amazing how it can understand context.",
         language: "en",
-        features["sentiment", "entities", "keywords"]
+        features: ["sentiment", "entities", "keywords"]
       },
       responseExample: {
         sentiment: { score: 0.9, label: "positive" },
-        entities[
+        entities: [
           { text: "AI technology", type: "technology", confidence: 0.95 }
         ],
-        keywords["AI", "technology", "amazing", "context"],
+        keywords: ["AI", "technology", "amazing", "context"],
         language: "en"
       },
       documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',
@@ -75,7 +75,7 @@ export default function ApiPlayground(...args[]):  {
       status: 'stable',
       rateLimit: '500 requests/hour',
       authentication: 'API Key',
-      parameters[
+      parameters: [
         { name: 'region', type: 'string', required: false, description: 'Cloud region' },
         { name: 'type', type: 'string', required: false, description: 'Resource type' },
         { name: 'status', type: 'string', required: false, description: 'Resource status' }
@@ -86,7 +86,7 @@ export default function ApiPlayground(...args[]):  {
         status: "running"
       },
       responseExample: {
-        resources[
+        resources: [
           {
             id: "i-1234567890abcdef0",
             name: "web-server-01",
@@ -113,7 +113,7 @@ export default function ApiPlayground(...args[]):  {
       status: 'beta',
       rateLimit: '200 requests/hour',
       authentication: 'OAuth 2.0',
-      parameters[
+      parameters: [
         { name: 'data', type: 'object', required: true, description: 'Security event data' },
         { name: 'source', type: 'string', required: true, description: 'Data source identifier' },
         { name: 'timestamp', type: 'string', required: false, description: 'Event timestamp' }
@@ -130,7 +130,7 @@ export default function ApiPlayground(...args[]):  {
       responseExample: {
         threat_level: "low",
         risk_score: 0.2,
-        recommendations["Enable 2FA", "Monitor login patterns"],
+        recommendations: ["Enable 2FA", "Monitor login patterns"],
         detected: false
       },
       documentation: 'https://docs.ziontechgroup.com/api/security-threats',
@@ -149,7 +149,7 @@ export default function ApiPlayground(...args[]):  {
       status: 'stable',
       rateLimit: '100 requests/hour',
       authentication: 'API Key',
-      parameters[
+      parameters: [
         { name: 'query', type: 'string', required: true, description: 'SQL query string' },
         { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },
         { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' }
@@ -160,7 +160,7 @@ export default function ApiPlayground(...args[]):  {
         timeout: 30
       },
       responseExample: {
-        results[
+        results: [
           { user_id: "user123", login_count: 45 },
           { user_id: "user456", login_count: 38 }
         ],
@@ -183,7 +183,7 @@ export default function ApiPlayground(...args[]):  {
       status: 'stable',
       rateLimit: '300 requests/hour',
       authentication: 'API Key',
-      parameters[
+      parameters: [
         { name: 'location', type: 'string', required: false, description: 'Device location' },
         { name: 'type', type: 'string', required: false, description: 'Device type' },
         { name: 'status', type: 'string', required: false, description: 'Device status' }
@@ -194,7 +194,7 @@ export default function ApiPlayground(...args[]):  {
         status: "active"
       },
       responseExample: {
-        devices[
+        devices: [
           {
             id: "sensor-001",
             name: "Temperature Sensor A1",
