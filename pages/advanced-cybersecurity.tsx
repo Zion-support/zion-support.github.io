@@ -1,16 +1,16 @@
 <<<<<<< HEAD
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState              } from 'react.ts';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027              } from '../data/advancedCybersecurityServices2027';
+import { useState               } from 'react.ts';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027               } from '../data/advancedCybersecurityServices2027';
 
 const AdvancedCybersecurityServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 =======
 import type { NextPage } from 'next.ts';
-import { Helmet             } from 'react-helmet-async.ts';
-import { useState             } from 'react.ts';
-import { ADVANCED_CYBERSECURITY_SERVICES_2027             } from '../data/advancedCybersecurityServices2027';
+import { Helmet              } from 'react-helmet-async.ts';
+import { useState              } from 'react.ts';
+import { ADVANCED_CYBERSECURITY_SERVICES_2027              } from '../data/advancedCybersecurityServices2027';
 
 const AdvancedCybersecurityServices: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
@@ -50,7 +50,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
   });
 
 <<<<<<< HEAD
-  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (level) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'from-red-500 to-pink-600';
@@ -65,7 +65,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
   };
 
 <<<<<<< HEAD
-  const getBadgeColor = (badge: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getBadgeColor = (badge: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (badge) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
@@ -80,7 +80,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
   };
 
 <<<<<<< HEAD
-  const getSecurityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getSecurityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI Security': return '🤖';
@@ -167,13 +167,13 @@ const AdvancedCybersecurityServices: NextPage = () => {;
         </div>
 
         {/* Security Stats */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 mb-12">
           {[
             { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
             { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
             { icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },
             { icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
-          ].map((stat, index)              => (
+          ].map((stat, index)               => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 text-center hover:border-blue-400/50 transition-all duration-300"
@@ -210,13 +210,13 @@ const AdvancedCybersecurityServices: NextPage = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
 
-                {categories.map((category)             => (
-=======
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
-              >
                 {categories.map((category)              => (
+=======
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+              >
+                {categories.map((category)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category.id} value={category.id}>
                     {category.name}
@@ -265,8 +265,8 @@ const AdvancedCybersecurityServices: NextPage = () => {;
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {sortedServices.map((service, index)              => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {sortedServices.map((service, index)               => (
             <div
               key={service.id}
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"

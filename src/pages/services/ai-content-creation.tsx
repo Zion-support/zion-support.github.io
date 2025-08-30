@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import SEO from '../../components/SEO';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCircle, Clock, TrendingUp, Sparkles, Zap, Palette, Camera const AIContentCreation: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -180,8 +180,8 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -262,8 +262,8 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {contentTypes.map((contentType, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {contentTypes.map((contentType, index)              => (
               <motion.div
                 key={contentType.title}
                 initial = {

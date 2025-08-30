@@ -1,6 +1,6 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 import { MessageSquare, BookOpen, Bot, Workflow, Bell, DollarSign, ExternalLink const HelpdeskPlatform: React.FC = (): JSX.Element => {
 	const capabilities = [
 		{ icon: MessageSquare, title: 'Omnichannel Tickets', desc: 'Email, chat, and social inbox with SLAs and macros.' },
@@ -10,8 +10,8 @@ import { MessageSquare, BookOpen, Bot, Workflow, Bell, DollarSign, ExternalLink 
 		{ icon: Bell, title: 'Status & Incidents', desc: 'Public status page, maintenance windows, and postmortems.' }
 	];
 =======
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
 import { MessageCircle, 
   Brain, 
   Target, 
@@ -42,7 +42,7 @@ import { MessageCircle,
   GraduationCap,
   Settings,
   Smartphone
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function HelpdeskPlatform(...args: any[]): any {
   const features = [
@@ -251,8 +251,8 @@ export default HelpdeskPlatform;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -350,8 +350,8 @@ export default HelpdeskPlatform;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -449,8 +449,8 @@ export default HelpdeskPlatform;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {supportChannels.map((channel, index)              => (
               <motion.div
                 key={channel.channel}
                 initial = {
@@ -548,8 +548,8 @@ export default HelpdeskPlatform;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase.industry}
                 initial = {

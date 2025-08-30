@@ -12,6 +12,7 @@ export interface AdditionalService {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -33,6 +34,7 @@ contactInfo?: {;
     email: string;
     website: string;
   
+
 
 
 

@@ -12,6 +12,7 @@ export interface IndustrySolution {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -27,6 +28,7 @@ pricing: {;
     professional: string;
     enterprise: string;
 custom: string;
+
 
 
 
@@ -492,14 +494,14 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 <<<<<<< HEAD
-export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]              => {
+export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]               => {
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry)};
 export const getAllIndustrySolutions = (): IndustrySolution[] => {;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025};
 =======
-export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]             => {;
+export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]              => {;
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
 

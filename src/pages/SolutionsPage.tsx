@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import { Building,
   Target,
   Brain,
@@ -27,7 +27,7 @@ import { Building,
   Phone,
   Mail,
   MapPin
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export function SolutionsPage(...args: any[]): any {
   const solutions = [
@@ -188,8 +188,8 @@ export function SolutionsPage(...args: any[]): any {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index)             => (
+        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index)              => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -211,8 +211,8 @@ export function SolutionsPage(...args: any[]): any {
         {/* Solutions Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Solutions</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index)              => (
               <motion.div
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -266,8 +266,8 @@ export function SolutionsPage(...args: any[]): any {
         {/* Industries Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Industries We Serve</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index)              => (
               <motion.div
                 key={industry.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -285,8 +285,8 @@ export function SolutionsPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{industry.description}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: anyanyanyanyanyanyanyanyanyanyanyany</h4>
-                  {industry.solutions.map((solution, solutionIndex)             => (
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Solutions: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {industry.solutions.map((solution, solutionIndex)              => (
                     <div key={solutionIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
                       <span>{solution}</span>

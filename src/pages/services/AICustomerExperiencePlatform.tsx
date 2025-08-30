@@ -2,8 +2,8 @@
 import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield export default function AICustomerExperiencePlatform(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -29,7 +29,7 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 export default function AICustomerExperiencePlatform(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -186,8 +186,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-pink-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-pink-600 mb-2">{t.price}</div>
@@ -208,8 +208,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
           </div>
         </div>
 
-        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)             => (
+        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)              => (
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -219,8 +219,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
 
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-            {useCases.map((useCase)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
+            {useCases.map((useCase)              => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
@@ -277,8 +277,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -333,8 +333,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {services.map((service, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -395,8 +395,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -456,8 +456,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {benefits.map((benefit, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -514,8 +514,8 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index)               => (
               <motion.div
                 key={index}
                 initial = {

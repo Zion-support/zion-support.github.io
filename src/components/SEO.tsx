@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
+import { Helmet               } from 'react-helmet-async.ts';
 
 interface SEOProps extends React.PropsWithChildren<{}> {
 

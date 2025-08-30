@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart              } from 'lucide-react.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart               } from 'lucide-react.ts';
 =======
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { BarChart3,
   TrendingUp,
   Database,
@@ -33,7 +33,7 @@ import { BarChart3,
   Network,
   FileText
 <<<<<<< HEAD
-import { SEO             } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
@@ -394,8 +394,8 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -467,8 +467,8 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
-            {industries.map((industry, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
+            {industries.map((industry, index)               => (
               <motion.div
                 key={industry.name}
                 initial = {
@@ -535,8 +535,8 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -628,8 +628,8 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -721,8 +721,8 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -803,7 +803,7 @@ export default function DataAnalytics(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -825,7 +825,7 @@ export default function DataAnalytics(...args: []):  {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve analytics capabilities'
 
-            ].map((phase, index)             => (
+            ].map((phase, index)              => (
               <motion.div
                 key={index}
                 initial = {

@@ -2,7 +2,7 @@
 import React, { useState } from 'react.ts';
 import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight export default function Categories(...args: any[]): any {
 =======
-import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight             } from 'lucide-react.ts';
+import { Server, Users, Building, Database, Cloud, Shield, Brain, Zap, Globe, Cpu, Lock, BarChart3, Palette, Smartphone, Rocket, Target, Lightbulb, Code, Network, Eye, Star, ArrowRight              } from 'lucide-react.ts';
 
 export default function Categories(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -241,7 +241,7 @@ export default function Categories(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const getCategoryCount = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryCount = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     if (categoryId === 'all') {
       return Object.values(subCategories).flat().reduce((total, sub) =>
         total + sub.services + sub.talent + sub.equipment, 0
@@ -285,8 +285,8 @@ export default function Categories(...args: any[]): any {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Main Categories
           </h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {mainCategories.map((category)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {mainCategories.map((category)               => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -320,8 +320,8 @@ export default function Categories(...args: any[]): any {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               {mainCategories.find(c => c.id === activeCategory)?.name} - Sub Categories
             </h2>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {subCategories[activeCategory].map((subCategory, index)              => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {subCategories[activeCategory].map((subCategory, index)               => (
                 <div
                   key={index}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -357,8 +357,8 @@ export default function Categories(...args: any[]): any {
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             Featured Items
           </h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {featuredItems.map((item, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {featuredItems.map((item, index)               => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"

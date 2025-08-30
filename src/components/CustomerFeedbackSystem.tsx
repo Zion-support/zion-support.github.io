@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Star,
   MessageCircle,
   ThumbsUp,
@@ -17,11 +17,12 @@ import { Star,
   Search
 <<<<<<< HEAD
 =======
-              } from 'lucide-react.ts';
+               } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Feedback {
+
 
 
 
@@ -62,12 +63,14 @@ verified: boolean;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
+
 
 
 
@@ -90,6 +93,7 @@ interface FeedbackStats {
   topCategories: Array<any>;
 =======
 topCategories: Array<any>;
+
 
 
 
@@ -143,16 +147,16 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
-    rating: anyanyanyanyanyanyanyanyanyanyanyanyany0,
+    rating: anyanyanyanyanyanyanyanyanyanyanyanyanyany0,
     comment: '',
     category: 'overall' as Feedback['category']
   });
 
   // Sample feedback data
-  useEffect(()               => {
+  useEffect(()                => {
     const sampleFeedback: Feedback[] = [
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         customerName: 'Sarah Johnson',
         rating: 5,
         comment: 'Exceptional AI consulting services! The team at Zion Tech Group delivered beyond our expectations. Their expertise in machine learning helped us optimize our processes significantly.',
@@ -222,7 +226,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     setFilteredFeedback(sampleFeedback)}, []);
 
   // Calculate stats
-  useEffect(()               => {
+  useEffect(()                => {
     if (feedback.length > 0) {
       const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback;
@@ -241,17 +245,17 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
 <<<<<<< HEAD
-          category: anyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),
+          category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),
           count,
           percentage: (count / totalFeedback) * 100
         }))
-        .sort((a, b)               => b.count - a.count);
+        .sort((a, b)                => b.count - a.count);
 =======;
-          category: anyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),;
+          category: anyanyanyanyanyanyanyanyanyanyanyanyanyanycategory.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
-        .sort((a, b)              => b.count - a.count);
+        .sort((a, b)               => b.count - a.count);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         .slice(0, 4);
 
@@ -327,7 +331,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
 };
 =======
-      tags: anyanyanyanyanyanyanyanyanyanyanyanyany[],;
+      tags: anyanyanyanyanyanyanyanyanyanyanyanyanyany[],;
   ;
   ;
   verified: false;
@@ -339,12 +343,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-    setFeedback(prev               => [feedback, ...prev]);
+    setFeedback(prev                => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
     setShowFeedbackForm(false)};
 
   // Handle helpful/unhelpful votes
-  const handleVote = (feedbackId: anyanyanyanyanyanyanyanyanyanyanyanyanystring, type: 'helpful' | 'unhelpful')               => {
+  const handleVote = (feedbackId: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, type: 'helpful' | 'unhelpful')                => {
     setFeedback(prev => prev.map(f => {
 <<<<<<< HEAD
       if (f.id === feedbackId) {
@@ -356,7 +360,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       return f}))};
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     switch (sentiment) {;
 =======;
       if (f.id === feedbackId) {;
@@ -371,7 +375,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get sentiment color
-  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const getSentimentColor = (sentiment: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (sentiment) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'positive': return 'text-green-400 bg-green-400/20';
@@ -385,7 +389,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
@@ -551,8 +555,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Categories</h3>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-4">
-            {stats.topCategories.map((category, index)               => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-4">
+            {stats.topCategories.map((category, index)                => (
               <motion.div
                 key={category.category}
                 initial = {

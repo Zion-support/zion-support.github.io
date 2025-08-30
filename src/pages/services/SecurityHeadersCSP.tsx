@@ -1,6 +1,6 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Shield, Lock, Code, Globe, DollarSign, ExternalLink const SecurityHeadersCSP: React.FC = (): JSX.Element => {
 	const items = [
 		{ icon: Shield, title: 'Best-Practice Headers', desc: 'HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and more.' },
@@ -9,8 +9,8 @@ import { Shield, Lock, Code, Globe, DollarSign, ExternalLink const SecurityHeade
 		{ icon: Lock, title: 'Reports & Alerts', desc: 'Real-time violation reporting, triage, and guided remediation.' }
 	];
 =======
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
 import { Shield, 
   Lock, 
   Target, 
@@ -46,7 +46,7 @@ import { Shield,
   Heart,
   Building,
   GraduationCap
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function SecurityHeadersCSP(...args: any[]): any {
   const features = [
@@ -250,8 +250,8 @@ export default SecurityHeadersCSP;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -349,8 +349,8 @@ export default SecurityHeadersCSP;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -448,8 +448,8 @@ export default SecurityHeadersCSP;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {securityHeaders.map((header, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {securityHeaders.map((header, index)              => (
               <motion.div
                 key={header.header}
                 initial = {
@@ -547,8 +547,8 @@ export default SecurityHeadersCSP;}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase.industry}
                 initial = {

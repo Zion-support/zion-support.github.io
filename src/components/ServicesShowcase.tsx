@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
 import {
   Brain,
   Cloud,
@@ -218,7 +218,7 @@ export function ServicesShowcase(...args: any[]): any {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025              } from '@/data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '@/data/innovativeMicroSaasServices2025';
 
 interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
 
@@ -242,7 +242,7 @@ export function ServicesShowcase(...args: any[]): any {
     return acc;
   }, {} as Record<string, any>);
 
-  const toggleCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const toggleCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setExpandedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
@@ -276,7 +276,7 @@ export function ServicesShowcase(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     const colors = {
       'AI & Machine Learning': 'from-zion-purple to-zion-purple-dark',
       'Cloud & DevOps': 'from-zion-cyan to-zion-cyan-dark',
@@ -289,7 +289,7 @@ export function ServicesShowcase(...args: any[]): any {
   };
 
   const filteredServices = selectedCategory === 'all'
-    ? allServices: anyanyanyanyanyanyanyanyanyanyanyanyanyallServices.filter(service              =>
+    ? allServices: anyanyanyanyanyanyanyanyanyanyanyanyanyanyallServices.filter(service               =>
         service.category.toLowerCase().includes(selectedCategory.toLowerCase())
       );
 
@@ -365,10 +365,10 @@ export function ServicesShowcase(...args: any[]): any {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
 <<<<<<< HEAD
 
-          {services.map((service, index)              => (
+          {services.map((service, index)               => (
 =======
         >
           {filteredServices.map((service, index) => (

@@ -1,26 +1,26 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle               } from '@/components/ui/card';
+import { Badge               } from '@/components/ui/badge';
+import { Button               } from '@/components/ui/button';
+import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
+import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+=======
+import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
 import { Badge              } from '@/components/ui/badge';
 import { Button              } from '@/components/ui/button';
+<<<<<<< HEAD
+import { cuttingEdgeComprehensiveServices2027              } from '../../data/2027-cutting-edge-comprehensive-services';
+import { specializedInnovativeServices2027              } from '../../data/2027-specialized-innovative-services';
+import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap import { Link              } from 'react-router-dom.ts';
+=======
 import { cuttingEdgeComprehensiveServices2027              } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027              } from '../../data/2027-specialized-innovative-services';
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap              } from 'lucide-react.ts';
 import { Link              } from 'react-router-dom.ts';
-=======
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle             } from '@/components/ui/card';
-import { Badge             } from '@/components/ui/badge';
-import { Button             } from '@/components/ui/button';
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027             } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027             } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap import { Link             } from 'react-router-dom.ts';
-=======
-import { cuttingEdgeComprehensiveServices2027             } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027             } from '../../data/2027-specialized-innovative-services';
-import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap             } from 'lucide-react.ts';
-import { Link             } from 'react-router-dom.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -141,7 +141,7 @@ export default function ComprehensivePricing(...args[]: any):  {
   });
 
 <<<<<<< HEAD
-  const getPriceRangeLabel = (range: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getPriceRangeLabel = (range: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (range) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'under-1000': return 'Under $1,000';
@@ -196,8 +196,8 @@ export default function ComprehensivePricing(...args[]: any):  {
       <div className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)               => (
               <Card key={index} className={`relative ${tier.popular ? 'ring-2 ring-zion-cyan scale-105' : ''}`}>
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -265,8 +265,8 @@ export default function ComprehensivePricing(...args[]: any):  {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredServices.map((service)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service)               => (
               <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
@@ -296,8 +296,8 @@ export default function ComprehensivePricing(...args[]: any):  {
 
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
-                    {service.features.slice(0, 3).map((feature, index)              => (
+                    <h4 className="font-semibold text-zion-slate-dark text-sm">Key Features: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                    {service.features.slice(0, 3).map((feature, index)               => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-dark">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0"/>
                         {feature}

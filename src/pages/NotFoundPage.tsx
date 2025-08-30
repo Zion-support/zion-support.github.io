@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import { Home,
   Search,
   ArrowLeft,
@@ -8,7 +8,7 @@ import { Home,
   Brain,
   Shield,
   Cpu
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export function NotFoundPage(...args: any[]): any {
   const popularPages = [
@@ -57,8 +57,8 @@ export function NotFoundPage(...args: any[]): any {
           {/* Popular Pages */}
           <div className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Popular Pages</h2>
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
-              {popularPages.map((page, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
+              {popularPages.map((page, index)              => (
                 <motion.div
                   key={page.name}
                   initial={{ opacity: 0, scale: 0.8 }}

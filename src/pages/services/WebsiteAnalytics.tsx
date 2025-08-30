@@ -2,7 +2,7 @@
 import { BarChart3, Activity, Gauge, ArrowRight, Check, ExternalLink, Phone, Mail export default function WebsiteAnalytics(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { BarChart3, 
   TrendingUp, 
   CheckCircle, 
@@ -150,7 +150,7 @@ import { BarChart3,
   Memory,
   HardDrive,
   Server
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 const WebsiteAnalytics = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -333,8 +333,8 @@ const WebsiteAnalytics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -421,8 +421,8 @@ const WebsiteAnalytics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {services.map((service, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -630,8 +630,8 @@ const WebsiteAnalytics = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial = {

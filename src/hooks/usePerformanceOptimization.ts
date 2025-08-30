@@ -1,6 +1,7 @@
-import { useEffect, useRef, useCallback, useMemo              } from 'react.ts';
+import { useEffect, useRef, useCallback, useMemo               } from 'react.ts';
 
 interface PerformanceMetrics {
+
 
 
 
@@ -32,10 +33,12 @@ fps: number;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UsePerformanceOptimizationOptions {
+
 
 
 
@@ -57,6 +60,7 @@ interface UsePerformanceOptimizationOptions {
   threshold?: number;
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = { /* empty */;
+
 
 
 
@@ -206,7 +210,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Intersection Observer for lazy loading
 <<<<<<< HEAD
-  const createIntersectionObserver = useCallback((callback: anyanyanyanyanyanyanyanyanyanyanyanyIntersectionObserverCallback)             => {;
+  const createIntersectionObserver = useCallback((callback: anyanyanyanyanyanyanyanyanyanyanyanyanyIntersectionObserverCallback)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enableIntersectionObserver) return null;
 
@@ -217,7 +221,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Lazy loading utility
 <<<<<<< HEAD
-  const lazyLoad = useCallback((element: anyanyanyanyanyanyanyanyanyanyanyanyHTMLElement, callback: ()             => void) => {;
+  const lazyLoad = useCallback((element: anyanyanyanyanyanyanyanyanyanyanyanyanyHTMLElement, callback: ()              => void) => {;
     if (!enableLazyLoading) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       callback();
@@ -260,7 +264,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Performance monitoring
 <<<<<<< HEAD
-  const measureRenderTime = useCallback((componentName: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const measureRenderTime = useCallback((componentName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const startTime = performance.now();
 
@@ -300,33 +304,33 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Debounced function utility
 <<<<<<< HEAD
-  const debounce = useCallback(<T extends (...args: anyanyanyanyanyanyanyanyanyanyanyanyany[])             => any>(;
-    func: anyanyanyanyanyanyanyanyanyanyanyanyT,;
+  const debounce = useCallback(<T extends (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyany[])              => any>(;
+    func: anyanyanyanyanyanyanyanyanyanyanyanyanyT,;
     delay: number;
-  ): ((...args: Parameters<T>)             => void) => {;
+  ): ((...args: Parameters<T>)              => void) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    let timeoutId: anyanyanyanyanyanyanyanyanyanyanyanyNodeJS.Timeout;
+    let timeoutId: anyanyanyanyanyanyanyanyanyanyanyanyanyNodeJS.Timeout;
 <<<<<<< HEAD
 
-    return (...args: Parameters<T>)             => {
+    return (...args: Parameters<T>)              => {
 =======
     
-    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)              => {
+    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
 <<<<<<< HEAD
-  const throttle = useCallback(<T extends (...args: anyanyanyanyanyanyanyanyanyanyanyanyany[])             => any>(;
-    func: anyanyanyanyanyanyanyanyanyanyanyanyT,;
+  const throttle = useCallback(<T extends (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyany[])              => any>(;
+    func: anyanyanyanyanyanyanyanyanyanyanyanyanyT,;
     delay: number;
-  ): ((...args: Parameters<T>)             => void) => {;
+  ): ((...args: Parameters<T>)              => void) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     let lastCall = 0;
 <<<<<<< HEAD
 
-    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)             => {
+    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)              => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -336,7 +340,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 =======
     
-    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)              => {
+    return (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyParameters<T>)               => {
       const now = Date.now();
       if (now - lastCall >= delay) {
         lastCall = now;
@@ -362,14 +366,14 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
   // Memoized performance data
   const performanceData = useMemo(() => ({;
-    metrics: anyanyanyanyanyanyanyanyanyanyanyanygetMetrics(),;
+    metrics: anyanyanyanyanyanyanyanyanyanyanyanyanygetMetrics(),;
     isLowFPS: metricsRef.current.fps < 30,;
     isHighMemory: metricsRef.current.memoryUsage > 100,;
     isSlowRender: metricsRef.current.renderTime > 16;
   }), [getMetrics]);
 
   // Cleanup on unmount
-  useEffect(()              => {
+  useEffect(()               => {
     return cleanup}, [cleanup]);
 
   return {
@@ -398,8 +402,10 @@ declare global {
 
 
 
+
 <<<<<<< HEAD
-    gtag?: (...args: anyanyanyanyanyanyanyanyanyanyanyanyany[])             => void;
+    gtag?: (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyany[])              => void;
+
 
 
 

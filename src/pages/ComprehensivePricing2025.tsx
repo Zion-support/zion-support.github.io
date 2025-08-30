@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { Search, 
   Download, 
   Play, 
@@ -18,8 +18,8 @@ import { Search,
   Lock,
   Globe,
   Rocket
-             } from 'lucide-react.ts';
-import { SEO              } from '@/components/SEO';
+              } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
 
 const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -184,7 +184,7 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
         return 0}
   });
 
-  const getDiscountedPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanynumber, discount: number)              => {;
+  const getDiscountedPrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, discount: number)               => {;
     return Math.round(price * (1 - discount / 100))};
 
   const totalROI = filteredServices.reduce((sum, service) => sum + parseInt(service.roi), 0);
@@ -307,9 +307,9 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
               <select 
                 value={selectedCategory} 
                 onChange={(e) => setSelectedCategory(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-green-400"
               >
-                {categories.map(category              => (
+                {categories.map(category               => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -318,9 +318,9 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
               <select 
                 value={selectedIndustry} 
                 onChange={(e) => setSelectedIndustry(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-green-400"
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-green-400"
               >
-                {industries.map(industry              => (
+                {industries.map(industry               => (
                   <option key={industry} value={industry} className="bg-slate-800 text-white">
                     {industry === 'all' ? 'All Industries' : industry}
                   </option>
@@ -343,8 +343,8 @@ const ComprehensivePricing2025: React.FC = (): JSX.Element => {;
         {/* Pricing Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index)              => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)               => (
                 <motion.div
                   key={service.id}
                   initial = {

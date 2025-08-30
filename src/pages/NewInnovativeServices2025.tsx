@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
@@ -11,7 +11,7 @@ import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
 const NewInnovativeServices2025: React.FC = (): JSX.Element => {
   const newServices = [
 =======
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Brain, 
   GitFork, 
   Shield, 
@@ -125,7 +125,7 @@ import { Brain,
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function NewInnovativeServices2025(...args: any[]): any {
   const featuredServices = [
@@ -359,8 +359,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-6">
-            {categories.map((category, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-6">
+            {categories.map((category, index)              => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -481,8 +481,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {newServices.map((service, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {newServices.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -549,8 +549,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-              {featuredServices.map((service, index)             => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {featuredServices.map((service, index)              => (
                 <motion.div
                   key={index}
                   initial = {
@@ -752,8 +752,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {serviceCategories.map((category, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {serviceCategories.map((category, index)              => (
                 <motion.div
                   key={index}
                   initial = {
@@ -850,8 +850,8 @@ export default function NewInnovativeServices2025(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   initial = {

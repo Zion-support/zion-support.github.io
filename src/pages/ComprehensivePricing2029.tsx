@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Star, 
   CheckCircle, 
   ArrowRight, 
@@ -42,10 +42,10 @@ import { Star,
   Sparkles,
   Crown,
   Gem
-            } from 'lucide-react.ts';
-import { innovativeMicroSAASServices2029             } from '../../data/innovative-micro-saas-2029';
-import { revolutionaryAIServices2029             } from '../../data/revolutionary-ai-services-2029';
-import { revolutionaryITServices2029             } from '../../data/revolutionary-it-services-2029';
+             } from 'lucide-react.ts';
+import { innovativeMicroSAASServices2029              } from '../../data/innovative-micro-saas-2029';
+import { revolutionaryAIServices2029              } from '../../data/revolutionary-ai-services-2029';
+import { revolutionaryITServices2029              } from '../../data/revolutionary-it-services-2029';
 
 export default function ComprehensivePricing2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -84,7 +84,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const iconMap: { [key: string]: any } = {
       'AI & Analytics': Brain,
       'Cybersecurity': Shield,
@@ -293,12 +293,12 @@ export default function ComprehensivePricing2029(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >
             <AnimatePresence>
-              {sortedServices.map((service, index)             => (
+              {sortedServices.map((service, index)              => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

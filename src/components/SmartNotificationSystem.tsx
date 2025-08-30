@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import {
   Bell,
   X,
@@ -30,7 +30,8 @@ interface Notification {
 
 
 
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
+
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
@@ -38,8 +39,9 @@ interface Notification {
   read: boolean;
 action?: {;
     label: string;
-    onClick: ()              => void;
+    onClick: ()               => void;
   
+
 
 
 
@@ -72,7 +74,7 @@ export function SmartNotificationSystem(...args: any[]): any {;
   const generateSampleNotifications = useCallback(() => {
 const sampleNotifications: Notification[] = [;
       {
-id: anyanyanyanyanyanyanyanyanyanyanyanyany'1',;
+id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',;
 type: 'success',;
 title: 'Welcome to Zion Tech Group!',;
 message: 'Your account has been successfully created. Explore our AI-powered solutions.',;
@@ -83,16 +85,16 @@ category: 'onboarding',;
 action: {;
 label: 'Get Started',;
 <<<<<<< HEAD
-onClick: ()              => // // console.log('Get Started clicked');
+onClick: ()               => // // console.log('Get Started clicked');
 
 =======
-onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('Get Started clicked');
+onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Get Started clicked');
         
 }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'2',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'2',
         type: 'achievement',
         title: 'Performance Milestone Reached!',
         message: 'Your website performance score has improved to 95%. Great job!',
@@ -103,15 +105,15 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
         action: {
           label: 'View Details',
 <<<<<<< HEAD
-          onClick: ()              => // // console.log('View Details clicked')
+          onClick: ()               => // // console.log('View Details clicked')
 
 =======
-          onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('View Details clicked')
+          onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('View Details clicked')
         }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       },
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'3',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'3',
         type: 'info',
         title: 'New Feature Available',
         message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
@@ -133,20 +135,20 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
         action: {
           label: 'Update Now',
 <<<<<<< HEAD
-          onClick: ()              => // // console.log('Update Now clicked')
+          onClick: ()               => // // console.log('Update Now clicked')
 
 
 =======
-          onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('Update Now clicked')
+          onClick: anyanyanyanyanyanyanyanyanyanyanyanyanyany()               => console.log('Update Now clicked')
         }
       }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 =======
-        priority: anyanyanyanyanyanyanyanyanyanyanyanyany'high',;
+        priority: anyanyanyanyanyanyanyanyanyanyanyanyanyany'high',;
         category: 'security',;
         action: {;
           label: 'Update Now',;
-          onClick: ()              => console.log('Update Now clicked');
+          onClick: ()               => console.log('Update Now clicked');
         };
       };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -187,18 +189,18 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
 
   // Mark notification as read
 <<<<<<< HEAD
-  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setNotifications(prev => {
       const updated = prev.map(n =>
         n.id === id ? { ...n, read: true } : n
 =======
-  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const markAsRead = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setNotifications(prev => {;
       const updated = prev.map(n => ;
-        n.id === id ? { ...n, read: anyanyanyanyanyanyanyanyanyanyanyanyanytrue } : n;
+        n.id === id ? { ...n, read: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue } : n;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       );
-      setUnreadCount(updated.filter(n              => !n.read).length);
+      setUnreadCount(updated.filter(n               => !n.read).length);
       return updated;
     });
   }, []);
@@ -213,7 +215,7 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
   }, []);
 
   // Remove notification
-  const removeNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const removeNotification = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setNotifications(prev => {;
       const filtered = prev.filter(n => n.id !== id);
       setUnreadCount(filtered.filter(n => !n.read).length);
@@ -233,7 +235,7 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
   }, [isMuted]);
 
   // Get notification icon
-  const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyNotification['type'])              => {;
+  const getNotificationIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification['type'])               => {;
     switch (type) {;
       case 'success':;
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -251,7 +253,7 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyNotification['priority'])              => {;
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanyNotification['priority'])               => {;
     switch (priority) {;
       case 'high':;
         return 'border-l-red-500';
@@ -265,7 +267,7 @@ onClick: anyanyanyanyanyanyanyanyanyanyanyanyany()              => console.log('
   };
 
   // Format timestamp
-  const formatTimestamp = (timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyDate)              => {;
+  const formatTimestamp = (timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate)               => {;
     const now = new Date();
     const diff = now.getTime() - timestamp.getTime();
     const minutes = Math.floor(diff / (1000 * 60));

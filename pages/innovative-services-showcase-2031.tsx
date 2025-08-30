@@ -1,10 +1,10 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet             } from 'react-helmet-async.ts';
+import { Helmet              } from 'react-helmet-async.ts';
 import { innovativeMicroSaasServices2031,
   innovativeITInfrastructureServices2031,
   innovativeAIServices2031
-            } from '../src/data/innovativeServices2031';
+             } from '../src/data/innovativeServices2031';
 import { Brain,
   Cloud,
   CheckCircle,
@@ -17,10 +17,10 @@ import { innovativeMicroSaasServices2031,
   innovativeITInfrastructureServices2031, 
   innovativeAIServices2031 
 <<<<<<< HEAD
-             } from '../src/data/innovativeServices2031';
+              } from '../src/data/innovativeServices2031';
 import { Brain, 
 =======
-            } from '../src/data/innovativeServices2031';
+             } from '../src/data/innovativeServices2031';
 import { Brain, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Cloud, 
@@ -41,7 +41,7 @@ import { Brain,
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {;

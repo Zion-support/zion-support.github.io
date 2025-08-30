@@ -7,12 +7,12 @@ interface ButtonProps extends React.PropsWithChildren<{
 }> {
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  children: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
+  children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
   className?: string;
-  onClick?: ()               => void;
+  onClick?: ()                => void;
   type?: 'button' | 'submit' | 'reset';
 <<<<<<< HEAD
   disabled?: boolean}

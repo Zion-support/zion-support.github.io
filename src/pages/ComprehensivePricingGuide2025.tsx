@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
   MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
@@ -13,9 +13,9 @@ import {
   revolutionaryMicroSaasServices2025,
   advancedITInfrastructureServices2025,
   revolutionaryAIServices2025
-            } from '../data/comprehensiveServices2025';
+             } from '../data/comprehensiveServices2025';
 =======
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 import { DollarSign, 
   Star, 
   CheckCircle, 
@@ -36,7 +36,7 @@ import { DollarSign,
   Linkedin,
   Twitter,
   Github
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
@@ -419,8 +419,8 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {services.map((service, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {services.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -649,8 +649,8 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-              {pricingBenefits.map((benefit, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {pricingBenefits.map((benefit, index)              => (
                 <motion.div
                   key={benefit}
                   className="flex items-start gap-4 p-4 rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-pink-500/10"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 import {
   CheckCircle,
   Star,
@@ -137,9 +137,9 @@ const ComprehensivePricing2028: [any, React.Dispatch<React.SetStateAction<any>>]
   ];
 
   const filteredServices = selectedCategory === 'all'
-    ? services: anyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service             => service.category === selectedCategory);
+    ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service              => service.category === selectedCategory);
 
-  const getColorClasses = (color: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getColorClasses = (color: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const colorMap: { [key: string]: string } = {
       blue: 'from-blue-500 to-cyan-500',
       green: 'from-green-500 to-emerald-500',
@@ -151,17 +151,17 @@ const ComprehensivePricing2028: [any, React.Dispatch<React.SetStateAction<any>>]
     return colorMap[color] || 'from-gray-500 to-gray-600';
 =======
 } from 'lucide-react';
-import { SEO             } from '@/components/SEO';
+import { SEO              } from '@/components/SEO';
 import { COMPREHENSIVE_PRICING_PLANS_2028, 
   SERVICE_CATEGORIES_2028, 
   MARKET_ANALYSIS_2028 
-            } from '../data/comprehensivePricingGuide2028';
+             } from '../data/comprehensivePricingGuide2028';
 
 export default function ComprehensivePricing2028(...args: any[]): any {
   const [selectedPlan, setSelectedPlan] = useState('professional-2028');
   const [expandedCategories, setExpandedCategories] = useState<any>([]);
 
-  const toggleCategory = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const toggleCategory = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedCategories(prev => 
       prev.includes(categoryId) 
         ? prev.filter(id => id !== categoryId)
@@ -284,8 +284,8 @@ export default function ComprehensivePricing2028(...args: any[]): any {
       {/* Services Grid */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {filteredServices.map((service, index)             => (
+          <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredServices.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -410,8 +410,8 @@ export default function ComprehensivePricing2028(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-          {COMPREHENSIVE_PRICING_PLANS_2028.map((plan, index)             => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          {COMPREHENSIVE_PRICING_PLANS_2028.map((plan, index)              => (
             <motion.div
               key={plan.id}
               initial={{ opacity: 0, y: 20 }}
@@ -554,8 +554,8 @@ export default function ComprehensivePricing2028(...args: any[]): any {
             {selectedPlanData.addOns.length > 0 && (
               <div className="mt-8 pt-6 border-t border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Available Add-ons</h3>
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
-                  {selectedPlanData.addOns.map((addon, idx)             => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+                  {selectedPlanData.addOns.map((addon, idx)              => (
                     <div key={idx} className="bg-white/5 rounded-lg p-4 border border-white/10">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-medium text-white">{addon.name}</h4>
@@ -644,8 +644,8 @@ export default function ComprehensivePricing2028(...args: any[]): any {
 
               {expandedCategories.includes(category.id) && (
                 <div className="px-6 pb-6 border-t border-white/20">
-                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                    {category.services.map((service)             => (
+                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                    {category.services.map((service)              => (
                       <div key={service.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
                         <h4 className="font-medium text-white mb-2">{service.name}</h4>
                         <p className="text-sm text-gray-400 mb-3">{service.description}</p>
@@ -666,8 +666,8 @@ export default function ComprehensivePricing2028(...args: any[]): any {
                         </div>
 
                         <div className="space-y-2">
-                          <h5 className="text-sm font-medium text-white">Key Features: anyanyanyanyanyanyanyanyanyanyanyany</h5>
-                          {service.features.map((feature, idx)             => (
+                          <h5 className="text-sm font-medium text-white">Key Features: anyanyanyanyanyanyanyanyanyanyanyanyany</h5>
+                          {service.features.map((feature, idx)              => (
                             <div key={idx} className="flex items-center gap-2 text-xs text-gray-400">
                               <Check className="w-3 h-3 text-green-400" />
                               <span>{feature}</span>

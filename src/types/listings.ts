@@ -11,6 +11,7 @@ export interface Listing {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -26,6 +27,7 @@ seller: {;
     rating: number;
     reviews: number;
   
+
 
 
 
@@ -93,12 +95,14 @@ export interface CartItem {
 
 
 
+
   id: string;
   title: string;
   price: number;
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string;
+
 
 
 
@@ -126,11 +130,13 @@ export interface WishlistItem {
 
 
 
+
   id: string;
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
+
 
 
 

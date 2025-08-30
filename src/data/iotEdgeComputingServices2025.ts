@@ -12,6 +12,7 @@ export interface IoTEdgeService {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -27,6 +28,7 @@ pricing: {;
     professional: string;
     enterprise: string;
 custom: string;
+
 
 
 
@@ -400,14 +402,14 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
 
 ];
 <<<<<<< HEAD
-export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]              => {
+export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]               => {
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025};
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
 export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
   return IOT_EDGE_COMPUTING_SERVICES_2025};
 =======
-export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]             => {;
+export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]              => {;
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025;
 

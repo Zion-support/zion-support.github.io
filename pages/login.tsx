@@ -1,6 +1,6 @@
 import Head from 'next/head.ts'
-import { motion              } from 'framer-motion.ts'
-import { useState              } from 'react.ts'
+import { motion               } from 'framer-motion.ts'
+import { useState               } from 'react.ts'
 import { Mail,
   Lock,
   Eye,
@@ -14,7 +14,7 @@ import { Mail,
 <<<<<<< HEAD
 export default function Login(...args: any[]): any {
 =======
-             } from 'lucide-react.ts'
+              } from 'lucide-react.ts'
 
 export default function Login(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -28,7 +28,7 @@ export default function Login(...args[]: any):  {
 <<<<<<< HEAD
   const [errors, setErrors] = useState<Record<string, any>>({ /* empty */ })
 
-  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)             => {
+  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)              => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -51,7 +51,7 @@ export default function Login(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault()
 

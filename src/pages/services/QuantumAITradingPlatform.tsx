@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Atom, 
   TrendingUp, 
   Zap, 
@@ -37,7 +37,7 @@ import { Atom,
   BarChart,
   LineChart,
   PieChart
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function QuantumAITradingPlatform(...args: any[]): any {
   const [activeTab, setActiveTab] = useState('overview');
@@ -334,8 +334,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index)             => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {features.map((feature, index)              => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}

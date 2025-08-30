@@ -1,4 +1,4 @@
-import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award             } from 'lucide-react.ts';
+import { Brain, TrendingUp, Zap, Check, ExternalLink, Phone, Mail, BarChart3, Clock, Users, Target, Award              } from 'lucide-react.ts';
 
 export default function AIBusinessProcessOptimizer(...args: any[]): any {
   const features = [
@@ -80,8 +80,8 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
-              {tiers.map((t)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -127,8 +127,8 @@ export default function AIBusinessProcessOptimizer(...args: any[]): any {
           </div>
         </div>
 
-        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-          {['Real-time monitoring', 'AI-powered insights', 'Process automation'].map((t)             => (
+        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {['Real-time monitoring', 'AI-powered insights', 'Process automation'].map((t)              => (
             <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <BarChart3 className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{t}</div>

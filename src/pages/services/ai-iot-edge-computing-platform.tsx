@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 
 const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
   return (
@@ -73,7 +73,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI-Powered Edge Intelligence",
@@ -105,7 +105,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   description: "Built-in security features with local data processing and privacy-preserving AI algorithms.",
                   icon: "🔒"
                 }
-              ].map((feature, index)              => (
+              ].map((feature, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -161,7 +161,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "90%", description: "Reduction in latency" },
                 { metric: "70%", description: "Lower bandwidth costs" },
@@ -169,7 +169,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                 { metric: "80%", description: "Reduction in cloud costs" },
                 { metric: "95%", description: "Data processing accuracy" },
                 { metric: "60%", description: "Improvement in reliability" }
-              ].map((benefit, index)              => (
+              ].map((benefit, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -224,7 +224,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {[
                 {
                   industry: "Manufacturing",
@@ -246,7 +246,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   description: "Precision farming and crop monitoring with AI-powered edge analytics.",
                   features: ["Crop monitoring", "Soil analysis", "Irrigation optimization"]
                 }
-              ].map((useCase, index)              => (
+              ].map((useCase, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -309,11 +309,11 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
               {[
                 "TensorFlow Lite", "ONNX Runtime", "Apache Kafka", "MQTT", "Kubernetes Edge", "Docker Edge", "AWS IoT", "Azure IoT",
                 "Google Cloud IoT", "Node-RED", "Grafana", "Prometheus", "InfluxDB", "Redis", "PostgreSQL", "MongoDB"
-              ].map((tech, index)              => (
+              ].map((tech, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -367,7 +367,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {[
                 {
                   name: "Starter",
@@ -418,7 +418,7 @@ const AIIoTEdgeComputingPlatform: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)              => (
+              ].map((plan, index)               => (
                 <motion.div
                   key={index}
                   initial = {

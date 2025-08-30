@@ -1,10 +1,11 @@
 
-import { useState             } from 'react.ts';
-import { TALENT_PROFILES             } from '@/data/talentData';
-import { JOB_POSTS             } from '@/data/jobsData';
-import { PROJECTS             } from '@/data/projectsData';
+import { useState              } from 'react.ts';
+import { TALENT_PROFILES              } from '@/data/talentData';
+import { JOB_POSTS              } from '@/data/jobsData';
+import { PROJECTS              } from '@/data/projectsData';
 
 export interface SearchResult {
+
 
 
 
@@ -33,9 +34,11 @@ export interface SearchResult {
 
 
 
+
 }
 
 interface SearchFilters {
+
 
 
 
@@ -63,6 +66,7 @@ interface SearchFilters {
 
 
 
+
 } | null;
   availability?: string | null;
 }
@@ -71,7 +75,7 @@ export function useAISearch(...args: any[]): any {
   const [results, setResults] = useState<any>([]);
   const [loading, setLoading] = useState(false);
 
-  const search = async (query: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const search = async (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     setLoading(true);
     const response = await fetch(
       "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search",
@@ -85,7 +89,7 @@ export function useAISearch(...args: any[]): any {
       const filters: SearchFilters = data.filters || {};
 
       const items: SearchResult[] = [];
-      const matchSkill = (skills: anyanyanyanyanyanyanyanyanyanyanyanystring[] | null)             => {;
+      const matchSkill = (skills: anyanyanyanyanyanyanyanyanyanyanyanyanystring[] | null)              => {;
         if (!filters.skills || filters.skills.length === 0) return true;
         return skills?.some((s) =>
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))

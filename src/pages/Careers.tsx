@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import { Briefcase, Clock, Globe, GraduationCap, Heart, Mail, MapPin, MapPinIcon, Phone, Users, Zap import { useState             } from 'react.ts';
+import { Briefcase, Clock, Globe, GraduationCap, Heart, Mail, MapPin, MapPinIcon, Phone, Users, Zap import { useState              } from 'react.ts';
 
 export default function Careers(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -7,8 +7,8 @@ export default function Careers(...args: any[]): any {
   const [selectedLocation, setSelectedLocation] = useState('all');
 =======
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
 import { Briefcase, 
   Users, 
   Globe, 
@@ -38,9 +38,9 @@ import { Briefcase,
   Phone,
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   ExternalLink
-            } from 'lucide-react.ts';
-import { Button             } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle             } from '@/components/ui/card';
+             } from 'lucide-react.ts';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
 
 const Careers: React.FC = (): JSX.Element => {
 <<<<<<< HEAD
@@ -235,17 +235,17 @@ const Careers: React.FC = (): JSX.Element => {
   ];
 
   const categories = [
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Positions', count: jobListings.length },
-    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job             => job.category === 'ai').length },
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'security', name: 'Security', count: jobListings.filter(job             => job.category === 'security').length },
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job             => job.category === 'cloud').length },
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'engineering', name: 'Engineering', count: jobListings.filter(job             => job.category === 'engineering').length },
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'data', name: 'Data & Analytics', count: jobListings.filter(job             => job.category === 'data').length },
-    { id: anyanyanyanyanyanyanyanyanyanyanyany'product', name: 'Product', count: jobListings.filter(job             => job.category === 'product').length }
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Positions', count: jobListings.length },
+    { id: 'ai', name: 'AI & ML', count: jobListings.filter(job              => job.category === 'ai').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'security', name: 'Security', count: jobListings.filter(job              => job.category === 'security').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'cloud', name: 'Cloud & DevOps', count: jobListings.filter(job              => job.category === 'cloud').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'engineering', name: 'Engineering', count: jobListings.filter(job              => job.category === 'engineering').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'data', name: 'Data & Analytics', count: jobListings.filter(job              => job.category === 'data').length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'product', name: 'Product', count: jobListings.filter(job              => job.category === 'product').length }
   ];
 
   const filteredJobs = selectedCategory === 'all'
-    ? jobListings: anyanyanyanyanyanyanyanyanyanyanyanyjobListings.filter(job             => job.category === selectedCategory);
+    ? jobListings: anyanyanyanyanyanyanyanyanyanyanyanyanyjobListings.filter(job              => job.category === selectedCategory);
 
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   const companyValues = [
@@ -273,7 +273,7 @@ const Careers: React.FC = (): JSX.Element => {
   ];
 
   const filteredJobs = selectedDepartment === 'all' 
-    ? jobListings: anyanyanyanyanyanyanyanyanyanyanyanyjobListings.filter(job             => job.department === selectedDepartment);
+    ? jobListings: anyanyanyanyanyanyanyanyanyanyanyanyanyjobListings.filter(job              => job.department === selectedDepartment);
 =======
       icon: Shield,
       title: "Security & Trust",
@@ -355,7 +355,7 @@ const Careers: React.FC = (): JSX.Element => {
   ];
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (categoryId) {
       case 'ai':
         return Brain;
@@ -374,7 +374,7 @@ const Careers: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
@@ -463,8 +463,8 @@ const Careers: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {companyValues.map((value, index)              => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -665,8 +665,8 @@ const Careers: React.FC = (): JSX.Element => {
 
                     <div>
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                      <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-3">
-                        {job.benefits.map((benefit, idx)             => (
+                      <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-3">
+                        {job.benefits.map((benefit, idx)              => (
                           <div key={idx} className="flex items-center gap-2 text-gray-300">
                             <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                             <span>{benefit}</span>
@@ -728,7 +728,7 @@ const Careers: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 step: '1',
@@ -750,7 +750,7 @@ const Careers: React.FC = (): JSX.Element => {
                 title: 'Offer',
                 description: 'Receive your offer and join the Zion Tech family'
               }
-            ].map((step, index)             => (
+            ].map((step, index)              => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}
@@ -834,8 +834,8 @@ const Careers: React.FC = (): JSX.Element => {
                 </p>
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-                {filteredJobs.map((job, index)             => (
+              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+                {filteredJobs.map((job, index)              => (
                   <motion.div
                     key={job.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -982,8 +982,8 @@ const Careers: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-              {companyValues.map((value, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {companyValues.map((value, index)              => (
                 <motion.div
                   key={value.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1030,8 +1030,8 @@ const Careers: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)             => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 30 }}

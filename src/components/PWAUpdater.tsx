@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react.ts';
 <<<<<<< HEAD
 import { RefreshCw, X, CheckCircle export function PWAUpdater(...args: any[]): any {
 =======
-import { motion, AnimatePresence              } from 'framer-motion.ts';
-import { RefreshCw, X, CheckCircle, AlertTriangle, Info              } from 'lucide-react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { RefreshCw, X, CheckCircle, AlertTriangle, Info               } from 'lucide-react.ts';
 
 interface PWAUpdaterProps extends React.PropsWithChildren<{}> {
 
@@ -58,7 +58,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
       navigator.serviceWorker.register('/sw.js')
         .then((reg) => {
           setRegistration(reg);
-          console.log('Service Worker registered successfully: anyanyanyanyanyanyanyanyanyanyanyanyany', reg);
+          console.log('Service Worker registered successfully: anyanyanyanyanyanyanyanyanyanyanyanyanyany', reg);
           
           // Check for updates
           if (autoCheck) {
@@ -66,7 +66,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           }
           
           // Listen for updates
-          reg.addEventListener('updatefound', ()              => {
+          reg.addEventListener('updatefound', ()               => {
             console.log('Service Worker update found');
             const newWorker = reg.installing;
             
@@ -97,12 +97,12 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
           });
         })
         .catch((error) => {
-          console.error('Service Worker registration failed: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
+          console.error('Service Worker registration failed: anyanyanyanyanyanyanyanyanyanyanyanyanyany', error);
         });
     }
   }, [autoCheck, showUpdatePrompt]);
 
-  useEffect(()              => {
+  useEffect(()               => {
     if (autoCheck && registration) {
       const interval = setInterval(() => {
         checkForUpdates(registration);
@@ -112,7 +112,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     }
   }, [autoCheck, checkInterval, registration]);
 
-  const checkForUpdates = async (reg: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceWorkerRegistration)              => {
+  const checkForUpdates = async (reg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyServiceWorkerRegistration)               => {
     try {
       await reg.update();
       console.log('Service Worker update check completed');
@@ -132,11 +132,11 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     try {
       // Send message to service worker to skip waiting
       if (registration.waiting) {
-        registration.waiting.postMessage({ type: anyanyanyanyanyanyanyanyanyanyanyanyany'SKIP_WAITING' });
+        registration.waiting.postMessage({ type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'SKIP_WAITING' });
       }
       
       // Reload the page to apply the update
-      setTimeout(()              => {
+      setTimeout(()               => {
         window.location.reload();
       }, 1000);
     } catch (error) {

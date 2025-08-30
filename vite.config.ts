@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig  } from 'vite.ts'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { resolve  } from 'path.ts'
 
-// https://vitejs.dev/config/
+// https: any//vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -39,11 +39,11 @@ export default defineConfig({
           'icons-vendor': ['lucide-react'],
           'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
         },
-        chunkFileNames: (chunkInfo)            => {
+        chunkFileNames: (chunkInfo)             => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
           return `js/${facadeModuleId}-[hash].js`;
         },
-        assetFileNames: (assetInfo) => {
+        assetFileNames: any(assetInfo)  => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
           if (/\.(css)$/.test(assetInfo.name)) {

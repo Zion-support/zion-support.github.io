@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Brain, 
   BarChart3, 
   TrendingUp, 
@@ -21,7 +21,7 @@ import { Brain,
   Mail,
   MapPin,
   ExternalLink
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
   const features = [
@@ -182,8 +182,8 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -222,8 +222,8 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,8 +293,8 @@ const AIBusinessIntelligenceElite: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

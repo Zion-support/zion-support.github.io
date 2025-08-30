@@ -2,7 +2,7 @@
 import { Activity, Heart, Shield, Users, Check, ArrowRight, ExternalLink, Phone, Mail, Zap, Brain, Clock, Database export default function AIHealthcareAnalytics(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Activity, 
   Shield, 
   Zap, 
@@ -32,8 +32,8 @@ import { Activity,
   FileText,
   AlertTriangle,
   Building
-            } from 'lucide-react.ts';
-import { SEO             } from '@/components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
 const AIHealthcareAnalytics = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -246,8 +246,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4">
-            {features.map((feature, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -277,8 +277,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {benefits.map((benefit, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -308,8 +308,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
-            {useCases.map((useCase, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -352,8 +352,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
-            {analyticsCapabilities.map((capability, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
+            {analyticsCapabilities.map((capability, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -388,8 +388,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 max-w-6xl mx-auto">
-            {pricing.map((plan, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 max-w-6xl mx-auto">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -454,8 +454,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {healthcareTechnologies.map((tech, index)             => (
+          <div className="grid gap-6 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {healthcareTechnologies.map((tech, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -492,8 +492,8 @@ const AIHealthcareAnalytics = () => {
             </p>
           </div>
 
-          <div className="grid gap-4 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
-            {complianceStandards.map((standard, index)             => (
+          <div className="grid gap-4 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
+            {complianceStandards.map((standard, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -573,8 +573,8 @@ const AIHealthcareAnalytics = () => {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Compliance & Security</h2>
           <div className="bg-slate-800/50 border border-white/10 rounded-xl p-8">
-            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-              {complianceFeatures.map((feature, index)              => (
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+              {complianceFeatures.map((feature, index)               => (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Shield className="w-8 h-8 text-white"/>
@@ -597,8 +597,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Analytics Pricing</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)               => (
               <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
                 tier.popular 
                   ? 'border-green-500/50 bg-slate-800/70' 
@@ -647,8 +647,8 @@ const AIHealthcareAnalytics = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">What Healthcare Leaders Say</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {testimonials.map((testimonial, index)               => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

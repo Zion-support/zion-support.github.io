@@ -14,6 +14,7 @@ export interface PricingTier {
 
 
 
+
   id: string;
   name: string;
   price: number;
@@ -36,9 +37,11 @@ export interface PricingTier {
 
 
 
+
 }
 
 export interface EnterprisePricing {
+
 
 
 
@@ -90,6 +93,7 @@ enterprisePricing: {;
 
 
 
+
 };
   marketAnalysis: {
     averageMarketPrice: string;
@@ -128,6 +132,7 @@ export interface ServicePricing {
 
 
 
+
   serviceId: string;
   serviceName: string;
   category: string;
@@ -138,6 +143,7 @@ marketComparison: {;
     ourAdvantage: string;
     priceDifference: string;
   
+
 
 
 
@@ -830,11 +836,11 @@ export const pricingRecommendations = {
 };
 
 <<<<<<< HEAD
-export const getPricingGuideByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryPricingGuide2030[]             => {
+export const getPricingGuideByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryPricingGuide2030[]              => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
 };
 
-export const getPricingGuideByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number): RevolutionaryPricingGuide2030[]             => {
+export const getPricingGuideByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number): RevolutionaryPricingGuide2030[]              => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
     const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
     return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
@@ -860,10 +866,10 @@ export const getPricingGuideStats = () => {
   return {
     totalServices,
     totalTiers,
-    averageStarterPrice: anyanyanyanyanyanyanyanyanyanyanyanyMath.round(averageStarterPrice),
+    averageStarterPrice: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
-    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide             => guide.category))],
-    subcategories: anyanyanyanyanyanyanyanyanyanyanyany[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide             => guide.subcategory))]
+    categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide              => guide.category))],
+    subcategories: anyanyanyanyanyanyanyanyanyanyanyanyany[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide              => guide.subcategory))]
   };
 };}}}}}}}}}
 =======

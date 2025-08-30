@@ -609,35 +609,35 @@ export const innovativeServices2026: InnovativeService[] = [
 
 export const serviceCategories = [
   {
-    name: anyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s              => s.category === 'Micro SaaS')
+    services: innovativeServices2026.filter(s               => s.category === 'Micro SaaS')
   },
   {
-    name: anyanyanyanyanyanyanyanyanyanyanyany'AI Solutions',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s              => s.category === 'AI Solutions')
+    services: innovativeServices2026.filter(s               => s.category === 'AI Solutions')
   },
   {
-    name: anyanyanyanyanyanyanyanyanyanyanyany'IT Services',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s              => s.category === 'IT Services')
+    services: innovativeServices2026.filter(s               => s.category === 'IT Services')
   },
 <<<<<<< HEAD
   {
-    name: anyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
 <<<<<<< HEAD
-    services: innovativeServices2026.filter(s             => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
 
 =======
-    services: anyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+    services: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s               => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   };
 =======;
   {;
-    name: anyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
-    services: innovativeServices2026.filter(s             => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
+    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

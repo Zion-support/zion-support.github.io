@@ -15,6 +15,7 @@ export interface PricingTier {
 
 
 
+
   name: string;
   price: number;
   currency: string;
@@ -30,6 +31,7 @@ export interface PricingTier {
   setupTime: string;
   supportLevel: string;
   innovationLevel: string;
+
 
 
 
@@ -58,6 +60,7 @@ export interface ServicePricing {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -74,6 +77,7 @@ contactInfo: {;
     website: string;
     address: string;
   
+
 
 
 

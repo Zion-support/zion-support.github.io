@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Search, 
   Filter, 
   Grid3X3, 
@@ -16,8 +16,8 @@ import { Search,
   Mail,
   MapPin,
   ExternalLink
-            } from 'lucide-react.ts';
-import { zion2026AIMarketplaceServices             } from '../../data/zion-2026-ai-marketplace-services';
+             } from 'lucide-react.ts';
+import { zion2026AIMarketplaceServices              } from '../../data/zion-2026-ai-marketplace-services';
 
 const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
   const [searchTerm, setSearchTerm] = useState('');
@@ -35,7 +35,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     });
   }, [searchTerm, selectedCategory]);
 
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'AI Marketplace': return Globe;
       case 'AI Integration': return Zap;
@@ -46,7 +46,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'AI Marketplace': return 'from-blue-500 to-cyan-500';
       case 'AI Integration': return 'from-purple-500 to-pink-500';
@@ -159,9 +159,9 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
-                  {categories.map(category             => (
+                  {categories.map(category              => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -210,10 +210,10 @@ const Zion2026AIMarketplaceShowcase: React.FC = (): JSX.Element => {;
             </div>
           ) : (
             <div className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8'
+              ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8'
               : 'space-y-6'
             }>
-              {filteredServices.map((service, index)             => (
+              {filteredServices.map((service, index)              => (
                 <motion.div
                   key={service.id}
                   initial = {

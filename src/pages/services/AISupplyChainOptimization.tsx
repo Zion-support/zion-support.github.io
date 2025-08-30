@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 import { Truck, 
   Brain, 
 =======
@@ -57,11 +57,11 @@ import { Truck, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Zap, Ta
     },
   ];
 =======
-import { SEO             } from '../../components/SEO';
-import { Button             } from '../../components/ui/Button';
-import { Card             } from '../../components/ui/Card';
-import { Badge             } from '../../components/ui/Badge';
-import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
+import { Button              } from '../../components/ui/Button';
+import { Card              } from '../../components/ui/Card';
+import { Badge              } from '../../components/ui/Badge';
+import { CheckCircle, Brain, TrendingUp, Truck, Shield, Zap, Globe, Clock, Phone, Mail, BarChart3, Target, Users, Database              } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AISupplyChainOptimization: React.FC = (): JSX.Element => {
@@ -470,8 +470,8 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
 
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
-              {tiers.map((t)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-zion-cyan mb-2">{t.price}</div>
@@ -537,8 +537,8 @@ const AISupplyChainOptimization: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {integrations.map((integration, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={integration.name}
                 initial = {

@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
-  onSubmit?: (e: React.FormEvent)              => void;
+  children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
+  onSubmit?: (e: React.FormEvent)               => void;
 
 export function Form(...args: any[]): any {;
   return <form onSubmit={onSubmit
@@ -12,8 +12,8 @@ import React from 'react.ts';
 
 interface FormProps extends React.PropsWithChildren<{}> {
 
-  children: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
-  onSubmit?: (e: React.FormEvent)               => void}
+  children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
+  onSubmit?: (e: React.FormEvent)                => void}
 
 export function FormItem(...args[]: any):  {
   return <div className = "space-y-2">{children}</div>}
@@ -46,12 +46,12 @@ export function FormLabel(...args: any[]): any {;
 
 interface FormFieldProps extends React.PropsWithChildren<{}> {
 
-  control: anyanyanyanyanyanyanyanyanyanyanyanyany;
+  control: anyanyanyanyanyanyanyanyanyanyanyanyanyany;
   name: string;
-  render: (props: )              => React.ReactNode;
+  render: (props: )               => React.ReactNode;
 
-export function FormField(...args: anyanyanyanyanyanyanyanyanyanyanyanyany[]): any {;
-return render({ field: any{ name, value: '', onChange: ()              => { /* empty */;
+export function FormField(...args: anyanyanyanyanyanyanyanyanyanyanyanyanyany[]): any {;
+return render({ field: any{ name, value: '', onChange: ()               => { /* empty */;
 } } });
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {
@@ -67,11 +67,11 @@ export function FormLabel(...args[]: any):  {
 
 interface FormFieldProps extends React.PropsWithChildren<{}> {;
 ;
-  control;name: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
-  render: (props)               => React.ReactNode}
+  control;name: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  render: (props)                => React.ReactNode}
 
 export function FormField(...args[]: any):  {
-  return render({ field: anyanyanyanyanyanyanyanyanyanyanyanyany{ name, value: '', onChange: ()               => {} } })}
+  return render({ field: anyanyanyanyanyanyanyanyanyanyanyanyanyany{ name, value: '', onChange: ()                => {} } })}
 
 interface FormMessageProps extends React.PropsWithChildren<{}> {
 

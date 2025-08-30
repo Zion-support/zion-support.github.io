@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO             } from '@/components/SEO';
-import { motion             } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
 import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 =======
 import React from 'react.ts';
-import { SEO              } from '@/components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain              } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink, Activity, Users, Clock, DollarSign, Database, Lock, BarChart3, TrendingUp, Globe, Brain               } from 'lucide-react.ts';
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -274,12 +274,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -339,12 +339,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -404,12 +404,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)              => (
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -504,12 +504,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)              => (
 =======
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {useCases.map((useCase, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -574,12 +574,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
           </div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
 =======
           
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}

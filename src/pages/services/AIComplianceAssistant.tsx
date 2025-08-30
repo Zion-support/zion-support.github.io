@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight              } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Shield, FileText, CheckCircle, Scale, BookOpen, ArrowRight               } from 'lucide-react.ts';
 
 export default function AIComplianceAssistant(...args[]: any):  {
   const frameworks = [
@@ -14,8 +14,8 @@ export default function AIComplianceAssistant(...args[]: any):  {
   ];
 =======
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
 import { Shield, 
   CheckCircle, 
   AlertTriangle, 
@@ -36,7 +36,7 @@ import { Shield,
   Filter,
   Download,
   Share2
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const features = [
@@ -276,7 +276,7 @@ import { Shield,
               {pricing.map((p) => (<li key={p}>{p}</li>))}
             </ul>
             <div className="mt-6 text-sm text-slate-400">
-              References: anyanyanyanyanyanyanyanyanyanyanyany{links.map((l, i)              => (
+              References: anyanyanyanyanyanyanyanyanyanyanyanyany{links.map((l, i)               => (
                 <a key={l.label} href={l.url} target="_blank" rel="noreferrer" className="text-rose-300 hover:underline mr-2">{l.label}{i < links.length - 1 ? ',' : ''}</a>
               ))}
             </div>
@@ -327,8 +327,8 @@ import { Shield,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -534,8 +534,8 @@ import { Shield,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {regulations.map((regulation, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {regulations.map((regulation, index)              => (
               <motion.div
                 key={regulation.name}
                 initial = {
@@ -633,8 +633,8 @@ import { Shield,
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

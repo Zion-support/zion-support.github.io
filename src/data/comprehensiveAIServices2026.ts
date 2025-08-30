@@ -12,6 +12,7 @@ export interface ComprehensiveAIService2026 {
 
 
 
+
   id: string;
   title: string;
   description: string;
@@ -35,6 +36,7 @@ contactInfo: {;
     email: string;
     website: string;
   
+
 
 
 

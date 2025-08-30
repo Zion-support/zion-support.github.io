@@ -3,7 +3,7 @@ import React, { useState } from 'react.ts';
 interface InteractiveSearchProps extends React.PropsWithChildren<{}> {
 
   placeholder?: string;
-  onSearch: anyanyanyanyanyanyanyanyanyanyanyanyany(query: string)              => void;
+  onSearch: anyanyanyanyanyanyanyanyanyanyanyanyanyany(query: string)               => void;
   className?: string;
 
 <<<<<<< HEAD
@@ -22,7 +22,7 @@ const InteractiveSearch: React.FC<InteractiveSearchProps> = ({
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [query, setQuery] = useState('');
 
-  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     if (query.trim()) {
       onSearch(query.trim());

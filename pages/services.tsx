@@ -1,12 +1,12 @@
 import React, { useState } from 'react.ts'
-import { Link             } from 'react-router-dom.ts'
+import { Link              } from 'react-router-dom.ts'
 <<<<<<< HEAD
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 import { additionalEnhancedServices             } from '../data/additional-real-services'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2 import { additionalEnhancedServices              } from '../data/additional-real-services'
 =======
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight             } from 'lucide-react.ts'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight              } from 'lucide-react.ts'
 
-import { additionalEnhancedServices             } from '../data/additional-real-services'
-import { enhancedServices2025             } from '../data/enhanced-services-2025'
+import { additionalEnhancedServices              } from '../data/additional-real-services'
+import { enhancedServices2025              } from '../data/enhanced-services-2025'
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Services(...args[]: any):  {
@@ -65,7 +65,7 @@ export default function Services(...args[]: any):  {
 	}, [searchTerm, selectedCategory, sortBy])
 
 	// Pagination controls
-	const goToPage = (page: anyanyanyanyanyanyanyanyanyanyanyanynumber)             => {
+	const goToPage = (page: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
 		setCurrentPage(page)
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
@@ -135,13 +135,13 @@ export default function Services(...args[]: any):  {
 								value={selectedCategory}
 								onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-								className="px-3 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
+								className="px-3 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
 
-								{categories.map(category             => (
-=======
-								className="px-3 py-3 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
-							>
 								{categories.map(category              => (
+=======
+								className="px-3 py-3 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 w-full sm:w-auto"
+							>
+								{categories.map(category               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 									<option key={category} value={category}>
 										{category === 'all' ? 'All Categories' : category}
@@ -247,8 +247,8 @@ export default function Services(...args[]: any):  {
 					</div>
 
 					{/* Services Grid */}
-					<div className="grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanyanygap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-						{currentServices.map((service)             => (
+					<div className="grid gap-6 sm: anyanyanyanyanyanyanyanyanyanyanyanyanygap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+						{currentServices.map((service)              => (
 							<div key={service.id} className="group relative rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
 								{/* Popular Badge */}
 								{service.popular && (
@@ -368,7 +368,7 @@ export default function Services(...args[]: any):  {
 							>
 								<ChevronLeft className="h-5 w-5" />
 							</button>
-							{Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)             => (
+							{Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)              => (
 								<button
 									key={i + 1}
 									onClick={() => goToPage(i + 1)}

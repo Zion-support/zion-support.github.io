@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { ReactNode              } from 'react.ts';
+import { ReactNode               } from 'react.ts';
 interface LayoutProps extends React.PropsWithChildren<{}> {
 
   children: ReactNode;
@@ -32,12 +32,12 @@ export default function Layout(...args[]: any):  {
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
 <<<<<<< HEAD
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === href;
+  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)};
 =======
-  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => location.pathname === href;
-  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
+  const toggleSidebarDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

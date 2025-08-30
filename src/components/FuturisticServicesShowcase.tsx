@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Rocket,
 	Brain,
 	Zap,
@@ -16,9 +16,10 @@ import { Rocket,
 	Pause
 <<<<<<< HEAD
 =======
-              } from 'lucide-react.ts';
+               } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
+
 
 
 
@@ -45,6 +46,7 @@ interface ServiceShowcase {
 
 =======
 status: 'active' | 'beta' | 'new';
+
 
 
 
@@ -130,7 +132,7 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
 		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
 		switch (status) {;
 =======;
 		const interval = setInterval(() => {;
@@ -138,7 +140,7 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
@@ -152,7 +154,7 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 <<<<<<< HEAD
-	const getStatusText = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+	const getStatusText = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 		switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'NEW';
@@ -352,8 +354,8 @@ export default function FuturisticServicesShowcase(...args[]: any):  {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index)               => (
+					<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)                => (
 							<motion.div
 								key={service.id}
 								initial = {

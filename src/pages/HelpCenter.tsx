@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Search,
   HelpCircle,
   MessageCircle,
@@ -44,6 +44,7 @@ interface FAQItem {
 
 
 
+
 =======
   CheckCircle,
   AlertCircle,
@@ -60,9 +61,11 @@ interface FAQItem {
  
  
  
+ 
 } from 'lucide-react.ts';
 
 interface HelpSection {
+
 
 
 
@@ -92,9 +95,11 @@ articles: Array<any>;
 
 
 
+
 }
 
 interface FAQItem {
+
 
 
 
@@ -132,6 +137,7 @@ interface SupportOption {
 
 const helpCategories: HelpCategory[] = [;
 =======
+
 
 
 
@@ -472,7 +478,7 @@ export function HelpCenter(...args: any[]): any {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
 
-  const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -487,10 +493,10 @@ export function HelpCenter(...args: any[]): any {
   };
 
   const filteredFAQ = selectedCategory === 'All' 
-    ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item             => item.category === selectedCategory);
+    ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (category) {
       case 'getting-started': return BookOpen;
       case 'services': return Code;
@@ -502,7 +508,7 @@ export function HelpCenter(...args: any[]): any {
 
   };
 
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (category) {
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';
@@ -560,8 +566,8 @@ export function HelpCenter(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.2 }}
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index)              => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -595,8 +601,8 @@ export function HelpCenter(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.4 }}
 
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index)              => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -638,12 +644,12 @@ export function HelpCenter(...args: any[]): any {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                 }`}
 
                 All Categories
               </button>
-              {helpCategories.map(category             => (
+              {helpCategories.map(category              => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -744,8 +750,8 @@ export function HelpCenter(...args: any[]): any {
                               <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
                               <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
                                 <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
-                                  {getCategoryIcon(faq.category)({ className: anyanyanyanyanyanyanyanyanyanyanyany"h-4 w-4" })}
-                                  {helpCategories.find(c             => c.id === faq.category)?.title}
+                                  {getCategoryIcon(faq.category)({ className: anyanyanyanyanyanyanyanyanyanyanyanyany"h-4 w-4" })}
+                                  {helpCategories.find(c              => c.id === faq.category)?.title}
                                 </span>
                                 <span className="flex items-center gap-1">
                                   <Lightbulb className="h-4 w-4" />

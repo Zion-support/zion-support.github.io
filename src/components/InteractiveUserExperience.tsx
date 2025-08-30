@@ -1,30 +1,30 @@
 <<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react.ts';
+import { Card, CardContent, CardHeader, CardTitle                } from './ui/card';
+import { Button                } from './ui/button';
+import { Badge                } from './ui/badge';
+import { Progress                } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger                } from './ui/tabs';
+import { User, 
+=======
+import React, { useState, useEffect, useCallback               } from 'react.ts';
+<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
 import { Button               } from './ui/button';
 import { Badge               } from './ui/badge';
 import { Progress               } from './ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger               } from './ui/tabs';
-import { User, 
-=======
-import React, { useState, useEffect, useCallback              } from 'react.ts';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle              } from './ui/card';
-import { Button              } from './ui/button';
-import { Badge              } from './ui/badge';
-import { Progress              } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger              } from './ui/tabs';
 import { User,
   Settings,
   Palette,
   Eye,
   MousePointer,
 =======
-import { Card, CardContent, CardHeader, CardTitle              } from './ui/card';
-import { Button              } from './ui/button';
-import { Badge              } from './ui/badge';
-import { Progress              } from './ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger              } from './ui/tabs';
+import { Card, CardContent, CardHeader, CardTitle               } from './ui/card';
+import { Button               } from './ui/button';
+import { Badge               } from './ui/badge';
+import { Progress               } from './ui/progress';
+import { Tabs, TabsContent, TabsList, TabsTrigger               } from './ui/tabs';
 import { User, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Settings, 
@@ -43,10 +43,11 @@ import { User,
   Languages
 <<<<<<< HEAD
 =======
-              } from 'lucide-react.ts';
+               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserPreference {
+
 
 
 
@@ -83,10 +84,12 @@ description: string;
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UserActivity {
+
 
 
 
@@ -122,10 +125,12 @@ category: 'navigation' | 'interaction' | 'search' | 'purchase';
 
 
 
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AccessibilityFeature {
+
 
 
 
@@ -148,6 +153,7 @@ interface AccessibilityFeature {
   impact: 'high' | 'medium' | 'low';
 =======
 impact: 'high' | 'medium' | 'low';
+
 
 
 
@@ -183,7 +189,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   useEffect(() => {
     const initialPreferences: UserPreference[] = [
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'Theme',
         value: 'light',
         type: 'select',
@@ -237,10 +243,10 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setPreferences(initialPreferences)}, []);
 
   // Initialize accessibility features
-  useEffect(()               => {
+  useEffect(()                => {
     const features: AccessibilityFeature[] = [
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'Screen Reader Support',
         enabled: true,
         description: 'Full compatibility with screen readers and assistive technologies',
@@ -279,7 +285,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setAccessibilityFeatures(features)}, []);
 
   // Simulate user activities
-  useEffect(()               => {
+  useEffect(()                => {
     const activities: UserActivity[] = [
       {
         id: '1',
@@ -318,12 +324,12 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
     setUserActivities(activities)}, []);
 
 <<<<<<< HEAD
-  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)              => {
+  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)               => {
     setPreferences(prev => prev.map(pref =>
       pref.id === id ? { ...pref, value } : pref
 =======
 <<<<<<< HEAD
-  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)              => {;
+  const updatePreference = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | boolean | number)               => {;
     setPreferences(prev => prev.map(pref => ;
       pref.id === id ? { ...pref, value } : pref;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -355,7 +361,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
 
   }, [preferences]);
 
-  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setAccessibilityFeatures(prev => prev.map(feature =>
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
 =======
@@ -364,22 +370,22 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   }, [preferences]);
 
 <<<<<<< HEAD
-  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
     ))}, []);
 
-  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])               => {
+  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])                => {
     switch (category) {;
 =======;
-  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const toggleAccessibilityFeature = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setAccessibilityFeatures(prev => prev.map(feature => ;
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ));
   }, []);
 
-  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])              => {;
+  const getActivityIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUserActivity['category'])               => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'navigation': return <MousePointer className="h-4 w-4" />;
@@ -395,7 +401,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilityFeature['impact'])              => {;
+  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilityFeature['impact'])               => {;
     switch (impact) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'high': return 'bg-red-500';

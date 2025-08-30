@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO             } from '@/components/SEO';
+import { SEO              } from '@/components/SEO';
 import {
   CheckCircle,
   AlertTriangle,
@@ -26,8 +26,8 @@ export default Status;
 }
 =======
 import React, { useState, useEffect } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
 import { CheckCircle, 
   AlertTriangle, 
   XCircle, 
@@ -44,7 +44,7 @@ import { CheckCircle,
   AlertCircle,
   Info,
   ExternalLink
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function Status(...args: any[]): any {
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -210,7 +210,7 @@ export default function Status(...args: any[]): any {
     }
   ];
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
@@ -225,7 +225,7 @@ export default function Status(...args: any[]): any {
     }
   };
 
-  const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -240,7 +240,7 @@ export default function Status(...args: any[]): any {
     }
   };
 
-  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     switch (severity) {
       case 'low':
         return 'bg-blue-500/20 text-blue-400';
@@ -361,8 +361,8 @@ export default function Status(...args: any[]): any {
             <p className="text-xl text-gray-300">Key performance indicators and trends</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {performanceMetrics.map((metric, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {performanceMetrics.map((metric, index)              => (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
@@ -405,8 +405,8 @@ export default function Status(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index)              => (
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -455,8 +455,8 @@ export default function Status(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-            {regions.map((region, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
+            {regions.map((region, index)              => (
               <motion.div
                 key={region.name}
                 initial={{ opacity: 0, y: 20 }}

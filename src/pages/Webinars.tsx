@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO             } from '@/components/SEO';
+import { SEO              } from '@/components/SEO';
 
 export default function Webinars(...args: any[]): any {
 	return (
@@ -14,12 +14,12 @@ export default function Webinars(...args: any[]): any {
 	);
 
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars(...args: any[]): any {
 =======
 
-import React, { useState             } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import React, { useState              } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { BookOpen, 
   Brain, 
   Shield, 
@@ -44,10 +44,10 @@ import { BookOpen,
   Share2,
   ArrowRight,
   CheckCircle
-            } from 'lucide-react.ts';
-import { SEO             } from '@/components/SEO';
-import { Button             } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle             } from '@/components/ui/card';
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
 
 const Webinars: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -216,7 +216,7 @@ const Webinars: React.FC = (): JSX.Element => {
   const allWebinars = [...upcomingWebinars, ...pastWebinars];
 
 <<<<<<< HEAD
-  const filteredWebinars = (showPast ? pastWebinars: anyanyanyanyanyanyanyanyanyanyanyanyupcomingWebinars).filter(webinar              => {;
+  const filteredWebinars = (showPast ? pastWebinars: anyanyanyanyanyanyanyanyanyanyanyanyanyupcomingWebinars).filter(webinar               => {;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -247,7 +247,7 @@ const Webinars: React.FC = (): JSX.Element => {
       />
       
 =======
-      currentAttendees: anyanyanyanyanyanyanyanyanyanyanyany189,;
+      currentAttendees: anyanyanyanyanyanyanyanyanyanyanyanyany189,;
       featured: false,;
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
       thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
@@ -257,7 +257,7 @@ const Webinars: React.FC = (): JSX.Element => {
   ];
 
   // Update counts
-  React.useEffect(()             => {
+  React.useEffect(()              => {
     categories.forEach(cat = > {;
       cat.count = webinars.filter(w => w.category === cat.id).length;
     });
@@ -302,17 +302,17 @@ const Webinars: React.FC = (): JSX.Element => {
     return matchesCategory && matchesSearch && matchesTimeFilter;
   });
 
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : BookOpen;
   };
 
-  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       weekday: 'long', 
@@ -323,7 +323,7 @@ const Webinars: React.FC = (): JSX.Element => {
   };
 
 <<<<<<< HEAD
-  const formatTimeUntil = (dateString: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const formatTimeUntil = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     const now = new Date();
     const webinarDate = new Date(dateString);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -335,10 +335,10 @@ const Webinars: React.FC = (): JSX.Element => {
     return `${Math.ceil(diffDays / 30)} months`;
   };
 
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
 =======
-  const getRegistrationStatus = (webinar: anyanyanyanyanyanyanyanyanyanyanyany)             => {
+  const getRegistrationStatus = (webinar: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
     if (webinar.isLive) {
       return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
     } else if (webinar.attendees >= webinar.maxAttendees) {
@@ -627,9 +627,9 @@ const Webinars: React.FC = (): JSX.Element => {
               </motion.div>
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             ) : (
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
-                {filteredWebinars.map((webinar)             => (
+                {filteredWebinars.map((webinar)              => (
                   <motion.div
                     key={webinar.id}
                     initial={{ opacity: 0, y: 20 }}

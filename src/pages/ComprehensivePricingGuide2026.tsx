@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { DollarSign,
   TrendingUp,
   Users,
@@ -15,20 +15,20 @@ import { DollarSign,
   Cpu,
   Brain
 <<<<<<< HEAD
-import { SEO             } from '../components/SEO';
+import { SEO              } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { ALL_PRICING_GUIDES_2026, marketSummary2026             } from '../data/comprehensivePricingGuide2026';
+import { ALL_PRICING_GUIDES_2026, marketSummary2026              } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
   const [selectedTier, setSelectedTier] = useState<any>('all');
 =======
 } from 'lucide-react';
-import { SEO             } from '../components/SEO';
-import { ALL_PRICING_GUIDES_2026, marketSummary2026             } from '../data/comprehensivePricingGuide2026';
+import { SEO              } from '../components/SEO';
+import { ALL_PRICING_GUIDES_2026, marketSummary2026              } from '../data/comprehensivePricingGuide2026';
 
 const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   const [selectedService, setSelectedService] = useState<any>('all');
@@ -52,7 +52,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   }, [selectedService]);
 
 <<<<<<< HEAD
-  const getServiceIcon = (serviceName: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getServiceIcon = (serviceName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (serviceName) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
@@ -67,7 +67,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getTierColor = (tierName: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getTierColor = (tierName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (tierName) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'Starter': return 'from-green-500 to-emerald-500';
@@ -154,13 +154,13 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
 <<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                    {services.map(service             => (
-=======
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-                  >
                     {services.map(service              => (
+=======
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {services.map(service               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
@@ -176,13 +176,13 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
                     value={selectedTier}
                     onChange={(e) => setSelectedTier(e.target.value)}
 <<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
 
-                    {tiers.map(tier             => (
-=======
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
-                  >
                     {tiers.map(tier              => (
+=======
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    {tiers.map(tier               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
@@ -267,8 +267,8 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
                   {/* Competitors */}
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
-                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-3">
-                      {servicePricing.marketAnalysis.competitors.map((competitor, idx)              => (
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-3">
+                      {servicePricing.marketAnalysis.competitors.map((competitor, idx)               => (
                         <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
                           <span className="text-zinc-300">{competitor}</span>
                         </div>
@@ -278,8 +278,8 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {;
                 </div>
 
                 {/* Pricing Tiers */}
-                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-                  {servicePricing.pricingTiers.map((tier, tierIndex)              => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+                  {servicePricing.pricingTiers.map((tier, tierIndex)               => (
                     <motion.div
                       key={tier.name}
                       initial = {

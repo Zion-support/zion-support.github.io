@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Heart,
   Brain,
   TrendingUp,
@@ -9,7 +9,7 @@ import { Heart,
   BarChart3,
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { Heart, 
   Brain, 
   TrendingUp, 
@@ -53,14 +53,14 @@ import { Heart,
   Clipboard,
   TestTube
 <<<<<<< HEAD
-import { SEO             } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { SEO              } from '../../components/SEO';
+import { SEO               } from '../../components/SEO';
 =======
 } from 'lucide-react';
-import { SEO             } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -397,12 +397,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
 =======
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -487,12 +487,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {clinicalApplications.map((application, index)              => (
 =======
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {clinicalApplications.map((application, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -577,12 +577,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
 =======
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -664,12 +664,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFeatures.map((feature, index)              => (
 =======
           
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFeatures.map((feature, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -751,12 +751,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
 =======
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
@@ -841,12 +841,12 @@ export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
 =======
           
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}

@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 <<<<<<< HEAD
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText import { motion, AnimatePresence              } from 'framer-motion.ts';
 =======
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle             } from 'lucide-react.ts';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle              } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { ThemeToggle             } from '../components/ThemeToggle';
-import { ZionLoadingSpinner             } from '../components/ui/EnhancedLoadingSpinner';
-import { Sidebar             } from '../components/Sidebar';
-import { EnhancedSearch             } from '../components/EnhancedSearch';
+import { ThemeToggle              } from '../components/ThemeToggle';
+import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
+import { Sidebar              } from '../components/Sidebar';
+import { EnhancedSearch              } from '../components/EnhancedSearch';
 
 export function AppHeader(...args: any[]): any {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +29,7 @@ export function AppHeader(...args: any[]): any {
   }, []);
 
 <<<<<<< HEAD
-  const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)             => {
+  const handleSearch = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -269,9 +269,9 @@ export function AppHeader(...args: any[]): any {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
+          <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
             {/* Main Navigation */}
-            {mainNavigation.map((item)             => (
+            {mainNavigation.map((item)              => (
               <Link
                 key={item.name}
                 to={item.href}
@@ -357,8 +357,8 @@ export function AppHeader(...args: any[]): any {
               </button>
 =======
             {/* Desktop Navigation */}
-            <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
-              {navigation.slice(0, 6).map((item)             => (
+            <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
+              {navigation.slice(0, 6).map((item)              => (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -393,8 +393,8 @@ export function AppHeader(...args: any[]): any {
                     transition={{ duration: 0.2 }}
                     className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-zion-slate-dark/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-500/20 p-6"
 
-                    <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-6">
-                      {servicesCategories.map((category)             => (
+                    <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-6">
+                      {servicesCategories.map((category)              => (
                         <div key={category.title} className="space-y-3">
                           <div className="flex items-center space-x-2">
                             <category.icon className={`w-5 h-5 text-cyan-400`} />
@@ -479,8 +479,8 @@ export function AppHeader(...args: any[]): any {
                     {/* Quick Links Section */}
                     <div className="mt-6 pt-6 border-t border-cyan-400/20">
                       <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
-                      <div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
-                        {quickLinks.map((link)             => (
+                      <div className="grid grid-cols-2 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-3">
+                        {quickLinks.map((link)              => (
                           <Link
                             key={link.name}
                             to={link.href}

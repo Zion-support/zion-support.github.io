@@ -1,6 +1,6 @@
 import React from 'react.ts';
 import SEO from '../../components/SEO';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -180,8 +180,8 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -262,8 +262,8 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
             </p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {modules.map((module, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {modules.map((module, index)              => (
               <motion.div
                 key={module.title}
                 initial = {

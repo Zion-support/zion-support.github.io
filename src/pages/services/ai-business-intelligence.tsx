@@ -1,10 +1,10 @@
 import React from 'react.ts';
 <<<<<<< HEAD
-import { Helmet             } from 'react-helmet-async.ts';
-import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart import { Link             } from 'react-router-dom.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart import { Link              } from 'react-router-dom.ts';
 =======
-import { motion             } from 'framer-motion.ts';
-import { Link             } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { Brain, 
   BarChart3, 
   TrendingUp, 
@@ -33,8 +33,8 @@ import { Brain,
   DollarSign,
   Heart,
   Factory
-            } from 'lucide-react.ts';
-import { SEO             } from '../../components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIBusinessIntelligence(...args: any[]): any {
@@ -191,7 +191,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -223,7 +223,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                   title: "Data Security",
                   description: "Enterprise-grade security with encryption, access controls, and compliance features."
 
-              ].map((feature, index)             => (
+              ].map((feature, index)              => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -312,8 +312,8 @@ export default function AIBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -395,7 +395,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Sales & Marketing",
@@ -433,7 +433,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                   icon: Target,
                   benefits: ["Usage analytics", "Feature adoption", "Product optimization"]
 
-              ].map((useCase, index)             => (
+              ].map((useCase, index)              => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
 =======
@@ -453,8 +453,8 @@ export default function AIBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}
@@ -499,8 +499,8 @@ export default function AIBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
-            {technologies.map((tech, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {technologies.map((tech, index)              => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, y: 20 }}
@@ -534,8 +534,8 @@ export default function AIBusinessIntelligence(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((step, index)              => (
               <motion.div
                 key={step.step}
                 initial={{ opacity: 0, y: 20 }}

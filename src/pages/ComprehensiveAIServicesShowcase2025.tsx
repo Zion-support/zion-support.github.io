@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
 import { Brain,
   Shield,
   Activity,
@@ -9,8 +9,8 @@ import { Brain,
   Zap,
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Brain, 
   Shield, 
   Activity, 
@@ -31,10 +31,10 @@ import { Brain,
   Truck,
   Target
 <<<<<<< HEAD
-import { Link             } from 'react-router-dom.ts';
+import { Link              } from 'react-router-dom.ts';
 =======
  } from 'lucide-react';
-import { Link              } from 'react-router-dom.ts';
+import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
@@ -266,8 +266,8 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index)              => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -378,8 +378,8 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index)              => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((solution, index)               => (
                 <motion.div
                   key={index}
                   initial = {
@@ -461,8 +461,8 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-              {advancedTechnologies.map((tech, index)              => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {advancedTechnologies.map((tech, index)               => (
                 <motion.div
                   key={index}
                   initial = {

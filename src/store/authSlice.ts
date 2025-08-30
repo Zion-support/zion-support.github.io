@@ -1,6 +1,7 @@
-import { createSlice, PayloadAction              } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction               } from '@reduxjs/toolkit';
 
 interface User {
+
 
 
 
@@ -29,9 +30,11 @@ interface User {
 
 
 
+
 }
 
 interface AuthState {
+
 
 
 
@@ -50,6 +53,7 @@ interface AuthState {
   token: string | null;
 <<<<<<< HEAD
 =======
+
 
 
 
@@ -87,40 +91,40 @@ const initialState: AuthState = {
 
 <<<<<<< HEAD
 const authSlice = createSlice({
-  name: anyanyanyanyanyanyanyanyanyanyanyany'auth',
+  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',
   initialState,
   reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)              => {;
+    setLoggedIn: (state, action: PayloadAction<boolean>)               => {;
       state.isLoggedIn = action.payload;
     },
-    setUser: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)              => {
+    setUser: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)               => {
 =======
 const authSlice = createSlice({;
-  name: anyanyanyanyanyanyanyanyanyanyanyany'auth',;
+  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',;
   initialState,;
   reducers: {;
-    setUser: (state, action: PayloadAction<User>)             => {;
+    setUser: (state, action: PayloadAction<User>)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)              => {
+    setToken: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)               => {
       state.token = action.payload;
     },
-    logout: anyanyanyanyanyanyanyanyanyanyanyany(state)              => {
+    logout: anyanyanyanyanyanyanyanyanyanyanyanyany(state)               => {
       state.isLoggedIn = false;
       state.user = null;
       state.isAuthenticated = false;
       state.error = null;
     },
-    setLoading: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)             => {
+    setLoading: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)              => {
       state.isLoading = action.payload;
     },
-    setError: anyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)             => {
+    setError: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)              => {
       state.error = action.payload;
     },
-    clearError: anyanyanyanyanyanyanyanyanyanyanyany(state)             => {
+    clearError: anyanyanyanyanyanyanyanyanyanyanyanyany(state)              => {
       state.error = null;
     },
   },

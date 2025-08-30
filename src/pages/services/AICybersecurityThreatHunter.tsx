@@ -1,4 +1,4 @@
-import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3             } from 'lucide-react.ts';
+import { Shield, Eye, AlertTriangle, Check, ExternalLink, Phone, Mail, Lock, Zap, Brain, Target, BarChart3              } from 'lucide-react.ts';
 
 export default function AICybersecurityThreatHunter(...args: any[]): any {
   const features = [
@@ -89,8 +89,8 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Security Plans</h3>
-            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
-              {tiers.map((t)             => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-red-600 mb-2">{t.price}</div>
@@ -138,8 +138,8 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI Security Technology Stack</h3>
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {securityFeatures.map((f)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {securityFeatures.map((f)              => (
               <div key={f} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-red-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{f}</div>

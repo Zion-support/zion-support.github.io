@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { Search,
   Filter,
   Grid3X3,
@@ -55,13 +55,13 @@ import { Search,
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-import { SEO             } from '@/components/SEO';
+import { SEO              } from '@/components/SEO';
 import { ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-            } from '@/data/expandedInnovativeServices2027';
+             } from '@/data/expandedInnovativeServices2027';
 
 <<<<<<< HEAD
 const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
@@ -86,7 +86,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -111,7 +111,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanystring)             => {;
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'Cybersecurity':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -136,21 +136,21 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])              => {
+  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])               => {
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees'};
     return `$${pricing.basePrice.toLocaleString()}/month`};
 
-  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
+  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)               => {;
 =======;
-  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])             => {;
+  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])              => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
 
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
 
-  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)             => {;
+  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
@@ -375,7 +375,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
       </motion.div>;
     )};
 
-  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
+  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)               => {;
 =======;
               </a>;
             </div>;
@@ -385,7 +385,7 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
     );
   };
 
-  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)             => {;
+  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
@@ -670,13 +670,13 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
 
-                {EXPANDED_SERVICE_CATEGORIES.map((category)             => (
-=======
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
                 {EXPANDED_SERVICE_CATEGORIES.map((category)              => (
+=======
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+              >
+                {EXPANDED_SERVICE_CATEGORIES.map((category)               => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category}
@@ -720,8 +720,8 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service)             =>
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service)              =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>

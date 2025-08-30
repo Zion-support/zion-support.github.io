@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Plus,
   MessageCircle,
   Phone,
@@ -9,7 +9,7 @@ import { Plus,
   Settings,
   HelpCircle,
 =======
-import React, { useState, useCallback, useEffect              } from 'react.ts';
+import React, { useState, useCallback, useEffect               } from 'react.ts';
 import { Plus, 
   MessageCircle, 
   Phone, 
@@ -48,8 +48,10 @@ interface FloatingAction {
 
 
 
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
+
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   icon: React.ComponentType<{ size?: number; className?: string 
+
 
 
 
@@ -64,7 +66,7 @@ interface FloatingAction {
 
 }>;
   label: string;
-  action: ()              => void;
+  action: ()               => void;
   color: string;
   priority: 'high' | 'medium' | 'low';
 }
@@ -113,7 +115,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)              => {
+      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)               => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -139,21 +141,21 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Quick actions
   const quickActions = [
     {
-      icon: anyanyanyanyanyanyanyanyanyanyanyanyanyMessageCircle,
+      icon: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMessageCircle,
       label: 'Chat Support',
-      action: ()              => {
+      action: ()               => {
         // Trigger chat support
         const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
         if (chatButton) chatButton.click();
       },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyany'from-blue-500 to-blue-600',
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-blue-500 to-blue-600',
       delay: 0.1
     },
     {
       icon: Phone,
       label: 'Call Us',
-      action: ()              => {
-        window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyany+1-555-0123';
+      action: ()               => {
+        window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1-555-0123';
       },
       color: 'from-green-500 to-green-600',
       delay: 0.2
@@ -161,8 +163,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     {
       icon: Mail,
       label: 'Email',
-      action: ()              => {
-        window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanycontact@ziontechgroup.com';
+      action: ()               => {
+        window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanycontact@ziontechgroup.com';
       },
       color: 'from-purple-500 to-purple-600',
       delay: 0.3
@@ -170,20 +172,20 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     {
       icon: Search,
       label: 'Search',
-      action: ()              => {
+      action: ()               => {
         const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
         if (searchInput) {
           searchInput.focus();
           searchInput.click();
 
       },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyany'from-orange-500 to-orange-600',
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-orange-500 to-orange-600',
       delay: 0.4
     },
     {
       icon: Bookmark,
       label: 'Bookmark',
-      action: ()              => {
+      action: ()               => {
         if (navigator.share) {
           navigator.share({
             title: 'Zion Tech Group',
@@ -197,13 +199,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           window.open(bookmarkUrl, '_blank');
 
       },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyany'from-red-500 to-red-600',
+      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-red-500 to-red-600',
       delay: 0.5
     },
     {
       icon: Download,
       label: 'Download App',
-      action: ()              => {
+      action: ()               => {
         // Trigger app download or PWA install
         const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
         if (installButton) {
@@ -235,13 +237,13 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     // Contact actions
     ...(showContactActions ? [
       {
-        id: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'contact',
         icon: MessageCircle,
         label: 'Contact Us',
-        action: ()              => {
+        action: ()               => {
           const contactSection = document.getElementById('contact');
           if (contactSection) {
-            contactSection.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyanyany'smooth' });
+            contactSection.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyanyanyany'smooth' });
           }
         },
         color: 'bg-blue-500 hover:bg-blue-600',
@@ -251,8 +253,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'phone',
         icon: Phone,
         label: 'Call Now',
-        action: ()              => {
-          window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyany+1234567890';
+        action: ()               => {
+          window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1234567890';
         },
         color: 'bg-green-500 hover:bg-green-600',
         priority: 'high' as const
@@ -261,8 +263,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'email',
         icon: Mail,
         label: 'Send Email',
-        action: ()              => {
-          window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyinfo@ziontechgroup.com';
+        action: ()               => {
+          window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanyinfo@ziontechgroup.com';
         },
         color: 'bg-purple-500 hover:bg-purple-600',
         priority: 'medium' as const
@@ -271,10 +273,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'location',
         icon: MapPin,
         label: 'Get Directions',
-        action: ()              => {
+        action: ()               => {
           window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
         },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyany'bg-red-500 hover:bg-red-600',
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-red-500 hover:bg-red-600',
         priority: 'medium' as const
       }
     ] : []),
@@ -285,7 +287,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         id: 'bookmark',
         icon: Bookmark,
         label: 'Bookmark Page',
-        action: ()              => {
+        action: ()               => {
           if (navigator.share) {
             navigator.share({
               title: document.title,
@@ -300,14 +302,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyany'bg-yellow-500 hover:bg-yellow-600',
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-yellow-500 hover:bg-yellow-600',
         priority: 'low' as const
       },
       {
         id: 'share',
         icon: Share2,
         label: 'Share Page',
-        action: ()              => {
+        action: ()               => {
           if (navigator.share) {
             navigator.share({
               title: document.title,
@@ -321,14 +323,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           }
         },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyany'bg-indigo-500 hover:bg-indigo-600',
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-indigo-500 hover:bg-indigo-600',
         priority: 'low' as const
       },
       {
         id: 'download',
         icon: Download,
         label: 'Download Brochure',
-        action: ()              => {
+        action: ()               => {
           // Create a temporary link to trigger download
           const link = document.createElement('a');
           link.href = '/brochure.pdf'; // Adjust path as needed
@@ -337,14 +339,14 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           link.click();
           document.body.removeChild(link);
         },
-        color: anyanyanyanyanyanyanyanyanyanyanyanyany'bg-teal-500 hover:bg-teal-600',
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-teal-500 hover:bg-teal-600',
         priority: 'low' as const
       },
       {
         id: 'print',
         icon: Printer,
         label: 'Print Page',
-        action: ()              => {
+        action: ()               => {
           window.print();
         },
         color: 'bg-gray-500 hover:bg-gray-600',
@@ -374,7 +376,7 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   }, []);
 
   // Show notification
-  const showNotification = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const showNotification = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `

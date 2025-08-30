@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cpu,
@@ -35,7 +35,7 @@ import { Brain,
   Search,
   Menu,
   X
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 // Lazy load components for better performance
 const LazyTestimonials = lazy(() => import('../components/Testimonials'));

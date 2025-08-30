@@ -14,6 +14,7 @@ import { X, Send export interface Message {
 
 
 
+
 =======
 import React, { useState, useRef  
  
@@ -28,9 +29,11 @@ import React, { useState, useRef
  
  
  
+ 
 } from 'react.ts';
-import { X, Send               } from 'lucide-react.ts';
+import { X, Send                } from 'lucide-react.ts';
 export interface Message {
+
 
 
 
@@ -54,6 +57,7 @@ export interface Message {
   read?: boolean;
 
 export interface ChatAssistantProps extends React.PropsWithChildren<{
+
 
 
 
@@ -91,11 +95,11 @@ export function ChatAssistant(...args: any[]): any {;
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 <<<<<<< HEAD
-  const handleSendMessage = async (message: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const handleSendMessage = async (message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!message.trim()) return;
     const userMessage: Message = {
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
       role: 'user',
       message: message.trim(),
 <<<<<<< HEAD
@@ -103,9 +107,9 @@ export function ChatAssistant(...args: any[]): any {;
   ;
 
 };
-    setMessages(prev               => [...prev, userMessage]);
+    setMessages(prev                => [...prev, userMessage]);
 =======
-      timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
+      timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
   ;
   ;
   ;
@@ -115,13 +119,13 @@ export function ChatAssistant(...args: any[]): any {;
 
 
 };
-    setMessages(prev              => [...prev, userMessage]);
+    setMessages(prev               => [...prev, userMessage]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setInputMessage('');
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-  id: anyanyanyanyanyanyanyanyanyanyanyanyany(Date.now() + 1).toString(),
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyany(Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
 <<<<<<< HEAD
@@ -129,15 +133,15 @@ export function ChatAssistant(...args: any[]): any {;
   ;
 
 };
-      setMessages(prev               => [...prev, aiMessage])}, 1000)};
-  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
+      setMessages(prev                => [...prev, aiMessage])}, 1000)};
+  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)                => {;
     e.preventDefault();
     handleSendMessage(inputMessage)};
   const toggleChat = () => {;
     setIsChatOpen(!isChatOpen)};
   const closeChat = () => {;
 =======;
-        timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
+        timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
   ;
   ;
   ;
@@ -147,10 +151,10 @@ export function ChatAssistant(...args: any[]): any {;
 
 
 };
-      setMessages(prev              => [...prev, aiMessage]);
+      setMessages(prev               => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     handleSendMessage(inputMessage);
   };

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO              } from '../components/SEO';
-import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award              } from 'lucide-react.ts';
+import { SEO               } from '../components/SEO';
+import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award               } from 'lucide-react.ts';
 =======
 import React from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import { Users,
   MessageCircle,
   Star,
@@ -27,10 +27,10 @@ import { Users,
   CheckCircle,
   ArrowRight
 <<<<<<< HEAD
-import { SEO             } from '../components/SEO';
+import { SEO              } from '../components/SEO';
 =======
 } from 'lucide-react';
-import { SEO             } from '../components/SEO';
+import { SEO              } from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function Community(...args: any[]): any {
@@ -320,8 +320,8 @@ export default function Community(...args[]: any):  {
 
       {/* Community Stats */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {communityStats.map((stat, index)             => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {communityStats.map((stat, index)              => (
             <motion.div
               key={stat.label}
               initial = {
@@ -405,8 +405,8 @@ export default function Community(...args[]: any):  {
             Community Forums
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {communityForums.map((forum, index)             => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {communityForums.map((forum, index)              => (
               <motion.div
                 key={forum.title}
                 initial = {
@@ -595,8 +595,8 @@ export default function Community(...args[]: any):  {
           Upcoming Events
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-16">
-          {upcomingEvents.map((event, index)             => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-16">
+          {upcomingEvents.map((event, index)              => (
             <motion.div
               key={event.title}
               initial = {
@@ -718,8 +718,8 @@ export default function Community(...args[]: any):  {
             Featured Discussions
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {featuredDiscussions.map((discussion, index)             => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {featuredDiscussions.map((discussion, index)              => (
               <motion.div
                 key={discussion.title}
                 initial = {
@@ -843,8 +843,8 @@ export default function Community(...args[]: any):  {
           Community Resources
         </motion.h2>
 
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {communityResources.map((resource, index)             => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {communityResources.map((resource, index)              => (
             <motion.div
               key={resource.title}
               initial = {

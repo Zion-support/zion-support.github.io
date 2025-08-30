@@ -11,6 +11,7 @@ export interface EnhancedService {
 
 
 
+
   id: string;
   name: string;
   tagline: string;
@@ -32,6 +33,7 @@ contactInfo: {;
     email: string;
     address: string;
   
+
 
 
 

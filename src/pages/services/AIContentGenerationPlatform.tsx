@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
 import { PenTool, 
 =======
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { SEO             } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 import { PenTool,
   FileText,
   Brain,
@@ -15,7 +15,7 @@ import { PenTool,
   Shield,
   Users,
 =======
-import { SEO             } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 import { PenTool, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   FileText, 
@@ -41,7 +41,7 @@ import { PenTool,
 <<<<<<< HEAD
 export default function AIContentGenerationPlatform(...args: any[]): any {
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 export default function AIContentGenerationPlatform(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -419,8 +419,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -512,8 +512,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -556,8 +556,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
-                  {useCase.metrics.map((metric, idx)              => (
+                  <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {useCase.metrics.map((metric, idx)               => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                       <span className="text-slate-300">{metric}</span>
@@ -608,8 +608,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -694,8 +694,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -775,8 +775,8 @@ export default function AIContentGenerationPlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)               => (
               <motion.div
                 key={index}
                 initial = {

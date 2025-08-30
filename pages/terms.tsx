@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts'
-import { Link             } from 'react-router-dom.ts'
+import { Link              } from 'react-router-dom.ts'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle export default function Terms(...args: any[]): any {
 =======
 import React from 'react.ts'
-import { Link              } from 'react-router-dom.ts'
-import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle              } from 'lucide-react.ts'
+import { Link               } from 'react-router-dom.ts'
+import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle               } from 'lucide-react.ts'
 
 
 export default function Terms(...args[]: any):  {

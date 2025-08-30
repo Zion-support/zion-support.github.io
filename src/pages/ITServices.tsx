@@ -1,10 +1,10 @@
 import React from 'react.ts';
-import { SEO             } from '@/components/SEO';
-import { Link             } from 'react-router-dom.ts';
+import { SEO              } from '@/components/SEO';
+import { Link              } from 'react-router-dom.ts';
 <<<<<<< HEAD
 import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building const ITServices: React.FC = (): JSX.Element => {
 =======
-import { Server, Shield, Cloud, Network, Wrench, Headphones             } from 'lucide-react.ts';
+import { Server, Shield, Cloud, Network, Wrench, Headphones              } from 'lucide-react.ts';
 
 export default function ITServices(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -42,8 +42,8 @@ export default function ITServices(...args: any[]): any {
             </div>
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {offerings.map((o)             => (
+          <div className="mt-16 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {offerings.map((o)              => (
               <div key={o.title} className="card-futuristic">
                 <div className="flex items-center gap-3">
                   <o.icon className="w-6 h-6 text-cyan-400" />
@@ -54,8 +54,8 @@ export default function ITServices(...args: any[]): any {
             ))}
           </div>
 
-          <div className="mt-20 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
-            {prices.map((p)             => (
+          <div className="mt-20 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {prices.map((p)              => (
               <div key={p.name} className="card-futuristic">
                 <h3 className="text-white font-semibold">{p.name}</h3>
                 <div className="mt-2 text-3xl font-extrabold text-white">{p.price}</div>

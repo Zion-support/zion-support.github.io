@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones             } from 'lucide-react.ts';
-import { SEO             } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
 export default function AICustomerSupportAutomation(...args: any[]): any {
   const features = [
@@ -158,8 +158,8 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -196,8 +196,8 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -231,8 +231,8 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {solutions.map((solution, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -280,8 +280,8 @@ export default function AICustomerSupportAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
-            {useCases.map((useCase, index)             => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
 import { Brain,
   Users,
   Calendar,
@@ -11,8 +11,8 @@ import { Brain,
   CheckCircle,
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Brain, 
   Users, 
   Calendar, 
@@ -37,7 +37,7 @@ import { Brain,
 <<<<<<< HEAD
 export default function AIProjectManagementPlatform(...args: any[]): any {
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 export default function AIProjectManagementPlatform(...args: []):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -313,8 +313,8 @@ export default function AIProjectManagementPlatform(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -397,8 +397,8 @@ export default function AIProjectManagementPlatform(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -481,8 +481,8 @@ export default function AIProjectManagementPlatform(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -565,8 +565,8 @@ export default function AIProjectManagementPlatform(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
               <motion.div
                 key={index}
                 initial = {

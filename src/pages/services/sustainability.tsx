@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { SEO              } from '../../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle              } from 'lucide-react.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Globe, Leaf, Zap, Shield, Database, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Sun, Wind, Battery, Recycle               } from 'lucide-react.ts';
 
 export default function Sustainability(...args: []):  {
   const features = [
@@ -224,8 +224,8 @@ export default function Sustainability(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
 <<<<<<< HEAD
@@ -327,8 +327,8 @@ export default function Sustainability(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index)               => (
               <motion.div
                 key={service.title}
 <<<<<<< HEAD
@@ -433,8 +433,8 @@ export default function Sustainability(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
-            {solutions.map((solution, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
+            {solutions.map((solution, index)               => (
               <motion.div
                 key={solution.name}
                 initial = {

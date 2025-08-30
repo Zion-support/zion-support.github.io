@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { FileText, 
   Shield, 
   CheckCircle, 
@@ -18,7 +18,7 @@ import { FileText,
   Mail,
   MapPin,
   ExternalLink
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -265,8 +265,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Powerful Features for Legal Professionals
               </h2>
               
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index)             => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index)              => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -329,8 +329,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Transparent Pricing Plans
               </h2>
               
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-                {pricingPlans.map((plan, index)             => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+                {pricingPlans.map((plan, index)              => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -395,8 +395,8 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {
                 Competitive Analysis
               </h2>
               
-              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
-                {competitors.map((competitor, index)             => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
+                {competitors.map((competitor, index)              => (
                   <div key={index} className="bg-gray-800/50 p-6 rounded-xl border border-gray-600">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-semibold">{competitor.name}</h3>

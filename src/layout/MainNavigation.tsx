@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react.ts';
-import { Link, useLocation             } from 'react-router-dom.ts';
-import { motion, AnimatePresence             } from 'framer-motion.ts';
+import { Link, useLocation              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
 import { ChevronDown,
   Menu,
   X,
@@ -18,7 +18,7 @@ import { ChevronDown,
   BarChart3
 <<<<<<< HEAD
 =======
-             } from 'lucide-react.ts';
+              } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationLink {
@@ -35,15 +35,17 @@ interface NavigationLink {
 
 
 
-  key: anyanyanyanyanyanyanyanyanyanyanyanystring;
+
+  key: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
   href: string;
   name: string;
 <<<<<<< HEAD
-  matches: (path: string)             => boolean;
+  matches: (path: string)              => boolean;
   children?: NavigationLink[];
 =======
-  matches: anyanyanyanyanyanyanyanyanyanyanyany(path: string)              => boolean;
+  matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => boolean;
 children?: NavigationLink[];
+
 
 
 
@@ -71,7 +73,7 @@ export function MainNavigation(...args: any[]): any {
   // Close dropdowns when clicking outside
   useEffect(() => {
 <<<<<<< HEAD
-    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)             => {;
+    const handleClickOutside = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)              => {;
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         setIsServicesOpen(false);
@@ -90,132 +92,132 @@ export function MainNavigation(...args: any[]): any {
 
   const baseLinks: NavigationLink[] = [
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'home',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'home',
       href: '/',
       name: 'Home',
 <<<<<<< HEAD
-      matches: (path: string)              => path = == '/'
+      matches: (path: string)               => path = == '/'
 =======
-      matches: anyanyanyanyanyanyanyanyanyanyanyany(path: string)             => path = == '/'
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)              => path = == '/'
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'services',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
       href: '/services',
       name: 'Services',
-      matches: (path: string)              => path.startsWith('/services'),
+      matches: (path: string)               => path.startsWith('/services'),
       children[
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'ai-services',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services',
           href: '/services/ai',
           name: 'AI & Analytics',
-          matches: (path: string)              => path.startsWith('/services/ai')
+          matches: (path: string)               => path.startsWith('/services/ai')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'quantum',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
-          matches: (path: string)              => path.startsWith('/services/quantum')
+          matches: (path: string)               => path.startsWith('/services/quantum')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'blockchain',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
-          matches: (path: string)              => path.startsWith('/services/blockchain')
+          matches: (path: string)               => path.startsWith('/services/blockchain')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'iot',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
-          matches: (path: string)              => path.startsWith('/services/iot')
+          matches: (path: string)               => path.startsWith('/services/iot')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'cybersecurity',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
-          matches: (path: string)              => path.startsWith('/services/cybersecurity')
+          matches: (path: string)               => path.startsWith('/services/cybersecurity')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'healthcare',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'healthcare',
           href: '/services/healthcare',
           name: 'Healthcare',
-          matches: (path: string)              => path.startsWith('/services/healthcare')
+          matches: (path: string)               => path.startsWith('/services/healthcare')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'finance',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'finance',
           href: '/services/finance',
           name: 'Finance',
-          matches: (path: string)              => path.startsWith('/services/finance')
+          matches: (path: string)               => path.startsWith('/services/finance')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'manufacturing',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'manufacturing',
           href: '/services/manufacturing',
           name: 'Manufacturing',
-          matches: (path: string)              => path.startsWith('/services/manufacturing')
+          matches: (path: string)               => path.startsWith('/services/manufacturing')
         },
         {
-          key: anyanyanyanyanyanyanyanyanyanyanyany'sustainability',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'sustainability',
           href: '/services/sustainability',
           name: 'Sustainability',
-          matches: (path: string)              => path.startsWith('/services/sustainability')
+          matches: (path: string)               => path.startsWith('/services/sustainability')
         }
       ]
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'ai-services',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services',
       href: '/ai-services',
       name: 'AI Services',
-      matches: (path: string)              => path.startsWith('/ai-services')
+      matches: (path: string)               => path.startsWith('/ai-services')
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'it-services',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'it-services',
       href: '/it-services',
       name: 'IT Services',
-      matches: (path: string)              => path.startsWith('/it-services')
+      matches: (path: string)               => path.startsWith('/it-services')
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'micro-saas',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'micro-saas',
       href: '/micro-saas',
       name: 'Micro SAAS',
-      matches: (path: string)              => path.startsWith('/micro-saas')
+      matches: (path: string)               => path.startsWith('/micro-saas')
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'marketplace',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
-      matches: (path: string)              => path.startsWith('/marketplace')
+      matches: (path: string)               => path.startsWith('/marketplace')
     },
     {
-      key: anyanyanyanyanyanyanyanyanyanyanyany'about',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'about',
       href: '/about',
       name: 'About',
-      matches: (path: string)              => path.startsWith('/about')
+      matches: (path: string)               => path.startsWith('/about')
     },
     {
 <<<<<<< HEAD
-      key: anyanyanyanyanyanyanyanyanyanyanyany'contact',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',
       href: '/contact',
       name: 'Contact',
 <<<<<<< HEAD
-      matches: (path: string)             => path.startsWith('/contact')
+      matches: (path: string)              => path.startsWith('/contact')
 
 =======
-      matches: anyanyanyanyanyanyanyanyanyanyanyany(path: string)              => path.startsWith('/contact')
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => path.startsWith('/contact')
     };
 =======;
-      key: anyanyanyanyanyanyanyanyanyanyanyany'contact',;
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',;
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string)             => path.startsWith('/contact');
+      matches: (path: string)              => path.startsWith('/contact');
     };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-  const isActive = (link: anyanyanyanyanyanyanyanyanyanyanyanyNavigationLink)              => link.matches(location.pathname);
+  const isActive = (link: anyanyanyanyanyanyanyanyanyanyanyanyanyNavigationLink)               => link.matches(location.pathname);
 
 <<<<<<< HEAD
-  const renderDropdown = (link: anyanyanyanyanyanyanyanyanyanyanyanyNavigationLink, isOpen: boolean, setIsOpen: (open: boolean)             => void) => {;
+  const renderDropdown = (link: anyanyanyanyanyanyanyanyanyanyanyanyanyNavigationLink, isOpen: boolean, setIsOpen: (open: boolean)              => void) => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!link.children) return null;
 
@@ -302,8 +304,8 @@ export function MainNavigation(...args: any[]): any {
   return (
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
-      <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
-        {baseLinks.map((link)              => (
+      <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
+        {baseLinks.map((link)               => (
           <div key={link.key}>
             {link.children ? (
               renderDropdown(

@@ -1,21 +1,21 @@
-// import { NextPage              } from 'next.ts'; // Removed
+// import { NextPage               } from 'next.ts'; // Removed
 import React from 'react.ts'; // Ensure React is imported if not already for FC type
-import { AppLayout              } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
-import { Button              } from '@/components/ui/button';
-import { Input              } from '@/components/ui/input';
-import { Textarea              } from '@/components/ui/textarea';
-import { Label              } from '@/components/ui/label';
-import { Switch              } from '@/components/ui/switch'; // Added for new fields
-import { useForm, Controller, type SubmitHandler              } from 'react-hook-form.ts';
-import { zodResolver              } from '@hookform/resolvers/zod';
+import { AppLayout               } from '@/layout/AppLayout'; // Assuming a general AppLayout exists
+import { Button               } from '@/components/ui/button';
+import { Input               } from '@/components/ui/input';
+import { Textarea               } from '@/components/ui/textarea';
+import { Label               } from '@/components/ui/label';
+import { Switch               } from '@/components/ui/switch'; // Added for new fields
+import { useForm, Controller, type SubmitHandler               } from 'react-hook-form.ts';
+import { zodResolver               } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
-import { Steps, Step              } from '@/components/ui/steps'; // Assuming this is how steps are imported
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter              } from '@/components/ui/card';
-import { useState              } from 'react.ts';
-import { ProjectBrief, TeamRecommendation              } from '@/types'; // Import from barrel file
-import { toast              } from 'sonner.ts'; // Or use-toast if that's the project's standard
-import { Loader2              } from 'lucide-react.ts';
-import { TeamRecommendationDisplay              } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
+import { Steps, Step               } from '@/components/ui/steps'; // Assuming this is how steps are imported
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter               } from '@/components/ui/card';
+import { useState               } from 'react.ts';
+import { ProjectBrief, TeamRecommendation               } from '@/types'; // Import from barrel file
+import { toast               } from 'sonner.ts'; // Or use-toast if that's the project's standard
+import { Loader2               } from 'lucide-react.ts';
+import { TeamRecommendationDisplay               } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
 const projectBriefSchema = z.object({
@@ -81,13 +81,13 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-  userId: anyanyanyanyanyanyanyanyanyanyanyany'current-user-id',
+  userId: anyanyanyanyanyanyanyanyanyanyanyanyany'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
-      techStack: data.techStack?.split(',').map(s              => s.trim()).filter(s => s) || [],
-      talentFilters: anyanyanyanyanyanyanyanyanyanyanyany{ // Ensure talentFilters is structured correctly
+      techStack: data.techStack?.split(',').map(s               => s.trim()).filter(s => s) || [],
+      talentFilters: anyanyanyanyanyanyanyanyanyanyanyanyany{ // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
-        regions: data.talentFilters?.regions?.split(',').map(r              => r.trim()).filter(r => r) || [],
+        regions: data.talentFilters?.regions?.split(',').map(r               => r.trim()).filter(r => r) || [],
   
 ;
 };
@@ -118,7 +118,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     }
   };
 
-  const handleInviteTalent = async (talentId: anyanyanyanyanyanyanyanyanyanyanyanystring, roleTitle: string)              => {;
+  const handleInviteTalent = async (talentId: anyanyanyanyanyanyanyanyanyanyanyanyanystring, roleTitle: string)               => {;
     if (!projectBriefSubmitted) {;
       toast.error("Cannot send invite without a project context.");
       return;

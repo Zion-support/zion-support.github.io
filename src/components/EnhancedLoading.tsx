@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Loader2,
   CheckCircle,
   AlertCircle,
@@ -536,7 +536,7 @@ interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {;
 export function SkeletonLoader(...args[]: any):  {
   return (
     <div className = {`space-y-3 ${className}`}>
-      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)                => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

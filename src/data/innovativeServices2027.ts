@@ -12,6 +12,7 @@ export interface InnovativeService2027 {
 
 
 
+
   id: string;
   name: string;
   category: string;
@@ -32,6 +33,7 @@ export interface InnovativeService2027 {
 
 =======
 status: 'active' | 'beta' | 'coming-soon';
+
 
 
 
@@ -144,12 +146,12 @@ export const serviceCategories2027 = [
   'Neural Technology';
 ];
 <<<<<<< HEAD
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]              => {
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]               => {
   if (category === 'All') {;
     return innovativeServices2027};
   return innovativeServices2027.filter(service => service.category === category)};
 =======
-export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]             => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]              => {;
   if (category === 'All') {;
     return innovativeServices2027;
 

@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
-import { SEO             } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
 import { Cpu, 
   Zap, 
   Shield, 
@@ -28,7 +28,7 @@ import { Cpu,
   Play,
   Pause,
   RefreshCw
-            } from 'lucide-react.ts';
+             } from 'lucide-react.ts';
 
 export default function AIDevOpsAutomationPlatform(...args: any[]): any {
   const features = [
@@ -213,8 +213,8 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature}
                 initial={{ opacity: 0, y: 20 }}
@@ -251,8 +251,8 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -289,8 +289,8 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((category, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((category, index)              => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -340,8 +340,8 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)             => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

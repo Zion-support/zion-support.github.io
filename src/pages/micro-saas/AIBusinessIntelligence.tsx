@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion             } from 'framer-motion.ts';
+import { motion              } from 'framer-motion.ts';
 import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target export default function AIBusinessIntelligence(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target              } from 'lucide-react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users, TrendingUp, Target               } from 'lucide-react.ts';
 
 export default function AIBusinessIntelligence(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -169,8 +169,8 @@ export default function AIBusinessIntelligence(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
                 initial = {
@@ -253,8 +253,8 @@ export default function AIBusinessIntelligence(...args[]: any):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {capabilities.map((capability, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)               => (
               <motion.div
                 key={capability.title}
                 initial = {

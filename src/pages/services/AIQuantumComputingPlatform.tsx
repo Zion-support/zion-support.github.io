@@ -2,8 +2,8 @@
 import { Atom, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Globe, Database, Cpu, Network, Cloud, Zap as Lightning export default function AIQuantumComputingPlatform(...args: any[]): any {
 =======
 import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
 import { Brain, 
   Zap, 
   Atom, 
@@ -18,8 +18,8 @@ import { Brain,
   BarChart3,
   Network,
   Rocket
-             } from 'lucide-react.ts';
-import { SEO              } from '../../components/SEO';
+              } from 'lucide-react.ts';
+import { SEO               } from '../../components/SEO';
 
 const AIQuantumComputingPlatform = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -320,8 +320,8 @@ const AIQuantumComputingPlatform = () => {
             <p className="text-xl text-gray-600">Transform your computational capabilities with quantum intelligence</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <TrendingUp className="w-6 h-6 text-purple-600" />
@@ -351,8 +351,8 @@ const AIQuantumComputingPlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -393,8 +393,8 @@ const AIQuantumComputingPlatform = () => {
           <p className="text-xl text-gray-600">Revolutionary applications across cutting-edge industries</p>
         </div>
 
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((useCase, index)             => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+          {useCases.map((useCase, index)              => (
             <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
               <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <Cpu className="w-5 h-5 text-purple-600" />
@@ -413,8 +413,8 @@ const AIQuantumComputingPlatform = () => {
             <p className="text-xl text-gray-600">Choose the plan that fits your quantum computing needs</p>
           </div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)             => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <div key={index} className={`relative bg-white rounded-2xl shadow-lg border-2 ${
                 plan.popular ? 'border-purple-500' : 'border-gray-200'
               } p-8`}>
@@ -446,8 +446,8 @@ const AIQuantumComputingPlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)              => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -567,8 +567,8 @@ const AIQuantumComputingPlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -634,8 +634,8 @@ const AIQuantumComputingPlatform = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)              => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)               => (
               <motion.div
                 key={index}
                 initial = {

@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts'
-import { Link             } from 'react-router-dom.ts'
+import { Link              } from 'react-router-dom.ts'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award export default function Events(...args: any[]): any {
 =======
 import React from 'react.ts'
-import { Link              } from 'react-router-dom.ts'
-import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award              } from 'lucide-react.ts'
+import { Link               } from 'react-router-dom.ts'
+import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award               } from 'lucide-react.ts'
 
 
 export default function Events(...args[]: any):  {
@@ -205,8 +205,8 @@ export default function Events(...args[]: any):  {
 							Missed an event? Watch recordings and access materials
 						</p>
 					</div>
-					<div className="grid gap-6 lg: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
-						{pastEvents.map((event)              => (
+					<div className="grid gap-6 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2">
+						{pastEvents.map((event)               => (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-lg p-6">
 								<div className="flex items-start justify-between">
 									<div>

@@ -1,11 +1,11 @@
 import React from 'react.ts';
-import { Link             } from 'react-router-dom.ts';
-import { motion             } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import { Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
 <<<<<<< HEAD
-import { SEO             } from '@/components/SEO';
+import { SEO              } from '@/components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '@/components/SEO';
@@ -251,8 +251,8 @@ export default function InnovativeAIServicesShowcase(...args: any[]): any {
       {/* Services Grid */}
       <section className="pb-20">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
-            {services.map((service, index)             => (
+          <div className="grid gap-8 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {services.map((service, index)              => (
               <motion.div
                 key={service.id}
                 initial = {
