@@ -189,6 +189,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         { name: 'Partners', href: '/partners', icon: Building, description: 'Strategic partnerships' },
         { name: 'News & Press', href: '/news', icon: FileText, description: 'Latest news' },
         { name: 'Events', href: '/events', icon: Calendar, description: 'Upcoming events' },
+        { name: 'Blog', href: '/blog', icon: BookOpen, description: 'Latest insights' },
         { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart, description: 'Service marketplace' }
       ]
     },

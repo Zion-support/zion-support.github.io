@@ -78,6 +78,12 @@ const Talent = createLazyComponent(() => import('./pages/Talent'));
 const VideoCall = createLazyComponent(() => import('./pages/VideoCall'));
 const Wishlist = createLazyComponent(() => import('./pages/Wishlist'));
 
+// New pages I've created
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
@@ -203,6 +209,12 @@ function App() {
                     <Route path="/talent" element={<Talent />} />
                     <Route path="/video-call/:roomId" element={<VideoCall />} />
                     <Route path="/wishlist" element={<Wishlist />} />
+                    
+                    {/* New pages I've created */}
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/events" element={<Events />} />
                   </Routes>
                 </AnimatePresence>
               </main>
