@@ -32,7 +32,10 @@ export const PerformanceOptimizer = ({ children }) => {
                 img.decoding = 'async';
                 // Add error handling
                 img.onerror = () => {
-                    img.style.display = 'none'}})};
+                    img.style.display = 'none';
+                };
+            });
+        }
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages);
@@ -110,19 +113,20 @@ export const PerformanceOptimizer = ({ children }) => {
 // Add global performance optimizations
 if (typeof window !== 'undefined') {
     // Optimize long tasks
-    if ('scheduler' in window && 'postTask' in window.scheduler) {
-        window.scheduler.postTask(() => {
-            // Run non-critical tasks during idle time
-        }, { priority: 'background' });
-    // Optimize memory usage
-    if ('memory' in performance) {
-        const memoryThreshold = 50 * 1024 * 1024; // 50MB
-        if (performance.memory.usedJSHeapSize > memoryThreshold) {
-            // Trigger garbage collection if available
-            if ('gc' in window) {
-                window.gc();
+            if ('scheduler' in window && 'postTask' in window.scheduler) {
+            window.scheduler.postTask(() => {
+                // Run non-critical tasks during idle time
+            }, { priority: 'background' });
+        }
+        // Optimize memory usage
+        if ('memory' in performance) {
+            const memoryThreshold = 50 * 1024 * 1024; // 50MB
+            if (performance.memory.usedJSHeapSize > memoryThreshold) {
+                // Trigger garbage collection if available
+                if ('gc' in window) {
+                    window.gc();
+                }
             }
         }
     }
-}
 export default PerformanceOptimizer;
