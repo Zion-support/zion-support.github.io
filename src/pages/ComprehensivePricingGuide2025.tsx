@@ -324,9 +324,9 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                       }, 0) / MICRO_SAAS_SERVICES.length)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Savings:</span>
-                    <span className="text-green-400 font-semibold">
+                                      <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Savings:</span>
+                      <span className="text-green-400 font-semibold">
                       {(() => {
                         const avgMarketPrice = MICRO_SAAS_SERVICES.reduce((sum, s) => {
                           const priceRange = s.marketPrice.match(/\$(\d+)/);
@@ -338,8 +338,8 @@ const ComprehensivePricingGuide2025: React.FC = () => {
                         const savingsPercentage = ((avgMarketPrice - avgOurPrice) / avgMarketPrice) * 100;
                         return Math.round(savingsPercentage);
                       })()}%
-                    </span>
-                  </div>
+                      </span>
+                    </div>
                 </div>
               </div>
             </div>

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Mail, Send, CheckCircle } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { Mail, Send, CheckCircle  } from 'lucide-react.ts';
 
-export const FooterNewsletter: React.FC = () => {
+export const FooterNewsletter: React.FC = (): JSX.Element => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: anyReact.FormEvent)  => {
     e.preventDefault();
     if (!email.trim()) return;
 

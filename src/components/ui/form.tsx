@@ -1,55 +1,67 @@
-import React from 'react';
+import React from 'react.ts';
 
-interface FormProps {
-  children: React.ReactNode;
-  onSubmit?: (e: React.FormEvent) => void;
+interface FormProps extends React.PropsWithChildren<{}> {
+
+  children: anyReact.ReactNode;
+  onSubmit?: (e: React.FormEvent)  => void;
+
 }
 
-export function Form({ children, onSubmit }: FormProps) {
+export function Form(...args: any[]): any {
   return <form onSubmit={onSubmit}>{children}</form>;
 }
 
-interface FormControlProps {
+interface FormControlProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
+
 }
 
-export function FormControl({ children }: FormControlProps) {
+export function FormControl(...args: any[]): any {
   return <div>{children}</div>;
 }
 
-interface FormItemProps {
+interface FormItemProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
+
 }
 
-export function FormItem({ children }: FormItemProps) {
+export function FormItem(...args: any[]): any {
   return <div className="space-y-2">{children}</div>;
 }
 
-interface FormLabelProps {
+interface FormLabelProps extends React.PropsWithChildren<{}> {
+
   children: React.ReactNode;
   className?: string;
+
 }
 
-export function FormLabel({ children, className = '' }: FormLabelProps) {
+export function FormLabel(...args: any[]): any {
   return <label className={`block text-sm font-medium ${className}`}>{children}</label>;
 }
 
-interface FormFieldProps {
-  control: any;
+interface FormFieldProps extends React.PropsWithChildren<{}> {
+
+  control: anyany;
   name: string;
-  render: (props: any) => React.ReactNode;
+  render: (props: any)  => React.ReactNode;
+
 }
 
-export function FormField({ control, name, render }: FormFieldProps) {
-  return render({ field: { name, value: '', onChange: () => {} } });
+export function FormField(...args: any[]): any {
+  return render({ field: any{ name, value: '', onChange: ()  => {} } });
 }
 
-interface FormMessageProps {
+interface FormMessageProps extends React.PropsWithChildren<{}> {
+
   children?: React.ReactNode;
   className?: string;
+
 }
 
-export function FormMessage({ children, className = '' }: FormMessageProps) {
+export function FormMessage(...args: any[]): any {
   if (!children) return null;
   return <p className={`text-sm ${className}`}>{children}</p>;
 }

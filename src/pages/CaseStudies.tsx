@@ -11,7 +11,7 @@ import {
   ArrowRight,
   Filter,
   Search,
-  Industry,
+  Building,
   Brain,
   Shield,
   Cloud,
@@ -31,10 +31,10 @@ export default function CaseStudies() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const industries = [
-    { id: 'all', name: 'All Industries', icon: Industry },
+    { id: 'all', name: 'All Industries', icon: Building },
     { id: 'healthcare', name: 'Healthcare', icon: Heart },
     { id: 'finance', name: 'Financial Services', icon: DollarSign },
-    { id: 'manufacturing', name: 'Manufacturing', icon: Industry },
+    { id: 'manufacturing', name: 'Manufacturing', icon: Building },
     { id: 'retail', name: 'Retail & E-commerce', icon: ShoppingCart },
     { id: 'technology', name: 'Technology', icon: Brain },
     { id: 'energy', name: 'Energy & Utilities', icon: Zap },

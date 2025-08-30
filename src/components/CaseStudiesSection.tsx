@@ -1,17 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { TrendingUp, 
   Users, 
   DollarSign, 
   Clock, 
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const CaseStudiesSection: React.FC = () => {
+export const CaseStudiesSection: React.FC = (): JSX.Element => {
   const caseStudies = [
     {
       company: 'TechCorp Solutions',
@@ -72,8 +71,8 @@ export const CaseStudiesSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index) => (
+        <div className="grid lg: anygrid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)  => (
             <motion.div
               key={study.company}
               initial={{ opacity: 0, y: 20 }}

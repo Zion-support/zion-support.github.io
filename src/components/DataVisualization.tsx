@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { BarChart3, 
   PieChart, 
   TrendingUp, 
   Activity, 
@@ -16,33 +15,39 @@ import {
   Download,
   Share2,
   RefreshCw
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface ChartData {
+
   labels: string[];
-  datasets: {
+datasets: {;
     label: string;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
     borderWidth: number;
-  }[];
+  
+}[];
 }
 
 interface MetricCard {
+
   title: string;
   value: string | number;
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
   color: string;
+
 }
 
-interface DataVisualizationProps {
+interface DataVisualizationProps extends React.PropsWithChildren<{}> {
+
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
   showActions?: boolean;
+
 }
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
@@ -53,10 +58,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 }) => {
   const [selectedTimeRange, setSelectedTimeRange] = useState('7d');
   const [isLoading, setIsLoading] = useState(false);
-  const [activeChart, setActiveChart] = useState<'bar' | 'pie' | 'line'>('bar');
+  const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
-  const [chartData, setChartData] = useState<ChartData>({
+  const [chartData, setChartData] = useState<any>({
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [{
       label: 'Revenue',
@@ -67,7 +72,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     }]
   });
 
-  const [metrics, setMetrics] = useState<MetricCard[]>([
+  const [metrics, setMetrics] = useState<any>([
     {
       title: 'Total Revenue',
       value: '$2.4M',
@@ -111,9 +116,9 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: [{
+      datasets: any[{
         ...prev.datasets[0],
-        data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20)
+        data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
     }));
 
@@ -131,7 +136,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Get change icon and color
-  const getChangeDisplay = (change: number, changeType: string) => {
+  const getChangeDisplay = (change: anynumber, changeType: string)  => {
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
@@ -231,8 +236,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       {/* Metrics Cards */}
       {showMetrics && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index) => {
+        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {metrics.map((metric, index)  => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div

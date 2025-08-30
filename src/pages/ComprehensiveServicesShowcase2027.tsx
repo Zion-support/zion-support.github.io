@@ -30,7 +30,7 @@ import {
   MapPin,
   Globe as GlobeIcon,
   Atom,
-  Blockchain,
+  Link,
   Heart,
   Scale,
   Factory,
@@ -53,8 +53,8 @@ import {
 } from 'lucide-react';
 
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from '../data/ultimateInnovativeServices2026';
-import { zion2026ComprehensiveServices } from '../data/zion2026ComprehensiveServices';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
+import { ALL_REVOLUTIONARY_SERVICES_2026 } from '../data/comprehensiveServices2026';
 
 interface Service {
   id: string;
@@ -94,8 +94,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
     
-    // Add services from ultimateInnovativeServices2026
-    ultimateInnovativeServices2026.forEach(service => {
+    // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
+    ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,
@@ -121,8 +121,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       });
     });
 
-    // Add services from zion2026ComprehensiveServices
-    zion2026ComprehensiveServices.forEach(service => {
+    // Add services from ALL_REVOLUTIONARY_SERVICES_2026
+    ALL_REVOLUTIONARY_SERVICES_2026.forEach(service => {
       services.push({
         id: service.id,
         name: service.name,

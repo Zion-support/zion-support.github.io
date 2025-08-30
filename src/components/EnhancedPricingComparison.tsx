@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
 
 export const EnhancedPricingComparison = () => {
   return (

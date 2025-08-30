@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Code, 
   Database, 
   Cloud, 
   Shield, 
@@ -11,9 +10,9 @@ import {
   Server,
   Cpu,
   Network
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const TechnologyStackSection: React.FC = () => {
+export const TechnologyStackSection: React.FC = (): JSX.Element => {
   const techCategories = [
     {
       icon: Brain,
@@ -97,8 +96,8 @@ export const TechnologyStackSection: React.FC = () => {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {techCategories.map((category, index) => {
+        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {techCategories.map((category, index)  => {
             const IconComponent = category.icon;
             return (
               <motion.div
@@ -140,8 +139,8 @@ export const TechnologyStackSection: React.FC = () => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Emerging Technologies
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {emergingTech.map((tech, index) => {
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            {emergingTech.map((tech, index)  => {
               const IconComponent = tech.icon;
               return (
                 <div key={tech.name} className="text-center">

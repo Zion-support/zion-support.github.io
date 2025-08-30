@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Brain, Cloud } from 'lucide-react';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react.ts';
 
-export const PricingSection: React.FC = () => {
+export const PricingSection: React.FC = (): JSX.Element => {
   const plans = [
     {
       name: 'Starter',
@@ -74,8 +74,8 @@ export const PricingSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {plans.map((plan, index) => {
+        <div className="grid md: anygrid-cols-3 gap-8 mb-12">
+          {plans.map((plan, index)  => {
             const IconComponent = plan.icon;
             return (
               <motion.div

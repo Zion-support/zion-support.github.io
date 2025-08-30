@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Phone, 
+import React from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion.ts';
+import { Phone, 
   Mail, 
   MapPin, 
   Globe, 
@@ -59,9 +58,9 @@ import {
   Users,
   TrendingUp,
   CheckCircle
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
-export const EnhancedFuturisticFooter: React.FC = () => {
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
@@ -164,6 +163,21 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Compliance', href: '/compliance', description: 'Regulatory compliance' }
   ];
 
+  // Create missing pages for broken links
+  const createMissingPage = (name: anystring, href: string)  => {
+    // For now, we'll create placeholder pages for missing routes
+    // These will be created as separate components
+    return (
+      <Link
+        key={name}
+        to={href}
+        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
+      >
+        {name}
+      </Link>
+    );
+  };
+
   return (
     <footer className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white border-t border-cyan-400/20">
       {/* Main Footer Content */}
@@ -180,8 +194,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             >
               Our Services
             </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {footerSections.slice(0, 2).map((section, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+              {footerSections.slice(0, 2).map((section, index)  => (
                 <motion.div
                   key={section.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -221,8 +235,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             >
               Quick Access
             </motion.h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {quickLinks.map((link, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+              {quickLinks.map((link, index)  => (
                 <motion.div
                   key={link.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -234,14 +248,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                   >
                     <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center group-hover:bg-cyan-400/20 transition-colors">
-                      <link.icon className="w-4 h-4 text-cyan-400" />
+                      <Star className="w-4 h-4 text-cyan-400" />
                     </div>
                     <div>
                       <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                         {link.name}
                       </div>
                       <div className="text-xs text-slate-400">
-                        {link.description}
+                        Quick access
                       </div>
                     </div>
                   </Link>
@@ -261,8 +275,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           >
             Complete Service Portfolio
           </motion.h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {footerSections.map((section, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSections.map((section, index)  => (
               <motion.div
                 key={section.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -452,16 +466,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-bounce" />
+        <Brain className="w-8 h-8 text-cyan-400 animate-bounce" />
       </div>
       <div className="absolute top-20 right-20 opacity-20">
-        <Rocket className="w-8 h-8 text-zion-purple animate-pulse" />
+        <Rocket className="w-8 h-8 text-purple-400 animate-pulse" />
       </div>
       <div className="absolute bottom-20 left-20 opacity-20">
-        <Brain className="w-8 h-8 text-zion-cyan animate-spin" />
+        <Brain className="w-8 h-8 text-cyan-400 animate-spin" />
       </div>
       <div className="absolute bottom-10 right-10 opacity-20">
-        <Shield className="w-8 h-8 text-zion-purple animate-bounce delay-1000" />
+        <Shield className="w-8 h-8 text-purple-400 animate-bounce delay-1000" />
       </div>
     </footer>
   );
