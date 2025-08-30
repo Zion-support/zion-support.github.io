@@ -24,7 +24,6 @@ import {
   Star,
   Heart
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
 const aiServices = [
   {
     id: 'ai-consciousness-simulator',
@@ -272,7 +271,208 @@ const aiServices = [
     reviews: 89,
     customers: 156
   }
+import { Brain, Database, Zap, Shield, BarChart3, MessageSquare, Code, Globe, Server, Eye, FileText, CheckCircle, Users, Lock, Search } from 'lucide-react';
+const AIServices = [
+    {
+        title: "AI Strategy Consulting",
+        description: "Strategic guidance for implementing AI solutions in your business",
+        price: "$2,500 - $15,000",
+        features: ["AI readiness assessment", "ROI analysis", "Implementation roadmap", "Team training"],
+        icon: <Brain className="h-8 w-8 text-zion-cyan"/>,
+        category: "Strategy",
+        badge: "Popular",
+        link: "/request-quote?service=ai-strategy"
+    },
+    {
+        title: "Custom AI Model Development",
+        description: "Tailored machine learning models for your specific use case",
+        price: "$5,000 - $50,000",
+        features: ["Data preprocessing", "Model training", "Performance optimization", "Deployment support"],
+        icon: <Server className="h-8 w-8 text-zion-purple"/>,
+        category: "Development",
+        badge: "Premium",
+        link: "/request-quote?service=custom-ai-models"
+    },
+    {
+        title: "Data Labeling & Annotation",
+        description: "High-quality data preparation for machine learning projects",
+        price: "$0.50 - $5.00 per item",
+        features: ["Image annotation", "Text labeling", "Quality assurance", "Scalable workforce"],
+        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
+        category: "Data",
+        link: "/request-quote?service=data-labeling"
+    },
+    {
+        title: "AI-Powered Analytics",
+        description: "Advanced business intelligence with machine learning insights",
+        price: "$1,500 - $8,000/month",
+        features: ["Predictive analytics", "Real-time dashboards", "Custom reports", "API integration"],
+        icon: <BarChart3 className="h-8 w-8 text-zion-cyan"/>,
+        category: "Analytics",
+        badge: "New",
+        link: "/request-quote?service=ai-analytics"
+    },
+    {
+        title: "Computer Vision Solutions",
+        description: "Image and video analysis for automation and quality control",
+        price: "$3,000 - $25,000",
+        features: ["Object detection", "Image classification", "Video processing", "Edge deployment"],
+        icon: <Eye className="h-8 w-8 text-zion-purple"/>,
+        category: "Vision",
+        link: "/request-quote?service=computer-vision"
+    },
+    {
+        title: "Natural Language Processing",
+        description: "Text analysis, chatbots, and language understanding systems",
+        price: "$2,000 - $20,000",
+        features: ["Sentiment analysis", "Text generation", "Language translation", "Chatbot development"],
+        icon: <MessageSquare className="h-8 w-8 text-zion-blue"/>,
+        category: "NLP",
+        link: "/request-quote?service=nlp"
+    },
+    {
+        title: "AI Ethics & Compliance",
+        description: "Ensure your AI systems are fair, transparent, and compliant",
+        price: "$1,500 - $10,000",
+        features: ["Bias detection", "Explainability", "Privacy compliance", "Audit reports"],
+        icon: <Shield className="h-8 w-8 text-zion-cyan"/>,
+        category: "Compliance",
+        link: "/request-quote?service=ai-ethics"
+    },
+    {
+        title: "AI Model Optimization",
+        description: "Improve performance and efficiency of existing AI models",
+        price: "$1,000 - $15,000",
+        features: ["Performance tuning", "Model compression", "Inference optimization", "Cost reduction"],
+        icon: <Zap className="h-8 w-8 text-zion-purple"/>,
+        category: "Optimization",
+        link: "/request-quote?service=model-optimization"
+    },
+    {
+        title: "AI Training & Workshops",
+        description: "Custom training programs for your team on AI technologies",
+        price: "$500 - $3,000 per person",
+        features: ["Hands-on workshops", "Custom curriculum", "Certification", "Ongoing support"],
+        icon: <Users className="h-8 w-8 text-zion-blue"/>,
+        category: "Training",
+        link: "/request-quote?service=ai-training"
+    },
+    {
+        title: "AI Integration Services",
+        description: "Seamlessly integrate AI solutions into existing systems",
+        price: "$2,000 - $20,000",
+        features: ["API development", "System integration", "Testing", "Maintenance"],
+        icon: <Code className="h-8 w-8 text-zion-cyan"/>,
+        category: "Integration",
+        link: "/request-quote?service=ai-integration"
+    },
+    {
+        title: "AI Security & Testing",
+        description: "Comprehensive security testing for AI systems",
+        price: "$1,500 - $12,000",
+        features: ["Adversarial testing", "Vulnerability assessment", "Security hardening", "Compliance checks"],
+        icon: <Lock className="h-8 w-8 text-zion-purple"/>,
+        category: "Security",
+        link: "/request-quote?service=ai-security"
+    },
+    {
+        title: "AI Content Generation",
+        description: "Automated content creation for marketing and communication",
+        price: "$500 - $5,000/month",
+        features: ["Blog posts", "Social media content", "Product descriptions", "Multilingual support"],
+        icon: <FileText className="h-8 w-8 text-zion-blue"/>,
+        category: "Content",
+        link: "/request-quote?service=ai-content"
+    }
 ];
+const categories = [
+const AIServicesPage: React.FC = () => {
+  const aiServices = [
+    {
+      id: 1,
+      title: 'Machine Learning Development',
+      description: 'Custom ML models tailored to your business needs',
+      icon: Brain,
+      features: ['Predictive Analytics', 'Pattern Recognition', 'Automated Decision Making'],
+      useCases: ['Customer Segmentation', 'Risk Assessment', 'Demand Forecasting'],
+      pricing: 'Starting at $15,000'
+    },
+    {
+      id: 2,
+      title: 'Natural Language Processing',
+      description: 'Advanced text and speech processing solutions',
+      icon: MessageSquare,
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation'],
+      useCases: ['Chatbots', 'Document Processing', 'Content Moderation'],
+      pricing: 'Starting at $12,000'
+    },
+    {
+      id: 3,
+      title: 'Computer Vision',
+      description: 'Image and video analysis for automation',
+      icon: Eye,
+      features: ['Object Detection', 'Image Classification', 'Facial Recognition'],
+      useCases: ['Quality Control', 'Security Systems', 'Medical Imaging'],
+      pricing: 'Starting at $18,000'
+    },
+    {
+      id: 4,
+      title: 'Predictive Analytics',
+      description: 'Data-driven insights for strategic decision making',
+      icon: BarChart3,
+      features: ['Trend Analysis', 'Risk Modeling', 'Performance Optimization'],
+      useCases: ['Financial Planning', 'Inventory Management', 'Maintenance Scheduling'],
+      pricing: 'Starting at $10,000'
+    }
+  ];
+
+  const aiSolutions = [
+    {
+      title: 'AI-Powered Chatbots',
+      description: 'Intelligent customer service automation',
+      benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
+    },
+    {
+      title: 'Intelligent Document Processing',
+      description: 'Automated data extraction and analysis',
+      benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
+    },
+    {
+      title: 'Predictive Maintenance',
+      description: 'Prevent equipment failures with AI insights',
+      benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
+    },
+    {
+      title: 'AI-Driven Marketing',
+      description: 'Personalized campaigns and customer insights',
+      benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
+    }
+  ];
+
+  const caseStudies = [
+    {
+      company: 'TechCorp Industries',
+      industry: 'Manufacturing',
+      challenge: 'Quality control inefficiencies',
+      solution: 'Computer vision system for defect detection',
+      results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
+    },
+    {
+      company: 'Global Finance Ltd',
+      industry: 'Financial Services',
+      challenge: 'Fraud detection complexity',
+      solution: 'ML-powered risk assessment',
+      results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
+    },
+    {
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Patient data analysis',
+      solution: 'NLP for medical records',
+      results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes']
+    }
+  ];
+
 const AIServicesPage = () => {
   return (
     <>
@@ -281,6 +481,7 @@ const AIServicesPage = () => {
         description="Comprehensive AI services including machine learning, natural language processing, and intelligent automation solutions."
         keywords="AI services, machine learning, natural language processing, intelligent automation"
       />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
@@ -291,17 +492,20 @@ const AIServicesPage = () => {
               Comprehensive artificial intelligence solutions for modern businesses
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
               <p className="text-gray-300 mb-4">Advanced ML algorithms and predictive analytics</p>
             </div>
+            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">💬</div>
               <h3 className="text-xl font-semibold text-white mb-3">NLP Solutions</h3>
               <p className="text-gray-300 mb-4">Natural language processing and understanding</p>
             </div>
+            
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Intelligent Automation</h3>
@@ -313,4 +517,5 @@ const AIServicesPage = () => {
     </>
   );
 };
+
 export default AIServicesPage;

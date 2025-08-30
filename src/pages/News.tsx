@@ -1,485 +1,362 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Calendar, 
-  Clock, 
-  User, 
-  Eye, 
-  Star, 
-  ArrowRight,
-  Search,
-  Filter,
-  ExternalLink,
-  Play,
-  BookOpen,
-  Award,
-  TrendingUp,
-  Globe,
-  Building,
-  Brain,
-  Shield,
-  Zap,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Star as StarIcon,
-  CheckCircle,
-  ChevronDown,
-  ChevronUp,
-  Phone,
-  Mail,
-  MapPin as MapPinIcon
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, User, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function News() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('date');
-
-  const categories = [
-    'All',
-    'AI & Machine Learning',
-    'Cybersecurity',
-    'Cloud Computing',
-    'Digital Transformation',
-    'IoT & Edge Computing',
-    'Blockchain',
-    'Quantum Computing',
-    'Healthcare Technology',
-    'Financial Technology',
-    'Sustainability',
-    'Emerging Technologies'
-  ];
-
   const newsArticles = [
     {
       id: 1,
-      title: 'AI Revolution: How Zion Tech Group is Leading the Future of Technology',
-      subtitle: 'Exploring the latest breakthroughs in artificial intelligence and their impact on business transformation',
-      category: 'AI & Machine Learning',
-      date: '2027-01-15',
-      author: 'Dr. Sarah Chen',
-      readTime: '8 min read',
-      views: 15420,
+      title: 'Zion Tech Group Launches Revolutionary AI-Powered Cybersecurity Platform',
+      excerpt: 'Our latest innovation combines machine learning with advanced threat detection to provide enterprise-grade security solutions.',
+      content: 'Zion Tech Group is proud to announce the launch of our revolutionary AI-powered cybersecurity platform. This cutting-edge solution leverages advanced machine learning algorithms to detect and prevent cyber threats in real-time, providing enterprise-grade security for organizations of all sizes.',
+      author: 'Sarah Johnson',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      category: 'Product Launch',
+      tags: ['AI', 'Cybersecurity', 'Innovation'],
       featured: true,
-      description: 'Discover how Zion Tech Group is pioneering AI solutions that are reshaping industries and creating new opportunities for businesses worldwide.',
-      content: 'Artificial Intelligence has evolved from a futuristic concept to a practical business tool that\'s transforming every industry. At Zion Tech Group, we\'ve been at the forefront of this revolution, developing AI solutions that deliver real business value...',
-      image: '/images/news/ai-revolution-2027.jpg',
-      tags: ['AI', 'Machine Learning', 'Innovation', 'Business Transformation'],
-      url: '/news/ai-revolution-2027'
+      image: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&h=400'
     },
     {
       id: 2,
-      title: 'Quantum Computing Breakthrough: New Security Paradigms',
-      subtitle: 'Understanding the implications of quantum computing on cybersecurity and data protection',
-      category: 'Quantum Computing',
-      date: '2027-01-12',
-      author: 'Michael Rodriguez',
-      readTime: '12 min read',
-      views: 8920,
+      title: 'Zion Tech Group Expands Global Operations with New European Office',
+      excerpt: 'Strategic expansion into European markets to better serve our growing international client base.',
+      content: 'Zion Tech Group is excited to announce the opening of our new European office in London, UK. This strategic expansion will enable us to better serve our growing international client base and strengthen our presence in the European technology market.',
+      author: 'Michael Chen',
+      date: '2024-01-10',
+      readTime: '3 min read',
+      category: 'Company News',
+      tags: ['Expansion', 'Global', 'Europe'],
       featured: false,
-      description: 'Quantum computing is revolutionizing cybersecurity by introducing new encryption methods and threat detection capabilities.',
-      content: 'The advent of quantum computing has brought both opportunities and challenges to the cybersecurity landscape. While quantum computers can potentially break current encryption standards...',
-      image: '/images/news/quantum-computing-security.jpg',
-      tags: ['Quantum Computing', 'Cybersecurity', 'Encryption', 'Technology'],
-      url: '/news/quantum-computing-security-2027'
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=400'
     },
     {
       id: 3,
-      title: 'Edge Computing: The Future of IoT and Real-Time Analytics',
-      subtitle: 'How edge computing is enabling faster, more efficient IoT applications',
-      category: 'IoT & Edge Computing',
-      date: '2027-01-10',
-      author: 'Emily Watson',
-      readTime: '6 min read',
-      views: 6750,
+      title: 'The Future of Quantum Computing: Zion Tech Group\'s Research Initiative',
+      excerpt: 'Exploring the potential of quantum computing to solve complex computational problems.',
+      content: 'Zion Tech Group has launched a groundbreaking research initiative focused on quantum computing applications. Our team of quantum physicists and computer scientists are working to develop practical applications that could revolutionize industries from finance to healthcare.',
+      author: 'Dr. Emily Rodriguez',
+      date: '2024-01-05',
+      readTime: '7 min read',
+      category: 'Research',
+      tags: ['Quantum Computing', 'Research', 'Innovation'],
       featured: false,
-      description: 'Edge computing is transforming IoT applications by bringing processing power closer to data sources, enabling real-time analytics and faster response times.',
-      content: 'The Internet of Things (IoT) has generated massive amounts of data, but traditional cloud computing approaches often struggle with latency and bandwidth constraints...',
-      image: '/images/news/edge-computing-iot.jpg',
-      tags: ['Edge Computing', 'IoT', 'Real-time Analytics', 'Technology'],
-      url: '/news/edge-computing-iot-2027'
+      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=400'
     },
     {
       id: 4,
-      title: 'Blockchain in Supply Chain: Transparency and Trust',
-      subtitle: 'Revolutionizing supply chain management with blockchain technology',
-      category: 'Blockchain',
-      date: '2027-01-08',
-      author: 'David Kim',
-      readTime: '10 min read',
-      views: 5430,
+      title: 'Zion Tech Group Named Top 10 AI Companies to Watch in 2024',
+      excerpt: 'Industry recognition for our innovative approach to artificial intelligence and machine learning.',
+      content: 'Zion Tech Group has been recognized as one of the top 10 AI companies to watch in 2024 by TechInsights Magazine. This prestigious recognition highlights our innovative approach to artificial intelligence and machine learning solutions.',
+      author: 'David Thompson',
+      date: '2023-12-28',
+      readTime: '4 min read',
+      category: 'Awards',
+      tags: ['Awards', 'AI', 'Recognition'],
       featured: false,
-      description: 'Blockchain technology is creating unprecedented transparency and trust in global supply chains, reducing fraud and improving efficiency.',
-      content: 'Supply chain management has long been plagued by issues of transparency, traceability, and trust. Traditional systems often lack visibility into the movement of goods...',
-      image: '/images/news/blockchain-supply-chain.jpg',
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Trust'],
-      url: '/news/blockchain-supply-chain-2027'
+      image: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=400'
     },
     {
       id: 5,
-      title: 'Cybersecurity Trends 2027: AI-Powered Threat Detection',
-      subtitle: 'The latest developments in AI-driven cybersecurity solutions',
-      category: 'Cybersecurity',
-      date: '2027-01-05',
-      author: 'Lisa Park',
-      readTime: '9 min read',
-      views: 7890,
-      featured: true,
-      description: 'AI-powered cybersecurity solutions are becoming essential in protecting organizations from increasingly sophisticated cyber threats.',
-      content: 'As cyber threats become more sophisticated and frequent, traditional security approaches are no longer sufficient. Artificial Intelligence is emerging as a game-changer...',
-      image: '/images/news/ai-cybersecurity-2027.jpg',
-      tags: ['Cybersecurity', 'AI', 'Threat Detection', 'Security'],
-      url: '/news/ai-cybersecurity-2027'
+      title: 'New Partnership: Zion Tech Group and CloudTech Solutions',
+      excerpt: 'Strategic partnership to deliver integrated cloud and AI solutions to enterprise clients.',
+      content: 'Zion Tech Group is pleased to announce a strategic partnership with CloudTech Solutions. This collaboration will enable us to deliver integrated cloud and AI solutions to enterprise clients, combining our expertise in artificial intelligence with CloudTech\'s cloud infrastructure capabilities.',
+      author: 'Lisa Wang',
+      date: '2023-12-20',
+      readTime: '6 min read',
+      category: 'Partnerships',
+      tags: ['Partnership', 'Cloud', 'Enterprise'],
+      featured: false,
+      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=400'
     },
     {
       id: 6,
-      title: 'Cloud-Native Development: The New Standard',
-      subtitle: 'How cloud-native approaches are transforming software development',
-      category: 'Cloud Computing',
-      date: '2027-01-03',
-      author: 'Alex Johnson',
-      readTime: '7 min read',
-      views: 4560,
+      title: 'Zion Tech Group\'s Commitment to Sustainable Technology',
+      excerpt: 'How we\'re reducing our carbon footprint while advancing technology innovation.',
+      content: 'At Zion Tech Group, we believe that technological advancement and environmental responsibility can go hand in hand. Our commitment to sustainable technology includes energy-efficient data centers, green computing practices, and developing AI solutions that help organizations reduce their environmental impact.',
+      author: 'Alex Green',
+      date: '2023-12-15',
+      readTime: '5 min read',
+      category: 'Sustainability',
+      tags: ['Sustainability', 'Green Tech', 'Environment'],
       featured: false,
-      description: 'Cloud-native development is setting new standards for scalability, reliability, and deployment efficiency in modern software applications.',
-      content: 'The shift toward cloud-native development represents a fundamental change in how we build, deploy, and maintain software applications...',
-      image: '/images/news/cloud-native-development.jpg',
-      tags: ['Cloud Computing', 'Software Development', 'DevOps', 'Technology'],
-      url: '/news/cloud-native-development-2027'
+      image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&h=400'
     }
   ];
 
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'All' || article.category === selectedCategory;
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.subtitle.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    return matchesCategory && matchesSearch;
-  });
+  const categories = [
+    'All News',
+    'Product Launch',
+    'Company News',
+    'Research',
+    'Awards',
+    'Partnerships',
+    'Sustainability'
+  ];
 
-  const sortedArticles = [...filteredArticles].sort((a, b) => {
-    switch (sortBy) {
-      case 'date':
-        return new Date(b.date) - new Date(a.date);
-      case 'views':
-        return b.views - a.views;
-      case 'title':
-        return a.title.localeCompare(b.title);
-      case 'readTime':
-        return parseInt(a.readTime.split(' ')[0]) - parseInt(b.readTime.split(' ')[0]);
-      default:
-        return 0;
-    }
-  });
-
-  const featuredArticles = newsArticles.filter(article => article.featured);
-
-  const NewsCard = ({ article }: { article: any }) => {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-      >
-        <div className="mb-4">
-          <div className="flex items-center justify-between mb-3">
-            <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
-              {article.category}
-            </span>
-            {article.featured && (
-              <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm rounded-full">
-                Featured
-              </span>
-            )}
-          </div>
-          
-          <div className="flex items-center space-x-2 text-sm text-gray-400 mb-2">
-            <span className="flex items-center">
-              <Calendar className="w-4 h-4 mr-1" />
-              {new Date(article.date).toLocaleDateString()}
-            </span>
-            <span className="flex items-center">
-              <Clock className="w-4 h-4 mr-1" />
-              {article.readTime}
-            </span>
-          </div>
-          
-          <div className="flex items-center space-x-2 text-sm text-gray-400 mb-3">
-            <span className="flex items-center">
-              <User className="w-4 h-4 mr-1" />
-              {article.author}
-            </span>
-            <span className="flex items-center">
-              <Eye className="w-4 h-4 mr-1" />
-              {article.views.toLocaleString()}
-            </span>
-          </div>
-        </div>
-        
-        <h3 className="text-xl font-bold text-white mb-2">{article.title}</h3>
-        <p className="text-gray-300 text-sm mb-3">{article.subtitle}</p>
-        <p className="text-gray-400 text-sm mb-4">{article.description}</p>
-        
-        <div className="mb-4">
-          <h4 className="text-white font-semibold mb-2 text-sm">Tags:</h4>
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag: string, index: number) => (
-              <span key={index} className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-          <div className="text-sm text-gray-400">
-            {new Date(article.date).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'short', 
-              day: 'numeric' 
-            })}
-          </div>
-          
-          <a
-            href={article.url}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 text-sm"
-          >
-            Read More
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </motion.div>
-    );
-  };
-
-  const FeaturedNewsCard = ({ article }: { article: any }) => {
-    return (
-      <div
-        className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-      >
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex items-center space-x-2">
-            <span className="px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-sm rounded-full">
-              Featured
-            </span>
-            <span className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded-full">
-              {article.category}
-            </span>
-          </div>
-        </div>
-        
-        <h3 className="text-2xl font-bold text-white mb-3">{article.title}</h3>
-        <p className="text-gray-300 mb-4">{article.subtitle}</p>
-        <p className="text-gray-400 text-sm mb-6">{article.description}</p>
-        
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center space-x-4 text-sm text-gray-400">
-            <span className="flex items-center">
-              <Calendar className="w-4 h-4 mr-1" />
-              {new Date(article.date).toLocaleDateString()}
-            </span>
-            <span className="flex items-center">
-              <Clock className="w-4 h-4 mr-1" />
-              {article.readTime}
-            </span>
-          </div>
-          
-          <div className="flex items-center space-x-4 text-sm text-gray-400">
-            <span className="flex items-center">
-              <User className="w-4 h-4 mr-1" />
-              {article.author}
-            </span>
-            <span className="flex items-center">
-              <Eye className="w-4 h-4 mr-1" />
-              {article.views.toLocaleString()}
-            </span>
-          </div>
-        </div>
-        
-        <div className="mb-6">
-          <h4 className="text-white font-semibold mb-3">Tags:</h4>
-          <div className="flex flex-wrap gap-2">
-            {article.tags.map((tag: string, index: number) => (
-              <span key={index} className="px-3 py-1 bg-slate-700/50 text-slate-300 text-sm rounded">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <div className="text-sm text-gray-400">
-            {new Date(article.date).toLocaleDateString('en-US', { 
-              year: 'numeric', 
-              month: 'long', 
-              day: 'numeric' 
-            })}
-          </div>
-          
-          <a
-            href={article.url}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-          >
-            Read Full Article
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </div>
-    );
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   };
 
   return (
-    <>
-      <SEO
-        title="News | Zion Tech Group"
-        description="Stay updated with the latest technology news, insights, and developments from Zion Tech Group. Discover trends in AI, cybersecurity, cloud computing, and emerging technologies."
-        keywords="technology news, AI news, cybersecurity news, cloud computing news, Zion Tech Group news"
-        canonical="https://ziontechgroup.com/news"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Technology News & Insights
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Stay informed with the latest developments in technology, AI, cybersecurity, and emerging innovations from our expert team.
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Latest News & Updates
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
+            Stay informed about our latest innovations, company updates, and industry insights
+          </p>
+        </div>
+      </section>
+
+      {/* Featured Article */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              Featured Story
+            </h2>
+            <p className="text-xl text-zion-slate-light">
+              Our most important news and announcements
             </p>
-            
-            {/* Search and Filter Controls */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                {/* Search */}
+          </div>
+
+          {newsArticles.filter(article => article.featured).map((article) => (
+            <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search news..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover"
                   />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-zion-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {article.category}
+                    </span>
+                  </div>
                 </div>
-                
-                {/* Category Filter */}
-                <div>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {categories.map(category => (
-                      <option key={category} value={category}>{category}</option>
+                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {formatDate(article.date)}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-2" />
+                      {article.readTime}
+                    </div>
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-2" />
+                      {article.author}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl lg:text-3xl font-bold text-zion-slate-dark mb-4">
+                    {article.title}
+                  </h3>
+                  
+                  <p className="text-zion-slate-light text-lg leading-relaxed mb-6">
+                    {article.excerpt}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {article.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="bg-zion-slate-light/20 text-zion-slate-dark px-3 py-1 rounded-full text-sm"
+                      >
+                        {tag}
+                      </span>
                     ))}
-                  </select>
-                </div>
-                
-                {/* Sort By */}
-                <div>
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  </div>
+                  
+                  <Link
+                    to={`/news/${article.id}`}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan/80 font-semibold transition-colors"
                   >
-                    <option value="date">Sort by Date</option>
-                    <option value="views">Sort by Views</option>
-                    <option value="title">Sort by Title</option>
-                    <option value="readTime">Sort by Read Time</option>
-                  </select>
+                    Read Full Article
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-20 bg-zion-slate-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              Browse by Category
+            </h2>
+            <p className="text-xl text-zion-slate-light">
+              Find the news that matters most to you
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                className="px-6 py-3 bg-white text-zion-slate-dark rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors duration-300 shadow-sm"
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* All News Articles */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
+              All News
+            </h2>
+            <p className="text-xl text-zion-slate-light">
+              Stay up to date with everything happening at Zion Tech Group
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {newsArticles.filter(article => !article.featured).map((article) => (
+              <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                <div className="relative">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-zion-cyan text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {article.category}
+                    </span>
+                  </div>
                 </div>
                 
-                {/* Results Count */}
-                <div className="flex items-center justify-center">
-                  <span className="text-gray-300">
-                    {filteredArticles.length} of {newsArticles.length} articles
-                  </span>
+                <div className="p-6">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {formatDate(article.date)}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {article.readTime}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-zion-slate-dark mb-3 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  
+                  <p className="text-zion-slate-light mb-4 line-clamp-3">
+                    {article.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-zion-slate-light">
+                      <User className="w-4 h-4 mr-1" />
+                      {article.author}
+                    </div>
+                    
+                    <Link
+                      to={`/news/${article.id}`}
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan/80 font-medium text-sm transition-colors"
+                    >
+                      Read More
+                      <ArrowRight className="w-3 h-3 ml-1" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Featured News */}
-        {featuredArticles.length > 0 && (
-          <section className="py-20 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-                Featured Articles
-              </h2>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {featuredArticles.map((article) => (
-                  <FeaturedNewsCard key={article.id} article={article} />
-                ))}
-              </div>
+      {/* Newsletter Signup */}
+      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-white/90 mb-8">
+            Subscribe to our newsletter for the latest news, insights, and updates
+          </p>
+          
+          <div className="max-w-md mx-auto">
+            <div className="flex">
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-1 px-4 py-3 rounded-l-lg border-0 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button className="bg-white text-zion-purple px-6 py-3 rounded-r-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
             </div>
-          </section>
-        )}
-
-        {/* All News Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-              Latest News
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedArticles.map((article) => (
-                <NewsCard key={article.id} article={article} />
-              ))}
-            </div>
-
-            {filteredArticles.length === 0 && (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>
-                <p className="text-gray-300">Try adjusting your search criteria or filters.</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter to receive the latest technology insights, news, and updates directly in your inbox.
+            <p className="text-sm text-white/70 mt-3">
+              We respect your privacy. Unsubscribe at any time.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Our Team
-              </a>
-              <a 
-                href="/services"
-                className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                Explore Our Services
-              </a>
-            </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Social Media */}
+      <section className="py-20 bg-zion-slate-light">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-zion-slate-dark mb-6">
+            Follow Us
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8">
+            Get real-time updates and behind-the-scenes content
+          </p>
+          
+          <div className="flex justify-center space-x-6">
+            <a
+              href="https://linkedin.com/company/ziontechgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <span className="text-blue-600 font-semibold">LinkedIn</span>
+              <ExternalLink className="w-4 h-4 text-zion-slate-light" />
+            </a>
+            
+            <a
+              href="https://twitter.com/ziontechgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <span className="text-blue-400 font-semibold">Twitter</span>
+              <ExternalLink className="w-4 h-4 text-zion-slate-light" />
+            </a>
+            
+            <a
+              href="https://facebook.com/ziontechgroup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-white px-6 py-3 rounded-lg shadow-sm hover:shadow-md transition-shadow"
+            >
+              <span className="text-blue-600 font-semibold">Facebook</span>
+              <ExternalLink className="w-4 h-4 text-zion-slate-light" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

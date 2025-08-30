@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
-  HeartHandshake, 
+  Handshake, 
   Users, 
   Globe, 
   Award, 
@@ -20,7 +20,7 @@ import {
   Briefcase
 } from 'lucide-react';
 
-const Partners: React.FC = () => {
+export default function Partners() {
   const partnershipTypes = [
     {
       name: 'Technology Partners',
@@ -48,7 +48,7 @@ const Partners: React.FC = () => {
     },
     {
       name: 'Strategic Partners',
-      icon: HeartHandshake,
+      icon: Handshake,
       description: 'Long-term collaboration on major initiatives',
       benefits: [
         'Exclusive market access',
@@ -475,5 +475,3 @@ const Partners: React.FC = () => {
     </div>
   );
 }
-
-export default Partners;

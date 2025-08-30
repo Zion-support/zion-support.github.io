@@ -1,0 +1,42 @@
+import React from 'react';
+import { useFormContext } from 'react-hook-form';
+interface FormProps {
+  children: React.ReactNode;
+  [key: string]: any;
+}
+export function Form({ children, ...props }: FormProps) {
+  return <form {...props}>{children}</form>;
+}
+interface FormFieldProps {
+  name: string;
+  children: React.ReactNode;
+}
+export function FormField({ name, children }: FormFieldProps) {
+  return <>{children}</>;
+}
+interface FormItemProps {
+  children: React.ReactNode;
+  className?: string;
+}
+export function FormItem({ children, className = '' }: FormItemProps) {
+  return <div className={className}>{children}</div>;
+}
+interface FormLabelProps {
+  children: React.ReactNode;
+  className?: string;
+}
+export function FormLabel({ children, className = '' }: FormLabelProps) {
+  return <label className={className}>{children}</label>;
+}
+interface FormControlProps {
+  children: React.ReactNode;
+}
+export function FormControl({ children }: FormControlProps) {
+  return <>{children}</>;
+}
+interface FormMessageProps {
+  className?: string;
+}
+export function FormMessage({ className = '' }: FormMessageProps) {
+  return <span className={className}></span>;
+}

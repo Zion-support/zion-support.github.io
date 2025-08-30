@@ -77,20 +77,4 @@ temp/
 *.tsbuildinfo
 # Vite
 .vite/
-
-tsconfig.tsbuildinfo
 core
-
-# ignore build artifacts and crash dumps
-tsconfig.tsbuildinfo
-core
-
-# PM2 Automation Reports
-ci-cd-reports/*.json
-ci-cd-reports/*.md
-link-reports/*.json
-link-reports/*.md
-security-reports/*.json
-security-reports/*.md
-test-reports/*.json
-test-reports/*.md
