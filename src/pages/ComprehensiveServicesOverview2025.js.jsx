@@ -179,7 +179,7 @@ const ComprehensiveServicesOverview2025 = () => {
                 const service = allEnhancedServices.find(s => s.id === selectedService);
                 if (!service)
                     return null;
-                return (<>
+                return (<React.Fragment>
                     {/* Modal Header */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center space-x-3">
@@ -342,7 +342,7 @@ const ComprehensiveServicesOverview2025 = () => {
                         </div>
                       </div>
                     </div>
-                  </>)})()}
+                  </React.Fragment>)})()}
             </div>
           </div>
         </div>)}

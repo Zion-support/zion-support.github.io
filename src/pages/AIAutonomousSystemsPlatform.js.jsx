@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousSystemsPlatform = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Autonomous Systems Platform | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI autonomous systems platform that orchestrates intelligent agents, automates complex workflows, and enables next-generation autonomous operations."/>
@@ -153,5 +153,5 @@ const AIAutonomousSystemsPlatform = () => {
           </div>
         </div>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default AIAutonomousSystemsPlatform;

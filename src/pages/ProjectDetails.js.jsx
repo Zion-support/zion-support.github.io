@@ -164,7 +164,7 @@ function ProjectDetailsContent() {
     const isOfferPending = project.status === "offer_sent";
     const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-    return (<>
+    return (<React.Fragment>
       <SEO title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} description="View and manage your project details and collaboration."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -182,7 +182,7 @@ function ProjectDetailsContent() {
             
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
-              {isTalent && isOfferPending && (<>
+              {isTalent && isOfferPending && (<React.Fragment>
                   <AlertDialog>
                     <AlertDialogTrigger asChild>
                       <Button variant="default">
@@ -209,7 +209,7 @@ function ProjectDetailsContent() {
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4"/> Request Changes
                   </Button>
-                </>)}
+                </React.Fragment>)}
               
               {(isClient || isTalent) && project.status === "in_progress" && (<AlertDialog>
                   <AlertDialogTrigger asChild>
@@ -517,7 +517,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function ProjectDetails() {
     return (<ProtectedRoute>
       <ProjectDetailsContent />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Radio, Zap, Shield, ArrowRight, CheckCircle, BarChart3, Globe, Cpu } from 'lucide-react';
 const FiveGNetworkOptimization = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>5G Network Optimization - Zion Tech Group</title>
         <meta name="description" content="Advanced 5G network optimization solutions for enhanced performance, coverage, and efficiency."/>
@@ -184,5 +184,5 @@ const FiveGNetworkOptimization = () => {
           </div>
         </section>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default FiveGNetworkOptimization;

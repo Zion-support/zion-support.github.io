@@ -139,7 +139,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
     return matchesCategory && matchesPricing && matchesSearch});
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Comprehensive Services Overview | Zion Tech Group"
         description="Explore our complete range of AI services, IT solutions, and micro SaaS platforms designed to transform your business operations."
@@ -343,7 +343,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default ComprehensiveServicesOverview;

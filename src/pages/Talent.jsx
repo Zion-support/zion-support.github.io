@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Talent = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Talent - Zion Tech Group</title>
         <meta name="description" content="Find and hire top technology talent through Zion Tech Group. Connect with skilled professionals for your projects."/>
@@ -23,5 +23,5 @@ const Talent = () => {
           </div>
         </div>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default Talent;

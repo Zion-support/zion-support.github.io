@@ -45,7 +45,7 @@ const ITInfrastructure = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>IT Infrastructure — Zion Tech Group | Network & System Management</title>
         <meta name="description" content="Build robust IT infrastructure with Zion Tech Group. Network design, server management, storage solutions, and security infrastructure services."/>
@@ -203,7 +203,7 @@ const ITInfrastructure = () => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

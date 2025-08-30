@@ -7,7 +7,7 @@ import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBa
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
 export default function EnterprisePlans() {
-    return (<>
+    return (<React.Fragment>
       <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."/>
       
       <main className="min-h-screen bg-background">
@@ -19,4 +19,4 @@ export default function EnterprisePlans() {
         <EnterpriseCTA />
       </main>
       
-    </>)}
+    </React.Fragment>)}

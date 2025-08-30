@@ -86,7 +86,7 @@ const EnhancedAccessibility = () => {
     };
     const announcePageChange = (pageName) => {
         speakText(`Navigated to ${pageName}`)};
-    return (<>
+    return (<React.Fragment>
       {/* Accessibility Toggle Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-6 left-6 z-50 p-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" aria-label="Toggle accessibility settings" aria-expanded={isOpen} aria-controls="accessibility-panel">
         <AdjustmentsHorizontalIcon className="w-6 h-6"/>
@@ -241,5 +241,5 @@ const EnhancedAccessibility = () => {
 
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-    </>)};
+    </React.Fragment>)};
 export default EnhancedAccessibility;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Target, Users, Zap, Shield, ArrowRight, CheckCircle, Brain } from 'lucide-react';
 const AIBusinessIntelligence = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered business intelligence. Get real-time insights, predictive analytics, and intelligent decision-making capabilities."/>
@@ -245,5 +245,5 @@ const AIBusinessIntelligence = () => {
           </div>
         </section>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default AIBusinessIntelligence;

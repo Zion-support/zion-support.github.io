@@ -6,7 +6,7 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
     const isMobile = useIsMobile();
-    return (<>
+    return (<React.Fragment>
       <SEO title="Application Status Tracker | Zion AI Marketplace" description="Track the status of your job applications in the Zion AI marketplace."/>
       
       <div className="container mx-auto px-4 py-8">
@@ -30,7 +30,7 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
-    </>)}
+    </React.Fragment>)}
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
       

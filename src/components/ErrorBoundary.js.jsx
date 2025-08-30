@@ -84,7 +84,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
         if (fallback) {
             return fallback}
         return (<ErrorFallback error={error || undefined} resetError={resetError}/>)}
-    return <>{children}</>}
+    return <React.Fragment>{children}</React.Fragment>}
 // Hook for functional components to handle errors
 export function useErrorHandler() {
     const [error, setError] = useState(null);

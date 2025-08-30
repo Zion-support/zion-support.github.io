@@ -101,13 +101,13 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           <p className="text-sm text-gray-400">Monitoring the health of our website links</p>
         </div>
         <button onClick={checkAllLinks} disabled={isChecking} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2">
-          {isChecking ? (<>
+          {isChecking ? (<React.Fragment>
               <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"/>
               Checking...
-            </>) : (<>
+            </React.Fragment>) : (<React.Fragment>
               <CheckCircle className="w-4 h-4"/>
               Recheck
-            </>)}
+            </React.Fragment>)}
         </button>
       </div>
 

@@ -162,7 +162,7 @@ const Solutions: React.FC = (): JSX.Element => {
     ? solutions: solutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Technology Solutions | Zion Tech Group"
         description="Industry-specific technology solutions designed to transform your business operations and drive innovation across healthcare, finance, manufacturing, and more."
@@ -322,7 +322,7 @@ const Solutions: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default Solutions;

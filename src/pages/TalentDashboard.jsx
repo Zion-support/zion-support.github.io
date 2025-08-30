@@ -24,7 +24,7 @@ function TalentDashboardContent() {
         onboardingStatus.skillsAdded &&
         onboardingStatus.availabilitySet &&
         onboardingStatus.matchReceived;
-    return (<>
+    return (<React.Fragment>
       <SEO title="Talent Dashboard | Zion AI Marketplace" description="Your personalized talent dashboard with job matches and professional opportunities."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -177,7 +177,7 @@ function TalentDashboardContent() {
         </div>
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />

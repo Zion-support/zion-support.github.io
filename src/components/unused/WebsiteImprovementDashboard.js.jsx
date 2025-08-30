@@ -120,7 +120,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         if (showOnLoad) {
             runFullAnalysis()}
     }, [showOnLoad, runFullAnalysis]);
-    return (<>
+    return (<React.Fragment>
       {/* Dashboard Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 left-4 z-50 p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Website improvement dashboard" aria-expanded={isOpen}>
         <ChartBarIcon className="w-6 h-6"/>
@@ -191,13 +191,13 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
                   {/* Action Button */}
                   <button onClick={runFullAnalysis} disabled={isAnalyzing} className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
-                    {isAnalyzing ? (<>
+                    {isAnalyzing ? (<React.Fragment>
                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"/>
                         Analyzing...
-                      </>) : (<>
+                      </React.Fragment>) : (<React.Fragment>
                         <ChartBarIcon className="w-4 h-4"/>
                         Run Full Analysis
-                      </>)}
+                      </React.Fragment>)}
                   </button>
 
                   {/* Recent Activity */}
@@ -458,5 +458,5 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>)};
+    </React.Fragment>)};
 export default WebsiteImprovementDashboard;

@@ -109,7 +109,7 @@ export default function Careers() {
         </svg>)
         }
     ];
-    return (<>
+    return (<React.Fragment>
       <SEO title="Careers at Zion - Join Our Team" description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs" canonical="https://ziontechgroup.com/careers"/>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,4 +195,4 @@ export default function Careers() {
           </div>
         </div>
       </main>
-    </>)}
+    </React.Fragment>)}

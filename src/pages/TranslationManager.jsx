@@ -150,7 +150,7 @@ export default function TranslationManager() {
         return supportedLanguages
             .map(lang => lang.code)
             .filter(lang => !translations[lang]?.[key])};
-    return (<>
+    return (<React.Fragment>
       <SEO title={t('translation.manager_title')} description={t('translation.manager_description')}/>
       
       <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>
@@ -200,13 +200,13 @@ export default function TranslationManager() {
                             </div>
                             <div className="flex gap-2 mt-4">
                               <Button size="sm" onClick={() => handleSave(key)} disabled={isSaving}>
-                                {isSaving ? (<>
+                                {isSaving ? (<React.Fragment>
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
                                     {t('general.saving')}
-                                  </>) : (<>
+                                  </React.Fragment>) : (<React.Fragment>
                                     <Check className="mr-2 h-4 w-4"/>
                                     {t('general.save')}
-                                  </>)}
+                                  </React.Fragment>)}
                               </Button>
                               <Button size="sm" variant="outline" onClick={handleCancel}>
                                 {t('general.cancel')}
@@ -243,4 +243,4 @@ export default function TranslationManager() {
         </Card>
       </main>
       
-    </>)}
+    </React.Fragment>)}

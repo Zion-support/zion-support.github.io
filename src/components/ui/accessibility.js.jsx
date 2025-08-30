@@ -91,7 +91,7 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     }, [settings.screenReader]);
     if (!enabled)
         return null;
-    return (<>
+    return (<React.Fragment>
       {/* Accessibility Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className={`fixed top-4 right-4 z-50 p-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-full shadow-lg transition-all duration-300 ${className}`} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Accessibility settings">
         <Accessibility className="w-6 h-6"/>
@@ -292,4 +292,4 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
           </filter>
         </defs>
       </svg>
-    </>)}
+    </React.Fragment>)}

@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
+import json
 export function ApiDocumentation() {
     return (<Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -199,7 +200,6 @@ print(data)`
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',
@@ -418,7 +418,6 @@ print(data)`
 const data = await response.json();
 console.log(data);`,
             python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEY',

@@ -17,7 +17,7 @@ export default function IntegrationsFeature() {
     const { markSlackConnected } = useAdvancedOnboardingStatus();
     useEffect(() => {
         markSlackConnected()}, [markSlackConnected]);
-    return (<>
+    return (<React.Fragment>
       <SEO title="API & Integrations" description="Extend Zion by embedding widgets or using our REST API for custom workflows." keywords="Zion API, Slack integration, embed widget" canonical="https://app.ziontechgroup.com/features/integrations"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
@@ -54,4 +54,4 @@ export default function IntegrationsFeature() {
         </div>
       </main>
       <Footer />
-    </>)}
+    </React.Fragment>)}

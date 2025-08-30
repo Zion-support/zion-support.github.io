@@ -42,7 +42,7 @@ export function PrimaryNav() {
             router.push(`/search/${slugify(query)}`);
             setQuery('')}
     };
-    return (<>
+    return (<React.Fragment>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
@@ -108,25 +108,25 @@ export function PrimaryNav() {
             
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
-              {!isLoggedIn && (<>
+              {!isLoggedIn && (<React.Fragment>
                   <Link href="/auth/login" className="text-sm hover:text-primary whitespace-nowrap" data-testid="login-link">
                     {t('auth.login')}
                   </Link>
                   <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">
                     {t('auth.signup')}
                   </Link>
-                </>)}
+                </React.Fragment>)}
             </Link>
             <LanguageSelector />
             <ModeToggle />
-            {!isLoggedIn && (<>
+            {!isLoggedIn && (<React.Fragment>
                 <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
                   {t('login', 'Login')}
                 </Link>
                 <Link href="/signup" className="ml-2 text-sm hover:text-primary">
                   {t('signup', 'Sign up')}
                 </Link>
-              </>)}
+              </React.Fragment>)}
             {isLoggedIn && <UserMenu />}
           </div>
           
@@ -143,4 +143,4 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>)}
+    </React.Fragment>)}

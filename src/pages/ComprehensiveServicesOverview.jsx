@@ -112,7 +112,7 @@ export default function ComprehensiveServicesOverview() {
         if (typeof service.price === 'number') {
             return service.price}
     };
-    return (<>
+    return (<React.Fragment>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
@@ -373,4 +373,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-    </>)}
+    </React.Fragment>)}

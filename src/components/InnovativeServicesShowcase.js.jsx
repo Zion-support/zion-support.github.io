@@ -177,7 +177,7 @@ const InnovativeServicesShowcase = () => {
                           {activeTab === 'ai' && `$${selectedService.price}/${selectedService.pricingModel}`}
                         </span>
                       </div>
-                      {activeTab === 'microsaas' && (<>
+                      {activeTab === 'microsaas' && (<React.Fragment>
                           <div className="flex justify-between">
                             <span className="text-gray-300">User Limit:</span>
                             <span className="text-white">{selectedService.userLimit}</span>
@@ -190,8 +190,8 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">ROI:</span>
                             <span className="text-white text-green-400">{selectedService.roi}</span>
                           </div>
-                        </>)}
-                      {activeTab === 'it' && (<>
+                        </React.Fragment>)}
+                      {activeTab === 'it' && (<React.Fragment>
                           <div className="flex justify-between">
                             <span className="text-gray-300">Project Rate:</span>
                             <span className="text-white">${selectedService.projectRate}</span>
@@ -204,8 +204,8 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">SLA:</span>
                             <span className="text-white">{selectedService.sla}</span>
                           </div>
-                        </>)}
-                      {activeTab === 'ai' && (<>
+                        </React.Fragment>)}
+                      {activeTab === 'ai' && (<React.Fragment>
                           <div className="flex justify-between">
                             <span className="text-gray-300">AI Score:</span>
                             <span className="text-white text-green-400">{selectedService.aiScore}%</span>
@@ -218,7 +218,7 @@ const InnovativeServicesShowcase = () => {
                             <span className="text-gray-300">Market Price:</span>
                             <span className="text-white">{selectedService.marketPrice}</span>
                           </div>
-                        </>)}
+                        </React.Fragment>)}
                     </div>
                   </div>
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
-    return (<>
+    return (<React.Fragment>
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className={cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded", className)} animate={{
                 background[
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
@@ -15,7 +15,7 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
             }} style={{
                 backgroundSize: "200% 100%"
             }}/>))}
-    </>)}
+    </React.Fragment>)}
 export function CardSkeleton({ className }) {
     return (<div className={cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50", className)}>
       <div className="flex items-center space-x-4 mb-4">

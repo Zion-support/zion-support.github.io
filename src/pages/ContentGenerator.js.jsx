@@ -79,14 +79,14 @@ export default function ContentGenerator() {
     };
     // Check if user is still loading
     if (isLoading) {
-        return (<>
+        return (<React.Fragment>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
         </div>
         
-      </>)}
-    return (<>
+      </React.Fragment>)}
+    return (<React.Fragment>
       
       <div className="min-h-screen bg-zion-blue py-12">
         <div className="container mx-auto px-4">
@@ -125,7 +125,7 @@ export default function ContentGenerator() {
                     <Textarea id="customPrompt" placeholder="Enter a custom prompt for the AI..." className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]" value={customPrompt} onChange={(e) => setCustomPrompt(e.target.value)}/>
                   </div>
                   
-                  {contentType === 'blog' && (<>
+                  {contentType === 'blog' && (<React.Fragment>
                       <div className="flex items-center justify-between">
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>
                         <Switch id="autoPublish" checked={autoPublish} onCheckedChange={setAutoPublish}/>
@@ -135,7 +135,7 @@ export default function ContentGenerator() {
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch id="includeImage" checked={includeImage} onCheckedChange={setIncludeImage}/>
                       </div>
-                    </>)}
+                    </React.Fragment>)}
                   
                   {contentType === 'newsletter' && (<div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -144,10 +144,10 @@ export default function ContentGenerator() {
                 </CardContent>
                 <CardFooter>
                   <Button onClick={generateContent} disabled={isGenerating} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                    {isGenerating ? (<>
+                    {isGenerating ? (<React.Fragment>
                         <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
                         Generating...
-                      </>) : (<>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</>)}
+                      </React.Fragment>) : (<React.Fragment>Generate {contentType === 'blog' ? 'Blog Post' : 'Newsletter'}</React.Fragment>)}
                   </Button>
                 </CardFooter>
               </Card>
@@ -287,4 +287,4 @@ export default function ContentGenerator() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}

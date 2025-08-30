@@ -115,7 +115,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const getMetricColor = (score: PerformanceScore): string  => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700')};
   return (
-    <>
+    <React.Fragment>
       {/* Performance Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
@@ -308,7 +308,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </React.Fragment>
   )};
 // Simple refresh icon component
 const RefreshCw: React.FC<{ size: number }> = ({ size }) => (

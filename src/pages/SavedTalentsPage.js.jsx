@@ -119,7 +119,7 @@ export default function SavedTalentsPage() {
                 variant: "destructive",
             })}
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
       
       <div className="container mx-auto px-4 py-8">
@@ -133,4 +133,4 @@ export default function SavedTalentsPage() {
           </div>)}
       </div>
       
-    </>)}
+    </React.Fragment>)}

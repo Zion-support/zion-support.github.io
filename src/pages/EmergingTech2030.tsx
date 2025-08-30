@@ -64,7 +64,7 @@ export default function EmergingTech2030(...args[]):  {
   };
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Emerging Technology Services 2030 - Zion Tech Group"
         description="Discover cutting-edge emerging technology services for 2030 including quantum computing, neuromorphic computing, synthetic biology, and more. Future-ready solutions for forward-thinking businesses."
@@ -336,5 +336,5 @@ export default function EmergingTech2030(...args[]):  {
           </motion.div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )}

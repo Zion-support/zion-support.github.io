@@ -11,7 +11,7 @@ const ZionHireAI = () => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
@@ -107,7 +107,7 @@ const ZionHireAI = () => {
         </div>
       </main>
       <Footer />
-    </>
+    </React.Fragment>
   )};
 
 export default ZionHireAI;

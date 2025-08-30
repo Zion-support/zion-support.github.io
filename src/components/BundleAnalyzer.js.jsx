@@ -127,7 +127,7 @@ export const BundleAnalyzer = () => {
     };
     if (!analysis)
         return null;
-    return (<>
+    return (<React.Fragment>
       {/* Bundle Analyzer Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed top-4 right-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-300 focus:ring-opacity-50" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} aria-label="Bundle analyzer" aria-expanded={isOpen}>
         <BarChart3 className="w-6 h-6"/>
@@ -290,4 +290,4 @@ export const BundleAnalyzer = () => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>)};
+    </React.Fragment>)};

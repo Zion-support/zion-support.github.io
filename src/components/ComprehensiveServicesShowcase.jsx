@@ -580,7 +580,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
-      </></div>
+      </React.Fragment></div>
     </div>))}}
 
 interface ServiceCardProps {service};getCategoryIcon: (category: string) => React.ReactNode}
@@ -1121,4 +1121,4 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
   )};
 
 export default ComprehensiveServicesShowcase;
-    </></></></></></></></>)};
+    </React.Fragment></React.Fragment></React.Fragment></React.Fragment></React.Fragment></React.Fragment></React.Fragment></React.Fragment>)};

@@ -46,7 +46,7 @@ const MicroSAASServicesPage = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default MicroSAASServicesPage;

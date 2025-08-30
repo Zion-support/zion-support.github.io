@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() {
     const { projects, isLoading } = useProjects();
-    return (<>
+    return (<React.Fragment>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -45,6 +45,6 @@ function ProjectsContent() {
           </div>)}
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function Projects() {
     return <ProjectsContent />}

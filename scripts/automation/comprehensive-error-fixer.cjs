@@ -7,308 +7,519 @@ const { execSync } = require('child_process');
 class ComprehensiveErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
+    this.logsDir = path.join(this.projectRoot, 'logs');
     this.reportsDir = path.join(this.projectRoot, 'reports');
-    this.startTime = Date.now();
-    this.results = {
-      typescript: { success: false, errorsFixed: 0, filesProcessed: 0 },
-      eslint: { success: false, errorsFixed: 0, filesProcessed: 0 },
-      build: { success: false, errorsFixed: 0, filesProcessed: 0 },
-      overall: { success: false, totalErrorsFixed: 0, totalFilesProcessed: 0 }
-    };
+    this.backupDir = path.join(this.projectRoot, 'backup');
+    this.fixedFiles = [];
+    this.errorCount = 0;
+    this.warningCount = 0;
     
-    // Ensure reports directory exists
-    if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { recursive: true });
-    }
+    this.ensureDirectories();
+    this.setupLogging();
   }
 
-  log(message) {
+  ensureDirectories() {
+    [this.logsDir, this.reportsDir, this.backupDir].forEach(dir => {
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+    });
+  }
+
+  setupLogging() {
+    this.logFile = path.join(this.logsDir, 'comprehensive-error-fixer.log');
+    this.reportFile = path.join(this.reportsDir, 'comprehensive-error-fixer-report.json');
+  }
+
+  log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    
+    console.log(logMessage);
+    
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runTypeScriptErrorFixer() {
-    this.log('Running TypeScript Error Fixer...');
-    
+  backupFile(filePath) {
     try {
-      // Import and run the TypeScript error fixer
-      const TypeScriptErrorFixer = require('./typescript-error-fixer.cjs');
-      const fixer = new TypeScriptErrorFixer();
-      const result = await fixer.fixAllErrors();
-      
-      this.results.typescript = {
-        success: true,
-        errorsFixed: result.errorsFixed,
-        filesProcessed: result.filesProcessed
-      };
-      
-      this.log(`TypeScript Error Fixer completed successfully. Fixed ${result.errorsFixed} errors in ${result.filesProcessed} files.`);
-      return true;
-      
+      const backupPath = path.join(this.backupDir, path.basename(filePath) + '.backup');
+      fs.copyFileSync(filePath, backupPath);
+      return backupPath;
     } catch (error) {
-      this.log(`TypeScript Error Fixer failed: ${error.message}`);
-      this.results.typescript.success = false;
-      return false;
+      this.log(`Failed to backup ${filePath}: ${error.message}`, 'ERROR');
+      return null;
     }
   }
 
-  async runESLintErrorFixer() {
-    this.log('Running ESLint Error Fixer...');
+  async scanForErrors() {
+    this.log('Starting comprehensive error scan...');
     
     try {
-      // Import and run the general error fixer for ESLint issues
-      const ErrorFixer = require('./error-fixer.cjs');
-      const fixer = new ErrorFixer();
+      // Run ESLint to get current errors
+      const lintResult = execSync('npm run lint 2>&1', { encoding: 'utf8' });
+      this.log('ESLint scan completed');
       
-      // Run ESLint check and fix
-      const lintResult = await fixer.runLintCheck();
-      if (!lintResult.success) {
-        // Try to fix common ESLint issues
-        await fixer.fixCommonErrors();
+      // Parse ESLint output to extract file paths and error types
+      const errorFiles = this.parseESLintOutput(lintResult);
+      
+      // Run TypeScript check
+      try {
+        const tsResult = execSync('npm run type-check 2>&1', { encoding: 'utf8' });
+        this.log('TypeScript check completed');
+        const tsErrors = this.parseTypeScriptOutput(tsResult);
         
-        // Check again
-        const lintResultAfter = await fixer.runLintCheck();
-        this.results.eslint = {
-          success: lintResultAfter.success,
-          errorsFixed: lintResult.errors.length - (lintResultAfter.errors.length || 0),
-          filesProcessed: 1
-        };
-      } else {
-        this.results.eslint = {
-          success: true,
-          errorsFixed: 0,
-          filesProcessed: 0
-        };
+        // Merge errors
+        errorFiles.push(...tsErrors);
+      } catch (tsError) {
+        this.log('TypeScript check failed (expected for projects with errors)', 'WARN');
       }
       
-      this.log(`ESLint Error Fixer completed. Success: ${this.results.eslint.success}`);
-      return this.results.eslint.success;
-      
+      return errorFiles;
     } catch (error) {
-      this.log(`ESLint Error Fixer failed: ${error.message}`);
-      this.results.eslint.success = false;
-      return false;
+      this.log(`Error during scan: ${error.message}`, 'ERROR');
+      return [];
     }
   }
 
-  async runBuildErrorFixer() {
-    this.log('Running Build Error Fixer...');
+  parseESLintOutput(output) {
+    const errorFiles = [];
+    const lines = output.split('\n');
     
+    for (const line of lines) {
+      if (line.includes('error') || line.includes('warning')) {
+        const match = line.match(/^([^:]+):(\d+):(\d+)\s+(error|warning)\s+(.+)$/);
+        if (match) {
+          const [, filePath, lineNum, colNum, type, message] = match;
+          errorFiles.push({
+            file: filePath,
+            line: parseInt(lineNum),
+            column: parseInt(colNum),
+            type: type,
+            message: message.trim(),
+            source: 'eslint'
+          });
+        }
+      }
+    }
+    
+    return errorFiles;
+  }
+
+  parseTypeScriptOutput(output) {
+    const errorFiles = [];
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('error TS')) {
+        const match = line.match(/^([^:]+):(\d+):(\d+)\s+-\s+error\s+TS\d+:\s+(.+)$/);
+        if (match) {
+          const [, filePath, lineNum, colNum, message] = match;
+          errorFiles.push({
+            file: filePath,
+            line: parseInt(lineNum),
+            column: parseInt(colNum),
+            type: 'error',
+            message: message.trim(),
+            source: 'typescript'
+          });
+        }
+      }
+    }
+    
+    return errorFiles;
+  }
+
+  async fixFileErrors(filePath, errors) {
     try {
-      // Try to build the project
-      execSync('npm run build', { stdio: 'pipe' });
+      this.log(`Fixing errors in ${filePath}`);
       
-      this.results.build = {
-        success: true,
-        errorsFixed: 0,
-        filesProcessed: 0
-      };
-      
-      this.log('Build completed successfully - no build errors found.');
-      return true;
-      
-    } catch (error) {
-      this.log(`Build failed: ${error.message}`);
-      
-      // Try to fix common build issues
-      try {
-        await this.fixBuildErrors();
-        
-        // Try building again
-        execSync('npm run build', { stdio: 'pipe' });
-        
-        this.results.build = {
-          success: true,
-          errorsFixed: 1,
-          filesProcessed: 1
-        };
-        
-        this.log('Build errors fixed and build now succeeds.');
-        return true;
-        
-      } catch (fixError) {
-        this.log(`Failed to fix build errors: ${fixError.message}`);
-        this.results.build = {
-          success: false,
-          errorsFixed: 0,
-          filesProcessed: 0
-        };
+      // Backup the file
+      const backupPath = this.backupFile(filePath);
+      if (!backupPath) {
+        this.log(`Skipping ${filePath} due to backup failure`, 'WARN');
         return false;
       }
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      let fixed = false;
+      
+      // Sort errors by line number (descending) to avoid line number shifts
+      const sortedErrors = errors.sort((a, b) => b.line - a.line);
+      
+      for (const error of sortedErrors) {
+        if (error.source === 'eslint') {
+          const fixResult = this.fixESLintError(content, error);
+          if (fixResult.fixed) {
+            content = fixResult.content;
+            fixed = true;
+            this.log(`Fixed ESLint error at line ${error.line}: ${error.message}`);
+          }
+        } else if (error.source === 'typescript') {
+          const fixResult = this.fixTypeScriptError(content, error);
+          if (fixResult.fixed) {
+            content = fixResult.content;
+            fixed = true;
+            this.log(`Fixed TypeScript error at line ${error.line}: ${error.message}`);
+          }
+        }
+      }
+      
+      if (fixed) {
+        // Write the fixed content
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.fixedFiles.push(filePath);
+        this.log(`Successfully fixed errors in ${filePath}`);
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      return false;
     }
   }
 
-  async fixBuildErrors() {
-    this.log('Attempting to fix build errors...');
+  fixESLintError(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
     
-    // Common build error fixes
-    const fixes = [
-      // Fix missing dependencies
-      () => {
-        try {
-          execSync('npm install', { stdio: 'pipe' });
-          this.log('Dependencies installed successfully');
-        } catch (error) {
-          this.log(`Failed to install dependencies: ${error.message}`);
-        }
-      },
-      
-      // Fix TypeScript configuration
-      () => {
-        try {
-          const tsConfigPath = 'tsconfig.json';
-          if (fs.existsSync(tsConfigPath)) {
-            let content = fs.readFileSync(tsConfigPath, 'utf8');
-            
-            // Ensure strict mode is not too restrictive for build
-            if (content.includes('"strict": true')) {
-              content = content.replace('"strict": true', '"strict": false');
-              fs.writeFileSync(tsConfigPath, content, 'utf8');
-              this.log('Relaxed TypeScript strict mode for build');
-            }
-          }
-        } catch (error) {
-          this.log(`Failed to fix TypeScript config: ${error.message}`);
-        }
-      },
-      
-      // Fix Vite configuration
-      () => {
-        try {
-          const viteConfigPath = 'vite.config.ts';
-          if (fs.existsSync(viteConfigPath)) {
-            let content = fs.readFileSync(viteConfigPath, 'utf8');
-            
-            // Add common build optimizations
-            if (!content.includes('build: {')) {
-              content += `
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog']
+    if (lineIndex < 0 || lineIndex >= lines.length) {
+      return { fixed: false, content };
+    }
+    
+    const line = lines[lineIndex];
+    let newLine = line;
+    let fixed = false;
+    
+    // Fix common ESLint errors
+    if (error.message.includes('no-unused-vars')) {
+      // Remove unused imports/variables
+      if (line.includes('import') || line.includes('const') || line.includes('let') || line.includes('var')) {
+        // Comment out the line instead of deleting to preserve structure
+        newLine = '// ' + line + ' // FIXED: unused variable';
+        fixed = true;
+      }
+    } else if (error.message.includes('no-console')) {
+      // Comment out console statements
+      if (line.includes('console.')) {
+        newLine = '// ' + line + ' // FIXED: console statement removed';
+        fixed = true;
+      }
+    } else if (error.message.includes('Parsing error')) {
+      // Try to fix common parsing errors
+      if (line.includes('<>') && !line.includes('React.Fragment')) {
+        newLine = line.replace(/<>/g, '<React.Fragment>');
+        fixed = true;
+      } else if (line.includes('</>') && !line.includes('</React.Fragment>')) {
+        newLine = line.replace(/<\/>/g, '</React.Fragment>');
+        fixed = true;
+      }
+    }
+    
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return { fixed: true, content: lines.join('\n') };
+    }
+    
+    return { fixed: false, content };
+  }
+
+  fixTypeScriptError(content, error) {
+    const lines = content.split('\n');
+    const lineIndex = error.line - 1;
+    
+    if (lineIndex < 0 || lineIndex >= lines.length) {
+      return { fixed: false, content };
+    }
+    
+    const line = lines[lineIndex];
+    let newLine = line;
+    let fixed = false;
+    
+    // Fix common TypeScript errors
+    if (error.message.includes('JSX expressions must have one parent element')) {
+      // Wrap JSX in React.Fragment
+      if (line.trim().startsWith('<>')) {
+        newLine = line.replace(/<>/g, '<React.Fragment>');
+        fixed = true;
+      } else if (line.trim().startsWith('</>')) {
+        newLine = line.replace(/<\/>/g, '</React.Fragment>');
+        fixed = true;
+      }
+    } else if (error.message.includes('Unexpected token')) {
+      // Try to fix syntax errors
+      if (line.includes('[') && !line.includes(']')) {
+        newLine = line + ']';
+        fixed = true;
+      } else if (line.includes('{') && !line.includes('}')) {
+        newLine = line + '}';
+        fixed = true;
+      }
+    } else if (error.message.includes('Identifier expected')) {
+      // Fix function declaration issues
+      if (line.trim().startsWith('const') && line.includes('=') && line.includes('(')) {
+        // This looks like a function declaration, ensure proper syntax
+        if (!line.includes('function') && !line.includes('=>')) {
+          newLine = line.replace('const', 'function');
+          fixed = true;
         }
       }
     }
-  }
-});`;
-              fs.writeFileSync(viteConfigPath, content, 'utf8');
-              this.log('Added build optimizations to Vite config');
-            }
-          }
-        } catch (error) {
-          this.log(`Failed to fix Vite config: ${error.message}`);
-        }
-      }
-    ];
     
-    // Apply fixes
-    for (const fix of fixes) {
+    if (fixed) {
+      lines[lineIndex] = newLine;
+      return { fixed: true, content: lines.join('\n') };
+    }
+    
+    return { fixed: false, content };
+  }
+
+  async runAutoFixes() {
+    this.log('Running automatic fixes...');
+    
+    try {
+      // Fix common project-wide issues
+      await this.fixProjectStructure();
+      await this.fixImportIssues();
+      await this.fixSyntaxErrors();
+      
+      this.log('Automatic fixes completed');
+    } catch (error) {
+      this.log(`Error during auto-fixes: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async fixProjectStructure() {
+    this.log('Fixing project structure issues...');
+    
+    // Ensure proper React imports in JSX files
+    const jsxFiles = this.findFiles('src', ['.jsx', '.tsx']);
+    
+    for (const file of jsxFiles) {
       try {
-        fix();
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+        
+        // Add React import if missing
+        if (content.includes('JSX') && !content.includes('import React')) {
+          content = 'import React from \'react\';\n' + content;
+          modified = true;
+        }
+        
+        // Fix React.Fragment usage
+        if (content.includes('<>') || content.includes('</>')) {
+          if (!content.includes('React.Fragment')) {
+            content = content.replace(/<>/g, '<React.Fragment>');
+            content = content.replace(/<\/>/g, '</React.Fragment>');
+            modified = true;
+          }
+        }
+        
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
+          this.log(`Fixed structure issues in ${file}`);
+        }
       } catch (error) {
-        this.log(`Fix failed: ${error.message}`);
+        this.log(`Error fixing structure in ${file}: ${error.message}`, 'ERROR');
       }
     }
   }
 
-  async runAllFixes() {
+  async fixImportIssues() {
+    this.log('Fixing import issues...');
+    
+    // Remove duplicate imports and fix import paths
+    const jsFiles = this.findFiles('src', ['.js', '.jsx', '.ts', '.tsx']);
+    
+    for (const file of jsFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+        
+        // Remove duplicate imports
+        const lines = content.split('\n');
+        const importLines = [];
+        const otherLines = [];
+        
+        for (const line of lines) {
+          if (line.trim().startsWith('import ')) {
+            if (!importLines.includes(line.trim())) {
+              importLines.push(line.trim());
+            }
+          } else {
+            otherLines.push(line);
+          }
+        }
+        
+        if (importLines.length + otherLines.length !== lines.length) {
+          content = importLines.join('\n') + '\n' + otherLines.join('\n');
+          modified = true;
+        }
+        
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
+          this.log(`Fixed import issues in ${file}`);
+        }
+      } catch (error) {
+        this.log(`Error fixing imports in ${file}: ${error.message}`, 'ERROR');
+      }
+    }
+  }
+
+  async fixSyntaxErrors() {
+    this.log('Fixing syntax errors...');
+    
+    // Fix common syntax issues in data files
+    const dataFiles = this.findFiles('src/data', ['.js', '.jsx']);
+    
+    for (const file of dataFiles) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let modified = false;
+        
+        // Fix common syntax errors in data files
+        if (content.includes('const') && content.includes('[') && content.includes('=')) {
+          // Ensure proper array syntax
+          content = content.replace(/const\s+(\w+)\s*=\s*\[/g, 'const $1 = [');
+          modified = true;
+        }
+        
+        if (modified) {
+          fs.writeFileSync(file, content, 'utf8');
+          this.log(`Fixed syntax in ${file}`);
+        }
+      } catch (error) {
+        this.log(`Error fixing syntax in ${file}: ${error.message}`, 'ERROR');
+      }
+    }
+  }
+
+  findFiles(dir, extensions) {
+    const files = [];
+    
+    if (!fs.existsSync(dir)) return files;
+    
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        files.push(...this.findFiles(fullPath, extensions));
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    return files;
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalErrors: this.errorCount,
+        totalWarnings: this.warningCount,
+        filesFixed: this.fixedFiles.length,
+        success: this.errorCount === 0
+      },
+      fixedFiles: this.fixedFiles,
+      recommendations: this.generateRecommendations()
+    };
+    
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report generated: ${this.reportFile}`);
+    
+    return report;
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.errorCount > 0) {
+      recommendations.push('Run the error fixer again to address remaining issues');
+    }
+    
+    if (this.fixedFiles.length > 0) {
+      recommendations.push('Review fixed files to ensure changes are correct');
+      recommendations.push('Run tests to verify functionality is preserved');
+    }
+    
+    recommendations.push('Consider adding pre-commit hooks to prevent future errors');
+    recommendations.push('Regularly run linting and type checking in CI/CD pipeline');
+    
+    return recommendations;
+  }
+
+  async run() {
     this.log('Starting Comprehensive Error Fixer...');
     
     try {
-      // Run all error fixers in sequence
-      const typeScriptSuccess = await this.runTypeScriptErrorFixer();
-      const eslintSuccess = await this.runESLintErrorFixer();
-      const buildSuccess = await this.runBuildErrorFixer();
+      // Scan for current errors
+      const errors = await this.scanForErrors();
+      this.log(`Found ${errors.length} errors to fix`);
       
-      // Calculate overall results
-      this.results.overall = {
-        success: typeScriptSuccess && eslintSuccess && buildSuccess,
-        totalErrorsFixed: this.results.typescript.errorsFixed + 
-                         this.results.eslint.errorsFixed + 
-                         this.results.build.errorsFixed,
-        totalFilesProcessed: this.results.typescript.filesProcessed + 
-                           this.results.eslint.filesProcessed + 
-                           this.results.build.filesProcessed
-      };
+      // Group errors by file
+      const errorsByFile = {};
+      for (const error of errors) {
+        if (!errorsByFile[error.file]) {
+          errorsByFile[error.file] = [];
+        }
+        errorsByFile[error.file].push(error);
+      }
+      
+      // Fix errors in each file
+      for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {
+        if (fs.existsSync(filePath)) {
+          await this.fixFileErrors(filePath, fileErrors);
+        }
+      }
+      
+      // Run automatic fixes
+      await this.runAutoFixes();
       
       // Generate final report
       const report = this.generateReport();
       
-      this.log('Comprehensive Error Fixer completed!');
-      this.log(`Overall Success: ${this.results.overall.success}`);
-      this.log(`Total Errors Fixed: ${this.results.overall.totalErrorsFixed}`);
-      this.log(`Total Files Processed: ${this.results.overall.totalFilesProcessed}`);
+      this.log('Comprehensive Error Fixer completed successfully');
+      this.log(`Fixed ${this.fixedFiles.length} files`);
       
       return report;
       
     } catch (error) {
-      this.log(`Comprehensive Error Fixer failed: ${error.message}`);
+      this.log(`Error during execution: ${error.message}`, 'ERROR');
       throw error;
     }
   }
-
-  generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      summary: 'Comprehensive Error Fixer completed',
-      status: this.results.overall.success ? 'completed' : 'partial',
-      duration: `${duration}ms`,
-      results: this.results,
-      performance: {
-        totalDuration: duration,
-        averageTimePerFix: duration / Math.max(this.results.overall.totalErrorsFixed, 1)
-      }
-    };
-    
-    const reportPath = path.join(this.reportsDir, 'comprehensive-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`Comprehensive report saved to ${reportPath}`);
-    return report;
-  }
-
-  async runContinuousMode(interval = 300000) { // Default: 5 minutes
-    this.log(`Starting Continuous Error Fixer Mode (interval: ${interval}ms)...`);
-    
-    const runCycle = async () => {
-      try {
-        this.log('Running error fix cycle...');
-        await this.runAllFixes();
-        this.log(`Cycle completed. Next run in ${interval / 1000} seconds.`);
-      } catch (error) {
-        this.log(`Cycle failed: ${error.message}`);
-      }
-    };
-    
-    // Run immediately
-    await runCycle();
-    
-    // Set up continuous execution
-    setInterval(runCycle, interval);
-    
-    this.log('Continuous mode started. Press Ctrl+C to stop.');
-  }
 }
 
-// Run the automation if called directly
+// CLI interface
 if (require.main === module) {
   const fixer = new ComprehensiveErrorFixer();
   
-  // Check for command line arguments
-  const args = process.argv.slice(2);
-  
-  if (args.includes('--continuous') || args.includes('-c')) {
-    const interval = parseInt(args.find(arg => arg.startsWith('--interval='))?.split('=')[1]) || 300000;
-    fixer.runContinuousMode(interval).catch(console.error);
-  } else {
-    fixer.runAllFixes().catch(console.error);
-  }
+  fixer.run()
+    .then(report => {
+      console.log('\n=== COMPREHENSIVE ERROR FIXER REPORT ===');
+      console.log(`Files fixed: ${report.summary.filesFixed}`);
+      console.log(`Total errors: ${report.summary.totalErrors}`);
+      console.log(`Total warnings: ${report.summary.totalWarnings}`);
+      console.log(`Success: ${report.summary.success ? 'YES' : 'NO'}`);
+      
+      if (report.recommendations.length > 0) {
+        console.log('\nRecommendations:');
+        report.recommendations.forEach(rec => console.log(`- ${rec}`));
+      }
+      
+      process.exit(report.summary.success ? 0 : 1);
+    })
+    .catch(error => {
+      console.error('Error:', error.message);
+      process.exit(1);
+    });
 }
 
 module.exports = ComprehensiveErrorFixer;

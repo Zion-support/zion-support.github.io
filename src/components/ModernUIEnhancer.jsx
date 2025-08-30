@@ -203,7 +203,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         return () => {
             animatedElements.forEach((element) => {
                 observer.unobserve(element)})}}, [enableScrollEffects]);
-    return (<>
+    return (<React.Fragment>
       {/* Theme Toggle Button */}
       {enableThemeToggle && (<motion.button initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
           <AnimatePresence mode="wait">
@@ -327,5 +327,5 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                     ease: "linear",
                 }}/>))}
         </div>)}
-    </>)};
+    </React.Fragment>)};
 export default ModernUIEnhancer;

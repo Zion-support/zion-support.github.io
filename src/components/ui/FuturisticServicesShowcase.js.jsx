@@ -161,10 +161,10 @@ export default function FuturisticServicesShowcase() {
 
                 {/* Floating Elements */}
                 <AnimatePresence>
-                  {hoveredService === service.id && (<>
+                  {hoveredService === service.id && (<React.Fragment>
                       <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} className="absolute -top-2 -right-2 w-4 h-4 bg-cyan-400 rounded-full animate-ping"/>
                       <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} className="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-400 rounded-full animate-pulse"/>
-                    </>)}
+                    </React.Fragment>)}
                 </AnimatePresence>
               </motion.div>))}
           </AnimatePresence>

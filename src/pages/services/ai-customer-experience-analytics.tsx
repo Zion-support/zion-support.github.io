@@ -4,7 +4,7 @@ import { motion  } from 'framer-motion.ts';
 
 const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="AI-Powered Customer Experience Analytics Platform | Zion Tech Group"
         description="Advanced AI-driven customer experience analytics platform. Real-time sentiment analysis, customer journey tracking, and predictive analytics to boost satisfaction by 35% and reduce churn by 25%."
@@ -400,7 +400,7 @@ const AICustomerExperienceAnalytics: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

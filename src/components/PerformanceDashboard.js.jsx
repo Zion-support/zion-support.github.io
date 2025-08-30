@@ -125,11 +125,11 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
                     <span className="text-sm font-medium text-zion-purple">Tips</span>
                   </div>
                   <div className="text-xs text-zion-slate-light space-y-1">
-                    {performanceScore < 90 && (<>
+                    {performanceScore < 90 && (<React.Fragment>
                         {performanceScore < 70 && (<p>• Optimize images and use lazy loading</p>)}
                         <p>• Minimize JavaScript bundle size</p>
                         <p>• Use CDN for static assets</p>
-                      </>)}
+                      </React.Fragment>)}
                     {performanceScore >= 90 && (<p>Great performance! Keep up the good work! 🎉</p>)}
                   </div>
                 </div>

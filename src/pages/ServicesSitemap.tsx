@@ -158,7 +158,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="Services Sitemap | Zion Tech Group - Complete Service Directory"
         description="Complete directory of all Zion Tech Group services: AI-powered micro SAAS, cloud infrastructure, data analytics, security, and more. Find the perfect solution for your business needs."
@@ -380,7 +380,7 @@ const ServicesSitemap: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default ServicesSitemap;

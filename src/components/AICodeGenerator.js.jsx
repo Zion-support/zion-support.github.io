@@ -228,13 +228,13 @@ export const AICodeGenerator = () => {
                   </motion.div>)}
 
                 <button type="submit" disabled={isGenerating || !form.prompt.trim()} className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
-                  {isGenerating ? (<>
+                  {isGenerating ? (<React.Fragment>
                       <Loader2 className="w-5 h-5 animate-spin"/>
                       Generating Code...
-                    </>) : (<>
+                    </React.Fragment>) : (<React.Fragment>
                       <Sparkles className="w-5 h-5"/>
                       Generate Code
-                    </>)}
+                    </React.Fragment>)}
                 </button>
               </form>
 
@@ -273,13 +273,13 @@ export const AICodeGenerator = () => {
               </div>
 
               <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed">
-                {isAnalyzing ? (<>
+                {isAnalyzing ? (<React.Fragment>
                     <Loader2 className="w-5 h-5 animate-spin"/>
                     Analyzing Code...
-                  </>) : (<>
+                  </React.Fragment>) : (<React.Fragment>
                     <Eye className="w-5 h-5"/>
                     Analyze Code
-                  </>)}
+                  </React.Fragment>)}
               </button>
 
               {/* Analysis Results */}

@@ -202,7 +202,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
             <form onSubmit={handleSubmit(onSubmit)}>
               <CardContent className="space-y-6">
                 {currentStep === 0 && (
-                  <>
+                  <React.Fragment>
                     <div>
                       <Label htmlFor="projectName">Project Name</Label>
                       <Controller
@@ -221,10 +221,10 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
                       />
                       {errors.goals && <p className="text-sm text-red-600 mt-1">{errors.goals.message}</p>}
                     </div>
-                  </>
+                  </React.Fragment>
                 )}
                 {currentStep === 1 && (
-                  <>
+                  <React.Fragment>
                     <div>
                       <Label htmlFor="timeline">Timeline</Label>
                       <Controller
@@ -331,7 +331,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
                          {errors.talentFilters?.regions && <p className="text-sm text-red-600 mt-1">{errors.talentFilters.regions.message}</p>}
                       </div>
                     </div>
-                  </>
+                  </React.Fragment>
                 )}
                 {currentStep === 2 && (
                   <div>

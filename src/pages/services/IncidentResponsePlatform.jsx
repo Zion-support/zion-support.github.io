@@ -107,7 +107,7 @@ const IncidentResponsePlatform = () => {
         "Audit preparation",
         "Risk mitigation"
     ];
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Intelligent Incident Response Platform — Zion Tech Group | AI-Driven Security</title>
         <meta name="description" content="Transform your security operations with our AI-driven incident response platform. Automated threat detection, response workflows, and compliance reporting."/>
@@ -303,6 +303,6 @@ const IncidentResponsePlatform = () => {
           </div>
         </section>
       </div>
-    </>);
+    </React.Fragment>);
 };
 export default IncidentResponsePlatform;

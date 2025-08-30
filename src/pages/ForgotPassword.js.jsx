@@ -23,7 +23,7 @@ export default function ForgotPassword() {
             setIsSubmitted(true);
             setIsLoading(false)}, 2000)};
     if (isSubmitted) {
-        return (<>
+        return (<React.Fragment>
         <SEO title="Password Reset Sent - Zion Tech Group" description="Check your email for password reset instructions." canonical="https://ziontechgroup.com/forgot-password"/>
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="max-w-md w-full mx-auto p-6">
@@ -47,8 +47,8 @@ export default function ForgotPassword() {
             </div>
           </div>
         </div>
-      </>)}
-    return (<>
+      </React.Fragment>)}
+    return (<React.Fragment>
       
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
@@ -130,4 +130,4 @@ export default function ForgotPassword() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}

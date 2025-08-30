@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIAutonomousComplianceSecurity = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Autonomous Compliance Security Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI autonomous compliance security platform that continuously secures compliance, detects threats, and protects compliance infrastructure with advanced AI capabilities and autonomous operation."/>
@@ -168,5 +168,5 @@ const AIAutonomousComplianceSecurity = () => {
           </div>
         </div>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default AIAutonomousComplianceSecurity;

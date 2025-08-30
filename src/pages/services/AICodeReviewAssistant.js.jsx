@@ -105,7 +105,7 @@ const AICodeReviewAssistant = () => {
         "Code standardization",
         "Technical debt reduction"
     ];
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>AI Code Review Assistant — Zion Tech Group | Automated Code Quality & Security</title>
         <meta name="description" content="Transform your development workflow with our AI-powered code review assistant. Automated security scanning, quality metrics, and best practice recommendations."/>
@@ -301,5 +301,5 @@ const AICodeReviewAssistant = () => {
           </div>
         </section>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default AICodeReviewAssistant;

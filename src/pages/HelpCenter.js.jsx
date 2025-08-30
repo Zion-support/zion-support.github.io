@@ -79,7 +79,7 @@ export default function HelpCenter() {
         'Payment and escrow system',
         'Account security best practices'
     ];
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Help Center - Zion Tech Group</title>
         <meta name="description" content="Get help and support for Zion Tech Group's platform. Find answers to common questions, tutorials, and contact information."/>
@@ -195,4 +195,4 @@ export default function HelpCenter() {
           </div>
         </section>
       </div>
-    </>)}
+    </React.Fragment>)}

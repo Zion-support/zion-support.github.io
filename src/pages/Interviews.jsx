@@ -53,7 +53,7 @@ function InterviewsContent() {
                     await fetchInterviews()}}/>))}
           </div>
         </div>))};
-    return (<>
+    return (<React.Fragment>
       <SEO title="Interviews | Zion AI Marketplace" description="Manage your scheduled interviews with clients and talent"/>
       
       <main className="container mx-auto px-4 py-8">
@@ -114,7 +114,7 @@ function InterviewsContent() {
         </Tabs>
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />

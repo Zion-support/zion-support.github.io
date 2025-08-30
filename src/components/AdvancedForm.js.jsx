@@ -254,13 +254,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <motion.button type="submit" disabled={!isFormValid() || isSubmitting} className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${!isFormValid() || isSubmitting
             ? 'bg-gray-400 cursor-not-allowed'
             : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'}`} whileHover={isFormValid() && !isSubmitting ? { scale: 1.02 } : {}} whileTap={isFormValid() && !isSubmitting ? { scale: 0.98 } : {}}>
-          {isSubmitting ? (<>
+          {isSubmitting ? (<React.Fragment>
               <Loader2 className="w-5 h-5 animate-spin"/>
               Sending...
-            </>) : (<>
+            </React.Fragment>) : (<React.Fragment>
               <Send className="w-5 h-5"/>
               {submitText}
-            </>)}
+            </React.Fragment>)}
         </motion.button>
 
         {/* Form Status */}

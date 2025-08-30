@@ -159,7 +159,7 @@ const recentPosts = [
 export default function CommunityPage() {
     const { user } = useAuth();
     const [activeTab, setActiveTab] = useState("categories");
-    return (<>
+    return (<React.Fragment>
       <SEO title="Community Forum | Zion AI Marketplace" description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals." keywords="community, forum, discussion, AI marketplace, questions, answers" canonical="https://ziontechgroup.com/community"/>
       
       <div className="container py-8">
@@ -198,4 +198,4 @@ export default function CommunityPage() {
           </TabsContent>
         </Tabs>
       </div>
-    </>)}
+    </React.Fragment>)}

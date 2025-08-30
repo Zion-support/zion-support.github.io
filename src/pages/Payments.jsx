@@ -3,7 +3,7 @@ import { TransactionHistory } from "@/components/transactions/TransactionHistory
 import { GradientHeading } from "@/components/GradientHeading";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export default function Payments() {
-    return (<>
+    return (<React.Fragment>
       
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -81,7 +81,7 @@ export default function Payments() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}
 // Import UI components for Payment Settings tab
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";

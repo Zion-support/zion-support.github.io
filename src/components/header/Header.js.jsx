@@ -72,7 +72,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
             setQuery("")}} searchSuggestions={searchSuggestions}/>
         </form>
 
-      </></div>
+      </React.Fragment></div>
       
       {/* Animated Header Border */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
@@ -93,7 +93,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         {/* Mobile Menu */}
         <MobileMenu className="md:hidden"/>
       </div>
-    <>
+    <React.Fragment>
       <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
             ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20'
             : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'}`} style={headerStyle}>
@@ -232,5 +232,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       
       {/* Neon glow effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
-    </>header>
-    </>)}
+    </React.Fragment>header>
+    </React.Fragment>)}

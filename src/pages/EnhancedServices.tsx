@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 const EnhancedServices = () => {
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Enhanced Services - Zion Tech Group"
         description="Advanced technology services with enhanced features and capabilities for modern businesses."
@@ -37,6 +37,6 @@ const EnhancedServices = () => {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   )};
 export default EnhancedServices;

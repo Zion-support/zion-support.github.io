@@ -222,7 +222,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     return () => document.removeEventListener('keydown', handleEscape)}, [isOpen, announceToScreenReader]);
 
   return (
-    <>
+    <React.Fragment>
       {/* Toggle Button */}
       <motion.button
         initial={{ opacity: 0 }}
@@ -497,5 +497,5 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
           onClick={togglePanel}
         />
       )}
-    </>
+    </React.Fragment>
   )};

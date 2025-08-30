@@ -367,7 +367,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
               </div>
             </div>
         </div>
-      </></section>
+      </React.Fragment></section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -484,8 +484,8 @@ export default function AutonomousBusinessOperationsPlatform() {}
               </Link>
             </div>
           </div>
-        </></div>
-      </></section>
+        </React.Fragment></div>
+      </React.Fragment></section>
 
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -1004,11 +1004,11 @@ export default function AutonomousBusinessOperationsPlatform() {}
               <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200">
                 View Pricing
               </Link>
-            </></div>
+            </React.Fragment></div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
       </section>
     </div>
         {/* CTA Section */}
@@ -1036,8 +1036,8 @@ export default function AutonomousBusinessOperationsPlatform() {}
           </div>
         </section>
       </div>
-    </>
-    <>
+    </React.Fragment>
+    <React.Fragment>
       <SEOHead customData={{
                                                             title: "Autonomous Business Operations Platform - Zion Tech Group",
                                                             description: "Revolutionary AI-powered platform that automates and optimizes your entire business operations. Streamline processes, reduce costs, and boost efficiency with intelligent automation.",
@@ -1164,7 +1164,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >

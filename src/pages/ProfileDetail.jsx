@@ -57,7 +57,7 @@ export default function ProfileDetail() {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>)}
-    return (<>
+    return (<React.Fragment>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
       
       <div className="container mx-auto px-4 py-8">
@@ -202,4 +202,4 @@ export default function ProfileDetail() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}

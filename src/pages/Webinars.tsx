@@ -416,7 +416,7 @@ export default function Webinars() {
                 {/* Actions */}
                 <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
                   {showPast ? (
-                    <>
+                    <React.Fragment>
                       <a 
                         href={webinar.watchUrl}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
@@ -441,9 +441,9 @@ export default function Webinars() {
                           Slides
                         </a>
                       </div>
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <div className="text-sm text-slate-400">
                         {webinar.maxAttendees - webinar.attendees} spots remaining
                       </div>
@@ -454,7 +454,7 @@ export default function Webinars() {
                       >
                         Register Now
                       </a>
-                    </>
+                    </React.Fragment>
                   )}
                 </div>
               </motion.article>

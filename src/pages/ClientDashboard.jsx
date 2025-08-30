@@ -27,7 +27,7 @@ function ClientDashboardContent() {
     const handleJobSelect = (jobId, jobTitle) => {
         setSelectedJobId(jobId);
         setSelectedJobTitle(jobTitle)};
-    return (<>
+    return (<React.Fragment>
       <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -110,7 +110,7 @@ function ClientDashboardContent() {
         </div>
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />

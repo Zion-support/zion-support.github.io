@@ -841,15 +841,15 @@ export default function RequestQuote(...args[]):  {
                   className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
                   {isSubmitting ? (
-                    <>
+                    <React.Fragment>
                       <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                       Submitting...
-                    </>
+                    </React.Fragment>
                   ) : (
-                    <>
+                    <React.Fragment>
                       <Send className="h-4 w-4" />
                       Submit Quote Request
-                    </>
+                    </React.Fragment>
                   )}
                 </button>
               )}

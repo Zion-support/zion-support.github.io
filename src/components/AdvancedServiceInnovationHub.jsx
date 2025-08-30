@@ -237,7 +237,7 @@ const AdvancedServiceInnovationHub = () => {
       </motion.div>
 
       {/* Innovation Trends View */}
-      {viewMode === 'trends' && (<>
+      {viewMode === 'trends' && (<React.Fragment>
           {/* Filters */}
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -353,7 +353,7 @@ const AdvancedServiceInnovationHub = () => {
                 </Card>
               </motion.div>))}
           </motion.div>
-        </>)}
+        </React.Fragment>)}
 
       {/* Future Roadmap View */}
       {viewMode === 'roadmap' && (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="space-y-6">

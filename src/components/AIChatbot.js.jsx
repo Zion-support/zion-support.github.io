@@ -168,7 +168,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
           {suggestion}
         </button>))}
     </motion.div>);
-    return (<>
+    return (<React.Fragment>
       {/* Chatbot Toggle Button */}
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">
         <MessageCircle className="w-6 h-6"/>
@@ -203,7 +203,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             </div>
 
             {/* Chat Content */}
-            {!isMinimized && (<>
+            {!isMinimized && (<React.Fragment>
                 {/* Messages */}
                 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">
                   {messages.map((message) => (<motion.div key={message.id} initial={{ opacity: 0, x: message.type === 'user' ? 20 : -20 }} animate={{ opacity: 1, x: 0 }} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -255,7 +255,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     <span>{messages.length} messages</span>
                   </div>
                 </div>
-              </>)}
+              </React.Fragment>)}
           </motion.div>)}
       </AnimatePresence>
-    </>)};
+    </React.Fragment>)};

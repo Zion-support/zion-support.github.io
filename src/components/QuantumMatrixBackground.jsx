@@ -123,7 +123,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
       {showGrid && (<div className="absolute inset-0 cyber-grid-dense opacity-20"/>)}
 
       {/* Holographic Projections */}
-      {showHolograms && (<>
+      {showHolograms && (<React.Fragment>
           {/* Floating Holographic Elements */}
           <motion.div className="absolute top-20 left-20 w-32 h-32 rounded-full" style={{
                 background: 'radial-gradient(circle, rgba(34, 221, 210, 0.3) 0%, transparent 70%)',
@@ -177,7 +177,7 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
                 {String.fromCharCode(0x30A0 + Math.random() * 96)}
               </motion.div>))}
           </div>
-        </>)}
+        </React.Fragment>)}
 
       {/* Quantum Energy Fields */}
       <div className="absolute inset-0">

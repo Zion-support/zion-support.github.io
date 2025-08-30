@@ -117,7 +117,7 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     setSelectedService(null)};
 
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="Comprehensive Services 2030 - Zion Tech Group"
         description="Discover our cutting-edge AI, IT infrastructure, and emerging technology services for 2030. Transform your business with innovative solutions."
@@ -635,5 +635,5 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
           </motion.div>
         )}
       </div>
-    </>
+    </React.Fragment>
   )}

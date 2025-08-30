@@ -13,7 +13,7 @@ export default function TalentMarketplace() {
         "description": "Hire vetted AI and tech professionals from around the world on Zion.",
         "url": "https://app.ziontechgroup.com/features/talent-marketplace"
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title="Talent Marketplace" description="Discover and hire top AI specialists through the Zion talent marketplace." keywords="AI talent marketplace, hire developers, tech freelancers" canonical="https://app.ziontechgroup.com/features/talent-marketplace"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
@@ -50,4 +50,4 @@ export default function TalentMarketplace() {
         </div>
       </main>
       <Footer />
-    </>)}
+    </React.Fragment>)}

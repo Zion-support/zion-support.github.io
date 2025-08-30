@@ -36,7 +36,7 @@ export default function Blog() {
         return matchesSearch && matchesCategory});
     // Get featured posts
     const featuredPosts = posts.filter(post => post.isFeatured);
-    return (<>
+    return (<React.Fragment>
       <SEO title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://ziontechgroup.com/blog"/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
@@ -152,4 +152,4 @@ export default function Blog() {
             </div>)}
         </div>
       </div>
-    </>)}
+    </React.Fragment>)}

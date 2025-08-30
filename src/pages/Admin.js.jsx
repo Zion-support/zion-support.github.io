@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Admin = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Admin - Zion Tech Group</title>
         <meta name="description" content="Administrative dashboard for Zion Tech Group. Manage users, services, and system configurations."/>
@@ -23,5 +23,5 @@ const Admin = () => {
           </div>
         </div>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default Admin;

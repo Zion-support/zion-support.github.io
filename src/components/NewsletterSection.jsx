@@ -114,13 +114,13 @@ export function NewsletterSection() {
               <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto mb-6">
                 <input type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-1 px-6 py-4 rounded-xl border border-zion-blue-light/30 bg-zion-blue-dark/50 text-white placeholder:text-zion-slate-light/50 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg" required/>
                 <button type="submit" disabled={isLoading || !email} className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none shadow-lg hover:shadow-zion-cyan/25">
-                  {isLoading ? (<>
+                  {isLoading ? (<React.Fragment>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"/>
                       Subscribing...
-                    </>) : (<>
+                    </React.Fragment>) : (<React.Fragment>
                       Subscribe
                       <Send className="w-5 h-5"/>
-                    </>)}
+                    </React.Fragment>)}
                 </button>
               </form>
 

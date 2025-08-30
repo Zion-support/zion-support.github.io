@@ -10,7 +10,7 @@ export default function Services() {
         address: '364 E Main St STE 1008 Middletown DE 19709',
         website: 'https://ziontechgroup.com'
     };
-    return (<>
+    return (<React.Fragment>
 			<SEO title="Services - Micro SaaS, IT and AI Solutions | Zion Tech Group" description="Explore our micro SaaS products, enterprise IT services, and AI solutions with transparent pricing, clear features, and easy ways to get started." canonical="/services" url="https://ziontechgroup.com/services"/>
 
 			<main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -74,4 +74,4 @@ export default function Services() {
 
 				</div>
 			</main>
-		</>)}
+		</React.Fragment>)}

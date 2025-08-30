@@ -9,7 +9,7 @@ import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
     const { jobId } = useParams();
     const [activeTab, setActiveTab] = useState("kanban");
-    return (<>
+    return (<React.Fragment>
       <SEO title="Hiring Tracker | Zion AI Marketplace" description="Manage your candidate pipeline in the Zion AI Marketplace."/>
       
       <main className="container mx-auto px-4 py-8">
@@ -41,7 +41,7 @@ function HiringTrackerContent() {
         </Tabs>
       </main>
       
-    </>)}
+    </React.Fragment>)}
 export default function HiringTracker() {
     return (<ProtectedRoute>
       <HiringTrackerContent />

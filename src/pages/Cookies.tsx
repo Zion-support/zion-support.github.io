@@ -75,7 +75,7 @@ const Cookies: React.FC = (): JSX.Element => {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Cookie Policy | Zion Tech Group"
         description="Learn about how Zion Tech Group uses cookies to improve your browsing experience and provide personalized content."
@@ -329,7 +329,7 @@ const Cookies: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default Cookies;

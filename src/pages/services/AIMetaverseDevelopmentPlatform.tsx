@@ -83,7 +83,7 @@ export default function AIMetaverseDevelopmentPlatform() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="AI Metaverse Development Platform | Zion Tech Group"
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
@@ -308,6 +308,6 @@ export default function AIMetaverseDevelopmentPlatform() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

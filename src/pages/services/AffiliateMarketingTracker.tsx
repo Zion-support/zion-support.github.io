@@ -109,7 +109,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Affiliate Marketing Tracker - Zion Tech Group"
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
@@ -320,6 +320,6 @@ export default function AffiliateMarketingTracker(...args[]):  {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )}
 

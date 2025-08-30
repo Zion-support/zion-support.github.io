@@ -115,10 +115,10 @@ export default function ForumCategoryPage() {
         return <NotFound />}
     const category = categoriesInfo[categoryId];
     const IconComponent = iconMap[category.icon] || MessageSquare;
-    return (<>
+    return (<React.Fragment>
       <SEO title={`${category.name} | Community Forum | Zion AI Marketplace`} description={category.description} keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`} canonical={`https://ziontechgroup.com/community/category/${categoryId}`}/>
 
       <Suspense fallback={<div className="text-center py-16">Loading...</div>}>
         <CategoryContent categoryId={categoryId} category={category} IconComponent={IconComponent} user={user}/>
       </Suspense>
-    </>)}
+    </React.Fragment>)}

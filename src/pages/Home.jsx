@@ -15,7 +15,7 @@ import { ServicesShowcase } from "@/components/ServicesShowcase";
 
 export default function Home() {
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Zion Tech Group - Leading AI & Technology Solutions"
         description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem."
@@ -35,5 +35,5 @@ export default function Home() {
       <NewsletterSection />
       <ITServiceRequestHero />
       <FloatingCTA />
-    </>
+    </React.Fragment>
   )}

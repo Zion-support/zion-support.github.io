@@ -236,13 +236,13 @@ export const EnhancedContact = () => {
 
             <motion.div className="text-center" variants={itemVariants}>
               <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg py-3 px-8 disabled:opacity-50 disabled:cursor-not-allowed">
-                {isSubmitting ? (<>
+                {isSubmitting ? (<React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                     Sending...
-                  </>) : (<>
+                  </React.Fragment>) : (<React.Fragment>
                     <Send className="h-5 w-5 mr-2"/>
                     Send Message
-                  </>)}
+                  </React.Fragment>)}
               </Button>
             </motion.div>
           </motion.form>

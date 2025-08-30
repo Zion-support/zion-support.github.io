@@ -12,7 +12,7 @@ export default function CaseStudy() {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
       </div>)}
-    return (<>
+    return (<React.Fragment>
       <SEO title={study.title} description={study.excerpt}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto max-w-3xl">
@@ -28,4 +28,4 @@ export default function CaseStudy() {
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>
-    </>)}
+    </React.Fragment>)}

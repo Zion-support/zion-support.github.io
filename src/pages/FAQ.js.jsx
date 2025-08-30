@@ -55,7 +55,7 @@ export default function FAQ() {
             answer: "Getting started is simple! Create a free account, complete your profile, and start exploring the marketplace. You can immediately browse listings, connect with professionals, or showcase your own services and expertise."
         }
     ];
-    return (<>
+    return (<React.Fragment>
       <SEO title="FAQ - Frequently Asked Questions" description="Find answers to common questions about Zion Tech Group's AI and tech marketplace platform." keywords="FAQ, Zion Tech Group, AI marketplace, tech platform, questions, support" canonical="https://ziontechgroup.com/faq"/>
       <Header />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -101,4 +101,4 @@ export default function FAQ() {
         </div>
       </main>
       <Footer />
-    </>)}
+    </React.Fragment>)}

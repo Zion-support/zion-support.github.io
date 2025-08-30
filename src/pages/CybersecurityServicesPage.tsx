@@ -81,7 +81,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
     ? securityServices: securityServices.filter(service  => service.category === selectedCategory);
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Cybersecurity Services | Zion Tech Group"
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
@@ -291,7 +291,7 @@ const CybersecurityServicesPage: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default CybersecurityServicesPage;

@@ -52,7 +52,7 @@ export function AccessibilityMenu() {
             soundEnabled: true
         };
         setSettings(defaultSettings)};
-    return (<>
+    return (<React.Fragment>
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>
         <Settings className="h-5 w-5"/>
@@ -135,4 +135,4 @@ export function AccessibilityMenu() {
       <AnimatePresence>
         {isOpen && (<motion.div className="fixed inset-0 z-40 bg-black/20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setIsOpen(false)}/>)}
       </AnimatePresence>
-    </>)}
+    </React.Fragment>)}

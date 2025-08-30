@@ -88,12 +88,12 @@ const PerformanceOptimizedHero = memo(() => {
       </div>
 
       {/* Optimized Floating Elements */}
-      {isLoaded && (<>
+      {isLoaded && (<React.Fragment>
           <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>
           <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
-        </>)}
+        </React.Fragment>)}
     </section>)});
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;

@@ -263,13 +263,13 @@ export function AdvancedDataVisualization() {
             {/* Actions */}
             <div className="space-y-3">
               <button onClick={refreshData} disabled={isRefreshing} className="w-full px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
-                {isRefreshing ? (<>
+                {isRefreshing ? (<React.Fragment>
                     <RefreshCw className="w-4 h-4 animate-spin"/>
                     Refreshing...
-                  </>) : (<>
+                  </React.Fragment>) : (<React.Fragment>
                     <RefreshCw className="w-4 h-4"/>
                     Refresh Data
-                  </>)}
+                  </React.Fragment>)}
               </button>
               
               <div className="grid grid-cols-3 gap-2">

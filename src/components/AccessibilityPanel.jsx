@@ -95,7 +95,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         return 'Poor'};
     if (!isVisible)
         return null;
-    return (<>
+    return (<React.Fragment>
       {/* Toggle Button */}
       <button onClick={onToggle} className="fixed bottom-4 left-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" aria-label="Toggle accessibility panel" title="Accessibility Settings">
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -257,5 +257,5 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </>)};
+    </React.Fragment>)};
 export default AccessibilityPanel;

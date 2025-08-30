@@ -85,7 +85,7 @@ export default function Onboarding() {
     if (!user) {
         navigate('/login');
         return null}
-    return (<>
+    return (<React.Fragment>
       
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -120,4 +120,4 @@ export default function Onboarding() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}

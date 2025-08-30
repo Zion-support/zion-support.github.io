@@ -23,7 +23,7 @@ import { SecurityComplianceSection } from "@/components/SecurityComplianceSectio
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 export default function Home() {
-    return (<>
+    return (<React.Fragment>
       <SEO title="Zion Tech Group - Leading AI & Technology Solutions" description="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." canonical="/" url="https://ziontechgroup.com"/>
       
       <HeroSection />
@@ -48,4 +48,4 @@ export default function Home() {
       <NewsletterSection />
       <ITServiceRequestHero />
       <FloatingCTA />
-    </>)}
+    </React.Fragment>)}

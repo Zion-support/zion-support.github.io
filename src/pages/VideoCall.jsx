@@ -48,7 +48,7 @@ export default function VideoCall() {
             setParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`)}
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
       
       <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
@@ -70,4 +70,4 @@ export default function VideoCall() {
           </div>)}
       </main>
       
-    </>)}
+    </React.Fragment>)}

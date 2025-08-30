@@ -415,15 +415,15 @@ const Profile: React.FC = (): JSX.Element => {
               className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
             >
               {isLoading ? (
-                <>
+                <React.Fragment>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                   Saving...
-                </>
+                </React.Fragment>
               ) : (
-                <>
+                <React.Fragment>
                   <Save className="w-5 h-5" />
                   Save Changes
-                </>
+                </React.Fragment>
               )}
             </button>
           </div>
@@ -570,15 +570,15 @@ const Profile: React.FC = (): JSX.Element => {
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
           >
             {isLoading ? (
-              <>
+              <React.Fragment>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                 Changing Password...
-              </>
+              </React.Fragment>
             ) : (
-              <>
+              <React.Fragment>
                 <Key className="w-5 h-5" />
                 Change Password
-              </>
+              </React.Fragment>
             )}
           </button>
         </div>

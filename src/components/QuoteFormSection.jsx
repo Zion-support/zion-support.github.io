@@ -253,15 +253,15 @@ export const QuoteFormSection = () => {
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
               >
                 {isSubmitting ? (
-                  <>
+                  <React.Fragment>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
                     <span>Submitting...</span>
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     <Send className="w-5 h-5" />
                     <span>Get Your Quote</span>
-                  </>
+                  </React.Fragment>
                 )}
               </button>
 

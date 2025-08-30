@@ -13,15 +13,15 @@ export default function Profile() {
             navigate("/login?redirect=/profile")}
     }, [user, isLoading, navigate]);
     if (isLoading) {
-        return (<>
+        return (<React.Fragment>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading profile...</div>
         </div>
         
-      </>)}
+      </React.Fragment>)}
     if (!user) {
-        return (<>
+        return (<React.Fragment>
         
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
@@ -33,8 +33,8 @@ export default function Profile() {
           </div>
         </div>
         
-      </>)}
-    return (<>
+      </React.Fragment>)}
+    return (<React.Fragment>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
@@ -60,6 +60,6 @@ export default function Profile() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}
 ;
 export default Profile;

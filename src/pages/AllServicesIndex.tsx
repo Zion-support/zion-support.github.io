@@ -170,7 +170,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
     return matchesSearch && matchesCategory});
 
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="All Services Index | Zion Tech Group - Complete Service Directory"
         description="Browse our complete portfolio of AI-powered micro SAAS, cloud infrastructure, data analytics, and security services. Find the perfect solution for your business needs."
@@ -411,7 +411,7 @@ const AllServicesIndex: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default AllServicesIndex;

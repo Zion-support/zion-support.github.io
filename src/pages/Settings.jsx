@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const Settings = () => {
-    return (<>
+    return (<React.Fragment>
       <Helmet>
         <title>Settings - Zion Tech Group</title>
         <meta name="description" content="Configure your Zion Tech Group account settings. Customize notifications, security, and preferences."/>
@@ -23,5 +23,5 @@ const Settings = () => {
           </div>
         </div>
       </div>
-    </>)};
+    </React.Fragment>)};
 export default Settings;

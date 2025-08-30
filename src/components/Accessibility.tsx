@@ -132,7 +132,7 @@ export function Accessibility() {
   };
 
   return (
-    <>
+    <React.Fragment>
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -325,6 +325,6 @@ export function Accessibility() {
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </React.Fragment>
   );
 }

@@ -447,7 +447,7 @@ export default function EnhancedServicesShowcase2025() {
             <div className="mt-4 text-sm text-gray-400">
               Showing {filteredServices.length} of {enhancedServicesCatalog2025.length} services
               {selectedCategory !== 'all' && (
-                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></>
+                <React.Fragment> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></React.Fragment>
               )}
             </div>
           </div>
@@ -462,7 +462,7 @@ export default function EnhancedServicesShowcase2025() {
             <p className="text-gray-400">
               Showing <span className="text-white font-semibold">{filteredServices.length}</span> services
               {selectedCategory !== 'all' && (
-                <> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></>
+                <React.Fragment> in <span className="text-cyan-400 font-semibold">{selectedCategory}</span></React.Fragment>
               )}
             </p>
           </div>

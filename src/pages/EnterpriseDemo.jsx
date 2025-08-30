@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function EnterpriseDemo() {
-    return (<>
+    return (<React.Fragment>
       <SEO title="Enterprise Demo - Zion Tech Group" description="Schedule a personalized demo of Zion's enterprise solutions for AI hiring, talent management, and marketplace services." keywords="enterprise demo, AI hiring demo, talent management demo, Zion enterprise" canonical="https://ziontechgroup.com/enterprise/demo"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -181,4 +181,4 @@ export default function EnterpriseDemo() {
           </div>
         </div>
       </main>
-    </>)}
+    </React.Fragment>)}

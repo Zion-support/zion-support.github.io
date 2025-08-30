@@ -54,7 +54,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
   const categories = ['All', 'Security & Development', 'Analytics & Customer Success', 'DevOps & Infrastructure', 'IoT & Edge Computing'];
 
   return (
-    <>
+    <React.Fragment>
       <SEO
         title="AI-Powered Micro SAAS Services Showcase | Zion Tech Group"
         description="Discover our cutting-edge AI-powered micro SAAS services. From code security to customer analytics, DevOps automation to IoT edge computing. Transform your business with intelligent solutions."
@@ -305,7 +305,7 @@ const AIServicesShowcase: React.FC = (): JSX.Element => {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )};
 
 export default AIServicesShowcase;

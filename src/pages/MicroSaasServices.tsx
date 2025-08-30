@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 const MicroSaasServices: React.FC = (): JSX.Element => {
 	return (
-<>
+<React.Fragment>
 			<Helmet>
 				<title>Micro SaaS Services - Zion Tech Group</title>
 				<meta
@@ -25,6 +25,6 @@ const MicroSaasServices: React.FC = (): JSX.Element => {
 					</div>
 				</div>
 			</div>
-</>
+</React.Fragment>
 	)};
 export default MicroSaasServices;

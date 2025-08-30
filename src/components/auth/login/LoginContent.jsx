@@ -136,15 +136,15 @@ export function LoginContent() {
             >
               <span className="relative z-10 flex items-center justify-center">
                 {isLoading ? (
-                  <>
+                  <React.Fragment>
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
                     Signing in...
-                  </>
+                  </React.Fragment>
                 ) : (
-                  <>
+                  <React.Fragment>
                     <Lock className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform duration-300" />
                     Sign In
-                  </>
+                  </React.Fragment>
                 )}
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

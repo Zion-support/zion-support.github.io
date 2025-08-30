@@ -376,7 +376,7 @@ export function MainSidebar(...args[]):  {
   ];
 
   return (
-    <>
+    <React.Fragment>
       {/* Overlay */}
       {isOpen && (
         <div 
@@ -511,5 +511,5 @@ export function MainSidebar(...args[]):  {
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   )}

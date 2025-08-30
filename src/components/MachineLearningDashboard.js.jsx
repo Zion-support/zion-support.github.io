@@ -363,7 +363,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </div>
                     
                     <div className="flex space-x-2">
-                      {model.status === 'ready' && (<>
+                      {model.status === 'ready' && (<React.Fragment>
                           <button onClick={() => handleStartTraining(model.id)} className="flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                             <Play className="w-4 h-4 inline mr-2"/>
                             Train
@@ -371,7 +371,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           <button onClick={() => handleDeployModel(model.id)} className="flex-1 px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
                             Deploy
                           </button>
-                        </>)}
+                        </React.Fragment>)}
                       {model.status === 'deployed' && (<button onClick={() => handleArchiveModel(model.id)} className="w-full px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">
                           Archive
                         </button>)}

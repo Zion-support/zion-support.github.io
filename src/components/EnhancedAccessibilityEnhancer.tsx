@@ -294,7 +294,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
   if (!enabled) return null;
 
   return (
-    <>
+    <React.Fragment>
       {/* Accessibility Controls Button */}
       {showControls && (
         <button
@@ -431,7 +431,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
           </span>
         )}
       </div>
-    </>
+    </React.Fragment>
   )};
 
 // Export default component

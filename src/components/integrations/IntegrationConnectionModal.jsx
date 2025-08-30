@@ -44,7 +44,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
           </div>
         </DialogHeader>
         
-        {(integration.status === "connected" || integration.status === "warning") ? (<>
+        {(integration.status === "connected" || integration.status === "warning") ? (<React.Fragment>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
@@ -88,7 +88,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 Save Settings
               </Button>
             </DialogFooter>
-          </>) : (<>
+          </React.Fragment>) : (<React.Fragment>
             <div className="space-y-4 py-4">
               <p className="text-sm">
                 Connect your {integration.name} account to sync job contacts, applicants, and more. 
@@ -111,6 +111,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
               </Button>
             </DialogFooter>
-          </>)}
+          </React.Fragment>)}
       </DialogContent>
     </Dialog>)}

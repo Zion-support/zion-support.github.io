@@ -217,7 +217,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;
             default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
     };
-    return (<>
+    return (<React.Fragment>
       {/* Broken Link Fixer Toggle Button */}
       <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(!isOpen)} className={`fixed bottom-32 right-4 z-50 w-14 h-14 bg-orange-600 hover:bg-orange-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`} aria-label="Broken Link Checker" aria-expanded={isOpen}>
         <LinkIcon className="w-6 h-6"/>
@@ -433,5 +433,5 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           50% { opacity: 0.7}
         }
       `}</style>
-    </>)};
+    </React.Fragment>)};
 export default BrokenLinkFixer;

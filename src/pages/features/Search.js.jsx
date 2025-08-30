@@ -13,7 +13,7 @@ export default function SearchFeature() {
         "description": "Quickly locate products, services and talent using intelligent search filters.",
         "url": "https://app.ziontechgroup.com/features/search"
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title="Advanced Search" description="Find exactly what you need with fast, filterable search powered by Elasticsearch." keywords="search engine, filtering, tech marketplace search" canonical="https://app.ziontechgroup.com/features/search"/>
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
@@ -50,4 +50,4 @@ export default function SearchFeature() {
         </div>
       </main>
       <Footer />
-    </>)}
+    </React.Fragment>)}

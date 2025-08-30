@@ -14,6 +14,7 @@
     "type-check": "tsc --noEmit",
     "prepare": "git config core.hooksPath .husky || true",
     "fix:all": "yarn lint --fix || true",
+    "fix:comprehensive": "node scripts/automation/comprehensive-error-fixer.cjs",
     "automation:start": "./scripts/start-automation.sh start",
     "automation:stop": "./scripts/start-automation.sh stop",
     "automation:restart": "./scripts/start-automation.sh restart",
@@ -27,7 +28,14 @@
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    "pm2:comprehensive:start": "./scripts/start-comprehensive-error-prevention.sh start",
+    "pm2:comprehensive:stop": "./scripts/start-comprehensive-error-prevention.sh stop",
+    "pm2:comprehensive:restart": "./scripts/start-comprehensive-error-prevention.sh restart",
+    "pm2:comprehensive:status": "./scripts/start-comprehensive-error-prevention.sh status",
+    "pm2:comprehensive:logs": "./scripts/start-comprehensive-error-prevention.sh logs",
+    "pm2:comprehensive:monitor": "./scripts/start-comprehensive-error-prevention.sh monitor",
+    "pm2:comprehensive:health": "./scripts/start-comprehensive-error-prevention.sh health"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -101,6 +109,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
+    "globals": "^16.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "terser": "^5.43.1",

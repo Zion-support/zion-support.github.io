@@ -10,7 +10,7 @@ export default function PostJob() {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-pulse">Loading...</div>
       </div>)}
-    return (<>
+    return (<React.Fragment>
       <SEO title="Post a Job | Zion AI Marketplace" description="Post a job to find the perfect AI talent for your project."/>
       
       <main className={`container mx-auto px-${isMobile ? '2' : '4'} py-${isMobile ? '6' : '12'} max-w-4xl`}>
@@ -29,4 +29,4 @@ export default function PostJob() {
       
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
       {isMobile && <div className="h-16"></div>}
-    </>)}
+    </React.Fragment>)}

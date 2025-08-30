@@ -83,7 +83,7 @@ export default function AIAutonomousVehiclePlatform() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="AI Autonomous Vehicle Platform | Zion Tech Group"
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
@@ -308,6 +308,6 @@ export default function AIAutonomousVehiclePlatform() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

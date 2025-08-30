@@ -28,5 +28,5 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
     return <Navigate to="/unauthorized" replace />;
   }
 
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 }

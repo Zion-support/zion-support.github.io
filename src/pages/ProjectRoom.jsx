@@ -46,7 +46,7 @@ export default function ProjectRoom() {
             setCallParticipants(prev => [...prev, randomUser]);
             toast(`${randomUser.name} joined the call`)}
     };
-    return (<>
+    return (<React.Fragment>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
       
       <main className="container mx-auto py-8">
@@ -198,4 +198,4 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
       
-    </>)}
+    </React.Fragment>)}

@@ -63,7 +63,7 @@ export default function HelpCenterPage() {
             answer: "You can reach us through multiple channels: live chat on our website, email at support@ziontechgroup.com, or phone at +1 (555) 123-4567. We typically respond within 2 hours."
         }
     ];
-    return (<>
+    return (<React.Fragment>
       <SEO title="Help Center - Zion Tech Group" description="Get help and support for using Zion's marketplace platform. Find answers to common questions and contact our support team." keywords="help center, support, FAQ, customer service, Zion Tech Group" canonical="https://ziontechgroup.com/help"/>
       
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -219,4 +219,4 @@ export default function HelpCenterPage() {
           </section>
         </div>
       </main>
-    </>)}
+    </React.Fragment>)}

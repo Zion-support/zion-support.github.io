@@ -221,16 +221,16 @@ export default function RequestQuote() {
                   <button type="submit" disabled={!isFormValid || submissionStatus === 'submitting'} className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${!isFormValid || submissionStatus === 'submitting'
             ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
             : 'bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25'}`}>
-                    {submissionStatus === 'submitting' ? (<>
+                    {submissionStatus === 'submitting' ? (<React.Fragment>
                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                         <span>Submitting...</span>
-                      </>) : submissionStatus === 'success' ? (<>
+                      </React.Fragment>) : submissionStatus === 'success' ? (<React.Fragment>
                         <CheckCircle className="w-5 h-5"/>
                         <span>Quote Requested!</span>
-                      </>) : (<>
+                      </React.Fragment>) : (<React.Fragment>
                         <Send className="w-5 h-5"/>
                         <span>Request Quote</span>
-                      </>)}
+                      </React.Fragment>)}
                   </button>
 
                   {/* Status Messages */}

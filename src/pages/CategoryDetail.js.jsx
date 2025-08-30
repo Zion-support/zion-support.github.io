@@ -182,7 +182,7 @@ export default function CategoryDetail() {
                 }
             })}
     };
-    return (<>
+    return (<React.Fragment>
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
@@ -214,4 +214,4 @@ export default function CategoryDetail() {
         </div>
       </div>
       
-    </>)}
+    </React.Fragment>)}

@@ -432,13 +432,13 @@ export function AdvancedAICodeGenerator() {
                     <option value="java">Java</option>
                   </select>
                   <button onClick={generateCode} disabled={isGenerating || !aiPrompt.trim()} className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center space-x-2">
-                    {isGenerating ? (<>
+                    {isGenerating ? (<React.Fragment>
                         <RefreshCw className="w-4 h-4 animate-spin"/>
                         <span>Generating...</span>
-                      </>) : (<>
+                      </React.Fragment>) : (<React.Fragment>
                         <Zap className="w-4 h-4"/>
                         <span>Generate Code</span>
-                      </>)}
+                      </React.Fragment>)}
                   </button>
                 </div>
               </div>

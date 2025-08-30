@@ -5,7 +5,7 @@ import { GradientHeading } from "@/components/ui/GradientHeading";
 
 export default function Privacy() {
     return (
-      <>
+      <React.Fragment>
         <SEO title="Privacy Policy" description="Learn how Zion Tech Group handles your data and protects your privacy." canonical="https://ziontechgroup.com/privacy"/>
         <Header />
         <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -42,5 +42,5 @@ export default function Privacy() {
           </div>
         </main>
         <Footer />
-      </>
+      </React.Fragment>
     )}

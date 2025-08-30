@@ -157,7 +157,7 @@ export default function Support() {
     : filteredIssues;
 
   return (
-    <>
+    <React.Fragment>
       <SEO 
         title="Support Center - Zion Tech Group"
         description="Get expert technical support for all Zion Tech Group services. 24/7 AI-powered assistance, phone support, and comprehensive resources."
@@ -396,5 +396,5 @@ export default function Support() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   )}

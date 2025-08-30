@@ -108,7 +108,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
   }, [seoData]);
   
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>{seoData.title}</title>
         <meta name="description" content={seoData.description} />
@@ -140,7 +140,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         <meta name="msapplication-TileColor" content="#000000" />
       </Helmet>
       {children}
-    </>
+    </React.Fragment>
   );
 };
 
