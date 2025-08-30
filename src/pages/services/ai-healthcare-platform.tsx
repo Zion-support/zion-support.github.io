@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+  Heart, 
   Target, 
   Users, 
   Zap, 
@@ -28,58 +29,57 @@ import {
   Rocket,
   FileText,
   ShoppingCart,
-  Heart,
   Factory
 } from 'lucide-react';
 
-export function AIProjectManagementPage() {
+export function AIHealthcarePlatformPage() {
   const features = [
     {
-      title: 'Task Automation',
-      description: 'Automate repetitive project tasks and workflows for increased efficiency',
-      icon: Zap,
-      benefits: ['Reduced manual work', 'Faster completion', 'Better consistency']
+      title: 'Diagnostic Support',
+      description: 'AI-powered diagnostic assistance for improved accuracy and faster results',
+      icon: Brain,
+      benefits: ['Enhanced accuracy', 'Faster diagnosis', 'Reduced errors']
     },
     {
-      title: 'Resource Allocation',
-      description: 'Intelligent resource management and team optimization',
-      icon: Users,
-      benefits: ['Optimal utilization', 'Skill matching', 'Workload balance']
+      title: 'Patient Monitoring',
+      description: 'Real-time patient monitoring and early warning systems',
+      icon: Activity,
+      benefits: ['Continuous monitoring', 'Early detection', 'Better outcomes']
     },
     {
-      title: 'Risk Assessment',
-      description: 'AI-powered risk identification and mitigation strategies',
-      icon: Shield,
-      benefits: ['Early detection', 'Proactive mitigation', 'Better planning']
+      title: 'Treatment Planning',
+      description: 'Personalized treatment plans based on patient data and AI analysis',
+      icon: Target,
+      benefits: ['Personalized care', 'Optimized treatment', 'Better results']
     },
     {
-      title: 'Progress Tracking',
-      description: 'Real-time project monitoring and performance analytics',
+      title: 'Research Analytics',
+      description: 'Advanced analytics for medical research and clinical trials',
       icon: BarChart3,
-      benefits: ['Live updates', 'Performance insights', 'Timeline management']
+      benefits: ['Data insights', 'Research acceleration', 'Clinical validation']
     }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Streamline workflows and reduce project delivery time',
-      icon: Zap
+      title: 'Improved Patient Outcomes',
+      description: 'Better diagnosis and treatment lead to improved health results',
+      icon: Heart
     },
     {
-      title: 'Better Collaboration',
-      description: 'Enhanced team communication and coordination',
-      icon: Users
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Lower project costs through optimization and automation',
+      title: 'Reduced Costs',
+      description: 'Lower healthcare costs through efficiency and prevention',
       icon: DollarSign
     },
     {
-      title: 'Improved Quality',
-      description: 'Better project outcomes and stakeholder satisfaction',
-      icon: Star
+      title: 'Enhanced Efficiency',
+      description: 'Streamlined workflows and automated processes',
+      icon: Zap
+    },
+    {
+      title: 'Better Access',
+      description: 'Improved healthcare access through telemedicine and automation',
+      icon: Globe
     }
   ];
 
@@ -96,15 +96,15 @@ export function AIProjectManagementPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <Target className="w-8 h-8 text-white" />
+                <Heart className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              AI Project Management
+              AI Healthcare Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Streamline project workflows with intelligent task management and resource optimization.
-              Deliver projects faster and more efficiently with AI-powered automation.
+              Advanced healthcare solutions powered by AI for improved patient outcomes.
+              Transform healthcare delivery with intelligent technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -143,10 +143,10 @@ export function AIProjectManagementPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              AI Project Management Features
+              AI Healthcare Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage projects intelligently with AI
+              Everything you need to transform healthcare delivery with AI
             </p>
           </motion.div>
 
@@ -192,10 +192,10 @@ export function AIProjectManagementPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Choose AI Project Management?
+              Why Choose AI Healthcare?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of AI-powered project management
+              Experience the transformative power of AI-powered healthcare
             </p>
           </motion.div>
 
@@ -230,10 +230,10 @@ export function AIProjectManagementPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Project Management?
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Boost project success with AI-powered management solutions
+              Improve patient outcomes with AI-powered healthcare solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -258,4 +258,4 @@ export function AIProjectManagementPage() {
   );
 }
 
-export default AIProjectManagementPage;
+export default AIHealthcarePlatformPage;

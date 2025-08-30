@@ -48,10 +48,14 @@ export function Sidebar() {
       description: 'Our technology services',
       subItems: [
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Users },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', icon: TrendingUp },
+        { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', icon: Heart },
+        { name: 'AI Project Management', href: '/services/ai-project-management', icon: Target },
+        { name: 'AI Cybersecurity Suite', href: '/services/ai-cybersecurity-suite', icon: Shield },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud }
@@ -67,7 +71,8 @@ export function Sidebar() {
         { name: 'AI Business Intelligence', href: '/solutions/ai-business-intelligence', icon: Brain },
         { name: 'Quantum AI Platform', href: '/solutions/quantum-ai-platform', icon: Atom },
         { name: 'Digital Twin', href: '/solutions/digital-twin', icon: Eye },
-        { name: 'Zero Trust Security', href: '/solutions/zero-trust-security', icon: Shield }
+        { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial', href: '/solutions/financial', icon: DollarSign }
       ]
     },
     {
@@ -96,7 +101,8 @@ export function Sidebar() {
         { name: 'API Reference', href: '/api', icon: Cpu },
         { name: 'Support', href: '/support', icon: HelpCircle },
         { name: 'Training', href: '/training', icon: GraduationCap },
-        { name: 'Helpdesk', href: '/help', icon: HelpCircle }
+        { name: 'Helpdesk', href: '/help', icon: HelpCircle },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText }
       ]
     },
     {

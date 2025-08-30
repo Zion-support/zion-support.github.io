@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Target, 
   Users, 
+  TrendingUp, 
+  Target, 
   Zap, 
   Brain, 
   CheckCircle, 
@@ -32,54 +33,54 @@ import {
   Factory
 } from 'lucide-react';
 
-export function AIProjectManagementPage() {
+export function AISalesCopilotPage() {
   const features = [
     {
-      title: 'Task Automation',
-      description: 'Automate repetitive project tasks and workflows for increased efficiency',
-      icon: Zap,
-      benefits: ['Reduced manual work', 'Faster completion', 'Better consistency']
+      title: 'Lead Generation',
+      description: 'AI-powered lead scoring and qualification for better conversion rates',
+      icon: Target,
+      benefits: ['Smart lead scoring', 'Automated qualification', 'Higher conversion rates']
     },
     {
-      title: 'Resource Allocation',
-      description: 'Intelligent resource management and team optimization',
+      title: 'Sales Forecasting',
+      description: 'Predictive analytics for accurate sales projections and planning',
+      icon: TrendingUp,
+      benefits: ['Accurate predictions', 'Better planning', 'Risk mitigation']
+    },
+    {
+      title: 'Customer Segmentation',
+      description: 'Intelligent customer grouping for personalized sales strategies',
       icon: Users,
-      benefits: ['Optimal utilization', 'Skill matching', 'Workload balance']
+      benefits: ['Personalized approach', 'Better targeting', 'Improved ROI']
     },
     {
-      title: 'Risk Assessment',
-      description: 'AI-powered risk identification and mitigation strategies',
-      icon: Shield,
-      benefits: ['Early detection', 'Proactive mitigation', 'Better planning']
-    },
-    {
-      title: 'Progress Tracking',
-      description: 'Real-time project monitoring and performance analytics',
+      title: 'Performance Analytics',
+      description: 'Comprehensive insights into sales team performance and metrics',
       icon: BarChart3,
-      benefits: ['Live updates', 'Performance insights', 'Timeline management']
+      benefits: ['Team optimization', 'Performance tracking', 'Goal setting']
     }
   ];
 
   const benefits = [
     {
-      title: 'Increased Efficiency',
-      description: 'Streamline workflows and reduce project delivery time',
-      icon: Zap
-    },
-    {
-      title: 'Better Collaboration',
-      description: 'Enhanced team communication and coordination',
-      icon: Users
-    },
-    {
-      title: 'Cost Reduction',
-      description: 'Lower project costs through optimization and automation',
+      title: 'Increased Sales',
+      description: 'Boost revenue with AI-driven insights and automation',
       icon: DollarSign
     },
     {
-      title: 'Improved Quality',
-      description: 'Better project outcomes and stakeholder satisfaction',
-      icon: Star
+      title: 'Better Efficiency',
+      description: 'Automate repetitive tasks and focus on high-value activities',
+      icon: Zap
+    },
+    {
+      title: 'Improved Accuracy',
+      description: 'Reduce errors with AI-powered data analysis and predictions',
+      icon: Target
+    },
+    {
+      title: '24/7 Availability',
+      description: 'AI systems work around the clock without fatigue',
+      icon: Clock
     }
   ];
 
@@ -96,15 +97,15 @@ export function AIProjectManagementPage() {
           >
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center">
-                <Target className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              AI Project Management
+              AI Sales Copilot
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Streamline project workflows with intelligent task management and resource optimization.
-              Deliver projects faster and more efficiently with AI-powered automation.
+              Revolutionize your sales process with intelligent automation and predictive lead scoring.
+              Boost revenue and efficiency with AI-powered sales solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -143,10 +144,10 @@ export function AIProjectManagementPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              AI Project Management Features
+              AI Sales Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage projects intelligently with AI
+              Everything you need to transform your sales process with AI
             </p>
           </motion.div>
 
@@ -192,10 +193,10 @@ export function AIProjectManagementPage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Choose AI Project Management?
+              Why Choose AI Sales Copilot?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative power of AI-powered project management
+              Experience the transformative power of AI-powered sales automation
             </p>
           </motion.div>
 
@@ -230,10 +231,10 @@ export function AIProjectManagementPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Project Management?
+              Ready to Transform Your Sales?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Boost project success with AI-powered management solutions
+              Boost your sales performance with AI-powered automation and insights
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
@@ -258,4 +259,4 @@ export function AIProjectManagementPage() {
   );
 }
 
-export default AIProjectManagementPage;
+export default AISalesCopilotPage;
