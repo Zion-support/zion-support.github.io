@@ -60,13 +60,16 @@ import {
   Palette
 } from 'lucide-react';
 import { MainNavigation } from './header/MainNavigation';
+import { AdvancedSearch } from './AdvancedSearch';
+import { ThemeToggle } from './ThemeProvider';
 import { cn } from '@/lib/utils';
 
 interface HeaderProps {
   className?: string;
+  onMenuClick?: () => void;
 }
 
-export function Header({ className }: HeaderProps) {
+export function Header({ className, onMenuClick }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -89,6 +92,7 @@ export function Header({ className }: HeaderProps) {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (onMenuClick) onMenuClick();
   };
 
   const closeMobileMenu = () => {
@@ -131,23 +135,11 @@ export function Header({ className }: HeaderProps) {
           {/* Right Side Actions */}
           <div className="flex items-center space-x-4">
             
-            {/* Search Button */}
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
+            {/* Advanced Search */}
+            <AdvancedSearch />
+            
             {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
+            <ThemeToggle />
 
             {/* Notifications */}
             <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors relative">
@@ -215,36 +207,17 @@ export function Header({ className }: HeaderProps) {
               className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
               aria-label="Toggle mobile menu"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Search Bar */}
-      <AnimatePresence>
-        {isSearchOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="bg-zion-blue-dark border-t border-zion-purple/30"
-          >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or resources..."
-                  className="w-full pl-10 pr-4 py-3 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Mobile Menu */}
+      {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -253,116 +226,59 @@ export function Header({ className }: HeaderProps) {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-zion-blue-dark border-t border-zion-purple/30"
           >
-            <div className="px-4 py-6 space-y-6">
-              
+            <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation Links */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <Link
                   to="/"
-                  className="block text-white hover:text-zion-cyan transition-colors text-lg font-medium"
+                  className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors"
                   onClick={closeMobileMenu}
                 >
                   Home
                 </Link>
-                
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Services</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/ai-services"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      AI Services
-                    </Link>
-                    <Link
-                      to="/it-services"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      IT Services
-                    </Link>
-                    <Link
-                      to="/micro-saas"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Micro SAAS
-                    </Link>
-                    <Link
-                      to="/cloud-devops"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Cloud & DevOps
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Solutions</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/enterprise"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Enterprise
-                    </Link>
-                    <Link
-                      to="/healthcare"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Healthcare
-                    </Link>
-                    <Link
-                      to="/financial"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Financial
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wider">Company</h3>
-                  <div className="pl-4 space-y-2">
-                    <Link
-                      to="/about"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      About Us
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Contact
-                    </Link>
-                    <Link
-                      to="/careers"
-                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
-                      onClick={closeMobileMenu}
-                    >
-                      Careers
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-zion-purple/20">
                 <Link
-                  to="/signup"
-                  className="block w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white text-center py-3 px-6 rounded-lg font-medium hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300"
+                  to="/services"
+                  className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors"
                   onClick={closeMobileMenu}
                 >
-                  Get Started
+                  Services
                 </Link>
+                <Link
+                  to="/about"
+                  className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  About
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block px-4 py-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/20 rounded-lg transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  Contact
+                </Link>
+              </div>
+
+              {/* Mobile Quick Actions */}
+              <div className="pt-4 border-t border-zion-purple/20">
+                <div className="grid grid-cols-2 gap-3">
+                  <Link
+                    to="/ai-services"
+                    className="flex items-center space-x-3 p-4 bg-zion-blue/10 border border-zion-purple/30 rounded-lg hover:bg-zion-blue/20 transition-colors"
+                    onClick={closeMobileMenu}
+                  >
+                    <Brain className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-light font-medium">AI Services</span>
+                  </Link>
+                  <Link
+                    to="/cybersecurity"
+                    className="flex items-center space-x-3 p-4 bg-zion-blue/10 border border-zion-purple/30 rounded-lg hover:bg-zion-blue/20 transition-colors"
+                    onClick={closeMobileMenu}
+                  >
+                    <Shield className="w-5 h-5 text-zion-cyan" />
+                    <span className="text-zion-slate-light font-medium">Security</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </motion.div>
