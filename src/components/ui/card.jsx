@@ -1,71 +1,82 @@
-<<<<<<< HEAD
-const Card = ({ children, className = '' }) => {
-    return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
-      {children}
-    </div>);
-};
-const CardHeader = ({ children, className = '' }) => {
-    return (<div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
-      {children}
-    </div>);
-};
-const CardTitle = ({ children, className = '' }) => {
-    return (<h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
-      {children}
-    </h3>);
-};
-const CardDescription = ({ children, className = '' }) => {
-    return (<p className={`text-sm text-muted-foreground ${className}`}>
-      {children}
-    </p>);
-};
-const CardContent = ({ children, className = '' }) => {
-    return (<div className={`p-6 pt-0 ${className}`}>
-      {children}
-    </div>);
-};
-const CardFooter = ({ children, className = '' }) => {
-    return (<div className={`flex items-center p-6 pt-0 ${className}`}>
-      {children}
-    </div>);
-};
-export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-=======
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]]}
-    return t};
-import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
 import { cn } from '@/lib/utils';
-const Card = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('rounded-lg border bg-card text-card-foreground shadow-sm', className) }, props)))});
+
+const Card = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <div 
+            ref={ref}
+            className={cn('rounded-lg border bg-card text-card-foreground shadow-sm', className)}
+            {...props}
+        >
+            {children}
+        </div>
+    );
+});
 Card.displayName = 'Card';
-const CardHeader = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex flex-col space-y-1.5 p-6', className) }, props)))});
+
+const CardHeader = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <div 
+            ref={ref}
+            className={cn('flex flex-col space-y-1.5 p-6', className)}
+            {...props}
+        >
+            {children}
+        </div>
+    );
+});
 CardHeader.displayName = 'CardHeader';
-const CardTitle = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("h3", Object.assign({ ref: ref, className: cn('text-2xl font-semibold leading-none tracking-tight', className) }, props)))});
+
+const CardTitle = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <h3 
+            ref={ref}
+            className={cn('text-2xl font-semibold leading-none tracking-tight', className)}
+            {...props}
+        >
+            {children}
+        </h3>
+    );
+});
 CardTitle.displayName = 'CardTitle';
-const CardDescription = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("p", Object.assign({ ref: ref, className: cn('text-sm text-muted-foreground', className) }, props)))});
+
+const CardDescription = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <p 
+            ref={ref}
+            className={cn('text-sm text-muted-foreground', className)}
+            {...props}
+        >
+            {children}
+        </p>
+    );
+});
 CardDescription.displayName = 'CardDescription';
-const CardContent = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('p-6 pt-0', className) }, props)))});
+
+const CardContent = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <div 
+            ref={ref}
+            className={cn('p-6 pt-0', className)}
+            {...props}
+        >
+            {children}
+        </div>
+    );
+});
 CardContent.displayName = 'CardContent';
-const CardFooter = React.forwardRef((_a, ref) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))});
+
+const CardFooter = React.forwardRef(({ className, children, ...props }, ref) => {
+    return (
+        <div 
+            ref={ref}
+            className={cn('flex items-center p-6 pt-0', className)}
+            {...props}
+        >
+            {children}
+        </div>
+    );
+});
 CardFooter.displayName = 'CardFooter';
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
