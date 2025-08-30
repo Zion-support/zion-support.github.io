@@ -84,19 +84,19 @@ export function Footer() {
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://facebook.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://instagram.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+              <a href="https://youtube.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-5 h-5" />
               </a>
               <a href="https://github.com/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">

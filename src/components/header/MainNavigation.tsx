@@ -133,21 +133,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
                     <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+                    <li><Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Neural Network</Link></li>
+                    <li><Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>
                     <li><Link to="/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
                     <li><Link to="/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
-                    <li><Link to="/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Supply Chain</Link></li>
-                    <li><Link to="/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Quantum Hybrid</Link></li>
                   </ul>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
-                <Link 
-                  to="/enhanced-services" 
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
-                >
-                  View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
-                </Link>
+                <div className="grid grid-cols-2 gap-4">
+                  <Link 
+                    to="/enhanced-services" 
+                    className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                  >
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link 
+                    to="/comprehensive-pricing-guide-2025" 
+                    className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                  >
+                    Pricing Guide
+                    <DollarSign className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
