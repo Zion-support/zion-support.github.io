@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { HelpCircle, 
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  HelpCircle, 
   MessageCircle, 
   Mail, 
   Phone, 
@@ -21,8 +22,8 @@ import { HelpCircle,
   Lock,
   Cpu,
   Star
- } from 'lucide-react.ts';
-import { SEO  } from '../components/SEO';
+} from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState('');

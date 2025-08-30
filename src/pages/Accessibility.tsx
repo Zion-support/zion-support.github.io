@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Accessibility, 
   Eye, 
   Ear, 
@@ -23,7 +23,7 @@ import { Accessibility,
   Type,
   ZoomIn,
   ZoomOut
- } from 'lucide-react.ts';
+} from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function Accessibility() {

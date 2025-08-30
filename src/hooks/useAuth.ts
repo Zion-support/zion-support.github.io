@@ -1,4 +1,4 @@
-import { useState, useEffect  } from 'react.ts';
+import { useState, useEffect } from 'react';
 
 interface User {
 
@@ -14,16 +14,17 @@ interface AuthState {
 
   user: User | null;
   isAuthenticated: boolean;
-  isLoading: boolean}
+  isLoading: boolean;
+}
 
-export function useAuth(...args[]):  {
+export function useAuth(...args: any[]) {
   const [authState, setAuthState] = useState<any>({
     user: null,
     isAuthenticated: false,
     isLoading: true,
   });
 
-  useEffect(()  => {
+  useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const storedUser = localStorage.getItem('zion_user');
@@ -36,22 +37,26 @@ export function useAuth(...args[]):  {
             user,
             isAuthenticated: true,
             isLoading: false,
-          })} catch (error) {
+          });
+        } catch (error) {
           console.error('Error parsing stored user:', error);
           setAuthState({
             user: null,
             isAuthenticated: false,
             isLoading: false,
-          })}
+          });
+        }
       } else {
         setAuthState({
           user: null,
           isAuthenticated: false,
           isLoading: false,
-        })}
+        });
+      }
     };
 
-    checkAuth()}, []);
+    checkAuth();
+  }, []);
 
   const login = async (email: string, _password: string)  => {
     // In a real app, you would make an API call to your backend
@@ -72,7 +77,8 @@ export function useAuth(...args[]):  {
     localStorage.setItem('authToken', 'dummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     
-    return mockUser};
+    return mockUser;
+  };
 
   const logout = () => {
     setAuthState({
@@ -81,9 +87,10 @@ export function useAuth(...args[]):  {
       isLoading: false,
     });
     localStorage.removeItem('zion_user');
-    localStorage.removeItem('authToken')};
+    localStorage.removeItem('authToken');
+  };
 
-  const register = async (email: string, password: string, name: string)  => {
+  const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
       id: '1',
@@ -101,7 +108,8 @@ export function useAuth(...args[]):  {
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     localStorage.setItem('authToken', 'dummy-token');
     
-    return mockUser};
+    return mockUser;
+  };
 
   return {
     user: authState.user,

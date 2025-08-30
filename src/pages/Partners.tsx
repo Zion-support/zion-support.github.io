@@ -1,13 +1,13 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Handshake, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Handshake, 
   Users, 
   Building, 
   Globe, 
   Star, 
   ArrowRight, 
-  Handshake, 
   Award, 
   TrendingUp,
   Shield,
@@ -15,9 +15,8 @@ import { Handshake,
   Brain,
   Zap,
   CheckCircle,
-  Building,
   Briefcase
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 export default function Partners() {
   const partnershipTypes = [
@@ -85,10 +84,13 @@ export default function Partners() {
       title: 'Market Expansion',
       description: 'Expand your reach into new industries and geographies',
       icon: Globe,
-      partners: [
-        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
-        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
-      ]
+      color: 'from-blue-500 to-cyan-600'
+    },
+    {
+      title: 'Innovation Support',
+      description: 'Access to cutting-edge research and development resources',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-600'
     }
   ];
 
@@ -97,6 +99,30 @@ export default function Partners() {
     { icon: Shield, title: 'Technical Support', description: 'Dedicated technical support and training' },
     { icon: TrendingUp, title: 'Revenue Growth', description: 'Competitive margins and growth opportunities' },
     { icon: Award, title: 'Recognition', description: 'Partner awards and marketing support' }
+  ];
+
+  const existingPartners = [
+    {
+      name: 'TechCorp',
+      logo: 'TC',
+      category: 'Technology Partner',
+      description: 'Leading technology solutions provider',
+      year: '2022'
+    },
+    {
+      name: 'InnovateTech',
+      logo: 'IT',
+      category: 'System Integrator',
+      description: 'Global system integration expertise',
+      year: '2021'
+    },
+    {
+      name: 'CloudSolutions',
+      logo: 'CS',
+      category: 'Cloud Partner',
+      description: 'Specialized cloud infrastructure services',
+      year: '2023'
+    }
   ];
 
   return (
@@ -205,7 +231,7 @@ export default function Partners() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Partner Benefits */}
       <section className="py-20 bg-slate-900">
@@ -225,8 +251,8 @@ export default function Partners() {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {partnerBenefits.map((benefit, index)  => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {partnerBenefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -242,51 +268,51 @@ export default function Partners() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
-            </p>
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="mt-16 text-center"
+          >
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+              <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                Join our partner ecosystem and help organizations leverage the power of AI, cloud, and emerging technologies.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {existingPartners.map((partner, index) => (
+                <motion.div
+                  key={partner.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group"
+                >
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-4xl">{partner.logo}</div>
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
+                        {partner.category}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                    <p className="text-slate-300 text-sm mb-4">{partner.description}</p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-slate-400 text-sm">Partner since {partner.year}</span>
+                      <Star className="w-4 h-4 text-amber-400" />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
-          
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {existingPartners.map((partner, index)  => (
-              <motion.div
-                key={partner.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-4xl">{partner.logo}</div>
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
-                      {partner.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
-                  <p className="text-slate-300 text-sm mb-4">{partner.description}</p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400 text-sm">Partner since {partner.year}</span>
-                    <Star className="w-4 h-4 text-amber-400" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -309,8 +335,8 @@ export default function Partners() {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {partnershipProcess.map((step, index)  => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipProcess.map((step, index) => (
                 <motion.div
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
@@ -336,7 +362,8 @@ export default function Partners() {
               ))}
             </div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </section>
     </div>
-  )}
+  );
+};

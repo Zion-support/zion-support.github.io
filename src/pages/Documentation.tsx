@@ -139,7 +139,7 @@ export default function Documentation() {
       views: '6.7k',
       rating: 4.7
     }
-  };
+  ];
 
   const getTypeIcon = (type: string) => {
     switch (type) {

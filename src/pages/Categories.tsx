@@ -160,33 +160,33 @@ export default function Categories() {
         talent: 5,
         equipment: 2
       }
-    ],
-    'development'[
-      {
-        name: 'Web Development',
-        description: 'Frontend and backend web applications',
-        icon: <Code className="w-6 h-6" />,
-        services: 22,
-        talent: 15,
-        equipment: 3
-      },
-      {
-        name: 'Mobile Development',
-        description: 'iOS and Android mobile applications',
-        icon: <Smartphone className="w-6 h-6" />,
-        services: 16,
-        talent: 12,
-        equipment: 2
-      },
-      {
-        name: 'API Development',
-        description: 'RESTful APIs and microservices',
-        icon: <Network className="w-6 h-6" />,
-        services: 13,
-        talent: 8,
-        equipment: 1
-      }
-    ]
+          ],
+      'development': [
+        {
+          name: 'Web Development',
+          description: 'Frontend and backend web applications',
+          icon: <Code className="w-6 h-6" />,
+          services: 22,
+          talent: 15,
+          equipment: 3
+        },
+        {
+          name: 'Mobile Development',
+          description: 'iOS and Android mobile applications',
+          icon: <Smartphone className="w-6 h-6" />,
+          services: 16,
+          talent: 12,
+          equipment: 2
+        },
+        {
+          name: 'API Development',
+          description: 'RESTful APIs and microservices',
+          icon: <Network className="w-6 h-6" />,
+          services: 13,
+          talent: 8,
+          equipment: 1
+        }
+      ]
   };
 
   const featuredItems = [

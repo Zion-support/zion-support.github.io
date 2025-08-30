@@ -10,7 +10,7 @@ export function HeroSection() {
     const containerRef = useRef(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset["start start", "end start"]
+        offset: ["start start", "end start"]
     });
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
@@ -36,9 +36,9 @@ export function HeroSection() {
         }
     };
     const floatingVariants = {
-        animate: {
-            y[-15, 15, -15],
-            rotate[0, 5, 0],
+                  animate: {
+              y: [-15, 15, -15],
+              rotate: [0, 5, 0],
             transition: {
                 duration: 4,
                 repeat: Infinity,
@@ -47,9 +47,9 @@ export function HeroSection() {
         }
     };
     const pulseVariants = {
-        animate: {
-            scale[1, 1.1, 1],
-            opacity[0.5, 0.8, 0.5],
+                  animate: {
+              scale: [1, 1.1, 1],
+              opacity: [0.5, 0.8, 0.5],
             transition: {
                 duration: 2,
                 repeat: Infinity,
