@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect } from 'react';
 import { api, ApiResponse  } from '@/services/api';
 
 interface User {
@@ -48,7 +48,7 @@ const ApiDemo: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleCreateUser = async (e: anyReact.FormEvent)  => {
+  const handleCreateUser = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!newUser.name.trim() || !newUser.email.trim()) {

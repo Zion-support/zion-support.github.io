@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { MessageCircle, 
   X, 
   Send, 
@@ -28,7 +28,7 @@ import { MessageCircle,
   Maximize2,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Message {
 
@@ -80,13 +80,13 @@ export function ChatAssistant(...args: any[]): any {
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: anyany)  => {
+      recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyany)  => {
+      recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error: any', event.error);
         setIsListening(false);
       };
@@ -97,7 +97,7 @@ export function ChatAssistant(...args: any[]): any {
   useEffect(()  => {
     if (enabled && messages.length === 0) {
       const welcomeMessage: Message = {
-        id: any'welcome',
+        id: 'welcome',
         type: 'assistant',
         content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
         timestamp: new Date(),
@@ -121,7 +121,7 @@ export function ChatAssistant(...args: any[]): any {
   }, [messages]);
 
   // Handle input change
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
   };
 
@@ -130,7 +130,7 @@ export function ChatAssistant(...args: any[]): any {
     if (!inputValue.trim() || isProcessing) return;
 
     const userMessage: Message = {
-      id: any`user-${Date.now()}`,
+      id: `user-${Date.now()}`,
       type: 'user',
       content: inputValue.trim(),
       timestamp: new Date()
@@ -146,7 +146,7 @@ export function ChatAssistant(...args: any[]): any {
     setTimeout(() => {
       const aiResponse = generateAIResponse(inputValue.trim());
       const assistantMessage: Message = {
-        id: any`assistant-${Date.now()}`,
+        id: `assistant-${Date.now()}`,
         type: 'assistant',
         content: aiResponse.content,
         timestamp: new Date(),
@@ -162,7 +162,7 @@ export function ChatAssistant(...args: any[]): any {
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: anystring): { content: string; metadata: any }  => {
+  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input

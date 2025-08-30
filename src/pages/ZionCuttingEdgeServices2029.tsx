@@ -291,7 +291,7 @@ export default function ZionCuttingEdgeServices2029(...args: any[]): any {
 
                 {/* ROI */}
                 <div className="mb-6 p-3 bg-green-500/20 rounded-lg border border-green-500/30">
-                  <h4 className="text-green-400 font-semibold text-sm mb-1">ROI Promise<any>
+                  <h4 className="text-green-400 font-semibold text-sm mb-1">ROI Promise</h4>
                   <p className="text-green-300 text-xs">{service.roi}</p>
                 </div>
 

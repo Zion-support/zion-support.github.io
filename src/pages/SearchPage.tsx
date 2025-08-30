@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { useSearchParams  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams  } from 'react-router-dom';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, 
   Filter, 
   X, 
@@ -65,7 +65,7 @@ import { Search,
   Calendar as CalendarIcon,
   User,
   Tag as TagIcon
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface SearchResult {
 
@@ -242,7 +242,7 @@ export default function SearchPage(...args: any[]): any {
   ];
 
   const filterOptions = [
-    { id: any'ai-services', name: 'AI Services', icon: Brain, count: 0 },
+    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 0 },
     { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 0 },
     { id: 'security', name: 'Security & Compliance', icon: Shield, count: 0 },
     { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 0 },
@@ -292,14 +292,14 @@ export default function SearchPage(...args: any[]): any {
     setIsSearching(false);
   };
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const toggleFilter = (filterId: anystring)  => {
+  const toggleFilter = (filterId: string) => {
     const newFilters = new Set(selectedFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -313,7 +313,7 @@ export default function SearchPage(...args: any[]): any {
     setSelectedFilters(new Set());
   };
 
-  const getResultIcon = (type: anystring)  => {
+  const getResultIcon = (type: string) => {
     switch (type) {
       case 'service': return Zap;
       case 'page': return FileText;
@@ -324,13 +324,13 @@ export default function SearchPage(...args: any[]): any {
     }
   };
 
-  const getResultColor = (type: anystring)  => {
+  const getResultColor = (type: string) => {
     switch (type) {
       case 'service': return 'from-blue-500 to-indigo-500';
       case 'blog': return 'from-green-500 to-emerald-500';
       case 'case-study': return 'from-purple-500 to-pink-500';
       case 'documentation': return 'from-orange-500 to-red-500';
-      default: anyreturn 'from-gray-500 to-slate-500';
+      default: return 'from-gray-500 to-slate-500';
     }
   };
 

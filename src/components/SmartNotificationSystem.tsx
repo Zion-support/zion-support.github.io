@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Bell, 
   X, 
   CheckCircle, 
@@ -15,17 +15,17 @@ import { Bell,
   Zap,
   TrendingUp,
   Award
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Notification {
 
-  id: anystring;
+  id: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';
   title: string;
   message: string;
   timestamp: Date;
   read: boolean;
-action?: {;
+action?: {
     label: string;
     onClick: ()  => void;
   
@@ -52,7 +52,7 @@ export function SmartNotificationSystem(...args: any[]): any {
   const generateSampleNotifications = useCallback(() => {
     const sampleNotifications: Notification[] = [
       {
-        id: any'1',
+        id: '1',
         type: 'success',
         title: 'Welcome to Zion Tech Group!',
         message: 'Your account has been successfully created. Explore our AI-powered solutions.',
@@ -66,7 +66,7 @@ export function SmartNotificationSystem(...args: any[]): any {
         }
       },
       {
-        id: any'2',
+        id: '2',
         type: 'achievement',
         title: 'Performance Milestone Reached!',
         message: 'Your website performance score has improved to 95%. Great job!',
@@ -80,7 +80,7 @@ export function SmartNotificationSystem(...args: any[]): any {
         }
       },
       {
-        id: any'3',
+        id: '3',
         type: 'info',
         title: 'New Feature Available',
         message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
@@ -140,10 +140,10 @@ export function SmartNotificationSystem(...args: any[]): any {
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: anystring)  => {
+  const markAsRead = useCallback((id: string) => {
     setNotifications(prev => {
       const updated = prev.map(n => 
-        n.id === id ? { ...n, read: anytrue } : n
+        n.id === id ? { ...n, read: true } : n
       );
       setUnreadCount(updated.filter(n  => !n.read).length);
       return updated;

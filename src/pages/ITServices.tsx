@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building  } from 'lucide-react.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Cloud, Server, Shield, Cpu, Cable, LifeBuoy, DollarSign, ExternalLink, Wrench, Database, Building  } from 'lucide-react';
 
 const ITServices: React.FC = (): JSX.Element => {
   const offerings = [
@@ -31,7 +31,7 @@ const ITServices: React.FC = (): JSX.Element => {
         </div>
         <div className="mt-10 text-xs text-slate-400">Typical T&M: $110–$200/hr blended; fixed-scope engagements available.</div>
 
-        <div className="mt-12 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {offerings.map((o)  => (
             <div key={o.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition hover:border-cyan-400/30">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-blue-500/15 text-blue-300">

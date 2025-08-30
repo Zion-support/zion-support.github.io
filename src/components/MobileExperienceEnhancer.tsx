@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Smartphone, 
   Tablet, 
   Monitor, 
@@ -44,7 +44,7 @@ import { Smartphone,
   Clock,
   DoubleArrow,
   Move
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface MobileSettings {
 
@@ -237,7 +237,7 @@ export function MobileExperienceEnhancer(...args: any[]): any {
       const deviceInfo: DeviceInfo = {
         type,
         platform,
-        screenSize: any{ width: screen.width, height: screen.height },
+                  screenSize: { width: screen.width, height: screen.height },
         pixelRatio: window.devicePixelRatio || 1,
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',
         touchSupport: 'ontouchstart' in window,

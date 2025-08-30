@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { FileText, 
   Building, 
   Users, 
@@ -25,7 +25,7 @@ import { FileText,
   Clock,
   MapPin,
   Factory
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 export default function CaseStudies(...args: any[]): any {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
@@ -52,7 +52,7 @@ export default function CaseStudies(...args: any[]): any {
 
   const caseStudies = [
     {
-      id: any1,
+      id: 1,
       title: 'AI-Powered Healthcare Analytics Platform',
       company: 'MedTech Solutions Inc.',
       industry: 'healthcare',

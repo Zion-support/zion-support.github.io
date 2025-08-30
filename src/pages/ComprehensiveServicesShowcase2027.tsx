@@ -63,14 +63,13 @@ interface Service {
   description: string;
   features: string[];
   benefits: string[];
-pricing: {;
+  pricing: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
     billingCycle: string;
-  
-};
+  };
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -98,7 +97,7 @@ const ComprehensiveServicesShowcase2027: React.FC = (): JSX.Element => {
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
       services.push({
-        id: anyservice.id,
+        id: service.id,
         name: service.name,
         category: service.category,
         description: service.description,

@@ -79,30 +79,30 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
-    { id: any'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: any'🤖' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s  => s.category === 'AI & Analytics').length, icon: any'📊' },
-    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s  => s.category === 'AI & Legal').length, icon: any'⚖️' },
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s  => s.category === 'AI & Logistics').length, icon: any'🚚' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: any'🏥' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s  => s.category === 'AI & Marketing').length, icon: any'📢' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s  => s.category === 'AI & Research').length, icon: any'🔬' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: any'👥' },
-    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s  => s.category === 'AI & Manufacturing').length, icon: any'🏭' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: any'✍️' },
-    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s  => s.category === 'AI & Transportation').length, icon: any'🚗' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: any'⚛️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: any'🛡️' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: any'🌐' },
-    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s  => s.category === 'Sustainability').length, icon: any'🌱' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: any'🔗' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: any'🌍' },
-    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s  => s.category === 'Autonomous Vehicles').length, icon: any'🚗' },
-    { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s  => s.category === 'Healthcare').length, icon: any'🏥' },
-    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s  => s.category === 'Financial Services').length, icon: any'💰' },
-    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s  => s.category === 'Marketing').length, icon: any'📢' },
-    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s  => s.category === 'Project Management').length, icon: any'📋' },
-    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s  => s.category === 'Business Intelligence').length, icon: any'📊' },
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: '🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s  => s.category === 'AI & Analytics').length, icon: '📊' },
+    { id: 'AI & Legal', name: 'AI & Legal', count: allServices.filter(s  => s.category === 'AI & Legal').length, icon: '⚖️' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s  => s.category === 'AI & Logistics').length, icon: '🚚' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: '🏥' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s  => s.category === 'AI & Marketing').length, icon: '📢' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s  => s.category === 'AI & Research').length, icon: '🔬' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' },
+    { id: 'AI & Manufacturing', name: 'AI & Manufacturing', count: allServices.filter(s  => s.category === 'AI & Manufacturing').length, icon: '🏭' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: '✍️' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s  => s.category === 'AI & Transportation').length, icon: '🚗' },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: '⚛️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: '🛡️' },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: '🌐' },
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s  => s.category === 'Sustainability').length, icon: '🌱' },
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: '🔗' },
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: '🌍' },
+    { id: 'Autonomous Vehicles', name: 'Autonomous Vehicles', count: allServices.filter(s  => s.category === 'Autonomous Vehicles').length, icon: '🚗' },
+    { id: 'Healthcare', name: 'Healthcare', count: allServices.filter(s  => s.category === 'Healthcare').length, icon: '🏥' },
+    { id: 'Financial Services', name: 'Financial Services', count: allServices.filter(s  => s.category === 'Financial Services').length, icon: '💰' },
+    { id: 'Marketing', name: 'Marketing', count: allServices.filter(s  => s.category === 'Marketing').length, icon: '📢' },
+    { id: 'Project Management', name: 'Project Management', count: allServices.filter(s  => s.category === 'Project Management').length, icon: '📋' },
+    { id: 'Business Intelligence', name: 'Business Intelligence', count: allServices.filter(s  => s.category === 'Business Intelligence').length, icon: '📊' },
     { id: 'Software Development', name: 'Software Development', count: allServices.filter(s  => s.category === 'Software Development').length, icon: '💻' }
   ];
 
@@ -134,7 +134,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   });
 
-  const handleServiceClick = (service: anyany)  => {
+  const handleServiceClick = (service: any) => {
     setSelectedService(service);
   };
 
@@ -164,7 +164,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: any } = {
       'AI & Automation': Brain,
       'AI & Analytics': BarChart3,

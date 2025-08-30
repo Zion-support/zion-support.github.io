@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Eye, 
   EyeOff, 
   Volume2, 
@@ -31,7 +31,7 @@ import { Eye,
   RotateCcw,
   Save,
   Loader2
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface AccessibilitySettings {
 
@@ -50,13 +50,12 @@ interface AccessibilitySettings {
   lineHeight: number;
   letterSpacing: number;
   colorScheme: 'light' | 'dark' | 'high-contrast' | 'sepia' | 'custom';
-customColors: {;
+  customColors: {
     background: string;
     text: string;
     primary: string;
     secondary: string;
-  
-};
+  };
 }
 
 interface AccessibilityFeature {
@@ -301,9 +300,9 @@ export default function EnhancedAccessibilityEnhancer(...args: any[]): any {
   }, []);
 
   // Toggle accessibility features
-  const toggleFeature = useCallback((featureId: anystring)  => {
+  const toggleFeature = useCallback((featureId: string) => {
     setFeatures(prev => prev.map(f => 
-      f.id === featureId ? { ...f, enabled: any!f.enabled } : f
+      f.id === featureId ? { ...f, enabled: !f.enabled } : f
     ));
 
     // Update active features
@@ -363,7 +362,7 @@ export default function EnhancedAccessibilityEnhancer(...args: any[]): any {
     });
 
     setWcagScore({
-      A: anyMath.round((scores.A / totalFeatures) * 100),
+      A: Math.round((scores.A / totalFeatures) * 100),
       AA: Math.round((scores.AA / totalFeatures) * 100),
       AAA: Math.round((scores.AAA / totalFeatures) * 100)
     });
@@ -371,7 +370,7 @@ export default function EnhancedAccessibilityEnhancer(...args: any[]): any {
 
   // Keyboard shortcuts
   useEffect(()  => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       // Alt + A to open accessibility panel
       if (event.altKey && event.key === 'a') {
         event.preventDefault();

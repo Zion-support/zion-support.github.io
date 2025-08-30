@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react.ts';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Download, Wifi, WifiOff, CheckCircle, AlertCircle  } from 'lucide-react';
 
 interface ServiceWorkerState {
 
@@ -13,7 +13,7 @@ interface ServiceWorkerState {
 
 export function ServiceWorker(...args: any[]): any {
   const [swState, setSwState] = useState<any>({
-    isInstalled: anyfalse,
+    isInstalled: false,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
@@ -26,20 +26,20 @@ export function ServiceWorker(...args: any[]): any {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: any', registration);
-          setSwState(prev  => ({ ...prev, isInstalled: anytrue }));
+          console.log('SW registered: ', registration);
+                      setSwState(prev  => ({ ...prev, isInstalled: true }));
 
           // Check for updates
           registration.addEventListener('updatefound', ()  => {
             const newWorker = registration.installing;
             if (newWorker) {
-              setSwState(prev => ({ ...prev, isInstalling: anytrue }));
+              setSwState(prev => ({ ...prev, isInstalling: true }));
               
               newWorker.addEventListener('statechange', ()  => {
                 if (newWorker.state === 'installed') {
                   setSwState(prev => ({ 
                     ...prev, 
-                    isInstalling: anyfalse,
+                    isInstalling: false,
                     hasUpdate: true 
                   }));
                 }
@@ -59,7 +59,7 @@ export function ServiceWorker(...args: any[]): any {
 
     // Online/offline detection
     const handleOnline = () => setSwState(prev => ({ ...prev, isOnline: true }));
-    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: anyfalse }));
+    const handleOffline = () => setSwState(prev => ({ ...prev, isOnline: false }));
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);

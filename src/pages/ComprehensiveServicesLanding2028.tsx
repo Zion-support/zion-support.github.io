@@ -62,8 +62,8 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
   const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: any'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: any'IT Infrastructure' })),
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
     ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
   ];
 
@@ -101,7 +101,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     { number: "24/7", label: "Support Available", icon: Clock }
   ];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -118,7 +118,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string) => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',

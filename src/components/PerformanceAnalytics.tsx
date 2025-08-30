@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion  } from 'framer-motion';
 import { Activity, 
   TrendingUp, 
   TrendingDown, 
@@ -12,7 +12,7 @@ import { Activity,
   HardDrive,
   Network,
   Monitor
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface PerformanceMetric {
 

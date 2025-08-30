@@ -1,7 +1,7 @@
-import { Suspense, lazy  } from 'react.ts';
-import { Routes, Route  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { HelmetProvider  } from 'react-helmet-async.ts';
+import { Suspense, lazy  } from 'react';
+import { Routes, Route  } from 'react-router-dom';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { HelmetProvider  } from 'react-helmet-async';
 
 // Layout Components
 import { AppHeader  } from './layout/AppHeader';
@@ -168,6 +168,9 @@ const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServices
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = lazy(() => import('./pages/ComprehensivePricing2028'));
+
+// 2029 Pricing Guide
+const ComprehensivePricingGuide2029 = lazy(() => import('./pages/ComprehensivePricingGuide2029'));
 const API = lazy(() => import('./pages/API'));
 const DeveloperPortal = lazy(() => import('./pages/DeveloperPortal'));
 const ApiDemo = lazy(() => import('./components/ApiDemo'));
@@ -426,6 +429,10 @@ function App(...args: any[]): any {
                   {/* 2028 Pricing */}
                   <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                   <Route path="/pricing-2028" element={<ComprehensivePricing2028 />} />
+                  
+                  {/* 2029 Pricing Guide */}
+                  <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
+                  <Route path="/pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
                   
                   {/* 2028 Comprehensive Services */}
                   <Route path="/comprehensive-services-2028" element={<ComprehensiveServicesLanding2028 />} />

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Brain, 
   Zap, 
   Shield, 
@@ -12,8 +12,8 @@ import { Brain,
   Star,
   CheckCircle,
   Rocket
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 
 interface AIService {
 
@@ -22,12 +22,11 @@ interface AIService {
   description: string;
   category: string;
   features: string[];
-pricing: {;
+  pricing: {
     starter: number;
     professional: number;
     enterprise: number;
-  
-};
+  };
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';

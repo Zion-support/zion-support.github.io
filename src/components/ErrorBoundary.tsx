@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { motion  } from 'framer-motion';
 import { AlertTriangle, 
   RefreshCw, 
   Home, 
@@ -11,7 +11,7 @@ import { AlertTriangle,
   Info,
   Zap,
   CheckCircle
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface Props extends React.PropsWithChildren<{}> {
 

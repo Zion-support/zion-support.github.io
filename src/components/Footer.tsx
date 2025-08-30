@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Twitter, 
   Linkedin, 
   Facebook, 
@@ -57,8 +57,8 @@ import { Twitter,
   ExternalLink,
   ChevronDown,
   Copyright
- } from 'lucide-react.ts';
-import { AnimatePresence  } from 'framer-motion.ts';
+ } from 'lucide-react';
+import { AnimatePresence  } from 'framer-motion';
 
 interface FooterLink {
 

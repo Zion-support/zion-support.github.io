@@ -1,6 +1,6 @@
-import { defineConfig  } from 'vite.ts'
+import { defineConfig  } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve  } from 'path.ts'
+import { resolve  } from 'path'
 
 // https: any//vite.dev/config/
 export default defineConfig({
@@ -38,7 +38,7 @@ export default defineConfig({
         }
       }
     },
-    terserOptions: any{
+    terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,

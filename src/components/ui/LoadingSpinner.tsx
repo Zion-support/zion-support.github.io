@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { cn  } from '../../utils/cn';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
@@ -51,7 +51,7 @@ export default function LoadingSpinner(...args: any[]): any {
 export function SkeletonLoader(...args: any[]): any {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -154,7 +154,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: any4 }).map((_, index)  => (
+        Array.from({ length: 4 }).map((_, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
@@ -178,11 +178,11 @@ export function AppLoadingSpinner(...args: any[]): any {
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: any'2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
         </div>
         
         {/* Floating icons */}
-        {icons.map((icon, index)  => (
+        {icons.map((icon, index) => (
           <motion.div
             key={index}
             className="absolute text-2xl"

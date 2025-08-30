@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useCallback } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Plus, 
   MessageCircle, 
   Phone, 
@@ -15,7 +15,7 @@ import { Plus,
   Bookmark,
   Download,
   Search
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 
 interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
 
@@ -49,21 +49,21 @@ export function FloatingActionButton(...args: any[]): any {
   // Quick actions
   const quickActions = [
     {
-      icon: anyMessageCircle,
+      icon: MessageCircle,
       label: 'Chat Support',
       action: ()  => {
         // Trigger chat support
         const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
         if (chatButton) chatButton.click();
       },
-      color: any'from-blue-500 to-blue-600',
+      color: 'from-blue-500 to-blue-600',
       delay: 0.1
     },
     {
       icon: Phone,
       label: 'Call Us',
       action: ()  => {
-        window.location.href = 'tel: any+1-555-0123';
+        window.location.href = 'tel:+1-302-464-0950';
       },
       color: 'from-green-500 to-green-600',
       delay: 0.2
@@ -72,7 +72,7 @@ export function FloatingActionButton(...args: any[]): any {
       icon: Mail,
       label: 'Email',
       action: ()  => {
-        window.location.href = 'mailto: anycontact@ziontechgroup.com';
+        window.location.href = 'mailto:kleber@ziontechgroup.com';
       },
       color: 'from-purple-500 to-purple-600',
       delay: 0.3
@@ -87,7 +87,7 @@ export function FloatingActionButton(...args: any[]): any {
           searchInput.click();
         }
       },
-      color: any'from-orange-500 to-orange-600',
+      color: 'from-orange-500 to-orange-600',
       delay: 0.4
     },
     {
@@ -107,7 +107,7 @@ export function FloatingActionButton(...args: any[]): any {
           window.open(bookmarkUrl, '_blank');
         }
       },
-      color: any'from-red-500 to-red-600',
+      color: 'from-red-500 to-red-600',
       delay: 0.5
     },
     {
