@@ -27,7 +27,18 @@
     "pm2:restart": "pm2 restart ecosystem.config.cjs --only automation",
     "pm2:status": "pm2 status",
     "pm2:logs": "pm2 logs --lines 50",
-    "pm2:monit": "pm2 monit"
+    "pm2:monit": "pm2 monit",
+    "automation:master": "node scripts/automation/master-automation-controller.cjs",
+    "automation:auto-fix": "node scripts/automation/auto-error-fixer.cjs",
+    "automation:resolve-conflicts": "node scripts/automation/merge-conflict-resolver.cjs",
+    "automation:comprehensive-fix": "node scripts/automation/comprehensive-error-fixer.cjs",
+    "automation:typescript-fix": "node scripts/automation/typescript-error-fixer.cjs",
+    "automation:console-fix": "node scripts/automation/console-error-fixer.cjs",
+    "automation:start-all": "pm2 start ecosystem.config.cjs",
+    "automation:stop-all": "pm2 stop all",
+    "automation:restart-all": "pm2 restart all",
+    "automation:health": "node scripts/automation/master-automation-controller.cjs health",
+    "automation:emergency": "node scripts/automation/master-automation-controller.cjs emergency-stop"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
