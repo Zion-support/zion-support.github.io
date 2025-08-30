@@ -1,190 +1,106 @@
-import { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-
-// Layout Components
-import { AppHeader } from './layout/AppHeader';
+import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { ErrorBoundary } from 'react-error-boundary';
 
-// Enhanced Components - only import existing ones
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import EnhancedSEO from './components/EnhancedSEO';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+// Lazy load pages for better performance
+const HomePage = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.ServicesPage })));
+const SolutionsPage = lazy(() => import('./pages/SolutionsPage').then(module => ({ default: module.SolutionsPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
+const BlogPage = lazy(() => import('./pages/BlogPage').then(module => ({ default: module.BlogPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
+const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage').then(module => ({ default: module.ComprehensiveServicesPage })));
+const Sitemap = lazy(() => import('./pages/Sitemap').then(module => ({ default: module.default })));
+const Support = lazy(() => import('./pages/Support').then(module => ({ default: module.default })));
+const Training = lazy(() => import('./pages/Training').then(module => ({ default: module.default })));
+const Helpdesk = lazy(() => import('./pages/Helpdesk').then(module => ({ default: module.default })));
 
-// Lazy-loaded pages for better performance - only import existing ones
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/about'));
-const Services = lazy(() => import('./pages/services'));
-const Contact = lazy(() => import('./pages/contact'));
-const Blog = lazy(() => import('./pages/Blog'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Team = lazy(() => import('./pages/Team'));
-const CaseStudies = lazy(() => import('./pages/case-studies'));
+// Loading component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
+      <p className="text-gray-400">Loading...</p>
+    </div>
+  </div>
+);
+
+// Error fallback component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+    <div className="text-center max-w-md">
+      <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+        </svg>
+      </div>
+      <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
+      <p className="text-gray-400 mb-6">We're sorry, but something unexpected happened. Please try again.</p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Try again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Go home
+        </button>
+      </div>
+    </div>
+  </div>
+);
 
 export default function App() {
   return (
-    <ErrorBoundary>
-      <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* SEO Component */}
-        <EnhancedSEO 
-          title="Zion Tech Group - Leading AI & Technology Solutions"
-          description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
-          keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
-          ogImage="/og-image.jpg"
-          canonicalUrl="https://ziontechgroup.com"
-        />
-        
-        {/* Performance Optimizer */}
-        <PerformanceOptimizer enabled={true} />
-        
-        {/* Header */}
-        <AppHeader />
-        
-        {/* Main Content */}
-        <main className="flex-1">
-          <Suspense fallback={<LoadingSpinner />}>
-            <AnimatePresence mode="wait">
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <div className="min-h-screen bg-gray-900 text-white">
+        <Header />
+        <div className="flex pt-16">
+          <Sidebar />
+          <main className="flex-1 ml-64 min-h-screen">
+            <Suspense fallback={<PageLoader />}>
               <Routes>
-                {/* Core Routes */}
-                <Route 
-                  path="/" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Home />
-                    </motion.div>
-                  } 
-                />
-                
-                {/* Basic Pages */}
-                <Route 
-                  path="/about" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <About />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/services" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Services />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/contact" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Contact />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/blog" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Blog />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/careers" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Careers />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/team" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <Team />
-                    </motion.div>
-                  } 
-                />
-                <Route 
-                  path="/case-studies" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <CaseStudies />
-                    </motion.div>
-                  } 
-                />
-                
-                {/* Catch-all route for 404 */}
-                <Route 
-                  path="*" 
-                  element={
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center text-white">
-                          <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-6">The page you're looking for doesn't exist.</p>
-                          <a 
-                            href="/" 
-                            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-                          >
-                            Go Home
-                          </a>
-                        </div>
-                      </div>
-                    </motion.div>
-                  } 
-                />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/services/*" element={<ServicesPage />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+                <Route path="/solutions" element={<SolutionsPage />} />
+                <Route path="/solutions/*" element={<SolutionsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/about/*" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/*" element={<BlogPage />} />
+                <Route path="/careers" element={<AboutPage />} />
+                <Route path="/partners" element={<AboutPage />} />
+                <Route path="/press" element={<AboutPage />} />
+                <Route path="/case-studies" element={<BlogPage />} />
+                <Route path="/research-development" element={<BlogPage />} />
+                <Route path="/docs" element={<BlogPage />} />
+                <Route path="/api" element={<BlogPage />} />
+                <Route path="/developer" element={<BlogPage />} />
+                <Route path="/help" element={<Helpdesk />} />
+                <Route path="/training" element={<Training />} />
+                <Route path="/community" element={<BlogPage />} />
+                <Route path="/support" element={<Support />} />
+                <Route path="/sitemap" element={<Sitemap />} />
+                <Route path="/privacy-policy" element={<BlogPage />} />
+                <Route path="/terms-of-service" element={<BlogPage />} />
+                <Route path="/cookie-policy" element={<BlogPage />} />
+                <Route path="/request-quote" element={<ContactPage />} />
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
-            </AnimatePresence>
-          </Suspense>
-        </main>
-        
-        {/* Footer */}
+            </Suspense>
+          </main>
+        </div>
         <Footer />
       </div>
     </ErrorBoundary>
