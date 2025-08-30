@@ -18,7 +18,7 @@ import { MessageCircle,
   Shield,
   Clock,
   Star
-  } from 'lucide-react.ts';
+  } from 'lucide-react';
 
 interface ChatMessage {
 
