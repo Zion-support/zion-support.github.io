@@ -11,6 +11,7 @@ import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ComprehensiveServicesPage } from './pages/ComprehensiveServicesPage';
+import { NewServicesShowcase2025 } from './pages/NewServicesShowcase2025';
 import Sitemap from './pages/Sitemap';
 import Support from './pages/Support';
 import Training from './pages/Training';
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/*" element={<ServicesPage />} />
             <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+            <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/solutions/*" element={<SolutionsPage />} />
             <Route path="/about" element={<AboutPage />} />

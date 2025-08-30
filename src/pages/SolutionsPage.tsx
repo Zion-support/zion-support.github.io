@@ -299,6 +299,40 @@ export function SolutionsPage() {
           </div>
         </div>
 
+        {/* New Services Showcase CTA */}
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Explore Our Revolutionary New Services 2025
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              Discover our latest cutting-edge micro SAAS services, AI-powered platforms, and emerging technology solutions. 
+              Each service is designed with proven ROI and market-leading capabilities.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/new-services-2025"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-200 font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                <span>Explore New Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-transparent text-white rounded-lg hover:bg-white/10 transition-all duration-200 font-semibold text-lg border-2 border-white"
+              >
+                <span>Contact Sales</span>
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center">
           <motion.div
