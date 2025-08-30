@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { SEO } from '@/components/SEO'
+import React, { useState } from 'react';
+import { SEO } from '@/components/SEO';
 
 const SearchPage: React.FC = () => {
-	const [query, setQuery] = useState('')
+	const [query, setQuery] = useState('');
 	return (
 		<div className="min-h-screen bg-slate-950 text-white py-16">
 			<SEO title="Search" description="Search Zion Tech Group content and services." />
@@ -16,6 +16,7 @@ const SearchPage: React.FC = () => {
 				/>
 			</div>
 		</div>
-	)
+	);
+};
 
-export default SearchPage}
+export default SearchPage;

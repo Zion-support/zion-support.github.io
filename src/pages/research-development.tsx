@@ -39,6 +39,8 @@ import {
   Atom,
   Satellite,
   Telescope
+} from 'lucide-react';
+
 const researchAreas = [
   {
     id: 'ai-ml',

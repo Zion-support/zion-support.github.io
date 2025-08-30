@@ -488,7 +488,7 @@ export default function EnhancedAccessibilityEnhancer() {
                             result.severity === 'medium' ? 'bg-yellow-50 dark:bg-yellow-900/20 border-yellow-200 dark:border-yellow-800' :
                             'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-800'
                           }`}
-
+                        >
                           <div className="flex items-start space-x-3">
                             {result.severity === 'critical' || result.severity === 'high' ? (
                               <AlertTriangle className="w-5 h-5 text-red-500 mt-0.5" />
@@ -568,4 +568,4 @@ export default function EnhancedAccessibilityEnhancer() {
       </AnimatePresence>
     </>
   );
-}}}}}}}}}}}}}}}}}}}
+}

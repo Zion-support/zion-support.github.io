@@ -38,6 +38,7 @@ import {
   Download,
   Play,
   ExternalLink
+} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Developers() {
@@ -73,7 +74,7 @@ export default function Developers() {
       endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'],
       documentation: '/docs/api/security',
       status: 'Production'
-
+    }
   ];
 
   const sdks = [
@@ -108,7 +109,7 @@ export default function Developers() {
       downloads: '8K+',
       repository: 'https://github.com/ziontechgroup/go-sdk',
       documentation: '/docs/sdk/go'
-
+    }
   ];
 
   const tools = [
@@ -139,7 +140,7 @@ export default function Developers() {
       icon: Terminal,
       href: '/examples',
       category: 'Learning'
-
+    }
   ];
 
   const quickStartSteps = [
@@ -170,7 +171,7 @@ export default function Developers() {
       description: 'Test your integration with our sample endpoints',
       action: 'Try API',
       href: '/api-playground'
-
+    }
   ];
 
   return (
@@ -201,14 +202,14 @@ export default function Developers() {
               <Link
                 to="/docs"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-
+              >
                 View Documentation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/api-playground"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-
+              >
                 Try API Playground
               </Link>
             </div>

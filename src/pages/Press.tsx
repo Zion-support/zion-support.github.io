@@ -16,6 +16,8 @@ import {
   Shield,
   Brain,
   Rocket
+} from 'lucide-react';
+
 export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -93,7 +95,7 @@ export default function Press() {
       content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
       featured: false,
       tags: ["Global Expansion", "Europe", "Market Growth"]
-
+    }
   ];
 
   const mediaCoverage = [
@@ -140,7 +142,7 @@ export default function Press() {
       excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
       url: "https://venturebeat.com/zion-tech-group-startup",
       featured: false
-
+    }
   ];
 
   const awards = [
@@ -170,7 +172,7 @@ export default function Press() {
       category: "awards",
       description: "Outstanding achievement in AI-powered cybersecurity solutions",
       image: "/images/awards/infosec.png"
-
+    }
   ];
 
   const filteredContent = selectedCategory === 'all'
@@ -183,8 +185,8 @@ export default function Press() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1
-
-
+      }
+    }
   };
 
   const itemVariants = {
@@ -193,7 +195,7 @@ export default function Press() {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6 }
-
+    }
   };
 
   return (

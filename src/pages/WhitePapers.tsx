@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award import { SEO } from '@/components/SEO';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -120,7 +121,7 @@ export default function WhitePapers() {
       coverImage: '/images/whitepapers/digital-transformation-roi.jpg',
       fileSize: '2.2 MB',
       language: 'English'
-
+    }
   ];
 
   const featuredInsights = [

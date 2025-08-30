@@ -11,6 +11,8 @@ import {
   Zap,
   Shield,
   Activity
+} from 'lucide-react';
+
 const Status: React.FC = () => (
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
 		<SEO title="Status - Zion Tech Group" description="System status and uptime information." />
@@ -22,4 +24,3 @@ const Status: React.FC = () => (
 );
 
 export default Status;
-}

@@ -127,6 +127,7 @@ import {
   Chi,
   Psi,
   Omega
+} from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026';
 
@@ -180,7 +181,7 @@ const Home2026: React.FC = () => {
       description: "Green technology and ESG compliance solutions",
       color: "from-teal-500 to-cyan-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Sustainability').length
-
+    }
   ];
 
   const stats = [
@@ -236,10 +237,9 @@ const Home2026: React.FC = () => {
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
-
+            >
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] &&
-                React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24 })
-
+                React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24 })}
             </motion.div>
           ))}
         </div>
@@ -249,7 +249,7 @@ const Home2026: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-
+          >
             {/* Logo and Company Name */}
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl mb-6 shadow-2xl shadow-cyan-400/30">
@@ -288,7 +288,7 @@ const Home2026: React.FC = () => {
               <Link
                 to="/services2026"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30"
-
+              >
                 Explore Services
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -296,7 +296,7 @@ const Home2026: React.FC = () => {
               <Link
                 to="/contact"
                 className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105"
-
+              >
                 Get Started
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -329,7 +329,7 @@ const Home2026: React.FC = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-
+        >
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
             <motion.div
               className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
@@ -351,7 +351,7 @@ const Home2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-
+              >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -371,7 +371,7 @@ const Home2026: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
@@ -388,7 +388,7 @@ const Home2026: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
-
+              >
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
@@ -409,7 +409,7 @@ const Home2026: React.FC = () => {
                   <Link
                     to="/services2026"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:underline"
-
+                  >
                     Explore
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -428,7 +428,7 @@ const Home2026: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Revolutionary Services
             </h2>
@@ -486,7 +486,7 @@ const Home2026: React.FC = () => {
                     <Link
                       to={`/services/${service.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-
+                  >
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -510,7 +510,7 @@ const Home2026: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
+          >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>

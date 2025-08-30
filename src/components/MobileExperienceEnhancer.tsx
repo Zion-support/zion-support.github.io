@@ -566,7 +566,7 @@ export function MobileExperienceEnhancer() {
                       onClick={autoOptimizeMobile}
                       disabled={isOptimizing}
                       className="px-4 py-2 bg-zion-green text-white rounded-lg hover:bg-zion-green-dark disabled:opacity-50 transition-colors"
-
+                    >
                       {isOptimizing ? 'Optimizing...' : 'Auto-Optimize'}
                     </button>
                   </div>
@@ -579,7 +579,7 @@ export function MobileExperienceEnhancer() {
                             ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
                         }`}
-
+                      >
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
@@ -635,7 +635,7 @@ export function MobileExperienceEnhancer() {
                             ? 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700'
                         }`}
-
+                      >
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
@@ -674,7 +674,7 @@ export function MobileExperienceEnhancer() {
                   <button
                     onClick={() => setShowAdvanced(!showAdvanced)}
                     className="flex items-center space-x-2 text-zion-green hover:text-zion-green-dark transition-colors mb-4"
-
+                  >
                     <Settings className="w-4 h-4" />
                     <span>{showAdvanced ? 'Hide' : 'Show'} Advanced Settings</span>
                   </button>
@@ -685,7 +685,7 @@ export function MobileExperienceEnhancer() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
-
+                    >
                       {/* Theme Settings */}
                       <div>
                         <h4 className="font-medium text-gray-900 dark:text-white mb-3">Theme</h4>
@@ -779,4 +779,4 @@ export function MobileExperienceEnhancer() {
       </AnimatePresence>
     </>
   );
-</div>}}}}}}}}}}}}}}}}}}}}}}}
+}
