@@ -176,25 +176,12 @@ export function AdvancedAnalytics() {
         </motion.div>
 
         {/* Traffic Sources */}
-        <motion.div initial = {
-  { opacity: 0,
-  x: 20 
-
-
-
-
-
-
-}} animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}} transition={{ delay: 0.6 }} className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl">
+        <motion.div 
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.6 }} 
+          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        >
           <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
             Traffic Sources
           </h3>
