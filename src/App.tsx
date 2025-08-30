@@ -11,6 +11,8 @@ import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ComprehensiveServicesPage } from './pages/ComprehensiveServicesPage';
+import { ServicesShowcasePage } from './pages/ServicesShowcasePage';
+import { PricingPage } from './pages/PricingPage';
 import Sitemap from './pages/Sitemap';
 import Support from './pages/Support';
 import Training from './pages/Training';
@@ -28,6 +30,8 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/*" element={<ServicesPage />} />
             <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
+            <Route path="/services-showcase" element={<ServicesShowcasePage />} />
+            <Route path="/pricing" element={<PricingPage />} />
             <Route path="/solutions" element={<SolutionsPage />} />
             <Route path="/solutions/*" element={<SolutionsPage />} />
             <Route path="/about" element={<AboutPage />} />
