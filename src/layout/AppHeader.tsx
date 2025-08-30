@@ -59,6 +59,27 @@ export function AppHeader() {
           featured: true
         },
         { 
+          name: 'AI Workflow Orchestrator', 
+          href: '/services/ai-workflow-orchestrator', 
+          icon: Workflow, 
+          description: 'Intelligent Process Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Customer Experience Analytics', 
+          href: '/services/ai-customer-experience-analytics', 
+          icon: BarChart3, 
+          description: 'Customer Insights & Optimization',
+          featured: true
+        },
+        { 
+          name: 'AI Financial Risk Management', 
+          href: '/services/ai-financial-risk-management', 
+          icon: Shield, 
+          description: 'Risk Assessment & Mitigation',
+          featured: true
+        },
+        { 
           name: 'AI Healthcare Analytics', 
           href: '/services/ai-healthcare-analytics', 
           icon: Heart, 
@@ -247,6 +268,27 @@ export function AppHeader() {
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       services: [
+        { 
+          name: 'AI Workflow Orchestrator', 
+          href: '/services/ai-workflow-orchestrator', 
+          icon: Workflow, 
+          description: 'Intelligent Process Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Customer Experience Analytics', 
+          href: '/services/ai-customer-experience-analytics', 
+          icon: BarChart3, 
+          description: 'Customer Insights & Optimization',
+          featured: true
+        },
+        { 
+          name: 'AI Financial Risk Management', 
+          href: '/services/ai-financial-risk-management', 
+          icon: Shield, 
+          description: 'Risk Assessment & Mitigation',
+          featured: true
+        },
         { 
           name: 'Micro SaaS Products', 
           href: '/services/micro-saas', 

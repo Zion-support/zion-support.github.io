@@ -146,7 +146,10 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
         { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
         { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management', featured: true }
       ]
     },
     {
