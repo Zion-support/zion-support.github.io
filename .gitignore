@@ -78,3 +78,14 @@ temp/
 # Vite
 .vite/
 tsconfig.tsbuildinfo
+
+# Report files and build artifacts
+link-reports/
+*.report.*
+link-check.json
+link-checker-report.json
+link-report*.json
+continuous-improvement-report.json
+daily-build-test-report.json
+console-error-fixer-report.json
+automation-health-report.txt
