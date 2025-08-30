@@ -1,6 +1,6 @@
 module.exports = {
   apps: [
-    // Main application - using dev script since start doesn't exist
+    // Main application
     {
       name: 'zion-app',
       script: 'npm',
