@@ -13,6 +13,7 @@ console.log('🔧 PM2 Automation Manager');
 class AutomationManager {
   constructor() {
     this.automationProcesses = [
+      // Core automation processes
       'console-error-fixer',
       'link-checker',
       'continuous-improvement',
@@ -23,7 +24,18 @@ class AutomationManager {
       'quality-checks',
       'link-integrity',
       'front-maximizer',
-      'sitemap-runner'
+      'sitemap-runner',
+      
+      // Intelligent automation processes
+      'intelligent-predictive-monitor',
+      'ai-code-optimizer',
+      'smart-dependency-manager',
+      'ai-code-analyzer',
+      'smart-deployment-optimizer',
+      'adaptive-test-generator',
+      'intelligent-code-refactorer',
+      'smart-documentation-generator',
+      'predictive-maintenance-monitor'
     ];
   }
 
