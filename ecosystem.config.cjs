@@ -313,6 +313,34 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '7200000' // 2 hours
       }
+    },
+
+    // PM2 Monitor - runs every 10 minutes
+    {
+      name: 'pm2-monitor',
+      script: './scripts/automation/pm2-monitor.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '256M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '600000' // 10 minutes
+      }
+    },
+
+    // Enhanced Automation Runner - runs every 15 minutes
+    {
+      name: 'enhanced-automation-runner',
+      script: './scripts/automation/enhanced-automation-runner.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '512M',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
     }
   ]
 };
