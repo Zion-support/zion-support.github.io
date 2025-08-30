@@ -17,6 +17,8 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -74,9 +76,12 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
-          <div className="App">
+          <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            {/* Header */}
+            <Header />
+            
             {/* Main Content */}
-            <main id="main-content">
+            <main id="main-content" className="pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -143,6 +148,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Footer */}
+            <Footer />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
