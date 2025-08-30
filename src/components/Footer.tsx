@@ -150,6 +150,18 @@ export function Footer() {
       ]
     },
     {
+      title: '2032 Innovative Services',
+      icon: Star,
+      links: [
+        { name: 'AI Predictive Business Intelligence', path: '/services/ai-predictive-business-intelligence', icon: Brain },
+        { name: 'AI Customer Experience Platform', path: '/services/ai-customer-experience-platform', icon: MessageSquare },
+        { name: 'Quantum-Safe Cybersecurity', path: '/services/quantum-safe-cybersecurity-platform', icon: Shield },
+        { name: 'Sustainable Technology Solutions', path: '/services/sustainable-technology-solutions-platform', icon: Leaf },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics-platform', icon: Hospital },
+        { name: '2032 Services Overview', path: '/innovative-services-showcase-2032', icon: Star }
+      ]
+    },
+    {
       title: 'Support & Resources',
       icon: HelpCircle,
       links: [

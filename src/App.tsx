@@ -155,6 +155,7 @@ const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/U
 // const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
 
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
+const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
 // const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
 
 // Additional service components
@@ -339,6 +340,7 @@ function App() {
 
                     {/* Innovative Services Routes */}
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2032" element={<InnovativeServicesShowcase2032 />} />
                     {/* <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} /> */}
                     {/* <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} /> */}
 

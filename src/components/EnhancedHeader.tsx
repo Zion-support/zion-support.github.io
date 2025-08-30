@@ -150,6 +150,16 @@ export function EnhancedHeader() {
       color: 'from-indigo-500 to-purple-500',
       badge: 'Future'
     },
+    {
+      name: '2032 Innovative Services',
+      href: '/innovative-services-showcase-2032',
+      icon: Star,
+      description: 'Next-Generation AI & Emerging Tech Solutions',
+      category: 'Featured',
+      featured: true,
+      color: 'from-violet-500 to-purple-600',
+      badge: 'Latest'
+    },
 
     // AI & Machine Learning
     {
