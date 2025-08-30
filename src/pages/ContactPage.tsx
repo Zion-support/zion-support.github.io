@@ -71,21 +71,24 @@ export function ContactPage() {
       value: '+1 302 464 0950',
       icon: Phone,
       description: 'Call us anytime',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600',
+      link: 'tel:+13024640950'
     },
     {
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       icon: Mail,
       description: 'Send us a message',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-500 to-pink-600',
+      link: 'mailto:kleber@ziontechgroup.com'
     },
     {
       title: 'Office',
       value: '364 E Main St STE 1008 Middletown DE 19709',
       icon: MapPin,
       description: 'Visit our headquarters',
-      color: 'from-green-500 to-teal-600'
+      color: 'from-green-500 to-teal-600',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       title: 'Hours',
@@ -103,6 +106,30 @@ export function ContactPage() {
     'Cloud & DevOps',
     'Digital Transformation',
     'Data Analytics',
+    'IoT & Edge Computing',
+    'Space Technology',
+    'AI Healthcare Platform',
+    'AI Sales Copilot',
+    'AI Marketing Automation',
+    'AI Project Management',
+    'Quantum AI Hybrid Platform',
+    'AI Cybersecurity Platform',
+    'Quantum AI Trading Platform',
+    'Space Technology Solutions',
+    'Digital Twin Solutions',
+    'Green IT Solutions',
+    'Zero Trust Network Access',
+    'AI Creative Studio',
+    'AI Health Monitoring',
+    'AI Financial Advisor',
+    'AI Education Platform',
+    'AI Legal Assistant',
+    'AI Real Estate Platform',
+    'AI Supply Chain Optimizer',
+    'AI Energy Management',
+    'AI Manufacturing Platform',
+    'AI Customer Intelligence',
+    'AI Data Governance',
     'Custom Development',
     'Consulting'
   ];
@@ -173,7 +200,18 @@ export function ContactPage() {
                 <method.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
-              <p className="text-cyan-400 font-medium mb-2">{method.value}</p>
+              {method.link ? (
+                <a 
+                  href={method.link} 
+                  className="text-cyan-400 font-medium mb-2 hover:text-cyan-300 transition-colors cursor-pointer block"
+                  target={method.link.startsWith('http') ? '_blank' : undefined}
+                  rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
+                  {method.value}
+                </a>
+              ) : (
+                <p className="text-cyan-400 font-medium mb-2">{method.value}</p>
+              )}
               <p className="text-gray-400 text-sm">{method.description}</p>
             </motion.div>
           ))}
