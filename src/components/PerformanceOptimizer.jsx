@@ -26,12 +26,8 @@ export const PerformanceOptimizer = ({ children }) => {
             images.forEach((img) => {
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
-<<<<<<< HEAD
                     img.loading = 'lazy';
-
-=======
-                    img.loading = 'lazy'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                }
                 // Add decoding="async" for better performance
                 img.decoding = 'async';
                 // Add error handling
@@ -39,17 +35,10 @@ export const PerformanceOptimizer = ({ children }) => {
                     img.style.display = 'none'}})};
         // Use requestIdleCallback for non-critical optimization
         if ('requestIdleCallback' in window) {
-<<<<<<< HEAD
             requestIdleCallback(optimizeImages);
-
-        else {
+        } else {
             setTimeout(optimizeImages, 100);
-
-=======
-            requestIdleCallback(optimizeImages)}
-        else {
-            setTimeout(optimizeImages, 100)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        }
     }, [location.pathname]);
     // Memoize expensive computations
     const optimizedChildren = useMemo(() => children, [children]);
@@ -59,14 +48,9 @@ export const PerformanceOptimizer = ({ children }) => {
         if (!window.scrollTimeout) {
             window.scrollTimeout = setTimeout(() => {
                 // Handle scroll-based optimizations here
-<<<<<<< HEAD
                 window.scrollTimeout = null;
             }, 16); // ~60fps
-
-=======
-                window.scrollTimeout = null}, 16); // ~60fps
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -77,12 +61,7 @@ export const PerformanceOptimizer = ({ children }) => {
             navigator.serviceWorker
                 .register('/sw.js')
                 .then((registration) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    // // // console.log('SW registered: ', registration);
-=======
-                    // // // // // // // console.log('SW registered: ', registration);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+                    // console.log('SW registered: ', registration);
 
                     // Check for updates
                     registration.addEventListener('updatefound', () => {
@@ -91,30 +70,15 @@ export const PerformanceOptimizer = ({ children }) => {
                             newWorker.addEventListener('statechange', () => {
                                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                                     // New service worker available
-<<<<<<< HEAD
-                                    // // // console.log('New service worker available');
-
-=======
-                                    // // // // // // // console.log('New service worker available');
+                                    // console.log('New service worker available');
                                 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                             });
-
+                        }
                     });
                 })
                 .catch((registrationError) => {
-<<<<<<< HEAD
-                    // // // console.warn('SW registration failed: ', registrationError);
-=======
-                    // // // // // // // console.warn('SW registration failed: ', registrationError);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+                    // console.warn('SW registration failed: ', registrationError);
                 });
-
-=======
-                console.log('SW registered: ', registration)})
-                .catch((registrationError) => {
-                console.log('SW registration failed: ', registrationError)})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     // Intersection Observer for lazy loading
     useEffect(() => {
