@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ultimateInnovativeServices2026 } from "../data/2026-ultimate-innovative-services";
-import { enterpriseITInfrastructureServices2026 } from "../data/2026-enterprise-it-infrastructure-services";
+import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
+import { specializedITInfrastructureServices2026 } from "../data/specializedITInfrastructureServices2026";
 const UltimateServicesShowcase2026 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
     const [sortBy, setSortBy] = useState('name');
     // Combine all services
-    const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];
+    const allServices = [...ultimateInnovativeServices2026, ...specializedITInfrastructureServices2026];
     const categories = [
         'all',
         'Business Intelligence',
