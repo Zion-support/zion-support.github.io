@@ -50,12 +50,8 @@ import {
   Satellite,
   FileText,
   Sparkles as SparklesIcon
-<<<<<<< HEAD
-import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
-=======
 } from 'lucide-react';
-import { enhancedServicesCatalog2025 } from "../data/enhancedServicesCatalog2025";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export function EnhancedHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -74,7 +74,7 @@ const InnovativeServices2025 = () => {
                                           useCases: ["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
                                           competitors: ["Kira Systems", "Luminance", "eBrevia"],
                     competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"
-
+                }
             ]
         },
         {
@@ -84,14 +84,14 @@ const InnovativeServices2025 = () => {
                 {
                     name: "AI-Powered Fraud Detection",
                     description: "Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.",
-                    features[
+                    features: [
                         "Real-time transaction monitoring",
                         "Behavioral pattern recognition",
                         "Machine learning risk scoring",
                         "Automated fraud alerts",
                         "Comprehensive fraud analytics"
                     ],
-                    benefits[
+                    benefits: [
                         "99.9% fraud detection accuracy",
                         "Real-time prevention capabilities",
                         "Reduced false positives by 80%",
@@ -100,21 +100,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$3,000 - $25,000/month",
                     marketPosition: "Leading AI fraud detection for financial institutions and e-commerce",
-                    useCases["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],
-                    competitors["Sift", "Signifyd", "Forter"],
+                    useCases: ["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],
+                    competitors: ["Sift", "Signifyd", "Forter"],
                     competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates"
                 },
                 {
                     name: "AI Supply Chain Optimization",
                     description: "Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI-powered analytics.",
-                    features[
+                    features: [
                         "Predictive demand forecasting",
                         "Route optimization algorithms",
                         "Supplier performance analytics",
                         "Real-time supply chain visibility",
                         "Risk assessment and mitigation"
                     ],
-                    benefits[
+                    benefits: [
                         "25% reduction in supply chain costs",
                         "Improved delivery performance",
                         "Enhanced supplier relationships",
@@ -123,21 +123,21 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$4,000 - $30,000/month",
                     marketPosition: "Advanced supply chain optimization for global enterprises",
-                    useCases["Manufacturing", "Logistics", "Retail", "Healthcare"],
-                    competitors["Llamasoft", "AnyLogic", "FlexSim"],
+                    useCases: ["Manufacturing", "Logistics", "Retail", "Healthcare"],
+                    competitors: ["Llamasoft", "AnyLogic", "FlexSim"],
                     competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management"
                 },
                 {
                     name: "AI-Powered Healthcare",
                     description: "Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.",
-                    features[
+                    features: [
                         "Medical imaging analysis",
                         "Diagnostic assistance algorithms",
                         "Patient monitoring systems",
                         "Drug discovery optimization",
                         "Healthcare analytics dashboard"
                     ],
-                    benefits[
+                    benefits: [
                         "Improved diagnostic accuracy by 30%",
                         "Enhanced patient care quality",
                         "Reduced healthcare costs",
@@ -146,8 +146,8 @@ const InnovativeServices2025 = () => {
                     ],
                     pricing: "$8,000 - $60,000/month",
                     marketPosition: "Leading healthcare AI for hospitals and medical institutions",
-                    useCases["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
-                    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+                    useCases: ["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
+                    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
                     competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
 
             ]
