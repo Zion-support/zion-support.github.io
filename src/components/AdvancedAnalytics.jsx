@@ -268,6 +268,6 @@ export function AdvancedAnalytics() {
       </motion.div>
     </div>
   );
-};
+}
 
 export default AdvancedAnalytics;
