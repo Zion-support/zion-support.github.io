@@ -5,7 +5,7 @@ const ReactPlayer = React.lazy(() => import('react-player'));
 const ModelViewer = React.lazy(() => import('@google/model-viewer/react'));
 export function ProductGallery({ images, videoUrl, modelUrl }) {
     const [selected, setSelected] = useState(0);
-    const poster = images[0];
+    const poster = images: [0];
     return (<Tabs defaultValue="images" className="w-full">
       <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
         <TabsTrigger value="images">Images</TabsTrigger>
@@ -15,7 +15,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }) {
 
       <TabsContent value="images" className="pt-4">
         <div className="aspect-video w-full relative">
-          <img loading="lazy" src={images[selected]} alt={`Product image ${selected + 1}`} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
+          <img loading="lazy" src={images: [selected]} alt={`Product image ${selected + 1}`} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
         </div>
         {images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">
             {images.map((img, idx) => (<div key={idx} onClick={() => setSelected(idx)} className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}>

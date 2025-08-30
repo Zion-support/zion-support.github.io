@@ -45,7 +45,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Service-based businesses",
             "Startups scaling rapidly"
         ],
-        tags["AI", "Autonomous Systems", "Business Operations", "Automation", "Machine Learning", "2025"],
+        tags: ["AI", "Autonomous Systems", "Business Operations", "Automation", "Machine Learning", "2025"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $12,000/month",
@@ -106,7 +106,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Technology companies",
             "Academic institutions"
         ],
-        tags["Quantum Computing", "AI", "Machine Learning", "Optimization", "Research", "2025"],
+        tags: ["Quantum Computing", "AI", "Machine Learning", "Optimization", "Research", "2025"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,000 - $20,000/month",
@@ -167,7 +167,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Technology companies",
             "Educational institutions"
         ],
-        tags["Cybersecurity", "AI", "Threat Detection", "Zero Trust", "Compliance", "2025"],
+        tags: ["Cybersecurity", "AI", "Threat Detection", "Zero Trust", "Compliance", "2025"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$2,800 - $8,500/month",
@@ -228,7 +228,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Energy companies",
             "Agricultural businesses"
         ],
-        tags["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance", "2025"],
+        tags: ["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance", "2025"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,500/month",
@@ -289,7 +289,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Individual investors",
             "Blockchain startups"
         ],
-        tags["Blockchain", "DeFi", "Web3", "Smart Contracts", "Cryptocurrency", "2025"],
+        tags: ["Blockchain", "DeFi", "Web3", "Smart Contracts", "Cryptocurrency", "2025"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,200 - $10,000/month",
@@ -350,7 +350,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Publishers",
             "E-commerce platforms"
         ],
-        tags["AI", "Content Creation", "Digital Marketing", "SEO", "Social Media", "2025"],
+        tags: ["AI", "Content Creation", "Digital Marketing", "SEO", "Social Media", "2025"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "premium",
         marketPrice: "$450 - $1,200/month",
@@ -411,7 +411,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Business analysts",
             "Enterprise businesses"
         ],
-        tags["Data Management", "Autonomous Systems", "AI", "Compliance", "Analytics", "2025"],
+        tags: ["Data Management", "Autonomous Systems", "AI", "Compliance", "Analytics", "2025"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $6,000/month",
@@ -472,7 +472,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Security teams",
             "Enterprise businesses"
         ],
-        tags["IT Infrastructure", "Automation", "DevOps", "Cloud", "Security", "2025"],
+        tags: ["IT Infrastructure", "Automation", "DevOps", "Cloud", "Security", "2025"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$2,200 - $7,500/month",
@@ -533,7 +533,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             "Product managers",
             "Business owners"
         ],
-        tags["Customer Experience", "AI", "Personalization", "Analytics", "Automation", "2025"],
+        tags: ["Customer Experience", "AI", "Personalization", "Analytics", "Automation", "2025"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$800 - $2,500/month",

@@ -126,7 +126,7 @@ export function ProductSubmissionForm() {
                 const { error: updateError } = await supabase
                     .from('product_listings')
                     .update({
-                    images[publicUrlData.publicUrl]
+                    images: [publicUrlData.publicUrl]
                 })
                     .eq('id', productRecord.id);
                 if (updateError) {

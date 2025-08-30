@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Brain,
   Cloud,
   Shield,

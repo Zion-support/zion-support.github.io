@@ -40,7 +40,7 @@ export const INNOVATIVE_AI_SERVICES = [
             "Agencies",
             "E-commerce owners"
         ],
-        tags["AI", "Content Marketing", "SEO", "Social Media", "Automation"],
+        tags: ["AI", "Content Marketing", "SEO", "Social Media", "Automation"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -99,7 +99,7 @@ export const INNOVATIVE_AI_SERVICES = [
             "Manufacturing plants",
             "Transportation companies"
         ],
-        tags["AI", "Computer Vision", "Video Analytics", "Security", "Retail Analytics"],
+        tags: ["AI", "Computer Vision", "Video Analytics", "Security", "Retail Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -158,7 +158,7 @@ export const INNOVATIVE_AI_SERVICES = [
             "High-net-worth individuals",
             "Trading firms"
         ],
-        tags["AI", "Finance", "Trading", "Machine Learning", "Risk Management"],
+        tags: ["AI", "Finance", "Trading", "Machine Learning", "Risk Management"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -217,7 +217,7 @@ export const INNOVATIVE_AI_SERVICES = [
             "Healthcare administrators",
             "Medical researchers"
         ],
-        tags["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Deep Learning"],
+        tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Deep Learning"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,299 - $5,000/month",
@@ -276,7 +276,7 @@ export const INNOVATIVE_AI_SERVICES = [
             "Procurement teams",
             "Business executives"
         ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$699 - $2,500/month",

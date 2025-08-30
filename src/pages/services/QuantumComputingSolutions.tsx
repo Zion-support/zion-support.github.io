@@ -1,7 +1,7 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
+import { SEO  } from '../components/SEO';
 import { Atom, 
   Zap, 
   CheckCircle, 

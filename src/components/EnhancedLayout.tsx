@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { ReactNode  } from 'react.ts';
+import React from 'react';
+import { ReactNode  } from 'react';
 import { FuturisticNavigation  } from './FuturisticNavigation';
 import { FuturisticFooter  } from './FuturisticFooter';
 import { EnhancedSidebar  } from './EnhancedSidebar';

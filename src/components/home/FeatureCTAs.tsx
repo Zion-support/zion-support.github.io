@@ -1,9 +1,9 @@
 
-import React from 'react.ts';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '../components/ui/card';
+import { Button  } from '../components/ui/button';
+import { Badge  } from '../components/ui/badge';
+import { Link  } from 'react-router-dom';
 import { ArrowRight, 
   Users, 
   Zap, 

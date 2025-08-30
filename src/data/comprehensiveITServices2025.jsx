@@ -42,7 +42,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Business owners",
             "Digital transformation consultants"
         ],
-        tags["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
+        tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $10,000/month",
@@ -108,7 +108,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "IT directors",
             "Business owners"
         ],
-        tags["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
+        tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
         estimatedDelivery: "6-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,899 - $7,500/month",
@@ -173,7 +173,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Product managers",
             "Technology leaders"
         ],
-        tags["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
+        tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$1,599 - $6,000/month",
@@ -238,7 +238,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Marketing teams",
             "Executive leadership"
         ],
-        tags["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
+        tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
         estimatedDelivery: "6-10 weeks",
         supportLevel: "premium",
         marketPrice: "$1,299 - $5,000/month",
@@ -303,7 +303,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Business owners",
             "Technology consultants"
         ],
-        tags["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
+        tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
         estimatedDelivery: "4-8 weeks",
         supportLevel: "premium",
         marketPrice: "$999 - $4,000/month",
@@ -368,7 +368,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Technology leaders",
             "Business owners"
         ],
-        tags["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
+        tags: ["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
         estimatedDelivery: "2-4 weeks",
         supportLevel: "consulting",
         marketPrice: "$299 - $500/hour",
@@ -433,7 +433,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "IT administrators",
             "Business owners"
         ],
-        tags["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
+        tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
         estimatedDelivery: "2-4 weeks",
         supportLevel: "premium",
         marketPrice: "$799 - $3,000/month",
@@ -498,7 +498,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Operations managers",
             "Digital transformation teams"
         ],
-        tags["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
+        tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
         estimatedDelivery: "8-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,999 - $8,000/month",
@@ -563,7 +563,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
             "Technology leaders",
             "Implementation teams"
         ],
-        tags["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
+        tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
         estimatedDelivery: "Project-based",
         supportLevel: "premium",
         marketPrice: "$1,499 - $6,000/month",

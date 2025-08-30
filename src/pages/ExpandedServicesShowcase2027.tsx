@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, 
   Filter, 
   Grid3X3, 
@@ -56,13 +56,13 @@ import { Search,
   Monitor as Healthcare,
   Cpu as FinTech
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 import { ALL_EXPANDED_SERVICES_2027, 
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027 
- } from '@/data/expandedInnovativeServices2027';
+ } from '../data/expandedInnovativeServices2027';
 
 const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All');

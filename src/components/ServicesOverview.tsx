@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Shield, 
   Rocket, 
@@ -27,7 +27,7 @@ import { Brain,
   CheckCircle,
   Clock
  } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '../data/innovativeMicroSaasServices2025';
 
 export function ServicesOverview(...args[]):  {
   const serviceCategories = [

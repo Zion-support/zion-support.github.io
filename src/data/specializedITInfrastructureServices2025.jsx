@@ -33,7 +33,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Smart city projects",
             "Retail chains"
         ],
-        tags["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
+        tags: ["Edge Computing", "AI", "IoT", "Machine Learning", "Real-time Processing"],
         marketPrice: "$1,800 - $6,000/month",
         roi: "450% within 8 months",
         competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
@@ -90,7 +90,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Government agencies",
             "Educational institutions"
         ],
-        tags["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
+        tags: ["Cybersecurity", "Zero Trust", "AI", "Identity Management", "Network Security"],
         marketPrice: "$2,500 - $10,000/month",
         roi: "600% within 10 months",
         competitors["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
@@ -147,7 +147,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Government agencies",
             "Financial institutions"
         ],
-        tags["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
+        tags: ["Cloud Management", "Hybrid Cloud", "AI", "Multi-cloud", "DevOps"],
         marketPrice: "$2,200 - $8,000/month",
         roi: "500% within 9 months",
         competitors["VMware", "Red Hat", "HashiCorp", "Terraform", "Ansible"],
@@ -204,7 +204,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Colocation providers",
             "Government agencies"
         ],
-        tags["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
+        tags: ["Data Center", "Automation", "AI", "Energy Management", "Predictive Maintenance"],
         marketPrice: "$3,000 - $15,000/month",
         roi: "700% within 12 months",
         competitors["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell"],
@@ -261,7 +261,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             "Healthcare organizations",
             "Government agencies"
         ],
-        tags["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
+        tags: ["Network Management", "Performance Optimization", "AI", "Monitoring", "Automation"],
         marketPrice: "$1,900 - $7,000/month",
         roi: "550% within 9 months",
         competitors["Cisco", "Juniper", "Aruba", "Extreme Networks", "Fortinet"],

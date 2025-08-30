@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '../components/SEO';
 import { Check, 
   Star, 
   Zap, 

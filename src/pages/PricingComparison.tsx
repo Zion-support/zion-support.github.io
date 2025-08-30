@@ -1,7 +1,7 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
 const PricingComparison: React.FC = (): JSX.Element => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');

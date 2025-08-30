@@ -40,7 +40,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "Bloggers",
             "Social media managers"
         ],
-        tags["AI", "Content Creation", "GPT-5", "SEO", "Automation"],
+        tags: ["AI", "Content Creation", "GPT-5", "SEO", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -99,7 +99,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "Digital transformation leaders",
             "Automation specialists"
         ],
-        tags["Automation", "AI", "Process Optimization", "Workflow", "Efficiency"],
+        tags: ["Automation", "AI", "Process Optimization", "Workflow", "Efficiency"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$599 - $2,500/month",
@@ -158,7 +158,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "Financial institutions",
             "Technology leaders"
         ],
-        tags["Quantum Computing", "Data Analytics", "Optimization", "Future-Proof", "AI"],
+        tags: ["Quantum Computing", "Data Analytics", "Optimization", "Future-Proof", "AI"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$799 - $3,000/month",
@@ -217,7 +217,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "Product managers",
             "UX designers"
         ],
-        tags["Customer Experience", "AI", "Personalization", "Analytics", "Automation"],
+        tags: ["Customer Experience", "AI", "Personalization", "Analytics", "Automation"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -276,7 +276,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "E-commerce businesses",
             "Technology companies"
         ],
-        tags["Blockchain", "Identity Management", "Security", "Privacy", "Compliance"],
+        tags: ["Blockchain", "Identity Management", "Security", "Privacy", "Compliance"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
@@ -335,7 +335,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
             "Energy companies",
             "Transportation firms"
         ],
-        tags["IoT", "Edge Computing", "Real-time", "Analytics", "Automation"],
+        tags: ["IoT", "Edge Computing", "Real-time", "Analytics", "Automation"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",

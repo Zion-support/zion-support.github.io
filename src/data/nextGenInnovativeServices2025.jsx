@@ -40,7 +40,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Government agencies",
             "Tech enterprises"
         ],
-        tags["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
+        tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
@@ -98,7 +98,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Enterprise leaders",
             "Startup founders"
         ],
-        tags["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"],
+        tags: ["AI", "Automation", "Business Operations", "Autonomous", "Enterprise"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,000/month",
@@ -156,7 +156,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Educational institutions",
             "Healthcare providers"
         ],
-        tags["Neural Interface", "BCI", "Accessibility", "Medical", "Research"],
+        tags: ["Neural Interface", "BCI", "Accessibility", "Medical", "Research"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $15,000/month",
@@ -214,7 +214,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Educational institutions",
             "Creative agencies"
         ],
-        tags["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"],
+        tags: ["Holographic", "VR/AR", "Collaboration", "Remote Work", "3D"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $3,500/month",
@@ -272,7 +272,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Enterprise organizations",
             "Government agencies"
         ],
-        tags["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
+        tags: ["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,200 - $8,000/month",
@@ -330,7 +330,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025 = [
             "Renewable energy firms",
             "Corporate responsibility teams"
         ],
-        tags["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"],
+        tags: ["Sustainability", "Green Tech", "Environmental", "Renewable Energy", "Compliance"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$1,500 - $4,500/month",

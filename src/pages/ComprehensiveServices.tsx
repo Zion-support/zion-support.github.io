@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { SEO  } from '../components/SEO';
+import { Link  } from 'react-router-dom';
 import { ArrowRight, CheckCircle2, Globe, Sparkles, Shield, Cpu, Cloud, Database, Workflow, Rocket, DollarSign, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
 
 const ComprehensiveServices: React.FC = (): JSX.Element => {

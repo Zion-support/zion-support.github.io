@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, 
   Filter, 
   Grid3X3, 
@@ -60,10 +60,10 @@ import { Search,
   AlertTriangle,
   Zap
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing 
- } from '@/data/expandedServicesPricing2027';
+ } from '../data/expandedServicesPricing2027';
 
 const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All');

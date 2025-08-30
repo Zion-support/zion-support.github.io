@@ -41,7 +41,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Educators",
             "Social media managers"
         ],
-        tags["AI", "Video Creation", "Content Marketing", "Social Media", "Automation"],
+        tags: ["AI", "Video Creation", "Content Marketing", "Social Media", "Automation"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$99 - $299/month",
@@ -100,7 +100,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Product managers",
             "Sales teams"
         ],
-        tags["AI", "Customer Success", "Churn Prevention", "Automation", "Analytics"],
+        tags: ["AI", "Customer Success", "Churn Prevention", "Automation", "Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $599/month",
@@ -160,7 +160,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Marketing agencies",
             "Small businesses"
         ],
-        tags["AI", "Email Marketing", "Automation", "Personalization", "Analytics"],
+        tags: ["AI", "Email Marketing", "Automation", "Personalization", "Analytics"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$79 - $299/month",
@@ -220,7 +220,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Small businesses",
             "Influencers"
         ],
-        tags["AI", "Social Media", "Content Management", "Automation", "Analytics"],
+        tags: ["AI", "Social Media", "Content Management", "Automation", "Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$149 - $499/month",
@@ -280,7 +280,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Web developers",
             "Small businesses"
         ],
-        tags["AI", "SEO", "Search Optimization", "Content Marketing", "Analytics"],
+        tags: ["AI", "SEO", "Search Optimization", "Content Marketing", "Analytics"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$89 - $299/month",
@@ -340,7 +340,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Small businesses",
             "Support managers"
         ],
-        tags["AI", "Chatbot", "Customer Support", "Automation", "NLP"],
+        tags: ["AI", "Chatbot", "Customer Support", "Automation", "NLP"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$129 - $399/month",
@@ -400,7 +400,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Operations managers",
             "Development teams"
         ],
-        tags["AI", "Project Management", "Automation", "Collaboration", "Analytics"],
+        tags: ["AI", "Project Management", "Automation", "Collaboration", "Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$179 - $599/month",
@@ -460,7 +460,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
             "Families",
             "Retirement planners"
         ],
-        tags["AI", "Financial Planning", "Personal Finance", "Investment", "Budgeting"],
+        tags: ["AI", "Financial Planning", "Personal Finance", "Investment", "Budgeting"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "standard",
         marketPrice: "$69 - $199/month",

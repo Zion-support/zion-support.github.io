@@ -18,7 +18,7 @@ const CloudDevOpsServices = () => {
             features["Multi-cloud orchestration", "Cost optimization", "Unified monitoring", "Auto-scaling", "Disaster recovery", "Security compliance"],
             benefits["Reduced cloud costs", "Improved reliability", "Better performance", "Enhanced security", "Simplified management"],
             targetAudience["Large enterprises", "Multi-cloud organizations", "Financial services", "Healthcare systems"],
-            tags["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
+            tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -39,7 +39,7 @@ const CloudDevOpsServices = () => {
             features["Cluster automation", "Auto-scaling", "Security hardening", "Monitoring & alerting", "Backup & recovery", "Multi-region support"],
             benefits["Improved scalability", "Enhanced security", "Reduced operational overhead", "Better resource utilization"],
             targetAudience["DevOps teams", "Software companies", "Digital agencies", "E-commerce platforms"],
-            tags["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
+            tags: ["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -60,7 +60,7 @@ const CloudDevOpsServices = () => {
             features["Automated testing", "Deployment automation", "Rollback mechanisms", "Security scanning", "Performance testing", "Multi-environment support"],
             benefits["Faster deployments", "Reduced errors", "Improved quality", "Better collaboration", "Cost savings"],
             targetAudience["Development teams", "Software companies", "IT departments", "Digital agencies"],
-            tags["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
+            tags: ["CI/CD", "Automation", "DevOps", "Testing", "Deployment"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -81,7 +81,7 @@ const CloudDevOpsServices = () => {
             features["Architecture design", "Function optimization", "Event-driven design", "Cost optimization", "Monitoring setup", "Security implementation"],
             benefits["Reduced infrastructure costs", "Automatic scaling", "Pay-per-use pricing", "Reduced operational overhead"],
             targetAudience["Startups", "SaaS companies", "E-commerce platforms", "API providers"],
-            tags["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
+            tags: ["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -102,7 +102,7 @@ const CloudDevOpsServices = () => {
             features["Terraform automation", "CloudFormation templates", "Ansible playbooks", "Version control", "Testing automation", "Documentation"],
             benefits["Consistent deployments", "Reduced errors", "Faster provisioning", "Better collaboration", "Cost control"],
             targetAudience["DevOps teams", "Infrastructure teams", "Cloud architects", "System administrators"],
-            tags["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
+            tags: ["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -123,7 +123,7 @@ const CloudDevOpsServices = () => {
             features["Security assessment", "Compliance monitoring", "Threat detection", "Access control", "Data encryption", "Audit logging"],
             benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Customer trust", "Insurance benefits"],
             targetAudience["Financial services", "Healthcare organizations", "E-commerce businesses", "Government agencies"],
-            tags["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
+            tags: ["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",

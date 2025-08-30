@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';
-import { Search, 
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Search, 
   BookOpen, 
   Code, 
   FileText, 
@@ -18,7 +19,7 @@ import { Search,
   Cloud,
   Shield,
   Rocket
- } from 'lucide-react';
+} from 'lucide-react';
 
 export default function Documentation() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -139,7 +140,7 @@ export default function Documentation() {
       views: '6.7k',
       rating: 4.7
     }
-  };
+  ];
 
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -152,7 +153,8 @@ export default function Documentation() {
   };
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
+    ? docCategories 
+    : docCategories.filter(category => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -168,9 +170,8 @@ export default function Documentation() {
         title="Documentation - Zion Tech Group"
         description="Comprehensive documentation, API guides, and resources for Zion Tech Group services. Get started with our detailed guides and tutorials."
         keywords="documentation, API docs, user guides, tutorials, Zion Tech Group"
-        canonical="https://ziontechgroup.com/documentation"
       />
-
+      
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
@@ -231,123 +232,43 @@ export default function Documentation() {
               className="text-center mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold text-white mb-2">
+              <h2 className="text-3xl font-bold text-white mb-4">
                 Search Results for "{searchQuery}"
               </h2>
-              <p className="text-slate-300">
-                Found {searchResults.length} articles matching your search
+              <p className="text-gray-300">
+                Found {searchResults.length} results
               </p>
             </motion.div>
             
-            {searchResults.length > 0 ? (
-              <div className="max-w-4xl mx-auto space-y-4">
-                {searchResults.map((result, index) => (
-                  <motion.div
-                    key={`${result.id}-${index}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">
-                          {result.article.title}
-                        </h3>
-                        <p className="text-slate-300 text-sm">
-                          Category: {result.name}
-                        </p>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-cyan-400" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            ) : (
-              <motion.div 
-                className="text-center py-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No results found</h3>
-                <p className="text-slate-300 mb-6">Try adjusting your search terms or browse our categories below</p>
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="px-6 py-3 bg-cyan-500 text-white rounded-lg font-semibold hover:bg-cyan-600 transition-colors duration-300"
-                >
-                  Clear Search
-                </button>
-              </motion.div>
-            )}
-          </div>
-        </section>
-      )}
-
-      {/* Documentation Categories */}
-      {!searchQuery && (
-        <section className="py-20 bg-slate-900">
-          <div className="container mx-auto px-4">
-            <motion.div 
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Documentation Categories
-              </h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Browse our organized documentation by service category
-              </p>
-            </motion.div>
-            
-            <div className="grid md: grid-cols-2 gap-8">
-              {filteredCategories.map((category, index)  => (
+            <div className="max-w-4xl mx-auto space-y-4">
+              {searchResults.map((result, index) => (
                 <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group"
+                  key={`${result.id}-${result.article.title}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  className="bg-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300"
                 >
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 h-full">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                      <category.icon className="w-8 h-8 text-white" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
-                    <p className="text-slate-300 mb-6 leading-relaxed">{category.description}</p>
-                    
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-cyan-400 mb-3">Available Guides:</h4>
-                      <div className="space-y-3">
-                        {category.articles.map((article, idx) => (
-                          <div key={idx} className="flex items-center justify-between p-3 bg-slate-700/50 rounded-lg">
-                            <div>
-                              <h5 className="text-white font-medium text-sm">{article.title}</h5>
-                              <div className="flex items-center space-x-4 mt-1">
-                                <span className="text-slate-400 text-xs flex items-center">
-                                  <Clock className="w-3 h-3 mr-1" />
-                                  {article.readTime}
-                                </span>
-                                <span className="text-slate-400 text-xs">{article.difficulty}</span>
-                              </div>
-                            </div>
-                            <ArrowRight className="w-4 h-4 text-cyan-400" />
-                          </div>
-                        ))}
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
+                          {result.name}
+                        </span>
+                        <span className="text-gray-400 text-sm">
+                          {result.article.readTime} • {result.article.difficulty}
+                        </span>
                       </div>
+                      <h3 className="text-xl font-semibold text-white mb-2">
+                        {result.article.title}
+                      </h3>
+                      <p className="text-gray-300 text-sm">
+                        {result.description}
+                      </p>
                     </div>
-                    
-                    <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
-                      View All {category.name} Docs
-                    </button>
+                    <ArrowRight className="w-5 h-5 text-gray-400 flex-shrink-0 mt-2" />
                   </div>
                 </motion.div>
               ))}
@@ -356,62 +277,153 @@ export default function Documentation() {
         </section>
       )}
 
+      {/* Category Filter */}
+      <section className="py-16 bg-slate-800/20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button
+              onClick={() => setSelectedCategory('all')}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                selectedCategory === 'all'
+                  ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
+              }`}
+            >
+              All Categories
+            </button>
+            {docCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                    : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50 hover:text-white'
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Documentation Categories */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredCategories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                    <category.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{category.name}</h3>
+                    <p className="text-gray-400 text-sm">{category.articles.length} articles</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-6">{category.description}</p>
+                
+                <div className="space-y-3 mb-6">
+                  {category.articles.map((article, articleIndex) => (
+                    <div key={articleIndex} className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg hover:bg-slate-700/50 transition-colors duration-200">
+                      <div className="flex-1">
+                        <h4 className="text-white font-medium text-sm">{article.title}</h4>
+                        <div className="flex items-center gap-3 mt-1">
+                          <span className="text-gray-400 text-xs">{article.readTime}</span>
+                          <span className="text-gray-400 text-xs">•</span>
+                          <span className="text-gray-400 text-xs">{article.difficulty}</span>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-gray-400" />
+                    </div>
+                  ))}
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  View All Articles
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* API Documentation */}
-      <section className="py-20 bg-slate-800/50">
+      <section className="py-20 bg-slate-800/20">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-white mb-6">
               API Documentation
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Integrate with our services using our comprehensive APIs
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive API references, SDKs, and integration guides for developers
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 gap-8">
-            {apiDocs.map((api, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {apiDocs.map((api, index) => (
               <motion.div
                 key={api.name}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{api.name}</h3>
-                      <p className="text-slate-300 text-sm mb-3">{api.description}</p>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Api className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{api.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{api.description}</p>
+                  
+                  <div className="space-y-2 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Version:</span>
+                      <span className="text-white">{api.version}</span>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      api.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-amber-500/20 text-amber-400'
-                    }`}>
-                      {api.status}
-                    </span>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Status:</span>
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        api.status === 'Stable' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                        api.status === 'Beta' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+                        'bg-red-500/20 text-red-400 border border-red-500/30'
+                      }`}>
+                        {api.status}
+                      </span>
+                    </div>
+                    {api.endpoints && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Endpoints:</span>
+                        <span className="text-white">{api.endpoints}</span>
+                      </div>
+                    )}
+                    {api.languages && (
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Languages:</span>
+                        <span className="text-white">{api.languages}</span>
+                      </div>
+                    )}
                   </div>
                   
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-slate-400 text-sm">Version: {api.version}</span>
-                    <span className="text-slate-400 text-sm">
-                      {api.endpoints ? `${api.endpoints} endpoints` : `${api.languages} languages`}
-                    </span>
-                  </div>
-                  
-                  <div className="flex space-x-3">
-                    <button className="flex-1 bg-slate-700 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-slate-600 transition-colors duration-300">
-                      View Docs
-                    </button>
-                    <button className="flex-1 bg-cyan-500 text-white py-2 px-4 rounded-lg text-sm font-medium hover:bg-cyan-600 transition-colors duration-300">
-                      Try API
-                    </button>
-                  </div>
+                  <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                    View Docs
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -420,136 +432,71 @@ export default function Documentation() {
       </section>
 
       {/* Popular Guides */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-white mb-6">
               Popular Guides
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Most frequently accessed documentation and tutorials
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Most viewed and highly rated documentation guides
             </p>
           </motion.div>
           
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md: grid-cols-2 gap-8">
-              {popularGuides.map((guide, index)  => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="group"
-                >
-                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                          {guide.title}
-                        </h3>
-                        <p className="text-cyan-400 text-sm">{guide.category}</p>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-amber-400 fill-current" />
-                        <span className="text-white text-sm font-medium">{guide.rating}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-slate-400 text-sm">
-                        <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {guide.readTime}
-                        </span>
-                        <span>{guide.difficulty}</span>
-                      </div>
-                      <span className="text-slate-400 text-sm">{guide.views} views</span>
-                    </div>
-                    
-                    <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
-                      Read Guide
-                    </button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Resources */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Additional Resources
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              More ways to learn and get support
-            </p>
-          </motion.div>
-          
-          <div className="grid md: grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Video Tutorials',
-                description: 'Step-by-step video guides for all our services',
-                icon: Video,
-                count: '50+ videos',
-                href: '/tutorials'
-              },
-              {
-                title: 'Code Examples',
-                description: 'Ready-to-use code snippets and examples',
-                icon: Code,
-                count: '200+ examples',
-                href: '/examples'
-              },
-              {
-                title: 'Download Center',
-                description: 'SDKs, tools, and resources for developers',
-                icon: Download,
-                count: '25+ downloads',
-                href: '/downloads'
-              }
-            ].map((resource, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularGuides.map((guide, index) => (
               <motion.div
-                key={resource.title}
-                initial={{ opacity: 0, y: 30 }}
+                key={guide.title}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="group"
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 text-center h-full">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <resource.icon className="w-8 h-8 text-white" />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BookOpen className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{guide.title}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{guide.category}</p>
+                  
+                  <div className="space-y-2 text-sm mb-4">
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Read Time:</span>
+                      <span className="text-white">{guide.readTime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Difficulty:</span>
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        guide.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                        guide.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30' :
+                        'bg-red-500/20 text-red-400 border border-red-500/30'
+                      }`}>
+                        {guide.difficulty}
+                      </span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Views:</span>
+                      <span className="text-white">{guide.views}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Rating:</span>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-white">{guide.rating}</span>
+                      </div>
+                    </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-4">{resource.title}</h3>
-                  <p className="text-slate-300 mb-4">{resource.description}</p>
-                  <div className="text-cyan-400 text-sm font-medium mb-6">{resource.count}</div>
-                  
-                  <a 
-                    href={resource.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
-                  >
-                    Explore {resource.title}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
+                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
+                    Read Guide
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -558,47 +505,38 @@ export default function Documentation() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
-            initial={{ opacity: 0, y: 30 }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          >
-            Need More Help?
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Can't find what you're looking for? Our support team is here to help
-          </motion.p>
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <a 
-              href="/help" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Support
-            </a>
-            <a 
-              href="/contact" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
-              Contact Us
-            </a>
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Can't find what you're looking for? Our support team is here to help you get the most out of our services.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Support
+              </a>
+              <a
+                href="/ai-services-showcase"
+                className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+              >
+                Explore Services
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
     </div>
-  )}
+  );
+}

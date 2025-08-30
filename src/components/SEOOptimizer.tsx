@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Search, 
   TrendingUp, 
   Target, 

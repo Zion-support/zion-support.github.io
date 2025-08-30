@@ -41,7 +41,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Technology companies",
             "Government agencies"
         ],
-        tags["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
+        tags: ["Quantum Computing", "Cloud Services", "Research", "Innovation", "Advanced Computing"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,000 - $25,000/month",
@@ -100,7 +100,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Healthcare providers",
             "Smart city developers"
         ],
-        tags["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
+        tags: ["Edge Computing", "IoT", "5G", "Real-time Processing", "Distributed Systems"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,500/month",
@@ -159,7 +159,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Compliance officers",
             "Security engineers"
         ],
-        tags["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
+        tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $8,000/month",
@@ -218,7 +218,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Cloud engineers",
             "Operations teams"
         ],
-        tags["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
+        tags: ["Multi-Cloud", "Cloud Management", "Cost Optimization", "DevOps", "Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$800 - $3,000/month",
@@ -277,7 +277,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Enterprise architects",
             "Integration specialists"
         ],
-        tags["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
+        tags: ["API Management", "Microservices", "Developer Experience", "Integration", "Governance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$600 - $2,500/month",
@@ -336,7 +336,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "QA engineers",
             "Security engineers"
         ],
-        tags["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
+        tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Monitoring"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$450 - $1,800/month",
@@ -395,7 +395,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "Enterprise architects",
             "Data governance teams"
         ],
-        tags["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
+        tags: ["Data Mesh", "Data Architecture", "Data Governance", "Microservices", "Data Products"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $6,000/month",
@@ -454,7 +454,7 @@ export const INNOVATIVE_IT_SERVICES = [
             "ESG teams",
             "Compliance officers"
         ],
-        tags["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
+        tags: ["Green IT", "Sustainability", "Energy Efficiency", "ESG", "Environmental Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$800 - $3,000/month",

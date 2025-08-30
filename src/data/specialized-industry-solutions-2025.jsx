@@ -43,7 +43,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Healthcare administrators",
             "Medical researchers"
         ],
-        tags["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],
+        tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$45,000 - $120,000/month",
@@ -108,7 +108,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Operations managers",
             "Executive leadership"
         ],
-        tags["Financial Compliance", "RegTech", "AI Monitoring", "Risk Management", "Regulatory Reporting"],
+        tags: ["Financial Compliance", "RegTech", "AI Monitoring", "Risk Management", "Regulatory Reporting"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$32,000 - $85,000/month",
@@ -173,7 +173,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Quality managers",
             "Supply chain managers"
         ],
-        tags["Manufacturing IoT", "Smart Factory", "Predictive Maintenance", "Quality Control", "Supply Chain"],
+        tags: ["Manufacturing IoT", "Smart Factory", "Predictive Maintenance", "Quality Control", "Supply Chain"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $65,000/month",
@@ -238,7 +238,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Merchandising teams",
             "Customer experience managers"
         ],
-        tags["Retail AI", "Customer Personalization", "Inventory Optimization", "Demand Forecasting", "Marketing Automation"],
+        tags: ["Retail AI", "Customer Personalization", "Inventory Optimization", "Demand Forecasting", "Marketing Automation"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$18,000 - $45,000/month",
@@ -303,7 +303,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Energy consultants",
             "Government officials"
         ],
-        tags["Energy Management", "Smart Grid", "Renewable Energy", "Predictive Analytics", "Sustainability"],
+        tags: ["Energy Management", "Smart Grid", "Renewable Energy", "Predictive Analytics", "Sustainability"],
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$35,000 - $90,000/month",
@@ -368,7 +368,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Operations managers",
             "Customer service teams"
         ],
-        tags["Logistics AI", "Supply Chain", "Route Optimization", "Fleet Management", "Real-time Tracking"],
+        tags: ["Logistics AI", "Supply Chain", "Route Optimization", "Fleet Management", "Real-time Tracking"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$22,000 - $55,000/month",
@@ -433,7 +433,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Educational technologists",
             "Curriculum developers"
         ],
-        tags["Education AI", "Personalized Learning", "Adaptive Content", "Learning Analytics", "Student Engagement"],
+        tags: ["Education AI", "Personalized Learning", "Adaptive Content", "Learning Analytics", "Student Engagement"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$15,000 - $40,000/month",
@@ -498,7 +498,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Portfolio managers",
             "Financial advisors"
         ],
-        tags["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
+        tags: ["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$20,000 - $50,000/month",

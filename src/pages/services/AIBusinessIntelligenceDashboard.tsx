@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
 import { GradientHeading  } from '../../components/ui/GradientHeading';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../../components/ui/card';

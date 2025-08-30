@@ -119,7 +119,7 @@ export default function PricingGuidePage() {
             const tier = getServiceTier(service.price || 0);
             return (<Card key={service.id} className="h-full hover:shadow-lg transition-shadow duration-300">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                  <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                   <div className="absolute top-2 left-2">
                     <Badge className={tier.color}>
                       {tier.tier}

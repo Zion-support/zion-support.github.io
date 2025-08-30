@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Brain, Cloud  } from 'lucide-react';
 
 export const PricingSection: React.FC = (): JSX.Element => {

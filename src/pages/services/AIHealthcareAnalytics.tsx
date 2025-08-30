@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 import { Heart, 
   Brain, 
   BarChart3, 
@@ -23,7 +23,7 @@ import { Heart,
   Eye,
   AlertTriangle
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const AIHealthcareAnalytics = () => {
   const features = [

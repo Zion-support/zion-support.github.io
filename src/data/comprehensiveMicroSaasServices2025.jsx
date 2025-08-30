@@ -42,7 +42,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Marketing teams",
             "Sales leaders"
         ],
-        tags["AI", "Business Intelligence", "Data Analytics", "Predictive Analytics", "Reporting"],
+        tags: ["AI", "Business Intelligence", "Data Analytics", "Predictive Analytics", "Reporting"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -106,7 +106,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Customer service leaders",
             "Product managers"
         ],
-        tags["AI", "Customer Experience", "Personalization", "Customer Journey", "Analytics"],
+        tags: ["AI", "Customer Experience", "Personalization", "Customer Journey", "Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$449 - $1,800/month",
@@ -170,7 +170,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Procurement specialists",
             "Business owners"
         ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -234,7 +234,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Risk managers",
             "Individual investors"
         ],
-        tags["AI", "FinTech", "Financial Services", "Investment", "Risk Management"],
+        tags: ["AI", "FinTech", "Financial Services", "Investment", "Risk Management"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,500/month",
@@ -298,7 +298,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Research organizations",
             "Healthcare technology companies"
         ],
-        tags["AI", "Healthcare", "Medical Technology", "Diagnostics", "Patient Care"],
+        tags: ["AI", "Healthcare", "Medical Technology", "Diagnostics", "Patient Care"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$899 - $4,000/month",
@@ -362,7 +362,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Online learning platforms",
             "Educational technology companies"
         ],
-        tags["AI", "Education", "Learning Technology", "Personalization", "Assessment"],
+        tags: ["AI", "Education", "Learning Technology", "Personalization", "Assessment"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -426,7 +426,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Compliance officers",
             "Business owners"
         ],
-        tags["AI", "Cybersecurity", "Threat Intelligence", "Security", "Compliance"],
+        tags: ["AI", "Cybersecurity", "Threat Intelligence", "Security", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$649 - $2,500/month",
@@ -490,7 +490,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Agency professionals",
             "Business owners"
         ],
-        tags["AI", "Marketing", "Advertising", "Automation", "Personalization"],
+        tags: ["AI", "Marketing", "Advertising", "Automation", "Personalization"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$549 - $2,000/month",
@@ -554,7 +554,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Business leaders",
             "HR technology companies"
         ],
-        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Performance"],
+        tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Performance"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $1,800/month",
@@ -618,7 +618,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Compliance officers",
             "Legal technology companies"
         ],
-        tags["AI", "Legal Technology", "Compliance", "Contract Analysis", "Legal Research"],
+        tags: ["AI", "Legal Technology", "Compliance", "Contract Analysis", "Legal Research"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$749 - $3,000/month",
@@ -682,7 +682,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Property owners",
             "Real estate technology companies"
         ],
-        tags["AI", "Real Estate", "Property Management", "Investment", "Market Analysis"],
+        tags: ["AI", "Real Estate", "Property Management", "Investment", "Market Analysis"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -746,7 +746,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
             "Maintenance supervisors",
             "Manufacturing technology companies"
         ],
-        tags["AI", "Manufacturing", "Industrial IoT", "Predictive Maintenance", "Quality Control"],
+        tags: ["AI", "Manufacturing", "Industrial IoT", "Predictive Maintenance", "Quality Control"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",

@@ -17,7 +17,7 @@ const ENHANCED_SERVICES = [
         price: 2999,
         features["Predictive analytics", "Natural language processing", "Real-time insights", "Custom dashboards"],
         benefits["Increased efficiency", "Better decision making", "Cost reduction"],
-        tags["AI", "Analytics", "Business Intelligence"],
+        tags: ["AI", "Analytics", "Business Intelligence"],
         location: "Global"
     },
     {
@@ -31,7 +31,7 @@ const ENHANCED_SERVICES = [
         price: 1999,
         features["Threat detection", "24/7 monitoring", "Incident response", "Compliance reporting"],
         benefits["Enhanced security", "Compliance assurance", "Risk mitigation"],
-        tags["Security", "Compliance", "Enterprise"],
+        tags: ["Security", "Compliance", "Enterprise"],
         location: "Global"
     },
     {
@@ -45,7 +45,7 @@ const ENHANCED_SERVICES = [
         price: 1499,
         features["Cost optimization", "Performance monitoring", "Auto-scaling", "Security compliance"],
         benefits["Cost savings", "Improved performance", "Scalability"],
-        tags["Cloud", "DevOps", "Optimization"],
+        tags: ["Cloud", "DevOps", "Optimization"],
         location: "Global"
     }
 ];

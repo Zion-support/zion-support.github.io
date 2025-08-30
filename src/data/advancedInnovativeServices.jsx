@@ -43,7 +43,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Asset managers",
             "Safety officers"
         ],
-        tags["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Industry 4.0", "Smart Manufacturing"],
+        tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Industry 4.0", "Smart Manufacturing"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -105,7 +105,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Government agencies",
             "Technology companies"
         ],
-        tags["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
+        tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
         estimatedDelivery: "10-14 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $8,000/month",
@@ -167,7 +167,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Bioinformaticians",
             "Medical professionals"
         ],
-        tags["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
+        tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -229,7 +229,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Educational institutions",
             "Technology companies"
         ],
-        tags["Blockchain", "Digital Identity", "Privacy", "Security", "Compliance", "SSI"],
+        tags: ["Blockchain", "Digital Identity", "Privacy", "Security", "Compliance", "SSI"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -291,7 +291,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Risk managers",
             "Legal consultants"
         ],
-        tags["AI", "Legal Tech", "Document Analysis", "NLP", "Compliance", "Risk Management"],
+        tags: ["AI", "Legal Tech", "Document Analysis", "NLP", "Compliance", "Risk Management"],
         estimatedDelivery: "3-5 weeks",
         supportLevel: "premium",
         marketPrice: "$449 - $1,800/month",
@@ -353,7 +353,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Energy consultants",
             "Corporate executives"
         ],
-        tags["Sustainability", "Green Tech", "Energy Management", "ESG", "Carbon Tracking", "Renewable Energy"],
+        tags: ["Sustainability", "Green Tech", "Energy Management", "ESG", "Carbon Tracking", "Renewable Energy"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -415,7 +415,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Compliance officers",
             "Risk managers"
         ],
-        tags["Cybersecurity", "Threat Intelligence", "AI", "Machine Learning", "Incident Response", "Compliance"],
+        tags: ["Cybersecurity", "Threat Intelligence", "AI", "Machine Learning", "Incident Response", "Compliance"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",
@@ -477,7 +477,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Utility managers",
             "Public safety directors"
         ],
-        tags["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Public Services", "Infrastructure"],
+        tags: ["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Public Services", "Infrastructure"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,800/month",
@@ -539,7 +539,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Medical researchers",
             "Healthcare administrators"
         ],
-        tags["AI", "Healthcare", "Medical Diagnostics", "Computer Vision", "Deep Learning", "Telemedicine"],
+        tags: ["AI", "Healthcare", "Medical Diagnostics", "Computer Vision", "Deep Learning", "Telemedicine"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,200/month",
@@ -601,7 +601,7 @@ export const ADVANCED_INNOVATIVE_SERVICES = [
             "Government agencies",
             "Financial institutions"
         ],
-        tags["Quantum Computing", "Cryptography", "Security", "Communications", "Compliance", "Future-Proof"],
+        tags: ["Quantum Computing", "Cryptography", "Security", "Communications", "Compliance", "Future-Proof"],
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,200/month",

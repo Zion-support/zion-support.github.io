@@ -15,7 +15,7 @@ const SEOOptimizer = () => {
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
                     headings['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'],
-                    images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
+                    images: ['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
                     links['/services', '/ai-solutions', '/about', '/contact'],
                     keywords['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation']
                 },
@@ -24,7 +24,7 @@ const SEOOptimizer = () => {
                     title: 'Our Services - Comprehensive Technology Solutions',
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
                     headings['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'],
-                    images['/images/services-overview.jpg'],
+                    images: ['/images/services-overview.jpg'],
                     links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'],
                     keywords['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity']
                 },
@@ -33,7 +33,7 @@ const SEOOptimizer = () => {
                     title: 'AI Solutions - Artificial Intelligence Services',
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.',
                     headings['Machine Learning', 'Predictive Analytics', 'AI Automation', 'Business Intelligence'],
-                    images['/images/ai-solutions.jpg'],
+                    images: ['/images/ai-solutions.jpg'],
                     links['/services', '/about', '/contact'],
                     keywords['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
                 }

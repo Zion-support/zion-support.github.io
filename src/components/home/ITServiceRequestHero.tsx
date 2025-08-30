@@ -1,9 +1,9 @@
-import React, { useState } from 'react.ts';
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { GradientHeading  } from '../components/GradientHeading';
+import { Button  } from '../components/ui/button';
+import { Input  } from '../components/ui/input';
+import { useNavigate  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
 
 export function ITServiceRequestHero(...args[]):  {

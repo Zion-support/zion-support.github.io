@@ -33,7 +33,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             "Neuroscience researchers",
             "Medical device manufacturers"
         ],
-        tags["Neurotechnology", "Brain-Computer Interface", "AI", "Medical Technology", "Accessibility"],
+        tags: ["Neurotechnology", "Brain-Computer Interface", "AI", "Medical Technology", "Accessibility"],
         marketPrice: "$5,000 - $20,000/month",
         roi: "800% within 18 months",
         competitors["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
@@ -90,7 +90,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             "Defense contractors",
             "Research institutions"
         ],
-        tags["Space Technology", "AI", "Satellites", "Autonomous Systems", "Predictive Analytics"],
+        tags: ["Space Technology", "AI", "Satellites", "Autonomous Systems", "Predictive Analytics"],
         marketPrice: "$3,500 - $15,000/month",
         roi: "600% within 15 months",
         competitors["Maxar", "Planet Labs", "SpaceX", "OneWeb"],
@@ -147,7 +147,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             "Defense contractors",
             "Research institutions"
         ],
-        tags["Quantum Technology", "Quantum Internet", "AI", "Cybersecurity", "Network Security"],
+        tags: ["Quantum Technology", "Quantum Internet", "AI", "Cybersecurity", "Network Security"],
         marketPrice: "$4,000 - $18,000/month",
         roi: "900% within 20 months",
         competitors["IBM Quantum", "Google Quantum", "Microsoft", "Intel"],
@@ -204,7 +204,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             "Delivery services",
             "Public transportation"
         ],
-        tags["Autonomous Vehicles", "AI", "Fleet Management", "IoT", "Safety", "Logistics"],
+        tags: ["Autonomous Vehicles", "AI", "Fleet Management", "IoT", "Safety", "Logistics"],
         marketPrice: "$2,800 - $12,000/month",
         roi: "500% within 12 months",
         competitors["Waymo", "Cruise", "Tesla", "Uber ATG"],
@@ -261,7 +261,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             "Energy providers",
             "Government agencies"
         ],
-        tags["Climate Technology", "AI", "Sustainability", "Risk Management", "Predictive Analytics"],
+        tags: ["Climate Technology", "AI", "Sustainability", "Risk Management", "Predictive Analytics"],
         marketPrice: "$2,200 - $8,000/month",
         roi: "400% within 10 months",
         competitors["Climate Corp", "Jupiter Intelligence", "ClimateAI", "One Concern"],

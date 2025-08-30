@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../../components/SEO';
-import { motion  } from 'framer-motion.ts';
+import { motion  } from 'framer-motion';
 import { Cloud, Zap, Shield, Cpu, Database, Server, GitBranch, Docker, Kubernetes, Aws, Azure, Gcp, Monitor, BarChart3, Settings, Users, Globe, Lock, RefreshCw, TrendingUp  } from 'lucide-react';
 
 export default function CloudDevOps(...args[]):  {

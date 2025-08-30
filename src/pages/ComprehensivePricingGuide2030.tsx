@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -35,8 +35,8 @@ import { CheckCircle,
   Heart,
   Sparkles
  } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
-import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_SERVICES_2025  } from '../data/innovativeServices2025';
+import { SEO  } from '../components/SEO';
 
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');

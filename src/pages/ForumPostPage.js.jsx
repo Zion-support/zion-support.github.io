@@ -26,7 +26,7 @@ const mockPost = {
     authorId: "user1",
     category: "ai-tools",
     categoryId: "ai-tools",
-    tags["machine-learning", "fine-tuning", "gpt"],
+    tags: ["machine-learning", "fine-tuning", "gpt"],
     createdAt: "2025-04-01T12:00:00Z",
     updatedAt: "2025-04-01T12:00:00Z",
     replies[],

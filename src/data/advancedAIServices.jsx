@@ -40,7 +40,7 @@ export const ADVANCED_AI_SERVICES = [
             "Hedge fund operators",
             "Individual investors"
         ],
-        tags["AI", "Algorithmic Trading", "Financial Technology", "Machine Learning", "Risk Management"],
+        tags: ["AI", "Algorithmic Trading", "Financial Technology", "Machine Learning", "Risk Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $10,000/month",
@@ -98,7 +98,7 @@ export const ADVANCED_AI_SERVICES = [
             "Hospital administrators",
             "Telemedicine companies"
         ],
-        tags["AI", "Healthcare", "Medical Diagnostics", "Deep Learning", "Medical Imaging"],
+        tags: ["AI", "Healthcare", "Medical Diagnostics", "Deep Learning", "Medical Imaging"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",
@@ -156,7 +156,7 @@ export const ADVANCED_AI_SERVICES = [
             "Inventory managers",
             "Business owners"
         ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,000/month",
@@ -214,7 +214,7 @@ export const ADVANCED_AI_SERVICES = [
             "Compliance officers",
             "Security engineers"
         ],
-        tags["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Analytics"],
+        tags: ["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Analytics"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,800 - $6,000/month",
@@ -272,7 +272,7 @@ export const ADVANCED_AI_SERVICES = [
             "Digital agencies",
             "Business owners"
         ],
-        tags["AI", "Content Creation", "Video Editing", "Graphic Design", "Social Media"],
+        tags: ["AI", "Content Creation", "Video Editing", "Graphic Design", "Social Media"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,200/month",
@@ -330,7 +330,7 @@ export const ADVANCED_AI_SERVICES = [
             "Contract managers",
             "Legal departments"
         ],
-        tags["AI", "Legal Technology", "Document Analysis", "Contract Review", "Compliance"],
+        tags: ["AI", "Legal Technology", "Document Analysis", "Contract Review", "Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$800 - $2,500/month",
@@ -388,7 +388,7 @@ export const ADVANCED_AI_SERVICES = [
             "Investment analysts",
             "Property developers"
         ],
-        tags["AI", "Real Estate", "Market Analytics", "Investment Analysis", "Predictive Analytics"],
+        tags: ["AI", "Real Estate", "Market Analytics", "Investment Analysis", "Predictive Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $999/month",
@@ -446,7 +446,7 @@ export const ADVANCED_AI_SERVICES = [
             "Building operators",
             "Property managers"
         ],
-        tags["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT"],
+        tags: ["AI", "Energy Management", "Smart Grid", "Sustainability", "IoT"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $5,000/month",

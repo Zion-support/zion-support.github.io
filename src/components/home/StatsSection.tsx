@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, useInView  } from 'framer-motion.ts';
-import { useRef  } from 'react.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, useInView  } from 'framer-motion';
+import { useRef  } from 'react';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {

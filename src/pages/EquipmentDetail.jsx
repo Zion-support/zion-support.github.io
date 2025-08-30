@@ -70,7 +70,7 @@ export default function EquipmentDetail() {
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 {/* Main Image */}
                 <div className="aspect-video w-full relative">
-                  <img src={equipment.images[selectedImageIndex]} alt={equipment.name} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
+                  <img src={equipment.images: [selectedImageIndex]} alt={equipment.name} className="w-full h-full object-contain bg-zion-blue-light/10 p-4"/>
                 </div>
                 {/* Thumbnail Gallery */}
                 {equipment.images.length > 1 && (<div className="flex p-4 gap-2 overflow-x-auto">

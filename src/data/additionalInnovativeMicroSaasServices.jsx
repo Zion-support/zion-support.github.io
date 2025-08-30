@@ -40,7 +40,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Contract managers",
             "Legal consultants"
         ],
-        tags["AI", "Legal Tech", "Document Automation", "Compliance", "Contract Management"],
+        tags: ["AI", "Legal Tech", "Document Automation", "Compliance", "Contract Management"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,200/month",
@@ -97,7 +97,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Healthcare administrators",
             "Clinical researchers"
         ],
-        tags["AI", "Healthcare", "Analytics", "Predictive Modeling", "EHR Integration"],
+        tags: ["AI", "Healthcare", "Analytics", "Predictive Modeling", "EHR Integration"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$599 - $2,000/month",
@@ -154,7 +154,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Financial advisors",
             "Institutional investors"
         ],
-        tags["AI", "FinTech", "Trading", "Machine Learning", "Investment"],
+        tags: ["AI", "FinTech", "Trading", "Machine Learning", "Investment"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $3,000/month",
@@ -211,7 +211,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Supply chain managers",
             "Operations directors"
         ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $1,800/month",
@@ -268,7 +268,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Development companies",
             "Investment firms"
         ],
-        tags["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+        tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$349 - $1,200/month",
@@ -325,7 +325,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Online learning platforms",
             "Educational consultants"
         ],
-        tags["AI", "Education", "Personalization", "Learning Analytics", "Adaptive Learning"],
+        tags: ["AI", "Education", "Personalization", "Learning Analytics", "Adaptive Learning"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,000/month",
@@ -382,7 +382,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Talent acquisition teams",
             "HR consultants"
         ],
-        tags["AI", "HR", "Recruitment", "Talent Acquisition", "Automation"],
+        tags: ["AI", "HR", "Recruitment", "Talent Acquisition", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -439,7 +439,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "B2B companies",
             "Marketing consultants"
         ],
-        tags["AI", "Marketing", "Attribution", "Analytics", "ROI Optimization"],
+        tags: ["AI", "Marketing", "Attribution", "Analytics", "ROI Optimization"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$449 - $1,800/month",
@@ -496,7 +496,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "B2B companies",
             "E-commerce businesses"
         ],
-        tags["AI", "Customer Success", "Churn Prevention", "Retention", "Predictive Analytics"],
+        tags: ["AI", "Customer Success", "Churn Prevention", "Retention", "Predictive Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -553,7 +553,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES = [
             "Warehouse operators",
             "Supply chain managers"
         ],
-        tags["AI", "Inventory Management", "Forecasting", "Optimization", "Supply Chain"],
+        tags: ["AI", "Inventory Management", "Forecasting", "Optimization", "Supply Chain"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$379 - $1,500/month",

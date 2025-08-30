@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Shield, 
   TrendingUp, 
@@ -81,11 +81,11 @@ import { Brain,
   ChevronDown,
   ChevronUp
  } from 'lucide-react';
-import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Badge  } from '@/components/ui/badge';
+import { MICRO_SAAS_SERVICES  } from '../data/microSaasServices';
+import { SEO  } from '../components/SEO';
+import { Button  } from '../components/ui/button';
+import { Input  } from '../components/ui/input';
+import { Badge  } from '../components/ui/badge';
 const categories = [
   { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
   { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },

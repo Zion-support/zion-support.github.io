@@ -1,4 +1,4 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../components/SEO';
 import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award  } from 'lucide-react';
 

@@ -100,6 +100,10 @@ export default {
           800: '#212529',
           900: '#000000',
         },
+        zion: {
+          cyan: '#00d4ff',
+          purple: '#8b5cf6',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],

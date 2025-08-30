@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -30,8 +30,8 @@ import { Brain,
   MapPin,
   Globe as GlobeIcon
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
+import { SEO } from '../components/SEO';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from '../data/innovativeMicroSaasServices2025';
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -70,9 +70,7 @@ export default function ServicesPage() {
   // Filter and sort services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...SPECIALIZED_SERVICES
   ];
   
   const filteredServices = allServices.filter(service => {

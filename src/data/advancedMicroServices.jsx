@@ -45,7 +45,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Financial controllers",
             "Marketing directors"
         ],
-        tags["AI", "Business Intelligence", "Analytics", "Machine Learning", "Data Visualization"],
+        tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Data Visualization"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $2,999/month",
@@ -110,7 +110,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "System administrators",
             "Security analysts"
         ],
-        tags["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance"],
+        tags: ["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,299 - $4,999/month",
@@ -175,7 +175,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Network engineers",
             "Application developers"
         ],
-        tags["Edge Computing", "IoT", "Cloud Native", "DevOps", "Real-time Processing"],
+        tags: ["Edge Computing", "IoT", "Cloud Native", "DevOps", "Real-time Processing"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$699 - $2,499/month",
@@ -240,7 +240,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Operations directors",
             "Sustainability managers"
         ],
-        tags["Blockchain", "Supply Chain", "Traceability", "Compliance", "Sustainability"],
+        tags: ["Blockchain", "Supply Chain", "Traceability", "Compliance", "Sustainability"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$599 - $1,999/month",
@@ -305,7 +305,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Release managers",
             "Platform engineers"
         ],
-        tags["DevOps", "Automation", "CI/CD", "AI", "Cloud Native"],
+        tags: ["DevOps", "Automation", "CI/CD", "AI", "Cloud Native"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$799 - $2,799/month",
@@ -370,7 +370,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Academic institutions",
             "Government agencies"
         ],
-        tags["Quantum Computing", "Machine Learning", "Optimization", "Research", "Innovation"],
+        tags: ["Quantum Computing", "Machine Learning", "Optimization", "Research", "Innovation"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $9,999/month",
@@ -435,7 +435,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "IT security managers",
             "Legal teams"
         ],
-        tags["Data Governance", "Compliance", "Privacy", "AI", "Data Management"],
+        tags: ["Data Governance", "Compliance", "Privacy", "AI", "Data Management"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $3,499/month",
@@ -500,7 +500,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Integration specialists",
             "Platform engineers"
         ],
-        tags["API Management", "Microservices", "Developer Experience", "Security", "Analytics"],
+        tags: ["API Management", "Microservices", "Developer Experience", "Security", "Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$649 - $2,199/month",
@@ -565,7 +565,7 @@ export const ADVANCED_MICRO_SERVICES = [
             "Digital transformation leaders",
             "Business process owners"
         ],
-        tags["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow Automation"],
+        tags: ["Hyperautomation", "RPA", "AI", "Process Mining", "Workflow Automation"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$1,099 - $3,999/month",

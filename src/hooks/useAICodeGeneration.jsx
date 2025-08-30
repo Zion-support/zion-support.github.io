@@ -346,7 +346,7 @@ console.log("Language:", "${options.language}");`};
                 confidence: 0.85,
                 impact: 'medium',
                 category: 'Performance',
-                tags['timers', 'animation', 'cleanup'],
+                tags: ['timers', 'animation', 'cleanup'],
                 explanation: 'Timers can cause memory leaks and performance issues if not properly managed.',
                 alternatives['requestAnimationFrame', 'useEffect cleanup', 'AbortController']
             })}
@@ -361,7 +361,7 @@ console.log("Language:", "${options.language}");`};
                 confidence: 0.95,
                 impact: 'high',
                 category: 'Security',
-                tags['xss', 'security', 'user-input'],
+                tags: ['xss', 'security', 'user-input'],
                 explanation: 'innerHTML can execute malicious scripts if user input is not properly sanitized.',
                 alternatives['textContent', 'createElement', 'DOMPurify']
             })}
@@ -376,7 +376,7 @@ console.log("Language:", "${options.language}");`};
                 confidence: 0.90,
                 impact: 'low',
                 category: 'Best Practices',
-                tags['logging', 'production', 'cleanup'],
+                tags: ['logging', 'production', 'cleanup'],
                 explanation: 'Console logs should not be in production code as they can impact performance and expose sensitive information.',
                 alternatives['winston', 'pino', 'debug package']
             })}

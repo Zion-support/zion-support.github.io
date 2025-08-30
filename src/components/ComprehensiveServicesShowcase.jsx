@@ -589,7 +589,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
   return (
     <Card className="group hover:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-cyan-500/50">
       <div className="relative overflow-hidden rounded-t-lg">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"/>
+        <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"/>
         {service.featured && (<div className="absolute top-2 right-2">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
               Featured

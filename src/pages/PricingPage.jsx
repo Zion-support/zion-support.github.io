@@ -165,7 +165,7 @@ export default function PricingPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service) => (<Card key={service.id} className="bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
                     <div className="relative">
-                      <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                      <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {service.category}
                       </Badge>

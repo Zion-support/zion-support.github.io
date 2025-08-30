@@ -1,4 +1,24 @@
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, 
+  AlertTriangle, 
+  XCircle, 
+  Clock, 
+  Activity, 
+  Server, 
+  Database, 
+  Cloud, 
+  Shield, 
+  Brain, 
+  Zap, 
+  Globe, 
+  BarChart3, 
+  RefreshCw, 
+  ExternalLink,
+  TrendingUp
+} from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -129,7 +149,7 @@ export default function SystemStatus() {
     }
   ];
 
-  const getStatusColor = (status: string)  => {
+  const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
         return 'text-green-500';
@@ -140,10 +160,11 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'text-blue-500';
       default:
-        return 'text-gray-500'}
+        return 'text-gray-500';
+    }
   };
 
-  const getStatusIcon = (status: string)  => {
+  const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -154,10 +175,11 @@ export default function SystemStatus() {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />}
+        return <Clock className="w-5 h-5 text-gray-500" />;
+    }
   };
 
-  const getSeverityColor = (severity: string)  => {
+  const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
         return 'bg-red-500';
@@ -168,28 +190,32 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'bg-blue-500';
       default:
-        return 'bg-gray-500'}
+        return 'bg-gray-500';
+    }
   };
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    })};
+    });
+  };
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false)};
+    setIsRefreshing(false);
+  };
 
   useEffect(() => {
     const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
-    return () => clearInterval(interval)}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 
@@ -197,189 +223,151 @@ export default function SystemStatus() {
     ? 'outage' 
     : 'degraded';
 
-  const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0) / services.length;
+  const overallUptime = services.reduce((acc, service) => acc + parseFloat(service.uptime), 0) / services.length;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="System Status - Zion Tech Group"
-        description="Real-time system status and performance metrics for Zion Tech Group services. Monitor uptime, response times, and incident reports."
+        description="Real-time system status, uptime monitoring, and incident reports for Zion Tech Group services"
+        keywords="system status, uptime, monitoring, incidents, Zion Tech Group"
       />
       
       {/* Header */}
-      <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-          >
-            <Activity className="w-4 h-4 mr-2 text-cyan-400" />
-            System Status
-          </motion.div>
-          
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
-            System Status
-          </motion.h1>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Real-time monitoring of our services, infrastructure, and performance metrics.
-          </motion.p>
-        </div>
-      </div>
-
-      {/* Overall Status */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
+          transition={{ duration: 0.6 }}
+          className="text-center"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Overall Status */}
-            <div className="text-center">
-              <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${getStatusColor(overallStatus)}`}>
-                {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2" })}
-                {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
-              <p className="text-gray-400">All systems operational</p>
-            </div>
-
-            {/* Uptime */}
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{overallUptime.toFixed(2)}%</div>
-              <h3 className="text-xl font-semibold text-white mb-2">Uptime</h3>
-              <p className="text-gray-400">30-day average</p>
-            </div>
-
-            {/* Last Updated */}
-            <div className="text-center">
-              <div className="text-sm text-gray-400 mb-2">Last Updated</div>
-              <div className="text-lg font-semibold text-white">
-                {lastUpdated.toLocaleTimeString()}
-              </div>
-              <p className="text-gray-400">Updates every 30s</p>
-            </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            System Status
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Real-time monitoring of our platform's performance, uptime, and any ongoing incidents
+          </p>
+          
+          {/* Overall Status */}
+          <div className="inline-flex items-center px-6 py-3 bg-slate-800/50 rounded-full border border-slate-700/50">
+            <div className={`w-3 h-3 rounded-full mr-3 ${getStatusColor(overallStatus).replace('text-', 'bg-')}`}></div>
+            <span className="text-white font-medium">
+              All Systems {overallStatus === 'operational' ? 'Operational' : overallStatus === 'outage' ? 'Experiencing Outage' : 'Experiencing Issues'}
+            </span>
           </div>
         </motion.div>
       </div>
 
-      {/* Services Status */}
-      <div className="py-16 bg-zion-slate-dark">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            Service Status
-          </h2>
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index)  => (
-                <div
-                  key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="text-zion-cyan">{service.icon}</div>
-                    <div className="flex items-center gap-2">
-                      {getStatusIcon(service.status)}
-                      <span className="text-sm text-zion-slate-light">Operational</span>
+      {/* Services Status Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
+        >
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold text-white">Service Status</h2>
+            <button
+              onClick={refreshStatus}
+              disabled={isRefreshing}
+              className="flex items-center px-4 py-2 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors disabled:opacity-50"
+            >
+              <RefreshCw className={`w-4 h-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+              Refresh
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {services.map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 * index }}
+                className="bg-slate-700/30 rounded-xl p-4 border border-slate-600/30 hover:border-slate-500/50 transition-all duration-200"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center">
+                    <div className="text-slate-400 mr-3">
+                      {service.icon}
                     </div>
+                    <h3 className="text-white font-medium text-sm">{service.name}</h3>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                    <p className="text-sm text-gray-400">{service.description}</p>
+                  {getStatusIcon(service.status)}
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex justify-between text-xs">
+                    <span className="text-gray-400">Uptime:</span>
+                    <span className="text-white">{service.uptime}</span>
+                  </div>
+                  <div className="flex justify-between text-xs">
+                    <span className="text-gray-400">Response:</span>
+                    <span className="text-white">{service.responseTime}</span>
+                  </div>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
+                    {service.status}
                   </div>
                 </div>
-                <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
-                  {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Uptime</span>
-                  <span className="text-white font-medium">{service.uptime}%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Response Time</span>
-                  <span className="text-white font-medium">{service.responseTime}ms</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Last Updated</span>
-                  <span className="text-white font-medium text-sm">
-                    {new Date(service.lastUpdated).toLocaleTimeString()}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-6 text-center text-sm text-gray-400">
+            Last updated: {lastUpdated.toLocaleString()}
+          </div>
         </motion.div>
       </div>
 
-      {/* Incidents */}
+      {/* Recent Incidents */}
       {incidents.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
                 <motion.div
                   key={incident.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
-                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.1 * index }}
+                  className="bg-slate-700/30 rounded-xl p-6 border border-slate-600/30"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <div className="flex items-center space-x-3 mb-2">
-                        <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(incident.severity)}`}>
-                          {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
-                        </div>
-                        <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          incident.status === 'resolved' 
-                            ? 'text-green-400 bg-green-400/10 border border-green-400/20'
-                            : incident.status === 'monitoring'
-                            ? 'text-blue-400 bg-blue-400/10 border border-blue-400/20'
-                            : 'text-yellow-400 bg-yellow-400/10 border border-yellow-400/20'
-                        }`}>
-                          {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
-                        </div>
-                      </div>
                       <h3 className="text-lg font-semibold text-white mb-2">{incident.title}</h3>
-                      <p className="text-gray-300 mb-3">{incident.description}</p>
+                      <p className="text-gray-300 text-sm mb-3">{incident.description}</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)} text-white`}>
+                        {incident.severity}
+                      </span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium border ${
+                        incident.status === 'resolved' ? 'border-green-500 text-green-500' : 'border-yellow-500 text-yellow-500'
+                      }`}>
+                        {incident.status}
+                      </span>
                     </div>
                   </div>
-
+                  
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="text-gray-400">Start Time:</span>
                       <span className="text-white ml-2">
-                        {new Date(incident.startTime).toLocaleString()}
+                        {formatDate(incident.startTime)}
                       </span>
                     </div>
                     {incident.endTime && (
                       <div>
                         <span className="text-gray-400">End Time:</span>
                         <span className="text-white ml-2">
-                          {new Date(incident.endTime).toLocaleString()}
+                          {formatDate(incident.endTime)}
                         </span>
                       </div>
                     )}
@@ -476,4 +464,5 @@ export default function SystemStatus() {
         </motion.div>
       </div>
     </div>
-  )}
+  );
+}

@@ -44,7 +44,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Customer support teams",
             "Business analysts"
         ],
-        tags["AI", "Customer Experience", "Sentiment Analysis", "Machine Learning", "Automation", "Analytics"],
+        tags: ["AI", "Customer Experience", "Sentiment Analysis", "Machine Learning", "Automation", "Analytics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $3,500/month",
@@ -127,7 +127,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Brand managers",
             "Operations directors"
         ],
-        tags["Blockchain", "Supply Chain", "Transparency", "Traceability", "Smart Contracts", "Compliance"],
+        tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Smart Contracts", "Compliance"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,500 - $6,000/month",
@@ -210,7 +210,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Asset managers",
             "Reliability engineers"
         ],
-        tags["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Asset Management", "Industry 4.0"],
+        tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Asset Management", "Industry 4.0"],
         estimatedDelivery: "6-10 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $5,000/month",
@@ -293,7 +293,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Compliance officers",
             "Government officials"
         ],
-        tags["Quantum Security", "Post-Quantum Cryptography", "Encryption", "Communication", "Zero Trust", "Compliance"],
+        tags: ["Quantum Security", "Post-Quantum Cryptography", "Encryption", "Communication", "Zero Trust", "Compliance"],
         estimatedDelivery: "12-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,000 - $15,000/month",
@@ -376,7 +376,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Strategy directors",
             "Business developers"
         ],
-        tags["AI", "Market Research", "Business Intelligence", "Competitive Analysis", "Data Analytics", "Strategy"],
+        tags: ["AI", "Market Research", "Business Intelligence", "Competitive Analysis", "Data Analytics", "Strategy"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$799 - $3,200/month",
@@ -459,7 +459,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Business owners",
             "Brand managers"
         ],
-        tags["AI", "Autonomous Systems", "Content Creation", "Digital Marketing", "SEO", "Automation"],
+        tags: ["AI", "Autonomous Systems", "Content Creation", "Digital Marketing", "SEO", "Automation"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$1,299 - $5,500/month",
@@ -542,7 +542,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "NFT creators",
             "Blockchain consultants"
         ],
-        tags["Blockchain", "Smart Contracts", "DeFi", "NFT", "Security", "Development"],
+        tags: ["Blockchain", "Smart Contracts", "DeFi", "NFT", "Security", "Development"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $7,500/month",
@@ -625,7 +625,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "HR directors",
             "Business leaders"
         ],
-        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics", "Automation"],
+        tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics", "Automation"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$699 - $3,000/month",
@@ -708,7 +708,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
             "Research directors",
             "Technology executives"
         ],
-        tags["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
+        tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
         estimatedDelivery: "16-20 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,000 - $25,000/month",

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '../components/ui/card';
+import { Badge  } from '../components/ui/badge';
+import { Button  } from '../components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '../components/ui/tabs';
 import { Check, 
   X, 
   Star, 
@@ -24,7 +24,7 @@ import { Check,
   DollarSign,
   Clock
  } from 'lucide-react';
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
+import { EXPANDED_SERVICES } from '../data/expandedServices';
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {

@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -25,7 +25,7 @@ import { Brain,
   ChevronDown,
   ChevronUp
  } from 'lucide-react';
-import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '@/data/innovativeMicroSaasServices2025';
+import { innovativeMicroSaasServices2025 as INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceShowcaseProps extends React.PropsWithChildren<{}> {
 

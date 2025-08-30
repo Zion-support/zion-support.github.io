@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 import { Atom, 
   Brain, 
   Zap, 
@@ -21,7 +21,7 @@ import { Atom,
   Users,
   Shield
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const QuantumAIPlatform = () => {
   const features = [

@@ -20,7 +20,7 @@ export function SearchModal({ isOpen, onClose }) {
             description: 'Comprehensive AI-driven IT infrastructure and consulting services',
             url: '/services/ai-it-solutions',
             category: 'IT Services',
-            tags['AI', 'IT', 'Infrastructure', 'Consulting'],
+            tags: ['AI', 'IT', 'Infrastructure', 'Consulting'],
             rating: 4.8,
             price: 'Starting at $5,000'
         },
@@ -31,7 +31,7 @@ export function SearchModal({ isOpen, onClose }) {
             description: 'Experienced AI engineer with 8+ years in machine learning and deep learning',
             url: '/talent/ai-engineer-001',
             category: 'Engineering',
-            tags['AI', 'Machine Learning', 'Python', 'TensorFlow'],
+            tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
             rating: 4.9,
             location: 'San Francisco, CA'
         },
@@ -42,7 +42,7 @@ export function SearchModal({ isOpen, onClose }) {
             description: 'Enterprise-grade GPU server for AI/ML workloads',
             url: '/equipment/gpu-server-001',
             category: 'Hardware',
-            tags['GPU', 'Server', 'AI', 'ML'],
+            tags: ['GPU', 'Server', 'AI', 'ML'],
             price: '$15,000'
         },
         {
@@ -52,7 +52,7 @@ export function SearchModal({ isOpen, onClose }) {
             description: 'Comprehensive cybersecurity solutions for enterprise protection',
             url: '/services/cybersecurity',
             category: 'Security',
-            tags['Security', 'Cybersecurity', 'Enterprise', 'Protection']
+            tags: ['Security', 'Cybersecurity', 'Enterprise', 'Protection']
         }
     ];
     useEffect(() => {

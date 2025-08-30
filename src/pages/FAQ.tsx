@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 import { ChevronDown, 
   ChevronUp, 
   Search, 

@@ -42,7 +42,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Risk managers",
             "Compliance officers"
         ],
-        tags["AI", "Quantum Computing", "FinTech", "Trading", "Risk Management"],
+        tags: ["AI", "Quantum Computing", "FinTech", "Trading", "Risk Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $75,000/month",
@@ -106,7 +106,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Manufacturing companies",
             "Research institutions"
         ],
-        tags["Neuromorphic", "Edge AI", "IoT", "Machine Learning", "Hardware"],
+        tags: ["Neuromorphic", "Edge AI", "IoT", "Machine Learning", "Hardware"],
         estimatedDelivery: "8-10 weeks",
         supportLevel: "enterprise",
         marketPrice: "$35,000 - $100,000/month",
@@ -170,7 +170,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Government agencies",
             "Pharmaceutical companies"
         ],
-        tags["Federated Learning", "Privacy", "AI Collaboration", "Compliance", "Security"],
+        tags: ["Federated Learning", "Privacy", "AI Collaboration", "Compliance", "Security"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$18,000 - $45,000/month",
@@ -234,7 +234,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Ethics committees",
             "Government agencies"
         ],
-        tags["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency"],
+        tags: ["AI Ethics", "Governance", "Compliance", "Bias Detection", "Transparency"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$22,000 - $55,000/month",
@@ -298,7 +298,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Compliance officers",
             "Government officials"
         ],
-        tags["Quantum-Safe", "Cybersecurity", "Post-Quantum", "AI Security", "Zero-Trust"],
+        tags: ["Quantum-Safe", "Cybersecurity", "Post-Quantum", "AI Security", "Zero-Trust"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$28,000 - $75,000/month",
@@ -362,7 +362,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "IT operations teams",
             "Platform teams"
         ],
-        tags["Autonomous DevOps", "Self-Healing", "AI Operations", "Infrastructure", "Automation"],
+        tags: ["Autonomous DevOps", "Self-Healing", "AI Operations", "Infrastructure", "Automation"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$15,000 - $40,000/month",
@@ -426,7 +426,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Smart city developers",
             "Telecommunications"
         ],
-        tags["Edge AI", "Orchestration", "Distributed Computing", "IoT", "Real-time"],
+        tags: ["Edge AI", "Orchestration", "Distributed Computing", "IoT", "Real-time"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "premium",
         marketPrice: "$20,000 - $50,000/month",
@@ -490,7 +490,7 @@ export const CUTTING_EDGE_SERVICES_2025 = [
             "Gaming companies",
             "Content creators"
         ],
-        tags["Blockchain", "AI", "DeFi", "Smart Contracts", "Decentralized"],
+        tags: ["Blockchain", "AI", "DeFi", "Smart Contracts", "Decentralized"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $70,000/month",

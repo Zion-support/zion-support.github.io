@@ -40,7 +40,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Retirement planners",
             "Tax professionals"
         ],
-        tags["AI", "Financial Advisory", "Investment", "Portfolio Management", "Risk Management"],
+        tags: ["AI", "Financial Advisory", "Investment", "Portfolio Management", "Risk Management"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,500 - $8,000/month",
@@ -101,7 +101,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Telemedicine companies",
             "Health insurance companies"
         ],
-        tags["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Telemedicine"],
+        tags: ["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Telemedicine"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$4,500 - $15,000/month",
@@ -162,7 +162,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Corporate legal departments",
             "Government legal offices"
         ],
-        tags["AI", "Legal Services", "Legal Research", "Case Law", "Document Analysis"],
+        tags: ["AI", "Legal Services", "Legal Research", "Case Law", "Document Analysis"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,000/month",
@@ -223,7 +223,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Online learning companies",
             "Parents and students"
         ],
-        tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],
+        tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,200 - $4,000/month",
@@ -284,7 +284,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Procurement managers",
             "Business executives"
         ],
-        tags["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
+        tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,200 - $10,000/month",
@@ -345,7 +345,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Property developers",
             "Mortgage lenders"
         ],
-        tags["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+        tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,500 - $5,000/month",
@@ -406,7 +406,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Business leaders",
             "Talent acquisition teams"
         ],
-        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Management"],
+        tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Management"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$2,200 - $7,000/month",
@@ -467,7 +467,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Business owners",
             "Marketing agencies"
         ],
-        tags["AI", "Marketing", "Automation", "Personalization", "Analytics"],
+        tags: ["AI", "Marketing", "Automation", "Personalization", "Analytics"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$2,800 - $8,000/month",
@@ -528,7 +528,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Marketing teams",
             "Product managers"
         ],
-        tags["AI", "Customer Experience", "Personalization", "Analytics", "Customer Service"],
+        tags: ["AI", "Customer Experience", "Personalization", "Analytics", "Customer Service"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,900 - $6,000/month",
@@ -589,7 +589,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025 = [
             "Business executives",
             "Innovation managers"
         ],
-        tags["AI", "Product Development", "R&D", "Innovation", "Market Analysis"],
+        tags: ["AI", "Product Development", "R&D", "Innovation", "Market Analysis"],
         estimatedDelivery: "5-7 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $12,000/month",

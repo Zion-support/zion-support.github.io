@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { MessageCircle, 
   Send, 
   Bot, 

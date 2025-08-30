@@ -1,7 +1,7 @@
-import React from 'react.ts';
+import React from 'react';
 import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
   const serviceCategories = [

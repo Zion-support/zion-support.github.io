@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link, useLocation  } from 'react-router-dom.ts';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link, useLocation  } from 'react-router-dom';
 import { Menu, 
   X, 
   ChevronDown, 

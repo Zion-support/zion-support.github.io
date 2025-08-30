@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -31,7 +31,7 @@ import { Brain,
   Mail,
   MapPin
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');

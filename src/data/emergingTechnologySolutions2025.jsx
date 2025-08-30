@@ -42,7 +42,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Digital transformation consultants",
             "Blockchain developers"
         ],
-        tags["Blockchain", "Web3", "Smart Contracts", "DeFi", "Enterprise"],
+        tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "Enterprise"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,299 - $5,000/month",
@@ -107,7 +107,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Technology companies",
             "Government agencies"
         ],
-        tags["Quantum Computing", "Quantum Algorithms", "Machine Learning", "Optimization", "Research"],
+        tags: ["Quantum Computing", "Quantum Algorithms", "Machine Learning", "Optimization", "Research"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $10,000/month",
@@ -172,7 +172,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Healthcare technology providers",
             "Transportation companies"
         ],
-        tags["Edge Computing", "IoT", "Real-time Processing", "AI", "Connectivity"],
+        tags: ["Edge Computing", "IoT", "Real-time Processing", "AI", "Connectivity"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -237,7 +237,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Healthcare technology companies",
             "Transportation companies"
         ],
-        tags["5G", "Connectivity", "Low Latency", "IoT", "Network Infrastructure"],
+        tags: ["5G", "Connectivity", "Low Latency", "IoT", "Network Infrastructure"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$999 - $4,000/month",
@@ -302,7 +302,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Healthcare training providers",
             "Educational institutions"
         ],
-        tags["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
+        tags: ["AR/VR", "Immersive Technology", "Training", "Collaboration", "3D Visualization"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$899 - $3,500/month",
@@ -367,7 +367,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Quality control departments",
             "Automation consultants"
         ],
-        tags["Robotics", "Automation", "RPA", "Computer Vision", "Manufacturing"],
+        tags: ["Robotics", "Automation", "RPA", "Computer Vision", "Manufacturing"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$1,199 - $5,000/month",
@@ -432,7 +432,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Energy companies",
             "Urban planners"
         ],
-        tags["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
+        tags: ["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "3D Modeling"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$999 - $4,000/month",
@@ -497,7 +497,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
             "Real estate developers",
             "Government agencies"
         ],
-        tags["Green Technology", "Sustainability", "Renewable Energy", "Environmental", "Carbon Tracking"],
+        tags: ["Green Technology", "Sustainability", "Renewable Energy", "Environmental", "Carbon Tracking"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$699 - $2,500/month",

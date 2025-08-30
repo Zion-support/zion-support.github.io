@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion  } from 'framer-motion';
 import { Shield, 
   Lock, 
   Eye, 
@@ -25,7 +25,7 @@ import { Shield,
   Sparkles,
   Clock
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const CybersecurityServicesPage: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Building, 
   Shield, 
   Cloud, 
@@ -15,7 +15,7 @@ import { Building,
   ArrowRight,
   Play
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const Solutions: React.FC = (): JSX.Element => {
   const [selectedIndustry, setSelectedIndustry] = useState('all');

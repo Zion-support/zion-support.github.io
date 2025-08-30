@@ -42,7 +42,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Marketing directors",
             "CTOs"
         ],
-        tags["AI", "Multimodal", "Content Generation", "Machine Learning", "Automation"],
+        tags: ["AI", "Multimodal", "Content Generation", "Machine Learning", "Automation"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,499 - $8,000/month",
@@ -108,7 +108,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Financial institutions",
             "Legal firms"
         ],
-        tags["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs"],
+        tags: ["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFTs"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,999 - $15,000/month",
@@ -173,7 +173,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Government agencies",
             "Technology companies"
         ],
-        tags["Quantum Computing", "Optimization", "AI", "Research", "Enterprise"],
+        tags: ["Quantum Computing", "Optimization", "AI", "Research", "Enterprise"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,999 - $25,000/month",
@@ -238,7 +238,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Compliance officers",
             "Risk managers"
         ],
-        tags["Cybersecurity", "AI", "Threat Intelligence", "SOC", "Compliance"],
+        tags: ["Cybersecurity", "AI", "Threat Intelligence", "SOC", "Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,499 - $12,000/month",
@@ -303,7 +303,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Smart city planners",
             "Healthcare providers"
         ],
-        tags["Edge Computing", "IoT", "AI", "Real-time Analytics", "Automation"],
+        tags: ["Edge Computing", "IoT", "AI", "Real-time Analytics", "Automation"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$1,999 - $8,000/month",
@@ -368,7 +368,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "IT managers",
             "C-level executives"
         ],
-        tags["Data Analytics", "Real-time Processing", "AI", "Data Integration", "Business Intelligence"],
+        tags: ["Data Analytics", "Real-time Processing", "AI", "Data Integration", "Business Intelligence"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$2,799 - $10,000/month",
@@ -433,7 +433,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Business analysts",
             "Automation engineers"
         ],
-        tags["Automation", "AI", "Workflow", "Process Optimization", "RPA"],
+        tags: ["Automation", "AI", "Workflow", "Process Optimization", "RPA"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,899 - $7,000/month",
@@ -498,7 +498,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Engineers",
             "IT managers"
         ],
-        tags["Digital Twin", "IoT", "Predictive Maintenance", "3D Modeling", "Asset Management"],
+        tags: ["Digital Twin", "IoT", "Predictive Maintenance", "3D Modeling", "Asset Management"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$4,499 - $18,000/month",
@@ -563,7 +563,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Real estate companies",
             "Marketing agencies"
         ],
-        tags["Metaverse", "VR/AR", "3D Development", "Gaming", "Virtual Reality"],
+        tags: ["Metaverse", "VR/AR", "3D Development", "Gaming", "Virtual Reality"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "premium",
         marketPrice: "$3,299 - $12,000/month",
@@ -628,7 +628,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
             "Compliance officers",
             "CSR managers"
         ],
-        tags["Sustainability", "Green Technology", "Energy Optimization", "Carbon Tracking", "Compliance"],
+        tags: ["Sustainability", "Green Technology", "Energy Optimization", "Carbon Tracking", "Compliance"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,599 - $6,000/month",

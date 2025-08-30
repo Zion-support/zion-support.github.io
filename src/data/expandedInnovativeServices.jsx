@@ -42,7 +42,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Digital agencies",
             "Business owners"
         ],
-        tags["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
+        tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -102,7 +102,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Quality control managers",
             "Marketing analysts"
         ],
-        tags["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"],
+        tags: ["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -160,7 +160,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Retirement planners",
             "Tax professionals"
         ],
-        tags["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"],
+        tags: ["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -218,7 +218,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Medical imaging technicians",
             "Healthcare IT managers"
         ],
-        tags["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
+        tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$899 - $3,500/month",
@@ -276,7 +276,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Inventory managers",
             "Procurement specialists"
         ],
-        tags["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"],
+        tags: ["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -334,7 +334,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Compliance officers",
             "Legal administrators"
         ],
-        tags["AI", "Legal Services", "Document Analysis", "Research", "Compliance"],
+        tags: ["AI", "Legal Services", "Document Analysis", "Research", "Compliance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
@@ -392,7 +392,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Property managers",
             "Mortgage professionals"
         ],
-        tags["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
+        tags: ["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,500/month",
@@ -450,7 +450,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Learning & development managers",
             "HR directors"
         ],
-        tags["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"],
+        tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$299 - $1,200/month",
@@ -508,7 +508,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Operations directors",
             "Building owners"
         ],
-        tags["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"],
+        tags: ["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -566,7 +566,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Production engineers",
             "Operations directors"
         ],
-        tags["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"],
+        tags: ["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$799 - $3,000/month",
@@ -624,7 +624,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Students",
             "Parents"
         ],
-        tags["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
+        tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",
@@ -682,7 +682,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Agricultural researchers",
             "Farm managers"
         ],
-        tags["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
+        tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "premium",
         marketPrice: "$499 - $2,000/month",
@@ -740,7 +740,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Operations managers",
             "Supply chain specialists"
         ],
-        tags["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"],
+        tags: ["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$699 - $2,800/month",
@@ -798,7 +798,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Underwriters",
             "Insurance executives"
         ],
-        tags["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"],
+        tags: ["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$599 - $2,500/month",
@@ -856,7 +856,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
             "Streaming service providers",
             "Gaming community managers"
         ],
-        tags["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"],
+        tags: ["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$199 - $800/month",

@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { SEO  } from '../components/SEO';
+import { motion  } from 'framer-motion';
 import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
 
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {

@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   TrendingUp, 
   BarChart3, 
@@ -21,9 +21,9 @@ import { Brain,
   LineChart,
   Activity
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+import { SEO  } from '../components/SEO';
+import { Button  } from '../components/ui/button';
+import { Badge  } from '../components/ui/badge';
 
 export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [

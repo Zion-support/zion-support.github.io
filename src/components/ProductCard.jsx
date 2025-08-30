@@ -38,7 +38,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             price: product.price ?? 0,
             image: imageUrl || undefined,
         }))};
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
+    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images: [0] : null;
     const imageAltText = productTitle;
     const handleImageError = (error) => {
         if (!imageError) {

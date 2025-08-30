@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { SEO  } from '../components/SEO';
 import { Brain, 
   Shield, 
   Activity, 
@@ -20,7 +20,7 @@ import { Brain,
   Truck,
   Target
  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   const aiServices = [

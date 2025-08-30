@@ -40,7 +40,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Bloggers",
             "Small businesses"
         ],
-        tags["AI", "Content Generation", "Marketing", "SEO", "Automation"],
+        tags: ["AI", "Content Generation", "Marketing", "SEO", "Automation"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$299 - $999/month",
@@ -99,7 +99,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Consultants",
             "Agencies"
         ],
-        tags["Invoicing", "Financial Management", "Automation", "OCR", "AI"],
+        tags: ["Invoicing", "Financial Management", "Automation", "OCR", "AI"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$199 - $599/month",
@@ -158,7 +158,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Online retailers",
             "Digital businesses"
         ],
-        tags["Customer Support", "AI", "Chatbot", "Automation", "Customer Service"],
+        tags: ["Customer Support", "AI", "Chatbot", "Automation", "Customer Service"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$399 - $1,299/month",
@@ -217,7 +217,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Consulting firms",
             "Small businesses"
         ],
-        tags["Project Management", "AI", "Productivity", "Collaboration", "Automation"],
+        tags: ["Project Management", "AI", "Productivity", "Collaboration", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "standard",
         marketPrice: "$249 - $799/month",
@@ -276,7 +276,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Small businesses",
             "Online retailers"
         ],
-        tags["Email Marketing", "AI", "Automation", "Personalization", "Analytics"],
+        tags: ["Email Marketing", "AI", "Automation", "Personalization", "Analytics"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$179 - $599/month",
@@ -335,7 +335,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Distributors",
             "Warehouse operators"
         ],
-        tags["Inventory Management", "AI", "Supply Chain", "Automation", "Analytics"],
+        tags: ["Inventory Management", "AI", "Supply Chain", "Automation", "Analytics"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$349 - $1,199/month",
@@ -394,7 +394,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Entrepreneurs",
             "Social media managers"
         ],
-        tags["Social Media", "AI", "Automation", "Content Generation", "Marketing"],
+        tags: ["Social Media", "AI", "Automation", "Content Generation", "Marketing"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$199 - $699/month",
@@ -453,7 +453,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Consultants",
             "Remote workers"
         ],
-        tags["Time Tracking", "Productivity", "AI", "Automation", "Analytics"],
+        tags: ["Time Tracking", "Productivity", "AI", "Automation", "Analytics"],
         estimatedDelivery: "1-2 weeks",
         supportLevel: "standard",
         marketPrice: "$129 - $399/month",
@@ -512,7 +512,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Small businesses",
             "Consultants"
         ],
-        tags["Lead Generation", "AI", "Sales", "Marketing", "Automation"],
+        tags: ["Lead Generation", "AI", "Sales", "Marketing", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$449 - $1,499/month",
@@ -571,7 +571,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
             "Compliance officers",
             "Small businesses"
         ],
-        tags["Document Management", "AI", "Workflow", "Collaboration", "Security"],
+        tags: ["Document Management", "AI", "Workflow", "Collaboration", "Security"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$279 - $899/month",

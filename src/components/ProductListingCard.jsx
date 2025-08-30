@@ -11,7 +11,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
     const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [imageSrc, setImageSrc] = useState(listing.images && listing.images.length > 0
-        ? listing.images[0]
+        ? listing.images: [0]
         : '/placeholder.svg');
     const [imageError, setImageError] = useState(false);
     const formatPrice = () => {

@@ -42,7 +42,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
             "Operations managers",
             "Technology consultants"
         ],
-        tags["Edge Computing", "IoT", "Real-time", "Infrastructure", "Low Latency"],
+        tags: ["Edge Computing", "IoT", "Real-time", "Infrastructure", "Low Latency"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,800 - $8,000/month",
@@ -102,7 +102,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
             "Compliance officers",
             "Network administrators"
         ],
-        tags["Zero-Trust", "Cybersecurity", "Access Control", "Network Security", "Compliance"],
+        tags: ["Zero-Trust", "Cybersecurity", "Access Control", "Network Security", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,500 - $12,000/month",
@@ -162,7 +162,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
             "System administrators",
             "Operations teams"
         ],
-        tags["Hybrid Cloud", "Multi-cloud", "Cloud Management", "Orchestration", "Optimization"],
+        tags: ["Hybrid Cloud", "Multi-cloud", "Cloud Management", "Orchestration", "Optimization"],
         estimatedDelivery: "4-5 weeks",
         supportLevel: "enterprise",
         marketPrice: "$2,200 - $7,000/month",
@@ -222,7 +222,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
             "System architects",
             "Operations teams"
         ],
-        tags["SDN", "Networking", "Automation", "Network Management", "Performance"],
+        tags: ["SDN", "Networking", "Automation", "Network Management", "Performance"],
         estimatedDelivery: "3-4 weeks",
         supportLevel: "premium",
         marketPrice: "$1,800 - $5,500/month",
@@ -282,7 +282,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
             "Development teams",
             "Operations managers"
         ],
-        tags["Containers", "Orchestration", "DevOps", "Microservices", "Automation"],
+        tags: ["Containers", "Orchestration", "DevOps", "Microservices", "Automation"],
         estimatedDelivery: "2-3 weeks",
         supportLevel: "premium",
         marketPrice: "$1,500 - $4,500/month",

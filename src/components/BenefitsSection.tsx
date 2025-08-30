@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { Bot, Clock, Globe, TrendingDown, CheckCircle  } from 'lucide-react';
 import { GradientHeading  } from './GradientHeading';
 

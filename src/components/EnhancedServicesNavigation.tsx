@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+import { motion, AnimatePresence  } from 'framer-motion';
 
 const EnhancedServicesNavigation: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);

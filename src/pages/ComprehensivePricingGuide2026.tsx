@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
 import { DollarSign, 
   TrendingUp, 
   Users, 

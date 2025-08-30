@@ -19,7 +19,7 @@ const IndustrySolutions = () => {
             benefits["Improved patient care", "Operational efficiency", "Regulatory compliance", "Cost reduction"],
             useCases["Hospitals", "Clinics", "Telemedicine providers", "Health systems"],
             compliance["HIPAA", "HITECH", "FDA", "SOC 2"],
-            tags["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
+            tags: ["Healthcare", "Digital Health", "Telemedicine", "EHR", "HIPAA"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -39,7 +39,7 @@ const IndustrySolutions = () => {
             benefits["Operational efficiency", "Cost reduction", "Enhanced security", "Regulatory compliance"],
             useCases["Banks", "Credit unions", "Payment processors", "Investment firms"],
             compliance["PCI DSS", "SOX", "GLBA", "SOC 2"],
-            tags["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
+            tags: ["Finance", "FinTech", "Digital Banking", "Payments", "Compliance"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -59,7 +59,7 @@ const IndustrySolutions = () => {
             benefits["Increased productivity", "Reduced downtime", "Cost savings", "Quality improvement"],
             useCases["Automotive", "Electronics", "Pharmaceuticals", "Food & beverage"],
             compliance["ISO 9001", "ISO 14001", "FDA", "GMP"],
-            tags["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
+            tags: ["Manufacturing", "Industry 4.0", "IoT", "Predictive Analytics", "Supply Chain"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -79,7 +79,7 @@ const IndustrySolutions = () => {
             benefits["Increased sales", "Better customer experience", "Operational efficiency", "Market expansion"],
             useCases["Online retailers", "Brick & mortar stores", "Marketplaces", "Brands"],
             compliance["PCI DSS", "GDPR", "CCPA", "SOC 2"],
-            tags["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
+            tags: ["Retail", "E-commerce", "Digital Commerce", "Customer Experience", "Inventory"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -99,7 +99,7 @@ const IndustrySolutions = () => {
             benefits["Improved learning outcomes", "Administrative efficiency", "Student engagement", "Cost reduction"],
             useCases["K-12 schools", "Universities", "Corporate training", "Online education"],
             compliance["FERPA", "COPPA", "GDPR", "SOC 2"],
-            tags["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
+            tags: ["Education", "EdTech", "Online Learning", "Student Management", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -119,7 +119,7 @@ const IndustrySolutions = () => {
             benefits["Cost reduction", "Improved efficiency", "Better visibility", "Customer satisfaction"],
             useCases["Transportation", "Warehousing", "Distribution", "E-commerce"],
             compliance["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-            tags["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
+            tags: ["Logistics", "Supply Chain", "Transportation", "Tracking", "Optimization"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -139,7 +139,7 @@ const IndustrySolutions = () => {
             benefits["Increased sales", "Better client experience", "Operational efficiency", "Market insights"],
             useCases["Real estate agencies", "Property managers", "Developers", "Investors"],
             compliance["GDPR", "CCPA", "SOC 2", "Real estate regulations"],
-            tags["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
+            tags: ["Real Estate", "PropTech", "Property Management", "Virtual Tours", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -159,7 +159,7 @@ const IndustrySolutions = () => {
             benefits["Energy efficiency", "Cost savings", "Sustainability", "Customer satisfaction"],
             useCases["Utility companies", "Energy providers", "Industrial facilities", "Smart cities"],
             compliance["NERC", "FERC", "ISO standards", "SOC 2"],
-            tags["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
+            tags: ["Energy", "Utilities", "Smart Grid", "Renewable Energy", "Sustainability"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -179,7 +179,7 @@ const IndustrySolutions = () => {
             benefits["Enhanced security", "Regulatory compliance", "Risk mitigation", "Business continuity"],
             useCases["Financial services", "Healthcare", "Government", "Enterprise"],
             compliance["SOC 2", "ISO 27001", "NIST", "GDPR"],
-            tags["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
+            tags: ["Cybersecurity", "Compliance", "Risk Management", "Threat Detection", "Security"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -199,7 +199,7 @@ const IndustrySolutions = () => {
             benefits["Increased efficiency", "Cost reduction", "Better client service", "Compliance"],
             useCases["Law firms", "Corporate legal", "Government", "Legal services"],
             compliance["Attorney-client privilege", "Data security", "SOC 2", "GDPR"],
-            tags["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
+            tags: ["Legal", "LegalTech", "Case Management", "Document Automation", "Compliance"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -219,7 +219,7 @@ const IndustrySolutions = () => {
             benefits["Increased engagement", "Revenue growth", "Content efficiency", "Audience insights"],
             useCases["Streaming services", "Content creators", "Media companies", "Entertainment"],
             compliance["Copyright", "Licensing", "GDPR", "SOC 2"],
-            tags["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
+            tags: ["Media", "Entertainment", "Content Management", "Streaming", "Analytics"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",
@@ -239,7 +239,7 @@ const IndustrySolutions = () => {
             benefits["Operational efficiency", "Cost reduction", "Better service", "Safety improvement"],
             useCases["Public transit", "Logistics", "Ride-sharing", "Fleet operators"],
             compliance["DOT", "Safety regulations", "GDPR", "SOC 2"],
-            tags["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
+            tags: ["Transportation", "Mobility", "Fleet Management", "Route Optimization", "Safety"],
             contactInfo: {
                 phone: "+1 302 464 0950",
                 email: "kleber@ziontechgroup.com",

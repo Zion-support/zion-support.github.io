@@ -42,7 +42,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Medical directors",
             "IT managers"
         ],
-        tags["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
+        tags: ["Healthcare", "AI", "Diagnostics", "Medical Imaging", "Clinical Decision Support"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,999 - $15,000/month",
@@ -108,7 +108,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Fraud analysts",
             "IT managers"
         ],
-        tags["Financial Services", "AI", "Fraud Detection", "Risk Management", "Compliance"],
+        tags: ["Financial Services", "AI", "Fraud Detection", "Risk Management", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$4,999 - $20,000/month",
@@ -173,7 +173,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Quality managers",
             "IT directors"
         ],
-        tags["Manufacturing", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"],
+        tags: ["Manufacturing", "Industry 4.0", "IoT", "AI", "Predictive Maintenance"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,499 - $15,000/month",
@@ -238,7 +238,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Operations directors",
             "Business analysts"
         ],
-        tags["Retail", "E-commerce", "AI", "Inventory Management", "Customer Experience"],
+        tags: ["Retail", "E-commerce", "AI", "Inventory Management", "Customer Experience"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$2,299 - $8,000/month",
@@ -303,7 +303,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Supply chain managers",
             "Transportation directors"
         ],
-        tags["Transportation", "Logistics", "AI", "Route Optimization", "Fleet Management"],
+        tags: ["Transportation", "Logistics", "AI", "Route Optimization", "Fleet Management"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$2,799 - $10,000/month",
@@ -368,7 +368,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Sustainability managers",
             "IT directors"
         ],
-        tags["Energy", "Utilities", "AI", "IoT", "Sustainability"],
+        tags: ["Energy", "Utilities", "AI", "IoT", "Sustainability"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$3,999 - $15,000/month",
@@ -433,7 +433,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Training managers",
             "Curriculum developers"
         ],
-        tags["Education", "EdTech", "AI", "Personalized Learning", "Analytics"],
+        tags: ["Education", "EdTech", "AI", "Personalized Learning", "Analytics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$1,899 - $6,000/month",
@@ -498,7 +498,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "Building owners",
             "Operations directors"
         ],
-        tags["Real Estate", "Property Management", "IoT", "AI", "Maintenance"],
+        tags: ["Real Estate", "Property Management", "IoT", "AI", "Maintenance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$2,499 - $8,000/month",
@@ -563,7 +563,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
             "General counsel",
             "IT directors"
         ],
-        tags["Legal", "Compliance", "AI", "Risk Management", "Regulatory"],
+        tags: ["Legal", "Compliance", "AI", "Risk Management", "Regulatory"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "premium",
         marketPrice: "$3,299 - $12,000/month",

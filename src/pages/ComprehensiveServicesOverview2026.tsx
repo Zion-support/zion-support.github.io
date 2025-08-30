@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -81,8 +81,8 @@ import { Brain,
   Network as NetworkIcon,
   Leaf as LeafIcon
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
+import { SEO  } from '../components/SEO';
+import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '../data/ultimateInnovativeServices2026';
 
 export default function ComprehensiveServicesOverview2026(...args[]):  {
   const [selectedCategory, setSelectedCategory] = useState('all');

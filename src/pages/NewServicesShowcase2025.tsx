@@ -7,7 +7,7 @@ import {
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
 } from 'lucide-react';
-import { SEO } from '@/components/SEO';
+import { SEO } from '../components/SEO';
 
 export default function NewServicesShowcase2025() {
   const newServices = [

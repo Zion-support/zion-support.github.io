@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useEffect } from 'react';
+import { motion  } from 'framer-motion';
 import { Search, 
   Download, 
   Play, 
@@ -19,7 +19,7 @@ import { Search,
   Globe,
   Rocket
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const ComprehensivePricing2025: React.FC = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');

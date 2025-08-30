@@ -47,7 +47,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   }, [url]);
 
   return { data, loading, error, execute }}`,
-        tags['react', 'hooks', 'api', 'typescript'],
+        tags: ['react', 'hooks', 'api', 'typescript'],
         complexity: 'medium',
         rating: 4.8,
         usageCount: 1250,
@@ -90,7 +90,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
   0% { background-position: -200% 0}
   100% { background-position: 200% 0}
 }`,
-        tags['css', 'tailwind', 'animations', 'utilities'],
+        tags: ['css', 'tailwind', 'animations', 'utilities'],
         complexity: 'low',
         rating: 4.6,
         usageCount: 890,
@@ -176,7 +176,7 @@ export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<
       })}
   }
 }`,
-        tags['javascript', 'forms', 'validation', 'class'],
+        tags: ['javascript', 'forms', 'validation', 'class'],
         complexity: 'high',
         rating: 4.9,
         usageCount: 2100,

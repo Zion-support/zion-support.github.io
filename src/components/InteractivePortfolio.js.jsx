@@ -14,7 +14,7 @@ const portfolioProjects = [
         users: 2500,
         completionDate: '2024-01',
         featured: true,
-        tags['Machine Learning', 'E-commerce', 'Real-time', 'Scalable']
+        tags: ['Machine Learning', 'E-commerce', 'Real-time', 'Scalable']
     },
     {
         id: '2',
@@ -29,7 +29,7 @@ const portfolioProjects = [
         users: 1800,
         completionDate: '2024-02',
         featured: true,
-        tags['Blockchain', 'Supply Chain', 'Decentralized', 'Security']
+        tags: ['Blockchain', 'Supply Chain', 'Decentralized', 'Security']
     },
     {
         id: '3',
@@ -44,7 +44,7 @@ const portfolioProjects = [
         users: 3200,
         completionDate: '2024-03',
         featured: false,
-        tags['Analytics', 'Real-time', 'Predictive', 'Dashboard']
+        tags: ['Analytics', 'Real-time', 'Predictive', 'Dashboard']
     },
     {
         id: '4',
@@ -59,7 +59,7 @@ const portfolioProjects = [
         users: 4500,
         completionDate: '2024-04',
         featured: true,
-        tags['Mobile', 'Banking', 'Security', 'Biometric']
+        tags: ['Mobile', 'Banking', 'Security', 'Biometric']
     },
     {
         id: '5',
@@ -74,7 +74,7 @@ const portfolioProjects = [
         users: 1200,
         completionDate: '2024-05',
         featured: false,
-        tags['IoT', 'Smart Home', 'Automation', 'Energy']
+        tags: ['IoT', 'Smart Home', 'Automation', 'Energy']
     },
     {
         id: '6',
@@ -89,7 +89,7 @@ const portfolioProjects = [
         users: 2800,
         completionDate: '2024-06',
         featured: true,
-        tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
+        tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
     }
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];

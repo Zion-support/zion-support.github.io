@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Lock, Link, Shield, Zap, BarChart3, ArrowRight, Users, Globe, Database, Cpu  } from 'lucide-react';
 
 export default function Blockchain(...args[]):  {

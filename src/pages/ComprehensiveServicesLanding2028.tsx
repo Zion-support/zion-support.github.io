@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Brain, 
   Cloud, 
   Shield, 
@@ -52,10 +52,10 @@ import { Brain,
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
- } from '@/data/innovativeMicroSaasServices2028';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+ } from '../data/innovativeMicroSaasServices2028';
+import { SEO  } from '../components/SEO';
+import { Button  } from '../components/ui/button';
+import { Badge  } from '../components/ui/badge';
 
 export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);

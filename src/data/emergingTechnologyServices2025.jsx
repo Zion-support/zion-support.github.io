@@ -45,7 +45,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Technology companies",
             "Academic researchers"
         ],
-        tags["Quantum Computing", "Research", "Optimization", "Simulation", "Innovation", "Breakthrough Technology"],
+        tags: ["Quantum Computing", "Research", "Optimization", "Simulation", "Innovation", "Breakthrough Technology"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$25,000 - $100,000/month",
@@ -118,7 +118,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Business consultants",
             "IT directors"
         ],
-        tags["Artificial Intelligence", "Autonomous Systems", "Automation", "Decision Making", "Process Optimization"],
+        tags: ["Artificial Intelligence", "Autonomous Systems", "Automation", "Decision Making", "Process Optimization"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$8,999 - $25,000/month",
@@ -191,7 +191,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Operations directors",
             "Business owners"
         ],
-        tags["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Traceability", "Compliance"],
+        tags: ["Blockchain", "Supply Chain", "Smart Contracts", "Transparency", "Traceability", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$5,999 - $18,000/month",
@@ -264,7 +264,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "IT directors",
             "Product managers"
         ],
-        tags["Edge Computing", "IoT", "Real-time Processing", "AI Inference", "Device Management", "Analytics"],
+        tags: ["Edge Computing", "IoT", "Real-time Processing", "AI Inference", "Device Management", "Analytics"],
         estimatedDelivery: "4-6 weeks",
         supportLevel: "premium",
         marketPrice: "$3,999 - $12,000/month",
@@ -337,7 +337,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Security analysts",
             "Technology leaders"
         ],
-        tags["Cybersecurity", "Artificial Intelligence", "Threat Detection", "Incident Response", "Compliance"],
+        tags: ["Cybersecurity", "Artificial Intelligence", "Threat Detection", "Incident Response", "Compliance"],
         estimatedDelivery: "6-8 weeks",
         supportLevel: "enterprise",
         marketPrice: "$7,999 - $25,000/month",
@@ -410,7 +410,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Security architects",
             "Risk managers"
         ],
-        tags["Quantum Technology", "Cryptography", "Post-Quantum", "Security", "Compliance", "Future-Proof"],
+        tags: ["Quantum Technology", "Cryptography", "Post-Quantum", "Security", "Compliance", "Future-Proof"],
         estimatedDelivery: "8-12 weeks",
         supportLevel: "enterprise",
         marketPrice: "$12,999 - $35,000/month",
@@ -483,7 +483,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Pharmaceutical leaders",
             "Technology directors"
         ],
-        tags["Healthcare Technology", "Artificial Intelligence", "Drug Discovery", "Pharmaceuticals", "Research", "Innovation"],
+        tags: ["Healthcare Technology", "Artificial Intelligence", "Drug Discovery", "Pharmaceuticals", "Research", "Innovation"],
         estimatedDelivery: "12-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$19,999 - $50,000/month",
@@ -556,7 +556,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2025 = [
             "Mobility executives",
             "Government officials"
         ],
-        tags["Autonomous Vehicles", "Computer Vision", "Machine Learning", "Robotics", "Transportation", "Innovation"],
+        tags: ["Autonomous Vehicles", "Computer Vision", "Machine Learning", "Robotics", "Transportation", "Innovation"],
         estimatedDelivery: "12-16 weeks",
         supportLevel: "enterprise",
         marketPrice: "$15,999 - $45,000/month",

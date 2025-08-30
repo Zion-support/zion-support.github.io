@@ -1,6 +1,6 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 import { Bot, 
   Zap, 
   Shield, 
@@ -24,7 +24,7 @@ import { Bot,
   Rocket,
   Star
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '../components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = (): JSX.Element => {
   const features = [

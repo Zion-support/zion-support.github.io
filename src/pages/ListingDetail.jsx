@@ -50,7 +50,7 @@ export default function ListingDetail() {
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
                 <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images[selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                  {listing.images && listing.images.length > 0 ? (<ImageWithRetry src={listing.images: [selectedImageIndex]} alt={listing.title} className="w-full h-full object-cover" fallbackSrc="/placeholder.svg"/>) : (<div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
                     </div>)}
                 </div>

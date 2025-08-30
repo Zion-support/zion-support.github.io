@@ -1,4 +1,4 @@
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react';
 
 export default function News(...args[]):  {

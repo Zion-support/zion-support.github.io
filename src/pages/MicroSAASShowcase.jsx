@@ -79,7 +79,7 @@ export default function MicroSAASShowcase() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {microSAASServices.map((service) => (<Card key={service.id} className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-zion-blue-light">
                 <div className="relative">
-                  <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
+                  <img src={service.images: [0]} alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                   <Badge className="absolute top-4 right-4 bg-zion-cyan text-zion-blue font-bold">
                     {service.subcategory}
                   </Badge>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { Mail, Send, CheckCircle  } from 'lucide-react';
 
 export const FooterNewsletter: React.FC = (): JSX.Element => {

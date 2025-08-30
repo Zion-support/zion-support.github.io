@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState, useMemo } from 'react';
+import { motion  } from 'framer-motion';
 import { Brain, 
   Cpu, 
   Cloud, 
@@ -26,7 +26,7 @@ import { Brain,
   ExternalLink,
   Search
  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Link  } from 'react-router-dom';
 import { EXPANDED_INNOVATIVE_SERVICES_2025  } from '../data/expandedInnovativeServices2025';
 import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
 interface Service {

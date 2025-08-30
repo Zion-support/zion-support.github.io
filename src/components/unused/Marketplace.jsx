@@ -49,7 +49,7 @@ export default function Marketplace() {
                 'Multi-tenant support',
                 'API integration'
             ],
-            tags['AI', 'Business Automation', 'Enterprise', 'Cloud'],
+            tags: ['AI', 'Business Automation', 'Enterprise', 'Cloud'],
             featured: true,
             new: false,
             discount: 25,
@@ -73,7 +73,7 @@ export default function Marketplace() {
                 'Python SDK',
                 'Documentation & examples'
             ],
-            tags['Quantum Computing', 'AI', 'Research', 'Python'],
+            tags: ['Quantum Computing', 'AI', 'Research', 'Python'],
             featured: true,
             new: true,
             discount: 25,
@@ -97,7 +97,7 @@ export default function Marketplace() {
                 'Risk assessment',
                 'Reporting dashboard'
             ],
-            tags['Cybersecurity', 'Compliance', 'SOC2', 'Enterprise'],
+            tags: ['Cybersecurity', 'Compliance', 'SOC2', 'Enterprise'],
             featured: false,
             new: false,
             discount: 25,
@@ -121,7 +121,7 @@ export default function Marketplace() {
                 'Monitoring tools',
                 '24/7 support'
             ],
-            tags['5G', 'Networking', 'Enterprise', 'Infrastructure'],
+            tags: ['5G', 'Networking', 'Enterprise', 'Infrastructure'],
             featured: false,
             new: false,
             discount: 17,
@@ -145,7 +145,7 @@ export default function Marketplace() {
                 'Best practices',
                 'Community support'
             ],
-            tags['AI', 'Workflows', 'Templates', 'Business'],
+            tags: ['AI', 'Workflows', 'Templates', 'Business'],
             featured: false,
             new: false,
             discount: 33,
@@ -169,7 +169,7 @@ export default function Marketplace() {
                 'Testing framework',
                 'Deployment guides'
             ],
-            tags['Blockchain', 'DeFi', 'Smart Contracts', 'Development'],
+            tags: ['Blockchain', 'DeFi', 'Smart Contracts', 'Development'],
             featured: false,
             new: true,
             discount: 25,
@@ -193,7 +193,7 @@ export default function Marketplace() {
                 'Scalable architecture',
                 'Multi-cloud support'
             ],
-            tags['IoT', 'Analytics', 'Machine Learning', 'Enterprise'],
+            tags: ['IoT', 'Analytics', 'Machine Learning', 'Enterprise'],
             featured: false,
             new: false,
             discount: 22,
@@ -217,7 +217,7 @@ export default function Marketplace() {
                 'Incident response',
                 'Expert support'
             ],
-            tags['Cybersecurity', 'Threat Intelligence', 'Monitoring', 'Security'],
+            tags: ['Cybersecurity', 'Threat Intelligence', 'Monitoring', 'Security'],
             featured: false,
             new: false,
             discount: 33,
