@@ -1,5 +1,5 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React from 'react';
+import { motion  } from 'framer-motion';
 import { Shield, 
   Lock, 
   Eye, 
@@ -28,7 +28,7 @@ import { Shield,
   Search,
   Phone,
   Mail
- } from 'lucide-react.ts';
+ } from 'lucide-react';
 import { SEO  } from '../components/SEO';
 
 export default function Security() {
