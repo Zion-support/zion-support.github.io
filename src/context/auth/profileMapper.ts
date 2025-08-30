@@ -42,7 +42,7 @@ interface MappedUser {
 
 }
 
-export const mapProfileToUser = (supabaseUser: anyanySupabaseUser, profile: Profile): MappedUser   => {
+export const mapProfileToUser = (supabaseUser: anySupabaseUser, profile: Profile): MappedUser   => {
   return {
     id: supabaseUser.id,
     email: supabaseUser.email || '',

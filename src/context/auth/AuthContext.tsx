@@ -3,7 +3,7 @@ import React, { createContext, useContext } from 'react.ts';
 interface User {
 
 
-  id: anyanystring;
+  id: anystring;
   email: string;
   displayName?: string;
   avatar?: string;
@@ -34,13 +34,13 @@ interface AuthContextType {
 login: (email: string, password: string)   => Promise<any>;
   register: any(name: string, email: string, password: string)   => Promise<any>;
   signup: any(email: string, password: string, userData: any)   => Promise<any>;
-  logout: anyany()   => Promise<any>;
-  resetPassword: anyany(email: string)   => Promise<any>;
-  updateProfile: anyany(updates: Partial<User>)   => Promise<any>;
-  loginWithGoogle: anyany()   => Promise<any>;
-  loginWithFacebook: anyany()   => Promise<any>;
-  loginWithTwitter: anyany()   => Promise<any>;
-  loginWithWeb3: anyany()   => Promise<any>;
+  logout: any()   => Promise<any>;
+  resetPassword: any(email: string)   => Promise<any>;
+  updateProfile: any(updates: Partial<User>)   => Promise<any>;
+  loginWithGoogle: any()   => Promise<any>;
+  loginWithFacebook: any()   => Promise<any>;
+  loginWithTwitter: any()   => Promise<any>;
+  loginWithWeb3: any()   => Promise<any>;
 
 }
 
