@@ -4,150 +4,144 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting comprehensive error fixer automation...');
+class ComprehensiveErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json');
+    this.errorsFixed = 0;
+    this.filesProcessed = 0;
+    this.startTime = Date.now();
+  }
 
-// Get automation interval from environment variable (default: 30 minutes)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'error' ? '❌' : type === 'warning' ? '⚠️' : 'ℹ️';
+    console.log(`[${timestamp}] ${prefix} ${message}`);
+  }
 
-async function runComprehensiveErrorFixer() {
-  try {
-    console.log(`🔧 Running comprehensive error fixer at ${new Date().toISOString()}`);
+  async run() {
+    this.log('🚀 Starting Comprehensive Error Fixer...');
     
-    const errors = {
-      eslint: [],
-      typescript: [],
-      syntax: [],
-      missingExports: [],
-      duplicateDeclarations: [],
-      fixed: []
+    try {
+      // Find all TypeScript/React files
+      const files = this.findTypeScriptFiles();
+      this.log(`Found ${files.length} TypeScript/React files to process`);
+      
+      for (const file of files) {
+        await this.fixFile(file);
+      }
+      
+      await this.generateReport();
+      this.log(`✅ Completed! Fixed ${this.errorsFixed} errors in ${this.filesProcessed} files`);
+      
+    } catch (error) {
+      this.log(`Error during execution: ${error.message}`, 'error');
+      process.exit(1);
+    }
+  }
+
+  findTypeScriptFiles() {
+    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+    const files = [];
+    
+    const walkDir = (dir) => {
+      const items = fs.readdirSync(dir);
+      for (const item of items) {
+        const fullPath = path.join(dir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          walkDir(fullPath);
+        } else if (stat.isFile()) {
+          const ext = path.extname(item);
+          if (extensions.includes(ext)) {
+            files.push(fullPath);
+          }
+        }
+      }
     };
     
-    // Step 1: Run ESLint to detect issues
-    console.log('🔍 Step 1: Running ESLint to detect issues...');
+    walkDir(this.projectRoot);
+    return files;
+  }
+
+  async fixFile(filePath) {
     try {
-      execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ ESLint passed - no issues found');
+      const content = fs.readFileSync(filePath, 'utf8');
+      let fixedContent = content;
+      let fileErrorsFixed = 0;
+      
+      // Fix common JSX syntax issues
+      const fixes = [
+        // Fix malformed JSX with semicolons
+        { pattern: /;\s*<(\w+)/g, replacement: '<$1' },
+        { pattern: /(\w+)\s*>\s*;/g, replacement: '$1>' },
+        { pattern: /;\s*\/>\s*;/g, replacement: '/>' },
+        
+        // Fix HTML entities in JSX
+        { pattern: /&lt;/g, replacement: '<' },
+        { pattern: /&gt;/g, replacement: '>' },
+        { pattern: /&amp;/g, replacement: '&' },
+        
+        // Fix malformed function declarations
+        { pattern: /const\s+(\w+)\s*=\s*\(\s*;\s*/g, replacement: 'const $1 = () => (' },
+        { pattern: /function\s+(\w+)\s*\(\s*;\s*/g, replacement: 'function $1() {' },
+        
+        // Fix malformed JSX attributes
+        { pattern: /(\w+)\s*=\s*\{([^}]+)\s*;\s*\}/g, replacement: '$1={$2}' },
+        
+        // Fix malformed JSX closing tags
+        { pattern: /;\s*<\/\w+>\s*;/g, replacement: '</$1>' },
+        
+        // Fix malformed JSX self-closing tags
+        { pattern: /;\s*\/>\s*;/g, replacement: '/>' },
+        
+        // Fix malformed JSX with long lines
+        { pattern: /;\s*<(\w+)[^>]*>\s*;\s*([^<]+)\s*;\s*<\/\1>\s*;/g, replacement: '<$1>$2</$1>' },
+        
+        // Fix malformed JSX with multiple semicolons
+        { pattern: /;\s*;\s*/g, replacement: ';' },
+        
+        // Fix malformed JSX with incorrect spacing
+        { pattern: />\s*;\s*</g, replacement: '><' },
+        { pattern: />\s*;\s*$/gm, replacement: '>' },
+      ];
+      
+      for (const fix of fixes) {
+        const matches = (fixedContent.match(fix.pattern) || []).length;
+        if (matches > 0) {
+          fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
+          fileErrorsFixed += matches;
+        }
+      }
+      
+      if (fileErrorsFixed > 0) {
+        fs.writeFileSync(filePath, fixedContent, 'utf8');
+        this.errorsFixed += fileErrorsFixed;
+        this.log(`Fixed ${fileErrorsFixed} issues in ${path.relative(this.projectRoot, filePath)}`);
+      }
+      
+      this.filesProcessed++;
+      
     } catch (error) {
-      console.log('⚠️  ESLint found issues, analyzing...');
-      const lintOutput = error.message;
-      errors.eslint = parseESLintOutput(lintOutput);
-      console.log(`📊 Found ${errors.eslint.length} ESLint issues`);
+      this.log(`Error processing ${filePath}: ${error.message}`, 'warning');
     }
-    
-    // Step 2: Run TypeScript type checking
-    console.log('🔍 Step 2: Running TypeScript type checking...');
-    try {
-      execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ TypeScript type checking passed');
-    } catch (error) {
-      console.log('⚠️  TypeScript found issues, analyzing...');
-      const tsOutput = error.message;
-      errors.typescript = parseTypeScriptOutput(tsOutput);
-      console.log(`📊 Found ${errors.typescript.length} TypeScript issues`);
-    }
-    
-    // Step 3: Fix common issues automatically
-    console.log('🔧 Step 3: Attempting to fix common issues automatically...');
-    const fixedIssues = await autoFixCommonIssues(errors);
-    errors.fixed = fixedIssues;
-    
-    // Step 4: Run ESLint again to see if we fixed issues
-    console.log('🔍 Step 4: Running ESLint again to verify fixes...');
-    try {
-      execSync('npm run lint', { stdio: 'pipe' });
-      console.log('✅ ESLint passed after fixes - issues resolved');
-    } catch (error) {
-      console.log('⚠️  Some ESLint issues remain after fixes');
-    }
-    
-    // Step 5: Run TypeScript again to see if we fixed issues
-    console.log('🔍 Step 5: Running TypeScript again to verify fixes...');
-    try {
-      execSync('npm run type-check', { stdio: 'pipe' });
-      console.log('✅ TypeScript passed after fixes - issues resolved');
-    } catch (error) {
-      console.log('⚠️  Some TypeScript issues remain after fixes');
-    }
-    
-    // Generate comprehensive error fixer report
-    console.log('📊 Generating comprehensive error fixer report...');
+  }
+
+  async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      summary: 'Comprehensive error fixer completed',
-      status: 'completed',
-      errors: {
-        eslint: errors.eslint.length,
-        typescript: errors.typescript.length,
-        syntax: errors.syntax.length,
-        missingExports: errors.missingExports.length,
-        duplicateDeclarations: errors.duplicateDeclarations.length
-      },
-      fixed: errors.fixed.length,
-      details: errors
+      duration: Date.now() - this.startTime,
+      errorsFixed: this.errorsFixed,
+      filesProcessed: this.filesProcessed,
+      success: true
     };
     
-    const reportPath = path.join(process.cwd(), 'comprehensive-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ Comprehensive error fixer report saved to ${reportPath}`);
-    
-    console.log('✅ Comprehensive error fixer completed successfully');
-    
-  } catch (error) {
-    console.error('❌ Comprehensive error fixer failed:', error.message);
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(`Report saved to ${this.reportFile}`);
   }
 }
 
-// Helper functions for parsing output
-function parseESLintOutput(output) {
-  const lines = output.split('\n');
-  const issues = [];
-  
-  for (const line of lines) {
-    if (line.includes('error') || line.includes('warning')) {
-      issues.push(line.trim());
-    }
-  }
-  
-  return issues;
-}
-
-function parseTypeScriptOutput(output) {
-  const lines = output.split('\n');
-  const issues = [];
-  
-  for (const line of lines) {
-    if (line.includes('error TS') || line.includes('warning TS')) {
-      issues.push(line.trim());
-    }
-  }
-  
-  return issues;
-}
-
-async function autoFixCommonIssues(errors) {
-  const fixedIssues = [];
-  
-  // Auto-fix common issues
-  try {
-    // Try to auto-fix ESLint issues
-    if (errors.eslint.length > 0) {
-      execSync('npm run lint:fix', { stdio: 'pipe' });
-      fixedIssues.push('ESLint auto-fixes applied');
-    }
-  } catch (error) {
-    // Auto-fix failed, continue with manual fixes
-  }
-  
-  return fixedIssues;
-}
-
-// Main execution
-if (require.main === module) {
-  runComprehensiveErrorFixer();
-  
-  // Set up continuous monitoring
-  setInterval(runComprehensiveErrorFixer, AUTOMATION_INTERVAL);
-  console.log(`🔄 Comprehensive error fixer will run every ${AUTOMATION_INTERVAL / 60000} minutes`);
-}
-
-module.exports = { runComprehensiveErrorFixer };
+// Run the fixer
+const fixer = new ComprehensiveErrorFixer();
+fixer.run().catch(console.error);

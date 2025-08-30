@@ -1,556 +1,529 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Brain,
-  Zap,
-  Globe,
-  Server,
-  Cpu,
-  Network
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = () => {
-=======
-} from 'lucide-react';
-
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const techCategories = [
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Code, Cloud, Zap, ArrowRight, Star, TrendingUp, Layers, GitBranch, Terminal, Monitor, Server, Brain } from 'lucide-react';
+const frontendTechnologies = [
     {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      technologies[
-        'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Hugging Face',
-        'Keras', 'Pandas', 'NumPy', 'Jupyter', 'MLflow'
-      ],
-      color: 'from-purple-500 to-pink-500'
+        name: "React",
+        category: "Frontend Framework",
+        logo: "/logos/react.svg",
+        description: "Modern component-based UI library for building interactive user interfaces",
+        version: "18.x",
+        expertise: "Expert",
+        projects: 150,
+        rating: 5,
+        features["Hooks", "Context API", "Suspense", "Concurrent Features"],
+        alternatives["Vue.js", "Angular", "Svelte"]
     },
     {
-      icon: Code,
-      title: 'Frontend Development',
-      technologies[
-        'React', 'Vue.js', 'Angular', 'TypeScript', 'Next.js',
-        'Tailwind CSS', 'Material-UI', 'Redux', 'GraphQL', 'Webpack'
-      ],
-      color: 'from-blue-500 to-cyan-500'
+        name: "Next.js",
+        category: "Full-Stack Framework",
+        logo: "/logos/nextjs.svg",
+        description: "React framework for production with server-side rendering and static generation",
+        version: "14.x",
+        expertise: "Expert",
+        projects: 120,
+        rating: 5,
+        features["SSR/SSG", "API Routes", "Image Optimization", "Middleware"],
+        alternatives["Nuxt.js", "Gatsby", "Remix"]
     },
     {
-      icon: Server,
-      title: 'Backend Development',
-      technologies[
-        'Node.js', 'Python', 'Java', 'Go', 'C#',
-        'Express.js', 'Django', 'Spring Boot', 'FastAPI', 'ASP.NET Core'
-      ],
-      color: 'from-green-500 to-emerald-500'
+        name: "TypeScript",
+        category: "Programming Language",
+        logo: "/logos/typescript.svg",
+        description: "Typed superset of JavaScript for building scalable applications",
+        version: "5.x",
+        expertise: "Expert",
+        projects: 200,
+        rating: 5,
+        features["Static Typing", "Interfaces", "Generics", "Decorators"],
+        alternatives["JavaScript", "Flow", "Dart"]
     },
     {
-      icon: Database,
-      title: 'Databases & Storage',
-      technologies[
-        'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch',
-        'AWS RDS', 'Azure SQL', 'Google Cloud SQL', 'DynamoDB', 'Cassandra'
-      ],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      technologies[
-        'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes',
-        'Terraform', 'Jenkins', 'GitLab CI/CD', 'Ansible', 'Prometheus'
-      ],
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      technologies[
-        'OAuth 2.0', 'JWT', 'SAML', 'LDAP', 'MFA',
-        'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
-      ],
-<<<<<<< HEAD
-      color: 'from-red-500 to-pink-500'
-
-=======
-      color: 'from-red-500 to-pink-500';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
-=======
-const technologyCategories = [
-  {
-    category: "Frontend Technologies",
-    technologies: [
-      { name: "React", icon: "⚛️", proficiency: 95 },
-      { name: "Vue.js", icon: "💚", proficiency: 90 },
-      { name: "Angular", icon: "🅰️", proficiency: 85 },
-      { name: "TypeScript", icon: "📘", proficiency: 95 },
-      { name: "Tailwind CSS", icon: "🎨", proficiency: 90 }
-    ],
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    category: "Backend Technologies",
-    technologies: [
-      { name: "Node.js", icon: "🟢", proficiency: 95 },
-      { name: "Python", icon: "🐍", proficiency: 90 },
-      { name: "Java", icon: "☕", proficiency: 85 },
-      { name: "Go", icon: "🐹", proficiency: 80 },
-      { name: "Rust", icon: "🦀", proficiency: 75 }
-    ],
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    category: "AI & Machine Learning",
-    technologies: [
-      { name: "TensorFlow", icon: "🧠", proficiency: 90 },
-      { name: "PyTorch", icon: "🔥", proficiency: 85 },
-      { name: "Scikit-learn", icon: "📊", proficiency: 90 },
-      { name: "OpenAI GPT", icon: "🤖", proficiency: 85 },
-      { name: "Hugging Face", icon: "🤗", proficiency: 80 }
-    ],
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    category: "Cloud & DevOps",
-    technologies: [
-      { name: "AWS", icon: "☁️", proficiency: 90 },
-      { name: "Azure", icon: "🔷", proficiency: 85 },;
-      { name: "Google Cloud", icon: "🔵", proficiency: 80 },;
-      { name: "Docker", icon: "🐳", proficiency: 90 },;
-      { name: "Kubernetes", icon: "⚓", proficiency: 85 };
-    ],;
-    color: "from-orange-500 to-red-500";
-  };
+        name: "Tailwind CSS",
+        category: "CSS Framework",
+        logo: "/logos/tailwind.svg",
+        description: "Utility-first CSS framework for rapid UI development",
+        version: "3.x",
+        expertise: "Expert",
+        projects: 180,
+        rating: 5,
+        features["Utility Classes", "Responsive Design", "Dark Mode", "Customization"],
+        alternatives["Bootstrap", "Material-UI", "Chakra UI"]
+    }
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-const emergingTech = [;
-  { name: "Quantum Computing", icon: "⚛️", status: "Research" },;
-  { name: "Blockchain", icon: "🔗", status: "Production" },;
-  { name: "Edge Computing", icon: "🌐", status: "Development" },;
-  { name: "5G Networks", icon: "📡", status: "Integration" },;
-  { name: "IoT Platforms", icon: "📱", status: "Production" },;
-  { name: "AR/VR", icon: "🥽", status: "Research" };
+const backendTechnologies = [
+    {
+        name: "Node.js",
+        category: "Runtime Environment",
+        logo: "/logos/nodejs.svg",
+        description: "JavaScript runtime for building scalable server-side applications",
+        version: "20.x",
+        expertise: "Expert",
+        projects: 160,
+        rating: 5,
+        features["Event-driven", "Non-blocking I/O", "NPM Ecosystem", "Microservices"],
+        alternatives["Python", "Java", "Go", "C#"]
+    },
+    {
+        name: "Python",
+        category: "Programming Language",
+        logo: "/logos/python.svg",
+        description: "High-level programming language for AI, ML, and backend development",
+        version: "3.11+",
+        expertise: "Expert",
+        projects: 140,
+        rating: 5,
+        features["AI/ML Libraries", "Web Frameworks", "Data Science", "Automation"],
+        alternatives["Node.js", "Java", "Go", "Rust"]
+    },
+    {
+        name: "PostgreSQL",
+        category: "Database",
+        logo: "/logos/postgresql.svg",
+        description: "Advanced open-source relational database with ACID compliance",
+        version: "15.x",
+        expertise: "Expert",
+        projects: 130,
+        rating: 5,
+        features["ACID Compliance", "JSON Support", "Extensions", "Partitioning"],
+        alternatives["MySQL", "MongoDB", "Redis", "SQLite"]
+    },
+    {
+        name: "Redis",
+        category: "In-Memory Database",
+        logo: "/logos/redis.svg",
+        description: "High-performance in-memory data structure store",
+        version: "7.x",
+        expertise: "Expert",
+        projects: 110,
+        rating: 5,
+        features["Caching", "Session Storage", "Real-time", "Pub/Sub"],
+        alternatives["Memcached", "Hazelcast", "Apache Ignite"]
+    }
 ];
-
+const cloudTechnologies = [
+    {
+        name: "AWS",
+        category: "Cloud Platform",
+        logo: "/logos/aws.svg",
+        description: "Comprehensive cloud computing platform with 200+ services",
+        version: "Latest",
+        expertise: "Expert",
+        projects: 180,
+        rating: 5,
+        features["EC2", "Lambda", "S3", "RDS", "CloudFormation"],
+        alternatives["Azure", "Google Cloud", "DigitalOcean", "Heroku"]
+    },
+    {
+        name: "Docker",
+        category: "Containerization",
+        logo: "/logos/docker.svg",
+        description: "Platform for developing, shipping, and running applications in containers",
+        version: "24.x",
+        expertise: "Expert",
+        projects: 160,
+        rating: 5,
+        features["Containerization", "Orchestration", "Microservices", "DevOps"],
+        alternatives["Podman", "LXC", "rkt", "Kubernetes"]
+    },
+    {
+        name: "Kubernetes",
+        category: "Container Orchestration",
+        logo: "/logos/kubernetes.svg",
+        description: "Open-source container orchestration platform for automating deployment",
+        version: "1.28+",
+        expertise: "Expert",
+        projects: 120,
+        rating: 5,
+        features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"],
+        alternatives["Docker Swarm", "Nomad", "OpenShift", "Rancher"]
+    },
+    {
+        name: "Terraform",
+        category: "Infrastructure as Code",
+        logo: "/logos/terraform.svg",
+        description: "Infrastructure as code tool for building, changing, and versioning infrastructure",
+        version: "1.5+",
+        expertise: "Expert",
+        projects: 100,
+        rating: 5,
+        features["IaC", "Multi-cloud", "State Management", "Modules"],
+        alternatives["CloudFormation", "Pulumi", "Ansible", "Chef"]
+    }
+];
+const aiTechnologies = [
+    {
+        name: "TensorFlow",
+        category: "Machine Learning",
+        logo: "/logos/tensorflow.svg",
+        description: "Open-source machine learning framework for research and production",
+        version: "2.15+",
+        expertise: "Expert",
+        projects: 80,
+        rating: 5,
+        features["Deep Learning", "Neural Networks", "GPU Support", "Model Serving"],
+        alternatives["PyTorch", "Scikit-learn", "Keras", "MXNet"]
+    },
+    {
+        name: "OpenAI",
+        category: "AI Services",
+        logo: "/logos/openai.svg",
+        description: "Advanced AI models and APIs for natural language processing",
+        version: "Latest",
+        expertise: "Expert",
+        projects: 60,
+        rating: 5,
+        features["GPT Models", "DALL-E", "Whisper", "Embeddings"],
+        alternatives["Anthropic", "Google AI", "Azure OpenAI", "Hugging Face"]
+    },
+    {
+        name: "LangChain",
+        category: "AI Framework",
+        logo: "/logos/langchain.svg",
+        description: "Framework for developing applications with large language models",
+        version: "0.1+",
+        expertise: "Expert",
+        projects: 40,
+        rating: 5,
+        features["LLM Integration", "Chains", "Agents", "Memory"],
+        alternatives["Semantic Kernel", "AutoGPT", "LlamaIndex", "Haystack"]
+    },
+    {
+        name: "Hugging Face",
+        category: "AI Platform",
+        logo: "/logos/huggingface.svg",
+        description: "Platform for machine learning models, datasets, and applications",
+        version: "Latest",
+        expertise: "Expert",
+        projects: 50,
+        rating: 5,
+        features["Model Hub", "Transformers", "Datasets", "Spaces"],
+        alternatives["ModelScope", "Replicate", "Gradio", "Streamlit"]
+    }
+];
+const developmentTools = [
+    {
+        name: "Git",
+        category: "Version Control",
+        logo: "/logos/git.svg",
+        description: "Distributed version control system for tracking changes in source code",
+        version: "2.40+",
+        expertise: "Expert",
+        projects: 300,
+        rating: 5,
+        features["Branching", "Merging", "Stashing", "Rebasing"],
+        alternatives["SVN", "Mercurial", "Perforce", "GitHub Desktop"]
+    },
+    {
+        name: "VS Code",
+        category: "Code Editor",
+        logo: "/logos/vscode.svg",
+        description: "Lightweight but powerful source code editor with extensive extensions",
+        version: "1.80+",
+        expertise: "Expert",
+        projects: 250,
+        rating: 5,
+        features["IntelliSense", "Debugging", "Extensions", "Git Integration"],
+        alternatives["WebStorm", "Sublime Text", "Atom", "Vim"]
+    },
+    {
+        name: "Postman",
+        category: "API Development",
+        logo: "/logos/postman.svg",
+        description: "Platform for building and testing APIs with comprehensive tools",
+        version: "Latest",
+        expertise: "Expert",
+        projects: 180,
+        rating: 5,
+        features["API Testing", "Collections", "Mock Servers", "Documentation"],
+        alternatives["Insomnia", "Thunder Client", "Hoppscotch", "Swagger"]
+    },
+    {
+        name: "Jest",
+        category: "Testing Framework",
+        logo: "/logos/jest.svg",
+        description: "JavaScript testing framework with a focus on simplicity and support",
+        version: "29.x",
+        expertise: "Expert",
+        projects: 200,
+        rating: 5,
+        features["Unit Testing", "Mocking", "Coverage", "Snapshot Testing"],
+        alternatives["Vitest", "Mocha", "Jasmine", "Cypress"]
+    }
+];
+const technologyStats = [
+    { icon: <Code className="w-6 h-6"/>, value: "50+", label: "Technologies" },
+    { icon: <Layers className="w-6 h-6"/>, value: "15+", label: "Categories" },
+    { icon: <Star className="w-6 h-6"/>, value: "4.9/5", label: "Expertise Rating" },
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "1000+", label: "Projects Delivered" },
+    { icon: <GitBranch className="w-6 h-6"/>, value: "24/7", label: "Support Available" },
+    { icon: <Zap className="w-6 h-6"/>, value: "99.9%", label: "Uptime Guarantee" }
+];
 export function TechnologyStackSection() {
-  return (
-    <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
-          className="text-center mb-16"
-<<<<<<< HEAD
+    const [selectedTech, setSelectedTech] = useState(null);
+    const [selectedCategory, setSelectedCategory] = useState("frontend");
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+  hidden: { y: 30,
+  opacity: 0 
 
-          <h2 className="text-4xl font-bold mb-4">
-=======
-          initial = {
+},
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+    return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* Header */}
+        <motion.div className="text-center mb-20" initial = {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
-}}
-          whileInView = {
+}} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Technology Stack
+}} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Technology <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Stack</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Built with cutting-edge technologies and industry best practices.
-            Our comprehensive tech stack ensures scalability, security, and performance.
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed mb-8">
+            Discover our comprehensive technology stack that powers innovative solutions across 
+            frontend, backend, cloud, AI, and development tools. Built for scale, performance, and reliability.
           </p>
+
+          {/* Technology stats */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+            {technologyStats.map((stat, index) => (<motion.div key={index} initial = {
+  { opacity: 0,
+  scale: 0.8 
+
+}} whileInView = {
+  { opacity: 1,
+  scale: 1 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
+  delay: index * 0.1 
+
+}} className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20">
+                <div className="text-zion-cyan mb-2 flex justify-center">
+                  {stat.icon}
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-zion-slate-light text-sm">{stat.label}</div>
+              </motion.div>))}
+          </div>
         </motion.div>
 
-        {/* Technology Categories */}
-<<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {techCategories.map((category, index)  => {;
-            const IconComponent = category.icon;
-            return (
-              <motion.div
-                key = {category.title}
-                initial = {
+        {/* Category Navigation */}
+        <motion.div className="mb-16" initial = {
   { opacity: 0,
   y: 20 
 
-}}
-                whileInView = {
+}} whileInView = {
   { opacity: 1,
   y: 0 
 
-}}
-                transition = {
+}} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: index * 0.1 
+  delay: 0.2 
 
-}}
-                className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
+}}>
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedCategory === category.id
+                ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
+                : 'bg-zion-blue-dark/40 text-zion-slate-light hover:bg-zion-blue-dark/60 hover:text-white border border-zion-blue-light/30'}`}>
+                {category.icon}
+                <span>{category.name}</span>
+              </button>))}
+          </div>
+        </motion.div>
 
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">
-                    {category.title}
-                  </h3>
-=======
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
-            <motion.div
-              key={category.category}
-              className="bg-slate-800 border border-slate-700 rounded-xl p-6"
-              initial = {
+        {/* Technology Grid */}
+        <motion.div className="mb-20" initial = {
   { opacity: 0,
-  y: 30 
+  y: 20 
 
-
-
-
-
-
-}}
-              whileInView = {
+}} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
-}}
-              viewport={{ once: true }}
-              transition = {
+}} viewport={{ once: true }} transition = {
   { duration: 0.6,
+  delay: 0.3 
+
+}}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {currentTechnologies.map((tech, index) => (<motion.div key={tech.name} initial = {
+  { opacity: 0,
+  y: 20 
+
+}} whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}} viewport={{ once: true }} transition = {
+  { duration: 0.4,
   delay: index * 0.1 
 
-
-
-
-
-
-}}
-            >
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
-                <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
-                  <span className="text-sm">⚡</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                </div>
-                {category.category}
-              </h3>
-              
-              <div className="space-y-4">
-                {category.technologies.map((tech, techIndex) => (
-                  <div key={tech.name} className="flex items-center justify-between">
+}} whileHover={{ y: -4 }} className="relative">
+                <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 group cursor-pointer" onClick={() => setSelectedTech(selectedTech === index ? null : index)}>
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <span className="text-xl">{tech.icon}</span>
-                      <span className="text-gray-300 font-medium">{tech.name}</span>
-                    </div>
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </motion.div>
-            )})}
-=======
-                    
-                    <div className="flex items-center gap-2">
-                      <div className="w-20 bg-slate-700 rounded-full h-2">
-                        <motion.div
-                          className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${tech.proficiency}%` }}
-                          viewport={{ once: true }}
-                          transition = {
-  { duration: 1,
-  delay: 0.8 + techIndex * 0.1 
-
-
-
-
-
-
-}}
-                        />
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple flex items-center justify-center">
+                        <Code className="w-6 h-6 text-white"/>
                       </div>
-                      <span className="text-blue-400 text-sm font-semibold w-8 text-right">
-                        {tech.proficiency}%
-                      </span>
+                      <div>
+                        <h4 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
+                          {tech.name}
+                        </h4>
+                        <div className="text-zion-cyan text-sm">{tech.category}</div>
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-zion-purple-light text-xs">v{tech.version}</div>
+                      <div className="text-zion-slate-light text-xs">{tech.expertise}</div>
                     </div>
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        </div>
 
-        {/* Emerging Technologies */}
-        <motion.div 
-          className="mb-16"
-<<<<<<< HEAD
+                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
+                    {tech.description}
+                  </p>
 
-          <h3 className="text-2xl font-bold text-center mb-8">
-=======
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.4 
-
-
-
-
-
-
-}}
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Emerging Technologies
-          </h3>
-<<<<<<< HEAD
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">;
-            {emergingTech.map((tech, index)  => {;
-              const IconComponent = tech.icon;
-              return (
-                <div key = {tech.name} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-600 rounded-full">
-                      <IconComponent className="h-8 w-8 text-white" />
+                  {/* Quick stats */}
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
+                      <div className="text-zion-cyan font-bold text-sm">{tech.projects}</div>
+                      <div className="text-zion-slate-light text-xs">Projects</div>
+                    </div>
+                    <div className="text-center p-2 rounded-lg bg-zion-blue-light/20 border border-zion-cyan/30">
+                      <div className="text-zion-cyan font-bold text-sm">{tech.rating}/5</div>
+                      <div className="text-zion-slate-light text-xs">Rating</div>
                     </div>
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
-                  <p className="text-sm text-gray-400">{tech.status}</p>
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-                initial = {
-  { opacity: 0,
-  y: 30 
 
+                  {/* Features preview */}
+                  <div className="mb-4">
+                    <div className="text-zion-cyan font-semibold text-sm mb-2">Key Features:</div>
+                    <div className="flex flex-wrap gap-1">
+                      {tech.features.slice(0, 2).map((feature, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                          {feature}
+                        </span>))}
+                      {tech.features.length > 2 && (<span className="text-zion-cyan/60 text-xs">
+                          +{tech.features.length - 2} more
+                        </span>)}
+                    </div>
+                  </div>
 
+                  {/* CTA */}
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-purple-light font-medium text-sm group-hover:text-zion-purple transition-colors">
+                      View Technology Details
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-zion-purple-light group-hover:text-zion-purple group-hover:translate-x-1 transition-all duration-300"/>
+                  </div>
 
+                  {/* Expanded details */}
+                  <AnimatePresence>
+                    {selectedTech === index && (<motion.div className="mt-6 p-4 rounded-xl bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-cyan/30" initial = {
+  { opacity: 0, height: 0,
+  y: 10 
 
-
-
-}}
-                whileInView = {
-  { opacity: 1,
+}} animate = {
+  { opacity: 1, height: "auto",
   y: 0 
 
+}} exit = {
+  { opacity: 0, height: 0,
+  y: 10 
 
+}} transition={{ duration: 0.3 }}>
+                        {/* All Features */}
+                        <div className="mb-4">
+                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">All Features:</h5>
+                          <div className="flex flex-wrap gap-1">
+                            {tech.features.map((feature, idx) => (<span key={idx} className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
+                                {feature}
+                              </span>))}
+                          </div>
+                        </div>
 
+                        {/* Alternatives */}
+                        <div className="mb-4">
+                          <h5 className="text-zion-cyan font-semibold text-sm mb-2">Alternatives:</h5>
+                          <div className="text-zion-slate-light/80 text-xs">
+                            {tech.alternatives.join(", ")}
+                          </div>
+                        </div>
 
-
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1 
-
-
-
-
-
-
-}}
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{tech.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                        {/* Expertise Badge */}
+                        <div className="text-center p-2 rounded-lg bg-zion-cyan/20 border border-zion-cyan/30">
+                          <div className="text-zion-cyan font-bold text-sm">{tech.expertise} Level</div>
+                          <div className="text-zion-slate-light text-xs">Proven in {tech.projects} projects</div>
+                        </div>
+                      </motion.div>)}
+                  </AnimatePresence>
                 </div>
-              )})}
+              </motion.div>))}
           </div>
         </motion.div>
 
-        {/* Technology Philosophy */}
-        <motion.div 
-          className="mb-12"
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.8 
-
-
-
-
-
-
-}}
-        >
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Our Technology Philosophy
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Innovation First</h4>
-                <p className="text-gray-400 text-sm">Always exploring cutting-edge technologies</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛡️</span>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Security Focused</h4>
-                <p className="text-gray-400 text-sm">Enterprise-grade security in everything we build</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h4 className="text-lg font-bold text-white mb-2">Performance Driven</h4>
-                <p className="text-gray-400 text-sm">Optimized for speed and scalability</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-
-        <motion.div 
-          className="text-center"
-<<<<<<< HEAD
-
-=======
-          initial = {
+        {/* Call to action */}
+        <motion.div className="text-center" initial = {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
-}}
-          whileInView = {
+}} whileInView = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
-}}
-          viewport={{ once: true }}
-          transition = {
+}} viewport={{ once: true }} transition = {
   { duration: 0.6,
-  delay: 1.0 
+  delay: 0.5 
 
-
-
-
-
-
-}}
-        >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4">
-              Ready to Build with Modern Tech?
-            </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our expert team is ready to help you leverage the latest technologies
-              to build scalable, secure, and innovative solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
-                Start Your Project
-                <Code className="ml-2 h-5 w-5" />
-              </button>
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
-                View Tech Specs
-                <Server className="ml-2 h-5 w-5" />
-              </button>
+}}>
+          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+            <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Ready to Build with Our Tech Stack?
+              </h3>
+              <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+                Leverage our expertise in cutting-edge technologies to build scalable, 
+                performant, and innovative solutions that drive your business forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  Start Your Project
+                </button>
+                <button className="px-8 py-3 bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan border border-zion-cyan/30 hover:border-zion-cyan/50 rounded-xl font-medium transition-all duration-300">
+                  View Technology Portfolio
+                </button>
+              </div>
             </div>
           </div>
         </motion.div>
-      </div>;
-    </section>;
-  )};
-
-export default TechnologyStackSection;
-<<<<<<< HEAD
-}}
-=======
-=======
-            <span className="text-2xl">→</span>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
-  );
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-export default TechnologyStackSection;
-export default TechnologyStackSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      </div>
+    </section>)}

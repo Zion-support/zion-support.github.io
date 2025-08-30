@@ -1,209 +1,31 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { ChevronDown interface AccordionProps {
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[];
-=======
-import React, { useState } from 'react.ts';
-import { ChevronDown  } from 'lucide-react';
+"use client";
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<AccordionPrimitive.Item ref={ref} className = {
+  cn("border-b",
+  className)
 
-interface AccordionProps extends React.PropsWithChildren<{}> {
+} {...props}/>));
+AccordionItem.displayName = "AccordionItem";
+const AccordionTrigger = React.forwardRef(({ className, children, ...props }, ref) => (<AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger ref={ref} className = {
+  cn("flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
+  className)
 
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export function Accordion({
-  children,
-  className = '',
-  type = 'single',
-  defaultValue
-}: AccordionProps) {
-  const [openItems, setOpenItems] = useState<string[]>(
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  );
-
-  const handleToggle = (value: string)  => {
-    if (type === 'single') {
-      setOpenItems(openItems.includes(value) ? [] : [value]);
-    } else {
-      setOpenItems(prev =>
-        prev.includes(value)
-          ? prev.filter(item => item !== value)
-          [...prev, value];
-      )};
-  };
-
-  return (
-    <div className = {`space-y-1 ${className}`}>
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
-            isOpen: openItems.includes(child.props.value),
-            onToggle: ()  => handleToggle(child.props.value)
-          })}
-        return child})}
-=======
-export function Accordion({ 
-  children, ;
-  className = '', ;
-  type = 'single',;
-  defaultValue ;
-}: AccordionProps) {;
-  const [openItems, setOpenItems] = useState<string[]>(;
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
-  );
-
-  const handleToggle = (value: string) => {;
-    if (type === 'single') {;
-      setOpenItems(openItems.includes(value) ? [] : [value]);
-    } else {
-      setOpenItems(prev = > ;
-        prev.includes(value) ;
-          ? prev.filter(item => item !== value);
-          : [...prev, value];
-      );
-
-  };
-
-  return (
-    <div className={`space-y-1 ${className}`}>
-      {React.Children.map(children, (child) => {
-        if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            isOpen: openItems.includes(child.props.value),
-            onToggle: () => handleToggle(child.props.value)
-          });
-
-        return child;
-      })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    </div>
-<<<<<<< HEAD
-  );
-=======
-  )}
-
-interface AccordionItemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  children: React.ReactNode;
-  value: string;
-  className?: string;
-  isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: () => void;
-=======
-  onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export function AccordionItem({
-  children,
-  className = '',
-  isOpen = false,;
-  onToggle;
-}: AccordionItemProps) {;
-  return (;
-    <div className={`border-b border-gray-200 ${className}`}>;
-      {React.Children.map(children, (child) => {;
-        if (React.isValidElement(child)) {;
-          return React.cloneElement(child, { isOpen, onToggle });
-
-        return child;
-      })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    </div>
-<<<<<<< HEAD
-  );
-=======
-  )}
-
-interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  children: React.ReactNode;
-  className?: string;
-  isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: () => void;
-=======
-  onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export function AccordionTrigger({
-  children,
-  className = '',
-  isOpen = false,
-  onToggle
-}: AccordionTriggerProps) {
-  return (
-    <button
-      className = {`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
-      onClick={onToggle}
-
+} {...props}>
       {children}
-      <ChevronDown
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
-          isOpen ? 'rotate-180' : ''
-        }`}
-      />
-    </button>
-  )}
+      <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200"/>
+    </AccordionPrimitive.Trigger>
+  </AccordionPrimitive.Header>));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
+const AccordionContent = React.forwardRef(({ className, children, ...props }, ref) => (<AccordionPrimitive.Content ref={ref} className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" {...props}>
+    <div className = {
+  cn("pb-4 pt-0",
+  className)
 
-interface AccordionContentProps extends React.PropsWithChildren<{}> {;
-=======;
-        className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
-          isOpen ? 'rotate-180' : '';
-        }`} ;
-      />;
-    </button>;
-  );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  children: React.ReactNode;
-  className?: string;
-<<<<<<< HEAD
-  isOpen?: boolean;
-=======
-  isOpen?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export function AccordionContent({
-  children,
-  className = '',
-  isOpen = false
-}: AccordionContentProps) {
-  if (!isOpen) return null;
-
-  return (
-    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>
-      {children}
-    </div>
-  )}
-=======
-export function AccordionContent({ ;
-  children, ;
-  className = '',;
-  isOpen = false;
-}: AccordionContentProps) {;
-  if (!isOpen) return null;
-
-  return (
-    <div className = {`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>;
-      {children};
-    </div>;
-  );
-<<<<<<< HEAD
-}}}}}}}}}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}>{children}</div>
+  </AccordionPrimitive.Content>));
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

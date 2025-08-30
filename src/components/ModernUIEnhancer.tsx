@@ -1,815 +1,423 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
-import {
-  Sparkles,
-  Zap,
-  Star,
-  Palette,
-  Eye,
-  Layers,
-  Settings,
-  X
-interface UISettings {
-  glassmorphism: boolean;
-  particleEffects: boolean;
-  smoothScrolling: boolean;
-  enhancedAnimations: boolean;
-  modernShadows: boolean;
-  colorThemes: boolean;
-  depthLayers: boolean;
-
-export const ModernUIEnhancer: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<UISettings>({
-    glassmorphism: true,
-    particleEffects: true,
-    smoothScrolling: true,
-    enhancedAnimations: true,
-    modernShadows: true,
-    colorThemes: true,
-    depthLayers: true
-  });
-
-  const [activeTheme, setActiveTheme] = useState('default');
-  const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; vx: number; vy: number }>>([]);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 1000], [0, -200]);
-
-  useEffect(() => {
-    // Initialize UI enhancements
-    initializeUIEnhancements();
-
-    // Setup particle system
-    if (settings.particleEffects) {
-      setupParticleSystem();
-
-    // Setup smooth scrolling
-    if (settings.smoothScrolling) {
-      setupSmoothScrolling();
-
-    // Apply initial settings
-    applyUISettings();
-
-    return () => {
-      cleanupUIEnhancements();
-=======
-import React, { useEffect, useCallback, useState } from 'react';
-
-interface ModernUIEnhancerProps {
-  enabled?: boolean;
-}
-
-export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
-  enabled = true 
-}) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [accentColor, setAccentColor] = useState('#0ea5e9');
-
-  const enhanceTypography = useCallback(() => {
-    if (!enabled) return;
-
-    // Add modern font loading
-    const fontLink = document.createElement('link');
-    fontLink.rel = 'preload';
-    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
-    fontLink.as = 'style';
-    document.head.appendChild(fontLink);
-
-    // Apply modern typography
-    const root = document.documentElement;
-    root.style.setProperty('--font-family', "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif");
-    root.style.setProperty('--font-weight-light', '300');
-    root.style.setProperty('--font-weight-normal', '400');
-    root.style.setProperty('--font-weight-medium', '500');
-    root.style.setProperty('--font-weight-semibold', '600');
-    root.style.setProperty('--font-weight-bold', '700');
-  }, [enabled]);
-
-  const enhanceColorScheme = useCallback(() => {
-    if (!enabled) return;
-
-    const root = document.documentElement;
-    
-    // Modern color palette
-    const colors = {
-      primary: accentColor,
-      secondary: '#6366f1',
-      success: '#10b981',
-      warning: '#f59e0b',
-      error: '#ef4444',
-      info: '#3b82f6',
-      neutral: {
-        50: '#f8fafc',
-        100: '#f1f5f9',
-        200: '#e2e8f0',
-        300: '#cbd5e1',
-        400: '#94a3b8',
-        500: '#64748b',
-        600: '#475569',
-        700: '#334155',
-        800: '#1e293b',
-        900: '#0f172a'
-      }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    };
-
-<<<<<<< HEAD
-  useEffect(() => {
-    // Apply settings when they change
-    applyUISettings();
-  }, [settings]);
-
-  const initializeUIEnhancements = () => {
-    // Add CSS custom properties
-    addCSSVariables();
-
-    // Add glassmorphism styles
-    addGlassmorphismStyles();
-
-    // Add modern shadow styles
-    addModernShadowStyles();
-
-    // Add depth layer styles
-    addDepthLayerStyles();
-
-    // Add color theme styles
-    addColorThemeStyles();
-  };
-
-  const addCSSVariables = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      :root {
-        --glass-bg: rgba(255, 255, 255, 0.1);
-        --glass-border: rgba(255, 255, 255, 0.2);
-        --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        --modern-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        --depth-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        --accent-glow: 0 0 20px rgba(6, 182, 212, 0.5);
-        --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-      .glass-effect {
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--glass-shadow);
-
-      .modern-shadow {
-        box-shadow: var(--modern-shadow);
-
-      .depth-layer {
-        box-shadow: var(--depth-shadow);
-        transform: translateZ(0);
-
-      .accent-glow {
-        box-shadow: var(--accent-glow);
-
-      .text-shadow {
-        text-shadow: var(--text-shadow);
-
-      .smooth-scroll {
-        scroll-behavior: smooth;
-
-      .enhanced-animation {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addGlassmorphismStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .glass-card {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 16px;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-
-      .glass-card:hover {
-        background: rgba(255, 255, 255, 0.15);
-        border-color: rgba(255, 255, 255, 0.3);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        transform: translateY(-2px);
-
-      .glass-button {
-        background: rgba(6, 182, 212, 0.2);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(6, 182, 212, 0.3);
-        border-radius: 12px;
-        padding: 12px 24px;
-        color: white;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        cursor: pointer;
-
-      .glass-button:hover {
-        background: rgba(6, 182, 212, 0.3);
-        border-color: rgba(6, 182, 212, 0.5);
-        box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
-        transform: translateY(-1px);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addModernShadowStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .shadow-elevation-1 {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-      .shadow-elevation-2 {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
-      .shadow-elevation-3 {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
-      .shadow-elevation-4 {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-
-      .shadow-elevation-5 {
-        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
-
-      .hover-lift {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-      .hover-lift:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addDepthLayerStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .depth-1 {
-        transform: translateZ(10px);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
-      .depth-2 {
-        transform: translateZ(20px);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-
-      .depth-3 {
-        transform: translateZ(30px);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-
-      .parallax-layer {
-        transform-style: preserve-3d;
-        will-change: transform;
-
-      .floating-element {
-        animation: float 6s ease-in-out infinite;
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0px) translateZ(0); }
-        50% { transform: translateY(-10px) translateZ(10px); }
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const addColorThemeStyles = () => {
-    const style = document.createElement('style');
-    style.textContent = `
-      .theme-cyber {
-        --primary: #00ffff;
-        --secondary: #ff00ff;
-        --accent: #ffff00;
-        --background: #000000;
-        --surface: #111111;
-
-      .theme-nature {
-        --primary: #4ade80;
-        --secondary: #22c55e;
-        --accent: #84cc16;
-        --background: #f0fdf4;
-        --surface: #ffffff;
-
-      .theme-sunset {
-        --primary: #f97316;
-        --secondary: #ec4899;
-        --accent: #f59e0b;
-        --background: #fef3c7;
-        --surface: #ffffff;
-
-      .theme-ocean {
-        --primary: #06b6d4;
-        --secondary: #0891b2;
-        --accent: #0ea5e9;
-        --background: #f0f9ff;
-        --surface: #ffffff;
-
-      .theme-dark {
-        --primary: #6366f1;
-        --secondary: #8b5cf6;
-        --accent: #a855f7;
-        --background: #0f172a;
-        --surface: #1e293b;
-
-    `;
-    document.head.appendChild(style);
-  };
-
-  const setupParticleSystem = () => {
-    // Create floating particles
-    const particleCount = 50;
-    const newParticles = [];
-
-    for (const i = 0; i < particleCount; i++) {
-      newParticles.push({
-        id: i,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5
-      });
-
-    setParticles(newParticles);
-
-    // Animate particles
-    const animateParticles = () => {
-      setParticles(prev => prev.map(particle => ({
-        ...particle,
-        x: particle.x + particle.vx,
-        y: particle.y + particle.vy,
-        vx: particle.x <= 0 || particle.x >= window.innerWidth ? -particle.vx : particle.vx,
-        vy: particle.y <= 0 || particle.y >= window.innerHeight ? -particle.vy : particle.vy
-      })));
-    };
-
-    const interval = setInterval(animateParticles, 50);
-
-    return () => clearInterval(interval);
-  };
-
-  const setupSmoothScrolling = () => {
-    // Add smooth scrolling to all anchor links
-    const links = document.querySelectorAll('a[href^="#"]');
-
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href')?.substring(1);
-        const targetElement = document.getElementById(targetId || '');
-
-        if (targetElement) {
-          targetElement.scrollIntoView({
+import { motion, AnimatePresence } from 'framer-motion';
+import { Sparkles, ArrowUp, Palette, Sun, Moon, Monitor, Smartphone, Tablet } from 'lucide-react';
+export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = true, enableScrollEffects = true, enableThemeToggle = true, enableResponsiveDesign = true, }) => {
+    const [isVisible, setIsVisible] = useState(false);
+    const [currentTheme, setCurrentTheme] = useState('auto');
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
+    const [deviceType, setDeviceType] = useState('desktop');
+    const scrollToTopRef = useRef(null);
+    // Detect device type
+    useEffect(() => {
+        const updateDeviceType = () => {
+            const width = window.innerWidth;
+            if (width < 768) {
+                setDeviceType('mobile')}
+            else if (width < 1024) {
+                setDeviceType('tablet')}
+            else {
+                setDeviceType('desktop')}
+        };
+        updateDeviceType();
+        window.addEventListener('resize', updateDeviceType);
+        return () => window.removeEventListener('resize', updateDeviceType)}, []);
+    // Scroll effects
+    useEffect(() => {
+        if (!enableScrollEffects)
+            return;
+        const handleScroll = () => {
+            const scrollTop = window.pageYOffset;
+            setShowScrollToTop(scrollTop > 300);
+            // Parallax effect for background elements
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('[data-parallax]');
+            parallaxElements.forEach((element) => {
+                const speed = parseFloat(element.getAttribute('data-parallax') || '0.5');
+                const yPos = -(scrolled * speed);
+                element.style.transform = `translateY(${yPos}px)`});
+            // Fade in elements on scroll
+            const fadeElements = document.querySelectorAll('[data-fade-in]');
+            fadeElements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                if (isVisible) {
+                    element.classList.add('fade-in-visible')}
+            })};
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]);
+    // Theme management
+    useEffect(() => {
+        const savedTheme = localStorage.getItem('theme') || 'auto';
+        setCurrentTheme(savedTheme);
+        applyTheme(savedTheme)}, []);
+    const applyTheme = (theme) => {
+        const root = document.documentElement;
+        if (theme === 'auto') {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            root.classList.toggle('dark', prefersDark)}
+        else {
+            root.classList.toggle('dark', theme === 'dark')}
+        localStorage.setItem('theme', theme)};
+    const themes = ['light', 'dark', 'auto'];
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextTheme = themes[(currentIndex + 1) % themes.length];
+        setCurrentTheme(nextTheme);
+        applyTheme(nextTheme)};
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
             behavior: 'smooth',
-            block: 'start'
-          });
-
-      });
-=======
-    // Apply CSS custom properties
-    Object.entries(colors).forEach(([key, value]) => {
-      if (typeof value === 'string') {
-        root.style.setProperty(`--color-${key}`, value);
-      } else {
-        Object.entries(value).forEach(([shade, colorValue]) => {
-          root.style.setProperty(`--color-${key}-${shade}`, colorValue);
-        });
+        })};
+    // Add CSS animations to the document
+    useEffect(() => {
+        if (!enableAnimations)
+            return;
+        const style = document.createElement('style');
+        style.textContent = `
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+      
+      .fade-in-visible {
+        opacity: 1;
+        transform: translateY(0)}
+      
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+      
+      .slide-in-left-visible {
+        opacity: 1;
+        transform: translateX(0)}
+      
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+      
+      .slide-in-right-visible {
+        opacity: 1;
+        transform: translateX(0)}
+      
+      .scale-in {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out}
+      
+      .scale-in-visible {
+        opacity: 1;
+        transform: scale(1)}
+      
+      .bounce-in {
+        animation: bounceIn 0.8s ease-out}
+      
+      @keyframes bounceIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.3)}
+        50% {
+          opacity: 1;
+          transform: scale(1.05)}
+        70% {
+          transform: scale(0.9)}
+        100% {
+          opacity: 1;
+          transform: scale(1)}
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    });
+      
+      .floating {
+        animation: floating 3s ease-in-out infinite}
+      
+      @keyframes floating {
+        0%, 100% {
+          transform: translateY(0px)}
+        50% {
+          transform: translateY(-10px)}
+      }
+      
+      .glow {
+        animation: glow 2s ease-in-out infinite alternate}
+      
+      @keyframes glow {
+        from {
+          box-shadow: 0 0 20px rgba(59, 130, 246, 0.5)}
+        to {
+          box-shadow: 0 0 30px rgba(59, 130, 246, 0.8)}
+      }
+      
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text}
+      
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2)}
+      
+      .glass-effect-dark {
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1)}
+      
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease}
+      
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1)}
+      
+      .text-shadow {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)}
+      
+      .text-shadow-light {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1)}
+    `;
+        document.head.appendChild(style);
+        return () => {
+            document.head.removeChild(style)}}, [enableAnimations]);
+    // Add intersection observer for scroll animations
+    useEffect(() => {
+        if (!enableScrollEffects)
+            return;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const animationType = element.getAttribute('data-animation');
+                    if (animationType) {
+                        element.classList.add(`${animationType}-visible`)}
+                }
+            })}, observerOptions);
+        const animatedElements = document.querySelectorAll('[data-animation]');
+        animatedElements.forEach((element) => {
+            observer.observe(element)});
+        return () => {
+            animatedElements.forEach((element) => {
+                observer.unobserve(element)})}}, [enableScrollEffects]);
+    return (<>
+      {/* Theme Toggle Button */}
+      {enableThemeToggle && (<motion.button initial = {
+  { opacity: 0,
+  scale: 0 
 
-    // Apply accent color variations
-    root.style.setProperty('--color-primary-light', `${accentColor}20`);
-    root.style.setProperty('--color-primary-dark', `${accentColor}80`);
-  }, [enabled, accentColor]);
+}} animate = {
+  { opacity: 1,
+  scale: 1 
 
-  const enhanceSpacing = useCallback(() => {
-    if (!enabled) return;
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleTheme} className="fixed top-6 right-6 z-50 p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700" title={`Current theme: ${currentTheme}`}>
+          <AnimatePresence mode="wait">
+            {currentTheme === 'light' && (<motion.div key="light" initial = {
+  { opacity: 0,
+  rotate: -90 
 
-    const root = document.documentElement;
-<<<<<<< HEAD
+}} animate = {
+  { opacity: 1,
+  rotate: 0 
 
-    // Apply glassmorphism
-    if (settings.glassmorphism) {
-      root.classList.add('glassmorphism-enabled');
-    } else {
-      root.classList.remove('glassmorphism-enabled');
+}} exit = {
+  { opacity: 0,
+  rotate: 90 
 
-    // Apply enhanced animations
-    if (settings.enhancedAnimations) {
-      root.classList.add('enhanced-animations');
-    } else {
-      root.classList.remove('enhanced-animations');
+}} transition={{ duration: 0.3 }}>
+                <Sun className="w-5 h-5 text-yellow-500"/>
+              </motion.div>)}
+            {currentTheme === 'dark' && (<motion.div key="dark" initial = {
+  { opacity: 0,
+  rotate: -90 
 
-    // Apply modern shadows
-    if (settings.modernShadows) {
-      root.classList.add('modern-shadows');
-    } else {
-      root.classList.remove('modern-shadows');
+}} animate = {
+  { opacity: 1,
+  rotate: 0 
 
-    // Apply depth layers
-    if (settings.depthLayers) {
-      root.classList.add('depth-layers');
-    } else {
-      root.classList.remove('depth-layers');
+}} exit = {
+  { opacity: 0,
+  rotate: 90 
 
-    // Apply color themes
-    if (settings.colorThemes) {
-      root.classList.add('color-themes');
-    } else {
-      root.classList.remove('color-themes');
+}} transition={{ duration: 0.3 }}>
+                <Moon className="w-5 h-5 text-blue-400"/>
+              </motion.div>)}
+            {currentTheme === 'auto' && (<motion.div key="auto" initial = {
+  { opacity: 0,
+  rotate: -90 
 
-    // Apply active theme
-    root.className = root.className.replace(/theme-\w+/g, '');
-    root.classList.add(`theme-${activeTheme}`);
-  };
+}} animate = {
+  { opacity: 1,
+  rotate: 0 
 
-  const cleanupUIEnhancements = () => {
-    // Remove added styles
-    const addedStyles = document.querySelectorAll('style[data-ui-enhancer]');
-    addedStyles.forEach(style => style.remove());
+}} exit = {
+  { opacity: 0,
+  rotate: 90 
 
-    // Remove added classes
-=======
-    
-    // Modern spacing scale (4px base unit)
-    const spacing = {
-      0: '0px',
-      1: '4px',
-      2: '8px',
-      3: '12px',
-      4: '16px',
-      5: '20px',
-      6: '24px',
-      7: '28px',
-      8: '32px',
-      9: '36px',
-      10: '40px',
-      12: '48px',
-      14: '56px',
-      16: '64px',
-      20: '80px',
-      24: '96px',
-      28: '112px',
-      32: '128px'
-    };
+}} transition={{ duration: 0.3 }}>
+                <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-400"/>
+              </motion.div>)}
+          </AnimatePresence>
+        </motion.button>)}
 
-    Object.entries(spacing).forEach(([key, value]) => {
-      root.style.setProperty(`--spacing-${key}`, value);
-    });
-  }, [enabled]);
+      {/* Device Type Indicator */}
+      {enableResponsiveDesign && (<motion.div initial = {
+  { opacity: 0,
+  x: -50 
 
-  const enhanceShadows = useCallback(() => {
-    if (!enabled) return;
+}} animate = {
+  { opacity: 1,
+  x: 0 
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    const root = document.documentElement;
-    
-    // Modern shadow system
-    const shadows = {
-      xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-      md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-      xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-      '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
-    };
+}} className="fixed top-6 left-6 z-50 p-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+          <div className="flex items-center space-x-2 text-sm">
+            {deviceType === 'desktop' && <Monitor className="w-4 h-4 text-blue-500"/>}
+            {deviceType === 'tablet' && <Tablet className="w-4 h-4 text-green-500"/>}
+            {deviceType === 'mobile' && <Smartphone className="w-4 h-4 text-purple-500"/>}
+            <span className="text-gray-700 dark:text-gray-300 capitalize">{deviceType}</span>
+          </div>
+        </motion.div>)}
 
-    Object.entries(shadows).forEach(([key, value]) => {
-      root.style.setProperty(`--shadow-${key}`, value);
-    });
-  }, [enabled]);
+      {/* Scroll to Top Button */}
+      <AnimatePresence>
+        {showScrollToTop && (<motion.button ref={scrollToTopRef} initial = {
+  { opacity: 0,
+  scale: 0 
 
-  const enhanceTransitions = useCallback(() => {
-    if (!enabled) return;
+}} animate = {
+  { opacity: 1,
+  scale: 1 
 
-<<<<<<< HEAD
-  return (
-    <>
-      {/* UI Enhancement Toggle Button */}
-      <motion.button
-        whileHover={{ scale: 1.05, rotate: 5 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
-        aria-label="UI Enhancement settings"
-        aria-expanded={isOpen}
-        aria-controls="ui-enhancement-panel"
+}} exit = {
+  { opacity: 0,
+  scale: 0 
 
-        <Sparkles size={24} />
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToTop} className="fixed bottom-6 left-6 z-50 p-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="Scroll to top">
+            <ArrowUp className="w-5 h-5"/>
+          </motion.button>)}
+      </AnimatePresence>
+
+      {/* Floating Action Button */}
+      <motion.button initial = {
+  { opacity: 0,
+  scale: 0 
+
+}} animate = {
+  { opacity: 1,
+  scale: 1 
+
+}} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsVisible(!isVisible)} className="fixed bottom-6 right-6 z-50 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300" title="UI Enhancements">
+        <Palette className="w-5 h-5"/>
       </motion.button>
 
       {/* UI Enhancement Panel */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-20 left-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl shadow-2xl p-6 w-80 z-50 border border-white/20 dark:border-gray-700/50 glass-effect"
-            role="dialog"
-            aria-labelledby="ui-enhancement-title"
-            aria-describedby="ui-enhancement-description"
+        {isVisible && (<motion.div initial = {
+  { opacity: 0, y: 100,
+  scale: 0.8 
 
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="ui-enhancement-title" className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
-                <Sparkles size={20} className="text-pink-500" />
-                UI Enhancements
-              </h2>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 hover:scale-110 transition-transform"
-                aria-label="Close UI enhancement panel"
+}} animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
 
-                <X size={20} />
-              </button>
-            </div>
+}} exit = {
+  { opacity: 0, y: 100,
+  scale: 0.8 
 
-            <p id="ui-enhancement-description" className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-              Customize the visual experience with modern UI effects
-            </p>
+}} transition = {
+  { type: "spring", damping: 25,
+  stiffness: 300 
 
-            <div className="space-y-4">
-              {/* Glassmorphism */}
+}} className="fixed bottom-24 right-6 z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Layers size={20} className="text-blue-600" />
-                  <span className="text-sm font-medium">Glassmorphism</span>
+                <div className="flex items-center space-x-2">
+                  <Sparkles className="w-5 h-5"/>
+                  <h3 className="font-semibold">UI Enhancements</h3>
                 </div>
-                <button
-                  onClick={() => toggleSetting('glassmorphism')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.glassmorphism ? 'bg-blue-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.glassmorphism}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.glassmorphism ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Particle Effects */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Star size={20} className="text-yellow-600" />
-                  <span className="text-sm font-medium">Particle Effects</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('particleEffects')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.particleEffects ? 'bg-yellow-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.particleEffects}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.particleEffects ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Enhanced Animations */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Zap size={20} className="text-green-600" />
-                  <span className="text-sm font-medium">Enhanced Animations</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('enhancedAnimations')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.enhancedAnimations ? 'bg-green-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.enhancedAnimations}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.enhancedAnimations ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Modern Shadows */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Eye size={20} className="text-purple-600" />
-                  <span className="text-sm font-medium">Modern Shadows</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('modernShadows')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.modernShadows ? 'bg-purple-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.modernShadows}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.modernShadows ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Depth Layers */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Settings size={20} className="text-indigo-600" />
-                  <span className="text-sm font-medium">Depth Layers</span>
-                </div>
-                <button
-                  onClick={() => toggleSetting('depthLayers')}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.depthLayers ? 'bg-indigo-600' : 'bg-gray-300'
-                  }`}
-                  role="switch"
-                  aria-checked={settings.depthLayers}
-
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                      settings.depthLayers ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
+                <button onClick={() => setIsVisible(false)} className="text-white hover:text-gray-200 transition-colors">
+                  ×
                 </button>
               </div>
             </div>
 
-            {/* Color Themes */}
-            <div className="mt-6">
-              <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-                <Palette size={16} className="text-pink-500" />
-                Color Themes
-              </h3>
-              <div className="grid grid-cols-3 gap-2">
-                {['default', 'cyber', 'nature', 'sunset', 'ocean', 'dark'].map((theme) => (
-                  <button
-                    key={theme}
-                    onClick={() => changeTheme(theme)}
-                    className={`p-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-                      activeTheme === theme
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white shadow-lg scale-105'
-                        : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-                    }`}
-
-                    {theme.charAt(0).toUpperCase() + theme.slice(1)}
+            {/* Content */}
+            <div className="p-4 space-y-4">
+              {/* Animation Controls */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white">Animations</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  <button className="p-2 bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded text-sm hover:bg-blue-200 dark:hover:bg-blue-900/40 transition-colors">
+                    Fade In
                   </button>
-                ))}
+                  <button className="p-2 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded text-sm hover:bg-green-200 dark:hover:bg-green-900/40 transition-colors">
+                    Slide In
+                  </button>
+                  <button className="p-2 bg-purple-100 dark:bg-purple-900/20 text-purple-700 dark:text-purple-300 rounded text-sm hover:bg-purple-200 dark:hover:bg-purple-900/40 transition-colors">
+                    Scale In
+                  </button>
+                  <button className="p-2 bg-orange-100 dark:bg-orange-900/20 text-orange-700 dark:text-orange-300 rounded text-sm hover:bg-orange-200 dark:hover:bg-orange-900/40 transition-colors">
+                    Bounce In
+                  </button>
+                </div>
+              </div>
+
+              {/* Visual Effects */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white">Visual Effects</h4>
+                <div className="grid grid-cols-2 gap-2">
+                  <button className="p-2 bg-indigo-100 dark:bg-indigo-900/20 text-indigo-700 dark:text-indigo-300 rounded text-sm hover:bg-indigo-200 dark:hover:bg-indigo-900/40 transition-colors">
+                    Glass Effect
+                  </button>
+                  <button className="p-2 bg-pink-100 dark:bg-pink-900/20 text-pink-700 dark:text-pink-300 rounded text-sm hover:bg-pink-200 dark:hover:bg-pink-900/40 transition-colors">
+                    Gradient Text
+                  </button>
+                  <button className="p-2 bg-teal-100 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300 rounded text-sm hover:bg-teal-200 dark:hover:bg-teal-900/40 transition-colors">
+                    Hover Lift
+                  </button>
+                  <button className="p-2 bg-yellow-100 dark:bg-yellow-900/20 text-yellow-700 dark:text-yellow-300 rounded text-sm hover:bg-yellow-200 dark:hover:bg-yellow-900/40 transition-colors">
+                    Glow Effect
+                  </button>
+                </div>
+              </div>
+
+              {/* Performance Info */}
+              <div className="space-y-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white">Performance</h4>
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Animations Enabled</div>
+                  <div className="text-lg font-semibold text-green-600">{enableAnimations ? 'Yes' : 'No'}</div>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-lg">
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Scroll Effects</div>
+                  <div className="text-lg font-semibold text-blue-600">{enableScrollEffects ? 'Yes' : 'No'}</div>
+                </div>
               </div>
             </div>
-=======
-    const root = document.documentElement;
-    
-    // Modern transition system
-    const transitions = {
-      fast: '150ms ease-in-out',
-      normal: '250ms ease-in-out',
-      slow: '350ms ease-in-out',
-      bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-      smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
-      sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
-    };
+          </motion.div>)}
+      </AnimatePresence>
 
-    Object.entries(transitions).forEach(([key, value]) => {
-      root.style.setProperty(`--transition-${key}`, value);
-    });
-  }, [enabled]);
+      {/* Background Particles */}
+      {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">
+          {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-20" initial = {
+  {
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+  
 
-  const enhanceBorderRadius = useCallback(() => {
-    if (!enabled) return;
+}} animate = {
+  {
+                    y[0, -100, 0],
+                    opacity[0.2, 0.5, 0.2],
+  
 
-    const root = document.documentElement;
-    
-    // Modern border radius system
-    const radius = {
-      none: '0px',
-      sm: '2px',
-      md: '6px',
-      lg: '8px',
-      xl: '12px',
-      '2xl': '16px',
-      '3xl': '24px',
-      full: '9999px'
-    };
+}} transition = {
+  {
+                    duration: Math.random() * 10 + 10,
+                    repeat: Infinity,
+                    ease: "linear",
+  
 
-    Object.entries(radius).forEach(([key, value]) => {
-      root.style.setProperty(`--radius-${key}`, value);
-    });
-  }, [enabled]);
-
-  const enhanceDarkMode = useCallback(() => {
-    if (!enabled) return;
-
-    const root = document.documentElement;
-    
-    if (isDarkMode) {
-      root.classList.add('dark');
-      root.style.setProperty('--bg-primary', '#0f172a');
-      root.style.setProperty('--bg-secondary', '#1e293b');
-      root.style.setProperty('--text-primary', '#f8fafc');
-      root.style.setProperty('--text-secondary', '#cbd5e1');
-      root.style.setProperty('--border-color', '#334155');
-    } else {
-      root.classList.remove('dark');
-      root.style.setProperty('--bg-primary', '#ffffff');
-      root.style.setProperty('--bg-secondary', '#f8fafc');
-      root.style.setProperty('--text-primary', '#0f172a');
-      root.style.setProperty('--text-secondary', '#475569');
-      root.style.setProperty('--border-color', '#e2e8f0');
-    }
-  }, [enabled, isDarkMode]);
-
-  const enhanceComponents = useCallback(() => {
-    if (!enabled) return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    // Add modern button styles
-    const buttons = document.querySelectorAll('button, .btn, [role="button"]');
-    buttons.forEach((button) => {
-      if (!button.classList.contains('modern-enhanced')) {
-        button.classList.add('modern-enhanced');
-        button.style.cssText += `
-          border-radius: var(--radius-md);
-          transition: var(--transition-normal);
-          font-weight: var(--font-weight-medium);
-          box-shadow: var(--shadow-sm);
-        `;
-      }
-    });
-
-    // Add modern card styles
-    const cards = document.querySelectorAll('.card, [class*="card"], [class*="Card"]');
-    cards.forEach((card) => {
-      if (!card.classList.contains('modern-enhanced')) {
-        card.classList.add('modern-enhanced');
-        card.style.cssText += `
-          border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-md);
-          transition: var(--transition-normal);
-          border: 1px solid var(--border-color);
-        `;
-      }
-    });
-  }, [enabled]);
-
-<<<<<<< HEAD
-      {/* Floating UI Elements */}
-      {settings.depthLayers && (
-        <div className="fixed top-20 right-20 pointer-events-none z-30">
-          <motion.div
-            className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
-            animate={{
-              scale: [1, 1.2, 1],
-              rotate: [0, 180, 360],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-        </div>
-      )}
-    </>
-  );
-};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div></motion.div>}
-=======
-  useEffect(() => {
-    if (!enabled) return;
-
-    enhanceTypography();
-    enhanceColorScheme();
-    enhanceSpacing();
-    enhanceShadows();
-    enhanceTransitions();
-    enhanceBorderRadius();
-    enhanceDarkMode();
-    enhanceComponents();
-  }, [
-    enabled,
-    enhanceTypography,
-    enhanceColorScheme,
-    enhanceSpacing,
-    enhanceShadows,
-    enhanceTransitions,
-    enhanceBorderRadius,
-    enhanceDarkMode,
-    enhanceComponents
-  ]);
-
-  // Don't render anything - this is a utility component
-  return null;
-};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}}/>))}
+        </div>)}
+    </>)};
+export default ModernUIEnhancer;

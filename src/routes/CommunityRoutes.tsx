@@ -1,27 +1,8 @@
-import { Route, Routes } from 'react-router-dom';
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import CommunityPage from "../pages/CommunityPage";
-import ForumCategoryPage from "../pages/ForumCategoryPage";
-import ForumPostPage from "../pages/ForumPostPage";
-import CreatePostPage from "../pages/CreatePostPage";
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-
+import React from 'react';
+// Next.js routing - no need for react-router-dom
+import CommunityPage from '@/pages/CommunityPage';
 export default function CommunityRoutes() {
-  return (
-<<<<<<< HEAD
-    <Routes>
-      <Route path = "" element={<CommunityPage />} />
-      <Route path="category/:categorySlug" element={<ForumCategoryPage />} />
-      <Route path="post/:postId" element={<ForumPostPage />} />
-      <Route path="create" element={<CreatePostPage />} />
-      <Route path="edit/:postId" element={<EditPostPage />} />
-      <Route path="profile/:username" element={<CommunityProfilePage />} />
-    </Routes>
-=======;
-    <>;
-      <Route path = "" element={<CommunityPage />} />;
-    </>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  );
+    return (<>
+      <Route path="" element={<CommunityPage />}/>
+    </>);
 }

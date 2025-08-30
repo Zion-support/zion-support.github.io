@@ -1,701 +1,417 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Award, 
-  Code, 
-  Truck, 
-  Building, 
-  BarChart3, 
-  PenTool, 
-  Eye, 
-  Server, 
-  Smartphone, 
-  Database, 
-  Network, 
-  Clock, 
-  ArrowRight, 
-  Sparkles, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Satellite, 
-  FileText,
-  Zap,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Car,
-  Plane,
-  Ship,
-  Train,
-  Leaf,
-  Sun,
-  Wind,
-  Droplets,
-  Mountain,
-  TreePine,
-  Recycle,
-  Lightbulb,
-  Battery,
-  Wifi,
-  Bluetooth,
-  Radio,
-  Satellite,
-  Telescope,
-  Microscope,
-  Flask,
-  TestTube,
-  Beaker,
-  Pill,
-  Stethoscope,
-  Syringe,
-  HeartPulse,
-  Activity,
-  Thermometer,
-  Droplet,
-  EyeOff,
-  Eye,
-  Key,
-  Fingerprint,
-  Scan,
-  QrCode,
-  CreditCard,
-  Wallet,
-  PiggyBank,
-  TrendingDown,
-  BarChart,
-  PieChart,
-  LineChart,
-  ScatterChart,
-  AreaChart,
-  CandlestickChart,
-  GanttChart,
-  Kanban,
-  Calendar,
-  Clock,
-  Timer,
-  Stopwatch,
-  Hourglass,
-  CalendarDays,
-  CalendarCheck,
-  CalendarX,
-  CalendarPlus,
-  CalendarMinus,
-  CalendarRange,
-  CalendarSearch,
-  CalendarClock,
-  CalendarHeart,
-  CalendarStar,
-  CalendarUser,
-  CalendarSettings,
-  CalendarEdit,
-  CalendarTrash,
-  CalendarOff,
-  CalendarEvent,
-  CalendarTime,
-  CalendarWeek,
-  CalendarMonth,
-  CalendarYear,
-  CalendarDays2,
-  CalendarCheck2,
-  CalendarX2,
-  CalendarPlus2,
-  CalendarMinus2,
-  CalendarRange2,
-  CalendarSearch2,
-  CalendarClock2,
-  CalendarHeart2,
-  CalendarStar2,
-  CalendarUser2,
-  CalendarSettings2,
-  CalendarEdit2,
-  CalendarTrash2,
-  CalendarOff2,
-  CalendarEvent2,
-  CalendarTime2,
-  CalendarWeek2,
-  CalendarMonth2,
-  CalendarYear2
-} from 'lucide-react';
-
-export default function InnovativeServices2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  // Enhanced Services Catalog 2025
-  const services = [
-    // AI & Machine Learning Services
-    {
-      id: 'ai-business-intelligence',
-      name: 'AI Business Intelligence Platform',
-      description: 'Advanced AI-powered business analytics and insights platform with predictive modeling and real-time dashboards.',
-      category: 'AI & ML',
-      price: '$2,500/month',
-      features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom Reports', 'API Integration', '24/7 Support'],
-      icon: Brain,
-      badge: 'Popular',
-      color: 'from-purple-600 to-indigo-700',
-      link: '/services/ai-business-intelligence',
-      marketPrice: '$3,200/month',
-      savings: '22%',
-      rating: 4.9,
-      reviews: 127
-    },
-    {
-      id: 'ai-compliance-assistant',
-      name: 'AI Compliance Automation Suite',
-      description: 'Automated compliance monitoring and reporting for regulatory requirements across industries.',
-      category: 'AI & ML',
-      price: '$1,800/month',
-      features: ['Regulatory Monitoring', 'Automated Reporting', 'Risk Assessment', 'Audit Trails', 'Compliance Dashboard'],
-      icon: Shield,
-      badge: 'New',
-      color: 'from-green-600 to-emerald-700',
-      link: '/services/ai-compliance-assistant',
-      marketPrice: '$2,400/month',
-      savings: '25%',
-      rating: 4.8,
-      reviews: 89
-    },
-    {
-      id: 'ai-sales-copilot',
-      name: 'AI Sales Copilot Platform',
-      description: 'Intelligent sales automation with lead scoring, customer insights, and sales forecasting.',
-      category: 'AI & ML',
-      price: '$2,200/month',
-      features: ['Lead Scoring', 'Customer Insights', 'Sales Forecasting', 'CRM Integration', 'Performance Analytics'],
-      icon: TrendingUp,
-      badge: 'Featured',
-      color: 'from-blue-600 to-cyan-700',
-      link: '/services/ai-sales-copilot',
-      marketPrice: '$2,800/month',
-      savings: '21%',
-      rating: 4.9,
-      reviews: 156
-    },
-    {
-      id: 'ai-content-marketing-suite',
-      name: 'AI Content Marketing Suite',
-      description: 'Complete content creation, optimization, and distribution platform powered by advanced AI.',
-      category: 'AI & ML',
-      price: '$1,900/month',
-      features: ['Content Creation', 'SEO Optimization', 'Social Media Management', 'Analytics Dashboard', 'Multi-platform Publishing'],
-      icon: PenTool,
-      badge: 'New',
-      color: 'from-pink-600 to-rose-700',
-      link: '/services/ai-content-marketing-suite',
-      marketPrice: '$2,500/month',
-      savings: '24%',
-      rating: 4.7,
-      reviews: 94
-    },
-    {
-      id: 'ai-customer-support-automation',
-      name: 'AI Customer Support Automation',
-      description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',
-      category: 'AI & ML',
-      price: '$1,600/month',
-      features: ['Smart Chatbots', 'Ticket Routing', 'Sentiment Analysis', 'Knowledge Base', 'Performance Metrics'],
-      icon: MessageCircle,
-      badge: 'Popular',
-      color: 'from-cyan-600 to-blue-700',
-      link: '/services/ai-customer-support-automation',
-      marketPrice: '$2,100/month',
-      savings: '24%',
-      rating: 4.8,
-      reviews: 203
-    },
-    {
-      id: 'ai-project-management',
-      name: 'AI Project Management Platform',
-      description: 'Intelligent project planning, resource allocation, and risk management with AI insights.',
-      category: 'AI & ML',
-      price: '$2,300/month',
-      features: ['Smart Planning', 'Resource Optimization', 'Risk Management', 'Team Collaboration', 'Progress Tracking'],
-      icon: Workflow,
-      badge: 'Featured',
-      color: 'from-orange-600 to-red-700',
-      link: '/services/ai-project-management',
-      marketPrice: '$2,900/month',
-      savings: '21%',
-      rating: 4.9,
-      reviews: 178
-    },
-
-    // IT Infrastructure Services
-    {
-      id: 'cloud-devops-platform',
-      name: 'Cloud DevOps Automation Platform',
-      description: 'Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',
-      category: 'IT Infrastructure',
-      price: '$3,200/month',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring & Alerting', 'Security Scanning', 'Auto-scaling'],
-      icon: Cloud,
-      badge: 'Popular',
-      color: 'from-blue-600 to-indigo-700',
-      link: '/services/cloud-devops',
-      marketPrice: '$4,100/month',
-      savings: '22%',
-      rating: 4.9,
-      reviews: 234
-    },
-    {
-      id: 'it-infrastructure-management',
-      name: 'IT Infrastructure Management Suite',
-      description: 'Complete IT infrastructure monitoring, management, and optimization platform.',
-      category: 'IT Infrastructure',
-      price: '$2,800/month',
-      features: ['Infrastructure Monitoring', 'Performance Optimization', 'Capacity Planning', 'Security Management', 'Backup & Recovery'],
-      icon: Server,
-      badge: 'Featured',
-      color: 'from-gray-600 to-slate-700',
-      link: '/services/it-infrastructure',
-      marketPrice: '$3,500/month',
-      savings: '20%',
-      rating: 4.8,
-      reviews: 167
-    },
-    {
-      id: 'cybersecurity-platform',
-      name: 'AI-Powered Cybersecurity Platform',
-      description: 'Advanced threat detection, vulnerability assessment, and security automation platform.',
-      category: 'IT Infrastructure',
-      price: '$3,500/month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Automation', 'Incident Response', 'Compliance Reporting'],
-      icon: Lock,
-      badge: 'Popular',
-      color: 'from-red-600 to-pink-700',
-      link: '/services/ai-cybersecurity-platform',
-      marketPrice: '$4,400/month',
-      savings: '20%',
-      rating: 4.9,
-      reviews: 289
-    },
-
-    // Micro SaaS Solutions
-    {
-      id: 'finops-advisor',
-      name: 'FinOps Cloud Cost Optimizer',
-      description: 'Cloud cost optimization and financial operations management platform for enterprises.',
-      category: 'Micro SaaS',
-      price: '$1,200/month',
-      features: ['Cost Optimization', 'Budget Management', 'Resource Tracking', 'Cost Allocation', 'Savings Recommendations'],
-      icon: DollarSign,
-      badge: 'New',
-      color: 'from-green-600 to-emerald-700',
-      link: '/services/finops-advisor',
-      marketPrice: '$1,600/month',
-      savings: '25%',
-      rating: 4.7,
-      reviews: 76
-    },
-    {
-      id: 'zero-trust-network',
-      name: 'Zero Trust Network Access Platform',
-      description: 'Secure network access control with identity verification and continuous monitoring.',
-      category: 'Micro SaaS',
-      price: '$2,100/month',
-      features: ['Identity Verification', 'Access Control', 'Continuous Monitoring', 'Threat Detection', 'Compliance Reporting'],
-      icon: Shield,
-      badge: 'Featured',
-      color: 'from-indigo-600 to-purple-700',
-      link: '/services/zero-trust-network-access',
-      marketPrice: '$2,700/month',
-      savings: '22%',
-      rating: 4.8,
-      reviews: 134
-    },
-    {
-      id: 'dsr-portal',
-      name: 'Data Subject Rights Portal',
-      description: 'GDPR compliance platform for managing data subject requests and privacy rights.',
-      category: 'Micro SaaS',
-      price: '$900/month',
-      features: ['Request Management', 'Data Mapping', 'Consent Management', 'Privacy Impact Assessment', 'Compliance Reporting'],
-      icon: FileText,
-      badge: 'New',
-      color: 'from-teal-600 to-cyan-700',
-      link: '/services/dsr-portal',
-      marketPrice: '$1,200/month',
-      savings: '25%',
-      rating: 4.6,
-      reviews: 89
-    },
-
-    // Emerging Technology Services
-    {
-      id: 'quantum-computing-platform',
-      name: 'Quantum Computing Solutions',
-      description: 'Quantum computing services for optimization, cryptography, and scientific computing.',
-      category: 'Emerging Tech',
-      price: '$5,000/month',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Scientific Computing', 'Research Support'],
-      icon: Atom,
-      badge: 'Future',
-      color: 'from-purple-600 to-pink-700',
-      link: '/services/quantum-computing',
-      marketPrice: '$6,500/month',
-      savings: '23%',
-      rating: 4.9,
-      reviews: 45
-    },
-    {
-      id: 'edge-computing-platform',
-      name: 'Edge Computing Platform',
-      description: 'Distributed edge computing platform for IoT, real-time processing, and low-latency applications.',
-      category: 'Emerging Tech',
-      price: '$2,800/month',
-      features: ['Edge Nodes', 'Real-time Processing', 'IoT Integration', 'Low Latency', 'Scalable Architecture'],
-      icon: Cpu,
-      badge: 'Featured',
-      color: 'from-blue-600 to-cyan-700',
-      link: '/services/edge-computing',
-      marketPrice: '$3,600/month',
-      savings: '22%',
-      rating: 4.8,
-      reviews: 123
-    },
-    {
-      id: 'blockchain-platform',
-      name: 'Enterprise Blockchain Platform',
-      description: 'Scalable blockchain solutions for supply chain, finance, and digital identity management.',
-      category: 'Emerging Tech',
-      price: '$3,200/month',
-      features: ['Smart Contracts', 'Supply Chain Tracking', 'Digital Identity', 'Token Management', 'Consensus Mechanisms'],
-      icon: Link,
-      badge: 'Popular',
-      color: 'from-green-600 to-blue-700',
-      link: '/services/blockchain',
-      marketPrice: '$4,100/month',
-      savings: '22%',
-      rating: 4.7,
-      reviews: 167
-    }
-  ];
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Star, count: services.length },
-    { id: 'AI & ML', name: 'AI & Machine Learning', icon: Brain, count: services.filter(s => s.category === 'AI & ML').length },
-    { id: 'IT Infrastructure', name: 'IT Infrastructure', icon: Server, count: services.filter(s => s.category === 'IT Infrastructure').length },
-    { id: 'Micro SaaS', name: 'Micro SaaS', icon: Rocket, count: services.filter(s => s.category === 'Micro SaaS').length },
-    { id: 'Emerging Tech', name: 'Emerging Technology', icon: Atom, count: services.filter(s => s.category === 'Emerging Tech').length }
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
-      case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
-      case 'rating':
-        return b.rating - a.rating;
-      case 'popularity':
-      default:
-        return b.reviews - a.reviews;
-    }
-  });
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+const InnovativeServices2025 = () => {
+    const innovativeServices = [
+        {
+            category: "AI-Powered Micro SAAS Solutions",
+            description: "Intelligent software-as-a-service solutions that automate and optimize business processes",
+            services[
+                {
+                    name: "AI-Powered HR Assistant",
+                    description: "Revolutionary HR automation platform that transforms recruitment, onboarding, and employee management through artificial intelligence.",
+                    features[
+                        "AI-powered resume screening with 95% accuracy",
+                        "Intelligent interview scheduling and candidate matching",
+                        "Automated employee onboarding workflows",
+                        "Performance tracking and predictive analytics",
+                        "Bias detection and elimination algorithms"
+                    ],
+                    benefits[
+                        "70% faster hiring process",
+                        "Reduced unconscious bias in hiring",
+                        "Improved employee retention by 40%",
+                        "Automated compliance tracking",
+                        "Real-time performance insights"
+                    ],
+                    pricing: "$199 - $799/month",
+                    marketPosition: "Leading AI-powered HR solution for mid-market companies",
+                    useCases["Recruitment agencies", "HR departments", "Startups", "Enterprise companies"],
+                    competitors["BambooHR", "Workday", "Zenefits"],
+                    competitiveAdvantage: "Advanced AI algorithms, comprehensive automation, and bias-free hiring processes"
+                },
+                {
+                    name: "Smart Inventory Management",
+                    description: "AI-driven inventory optimization platform that eliminates stockouts and reduces carrying costs through predictive analytics.",
+                    features[
+                        "Machine learning demand forecasting",
+                        "Automated reorder point calculations",
+                        "Supplier performance analytics",
+                        "Real-time inventory tracking",
+                        "Multi-location optimization"
+                    ],
+                    benefits[
+                        "30% reduction in inventory costs",
+                        "Zero stockout incidents",
+                        "Improved supplier relationships",
+                        "Real-time visibility across locations",
+                        "Automated compliance reporting"
+                    ],
+                    pricing: "$149 - $599/month",
+                    marketPosition: "Next-generation inventory management for retail and manufacturing",
+                    useCases["Retail chains", "Manufacturing", "E-commerce", "Distribution centers"],
+                    competitors["TradeGecko", "Zoho Inventory", "Fishbowl"],
+                    competitiveAdvantage: "AI-powered forecasting, real-time optimization, and seamless ERP integration"
+                },
+                {
+                    name: "AI Legal Document Analyzer",
+                    description: "Advanced legal AI platform that automates document review, contract analysis, and compliance monitoring.",
+                    features[
+                        "Natural language processing for legal documents",
+                        "Automated contract risk assessment",
+                        "Compliance violation detection",
+                        "Legal research automation",
+                        "Audit trail and reporting"
+                    ],
+                    benefits[
+                        "90% faster document review",
+                        "Comprehensive risk identification",
+                        "Automated compliance checking",
+                        "Reduced legal costs",
+                        "Improved accuracy and consistency"
+                    ],
+                    pricing: "$299 - $1,199/month",
+                    marketPosition: "Cutting-edge legal AI for law firms and corporate legal departments",
+                    useCases["Law firms", "Corporate legal", "Compliance teams", "Contract management"],
+                    competitors["Kira Systems", "Luminance", "eBrevia"],
+                    competitiveAdvantage: "Advanced NLP, comprehensive risk assessment, and seamless legal workflow integration"
+                }
+            ]
+        },
+        {
+            category: "Advanced AI & Machine Learning",
+            description: "Enterprise-grade artificial intelligence solutions that drive innovation and competitive advantage",
+            services[
+                {
+                    name: "AI-Powered Fraud Detection",
+                    description: "Next-generation fraud prevention platform using machine learning to detect and prevent fraudulent activities in real-time.",
+                    features[
+                        "Real-time transaction monitoring",
+                        "Behavioral pattern recognition",
+                        "Machine learning risk scoring",
+                        "Automated fraud alerts",
+                        "Comprehensive fraud analytics"
+                    ],
+                    benefits[
+                        "99.9% fraud detection accuracy",
+                        "Real-time prevention capabilities",
+                        "Reduced false positives by 80%",
+                        "Compliance with regulatory requirements",
+                        "Significant cost savings from fraud prevention"
+                    ],
+                    pricing: "$3,000 - $25,000/month",
+                    marketPosition: "Leading AI fraud detection for financial institutions and e-commerce",
+                    useCases["Banks", "Credit card companies", "E-commerce platforms", "Insurance companies"],
+                    competitors["Sift", "Signifyd", "Forter"],
+                    competitiveAdvantage: "Advanced ML algorithms, real-time processing, and industry-leading accuracy rates"
+                },
+                {
+                    name: "AI Supply Chain Optimization",
+                    description: "Intelligent supply chain platform that optimizes operations, reduces costs, and improves efficiency through AI-powered analytics.",
+                    features[
+                        "Predictive demand forecasting",
+                        "Route optimization algorithms",
+                        "Supplier performance analytics",
+                        "Real-time supply chain visibility",
+                        "Risk assessment and mitigation"
+                    ],
+                    benefits[
+                        "25% reduction in supply chain costs",
+                        "Improved delivery performance",
+                        "Enhanced supplier relationships",
+                        "Real-time risk monitoring",
+                        "Data-driven decision making"
+                    ],
+                    pricing: "$4,000 - $30,000/month",
+                    marketPosition: "Advanced supply chain optimization for global enterprises",
+                    useCases["Manufacturing", "Logistics", "Retail", "Healthcare"],
+                    competitors["Llamasoft", "AnyLogic", "FlexSim"],
+                    competitiveAdvantage: "AI-powered optimization, real-time visibility, and comprehensive risk management"
+                },
+                {
+                    name: "AI-Powered Healthcare",
+                    description: "Revolutionary healthcare AI platform that improves diagnosis accuracy, patient care, and operational efficiency.",
+                    features[
+                        "Medical imaging analysis",
+                        "Diagnostic assistance algorithms",
+                        "Patient monitoring systems",
+                        "Drug discovery optimization",
+                        "Healthcare analytics dashboard"
+                    ],
+                    benefits[
+                        "Improved diagnostic accuracy by 30%",
+                        "Enhanced patient care quality",
+                        "Reduced healthcare costs",
+                        "Faster treatment decisions",
+                        "Better resource utilization"
+                    ],
+                    pricing: "$8,000 - $60,000/month",
+                    marketPosition: "Leading healthcare AI for hospitals and medical institutions",
+                    useCases["Hospitals", "Medical clinics", "Research institutions", "Pharmaceutical companies"],
+                    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+                    competitiveAdvantage: "Advanced medical AI, comprehensive healthcare integration, and regulatory compliance"
+                }
+            ]
+        },
+        {
+            category: "Emerging Technology Solutions",
+            description: "Cutting-edge technology services that position businesses for the future",
+            services[
+                {
+                    name: "Quantum Computing Consulting",
+                    description: "Expert guidance on quantum computing strategy, implementation, and business transformation for forward-thinking organizations.",
+                    features[
+                        "Quantum computing strategy development",
+                        "Use case identification and validation",
+                        "Vendor selection and evaluation",
+                        "Implementation roadmap planning",
+                        "Quantum workforce development"
+                    ],
+                    benefits[
+                        "Future-ready technology strategy",
+                        "Competitive advantage in emerging tech",
+                        "Innovation leadership positioning",
+                        "Strategic technology planning",
+                        "Expert guidance and support"
+                    ],
+                    pricing: "$5,000 - $25,000/month",
+                    marketPosition: "Premier quantum computing consulting for Fortune 500 companies",
+                    useCases["Financial services", "Pharmaceutical", "Logistics", "Research institutions"],
+                    competitors["McKinsey", "BCG", "Deloitte"],
+                    competitiveAdvantage: "Deep quantum expertise, practical implementation experience, and strategic business focus"
+                },
+                {
+                    name: "Metaverse Development",
+                    description: "Complete metaverse platform development including VR/AR experiences, 3D environments, and interactive digital spaces.",
+                    features[
+                        "Virtual reality platform development",
+                        "Augmented reality applications",
+                        "3D modeling and design",
+                        "Interactive experience creation",
+                        "Multi-user platform support"
+                    ],
+                    benefits[
+                        "Innovation leadership in emerging tech",
+                        "New revenue streams and business models",
+                        "Enhanced customer engagement",
+                        "Competitive differentiation",
+                        "Future-ready technology infrastructure"
+                    ],
+                    pricing: "$8,000 - $60,000/month",
+                    marketPosition: "Leading metaverse development for brands and enterprises",
+                    useCases["Brand marketing", "Virtual events", "Training and education", "Entertainment"],
+                    competitors["Meta", "Microsoft", "Unity"],
+                    competitiveAdvantage: "Custom development, rapid prototyping, and comprehensive platform solutions"
+                },
+                {
+                    name: "Web3 Development",
+                    description: "Complete Web3 development services including decentralized applications, DeFi platforms, and blockchain integration.",
+                    features[
+                        "Decentralized application development",
+                        "Smart contract development",
+                        "DeFi platform creation",
+                        "NFT marketplace development",
+                        "Blockchain integration services"
+                    ],
+                    benefits[
+                        "Decentralized business models",
+                        "Innovation in financial services",
+                        "New revenue opportunities",
+                        "Technology leadership",
+                        "Future-proof architecture"
+                    ],
+                    pricing: "$6,000 - $45,000/month",
+                    marketPosition: "Expert Web3 development for fintech and innovative businesses",
+                    useCases["Financial services", "Gaming", "Art and collectibles", "Supply chain"],
+                    competitors["Consensys", "Chainlink Labs", "Alchemy"],
+                    competitiveAdvantage: "Full-stack Web3 development, rapid deployment, and comprehensive blockchain expertise"
+                }
+            ]
+        },
+        {
+            category: "Advanced Cybersecurity Solutions",
+            description: "Next-generation security solutions that protect against evolving cyber threats",
+            services[
+                {
+                    name: "Zero Trust Architecture",
+                    description: "Modern security architecture implementation that eliminates implicit trust and continuously validates every access request.",
+                    features[
+                        "Identity verification and authentication",
+                        "Continuous access monitoring",
+                        "Network segmentation",
+                        "Threat detection and response",
+                        "Compliance and audit support"
+                    ],
+                    benefits[
+                        "Enhanced security posture",
+                        "Reduced attack surface",
+                        "Improved compliance",
+                        "Better visibility and control",
+                        "Adaptive security architecture"
+                    ],
+                    pricing: "$4,500 - $35,000/month",
+                    marketPosition: "Leading zero trust implementation for enterprise organizations",
+                    useCases["Financial services", "Healthcare", "Government", "Technology companies"],
+                    competitors["Palo Alto Networks", "Cisco", "Microsoft"],
+                    competitiveAdvantage: "Comprehensive implementation, rapid deployment, and ongoing optimization support"
+                },
+                {
+                    name: "AI-Powered Cybersecurity",
+                    description: "Next-generation cybersecurity platform that uses artificial intelligence to detect and respond to threats in real-time.",
+                    features[
+                        "AI-powered threat detection",
+                        "Behavioral analysis and monitoring",
+                        "Automated incident response",
+                        "Predictive security analytics",
+                        "Continuous learning and adaptation"
+                    ],
+                    benefits[
+                        "Proactive threat prevention",
+                        "Zero-day attack protection",
+                        "Automated response capabilities",
+                        "Reduced false positives",
+                        "Continuous security improvement"
+                    ],
+                    pricing: "$5,000 - $40,000/month",
+                    marketPosition: "Advanced AI cybersecurity for high-security environments",
+                    useCases["Critical infrastructure", "Financial institutions", "Healthcare", "Government"],
+                    competitors["Darktrace", "CrowdStrike", "SentinelOne"],
+                    competitiveAdvantage: "Advanced AI algorithms, real-time protection, and comprehensive threat intelligence"
+                }
+            ]
+        }
+    ];
+    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-blue-light py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
-          >
-            Innovative Services 2025
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-zion-blue-light max-w-4xl mx-auto mb-8"
-          >
-            Discover cutting-edge AI solutions, micro SAAS platforms, and revolutionary IT services that will transform your business in 2025
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="bg-white text-zion-blue-dark px-8 py-3 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/pricing"
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300"
-            >
-              View Pricing
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information Banner */}
-      <section className="bg-zion-slate-dark py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-zion-blue-light">
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Innovative
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Services 2025
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover our cutting-edge portfolio of AI-powered micro SAAS solutions, advanced technology services, and emerging tech innovations designed to transform your business and drive competitive advantage
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              Call Us: +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              Email Us
+            </a>
+          </div>
+          <div className="text-sm text-gray-400 space-y-1">
+            <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>
 
-      {/* Filters and Search */}
-      <section className="py-8 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-zion-blue text-white'
-                      : 'bg-zion-slate text-zion-blue-light hover:bg-zion-slate-light'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  <span>{category.name}</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                    {category.count}
-                  </span>
-                </button>
-              ))}
+      {/* Services Categories */}
+      {innovativeServices.map((category, categoryIndex) => (<section key={categoryIndex} className={`py-20 px-4 sm:px-6 lg:px-8 ${categoryIndex % 2 === 0 ? 'bg-white/5' : ''}`}>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {category.category}
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                {category.description}
+              </p>
             </div>
+            
+            <div className="space-y-12">
+              {category.services.map((service, serviceIndex) => (<div key={serviceIndex} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Service Details */}
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                      <p className="text-gray-300 mb-6 text-lg">{service.description}</p>
+                      
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-blue-400 mb-3">Key Features:</h4>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, idx) => (<li key={idx} className="text-gray-300 flex items-start">
+                              <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                              {feature}
+                            </li>))}
+                        </ul>
+                      </div>
 
-            {/* Search and Sort */}
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full sm:w-64 px-4 py-2 pl-10 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
-                />
-                <Search className="absolute left-3 top-2.5 w-4 h-4 text-zion-blue-light" />
-              </div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-zion-slate text-white rounded-lg border border-zion-slate-light focus:border-zion-blue focus:outline-none"
-              >
-                <option value="popularity">Most Popular</option>
-                <option value="rating">Highest Rated</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-              </select>
+                      <div className="mb-6">
+                        <h4 className="text-lg font-semibold text-green-400 mb-3">Key Benefits:</h4>
+                        <ul className="space-y-2">
+                          {service.benefits.map((benefit, idx) => (<li key={idx} className="text-gray-300 flex items-start">
+                              <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                              {benefit}
+                            </li>))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Market Information */}
+                    <div className="space-y-6">
+                      <div className="bg-white/5 rounded-lg p-6">
+                        <h4 className="text-lg font-semibold text-yellow-400 mb-3">Pricing & Market Position</h4>
+                        <div className="space-y-3">
+                          <div>
+                            <span className="text-sm text-gray-400">Pricing:</span>
+                            <p className="text-white font-semibold text-lg">{service.pricing}</p>
+                          </div>
+                          <div>
+                            <span className="text-sm text-gray-400">Market Position:</span>
+                            <p className="text-gray-300">{service.marketPosition}</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-white/5 rounded-lg p-6">
+                        <h4 className="text-lg font-semibold text-purple-400 mb-3">Business Information</h4>
+                        <div className="space-y-3">
+                          <div>
+                            <span className="text-sm text-gray-400">Use Cases:</span>
+                            <p className="text-gray-300">{service.useCases.join(", ")}</p>
+                          </div>
+                          <div>
+                            <span className="text-sm text-gray-400">Competitors:</span>
+                            <p className="text-gray-300">{service.competitors.join(", ")}</p>
+                          </div>
+                          <div>
+                            <span className="text-sm text-gray-400">Competitive Advantage:</span>
+                            <p className="text-gray-300">{service.competitiveAdvantage}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>))}
             </div>
+          </div>
+        </section>))}
+
+      {/* Enhanced CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business with Innovation?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our cutting-edge services can position your business for success in 2025 and beyond
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              Start Your Innovation Journey
+            </Link>
+            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="text-sm text-gray-400 space-y-1">
+            <p>📧 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
+            <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${selectedCategory}-${searchQuery}-${sortBy}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {sortedServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-zion-slate-light hover:border-zion-blue transition-all duration-300 hover:shadow-2xl hover:shadow-zion-blue/20"
-                >
-                  {/* Badge */}
-                  {service.badge && (
-                    <div className="absolute top-4 right-4">
-                      <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                        service.badge === 'New' ? 'bg-green-500 text-white' :
-                        service.badge === 'Popular' ? 'bg-blue-500 text-white' :
-                        service.badge === 'Featured' ? 'bg-purple-500 text-white' :
-                        'bg-orange-500 text-white'
-                      }`}>
-                        {service.badge}
-                      </span>
-                    </div>
-                  )}
-
-                  {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-full h-full text-white" />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-blue-light transition-colors duration-300">
-                    {service.name}
-                  </h3>
-                  <p className="text-zion-blue-light mb-4 line-clamp-3">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-zion-blue-light mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, idx) => (
-                        <li key={idx} className="text-xs text-zion-blue-light flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 bg-zion-blue rounded-full"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Pricing and Rating */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-white">{service.price}</div>
-                      <div className="text-sm text-zion-blue-light line-through">{service.marketPrice}</div>
-                      <div className="text-xs text-green-400">Save {service.savings}</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="flex items-center gap-1 mb-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${
-                              i < Math.floor(service.rating)
-                                ? 'text-yellow-400 fill-current'
-                                : 'text-zion-slate-light'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <div className="text-xs text-zion-blue-light">
-                        {service.rating} ({service.reviews} reviews)
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* CTA Button */}
-                  <Link
-                    to={service.link}
-                    className="w-full bg-gradient-to-r from-zion-blue to-zion-blue-light text-white py-3 px-6 rounded-xl font-semibold hover:from-zion-blue-light hover:to-zion-blue transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-zion-blue/25"
-                  >
-                    Learn More
-                    <ArrowRight className="inline-block w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
-                </motion.div>
-              ))}
-            </motion.div>
-          </AnimatePresence>
-
-          {/* No Results */}
-          {sortedServices.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
-              <div className="text-6xl mb-4">🔍</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-              <p className="text-zion-blue-light">Try adjusting your search criteria or browse all services.</p>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-blue-light">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold text-white mb-6"
-          >
-            Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-blue-light max-w-3xl mx-auto mb-8"
-          >
-            Join thousands of businesses already leveraging our innovative services to stay ahead of the competition.
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <Link
-              to="/contact"
-              className="bg-white text-zion-blue-dark px-8 py-4 rounded-full font-semibold hover:bg-zion-blue-light transition-colors duration-300 text-lg"
-            >
-              Schedule a Demo
-            </Link>
-            <Link
-              to="/pricing"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-zion-blue-dark transition-colors duration-300 text-lg"
-            >
-              View Full Pricing
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}
+    </div>)};
+export default InnovativeServices2025;

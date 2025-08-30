@@ -1,44 +1,11 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
+import React from "react";
+export function GradientHeading({ children, className, level = "h2", id }) {
+    const Tag = level;
+    return (<Tag id={id} className = {
+  cn("text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+  className)
 
-interface GradientHeadingProps {
-  children: React.ReactNode;
-  className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-
-<<<<<<< HEAD
-export const GradientHeading: React.FC<GradientHeadingProps> = ({
-  children,
-  className = '',
-  as: Component = 'h2'
-}) => {
-  return (
-    <Component
-      className={`bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent ${className}`}
-
+}>
       {children}
-    </Component>
-  );
-};}
-=======
-const GradientHeading = React.forwardRef<HTMLHeadingElement, GradientHeadingProps>(
-  ({ children, className, as: Component = 'h2', ...props }, ref) => {
-    return (
-      <Component
-        ref={ref}
-        className={cn(
-          'font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent',
-          className
-        )}
-        {...props}
-      >
-        {children}
-      </Component>
-    );
-  }
-);
-
-GradientHeading.displayName = 'GradientHeading';
-
-export { GradientHeading };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    </Tag>)}

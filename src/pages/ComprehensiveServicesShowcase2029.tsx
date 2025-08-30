@@ -491,6 +491,6 @@ export default function ComprehensiveServicesShowcase2029() {
       </section>
     </div>
   );
-};
+}
 
 export default ComprehensiveServicesShowcase2029;
