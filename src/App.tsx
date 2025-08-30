@@ -45,6 +45,7 @@ const AILegalContractAnalyzer = createLazyComponent(() => import('./pages/servic
 const AIHealthcarePredictiveAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-predictive-analytics-2025'));
 const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-trading-platform-2025'));
 const AISupplyChainOptimization2025 = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-2025'));
+const AICustomerExperienceAnalytics = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-2025'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -183,6 +184,7 @@ function App() {
                     <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
                     <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization2025 />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
