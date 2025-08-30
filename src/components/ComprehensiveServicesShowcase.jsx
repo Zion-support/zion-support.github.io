@@ -585,8 +585,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
     </div>))};
 }
 
-interface ServiceCardProps {service}: any;
-  getCategoryIcon: (category: string) => React.ReactNode;
+interface ServiceCardProps {service}: ;getCategoryIcon: (category: string) => React.ReactNode;
 }
 
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}

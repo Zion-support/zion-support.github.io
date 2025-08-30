@@ -167,7 +167,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500/50"
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
               >
                 {categories.map(category  => (
                   <option key={category} value={category}>
@@ -202,7 +202,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {
         initial="hidden"
         animate="visible"
       >
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service)  => (
             <motion.div
               key={service.id}

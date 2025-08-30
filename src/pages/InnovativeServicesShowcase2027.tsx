@@ -7,7 +7,7 @@ import { Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
  } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027(...args: any[]): any {
+export default function InnovativeServicesShowcase2027(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -112,12 +112,12 @@ export default function InnovativeServicesShowcase2027(...args: any[]): any {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: any0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyBrain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyStar, color: 'from-yellow-500 to-orange-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
             ].map((stat, index)  => (
               <div key={index} className="text-center group">
@@ -159,7 +159,7 @@ export default function InnovativeServicesShowcase2027(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
@@ -215,7 +215,7 @@ export default function InnovativeServicesShowcase2027(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: any0.3 }}
+                transition={{ duration: 0.3 }}
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div

@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Truck, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function AISupplyChainOptimization(...args: any[]): any {
+export default function AISupplyChainOptimization(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -120,7 +120,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Demand Forecasting",
@@ -191,7 +191,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Machine Learning",
@@ -285,7 +285,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"15-25%", label: "Cost Reduction", description: "Supply chain costs" },
+                    { metric: "15-25%", label: "Cost Reduction", description: "Supply chain costs" },
                     { metric: "30-40%", label: "Delivery Performance", description: "Improvement" },
                     { metric: "20-30%", label: "Inventory Costs", description: "Reduction" },
                     { metric: "90%+", label: "Visibility", description: "Supply chain transparency" }
@@ -314,7 +314,7 @@ export default function AISupplyChainOptimization(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function EmployeeSchedulingSaaS(...args: any[]): any {
+export default function EmployeeSchedulingSaaS(...args: []):  {
   const features = [
     {
       icon: Calendar,
@@ -236,7 +236,7 @@ export default function EmployeeSchedulingSaaS(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
@@ -268,7 +268,7 @@ export default function EmployeeSchedulingSaaS(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
@@ -300,7 +300,7 @@ export default function EmployeeSchedulingSaaS(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)  => (
                 <motion.div
                   key={index}
@@ -332,7 +332,7 @@ export default function EmployeeSchedulingSaaS(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
@@ -366,7 +366,7 @@ export default function EmployeeSchedulingSaaS(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}

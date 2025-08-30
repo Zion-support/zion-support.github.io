@@ -27,7 +27,7 @@ import { AlertTriangle,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIIncidentPostmortems(...args: any[]): any {
+export default function AIIncidentPostmortems(...args: []):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -220,7 +220,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -259,7 +259,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -295,7 +295,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -366,7 +366,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -413,7 +413,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -432,7 +432,7 @@ export default function AIIncidentPostmortems(...args: any[]): any {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team is here to help you get started and answer any questions
+              Our team is here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

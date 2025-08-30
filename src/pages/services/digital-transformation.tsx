@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function DigitalTransformation(...args: any[]): any {
+export default function DigitalTransformation(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function DigitalTransformation(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -120,7 +120,7 @@ export default function DigitalTransformation(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Technology Infrastructure",
@@ -191,7 +191,7 @@ export default function DigitalTransformation(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cloud Platforms",
@@ -285,7 +285,7 @@ export default function DigitalTransformation(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"25-40%", label: "Efficiency", description: "Operational improvement" },
+                    { metric: "25-40%", label: "Efficiency", description: "Operational improvement" },
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
@@ -314,7 +314,7 @@ export default function DigitalTransformation(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

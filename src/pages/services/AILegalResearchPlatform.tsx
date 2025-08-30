@@ -33,7 +33,7 @@ import { Brain,
   Award
  } from 'lucide-react.ts';
 
-export default function AILegalResearchPlatform(...args: any[]): any {
+export default function AILegalResearchPlatform(...args: []):  {
   const features = [
     "AI-powered case law research and analysis",
     "Intelligent document review and contract analysis",
@@ -187,7 +187,7 @@ export default function AILegalResearchPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -223,7 +223,7 @@ export default function AILegalResearchPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -259,7 +259,7 @@ export default function AILegalResearchPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -295,7 +295,7 @@ export default function AILegalResearchPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -382,7 +382,7 @@ export default function AILegalResearchPlatform(...args: any[]): any {
               </motion.button>
             </div>
             <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>

@@ -18,11 +18,11 @@ import { ChevronDown,
   Lightbulb
  } from 'lucide-react.ts';
 
-export default function FAQ(...args: any[]): any {
+export default function FAQ(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [openItems, setOpenItems] = useState<any>([]);
 
-  const toggleItem = (index: anynumber)  => {
+  const toggleItem = (index: number)  => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
@@ -37,7 +37,7 @@ export default function FAQ(...args: any[]): any {
       questions: [
         {
           question: 'What is Zion Tech Group?',
-          answer: 'Zion Tech Group is a leading technology company specializing in AI-powered solutions, cloud services, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.'
+          answer: 'Zion Tech Group is a leading technology comp specializing in AI-powered solutions, cloud services, cybersecurity, and digital transformation. We help businesses leverage cutting-edge technology to drive innovation and growth.'
         },
         {
           question: 'Where is Zion Tech Group located?',
@@ -45,7 +45,7 @@ export default function FAQ(...args: any[]): any {
         },
         {
           question: 'What industries do you serve?',
-          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are adaptable to any industry that can benefit from AI and digital transformation.'
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government sectors. Our solutions are adaptable to  industry that can benefit from AI and digital transformation.'
         },
         {
           question: 'How long has Zion Tech Group been in business?',
@@ -114,7 +114,7 @@ export default function FAQ(...args: any[]): any {
           answer: 'Our service packages include project planning, development, testing, deployment, training, and ongoing support. We also provide documentation, user guides, and maintenance services as part of our comprehensive packages.'
         },
         {
-          question: 'Are there any hidden costs?',
+          question: 'Are there  hidden costs?',
           answer: 'No hidden costs! We provide transparent pricing with detailed breakdowns of all services and costs. Any additional requirements or changes are discussed upfront and clearly communicated before implementation.'
         }
       ]
@@ -167,7 +167,7 @@ export default function FAQ(...args: any[]): any {
 
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: anycategory.questions.filter(q  =>
+    questions: category.questions.filter(q  =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -345,11 +345,11 @@ export default function FAQ(...args: any[]): any {
               Still Have Questions?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our team is here to help. Get in touch with us through any of these channels.
+              Our team is here to help. Get in touch with us through  of these channels.
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((contact, index)  => (
               <motion.div
                 key={contact.title}

@@ -82,11 +82,11 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     setTeamRecommendation(null);
 
     const projectBriefData: ProjectBrief = {
-      userId: any'current-user-id',
+      userId: 'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s  => s.trim()).filter(s => s) || [],
-      talentFilters: any{ // Ensure talentFilters is structured correctly
+      talentFilters: { // Ensure talentFilters is structured correctly
         verifiedOnly: data.talentFilters?.verifiedOnly,
         regions: data.talentFilters?.regions?.split(',').map(r  => r.trim()).filter(r => r) || [],
       }
@@ -109,7 +109,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -117,7 +117,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
     }
   };
 
-  const handleInviteTalent = async (talentId: anystring, roleTitle: string)  => {
+  const handleInviteTalent = async (talentId: string, roleTitle: string)  => {
     if (!projectBriefSubmitted) {
       toast.error("Cannot send invite without a project context.");
       return;
@@ -150,7 +150,7 @@ const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type fo
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }

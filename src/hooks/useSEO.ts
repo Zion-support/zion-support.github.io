@@ -46,14 +46,14 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [seoData.canonical]);
 
   // Update document title
-  const updateTitle = useCallback((title: anystring)  => {
+  const updateTitle = useCallback((title: string)  => {
     if (typeof document !== 'undefined') {
       document.title = title;
     }
   }, []);
 
   // Update meta tags
-  const updateMetaTags = useCallback((data: anySEOData)  => {
+  const updateMetaTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     // Update or create meta description
@@ -98,11 +98,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-  const updateOpenGraphTags = useCallback((data: anySEOData)  => {
+  const updateOpenGraphTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     const ogTags = [
-      { property: any'og:title', content: fullTitle },
+      { property: 'og:title', content: fullTitle },
       { property: 'og:description', content: data.description },
       { property: 'og:type', content: data.ogType || 'website' },
       { property: 'og:url', content: canonicalUrl },
@@ -123,11 +123,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [fullTitle, canonicalUrl]);
 
   // Update Twitter Card tags
-  const updateTwitterCardTags = useCallback((data: anySEOData)  => {
+  const updateTwitterCardTags = useCallback((data: SEOData)  => {
     if (typeof document === 'undefined') return;
 
     const twitterTags = [
-      { name: any'twitter:card', content: data.twitterCard || 'summary_large_image' },
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },
       { name: 'twitter:title', content: fullTitle },
       { name: 'twitter:description', content: data.description },
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },
@@ -146,7 +146,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }, [fullTitle]);
 
   // Add structured data
-  const addStructuredData = useCallback((data: anyobject)  => {
+  const addStructuredData = useCallback((data: object)  => {
     if (!enableStructuredData || typeof document === 'undefined') return;
 
     // Remove existing structured data
@@ -194,7 +194,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
   }), []);
 
   // Track page view
-  const trackPageView = useCallback((pageData: anySEOData)  => {
+  const trackPageView = useCallback((pageData: SEOData)  => {
     if (!enableAnalytics || typeof window === 'undefined') return;
 
     // Google Analytics
@@ -244,7 +244,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
-          dns: anynavigation.domainLookupEnd - navigation.domainLookupStart,
+          dns: navigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -255,7 +255,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
         if (window.gtag) {
           Object.entries(metrics).forEach(([key, value])  => {
             window.gtag('event', 'performance_metric', {
-              event_category: any'performance',
+              event_category: 'performance',
               event_label: key,
               value: Math.round(value)
             });
@@ -333,8 +333,8 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 declare global {
   interface Window {
 
-    gtag?: (...args: anyany[])  => void;
-    dataLayer?: any[];
+    gtag?: (...args: [])  => void;
+    dataLayer?: [];
   
 }
 }

@@ -12,7 +12,7 @@ import { RequestsHeader,
 import type { QuoteRequest } from "@/types/quotes";
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-export default function RequestsPanel(...args: any[]): any {
+export default function RequestsPanel(...args: []):  {
   const { user } = useAuth();
   
   const [selectedQuote, setSelectedQuote] = useState<any>(null);
@@ -31,7 +31,7 @@ export default function RequestsPanel(...args: any[]): any {
     toggleArchive
   } = useTalentQuotes();
 
-  const handleViewDetails = (quote: anyQuoteRequest)  => {
+  const handleViewDetails = (quote: QuoteRequest)  => {
     setSelectedQuote(quote);
     setShowDetails(true);
     
@@ -42,8 +42,8 @@ export default function RequestsPanel(...args: any[]): any {
   };
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter((q: anyQuoteRequest)  => !q.is_archived);
-  const archivedQuotes = quotes.filter((q: anyQuoteRequest)  => q.is_archived);
+  const activeQuotes = quotes.filter((q: QuoteRequest)  => !q.is_archived);
+  const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
 
   return (
     <ProtectedRoute>

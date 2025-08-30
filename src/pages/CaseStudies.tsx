@@ -24,7 +24,7 @@ import { TrendingUp,
   ShoppingCart
  } from 'lucide-react.ts';
 
-export default function CaseStudies(...args: any[]): any {
+export default function CaseStudies(...args: []):  {
   const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [selectedService, setSelectedService] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -108,7 +108,7 @@ export default function CaseStudies(...args: any[]): any {
     },
     {
       id: 4,
-      title: 'Zero Trust Security Architecture for Tech Company',
+      title: 'Zero Trust Security Architecture for Tech Comp',
       client: 'SaaS Technology Provider',
       industry: 'technology',
       services: ['cybersecurity', 'cloud-devops'],
@@ -145,7 +145,7 @@ export default function CaseStudies(...args: any[]): any {
     {
       id: 6,
       title: 'Blockchain Supply Chain Solution',
-      client: 'International Logistics Company',
+      client: 'International Logistics Comp',
       industry: 'manufacturing',
       services: ['blockchain', 'iot-edge'],
       challenge: 'Supply chain transparency and counterfeit prevention',
@@ -220,7 +220,7 @@ export default function CaseStudies(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
@@ -258,7 +258,7 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
                   {industries.map((industry)  => (
                     <option key={industry.id} value={industry.id}>
@@ -274,7 +274,7 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedService}
                   onChange={(e) => setSelectedService(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
                   {services.map((service)  => (
                     <option key={service.id} value={service.id}>
@@ -292,7 +292,7 @@ export default function CaseStudies(...args: any[]): any {
       {/* Case Studies Grid */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredCaseStudies.map((study, index)  => (
               <motion.article
                 key={study.id}

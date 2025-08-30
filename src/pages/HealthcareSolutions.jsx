@@ -152,7 +152,7 @@ const complianceStandards = [
 const successStories = [
   {
     id: 1,
-    company: "MedTech Solutions",
+    comp: "MedTech Solutions",
     industry: "Healthcare Technology",
     challenge: "Needed HIPAA-compliant mobile app for patient engagement",
     solution: "Built secure mobile app with end-to-end encryption",
@@ -161,7 +161,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "HealthCare Plus",
+    comp: "HealthCare Plus",
     industry: "Hospital Network",
     challenge: "Required scalable telemedicine platform for 10 hospitals",
     solution: "Implemented secure video conferencing with EHR integration",
@@ -170,7 +170,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Digital Diagnostics",
+    comp: "Digital Diagnostics",
     industry: "Medical Imaging",
     challenge: "Needed AI-powered diagnostic assistance tool",
     solution: "Developed FDA-approved AI diagnostic platform",
@@ -482,7 +482,7 @@ export default function HealthcareSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

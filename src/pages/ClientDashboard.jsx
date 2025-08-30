@@ -18,7 +18,7 @@ function ClientDashboardContent() {
     const [selectedJobId, setSelectedJobId] = useState(null);
     const [selectedJobTitle, setSelectedJobTitle] = useState("");
     const isMobile = useIsMobile();
-    // Set the first job as selected when jobs are loaded (if any)
+    // Set the first job as selected when jobs are loaded (if )
     useEffect(() => {
         if (jobs.length > 0 && !selectedJobId) {
             setSelectedJobId(jobs[0].id);

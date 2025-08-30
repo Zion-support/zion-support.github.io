@@ -136,7 +136,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
     { name: 'Sitemap', href: '/sitemap' }
   ];
 
-  const companyLinks = [
+  const compLinks = [
     { name: 'About Us', href: '/about', description: 'Our story and mission' },
     { name: 'Team', href: '/team', description: 'Meet our experts' },
     { name: 'Careers', href: '/careers', description: 'Join our team' },
@@ -164,7 +164,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
+  const createMissingPage = (name: string, href: string)  => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -194,7 +194,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Our Services
             </motion.h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
               {footerSections.slice(0, 2).map((section, index)  => (
                 <motion.div
                   key={section.title}
@@ -235,7 +235,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             >
               Quick Access
             </motion.h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
               {quickLinks.map((link, index)  => (
                 <motion.div
                   key={link.name}
@@ -275,7 +275,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
           >
             Complete Service Portfolio
           </motion.h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {footerSections.map((section, index)  => (
               <motion.div
                 key={section.title}
@@ -309,13 +309,13 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Bottom Section - Company Info & Links */}
+        {/* Bottom Section - Comp Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Links */}
+          {/* Comp Links */}
           <div>
             <h4 className="font-semibold text-white mb-4">Company</h4>
             <div className="space-y-2">
-              {companyLinks.map((link) => (
+              {compLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
@@ -393,7 +393,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       <div className="border-t border-slate-700/50">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center">

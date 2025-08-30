@@ -60,7 +60,7 @@ const categoryColors: { [key: string]: string } = {
   'Edge AI Solutions': 'from-red-500 to-pink-500',
   'Federated Learning Solutions': 'from-yellow-500 to-orange-500'
 };
-export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): any {
+export default function EnhancedInnovativeServicesShowcase2027(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -191,7 +191,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark/70'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: bg-zion-slate-dark/70'
                 }`}
               >
                 All Categories
@@ -232,7 +232,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
               >
                 <option value="name">Sort by Name</option>
@@ -250,7 +250,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args: any[]): 
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {sortedServices.map((service)  => (
               <motion.div

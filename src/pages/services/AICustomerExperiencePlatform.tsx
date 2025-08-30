@@ -28,7 +28,7 @@ import { Users,
   Headphones
  } from 'lucide-react.ts';
 
-export default function AICustomerExperiencePlatform(...args: any[]): any {
+export default function AICustomerExperiencePlatform(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -215,7 +215,7 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -252,7 +252,7 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div
                 key={index}
@@ -295,7 +295,7 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -337,7 +337,7 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -374,7 +374,7 @@ export default function AICustomerExperiencePlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}

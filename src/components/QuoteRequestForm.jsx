@@ -13,7 +13,7 @@ export const QuoteRequestForm = () => {
     lastName: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     serviceType: '',
     projectDescription: '',
     timeline: '',
@@ -89,7 +89,7 @@ export const QuoteRequestForm = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-    if (!formData.company.trim()) newErrors.company = 'Company name is required';
+    if (!formData.company.trim()) newErrors.comp = 'Comp name is required';
     if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
     if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
@@ -120,7 +120,7 @@ export const QuoteRequestForm = () => {
         lastName: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         serviceType: '',
         projectDescription: '',
         timeline: '',
@@ -241,20 +241,20 @@ export const QuoteRequestForm = () => {
             </div>
           </div>
 
-          {/* Company Information */}
+          {/* Comp Information */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Company Name *
+              Comp Name *
             </label>
             <Input
               type="text"
-              value={formData.company}
-              onChange={(e) => handleChange('company', e.target.value)}
-              className={errors.company ? 'border-red-500' : ''}
-              placeholder="Your Company Inc."
+              value={formData.comp}
+              onChange={(e) => handleChange('comp', e.target.value)}
+              className={errors.comp ? 'border-red-500' : ''}
+              placeholder="Your Comp Inc."
             />
-            {errors.company && (
-              <p className="text-red-500 text-sm mt-1">{errors.company}</p>
+            {errors.comp && (
+              <p className="text-red-500 text-sm mt-1">{errors.comp}</p>
             )}
           </div>
 
@@ -292,7 +292,7 @@ export const QuoteRequestForm = () => {
               value={formData.projectDescription}
               onChange={(e) => handleChange('projectDescription', e.target.value)}
               className={errors.projectDescription ? 'border-red-500' : ''}
-              placeholder="Please describe your project requirements, goals, and any specific needs..."
+              placeholder="Please describe your project requirements, goals, and  specific needs..."
               rows={4}
             />
             {errors.projectDescription && (

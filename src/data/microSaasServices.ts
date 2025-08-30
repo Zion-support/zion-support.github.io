@@ -1272,7 +1272,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     createdAt: "2024-01-15T10:00:00.000Z"
   }
 ];
-export const getMicroSaasServiceById = (id: anystring): MicroSaasService | undefined  => {
+export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined  => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id);
 };
 export const MICRO_SAAS_CATEGORIES = [
@@ -1307,7 +1307,7 @@ export const CONTACT_INFO = {
   phone: '+1 (555) 123-4567',
   address: '123 Tech Street, Innovation City, IC 12345'
 };
-export const getMicroSaasServicesByCategory = (category: anystring): MicroSaasService[]  => {
+export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[]  => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 export const getMicroSaasCategories = (): string[] => {

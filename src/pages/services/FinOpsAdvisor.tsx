@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function FinOpsAdvisor(...args: any[]): any {
+export default function FinOpsAdvisor(...args: []):  {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO

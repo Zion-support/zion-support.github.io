@@ -3,7 +3,7 @@ import Head from 'next/head.ts';
 
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react.ts';
 import Link from 'next/link.ts';
-export default function ServicesAdvertisingPage(...args: any[]): any {
+export default function ServicesAdvertisingPage(...args: []):  {
   const contact = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -17,7 +17,7 @@ export default function ServicesAdvertisingPage(...args: any[]): any {
     'Enterprise-grade security and compliance',
     '24/7 support with SLAs',
     'Proven architectures and reference implementations',
-    'No long-term lock-in; cancel anytime',
+    'No long-term lock-in; cancel time',
     'SOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
   ];
@@ -140,7 +140,7 @@ export default function ServicesAdvertisingPage(...args: any[]): any {
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
     ]
   } as const;
-  function ext(...args: any[]): any {
+  function ext(...args: []):  {
     return (
       <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
     );
@@ -170,7 +170,7 @@ export default function ServicesAdvertisingPage(...args: any[]): any {
           </header>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               {benefits.map((b)  => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
@@ -244,7 +244,7 @@ export default function ServicesAdvertisingPage(...args: any[]): any {
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
                 { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },

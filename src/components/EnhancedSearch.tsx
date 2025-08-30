@@ -64,8 +64,8 @@ const searchData: SearchResult[] = [
     description: 'Learn about our mission, values, and commitment to innovation',
     url: '/about',
     type: 'page',
-    category: 'Company',
-    tags: ['About', 'Company', 'Mission', 'Values'],
+    category: 'Comp',
+    tags: ['About', 'Comp', 'Mission', 'Values'],
     relevance: 85
   },
   {
@@ -154,7 +154,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: anyMouseEvent)  => {
+    const handleClickOutside = (event: MouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
@@ -166,7 +166,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
       } else if (event.key === 'k' && (event.metaKey || event.ctrlKey)) {
@@ -180,7 +180,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const handleSearch = useCallback((searchQuery: anystring)  => {
+  const handleSearch = useCallback((searchQuery: string)  => {
     if (searchQuery.trim()) {
       // Add to recent searches
       const updated = [searchQuery, ...recentSearches.filter(s => s !== searchQuery)].slice(0, 5);
@@ -193,14 +193,14 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     }
   }, [recentSearches]);
 
-  const handleResultClick = (result: anySearchResult)  => {
+  const handleResultClick = (result: SearchResult)  => {
     handleSearch(result.title);
     navigate(result.url);
     setIsOpen(false);
     setQuery('');
   };
 
-  const toggleFilter = (filterType: anykeyof SearchFilter, value: string)  => {
+  const toggleFilter = (filterType: keyof SearchFilter, value: string)  => {
     setFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -213,7 +213,7 @@ export const EnhancedSearch: React.FC = (): JSX.Element => {
     setFilters({ type: [], category: [], tags: [] });
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service': return <Code className="h-4 w-4" />;
       case 'page': return <Globe className="h-4 w-4" />;

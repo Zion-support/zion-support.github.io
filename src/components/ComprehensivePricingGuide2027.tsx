@@ -55,7 +55,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     ...servicesCatalog.flatMap(category => 
       category.items.map(item => ({
         ...item,
-        source: any'catalog',
+        source: 'catalog',
         category: category.name
       }))
     ),
@@ -108,14 +108,14 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const getPriceRange = (price: anystring)  => {
+  const getPriceRange = (price: string)  => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High';
   };
 
-  const getPriceColor = (price: anystring)  => {
+  const getPriceColor = (price: string)  => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -125,7 +125,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -211,7 +211,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {categories.map(category  => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
@@ -224,7 +224,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
                 {priceRanges.map(range  => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
@@ -264,7 +264,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index)  => (
             <motion.div
@@ -369,7 +369,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions 
+              Our team of experts is ready to provide personalized quotes and answer  questions 
               about our services. Get in touch for a detailed consultation.
             </p>
             

@@ -116,7 +116,7 @@ export const serviceCategories2027 = [
   'Nanotechnology',
   'Neural Technology'
 ];
-export const getServicesByCategory = (category: anystring): InnovativeService2027[]  => {
+export const getServicesByCategory = (category: string): InnovativeService2027[]  => {
   if (category === 'All') {
     return innovativeServices2027;
   }

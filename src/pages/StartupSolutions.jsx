@@ -119,7 +119,7 @@ const startupSolutions = [
 const successStories = [
   {
     id: 1,
-    company: "TechFlow",
+    comp: "TechFlow",
     industry: "SaaS",
     challenge: "Needed rapid MVP development to secure funding",
     solution: "Built MVP in 6 weeks with AI-powered analytics",
@@ -128,7 +128,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "GreenStart",
+    comp: "GreenStart",
     industry: "CleanTech",
     challenge: "Required scalable cloud infrastructure for IoT platform",
     solution: "Implemented auto-scaling cloud solution with security",
@@ -137,7 +137,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "HealthTech Pro",
+    comp: "HealthTech Pro",
     industry: "Healthcare",
     challenge: "Needed HIPAA-compliant mobile app development",
     solution: "Built secure mobile app with compliance framework",
@@ -392,7 +392,7 @@ export default function StartupSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

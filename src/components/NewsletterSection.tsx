@@ -7,7 +7,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!email) return;
 
@@ -109,7 +109,7 @@ const NewsletterSection: React.FC = (): JSX.Element => {
 
             <div className="flex items-center text-sm text-gray-400">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-              <span>No spam, unsubscribe at any time</span>
+              <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
 

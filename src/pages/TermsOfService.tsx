@@ -18,7 +18,7 @@ import { FileText,
 
 const TermsOfService: React.FC = (): JSX.Element => {
   const lastUpdated = 'January 15, 2024';
-  const companyName = 'Zion Tech Group';
+  const compName = 'Zion Tech Group';
   const website = 'https://ziontechgroup.com';
   const email = 'legal@ziontechgroup.com';
   const phone = '+1 (555) 123-4567';
@@ -77,10 +77,10 @@ const TermsOfService: React.FC = (): JSX.Element => {
               </h2>
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  These Terms of Service ("Terms") govern your use of the {companyName} website located at {website} and any related services provided by {companyName} ("we," "our," or "us").
+                  These Terms of Service ("Terms") govern your use of the {compName} website located at {website} and  related services provided by {compName} ("we," "our," or "us").
                 </p>
                 <p>
-                  By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our website or use our services.
+                  By accessing or using our website and services, you agree to be bound by these Terms. If you disagree with  part of these terms, you may not access our website or use our services.
                 </p>
                 <p>
                   These Terms apply to all visitors, users, and others who access or use our website and services.
@@ -103,7 +103,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  {companyName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
+                  {compName} provides technology consulting, software development, AI solutions, cybersecurity services, and related technology services. Our services include:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -128,7 +128,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
                   </li>
                 </ul>
                 <p>
-                  We reserve the right to modify, suspend, or discontinue any part of our services at any time without notice.
+                  We reserve the right to modify, suspend, or discontinue  part of our services at  time without notice.
                 </p>
               </div>
             </motion.div>
@@ -161,7 +161,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Notifying us immediately of any unauthorized use
+                    Notifying us immediately of  unauthorized use
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -194,7 +194,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Violate any applicable laws or regulations
+                    Violate  applicable laws or regulations
                   </li>
                   <li className="flex items-start gap-2">
                     <AlertTriangle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -238,7 +238,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  Our website and services contain content that is owned by {companyName} or its licensors, including but not limited to:
+                  Our website and services contain content that is owned by {compName} or its licensors, including but not limited to:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -308,7 +308,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  To the maximum extent permitted by law, {companyName} shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                  To the maximum extent permitted by law, {compName} shall not be liable for  indirect, incidental, special, consequential, or punitive damages, including but not limited to:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -329,7 +329,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
                   </li>
                 </ul>
                 <p>
-                  Our total liability to you for any claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
+                  Our total liability to you for  claims arising from these Terms or your use of our services shall not exceed the amount you paid us in the 12 months preceding the claim.
                 </p>
               </div>
             </motion.div>
@@ -349,7 +349,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied.
+                  Our services are provided "as is" and "as available" without  warranties of  kind, either express or implied.
                 </p>
                 <p>
                   We do not warrant that:
@@ -393,7 +393,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  You agree to indemnify, defend, and hold harmless {companyName} and its officers, directors, employees, agents, and affiliates from and against any claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
+                  You agree to indemnify, defend, and hold harmless {compName} and its officers, directors, employees, agents, and affiliates from and against  claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:
                 </p>
                 <ul className="space-y-2 text-zion-slate-light ml-6">
                   <li className="flex items-start gap-2">
@@ -406,7 +406,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    Your violation of any third-party rights
+                    Your violation of  third-party rights
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
@@ -431,7 +431,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms.
+                  We may terminate or suspend your access to our services immediately, without prior notice or liability, for  reason whatsoever, including without limitation if you breach these Terms.
                 </p>
                 <p>
                   Upon termination, your right to use our services will cease immediately. If you wish to terminate your account, you may simply discontinue using our services.
@@ -483,13 +483,13 @@ const TermsOfService: React.FC = (): JSX.Element => {
               
               <div className="space-y-4 text-zion-slate-light leading-relaxed">
                 <p>
-                  We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days notice prior to any new terms taking effect.
+                  We reserve the right to modify or replace these Terms at  time. If a revision is material, we will provide at least 30 days notice prior to  new terms taking effect.
                 </p>
                 <p>
                   What constitutes a material change will be determined at our sole discretion.
                 </p>
                 <p>
-                  By continuing to access or use our services after any revisions become effective, you agree to be bound by the revised terms.
+                  By continuing to access or use our services after  revisions become effective, you agree to be bound by the revised terms.
                 </p>
               </div>
             </motion.div>
@@ -507,7 +507,7 @@ const TermsOfService: React.FC = (): JSX.Element => {
               </h2>
               
               <p className="text-zion-slate-light mb-6">
-                If you have any questions about these Terms of Service, please contact us:
+                If you have  questions about these Terms of Service, please contact us:
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react.ts'
 
 
-export default function Terms(...args: any[]): any {
+export default function Terms(...args: []):  {
 	return (
 		<>
 			{/* Hero Section */}
@@ -75,15 +75,15 @@ export default function Terms(...args: any[]): any {
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Use the materials for any commercial purpose
+									Use the materials for  commercial purpose
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Attempt to reverse engineer any software
+									Attempt to reverse engineer  software
 								</li>
 								<li className="flex items-start gap-2">
 									<div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-									Remove any copyright or proprietary notations
+									Remove  copyright or proprietary notations
 								</li>
 							</ul>
 						</div>
@@ -170,7 +170,7 @@ export default function Terms(...args: any[]): any {
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">7. Limitation of Liability</h2>
 							<p className="text-gray-600 mb-4">
-								In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
+								In no event shall Zion Tech Group or its suppliers be liable for  damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group's website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.
 							</p>
 							<p className="text-gray-600">
 								Our total liability shall not exceed the amount paid by you for the specific service in question.
@@ -236,7 +236,7 @@ export default function Terms(...args: any[]): any {
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
 							<p className="text-gray-600">
-								Zion Tech Group reserves the right to revise these terms of service at any time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
+								Zion Tech Group reserves the right to revise these terms of service at  time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
 							</p>
 						</div>
 
@@ -254,7 +254,7 @@ export default function Terms(...args: any[]): any {
 						Questions About Our Terms?
 					</h2>
 					<p className="text-gray-600 mb-6">
-						We're here to clarify any questions about our terms of service.
+						We're here to clarify  questions about our terms of service.
 					</p>
 					<Link
 						to="/contact"

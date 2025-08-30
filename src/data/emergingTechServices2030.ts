@@ -1035,11 +1035,11 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
 ];
 
 // Utility functions for service management
-export const getEmergingTechServicesByCategory = (category: anystring): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByCategory = (category: string): EmergingTechService2030[]  => {
   return EMERGING_TECH_SERVICES_2030.filter(service => service.category === category);
 };
 
-export const getEmergingTechServicesByPriceRange = (minPrice: anynumber, maxPrice: number): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number): EmergingTechService2030[]  => {
   return EMERGING_TECH_SERVICES_2030.filter(service => 
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
@@ -1057,7 +1057,7 @@ export const getEmergingTechTrendingServices = (limit: number = 10): EmergingTec
     .slice(0, limit);
 };
 
-export const searchEmergingTechServices = (query: anystring): EmergingTechService2030[]  => {
+export const searchEmergingTechServices = (query: string): EmergingTechService2030[]  => {
   const lowercaseQuery = query.toLowerCase();
   return EMERGING_TECH_SERVICES_2030.filter(service =>
     service.title.toLowerCase().includes(lowercaseQuery) ||
@@ -1066,11 +1066,11 @@ export const searchEmergingTechServices = (query: anystring): EmergingTechServic
   );
 };
 
-export const getEmergingTechServicesByInnovationLevel = (level: anystring): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByInnovationLevel = (level: string): EmergingTechService2030[]  => {
   return EMERGING_TECH_SERVICES_2030.filter(service => service.innovationLevel === level);
 };
 
-export const getEmergingTechServicesByTechnology = (technology: anystring): EmergingTechService2030[]  => {
+export const getEmergingTechServicesByTechnology = (technology: string): EmergingTechService2030[]  => {
   const lowercaseTech = technology.toLowerCase();
   return EMERGING_TECH_SERVICES_2030.filter(service =>
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
@@ -1087,11 +1087,11 @@ export const getEmergingTechServicesStats = () => {
   return {
     totalServices,
     totalRevenue,
-    averageRating: anyMath.round(averageRating * 100) / 100,
+    averageRating: Math.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
     categories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.category))],
-    subcategories: any[...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))]
+    subcategories: [...new Set(EMERGING_TECH_SERVICES_2030.map(service  => service.subcategory))]
   };
 };
 

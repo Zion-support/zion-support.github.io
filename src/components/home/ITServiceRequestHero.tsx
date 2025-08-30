@@ -6,12 +6,12 @@ import { useNavigate  } from 'react-router-dom.ts';
 import { motion  } from 'framer-motion.ts';
 import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react.ts';
 
-export function ITServiceRequestHero(...args: any[]): any {
+export function ITServiceRequestHero(...args: []):  {
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);
@@ -83,7 +83,7 @@ export function ITServiceRequestHero(...args: any[]): any {
             </GradientHeading>
             
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl leading-relaxed">
-              Get professional IT technicians anywhere in the world, anytime you need them. 
+              Get professional IT technicians where in the world, time you need them. 
               From emergency repairs to scheduled maintenance, we're there when you need us most.
             </p>
 

@@ -209,7 +209,7 @@ export default function CommunityProfilePage() {
                     {posts.map((post) => (<PostCard key={post.id} post={post}/>))}
                   </div>) : (<Card>
                     <CardContent className="p-6 text-center">
-                      <p className="text-muted-foreground">This user hasn't created any posts yet.</p>
+                      <p className="text-muted-foreground">This user hasn't created  posts yet.</p>
                     </CardContent>
                   </Card>)}
               </TabsContent>

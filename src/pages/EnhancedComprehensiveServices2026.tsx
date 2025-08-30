@@ -109,7 +109,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
     // Add services from ultimateInnovativeServices2026
     ultimateInnovativeServices2026.forEach(service => {
       services.push({
-        id: anyservice.id,
+        id: service.id,
         name: service.name,
         category: service.category,
         description: service.description,
@@ -200,7 +200,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
     return filtered;
   }, [allServices, searchTerm, selectedCategory, sortBy]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Artificial Intelligence':
         return <Brain className="w-6 h-6" />;
@@ -227,7 +227,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status.toLowerCase()) {
       case 'live':
         return 'bg-green-100 text-green-800';
@@ -242,7 +242,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
     }
   };
 
-  const getInnovationBadge = (service: anyService)  => {
+  const getInnovationBadge = (service: Service)  => {
     if (service.innovationLevel === 'Revolutionary') {
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel === 'Cutting-Edge') {
@@ -315,7 +315,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
               >
                 {categories.map(category  => (
                   <option key={category} value={category}>{category}</option>
@@ -327,7 +327,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
             <div className="flex-shrink-0">
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) => setSortBy(e.target.value as )}
                 className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
@@ -366,7 +366,7 @@ const EnhancedComprehensiveServices2026: React.FC = (): JSX.Element => {
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
               {filteredServices.map((service, index)  => (
                 <motion.div

@@ -81,10 +81,10 @@ export const SEO: React.FC<SEOProps> = ({
     '/about': {
       title: 'About Us - Zion Tech Group',
       description: 'Learn about Zion Tech Group\'s mission, team, and commitment to delivering innovative technology solutions that drive business success.',
-      keywords: ['about us', 'mission', 'team', 'technology company', 'innovation'],
+      keywords: ['about us', 'mission', 'team', 'technology comp', 'innovation'],
       image: '/images/about-og.jpg',
       type: 'website',
-      section: 'Company',
+      section: 'Comp',
     },
     '/contact': {
       title: 'Contact Us - Zion Tech Group',
@@ -228,7 +228,7 @@ export const SEO: React.FC<SEOProps> = ({
     // Add article-specific meta tags
     if (type === 'article' && publishedTime) {
       metaTags.push(
-        { property: any'article:published_time', content: publishedTime },
+        { property: 'article:published_time', content: publishedTime },
         { property: 'article:modified_time', content: modifiedTime || publishedTime },
         { property: 'article:author', content: author || 'Zion Tech Group' },
         { property: 'article:section', content: finalMetadata.section }
@@ -247,7 +247,7 @@ export const SEO: React.FC<SEOProps> = ({
   const generateLinkTags = () => {
     const linkTags = [
       // Canonical URL
-      { rel: any'canonical', href: canonical || currentUrl },
+      { rel: 'canonical', href: canonical || currentUrl },
       
       // Alternate languages (if you have multiple language versions)
       { rel: 'alternate', hreflang: 'en', href: currentUrl },
@@ -309,7 +309,7 @@ export const SEO: React.FC<SEOProps> = ({
     canonicalLink.setAttribute('href', canonical || currentUrl);
 
     // Update Open Graph tags
-    const updateOGTag = (property: anystring, content: string)  => {
+    const updateOGTag = (property: string, content: string)  => {
       let ogTag = document.querySelector(`meta[property="${property}"]`);
       if (!ogTag) {
         ogTag = document.createElement('meta');
@@ -326,7 +326,7 @@ export const SEO: React.FC<SEOProps> = ({
     updateOGTag('og:type', finalMetadata.type);
 
     // Update Twitter tags
-    const updateTwitterTag = (name: anystring, content: string)  => {
+    const updateTwitterTag = (name: string, content: string)  => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`);
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
@@ -352,8 +352,8 @@ export const SEO: React.FC<SEOProps> = ({
     document.head.appendChild(script);
 
     // Track page view for analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as ).gtag) {
+      (window as ).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: finalMetadata.title,
         page_location: currentUrl,
       });

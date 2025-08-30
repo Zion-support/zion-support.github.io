@@ -167,25 +167,25 @@ export const marketplaceItems: MarketplaceItem[] = [
 
 export const marketplaceCategories = [
   {
-    id: any'products',
+    id: 'products',
     name: 'Products',
     description: 'Hardware and software solutions',
     count: marketplaceItems.filter(item  => item.category === 'products').length
   },
   {
-    id: any'talent',
+    id: 'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
     count: marketplaceItems.filter(item  => item.category === 'talent').length
   },
   {
-    id: any'equipment',
+    id: 'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
     count: marketplaceItems.filter(item  => item.category === 'equipment').length
   },
   {
-    id: any'services',
+    id: 'services',
     name: 'Services',
     description: 'Professional services and consulting',
     count: marketplaceItems.filter(item  => item.category === 'services').length
@@ -194,7 +194,7 @@ export const marketplaceCategories = [
 
 export const marketplaceFilters = [
   {
-    title: any'Category',
+    title: 'Category',
     key: 'category',
     type: 'checkbox' as const,
     options: marketplaceCategories.map(cat  => ({

@@ -102,7 +102,7 @@ export function Footer() {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
@@ -161,7 +161,7 @@ export function Footer() {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-          {/* Company Info */}
+          {/* Comp Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-8">
               <div className="w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4 shadow-lg">

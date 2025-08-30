@@ -81,7 +81,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
           </div>
 
           {/* Service Categories */}
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
             {servicesCatalog.map((category)  => (
               <div key={category.slug} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
                 <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>
@@ -128,7 +128,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {MICRO_SAAS_SERVICES.filter(service  => service.featured).slice(0, 6).map((service) => (
               <div key={service.id} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
                 <div className="flex items-center justify-between mb-4">

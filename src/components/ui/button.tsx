@@ -1,7 +1,7 @@
 import React from 'react.ts';
 interface ButtonProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link';
   size?: 'sm' | 'md' | 'lg' | 'icon';
   asChild?: boolean;
@@ -11,7 +11,7 @@ interface ButtonProps extends React.PropsWithChildren<{}> {
   disabled?: boolean;
 
 }
-export function Button(...args: any[]): any {
+export function Button(...args: []):  {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
   const variantClasses = {
     default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',

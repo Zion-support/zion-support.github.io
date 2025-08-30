@@ -23,7 +23,7 @@ import { Brain,
   Cloud
  } from 'lucide-react.ts';
 
-export default function AIProjectManagementPlatform(...args: any[]): any {
+export default function AIProjectManagementPlatform(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -215,7 +215,7 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -254,7 +254,7 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -293,7 +293,7 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -332,7 +332,7 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -411,7 +411,7 @@ export default function AIProjectManagementPlatform(...args: any[]): any {
             </div>
             
             <p className="text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>

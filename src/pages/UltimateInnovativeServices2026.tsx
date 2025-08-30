@@ -58,7 +58,7 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function UltimateInnovativeServices2026(...args: any[]): any {
+export default function UltimateInnovativeServices2026(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -95,12 +95,12 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
     { id: 'roi', name: 'ROI Potential' }
   ];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Zap;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const cat = categories.find(c => c.id === category);
     return cat ? cat.color : 'from-zion-cyan to-zion-blue';
   };
@@ -139,7 +139,7 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
     }
   });
 
-  const toggleServiceExpansion = (serviceId: anystring)  => {
+  const toggleServiceExpansion = (serviceId: string)  => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -223,7 +223,7 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {categories.map(category  => (
                   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
@@ -238,7 +238,7 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               >
                 {priceRanges.map(range  => (
                   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
@@ -281,7 +281,7 @@ export default function UltimateInnovativeServices2026(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
               {sortedServices.map((service, index)  => (
                 <motion.div

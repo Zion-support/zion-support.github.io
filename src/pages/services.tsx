@@ -28,7 +28,7 @@ import { Brain,
   Server
  } from 'lucide-react.ts';
 
-export default function Services(...args: any[]): any {
+export default function Services(...args: []):  {
   const serviceCategories = [
     {
       name: 'AI & Analytics',
@@ -409,7 +409,7 @@ export default function Services(...args: any[]): any {
                   <p className="text-xl text-slate-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
                 
-                <div className="grid lg: anygrid-cols-2 gap-8">
+                <div className="grid lg: grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex)  => (
                     <motion.div
                       key={service.name}
@@ -480,7 +480,7 @@ export default function Services(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {emergingTechnologies.map((tech, index)  => (
               <motion.div
                 key={tech.name}
@@ -527,7 +527,7 @@ export default function Services(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((reason, index)  => (
               <motion.div
                 key={reason.title}

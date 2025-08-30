@@ -177,7 +177,7 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
         {selectedMetric && (<motion.div className="bg-zion-blue/10 border border-zion-blue-light/20 rounded-lg p-4" initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }}>
             <h4 className="text-white font-semibold mb-2">Metric Details</h4>
             <p className="text-zinc-300 text-sm">
-              Selected metric: {selectedMetric} - Click on any metric card above to view detailed information.
+              Selected metric: {selectedMetric} - Click on  metric card above to view detailed information.
             </p>
           </motion.div>)}
       </AnimatePresence>

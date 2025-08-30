@@ -160,7 +160,7 @@ export default function Marketplace() {
                 {filteredListings.length > 0 ? (filteredListings.map((listing) => (<ProductListingCard key={listing.id} listing={listing} view={view} onRequestQuote={handleRequestQuote}/>))) : (<div className="col-span-2 text-center py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">
                   <h2 className="text-2xl font-bold text-white mb-4">No Results Found</h2>
                   <p className="text-zion-slate-light max-w-md mx-auto mb-8">
-                    We couldn't find any listings matching your filters. Try adjusting your search criteria.
+                    We couldn't find  listings matching your filters. Try adjusting your search criteria.
                   </p>
                   <Button onClick={clearAllFilters} className="bg-zion-purple hover:bg-zion-purple-dark">
                     Clear Filters

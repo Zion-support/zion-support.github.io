@@ -60,7 +60,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, []);
 
   // Keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent)  => {
     if (!enableKeyboardNavigation) return;
 
     const { key, target, shiftKey } = event;
@@ -109,7 +109,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, [enableKeyboardNavigation]);
 
   // Focus management
-  const manageFocus = useCallback((element: anyHTMLElement)  => {
+  const manageFocus = useCallback((element: HTMLElement)  => {
     if (!enableFocusManagement) return;
 
     // Store last focused element
@@ -130,7 +130,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, [enableFocusManagement]);
 
   // Focus trap for modals
-  const createFocusTrap = useCallback((container: anyHTMLElement)  => {
+  const createFocusTrap = useCallback((container: HTMLElement)  => {
     if (!enableFocusManagement) return;
 
     focusTrapRef.current = container;
@@ -154,7 +154,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, []);
 
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: anyHTMLElement): HTMLElement[]  => {
+  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
     const selector = [
       'button:not([disabled])',
       'input:not([disabled])',
@@ -169,7 +169,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, []);
 
   // Navigate focus
-  const navigateFocus = useCallback((direction: any'forward' | 'backward', currentElement: HTMLElement)  => {
+  const navigateFocus = useCallback((direction: 'forward' | 'backward', currentElement: HTMLElement)  => {
     const container = focusTrapRef.current || document.body;
     const focusableElements = getFocusableElements(container);
     
@@ -188,7 +188,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, [getFocusableElements, manageFocus]);
 
   // Vertical navigation
-  const navigateVertical = useCallback((direction: any'up' | 'down', currentElement: HTMLElement)  => {
+  const navigateVertical = useCallback((direction: 'up' | 'down', currentElement: HTMLElement)  => {
     // Implementation for vertical navigation (e.g., in dropdowns, lists)
     const container = currentElement.closest('[role="listbox"], [role="menu"], .dropdown, .list');
     if (!container) return;
@@ -212,7 +212,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   }, [manageFocus]);
 
   // Horizontal navigation
-  const navigateHorizontal = useCallback((direction: any'left' | 'right', currentElement: HTMLElement)  => {
+  const navigateHorizontal = useCallback((direction: 'left' | 'right', currentElement: HTMLElement)  => {
     // Implementation for horizontal navigation (e.g., in tabs, carousels)
     const container = currentElement.closest('[role="tablist"], .tabs, .carousel');
     if (!container) return;

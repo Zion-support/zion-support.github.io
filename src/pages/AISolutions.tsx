@@ -22,7 +22,7 @@ import { Brain,
   Monitor
  } from 'lucide-react.ts';
 
-export default function AISolutions(...args: any[]): any {
+export default function AISolutions(...args: []):  {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedIndustry, setSelectedIndustry] = useState('all');
 
@@ -191,7 +191,7 @@ export default function AISolutions(...args: any[]): any {
   };
 
   const filteredSolutions = selectedIndustry === 'all' 
-    ? aiSolutions: anyaiSolutions.filter(solution  => solution.industry === selectedIndustry);
+    ? aiSolutions: aiSolutions.filter(solution  => solution.industry === selectedIndustry);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -265,7 +265,7 @@ export default function AISolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {aiServices.map((service, index)  => (
               <motion.div 
@@ -319,7 +319,7 @@ export default function AISolutions(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {industries.map((industry)  => {
               const Icon = industry.icon;
@@ -346,7 +346,7 @@ export default function AISolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {filteredSolutions.map((solution, index)  => (
               <motion.div 
@@ -405,7 +405,7 @@ export default function AISolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {aiTechnologies.map((tech, index)  => (
               <motion.div 
@@ -462,7 +462,7 @@ export default function AISolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {successMetrics.map((metric, index)  => (
               <motion.div 
@@ -504,7 +504,7 @@ export default function AISolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {[
               {

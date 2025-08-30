@@ -31,7 +31,7 @@ import { Brain,
 import { SEO  } from '../components/SEO';
 import { emergingTechServices2030  } from '../data/emergingTechServices2030';
 
-export default function EmergingTech2030(...args: any[]): any {
+export default function EmergingTech2030(...args: []):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -150,7 +150,7 @@ export default function EmergingTech2030(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {emergingTechServices2030.map((service, index)  => {
                 const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Cpu;
                 
@@ -232,7 +232,7 @@ export default function EmergingTech2030(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Award,

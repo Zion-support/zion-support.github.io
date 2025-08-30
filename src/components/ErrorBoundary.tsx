@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react.ts';
 
 interface Props extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)  => void;
 
@@ -59,11 +59,11 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo)  => {
     try {
       // Send error to your error tracking service (e.g., Sentry, LogRocket, etc.)
       const errorData = {
-        errorId: anythis.state.errorId,
+        errorId: this.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -213,15 +213,15 @@ Timestamp: ${new Date().toISOString()}
 }
 
 // Hook for functional components to catch errors
-export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+export const useErrorHandler: [, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
-    const handleError = (event: anyErrorEvent)  => {
+    const handleError = (event: ErrorEvent)  => {
       setError(event.error);
     };
 
-    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)  => {
+    const handleUnhandledRejection = (event: PromiseRejectionEvent)  => {
       setError(new Error(event.reason));
     };
 
@@ -239,10 +239,10 @@ export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] =
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: anyReact.ComponentType<P>,
+  Component: React.ComponentType<P>,
   errorBoundaryProps?: Partial<Props>
 )  => {
-  const WrappedComponent = (props: anyP)  => (
+  const WrappedComponent = (props: P)  => (
     <ErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ErrorBoundary>

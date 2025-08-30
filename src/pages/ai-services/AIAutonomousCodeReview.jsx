@@ -40,7 +40,7 @@ const benefits = [
 const useCases = [
     {
         title: "Development Teams",
-        description: "Streamline code review processes for development teams of any size.",
+        description: "Streamline code review processes for development teams of  size.",
         icon: Users
     },
     {

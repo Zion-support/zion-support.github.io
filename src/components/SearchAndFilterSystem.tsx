@@ -19,7 +19,7 @@ import { Search,
 
 interface SearchResult {
 
-  id: anystring;
+  id: string;
   title: string;
   description: string;
   category: string;
@@ -75,8 +75,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     }, {} as Record<string, any>);
 
     return {
-      categories: anyObject.entries(categories).map(([key, count])  => ({
-        id: anykey,
+      categories: Object.entries(categories).map(([key, count])  => ({
+        id: key,
         label: key.charAt(0).toUpperCase() + key.slice(1),
         value: key,
         count
@@ -144,7 +144,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: anystring)  => {
+  const toggleFilter = (filterId: string)  => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -162,7 +162,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get icon for type
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -173,7 +173,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',
@@ -267,7 +267,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           <div className="relative">
             <select
               value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as any)}
+              onChange={(e) => setSortBy(e.target.value as )}
               className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
             >
               <option value="relevance">Relevance</option>

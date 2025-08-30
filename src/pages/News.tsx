@@ -1,7 +1,7 @@
 import { Link  } from 'react-router-dom.ts';
 import { Calendar, Clock, User, ArrowRight, ExternalLink  } from 'lucide-react.ts';
 
-export default function News(...args: any[]): any {
+export default function News(...args: []):  {
   const newsArticles = [
     {
       id: 1,
@@ -24,7 +24,7 @@ export default function News(...args: any[]): any {
       author: 'Michael Chen',
       date: '2024-01-10',
       readTime: '3 min read',
-      category: 'Company News',
+      category: 'Comp News',
       tags: ['Expansion', 'Global', 'Europe'],
       featured: false,
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=400'
@@ -86,14 +86,14 @@ export default function News(...args: any[]): any {
   const categories = [
     'All News',
     'Product Launch',
-    'Company News',
+    'Comp News',
     'Research',
     'Awards',
     'Partnerships',
     'Sustainability'
   ];
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -111,7 +111,7 @@ export default function News(...args: any[]): any {
             Latest News & Updates
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
-            Stay informed about our latest innovations, company updates, and industry insights
+            Stay informed about our latest innovations, comp updates, and industry insights
           </p>
         </div>
       </section>
@@ -229,7 +229,7 @@ export default function News(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {newsArticles.filter(article  => !article.featured).map((article) => (
               <article key={article.id} className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
                 <div className="relative">
@@ -308,7 +308,7 @@ export default function News(...args: any[]): any {
               </button>
             </div>
             <p className="text-sm text-white/70 mt-3">
-              We respect your privacy. Unsubscribe at any time.
+              We respect your privacy. Unsubscribe at  time.
             </p>
           </div>
         </div>

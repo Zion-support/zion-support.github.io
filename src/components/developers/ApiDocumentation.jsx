@@ -664,7 +664,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                     <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>
                   </tr>
                   <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>
+                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too M Requests</code></td>
                     <td className="py-2 px-4">The request was rejected due to rate limiting.</td>
                   </tr>
                   <tr className="border-b border-zinc-800">
@@ -696,7 +696,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <p className="text-zinc-400 mb-4">
                 The Zion API implements rate limiting to protect our infrastructure and ensure fair usage.
                 Rate limits are applied on a per-API key basis. If you exceed the rate limits, you will receive 
-                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code> response.
+                a <code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too M Requests</code> response.
               </p>
               
               <p className="text-zinc-400 mb-2">

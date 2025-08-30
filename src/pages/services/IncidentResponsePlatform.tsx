@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function IncidentResponsePlatform(...args: any[]): any {
+export default function IncidentResponsePlatform(...args: []):  {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16">
       <SEO title="Incident Response Platform" description="Automate detection, triage, and remediation with our AI-driven IR platform." />

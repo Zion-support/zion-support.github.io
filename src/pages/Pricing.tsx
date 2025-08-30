@@ -18,7 +18,7 @@ import { Check,
   Lock
  } from 'lucide-react.ts';
 
-export default function Pricing(...args: any[]): any {
+export default function Pricing(...args: []):  {
   const [billingCycle, setBillingCycle] = useState<any>('annual');
 
   const pricingTiers = [
@@ -145,7 +145,7 @@ export default function Pricing(...args: any[]): any {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            No hidden fees • Cancel anytime • 30-day money-back guarantee
+            No hidden fees • Cancel time • 30-day money-back guarantee
           </motion.div>
         </div>
       </section>
@@ -193,7 +193,7 @@ export default function Pricing(...args: any[]): any {
       {/* Pricing Tiers */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
-          <div className="grid lg: anygrid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg: grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
@@ -271,7 +271,7 @@ export default function Pricing(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-8 max-w-6xl mx-auto">
             {addOnServices.map((service, index)  => (
               <motion.div
                 key={service.name}
@@ -327,8 +327,8 @@ export default function Pricing(...args: any[]): any {
           <div className="max-w-4xl mx-auto space-y-6">
             {[
               {
-                question: any"Can I change my plan at any time?",
-                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
+                question: "Can I change my plan at  time?",
+                answer: "Yes, you can upgrade or downgrade your plan at  time. Changes take effect immediately, and we'll prorate  billing adjustments."
               },
               {
                 question: "What's included in the 30-day money-back guarantee?",

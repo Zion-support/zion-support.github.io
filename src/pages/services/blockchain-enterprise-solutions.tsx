@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function BlockchainEnterpriseSolutions(...args: any[]): any {
+export default function BlockchainEnterpriseSolutions(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Lock,
@@ -120,7 +120,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Supply Chain",
@@ -214,7 +214,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
+                    { type: "Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },
                     { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
@@ -301,7 +301,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

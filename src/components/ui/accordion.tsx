@@ -10,12 +10,12 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Accordion(...args: any[]): any {
+export function Accordion(...args: []):  {
   const [openItems, setOpenItems] = useState<any>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
   );
 
-  const handleToggle = (value: anystring)  => {
+  const handleToggle = (value: string)  => {
     if (type === 'single') {
       setOpenItems(openItems.includes(value) ? [] : [value]);
     } else {
@@ -32,7 +32,7 @@ export function Accordion(...args: any[]): any {
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { 
-            isOpen: anyopenItems.includes(child.props.value),
+            isOpen: openItems.includes(child.props.value),
             onToggle: ()  => handleToggle(child.props.value)
           });
         }
@@ -44,7 +44,7 @@ export function Accordion(...args: any[]): any {
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
@@ -52,7 +52,7 @@ interface AccordionItemProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AccordionItem(...args: any[]): any {
+export function AccordionItem(...args: []):  {
   return (
     <div className={`border-b border-gray-200 ${className}`}>
       {React.Children.map(children, (child) => {
@@ -67,14 +67,14 @@ export function AccordionItem(...args: any[]): any {
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
 
-  children: anyReact.ReactNode;
+  children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
   onToggle?: ()  => void;
 
 }
 
-export function AccordionTrigger(...args: any[]): any {
+export function AccordionTrigger(...args: []):  {
   return (
     <button
       className={`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
@@ -98,7 +98,7 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AccordionContent(...args: any[]): any {
+export function AccordionContent(...args: []):  {
   if (!isOpen) return null;
 
   return (

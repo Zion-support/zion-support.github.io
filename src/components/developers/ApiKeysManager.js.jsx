@@ -218,7 +218,7 @@ export default function ApiKeysManager() {
           <AlertDialogHeader>
             <AlertDialogTitle>Delete API Key</AlertDialogTitle>
             <AlertDialogDescription className="text-zinc-400">
-              This action cannot be undone. The API key will be permanently deleted and any applications using it will stop working.
+              This action cannot be undone. The API key will be permanently deleted and  applications using it will stop working.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <DialogFooter>

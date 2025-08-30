@@ -459,7 +459,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     certifications: ['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
 ];
-export const getIndustrySolutionsByIndustry = (industry: anystring): IndustrySolution[]  => {
+export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[]  => {
   if (industry === 'All') {
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
   }

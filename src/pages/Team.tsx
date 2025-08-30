@@ -19,7 +19,7 @@ import { Users,
   Star
  } from 'lucide-react.ts';
 
-export default function Team(...args: any[]): any {
+export default function Team(...args: []):  {
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -208,7 +208,7 @@ export default function Team(...args: any[]): any {
             Leadership Team
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index)  => (
               <motion.div
                 key={member.name}
@@ -280,7 +280,7 @@ export default function Team(...args: any[]): any {
             Areas of Expertise
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {expertiseAreas.map((area, index)  => (
               <motion.div
                 key={area.title}
@@ -300,7 +300,7 @@ export default function Team(...args: any[]): any {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.h2 
@@ -312,7 +312,7 @@ export default function Team(...args: any[]): any {
             Our Values
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)  => (
               <motion.div
                 key={value.title}

@@ -7,7 +7,7 @@ import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',
-        companySize: '',
+        compSize: '',
         budget: '',
         timeline: '',
         technologyMaturity: '',
@@ -21,7 +21,7 @@ const AdvancedServiceRecommendation = () => {
         'Technology', 'Healthcare', 'Financial Services', 'Manufacturing',
         'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'
     ];
-    const companySizes = [
+    const compSizes = [
         'Startup (1-50 employees)', 'Small Business (51-200 employees)',
         'Medium Business (201-1000 employees)', 'Enterprise (1000+ employees)'
     ];
@@ -204,7 +204,7 @@ const AdvancedServiceRecommendation = () => {
         }
     };
     const isFormComplete = () => {
-        return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&
+        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
     };
@@ -237,10 +237,10 @@ const AdvancedServiceRecommendation = () => {
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
-            <select value={clientProfile.companySize} onChange={(e) => setClientProfile(prev => ({ ...prev, companySize: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
-              <option value="">Select Company Size</option>
-              {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
+            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
+            <select value={clientProfile.compSize} onChange={(e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value }))} className="w-full p-3 border border-zion-slate-light rounded-md">
+              <option value="">Select Comp Size</option>
+              {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
             </select>
           </div>
           

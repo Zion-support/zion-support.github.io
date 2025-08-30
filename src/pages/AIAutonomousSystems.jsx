@@ -711,7 +711,7 @@ const autonomousTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Automotive Manufacturer",
+    comp: "Automotive Manufacturer",
     industry: "Automotive",
     challenge: "Needed autonomous driving system for next-generation vehicles",
     solution: "Built comprehensive autonomous system with computer vision, sensor fusion, and AI decision making",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Manufacturing Corporation",
+    comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Required autonomous robots for 24/7 production line operation",
     solution: "Implemented AI-powered industrial robots with computer vision and safety systems",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Agricultural Cooperative",
+    comp: "Agricultural Cooperative",
     industry: "Agriculture",
     challenge: "Needed autonomous farming system for large-scale crop management",
     solution: "Built autonomous agricultural robots with precision farming capabilities",
@@ -1115,7 +1115,7 @@ export default function AIAutonomousSystems() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

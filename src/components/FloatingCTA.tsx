@@ -190,7 +190,7 @@ const FloatingCTA: React.FC = (): JSX.Element => {
               </div>
 
               {/* Contact Methods */}
-              <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
                 {contactMethods.map((method, index)  => (
                   <motion.div
                     key={index}

@@ -20,7 +20,7 @@ import { Shield,
   Monitor,
   CreditCard
  } from 'lucide-react.ts';
-export default function CybersecurityServices(...args: any[]): any {
+export default function CybersecurityServices(...args: []):  {
   const cyberServices = [
     {
       name: "Security Assessment & Auditing",
@@ -170,7 +170,7 @@ export default function CybersecurityServices(...args: any[]): any {
               Comprehensive security solutions designed to protect your business from evolving threats
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {cyberServices.map((service, index)  => (
               <div
                 key={index}
@@ -221,7 +221,7 @@ export default function CybersecurityServices(...args: any[]): any {
               We leverage cutting-edge security tools and technologies to protect your infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
             {securityTechnologies.map((tech, index)  => (
               <div
                 key={index}
@@ -248,7 +248,7 @@ export default function CybersecurityServices(...args: any[]): any {
               Meet industry standards and regulatory requirements with our compliance solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {complianceFrameworks.map((framework, index)  => (
               <div
                 key={index}

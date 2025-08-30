@@ -234,7 +234,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -266,7 +266,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -333,7 +333,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -370,7 +370,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index)  => (
               <motion.div
                 key={index}
@@ -430,7 +430,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                <span>Cancel anytime</span>
+                <span>Cancel time</span>
               </div>
             </div>
           </motion.div>

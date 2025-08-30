@@ -23,7 +23,7 @@ import { Brain,
   ShoppingCart
  } from 'lucide-react.ts';
 
-export default function AIServices(...args: any[]): any {
+export default function AIServices(...args: []):  {
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
@@ -163,7 +163,7 @@ export default function AIServices(...args: any[]): any {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index)  => (
               <div
                 key={index}
@@ -218,7 +218,7 @@ export default function AIServices(...args: any[]): any {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index)  => (
               <div
                 key={index}
@@ -247,7 +247,7 @@ export default function AIServices(...args: any[]): any {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
               <div
                 key={index}

@@ -71,8 +71,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Loop', 'Returnly', 'Happy Returns'],
     marketSize: '$9B returns tech',
     growthRate: '18% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -118,8 +117,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Mailshake', 'Lemlist', 'Apollo'],
     marketSize: '$6B sales engagement',
     growthRate: '20% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -165,8 +163,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Descript', 'Castmagic', 'Capsho'],
     marketSize: '$2B podcast tooling',
     growthRate: '19% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -212,8 +209,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Webflow', 'Squarespace', 'Wix'],
     marketSize: '$4B creator sites',
     growthRate: '11% YoY',
-    variant: 'growth-futuristic' as any,
-    contactInfo: {
+    variant: 'growth-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -259,8 +255,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['HubSpot Starter', 'Pipedrive Essentials'],
     marketSize: '$20B SMB CRM',
     growthRate: '10% YoY',
-    variant: 'analytics-futuristic' as any,
-    contactInfo: {
+    variant: 'analytics-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -306,8 +301,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Copy.ai', 'Jasper', 'Headline analyzers'],
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -353,8 +347,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['LinearB', 'Swarmia', 'Velocity'],
     marketSize: '$5B dev analytics',
     growthRate: '21% YoY',
-    variant: 'analytics-futuristic' as any,
-    contactInfo: {
+    variant: 'analytics-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -398,8 +391,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Jamf, Kandji, Intune turnkey partners'],
     marketSize: '$6B+ MDM',
     growthRate: '18% YoY',
-    variant: 'cloud-futuristic' as any,
-    contactInfo: {
+    variant: 'cloud-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -443,8 +435,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Supernormal, Tactiq + custom flows'],
     marketSize: '$3B productivity AI',
     growthRate: '25% YoY',
-    variant: 'ai-futuristic' as any,
-    contactInfo: {
+    variant: 'ai-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -488,8 +479,7 @@ export const realMarketServices: RealMarketService[] = [
     competitors: ['Native vendor hygiene, manual audits'],
     marketSize: '$2B experimentation',
     growthRate: '18% YoY',
-    variant: 'devops-futuristic' as any,
-    contactInfo: {
+    variant: 'devops-futuristic' as , contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

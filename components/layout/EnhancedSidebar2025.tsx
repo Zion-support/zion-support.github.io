@@ -27,7 +27,7 @@ interface SidebarItem {
 
 const sidebarSections = [
   {
-    title: any'Revolutionary Services',
+    title: 'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items: [
@@ -198,7 +198,7 @@ const sidebarSections = [
     ]
   },
   {
-    title: 'Company & Resources',
+    title: 'Comp & Resources',
     icon: Users,
     color: 'from-green-500 to-emerald-600',
     items: [
@@ -210,7 +210,7 @@ const sidebarSections = [
         subItems: [
           { name: 'Our Mission', href: '/mission' },
           { name: 'Leadership Team', href: '/leadership' },
-          { name: 'Company History', href: '/history' },
+          { name: 'Comp History', href: '/history' },
           { name: 'Careers', href: '/careers' }
         ]
       },
@@ -251,11 +251,11 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
 }
 
-export default function EnhancedSidebar2025(...args: any[]): any {
+export default function EnhancedSidebar2025(...args: []):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-  const toggleSection = (sectionTitle: anystring)  => {
+  const toggleSection = (sectionTitle: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
       newExpanded.delete(sectionTitle);
@@ -274,7 +274,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
     )
   );
 
-  const toggleItem = (itemName: anystring)  => {
+  const toggleItem = (itemName: string)  => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
       newExpanded.delete(itemName);
@@ -296,7 +296,7 @@ export default function EnhancedSidebar2025(...args: any[]): any {
     };
   }, [isOpen]);
 
-  const isActive = (href: anystring)  => router.pathname === href;
+  const isActive = (href: string)  => router.pathname === href;
 
   return (
     <>

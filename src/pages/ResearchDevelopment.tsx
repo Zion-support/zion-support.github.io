@@ -237,7 +237,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {filteredProjects.map((project, index)  => (
               <motion.div
                 key={project.id}
@@ -361,7 +361,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {partnerships.map((partner, index)  => (
               <motion.div
                 key={partner.name}
@@ -404,7 +404,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 icon: Flask,

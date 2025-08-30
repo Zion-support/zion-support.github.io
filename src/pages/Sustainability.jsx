@@ -181,7 +181,7 @@ const sustainabilityTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Green Manufacturing Corp",
+    comp: "Green Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed to reduce carbon footprint by 50% while maintaining production efficiency",
     solution: "Implemented comprehensive sustainability program with renewable energy, waste reduction, and circular economy practices",
@@ -190,7 +190,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Eco-City Initiative",
+    comp: "Eco-City Initiative",
     industry: "Municipal",
     challenge: "Required sustainable urban development with renewable energy and green infrastructure",
     solution: "Built smart city with solar power, green buildings, and sustainable transportation systems",
@@ -199,7 +199,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Sustainable Logistics",
+    comp: "Sustainable Logistics",
     industry: "Transportation",
     challenge: "Needed to reduce transportation carbon footprint by 70%",
     solution: "Implemented electric fleet, route optimization, and carbon tracking systems",
@@ -585,7 +585,7 @@ export default function Sustainability() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -57,7 +57,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI-Powered Analysis",
@@ -125,7 +125,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {[
                 {
                   title: "Static Application Security Testing (SAST)",
@@ -190,7 +190,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "85%", description: "Reduction in security vulnerabilities" },
                 { metric: "70%", description: "Faster code review process" },
@@ -233,7 +233,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {[
                 {
                   industry: "Financial Services",
@@ -298,7 +298,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
               {[
                 "SonarQube", "Snyk", "CodeQL", "Veracode", "Checkmarx", "Fortify", "Coverity", "Bandit",
                 "ESLint", "SonarLint", "GitHub Security", "GitLab Security", "Bitbucket Security", "Jenkins", "GitLab CI/CD", "GitHub Actions"
@@ -336,7 +336,7 @@ const AICodeReviewSecurity: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {[
                 {
                   name: "Developer",

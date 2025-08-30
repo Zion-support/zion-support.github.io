@@ -399,7 +399,7 @@ const workflowTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed AI workflow automation for production processes across 20+ facilities",
     solution: "Built comprehensive AI workflow automation system with predictive analytics",
@@ -408,7 +408,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required AI document processing and workflow automation for compliance",
     solution: "Implemented AI-powered document processing and workflow automation",
@@ -417,7 +417,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Needed AI workflow automation for patient care processes",
     solution: "Built AI-powered workflow automation system for healthcare",
@@ -484,14 +484,14 @@ const workflowBenefits = [
   }
 ];
 
-export default function AIWorkflowAutomation(...args: any[]): any {
+export default function AIWorkflowAutomation(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Process Automation', 'Document Processing', 'Workflow Orchestration', 'Decision Automation', 'Analytics', 'Task Management'];
   
   const filteredSolutions = selectedCategory === 'All' 
-    ? workflowSolutions: anyworkflowSolutions.filter(solution  => solution.category === selectedCategory);
+    ? workflowSolutions: workflowSolutions.filter(solution  => solution.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -562,7 +562,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {workflowBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
@@ -608,7 +608,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {workflowTechnologies.map((technology, index)  => (
               <motion.div
                 key={technology.name}
@@ -655,7 +655,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)  => (
               <motion.div
                 key={step.step}
@@ -716,7 +716,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.id}
@@ -788,7 +788,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)  => (
               <motion.div
                 key={story.id}
@@ -802,7 +802,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

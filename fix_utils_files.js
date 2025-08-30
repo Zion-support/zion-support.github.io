@@ -52,7 +52,7 @@ function fixUtilsFile(filePath) {
     // Fix type annotations
     content = content.replace(/stri,\s*n,\s*g/g, "string");
     content = content.replace(/numb,\s*e,\s*r/g, "number");
-    content = content.replace(/a,\s*n,\s*y/g, "any");
+    content = content.replace(/a,\s*n,\s*y/g, "");
     content = content.replace(/pendi,\s*n,\s*g/g, "pending");
     content = content.replace(/approv,\s*e,\s*d/g, "approved");
     content = content.replace(/reject,\s*e,\s*d/g, "rejected");

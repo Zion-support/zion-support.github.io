@@ -7,7 +7,7 @@ interface Testimonial {
   id: number;
   name: string;
   role: string;
-  company: string;
+  comp: string;
   content: string;
   rating: number;
   avatar: string;
@@ -23,7 +23,7 @@ const Testimonials: React.FC = (): JSX.Element => {
       id: 1,
       name: "Sarah Chen",
       role: "CTO",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",
       rating: 5,
       avatar: "/images/testimonials/sarah-chen.jpg",
@@ -33,7 +33,7 @@ const Testimonials: React.FC = (): JSX.Element => {
       id: 2,
       name: "Marcus Rodriguez",
       role: "VP of Operations",
-      company: "Global Manufacturing Co.",
+      comp: "Global Manufacturing Co.",
       content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
       rating: 5,
       avatar: "/images/testimonials/marcus-rodriguez.jpg",
@@ -43,7 +43,7 @@ const Testimonials: React.FC = (): JSX.Element => {
       id: 3,
       name: "Dr. Emily Watson",
       role: "Research Director",
-      company: "Quantum Research Institute",
+      comp: "Quantum Research Institute",
       content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",
       rating: 5,
       avatar: "/images/testimonials/emily-watson.jpg",
@@ -53,7 +53,7 @@ const Testimonials: React.FC = (): JSX.Element => {
       id: 4,
       name: "David Kim",
       role: "CEO",
-      company: "FinTech Innovations",
+      comp: "FinTech Innovations",
       content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",
       rating: 5,
       avatar: "/images/testimonials/david-kim.jpg",
@@ -69,7 +69,7 @@ const Testimonials: React.FC = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: number)  => {
     setCurrentIndex(index);
   };
 
@@ -136,7 +136,7 @@ const Testimonials: React.FC = (): JSX.Element => {
                   {testimonials[currentIndex].role}
                 </p>
                 <p className="text-zion-slate-light text-sm mb-2">
-                  {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].comp}
                 </p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">
                   {testimonials[currentIndex].industry}

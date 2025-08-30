@@ -32,7 +32,7 @@ import { Code,
   Lightbulb
  } from 'lucide-react.ts';
 
-const DeveloperPortal: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DeveloperPortal: [, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const apiFeatures = [
@@ -239,7 +239,7 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {quickStartSteps.map((step, index)  => (
               <motion.div
                 key={index}
@@ -285,7 +285,7 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {apiFeatures.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -330,7 +330,7 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {codeExamples.map((example, index)  => (
               <motion.div
                 key={index}
@@ -373,7 +373,7 @@ print(data)`,
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {resources.map((resource, index)  => (
               <motion.div
                 key={index}

@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, BarChart3, TrendingUp, Database, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Zap, Target, PieChart  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function AIBusinessIntelligence(...args: any[]): any {
+export default function AIBusinessIntelligence(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -143,7 +143,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Analytics Types</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Descriptive", icon: BarChart3, color: "from-blue-500 to-cyan-500" },
+                    { type: "Descriptive", icon: BarChart3, color: "from-blue-500 to-cyan-500" },
                     { type: "Diagnostic", icon: Target, color: "from-purple-500 to-pink-500" },
                     { type: "Predictive", icon: TrendingUp, color: "from-green-500 to-emerald-500" },
                     { type: "Prescriptive", icon: Zap, color: "from-orange-500 to-red-500" }
@@ -173,7 +173,7 @@ export default function AIBusinessIntelligence(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Sales & Marketing",

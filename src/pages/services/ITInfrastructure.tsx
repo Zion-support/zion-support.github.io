@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Database, Cloud, Cpu, Users, CheckCircle, ArrowRight, Settings, Monitor, HardDrive, Wifi, Lock, TrendingUp, BarChart3, Zap  } from 'lucide-react.ts';
 
-export default function ITInfrastructure(...args: any[]): any {
+export default function ITInfrastructure(...args: []):  {
   const features = [
     {
       icon: Server,
@@ -134,7 +134,7 @@ export default function ITInfrastructure(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -165,7 +165,7 @@ export default function ITInfrastructure(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div
                 key={index}
@@ -202,7 +202,7 @@ export default function ITInfrastructure(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}

@@ -3,7 +3,7 @@ import { SEO  } from '@/components/SEO';
 import { DisputeDashboard  } from '@/components/disputes';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
 
-function DisputesPage(...args: any[]): any {
+function DisputesPage(...args: []):  {
   return (
     <ProtectedRoute>
       <>

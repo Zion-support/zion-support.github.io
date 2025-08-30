@@ -57,13 +57,13 @@ import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 
-export default function ComprehensiveServicesLanding2028(...args: any[]): any {
+export default function ComprehensiveServicesLanding2028(...args: []):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
-    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: any'Micro SaaS' })),
-    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: any'IT Infrastructure' })),
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: 'Micro SaaS' })),
+    ...revolutionaryITInfrastructureServices2028.map(s  => ({ ...s, type: 'IT Infrastructure' })),
     ...revolutionaryAIServices2028.map(s  => ({ ...s, type: 'AI Services' }))
   ];
 
@@ -71,7 +71,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     {
       name: "Sarah Johnson",
       role: "CTO, TechFlow Solutions",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "Zion Tech Group's AI-powered legal document analyzer has revolutionized our contract review process. We've reduced review time by 80% and identified potential risks we would have missed.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
@@ -79,7 +79,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     {
       name: "Michael Chen",
       role: "Operations Director, Global Logistics Inc",
-      company: "Global Logistics Inc",
+      comp: "Global Logistics Inc",
       content: "The quantum-enhanced supply chain optimizer has transformed our logistics operations. We've reduced costs by 35% and improved delivery accuracy to 98%.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
@@ -87,7 +87,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     {
       name: "Dr. Emily Rodriguez",
       role: "Research Director, BioTech Innovations",
-      company: "BioTech Innovations",
+      comp: "BioTech Innovations",
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
       rating: 5,
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
@@ -101,7 +101,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     { number: "24/7", label: "Support Available", icon: Clock }
   ];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Legal Tech': return Scale;
       case 'Supply Chain': return Truck;
@@ -118,7 +118,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',
@@ -201,7 +201,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index)  => (
               <motion.div
                 key={stat.label}
@@ -236,7 +236,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.slice(0, 6).map((service, index)  => (
               <motion.div
                 key={service.id}
@@ -366,7 +366,7 @@ export default function ComprehensiveServicesLanding2028(...args: any[]): any {
                 <div className="text-left">
                   <div className="font-semibold text-white">{testimonials[currentTestimonial].name}</div>
                   <div className="text-zion-slate-light">{testimonials[currentTestimonial].role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonials[currentTestimonial].comp}</div>
                 </div>
               </div>
             </motion.div>

@@ -26,7 +26,7 @@ import { Code,
   Network
  } from 'lucide-react.ts';
 
-export default function CustomDevelopment(...args: any[]): any {
+export default function CustomDevelopment(...args: []):  {
   const services = [
     {
       title: 'Web Applications',
@@ -163,7 +163,7 @@ export default function CustomDevelopment(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div 
                 key={index}
@@ -217,7 +217,7 @@ export default function CustomDevelopment(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index)  => (
               <motion.div 
                 key={index}
@@ -261,7 +261,7 @@ export default function CustomDevelopment(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
@@ -299,7 +299,7 @@ export default function CustomDevelopment(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
             {industries.map((industry, index)  => (
               <motion.div 
                 key={index}
@@ -332,7 +332,7 @@ export default function CustomDevelopment(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },
               { step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },

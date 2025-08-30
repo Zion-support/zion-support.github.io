@@ -26,7 +26,7 @@ import { Rocket,
   Heart
  } from 'lucide-react.ts';
 
-const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DigitalTransformation: [, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
@@ -143,7 +143,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
       rating: 5
     },
     {
-      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
+      content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
       name: "Marcus Johnson",
       role: "CTO, DigitalFirst Inc",
       rating: 5
@@ -198,7 +198,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
       {/* Stats Section */}
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index)  => (
               <motion.div
                 key={index}
@@ -228,7 +228,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {transformationServices.map((service, index)  => (
               <motion.div
                 key={index}
@@ -272,7 +272,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {transformationPhases.map((phase, index)  => (
                 <motion.div
                   key={index}
@@ -337,7 +337,7 @@ const DigitalTransformation: [any, React.Dispatch<React.SetStateAction<any>>] = 
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index)  => (
               <motion.div
                 key={index}

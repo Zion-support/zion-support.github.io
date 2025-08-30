@@ -25,7 +25,7 @@ import { Link,
   Check
  } from 'lucide-react.ts';
 
-const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+const BlockchainServicesPage: [, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
@@ -152,17 +152,17 @@ const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] =
   ];
 
   const categories = [
-    { id: any'all', name: 'All Services', count: blockchainServices.length },
+    { id: 'all', name: 'All Services', count: blockchainServices.length },
     { id: 'Development', name: 'Development', count: blockchainServices.filter(s  => s.category === 'Development').length },
-    { id: any'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
-    { id: any'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
-    { id: any'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
-    { id: any'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
-    { id: any'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
+    { id: 'DeFi', name: 'DeFi', count: blockchainServices.filter(s  => s.category === 'DeFi').length },
+    { id: 'NFTs', name: 'NFTs', count: blockchainServices.filter(s  => s.category === 'NFTs').length },
+    { id: 'Enterprise', name: 'Enterprise', count: blockchainServices.filter(s  => s.category === 'Enterprise').length },
+    { id: 'Security', name: 'Security', count: blockchainServices.filter(s  => s.category === 'Security').length },
+    { id: 'Interoperability', name: 'Interoperability', count: blockchainServices.filter(s  => s.category === 'Interoperability').length }
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? blockchainServices: anyblockchainServices.filter(service  => service.category === selectedCategory);
+    ? blockchainServices: blockchainServices.filter(service  => service.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -241,7 +241,7 @@ const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] =
       {/* Services Grid */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}
@@ -333,7 +333,7 @@ const BlockchainServicesPage: [any, React.Dispatch<React.SetStateAction<any>>] =
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Shield,

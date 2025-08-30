@@ -450,21 +450,21 @@ const AIServicesPage: React.FC = (): JSX.Element => {
 
   const caseStudies = [
     {
-      company: 'TechCorp Industries',
+      comp: 'TechCorp Industries',
       industry: 'Manufacturing',
       challenge: 'Quality control inefficiencies',
       solution: 'Computer vision system for defect detection',
       results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
     },
     {
-      company: 'Global Finance Ltd',
+      comp: 'Global Finance Ltd',
       industry: 'Financial Services',
       challenge: 'Fraud detection complexity',
       solution: 'ML-powered risk assessment',
       results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
     },
     {
-      company: 'HealthTech Solutions',
+      comp: 'HealthTech Solutions',
       industry: 'Healthcare',
       challenge: 'Patient data analysis',
       solution: 'NLP for medical records',

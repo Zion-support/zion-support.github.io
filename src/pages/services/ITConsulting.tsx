@@ -25,7 +25,7 @@ import { Users,
   Building2
  } from 'lucide-react.ts';
 
-export default function ITConsulting(...args: any[]): any {
+export default function ITConsulting(...args: []):  {
   const services = [
     {
       title: 'Technology Strategy',
@@ -168,7 +168,7 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div 
                 key={index}
@@ -221,7 +221,7 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {expertise.map((area, index)  => (
               <motion.div 
                 key={index}
@@ -259,7 +259,7 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div 
                 key={index}
@@ -297,7 +297,7 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
             {industries.map((industry, index)  => (
               <motion.div 
                 key={index}
@@ -330,7 +330,7 @@ export default function ITConsulting(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             {[
               { step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },
               { step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },

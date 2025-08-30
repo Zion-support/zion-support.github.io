@@ -85,7 +85,7 @@ const categories = [
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: any'from-purple-600 to-pink-700',
+    color: 'from-purple-600 to-pink-700',
     services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
   },
   {
@@ -120,7 +120,7 @@ const patentStatusColors = {
   'Open Source': 'from-purple-600 to-violet-700'
 };
 
-export function UltimateServicesShowcase(...args: any[]): any {
+export function UltimateServicesShowcase(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedService, setSelectedService] = useState<any>(null);
 
@@ -131,7 +131,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
   ];
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
+    ? allServices: categories.find(cat  => cat.id === selectedCategory)?.services || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -207,7 +207,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover: anybg-zion-slate hover:text-white'
+                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
             }`}
           >
             All Services ({allServices.length})

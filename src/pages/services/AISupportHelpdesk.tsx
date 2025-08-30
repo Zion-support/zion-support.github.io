@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AISupportHelpdesk(...args: any[]): any {
+export default function AISupportHelpdesk(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -29,7 +29,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
     {
       icon: Smartphone,
       title: "Mobile-First Design",
-      description: "Fully responsive support platform accessible on any device with native mobile apps."
+      description: "Fully responsive support platform accessible on  device with native mobile apps."
     },
     {
       icon: Globe,
@@ -236,7 +236,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
@@ -268,7 +268,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)  => (
                 <motion.div
                   key={index}
@@ -300,7 +300,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)  => (
                 <motion.div
                   key={index}
@@ -332,7 +332,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
@@ -366,7 +366,7 @@ export default function AISupportHelpdesk(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}

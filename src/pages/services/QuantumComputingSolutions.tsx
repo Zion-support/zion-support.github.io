@@ -210,7 +210,7 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -259,7 +259,7 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {applications.map((app, index)  => (
               <motion.div
                 key={app.industry}
@@ -307,7 +307,7 @@ const QuantumComputingSolutions = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}

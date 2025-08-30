@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function FinOpsAdvisor(...args: any[]): any {
+export default function FinOpsAdvisor(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Calculator,
@@ -120,7 +120,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Compute Resources",
@@ -191,7 +191,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   step: "01",
@@ -256,7 +256,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"30-40%", label: "Cost Reduction", description: "Average savings" },
+                    { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }
@@ -285,7 +285,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cost Management Tools",
@@ -356,7 +356,7 @@ export default function FinOpsAdvisor(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

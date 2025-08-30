@@ -711,7 +711,7 @@ const vehicleTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Autonomous Transport Corp",
+    comp: "Autonomous Transport Corp",
     industry: "Transportation",
     challenge: "Needed AI-powered autonomous vehicle system for logistics fleet",
     solution: "Built comprehensive AI autonomous vehicle system with perception, navigation, and control",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Smart City Solutions",
+    comp: "Smart City Solutions",
     industry: "Government",
     challenge: "Required autonomous vehicle system for public transportation",
     solution: "Implemented AI-driven autonomous public transport system",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Industrial Automation Ltd",
+    comp: "Industrial Automation Ltd",
     industry: "Manufacturing",
     challenge: "Needed autonomous vehicle system for warehouse operations",
     solution: "Built AI-powered autonomous warehouse vehicle system",
@@ -1115,7 +1115,7 @@ export default function AIAutonomousVehicle() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

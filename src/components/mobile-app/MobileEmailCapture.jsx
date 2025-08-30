@@ -88,7 +88,7 @@ export const MobileEmailCapture = () => {
                 </button>
               </div>
               <p className="text-sm text-gray-400">
-                We respect your privacy. Unsubscribe at any time.
+                We respect your privacy. Unsubscribe at  time.
               </p>
             </form>
           )}

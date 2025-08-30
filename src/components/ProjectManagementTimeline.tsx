@@ -81,7 +81,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: any'1',
+        id: '1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -223,16 +223,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
 
   // Calculate project stats
   const projectStats = {
-    total: anyprojects.length,
+    total: projects.length,
     active: projects.filter(p  => p.status === 'active').length,
-    completed: anyprojects.filter(p  => p.status === 'completed').length,
-    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,
-    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),
-    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
+    completed: projects.filter(p  => p.status === 'completed').length,
+    onHold: projects.filter(p  => p.status === 'on-hold').length,
+    totalBudget: projects.reduce((sum, p)  => sum + p.budget, 0),
+    averageProgress: projects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: string)  => {
     switch (status) {
       case 'planning':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
@@ -250,7 +250,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -261,7 +261,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get milestone status color
-  const getMilestoneStatusColor = (status: anystring)  => {
+  const getMilestoneStatusColor = (status: string)  => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20';
@@ -272,7 +272,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Format currency
-  const formatCurrency = (amount: anynumber)  => {
+  const formatCurrency = (amount: number)  => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -282,7 +282,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anystring)  => {
+  const getDaysRemaining = (endDate: string)  => {
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();
@@ -309,7 +309,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'

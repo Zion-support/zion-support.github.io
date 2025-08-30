@@ -17,7 +17,7 @@ interface ContactFormData {
   name: string;
   email: string;
   phone: string;
-  company: string;
+  comp: string;
   service: string;
   message: string;
 
@@ -29,12 +29,12 @@ interface ContactFormErrors {
 
 }
 
-export function EnhancedContact(...args: any[]): any {
+export function EnhancedContact(...args: []):  {
   const [formData, setFormData] = useState<any>({
     name: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     service: 'general',
     message: ''
   });
@@ -77,7 +77,7 @@ export function EnhancedContact(...args: any[]): any {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
+  const handleInputChange = (field: keyof ContactFormData, value: string)  => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -86,7 +86,7 @@ export function EnhancedContact(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -104,7 +104,7 @@ export function EnhancedContact(...args: any[]): any {
         name: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         service: 'general',
         message: ''
       });
@@ -239,7 +239,7 @@ export function EnhancedContact(...args: any[]): any {
               ))}
             </div>
 
-            {/* Company Stats */}
+            {/* Comp Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -342,7 +342,7 @@ export function EnhancedContact(...args: any[]): any {
                 </AnimatePresence>
               </div>
 
-              {/* Phone and Company */}
+              {/* Phone and Comp */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -358,16 +358,15 @@ export function EnhancedContact(...args: any[]): any {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Company
-                  </label>
+                  <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
+                    Comp </label>
                   <input
                     type="text"
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    id="comp"
+                    value={formData.comp}
+                    onChange={(e) => handleInputChange('comp', e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
-                    placeholder="Enter your company name"
+                    placeholder="Enter your comp name"
                   />
                 </div>
               </div>
@@ -381,7 +380,7 @@ export function EnhancedContact(...args: any[]): any {
                   id="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
                 >
                   {services.map(service  => (
                     <option key={service.value} value={service.value}>

@@ -109,7 +109,7 @@ export function AboutSection() {
             </h3>
             <p className="text-lg text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
               Our team of experts spans across cutting-edge technologies, ensuring we can 
-              deliver comprehensive solutions for any digital challenge your business faces.
+              deliver comprehensive solutions for  digital challenge your business faces.
             </p>
           </div>
 

@@ -27,7 +27,7 @@ interface LayoutShiftEntry extends PerformanceEntry {
   hadRecentInput: boolean;
   value: number;
 }
-export function usePerformance(...args: any[]): any {
+export function usePerformance(...args: []):  {
   const [metrics, setMetrics] = useState<any>({
     fcp: null,
     lcp: null,
@@ -96,7 +96,7 @@ export function usePerformance(...args: any[]): any {
     if (navigationEntry) {
       setMetrics(prev => ({
         ...prev,
-        ttfb: anynavigationEntry.responseStart - navigationEntry.requestStart,
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
         domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
         windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
       }));
@@ -110,7 +110,7 @@ export function usePerformance(...args: any[]): any {
     };
   }, []);
   // Get performance rating
-  const getRating = (metric: anykeyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor'  => {
+  const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor'  => {
     const thresholds = {
       fcp: { good: 1800, poor: 3000 },
       lcp: { good: 2500, poor: 4000 },
@@ -155,7 +155,7 @@ export function usePerformance(...args: any[]): any {
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-        default: anyreturn 100;
+        default: return 100;
       }
     });
     return Math.round(scores.reduce((sum, score)  => sum + score, 0) / scores.length);
@@ -167,7 +167,7 @@ export function usePerformance(...args: any[]): any {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
-          console.warn('Long task detected: any', {
+          console.warn('Long task detected: ', {
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
@@ -186,7 +186,7 @@ export function usePerformance(...args: any[]): any {
     metrics,
     observers,
     isMonitoring,
-    performanceScore: anygetPerformanceScore(),
+    performanceScore: getPerformanceScore(),
     insights: getPerformanceInsights(),
     startMonitoring,
     stopMonitoring,
@@ -201,7 +201,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
       list.getEntries().forEach(callback);
     });
     try {
-      observer.observe({ entryTypes: any[eventName] });
+      observer.observe({ entryTypes: [eventName] });
     } catch (error) {
       console.warn(`Error observing ${eventName}:`, error);
     }
@@ -209,7 +209,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
   }, [eventName, callback]);
 }
 // Hook for measuring time between renders
-export function useRenderTime(...args: any[]): any {
+export function useRenderTime(...args: []):  {
   const renderStart = useRef(performance.now());
   const [renderTime, setRenderTime] = useState(0);
   useEffect(() => {

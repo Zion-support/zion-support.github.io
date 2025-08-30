@@ -4,7 +4,7 @@ import { Link  } from 'react-router-dom.ts';
 import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function AffiliateMarketingTracker(...args: any[]): any {
+export default function AffiliateMarketingTracker(...args: []):  {
   const features = [
     {
       icon: Target,
@@ -167,7 +167,7 @@ export default function AffiliateMarketingTracker(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
@@ -199,7 +199,7 @@ export default function AffiliateMarketingTracker(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
                 <motion.div
                   key={index}
@@ -233,7 +233,7 @@ export default function AffiliateMarketingTracker(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid md: anygrid-cols-3 gap-8">
+            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}

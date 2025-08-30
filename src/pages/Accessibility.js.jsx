@@ -251,7 +251,7 @@ const Accessibility = () => {
             Need Help with Accessibility?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            If you encounter any accessibility issues or have suggestions for 
+            If you encounter  accessibility issues or have suggestions for 
             improvement, we want to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

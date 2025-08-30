@@ -1,6 +1,6 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
-export default function PricingPage(...args: any[]): any {
+export default function PricingPage(...args: []):  {
   const pricingTiers = [
     {
       name: 'Starter',
@@ -92,8 +92,8 @@ export default function PricingPage(...args: any[]): any {
       answer: 'We accept all major credit cards, bank transfers, and can accommodate custom payment terms for enterprise clients.'
     },
     {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.'
+      question: 'Can I change my plan at  time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.'
     },
     {
       question: 'Is there a setup fee?',
@@ -109,7 +109,7 @@ export default function PricingPage(...args: any[]): any {
     },
     {
       question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel at any time with no penalties. Your access will continue until the end of your current billing period.'
+      answer: 'Yes, you can cancel at  time with no penalties. Your access will continue until the end of your current billing period.'
     }
   ];
   return (
@@ -144,7 +144,7 @@ export default function PricingPage(...args: any[]): any {
         {/* Pricing Tiers */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {pricingTiers.map((tier, index)  => (
                 <div 
                   key={index} 
@@ -205,7 +205,7 @@ export default function PricingPage(...args: any[]): any {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {addOnServices.map((service, index)  => (
                 <div key={index} className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-10">
                   <h3 className="text-xl font-semibold mb-3">{service.name}</h3>

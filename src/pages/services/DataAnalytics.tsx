@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { BarChart3, Database, Zap, Shield, Globe, Server, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, PieChart, LineChart, BarChart, TrendingDown, ShoppingCart  } from 'lucide-react.ts';
 
-export default function DataAnalytics(...args: any[]): any {
+export default function DataAnalytics(...args: []):  {
   const features = [
     {
       icon: BarChart3,
@@ -149,7 +149,7 @@ export default function DataAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -187,7 +187,7 @@ export default function DataAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
             {industries.map((industry, index)  => (
               <motion.div
                 key={industry.name}
@@ -225,7 +225,7 @@ export default function DataAnalytics(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}

@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function DigitalTwin(...args: any[]): any {
+export default function DigitalTwin(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function DigitalTwin(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -120,7 +120,7 @@ export default function DigitalTwin(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Manufacturing",
@@ -214,7 +214,7 @@ export default function DigitalTwin(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
                   {[
-                    { component: any"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: "Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }

@@ -291,7 +291,7 @@ const AdvancedAnalyticsDashboard = () => {
                 <div>
                   <h4 className="font-semibold text-zion-slate-dark">Satisfaction Score</h4>
                   <p className="text-sm text-zion-slate-light">
-                    Client satisfaction reached 4.8/5, highest in company history
+                    Client satisfaction reached 4.8/5, highest in comp history
                   </p>
                 </div>
               </div>

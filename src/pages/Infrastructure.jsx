@@ -400,7 +400,7 @@ const infrastructureTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Financial Institution",
+    comp: "Global Financial Institution",
     industry: "Finance",
     challenge: "Needed enterprise-grade infrastructure for 50,000+ users across 30 countries",
     solution: "Built comprehensive infrastructure with data centers, cloud integration, and security",
@@ -409,7 +409,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Required HIPAA-compliant infrastructure for patient data management",
     solution: "Implemented secure infrastructure with encryption, access controls, and monitoring",
@@ -418,7 +418,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Manufacturing Corporation",
+    comp: "Manufacturing Corporation",
     industry: "Manufacturing",
     challenge: "Needed IoT-ready infrastructure for smart manufacturing operations",
     solution: "Built edge computing infrastructure with IoT integration and real-time monitoring",
@@ -804,7 +804,7 @@ export default function Infrastructure() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

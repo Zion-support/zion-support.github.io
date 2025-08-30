@@ -30,7 +30,7 @@ export default function OrdersPage() {
                 <TableCell><Skeleton className="h-4 w-24"/></TableCell>
               </TableRow>))}
           </TableBody>
-        </Table>) : orders.length === 0 ? (<EmptyState icon={<FileText className="h-10 w-10"/>} title="No Orders" description="You haven't purchased anything yet."/>) : (<Table>
+        </Table>) : orders.length === 0 ? (<EmptyState icon={<FileText className="h-10 w-10"/>} title="No Orders" description="You haven't purchased thing yet."/>) : (<Table>
           <TableHeader>
             <TableRow>
               <TableHead>Order #</TableHead>

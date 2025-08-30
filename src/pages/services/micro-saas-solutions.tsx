@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function MicroSAASSolutions(...args: any[]): any {
+export default function MicroSAASSolutions(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Rocket,
@@ -120,7 +120,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Business Tools",
@@ -191,7 +191,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -261,7 +261,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Features</h3>
                 <div className="space-y-4">
                   {[
-                    { feature: any"Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
+                    { feature: "Responsive Design", icon: Globe, color: "from-blue-500 to-cyan-500" },
                     { feature: "API Integration", icon: Settings, color: "from-purple-500 to-pink-500" },
                     { feature: "Real-time Updates", icon: Zap, color: "from-green-500 to-emerald-500" },
                     { feature: "Mobile Apps", icon: Rocket, color: "from-orange-500 to-red-500" }
@@ -345,7 +345,7 @@ export default function MicroSAASSolutions(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   metric: "MRR",

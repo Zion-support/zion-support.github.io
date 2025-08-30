@@ -535,15 +535,15 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
 ];
 
 // Utility functions for pricing guide management
-export const getPricingGuideByServiceId = (serviceId: anystring): RevolutionaryPricingGuide2030 | undefined  => {
+export const getPricingGuideByServiceId = (serviceId: string): RevolutionaryPricingGuide2030 | undefined  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.find(guide => guide.serviceId === serviceId);
 };
 
-export const getPricingGuideByCategory = (category: anystring): RevolutionaryPricingGuide2030[]  => {
+export const getPricingGuideByCategory = (category: string): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => guide.category === category);
 };
 
-export const getPricingGuideByPriceRange = (minPrice: anynumber, maxPrice: number): RevolutionaryPricingGuide2030[]  => {
+export const getPricingGuideByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryPricingGuide2030[]  => {
   return REVOLUTIONARY_PRICING_GUIDE_2030.filter(guide => {
     const minGuidePrice = Math.min(...guide.pricingTiers.map(tier => tier.monthlyPrice));
     return minGuidePrice >= minPrice && minGuidePrice <= maxPrice;
@@ -569,9 +569,9 @@ export const getPricingGuideStats = () => {
   return {
     totalServices,
     totalTiers,
-    averageStarterPrice: anyMath.round(averageStarterPrice),
+    averageStarterPrice: Math.round(averageStarterPrice),
     averageEnterprisePrice: Math.round(averageEnterprisePrice),
     categories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.category))],
-    subcategories: any[...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.subcategory))]
+    subcategories: [...new Set(REVOLUTIONARY_PRICING_GUIDE_2030.map(guide  => guide.subcategory))]
   };
 };

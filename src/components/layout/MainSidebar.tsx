@@ -235,12 +235,12 @@ import { Home,
 
 interface MainSidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyboolean;
+  isOpen: boolean;
   onClose: ()  => void;
 
 }
 
-export function MainSidebar(...args: any[]): any {
+export function MainSidebar(...args: []):  {
   const location = useLocation();
 
   const navigationItems = [
@@ -348,7 +348,7 @@ export function MainSidebar(...args: any[]): any {
       icon: Phone, 
       text: '+1 302 464 0950', 
       href: 'tel:+13024640950',
-      description: 'Call us anytime'
+      description: 'Call us time'
     },
     { 
       icon: Mail, 

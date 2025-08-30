@@ -23,7 +23,7 @@ textColor?: string;
 
 }
 function collectAllServices(): ServiceItem[] {
-	const arrays: any[] = [
+	const arrays: [] = [
 		innovativeRealMicroSaasServices2025,
 		advancedITServices,
 		innovativeAIServices,
@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 	}
 	return { props: { service } }
 }
-export default function ServiceDetail(...args: any[]): any {
+export default function ServiceDetail(...args: []):  {
 	const title = `${service.name} — Zion Tech Group`
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (

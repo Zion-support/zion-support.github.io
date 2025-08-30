@@ -156,7 +156,7 @@ const retailTrends = [
 const successStories = [
   {
     id: 1,
-    company: "Fashion Forward",
+    comp: "Fashion Forward",
     industry: "Apparel Retail",
     challenge: "Needed omnichannel platform to connect online and physical stores",
     solution: "Built integrated e-commerce and POS system with unified inventory",
@@ -165,7 +165,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Tech Gadgets Pro",
+    comp: "Tech Gadgets Pro",
     industry: "Electronics Retail",
     challenge: "Required mobile app for enhanced customer engagement",
     solution: "Developed feature-rich mobile shopping app with AR product preview",
@@ -174,7 +174,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Home & Garden Plus",
+    comp: "Home & Garden Plus",
     industry: "Home Improvement",
     challenge: "Needed inventory management system for 50+ locations",
     solution: "Implemented cloud-based inventory system with real-time tracking",
@@ -487,7 +487,7 @@ export default function RetailSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -4,17 +4,17 @@ import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react
 
 interface AccessibilityContextType {
 
-  highContrast: anyboolean;
+  highContrast: boolean;
   toggleHighContrast: ()  => void;
-  reducedMotion: anyboolean;
+  reducedMotion: boolean;
   toggleReducedMotion: ()  => void;
-  fontSize: anynumber;
+  fontSize: number;
   increaseFontSize: ()  => void;
-  decreaseFontSize: any()  => void;
-  resetFontSize: any()  => void;
-  showSkipLinks: anyboolean;
+  decreaseFontSize: ()  => void;
+  resetFontSize: ()  => void;
+  showSkipLinks: boolean;
   setShowSkipLinks: (show: boolean)  => void;
-  voiceNavigation: anyboolean;
+  voiceNavigation: boolean;
   toggleVoiceNavigation: ()  => void;
 
 }
@@ -79,7 +79,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
         event.preventDefault();
@@ -275,7 +275,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

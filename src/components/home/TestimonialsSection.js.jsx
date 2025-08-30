@@ -4,7 +4,7 @@ export function TestimonialsSection() {
         {
             name: 'Sarah Johnson',
             role: 'CTO',
-            company: 'TechCorp Inc.',
+            comp: 'TechCorp Inc.',
             content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
             rating: 5,
             avatar: '👩‍💼'
@@ -12,7 +12,7 @@ export function TestimonialsSection() {
         {
             name: 'Michael Chen',
             role: 'VP of Engineering',
-            company: 'InnovateLabs',
+            comp: 'InnovateLabs',
             content: 'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
             rating: 5,
             avatar: '👨‍💻'
@@ -20,7 +20,7 @@ export function TestimonialsSection() {
         {
             name: 'Emily Rodriguez',
             role: 'Operations Director',
-            company: 'Global Solutions',
+            comp: 'Global Solutions',
             content: 'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
             rating: 5,
             avatar: '👩‍🔬'
@@ -50,7 +50,7 @@ export function TestimonialsSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.company}</p>
+                  <p className="text-sm text-gray-600">{testimonial.role} at {testimonial.comp}</p>
                 </div>
               </div>
               

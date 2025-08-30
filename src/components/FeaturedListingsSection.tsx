@@ -99,13 +99,13 @@ const featuredServices = [
   }
 ];
 
-export function FeaturedListingsSection(...args: any[]): any {
+export function FeaturedListingsSection(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<any>(null);
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredListings = selectedCategory === "All" 
-    ? featuredListings: anyfeaturedListings.filter(listing  => listing.category === selectedCategory);
+    ? featuredListings: featuredListings.filter(listing  => listing.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -118,8 +118,8 @@ export function FeaturedListingsSection(...args: any[]): any {
     }
   };
 
-  const renderStars = (rating: anynumber)  => {
-    return Array.from({ length: any5 }, (_, i)  => (
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5 }, (_, i)  => (
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
@@ -138,7 +138,7 @@ export function FeaturedListingsSection(...args: any[]): any {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredServices.map((service, index)  => (
             <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
               <div className="p-6">

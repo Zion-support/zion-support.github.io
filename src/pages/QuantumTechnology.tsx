@@ -25,7 +25,7 @@ import { Atom,
   Eye
  } from 'lucide-react.ts';
 
-export default function QuantumTechnology(...args: any[]): any {
+export default function QuantumTechnology(...args: []):  {
   const [selectedApplication, setSelectedApplication] = useState('all');
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -194,7 +194,7 @@ export default function QuantumTechnology(...args: any[]): any {
   };
 
   const filteredApplications = selectedApplication === 'all' 
-    ? quantumApplications: anyquantumApplications.filter(app  => app.category === selectedApplication);
+    ? quantumApplications: quantumApplications.filter(app  => app.category === selectedApplication);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -268,7 +268,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {quantumServices.map((service, index)  => (
               <motion.div 
@@ -323,7 +323,7 @@ export default function QuantumTechnology(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {applications.map((app)  => {
               const Icon = app.icon;
@@ -350,7 +350,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {filteredApplications.map((app, index)  => (
               <motion.div 
@@ -409,7 +409,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {quantumTechnologies.map((tech, index)  => (
               <motion.div 
@@ -466,7 +466,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {quantumAdvantages.map((advantage, index)  => (
               <motion.div 
@@ -509,7 +509,7 @@ export default function QuantumTechnology(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {[
               {

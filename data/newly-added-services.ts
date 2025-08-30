@@ -1140,7 +1140,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     tagline: 'Conversational surveys that adapt in real-time',
     price: '$29',
     period: '/month',
-    description: 'Build adaptive, mobile‑optimized surveys and embed them anywhere. Get real‑time analytics and audience insights.',
+    description: 'Build adaptive, mobile‑optimized surveys and embed them where. Get real‑time analytics and audience insights.',
     features: [
       'Branching logic and conditions',
       'Beautiful mobile templates',

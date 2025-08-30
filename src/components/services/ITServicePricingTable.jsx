@@ -230,10 +230,10 @@ export const ITServicePricingTable = () => {
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-white rounded-xl p-6 shadow-lg">
               <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Can I change my plan at any time?
+                Can I change my plan at  time?
               </h4>
               <p className="text-gray-600">
-                Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle.
+                Yes, you can upgrade or downgrade your plan at  time. Changes take effect at the start of your next billing cycle.
               </p>
             </div>
             <div className="bg-white rounded-xl p-6 shadow-lg">

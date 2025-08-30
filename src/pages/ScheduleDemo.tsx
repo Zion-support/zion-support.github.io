@@ -8,7 +8,7 @@ interface DemoFormData {
   firstName: string;
   lastName: string;
   email: string;
-  company: string;
+  comp: string;
   phone: string;
   preferredDate: string;
   preferredTime: string;
@@ -23,7 +23,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     firstName: '',
     lastName: '',
     email: '',
-    company: '',
+    comp: '',
     phone: '',
     preferredDate: '',
     preferredTime: '',
@@ -51,16 +51,16 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' }
   ];
 
-  const handleServiceToggle = (serviceId: anystring)  => {
+  const handleServiceToggle = (serviceId: string)  => {
     setFormData(prev => ({
       ...prev,
-      services: anyprev.services.includes(serviceId)
+      services: prev.services.includes(serviceId)
         ? prev.services.filter(id  => id !== serviceId)
         : [...prev.services, serviceId]
     }));
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -240,15 +240,15 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company *
+                        Comp *
                       </label>
                       <input
                         type="text"
                         required
-                        value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                        value={formData.comp}
+                        onChange={(e) => setFormData(prev => ({ ...prev, comp: e.target.value }))}
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Enter company name"
+                        placeholder="Enter comp name"
                       />
                     </div>
                   </div>
@@ -320,7 +320,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Services of Interest
                     </label>
-                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
                       {availableServices.map((service)  => (
                         <label key={service.id} className="flex items-center gap-3 p-3 bg-slate-700/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-colors">
                           <input

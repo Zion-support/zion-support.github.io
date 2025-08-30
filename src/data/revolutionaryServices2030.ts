@@ -569,21 +569,21 @@ export const REVOLUTIONARY_SERVICE_CATEGORIES = [
 
 // Service Statistics for Revolutionary Services
 export const REVOLUTIONARY_SERVICE_STATISTICS = {
-  totalServices: anyREVOLUTIONARY_SERVICES_2030.length,
+  totalServices: REVOLUTIONARY_SERVICES_2030.length,
   totalCategories: REVOLUTIONARY_SERVICE_CATEGORIES.length,
   averagePrice: Math.round(
     REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.price, 0) / 
     REVOLUTIONARY_SERVICES_2030.length
   ),
-  averageRating: anyMath.round(
+  averageRating: Math.round(
     (REVOLUTIONARY_SERVICES_2030.reduce((sum, service)  => sum + service.rating, 0) / 
     REVOLUTIONARY_SERVICES_2030.length) * 10
   ) / 10,
-  featuredServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => service.featured).length,
-  aiServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => 
+  featuredServices: REVOLUTIONARY_SERVICES_2030.filter(service  => service.featured).length,
+  aiServices: REVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category.includes('AI') || service.aiScore > 90
   ).length,
-  emergingTechServices: anyREVOLUTIONARY_SERVICES_2030.filter(service  => 
+  emergingTechServices: REVOLUTIONARY_SERVICES_2030.filter(service  => 
     service.category === 'Emerging Technology'
   ).length
 };

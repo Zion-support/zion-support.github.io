@@ -1,4 +1,4 @@
-export const aiAutonomousServices2026 = [] as any[];
+export const aiAutonomousServices2026 = [] as [];
 export interface AiAutonomousService2026 {
   id: string;
   name: string;

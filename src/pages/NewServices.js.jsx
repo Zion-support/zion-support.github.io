@@ -312,7 +312,7 @@ export function NewServices() {
             Showing {filteredServices.length} of {allServices.length} revolutionary services
           </p>
           <p className="text-sm mt-2">
-            Contact us to learn more about any service or request a custom solution
+            Contact us to learn more about  service or request a custom solution
           </p>
         </motion.div>
 

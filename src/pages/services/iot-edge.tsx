@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function IoTEdge(...args: any[]): any {
+export default function IoTEdge(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function IoTEdge(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Cpu,
@@ -120,7 +120,7 @@ export default function IoTEdge(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Smart Manufacturing",
@@ -214,7 +214,7 @@ export default function IoTEdge(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"90%", label: "Reduced Latency" },
+                    { metric: "90%", label: "Reduced Latency" },
                     { metric: "60%", label: "Bandwidth Savings" },
                     { metric: "99.9%", label: "Uptime Reliability" },
                     { metric: "24/7", label: "Local Processing" }
@@ -242,7 +242,7 @@ export default function IoTEdge(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   title: "IoT Protocols",
@@ -285,7 +285,7 @@ export default function IoTEdge(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

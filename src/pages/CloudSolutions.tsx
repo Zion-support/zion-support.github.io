@@ -16,7 +16,7 @@ import { Cloud,
   Users
  } from 'lucide-react.ts';
 
-export default function CloudSolutions(...args: any[]): any {
+export default function CloudSolutions(...args: []):  {
   const cloudServices = [
     {
       icon: Server,
@@ -172,7 +172,7 @@ export default function CloudSolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {cloudServices.map((service, index)  => (
               <motion.div 
@@ -226,7 +226,7 @@ export default function CloudSolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {benefits.map((benefit, index)  => (
               <motion.div 
@@ -269,7 +269,7 @@ export default function CloudSolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {technologies.map((tech, index)  => (
               <motion.div 

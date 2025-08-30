@@ -8,7 +8,7 @@ interface LayoutProps extends React.PropsWithChildren<{}> {
 
 }
 
-export default function Layout(...args: any[]): any {
+export default function Layout(...args: []):  {
   return (
     <div className="min-h-screen flex flex-col">
       <EnhancedNavigation2025 />

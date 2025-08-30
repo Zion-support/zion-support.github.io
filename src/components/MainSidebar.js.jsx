@@ -16,7 +16,7 @@ export function MainSidebar() {
             ]
         },
         {
-            title: 'Company',
+            title: 'Comp',
             items: [
                 { key: 'about', href: '/about', icon: <Building className="w-4 h-4"/>, label: 'About Us' },
                 { key: 'careers', href: '/careers', icon: <Briefcase className="w-4 h-4"/>, label: 'Careers' },

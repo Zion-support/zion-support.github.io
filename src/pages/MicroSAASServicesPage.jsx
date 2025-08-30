@@ -503,7 +503,7 @@ export default function MicroSAASServicesPage() {
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel anytime.
+            improve productivity, and drive growth. No long-term contracts, cancel time.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">

@@ -102,7 +102,7 @@ function main() {
     console.log('\n📝 Next steps:');
     console.log('1. Review the changes made');
     console.log('2. Test the application to ensure routing works correctly');
-    console.log('3. Update any remaining Next.js specific patterns');
+    console.log('3. Update  remaining Next.js specific patterns');
     console.log('4. Run the enhanced testing automation to verify fixes');
   } else {
     console.log('\n✅ No Next.js imports found to fix');

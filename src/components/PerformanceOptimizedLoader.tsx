@@ -60,10 +60,10 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
 });
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader';
 // Skeleton loader for content
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index)  => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -79,7 +79,7 @@ export function SkeletonLoader(...args: any[]): any {
   );
 }
 // Card skeleton loader
-export function CardSkeleton(...args: any[]): any {
+export function CardSkeleton(...args: []):  {
   return (
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${className}`}>
       <div className="space-y-4">
@@ -101,9 +101,9 @@ export function CardSkeleton(...args: any[]): any {
   );
 }
 // Grid skeleton loader
-export function GridSkeleton(...args: any[]): any {
+export function GridSkeleton(...args: []):  {
   return (
-    <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
+    <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
       {Array.from({ length: columns * rows }).map((_, index)  => (
         <CardSkeleton key={index} />
       ))}
@@ -111,7 +111,7 @@ export function GridSkeleton(...args: any[]): any {
   );
 }
 // Page skeleton loader
-export function PageSkeleton(...args: any[]): any {
+export function PageSkeleton(...args: []):  {
   return (
     <div className={`space-y-8 ${className}`}>
       {/* Header skeleton */}

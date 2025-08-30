@@ -16,7 +16,7 @@ import { Search,
   Rocket
  } from 'lucide-react.ts';
 
-export default function Blog(...args: any[]): any {
+export default function Blog(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -129,7 +129,7 @@ export default function Blog(...args: any[]): any {
   ];
 
   const filteredPosts = selectedCategory === 'all' 
-    ? recentPosts: anyrecentPosts.filter(post  => post.category === selectedCategory);
+    ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
 
   const searchResults = searchQuery 
     ? [...featuredPosts, ...recentPosts].filter(post => 
@@ -199,7 +199,7 @@ export default function Blog(...args: any[]): any {
             className="flex flex-wrap justify-center gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: any0.8 }}
+            transition={{ duration: 0.8 }}
           >
             {categories.map((category)  => (
               <button
@@ -241,7 +241,7 @@ export default function Blog(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid lg: anygrid-cols-3 gap-8">
+            <div className="grid lg: grid-cols-3 gap-8">
               {featuredPosts.map((post, index)  => (
                 <motion.article
                   key={post.id}
@@ -334,7 +334,7 @@ export default function Blog(...args: any[]): any {
               </button>
             </motion.div>
           ) : (
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {(searchQuery ? searchResults : filteredPosts).map((post, index)  => (
                 <motion.article
                   key={post.id}
@@ -417,7 +417,7 @@ export default function Blog(...args: any[]): any {
               </div>
               
               <p className="text-sm text-slate-400 mt-4">
-                No spam, unsubscribe at any time. We respect your privacy.
+                No spam, unsubscribe at  time. We respect your privacy.
               </p>
             </motion.div>
           </div>

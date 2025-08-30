@@ -29,7 +29,7 @@ import { ArrowRight,
   Smartphone
  } from 'lucide-react.ts';
 
-export default function Index(...args: any[]): any {
+export default function Index(...args: []):  {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
   
@@ -101,7 +101,7 @@ export default function Index(...args: any[]): any {
             </p>
           </div>
           
-          <div className={`grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
+          <div className={`grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index)  => (
               <Link 
                 key={index} 

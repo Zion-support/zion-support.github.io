@@ -21,7 +21,7 @@ const caseStudies = [
   {
     id: 1,
     title: "AI-Powered Customer Service Transformation",
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "Technology",
     challenge: "High customer service costs and long response times",
     solution: "Implemented AI chatbot with natural language processing",
@@ -45,7 +45,7 @@ const caseStudies = [
   {
     id: 2,
     title: "Cloud Migration & DevOps Automation",
-    company: "InnovateLab Inc",
+    comp: "InnovateLab Inc",
     industry: "Healthcare",
     challenge: "Legacy infrastructure causing downtime and security risks",
     solution: "Complete cloud migration with CI/CD pipeline implementation",
@@ -69,7 +69,7 @@ const caseStudies = [
   {
     id: 3,
     title: "Data Analytics & Business Intelligence Platform",
-    company: "DataFlow Analytics",
+    comp: "DataFlow Analytics",
     industry: "Finance",
     challenge: "Scattered data sources and lack of real-time insights",
     solution: "Centralized data warehouse with real-time analytics dashboard",
@@ -93,7 +93,7 @@ const caseStudies = [
   {
     id: 4,
     title: "Cybersecurity & Compliance Implementation",
-    company: "SecureBank Ltd",
+    comp: "SecureBank Ltd",
     industry: "Banking",
     challenge: "Increasing cyber threats and regulatory compliance requirements",
     solution: "Comprehensive security framework with SOC2 compliance",
@@ -117,7 +117,7 @@ const caseStudies = [
   {
     id: 5,
     title: "IoT & Edge Computing Solution",
-    company: "SmartManufacturing Co",
+    comp: "SmartManufacturing Co",
     industry: "Manufacturing",
     challenge: "Inefficient production monitoring and quality control",
     solution: "IoT sensors with edge computing for real-time monitoring",
@@ -141,7 +141,7 @@ const caseStudies = [
   {
     id: 6,
     title: "Digital Transformation & Legacy Modernization",
-    company: "LegacyCorp Enterprises",
+    comp: "LegacyCorp Enterprises",
     industry: "Retail",
     challenge: "Outdated systems limiting growth and customer experience",
     solution: "Complete digital transformation with modern tech stack",
@@ -167,7 +167,7 @@ const caseStudies = [
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-export default function CaseStudies(...args: any[]): any {
+export default function CaseStudies(...args: []):  {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -233,7 +233,7 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
@@ -246,7 +246,7 @@ export default function CaseStudies(...args: any[]): any {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {technologies.map(tech  => (
                     <option key={tech} value={tech}>{tech}</option>
@@ -261,7 +261,7 @@ export default function CaseStudies(...args: any[]): any {
       {/* Case Studies Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredCaseStudies.map((study, index)  => (
               <motion.div
                 key={study.id}
@@ -277,7 +277,7 @@ export default function CaseStudies(...args: any[]): any {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {study.company}
+                        {study.comp}
                       </span>
                       <span className="flex items-center gap-1">
                         <Globe className="w-4 h-4" />

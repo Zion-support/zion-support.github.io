@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function AICybersecuritySuite(...args: any[]): any {
+export default function AICybersecuritySuite(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AICybersecuritySuite(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -120,7 +120,7 @@ export default function AICybersecuritySuite(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   layer: "01",
@@ -190,7 +190,7 @@ export default function AICybersecuritySuite(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>
                 <div className="space-y-4">
                   {[
-                    { type: any"Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
+                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },
                     { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }
@@ -223,7 +223,7 @@ export default function AICybersecuritySuite(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "SOC 2 Type II",

@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Building, Users, Shield, Zap, Globe, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react.ts';
 
-export default function EnterpriseSolutions(...args: any[]): any {
+export default function EnterpriseSolutions(...args: []):  {
   const solutions = [
     {
       icon: Building,
@@ -130,7 +130,7 @@ export default function EnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.title}
@@ -239,7 +239,7 @@ export default function EnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
             {industries.map((industry, index)  => (
               <motion.div
                 key={industry}

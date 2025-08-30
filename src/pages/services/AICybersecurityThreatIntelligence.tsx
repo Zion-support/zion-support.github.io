@@ -25,7 +25,7 @@ import { Shield,
   Fingerprint
  } from 'lucide-react.ts';
 
-export default function AICybersecurityThreatIntelligence(...args: any[]): any {
+export default function AICybersecurityThreatIntelligence(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -284,7 +284,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -332,7 +332,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -383,7 +383,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -424,7 +424,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
             {technologies.map((tech, index)  => (
               <motion.div
                 key={index}
@@ -460,7 +460,7 @@ export default function AICybersecurityThreatIntelligence(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)  => (
               <motion.div
                 key={index}

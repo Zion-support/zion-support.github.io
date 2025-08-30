@@ -146,7 +146,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
     setServices(filtered);
   }, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: anystring)  => {
+  const handleServiceSelect = (serviceId: string)  => {
     setSelectedServices(prev => 
       prev.includes(serviceId) 
         ? prev.filter(id => id !== serviceId)
@@ -303,7 +303,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
                 <Brain className="w-8 h-8 text-blue-400 mr-3" />
                 <h3 className="text-xl font-semibold text-white">Business Size</h3>
               </div>
-              <p className="text-gray-300 mb-4">Select your company size to get tailored recommendations</p>
+              <p className="text-gray-300 mb-4">Select your comp size to get tailored recommendations</p>
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500">
                 <option>Startup (1-10 employees)</option>
                 <option>Small Business (11-50 employees)</option>
@@ -562,7 +562,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             </p>
           </div>
           {viewMode === 'grid' && (
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index)  => (
                 <motion.div
                   key={service.id}
@@ -1207,7 +1207,7 @@ const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {
             >
               <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
               <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
-              <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
+              <div className="text-orange-400 text-sm">UK • Germ • Japan • Singapore</div>
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"

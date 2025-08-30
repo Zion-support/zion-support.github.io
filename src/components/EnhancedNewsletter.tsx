@@ -58,7 +58,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -72,7 +72,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // Here you would typically send the data to your newsletter service
-      console.log('Newsletter subscription: any', formData);
+      console.log('Newsletter subscription: ', formData);
       
       setStatus('success');
       
@@ -93,10 +93,10 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleInterestToggle = (interestId: anystring)  => {
+  const handleInterestToggle = (interestId: string)  => {
     setFormData(prev => ({
       ...prev,
-      interests: anyprev.interests.includes(interestId)
+      interests: prev.interests.includes(interestId)
         ? prev.interests.filter(id  => id !== interestId)
         : [...prev.interests, interestId]
     }));
@@ -107,7 +107,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleInputChange = (field: anykeyof NewsletterFormData, value: string | string[])  => {
+  const handleInputChange = (field: keyof NewsletterFormData, value: string | string[])  => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -232,7 +232,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Areas of Interest * (Select all that apply)
           </label>
-          <div className="grid grid-cols-2 md: anygrid-cols-3 gap-3">
+          <div className="grid grid-cols-2 md: grid-cols-3 gap-3">
             {interests.map((interest)  => {
               const Icon = interest.icon;
               const isSelected = formData.interests.includes(interest.id);
@@ -269,7 +269,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
           <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
             Update Frequency
           </label>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-3">
             {frequencies.map((freq)  => (
               <label
                 key={freq.value}
@@ -348,7 +348,7 @@ export const EnhancedNewsletter: React.FC = (): JSX.Element => {
         {/* Privacy Notice */}
         <p className="text-xs text-slate-500 dark:text-slate-400 text-center">
           By subscribing, you agree to receive marketing emails from Zion Tech Group. 
-          You can unsubscribe at any time. We respect your privacy and will never share your information.
+          You can unsubscribe at  time. We respect your privacy and will never share your information.
         </p>
       </motion.form>
     </div>

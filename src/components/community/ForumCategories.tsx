@@ -16,7 +16,7 @@ lastPost?: {;
 };
 }
 
-export default function ForumCategories(...args: any[]): any {
+export default function ForumCategories(...args: []):  {
   const categories: ForumCategoryInfo[] = [
     {
       id: '1',
@@ -118,7 +118,7 @@ export default function ForumCategories(...args: any[]): any {
         </div>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category)  => (
             <div 
               key={category.id} 

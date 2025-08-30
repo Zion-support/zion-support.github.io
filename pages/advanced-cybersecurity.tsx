@@ -37,7 +37,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
     }
   });
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'from-red-500 to-pink-600';
       case 'Breakthrough': return 'from-purple-500 to-indigo-600';
@@ -46,7 +46,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
     }
   };
 
-  const getBadgeColor = (badge: anystring)  => {
+  const getBadgeColor = (badge: string)  => {
     switch (badge) {
       case 'Revolutionary': return 'bg-gradient-to-r from-red-500 to-pink-600';
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-500 to-indigo-600';
@@ -55,7 +55,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
     }
   };
 
-  const getSecurityIcon = (category: anystring)  => {
+  const getSecurityIcon = (category: string)  => {
     switch (category) {
       case 'AI Security': return '🤖';
       case 'Quantum Security': return '🔐';
@@ -128,7 +128,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Security Stats */}
-        <div className="grid grid-cols-1 md: anygrid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">
           {[
             { icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },
             { icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },
@@ -170,7 +170,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: anyoutline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
+                className="w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none"
               >
                 {categories.map((category)  => (
                   <option key={category.id} value={category.id}>
@@ -220,7 +220,7 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sortedServices.map((service, index)  => (
             <div
               key={service.id}

@@ -154,7 +154,7 @@ const aiCapabilities = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Giant",
+    comp: "E-commerce Giant",
     industry: "Retail",
     challenge: "Needed predictive analytics for inventory management",
     solution: "Built AI-powered forecasting system with 95% accuracy",
@@ -163,7 +163,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required real-time fraud detection system",
     solution: "Implemented AI-powered anomaly detection with machine learning",
@@ -172,7 +172,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Needed patient behavior analytics for better care",
     solution: "Developed AI-driven patient insights platform",
@@ -484,7 +484,7 @@ export default function AIAnalytics() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

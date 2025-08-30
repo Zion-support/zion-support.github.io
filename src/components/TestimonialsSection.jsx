@@ -5,7 +5,7 @@ export const TestimonialsSection = () => {
         {
             id: 1,
             name: "Sarah Johnson",
-            company: "TechCorp Solutions",
+            comp: "TechCorp Solutions",
             role: "CTO",
             content: "Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.",
             rating: 5,
@@ -14,7 +14,7 @@ export const TestimonialsSection = () => {
         {
             id: 2,
             name: "Michael Chen",
-            company: "InnovateTech",
+            comp: "InnovateTech",
             role: "VP of Engineering",
             content: "The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal performance.",
             rating: 5,
@@ -23,7 +23,7 @@ export const TestimonialsSection = () => {
         {
             id: 3,
             name: "Emily Rodriguez",
-            company: "DataFlow Systems",
+            comp: "DataFlow Systems",
             role: "Data Science Director",
             content: "Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.",
             rating: 5,
@@ -32,7 +32,7 @@ export const TestimonialsSection = () => {
         {
             id: 4,
             name: "David Kim",
-            company: "Quantum Industries",
+            comp: "Quantum Industries",
             role: "Research Director",
             content: "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.",
             rating: 5,
@@ -41,7 +41,7 @@ export const TestimonialsSection = () => {
         {
             id: 5,
             name: "Lisa Thompson",
-            company: "GreenTech Solutions",
+            comp: "GreenTech Solutions",
             role: "Sustainability Officer",
             content: "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.",
             rating: 5,
@@ -50,7 +50,7 @@ export const TestimonialsSection = () => {
         {
             id: 6,
             name: "Robert Wilson",
-            company: "SpaceTech Ventures",
+            comp: "SpaceTech Ventures",
             role: "CEO",
             content: "The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.",
             rating: 5,
@@ -82,7 +82,7 @@ export const TestimonialsSection = () => {
                 <div>
                   <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
                   <p className="text-sm text-gray-400">{testimonial.role}</p>
-                  <p className="text-sm text-orange-400">{testimonial.company}</p>
+                  <p className="text-sm text-orange-400">{testimonial.comp}</p>
                 </div>
               </div>
 

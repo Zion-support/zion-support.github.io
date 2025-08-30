@@ -1,7 +1,7 @@
 import React, { useState } from 'react.ts';
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react.ts';
 
-export default function ApiPlayground(...args: any[]): any {
+export default function ApiPlayground(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -156,7 +156,7 @@ export default function ApiPlayground(...args: any[]): any {
       ],
       requestExample: {
         query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
-        format: any"json",
+        format: "json",
         timeout: 30
       },
       responseExample: {
@@ -231,15 +231,15 @@ export default function ApiPlayground(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-  const getCategoryIcon = (categoryId: anystring)  => {
+  const getCategoryIcon = (categoryId: string)  => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: anystring)  => {
+  const getMethodColor = (method: string)  => {
     return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
@@ -248,7 +248,7 @@ export default function ApiPlayground(...args: any[]): any {
     }
   };
 
-  const handleApiSelect = (api: anyany)  => {
+  const handleApiSelect = (api: )  => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -267,7 +267,7 @@ export default function ApiPlayground(...args: any[]): any {
     }, 1500);
   };
 
-  const copyToClipboard = (text: anystring)  => {
+  const copyToClipboard = (text: string)  => {
     navigator.clipboard.writeText(text);
   };
 

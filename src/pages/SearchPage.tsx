@@ -31,7 +31,7 @@ import { Search,
 interface SearchResult {
 
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'company';
+  type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
   description: string;
   category: string;
@@ -136,14 +136,14 @@ const categories = [
 ];
 
 const filters = {
-  type: ['service', 'talent', 'equipment', 'company'],
+  type: ['service', 'talent', 'equipment', 'comp'],
   category: ['AI & Analytics', 'Cybersecurity', 'Cloud & DevOps', 'IoT & Edge', 'Quantum Computing', 'Blockchain'],
   location: ['Remote', 'On-site', 'Hybrid'],
   priceRange: ['$0-$100', '$100-$500', '$500-$1000', '$1000+'],
   rating: ['4.5+', '4.0+', '3.5+']
 };
 
-export default function SearchPage(...args: any[]): any {
+export default function SearchPage(...args: []):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('q') || '');
   const [results, setResults] = useState<any>([]);
@@ -152,7 +152,7 @@ export default function SearchPage(...args: any[]): any {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showFilters, setShowFilters] = useState(false);
   const [activeFilters, setActiveFilters] = useState({
-    type: any[] as string[],
+    type: [] as string[],
     category: [] as string[],
     location: [] as string[],
     priceRange: [] as string[],
@@ -169,7 +169,7 @@ export default function SearchPage(...args: any[]): any {
     applyFilters();
   }, [activeFilters, results]);
 
-  const performSearch = async (searchQuery: anystring)  => {
+  const performSearch = async (searchQuery: string)  => {
     setLoading(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -213,7 +213,7 @@ export default function SearchPage(...args: any[]): any {
     setFilteredResults(filtered);
   };
 
-  const toggleFilter = (filterType: anykeyof typeof activeFilters, value: string)  => {
+  const toggleFilter = (filterType: keyof typeof activeFilters, value: string)  => {
     setActiveFilters(prev => ({
       ...prev,
       [filterType]: prev[filterType].includes(value)
@@ -232,24 +232,24 @@ export default function SearchPage(...args: any[]): any {
     });
   };
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       setSearchParams({ q: query.trim() });
     }
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service': return Code;
       case 'talent': return Users;
       case 'equipment': return Cpu;
-      case 'company': return Building;
+      case 'comp': return Building;
       default: return Code;
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics': return Brain;
       case 'Cybersecurity': return Shield;
@@ -478,7 +478,7 @@ export default function SearchPage(...args: any[]): any {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="grid md: anygrid-cols-2 xl:grid-cols-3 gap-6"
+                    className="grid md: grid-cols-2 xl:grid-cols-3 gap-6"
                   >
                     {filteredResults.map((result, index)  => (
                       <motion.div

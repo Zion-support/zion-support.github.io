@@ -154,7 +154,7 @@ const serviceAreas = [
 const successStories = [
   {
     id: 1,
-    company: "TechCorp Manufacturing",
+    comp: "TechCorp Manufacturing",
     industry: "Manufacturing",
     challenge: "Needed complete network infrastructure for new facility",
     solution: "Designed and installed enterprise network with 500+ devices",
@@ -163,7 +163,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Plus Network",
+    comp: "Healthcare Plus Network",
     industry: "Healthcare",
     challenge: "Required secure server infrastructure for HIPAA compliance",
     solution: "Installed and configured secure server cluster with encryption",
@@ -172,7 +172,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services Inc",
+    comp: "Financial Services Inc",
     industry: "Finance",
     challenge: "Needed emergency IT support for trading system failure",
     solution: "Provided 24/7 emergency support and system recovery",
@@ -483,7 +483,7 @@ export default function ITOnsiteServices() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

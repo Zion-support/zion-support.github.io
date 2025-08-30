@@ -22,10 +22,10 @@ interface AccessibilitySettings {
 
 }
 
-export function AccessibilityEnhancer(...args: any[]): any {
+export function AccessibilityEnhancer(...args: []):  {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<any>({
-    highContrast: anyfalse,
+    highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
@@ -44,7 +44,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     applyAccessibilitySettings(settings);
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: anyAccessibilitySettings)  => {
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast
@@ -79,13 +79,13 @@ export function AccessibilityEnhancer(...args: any[]): any {
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const toggleSetting = (key: anykeyof AccessibilitySettings)  => {
+  const toggleSetting = (key: keyof AccessibilitySettings)  => {
     const newSettings = { ...settings, [key]: !settings[key] };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
   };
 
-  const announceToScreenReader = (message: anystring)  => {
+  const announceToScreenReader = (message: string)  => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -102,7 +102,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       if (!settings.keyboardNavigation) return;
 
       switch (event.key) {
@@ -167,7 +167,7 @@ export function AccessibilityEnhancer(...args: any[]): any {
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
     skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link sr-only focus: anynot-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-blue focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-zion-cyan';
+    skipLink.className = 'skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-zion-blue focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-zion-cyan';
     
     document.body.insertBefore(skipLink, document.body.firstChild);
     

@@ -253,7 +253,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025 = [
         roi: "600% within 10 months",
         competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
         demoUrl: "https://ziontechgroup.com/demo/data-analytics",
-        caseStudies: ["Retail company 70% decision improvement", "Manufacturing 45% efficiency increase"],
+        caseStudies: ["Retail comp 70% decision improvement", "Manufacturing 45% efficiency increase"],
         marketTrend: "Growing data analytics adoption with 50% annual growth",
         industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
         scalability: "Enterprise data platform with unlimited data processing",

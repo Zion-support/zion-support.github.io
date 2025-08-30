@@ -87,7 +87,7 @@ const testimonials = [
         rating: 5
     },
     {
-        content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
+        content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
         name: "Marcus Johnson",
         role: "CTO, DigitalFirst Inc",
         rating: 5

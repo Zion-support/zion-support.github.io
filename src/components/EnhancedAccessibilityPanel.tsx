@@ -59,7 +59,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
+  const applySettings = useCallback((newSettings: AccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -131,7 +131,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Handle keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent)  => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
@@ -166,7 +166,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: anystring)  => {
+  const announceToScreenReader = useCallback((message: string)  => {
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -190,7 +190,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: any)  => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: )  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
@@ -236,7 +236,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (event: anyKeyboardEvent)  => {
+    const handleEscape = (event: KeyboardEvent)  => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
         announceToScreenReader('Accessibility panel closed');

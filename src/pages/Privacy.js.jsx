@@ -19,7 +19,7 @@ export default function Privacy() {
             <p>
               We collect personal information you provide when creating an
               account or using our services. This may include your name, email,
-              and any other details required to deliver our marketplace
+              and  other details required to deliver our marketplace
               features.
             </p>
             <p>

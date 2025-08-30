@@ -206,7 +206,7 @@ const Products: NextPage = () => {
   ];
 
   const filteredProducts = activeCategory === 'all' 
-    ? products: anyproducts.filter(product  => product.category === activeCategory);
+    ? products: products.filter(product  => product.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
@@ -267,7 +267,7 @@ const Products: NextPage = () => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid lg: anygrid-cols-2 gap-8">
+        <div className="grid lg: grid-cols-2 gap-8">
           {filteredProducts.map((product)  => {
             const IconComponent = product.icon;
             return (

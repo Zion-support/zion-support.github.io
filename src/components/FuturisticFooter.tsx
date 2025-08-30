@@ -57,7 +57,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
       ]
     },
     {
-      title: "Company",
+      title: "Comp",
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
@@ -97,7 +97,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
+                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
                     {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title}
                   </h3>

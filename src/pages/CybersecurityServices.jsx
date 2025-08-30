@@ -126,7 +126,7 @@ export default function CybersecurityServices() {
         {
             name: "Robert Johnson",
             role: "CEO, E-commerce Pro",
-            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than any other provider we've used.",
+            content: "24/7 incident response gives us peace of mind. Zion's team responds faster than  other provider we've used.",
             rating: 5
         }
     ];

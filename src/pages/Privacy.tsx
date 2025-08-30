@@ -15,7 +15,7 @@ import { Shield,
   AlertTriangle
  } from 'lucide-react.ts';
 
-export default function Privacy(...args: any[]): any {
+export default function Privacy(...args: []):  {
   const lastUpdated = 'December 15, 2024';
 
   const privacyPrinciples = [
@@ -46,7 +46,7 @@ export default function Privacy(...args: any[]): any {
       title: 'Personal Information',
       items: [
         'Name and contact information (email, phone, address)',
-        'Company and job title information',
+        'Comp and job title information',
         'Professional credentials and certifications',
         'Communication preferences and history'
       ]
@@ -181,7 +181,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {privacyPrinciples.map((principle, index)  => (
               <motion.div
                 key={principle.title}
@@ -220,7 +220,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid lg: anygrid-cols-3 gap-8">
+          <div className="grid lg: grid-cols-3 gap-8">
             {dataCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
@@ -382,7 +382,7 @@ export default function Privacy(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {userRights.map((right, index)  => (
               <motion.div
                 key={right.right}
@@ -496,7 +496,7 @@ export default function Privacy(...args: any[]): any {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Our privacy team is here to help with any questions or concerns about your data
+            Our privacy team is here to help with  questions or concerns about your data
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"

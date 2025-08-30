@@ -106,9 +106,9 @@ import { Input  } from '@/components/ui/input';
 import { Badge  } from '@/components/ui/badge';
 const categories = [
   { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
-  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
-  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.filter(s  => s.category === 'Business Solutions').length }
 ];
 const pricingModels = [
   { id: 'all', name: 'All Pricing' },
@@ -117,7 +117,7 @@ const pricingModels = [
   { id: 'one-time', name: 'One-time' },
   { id: 'usage-based', name: 'Usage-based' }
 ];
-export default function ComprehensiveServicesOverview2027(...args: any[]): any {
+export default function ComprehensiveServicesOverview2027(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -158,7 +158,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
     });
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
-  const ServiceCard = ({ service }: { service: anyany })  => (
+  const ServiceCard = ({ service }: { service: })  => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -241,7 +241,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
               exit={{ opacity: 0, height: 0 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: anystring, index: number)  => (
+              {service.benefits.map((benefit: string, index: number)  => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -385,7 +385,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
                 </div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as )}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
                 >
                   <option value="rating">Sort by Rating</option>
@@ -427,7 +427,7 @@ export default function ComprehensiveServicesOverview2027(...args: any[]): any {
           {/* Services Grid */}
           <div className={`grid gap-8 ${
             viewMode === 'grid' 
-              ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+              ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' 
               : 'grid-cols-1'
           }`}>
             {filteredServices.map((service)  => (

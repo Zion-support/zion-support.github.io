@@ -105,7 +105,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
                 rating: 4.7,
                 reviews: 456,
                 location: 'San Francisco, CA',
-                type: 'company',
+                type: 'comp',
                 metadata: {
                     lastUpdated: '2024-01-18',
                     verified: true,

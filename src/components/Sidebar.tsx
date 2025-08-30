@@ -69,13 +69,13 @@ import { cn  } from '@/lib/utils';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyboolean;
+  isOpen: boolean;
   onClose: ()  => void;
   className?: string;
 
 }
 
-export function Sidebar(...args: any[]): any {
+export function Sidebar(...args: []):  {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
@@ -84,7 +84,7 @@ export function Sidebar(...args: any[]): any {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: anystring)  => {
+  const toggleSection = (sectionTitle: string)  => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)
@@ -101,7 +101,7 @@ export function Sidebar(...args: any[]): any {
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
         { name: 'Pricing', path: '/pricing', icon: DollarSignIcon, description: 'Service plans and pricing' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our comp' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
@@ -223,7 +223,7 @@ export function Sidebar(...args: any[]): any {
       items: [
         { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
         { name: 'Case Studies', path: '/case-studies', icon: CheckCircle, description: 'Success stories' },
-        { name: 'News', path: '/news', icon: Newspaper, description: 'Company updates' },
+        { name: 'News', path: '/news', icon: Newspaper, description: 'Comp updates' },
         { name: 'Newsroom', path: '/newsroom', icon: Newspaper, description: 'Press releases' },
         { name: 'Reports', path: '/reports', icon: FileText, description: 'Industry reports' },
         { name: 'Research & Development', path: '/research-development', icon: TestTube, description: 'R&D projects' },
@@ -232,13 +232,13 @@ export function Sidebar(...args: any[]): any {
       ]
     },
     {
-      title: 'Company & Team',
+      title: 'Comp & Team',
       icon: Users,
       items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
         { name: 'Our Team', path: '/team', icon: Users, description: 'Meet our experts' },
         { name: 'Careers', path: '/careers', icon: Briefcase, description: 'Join our team' },
-        { name: 'Company', path: '/company', icon: Building, description: 'Company information' },
+        { name: 'Comp', path: '/comp', icon: Building, description: 'Comp information' },
         { name: 'Innovation', path: '/innovation', icon: Lightbulb, description: 'Innovation initiatives' },
         { name: 'Talent', path: '/talent', icon: Users, description: 'Talent solutions' }
       ]

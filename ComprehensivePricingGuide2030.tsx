@@ -70,7 +70,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     return filtered;
   }, [services, selectedCategory, selectedPricingModel]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -91,7 +91,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':
       case 'AI & Sales':
@@ -270,7 +270,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           >
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {marketInsights.map((insight, index)  => (
               <motion.div
                 key={insight.title}
@@ -303,7 +303,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           >
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingTiers.map((tier, index)  => (
               <motion.div
                 key={tier.name}
@@ -376,7 +376,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {categories.map(category  => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
@@ -387,7 +387,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {pricingModels.map(model  => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
@@ -398,7 +398,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {filteredServices.map((service, index)  => {
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);

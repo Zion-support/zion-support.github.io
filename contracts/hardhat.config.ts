@@ -33,8 +33,7 @@ const config: HardhatUserConfig = {
   //   apiKey: {
   //     polygonAmoy: POLYGONSCAN_API_KEY,
   //     polygonMumbai: POLYGONSCAN_API_KEY,
-  //   } as any,
-  // },
+  //   } as , // },
   paths: {
     sources: './contracts',
     tests: './test',

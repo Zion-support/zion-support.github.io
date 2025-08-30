@@ -20,12 +20,12 @@ interface AuthTokens {
 
 }
 
-export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+export const useAuthState: [, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [tokens, setTokens] = useState<any>({
-    accessToken: anynull,
+    accessToken: null,
     refreshToken: null
   });
 

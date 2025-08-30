@@ -145,7 +145,7 @@ export function NewsletterSection() {
           {/* Privacy notice */}
           <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.7 }}>
             <p className="text-zion-slate-light/70 text-sm mb-4">
-              No spam, unsubscribe at any time. We respect your privacy.
+              No spam, unsubscribe at  time. We respect your privacy.
             </p>
             
             {/* Trust indicators */}

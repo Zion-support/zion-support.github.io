@@ -1,7 +1,7 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 
-export default function ProductsIndex(...args: any[]): any {
+export default function ProductsIndex(...args: []):  {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
@@ -43,7 +43,7 @@ export default function ProductsIndex(...args: any[]): any {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
-          <div className="grid grid-cols-1 gap-5 sm: anygrid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">
             {[
               { title: 'SEO Guard', desc: 'Continuous audits + on-page fixes' },
               { title: 'Perf Shield', desc: 'CWV budgets + asset optimization' },

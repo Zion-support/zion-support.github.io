@@ -32,7 +32,7 @@ import { Brain,
  } from 'lucide-react.ts';
 import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
 
-export default function UltimateInnovativeServicesShowcase2025(...args: any[]): any {
+export default function UltimateInnovativeServicesShowcase2025(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
   const [searchTerm, setSearchTerm] = useState<any>('');
@@ -91,7 +91,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args: any[]): 
     return filtered;
   }, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
       case 'Quantum Computing': return <Cpu className="w-6 h-6" />;
@@ -107,7 +107,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args: any[]): 
     }
   };
 
-  const getInnovationBadge = (level: anystring)  => {
+  const getInnovationBadge = (level: string)  => {
     const type = level.split(' - ')[0];
     switch (type) {
       case 'Revolutionary':
@@ -227,7 +227,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args: any[]): 
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredServices.map((service, index)  => (
             <motion.div
               key={service.id}

@@ -156,7 +156,7 @@ const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
 const categories = ['All', 'AI & ML', 'Cybersecurity', 'Cloud & DevOps', 'Data Analytics', 'IoT & Edge', 'Digital Transformation'];
 const statuses = ['All', 'upcoming', 'past'];
 
-export default function Events(...args: any[]): any {
+export default function Events(...args: []):  {
   const [selectedType, setSelectedType] = useState('All');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedStatus, setSelectedStatus] = useState('All');
@@ -176,7 +176,7 @@ export default function Events(...args: any[]): any {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -186,7 +186,7 @@ export default function Events(...args: any[]): any {
     });
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -198,7 +198,7 @@ export default function Events(...args: any[]): any {
     }
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (status: string)  => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
@@ -256,7 +256,7 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {eventTypes.map(type  => (
                     <option key={type} value={type}>{type}</option>
@@ -269,7 +269,7 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
@@ -282,7 +282,7 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
                     <option key={status} value={status}>
@@ -311,7 +311,7 @@ export default function Events(...args: any[]): any {
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {upcomingEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
@@ -428,7 +428,7 @@ export default function Events(...args: any[]): any {
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {pastEvents.map((event, index)  => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (

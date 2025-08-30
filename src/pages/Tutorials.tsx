@@ -183,7 +183,7 @@ const Tutorials = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredTutorials.map((tutorial, index)  => (
               <div 
                 key={index}
@@ -258,7 +258,7 @@ const Tutorials = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {learningPaths.map((path, index)  => (
               <div 
                 key={index}

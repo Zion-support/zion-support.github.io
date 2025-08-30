@@ -128,7 +128,7 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingTiers.map((tier, index)  => (
               <div 
                 key={tier.name}
@@ -204,7 +204,7 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
                   </span>
                 </div>
                 
-                <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">
                   {category.items.map((service)  => (
                     <div key={service.id} className="bg-slate-700/50 rounded-lg p-6">
                       <h4 className="text-lg font-semibold text-white mb-3">{service.title}</h4>

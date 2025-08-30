@@ -51,8 +51,7 @@ interface HelpCategory {
   id: string;
   title: string;
   description: string;
-  icon: any;
-  color: string;
+  icon: ;color: string;
   articleCount: number;
   path: string;
 
@@ -62,8 +61,7 @@ interface SupportOption {
 
   title: string;
   description: string;
-  icon: any;
-  color: string;
+  icon: ;color: string;
   action: string;
   path: string;
 
@@ -220,13 +218,13 @@ const faqData: FAQItem[] = [
   }
 ];
 
-export default function HelpCenter(...args: any[]): any {
+export default function HelpCenter(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [expandedFAQ, setExpandedFAQ] = useState<any>(null);
   const [filteredFAQs, setFilteredFAQs] = useState<any>(faqData);
 
-  const handleSearch = (query: anystring)  => {
+  const handleSearch = (query: string)  => {
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -241,11 +239,11 @@ export default function HelpCenter(...args: any[]): any {
     setFilteredFAQs(filtered);
   };
 
-  const toggleFAQ = (id: anystring)  => {
+  const toggleFAQ = (id: string)  => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'getting-started': return BookOpen;
       case 'services': return Code;
@@ -257,7 +255,7 @@ export default function HelpCenter(...args: any[]): any {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'getting-started': return 'text-blue-500';
       case 'services': return 'text-purple-500';
@@ -312,7 +310,7 @@ export default function HelpCenter(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {helpCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
@@ -347,7 +345,7 @@ export default function HelpCenter(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {supportOptions.map((option, index)  => (
               <motion.div
                 key={option.title}
@@ -390,7 +388,7 @@ export default function HelpCenter(...args: any[]): any {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover: anybg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover: bg-white/20'
                 }`}
               >
                 All Categories
@@ -467,7 +465,7 @@ export default function HelpCenter(...args: any[]): any {
                               <p className="text-zion-slate-light leading-relaxed">{faq.answer}</p>
                               <div className="mt-4 flex items-center gap-4 text-sm text-zion-slate-light">
                                 <span className={`flex items-center gap-1 ${getCategoryColor(faq.category)}`}>
-                                  {getCategoryIcon(faq.category)({ className: any"h-4 w-4" })}
+                                  {getCategoryIcon(faq.category)({ className: "h-4 w-4" })}
                                   {helpCategories.find(c  => c.id === faq.category)?.title}
                                 </span>
                                 <span className="flex items-center gap-1">

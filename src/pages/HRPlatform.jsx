@@ -275,7 +275,7 @@ const hrTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Corporation",
+    comp: "Global Corporation",
     industry: "Technology",
     challenge: "Needed unified HR platform for 10,000+ employees across 20 countries",
     solution: "Built comprehensive HR platform with localization, compliance, and automation features",
@@ -284,7 +284,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Network",
+    comp: "Healthcare Network",
     industry: "Healthcare",
     challenge: "Required automated recruitment and onboarding for 500+ annual hires",
     solution: "Implemented AI-powered recruitment system with automated workflows and compliance tracking",
@@ -293,7 +293,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Manufacturing Company",
+    comp: "Manufacturing Comp",
     industry: "Manufacturing",
     challenge: "Needed performance management system for 2000+ production workers",
     solution: "Built performance tracking platform with goal setting and development planning",
@@ -679,7 +679,7 @@ export default function HRPlatform() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -106,7 +106,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
@@ -118,7 +118,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => (
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
@@ -159,7 +159,7 @@ const ExpandedServicesShowcase2027: NextPage = () => {
         </div>
 
         {/* Services Grid/List */}
-        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
           {filteredServices.map((service)  => (
             <div
               key={service.id}

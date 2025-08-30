@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { BookOpen, PenTool, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Sparkles  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function LLMContentStudio(...args: any[]): any {
+export default function LLMContentStudio(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function LLMContentStudio(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Sparkles,
@@ -120,7 +120,7 @@ export default function LLMContentStudio(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Blog Posts & Articles",
@@ -214,7 +214,7 @@ export default function LLMContentStudio(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>
                 <div className="space-y-4">
                   {[
-                    { model: any"GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },
+                    { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },
                     { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },
                     { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },
                     { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
@@ -247,7 +247,7 @@ export default function LLMContentStudio(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -348,7 +348,7 @@ export default function LLMContentStudio(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   metric: "Engagement",

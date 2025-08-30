@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function LLMContentStudio(...args: any[]): any {
+export default function LLMContentStudio(...args: []):  {
   return (
     <div className="min-h-screen bg-futuristic text-white">
       <SEO

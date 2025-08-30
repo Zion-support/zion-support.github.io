@@ -8,7 +8,7 @@ export const EnhancedContact = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        company: '',
+        comp: '',
         phone: '',
         service: '',
         message: ''
@@ -113,7 +113,7 @@ export const EnhancedContact = () => {
             setFormData({
                 name: '',
                 email: '',
-                company: '',
+                comp: '',
                 phone: '',
                 service: '',
                 message: ''
@@ -203,11 +203,10 @@ export const EnhancedContact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company
-                </label>
-                <Input type="text" placeholder="Enter your company name" value={formData.company} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
-                <input type="hidden" name="company" value={formData.company}/>
+                <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
+                  Comp </label>
+                <Input type="text" placeholder="Enter your comp name" value={formData.comp} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
+                <input type="hidden" name="comp" value={formData.comp}/>
               </motion.div>
 
               <motion.div variants={itemVariants}>
@@ -235,7 +234,7 @@ export const EnhancedContact = () => {
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                 Message *
               </label>
-              <Textarea rows={6} placeholder="Tell us about your project, requirements, or any questions you have..." value={formData.message} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan resize-none"/>
+              <Textarea rows={6} placeholder="Tell us about your project, requirements, or  questions you have..." value={formData.message} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan resize-none"/>
               <input type="hidden" name="message" value={formData.message}/>
             </motion.div>
 
@@ -254,7 +253,7 @@ export const EnhancedContact = () => {
         </div>
       </section>
 
-      {/* Company Info */}
+      {/* Comp Info */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div className="text-center mb-12" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>

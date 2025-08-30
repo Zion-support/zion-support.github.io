@@ -70,7 +70,7 @@ export function ITServiceRequestHero() {
             </GradientHeading>
             
             <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
+              Request professional technicians where in the world, time you need them. 
               Fast, reliable, and secure IT solutions for your business.
             </p>
 

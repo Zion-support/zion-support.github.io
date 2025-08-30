@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react.ts';
 import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight  } from 'lucide-react.ts';
 import { useSearchParams  } from 'react-router-dom.ts';
 
-export default function Search(...args: any[]): any {
+export default function Search(...args: []):  {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -29,7 +29,7 @@ export default function Search(...args: any[]): any {
   // Mock search results - in a real app, this would come from an API
   const mockResults = [
     {
-      id: any1,
+      id: 1,
       type: 'service',
       title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics platform with machine learning capabilities for business insights',
@@ -38,7 +38,7 @@ export default function Search(...args: any[]): any {
       reviews: 127,
       price: '$2,500/month',
       location: 'Remote',
-      company: 'Zion Tech Group',
+      comp: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
       featured: true
     },
@@ -52,7 +52,7 @@ export default function Search(...args: any[]): any {
       reviews: 89,
       price: '$150/hour',
       location: 'San Francisco, CA',
-      company: 'Tech Solutions Inc',
+      comp: 'Tech Solutions Inc',
       tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
       featured: false
     },
@@ -66,7 +66,7 @@ export default function Search(...args: any[]): any {
       reviews: 45,
       price: '$15,000/month',
       location: 'New York, NY',
-      company: 'Cloud Computing Corp',
+      comp: 'Cloud Computing Corp',
       tags: ['GPU', 'AI Training', 'High Performance', 'Enterprise'],
       featured: true
     },
@@ -80,7 +80,7 @@ export default function Search(...args: any[]): any {
       reviews: 203,
       price: '$300/hour',
       location: 'Remote',
-      company: 'Zion Tech Group',
+      comp: 'Zion Tech Group',
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
@@ -128,14 +128,14 @@ export default function Search(...args: any[]): any {
     setLoading(false);
   };
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
     }
   };
 
-  const getTypeIcon = (type: anystring)  => {
+  const getTypeIcon = (type: string)  => {
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -148,7 +148,7 @@ export default function Search(...args: any[]): any {
     }
   };
 
-  const getTypeLabel = (type: anystring)  => {
+  const getTypeLabel = (type: string)  => {
     switch (type) {
       case 'service':
         return 'Service';
@@ -212,7 +212,7 @@ export default function Search(...args: any[]): any {
                   {category.icon}
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                    {category.id === 'all' ? results.length: anyresults.filter(r  => r.type === category.id).length}
+                    {category.id === 'all' ? results.length: results.filter(r  => r.type === category.id).length}
                   </span>
                 </button>
               ))}
@@ -224,7 +224,7 @@ export default function Search(...args: any[]): any {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
               >
                 {sortOptions.map((option)  => (
                   <option key={option.value} value={option.value}>
@@ -291,7 +291,7 @@ export default function Search(...args: any[]): any {
                       </div>
                       <div className="flex items-center gap-1">
                         <Building className="w-4 h-4" />
-                        {result.company}
+                        {result.comp}
                       </div>
                       <div className="text-zion-cyan font-medium">{result.price}</div>
                     </div>

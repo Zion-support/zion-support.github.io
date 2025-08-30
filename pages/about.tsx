@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react.ts'
 
 
-export default function About(...args: any[]): any {
+export default function About(...args: []):  {
 	return (
 		<>
 			{/* Hero Section */}

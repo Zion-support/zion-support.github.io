@@ -154,7 +154,7 @@ const cloudPlatforms = [
 const successStories = [
   {
     id: 1,
-    company: "Tech Startup",
+    comp: "Tech Startup",
     industry: "SaaS",
     challenge: "Needed scalable cloud infrastructure for rapid growth",
     solution: "Built auto-scaling cloud platform with CI/CD pipelines",
@@ -163,7 +163,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "E-commerce Platform",
+    comp: "E-commerce Platform",
     industry: "Retail",
     challenge: "Required containerized microservices architecture",
     solution: "Implemented Kubernetes with automated CI/CD",
@@ -172,7 +172,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services",
+    comp: "Financial Services",
     industry: "Finance",
     challenge: "Needed secure, compliant cloud infrastructure",
     solution: "Built secure cloud platform with automated compliance",
@@ -483,7 +483,7 @@ export default function CloudDevOps() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

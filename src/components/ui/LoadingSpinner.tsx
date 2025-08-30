@@ -12,7 +12,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export default function LoadingSpinner(...args: any[]): any {
+export default function LoadingSpinner(...args: []):  {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -48,10 +48,10 @@ export default function LoadingSpinner(...args: any[]): any {
 }
 
 // Optimized skeleton loader
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index)  => (
         <motion.div
           key={index}
           initial={{ opacity: 0 }}
@@ -65,7 +65,7 @@ export function SkeletonLoader(...args: any[]): any {
 }
 
 // Button loading state
-export function ButtonLoader(...args: any[]): any {
+export function ButtonLoader(...args: []):  {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -75,7 +75,7 @@ export function ButtonLoader(...args: any[]): any {
 }
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: any[]): any {
+export function PageLoaderOverlay(...args: []):  {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -99,7 +99,7 @@ export function PageLoaderOverlay(...args: any[]): any {
 }
 
 // Content loading placeholder
-export function ContentPlaceholder(...args: any[]): any {
+export function ContentPlaceholder(...args: []):  {
   const variants = {
     default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
@@ -111,7 +111,7 @@ export function ContentPlaceholder(...args: any[]): any {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: any6 }).map((_, index)  => (
+        Array.from({ length: 6 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
@@ -126,7 +126,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: any5 }).map((_, index)  => (
+        Array.from({ length: 5 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
@@ -140,7 +140,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: any8 }).map((_, index)  => (
+        Array.from({ length: 8 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
@@ -154,7 +154,7 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: any4 }).map((_, index)  => (
+        Array.from({ length: 4 }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}

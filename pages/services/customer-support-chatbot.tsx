@@ -1,7 +1,7 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
 
-export default function CustomerSupportChatbot(...args: any[]): any {
+export default function CustomerSupportChatbot(...args: []):  {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>

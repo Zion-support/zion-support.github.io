@@ -198,10 +198,10 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   {
     id: 'space-habitat-design-platform',
     name: 'Space Habitat Design Platform',
-    tagline: 'Design space habitats for any planet or environment',
+    tagline: 'Design space habitats for  planet or environment',
     price: '$45,999',
     period: '/month',
-    description: 'Advanced platform for designing and planning space habitats optimized for any planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
+    description: 'Advanced platform for designing and planning space habitats optimized for  planetary environment. Uses AI-powered design tools, environmental simulation, and advanced materials science to create sustainable living spaces in space.',
     features: [
       'AI-powered habitat design',
       'Environmental simulation tools',

@@ -399,7 +399,7 @@ const blockchainTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Supply Chain Corp",
+    comp: "Global Supply Chain Corp",
     industry: "Manufacturing",
     challenge: "Needed transparent supply chain tracking across 50+ countries",
     solution: "Built comprehensive blockchain supply chain platform with IoT integration",
@@ -408,7 +408,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Digital Bank International",
+    comp: "Digital Bank International",
     industry: "Finance",
     challenge: "Required blockchain-based cross-border payment system",
     solution: "Implemented blockchain payment platform with smart contracts",
@@ -417,7 +417,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Identity Solutions",
+    comp: "Healthcare Identity Solutions",
     industry: "Healthcare",
     challenge: "Needed secure patient identity management system",
     solution: "Built blockchain-based identity management platform",
@@ -484,14 +484,14 @@ const blockchainBenefits = [
   }
 ];
 
-export default function BlockchainEnterpriseSolutions(...args: any[]): any {
+export default function BlockchainEnterpriseSolutions(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
 
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
   
   const filteredSolutions = selectedCategory === 'All' 
-    ? blockchainSolutions: anyblockchainSolutions.filter(solution  => solution.category === selectedCategory);
+    ? blockchainSolutions: blockchainSolutions.filter(solution  => solution.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -562,7 +562,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {blockchainBenefits.map((benefit, index)  => (
               <motion.div
                 key={benefit.title}
@@ -608,7 +608,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {blockchainTechnologies.map((technology, index)  => (
               <motion.div
                 key={technology.name}
@@ -655,7 +655,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index)  => (
               <motion.div
                 key={step.step}
@@ -716,7 +716,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index)  => (
               <motion.div
                 key={solution.id}
@@ -788,7 +788,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index)  => (
               <motion.div
                 key={story.id}
@@ -802,7 +802,7 @@ export default function BlockchainEnterpriseSolutions(...args: any[]): any {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -111,21 +111,21 @@ const AISalesCopilot = () => {
     {
       name: "Sarah Johnson",
       role: "Sales Director",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "AI Sales Copilot has transformed our sales process. We've seen a 40% increase in conversion rates and our team is 50% more productive.",
       rating: 5
     },
     {
       name: "Michael Chen",
       role: "VP of Sales",
-      company: "InnovateCorp",
+      comp: "InnovateCorp",
       content: "The predictive analytics feature alone has helped us close deals we would have missed. ROI within the first month!",
       rating: 5
     },
     {
       name: "Emily Rodriguez",
       role: "Sales Manager",
-      company: "Growth Dynamics",
+      comp: "Growth Dynamics",
       content: "Automated follow-ups ensure we never lose track of prospects. Our follow-up response time went from days to minutes.",
       rating: 5
     }
@@ -215,7 +215,7 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful AI Features</h2>
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
             {features.map((feature, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-8 hover:border-blue-500/50 transition-all">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
@@ -241,7 +241,7 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Seamless Integrations</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map((integration, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all">
                 <h3 className="text-xl font-bold text-white mb-3">{integration.name}</h3>
@@ -256,7 +256,7 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Transparent Pricing</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingTiers.map((tier, index)  => (
               <div key={index} className={`bg-slate-800/50 border rounded-xl p-8 relative ${
                 tier.popular 
@@ -306,7 +306,7 @@ const AISalesCopilot = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Customers Say</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {testimonials.map((testimonial, index)  => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6">
                 <div className="flex items-center mb-4">
@@ -317,7 +317,7 @@ const AISalesCopilot = () => {
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
                 </div>
               </div>
             ))}

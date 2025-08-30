@@ -201,7 +201,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
                     {category.services.map((service, serviceIndex)  => (
                       <motion.div
                         key={service.title}
@@ -254,7 +254,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {[
                 {
                   title: "AI-Powered Code Review & Security Analysis",

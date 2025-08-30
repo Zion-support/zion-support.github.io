@@ -122,7 +122,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         roi: "2000% within 24 months",
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
         demoUrl: "https://ziontechgroup.com/demo/quantum-computing",
-        caseStudies: ["Pharma company 10x faster drug discovery", "Financial firm 1000x optimization speed"],
+        caseStudies: ["Pharma comp 10x faster drug discovery", "Financial firm 1000x optimization speed"],
         marketTrend: "Rapid advancement in quantum computing with 100% annual growth",
         industryFocus: ["Research", "Pharmaceuticals", "Finance", "Technology", "Government"],
         scalability: "Quantum cloud infrastructure with unlimited computational power",

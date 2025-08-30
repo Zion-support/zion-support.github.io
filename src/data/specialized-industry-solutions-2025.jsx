@@ -383,7 +383,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         roi: "450% within 12 months",
         competitors: ["Manhattan Associates", "JDA Software", "Oracle", "SAP"],
         demoUrl: "https://ziontechgroup.com/demo/transportation-logistics-ai",
-        caseStudies: ["Logistics company 25% cost reduction", "E-commerce 30% faster delivery"],
+        caseStudies: ["Logistics comp 25% cost reduction", "E-commerce 30% faster delivery"],
         websiteUrl: "https://ziontechgroup.com/services/transportation-logistics-ai",
         industryChallenges: ["Transportation costs", "Delivery times", "Fleet optimization", "Supply chain visibility"],
         marketOpportunity: "$26.8 billion by 2026",

@@ -63,7 +63,7 @@ interface CategoriesSectionProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function CategoriesSection(...args: any[]): any {
+export function CategoriesSection(...args: []):  {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -132,7 +132,7 @@ export function CategoriesSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anytrue }}
+          viewport={{ once: true }}
         >
           {categories.map((category, index)  => (
             <motion.div

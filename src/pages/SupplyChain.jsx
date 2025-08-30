@@ -200,7 +200,7 @@ const supplyChainTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Logistics Corp",
+    comp: "Global Logistics Corp",
     industry: "Logistics",
     challenge: "Needed real-time visibility across 50+ warehouses and 1000+ delivery vehicles",
     solution: "Implemented comprehensive supply chain visibility platform with IoT integration and real-time analytics",
@@ -209,7 +209,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Manufacturing Network",
+    comp: "Manufacturing Network",
     industry: "Manufacturing",
     challenge: "Required optimized inventory management across multiple production facilities",
     solution: "Built AI-powered inventory management system with demand forecasting and automated reordering",
@@ -218,7 +218,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Retail Chain",
+    comp: "Retail Chain",
     industry: "Retail",
     challenge: "Needed efficient route optimization for last-mile delivery to 500+ stores",
     solution: "Implemented AI-driven route optimization with real-time traffic integration",
@@ -604,7 +604,7 @@ export default function SupplyChain() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

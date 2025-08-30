@@ -8,11 +8,11 @@ export interface CartItem {
 
 }
 
-export const calculateCartTotal = (items: anyCartItem[]): number  => {
+export const calculateCartTotal = (items: CartItem[]): number  => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: anyCartItem[], item: CartItem): CartItem[]  => {
+export const addToCart = (cart: CartItem[], item: CartItem): CartItem[]  => {
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
   
   if (existingItem) {
@@ -26,11 +26,11 @@ export const addToCart = (cart: anyCartItem[], item: CartItem): CartItem[]  => {
   return [...cart, item];
 };
 
-export const removeFromCart = (cart: anyCartItem[], itemId: string): CartItem[]  => {
+export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[]  => {
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: anyCartItem[], itemId: string, quantity: number): CartItem[]  => {
+export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[]  => {
   if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
@@ -44,11 +44,11 @@ export const clearCart = (): CartItem[] => {
   return [];
 };
 
-export const getCartKey = (userId: anystring): string  => {
+export const getCartKey = (userId: string): string  => {
   return `cart_${userId}`;
 };
 
-export const mergeCartItems = (existingItems: anyCartItem[], newItems: CartItem[]): CartItem[]  => {
+export const mergeCartItems = (existingItems: CartItem[], newItems: CartItem[]): CartItem[]  => {
   const merged = [...existingItems];
   
   newItems.forEach(newItem => {

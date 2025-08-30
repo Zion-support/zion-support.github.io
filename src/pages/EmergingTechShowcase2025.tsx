@@ -52,7 +52,7 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
   ];
 
     const filteredServices = selectedCategory === 'all'
-    ? EMERGING_TECH_SERVICES_2025: anyEMERGING_TECH_SERVICES_2025.filter(service  => service.category === selectedCategory);
+    ? EMERGING_TECH_SERVICES_2025: EMERGING_TECH_SERVICES_2025.filter(service  => service.category === selectedCategory);
 
   useEffect(() => {
     if (autoPlay) {
@@ -63,12 +63,12 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
     }
   }, [autoPlay, filteredServices.length]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.color : 'from-blue-500 to-purple-600';
   };
@@ -256,7 +256,7 @@ const EmergingTechShowcase2025: React.FC = (): JSX.Element => {
             <p className="text-xl text-gray-300">Comprehensive overview of our cutting-edge solutions</p>
           </div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)  => (
               <motion.div
                 key={service.id}

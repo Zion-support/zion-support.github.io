@@ -73,7 +73,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = useCallback(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: any'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, []);
 
   useEffect(()  => {
@@ -86,7 +86,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
-      const handleChange = (e: anyMediaQueryListEvent)  => {
+      const handleChange = (e: MediaQueryListEvent)  => {
         setCurrentTheme(e.matches ? 'dark' : 'light');
       };
       
@@ -100,20 +100,20 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Voice recognition setup
   useEffect(() => {
     if (enableVoice && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = (window as ).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: anyany)  => {
+      recognitionRef.current.onresult = (event: )  => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: anyany)  => {
-        console.error('Speech recognition error: any', event.error);
+      recognitionRef.current.onerror = (event: )  => {
+        console.error('Speech recognition error: ', event.error);
         setIsListening(false);
       };
     }
@@ -154,11 +154,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, [isListening]);
 
   // Send message
-  const sendMessage = useCallback(async (content: anystring)  => {
+  const sendMessage = useCallback(async (content: string)  => {
     if (!content.trim()) return;
 
     const userMessage: ChatMessage = {
-      id: anyDate.now().toString(),
+      id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
       timestamp: new Date(),
@@ -174,7 +174,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
       
       const aiResponse: ChatMessage = {
-        id: any(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: generateAIResponse(content),
         timestamp: new Date(),
@@ -189,7 +189,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       console.error('Error sending message:', error);
       
       const errorMessage: ChatMessage = {
-        id: any(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),
@@ -203,7 +203,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Generate AI response (replace with actual AI integration)
-  const generateAIResponse = (userInput: anystring): string  => {
+  const generateAIResponse = (userInput: string): string  => {
     const responses = [
       'I understand you\'re asking about that. Let me help you with some information.',
       'That\'s a great question! Here\'s what I can tell you about that topic.',
@@ -216,7 +216,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Generate suggestions based on user input
-  const generateSuggestions = (userInput: anystring): string[]  => {
+  const generateSuggestions = (userInput: string): string[]  => {
     const suggestions = [
       'Tell me more',
       'Can you explain that differently?',
@@ -229,11 +229,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = useCallback((event: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>)  => {
     const file = event.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-        id: anyDate.now().toString(),
+        id: Date.now().toString(),
         type: 'user',
         content: `Uploaded file: ${file.name}`,
         timestamp: new Date(),
@@ -246,12 +246,12 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   }, []);
 
   // Handle suggestion click
-  const handleSuggestionClick = useCallback((suggestion: anystring)  => {
+  const handleSuggestionClick = useCallback((suggestion: string)  => {
     sendMessage(suggestion);
   }, [sendMessage]);
 
   // Handle enter key
-  const handleKeyPress = useCallback((e: anyReact.KeyboardEvent)  => {
+  const handleKeyPress = useCallback((e: React.KeyboardEvent)  => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       sendMessage(inputValue);

@@ -152,21 +152,21 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     {
       name: 'Jennifer Martinez',
       role: 'Content Marketing Director',
-      company: 'TechFlow Solutions',
+      comp: 'TechFlow Solutions',
       content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
       rating: 5
     },
     {
       name: 'David Kim',
       role: 'SEO Manager',
-      company: 'Digital Growth Agency',
+      comp: 'Digital Growth Agency',
       content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
       rating: 5
     },
     {
       name: 'Sarah Williams',
       role: 'Content Creator',
-      company: 'Creative Content Studio',
+      comp: 'Creative Content Studio',
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
       rating: 5
     }
@@ -247,7 +247,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
                 <motion.div
                   key={index}
@@ -294,7 +294,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {useCases.map((useCase, index)  => (
                 <motion.div
                   key={index}
@@ -338,7 +338,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
                 <motion.div
                   key={index}
@@ -424,7 +424,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {testimonials.map((testimonial, index)  => (
                 <motion.div
                   key={index}
@@ -443,7 +443,7 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.company}</p>
+                    <p className="text-blue-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </motion.div>
               ))}

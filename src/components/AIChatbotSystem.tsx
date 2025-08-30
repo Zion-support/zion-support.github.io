@@ -80,7 +80,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       const welcomeMessage: ChatMessage = {
-        id: any'welcome',
+        id: 'welcome',
         content: "Hello! I'm Zion AI, your intelligent assistant. I can help you with:\n\n• Information about our services\n• Technical support and guidance\n• Project inquiries and quotes\n• General questions about Zion Tech Group\n\nHow can I assist you today?",
         sender: 'bot',
         timestamp: new Date(),
@@ -105,7 +105,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   }, [messages, autoScroll]);
 
   // Simulate AI response
-  const simulateAIResponse = async (userMessage: anystring)  => {
+  const simulateAIResponse = async (userMessage: string)  => {
     setIsTyping(true);
     
     // Simulate processing time
@@ -113,7 +113,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     
     const responses = [
       {
-        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about any particular service?",
+        content: "I'd be happy to help you with that! Zion Tech Group offers comprehensive AI consulting services including machine learning implementation, data analytics, and process automation. Would you like me to provide more specific details about  particular service?",
         suggestions: ['AI Consulting details', 'Machine Learning services', 'Data Analytics', 'Process Automation'],
         relatedServices: ['AI Consulting', 'Machine Learning', 'Data Analytics']
       },
@@ -137,7 +137,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     
     const botMessage: ChatMessage = {
-      id: anyDate.now().toString(),
+      id: Date.now().toString(),
       content: randomResponse.content,
       sender: 'bot',
       timestamp: new Date(),
@@ -156,12 +156,12 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle message submission
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
-      id: anyDate.now().toString(),
+      id: Date.now().toString(),
       content: inputValue,
       sender: 'user',
       timestamp: new Date(),
@@ -183,11 +183,11 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Handle file upload
-  const handleFileUpload = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>)  => {
     const file = e.target.files?.[0];
     if (file) {
       const fileMessage: ChatMessage = {
-        id: anyDate.now().toString(),
+        id: Date.now().toString(),
         content: `Uploaded: ${file.name}`,
         sender: 'user',
         timestamp: new Date(),
@@ -204,7 +204,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   };
 
   // Rate response
-  const rateResponse = (messageId: anystring, rating: 'positive' | 'negative')  => {
+  const rateResponse = (messageId: string, rating: 'positive' | 'negative')  => {
     setMessages(prev => prev.map(msg => 
       msg.id === messageId 
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating } }
@@ -452,7 +452,7 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
                     type="text"
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
-                    placeholder="Ask me anything about Zion Tech Group..."
+                    placeholder="Ask me thing about Zion Tech Group..."
                     className="w-full px-4 py-3 bg-zinc-800/50 border border-zinc-600/50 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
                     disabled={isTyping}
                   />

@@ -41,7 +41,7 @@ const AIAutonomousEducationProfessor = () => {
             <div className="text-center">
               <div className="text-6xl mb-4">🌍</div>
               <h3 className="text-xl font-semibold text-white mb-2">Global Access</h3>
-              <p className="text-gray-300">Learn from anywhere, anytime</p>
+              <p className="text-gray-300">Learn from where, time</p>
             </div>
           </div>
 

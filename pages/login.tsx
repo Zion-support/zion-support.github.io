@@ -13,7 +13,7 @@ import { Mail,
   ArrowRight
  } from 'lucide-react.ts'
 
-export default function Login(...args: any[]): any {
+export default function Login(...args: []):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -23,7 +23,7 @@ export default function Login(...args: any[]): any {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errors, setErrors] = useState<Record<string, any>>({})
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -44,7 +44,7 @@ export default function Login(...args: any[]): any {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault()
     
     if (!validateForm()) return

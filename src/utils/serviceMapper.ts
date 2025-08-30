@@ -3,7 +3,7 @@ import { specializedIndustrySolutions2026  } from '@/data/2026-specialized-indus
 // Interface for the existing service structure
 export interface Service {
 
-  id: anystring;
+  id: string;
   title: string;
   description: string;
   category: string;

@@ -7,7 +7,7 @@ interface AlertProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Alert(...args: any[]): any {
+export function Alert(...args: []):  {
   return (
     <div className={`relative w-full rounded-lg border p-4 ${className}`}>
       {children}
@@ -22,7 +22,7 @@ interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function AlertDescription(...args: any[]): any {
+export function AlertDescription(...args: []):  {
   return (
     <div className={`text-sm ${className}`}>
       {children}

@@ -108,7 +108,7 @@ export function KanbanBoard({ jobId }) {
         <CardContent>
           <h3 className="text-lg font-semibold mb-2">No applications yet</h3>
           <p className="text-muted-foreground mb-6">
-            You haven't received any applications for this job yet.
+            You haven't received  applications for this job yet.
           </p>
         </CardContent>
       </Card>);

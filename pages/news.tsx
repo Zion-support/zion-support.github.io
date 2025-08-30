@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, ArrowRight, Tag, User  } from 'lucide-react.ts'
 
 
-export default function News(...args: any[]): any {
+export default function News(...args: []):  {
 	const newsArticles = [
 		{
 			id: 1,
@@ -32,7 +32,7 @@ export default function News(...args: any[]): any {
 			author: 'Zion Team',
 			date: '2025-01-05',
 			readTime: '3 min read',
-			category: 'Company News',
+			category: 'Comp News',
 			image: '/api/placeholder/400/250'
 		},
 		{
@@ -67,7 +67,7 @@ export default function News(...args: any[]): any {
 		}
 	]
 
-	const categories = ['All', 'Product Launch', 'Company News', 'Industry Insights', 'Customer Success', 'Security']
+	const categories = ['All', 'Product Launch', 'Comp News', 'Industry Insights', 'Customer Success', 'Security']
 
 	return (
 		<>
@@ -158,7 +158,7 @@ export default function News(...args: any[]): any {
 			{/* News Grid */}
 			<section className="py-16">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
-					<div className="grid gap-8 lg: anygrid-cols-2">
+					<div className="grid gap-8 lg: grid-cols-2">
 						{newsArticles.slice(1).map((article)  => (
 							<article key={article.id} className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
 								<div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">

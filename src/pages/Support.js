@@ -9,11 +9,11 @@ export default function Support() {
             },
             {
                 question: 'What industries do you serve?',
-                answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our AI and technology solutions are designed to be industry-agnostic and can be customized for any sector.'
+                answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our AI and technology solutions are designed to be industry-agnostic and can be customized for  sector.'
             },
             {
                 question: 'Do you offer remote support?',
-                answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from anywhere in the world, ensuring you get the help you need regardless of your location.'
+                answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from where in the world, ensuring you get the help you need regardless of your location.'
             }
         ],
         technical: [
@@ -37,11 +37,11 @@ export default function Support() {
             },
             {
                 question: 'Do you offer refunds?',
-                answer: 'We offer a 30-day satisfaction guarantee. If you\'re not completely satisfied with our services within the first 30 days, we\'ll work to resolve any issues or provide a full refund.'
+                answer: 'We offer a 30-day satisfaction guarantee. If you\'re not completely satisfied with our services within the first 30 days, we\'ll work to resolve  issues or provide a full refund.'
             },
             {
                 question: 'Can I change my plan mid-contract?',
-                answer: 'Yes, you can upgrade or downgrade your plan at any time. We\'ll prorate any billing adjustments and ensure a smooth transition between plans.'
+                answer: 'Yes, you can upgrade or downgrade your plan at  time. We\'ll prorate  billing adjustments and ensure a smooth transition between plans.'
             }
         ],
         compliance: [
@@ -62,7 +62,7 @@ export default function Support() {
     const supportChannels = [
         {
             name: '24/7 Email Support',
-            description: 'Get help anytime via email',
+            description: 'Get help time via email',
             icon: '📧',
             response: 'Within 2 hours',
             link: '/contact'

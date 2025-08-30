@@ -155,7 +155,7 @@ const edTechTrends = [
 const successStories = [
   {
     id: 1,
-    company: "Tech University",
+    comp: "Tech University",
     industry: "Higher Education",
     challenge: "Needed comprehensive LMS for 50,000+ students",
     solution: "Built custom LMS with AI-powered personalization",
@@ -164,7 +164,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Global Learning Network",
+    comp: "Global Learning Network",
     industry: "K-12 Education",
     challenge: "Required mobile learning platform for remote students",
     solution: "Developed cross-platform mobile app with offline capabilities",
@@ -173,7 +173,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Corporate Training Plus",
+    comp: "Corporate Training Plus",
     industry: "Corporate Training",
     challenge: "Needed VR training simulations for safety training",
     solution: "Created immersive VR training modules with progress tracking",
@@ -486,7 +486,7 @@ export default function EducationSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

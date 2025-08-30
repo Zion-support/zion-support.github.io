@@ -11,8 +11,7 @@ const mockCodeSnippets = [
 interface UseApiOptions<T> {
   url: string;
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
-  body?: any;
-  headers?: Record<string, string>;
+  body?: ;headers?: Record<string, string>;
 }
 
 export function useApi<T>({ url, method = 'GET', body, headers }: UseApiOptions<T>) {

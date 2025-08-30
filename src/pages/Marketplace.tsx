@@ -107,7 +107,7 @@ const filters = [
   { name: 'Services', value: 'services' }
 ];
 
-export default function Marketplace(...args: any[]): any {
+export default function Marketplace(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -218,7 +218,7 @@ export default function Marketplace(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {marketplaceCategories.map((category, index)  => (
               <motion.div 
                 key={category.id}
@@ -275,7 +275,7 @@ export default function Marketplace(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: any0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
             {filters.map((filter)  => (
               <button
@@ -293,7 +293,7 @@ export default function Marketplace(...args: any[]): any {
           </motion.div>
 
           {/* Products Grid */}
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product, index)  => (
               <motion.div 
                 key={product.id}

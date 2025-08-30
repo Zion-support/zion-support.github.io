@@ -88,7 +88,7 @@ export const SPECIALIZED_MICRO_SAAS_SERVICES_2025 = [
         useCases: [
             "Small business invoicing",
             "Freelancer billing",
-            "Service company invoicing",
+            "Service comp invoicing",
             "Recurring billing management",
             "Expense tracking"
         ],

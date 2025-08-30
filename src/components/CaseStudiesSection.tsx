@@ -13,7 +13,7 @@ import { TrendingUp,
 export const CaseStudiesSection: React.FC = (): JSX.Element => {
   const caseStudies = [
     {
-      company: 'TechCorp Solutions',
+      comp: 'TechCorp Solutions',
       industry: 'Financial Services',
       challenge: 'Legacy system modernization and digital transformation',
       solution: 'Implemented AI-powered automation and cloud migration',
@@ -26,7 +26,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      company: 'Global Manufacturing Inc.',
+      comp: 'Global Manufacturing Inc.',
       industry: 'Manufacturing',
       challenge: 'Supply chain optimization and predictive maintenance',
       solution: 'IoT sensors and AI-powered analytics platform',
@@ -39,7 +39,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      company: 'HealthTech Innovations',
+      comp: 'HealthTech Innovations',
       industry: 'Healthcare',
       challenge: 'Patient data security and compliance management',
       solution: 'Zero-trust security framework and automated compliance',
@@ -71,10 +71,10 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid lg: anygrid-cols-3 gap-8 mb-12">
+        <div className="grid lg: grid-cols-3 gap-8 mb-12">
           {caseStudies.map((study, index)  => (
             <motion.div
-              key={study.company}
+              key={study.comp}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -86,7 +86,7 @@ export const CaseStudiesSection: React.FC = (): JSX.Element => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">
-                    {study.company}
+                    {study.comp}
                   </h3>
                   <p className="text-gray-600 text-sm">{study.industry}</p>
                 </div>

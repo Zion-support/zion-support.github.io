@@ -134,7 +134,7 @@ export default function NotificationsPage() {
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30"/>
                   <h3 className="text-xl font-medium">No notifications found</h3>
                   <p className="text-muted-foreground mt-1">
-                    {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
+                    {filter === 'all' ? "You don't have  notifications yet" : `You don't have  ${filter} notifications`}
                   </p>
                 </div>) : (<div>
                   {filteredNotifications.map(notification => (<NotificationCard key={notification.id} notification={notification} onMarkAsRead={markAsRead} onDismiss={dismissNotification}/>))}

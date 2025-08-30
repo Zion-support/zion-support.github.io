@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react.ts';
 import Link from 'next/link.ts';
 import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react.ts';
 
-export default function EnhancedNavigation2025(...args: any[]): any {
+export default function EnhancedNavigation2025(...args: []):  {
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -36,7 +36,7 @@ export default function EnhancedNavigation2025(...args: any[]): any {
 			]
 		},
 		{
-			name: 'Company',
+			name: 'Comp',
 			href: '/about',
 			children: [
 				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
@@ -49,7 +49,7 @@ export default function EnhancedNavigation2025(...args: any[]): any {
 		{ name: 'Pricing', href: '/pricing' },
 	];
 
-	const toggleDropdown = (name: anystring)  => {
+	const toggleDropdown = (name: string)  => {
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
 
@@ -102,7 +102,7 @@ export default function EnhancedNavigation2025(...args: any[]): any {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg: anyflex lg:items-center lg:space-x-8">
+					<div className="hidden lg: flex lg:items-center lg:space-x-8">
 						{navigation.map((item)  => (
 							<div key={item.name} className="relative group">
 								{item.children ? (

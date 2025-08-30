@@ -35,7 +35,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
     return filtered;
   }, [selectedService]);
 
-  const getServiceIcon = (serviceName: anystring)  => {
+  const getServiceIcon = (serviceName: string)  => {
     switch (serviceName) {
       case 'QuantumFlow Pro': return <Cpu className="w-6 h-6" />;
       case 'NeuroSync AI': return <Brain className="w-6 h-6" />;
@@ -44,7 +44,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
     }
   };
 
-  const getTierColor = (tierName: anystring)  => {
+  const getTierColor = (tierName: string)  => {
     switch (tierName) {
       case 'Starter': return 'from-green-500 to-emerald-500';
       case 'Professional': return 'from-blue-500 to-cyan-500';
@@ -121,7 +121,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {services.map(service  => (
                       <option key={service} value={service} className="bg-zinc-800 text-white">
@@ -137,7 +137,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
                   <select
                     value={selectedTier}
                     onChange={(e) => setSelectedTier(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     {tiers.map(tier  => (
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">
@@ -196,7 +196,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
                   {/* Competitors */}
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3 text-center">Competitor Pricing</h4>
-                    <div className="grid grid-cols-1 md: anygrid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-3">
                       {servicePricing.marketAnalysis.competitors.map((competitor, idx)  => (
                         <div key={idx} className="bg-white/5 rounded-lg p-3 text-center">
                           <span className="text-zinc-300">{competitor}</span>
@@ -207,7 +207,7 @@ const ComprehensivePricingGuide2026: React.FC = (): JSX.Element => {
                 </div>
 
                 {/* Pricing Tiers */}
-                <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
                   {servicePricing.pricingTiers.map((tier, tierIndex)  => (
                     <motion.div
                       key={tier.name}

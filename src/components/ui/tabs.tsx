@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react.ts'
 
 interface TabsContextType {
 
-  activeTab: anystring;
+  activeTab: string;
   setActiveTab: (tab: string)  => void;
 
 }
@@ -11,7 +11,7 @@ const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps extends React.PropsWithChildren<{}> {
 
-  children: anyReactNode;
+  children: ReactNode;
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string)  => void;
@@ -19,10 +19,10 @@ interface TabsProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Tabs(...args: any[]): any {
+export function Tabs(...args: []):  {
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anystring)  => {
+  const handleTabChange = (tab: string)  => {
     setActiveTab(tab);
     if (onValueChange) {
       onValueChange(tab);
@@ -45,7 +45,7 @@ interface TabsListProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function TabsList(...args: any[]): any {
+export function TabsList(...args: []):  {
   return (
     <div className={`flex border-b border-gray-200 ${className}`}>
       {children}
@@ -61,7 +61,7 @@ interface TabsTriggerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function TabsTrigger(...args: any[]): any {
+export function TabsTrigger(...args: []):  {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsTrigger must be used within Tabs');
 
@@ -89,7 +89,7 @@ interface TabsContentProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function TabsContent(...args: any[]): any {
+export function TabsContent(...args: []):  {
   const context = useContext(TabsContext);
   if (!context) throw new Error('TabsContent must be used within Tabs');
 

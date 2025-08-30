@@ -251,7 +251,7 @@ const contentTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Digital Marketing Agency",
+    comp: "Digital Marketing Agency",
     industry: "Marketing",
     challenge: "Needed scalable content creation platform for 100+ clients",
     solution: "Built custom CMS with AI-powered content generation and multi-channel publishing",
@@ -260,7 +260,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Educational Platform",
+    comp: "Educational Platform",
     industry: "Education",
     challenge: "Required video production tools for online course creation",
     solution: "Developed web-based video editing platform with collaboration features",
@@ -269,7 +269,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "E-commerce Brand",
+    comp: "E-commerce Brand",
     industry: "Retail",
     challenge: "Needed automated content generation for product descriptions",
     solution: "Implemented AI-powered content creation system with brand voice consistency",
@@ -655,7 +655,7 @@ export default function ContentCreation() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -22,7 +22,7 @@ import { Users,
   Database
  } from 'lucide-react.ts';
 
-export default function About(...args: any[]): any {
+export default function About(...args: []):  {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -91,7 +91,7 @@ export default function About(...args: any[]): any {
   const milestones = [
     {
       year: '2018',
-      title: 'Company Founded',
+      title: 'Comp Founded',
       description: 'Zion Tech Group established with a vision to democratize AI technology.'
     },
     {
@@ -121,7 +121,7 @@ export default function About(...args: any[]): any {
       <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to democratize AI technology and transform businesses through innovative solutions. Meet our expert team and discover our journey."
-        keywords="about Zion Tech Group, AI company, technology team, company mission, digital transformation"
+        keywords="about Zion Tech Group, AI comp, technology team, comp mission, digital transformation"
         canonical="https://ziontechgroup.com/about"
       />
 
@@ -255,7 +255,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index)  => (
               <motion.div 
                 key={index}
@@ -295,7 +295,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index)  => (
               <motion.div
                 key={index}
@@ -334,7 +334,7 @@ export default function About(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index)  => (
               <motion.div
                 key={index}
@@ -380,7 +380,7 @@ export default function About(...args: any[]): any {
               Our Journey
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Key milestones that have shaped our company and driven our growth
+              Key milestones that have shaped our comp and driven our growth
             </p>
           </motion.div>
           

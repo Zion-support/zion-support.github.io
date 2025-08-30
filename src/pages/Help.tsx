@@ -23,7 +23,7 @@ import { Search,
   ExternalLink
  } from 'lucide-react.ts';
 
-export default function Help(...args: any[]): any {
+export default function Help(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -152,7 +152,7 @@ export default function Help(...args: any[]): any {
     : [];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? helpCategories: anyhelpCategories.filter(category  => category.id === selectedCategory);
+    ? helpCategories: helpCategories.filter(category  => category.id === selectedCategory);
 
   return (
     <div className="min-h-screen bg-slate-900">
@@ -228,7 +228,7 @@ export default function Help(...args: any[]): any {
             <p className="text-slate-300">Get help immediately with these options</p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
             {quickActions.map((action, index)  => (
               <motion.div
                 key={action.title}
@@ -351,7 +351,7 @@ export default function Help(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredCategories.map((category, index)  => (
                 <motion.div
                   key={category.id}
@@ -535,7 +535,7 @@ export default function Help(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 title: 'Documentation',

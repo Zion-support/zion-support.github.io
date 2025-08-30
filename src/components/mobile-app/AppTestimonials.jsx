@@ -6,7 +6,7 @@ export const AppTestimonials = () => {
     {
       name: "Sarah Chen",
       role: "AI Research Director",
-      company: "TechCorp",
+      comp: "TechCorp",
       rating: 5,
       content: "The Zion mobile app has revolutionized how we manage AI projects. The talent matching is incredibly accurate, and the mobile interface makes collaboration seamless.",
       avatar: "/images/testimonials/sarah-chen.jpg"
@@ -14,15 +14,15 @@ export const AppTestimonials = () => {
     {
       name: "Michael Rodriguez",
       role: "CTO",
-      company: "InnovateLab",
+      comp: "InnovateLab",
       rating: 5,
-      content: "As a CTO, I need to stay connected to our AI initiatives on the go. Zion's mobile app gives me real-time visibility and control from anywhere.",
+      content: "As a CTO, I need to stay connected to our AI initiatives on the go. Zion's mobile app gives me real-time visibility and control from where.",
       avatar: "/images/testimonials/michael-rodriguez.jpg"
     },
     {
       name: "Dr. Emily Watson",
       role: "Data Scientist",
-      company: "AI Solutions Inc",
+      comp: "AI Solutions Inc",
       rating: 5,
       content: "The mobile app's AI talent discovery feature is game-changing. I can find specialized experts for our projects in seconds, even while commuting.",
       avatar: "/images/testimonials/emily-watson.jpg"
@@ -30,7 +30,7 @@ export const AppTestimonials = () => {
     {
       name: "David Kim",
       role: "Project Manager",
-      company: "Digital Dynamics",
+      comp: "Digital Dynamics",
       rating: 5,
       content: "Managing multiple AI projects used to be a nightmare. With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.",
       avatar: "/images/testimonials/david-kim.jpg"
@@ -74,7 +74,7 @@ export const AppTestimonials = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-400">{testimonial.role} at {testimonial.company}</p>
+                  <p className="text-sm text-gray-400">{testimonial.role} at {testimonial.comp}</p>
                 </div>
                 <div className="flex items-center">
                   {renderStars(testimonial.rating)}

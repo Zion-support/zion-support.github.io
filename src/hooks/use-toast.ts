@@ -10,7 +10,7 @@ interface Toast {
 
 }
 
-export function useToast(...args: any[]): any {
+export function useToast(...args: []):  {
   const [toasts, setToasts] = useState<any>([]);
 
   const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {
@@ -28,7 +28,7 @@ export function useToast(...args: any[]): any {
     return id;
   }, []);
 
-  const dismiss = useCallback((id: anystring)  => {
+  const dismiss = useCallback((id: string)  => {
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
 

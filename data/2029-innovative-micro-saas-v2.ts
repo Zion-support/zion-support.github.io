@@ -224,7 +224,7 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     referral: '$7,500 bonus for partnerships',
     partnership: 'Educational institution partnerships',
     funding: 'Series A funding, $40M valuation',
-    exit: 'Acquisition by major edtech company',
+    exit: 'Acquisition by major edtech comp',
     contact: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',

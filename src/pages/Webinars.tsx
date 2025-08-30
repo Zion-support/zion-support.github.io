@@ -27,7 +27,7 @@ import { Video,
   Phone
  } from 'lucide-react.ts';
 
-export default function Webinars(...args: any[]): any {
+export default function Webinars(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);
@@ -112,7 +112,7 @@ export default function Webinars(...args: any[]): any {
 
   const pastWebinars = [
     {
-      id: any5,
+      id: 5,
       title: 'The Future of AI in Healthcare: Opportunities and Challenges',
       category: 'healthcare-tech',
       speaker: 'Dr. Emily Watson, VP of Healthcare Technology',
@@ -190,11 +190,11 @@ export default function Webinars(...args: any[]): any {
     const allWebinars = [...upcomingWebinars, ...pastWebinars];
     const categoryCounts = categories.map(cat => ({
       ...cat,
-      count: cat.id === 'all' ? allWebinars.length: anyallWebinars.filter(wp  => wp.category === cat.id).length
+      count: cat.id === 'all' ? allWebinars.length: allWebinars.filter(wp  => wp.category === cat.id).length
     }));
   }, []);
 
-  const filteredWebinars = (showPast ? pastWebinars: anyupcomingWebinars).filter(webinar  => {
+  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -258,7 +258,7 @@ export default function Webinars(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
           >
             {stats.map((stat, index)  => (
               <div key={stat.label} className="text-center">
@@ -296,7 +296,7 @@ export default function Webinars(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
+                  className="appearance-none px-4 py-3 pr-10 rounded-lg bg-slate-800 border border-slate-600 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white text-sm"
                 >
                   {categories.map((category)  => (
                     <option key={category.id} value={category.id}>
@@ -347,7 +347,7 @@ export default function Webinars(...args: any[]): any {
             {showPast ? 'Past Webinars' : 'Upcoming Webinars'}
           </motion.h2>
           
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredWebinars.map((webinar, index)  => (
               <motion.article
                 key={webinar.id}
@@ -490,7 +490,7 @@ export default function Webinars(...args: any[]): any {
             Webinar Categories
           </motion.h2>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {categories.slice(1).map((category, index)  => (
               <motion.div
                 key={category.id}

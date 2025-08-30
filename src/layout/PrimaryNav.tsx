@@ -20,7 +20,7 @@ import { useTranslation  } from 'react-i18next.ts';
 import { useSelector  } from 'react-redux.ts';
 import type { RootState } from '@/store';
 
-export function PrimaryNav(...args: any[]): any {
+export function PrimaryNav(...args: []):  {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
@@ -38,11 +38,11 @@ export function PrimaryNav(...args: any[]): any {
     // context not available
   }
 
-  const cartCount = useSelector((s: anyRootState)  =>
+  const cartCount = useSelector((s: RootState)  =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0),
   );
 
-  const handleSubmit = (e: anyReact.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
     if (query.trim()) {
       console.log('PrimaryNav search submit:', query);

@@ -602,7 +602,7 @@ const ventureCapitalSolutions = [
     icon: Target,
     features: [
       "Deal identification",
-      "Company screening",
+      "Comp screening",
       "Market research",
       "Opportunity scoring"
     ],
@@ -711,7 +711,7 @@ const vcTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Innovation Capital Partners",
+    comp: "Innovation Capital Partners",
     industry: "Venture Capital",
     challenge: "Needed AI-powered investment analysis platform for portfolio management",
     solution: "Built comprehensive AI investment analysis platform with market intelligence and risk management",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Tech Growth Fund",
+    comp: "Tech Growth Fund",
     industry: "Investment Fund",
     challenge: "Required autonomous deal sourcing and evaluation system",
     solution: "Implemented AI-driven deal sourcing and evaluation platform",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Startup Ventures Ltd",
+    comp: "Startup Ventures Ltd",
     industry: "Venture Capital",
     challenge: "Needed AI portfolio management and exit optimization",
     solution: "Built AI-powered portfolio management and exit strategy system",
@@ -1115,7 +1115,7 @@ export default function AIAutonomousVentureCapitalist() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

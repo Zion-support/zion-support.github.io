@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function AIEnterpriseOrchestrator(...args: any[]): any {
+export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -121,7 +121,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -191,7 +191,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"40%", label: "Cost Reduction" },
+                    { metric: "40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }

@@ -277,7 +277,7 @@ export const ServiceDetailsSection = ({ services = [] }) => {
               Need a Custom Solution?
             </h3>
             <p className="text-blue-100 mb-6">
-              Our team can tailor any service to meet your specific business requirements.
+              Our team can tailor  service to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

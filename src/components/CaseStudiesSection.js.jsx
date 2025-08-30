@@ -5,7 +5,7 @@ const caseStudies = [
     {
         id: 'healthcare-ai',
         title: 'Healthcare AI Revolution',
-        company: 'MedTech Solutions',
+        comp: 'MedTech Solutions',
         industry: 'Healthcare',
         icon: <Shield className="w-8 h-8"/>,
         color: 'from-zion-cyan to-zion-blue',
@@ -31,7 +31,7 @@ const caseStudies = [
     {
         id: 'fintech-platform',
         title: 'Next-Gen Fintech Platform',
-        company: 'DigitalBank Pro',
+        comp: 'DigitalBank Pro',
         industry: 'Financial Services',
         icon: <TrendingUp className="w-8 h-8"/>,
         color: 'from-zion-purple to-zion-purple-dark',
@@ -57,7 +57,7 @@ const caseStudies = [
     {
         id: 'retail-transformation',
         title: 'Retail Digital Transformation',
-        company: 'Global Retail Co.',
+        comp: 'Global Retail Co.',
         industry: 'Retail',
         icon: <Globe className="w-8 h-8"/>,
         color: 'from-zion-cyan-light to-zion-cyan',
@@ -83,7 +83,7 @@ const caseStudies = [
     {
         id: 'manufacturing-iot',
         title: 'Smart Manufacturing IoT',
-        company: 'Advanced Manufacturing Inc.',
+        comp: 'Advanced Manufacturing Inc.',
         industry: 'Manufacturing',
         icon: <Zap className="w-8 h-8"/>,
         color: 'from-zion-purple-light to-zion-purple',
@@ -184,7 +184,7 @@ export function CaseStudiesSection() {
                   
                   <div className="text-right">
                     <div className="text-zion-cyan text-sm font-medium">{caseStudy.industry}</div>
-                    <div className="text-zion-slate-light text-xs">{caseStudy.company}</div>
+                    <div className="text-zion-slate-light text-xs">{caseStudy.comp}</div>
                   </div>
                 </div>
                 

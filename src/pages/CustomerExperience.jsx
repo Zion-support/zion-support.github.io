@@ -205,7 +205,7 @@ const customerExperienceTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Retailer",
+    comp: "E-commerce Retailer",
     industry: "Retail",
     challenge: "Needed to improve customer satisfaction and reduce cart abandonment rates",
     solution: "Implemented comprehensive UX redesign with customer journey mapping and personalization",
@@ -214,7 +214,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services",
+    comp: "Financial Services",
     industry: "Finance",
     challenge: "Required better customer experience for online banking and mobile apps",
     solution: "Built customer-centric design system with personalized experiences and improved usability",
@@ -223,7 +223,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Healthcare Provider",
+    comp: "Healthcare Provider",
     industry: "Healthcare",
     challenge: "Needed to improve patient portal experience and appointment booking",
     solution: "Redesigned patient portal with intuitive UX and streamlined appointment scheduling",
@@ -609,7 +609,7 @@ export default function CustomerExperience() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

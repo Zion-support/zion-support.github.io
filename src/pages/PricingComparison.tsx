@@ -329,7 +329,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
     }
   ];
 
-  const calculateSavings = (monthlyPrice: anynumber, yearlyPrice: number)  => {
+  const calculateSavings = (monthlyPrice: number, yearlyPrice: number)  => {
     const monthlyTotal = monthlyPrice * 12;
     const yearlyTotal = yearlyPrice * 12;
     const savings = monthlyTotal - yearlyTotal;
@@ -427,7 +427,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
                         </p>
                       </div>
 
-                      <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+                      <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
                         {service.plans.map((plan, planIndex)  => {
                           const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
                           return (
@@ -525,7 +525,7 @@ const PricingComparison: React.FC = (): JSX.Element => {
                 <div className="text-center">
                   <div className="text-4xl mb-4">🚀</div>
                   <h3 className="text-xl font-semibold text-white mb-3">14-Day Free Trial</h3>
-                  <p className="text-gray-300">Try any service risk-free with our comprehensive trial period</p>
+                  <p className="text-gray-300">Try  service risk-free with our comprehensive trial period</p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">💰</div>

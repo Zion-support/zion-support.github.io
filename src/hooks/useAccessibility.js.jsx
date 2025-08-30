@@ -99,7 +99,7 @@ export const useAccessibility = () => {
             }
             // Toggle accessibility menu
             if (event.key === 'Escape') {
-                // Close any open modals or menus
+                // Close  open modals or menus
                 const modals = document.querySelectorAll('[role="dialog"]');
                 modals.forEach(modal => {
                     if (modal instanceof HTMLElement) {

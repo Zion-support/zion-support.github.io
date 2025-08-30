@@ -158,7 +158,7 @@ const iotTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Manufacturing Corp",
+    comp: "Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed real-time monitoring of 1000+ production machines",
     solution: "Built IIoT platform with edge computing and predictive analytics",
@@ -167,7 +167,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Smart City Initiative",
+    comp: "Smart City Initiative",
     industry: "Municipal",
     challenge: "Required IoT infrastructure for city-wide monitoring",
     solution: "Implemented smart city platform with edge nodes and real-time analytics",
@@ -176,7 +176,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Network",
+    comp: "Logistics Network",
     industry: "Transportation",
     challenge: "Needed real-time tracking and monitoring of fleet vehicles",
     solution: "Built IoT fleet management system with edge computing",
@@ -489,7 +489,7 @@ export default function IoTEdge() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

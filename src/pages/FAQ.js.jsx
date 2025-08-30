@@ -40,7 +40,7 @@ export default function FAQ() {
         },
         {
             question: "Can I use Zion for both hiring and finding work?",
-            answer: "Yes! Many users maintain both client and talent profiles, allowing them to hire for projects while also offering their own services. This flexibility makes Zion ideal for freelancers, agencies, and growing companies."
+            answer: "Yes! M users maintain both client and talent profiles, allowing them to hire for projects while also offering their own services. This flexibility makes Zion ideal for freelancers, agencies, and growing companies."
         },
         {
             question: "How do you handle payments and contracts?",

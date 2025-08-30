@@ -20,7 +20,7 @@ import { Search,
   Rocket
  } from 'lucide-react.ts';
 
-export default function Documentation(...args: any[]): any {
+export default function Documentation(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -142,7 +142,7 @@ export default function Documentation(...args: any[]): any {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories: anydocCategories.filter(category  => category.id === selectedCategory);
+    ? docCategories: docCategories.filter(category  => category.id === selectedCategory);
 
   const searchResults = searchQuery 
     ? docCategories.flatMap(category => 
@@ -296,7 +296,7 @@ export default function Documentation(...args: any[]): any {
               </p>
             </motion.div>
             
-            <div className="grid md: anygrid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               {filteredCategories.map((category, index)  => (
                 <motion.div
                   key={category.id}
@@ -364,7 +364,7 @@ export default function Documentation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {apiDocs.map((api, index)  => (
               <motion.div
                 key={api.name}
@@ -428,7 +428,7 @@ export default function Documentation(...args: any[]): any {
           </motion.div>
           
           <div className="max-w-6xl mx-auto">
-            <div className="grid md: anygrid-cols-2 gap-8">
+            <div className="grid md: grid-cols-2 gap-8">
               {popularGuides.map((guide, index)  => (
                 <motion.div
                   key={index}
@@ -492,7 +492,7 @@ export default function Documentation(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {[
               {
                 title: 'Video Tutorials',

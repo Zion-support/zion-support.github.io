@@ -7,11 +7,11 @@ import { BudgetStatusDisplay  } from './BudgetStatusDisplay'; // New import
 
 interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
 
-  recommendation: anyTeamRecommendation;
+  recommendation: TeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison
   onInviteTalent: (talentId: string, roleTitle: string)  => void;
-  // onEditRole: any(roleId: string)  => void; // For future add/remove
-  // onRemoveRole: any(roleId: string)  => void; // For future add/remove
+  // onEditRole: (roleId: string)  => void; // For future add/remove
+  // onRemoveRole: (roleId: string)  => void; // For future add/remove
 
 }
 
@@ -80,7 +80,7 @@ export const TeamRecommendationDisplay = ({ recommendation, projectBrief, onInvi
 };
 
 // Helper component for summary cards
-const InfoCard = ({ title, value, icon }: { title: anystring; value: string; icon: React.ReactNode })  => (
+const InfoCard = ({ title, value, icon }: { title: string; value: string; icon: React.ReactNode })  => (
   <Card className="bg-secondary/50 p-3 shadow-sm">
     <div className="flex items-center text-muted-foreground mb-1">
       {icon}

@@ -382,7 +382,7 @@ const InnovativeServicesShowcase2031: React.FC = (): JSX.Element => {
                     <input 
                       type="text" 
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                      placeholder="Your company name"
+                      placeholder="Your comp name"
                     />
                   </div>
                   

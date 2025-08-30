@@ -437,11 +437,11 @@ console.log("Language:", "${options.language}");`;
                 line: code.split('\n').findIndex(line => line.includes('TODO')) + 1
             });
         }
-        if (code.includes('any')) {
+        if (code.includes('')) {
             issues.push({
                 severity: 'warning',
-                message: 'Usage of "any" type reduces type safety',
-                line: code.split('\n').findIndex(line => line.includes('any')) + 1
+                message: 'Usage of "" type reduces type safety',
+                line: code.split('\n').findIndex(line => line.includes('')) + 1
             });
         }
         return issues;

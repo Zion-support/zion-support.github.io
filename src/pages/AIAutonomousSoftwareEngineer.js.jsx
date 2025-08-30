@@ -80,7 +80,7 @@ const AIAutonomousSoftwareEngineer = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-yellow-400 text-4xl mb-4">🌐</div>
               <h3 className="text-xl font-semibold text-white mb-3">Multi-Language Support</h3>
-              <p className="text-gray-300">Program in any programming language</p>
+              <p className="text-gray-300">Program in  programming language</p>
             </div>
           </div>
 

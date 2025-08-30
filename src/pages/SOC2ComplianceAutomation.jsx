@@ -711,7 +711,7 @@ const soc2Technologies = [
 const successStories = [
   {
     id: 1,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Needed automated SOC2 compliance monitoring for regulatory requirements",
     solution: "Built comprehensive SOC2 compliance automation platform with monitoring and reporting",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Technology Ltd",
+    comp: "Healthcare Technology Ltd",
     industry: "Healthcare",
     challenge: "Required automated SOC2 policy management and enforcement",
     solution: "Implemented AI-driven SOC2 policy automation system",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Cloud Services Provider",
+    comp: "Cloud Services Provider",
     industry: "Technology",
     challenge: "Needed automated SOC2 audit preparation and security controls",
     solution: "Built AI-powered SOC2 audit preparation and security automation system",
@@ -1115,7 +1115,7 @@ export default function SOC2ComplianceAutomation() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

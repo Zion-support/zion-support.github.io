@@ -239,14 +239,14 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
 
-  const toggleDropdown = (dropdown: anystring)  => {
+  const toggleDropdown = (dropdown: string)  => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 

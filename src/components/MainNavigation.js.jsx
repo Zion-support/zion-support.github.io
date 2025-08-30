@@ -60,7 +60,7 @@ export function MainNavigation() {
             ]
         },
         {
-            name: 'Company',
+            name: 'Comp',
             href: '/about',
             dropdown: [
                 { name: 'About Us', href: '/about' },

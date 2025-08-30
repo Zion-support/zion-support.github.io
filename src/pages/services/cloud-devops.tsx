@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function CloudDevOps(...args: any[]): any {
+export default function CloudDevOps(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function CloudDevOps(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: GitBranch,
@@ -120,7 +120,7 @@ export default function CloudDevOps(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Continuous Integration",
@@ -191,7 +191,7 @@ export default function CloudDevOps(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "CI/CD Tools",
@@ -285,7 +285,7 @@ export default function CloudDevOps(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">DevOps Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"50-80%", label: "Deployment Speed", description: "Faster delivery" },
+                    { metric: "50-80%", label: "Deployment Speed", description: "Faster delivery" },
                     { metric: "60-90%", label: "Lead Time", description: "Reduction" },
                     { metric: "40-70%", label: "Recovery Time", description: "Improvement" },
                     { metric: "99.9%+", label: "Uptime", description: "Availability" }
@@ -314,7 +314,7 @@ export default function CloudDevOps(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

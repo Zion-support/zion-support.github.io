@@ -114,26 +114,26 @@ export const SUPPORT_LEVELS = [
 // Calculate counts for each category
 export const calculateServiceStats = () => {
   const stats = {
-    totalServices: anyCOMPREHENSIVE_SERVICES_CATALOG_2025.length,
+    totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
     pricingTiers: PRICING_TIERS.map(tier  => ({
       ...tier,
-      count: anyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => {
+      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => {
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
         return false;
       }).length
     })),
-    innovationLevels: anyINNOVATION_LEVELS.map(level  => ({
+    innovationLevels: INNOVATION_LEVELS.map(level  => ({
       ...level,
-      count: anyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => 
+      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => 
         service.innovationLevel.toLowerCase() === level.id
       ).length
     })),
-    supportLevels: anySUPPORT_LEVELS.map(level  => ({
+    supportLevels: SUPPORT_LEVELS.map(level  => ({
       ...level,
-      count: anyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => 
+      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service  => 
         service.supportLevel.toLowerCase() === level.id
       ).length
     }))
@@ -143,35 +143,35 @@ export const calculateServiceStats = () => {
 };
 
 // Get services by category
-export const getServicesByCategory = (category: anystring)  => {
+export const getServicesByCategory = (category: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
   );
 };
 
 // Get services by price range
-export const getServicesByPriceRange = (minPrice: anynumber, maxPrice: number)  => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 
 // Get services by innovation level
-export const getServicesByInnovationLevel = (level: anystring)  => {
+export const getServicesByInnovationLevel = (level: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Get services by support level
-export const getServicesBySupportLevel = (level: anystring)  => {
+export const getServicesBySupportLevel = (level: string)  => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.supportLevel.toLowerCase() === level.toLowerCase()
   );
 };
 
 // Search services
-export const searchServices = (query: anystring)  => {
+export const searchServices = (query: string)  => {
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => 
     service.title.toLowerCase().includes(searchTerm) ||
@@ -202,7 +202,7 @@ export const getTrendingServices = (limit: number = 10) => {
 };
 
 // Get services by industry
-export const getServicesByIndustry = (industry: anystring)  => {
+export const getServicesByIndustry = (industry: string)  => {
   const industryMap: { [key: string]: string[] } = {
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
@@ -229,7 +229,7 @@ export const getServicesByIndustry = (industry: anystring)  => {
 };
 
 // Get service recommendations based on user preferences
-export const getServiceRecommendations = (preferences: any{
+export const getServiceRecommendations = (preferences: {
   industry?: string;
   budget?: number;
   innovationLevel?: string;

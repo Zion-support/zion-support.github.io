@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react.ts';
 import { X, Send  } from 'lucide-react.ts';
 export interface Message {
 
-  id: anystring;
+  id: string;
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
@@ -15,15 +15,15 @@ export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   onClose?: ()  => void;
 
 }
-export function ChatAssistant(...args: any[]): any {
+export function ChatAssistant(...args: []):  {
   const [isChatOpen, setIsChatOpen] = useState(isOpen);
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const handleSendMessage = async (message: anystring)  => {
+  const handleSendMessage = async (message: string)  => {
     if (!message.trim()) return;
     const userMessage: Message = {
-      id: anyDate.now().toString(),
+      id: Date.now().toString(),
       role: 'user',
       message: message.trim(),
       timestamp: new Date(),
@@ -33,7 +33,7 @@ export function ChatAssistant(...args: any[]): any {
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: any(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),
@@ -41,7 +41,7 @@ export function ChatAssistant(...args: any[]): any {
       setMessages(prev  => [...prev, aiMessage]);
     }, 1000);
   };
-  const handleSubmit = (e: anyReact.FormEvent)  => {
+  const handleSubmit = (e: React.FormEvent)  => {
     e.preventDefault();
     handleSendMessage(inputMessage);
   };

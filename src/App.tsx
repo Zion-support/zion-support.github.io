@@ -167,7 +167,7 @@ const Marketplace = () => (
   </div>
 );
 
-function App(...args: any[]): any {
+function App(...args: []):  {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">

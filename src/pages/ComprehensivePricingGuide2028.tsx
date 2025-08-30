@@ -160,8 +160,8 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
 
   const getAllServices = () => {
     return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: any'AI Services' })),
-      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: any'Micro SAAS' })),
+      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
+      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: 'Micro SAAS' })),
       ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }))
     ];
   };
@@ -179,7 +179,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
     return matchesCategory && matchesPrice;
   });
 
-  const calculateROI = (roi: anystring)  => {
+  const calculateROI = (roi: string)  => {
     return parseInt(roi.replace('%', ''));
   };
 
@@ -330,7 +330,7 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {sortedServices.map((service, index)  => (
               <motion.div
                 key={`${service.type}-${service.name}`}

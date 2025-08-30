@@ -610,22 +610,22 @@ export const innovativeServices2026: InnovativeService[] = [
 
 export const serviceCategories = [
   {
-    name: any'Micro SaaS',
+    name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
     services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
   },
   {
-    name: any'AI Solutions',
+    name: 'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
     services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
   },
   {
-    name: any'IT Services',
+    name: 'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s  => s.category === 'IT Services')
   },
   {
-    name: any'Emerging Technologies',
+    name: 'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   }

@@ -62,7 +62,7 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             ]
         },
         {
-            label: 'Company',
+            label: 'Comp',
             href: '/about',
             children: [
                 { label: 'About Us', href: '/about' },

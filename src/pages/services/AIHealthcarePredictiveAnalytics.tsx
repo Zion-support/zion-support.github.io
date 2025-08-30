@@ -44,7 +44,7 @@ import { Heart,
  } from 'lucide-react.ts';
 import { SEO  } from '../../components/SEO';
 
-export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
+export default function AIHealthcarePredictiveAnalytics(...args: []):  {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -284,7 +284,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -323,7 +323,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {clinicalApplications.map((application, index)  => (
               <motion.div
                 key={index}
@@ -362,7 +362,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -398,7 +398,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFeatures.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -434,7 +434,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}
@@ -473,7 +473,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -552,7 +552,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -571,7 +571,7 @@ export default function AIHealthcarePredictiveAnalytics(...args: any[]): any {
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our healthcare experts are here to help you get started and answer any questions
+              Our healthcare experts are here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

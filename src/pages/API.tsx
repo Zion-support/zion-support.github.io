@@ -119,7 +119,7 @@ def check_threat(ip_address):
   }
 ];
 
-export default function API(...args: any[]): any {
+export default function API(...args: []):  {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -199,7 +199,7 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {apiCategories.map((category, index)  => (
               <motion.div
                 key={category.title}
@@ -270,7 +270,7 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {quickStartExamples.map((example, index)  => (
               <motion.div
                 key={example.title}

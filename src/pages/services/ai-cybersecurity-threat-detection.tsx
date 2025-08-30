@@ -23,7 +23,7 @@ import { Shield,
   Users
  } from 'lucide-react.ts';
 
-export default function AICybersecurityThreatDetection(...args: any[]): any {
+export default function AICybersecurityThreatDetection(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -225,7 +225,7 @@ export default function AICybersecurityThreatDetection(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -264,7 +264,7 @@ export default function AICybersecurityThreatDetection(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -303,7 +303,7 @@ export default function AICybersecurityThreatDetection(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {threatTypes.map((threat, index)  => (
               <motion.div
                 key={index}
@@ -342,7 +342,7 @@ export default function AICybersecurityThreatDetection(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFrameworks.map((framework, index)  => (
               <motion.div
                 key={index}
@@ -378,7 +378,7 @@ export default function AICybersecurityThreatDetection(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}

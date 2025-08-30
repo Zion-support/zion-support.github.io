@@ -22,7 +22,7 @@ const REWARD_OPTIONS = [
     {
         id: 'platform-credit',
         title: '$5 Platform Credit',
-        description: 'Get $5 credit to use on any paid service',
+        description: 'Get $5 credit to use on  paid service',
         cost: 100,
         type: 'credit'
     }

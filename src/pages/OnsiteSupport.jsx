@@ -152,7 +152,7 @@ const supportTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Manufacturing Plant",
+    comp: "Manufacturing Plant",
     industry: "Manufacturing",
     challenge: "Critical production system failure during peak hours",
     solution: "Emergency onsite support team arrived within 2 hours and restored system in 4 hours",
@@ -161,7 +161,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Clinic",
+    comp: "Healthcare Clinic",
     industry: "Healthcare",
     challenge: "Network outage affecting patient management systems",
     solution: "Onsite network support resolved connectivity issues and implemented redundancy",
@@ -170,7 +170,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Financial Services Firm",
+    comp: "Financial Services Firm",
     industry: "Finance",
     challenge: "Server hardware failure during trading hours",
     solution: "Emergency hardware support with immediate replacement and data recovery",
@@ -556,7 +556,7 @@ export default function OnsiteSupport() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

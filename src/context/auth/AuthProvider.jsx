@@ -96,7 +96,7 @@ export const AuthProvider = ({ children }) => {
         return result;
     };
     useEffect(() => {
-        // Clean up any potential stale auth state before setting up listeners
+        // Clean up  potential stale auth state before setting up listeners
         cleanupAuthState();
         const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
             if (session?.user) {

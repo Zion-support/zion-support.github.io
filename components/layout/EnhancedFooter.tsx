@@ -46,8 +46,8 @@ const footerNavigation = {
 			{ name: 'Financial Services', href: '/solutions/financial' },
 		],
 	},
-	company: {
-		title: 'Company',
+	comp: {
+		title: 'Comp',
 		items: [
 			{ name: 'About Us', href: '/about' },
 			{ name: 'Partners', href: '/partners' },
@@ -102,7 +102,7 @@ const EnhancedFooter: React.FC = (): JSX.Element => {
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
-					{/* Company info */}
+					{/* Comp info */}
 					<div className="lg:col-span-2">
 						<div className="mb-6">
 							<div className="flex items-center gap-3 mb-4">
@@ -140,7 +140,7 @@ const EnhancedFooter: React.FC = (): JSX.Element => {
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: anyIcon })  => (
+							{socialLinks.map(({ name, href, icon: Icon })  => (
 								<a
 									key={name}
 									href={href}
@@ -178,7 +178,7 @@ const EnhancedFooter: React.FC = (): JSX.Element => {
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
 						{quickLinks.map((link)  => (
 							<Link
 								key={link.name}

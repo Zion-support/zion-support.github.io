@@ -11,7 +11,7 @@ import { Mail,
   Users
  } from 'lucide-react.ts';
 
-export default function Login(...args: any[]): any {
+export default function Login(...args: []):  {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -19,14 +19,14 @@ export default function Login(...args: any[]): any {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement>)  => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>)  => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     setIsLoading(true);
     

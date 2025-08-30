@@ -62,7 +62,7 @@ export default function CheckoutPage() {
           <CardForm amount={product.price ?? 0} onSuccess={setIntent}/>
         </Elements>)}
       {!intent && (<p className="text-xs text-zion-slate-light text-center">
-          Use test card 4242-4242-4242-4242 with any future date and CVC.
+          Use test card 4242-4242-4242-4242 with  future date and CVC.
         </p>)}
     </div>);
 }

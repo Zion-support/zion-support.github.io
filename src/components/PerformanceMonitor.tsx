@@ -44,7 +44,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
   const [scores, setScores] = useState<Record<string, any>>({});
   const [showAlert, setShowAlert] = useState(false);
   const [alertMessage, setAlertMessage] = useState('');
-  const calculateScore = useCallback((metric: anynumber, thresholds: number[]): PerformanceScore  => {
+  const calculateScore = useCallback((metric: number, thresholds: number[]): PerformanceScore  => {
     if (metric <= thresholds[0]) return { score: 100, grade: 'A', color: 'text-green-400' };
     if (metric <= thresholds[1]) return { score: 80, grade: 'B', color: 'text-yellow-400' };
     if (metric <= thresholds[2]) return { score: 60, grade: 'C', color: 'text-orange-400' };
@@ -65,7 +65,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
       const fid = fidEntry ? fidEntry.processingStart - fidEntry.startTime : null;
       // Cumulative Layout Shift
       const clsEntry = perf.getEntriesByName('cumulative-layout-shift')[0] as PerformanceEntry;
-      const cls = clsEntry ? (clsEntry as any).value : null;
+      const cls = clsEntry ? (clsEntry as ).value : null;
       // Time to First Byte
       const navigationEntry = perf.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const ttfb = navigationEntry ? navigationEntry.responseStart - navigationEntry.requestStart : null;
@@ -109,7 +109,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
           }
         }
       });
-      observer.observe({ entryTypes: any['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
       return ()  => observer.disconnect();
     }
     // Update metrics periodically
@@ -122,7 +122,7 @@ export const PerformanceMonitor: React.FC = (): JSX.Element => {
     if (unit === 's') return `${(value / 1000).toFixed(2)}s`;
     return value.toFixed(3);
   };
-  const getMetricColor = (score: anyPerformanceScore): string  => {
+  const getMetricColor = (score: PerformanceScore): string  => {
     return score.color.replace('text-', 'bg-').replace('-400', '-500').replace('-600', '-700');
   };
   return (

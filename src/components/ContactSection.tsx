@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Phone, Mail, MapPin, ArrowRight  } from 'lucide-react.ts';
-export function ContactSection(...args: any[]): any {
+export function ContactSection(...args: []):  {
   const contactInfo = [
     {
       icon: Phone,
@@ -40,7 +40,7 @@ export function ContactSection(...args: any[]): any {
             Ready to transform your business? Contact us today to discuss your technology needs
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-12">
           {contactInfo.map((contact, index)  => (
             <motion.div
               key={index}

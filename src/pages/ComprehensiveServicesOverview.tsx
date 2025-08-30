@@ -192,7 +192,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: outline-none focus:border-blue-400/50"
                   >
                     {categories.map(category  => (
                       <option key={category.id} value={category.id}>{category.name}</option>
@@ -202,7 +202,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
                   <select
                     value={selectedPricing}
                     onChange={(e) => setSelectedPricing(e.target.value)}
-                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-blue-400/50"
+                    className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus: outline-none focus:border-blue-400/50"
                   >
                     {pricingModels.map(pricing  => (
                       <option key={pricing.id} value={pricing.id}>{pricing.name}</option>
@@ -217,7 +217,7 @@ const ComprehensiveServicesOverview: React.FC = (): JSX.Element => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service, index)  => (
                 <motion.div
                   key={service.id}

@@ -173,7 +173,7 @@ const digitalTwinTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Advanced Manufacturing Corp",
+    comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed real-time monitoring and optimization of 50+ production lines",
     solution: "Built comprehensive digital twin platform with IoT integration and AI analytics",
@@ -182,7 +182,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Metropolitan City",
+    comp: "Metropolitan City",
     industry: "Municipal",
     challenge: "Required comprehensive monitoring of city infrastructure and services",
     solution: "Implemented smart city digital twin with real-time monitoring and predictive analytics",
@@ -191,7 +191,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Regional Power Grid",
+    comp: "Regional Power Grid",
     industry: "Energy",
     challenge: "Needed real-time monitoring and optimization of power distribution network",
     solution: "Built energy infrastructure digital twin with predictive maintenance and load balancing",
@@ -577,7 +577,7 @@ export default function DigitalTwin() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

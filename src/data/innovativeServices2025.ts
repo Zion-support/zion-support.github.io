@@ -607,11 +607,11 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService[] = [
 ];
 
 // Helper functions
-export const getServicesByCategory = (category: anystring): InnovativeService[]  => {
+export const getServicesByCategory = (category: string): InnovativeService[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: anynumber, maxPrice: number): InnovativeService[]  => {
+export const getServicesByPriceRange = (minPrice: number, maxPrice: number): InnovativeService[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.price >= minPrice && service.price <= maxPrice);
 };
 
@@ -621,6 +621,6 @@ export const getTopRatedServices = (limit: number = 5): InnovativeService[] => {
     .slice(0, limit);
 };
 
-export const getServicesByAIScore = (minScore: anynumber): InnovativeService[]  => {
+export const getServicesByAIScore = (minScore: number): InnovativeService[]  => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };

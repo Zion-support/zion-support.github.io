@@ -296,7 +296,7 @@ export const CountryTabs = () => {
               Need Service in Another Region?
             </h3>
             <p className="text-blue-100 mb-6">
-              Contact our global team to discuss your IT service needs in any location.
+              Contact our global team to discuss your IT service needs in  location.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

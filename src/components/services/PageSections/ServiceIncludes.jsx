@@ -312,7 +312,7 @@ export const ServiceIncludes = () => {
               Need a Custom Solution?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our team can customize any service package to meet your specific business requirements.
+              Our team can customize  service package to meet your specific business requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

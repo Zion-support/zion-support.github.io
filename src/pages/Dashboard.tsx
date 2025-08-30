@@ -17,7 +17,7 @@ import { BarChart3,
   ArrowRight
  } from 'lucide-react.ts';
 
-export default function Dashboard(...args: any[]): any {
+export default function Dashboard(...args: []):  {
   const stats = [
     {
       title: "Total Revenue",
@@ -135,7 +135,7 @@ export default function Dashboard(...args: any[]): any {
     }
   ];
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case "Completed":
         return "bg-green-100 text-green-800";
@@ -148,7 +148,7 @@ export default function Dashboard(...args: any[]): any {
     }
   };
 
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case "High":
         return "bg-red-100 text-red-800";
@@ -184,7 +184,7 @@ export default function Dashboard(...args: any[]): any {
 
       <div className="p-6">
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.title}

@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Heart, Shield, Brain, Zap, Users, TrendingUp, CheckCircle, ArrowRight  } from 'lucide-react.ts';
 
-export default function HealthcareSolutions(...args: any[]): any {
+export default function HealthcareSolutions(...args: []):  {
   const solutions = [
     {
       icon: Heart,
@@ -130,7 +130,7 @@ export default function HealthcareSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {solutions.map((solution, index)  => (
               <motion.div
                 key={solution.title}
@@ -239,7 +239,7 @@ export default function HealthcareSolutions(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
             {specialties.map((specialty, index)  => (
               <motion.div
                 key={specialty}

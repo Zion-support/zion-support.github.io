@@ -23,7 +23,7 @@ import { TrendingUp,
   PieChart
  } from 'lucide-react.ts';
 
-export default function AIFinancialTradingPlatform(...args: any[]): any {
+export default function AIFinancialTradingPlatform(...args: []):  {
   const features = [
     {
       icon: Brain,
@@ -124,7 +124,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
     {
       icon: Target,
       title: 'Risk-Adjusted Returns',
-      description: 'AI optimizes for the best risk-reward ratio in any market condition'
+      description: 'AI optimizes for the best risk-reward ratio in  market condition'
     },
     {
       icon: BarChart3,
@@ -208,7 +208,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
       {/* Performance Metrics */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {performanceMetrics.map((item, index)  => (
               <motion.div
                 key={index}
@@ -244,7 +244,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -283,7 +283,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)  => (
               <motion.div
                 key={index}
@@ -322,7 +322,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {tradingMarkets.map((market, index)  => (
               <motion.div
                 key={index}
@@ -361,7 +361,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -440,7 +440,7 @@ export default function AIFinancialTradingPlatform(...args: any[]): any {
             </div>
             
             <p className="text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>

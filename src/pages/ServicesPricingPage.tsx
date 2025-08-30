@@ -44,13 +44,13 @@ const pricingFeatures = [
   "Security Compliance",
   "Scalable Architecture"
 ];
-export default function ServicesPricingPage(...args: any[]): any {
+export default function ServicesPricingPage(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const categories = Object.keys(servicesByCategory);
   const filteredServices = selectedCategory === 'all' 
     ? EXPANDED_SERVICES 
     : servicesByCategory[selectedCategory] || [];
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const categoryIcons: { [key: string]: React.ReactNode } = {
       'AI Automation': <Zap className="h-5 w-5" />,
       'Customer Intelligence': <Users className="h-5 w-5" />,
@@ -125,7 +125,7 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Pricing Tiers Overview */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Pricing Tiers Overview</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(SERVICE_PRICING_TIERS).map(([key, tier])  => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                 <CardHeader className="text-center">
@@ -168,7 +168,7 @@ export default function ServicesPricingPage(...args: any[]): any {
               ))}
             </TabsList>
             <TabsContent value={selectedCategory} className="mt-8">
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredServices.map((service)  => (
                   <Card key={service.id} className="bg-white/5 backdrop-blur-sm border-white/20 text-white hover:bg-white/10 transition-all duration-300">
                     <CardHeader>
@@ -263,7 +263,7 @@ export default function ServicesPricingPage(...args: any[]): any {
         {/* Service Benefits Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose ZionTech Group?</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.entries(SERVICE_BENEFITS).map(([key, benefit])  => (
               <Card key={key} className="bg-white/5 backdrop-blur-sm border-white/20 text-white text-center hover:bg-white/10 transition-all duration-300">
                 <CardContent className="pt-6">

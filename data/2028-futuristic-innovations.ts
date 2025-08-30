@@ -75,7 +75,7 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     integrations: ['Weather APIs', 'Satellite data feeds', 'Government databases', 'Insurance systems', 'Agricultural platforms'],
     useCases: ['Natural disaster preparation', 'Crop planning', 'Insurance risk assessment', 'Energy production optimization', 'Shipping route planning'],
     roi: 'Insurance companies report 300% ROI through improved risk assessment and reduced claims.',
-    competitors: ['IBM Weather Company', 'AccuWeather', 'The Weather Channel'],
+    competitors: ['IBM Weather Comp', 'AccuWeather', 'The Weather Channel'],
     marketSize: '$8.5B weather forecasting market',
     growthRate: '25% annual growth',
     variant: 'ai-futuristic',

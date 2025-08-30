@@ -1195,21 +1195,21 @@ export default function AutonomousBusinessOperationsPlatform() {}
   const testimonials = [
     {name}: "Operations Director",
       role: "Chief Operations Officer",
-      company: "Global Manufacturing Co.",
+      comp: "Global Manufacturing Co.",
       content: "The autonomous operations platform has transformed our business. We've achieved 60% efficiency gains and 24/7 operations.",
       rating: 5,
       avatar: "👨‍💼"
     },
     {name}: "Sarah Operations",
       role: "VP of Operations",
-      company: "Tech Solutions Inc.",
+      comp: "Tech Solutions Inc.",
       content: "The platform's autonomous decision-making capabilities have revolutionized how we manage our operations.",
       rating: 5,
       avatar: "👩‍💼"
     },
     {name}: "Michael Operations",
       role: "Operations Manager",
-      company: "Innovation Corp",
+      comp: "Innovation Corp",
       content: "We've seen unprecedented improvements in efficiency and cost reduction with this platform.",
       rating: 5,
       avatar: "👨‍💻"
@@ -1404,7 +1404,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   <div>
                     <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
                     <p className="text-green-400">{testimonial.role}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </div>
                 
@@ -1441,7 +1441,7 @@ export default function AutonomousBusinessOperationsPlatform() {}
             </div>
             
             <p className="text-sm text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </div>
         </div>

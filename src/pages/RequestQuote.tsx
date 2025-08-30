@@ -38,10 +38,10 @@ import { Calculator,
 
 interface QuoteForm {
 
-  // Company Information
-  companyName: string;
+  // Comp Information
+  compName: string;
   industry: string;
-  companySize: string;
+  compSize: string;
   website: string;
   
   // Contact Information
@@ -90,7 +90,7 @@ const industries = [
   'Other'
 ];
 
-const companySizes = [
+const compSizes = [
   '1-10 employees',
   '11-50 employees',
   '51-200 employees',
@@ -153,11 +153,11 @@ const teamSizes = [
   '100+ people'
 ];
 
-export default function RequestQuote(...args: any[]): any {
+export default function RequestQuote(...args: []):  {
   const [formData, setFormData] = useState<any>({
-    companyName: '',
+    compName: '',
     industry: '',
-    companySize: '',
+    compSize: '',
     website: '',
     firstName: '',
     lastName: '',
@@ -188,7 +188,7 @@ export default function RequestQuote(...args: any[]): any {
 
   const totalSteps = 4;
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -196,16 +196,16 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
-  const handleServiceToggle = (service: anystring)  => {
+  const handleServiceToggle = (service: string)  => {
     setFormData(prev => ({
       ...prev,
-      services: anyprev.services.includes(service)
+      services: prev.services.includes(service)
         ? prev.services.filter(s  => s !== service)
         : [...prev.services, service]
     }));
   };
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: string)  => {
     setExpandedSection(expandedSection === section ? null : section);
   };
 
@@ -221,7 +221,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -234,9 +234,9 @@ export default function RequestQuote(...args: any[]): any {
       setTimeout(() => {
         setSubmitStatus('idle');
         setFormData({
-          companyName: '',
+          compName: '',
           industry: '',
-          companySize: '',
+          compSize: '',
           website: '',
           firstName: '',
           lastName: '',
@@ -264,10 +264,10 @@ export default function RequestQuote(...args: any[]): any {
     }, 2000);
   };
 
-  const isStepValid = (step: anynumber)  => {
+  const isStepValid = (step: number)  => {
     switch (step) {
       case 1:
-        return formData.companyName && formData.industry && formData.firstName && formData.lastName && formData.email;
+        return formData.compName && formData.industry && formData.firstName && formData.lastName && formData.email;
       case 2:
         return formData.projectTitle && formData.projectDescription && formData.projectType && formData.services.length > 0;
       case 3:
@@ -279,7 +279,7 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepIcon = (step: anynumber)  => {
+  const getStepIcon = (step: number)  => {
     switch (step) {
       case 1: return <Building className="h-5 w-5" />;
       case 2: return <Target className="h-5 w-5" />;
@@ -289,9 +289,9 @@ export default function RequestQuote(...args: any[]): any {
     }
   };
 
-  const getStepTitle = (step: anynumber)  => {
+  const getStepTitle = (step: number)  => {
     switch (step) {
-      case 1: return 'Company & Contact';
+      case 1: return 'Comp & Contact';
       case 2: return 'Project Details';
       case 3: return 'Budget & Timeline';
       case 4: return 'Additional Info';
@@ -326,7 +326,7 @@ export default function RequestQuote(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <div className="flex items-center justify-between max-w-4xl mx-auto">
-            {Array.from({ length: anytotalSteps }, (_, index)  => (
+            {Array.from({ length: totalSteps }, (_, index)  => (
               <div key={index + 1} className="flex items-center">
                 <div className={`flex items-center justify-center w-12 h-12 rounded-full border-2 transition-all duration-300 ${
                   currentStep > index + 1
@@ -389,7 +389,7 @@ export default function RequestQuote(...args: any[]): any {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-3xl p-8">
-            {/* Step 1: Company & Contact Information */}
+            {/* Step 1: Comp & Contact Information */}
             {currentStep === 1 && (
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -398,24 +398,24 @@ export default function RequestQuote(...args: any[]): any {
                 className="space-y-6"
               >
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-2">Company & Contact Information</h2>
-                  <p className="text-zion-slate-light">Tell us about your company and how to reach you</p>
+                  <h2 className="text-2xl font-bold text-white mb-2">Comp & Contact Information</h2>
+                  <p className="text-zion-slate-light">Tell us about your comp and how to reach you</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="companyName" className="block text-white font-medium mb-2">
-                      Company Name *
+                    <label htmlFor="compName" className="block text-white font-medium mb-2">
+                      Comp Name *
                     </label>
                     <input
                       type="text"
-                      id="companyName"
-                      name="companyName"
-                      value={formData.companyName}
+                      id="compName"
+                      name="compName"
+                      value={formData.compName}
                       onChange={handleInputChange}
                       required
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
-                      placeholder="Enter your company name"
+                      placeholder="Enter your comp name"
                     />
                   </div>
 
@@ -441,18 +441,18 @@ export default function RequestQuote(...args: any[]): any {
                   </div>
 
                   <div>
-                    <label htmlFor="companySize" className="block text-white font-medium mb-2">
-                      Company Size
+                    <label htmlFor="compSize" className="block text-white font-medium mb-2">
+                      Comp Size
                     </label>
                     <select
-                      id="companySize"
-                      name="companySize"
-                      value={formData.companySize}
+                      id="compSize"
+                      name="compSize"
+                      value={formData.compSize}
                       onChange={handleInputChange}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
                     >
-                      <option value="">Select company size</option>
-                      {companySizes.map(size => (
+                      <option value="">Select comp size</option>
+                      {compSizes.map(size => (
                         <option key={size} value={size} className="bg-zion-slate-dark text-white">
                           {size}
                         </option>
@@ -785,7 +785,7 @@ export default function RequestQuote(...args: any[]): any {
                       onChange={handleInputChange}
                       rows={3}
                       className="w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-xl px-4 py-3 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 resize-none"
-                      placeholder="Describe any third-party integrations or systems that need to be connected..."
+                      placeholder="Describe  third-party integrations or systems that need to be connected..."
                     />
                   </div>
 

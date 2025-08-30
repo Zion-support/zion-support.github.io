@@ -2,14 +2,14 @@ import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Sitemap, Home, Users, Settings, FileText, Shield, Mail, HelpCircle, Building, Briefcase, Brain, Cloud, Rocket, Heart, Globe, Lock, Cpu, Zap, Star, TrendingUp, MessageCircle, DollarSign, BookOpen, Phone, MapPin  } from 'lucide-react.ts';
 
-export default function SitemapPage(...args: any[]): any {
+export default function SitemapPage(...args: []):  {
   const siteStructure = [
     {
       title: "Main Pages",
       icon: Home,
       links: [
         { name: "Home", path: "/", description: "Welcome to Zion Tech Group" },
-        { name: "About Us", path: "/about", description: "Learn about our company and mission" },
+        { name: "About Us", path: "/about", description: "Learn about our comp and mission" },
         { name: "Contact", path: "/contact", description: "Get in touch with our team" },
         { name: "Services Overview", path: "/services-overview", description: "Explore all our services" },
         { name: "Partners", path: "/partners", description: "Strategic partnerships and collaborations" },
@@ -151,7 +151,7 @@ export default function SitemapPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">Quick Actions</h2>
             <p className="text-xl text-slate-300">Get started quickly with these popular actions</p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {quickLinks.map((link, index)  => (
               <Link
                 key={index}
@@ -189,7 +189,7 @@ export default function SitemapPage(...args: any[]): any {
                   </div>
                   <h3 className="text-2xl font-bold text-white ml-4">{section.title}</h3>
                 </div>
-                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                   {section.links.map((link, linkIndex)  => (
                     <Link
                       key={linkIndex}
@@ -219,7 +219,7 @@ export default function SitemapPage(...args: any[]): any {
             <h2 className="text-3xl font-bold text-white mb-4">Contact Information</h2>
             <p className="text-xl text-slate-300">Get in touch with our team</p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {contactInfo.map((contact, index)  => (
               <div key={index} className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">

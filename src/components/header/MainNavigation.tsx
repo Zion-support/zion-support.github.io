@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts';
 import { cn  } from '@/lib/utils';
 import { NavLink  } from 'react-router-dom.ts';
 import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp  } from 'lucide-react.ts';
-export function MainNavigation(...args: any[]): any {
+export function MainNavigation(...args: []):  {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
     return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
@@ -101,21 +101,21 @@ export function MainNavigation(...args: any[]): any {
             </div>
           </div>)}
       </div>
-      {/* Company Dropdown */}
+      {/* Comp Dropdown */}
       <div className="relative group">
         <button
-          onMouseEnter={() => setIsCompanyOpen(true)}
-          onMouseLeave={() => setIsCompanyOpen(false)}
+          onMouseEnter={() => setIsCompOpen(true)}
+          onMouseLeave={() => setIsCompOpen(false)}
           className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
           <Building2 className="w-4 h-4" />
           <span>Company</span>
           <ChevronDown className="w-3 h-3" />
         </button>
-        {isCompanyOpen && (
+        {isCompOpen && (
           <div
-            onMouseEnter={() => setIsCompanyOpen(true)}
-            onMouseLeave={() => setIsCompanyOpen(false)}
+            onMouseEnter={() => setIsCompOpen(true)}
+            onMouseLeave={() => setIsCompOpen(false)}
             className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-4">

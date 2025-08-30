@@ -181,7 +181,7 @@ const fiveGTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Metropolitan City",
+    comp: "Metropolitan City",
     industry: "Municipal",
     challenge: "Needed high-speed connectivity for smart city infrastructure across 100+ locations",
     solution: "Deployed comprehensive 5G network with edge computing and IoT integration",
@@ -190,7 +190,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Advanced Manufacturing Corp",
+    comp: "Advanced Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Required real-time monitoring and control of 500+ production machines",
     solution: "Built private 5G network with industrial IoT and edge computing",
@@ -199,7 +199,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Regional Hospital Network",
+    comp: "Regional Hospital Network",
     industry: "Healthcare",
     challenge: "Needed high-bandwidth connectivity for telemedicine and remote monitoring",
     solution: "Implemented 5G healthcare network with telemedicine platforms and IoT devices",
@@ -585,7 +585,7 @@ export default function FiveGSolutions() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

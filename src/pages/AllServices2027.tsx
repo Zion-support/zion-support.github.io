@@ -41,19 +41,19 @@ const AllServices2027: React.FC = (): JSX.Element => {
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: anystring)  => {
+  const getCategoryStats = (categoryId: string)  => {
     if (categoryId === 'All') {
       return {
-              count: anyinnovativeServices2027.length,
+              count: innovativeServices2027.length,
       avgPrice: Math.round(innovativeServices2027.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: anyMath.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
+      avgRating: Math.round((innovativeServices2027.reduce((sum, s)  => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
       };
     }
     const services = innovativeServices2027.filter(s => s.category === categoryId);
           return {
-        count: anyservices.length,
+        count: services.length,
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
-        avgRating: anyMath.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
+        avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       };
   };
 
@@ -153,7 +153,7 @@ const AllServices2027: React.FC = (): JSX.Element => {
               specific business challenges and drive innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category)  => {
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
@@ -207,7 +207,7 @@ const AllServices2027: React.FC = (): JSX.Element => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)  => (
               <ServiceCard key={service.id} service={service} />
@@ -406,8 +406,8 @@ const AllServices2027: React.FC = (): JSX.Element => {
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: anystring)  => {
+const ServiceCard: React.FC<{ service:  }> = ({ service }) => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Services':
         return <Brain className="w-5 h-5" />;
@@ -458,7 +458,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 2).map((feature: anystring, index: number)  => (
+            {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"

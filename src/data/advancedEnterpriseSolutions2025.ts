@@ -373,7 +373,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     support: 'Strategic advisory team'
   }
 ];
-export const getEnterpriseSolutionsByCategory = (category: anystring): EnterpriseSolution[]  => {
+export const getEnterpriseSolutionsByCategory = (category: string): EnterpriseSolution[]  => {
   if (category === 'All') {
     return ADVANCED_ENTERPRISE_SOLUTIONS_2025;
   }

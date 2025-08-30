@@ -20,7 +20,7 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function LoadingSpinner(...args: any[]): any {
+export function LoadingSpinner(...args: []):  {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-16 h-16',
@@ -107,7 +107,7 @@ interface PageLoaderProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function PageLoader(...args: any[]): any {
+export function PageLoader(...args: []):  {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center">
       <div className="text-center">
@@ -190,10 +190,10 @@ interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines }).map((_, index)  => (
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"

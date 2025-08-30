@@ -63,7 +63,7 @@ export const ADVANCED_INNOVATIVE_SERVICES_2025 = [
         },
         competitors: ["OpenAI", "Anthropic", "Cohere", "AI21 Labs"],
         demoUrl: "https://ziontechgroup.com/demo/ai-multimodal",
-        caseStudies: ["Media company 300% efficiency boost", "E-commerce 5x content output"]
+        caseStudies: ["Media comp 300% efficiency boost", "E-commerce 5x content output"]
     },
     // Blockchain & Web3 Services
     {

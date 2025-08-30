@@ -20,9 +20,9 @@ interface AuthState {
 
 }
 
-export function useAuth(...args: any[]): any {
+export function useAuth(...args: []):  {
   const [authState, setAuthState] = useState<any>({
-    user: anynull,
+    user: null,
     isAuthenticated: false,
     isLoading: true,
   });
@@ -61,7 +61,7 @@ export function useAuth(...args: any[]): any {
     checkAuth();
   }, []);
 
-  const login = async (email: anystring, _password: string)  => {
+  const login = async (email: string, _password: string)  => {
     // In a real app, you would make an API call to your backend
     const mockUser: User = {
       id: '1',
@@ -93,7 +93,7 @@ export function useAuth(...args: any[]): any {
     localStorage.removeItem('authToken');
   };
 
-  const register = async (email: anystring, password: string, name: string)  => {
+  const register = async (email: string, password: string, name: string)  => {
     // Implement actual registration logic here
     const mockUser: User = {
       id: '1',

@@ -12,7 +12,7 @@ const Leadership = () => {
             education: "Ph.D. in Computer Science, Stanford University",
             expertise: ["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
             achievements: [
-                "Led company to 300% growth in 3 years",
+                "Led comp to 300% growth in 3 years",
                 "Named Top 50 Women in Tech by Forbes",
                 "Published 25+ research papers",
                 "Advisor to 3 successful tech startups"
@@ -112,7 +112,7 @@ const Leadership = () => {
             location: "New York, NY"
         }
     ];
-    const companyValues = [
+    const compValues = [
         {
             title: "Innovation First",
             description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
@@ -153,7 +153,7 @@ const Leadership = () => {
             Leadership Team
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Meet the visionary leaders who guide our company's mission and drive 
+            Meet the visionary leaders who guide our comp's mission and drive 
             innovation in technology and business transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -161,8 +161,7 @@ const Leadership = () => {
               Meet Our Team
             </Link>
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              About Our Company
-            </Link>
+              About Our Comp </Link>
           </div>
         </div>
       </section>
@@ -263,7 +262,7 @@ const Leadership = () => {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -276,7 +275,7 @@ const Leadership = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (<div key={index} className="text-center">
+            {compValues.map((value, index) => (<div key={index} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-10 h-10 text-white"/>
                 </div>

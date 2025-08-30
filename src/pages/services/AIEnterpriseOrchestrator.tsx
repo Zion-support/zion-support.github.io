@@ -25,7 +25,7 @@ import { Brain,
   Sparkles
  } from 'lucide-react.ts';
 
-export default function AIEnterpriseOrchestrator(...args: any[]): any {
+export default function AIEnterpriseOrchestrator(...args: []):  {
   const features = [
     {
       title: "Intelligent Process Orchestration",
@@ -237,7 +237,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={index}
@@ -287,7 +287,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <motion.div
                 key={index}
@@ -361,7 +361,7 @@ export default function AIEnterpriseOrchestrator(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={index}

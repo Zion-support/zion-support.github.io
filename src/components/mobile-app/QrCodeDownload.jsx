@@ -91,7 +91,7 @@ export const QrCodeDownload = () => {
                 
                 <div className="flex items-center justify-center space-x-2 text-sm text-gray-400">
                   <Smartphone className="w-4 h-4" />
-                  <span>Works with any QR code scanner app</span>
+                  <span>Works with  QR code scanner app</span>
                 </div>
               </div>
             </div>

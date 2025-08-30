@@ -164,7 +164,7 @@ function TalentDashboardContent() {
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-                      You haven't saved any jobs yet.
+                      You haven't saved  jobs yet.
                     </p>
                     <Button className="mt-4" asChild>
                       <Link href="/jobs">Browse Jobs</Link>

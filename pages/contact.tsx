@@ -3,28 +3,28 @@ import { Link  } from 'react-router-dom.ts'
 import { Mail, Phone, MapPin, Send, CheckCircle  } from 'lucide-react.ts'
 
 
-export default function Contact(...args: any[]): any {
+export default function Contact(...args: []):  {
 	const [formData, setFormData] = useState({
 		name: '',
 		email: '',
-		company: '',
+		comp: '',
 		message: ''
 	})
 	const [isSubmitted, setIsSubmitted] = useState(false)
 
-	const handleSubmit = (e: anyReact.FormEvent)  => {
+	const handleSubmit = (e: React.FormEvent)  => {
 		e.preventDefault()
 		// Here you would typically send the form data to your backend
-		console.log('Form submitted: any', formData)
+		console.log('Form submitted: ', formData)
 		setIsSubmitted(true)
 		// Reset form after submission
 		setTimeout(()  => {
 			setIsSubmitted(false)
-			setFormData({ name: '', email: '', company: '', message: '' })
+			setFormData({ name: '', email: '', comp: '', message: '' })
 		}, 3000)
 	}
 
-	const handleChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>)  => {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value
@@ -91,14 +91,13 @@ export default function Contact(...args: any[]): any {
 										/>
 									</div>
 									<div>
-										<label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-											Company
-										</label>
+										<label htmlFor="comp" className="block text-sm font-medium text-gray-700 mb-2">
+											Comp </label>
 										<input
 											type="text"
-											id="company"
-											name="company"
-											value={formData.company}
+											id="comp"
+											name="comp"
+											value={formData.comp}
 											onChange={handleChange}
 											className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
 										/>

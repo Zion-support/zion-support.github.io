@@ -39,7 +39,7 @@ import { Shield,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function Compliance(...args: any[]): any {
+export default function Compliance(...args: []):  {
   const complianceFrameworks = [
     {
       name: 'ISO 27001',
@@ -382,7 +382,7 @@ export default function Compliance(...args: any[]): any {
               <p className="text-xl text-slate-300">International standards and industry-specific compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {complianceFrameworks.map((framework, index)  => (
                 <motion.div
                   key={index}
@@ -453,7 +453,7 @@ export default function Compliance(...args: any[]): any {
               <p className="text-xl text-slate-300">Meeting the unique requirements of different industries</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {industryCompliance.map((industry, index)  => (
                 <motion.div
                   key={index}
@@ -501,7 +501,7 @@ export default function Compliance(...args: any[]): any {
               <p className="text-xl text-slate-300">Systematic approach to achieving and maintaining compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {complianceProcesses.map((phase, index)  => (
                 <motion.div
                   key={index}
@@ -554,7 +554,7 @@ export default function Compliance(...args: any[]): any {
               <p className="text-xl text-slate-300">Track our compliance performance and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {complianceMetrics.map((metric, index)  => (
                 <motion.div
                   key={index}
@@ -592,7 +592,7 @@ export default function Compliance(...args: any[]): any {
               <p className="text-xl text-slate-300">Advanced tools and platforms for effective compliance management</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
               {complianceTools.map((tool, index)  => (
                 <motion.div
                   key={index}
@@ -636,7 +636,7 @@ export default function Compliance(...args: any[]): any {
                 Compliance Questions or Support?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Our compliance team is here to help you understand our compliance posture and address any questions you may have.
+                Our compliance team is here to help you understand our compliance posture and address  questions you may have.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

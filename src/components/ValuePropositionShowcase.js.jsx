@@ -104,7 +104,7 @@ const marketComparison = [
 
 const successStories = [
   {
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "SaaS",
     challenge: "Manual customer onboarding taking 3+ weeks",
     solution: "AI Customer Success Hub",
@@ -112,7 +112,7 @@ const successStories = [
     roi: "280% in 8 months"
   },
   {
-    company: "Global Manufacturing Inc",
+    comp: "Global Manufacturing Inc",
     industry: "Manufacturing",
     challenge: "Inefficient supply chain causing 15% cost overruns",
     solution: "AI Supply Chain Optimizer",
@@ -120,7 +120,7 @@ const successStories = [
     roi: "320% in 12 months"
   },
   {
-    company: "FinTech Innovations",
+    comp: "FinTech Innovations",
     industry: "Financial Services",
     challenge: "Manual financial reporting taking 40+ hours weekly",
     solution: "AI Financial Analyst Pro",
@@ -315,7 +315,7 @@ export function ValuePropositionShowcase() {
                 whileHover={{ y: -5 }}
               >
                 <div className="mb-4">
-                  <h4 className="text-lg font-bold text-white mb-1">{story.company}</h4>
+                  <h4 className="text-lg font-bold text-white mb-1">{story.comp}</h4>
                   <span className="text-zion-cyan text-sm">{story.industry}</span>
                 </div>
                 

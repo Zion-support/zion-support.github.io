@@ -435,7 +435,7 @@ const WhitePapers = () => {
               </button>
             </div>
             <p className="text-gray-400 text-sm mt-4">
-              We respect your privacy. Unsubscribe at any time.
+              We respect your privacy. Unsubscribe at  time.
             </p>
           </div>
         </section>

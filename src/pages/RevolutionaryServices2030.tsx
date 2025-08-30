@@ -46,7 +46,7 @@ import { ArrowRight,
 import { SEO  } from '../components/SEO';
 import { REVOLUTIONARY_SERVICES_2030, REVOLUTIONARY_SERVICE_CATEGORIES, REVOLUTIONARY_SERVICE_STATISTICS  } from '../data/revolutionaryServices2030';
 
-export default function RevolutionaryServices2030(...args: any[]): any {
+export default function RevolutionaryServices2030(...args: []):  {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -83,12 +83,12 @@ export default function RevolutionaryServices2030(...args: any[]): any {
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
 
-  const handlePageChange = (page: anynumber)  => {
+  const handlePageChange = (page: number)  => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleServiceSelect = (service: anyany)  => {
+  const handleServiceSelect = (service: )  => {
     setSelectedService(service);
   };
 
@@ -96,7 +96,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     setSelectedService(null);
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Brain className="w-6 h-6" />,
       'Quantum Computing': <Zap className="w-6 h-6" />,
@@ -119,7 +119,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
     return iconMap[category] || <Rocket className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-purple-500 to-pink-500',
       'Quantum Computing': 'from-indigo-500 to-purple-500',
@@ -266,7 +266,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                       activeCategory === 'all'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 backdrop-blur-sm text-white hover: anybg-white/20'
+                        : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
                     }`}
                   >
                     All Services ({REVOLUTIONARY_SERVICES_2030.length})
@@ -278,7 +278,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                       className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                         activeCategory === category
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-white/10 backdrop-blur-sm text-white hover: anybg-white/20'
+                          : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
                       }`}
                     >
                       {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category).length})
@@ -289,7 +289,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
             </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service)  => (
                 <motion.div
                   key={service.id}
@@ -370,7 +370,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   
-                  {Array.from({ length: anytotalPages }, (_, i)  => i + 1).map((page) => (
+                  {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}
@@ -434,7 +434,7 @@ export default function RevolutionaryServices2030(...args: any[]): any {
                 },
                 {
                   icon: <Users className="w-12 h-12" />,
-                  title: any"Expert Support",
+                  title: "Expert Support",
                   description: "Dedicated support team with deep technical expertise and rapid response times"
                 }
               ].map((feature, index)  => (

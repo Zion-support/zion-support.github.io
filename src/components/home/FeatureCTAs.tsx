@@ -34,7 +34,7 @@ import { ArrowRight,
   Cloud
  } from 'lucide-react.ts';
 
-export function FeatureCTAs(...args: any[]): any {
+export function FeatureCTAs(...args: []):  {
   const features = [
     {
       title: "AI Services & Solutions",
@@ -169,7 +169,7 @@ export function FeatureCTAs(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index)  => (
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
               <CardHeader className="pb-4">

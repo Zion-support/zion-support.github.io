@@ -116,7 +116,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: any[{
+      datasets: [{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
@@ -136,7 +136,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Get change icon and color
-  const getChangeDisplay = (change: anynumber, changeType: string)  => {
+  const getChangeDisplay = (change: number, changeType: string)  => {
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
@@ -236,7 +236,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       {/* Metrics Cards */}
       {showMetrics && (
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric, index)  => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
@@ -277,7 +277,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             ].map((chartType) => (
               <button
                 key={chartType.id}
-                onClick={() => setActiveChart(chartType.id as any)}
+                onClick={() => setActiveChart(chartType.id as )}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeChart === chartType.id
                     ? 'bg-zion-cyan text-white'

@@ -154,7 +154,7 @@ const Cookies: React.FC = (): JSX.Element => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
               Types of Cookies We Use
             </h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {cookieTypes.map((cookieType, index)  => (
                 <motion.div
                   key={cookieType.type}
@@ -298,7 +298,7 @@ const Cookies: React.FC = (): JSX.Element => {
           <div className="max-w-4xl mx-auto px-4 text-center">
             <h3 className="text-2xl font-bold text-white mb-8">Questions About Cookies?</h3>
             <p className="text-gray-300 mb-6">
-              If you have any questions about our cookie policy or how we use cookies, 
+              If you have  questions about our cookie policy or how we use cookies, 
               please don't hesitate to contact us.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

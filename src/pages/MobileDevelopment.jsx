@@ -179,7 +179,7 @@ const mobileTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "E-commerce Startup",
+    comp: "E-commerce Startup",
     industry: "Retail",
     challenge: "Needed mobile app for iOS and Android to compete with larger retailers",
     solution: "Built cross-platform React Native app with modern UI/UX and e-commerce features",
@@ -188,7 +188,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Healthcare Provider",
+    comp: "Healthcare Provider",
     industry: "Healthcare",
     challenge: "Required secure mobile app for patient management and telemedicine",
     solution: "Developed native iOS and Android apps with HIPAA compliance and telemedicine features",
@@ -197,7 +197,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Company",
+    comp: "Logistics Comp",
     industry: "Transportation",
     challenge: "Needed enterprise mobile solution for fleet management and driver tracking",
     solution: "Built enterprise mobile app with real-time tracking, route optimization, and driver management",
@@ -583,7 +583,7 @@ export default function MobileDevelopment() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

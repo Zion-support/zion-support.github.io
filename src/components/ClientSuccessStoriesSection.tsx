@@ -15,7 +15,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
     {
       name: 'Sarah Johnson',
       role: 'CTO',
-      company: 'TechFlow Solutions',
+      comp: 'TechFlow Solutions',
       avatar: '👩‍💼',
       rating: 5,
       quote: 'Zion Tech Group transformed our legacy systems into a modern, AI-powered platform. The results exceeded our expectations with 300% performance improvement.',
@@ -24,7 +24,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
     {
       name: 'Michael Chen',
       role: 'CEO',
-      company: 'Global Manufacturing Co.',
+      comp: 'Global Manufacturing Co.',
       avatar: '👨‍💼',
       rating: 5,
       quote: 'Their cybersecurity expertise helped us achieve SOC 2 compliance in record time. The team is professional, knowledgeable, and delivers exceptional results.',
@@ -33,7 +33,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
     {
       name: 'Emily Rodriguez',
       role: 'VP of Operations',
-      company: 'HealthTech Innovations',
+      comp: 'HealthTech Innovations',
       avatar: '👩‍⚕️',
       rating: 5,
       quote: 'The AI solutions they implemented have revolutionized our patient care processes. We\'ve seen a 40% improvement in diagnostic accuracy.',
@@ -42,7 +42,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
     {
       name: 'David Thompson',
       role: 'Founder',
-      company: 'StartupXYZ',
+      comp: 'StartupXYZ',
       avatar: '👨‍💻',
       rating: 5,
       quote: 'From concept to launch in just 8 weeks! Zion Tech Group\'s rapid development approach and technical expertise are unmatched.',
@@ -80,7 +80,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
         >
           {successMetrics.map((metric, index)  => {
             const IconComponent = metric.icon;
@@ -101,7 +101,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid md: anygrid-cols-2 gap-8 mb-12">
+        <div className="grid md: grid-cols-2 gap-8 mb-12">
           {testimonials.map((testimonial, index)  => (
             <motion.div
               key={testimonial.name}
@@ -117,7 +117,7 @@ export const ClientSuccessStoriesSection: React.FC = (): JSX.Element => {
                     {testimonial.name}
                   </h3>
                   <p className="text-gray-600">{testimonial.role}</p>
-                  <p className="text-blue-600 font-medium">{testimonial.company}</p>
+                  <p className="text-blue-600 font-medium">{testimonial.comp}</p>
                 </div>
                 <div className="ml-auto flex">
                   {[...Array(testimonial.rating)].map((_, i) => (

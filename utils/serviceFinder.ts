@@ -14,8 +14,7 @@ import { newOperationalServices2025  } from '../data/new-operational-services-20
 import { innovative2025Services  } from '../data/innovative-2025-services';
 import { emergingTech2025Services  } from '../data/emerging-tech-2025-services';
 import { professionalServices  } from '../data/professional-services';
-export type ServiceRecord = any;
-const allServiceArrays: ServiceRecord[][] = [
+export type ServiceRecord = ;const allServiceArrays: ServiceRecord[][] = [
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
 	additionalEnhancedServices,
@@ -35,7 +34,7 @@ const allServiceArrays: ServiceRecord[][] = [
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	for (const arr of allServiceArrays) {
-		const hit = arr.find((s: anyany)  => {
+		const hit = arr.find((s: )  => {
 			if (!s) return false;
 			if (s.id && s.id === slug) return true;
 			if (s.link && typeof s.link === 'string') {

@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock  } from 'lucide-react.ts'
 
 
-export default function Index(...args: any[]): any {
+export default function Index(...args: []):  {
 	const features = [
 		{
 			icon: Brain,
@@ -64,7 +64,7 @@ export default function Index(...args: any[]): any {
 							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
 						</p>
 					</div>
-					<div className="grid gap-8 lg: anygrid-cols-3">
+					<div className="grid gap-8 lg: grid-cols-3">
 						{features.map((feature)  => (
 							<div key={feature.title} className="text-center">
 								<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 mb-6">

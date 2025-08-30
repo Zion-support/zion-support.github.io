@@ -43,7 +43,7 @@ const About = () => {
     },
     {
       year: "2022",
-      title: "Company Founded",
+      title: "Comp Founded",
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
     }
   ];
@@ -70,7 +70,7 @@ const About = () => {
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Technology</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Zion Tech Group is a leading technology company dedicated to transforming businesses through 
+              Zion Tech Group is a leading technology comp dedicated to transforming businesses through 
               innovative AI solutions, quantum computing, and cutting-edge digital technologies.
             </p>
           </div>

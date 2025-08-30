@@ -68,7 +68,7 @@ import { Home,
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyboolean;
+  isOpen: boolean;
   onClose: ()  => void;
 
 }
@@ -77,7 +77,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: string)  => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -85,7 +85,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: anystring)  => router.pathname === path;
+  const isActive = (path: string)  => router.pathname === path;
 
   const navigation = {
     main: [
@@ -122,12 +122,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' },
       { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },
     ],
-    company: [
+    comp: [
       { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' },
       { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' },
       { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
       { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' },
-      { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
+      { name: 'News', href: '/news', icon: Newspaper, description: 'Comp updates' },
       { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },
     ]
   };
@@ -151,7 +151,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: anystring, items: any[], sectionKey: string)  => (
+  const renderNavSection = (title: string, items: [], sectionKey: string)  => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}
@@ -282,8 +282,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Resources Section */}
           {renderNavSection('Resources', navigation.resources, 'resources')}
 
-          {/* Company Section */}
-          {renderNavSection('Company', navigation.company, 'company')}
+          {/* Comp Section */}
+          {renderNavSection('Comp', navigation.comp, 'comp')}
         </div>
 
         {/* Footer */}

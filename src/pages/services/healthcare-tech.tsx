@@ -3,7 +3,7 @@ import { Helmet  } from 'react-helmet-async.ts';
 import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export default function HealthcareTech(...args: any[]): any {
+export default function HealthcareTech(...args: []):  {
   return (
     <>
       <Helmet>
@@ -63,7 +63,7 @@ export default function HealthcareTech(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Heart,
@@ -120,7 +120,7 @@ export default function HealthcareTech(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Diagnostic Imaging",
@@ -215,7 +215,7 @@ export default function HealthcareTech(...args: any[]): any {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { benefit: any"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
+                    { benefit: "Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
@@ -244,7 +244,7 @@ export default function HealthcareTech(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "HIPAA Compliance",
@@ -315,7 +315,7 @@ export default function HealthcareTech(...args: any[]): any {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",

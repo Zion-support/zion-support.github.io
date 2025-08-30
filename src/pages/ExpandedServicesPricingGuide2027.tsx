@@ -88,7 +88,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return Shield;
@@ -107,7 +107,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'Cybersecurity':
         return 'from-red-500 to-pink-600';
@@ -126,7 +126,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getMarketPositionColor = (position: anystring)  => {
+  const getMarketPositionColor = (position: string)  => {
     switch (position) {
       case 'leader':
         return 'bg-green-100 text-green-800';
@@ -141,7 +141,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderPricingCard = (pricing: anyExpandedServicePricing)  => {
+  const renderPricingCard = (pricing: ExpandedServicePricing)  => {
     const CategoryIcon = getCategoryIcon(pricing.category);
     const categoryColor = getCategoryColor(pricing.category);
 
@@ -529,7 +529,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: anyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
                 {categories.map((category)  => (
                   <option key={category} value={category}>
@@ -550,7 +550,7 @@ const ExpandedServicesPricingGuide2027: React.FC = (): JSX.Element => {
 
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
           </div>
         ) : (

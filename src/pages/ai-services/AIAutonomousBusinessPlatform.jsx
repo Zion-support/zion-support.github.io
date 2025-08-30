@@ -61,7 +61,7 @@ const useCases = [
 ];
 const testimonials = [
     {
-        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from anywhere with real-time insights.",
+        content: "The AI Autonomous Business Platform has transformed how we operate. We can now manage our global operations from where with real-time insights.",
         name: "Jennifer Martinez",
         role: "CTO, GlobalTech Solutions",
         rating: 5

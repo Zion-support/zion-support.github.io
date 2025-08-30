@@ -3,7 +3,7 @@ import { SEO  } from '../../components/SEO';
 import { motion  } from 'framer-motion.ts';
 import { Cpu, Database, Zap, Shield, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Eye, Monitor, Target, Layers, Box, Gauge, BarChart, Building  } from 'lucide-react.ts';
 
-export default function DigitalTwin(...args: any[]): any {
+export default function DigitalTwin(...args: []):  {
   const features = [
     {
       icon: Cpu,
@@ -149,7 +149,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -187,7 +187,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8">
             {useCases.map((useCase, index)  => (
               <motion.div
                 key={useCase.name}
@@ -225,7 +225,7 @@ export default function DigitalTwin(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}

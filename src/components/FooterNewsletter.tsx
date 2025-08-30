@@ -6,7 +6,7 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (!email.trim()) return;
 
@@ -80,7 +80,7 @@ export const FooterNewsletter: React.FC = (): JSX.Element => {
         )}
 
         <p className="text-xs text-gray-400 mt-4">
-          We respect your privacy. Unsubscribe at any time.
+          We respect your privacy. Unsubscribe at  time.
         </p>
       </div>
     </div>

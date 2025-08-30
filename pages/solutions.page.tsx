@@ -283,7 +283,7 @@ const featuredSolutions = [
   }
 ];
 
-export default function Solutions(...args: any[]): any {
+export default function Solutions(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -349,7 +349,7 @@ export default function Solutions(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category  => (
                     <option key={category} value={category}>{category}</option>
@@ -362,7 +362,7 @@ export default function Solutions(...args: any[]): any {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {industries.map(industry  => (
                     <option key={industry} value={industry}>{industry}</option>
@@ -388,7 +388,7 @@ export default function Solutions(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {solutionCategories.map((category, index)  => {
               const IconComponent = category.icon;
               return (
@@ -442,7 +442,7 @@ export default function Solutions(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {industrySolutions.map((industry, index)  => {
               const IconComponent = industry.icon;
               return (
@@ -496,7 +496,7 @@ export default function Solutions(...args: any[]): any {
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {filteredSolutions.map((solution, index)  => {
               const IconComponent = solution.icon;
               return (

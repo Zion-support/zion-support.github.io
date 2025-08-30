@@ -7,7 +7,7 @@ import CreatePostPage from '../pages/CreatePostPage';
 import EditPostPage from '../pages/EditPostPage';
 import CommunityProfilePage from '../pages/CommunityProfilePage';
 
-export default function CommunityRoutes(...args: any[]): any {
+export default function CommunityRoutes(...args: []):  {
   return (
     <>
       <Route path="" element={<CommunityPage />} />

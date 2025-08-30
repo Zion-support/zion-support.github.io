@@ -6,7 +6,7 @@ import { TeamInvite  } from '@/types';
 // This project uses Vite. This logic needs to be refactored,
 // potentially into a Supabase Function or a backend handler compatible with Vite.
 /*
-export default async function handler(...args: any[]): any {
+export default async function handler(...args: []):  {
   if (req.method !== 'POST') {
     // res.setHeader('Allow', ['POST']); // Placeholder
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
@@ -54,7 +54,7 @@ export default async function handler(...args: any[]): any {
 
     res.status(201).json(data as TeamInvite);
 
-  } catch (error: any) {
+  } catch (error: ) {
     console.error('Error in /api/team-builder/invite:', error);
     return res.status(500).json({ error: `Failed to create team invite: ${error.message || 'Unknown error'}` });
   }

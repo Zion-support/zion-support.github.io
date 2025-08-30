@@ -2,7 +2,7 @@ import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, BarChart3, CheckCircle, Globe  } from 'lucide-react.ts';
 
-export default function Infrastructure(...args: any[]): any {
+export default function Infrastructure(...args: []):  {
   const features = [
     {
       icon: Server,
@@ -107,7 +107,7 @@ export default function Infrastructure(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)  => (
               <motion.div
                 key={feature.title}
@@ -146,7 +146,7 @@ export default function Infrastructure(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
             {services.map((service, index)  => (
               <motion.div
                 key={service.title}

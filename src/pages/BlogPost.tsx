@@ -15,7 +15,7 @@ import { Calendar,
   ArrowRight
  } from 'lucide-react.ts';
 
-function BlogPost(...args: any[]): any {
+function BlogPost(...args: []):  {
   const { id } = useParams();
   
   // Mock blog post data - in a real app, this would come from an API
@@ -72,7 +72,7 @@ function BlogPost(...args: any[]): any {
     ]
   };
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: string)  => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -226,7 +226,7 @@ function BlogPost(...args: any[]): any {
             </p>
           </motion.div>
           
-          <div className="grid md: anygrid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {blogPost.relatedPosts.map((post, index)  => (
               <motion.article
                 key={post.id}

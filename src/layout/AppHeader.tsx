@@ -5,7 +5,7 @@ import { ThemeToggle  } from '../components/ThemeToggle';
 import { ZionLoadingSpinner  } from '../components/ui/EnhancedLoadingSpinner';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 
-export function AppHeader(...args: any[]): any {
+export function AppHeader(...args: []):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -21,7 +21,7 @@ export function AppHeader(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSearch = async (e: anyReact.FormEvent)  => {
+  const handleSearch = async (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       setIsSearching(true);
@@ -38,7 +38,7 @@ export function AppHeader(...args: any[]): any {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Comp', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
@@ -173,7 +173,7 @@ export function AppHeader(...args: any[]): any {
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, description: 'Get custom pricing' },
   ];
 
-  const companyCategories = [
+  const compCategories = [
     {
       name: 'About Us',
       icon: Building,
@@ -257,7 +257,7 @@ export function AppHeader(...args: any[]): any {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg: anyflex items-center space-x-8">
+            <nav className="hidden lg: flex items-center space-x-8">
               {mainNavigation.map((item)  => (
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? (
@@ -327,7 +327,7 @@ export function AppHeader(...args: any[]): any {
               className="bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20"
             >
               <div className="container mx-auto px-4 py-8">
-                <div className="grid grid-cols-1 lg: anygrid-cols-5 gap-8">
+                <div className="grid grid-cols-1 lg: grid-cols-5 gap-8">
                   {servicesCategories.map((category)  => (
                     <div key={category.name} className="space-y-4">
                       <div className="flex items-center space-x-3">
@@ -362,7 +362,7 @@ export function AppHeader(...args: any[]): any {
                 {/* Quick Links Section */}
                 <div className="mt-8 pt-8 border-t border-slate-700">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Access</h3>
-                  <div className="grid grid-cols-1 md: anygrid-cols-4 gap-4">
+                  <div className="grid grid-cols-1 md: grid-cols-4 gap-4">
                     {quickLinks.map((link)  => (
                       <Link
                         key={link.name}

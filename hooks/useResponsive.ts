@@ -11,7 +11,7 @@ interface ResponsiveState {
 }
 const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<any>({
-    screenWidth: any1920,
+    screenWidth: 1920,
     screenHeight: 1080,
     orientation: "landscape",
     isMobile: false,

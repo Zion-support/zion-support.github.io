@@ -22,8 +22,8 @@ const AIMatcher = () => {
             ]
         },
         {
-            id: 'company_size',
-            question: 'What is your company size?',
+            id: 'comp_size',
+            question: 'What is your comp size?',
             options: [
                 'Startup (1-50 employees)',
                 'Small Business (51-200 employees)',
@@ -141,7 +141,7 @@ const AIMatcher = () => {
     const generateRecommendations = () => {
         // Simple recommendation logic based on answers
         const industry = answers.industry;
-        const companySize = answers.company_size;
+        const compSize = answers.comp_size;
         const goals = answers.ai_goals;
         let filteredSolutions = aiSolutions;
         // Filter based on industry
@@ -151,8 +151,8 @@ const AIMatcher = () => {
         else if (industry === 'Financial Services') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights');
         }
-        // Filter based on company size
-        if (companySize === 'Startup (1-50 employees)') {
+        // Filter based on comp size
+        if (compSize === 'Startup (1-50 employees)') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'));
         }
         // Filter based on goals

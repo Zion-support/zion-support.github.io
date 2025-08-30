@@ -163,7 +163,7 @@ const quantumTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Pharmaceutical Research Lab",
+    comp: "Pharmaceutical Research Lab",
     industry: "Healthcare",
     challenge: "Needed to simulate complex molecular interactions for drug discovery",
     solution: "Built quantum simulation platform using VQE algorithms",
@@ -172,7 +172,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Corp",
+    comp: "Financial Services Corp",
     industry: "Finance",
     challenge: "Required quantum-safe encryption for secure communications",
     solution: "Implemented quantum key distribution and post-quantum cryptography",
@@ -181,7 +181,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Logistics Optimization",
+    comp: "Logistics Optimization",
     industry: "Transportation",
     challenge: "Complex route optimization for 1000+ delivery vehicles",
     solution: "Built quantum optimization system using QAOA algorithms",
@@ -567,7 +567,7 @@ export default function QuantumComputing() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

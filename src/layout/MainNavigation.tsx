@@ -20,7 +20,7 @@ import { ChevronDown,
 
 interface NavigationLink {
 
-  key: anystring;
+  key: string;
   href: string;
   name: string;
   matches: (path: string)  => boolean;
@@ -28,20 +28,20 @@ interface NavigationLink {
 
 }
 
-export function MainNavigation(...args: any[]): any {
+export function MainNavigation(...args: []):  {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+  const [isCompOpen, setIsCompOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const location = useLocation();
 
   // Close dropdowns when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: anyMouseEvent)  => {
+    const handleClickOutside = (event: MouseEvent)  => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-        setIsCompanyOpen(false);
+        setIsCompOpen(false);
         setActiveDropdown(null);
       }
     };
@@ -52,17 +52,17 @@ export function MainNavigation(...args: any[]): any {
 
   const baseLinks: NavigationLink[] = [
     {
-      key: any'home',
+      key: 'home',
       href: '/',
       name: 'Home',
       matches: (path: string)  => path === '/'
     },
     {
-      key: any'services',
+      key: 'services',
       href: '/services',
       name: 'Services',
       matches: (path: string)  => path.startsWith('/services'),
-      children: any[
+      children: [
         {
           key: 'ai-services',
           href: '/services/ai',
@@ -70,49 +70,49 @@ export function MainNavigation(...args: any[]): any {
           matches: (path: string)  => path.startsWith('/services/ai')
         },
         {
-          key: any'quantum',
+          key: 'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
           matches: (path: string)  => path.startsWith('/services/quantum')
         },
         {
-          key: any'blockchain',
+          key: 'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
           matches: (path: string)  => path.startsWith('/services/blockchain')
         },
         {
-          key: any'iot',
+          key: 'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
           matches: (path: string)  => path.startsWith('/services/iot')
         },
         {
-          key: any'cybersecurity',
+          key: 'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
           matches: (path: string)  => path.startsWith('/services/cybersecurity')
         },
         {
-          key: any'healthcare',
+          key: 'healthcare',
           href: '/services/healthcare',
           name: 'Healthcare',
           matches: (path: string)  => path.startsWith('/services/healthcare')
         },
         {
-          key: any'finance',
+          key: 'finance',
           href: '/services/finance',
           name: 'Finance',
           matches: (path: string)  => path.startsWith('/services/finance')
         },
         {
-          key: any'manufacturing',
+          key: 'manufacturing',
           href: '/services/manufacturing',
           name: 'Manufacturing',
           matches: (path: string)  => path.startsWith('/services/manufacturing')
         },
         {
-          key: any'sustainability',
+          key: 'sustainability',
           href: '/services/sustainability',
           name: 'Sustainability',
           matches: (path: string)  => path.startsWith('/services/sustainability')
@@ -120,46 +120,46 @@ export function MainNavigation(...args: any[]): any {
       ]
     },
     {
-      key: any'ai-services',
+      key: 'ai-services',
       href: '/ai-services',
       name: 'AI Services',
       matches: (path: string)  => path.startsWith('/ai-services')
     },
     {
-      key: any'it-services',
+      key: 'it-services',
       href: '/it-services',
       name: 'IT Services',
       matches: (path: string)  => path.startsWith('/it-services')
     },
     {
-      key: any'micro-saas',
+      key: 'micro-saas',
       href: '/micro-saas',
       name: 'Micro SAAS',
       matches: (path: string)  => path.startsWith('/micro-saas')
     },
     {
-      key: any'marketplace',
+      key: 'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
       matches: (path: string)  => path.startsWith('/marketplace')
     },
     {
-      key: any'about',
+      key: 'about',
       href: '/about',
       name: 'About',
       matches: (path: string)  => path.startsWith('/about')
     },
     {
-      key: any'contact',
+      key: 'contact',
       href: '/contact',
       name: 'Contact',
       matches: (path: string)  => path.startsWith('/contact')
     }
   ];
 
-  const isActive = (link: anyNavigationLink)  => link.matches(location.pathname);
+  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
 
-  const renderDropdown = (link: anyNavigationLink, isOpen: boolean, setIsOpen: (open: boolean)  => void) => {
+  const renderDropdown = (link: NavigationLink, isOpen: boolean, setIsOpen: (open: boolean)  => void) => {
     if (!link.children) return null;
 
     return (
@@ -209,14 +209,14 @@ export function MainNavigation(...args: any[]): any {
   return (
     <nav className={`${className}`}>
       {/* Desktop Navigation */}
-      <div className="hidden lg: anyflex items-center space-x-1">
+      <div className="hidden lg: flex items-center space-x-1">
         {baseLinks.map((link)  => (
           <div key={link.key}>
             {link.children ? (
               renderDropdown(
                 link,
-                link.key === 'services' ? isServicesOpen : isCompanyOpen,
-                link.key === 'services' ? setIsServicesOpen : setIsCompanyOpen
+                link.key === 'services' ? isServicesOpen : isCompOpen,
+                link.key === 'services' ? setIsServicesOpen : setIsCompOpen
               )
             ) : (
               <Link

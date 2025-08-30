@@ -111,7 +111,7 @@ const MicroSaaS: React.FC = (): JSX.Element => {
         <h1 className="text-4xl font-bold sm:text-5xl">Micro SaaS products you can launch this week</h1>
         <p className="mt-4 max-w-2xl text-slate-300">Pick a ready-to-run tool or have us tailor it for your workflow. Secure, scalable, and priced for fast ROI.</p>
 
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 sm: grid-cols-2 lg:grid-cols-3">
           {products.map((p)  => (
             <div key={p.name} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-md">
               <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-purple-500/15 text-purple-300">

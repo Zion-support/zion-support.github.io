@@ -28,7 +28,7 @@ import { Calculator,
  } from 'lucide-react.ts';
 import { SEO  } from '../components/SEO';
 
-export default function PricingGuide(...args: any[]): any {
+export default function PricingGuide(...args: []):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
@@ -147,7 +147,7 @@ export default function PricingGuide(...args: any[]): any {
     }
   ];
 
-  const calculatePrice = (price: anynumber)  => {
+  const calculatePrice = (price: number)  => {
     const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
     const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
     const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
@@ -243,7 +243,7 @@ export default function PricingGuide(...args: any[]): any {
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular 
@@ -321,7 +321,7 @@ export default function PricingGuide(...args: any[]): any {
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {servicePricing.map((category, index)  => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">

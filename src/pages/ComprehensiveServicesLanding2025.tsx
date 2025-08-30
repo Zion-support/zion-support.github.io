@@ -263,7 +263,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((category, index)  => (
               <motion.div
                 key={category.id}
@@ -328,7 +328,7 @@ const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-          <div className="grid gap-6 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {filteredCategories.map((category, index)  => (
               <motion.div
                 key={category.id}

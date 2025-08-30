@@ -7,7 +7,7 @@ const News = () => {
   
   const categories = [
     'All',
-    'Company News',
+    'Comp News',
     'Product Updates',
     'Industry Insights',
     'Awards & Recognition',
@@ -18,7 +18,7 @@ const News = () => {
 
   const sources = [
     'All Sources',
-    'Company Press Releases',
+    'Comp Press Releases',
     'Industry Reports',
     'Technology News',
     'Research Papers',
@@ -40,7 +40,7 @@ const News = () => {
       id: 1,
       title: "Zion Tech Group Launches Revolutionary AI-Powered Quantum Neural Network Platform",
       category: "Product Updates",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2025-01-15",
       readTime: "5 min read",
       excerpt: "Our latest innovation combines quantum computing principles with advanced neural networks to deliver unprecedented AI capabilities for enterprise applications.",
@@ -62,7 +62,7 @@ const News = () => {
       id: 3,
       title: "Strategic Partnership Announced with Leading Cloud Infrastructure Provider",
       category: "Partnerships",
-      source: "Company Press Releases",
+      source: "Comp Press Releases",
       date: "2024-12-10",
       readTime: "4 min read",
       excerpt: "New partnership expands our cloud capabilities and enables seamless integration for enterprise clients.",

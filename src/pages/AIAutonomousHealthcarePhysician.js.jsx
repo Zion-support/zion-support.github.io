@@ -62,7 +62,7 @@ const AIAutonomousHealthcarePhysician = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <div className="text-teal-400 text-4xl mb-4">📱</div>
               <h3 className="text-xl font-semibold text-white mb-3">Remote Consultation</h3>
-              <p className="text-gray-300">Get medical advice from anywhere</p>
+              <p className="text-gray-300">Get medical advice from where</p>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">

@@ -170,7 +170,7 @@ const blockchainTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Logistics Corp",
+    comp: "Global Logistics Corp",
     industry: "Logistics",
     challenge: "Needed transparent tracking of international shipments across 50+ countries",
     solution: "Built blockchain-based supply chain platform with IoT integration",
@@ -179,7 +179,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Digital Art Gallery",
+    comp: "Digital Art Gallery",
     industry: "Art & Entertainment",
     challenge: "Required secure marketplace for digital art with royalty distribution",
     solution: "Developed NFT marketplace with smart contract-based royalty system",
@@ -188,7 +188,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Microfinance Network",
+    comp: "Microfinance Network",
     industry: "Finance",
     challenge: "Needed decentralized lending platform for underserved communities",
     solution: "Built DeFi lending protocol with credit scoring and collateral management",
@@ -574,7 +574,7 @@ export default function Blockchain() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

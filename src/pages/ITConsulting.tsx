@@ -16,7 +16,7 @@ import { Lightbulb,
   MessageSquare
  } from 'lucide-react.ts';
 
-export default function ITConsulting(...args: any[]): any {
+export default function ITConsulting(...args: []):  {
   const consultingServices = [
     {
       icon: Target,
@@ -172,7 +172,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {consultingServices.map((service, index)  => (
               <motion.div 
@@ -226,7 +226,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {benefits.map((benefit, index)  => (
               <motion.div 
@@ -269,7 +269,7 @@ export default function ITConsulting(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {industries.map((industry, index)  => (
               <motion.div 

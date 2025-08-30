@@ -6,7 +6,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
 
 }
 
-export default function FuturisticAnimatedBackground2029(...args: any[]): any {
+export default function FuturisticAnimatedBackground2029(...args: []):  {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

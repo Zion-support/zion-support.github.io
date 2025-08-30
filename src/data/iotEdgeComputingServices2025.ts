@@ -373,7 +373,7 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     deployment: 'Cloud-based analytics platform'
   }
 ];
-export const getIoTEdgeServicesByCategory = (category: anystring): IoTEdgeService[]  => {
+export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[]  => {
   if (category === 'All') {
     return IOT_EDGE_COMPUTING_SERVICES_2025;
   }

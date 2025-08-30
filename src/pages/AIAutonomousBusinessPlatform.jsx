@@ -711,7 +711,7 @@ const platformTechnologies = [
 const successStories = [
   {
     id: 1,
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Needed AI-powered business platform for 50+ global facilities",
     solution: "Built comprehensive AI business platform with predictive analytics and process automation",
@@ -720,7 +720,7 @@ const successStories = [
   },
   {
     id: 2,
-    company: "Financial Services Group",
+    comp: "Financial Services Group",
     industry: "Finance",
     challenge: "Required autonomous financial management platform and risk assessment",
     solution: "Implemented AI-driven financial planning and risk management platform",
@@ -729,7 +729,7 @@ const successStories = [
   },
   {
     id: 3,
-    company: "Retail Chain Network",
+    comp: "Retail Chain Network",
     industry: "Retail",
     challenge: "Needed intelligent customer management platform and predictive marketing",
     solution: "Built AI-powered customer analytics and personalization platform",
@@ -1115,7 +1115,7 @@ export default function AIAutonomousBusinessPlatform() {
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>

@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom.ts'
 import { Calendar, Clock, MapPin, Users, ArrowRight, Video, Globe, Award  } from 'lucide-react.ts'
 
 
-export default function Events(...args: any[]): any {
+export default function Events(...args: []):  {
 	const upcomingEvents = [
 		{
 			id: 1,
@@ -199,7 +199,7 @@ export default function Events(...args: any[]): any {
 							Missed an event? Watch recordings and access materials
 						</p>
 					</div>
-					<div className="grid gap-6 lg: anygrid-cols-2">
+					<div className="grid gap-6 lg: grid-cols-2">
 						{pastEvents.map((event)  => (
 							<div key={event.id} className="bg-white border border-gray-200 rounded-lg p-6">
 								<div className="flex items-start justify-between">

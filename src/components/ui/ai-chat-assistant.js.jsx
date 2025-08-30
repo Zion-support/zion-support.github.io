@@ -11,7 +11,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         {
             id: '1',
             type: 'assistant',
-            content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer any questions about our services. How can I assist you today?',
+            content: 'Hello! I\'m Zion AI Assistant. I can help you with technology solutions, business insights, and answer  questions about our services. How can I assist you today?',
             timestamp: new Date(),
             status: 'sent',
             metadata: {
@@ -260,7 +260,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </Button>
                     
                     <div className="flex-1 relative">
-                        <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me anything..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
+                        <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me thing..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
                         
                         {/* Voice input indicator */}
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">

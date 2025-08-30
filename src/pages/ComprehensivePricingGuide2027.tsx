@@ -124,7 +124,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     '5000+'
   ];
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Security': return <Shield className="w-5 h-5" />;
       case 'AI Finance': return <DollarSign className="w-5 h-5" />;
@@ -141,7 +141,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {
+  const getInnovationLevelColor = (level: string)  => {
     switch (level) {
       case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Cutting-edge': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -150,7 +150,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const toggleServiceExpansion = (serviceId: anystring)  => {
+  const toggleServiceExpansion = (serviceId: string)  => {
     const newExpanded = new Set(expandedServices);
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId);
@@ -160,7 +160,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     setExpandedServices(newExpanded);
   };
 
-  const getPriceRangeLabel = (range: anystring)  => {
+  const getPriceRangeLabel = (range: string)  => {
     switch (range) {
       case '0-1000': return '$0 - $1,000/month';
       case '1000-2500': return '$1,000 - $2,500/month';
@@ -239,7 +239,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
             >
               {categories.map(category  => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
@@ -252,7 +252,7 @@ const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
             <select
               value={selectedPriceRange}
               onChange={(e) => setSelectedPriceRange(e.target.value)}
-              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-blue-500"
             >
               {priceRanges.map(range  => (
                 <option key={range} value={range} className="bg-slate-800 text-white">

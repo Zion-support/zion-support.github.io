@@ -16,7 +16,7 @@ import { QuoteStatusCards,
   QuotesTable
  } from '@/components/admin/quotes';
 
-export default function QuoteManager(...args: any[]): any {
+export default function QuoteManager(...args: []):  {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   
@@ -42,14 +42,14 @@ export default function QuoteManager(...args: any[]): any {
 
   // Count quotes by status
   const statusCounts = {
-    new: anyquotes.filter((q: QuoteRequest)  => q.status === 'new').length,
-    in_review: anyquotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
-    accepted: anyquotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
-    responded: anyquotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
-    closed: anyquotes.filter((q: QuoteRequest)  => q.status === 'closed').length
+    new: quotes.filter((q: QuoteRequest)  => q.status === 'new').length,
+    in_review: quotes.filter((q: QuoteRequest)  => q.status === 'in_review').length,
+    accepted: quotes.filter((q: QuoteRequest)  => q.status === 'accepted').length,
+    responded: quotes.filter((q: QuoteRequest)  => q.status === 'responded').length,
+    closed: quotes.filter((q: QuoteRequest)  => q.status === 'closed').length
   };
 
-  const handleViewDetails = (quote: anyQuoteRequest)  => {
+  const handleViewDetails = (quote: QuoteRequest)  => {
     setSelectedQuote(quote);
     setShowDetails(true);
   };
@@ -106,7 +106,7 @@ export default function QuoteManager(...args: any[]): any {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyQuoteRequest)  => !quote.is_archived)}
+                    quotes={quotes.filter((quote: QuoteRequest)  => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -119,7 +119,7 @@ export default function QuoteManager(...args: any[]): any {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: anyQuoteRequest)  => quote.is_archived)}
+                    quotes={quotes.filter((quote: QuoteRequest)  => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

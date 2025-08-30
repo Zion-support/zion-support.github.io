@@ -102,7 +102,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 };
 
-export function ComprehensiveServicesShowcase2027(...args: any[]): any {
+export function ComprehensiveServicesShowcase2027(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
 
@@ -199,7 +199,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
@@ -257,7 +257,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services ({filteredServices.length})
           </h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>
@@ -349,7 +349,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
         {/* Benefits Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index)  => (
               <div key={index} className="text-center">
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">

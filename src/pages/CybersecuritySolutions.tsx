@@ -26,7 +26,7 @@ import { Shield,
   CreditCard
  } from 'lucide-react.ts';
 
-export default function CybersecuritySolutions(...args: any[]): any {
+export default function CybersecuritySolutions(...args: []):  {
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
@@ -201,7 +201,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
   };
 
   const filteredThreats = selectedThreat === 'all' 
-    ? securityThreats: anysecurityThreats.filter(threat  => threat.type === selectedThreat);
+    ? securityThreats: securityThreats.filter(threat  => threat.type === selectedThreat);
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -275,7 +275,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {securityServices.map((service, index)  => (
               <motion.div 
@@ -330,7 +330,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {threatTypes.map((threat)  => {
               const Icon = threat.icon;
@@ -357,7 +357,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {filteredThreats.map((threat, index)  => (
               <motion.div 
@@ -425,7 +425,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {complianceFrameworks.map((framework, index)  => (
               <motion.div 
@@ -482,7 +482,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {securityMetrics.map((metric, index)  => (
               <motion.div 
@@ -525,7 +525,7 @@ export default function CybersecuritySolutions(...args: any[]): any {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anytrue }}
+            viewport={{ once: true }}
           >
             {[
               {

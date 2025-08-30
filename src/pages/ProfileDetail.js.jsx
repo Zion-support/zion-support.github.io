@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
-    // useParams is typed as `any` in this environment due to missing type
+    // useParams is typed as `` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
     const { profileId } = useParams();
     const [profileData, setProfileData] = useState(null);
@@ -138,7 +138,7 @@ export default function ProfileDetail() {
               <CardContent>
                 {profileData.experience ? (profileData.experience.map((exp, index) => (<div key={index} className="mb-4">
                       <h4 className="font-bold text-white">{exp.title}</h4>
-                      <p className="text-zion-cyan">{exp.company}</p>
+                      <p className="text-zion-cyan">{exp.comp}</p>
                       <p className="text-sm text-zion-slate-light">{exp.start_date} - {exp.end_date || "Present"}</p>
                       <p className="text-zion-slate-light">{exp.description}</p>
                     </div>))) : (<p className="text-zion-slate-light">No experience provided.</p>)}

@@ -35,8 +35,7 @@ export interface APIParameter {
   required: boolean;
   schema: APISchema;
   description: string;
-  example?: any;
-  deprecated?: boolean;
+  example?: ;deprecated?: boolean;
 }
 export interface APIRequestBody {
   required: boolean;
@@ -45,8 +44,7 @@ export interface APIRequestBody {
 }
 export interface APIContent {
   schema: APISchema;
-  example?: any;
-  examples?: Record<string, APIExample>;
+  example?: ;examples?: Record<string, APIExample>;
 }
 export interface APIResponse {
   code: string;
@@ -66,9 +64,8 @@ export interface APISchema {
   properties?: Record<string, APISchema>;
   items?: APISchema;
   required?: string[];
-  enum?: any[];
-  example?: any;
-  deprecated?: boolean;
+  enum?: [];
+  example?: ;deprecated?: boolean;
   minimum?: number;
   maximum?: number;
   exclusiveMinimum?: boolean;
@@ -76,8 +73,7 @@ export interface APISchema {
   minLength?: number;
   maxLength?: number;
   pattern?: string;
-  default?: any;
-  nullable?: boolean;
+  default?: ;nullable?: boolean;
   $ref?: string;
 }
 export interface APIExample {
@@ -93,13 +89,11 @@ export interface ExampleRequest {
   method: string;
   url: string;
   headers: Record<string, string>;
-  body?: any;
-}
+  body?: ;}
 export interface ExampleResponse {
   status: number;
   headers: Record<string, string>;
-  body: any;
-}
+  body: ;}
 export interface RateLimit {
   requests: number;
   window: string;
@@ -120,7 +114,7 @@ export interface DocumentationConfig {
   branding?: {
     logo?: string;
     primaryColor?: string;
-    companyName?: string;
+    compName?: string;
   };
 }
 export class APIDocGeneratorService {
@@ -500,7 +494,7 @@ export class APIDocGeneratorService {
     }
     return examples;
   }
-  private generateExampleBody(requestBody: APIRequestBody): any {
+  private generateExampleBody(requestBody: APIRequestBody):  {
     // Generate example request body based on schema
     return {
       name: "Example Name",
@@ -508,7 +502,7 @@ export class APIDocGeneratorService {
       description: "This is an example description"
     };
   }
-  private generateExampleResponse(response: APIResponse): any {
+  private generateExampleResponse(response: APIResponse):  {
     // Generate example response based on schema
     if (response.content?.['application/json']?.schema) {
       return {

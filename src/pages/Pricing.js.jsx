@@ -185,7 +185,7 @@ export default function Pricing() {
           </h1>
           <p className="text-xl text-zion-cyan/80 max-w-3xl mx-auto mb-8">
             Choose the perfect plan for your needs. All plans include a 14-day free trial, 
-            no credit card required. Scale up or down anytime.
+            no credit card required. Scale up or down time.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 px-4 py-2 text-lg">
@@ -346,7 +346,7 @@ export default function Pricing() {
               <CardContent>
                 <p className="text-zion-cyan/80">
                   All plans include a 14-day free trial with full access to all features. 
-                  No credit card required. You can upgrade, downgrade, or cancel anytime.
+                  No credit card required. You can upgrade, downgrade, or cancel time.
                 </p>
               </CardContent>
             </Card>
@@ -357,8 +357,8 @@ export default function Pricing() {
               </CardHeader>
               <CardContent>
                 <p className="text-zion-cyan/80">
-                  Yes! You can upgrade or downgrade your plan at any time. Changes take effect immediately, 
-                  and we'll prorate any billing adjustments.
+                  Yes! You can upgrade or downgrade your plan at  time. Changes take effect immediately, 
+                  and we'll prorate  billing adjustments.
                 </p>
               </CardContent>
             </Card>

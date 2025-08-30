@@ -44,7 +44,7 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 lg:gap-12">
           {services.map((service, index)  => (
             <motion.div
               key={service.category}

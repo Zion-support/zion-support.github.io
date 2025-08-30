@@ -15,13 +15,13 @@ estimatedCost: { // From TeamRecommendation;
 }
 
 // Helper to parse budget string (very basic, needs improvement for production)
-const parseBudget = (budgetString: anystring): { min: number | null; max: number | null }  => {
+const parseBudget = (budgetString: string): { min: number | null; max: number | null }  => {
   budgetString = budgetString.toLowerCase().replace(/[^0-9-\s$k,]/g, ''); // Clean string
 
   let min: number | null = null;
   let max: number | null = null;
 
-  const kTo1000 = (val: anystring)  => parseFloat(val.replace('k', '')) * 1000;
+  const kTo1000 = (val: string)  => parseFloat(val.replace('k', '')) * 1000;
 
   if (budgetString.includes('-')) {
     const parts = budgetString.split('-');

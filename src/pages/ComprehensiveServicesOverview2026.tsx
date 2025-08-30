@@ -84,19 +84,19 @@ import { Brain,
 import { SEO  } from '@/components/SEO';
 import { ULTIMATE_INNOVATIVE_SERVICES_2026  } from '@/data/ultimateInnovativeServices2026';
 
-export default function ComprehensiveServicesOverview2026(...args: any[]): any {
+export default function ComprehensiveServicesOverview2026(...args: []):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedCategory, setExpandedCategory] = useState<any>(null);
 
   const serviceCategories = [
     {
-      id: any'quantum-ai',
+      id: 'quantum-ai',
       name: 'Quantum AI & Computing',
       description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
       icon: AtomIcon,
       color: 'from-purple-500 to-cyan-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Quantum AI'),
-      marketSize: any'$1.7 billion by 2027',
+      marketSize: '$1.7 billion by 2027',
       avgROI: '500-2000%',
       innovationLevel: 'Revolutionary'
     },
@@ -107,7 +107,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: BrainIcon2,
       color: 'from-pink-500 to-purple-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Neuromorphic AI'),
-      marketSize: any'$8.3 billion by 2027',
+      marketSize: '$8.3 billion by 2027',
       avgROI: '300-800%',
       innovationLevel: 'Cutting-edge'
     },
@@ -118,7 +118,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: DnaIcon,
       color: 'from-green-500 to-blue-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Synthetic Biology'),
-      marketSize: any'$13.4 billion by 2027',
+      marketSize: '$13.4 billion by 2027',
       avgROI: '400-1200%',
       innovationLevel: 'Revolutionary'
     },
@@ -129,7 +129,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: SatelliteIcon,
       color: 'from-blue-500 to-purple-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Space Technology'),
-      marketSize: any'$469.8 billion by 2027',
+      marketSize: '$469.8 billion by 2027',
       avgROI: '600-2000%',
       innovationLevel: 'Revolutionary'
     },
@@ -140,7 +140,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: LayersIcon,
       color: 'from-orange-500 to-red-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Advanced Materials'),
-      marketSize: any'$1.2 trillion by 2027',
+      marketSize: '$1.2 trillion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Cutting-edge'
     },
@@ -151,7 +151,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: MonitorIcon2,
       color: 'from-purple-500 to-pink-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Brain-Computer Interface'),
-      marketSize: any'$3.7 billion by 2027',
+      marketSize: '$3.7 billion by 2027',
       avgROI: '800-3000%',
       innovationLevel: 'Revolutionary'
     },
@@ -162,7 +162,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: GlobeIcon3,
       color: 'from-cyan-500 to-green-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Digital Twin'),
-      marketSize: any'$86.1 billion by 2028',
+      marketSize: '$86.1 billion by 2028',
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
@@ -173,7 +173,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: SmartphoneIcon2,
       color: 'from-orange-500 to-purple-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Extended Reality'),
-      marketSize: any'$125.2 billion by 2027',
+      marketSize: '$125.2 billion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
@@ -184,7 +184,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: CpuIcon2,
       color: 'from-green-500 to-cyan-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Edge AI'),
-      marketSize: any'$15.7 billion by 2027',
+      marketSize: '$15.7 billion by 2027',
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
@@ -195,7 +195,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
       icon: NetworkIcon,
       color: 'from-purple-500 to-blue-500',
       services: ULTIMATE_INNOVATIVE_SERVICES_2026.filter(s  => s.category === 'Federated Learning'),
-      marketSize: any'$2.3 billion by 2027',
+      marketSize: '$2.3 billion by 2027',
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
@@ -213,9 +213,9 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
   ];
 
   const filteredCategories = selectedCategory === 'all' 
-    ? serviceCategories: anyserviceCategories.filter(cat  => cat.id === selectedCategory);
+    ? serviceCategories: serviceCategories.filter(cat  => cat.id === selectedCategory);
 
-  const toggleCategoryExpansion = (categoryId: anystring)  => {
+  const toggleCategoryExpansion = (categoryId: string)  => {
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
@@ -293,7 +293,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
               className={`px-6 py-3 rounded-lg transition-all duration-200 ${
                 selectedCategory === 'all'
                   ? 'bg-zion-cyan text-white'
-                  : 'bg-white/10 text-zion-slate-300 hover: anybg-white/20'
+                  : 'bg-white/10 text-zion-slate-300 hover: bg-white/20'
               }`}
             >
               All Categories
@@ -373,7 +373,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                   </div>
 
                   {/* Services Preview */}
-                  <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex)  => (
                       <div key={service.id} className="bg-zion-slate-800/50 rounded-lg p-4">
                         <h4 className="font-semibold text-white mb-2">{service.title}</h4>
@@ -425,7 +425,7 @@ export default function ComprehensiveServicesOverview2026(...args: any[]): any {
                         transition={{ duration: 0.3 }}
                         className="mt-6 pt-6 border-t border-zion-slate-600/30"
                       >
-                        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 lg: grid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex)  => (
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
                               <div className="flex items-start justify-between mb-4">

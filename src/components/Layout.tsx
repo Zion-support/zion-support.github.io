@@ -27,12 +27,12 @@ const navigation: NavItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout(...args: any[]): any {
+export default function Layout(...args: []):  {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState<any>(null);
   const location = useLocation();
-  const isActive = (href: anystring)  => location.pathname === href;
-  const toggleSidebarDropdown = (label: anystring)  => {
+  const isActive = (href: string)  => location.pathname === href;
+  const toggleSidebarDropdown = (label: string)  => {
     setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
   };
 

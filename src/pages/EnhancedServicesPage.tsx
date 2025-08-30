@@ -30,7 +30,7 @@ import { Search,
  } from 'lucide-react.ts';
 import { SEO  } from '@/components/SEO';
 
-export default function EnhancedServicesPage(...args: any[]): any {
+export default function EnhancedServicesPage(...args: []):  {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -52,7 +52,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesPrice;
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: string)  => {
     switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai & machine learning':
@@ -86,7 +86,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
     }
   };
 
-  const getPriceRange = (price: anynumber)  => {
+  const getPriceRange = (price: number)  => {
     if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
@@ -137,7 +137,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Service Pricing Tiers
           </h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6">
             {Object.entries(SERVICE_PRICING_TIERS).map(([tier, info])  => (
               <Card key={tier} className="bg-zion-blue border-zion-blue-light">
                 <CardHeader className="text-center">
@@ -291,7 +291,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service)  => (
               <Card key={service.id} className="h-full hover:shadow-xl transition-shadow duration-300">
                 <CardHeader>
@@ -375,7 +375,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
             Explore by Category
           </h2>
           <Tabs defaultValue="ai-ml" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
+            <TabsList className="grid w-full grid-cols-2 md: grid-cols-4 lg:grid-cols-6 bg-zion-blue-dark">
               {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category  => (
                 <TabsTrigger 
                   key={category.value} 
@@ -389,7 +389,7 @@ export default function EnhancedServicesPage(...args: any[]): any {
             
             {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
               <TabsContent key={category.value} value={category.value} className="mt-8">
-                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
                   {ENHANCED_SERVICES
                     .filter(service  => service.category.toLowerCase().includes(category.value.toLowerCase()))
                     .slice(0, 6)

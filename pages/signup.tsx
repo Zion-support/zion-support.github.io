@@ -17,14 +17,14 @@ import { User,
   Cloud
  } from 'lucide-react.ts'
 
-export default function Signup(...args: any[]): any {
+export default function Signup(...args: []):  {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
     confirmPassword: '',
-    company: '',
+    comp: '',
     phone: '',
     website: '',
     industry: '',
@@ -60,7 +60,7 @@ export default function Signup(...args: any[]): any {
     'Other'
   ]
 
-  const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -88,7 +88,7 @@ export default function Signup(...args: any[]): any {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault()
     
     if (!validateForm()) return
@@ -339,22 +339,22 @@ export default function Signup(...args: any[]): any {
                     )}
                   </div>
 
-                  {/* Company Information */}
+                  {/* Comp Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
-                        Company Name
+                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                        Comp Name
                       </label>
                       <div className="relative">
                         <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
                         <input
                           type="text"
-                          id="company"
-                          name="company"
-                          value={formData.company}
+                          id="comp"
+                          name="comp"
+                          value={formData.comp}
                           onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all"
-                          placeholder="Enter company name"
+                          placeholder="Enter comp name"
                         />
                       </div>
                     </div>

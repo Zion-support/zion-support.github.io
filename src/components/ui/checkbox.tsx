@@ -2,7 +2,7 @@ import React from 'react.ts';
 
 interface CheckboxProps extends React.PropsWithChildren<{}> {
 
-  checked: anyboolean;
+  checked: boolean;
   onChange: (checked: boolean)  => void;
   label?: string;
   disabled?: boolean;
@@ -10,7 +10,7 @@ interface CheckboxProps extends React.PropsWithChildren<{}> {
 
 }
 
-export function Checkbox(...args: any[]): any {
+export function Checkbox(...args: []):  {
   return (
     <label className={`flex items-center space-x-2 cursor-pointer ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`}>
       <input

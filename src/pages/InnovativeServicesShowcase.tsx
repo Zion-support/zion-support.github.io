@@ -208,7 +208,7 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category  => (
                   <option key={category} value={category}>
@@ -223,7 +223,7 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {priceRanges.map(range  => (
                   <option key={range.value} value={range.value}>{range.label}</option>
@@ -236,7 +236,7 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: anyoutline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
               >
                 {sortOptions.map(option  => (
                   <option key={option.value} value={option.value}>{option.label}</option>
@@ -254,7 +254,7 @@ const InnovativeServicesShowcase: React.FC = (): JSX.Element => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service)  => (
             <ServiceCard key={service.id} service={service} />
           ))}

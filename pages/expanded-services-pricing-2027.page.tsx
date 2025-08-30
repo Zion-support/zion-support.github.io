@@ -43,7 +43,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
     setSelectedSubcategory('all');
   };
 
-  const getMarketPositionColor = (position: anystring)  => {
+  const getMarketPositionColor = (position: string)  => {
     switch (position) {
       case 'leader': return 'bg-green-600';
       case 'challenger': return 'bg-blue-600';
@@ -113,7 +113,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => (
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
@@ -125,7 +125,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             <select
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400"
             >
               {subcategories.map(subcat  => (
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
@@ -178,7 +178,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               </div>
 
               {/* Pricing Tiers */}
-              <div className="grid grid-cols-1 lg: anygrid-cols-4 gap-6 mb-8">
+              <div className="grid grid-cols-1 lg: grid-cols-4 gap-6 mb-8">
                 {Object.entries(service.pricingTiers).map(([tier, details])  => (
                   <div key={tier} className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>

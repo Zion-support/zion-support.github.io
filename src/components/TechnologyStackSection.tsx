@@ -96,7 +96,7 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
         </motion.div>
 
         {/* Technology Categories */}
-        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {techCategories.map((category, index)  => {
             const IconComponent = category.icon;
             return (
@@ -139,7 +139,7 @@ export const TechnologyStackSection: React.FC = (): JSX.Element => {
           <h3 className="text-2xl font-bold text-center mb-8">
             Emerging Technologies
           </h3>
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
             {emergingTech.map((tech, index)  => {
               const IconComponent = tech.icon;
               return (

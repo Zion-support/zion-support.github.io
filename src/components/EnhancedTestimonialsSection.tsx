@@ -15,8 +15,8 @@ interface Testimonial {
   id: string;
   name: string;
   position: string;
-  company: string;
-  companyLogo: string;
+  comp: string;
+  compLogo: string;
   content: string;
   rating: number;
   industry: string;
@@ -30,8 +30,8 @@ const testimonials: Testimonial[] = [
     id: '1',
     name: 'Sarah Chen',
     position: 'CTO',
-    company: 'TechFlow Solutions',
-    companyLogo: '/images/company-logos/techflow.svg',
+    comp: 'TechFlow Solutions',
+    compLogo: '/images/company-logos/techflow.svg',
     content: 'Zion Tech Group transformed our data infrastructure completely. Their AI-powered analytics platform increased our operational efficiency by 300% and provided insights we never had before. The ROI was incredible - we saw a 450% return within the first 6 months.',
     rating: 5,
     industry: 'Technology',
@@ -42,8 +42,8 @@ const testimonials: Testimonial[] = [
     id: '2',
     name: 'Marcus Rodriguez',
     position: 'VP of Operations',
-    company: 'Global Manufacturing Corp',
-    companyLogo: '/images/company-logos/gmc.svg',
+    comp: 'Global Manufacturing Corp',
+    compLogo: '/images/company-logos/gmc.svg',
     content: 'Implementing Zion\'s quantum optimization suite revolutionized our supply chain. We solved complex logistics problems in minutes that used to take weeks. The cost savings were immediate and substantial - over $2M annually.',
     rating: 5,
     industry: 'Manufacturing',
@@ -54,8 +54,8 @@ const testimonials: Testimonial[] = [
     id: '3',
     name: 'Dr. Emily Watson',
     position: 'Chief Medical Officer',
-    company: 'HealthTech Innovations',
-    companyLogo: '/images/company-logos/healthtech.svg',
+    comp: 'HealthTech Innovations',
+    compLogo: '/images/company-logos/healthtech.svg',
     content: 'Zion\'s AI-powered healthcare platform has been a game-changer for our diagnostic accuracy. We\'ve seen a 95% improvement in early detection rates and significantly reduced false positives. This technology is saving lives.',
     rating: 5,
     industry: 'Healthcare',
@@ -66,8 +66,8 @@ const testimonials: Testimonial[] = [
     id: '4',
     name: 'James Thompson',
     position: 'Head of Security',
-    company: 'FinSecure Bank',
-    companyLogo: '/images/company-logos/finsecure.svg',
+    comp: 'FinSecure Bank',
+    compLogo: '/images/company-logos/finsecure.svg',
     content: 'The zero-trust security platform from Zion Tech Group has provided us with enterprise-grade protection that adapts to new threats in real-time. Our security incidents dropped by 80% in the first quarter.',
     rating: 5,
     industry: 'Financial Services',
@@ -78,8 +78,8 @@ const testimonials: Testimonial[] = [
     id: '5',
     name: 'Lisa Park',
     position: 'Director of IT',
-    company: 'CloudScale Enterprises',
-    companyLogo: '/images/company-logos/cloudscale.svg',
+    comp: 'CloudScale Enterprises',
+    compLogo: '/images/company-logos/cloudscale.svg',
     content: 'Zion\'s multi-cloud orchestration platform streamlined our entire infrastructure. We reduced cloud costs by 40% while improving performance by 60%. The unified management interface is intuitive and powerful.',
     rating: 5,
     industry: 'Cloud Services',
@@ -88,7 +88,7 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-export default function EnhancedTestimonialsSection(...args: any[]): any {
+export default function EnhancedTestimonialsSection(...args: []):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -112,7 +112,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
     setIsAutoPlaying(false);
   };
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: number)  => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
@@ -191,7 +191,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+                  <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
                     {currentTestimonialData.results.map((result, index)  => (
                       <motion.div
                         key={result}
@@ -216,7 +216,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
                       <div>
                         <h4 className="text-xl font-bold text-white">{currentTestimonialData.name}</h4>
                         <p className="text-zion-cyan">{currentTestimonialData.position}</p>
-                        <p className="text-gray-300">{currentTestimonialData.company}</p>
+                        <p className="text-gray-300">{currentTestimonialData.comp}</p>
                         <div className="flex items-center space-x-2 mt-1">
                           <Building className="w-4 h-4 text-zion-cyan" />
                           <span className="text-sm text-gray-400">{currentTestimonialData.industry}</span>
@@ -278,7 +278,7 @@ export default function EnhancedTestimonialsSection(...args: any[]): any {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },

@@ -41,7 +41,7 @@ interface UserProfile {
   lastName: string;
   email: string;
   phone: string;
-  company: string;
+  comp: string;
   position: string;
   industry: string;
   location: string;
@@ -83,7 +83,7 @@ const Profile: React.FC = (): JSX.Element => {
     lastName: 'Doe',
     email: 'john.doe@ziontechgroup.com',
     phone: '+1 (555) 123-4567',
-    company: 'Zion Tech Group',
+    comp: 'Zion Tech Group',
     position: 'Senior Developer',
     industry: 'Technology',
     location: 'San Francisco, CA',
@@ -186,14 +186,14 @@ const Profile: React.FC = (): JSX.Element => {
     }
   };
 
-  const handleNotificationToggle = (key: anykeyof NotificationSettings)  => {
+  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
     setNotifications(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
 
-  const getPasswordStrength = (password: anystring)  => {
+  const getPasswordStrength = (password: string)  => {
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -241,7 +241,7 @@ const Profile: React.FC = (): JSX.Element => {
               {profile.firstName} {profile.lastName}
             </h2>
             <p className="text-slate-300 text-lg mb-1">{profile.position}</p>
-            <p className="text-slate-400">{profile.company}</p>
+            <p className="text-slate-400">{profile.comp}</p>
           </div>
           <button
             onClick={() => setIsEditing(!isEditing)}
@@ -253,7 +253,7 @@ const Profile: React.FC = (): JSX.Element => {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-4">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
@@ -345,8 +345,8 @@ const Profile: React.FC = (): JSX.Element => {
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-                value={profile.company}
-                onChange={(e) => setProfile(prev => ({ ...prev, company: e.target.value }))}
+                value={profile.comp}
+                onChange={(e) => setProfile(prev => ({ ...prev, comp: e.target.value }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -374,7 +374,7 @@ const Profile: React.FC = (): JSX.Element => {
                 value={profile.industry}
                 onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
                 disabled={!isEditing}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)  => (
                   <option key={industry} value={industry}>{industry}</option>
@@ -449,7 +449,7 @@ const Profile: React.FC = (): JSX.Element => {
       {/* Achievements */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Achievements</h3>
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
           {achievements.map((achievement, index)  => (
             <motion.div
               key={achievement.title}
@@ -842,7 +842,7 @@ const Profile: React.FC = (): JSX.Element => {
           ].map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key as any)}
+              onClick={() => setActiveTab(tab.key as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'

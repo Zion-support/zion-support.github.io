@@ -86,7 +86,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
@@ -101,7 +101,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">
                 {complianceStandards.map((standard, index)  => (
                   <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
@@ -114,7 +114,7 @@ const AccessibilityAuditor: React.FC = (): JSX.Element => {
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
-            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
               {testingAreas.map((area, index)  => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
