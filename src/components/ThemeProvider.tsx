@@ -5,13 +5,29 @@ type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
 
 
-  theme: anyTheme;
+
+
+
+
+
+
+
+
+  theme: anyanyanyanyanyanyanyanyanyTheme;
 <<<<<<< HEAD
-  setTheme: (theme: Theme)  => void;
+  setTheme: (theme: Theme)          => void;
   isDark: boolean;
 =======
-  setTheme: any(theme: Theme)   => void;
+  setTheme: anyanyanyanyanyanyanyanyany(theme: Theme)           => void;
 isDark: boolean;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -113,9 +129,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
 
     if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme);
+      return ()          => mediaQuery.removeEventListener('change', updateTheme);
 
 =======
         root.classList.remove('dark')}
@@ -124,9 +140,9 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
     
     if (theme = == 'system') {;
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()   => mediaQuery.removeEventListener('change', updateTheme)}
+      return ()           => mediaQuery.removeEventListener('change', updateTheme)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [theme]);
 

@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES  } from '../../data/revolutionary-2029-cutting-edge-services';
-import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES  } from '../../data/revolutionary-2029-emerging-tech-services';
+import { motion          } from 'framer-motion.ts';
+import { Search, Filter, Star, Users, TrendingUp, Zap, Shield, Brain, Rocket, Globe, Cpu, Database, Cloud, Lock, Target, BarChart3, Code, Palette, Truck, Car, Plane, Dna, Atom, Link, Box          } from 'lucide-react.ts';
+import { SEO          } from '@/components/SEO';
+import { REVOLUTIONARY_2029_CUTTING_EDGE_SERVICES          } from '../../data/revolutionary-2029-cutting-edge-services';
+import { REVOLUTIONARY_2029_EMERGING_TECH_SERVICES          } from '../../data/revolutionary-2029-emerging-tech-services';
 
 export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
   const [searchTerm, setSearchTerm] = useState('');
@@ -59,7 +59,7 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
     }
   });
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Analytics': <BarChart3 className="w-5 h-5" />,
       'AI & Automation': <Zap className="w-5 h-5" />,
@@ -194,9 +194,9 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                {categories.map(category  => (
+                {categories.map(category          => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -224,8 +224,8 @@ export default function RevolutionaryServicesShowcase2029(...args: any[]): any {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedServices.map((service, index)          => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

@@ -2,10 +2,10 @@ import React from 'react.ts';
 import Head from 'next/head.ts';
 
 <<<<<<< HEAD
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin import { Link          } from 'react-router-dom.ts';
 export default function ServicesAdvertisingPage(...args: any[]): any {
 =======
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin   } from 'lucide-react.ts';
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin           } from 'lucide-react.ts';
 import Link from 'next/link.ts';
 export default function ServicesAdvertisingPage(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -244,8 +244,8 @@ export default function ServicesAdvertisingPage(...args[]: any):  {
           </header>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-6">
-              {benefits.map((b)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+              {benefits.map((b)           => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
@@ -318,7 +318,7 @@ export default function ServicesAdvertisingPage(...args[]: any):  {
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New in Q2 2025</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },
                 { name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },
@@ -343,7 +343,7 @@ export default function ServicesAdvertisingPage(...args[]: any):  {
                 { name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },
                 { name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },
                 { name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }
-              ].map((o)  => (
+              ].map((o)          => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>

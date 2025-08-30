@@ -1,7 +1,15 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Star, Quote, ChevronLeft, ChevronRight, Play, Pause interface Testimonial {
+
+
+
+
+
+
+
+
 
   id: number;
   name: string;
@@ -22,6 +30,14 @@ import {
   Users,
   Award,
   TrendingUp
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
 } from 'lucide-react.ts';
 
@@ -104,7 +120,7 @@ export const InteractiveTestimonials: React.FC = (): JSX.Element => {;
   const previousTestimonial = () => {;
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
 
-  const goToTestimonial = (index: anynumber)   => {;
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanynumber)           => {;
     setCurrentIndex(index)};
 
   const togglePlayPause = () => {;
@@ -221,7 +237,7 @@ export function InteractiveTestimonials(...args: any[]): any {
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanynumber)          => {
     setCurrentIndex(index);
   };
 
@@ -309,12 +325,12 @@ export function InteractiveTestimonials(...args: any[]): any {
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               selectedCategory === null
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
-                : 'bg-white/10 text-gray-300 hover: anybg-white/20 border border-white/20'
+                : 'bg-white/10 text-gray-300 hover: anyanyanyanyanyanyanyanyanybg-white/20 border border-white/20'
             }`}
 
             All Categories
           </button>
-          {categories.map((category)  => (
+          {categories.map((category)          => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -398,8 +414,8 @@ export function InteractiveTestimonials(...args: any[]): any {
                 </p>
               </blockquote>
 
-              <div className="grid md: anygrid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])   => (
+              <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])           => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}

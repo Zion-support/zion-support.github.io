@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import type { NextPage } from 'next.ts';
 import Head from 'next/head.ts';
-import { useState, useMemo   } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_2027   } from '../data/expandedInnovativeServices2027';
+import { useState, useMemo           } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_2027           } from '../data/expandedInnovativeServices2027';
 =======
 import type { NextPage } from 'next.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { useState, useMemo  } from 'react.ts';
-import { ALL_EXPANDED_SERVICES_2027  } from '../data/expandedInnovativeServices2027';
+import { Helmet          } from 'react-helmet-async.ts';
+import { useState, useMemo          } from 'react.ts';
+import { ALL_EXPANDED_SERVICES_2027          } from '../data/expandedInnovativeServices2027';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const ExpandedServicesShowcase2027: NextPage = () => {;
@@ -142,14 +142,14 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
                 setSelectedSubcategory('all');
               }}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 
-              {categories.map(cat  => (
+              {categories.map(cat          => (
 =======
-              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
-              {categories.map(cat   => (
+              {categories.map(cat           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
                   {cat === 'all' ? 'All Categories' : cat}
@@ -161,13 +161,13 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
               value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
 
-              {subcategories.map(subcat  => (
+              {subcategories.map(subcat          => (
 =======
-              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyoutline-none focus:ring-2 focus:ring-blue-400"
+              className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-400"
             >
-              {subcategories.map(subcat   => (
+              {subcategories.map(subcat           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
                   {subcat === 'all' ? 'All Subcategories' : subcat}
@@ -207,8 +207,8 @@ const ExpandedServicesShowcase2027: NextPage = () => {;
         </div>
 
         {/* Services Grid/List */}
-        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-          {filteredServices.map((service)   => (
+        <div className={`grid gap-6 ${viewMode === 'grid' ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
+          {filteredServices.map((service)           => (
             <div
               key={service.id}
               className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 ${

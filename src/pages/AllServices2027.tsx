@@ -1,8 +1,8 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import SEO from '../components/SEOHead';
-import { INNOVATIVE_SERVICES_2027  } from '@/data/innovativeServices2027';
+import { INNOVATIVE_SERVICES_2027          } from '@/data/innovativeServices2027';
 import { Brain,
   Shield,
   Zap,
@@ -26,7 +26,7 @@ import { Brain,
 <<<<<<< HEAD
 const AllServices2027: React.FC = (): JSX.Element => {
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 const AllServices2027: React.FC = (): JSX.Element => {;
@@ -50,37 +50,37 @@ const AllServices2027: React.FC = (): JSX.Element => {;
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getCategoryStats = (categoryId: anystring)   => {
+  const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanystring)           => {
     if (categoryId === 'All') {
       return {
-              count: anyinnovativeServices2027.length,
-      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)   => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
-      avgRating: anyMath.round((innovativeServices2027.reduce((sum, s)   => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
+              count: anyanyanyanyanyanyanyanyanyinnovativeServices2027.length,
+      avgPrice: Math.round(innovativeServices2027.reduce((sum, s)           => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
+      avgRating: anyanyanyanyanyanyanyanyanyMath.round((innovativeServices2027.reduce((sum, s)           => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10;
       }};
     const services = innovativeServices2027.filter(s => s.category === categoryId);
           return {
-        count: anyservices.length,
-        avgPrice: Math.round(services.reduce((sum, s)   => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
-        avgRating: anyMath.round((services.reduce((sum, s)   => sum + s.rating, 0) / services.length) * 10) / 10
+        count: anyanyanyanyanyanyanyanyanyservices.length,
+        avgPrice: Math.round(services.reduce((sum, s)           => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
+        avgRating: anyanyanyanyanyanyanyanyanyMath.round((services.reduce((sum, s)           => sum + s.rating, 0) / services.length) * 10) / 10
       }};
 =======
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
 
-  const getCategoryStats = (categoryId: anystring)  => {;
+  const getCategoryStats = (categoryId: anyanyanyanyanyanyanyanyanystring)          => {;
     if (categoryId === 'All') {;
       return {;
-        count: anyINNOVATIVE_SERVICES_2027.length,;
-        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s)  => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
-        avgRating: anyMath.round((INNOVATIVE_SERVICES_2027.reduce((sum, s)  => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
+        count: anyanyanyanyanyanyanyanyanyINNOVATIVE_SERVICES_2027.length,;
+        avgPrice: Math.round(INNOVATIVE_SERVICES_2027.reduce((sum, s)          => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length),;
+        avgRating: anyanyanyanyanyanyanyanyanyMath.round((INNOVATIVE_SERVICES_2027.reduce((sum, s)          => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10;
       };
 
     const services = INNOVATIVE_SERVICES_2027.filter(s => s.category === categoryId);
     return {
-      count: anyservices.length,
-      avgPrice: Math.round(services.reduce((sum, s)  => sum + s.price, 0) / services.length),
-      avgRating: anyMath.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
+      count: anyanyanyanyanyanyanyanyanyservices.length,
+      avgPrice: Math.round(services.reduce((sum, s)          => sum + s.price, 0) / services.length),
+      avgRating: anyanyanyanyanyanyanyanyanyMath.round((services.reduce((sum, s)          => sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -228,14 +228,14 @@ const AllServices2027: React.FC = (): JSX.Element => {;
               specific business challenges and drive innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {categories.map((category)   => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((category)           => {;
 =======;
               specific business challenges and drive innovation.;
             </p>;
           </div>;
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {categories.map((category)  => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+            {categories.map((category)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
@@ -300,13 +300,13 @@ const AllServices2027: React.FC = (): JSX.Element => {;
             initial="hidden"
             animate="visible"
 <<<<<<< HEAD
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
 
-            {filteredServices.map((service)  => (
+            {filteredServices.map((service)          => (
 =======
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {filteredServices.map((service)   => (
+            {filteredServices.map((service)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -541,7 +541,7 @@ const AllServices2027: React.FC = (): JSX.Element => {;
 
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
     switch (category) {
       case 'AI Services':;
 =======;
@@ -555,7 +555,7 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (category) {;
       case 'AI Services':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -611,7 +611,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         {/* Features Preview */}
         <div className="mb-4">
           <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 2).map((feature: anystring, index: number)   => (
+            {service.features.slice(0, 2).map((feature: anyanyanyanyanyanyanyanyanystring, index: number)           => (
               <span
                 key={index}
                 className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"

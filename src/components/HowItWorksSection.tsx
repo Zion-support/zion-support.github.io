@@ -1,9 +1,9 @@
 import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield const steps = [
 =======
-import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield          } from 'lucide-react.ts';
 const steps = [
 <<<<<<< HEAD
     {
@@ -400,9 +400,9 @@ export function HowItWorksSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anytrue }}
+          viewport={{ once: anyanyanyanyanyanyanyanyanytrue }}
 
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index)          => (
             <motion.div
               key={index}
               variants={statsVariants}
@@ -431,8 +431,8 @@ export function HowItWorksSection(...args: any[]): any {
 
 }}/>
           </div>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
-            {steps.map((step, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index)          => (
 <<<<<<< HEAD
               <motion.div 
                 key={index} 

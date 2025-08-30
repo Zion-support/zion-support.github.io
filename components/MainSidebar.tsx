@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { useNavigate  } from 'react-router-dom.ts';
+import { Link          } from 'react-router-dom.ts';
+import { useNavigate          } from 'react-router-dom.ts';
 import { Home,
   Briefcase,
   Users,
@@ -57,9 +57,9 @@ import { Home,
   Share2,
   Monitor,
 =======
-import React, { useState  } from 'react.ts';
+import React, { useState          } from 'react.ts';
 import Link from 'next/link.ts';
-import { useRouter   } from 'next/router.ts';
+import { useRouter           } from 'next/router.ts';
 import { Home, 
   Briefcase, 
   Users, 
@@ -127,16 +127,16 @@ import { Home,
 <<<<<<< HEAD
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyboolean;
-  onClose: ()  => void;
+  isOpen: anyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()          => void;
 =======
   
 } from 'lucide-react.ts';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: anyboolean;
-  onClose: ()   => void}
+  isOpen: anyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()           => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -144,21 +144,21 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
 <<<<<<< HEAD
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanystring)          => {
     setExpandedSections(prev =>
       prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
 =======
 <<<<<<< HEAD
-  const toggleSection = (section: anystring)   => {
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanystring)           => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section);
         [...prev, section];
     )};
 =======
-  const toggleSection = (section: anystring)  => {;
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanystring)          => {;
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -168,7 +168,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const isActive = (path: anystring)   => router.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanystring)           => router.pathname === path;
 
   const navigation = {
   <<<<<<< HEAD
@@ -256,7 +256,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },;
   ];
 
-  const renderNavSection = (title: anystring, items[], sectionKey: string)   => (
+  const renderNavSection = (title: anyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)           => (
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

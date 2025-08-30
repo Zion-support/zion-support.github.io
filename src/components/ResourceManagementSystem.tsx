@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { Users,
   Calendar,
   Clock,
@@ -41,11 +41,19 @@ import { Users,
   Unlock
 <<<<<<< HEAD
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Resource {
+
+
+
+
+
+
+
+
 
 
   id: string;
@@ -67,12 +75,28 @@ interface Resource {
   utilization: number;
 =======
 utilization: number;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 =======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface ResourceStats {
+
+
+
+
+
+
+
+
 
 
   totalResources: number;
@@ -85,7 +109,15 @@ interface ResourceStats {
 <<<<<<< HEAD
   topDepartments: Array<any>;
 =======
-  topDepartments: Array<any>}
+topDepartments: Array<any>;
+
+
+
+
+
+
+
+}
 
 interface ResourceManagementSystemProps extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -132,7 +164,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   useEffect(() => {
     const sampleResources: Resource[] = [
       {
-        id: any'1',
+        id: anyanyanyanyanyanyanyanyany'1',
         name: 'AI Development Team',
         type: 'human',
         category: 'Development',
@@ -227,7 +259,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     setFilteredResources(sampleResources)}, []);
 
   // Filter resources
-  useEffect(()   => {
+  useEffect(()           => {
     let filtered = resources;
 
     if (selectedType !== 'all') {
@@ -274,14 +306,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   // Calculate resource stats
   const resourceStats = {
   <<<<<<< HEAD
-    totalResources: anyresources.length,
-    availableResources: resources.filter(r   => r.status === 'available').length,
-    allocatedResources: anyresources.filter(r   => r.status === 'allocated').length,
-    maintenanceResources: anyresources.filter(r   => r.status === 'maintenance').length,
-    totalCapacity: anyresources.reduce((sum, r)   => sum + r.capacity, 0),
-    currentUtilization: anyresources.reduce((sum, r)   => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: anyresources.reduce((sum, r)   => sum + r.cost, 0) / resources.length || 0,
-    topDepartments: any(()   => {
+    totalResources: anyanyanyanyanyanyanyanyanyresources.length,
+    availableResources: resources.filter(r           => r.status === 'available').length,
+    allocatedResources: anyanyanyanyanyanyanyanyanyresources.filter(r           => r.status === 'allocated').length,
+    maintenanceResources: anyanyanyanyanyanyanyanyanyresources.filter(r           => r.status === 'maintenance').length,
+    totalCapacity: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)           => sum + r.capacity, 0),
+    currentUtilization: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)           => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)           => sum + r.cost, 0) / resources.length || 0,
+    topDepartments: anyanyanyanyanyanyanyanyany(()           => {
       const deptCounts = resources.reduce((acc,;
   r) => {;
         acc[r.department] = (acc[r.department] || 0) + 1;
@@ -291,12 +323,12 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 =======
   totalResources: resources.length,
     availableResources: resources.filter(r = > r.status === 'available').length,
-    allocatedResources: anyresources.filter(r  => r.status === 'allocated').length,
-    maintenanceResources: anyresources.filter(r  => r.status === 'maintenance').length,
-    totalCapacity: anyresources.reduce((sum, r)  => sum + r.capacity, 0),
-    currentUtilization: anyresources.reduce((sum, r)  => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: anyresources.reduce((sum, r)  => sum + r.cost, 0) / resources.length || 0,;
-    topDepartments: any(()  => {;
+    allocatedResources: anyanyanyanyanyanyanyanyanyresources.filter(r          => r.status === 'allocated').length,
+    maintenanceResources: anyanyanyanyanyanyanyanyanyresources.filter(r          => r.status === 'maintenance').length,
+    totalCapacity: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)          => sum + r.capacity, 0),
+    currentUtilization: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)          => sum + r.utilization, 0) / resources.length || 0,
+    averageCost: anyanyanyanyanyanyanyanyanyresources.reduce((sum, r)          => sum + r.cost, 0) / resources.length || 0,;
+    topDepartments: anyanyanyanyanyanyanyanyany(()          => {;
       const deptCounts = resources.reduce((acc,;
   ;
   ;
@@ -320,15 +352,15 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         .map(([name, count]) => ({
           name,
           count,
-          percentage: any(count / resources.length) * 100
+          percentage: anyanyanyanyanyanyanyanyany(count / resources.length) * 100
         }))
-        .sort((a, b)   => b.count - a.count)
+        .sort((a, b)           => b.count - a.count)
         .slice(0, 5)})()
   };
 
   // Get status color and icon
 <<<<<<< HEAD
-  const getStatusDisplay = (status: anystring)  => {;
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (status) {;
       case 'available':;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -350,7 +382,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get type icon
 <<<<<<< HEAD
-  const getTypeIcon = (type: anystring)  => {;
+  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (type) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'human': return <Users className="w-5 h-5" />;
@@ -368,7 +400,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Get priority color
 <<<<<<< HEAD
-  const getPriorityColor = (priority: anystring)  => {;
+  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (priority) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'low': return 'text-green-400 bg-green-400/20';
@@ -385,7 +417,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
 
   // Format currency
 <<<<<<< HEAD
-  const formatCurrency = (amount: anynumber)   => {
+  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanynumber)           => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -394,9 +426,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
     }).format(amount)};
 
   // Get utilization color
-  const getUtilizationColor = (utilization: anynumber)   => {
+  const getUtilizationColor = (utilization: anyanyanyanyanyanyanyanyanynumber)           => {
 =======;
-  const formatCurrency = (amount: anynumber)  => {;
+  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanynumber)          => {;
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -406,7 +438,7 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   };
 
   // Get utilization color
-  const getUtilizationColor = (utilization: anynumber)  => {;
+  const getUtilizationColor = (utilization: anyanyanyanyanyanyanyanyanynumber)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (utilization >= 90) return 'text-red-400';
     if (utilization >= 75) return 'text-yellow-400';
@@ -668,8 +700,8 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       {showStats && (
         <div className="mb-8">
           <h3 className="text-xl font-semibold text-white mb-4">Top Departments by Resources</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-4">
-            {resourceStats.topDepartments.map((dept, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
+            {resourceStats.topDepartments.map((dept, index)           => (
               <motion.div
                 key={dept.name}
                 initial = {

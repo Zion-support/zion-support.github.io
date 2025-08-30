@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion   } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { ArrowRight,
   Brain,
   Cloud,
@@ -16,20 +16,20 @@ import { ArrowRight,
   Zap,
   Phone
 <<<<<<< HEAD
-import { SEO  } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030  } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030  } from '../data/comprehensivePricingGuide2030';
+import { SEO          } from '../components/SEO';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030          } from '../data/comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030          } from '../data/comprehensivePricingGuide2030';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { SEO   } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030   } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030   } from '../data/comprehensivePricingGuide2030';
+import { SEO           } from '../components/SEO';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030           } from '../data/comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030           } from '../data/comprehensivePricingGuide2030';
 =======
 } from 'lucide-react';
-import { SEO  } from '../components/SEO';
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030  } from '../data/comprehensiveServicesIndex2030';
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030  } from '../data/comprehensivePricingGuide2030';
+import { SEO          } from '../components/SEO';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030          } from '../data/comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030          } from '../data/comprehensivePricingGuide2030';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -69,7 +69,7 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   });
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -93,7 +93,7 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
     };
     return icons[category] || <Rocket className="w-6 h-6" />};
 
-  const getCategoryColor = (category: anystring)   => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)           => {
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -125,7 +125,7 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
     setAiScoreRange([80, 100])};
 
 <<<<<<< HEAD
-  const openServiceModal = (service: any)  => {;
+  const openServiceModal = (service: anyanyanyanyanyanyanyanyany)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSelectedService(service);
     setShowModal(true)};
@@ -479,8 +479,8 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedServices.map((service, index)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedServices.map((service, index)           => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -607,8 +607,8 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {COMPREHENSIVE_PRICING_GUIDE_2030.slice(0, 3).map((service, index)           => (
                 <motion.div
                   key={service.serviceId}
                   initial = {
@@ -810,7 +810,7 @@ export default function ComprehensiveServicesLanding2030(...args[]: any):  {
                   <div className="mt-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Tags</h4>
                     <div className="flex flex-wrap gap-2">
-                      {selectedService.tags.map((tag: anystring)   => (
+                      {selectedService.tags.map((tag: anyanyanyanyanyanyanyanyanystring)           => (
                         <span
                           key={tag}
                           className="px-3 py-1 bg-blue-600/20 text-blue-400 text-sm rounded-full border border-blue-600/30"

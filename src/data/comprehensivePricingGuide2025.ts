@@ -1,5 +1,13 @@
 export interface PricingTier {
 
+
+
+
+
+
+
+
+
   name: string;
   price: number;
   currency: string;
@@ -12,9 +20,25 @@ export interface PricingTier {
   implementationTime: string;
   supportLevel: string;
 
+
+
+
+
+
+
+
+
 }
 
 export interface ServicePricing {
+
+
+
+
+
+
+
+
 
   serviceId: string;
   serviceName: string;
@@ -27,6 +51,14 @@ marketComparison: {;
     ourPrice: string;
     savings: string;
   
+
+
+
+
+
+
+
+
 }[];
   volumeDiscounts: {
     users: string;

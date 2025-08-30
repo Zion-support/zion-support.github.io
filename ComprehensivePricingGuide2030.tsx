@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { CheckCircle,
   Star,
   Zap,
@@ -15,9 +15,9 @@ import { CheckCircle,
   Phone,
   MapPin,
 =======
-import React, { useState, useMemo  } from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
+import React, { useState, useMemo          } from 'react.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -53,12 +53,12 @@ import { CheckCircle,
   Heart,
   Sparkles
 <<<<<<< HEAD
-import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
-import { SEO  } from '@/components/SEO';
+import { INNOVATIVE_SERVICES_2025          } from '@/data/innovativeServices2025';
+import { SEO          } from '@/components/SEO';
 =======
  } from 'lucide-react.ts';
-import { INNOVATIVE_SERVICES_2025   } from '@/data/innovativeServices2025';
-import { SEO   } from '@/components/SEO';
+import { INNOVATIVE_SERVICES_2025           } from '@/data/innovativeServices2025';
+import { SEO           } from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
@@ -105,7 +105,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getCategoryIcon = (category: anystring)   => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)           => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Sales':;
@@ -130,7 +130,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryColor = (category: anystring)   => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)           => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Sales':;
@@ -455,8 +455,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
 
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)           => (
               <motion.div
                 key={insight.title}
                 initial = {
@@ -539,8 +539,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
 
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)   => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)           => (
               <motion.div
                 key={tier.name}
                 initial = {
@@ -664,13 +664,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
 
-              {categories.map(category  => (
+              {categories.map(category          => (
 =======
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {categories.map(category   => (
+              {categories.map(category           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
@@ -681,13 +681,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
 <<<<<<< HEAD
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
 
-              {pricingModels.map(model  => (
+              {pricingModels.map(model          => (
 =======
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {pricingModels.map(model   => (
+              {pricingModels.map(model           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
@@ -698,14 +698,14 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
           </div>
 
           {/* Services Grid */}
-          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">
-            {filteredServices.map((service, index)   => {;
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)           => {;
 =======;
           </div>;
 ;
           {/* Services Grid */};
-          <div className="grid gap-8 grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3">;
-            {filteredServices.map((service, index)  => {;
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">;
+            {filteredServices.map((service, index)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);

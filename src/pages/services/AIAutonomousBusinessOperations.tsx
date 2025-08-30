@@ -1,8 +1,8 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
+import { Link          } from 'react-router-dom.ts';
+import { SEO          } from '@/components/SEO';
 import { Brain,
   Zap,
   TrendingUp,
@@ -160,7 +160,7 @@ import {
   Shield,
   Users,
   Workflow
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 
 const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -440,7 +440,7 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
             {[
               {
@@ -473,7 +473,7 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
 
-            ].map((benefit, index)  => (
+            ].map((benefit, index)          => (
               <motion.div
                 key={benefit.title}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -596,8 +596,8 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
           </motion.div>
 <<<<<<< HEAD
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)          => (
               <motion.div
                 key={useCase.industry}
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
@@ -675,8 +675,8 @@ const AIAutonomousBusinessOperations: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)          => (
               <motion.div
                 key={tier.name}
                 className={`bg-slate-800/50 rounded-xl p-8 border ${

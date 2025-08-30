@@ -1,5 +1,13 @@
 export interface Listing {
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -15,6 +23,14 @@ seller: {;
     rating: number;
     reviews: number;
   
+
+
+
+
+
+
+
+
 };
   location: string;
   createdAt: string;
@@ -60,6 +76,14 @@ export interface TalentListing extends Listing {
 
 export interface CartItem {
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   price: number;
@@ -67,14 +91,38 @@ export interface CartItem {
   type: 'product' | 'service' | 'talent';
   image?: string;
 
+
+
+
+
+
+
+
+
 }
 
 export interface WishlistItem {
+
+
+
+
+
+
+
+
 
   id: string;
   userId: string;
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
+
+
+
+
+
+
+
+
 
 }

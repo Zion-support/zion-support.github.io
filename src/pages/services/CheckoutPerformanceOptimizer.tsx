@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Zap, CheckCircle, CreditCard, ExternalLink, Mail, Phone  } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Zap, CheckCircle, CreditCard, ExternalLink, Mail, Phone          } from 'lucide-react.ts';
+import { Link          } from 'react-router-dom.ts';
 
 export default function CheckoutPerformanceOptimizer(...args: any[]): any {
   return (
@@ -10,13 +10,13 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {
           <CreditCard className="w-8 h-8 text-cyan-400"/> Checkout Performance Optimizer
         </h1>
         <p className="mt-4 text-slate-300">Reduce friction and boost conversion with real‑user monitoring, A/B tested layouts, and payment retries. Works with Stripe, PayPal, Adyen.</p>
-        <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
+        <div className="mt-8 grid gap-4 sm: anyanyanyanyanyanyanyanyanygrid-cols-2">
           {[
             { title: 'RUM & Session Replay', desc: 'Find slow steps and rage clicks across funnels.' },
             { title: 'Experimentation', desc: 'One‑click A/B templates for forms, shipping, and offers.' },
             { title: 'Payment resilience', desc: 'Smart retries, 3DS prompts, and dunning flows.' },
             { title: 'Analytics & alerts', desc: 'Error budgets, drop‑off heatmaps and Slack alerts.' },
-          ].map((f)  => (
+          ].map((f)          => (
             <div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-5">
               <div className="flex items-center gap-2 text-cyan-300 font-semibold"><CheckCircle className="w-4 h-4"/> {f.title}</div>
               <div className="mt-1 text-sm text-slate-300">{f.desc}</div>

@@ -2,24 +2,64 @@
 import React from 'react.ts';
 import { Filter, X interface FilterOption {
 
+
+
+
+
+
+
+
+
   value: string;
   label: string;
   count?: number;
 =======
 import React from 'react.ts';
 import { Filter, X   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 } from 'lucide-react.ts';
 
 interface FilterOption {
 
 
+
+
+
+
+
+
+
+
   value: string;
   label: string;
 count?: number;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterGroup {
+
+
+
+
+
+
+
+
 
 
   title: string;
@@ -28,7 +68,15 @@ interface FilterGroup {
 <<<<<<< HEAD
   type: 'checkbox' | 'radio' | 'range';
 =======
-type: any'checkbox' | 'radio' | 'range';
+type: anyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
+
+
+
+
+
+
+
+
 }
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
@@ -36,13 +84,13 @@ interface FilterSidebarProps extends React.PropsWithChildren<{}> {
 
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)   => void;
-  onClearFilters: any()   => void;
-  isOpen: anyboolean;
+  onFilterChange: (key: string, value: string, checked: boolean)           => void;
+  onClearFilters: anyanyanyanyanyanyanyanyany()           => void;
+  isOpen: anyanyanyanyanyanyanyanyanyboolean;
 <<<<<<< HEAD
-  onClose: ()  => void;
+  onClose: ()          => void;
 =======
-  onClose: any()   => void}
+  onClose: anyanyanyanyanyanyanyanyany()           => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function FilterSidebar(...args: any[]): any {
@@ -84,7 +132,7 @@ export function FilterSidebar(...args: any[]): any {
               className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
 
 =======
-              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear all
@@ -93,7 +141,7 @@ export function FilterSidebar(...args: any[]): any {
 
           {/* Filter groups */}
 <<<<<<< HEAD
-          {filters.map((group)   => (
+          {filters.map((group)           => (
             <div key={group.key} className="space-y-3">
               <h4 className="font-medium text-white">{group.title}</h4>
 

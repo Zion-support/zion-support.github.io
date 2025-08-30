@@ -1,27 +1,35 @@
 <<<<<<< HEAD
 import React, { useState, useEffect } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
+import { useNavigate          } from 'react-router-dom.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
   Phone, Mail, MapPin, ChevronRight, ChevronDown,
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
   Award, Clock, Heart, Lightbulb, Users, FileText,
   HelpCircle, BookOpen, Target, TrendingUp, Star
 =======
-import React, { useState, useEffect  } from 'react.ts';
+import React, { useState, useEffect          } from 'react.ts';
 import Link from 'next/link.ts';
-import { useRouter   } from 'next/router.ts';
-import { motion, AnimatePresence   } from 'framer-motion.ts';
+import { useRouter           } from 'next/router.ts';
+import { motion, AnimatePresence           } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SidebarItem {
+
+
+
+
+
+
+
+
 
 
   name: string;
@@ -38,12 +46,20 @@ interface SidebarItem {
   category?: string;
 =======
 category?: string;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const sidebarSections = [
   {
-    title: any'Revolutionary Services',
+    title: anyanyanyanyanyanyanyanyany'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items[
@@ -264,9 +280,9 @@ const sidebarSections = [
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
   isOpen: boolean;
-  onClose: ()  => void;
+  onClose: ()          => void;
 =======
-{ name: any'Training Programs', href: '/training';
+{ name: anyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
 },;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
@@ -280,14 +296,14 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   isOpen: boolean;
-  onClose: ()   => void}
+  onClose: ()           => void}
 
 export default function EnhancedSidebar2025(...args[]: any):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
 <<<<<<< HEAD
-  const toggleSection = (sectionTitle: anystring)  => {;
+  const toggleSection = (sectionTitle: anyanyanyanyanyanyanyanyanystring)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionTitle)) {
@@ -314,7 +330,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   );
 
 <<<<<<< HEAD
-  const toggleItem = (itemName: anystring)  => {;
+  const toggleItem = (itemName: anyanyanyanyanyanyanyanyanystring)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(itemName)) {
@@ -345,7 +361,7 @@ export default function EnhancedSidebar2025(...args[]: any):  {
       document.body.style.overflow = 'unset'}}, [isOpen]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (href: anystring)   => router.pathname === href;
+  const isActive = (href: anyanyanyanyanyanyanyanyanystring)           => router.pathname === href;
 
   return (
     <>

@@ -1,6 +1,14 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing          } from '@/types/listings';
 
 export interface PricingTier {
+
+
+
+
+
+
+
+
 
   id: string;
   name: string;
@@ -16,9 +24,25 @@ export interface PricingTier {
   integrations: string[];
   limitations?: string[];
 
+
+
+
+
+
+
+
+
 }
 
 export interface ServiceCategory {
+
+
+
+
+
+
+
+
 
   id: string;
   name: string;
@@ -26,6 +50,14 @@ export interface ServiceCategory {
   icon: string;
   services: ProductListing[];
   pricingTiers: PricingTier[];
+
+
+
+
+
+
+
+
 
 }
 

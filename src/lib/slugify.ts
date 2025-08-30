@@ -3,7 +3,7 @@
  * @param text - The text to convert to a slug
  * @returns A URL-friendly slug
  */
-export function slugify(text: anystring): string {
+export function slugify(text: anyanyanyanyanyanyanyanyanystring): string {
   return text
     .toLowerCase()
     .trim()
@@ -20,7 +20,7 @@ export function slugify(text: anystring): string {
 export function deslugify(slug: string): string {
   return slug
     .replace(/-/g, ' ')
-    .replace(/\b\w/g, (char)  => char.toUpperCase());
+    .replace(/\b\w/g, (char)          => char.toUpperCase());
 }
 
 /**

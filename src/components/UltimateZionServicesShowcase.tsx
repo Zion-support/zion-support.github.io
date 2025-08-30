@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { ultimateZionServices2025  } from '../data/ultimate-zion-services-2025';
+import { motion          } from 'framer-motion.ts';
+import { ultimateZionServices2025          } from '../data/ultimate-zion-services-2025';
 
 const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -264,9 +264,9 @@ const UltimateZionServicesShowcase: React.FC = (): JSX.Element => {;
             variants={containerVariants} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: anytrue }}
+            viewport={{ once: anyanyanyanyanyanyanyanyanytrue }}
           >
-            {filteredServices.map((service, index)  => (
+            {filteredServices.map((service, index)          => (
               <motion.div 
                 key={service.id} 
                 variants={itemVariants} 

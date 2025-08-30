@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO   } from '@/components/SEO';
+import { SEO           } from '@/components/SEO';
 =======
 import React from 'react.ts';
 import SEO from '@/components/SEO';
@@ -101,8 +101,8 @@ export default function FinOpsAdvisor(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -189,8 +189,8 @@ export default function FinOpsAdvisor(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -398,8 +398,8 @@ export default function FinOpsAdvisor(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)          => (
               <motion.div
                 key={index}
                 initial = {

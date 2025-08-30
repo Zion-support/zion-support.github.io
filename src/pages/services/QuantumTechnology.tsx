@@ -3,7 +3,7 @@ import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
 =======
 import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity   } from 'lucide-react.ts';
+import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity           } from 'lucide-react.ts';
 
 const QuantumTechnology = () => {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -165,8 +165,8 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {quantumServices.map((service, index)          => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -201,8 +201,8 @@ const QuantumTechnology = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {quantumTechnologies.map((tech, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {quantumTechnologies.map((tech, index)          => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>

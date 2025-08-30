@@ -1,5 +1,13 @@
 export interface PricingTier {
 
+
+
+
+
+
+
+
+
     name: string;
     price: string;
     billing: 'monthly' | 'yearly' | 'one-time';
@@ -7,9 +15,25 @@ export interface PricingTier {
     popular?: boolean;
     savings?: string;
 
+
+
+
+
+
+
+
+
 }
 
 export interface ServicePricing {
+
+
+
+
+
+
+
+
 
     id: string;
     name: string;
@@ -29,6 +53,14 @@ contactInfo: {;
         address: string;
         website: string;
     
+
+
+
+
+
+
+
+
 };
 }
 

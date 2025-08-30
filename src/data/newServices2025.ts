@@ -1,5 +1,13 @@
 export interface NewService {
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -38,6 +46,14 @@ benefits: [;
 tags: ['RAG', 'Chatbot', 'Docs', 'Embeddings'],;
 marketPrice: '$299–$999/mo + setup $2k–$10k',;
   
+
+
+
+
+
+
+
+
 },
   {
     id: 'ai-lead-scoring',

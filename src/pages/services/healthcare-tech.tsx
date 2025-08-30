@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope import { Link  } from 'react-router-dom.ts';
+import { Helmet          } from 'react-helmet-async.ts';
+import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope import { Link          } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet   } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope   } from 'lucide-react.ts';
-import { Link   } from 'react-router-dom.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope           } from 'lucide-react.ts';
+import { Link           } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function HealthcareTech(...args: []):  {
@@ -69,7 +69,7 @@ export default function HealthcareTech(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Heart,
@@ -102,7 +102,7 @@ export default function HealthcareTech(...args: []):  {
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
 <<<<<<< HEAD
 
-              ].map((feature, index)  => (
+              ].map((feature, index)          => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function HealthcareTech(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Diagnostic Imaging",
@@ -170,7 +170,7 @@ export default function HealthcareTech(...args: []):  {
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
 <<<<<<< HEAD
 
-              ].map((application, index)  => (
+              ].map((application, index)          => (
 =======
                 }
               ].map((application, index)  => (
@@ -231,11 +231,11 @@ export default function HealthcareTech(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { benefit: any"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
+                    { benefit: anyanyanyanyanyanyanyanyany"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
-                  ].map((item, index)   => (
+                  ].map((item, index)           => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-pink-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.benefit}</div>
@@ -260,7 +260,7 @@ export default function HealthcareTech(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "HIPAA Compliance",
@@ -299,7 +299,7 @@ export default function HealthcareTech(...args: []):  {
                   features: ["Security framework", "Risk management", "Continuous improvement"]
 <<<<<<< HEAD
 
-              ].map((compliance, index)  => (
+              ].map((compliance, index)          => (
 =======
                 }
               ].map((compliance, index)  => (
@@ -336,7 +336,7 @@ export default function HealthcareTech(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -359,7 +359,7 @@ export default function HealthcareTech(...args: []):  {
                   description: "Monitor performance and continuously optimize healthcare delivery."
 <<<<<<< HEAD
 
-              ].map((step, index)  => (
+              ].map((step, index)          => (
 =======
                 }
               ].map((step, index)  => (

@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import { AnimatePresence, motion  } from 'framer-motion.ts';
+import { AnimatePresence, motion          } from 'framer-motion.ts';
 import { =======
-import React, { useState  } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState          } from 'react.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { Mail,
   Phone,
   MapPin,
@@ -17,7 +17,7 @@ import { Mail,
   MapPin,
   Phone,
   Send
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 import React, { useState } from 'react.ts';
 =======
   MessageSquare,
@@ -29,18 +29,50 @@ import React, { useState } from 'react.ts';
 interface ContactFormData {
 
 
+
+
+
+
+
+
+
+
   name: string;
   email: string;
   phone: string;
   comp: string;
   service: string;
 message: string;
+
+
+
+
+
+
+
+
 }
 
 interface ContactFormErrors {
 
 
+
+
+
+
+
+
+
+
 [key: string]: string;
+
+
+
+
+
+
+
+
 }
 
 export function EnhancedContact(...args[]: any):  {
@@ -104,16 +136,16 @@ export function EnhancedContact(...args[]: any):  {
     return Object.keys(newErrors).length === 0};
 
 <<<<<<< HEAD
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
-    setFormData((prev: anyContactFormData)  => ({ ...prev, [field]: value }));
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanykeyof ContactFormData, value: string)          => {
+    setFormData((prev: anyanyanyanyanyanyanyanyanyContactFormData)          => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors((prev: anyContactFormErrors)  => ({ ...prev, [field]: '' }));
+      setErrors((prev: anyanyanyanyanyanyanyanyanyContactFormErrors)          => ({ ...prev, [field]: '' }));
     }
 =======
 <<<<<<< HEAD
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {;
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanykeyof ContactFormData, value: string)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setFormData(prev => ({ ...prev, [field]: value }));
 
@@ -124,7 +156,7 @@ export function EnhancedContact(...args[]: any):  {
   };
 
 <<<<<<< HEAD
-  const handleSubmit = async (e: anyReact.FormEvent)  => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyReact.FormEvent)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     e.preventDefault();
 
@@ -736,10 +768,10 @@ export function EnhancedContact(...args[]: any):  {
 
 
 }
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
-                  {services.map(service   => (
+                  {services.map(service           => (
                     <option key={service.value} value={service.value}>
                       {service.label}
                     </option>

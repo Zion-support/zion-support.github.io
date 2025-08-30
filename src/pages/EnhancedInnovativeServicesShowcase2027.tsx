@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 import { Brain,
   Globe,
   Zap,
@@ -34,7 +34,7 @@ import { Brain,
   Grid3X3,
   List
 <<<<<<< HEAD
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories  } from '../data/enhancedInnovativeServices2027';
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories          } from '../data/enhancedInnovativeServices2027';
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'Web3 Solutions': Globe,
   'Metaverse Solutions': Eye,
@@ -50,7 +50,7 @@ const categoryIcons: { [key: string]: React.ComponentType<any> } = {
 };
 =======
  } from 'lucide-react';
-import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories   } from '../data/enhancedInnovativeServices2027';
+import { enhancedInnovativeServices2027, enhancedInnovativeServices2027Categories           } from '../data/enhancedInnovativeServices2027';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const categoryColors: { [key: string]: string } = {
   'Web3 Solutions': 'from-purple-500 to-pink-500',
@@ -105,7 +105,7 @@ export default function EnhancedInnovativeServicesShowcase2027(...args[]: any): 
   X,;
   Beaker;
 } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027  } from '../data/enhancedInnovativeServices2027';
+import { ENHANCED_INNOVATIVE_SERVICES_2027, EnhancedInnovativeService2027          } from '../data/enhancedInnovativeServices2027';
 
 const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
   const [services, setServices] = useState<any>(ENHANCED_INNOVATIVE_SERVICES_2027);
@@ -166,7 +166,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
         return 0}
   });
 
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (category) {;
       case 'AI & Financial Technology': return <DollarSign className="w-5 h-5" />;
       case 'Quantum & Cloud Computing': return <Cpu className="w-5 h-5" />;
@@ -182,7 +182,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
     }
   };
 
-  const getInnovationLevelColor = (level: anystring)  => {;
+  const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (level) {;
       case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'Advanced': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
@@ -192,7 +192,7 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const handleServiceClick = (service: anyEnhancedInnovativeService2027)  => {;
+  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyEnhancedInnovativeService2027)          => {;
     setSelectedService(service);
     setCurrentSlide(0);
   };
@@ -313,12 +313,12 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === 'All'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anybg-zion-slate-dark/70'
+                    : 'bg-zion-slate-dark/50 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanybg-zion-slate-dark/70'
                 }`}
 
                 All Categories
               </button>
-              {enhancedInnovativeServices2027Categories.map((category)   => (
+              {enhancedInnovativeServices2027Categories.map((category)           => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -374,13 +374,13 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
             initial="hidden"
             animate="visible"
 <<<<<<< HEAD
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
 
-            {sortedServices.map((service)  => (
+            {sortedServices.map((service)          => (
 =======
-            className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {sortedServices.map((service)   => (
+            {sortedServices.map((service)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={service.id}
@@ -458,8 +458,8 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = (): JSX.Element => {;
 
       {/* Services Grid */}
       <div id="services-grid" className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {sortedServices.map((service, index)          => (
             <motion.div
               key={service.id}
               initial = {

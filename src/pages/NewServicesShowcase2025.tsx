@@ -1,12 +1,12 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
 import { <<<<<<< HEAD
   Zap, Bot, TrendingUp, Target, MessageCircle, BarChart3,
   DollarSign, Users, Check, ArrowRight, ExternalLink, Phone, Mail,
   Calendar, Shield, Filter, Headphones, Calculator, PieChart,
   ArrowRight, ExternalLink, Phone, Mail, Globe, TrendingUp, Shield, Leaf, Cpu, Atom, Wifi, CheckCircle, Star
-import { SEO  } from '@/components/SEO';
+import { SEO          } from '@/components/SEO';
 
 export default function NewServicesShowcase2025(...args: any[]): any {
   const newServices = [
@@ -233,10 +233,10 @@ export default function NewServicesShowcase2025(...args: any[]): any {
   Psi,
   Omega as OmegaIcon
 } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025          } from '../data/innovativeMicroSaasServices2025';
 
 export function NewServicesShowcase2025(...args: any[]): any {
-  const getIconComponent = (category: anystring)  => {
+  const getIconComponent = (category: anyanyanyanyanyanyanyanyanystring)          => {
     const iconMap: { [key: string]: any } = {
       'AI & Content Creation': Brain,
       'AI & Customer Service': Users,
@@ -263,7 +263,7 @@ export function NewServicesShowcase2025(...args: any[]): any {
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const getGradientColor = (index: anynumber)  => {
+  const getGradientColor = (index: anyanyanyanyanyanyanyanyanynumber)          => {
     const gradients = [
       'from-purple-500 to-pink-600',
       'from-blue-500 to-cyan-600',
@@ -316,8 +316,8 @@ export function NewServicesShowcase2025(...args: any[]): any {
           <p className="text-xl text-gray-600">Transform your business with our latest AI-powered solutions</p>
         </div>
 
-        <div className="grid lg: anygrid-cols-2 gap-8">
-          {newServices.map((service, index)  => (
+        <div className="grid lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {newServices.map((service, index)          => (
             <div key={index} className="bg-white border border-gray-200 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className={`bg-gradient-to-r ${service.color} p-8 text-white`}>
                 <div className="flex items-center mb-4">
@@ -407,8 +407,8 @@ export function NewServicesShowcase2025(...args: any[]): any {
             <p className="text-xl text-gray-600">Our AI services are designed for organizations across all sectors</p>
           </div>
 
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, index)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, index)          => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <Globe className="w-6 h-6 text-purple-600" />
@@ -432,8 +432,8 @@ export function NewServicesShowcase2025(...args: any[]): any {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {INNOVATIVE_MICRO_SAAS_SERVICES_2025.map((service, index)  => {
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {INNOVATIVE_MICRO_SAAS_SERVICES_2025.map((service, index)          => {
             const IconComponent = getIconComponent(service.category);
             const gradientColor = getGradientColor(index);
             

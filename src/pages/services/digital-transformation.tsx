@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link  } from 'react-router-dom.ts';
+import { Helmet          } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link          } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet   } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone   } from 'lucide-react.ts';
-import { Link   } from 'react-router-dom.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone           } from 'lucide-react.ts';
+import { Link           } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DigitalTransformation(...args: []):  {
@@ -69,7 +69,7 @@ export default function DigitalTransformation(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Brain,
@@ -102,7 +102,7 @@ export default function DigitalTransformation(...args: []):  {
                   description: "Leverage data insights for informed decision-making and optimization."
 <<<<<<< HEAD
 
-              ].map((feature, index)  => (
+              ].map((feature, index)          => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function DigitalTransformation(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Technology Infrastructure",
@@ -170,7 +170,7 @@ export default function DigitalTransformation(...args: []):  {
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
 <<<<<<< HEAD
 
-              ].map((area, index)  => (
+              ].map((area, index)          => (
 =======
                 }
               ].map((area, index)  => (
@@ -207,7 +207,7 @@ export default function DigitalTransformation(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Cloud Platforms",
@@ -246,7 +246,7 @@ export default function DigitalTransformation(...args: []):  {
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
 <<<<<<< HEAD
 
-              ].map((tech, index)  => (
+              ].map((tech, index)          => (
 =======
                 }
               ].map((tech, index)  => (
@@ -306,11 +306,11 @@ export default function DigitalTransformation(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"25-40%", label: "Efficiency", description: "Operational improvement" },
+                    { metric: anyanyanyanyanyanyanyanyany"25-40%", label: "Efficiency", description: "Operational improvement" },
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
-                  ].map((item, index)   => (
+                  ].map((item, index)           => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.label}</div>
@@ -335,7 +335,7 @@ export default function DigitalTransformation(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -358,7 +358,7 @@ export default function DigitalTransformation(...args: []):  {
                   description: "Continuously monitor, optimize, and scale digital capabilities."
 <<<<<<< HEAD
 
-              ].map((step, index)  => (
+              ].map((step, index)          => (
 =======
                 }
               ].map((step, index)  => (

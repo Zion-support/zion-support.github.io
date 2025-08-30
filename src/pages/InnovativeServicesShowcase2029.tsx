@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { Brain, 
   Shield, 
   Cloud, 
@@ -44,8 +44,8 @@ import { Brain,
   Pause,
   Volume2,
   VolumeX
- } from 'lucide-react.ts';
-import { innovativeMicroSAASServices2029  } from '../../data/innovative-micro-saas-2029';
+         } from 'lucide-react.ts';
+import { innovativeMicroSAASServices2029          } from '../../data/innovative-micro-saas-2029';
 
 export default function InnovativeServicesShowcase2029(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -236,12 +236,12 @@ export default function InnovativeServicesShowcase2029(...args: any[]): any {
             transition={{ duration: 0.8, delay: 0.7 }}
             className={`grid gap-6 ${
               viewMode === 'grid' 
-                ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+                ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
                 : 'grid-cols-1'
             }`}
           >
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
+              {filteredServices.map((service, index)          => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}

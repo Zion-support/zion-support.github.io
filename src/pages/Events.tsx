@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Calendar,
   Clock,
   MapPin,
@@ -21,7 +21,7 @@ import { Calendar,
   MessageCircle,
   BookOpen,
   CheckCircle
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 
 const events = [
   {
@@ -176,7 +176,7 @@ export default function Events(...args: any[]): any {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)          => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -186,7 +186,7 @@ export default function Events(...args: any[]): any {
     });
   };
 
-  const getCategoryIcon = (category: anystring)  => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {
     switch (category) {
       case 'AI & ML': return Brain;
       case 'Cybersecurity': return Shield;
@@ -198,7 +198,7 @@ export default function Events(...args: any[]): any {
     }
   };
 
-  const getStatusBadge = (status: anystring)  => {
+  const getStatusBadge = (status: anyanyanyanyanyanyanyanyanystring)          => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
     } else {
@@ -256,9 +256,9 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {eventTypes.map(type  => (
+                  {eventTypes.map(type          => (
                     <option key={type} value={type}>{type}</option>
                   ))}
                 </select>
@@ -269,9 +269,9 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category  => (
+                  {categories.map(category          => (
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -282,9 +282,9 @@ export default function Events(...args: any[]): any {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {statuses.map(status  => (
+                  {statuses.map(status          => (
                     <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
                     </option>
@@ -311,8 +311,8 @@ export default function Events(...args: any[]): any {
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {upcomingEvents.map((event, index)          => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -428,8 +428,8 @@ export default function Events(...args: any[]): any {
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {pastEvents.map((event, index)          => {
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div

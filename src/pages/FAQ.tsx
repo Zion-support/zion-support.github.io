@@ -1,10 +1,18 @@
 import React, { useState } from 'react.ts';
 <<<<<<< HEAD
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO  } from '../components/SEO';
+import { ChevronDown, ChevronUp, HelpCircle, Search, Zap, Shield, Cloud, Brain import { SEO          } from '../components/SEO';
 
 interface FAQItem {
+
+
+
+
+
+
+
+
 
   id: string;
   question: string;
@@ -20,6 +28,14 @@ answer: 'We offer comprehensive AI services including machine learning, natural 
 category: 'AI Services',;
 icon: Brain;
   
+
+
+
+
+
+
+
+
 },
   {
     id: 'cybersecurity',
@@ -78,9 +94,9 @@ export default function FAQ(...args: any[]): any {
   const [activeItem, setActiveItem] = useState<any>(null);
   const [selectedCategory, setSelectedCategory] = useState('All');
 =======
-import { SEO  } from '../components/SEO';
+import { SEO          } from '../components/SEO';
 =======
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 import { Search, 
   ChevronDown, 
@@ -105,7 +121,7 @@ import { Search,
   Zap,
   Users,
   Globe
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 =======
   MessageCircle,
   Star,
@@ -114,9 +130,9 @@ import { Search,
   Lock,
   CheckCircle
 } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { SEO          } from '@/components/SEO';
+import { Button          } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle          } from '@/components/ui/card';
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
 const FAQ: React.FC = (): JSX.Element => {
@@ -125,7 +141,7 @@ const FAQ: React.FC = (): JSX.Element => {
 <<<<<<< HEAD
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set([0]));
 
-  const toggleItem = (index: anynumber)  => {
+  const toggleItem = (index: anyanyanyanyanyanyanyanyanynumber)          => {
     const newExpanded = new Set(expandedItems);
     if (newExpanded.has(index)) {
       newExpanded.delete(index);
@@ -136,7 +152,7 @@ const FAQ: React.FC = (): JSX.Element => {
 =======
   const [openItems, setOpenItems] = useState<any>({});
 
-  const toggleItem = (categoryIndex: anynumber, questionIndex: number)  => {
+  const toggleItem = (categoryIndex: anyanyanyanyanyanyanyanyanynumber, questionIndex: number)          => {
     const key = `${categoryIndex}-${questionIndex}`;
     setOpenItems(prev => ({
       ...prev,
@@ -421,7 +437,7 @@ const FAQ: React.FC = (): JSX.Element => {
 =======
   const filteredCategories = faqCategories.map(category => ({
     ...category,
-    questions: anycategory.questions.filter(q  =>
+    questions: anyanyanyanyanyanyanyanyanycategory.questions.filter(q          =>
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchQuery.toLowerCase())
     )
@@ -669,8 +685,8 @@ const FAQ: React.FC = (): JSX.Element => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-4xl mx-auto">
-            {contactInfo.map((info, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {contactInfo.map((info, index)          => (
               <motion.div
                 key={info.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -960,8 +976,8 @@ const FAQ: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {contactInfo.map((info, index)          => (
                 <motion.div
                   key={info.title}
                   initial={{ opacity: 0, y: 30 }}

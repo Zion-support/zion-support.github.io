@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu   } from 'lucide-react.ts';
+import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu           } from 'lucide-react.ts';
 =======
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 import { Leaf,
   Zap,
   Shield,
@@ -28,7 +28,7 @@ import { Leaf,
   Award,
   BarChart3
 <<<<<<< HEAD
-import { SEO  } from '../../components/SEO';
+import { SEO          } from '../../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
@@ -247,8 +247,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {greenServices.map((service, index)           => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -283,8 +283,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {greenTechnologies.map((tech, index)           => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -459,8 +459,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -542,8 +542,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -635,8 +635,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -728,8 +728,8 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)          => (
               <motion.div
                 key={index}
                 initial = {
@@ -810,7 +810,7 @@ export default function GreenIT(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -832,7 +832,7 @@ export default function GreenIT(...args: any[]): any {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
-            ].map((phase, index)  => (
+            ].map((phase, index)          => (
               <motion.div
                 key={index}
                 initial = {

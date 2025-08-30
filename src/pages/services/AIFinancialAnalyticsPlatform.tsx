@@ -1,4 +1,4 @@
-import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield  } from 'lucide-react.ts';
+import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield          } from 'lucide-react.ts';
 
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
   const features = [
@@ -98,8 +98,8 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Financial Plans</h3>
-            <div className="grid md: anygrid-cols-1 gap-4">
-              {tiers.map((t)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-1 gap-4">
+              {tiers.map((t)          => (
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>
@@ -147,8 +147,8 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Financial Analysis Tools</h3>
-          <div className="grid md: anygrid-cols-3 gap-6">
-            {financialTools.map((t)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {financialTools.map((t)          => (
               <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <PieChart className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
@@ -159,8 +159,8 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
-          <div className="grid md: anygrid-cols-3 gap-6">
-            {aiCapabilities.map((c)  => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+            {aiCapabilities.map((c)          => (
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>

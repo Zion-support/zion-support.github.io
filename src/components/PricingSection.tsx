@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = (): JSX.Element => {
 =======
 import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
-import { Check, Star, Zap, Shield, Brain, Cloud   } from 'lucide-react.ts';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud           } from 'lucide-react.ts';
 
 <<<<<<< HEAD
 export const PricingSection: React.FC = (): JSX.Element => {
@@ -168,8 +168,8 @@ export function PricingSection(...args: any[]): any {
         </motion.div>
 
 <<<<<<< HEAD
-        <div className="grid md: anygrid-cols-3 gap-8 mb-12">;
-          {plans.map((plan, index)   => {;
+        <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">;
+          {plans.map((plan, index)           => {;
             const IconComponent = plan.icon;
             return (
               <motion.div
@@ -199,8 +199,8 @@ export function PricingSection(...args: any[]): any {
                       Most Popular
                     </span>
 =======
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index)          => (
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}

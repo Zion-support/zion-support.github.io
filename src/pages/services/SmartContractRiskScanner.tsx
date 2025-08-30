@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { SEO   } from '../../components/SEO';
+import { motion           } from 'framer-motion.ts';
+import { SEO           } from '../../components/SEO';
 import { Shield, 
 =======
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { SEO  } from '../../components/SEO';
+import { SEO          } from '../../components/SEO';
 import { Shield,
   Search,
   AlertTriangle,
   CheckCircle,
 =======
-import { SEO  } from '../../components/SEO';
+import { SEO          } from '../../components/SEO';
 import { Shield, 
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Search, 
@@ -47,7 +47,7 @@ import { Shield,
 <<<<<<< HEAD
 export default function SmartContractRiskScanner(...args: any[]): any {
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 export default function SmartContractRiskScanner(...args: []):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -312,8 +312,8 @@ export default function SmartContractRiskScanner(...args: []):  {
       {/* Market Information */}
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md: anygrid-cols-5 gap-6">
-            {Object.entries(marketInfo).map(([key, value])   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
+            {Object.entries(marketInfo).map(([key, value])           => (
               <motion.div
                 key={key}
                 initial = {
@@ -385,8 +385,8 @@ export default function SmartContractRiskScanner(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {features.map((feature, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {features.map((feature, index)           => (
               <motion.div
                 key={index}
                 initial = {
@@ -480,8 +480,8 @@ export default function SmartContractRiskScanner(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {scanningCapabilities.map((capability, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {scanningCapabilities.map((capability, index)           => (
               <motion.div
                 key={index}
                 initial = {
@@ -575,8 +575,8 @@ export default function SmartContractRiskScanner(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-            {supportedNetworks.map((network, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportedNetworks.map((network, index)           => (
               <motion.div
                 key={index}
                 initial = {
@@ -657,8 +657,8 @@ export default function SmartContractRiskScanner(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {securityStandards.map((standard, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {securityStandards.map((standard, index)           => (
               <motion.div
                 key={index}
                 initial = {
@@ -739,8 +739,8 @@ export default function SmartContractRiskScanner(...args: []):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index)   => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)           => (
               <motion.div
                 key={index}
                 initial = {

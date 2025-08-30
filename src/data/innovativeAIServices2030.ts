@@ -4,6 +4,14 @@
 export interface AIService {
 
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -16,6 +24,14 @@ pricing: {;
     currency: string;
     pricingModel: string;
 marketPrice: string;
+
+
+
+
+
+
+
+
 };
   features: string[];
   benefits: string[];

@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 import { Building, 
   Heart, 
   Factory, 
@@ -12,8 +12,8 @@ import { Building,
   Cloud,
   Shield,
   TrendingUp
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+         } from 'lucide-react.ts';
+import { Link          } from 'react-router-dom.ts';
 
 const IndustrySolutions: React.FC = (): JSX.Element => {
   const industries = [
@@ -129,8 +129,8 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit, index)          => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
@@ -164,8 +164,8 @@ const IndustrySolutions: React.FC = (): JSX.Element => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {industries.map((industry, index)          => (
             <motion.div
               key={industry.title}
               initial={{ opacity: 0, y: 20 }}

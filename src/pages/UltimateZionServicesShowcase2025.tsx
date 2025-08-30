@@ -1,11 +1,11 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025   } from '../data/ultimateZionServices2025';
+import { SEO           } from '../components/SEO';
+import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025           } from '../data/ultimateZionServices2025';
 =======
 import React from 'react.ts';
-import { SEO  } from '../components/SEO';
-import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025  } from '../data/ultimateZionServices2025';
+import { SEO          } from '../components/SEO';
+import { ultimateMicroSaasServices2025, ultimateITInfrastructureServices2025, ultimateAIServices2025          } from '../data/ultimateZionServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
@@ -103,8 +103,8 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {ultimateMicroSaasServices2025.map((service)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {ultimateMicroSaasServices2025.map((service)           => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-semibold rounded-full">
@@ -179,8 +179,8 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-              {ultimateITInfrastructureServices2025.map((service)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {ultimateITInfrastructureServices2025.map((service)           => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300 transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
@@ -247,8 +247,8 @@ const UltimateZionServicesShowcase2025: React.FC = (): JSX.Element => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-              {ultimateAIServices2025.map((service)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {ultimateAIServices2025.map((service)           => (
                 <div key={service.id} className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-green-500 transition-all duration-300 transform hover:scale-105">
                   <div className="flex items-center justify-between mb-4">
                     <span className="px-3 py-1 bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-semibold rounded-full">

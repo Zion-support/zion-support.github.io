@@ -2,8 +2,8 @@ import React from 'react.ts';
 
 interface ErrorFallbackProps extends React.PropsWithChildren<{}> {
 
-  error: anyError;
-  resetErrorBoundary: ()  => void;
+  error: anyanyanyanyanyanyanyanyanyError;
+  resetErrorBoundary: ()          => void;
 
 }
 

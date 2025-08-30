@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React, { useEffect, useState, useRef } from 'react.ts';
-import { motion, AnimatePresence, useScroll, useTransform  } from 'framer-motion.ts';
+import { motion, AnimatePresence, useScroll, useTransform          } from 'framer-motion.ts';
 import {
   Sparkles,
   Zap,
@@ -11,6 +11,14 @@ import {
   Settings,
   X
 interface UISettings {
+
+
+
+
+
+
+
+
 
   glassmorphism: boolean;
   particleEffects: boolean;
@@ -31,6 +39,14 @@ modernShadows: true,;
 colorThemes: true,;
 depthLayers: true;
   
+
+
+
+
+
+
+
+
 });
 
   const [activeTheme, setActiveTheme] = useState('default');
@@ -98,7 +114,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     
     // Modern color palette
     const colors = {
-      primary: anyaccentColor,
+      primary: anyanyanyanyanyanyanyanyanyaccentColor,
       secondary: '#6366f1',
       success: '#10b981',
       warning: '#f59e0b',
@@ -120,7 +136,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     };
 
 <<<<<<< HEAD
-  useEffect(()  => {
+  useEffect(()          => {
     // Apply settings when they change
     applyUISettings();
   }, [settings]);
@@ -443,7 +459,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     
     // Modern spacing scale (4px base unit)
     const spacing = {
-      0: any'0px',
+      0: anyanyanyanyanyanyanyanyany'0px',
       1: '4px',
       2: '8px',
       3: '12px',
@@ -463,7 +479,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       32: '128px'
     };
 
-    Object.entries(spacing).forEach(([key, value])  => {
+    Object.entries(spacing).forEach(([key, value])          => {
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
@@ -476,7 +492,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     
     // Modern shadow system
     const shadows = {
-      xs: any'0 1px 2px 0 rgb(0 0 0 / 0.05)',
+      xs: anyanyanyanyanyanyanyanyany'0 1px 2px 0 rgb(0 0 0 / 0.05)',
       sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
       lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
@@ -485,7 +501,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
 
-    Object.entries(shadows).forEach(([key, value])  => {
+    Object.entries(shadows).forEach(([key, value])          => {
       root.style.setProperty(`--shadow-${key}`, value);
     });
   }, [enabled]);
@@ -678,7 +694,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     
     // Modern transition system
     const transitions = {
-      fast: any'150ms ease-in-out',
+      fast: anyanyanyanyanyanyanyanyany'150ms ease-in-out',
       normal: '250ms ease-in-out',
       slow: '350ms ease-in-out',
       bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
@@ -686,7 +702,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
     };
 
-    Object.entries(transitions).forEach(([key, value])  => {
+    Object.entries(transitions).forEach(([key, value])          => {
       root.style.setProperty(`--transition-${key}`, value);
     });
   }, [enabled]);
@@ -698,7 +714,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     
     // Modern border radius system
     const radius = {
-      none: any'0px',
+      none: anyanyanyanyanyanyanyanyany'0px',
       sm: '2px',
       md: '6px',
       lg: '8px',
@@ -708,7 +724,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       full: '9999px'
     };
 
-    Object.entries(radius).forEach(([key, value])  => {
+    Object.entries(radius).forEach(([key, value])          => {
       root.style.setProperty(`--radius-${key}`, value);
     });
   }, [enabled]);

@@ -1,7 +1,15 @@
 import React, { useState } from 'react.ts';
-import { useState, useCallback  } from 'react.ts';
+import { useState, useCallback          } from 'react.ts';
 
 interface Toast {
+
+
+
+
+
+
+
+
 
 
   id: string;
@@ -12,6 +20,14 @@ interface Toast {
   duration?: number;
 =======
 duration?: number;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -37,13 +53,13 @@ export function useToast(...args[]: any):  {
   }, []);
 
 <<<<<<< HEAD
-  const dismiss = useCallback((id: anystring)   => {;
+  const dismiss = useCallback((id: anyanyanyanyanyanyanyanyanystring)           => {;
     setToasts(prev => prev.filter(toast => toast.id !== id))}, []);
 
   const dismissAll = useCallback(() => {;
     setToasts([])}, []);
 =======
-  const dismiss = useCallback((id: anystring)  => {;
+  const dismiss = useCallback((id: anyanyanyanyanyanyanyanyanystring)          => {;
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react.ts';
 <<<<<<< HEAD
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research(...args: any[]): any {
 =======
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon   } from 'lucide-react.ts';
+import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon           } from 'lucide-react.ts';
 
 export default function Research(...args: any[]): any {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -267,14 +267,14 @@ export default function Research(...args: any[]): any {
   });
 
 <<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anystring)   => {;
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanystring)           => {;
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
 
-  const getCategoryIcon = (categoryId: anystring)  => {;
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanystring)          => {;
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: anystring)  => {;
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (status) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'active': return 'text-green-400';
@@ -290,7 +290,7 @@ export default function Research(...args: any[]): any {
   };
 
 <<<<<<< HEAD
-  const getImpactColor = (impact: anystring)  => {;
+  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (impact) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'very-high': return 'text-red-400';
@@ -306,26 +306,26 @@ export default function Research(...args: any[]): any {
   };
 
 <<<<<<< HEAD
-  const formatDate = (dateString: anystring)   => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)           => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',;
       month: 'short';
     })};
 
-  const formatFunding = (amount: anynumber)   => {
+  const formatFunding = (amount: anyanyanyanyanyanyanyanyanynumber)           => {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
       return `$${(amount / 1000).toFixed(0)}K`};
     return `$${amount.toLocaleString()}`};
 =======
-  const formatDate = (dateString: anystring)  => {;
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)          => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;
       month: 'short';
     });
   };
 
-  const formatFunding = (amount: anynumber)  => {;
+  const formatFunding = (amount: anyanyanyanyanyanyanyanyanynumber)          => {;
     if (amount >= 1000000) {;
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
@@ -424,7 +424,7 @@ export default function Research(...args: any[]): any {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anybg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover: anyanyanyanyanyanyanyanyanybg-zion-slate-light hover:text-white'
                       }`}
 
                       {type.name} ({type.count})
@@ -438,14 +438,14 @@ export default function Research(...args: any[]): any {
       </div>
 
       {/* Featured Research */}
-      {researchProjects.filter(p   => p.featured).length > 0 && (
+      {researchProjects.filter(p           => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p   => p.featured).map((project) => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {researchProjects.filter(p           => p.featured).map((project) => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
@@ -522,8 +522,8 @@ export default function Research(...args: any[]): any {
           </h2>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredProjects.map((project)           => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"

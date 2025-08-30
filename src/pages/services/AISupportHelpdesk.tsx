@@ -1,14 +1,14 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO  } from '@/components/SEO';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO          } from '@/components/SEO';
 =======
 import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
-import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone   } from 'lucide-react.ts';
-import { SEO   } from '@/components/SEO';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone           } from 'lucide-react.ts';
+import { SEO           } from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AISupportHelpdesk(...args[]: any):  {
@@ -317,12 +317,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)          => (
 =======
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)   => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -382,12 +382,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)          => (
 =======
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {aiCapabilities.map((capability, index)   => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -447,12 +447,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)          => (
 =======
             
-            <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {supportChannels.map((channel, index)   => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -512,12 +512,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)          => (
 =======
             
-            <div className="grid md: anygrid-cols-2 gap-8">
-              {benefits.map((benefit, index)   => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
@@ -579,12 +579,12 @@ export default function AISupportHelpdesk(...args[]: any):  {
             </div>
 <<<<<<< HEAD
 
-            <div className="grid md: anygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)          => (
 =======
             
-            <div className="grid md: anygrid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)   => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}

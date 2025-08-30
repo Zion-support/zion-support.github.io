@@ -1,6 +1,6 @@
 import React from 'react.ts'
-import { SEO  } from '../../components/SEO'
-import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2  } from 'lucide-react.ts'
+import { SEO          } from '../../components/SEO'
+import { Bot, MessageSquare, Headphones, Zap, PieChart, CheckCircle2          } from 'lucide-react.ts'
 
 export default function AIAgentHelpdesk(...args: any[]): any {
   const features = [
@@ -52,8 +52,8 @@ export default function AIAgentHelpdesk(...args: any[]): any {
       </section>
 
       <section className="py-10">
-        <div className="container-responsive grid grid-cols-1 md: anygrid-cols-3 gap-6">
-          {pricing.map((p)  => (
+        <div className="container-responsive grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {pricing.map((p)          => (
             <div key={p.tier} className="card-futuristic">
               <div className="text-sm text-zion-blue-light/70">{p.tier}</div>
               <div className="text-3xl font-bold text-white mt-2">{p.price}</div>

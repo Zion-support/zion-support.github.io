@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
 import { Twitter,
   Linkedin,
   Facebook,
@@ -46,9 +46,17 @@ import { Twitter,
   ExternalLink,
   ChevronDown,
   Copyright
-import { AnimatePresence  } from 'framer-motion.ts';
+import { AnimatePresence          } from 'framer-motion.ts';
 
 interface FooterLink {
+
+
+
+
+
+
+
+
 
   name: string;
   path: string;
@@ -66,6 +74,14 @@ title: 'Comp',;
 icon: Globe,;
 links: [;
 { name: 'About Us', path: '/about', icon: Users;
+
+
+
+
+
+
+
+
 },
       { name: 'Partners', path: '/partners', icon: Users },
       { name: 'Careers', path: '/careers', icon: Briefcase },
@@ -246,7 +262,7 @@ export function Footer(...args: any[]): any {
 
 <<<<<<< HEAD
   // Toggle section expansion (for mobile)
-  const toggleSection = (title: anystring)  => {
+  const toggleSection = (title: anyanyanyanyanyanyanyanyanystring)          => {
     setExpandedSections(prev => {
       const newSet = new Set(prev);
       if (newSet.has(title)) {
@@ -364,8 +380,8 @@ export function Footer(...args: any[]): any {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-          {footerSections.map((section)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {footerSections.map((section)          => (
             <div key={section.title} className="space-y-4">
               <motion.button
                 onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}

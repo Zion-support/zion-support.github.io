@@ -1,6 +1,14 @@
 export interface CartItem {
 
 
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   price: number;
@@ -10,21 +18,29 @@ export interface CartItem {
 =======
 
 
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 <<<<<<< HEAD
-export const calculateCartTotal = (items: anyCartItem[]): number   => {;
+export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyCartItem[]): number           => {;
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: anyCartItem[], item: CartItem): CartItem[]   => {;
+export const addToCart = (cart: anyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]           => {;
 =======;
-export const calculateCartTotal = (items: anyCartItem[]): number  => {;
+export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyCartItem[]): number          => {;
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: anyCartItem[], item: CartItem): CartItem[]  => {;
+export const addToCart = (cart: anyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
 
@@ -43,18 +59,18 @@ export const addToCart = (cart: anyCartItem[], item: CartItem): CartItem[]  => {
 };
 
 <<<<<<< HEAD
-export const removeFromCart = (cart: anyCartItem[], itemId: string): CartItem[]   => {;
+export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]           => {;
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: anyCartItem[], itemId: string, quantity: number): CartItem[]   => {
+export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]           => {
   if (quantity <= 0) {;
 =======;
-export const removeFromCart = (cart: anyCartItem[], itemId: string): CartItem[]  => {;
+export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]          => {;
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: anyCartItem[], itemId: string, quantity: number): CartItem[]  => {;
+export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]          => {;
   if (quantity <= 0) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return removeFromCart(cart, itemId);
@@ -73,11 +89,11 @@ export const clearCart = (): CartItem[] => {;
 };
 
 <<<<<<< HEAD
-export const getCartKey = (userId: anystring): string   => {;
+export const getCartKey = (userId: anyanyanyanyanyanyanyanyanystring): string           => {;
   return `cart_${userId}`;
 };
 
-export const mergeCartItems = (existingItems: anyCartItem[], newItems: CartItem[]): CartItem[]  => {
+export const mergeCartItems = (existingItems: anyanyanyanyanyanyanyanyanyCartItem[], newItems: CartItem[]): CartItem[]          => {
   const merged = [...existingItems];
 
   newItems.forEach(newItem => {

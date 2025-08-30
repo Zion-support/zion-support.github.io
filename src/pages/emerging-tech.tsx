@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 import { Atom, 
   Brain, 
   Network, 
@@ -12,8 +12,8 @@ import { Atom,
   Globe,
   Rocket,
   Star
- } from 'lucide-react.ts';
-import { Link  } from 'react-router-dom.ts';
+         } from 'lucide-react.ts';
+import { Link          } from 'react-router-dom.ts';
 
 const EmergingTech: React.FC = (): JSX.Element => {
   const technologies = [
@@ -99,8 +99,8 @@ const EmergingTech: React.FC = (): JSX.Element => {
 
       {/* Technologies Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {technologies.map((tech, index)          => (
             <motion.div
               key={tech.title}
               initial={{ opacity: 0, y: 20 }}

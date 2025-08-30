@@ -1,6 +1,14 @@
-import { TalentProfile   } from './talent';
+import { TalentProfile           } from './talent';
 
 export interface ProjectBrief {
+
+
+
+
+
+
+
+
 
 
   id?: string; // Optional: could be added if we save briefs to the DB
@@ -16,9 +24,25 @@ export interface ProjectBrief {
   talentFilters?: TalentFilters; // New
 
 
+
+
+
+
+
+
+
+
 }
 
 export interface TalentFilters {
+
+
+
+
+
+
+
+
 
 
   verifiedOnly?: boolean;
@@ -26,9 +50,25 @@ export interface TalentFilters {
   // Add other potential filters like min_experience, etc. later if needed
 
 
+
+
+
+
+
+
+
+
 }
 
 export interface RecommendedRole {
+
+
+
+
+
+
+
+
 
 
   role: string; // e.g., "Product Manager", "Fullstack Engineer"
@@ -38,12 +78,28 @@ hourlyRateRange: { // Estimated;
     max: number;
   
 
+
+
+
+
+
+
+
+
 };
   weeklyHours: number; // Estimated
   matchedTalent: TalentProfile[]; // Talent profiles matching this role
 }
 
 export interface TeamRecommendation {
+
+
+
+
+
+
+
+
 
 
   id?: string; // Optional: if we save recommendations
@@ -54,6 +110,14 @@ totalEstimatedRate: { // Sum of (hourlyRateRange.avg * weeklyHours) for all role
     min: number;
     max: number;
   
+
+
+
+
+
+
+
+
 
 };
   totalWeeklyBurn: { // Sum of (hourlyRateRange.avg * weeklyHours) for all roles - same as totalEstimatedRate for now
@@ -71,6 +135,14 @@ totalEstimatedRate: { // Sum of (hourlyRateRange.avg * weeklyHours) for all role
 export interface TeamInvite {
 
 
+
+
+
+
+
+
+
+
   id?: string;
   teamRecommendationId?: string;
   talentId: string;
@@ -78,6 +150,14 @@ export interface TeamInvite {
   status: 'pending' | 'accepted' | 'declined';
   createdAt?: string;
   updatedAt?: string;
+
+
+
+
+
+
+
+
 
 
 }

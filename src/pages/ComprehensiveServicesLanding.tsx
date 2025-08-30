@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { SEO   } from '../components/SEO';
-import { motion   } from 'framer-motion.ts';
-import { Link   } from 'react-router-dom.ts';
+import { SEO           } from '../components/SEO';
+import { motion           } from 'framer-motion.ts';
+import { Link           } from 'react-router-dom.ts';
 
 const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
   const serviceCategories = [
@@ -229,8 +229,8 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                     </p>
                   </div>
 
-                  <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                    {category.services.map((service, serviceIndex)   => (
+                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                    {category.services.map((service, serviceIndex)           => (
                       <motion.div
                         key={service.title}
                         initial = {
@@ -302,7 +302,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {[
                 {
                   title: "AI-Powered Code Review & Security Analysis",
@@ -320,7 +320,7 @@ const ComprehensiveServicesLanding: React.FC = (): JSX.Element => {
                   url: "/services/ai-customer-experience-analytics",
                   cta: "Analyze Customer Data"
                 }
-              ].map((service, index)   => (
+              ].map((service, index)           => (
                 <motion.div
                   key={service.title}
                   initial = {

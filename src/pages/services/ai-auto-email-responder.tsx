@@ -1,12 +1,12 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot import { Link  } from 'react-router-dom.ts';
+import { Helmet          } from 'react-helmet-async.ts';
+import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot import { Link          } from 'react-router-dom.ts';
 =======
 import React from 'react.ts';
-import { Helmet   } from 'react-helmet-async.ts';
-import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot   } from 'lucide-react.ts';
-import { Link   } from 'react-router-dom.ts';
+import { Helmet           } from 'react-helmet-async.ts';
+import { Mail, MessageCircle, Zap, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Clock, Target, Activity, BarChart3, Database, Bot           } from 'lucide-react.ts';
+import { Link           } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIAutoEmailResponder(...args: []):  {
@@ -69,7 +69,7 @@ export default function AIAutoEmailResponder(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   icon: Bot,
@@ -102,7 +102,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Enterprise-grade security with data encryption and privacy protection."
 <<<<<<< HEAD
 
-              ].map((feature, index)  => (
+              ].map((feature, index)          => (
 =======
                 }
               ].map((feature, index)  => (
@@ -131,7 +131,7 @@ export default function AIAutoEmailResponder(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Customer Support",
@@ -170,7 +170,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
 <<<<<<< HEAD
 
-              ].map((useCase, index)  => (
+              ].map((useCase, index)          => (
 =======
                 }
               ].map((useCase, index)  => (
@@ -207,7 +207,7 @@ export default function AIAutoEmailResponder(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   step: "01",
@@ -230,7 +230,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   description: "Automated responses are sent and logged in CRM systems."
 <<<<<<< HEAD
 
-              ].map((step, index)  => (
+              ].map((step, index)          => (
 =======
                 }
               ].map((step, index)  => (
@@ -282,11 +282,11 @@ export default function AIAutoEmailResponder(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: any"90%", label: "Faster Response Time" },
+                    { metric: anyanyanyanyanyanyanyanyany"90%", label: "Faster Response Time" },
                     { metric: "10x", label: "Email Volume Capacity" },
                     { metric: "24/7", label: "Availability" },
                     { metric: "95%", label: "Customer Satisfaction" }
-                  ].map((item, index)   => (
+                  ].map((item, index)           => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-blue-400">{item.metric}</span>
@@ -310,7 +310,7 @@ export default function AIAutoEmailResponder(...args: []):  {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "Email Platforms",
@@ -349,7 +349,7 @@ export default function AIAutoEmailResponder(...args: []):  {
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
 <<<<<<< HEAD
 
-              ].map((integration, index)  => (
+              ].map((integration, index)          => (
 =======
                 }
               ].map((integration, index)  => (

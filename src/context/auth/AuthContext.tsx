@@ -3,6 +3,14 @@ import React, { createContext, useContext } from 'react.ts';
 interface User {
 
 
+
+
+
+
+
+
+
+
   id: string;
   email: string;
   displayName?: string;
@@ -14,21 +22,53 @@ interface User {
   updatedAt?: string;
 =======
 updatedAt?: string;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthTokens {
 
 
+
+
+
+
+
+
+
+
   accessToken: string | null;
 <<<<<<< HEAD
   refreshToken: string | null;
 =======
-refreshToken: anystring | null;
+refreshToken: anyanyanyanyanyanyanyanyanystring | null;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface AuthContextType {
+
+
+
+
+
+
+
+
 
 
   user: User | null;
@@ -36,27 +76,35 @@ interface AuthContextType {
   onboardingStep: number;
   tokens: AuthTokens;
 <<<<<<< HEAD
-login: (email: string, password: string)  => Promise<any>;
-  register: (name: string, email: string, password: string)  => Promise<any>;
-  signup: (email: string, password: string, userData: )  => Promise<any>;
-  logout: any()  => Promise<any>;
-  resetPassword: any(email: string)  => Promise<any>;
-  updateProfile: any(updates: Partial<User>)  => Promise<any>;
-  loginWithGoogle: any()  => Promise<any>;
-  loginWithFacebook: any()  => Promise<any>;
-  loginWithTwitter: any()  => Promise<any>;
-  loginWithWeb3: any()  => Promise<any>;
+login: (email: string, password: string)          => Promise<any>;
+  register: anyanyanyanyanyanyanyany(name: string, email: string, password: string)          => Promise<any>;
+  signup: anyanyanyanyanyanyanyany(email: string, password: string, userData: )          => Promise<any>;
+  logout: anyanyanyanyanyanyanyanyany()          => Promise<any>;
+  resetPassword: anyanyanyanyanyanyanyanyany(email: string)          => Promise<any>;
+  updateProfile: anyanyanyanyanyanyanyanyany(updates: Partial<User>)          => Promise<any>;
+  loginWithGoogle: anyanyanyanyanyanyanyanyany()          => Promise<any>;
+  loginWithFacebook: anyanyanyanyanyanyanyanyany()          => Promise<any>;
+  loginWithTwitter: anyanyanyanyanyanyanyanyany()          => Promise<any>;
+  loginWithWeb3: anyanyanyanyanyanyanyanyany()          => Promise<any>;
 =======
-login: any(email: string, password: string)   => Promise<any>;
-  register: any(name: string, email: string, password: string)   => Promise<any>;
-  signup: any(email: string, password: string, userData)   => Promise<any>;
-  logout: any()   => Promise<any>;
-  resetPassword: any(email: string)   => Promise<any>;
-  updateProfile: any(updates: Partial<User>)   => Promise<any>;
-  loginWithGoogle: any()   => Promise<any>;
-  loginWithFacebook: any()   => Promise<any>;
-  loginWithTwitter: any()   => Promise<any>;
-  loginWithWeb3: any()   => Promise<any>}
+login: anyanyanyanyanyanyanyanyany(email: string, password: string)           => Promise<any>;
+  register: anyanyanyanyanyanyanyanyany(name: string, email: string, password: string)           => Promise<any>;
+  signup: anyanyanyanyanyanyanyanyany(email: string, password: string, userData)           => Promise<any>;
+  logout: anyanyanyanyanyanyanyanyany()           => Promise<any>;
+  resetPassword: anyanyanyanyanyanyanyanyany(email: string)           => Promise<any>;
+  updateProfile: anyanyanyanyanyanyanyanyany(updates: Partial<User>)           => Promise<any>;
+  loginWithGoogle: anyanyanyanyanyanyanyanyany()           => Promise<any>;
+  loginWithFacebook: anyanyanyanyanyanyanyanyany()           => Promise<any>;
+  loginWithTwitter: anyanyanyanyanyanyanyanyany()           => Promise<any>;
+loginWithWeb3: anyanyanyanyanyanyanyanyany()           => Promise<any>;
+
+
+
+
+
+
+
+}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AuthContext = createContext<AuthContextType | null>(null);

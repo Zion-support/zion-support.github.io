@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 import { Shield,
   CheckCircle,
   Award,
@@ -11,7 +11,7 @@ import { Shield,
   Eye,
 =======
 import React from 'react.ts';
-import { motion   } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import { Shield, 
   CheckCircle, 
   Award, 
@@ -50,17 +50,17 @@ import { Shield,
   Gauge,
   TrendingUp,
   BarChart3
-  } from 'lucide-react.ts';
-import { SEO   } from '../components/SEO';
+          } from 'lucide-react.ts';
+import { SEO           } from '../components/SEO';
 =======
   Clock,
   AlertTriangle,
   Info
 <<<<<<< HEAD
-import { SEO  } from '../components/SEO';
+import { SEO          } from '../components/SEO';
 =======
 } from 'lucide-react';
-import { SEO  } from '../components/SEO';
+import { SEO          } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -614,8 +614,8 @@ export default function Compliance(...args[]: any):  {
             Compliance Frameworks & Certifications
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {complianceFrameworks.map((framework, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {complianceFrameworks.map((framework, index)          => (
               <motion.div
                 key={framework.title}
                 initial = {
@@ -735,8 +735,8 @@ export default function Compliance(...args[]: any):  {
               <p className="text-xl text-slate-300">International standards and industry-specific compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {complianceFrameworks.map((framework, index)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {complianceFrameworks.map((framework, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -820,8 +820,8 @@ export default function Compliance(...args[]: any):  {
               <p className="text-xl text-slate-300">Meeting the unique requirements of different industries</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {industryCompliance.map((industry, index)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {industryCompliance.map((industry, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -880,8 +880,8 @@ export default function Compliance(...args[]: any):  {
               <p className="text-xl text-slate-300">Systematic approach to achieving and maintaining compliance</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceProcesses.map((phase, index)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceProcesses.map((phase, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -945,8 +945,8 @@ export default function Compliance(...args[]: any):  {
               <p className="text-xl text-slate-300">Track our compliance performance and continuous improvement</p>
             </div>
             
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {complianceMetrics.map((metric, index)   => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {complianceMetrics.map((metric, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -995,8 +995,8 @@ export default function Compliance(...args[]: any):  {
               <p className="text-xl text-slate-300">Advanced tools and platforms for effective compliance management</p>
             </div>
             
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-              {complianceTools.map((tool, index)   => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {complianceTools.map((tool, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -1105,8 +1105,8 @@ export default function Compliance(...args[]: any):  {
           Industry Standards & Best Practices
         </motion.h2>
 
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-          {industryStandards.map((standard, index)  => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {industryStandards.map((standard, index)          => (
             <motion.div
               key={standard.title}
               initial = {
@@ -1218,8 +1218,8 @@ export default function Compliance(...args[]: any):  {
             Compliance Processes & Procedures
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {complianceProcesses.map((process, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {complianceProcesses.map((process, index)          => (
               <motion.div
                 key={process.title}
                 initial = {
@@ -1322,8 +1322,8 @@ export default function Compliance(...args[]: any):  {
           Compliance Tools & Resources
         </motion.h2>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-          {complianceTools.map((tool, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {complianceTools.map((tool, index)          => (
             <motion.div
               key={tool.title}
               initial = {
@@ -1410,8 +1410,8 @@ export default function Compliance(...args[]: any):  {
             Compliance Support & Inquiries
           </motion.h2>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {contactInfo.map((contact, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {contactInfo.map((contact, index)          => (
               <motion.div
                 key={contact.title}
                 initial = {

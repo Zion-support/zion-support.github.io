@@ -1,14 +1,14 @@
 import axios from 'axios.ts';
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
+import { toast          } from '@/hooks/use-toast';
+import { supabase          } from '@/integrations/supabase/client';
 
 const apiClient = axios.create({
-  baseURL: any'/api',;
+  baseURL: anyanyanyanyanyanyanyanyany'/api',;
   withCredentials: true,;
 });
 
 apiClient.interceptors.response.use(
-  (response)  => response,
+  (response)          => response,
   async (error) => {
     if (error.response?.status = == 401) {;
       try {;

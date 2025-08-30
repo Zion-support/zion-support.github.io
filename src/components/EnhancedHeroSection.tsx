@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { ArrowRight,
   Play,
   Star,
@@ -16,10 +16,18 @@ import { ArrowRight,
   TrendingUp
 <<<<<<< HEAD
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface HeroSlide {
+
+
+
+
+
+
+
+
 
 
   title: string;
@@ -33,6 +41,14 @@ interface HeroSlide {
   icon: React.ComponentType<any>;
 <<<<<<< HEAD
   stats: { label: string; value: string; icon: React.ComponentType<any> 
+
+
+
+
+
+
+
+
 }[];
 =======
   stats: { label: string; value: string; icon: React.ComponentType<any> 
@@ -45,7 +61,7 @@ export default function EnhancedHeroSection(...args[]: any):  {
 
   const heroSlides: HeroSlide[] = [
     {
-      title: any"AI-Powered Business Solutions",
+      title: anyanyanyanyanyanyanyanyany"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -94,7 +110,7 @@ export default function EnhancedHeroSection(...args[]: any):  {
 
   ];
 
-  useEffect(()   => {
+  useEffect(()           => {
     if (!isAutoPlaying) return;
 
 <<<<<<< HEAD
@@ -117,7 +133,7 @@ export default function EnhancedHeroSection(...args[]: any):  {
     setIsAutoPlaying(false)};
 
 <<<<<<< HEAD
-  const goToSlide = (index: anynumber)  => {;
+  const goToSlide = (index: anyanyanyanyanyanyanyanyanynumber)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setCurrentSlide(index);
     setIsAutoPlaying(false)};
@@ -160,7 +176,7 @@ export default function EnhancedHeroSection(...args[]: any):  {
 
 }}
           transition = {
-  { duration: any20,
+  { duration: anyanyanyanyanyanyanyanyany20,
   repeat: Infinity 
 
 
@@ -173,7 +189,7 @@ export default function EnhancedHeroSection(...args[]: any):  {
         ></motion.div>
 
         {/* Floating particles */}
-        {[...Array(6)].map((_, i)   => (
+        {[...Array(6)].map((_, i)           => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -302,8 +318,8 @@ export default function EnhancedHeroSection(...args[]: any):  {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
-                  {currentSlideData.features.map((feature, index)   => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanyanyanyanyanyanyanyanymx-0">
+                  {currentSlideData.features.map((feature, index)           => (
                     <motion.div
                       key={feature}
                       initial = {

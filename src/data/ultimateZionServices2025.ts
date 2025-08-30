@@ -4,6 +4,14 @@
 export interface ServiceContact {
 
 
+
+
+
+
+
+
+
+
   phone: string;
   email: string;
   website: string;
@@ -11,10 +19,26 @@ export interface ServiceContact {
   address: string;
 =======
 address: string;
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
+
+
+
+
+
+
+
+
 
 
   id: number;
@@ -45,10 +69,26 @@ export interface MicroSaasService {
   technologies: string[];
 =======
 technologies: string[];
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
+
+
+
+
+
+
+
+
 
 
   id: number;
@@ -76,10 +116,26 @@ export interface ITService {
   technologies: string[];
 =======
 technologies: string[];
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
+
+
+
+
+
+
+
+
 
 
   id: number;
@@ -108,6 +164,14 @@ export interface AIService {
   technologies: string[];
 =======
 technologies: string[];
+
+
+
+
+
+
+
+
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 

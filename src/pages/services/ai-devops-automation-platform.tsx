@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { SEO   } from '../../components/SEO';
-import { motion   } from 'framer-motion.ts';
+import { SEO           } from '../../components/SEO';
+import { motion           } from 'framer-motion.ts';
 
 const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
   return (
@@ -73,7 +73,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
                   title: "AI Pipeline Optimization",
@@ -105,7 +105,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.",
                   icon: "🔒"
                 }
-              ].map((feature, index)   => (
+              ].map((feature, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -161,7 +161,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 { metric: "80%", description: "Reduction in deployment time" },
                 { metric: "90%", description: "Decrease in deployment failures" },
@@ -169,7 +169,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                 { metric: "85%", description: "Reduction in manual tasks" },
                 { metric: "70%", description: "Improvement in resource utilization" },
                 { metric: "95%", description: "Increase in deployment success rate" }
-              ].map((benefit, index)   => (
+              ].map((benefit, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -224,7 +224,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {[
                 {
                   industry: "Financial Services",
@@ -246,7 +246,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   description: "IoT-focused DevOps automation for industrial applications with edge computing support.",
                   features: ["Edge deployment", "IoT integration", "Real-time monitoring"]
                 }
-              ].map((useCase, index)   => (
+              ].map((useCase, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -309,11 +309,11 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
               {[
                 "Kubernetes", "Docker", "Terraform", "Jenkins", "GitLab CI/CD", "GitHub Actions", "AWS", "Azure",
                 "GCP", "Ansible", "Helm", "ArgoCD", "Prometheus", "Grafana", "ELK Stack", "Istio"
-              ].map((tech, index)   => (
+              ].map((tech, index)           => (
                 <motion.div
                   key={index}
                   initial = {
@@ -367,7 +367,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {[
                 {
                   name: "Starter",
@@ -418,7 +418,7 @@ const AIDevOpsAutomationPlatform: React.FC = (): JSX.Element => {
                   ],
                   popular: false
                 }
-              ].map((plan, index)   => (
+              ].map((plan, index)           => (
                 <motion.div
                   key={index}
                   initial = {

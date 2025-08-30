@@ -1,10 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Brain, Database, Users, Truck, Shield, Briefcase, Cpu, Wrench, Leaf, Atom,
   ArrowRight, ExternalLink, Phone, Mail, Zap, Target, Clock, Globe, Check
 =======
-import { Link  } from 'react-router-dom.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Search, 
   Star, 
   TrendingUp, 
@@ -28,11 +28,11 @@ import { Search,
   ArrowRight,
   Clock,
   Target
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import { SEO  } from '@/components/SEO';
-import { ADVANCED_MICRO_SAAS_SERVICES_2025  } from '../data/advancedMicroSaasServices2025';
-import { EMERGING_TECH_SERVICES_2025  } from '../data/emergingTechServices2025';
+import { SEO          } from '@/components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025          } from '../data/advancedMicroSaasServices2025';
+import { EMERGING_TECH_SERVICES_2025          } from '../data/emergingTechServices2025';
 
 export default function InnovativeServicesShowcase2025(...args: any[]): any {
 <<<<<<< HEAD
@@ -264,7 +264,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     return matchesSearch && matchesInnovation;
   });
 
-  const getInnovationColor = (level: anystring)  => {
+  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanystring)          => {
     switch (level) {
       case 'Advanced': return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
       case 'Cutting-edge': return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
@@ -273,7 +273,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
     }
   };
 
-  const getInnovationIcon = (level: anystring)  => {
+  const getInnovationIcon = (level: anyanyanyanyanyanyanyanyanystring)          => {
     switch (level) {
       case 'Advanced': return <Zap className="w-5 h-5" />;
       case 'Cutting-edge': return <Brain className="w-5 h-5" />;
@@ -469,8 +469,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
         </div>
 <<<<<<< HEAD
 
-        <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index)  => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index)          => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
@@ -537,7 +537,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
       <section className="py-16 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6">Why Choose Zion Tech Group?</h2>
-          <div className="grid md: anygrid-cols-3 gap-8">
+          <div className="grid md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {[
               {
                 icon: Brain,
@@ -554,7 +554,7 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
                 title: 'Rapid Implementation',
                 description: 'Quick deployment and onboarding with minimal disruption to your operations.'
 
-            ].map((item, index)  => (
+            ].map((item, index)          => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -589,9 +589,9 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
-                {innovationLevels.map(level  => (
+                {innovationLevels.map(level          => (
                   <option key={level.value} value={level.value} className="bg-slate-800 text-white">
                     {level.label}
                   </option>
@@ -614,8 +614,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {featuredServices.slice(0, 4).map((service, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {featuredServices.slice(0, 4).map((service, index)          => (
               <motion.div
 <<<<<<< HEAD
                 key={service.id}
@@ -707,8 +707,8 @@ export default function InnovativeServicesShowcase2025(...args: any[]): any {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index)          => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

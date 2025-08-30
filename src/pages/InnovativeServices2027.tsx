@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence          } from 'framer-motion.ts';
 import { Brain,
   Shield,
   Cloud,
@@ -30,7 +30,7 @@ import { Brain,
   Banknote,
   Building,
   Phone
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '../data/innovativeMicroSaasServices2027';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027          } from '../data/innovativeMicroSaasServices2027';
 import SEO from '../components/SEO';
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
@@ -213,9 +213,9 @@ export default function InnovativeServices2027(...args: any[]): any {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
 
-              {sortedServices.map((service, index)  => (
+              {sortedServices.map((service, index)          => (
                 <motion.div
                   key={service.id}
                   initial = {

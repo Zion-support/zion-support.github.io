@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Brain,
   Zap,
   Shield,
@@ -23,7 +23,7 @@ import { Brain,
   Star,
   Heart
 <<<<<<< HEAD
-import { SEO  } from '../components/SEO';
+import { SEO          } from '../components/SEO';
 =======
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -314,8 +314,8 @@ const AIServicesPage: React.FC = (): JSX.Element => {
           {/* AI Solutions Grid */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI Solutions</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
-              {aiSolutions.map((solution, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {aiSolutions.map((solution, index)          => (
                 <motion.div
                   key={index}
                   initial = {
@@ -368,8 +368,8 @@ const AIServicesPage: React.FC = (): JSX.Element => {
           {/* Case Studies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {caseStudies.map((study, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {caseStudies.map((study, index)          => (
                 <motion.div
                   key={index}
                   initial = {

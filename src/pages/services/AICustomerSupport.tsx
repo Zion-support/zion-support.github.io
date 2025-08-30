@@ -1,7 +1,7 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot  } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
+import { motion          } from 'framer-motion.ts';
+import { CheckCircle, MessageCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Globe, Smartphone, Headphones, Bot          } from 'lucide-react.ts';
+import { SEO          } from '@/components/SEO';
 <<<<<<< HEAD
 import {
   MessageCircle,
@@ -280,8 +280,8 @@ export default function AICustomerSupport(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)          => (
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -322,8 +322,8 @@ export default function AICustomerSupport(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)          => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -352,8 +352,8 @@ export default function AICustomerSupport(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)          => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -392,8 +392,8 @@ export default function AICustomerSupport(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {integrations.map((integration, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {integrations.map((integration, index)          => (
               <motion.div
                 key={index}
                 className="text-center"
@@ -431,8 +431,8 @@ export default function AICustomerSupport(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)          => (
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -472,8 +472,8 @@ export default function AICustomerSupport(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)          => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -507,8 +507,8 @@ export default function AICustomerSupport(...args: any[]): any {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-              {pricing.map((plan, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricing.map((plan, index)          => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

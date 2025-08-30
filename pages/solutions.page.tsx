@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion   } from 'framer-motion.ts';
+import { motion           } from 'framer-motion.ts';
 import Link from 'next/link.ts';
 import { Brain,
   Shield,
@@ -34,7 +34,7 @@ import { Brain,
   Filter
 <<<<<<< HEAD
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const solutionCategories = [
@@ -405,13 +405,13 @@ export default function Solutions(...args[]: any):  {
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
 <<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {categories.map(category  => (
+                  {categories.map(category          => (
 =======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {categories.map(category   => (
+                  {categories.map(category           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -424,13 +424,13 @@ export default function Solutions(...args[]: any):  {
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
 <<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {industries.map(industry  => (
+                  {industries.map(industry          => (
 =======
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry   => (
+                  {industries.map(industry           => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
@@ -474,14 +474,14 @@ export default function Solutions(...args[]: any):  {
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {solutionCategories.map((category, index)   => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {solutionCategories.map((category, index)           => {;
 =======;
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {solutionCategories.map((category, index)  => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+            {solutionCategories.map((category, index)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = category.icon;
               return (
@@ -590,14 +590,14 @@ export default function Solutions(...args[]: any):  {
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {industrySolutions.map((industry, index)   => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {industrySolutions.map((industry, index)           => {;
 =======;
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">;
-            {industrySolutions.map((industry, index)  => {;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+            {industrySolutions.map((industry, index)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = industry.icon;
               return (
@@ -710,14 +710,14 @@ export default function Solutions(...args[]: any):  {
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
-            {filteredSolutions.map((solution, index)   => {;
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredSolutions.map((solution, index)           => {;
 =======;
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
 ;
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">;
-            {filteredSolutions.map((solution, index)  => {;
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+            {filteredSolutions.map((solution, index)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = solution.icon;
               return (

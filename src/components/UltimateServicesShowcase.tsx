@@ -1,6 +1,6 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -21,21 +21,29 @@ import { Brain,
   MapPin
 <<<<<<< HEAD
 =======
-  } from 'lucide-react.ts';
+          } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import the new services
 <<<<<<< HEAD
-import { ultimateInnovativeServices2025   } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025   } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025   } from '../../data/2025-innovative-micro-saas-solutions';
+import { ultimateInnovativeServices2025           } from '../../data/2025-ultimate-innovative-services-expansion';
+import { enterpriseITInfrastructureServices2025           } from '../../data/2025-enterprise-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025           } from '../../data/2025-innovative-micro-saas-solutions';
 =======
-import { ultimateInnovativeServices2025  } from '../../data/2025-ultimate-innovative-services-expansion';
-import { enterpriseITInfrastructureServices2025  } from '../../data/2025-enterprise-it-infrastructure-services';
-import { innovativeMicroSaasSolutions2025  } from '../../data/2025-innovative-micro-saas-solutions';
+import { ultimateInnovativeServices2025          } from '../../data/2025-ultimate-innovative-services-expansion';
+import { enterpriseITInfrastructureServices2025          } from '../../data/2025-enterprise-it-infrastructure-services';
+import { innovativeMicroSaasSolutions2025          } from '../../data/2025-innovative-micro-saas-solutions';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
+
+
+
+
+
+
+
+
 
 
   id: string;
@@ -68,6 +76,14 @@ contactInfo: {;
     email: string;
     address: string;
 website: string;
+
+
+
+
+
+
+
+
 };
   realImplementation: boolean;
   implementationDetails: string;
@@ -108,8 +124,8 @@ const categories = [
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: any'from-purple-600 to-pink-700',
-    services: ultimateInnovativeServices2025.filter(s   => s.category.includes('AI'))
+    color: anyanyanyanyanyanyanyanyany'from-purple-600 to-pink-700',
+    services: ultimateInnovativeServices2025.filter(s           => s.category.includes('AI'))
   },
   {
     id: 'it-infrastructure',
@@ -186,7 +202,7 @@ export function UltimateServicesShowcase(...args[]: any):  {
   ];
 
   const filteredServices = selectedCategory === 'all'
-    ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
+    ? allServices: anyanyanyanyanyanyanyanyanycategories.find(cat          => cat.id === selectedCategory)?.services || [];
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
@@ -343,12 +359,12 @@ export function UltimateServicesShowcase(...args[]: any):  {
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover: anybg-zion-slate hover:text-white'
+                : 'bg-zion-slate-light text-zion-gray-light hover: anyanyanyanyanyanyanyanyanybg-zion-slate hover:text-white'
             }`}
 
             All Services ({allServices.length})
           </button>
-          {categories.map((category)   => (
+          {categories.map((category)           => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}

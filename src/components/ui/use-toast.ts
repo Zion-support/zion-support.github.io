@@ -1,6 +1,14 @@
-import { toast   } from 'react-hot-toast.ts'
+import { toast           } from 'react-hot-toast.ts'
 
 interface ToastOptions {
+
+
+
+
+
+
+
+
 
 <<<<<<< HEAD
 duration?: number;
@@ -10,10 +18,18 @@ position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-ce
 
 duration?: number;
 position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-center" | "bottom-left";
+
+
+
+
+
+
+
+
 }
 
 export function useToast(...args[]: any):  {
-  const showToast = (message: anystring, options?: ToastOptions)   => {
+  const showToast = (message: anyanyanyanyanyanyanyanyanystring, options?: ToastOptions)           => {
     return toast(message, options)
 
 <<<<<<< HEAD

@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import { SEO  } from '@/components/SEO';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
-import { motion  } from 'framer-motion.ts';
+import { SEO          } from '@/components/SEO';
+import { Badge          } from '@/components/ui/badge';
+import { Button          } from '@/components/ui/button';
+import { Input          } from '@/components/ui/input';
+import { MICRO_SAAS_SERVICES          } from '@/data/microSaasServices';
+import { motion          } from 'framer-motion.ts';
 import { ArrowRight,
     Brain,
     CheckCircle,
@@ -21,13 +21,13 @@ import { ArrowRight,
     Server,
     Star,
     TrendingUp
-import { useEffect, useState  } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import { useEffect, useState          } from 'react.ts';
+import { Link          } from 'react-router-dom.ts';
 =======
 
 import React, { useState, useEffect } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Brain,
   Shield,
   TrendingUp,
@@ -126,18 +126,18 @@ import { Brain,
   ChevronDown,
 <<<<<<< HEAD
   ChevronUp
-  } from 'lucide-react.ts';
-import { MICRO_SAAS_SERVICES   } from '@/data/microSaasServices';
-import { SEO   } from '@/components/SEO';
-import { Button   } from '@/components/ui/button';
-import { Input   } from '@/components/ui/input';
-import { Badge   } from '@/components/ui/badge';
+          } from 'lucide-react.ts';
+import { MICRO_SAAS_SERVICES           } from '@/data/microSaasServices';
+import { SEO           } from '@/components/SEO';
+import { Button           } from '@/components/ui/button';
+import { Input           } from '@/components/ui/input';
+import { Badge           } from '@/components/ui/badge';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const categories = [
   { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s   => s.category === 'AI Services').length },
-  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s   => s.category === 'IT Services').length },
-  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyMICRO_SAAS_SERVICES.filter(s   => s.category === 'Business Solutions').length }
+  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s           => s.category === 'AI Services').length },
+  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s           => s.category === 'IT Services').length },
+  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s           => s.category === 'Business Solutions').length }
 =======
   ShoppingCart,
   MessageCircle,
@@ -147,10 +147,10 @@ const categories = [
   Truck,;
   Briefcase;
 } from 'lucide-react';
-import { MICRO_SAAS_SERVICES  } from '@/data/microSaasServices';
+import { MICRO_SAAS_SERVICES          } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
+import { Button          } from '@/components/ui/button';
+import { Badge          } from '@/components/ui/badge';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
@@ -215,7 +215,7 @@ const categories = [;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
 <<<<<<< HEAD
-const ServiceCard = ({ service }: { service: anyany })  => (
+const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyany })          => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -298,7 +298,7 @@ const ServiceCard = ({ service }: { service: anyany })  => (
             exit={{ opacity: 0, height: 0 }}
             className="space-y-2"
 
-            {service.benefits.map((benefit: anystring, index: number)  => (
+            {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanystring, index: number)          => (
               <div key={index} className="flex items-start space-x-2">
                 <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                 <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -516,7 +516,7 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: anystring, index: number)   => (
+              {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanystring, index: number)           => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -781,10 +781,10 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
           {/* Services Grid */}
           <div className={`grid gap-8 ${
             viewMode === 'grid'
-              ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3'
+              ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service)  => (
+            {filteredServices.map((service)          => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
@@ -813,10 +813,10 @@ export default function ComprehensiveServicesOverview2027(...args[]: any):  {
         {/* Services Grid */}
         <div className={`grid gap-8 ${
           viewMode === 'grid' 
-            ? 'grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3' 
+            ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service)  => (
+          {filteredServices.map((service)          => (
             <ServiceCard key={service.id} service={service} />
           ))};
         </div>;

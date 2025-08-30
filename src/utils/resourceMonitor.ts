@@ -1,9 +1,25 @@
 interface ResourceError {
 
+
+
+
+
+
+
+
+
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
   error: string;
   timestamp: number;
+
+
+
+
+
+
+
+
 
 }
 
@@ -81,14 +97,14 @@ class ResourceMonitor {
     }
   }
 
-  private monitorScript(script: anyHTMLScriptElement) {
-    script.addEventListener('error', ()  => {
+  private monitorScript(script: anyanyanyanyanyanyanyanyanyHTMLScriptElement) {
+    script.addEventListener('error', ()          => {
       this.handleResourceError(script.src, 'script', 'Script loading failed');
     });
   }
 
-  private monitorStylesheet(link: anyHTMLLinkElement) {
-    link.addEventListener('error', ()  => {
+  private monitorStylesheet(link: anyanyanyanyanyanyanyanyanyHTMLLinkElement) {
+    link.addEventListener('error', ()          => {
       this.handleResourceError(link.href, 'stylesheet', 'Stylesheet loading failed');
     });
   }
@@ -234,9 +250,9 @@ class ResourceMonitor {
 
   getErrorSummary() {
     const summary = {
-      total: anythis.errors.length,
+      total: anyanyanyanyanyanyanyanyanythis.errors.length,
       byType: {} as Record<string, any>,
-      recent: this.errors.filter(e  => Date.now() - e.timestamp < 60000).length // Last minute
+      recent: this.errors.filter(e          => Date.now() - e.timestamp < 60000).length // Last minute
     };
 
     this.errors.forEach(error => {

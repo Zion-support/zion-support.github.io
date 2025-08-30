@@ -1,5 +1,13 @@
 export interface ZionService {
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -16,6 +24,14 @@ contactInfo: {;
     address: string;
     website: string;
   
+
+
+
+
+
+
+
+
 };
   ctaLabel: string;
   href: string;
@@ -681,18 +697,18 @@ export const zionTechGroup2025Services: ZionService[] = [
   }
 ];
 
-export const getServicesByCategory = (category: anyZionService['category'])  => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyZionService['category'])          => {;
   return zionTechGroup2025Services.filter(service => service.category === category);
 };
 
-export const getServicesByPriceRange = (minPrice: anynumber, maxPrice: number)  => {;
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanynumber, maxPrice: number)          => {;
   return zionTechGroup2025Services.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
 };
 
-export const searchServices = (query: anystring)  => {;
+export const searchServices = (query: anyanyanyanyanyanyanyanyanystring)          => {;
   const lowercaseQuery = query.toLowerCase();
   return zionTechGroup2025Services.filter(service = >;
     service.title.toLowerCase().includes(lowercaseQuery) ||;

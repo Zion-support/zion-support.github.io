@@ -1,6 +1,14 @@
 <<<<<<< HEAD
 export interface InnovativeService2025 {
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -24,6 +32,14 @@ contactInfo: {;
     email: string;
     website: string;
   
+
+
+
+
+
+
+
+
 };
   technicalSpecs?: {
     technology: string[];
@@ -35,7 +51,7 @@ contactInfo: {;
   competitors?: string[];
   marketSize?: string;
 =======
-import { ProductListing  } from '@/types/listings';
+import { ProductListing          } from '@/types/listings';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_SERVICES_2025: ProductListing[] = [
@@ -792,7 +808,7 @@ export const INNOVATIVE_PRICING_TIERS_2025 = {
 };
 
 <<<<<<< HEAD
-export const getServicesByAIScore = (minScore: anynumber): InnovativeService2025[]  => {
+export const getServicesByAIScore = (minScore: anyanyanyanyanyanyanyanyanynumber): InnovativeService2025[]          => {
   return INNOVATIVE_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };}}
 =======

@@ -1,13 +1,13 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
 import { Calendar, Clock, User, Tag, Search, Filter,
   ArrowRight, BookOpen, TrendingUp, Star, Eye
 function Blog(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('all');
 =======
-import { SEO  } from '../components/SEO';
-import { Link  } from 'react-router-dom.ts';
+import { SEO          } from '../components/SEO';
+import { Link          } from 'react-router-dom.ts';
 import { Search, 
   Calendar, 
   User, 
@@ -23,9 +23,17 @@ import { Search,
   ShoppingCart,
   BookOpen,
   Rocket
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 
 interface BlogPost {
+
+
+
+
+
+
+
+
 
   id: string;
   title: string;
@@ -42,14 +50,38 @@ interface BlogPost {
   views: number;
   likes: number;
 
+
+
+
+
+
+
+
+
 }
 
 interface Category {
+
+
+
+
+
+
+
+
 
   name: string;
   icon: ;
   count: number;
   color: string;
+
+
+
+
+
+
+
+
 
 }
 
@@ -225,7 +257,7 @@ export default function Blog(...args: any[]): any {
   });
 
 <<<<<<< HEAD
-  const formatDate = (dateString: anystring)  => {
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanystring)          => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -368,9 +400,9 @@ export default function Blog(...args: any[]): any {
               Featured Articles
             </motion.h2>
 
-            <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {filteredPosts
-                .filter(post  => post.featured)
+                .filter(post          => post.featured)
                 .map((post, index) => (
                   <motion.article
                     key={post.id}
@@ -449,9 +481,9 @@ export default function Blog(...args: any[]): any {
             Latest Articles
           </motion.h2>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts
-              .filter(post  => !post.featured)
+              .filter(post          => !post.featured)
               .map((post, index) => (
 =======
       {/* Categories Grid */}
@@ -467,8 +499,8 @@ export default function Blog(...args: any[]): any {
             <p className="text-gray-300">Discover insights in your area of interest</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-6">
-            {categories.map((category, index)  => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {categories.map((category, index)          => (
               <motion.div
                 key={category.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -512,8 +544,8 @@ export default function Blog(...args: any[]): any {
               <p className="text-gray-400">Try adjusting your search terms or filters</p>
             </motion.div>
           ) : (
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-              {sortedPosts.map((post, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedPosts.map((post, index)          => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.article
                   key={post.id}

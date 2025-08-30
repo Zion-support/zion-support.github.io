@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories  } from '../data/enhancedZionTechServices2025';
+import { ENHANCED_ZION_TECH_SERVICES_2025, getEnhancedServiceCategories          } from '../data/enhancedZionTechServices2025';
 
 const ComprehensiveZionTechPricing2025: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
@@ -18,7 +18,7 @@ const ComprehensiveZionTechPricing2025: React.FC = (): JSX.Element => {;
   );
 
 <<<<<<< HEAD
-  const getPrice = (service: any)  => {;
+  const getPrice = (service: anyanyanyanyanyanyanyanyany)          => {;
     if (billingCycle === 'yearly' && service.pricing?.yearly) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return service.pricing.yearly;
@@ -27,7 +27,7 @@ const ComprehensiveZionTechPricing2025: React.FC = (): JSX.Element => {;
   };
 
 <<<<<<< HEAD
-  const getSavings = (service: any)  => {;
+  const getSavings = (service: anyanyanyanyanyanyanyanyany)          => {;
     if (billingCycle === 'yearly' && service.pricing?.yearly) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
@@ -118,8 +118,8 @@ const ComprehensiveZionTechPricing2025: React.FC = (): JSX.Element => {;
 
       {/* Pricing Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)          => (
             <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
               {/* Service Header */}
               <div className="text-center mb-6">

@@ -1,5 +1,13 @@
 export interface EnhancedService {
 
+
+
+
+
+
+
+
+
     id: string;
     name: string;
     tagline: string;
@@ -11,6 +19,14 @@ pricing: {;
         enterprise: string;
         setup: string;
     
+
+
+
+
+
+
+
+
 };
     features: string[];
     benefits: string[];

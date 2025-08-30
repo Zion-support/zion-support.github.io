@@ -1,8 +1,8 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion          } from 'framer-motion.ts';
 <<<<<<< HEAD
-import { SEO  } from '../components/SEO';
-import { Link  } from 'react-router-dom.ts';
+import { SEO          } from '../components/SEO';
+import { Link          } from 'react-router-dom.ts';
 =======
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 import { Store, 
@@ -225,10 +225,10 @@ import { Store,
   Users,
   ArrowRight
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
- } from 'lucide-react.ts';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+         } from 'lucide-react.ts';
+import { SEO          } from '@/components/SEO';
+import { Button          } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle          } from '@/components/ui/card';
 
 <<<<<<< HEAD
 export default function Marketplace(...args: any[]): any {
@@ -679,7 +679,7 @@ const Marketplace: React.FC = (): JSX.Element => {
   const popularItems = marketplaceItems.filter(item => item.status === 'popular');
   const trendingItems = marketplaceItems.filter(item => item.status === 'trending');
 
-  const toggleItemExpansion = (itemId: anystring)  => {
+  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanystring)          => {
     setExpandedItem(expandedItem === itemId ? null : itemId);
   };
 
@@ -694,7 +694,7 @@ const Marketplace: React.FC = (): JSX.Element => {
     return true;
   });
 
-  const getCategoryColor = (category: anystring)  => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -738,7 +738,7 @@ const Marketplace: React.FC = (): JSX.Element => {
     }
   };
 
-  const getTypeColor = (type: anystring)  => {
+  const getTypeColor = (type: anyanyanyanyanyanyanyanyanystring)          => {
     switch (type) {
       case 'software': return 'bg-blue-500/20 text-blue-400';
       case 'service': return 'bg-green-500/20 text-green-400';
@@ -747,7 +747,7 @@ const Marketplace: React.FC = (): JSX.Element => {
     }
   };
 
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanystring)          => {
     switch (status) {
       case 'featured': return 'bg-yellow-500/20 text-yellow-400';
       case 'popular': return 'bg-blue-500/20 text-blue-400';
@@ -756,7 +756,7 @@ const Marketplace: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderStars = (rating: anynumber)  => {
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanynumber)          => {
     const stars = [];
     const fullStars = Math.floor(rating);
     const hasHalfStar = rating % 1 !== 0;
@@ -777,17 +777,17 @@ const Marketplace: React.FC = (): JSX.Element => {
     return stars;
   };
 
-  const getCategoryIcon = (categoryId: anystring)  => {
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanystring)          => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.icon : Globe;
   };
 
-  const getCategoryName = (categoryId: anystring)  => {
+  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanystring)          => {
     const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'General';
   };
 
-  const getBadgeColor = (badge: anystring)  => {
+  const getBadgeColor = (badge: anyanyanyanyanyanyanyanyanystring)          => {
     switch (badge) {
       case 'Most Popular':
         return 'bg-gradient-to-r from-yellow-500 to-orange-500';
@@ -909,9 +909,9 @@ const Marketplace: React.FC = (): JSX.Element => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                 >
-                  {categories.map((category)  => (
+                  {categories.map((category)          => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -924,9 +924,9 @@ const Marketplace: React.FC = (): JSX.Element => {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                 >
-                  {types.map((type)  => (
+                  {types.map((type)          => (
                     <option key={type.id} value={type.id}>
                       {type.name} ({type.count})
                     </option>
@@ -1021,8 +1021,8 @@ const Marketplace: React.FC = (): JSX.Element => {
             <p className="text-xl text-gray-300">Handpicked solutions for enterprise success</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredItems.map((item, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredItems.map((item, index)          => (
               <motion.div
                 key={item.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -1155,8 +1155,8 @@ const Marketplace: React.FC = (): JSX.Element => {
 >>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               </motion.div>
             ) : (
-              <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-                {sortedSolutions.map((solution, index)  => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                {sortedSolutions.map((solution, index)          => (
                   <motion.div
                     key={solution.id}
                     initial={{ opacity: 0, y: 30 }}
@@ -1279,8 +1279,8 @@ const Marketplace: React.FC = (): JSX.Element => {
           </motion.div>
 
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredItems.map((item, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {filteredItems.map((item, index)          => (
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, y: 20 }}

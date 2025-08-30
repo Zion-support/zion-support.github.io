@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
 import { Users,
   Target,
   Zap,
@@ -23,7 +23,7 @@ import { Users,
   Github,
   Facebook,
   Instagram
- } from 'lucide-react.ts';
+         } from 'lucide-react.ts';
 
 export function AboutPage(...args: any[]): any {
   const values = [
@@ -182,8 +182,8 @@ export function AboutPage(...args: any[]): any {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8 mb-20">
-          {stats.map((stat, index)  => (
+        <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-20">
+          {stats.map((stat, index)          => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
@@ -205,8 +205,8 @@ export function AboutPage(...args: any[]): any {
         {/* Values Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)          => (
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -229,8 +229,8 @@ export function AboutPage(...args: any[]): any {
         {/* Team Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Leadership Team</h2>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index)          => (
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -247,8 +247,8 @@ export function AboutPage(...args: any[]): any {
                 <p className="text-gray-400 mb-6 leading-relaxed">{member.bio}</p>
                 
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: any</h4>
-                  {member.expertise.map((skill, skillIndex)  => (
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Expertise: anyanyanyanyanyanyanyanyany</h4>
+                  {member.expertise.map((skill, skillIndex)          => (
                     <div key={skillIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400" />
                       <span>{skill}</span>
@@ -346,12 +346,12 @@ export function AboutPage(...args: any[]): any {
             {/* Social Links */}
             <div className="flex justify-center space-x-6 mt-8">
               {[
-                { icon: anyLinkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+                { icon: anyanyanyanyanyanyanyanyanyLinkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
                 { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
                 { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
                 { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
                 { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
-              ].map((social)  => (
+              ].map((social)          => (
                 <a
                   key={social.label}
                   href={social.href}

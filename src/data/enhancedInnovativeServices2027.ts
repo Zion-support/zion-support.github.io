@@ -1,6 +1,14 @@
 export interface EnhancedService2027 {
 
 
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -21,6 +29,14 @@ contactInfo: {;
     email: string;
     website: string;
 address: string;
+
+
+
+
+
+
+
+
 };
   competitors: string[];
   roi: string;
@@ -711,9 +727,9 @@ export const enhancedInnovativeServices2027Categories = [
 ];
 
 export const getEnhancedInnovativeServices2027 = () => enhancedInnovativeServices2027;
-export const getEnhancedInnovativeServices2027ByCategory = (category: anystring)  =>
+export const getEnhancedInnovativeServices2027ByCategory = (category: anyanyanyanyanyanyanyanyanystring)          =>
   enhancedInnovativeServices2027.filter(service => service.category === category);
-export const getEnhancedInnovativeServices2027ById = (id: anystring)  =>
+export const getEnhancedInnovativeServices2027ById = (id: anyanyanyanyanyanyanyanyanystring)          =>
 <<<<<<< HEAD
   enhancedInnovativeServices2027.find(service => service.id === id);}}
 =======

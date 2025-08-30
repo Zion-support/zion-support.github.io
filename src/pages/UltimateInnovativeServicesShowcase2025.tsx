@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion          } from 'framer-motion.ts';
+import { Link          } from 'react-router-dom.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -30,14 +30,14 @@ import { Brain,
   Clock,
   Shield as ShieldIcon
 <<<<<<< HEAD
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES          } from '../data/ultimateInnovativeServices2025';
 =======
 <<<<<<< HEAD
  } from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES   } from '../data/ultimateInnovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES           } from '../data/ultimateInnovativeServices2025';
 =======
 } from 'lucide-react';
-import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES  } from '../data/ultimateInnovativeServices2025';
+import { ULTIMATE_INNOVATIVE_SERVICES_2025, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES          } from '../data/ultimateInnovativeServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -116,7 +116,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
     return filtered}, [selectedCategory, selectedSubcategory, searchTerm, sortBy]);
 
 <<<<<<< HEAD
-  const getCategoryIcon = (category: anystring)  => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
     switch (category) {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'AI & Automation': return <Brain className="w-6 h-6" />;
@@ -138,7 +138,7 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
   };
 
 <<<<<<< HEAD
-  const getInnovationBadge = (level: anystring)  => {;
+  const getInnovationBadge = (level: anyanyanyanyanyanyanyanyanystring)          => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const type = level.split(' - ')[0];
     switch (type) {
@@ -277,8 +277,8 @@ export default function UltimateInnovativeServicesShowcase2025(...args[]: any): 
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 lg: anygrid-cols-2 xl:grid-cols-3 gap-6">
-          {filteredServices.map((service, index)   => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-6">
+          {filteredServices.map((service, index)           => (
             <motion.div
               key={service.id}
               initial = {
