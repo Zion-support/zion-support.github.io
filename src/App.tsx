@@ -11,10 +11,10 @@ import { ContactPage } from './pages/ContactPage';
 import { BlogPage } from './pages/BlogPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ComprehensiveServicesPage } from './pages/ComprehensiveServicesPage';
-import { Sitemap } from './pages/Sitemap';
-import { Support } from './pages/Support';
-import { Training } from './pages/Training';
-import { Helpdesk } from './pages/Helpdesk';
+import Sitemap from './pages/Sitemap';
+import Support from './pages/Support';
+import Training from './pages/Training';
+import Helpdesk from './pages/Helpdesk';
 
 function App() {
   return (
