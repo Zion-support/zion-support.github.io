@@ -21,16 +21,17 @@ export function registerServiceWorker() {
                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
                   // New content is available
                   // // // console.log('New content is available; please refresh.');
-
+                }
               });
-
+            }
           });
         })
         .catch((registrationError) => {
           // // // console.error('SW registration failed: ', registrationError);
         });
     });
-
+  }
+}
 
 export function unregisterServiceWorker() {
   if ('serviceWorker' in navigator) {
@@ -41,4 +42,5 @@ export function unregisterServiceWorker() {
       .catch((error) => {
         // // // console.error(error.message);
       });
-}}}}}}
+  }
+}

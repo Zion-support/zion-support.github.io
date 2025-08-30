@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
-import { Grid3X3, ListFilter, Loader2 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { Grid3X3, ListFilter, Loader2 } from "lucide-react";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
@@ -40,22 +41,27 @@ export default function Marketplace() {
             !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
             return false;
+        }
 
         // Product type filter
         if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
             return false;
+        }
 
         // Location filter
         if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
             return false;
+        }
 
         // Availability filter
         if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
             return false;
+        }
 
         // Rating filter
         if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
             return false;
+        }
 
         return true;
     });
@@ -71,7 +77,7 @@ export default function Marketplace() {
             case 'availability':
                 setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
                 break;
-
+        }
     };
     const clearAllFilters = () => {
         setSearchQuery("");
@@ -85,20 +91,20 @@ export default function Marketplace() {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
                     // Quote request functionality would go here
-        // // // console.log(`Quote requested for ${listing.title}`);
-            // Navigate to the quote request page with the listing information
-            navigate("/request-quote", {
-                state: {
-                    serviceType: listing.category,
-                    specificItem: {
-                        id: listing.id,
-                        title: listing.title,
-                        category: listing.category,
-                        image: listing.images?.[0]
-
-
-            });
-
+                    // // // console.log(`Quote requested for ${listing.title}`);
+                    // Navigate to the quote request page with the listing information
+                    navigate("/request-quote", {
+                        state: {
+                            serviceType: listing.category,
+                            specificItem: {
+                                id: listing.id,
+                                title: listing.title,
+                                category: listing.category,
+                                image: listing.images?.[0]
+                            }
+                        }
+                    });
+                }
     };
     return (<main className="flex-grow container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto mb-8">
@@ -163,4 +169,4 @@ export default function Marketplace() {
           </div>
         </div>
       </main>);
-}}}}}}}}}}}
+}

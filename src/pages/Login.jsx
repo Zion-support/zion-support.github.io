@@ -29,7 +29,7 @@ export default function Login() {
       // The actual authentication state will update via useAuth's listeners,
       // which should trigger the other useEffect.
       navigate(location.pathname, { replace: true });
-
+    }
   }, [location.search, location.pathname, navigate]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Login() {
       reduxDispatch(setLoggedIn(true));
       const next = location.state?.from?.pathname || '/dashboard';
       navigate(next, { replace: true });
-
+    }
   }, [isAuthenticated, isLoading, navigate, reduxDispatch, location.state]);
 
   // Render LoginContent if not authenticated and auth is not loading
@@ -55,4 +55,4 @@ export default function Login() {
   // If authenticated and isLoading is false, the useEffect above should have navigated.
   // Return null or a minimal layout if needed, though direct navigation is preferred.
   return null;
-}}}}}
+}}

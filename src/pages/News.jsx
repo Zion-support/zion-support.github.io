@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe const News = () => {
+import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLink, TrendingUp, Award, Globe } from 'lucide-react';
+
+const News = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
@@ -88,7 +90,7 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
       excerpt: "Comprehensive analysis of AI adoption patterns and emerging trends in enterprise technology.",
       image: "/images/news/market-trends.jpg",
       featured: false
-
+    }
   ];
 
   const filteredNews = newsItems.filter(item => {
@@ -135,7 +137,7 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-
+                >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -243,4 +245,3 @@ import { Calendar, User, Tag, ArrowRight, Search, Filter, Clock, Eye, ExternalLi
 };
 
 export default News;
-}}

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
+import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
+
+const About = () => {
   const values = [
     {
       icon: Lightbulb,
@@ -20,7 +22,7 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
       icon: Shield,
       title: "Integrity",
       description: "We operate with honesty, transparency, and ethical practices in all our business relationships and operations."
-
+    }
   ];
 
   const milestones = [
@@ -43,7 +45,7 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
       year: "2022",
       title: "Company Founded",
       description: "Zion Tech Group was established with a vision to revolutionize technology solutions."
-
+    }
   ];
 
   const stats = [
@@ -170,13 +172,13 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-
+            >
               📞 Call +1 (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-
+            >
               ✉️ Get in Touch
             </a>
           </div>
@@ -187,4 +189,3 @@ import { Users, Target, Globe, Award, Shield, Lightbulb const About = () => {
 };
 
 export default About;
-}}}

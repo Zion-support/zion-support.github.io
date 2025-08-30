@@ -143,6 +143,6 @@ module.exports = {
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log'
-
+    }
   ]
-};}
+};

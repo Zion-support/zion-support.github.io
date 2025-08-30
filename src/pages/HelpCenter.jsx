@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight export default function HelpCenter() {
+import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
+
+export default function HelpCenter() {
     const [searchQuery, setSearchQuery] = useState('');
     const [expandedCategories, setExpandedCategories] = useState(['getting-started']);
     const toggleCategory = (category) => {
@@ -69,7 +71,7 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
                 { title: 'Password reset and recovery', href: '/help/password-recovery' },
                 { title: 'Privacy settings and data control', href: '/help/privacy-settings' }
             ]
-
+        }
     };
     const popularArticles = [
         'How to create your first account',
@@ -196,4 +198,4 @@ import { Search, BookOpen, MessageSquare, Phone, Mail, ArrowRight, ChevronDown, 
         </section>
       </div>
     </>);
-}}}
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import { SEO } from "@/components/SEO";
-import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket const AISolutions = () => {
+import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket } from 'lucide-react';
+
+const AISolutions = () => {
     const aiServices = [
         {
             icon: Brain,
@@ -43,8 +45,9 @@ import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket
             description: "Intelligent automation for sales processes and marketing campaigns",
             features: ["Lead Scoring", "Customer Segmentation", "Campaign Optimization", "ROI Analysis"],
             path: "/ai-agentic-sales-outreach"
-
+        }
     ];
+    
     const benefits = [
         {
             icon: Rocket,
@@ -65,7 +68,7 @@ import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket
             icon: Globe,
             title: "Global Scalability",
             description: "Scale your operations globally with AI automation and optimization"
-
+        }
     ];
     return (<div className="min-h-screen bg-background pt-20">
       <SEO title="AI Solutions - Zion Tech Group" description="Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group." keywords="AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence" canonical="https://ziontechgroup.com/ai-solutions"/>
@@ -177,4 +180,3 @@ import { Brain, Cpu, Shield, Cloud, Zap, Target, Users, BarChart3, Globe, Rocket
     </div>);
 };
 export default AISolutions;
-}}}

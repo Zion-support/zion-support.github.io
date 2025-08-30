@@ -67,8 +67,9 @@ const Sitemap = () => {
                 { name: "Dashboard", path: "/dashboard", description: "User dashboard" },
                 { name: "Forgot Password", path: "/forgot-password", description: "Password recovery" }
             ]
-
+        }
     ];
+    
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24">
             <div className="container mx-auto px-4 py-16">
@@ -97,7 +98,7 @@ const Sitemap = () => {
                                         <Link
                                             to={link.path}
                                             className="block text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 group"
-
+                                        >
                                             <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
                                                 {link.name}
                                             </div>
@@ -118,19 +119,19 @@ const Sitemap = () => {
                         <Link
                             to="/contact"
                             className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-medium hover:scale-105 transition-transform"
-
+                        >
                             Get Started
                         </Link>
                         <Link
                             to="/services"
                             className="px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-colors"
-
+                        >
                             View Services
                         </Link>
                         <Link
                             to="/help"
                             className="px-6 py-3 border-2 border-zion-purple text-zion-purple rounded-lg font-medium hover:bg-zion-purple hover:text-white transition-colors"
-
+                        >
                             Get Help
                         </Link>
                     </div>
@@ -138,6 +139,4 @@ const Sitemap = () => {
             </div>
         </div>
     );
-};
-export default Sitemap;
 }

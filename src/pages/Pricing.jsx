@@ -90,7 +90,7 @@ const Pricing = () => {
       popular: false,
       cta: "Contact Sales",
       link: "/contact"
-
+    }
   ];
 
   return (
