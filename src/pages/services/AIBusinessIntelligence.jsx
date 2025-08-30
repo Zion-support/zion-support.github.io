@@ -268,6 +268,4 @@ const AIBusinessIntelligence = () => {
         </div>
       </div>
     </div>);
-</div>};
-export default AIBusinessIntelligence;
-}}}}}}}}
+}

@@ -16,6 +16,8 @@ import {
   Bookmark,
   Download,
   Search
+} from 'lucide-react';
+
 interface FloatingActionButtonProps {
   enabled?: boolean;
 

@@ -10,6 +10,7 @@ import {
     X,
     ZoomIn,
     ZoomOut
+} from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 
 interface AccessibilityFeature {
@@ -19,6 +20,7 @@ interface AccessibilityFeature {
   enabled: boolean;
   category: 'visual' | 'motor' | 'cognitive' | 'auditory';
   wcagLevel: 'A' | 'AA' | 'AAA';
+}
 
 interface AccessibilityAudit {
   id: string;
@@ -27,6 +29,7 @@ interface AccessibilityAudit {
   element: string;
   recommendation: string;
   wcagCriteria: string;
+}
 
 export default function EnhancedAccessibilityEnhancer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +100,7 @@ export default function EnhancedAccessibilityEnhancer() {
       enabled: false,
       category: 'visual',
       wcagLevel: 'AA'
-
+    }
   ];
 
   // Apply accessibility features

@@ -37,6 +37,8 @@ import {
   Smartphone as PhoneIcon,
   Tablet as TabletIcon,
   Monitor as DesktopIcon
+} from 'lucide-react';
+
 interface MobileOptimization {
   id: string;
   name: string;

@@ -28,7 +28,7 @@ const CloudDevOps = () => {
       title: "Database Management",
       description: "Scalable database solutions with high availability and disaster recovery.",
       features: ["AWS RDS", "Azure SQL", "MongoDB Atlas", "Redis"]
-
+    }
   ];
 
   const platforms = [
@@ -51,7 +51,7 @@ const CloudDevOps = () => {
       name: "Multi-Cloud",
       description: "Hybrid and multi-cloud strategy implementation",
       icon: "🌐"
-
+    }
   ];
 
   const devOpsTools = [
@@ -164,13 +164,13 @@ const CloudDevOps = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-
+            >
               📞 Call +1 (302) 464-0950
             </a>
             <a
               href="/contact"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-
+            >
               Get Started
             </a>
           </div>
@@ -181,4 +181,3 @@ const CloudDevOps = () => {
 };
 
 export default CloudDevOps;
-}}}

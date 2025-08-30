@@ -12,6 +12,7 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
   author?: string;
+}
 
 export function SEO({
   title,

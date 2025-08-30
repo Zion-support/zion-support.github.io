@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cog const SpaceTech = () => {
+import { Cog } from 'lucide-react';
+
+const SpaceTech = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -24,4 +26,3 @@ import { Cog const SpaceTech = () => {
 };
 
 export default SpaceTech;
-}

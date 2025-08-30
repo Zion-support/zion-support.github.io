@@ -29,6 +29,8 @@ import {
   Maximize2,
   Volume2,
   VolumeX
+} from 'lucide-react';
+
 interface Message {
   id: string;
   type: 'user' | 'assistant' | 'system';

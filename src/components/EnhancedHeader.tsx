@@ -50,6 +50,7 @@ import {
   Satellite,
   FileText,
   Sparkles as SparklesIcon
+} from 'lucide-react';
 import { enhancedServicesCatalog2025 } from '../data/enhancedServicesCatalog2025';
 
 export function EnhancedHeader() {
@@ -315,7 +316,7 @@ export function EnhancedHeader() {
       category: 'Micro SaaS',
       color: 'from-purple-600 to-pink-700',
       badge: 'Popular'
-
+    }
   ];
 
   return (
@@ -333,7 +334,7 @@ export function EnhancedHeader() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-
+      >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Enhanced Logo */}
@@ -342,7 +343,7 @@ export function EnhancedHeader() {
                 className="relative"
                 whileHover={{ scale: 1.05, rotate: 5 }}
                 whileTap={{ scale: 0.95 }}
-
+              >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
                 </div>
@@ -369,7 +370,7 @@ export function EnhancedHeader() {
                       ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-
+                >
                   {item.name}
                 </Link>
               ))}
@@ -380,7 +381,7 @@ export function EnhancedHeader() {
                   className="nav-link flex items-center space-x-2 font-medium text-gray-300 hover:text-cyan-400 transition-all duration-300"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
-
+                >
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
                 </button>

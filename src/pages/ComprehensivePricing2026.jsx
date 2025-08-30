@@ -312,6 +312,4 @@ const ComprehensivePricing2026 = () => {
         </div>
       </section>
     </div>);
-</div>};
-export default ComprehensivePricing2026;
-}}}}}
+}}

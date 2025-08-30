@@ -49,6 +49,8 @@ import {
   Facebook,
   Instagram,
   Youtube
+} from 'lucide-react';
+
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
@@ -110,7 +112,7 @@ export function EnhancedFooter() {
         { name: 'White Papers', href: '/white-papers', icon: FileText },
         { name: 'Blog', href: '/blog', icon: PenTool }
       ]
-
+    }
   ];
 
   const socialLinks = [
@@ -195,7 +197,7 @@ export function EnhancedFooter() {
                       <Link
                         to={link.href}
                         className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-
+                      >
                         <link.icon className="w-3 h-3 text-cyan-400 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
                       </Link>
@@ -248,7 +250,7 @@ export function EnhancedFooter() {
                     rel="noopener noreferrer"
                     className={`text-gray-400 ${social.color} transition-colors duration-300`}
                     aria-label={social.name}
-
+                  >
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -276,7 +278,7 @@ export function EnhancedFooter() {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-
+        >
           <Link
             to="/contact"
             className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"

@@ -16,6 +16,8 @@ import {
   Zap,
   TrendingUp,
   Award
+} from 'lucide-react';
+
 interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info' | 'achievement';

@@ -207,4 +207,3 @@ const DigitalTransformation = () => {
     </div>);
 };
 export default DigitalTransformation;
-}}
