@@ -1,6 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield  } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
 
 const steps = [
   {
@@ -87,9 +87,9 @@ const stats = [
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
 ];
 
-export function HowItWorksSection(...args: any[]): any {
-  const [hoveredStep, setHoveredStep] = useState<any>(null);
-  const [activeStep, setActiveStep] = useState<any>(0);
+export function HowItWorksSection() {
+  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
+  const [activeStep, setActiveStep] = useState<number>(0);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -166,9 +166,9 @@ export function HowItWorksSection(...args: any[]): any {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: anytrue }}
+          viewport={{ once: true }}
         >
-          {stats.map((stat, index)  => (
+          {stats.map((stat, index) => (
             <motion.div 
               key={index} 
               variants={statsVariants}
@@ -196,8 +196,8 @@ export function HowItWorksSection(...args: any[]): any {
           </div>
 
           {/* Steps grid */}
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-5 gap-8 relative">
-            {steps.map((step, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative">
+            {steps.map((step, index) => (
               <motion.div
                 key={index}
                 variants={containerVariants}

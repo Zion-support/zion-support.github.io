@@ -1,4 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
+
 export interface InnovativeMicroSaasSolution {
   id: string;
   name: string;

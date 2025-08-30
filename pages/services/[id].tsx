@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import React from 'react'
 import { innovativeRealMicroSaasServices2025 } from '../../data/2025-innovative-real-micro-saas-services'
 import { advancedITServices } from '../../data/advanced-it-services'
@@ -69,10 +69,10 @@ export default function ServiceDetail({ service }: { service: ServiceItem }) {
 	const description = service.tagline || 'Zion Tech Group Service'
 	return (
 		<>
-			<Head>
+			<Helmet>
 				<title>{title}</title>
 				<meta name="description" content={description} />
-			</Head>
+			</Helmet>
 			<main className="mx-auto min-h-screen max-w-3xl px-6 py-12">
 				<nav className="text-sm text-gray-500"><Link href="/services/">Services</Link> / <span className="text-gray-700">{service.name}</span></nav>
 				<h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">{service.icon ? `${service.icon} ` : ''}{service.name}</h1>

@@ -1,4 +1,28 @@
-import React, { useEffect, useCallback, useRef } from 'react.ts';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { Alert, AlertDescription } from './ui/alert';
+import { 
+  Activity, 
+  Zap, 
+  Gauge, 
+  TrendingUp, 
+  AlertTriangle,
+  CheckCircle,
+  Clock,
+  Cpu
+} from 'lucide-react';
+
+// Simple Progress component
+const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (
+  <div className={`w-full bg-gray-200 rounded-full h-2 ${className}`}>
+    <div 
+      className="bg-blue-600 h-2 rounded-full transition-all duration-300" 
+      style={{ width: `${Math.min(100, Math.max(0, value))}%` }}
+    />
+  </div>
+);
 
 interface PerformanceMetrics {
 

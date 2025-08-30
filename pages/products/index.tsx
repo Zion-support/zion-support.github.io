@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function ProductsIndex() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
-      <Head>
+      <Helmet>
         <title>Products — Zion</title>
         <meta name="description" content="A showcase of ready-to-run automation suites." />
-      </Head>
+      </Helmet>
 
       <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />

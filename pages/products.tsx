@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { 
   Brain, 
@@ -212,11 +212,11 @@ const Products: NextPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <Head>
+      <Helmet>
         <title>Products - Zion Tech Group | AI, SaaS, Security Solutions</title>
         <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI products, SaaS platforms, cybersecurity tools, blockchain development, Zion Tech Group products" />
-      </Head>
+      </Helmet>
 
       {/* Hero Section */}
       <div className="relative overflow-hidden">

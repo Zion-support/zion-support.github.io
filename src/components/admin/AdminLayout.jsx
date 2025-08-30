@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const navItems = [
     { title: 'Products', href: '/admin/products' },
     { title: 'Services', href: '/admin/services' },

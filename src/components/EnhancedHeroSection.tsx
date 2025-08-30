@@ -14,7 +14,7 @@ import { ArrowRight,
   Rocket,
   Target,
   TrendingUp
- } from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface HeroSlide {
 
@@ -140,11 +140,11 @@ export default function EnhancedHeroSection(...args: any[]): any {
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
-          transition={{ duration: any20, repeat: Infinity }}
+          transition={{ duration: 20, repeat: Infinity }}
         ></motion.div>
         
         {/* Floating particles */}
-        {[...Array(6)].map((_, i)  => (
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -210,8 +210,8 @@ export default function EnhancedHeroSection(...args: any[]): any {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
-                  {currentSlideData.features.map((feature, index)  => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
+                  {currentSlideData.features.map((feature, index) => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}

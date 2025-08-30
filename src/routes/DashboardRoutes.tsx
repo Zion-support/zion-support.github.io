@@ -9,16 +9,16 @@ import Analytics from "@/pages/Analytics";
 import ProjectMilestones from "@/pages/ProjectMilestones";
 import ProjectDetails from "@/pages/ProjectDetails";
 import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
+// MessagingInbox import removed - page not found
 import Payments from "@/pages/Payments";
 import Interviews from "@/pages/Interviews";
 import Notifications from "@/pages/Notifications";
 import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
 import HiringTracker from "@/pages/HiringTracker";
 import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
+// Referrals import removed - page not found
 import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
+// WalletPage import removed - page not found
 import OrdersPage from "@/pages/Orders";
 import OrderDetailPage from "@/pages/OrderDetail";
 import ContractBuilder from "@/pages/ContractBuilder";
@@ -96,7 +96,7 @@ const DashboardRoutes = () => {
         path="/messages"
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Messages Page</div>
           </ProtectedRoute>
         } 
       />
@@ -104,7 +104,7 @@ const DashboardRoutes = () => {
         path="/inbox" 
         element={
           <ProtectedRoute>
-            <MessagingInbox />
+            <div>Inbox Page</div>
           </ProtectedRoute>
         } 
       />
@@ -168,7 +168,7 @@ const DashboardRoutes = () => {
         path="/referrals" 
         element={
           <ProtectedRoute>
-            <Referrals />
+            <div>Referrals Page</div>
           </ProtectedRoute>
         } 
       />
@@ -184,7 +184,7 @@ const DashboardRoutes = () => {
         path="/wallet"
         element={
           <ProtectedRoute>
-            <WalletPage />
+            <div>Wallet Page</div>
           </ProtectedRoute>
         }
       />

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecurityServices2027';
 
@@ -82,13 +82,13 @@ const AdvancedCybersecurityServices: NextPage = () => {
         </div>
       </div>
 
-      <Head>
+      <Helmet>
         <title>Advanced Cybersecurity Services 2027 - Zion Tech Group | Military-Grade Security Solutions</title>
         <meta name="description" content="Protect your digital assets with Zion Tech Group's cutting-edge cybersecurity solutions. From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world." />
         <meta name="keywords" content="cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-cybersecurity" />
-      </Head>
+      </Helmet>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         {/* Hero Section */}
