@@ -55,6 +55,106 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Get Started',
 				href: 'https://ziontechgroup.com/contact'
+			},
+			{
+				id: 'ai-legal-contract-analyzer-2025',
+				title: 'AI-Powered Legal Contract Analyzer & Risk Assessment Platform',
+				description: 'Advanced AI platform for comprehensive legal contract analysis, risk assessment, and compliance monitoring with real-time insights and automated recommendations.',
+				category: 'Micro SaaS',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Intelligent contract parsing and analysis',
+					'Real-time risk assessment and scoring',
+					'Automated compliance monitoring',
+					'Legal precedent database integration',
+					'Multi-jurisdiction support',
+					'Advanced clause identification',
+					'Automated contract generation',
+					'Real-time collaboration tools'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-legal-contract-analyzer'
+			},
+			{
+				id: 'ai-healthcare-predictive-analytics-2025',
+				title: 'AI-Powered Healthcare Predictive Analytics Platform',
+				description: 'Comprehensive healthcare analytics platform using AI to predict disease progression, optimize treatment plans, and improve patient outcomes through advanced data analysis.',
+				category: 'Micro SaaS',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Disease progression prediction',
+					'Treatment optimization algorithms',
+					'Population health analytics',
+					'Clinical decision support',
+					'Real-time patient monitoring',
+					'Predictive risk modeling',
+					'Healthcare cost optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Request Demo',
+				href: '/services/ai-healthcare-predictive-analytics'
+			},
+			{
+				id: 'ai-financial-trading-platform-2025',
+				title: 'AI-Powered Financial Trading & Risk Management Platform',
+				description: 'Advanced AI-driven trading platform offering algorithmic trading, real-time risk management, and multi-asset portfolio optimization with institutional-grade security.',
+				category: 'Micro SaaS',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered trading algorithms',
+					'Real-time risk management',
+					'Multi-asset portfolio optimization',
+					'Market sentiment analysis',
+					'Automated trade execution',
+					'Compliance monitoring',
+					'Performance analytics',
+					'Institutional-grade security'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-financial-trading-platform'
+			},
+			{
+				id: 'ai-supply-chain-optimization-2025',
+				title: 'AI-Powered Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain management platform using AI to optimize logistics, reduce costs, and improve efficiency through predictive analytics and automation.',
+				category: 'Micro SaaS',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Demand forecasting and planning',
+					'Route optimization algorithms',
+					'Supplier performance analytics',
+					'Inventory optimization',
+					'Real-time tracking and monitoring',
+					'Cost reduction analytics',
+					'Risk assessment and mitigation',
+					'Automated procurement'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-supply-chain-optimization'
+			},
+			{
+				id: 'ai-customer-experience-analytics-2025',
+				title: 'AI-Powered Customer Experience Analytics Platform',
+				description: 'Comprehensive customer experience analytics platform using AI to analyze customer behavior, predict trends, and optimize engagement strategies across all touchpoints.',
+				category: 'Micro SaaS',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Sentiment analysis and monitoring',
+					'Customer journey mapping',
+					'Predictive customer behavior',
+					'Real-time feedback analysis',
+					'Personalization optimization',
+					'Churn prediction and prevention',
+					'Cross-channel analytics',
+					'ROI measurement tools'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-customer-experience-analytics'
 			}
 		]
 	},
@@ -198,6 +298,107 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Real-time disease detection and classification',
 					'Predictive health analytics',
 					'Automated radiology reporting',
+			},
+			{
+				id: 'ai-legal-contract-analyzer-2025',
+				title: 'AI-Powered Legal Contract Analyzer & Risk Assessment Platform',
+				description: 'Advanced AI platform for comprehensive legal contract analysis, risk assessment, and compliance monitoring with real-time insights and automated recommendations.',
+				category: 'AI Solutions',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Intelligent contract parsing and analysis',
+					'Real-time risk assessment and scoring',
+					'Automated compliance monitoring',
+					'Legal precedent database integration',
+					'Multi-jurisdiction support',
+					'Advanced clause identification',
+					'Automated contract generation',
+					'Real-time collaboration tools'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-legal-contract-analyzer'
+			},
+			{
+				id: 'ai-healthcare-predictive-analytics-2025',
+				title: 'AI-Powered Healthcare Predictive Analytics Platform',
+				description: 'Comprehensive healthcare analytics platform using AI to predict disease progression, optimize treatment plans, and improve patient outcomes through advanced data analysis.',
+				category: 'AI Solutions',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Disease progression prediction',
+					'Treatment optimization algorithms',
+					'Population health analytics',
+					'Clinical decision support',
+					'Real-time patient monitoring',
+					'Predictive risk modeling',
+					'Healthcare cost optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Request Demo',
+				href: '/services/ai-healthcare-predictive-analytics'
+			},
+			{
+				id: 'ai-financial-trading-platform-2025',
+				title: 'AI-Powered Financial Trading & Risk Management Platform',
+				description: 'Advanced AI-driven trading platform offering algorithmic trading, real-time risk management, and multi-asset portfolio optimization with institutional-grade security.',
+				category: 'AI Solutions',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered trading algorithms',
+					'Real-time risk management',
+					'Multi-asset portfolio optimization',
+					'Market sentiment analysis',
+					'Automated trade execution',
+					'Compliance monitoring',
+					'Performance analytics',
+					'Institutional-grade security'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-financial-trading-platform'
+			},
+			{
+				id: 'ai-supply-chain-optimization-2025',
+				title: 'AI-Powered Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain management platform using AI to optimize logistics, reduce costs, and improve efficiency through predictive analytics and automation.',
+				category: 'AI Solutions',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Demand forecasting and planning',
+					'Route optimization algorithms',
+					'Supplier performance analytics',
+					'Inventory optimization',
+					'Real-time tracking and monitoring',
+					'Cost reduction analytics',
+					'Risk assessment and mitigation',
+					'Automated procurement'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-supply-chain-optimization'
+			},
+			{
+				id: 'ai-customer-experience-analytics-2025',
+				title: 'AI-Powered Customer Experience Analytics Platform',
+				description: 'Comprehensive customer experience analytics platform using AI to analyze customer behavior, predict trends, and optimize engagement strategies across all touchpoints.',
+				category: 'AI Solutions',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Sentiment analysis and monitoring',
+					'Customer journey mapping',
+					'Predictive customer behavior',
+					'Real-time feedback analysis',
+					'Personalization optimization',
+					'Churn prediction and prevention',
+					'Cross-channel analytics',
+					'ROI measurement tools'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-customer-experience-analytics'
+			},
 					'Treatment recommendation engine',
 					'Patient risk assessment',
 					'Clinical decision support',
@@ -388,6 +589,106 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Plan Zero Trust',
 				href: 'https://ziontechgroup.com/services/zero-trust-rollout-coaching'
+			},
+			{
+				id: 'ai-legal-contract-analyzer-2025',
+				title: 'AI-Powered Legal Contract Analyzer & Risk Assessment Platform',
+				description: 'Advanced AI platform for comprehensive legal contract analysis, risk assessment, and compliance monitoring with real-time insights and automated recommendations.',
+				category: 'IT Services',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Intelligent contract parsing and analysis',
+					'Real-time risk assessment and scoring',
+					'Automated compliance monitoring',
+					'Legal precedent database integration',
+					'Multi-jurisdiction support',
+					'Advanced clause identification',
+					'Automated contract generation',
+					'Real-time collaboration tools'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-legal-contract-analyzer'
+			},
+			{
+				id: 'ai-healthcare-predictive-analytics-2025',
+				title: 'AI-Powered Healthcare Predictive Analytics Platform',
+				description: 'Comprehensive healthcare analytics platform using AI to predict disease progression, optimize treatment plans, and improve patient outcomes through advanced data analysis.',
+				category: 'IT Services',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Disease progression prediction',
+					'Treatment optimization algorithms',
+					'Population health analytics',
+					'Clinical decision support',
+					'Real-time patient monitoring',
+					'Predictive risk modeling',
+					'Healthcare cost optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Request Demo',
+				href: '/services/ai-healthcare-predictive-analytics'
+			},
+			{
+				id: 'ai-financial-trading-platform-2025',
+				title: 'AI-Powered Financial Trading & Risk Management Platform',
+				description: 'Advanced AI-driven trading platform offering algorithmic trading, real-time risk management, and multi-asset portfolio optimization with institutional-grade security.',
+				category: 'IT Services',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered trading algorithms',
+					'Real-time risk management',
+					'Multi-asset portfolio optimization',
+					'Market sentiment analysis',
+					'Automated trade execution',
+					'Compliance monitoring',
+					'Performance analytics',
+					'Institutional-grade security'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-financial-trading-platform'
+			},
+			{
+				id: 'ai-supply-chain-optimization-2025',
+				title: 'AI-Powered Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain management platform using AI to optimize logistics, reduce costs, and improve efficiency through predictive analytics and automation.',
+				category: 'IT Services',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Demand forecasting and planning',
+					'Route optimization algorithms',
+					'Supplier performance analytics',
+					'Inventory optimization',
+					'Real-time tracking and monitoring',
+					'Cost reduction analytics',
+					'Risk assessment and mitigation',
+					'Automated procurement'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-supply-chain-optimization'
+			},
+			{
+				id: 'ai-customer-experience-analytics-2025',
+				title: 'AI-Powered Customer Experience Analytics Platform',
+				description: 'Comprehensive customer experience analytics platform using AI to analyze customer behavior, predict trends, and optimize engagement strategies across all touchpoints.',
+				category: 'IT Services',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Sentiment analysis and monitoring',
+					'Customer journey mapping',
+					'Predictive customer behavior',
+					'Real-time feedback analysis',
+					'Personalization optimization',
+					'Churn prediction and prevention',
+					'Cross-channel analytics',
+					'ROI measurement tools'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-customer-experience-analytics'
 			}
 		]
 	},
@@ -587,6 +888,106 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Migrate Workloads',
 				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'ai-legal-contract-analyzer-2025',
+				title: 'AI-Powered Legal Contract Analyzer & Risk Assessment Platform',
+				description: 'Advanced AI platform for comprehensive legal contract analysis, risk assessment, and compliance monitoring with real-time insights and automated recommendations.',
+				category: 'Data & Analytics',
+				price: '$1,499',
+				billing: 'month',
+				features: [
+					'Intelligent contract parsing and analysis',
+					'Real-time risk assessment and scoring',
+					'Automated compliance monitoring',
+					'Legal precedent database integration',
+					'Multi-jurisdiction support',
+					'Advanced clause identification',
+					'Automated contract generation',
+					'Real-time collaboration tools'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-legal-contract-analyzer'
+			},
+			{
+				id: 'ai-healthcare-predictive-analytics-2025',
+				title: 'AI-Powered Healthcare Predictive Analytics Platform',
+				description: 'Comprehensive healthcare analytics platform using AI to predict disease progression, optimize treatment plans, and improve patient outcomes through advanced data analysis.',
+				category: 'Data & Analytics',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Disease progression prediction',
+					'Treatment optimization algorithms',
+					'Population health analytics',
+					'Clinical decision support',
+					'Real-time patient monitoring',
+					'Predictive risk modeling',
+					'Healthcare cost optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Request Demo',
+				href: '/services/ai-healthcare-predictive-analytics'
+			},
+			{
+				id: 'ai-financial-trading-platform-2025',
+				title: 'AI-Powered Financial Trading & Risk Management Platform',
+				description: 'Advanced AI-driven trading platform offering algorithmic trading, real-time risk management, and multi-asset portfolio optimization with institutional-grade security.',
+				category: 'Data & Analytics',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered trading algorithms',
+					'Real-time risk management',
+					'Multi-asset portfolio optimization',
+					'Market sentiment analysis',
+					'Automated trade execution',
+					'Compliance monitoring',
+					'Performance analytics',
+					'Institutional-grade security'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-financial-trading-platform'
+			},
+			{
+				id: 'ai-supply-chain-optimization-2025',
+				title: 'AI-Powered Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain management platform using AI to optimize logistics, reduce costs, and improve efficiency through predictive analytics and automation.',
+				category: 'Data & Analytics',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Demand forecasting and planning',
+					'Route optimization algorithms',
+					'Supplier performance analytics',
+					'Inventory optimization',
+					'Real-time tracking and monitoring',
+					'Cost reduction analytics',
+					'Risk assessment and mitigation',
+					'Automated procurement'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-supply-chain-optimization'
+			},
+			{
+				id: 'ai-customer-experience-analytics-2025',
+				title: 'AI-Powered Customer Experience Analytics Platform',
+				description: 'Comprehensive customer experience analytics platform using AI to analyze customer behavior, predict trends, and optimize engagement strategies across all touchpoints.',
+				category: 'Data & Analytics',
+				price: '$1,999',
+				billing: 'month',
+				features: [
+					'Sentiment analysis and monitoring',
+					'Customer journey mapping',
+					'Predictive customer behavior',
+					'Real-time feedback analysis',
+					'Personalization optimization',
+					'Churn prediction and prevention',
+					'Cross-channel analytics',
+					'ROI measurement tools'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-customer-experience-analytics'
 			}
 		]
 	},
@@ -886,6 +1287,26 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Build a Twin',
 				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'ai-supply-chain-optimization-2025',
+				title: 'AI-Powered Supply Chain Optimization Platform',
+				description: 'Intelligent supply chain management platform using AI to optimize logistics, reduce costs, and improve efficiency through predictive analytics and automation.',
+				category: 'IoT & Edge',
+				price: '$2,499',
+				billing: 'month',
+				features: [
+					'Demand forecasting and planning',
+					'Route optimization algorithms',
+					'Supplier performance analytics',
+					'Inventory optimization',
+					'Real-time tracking and monitoring',
+					'Cost reduction analytics',
+					'Risk assessment and mitigation',
+					'Automated procurement'
+				],
+				ctaLabel: 'Start Free Trial',
+				href: '/services/ai-supply-chain-optimization'
 			}
 		]
 	},
@@ -1057,6 +1478,26 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Enable Triage',
 				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'ai-healthcare-predictive-analytics-2025',
+				title: 'AI-Powered Healthcare Predictive Analytics Platform',
+				description: 'Comprehensive healthcare analytics platform using AI to predict disease progression, optimize treatment plans, and improve patient outcomes through advanced data analysis.',
+				category: 'BioTech & Health',
+				price: '$2,999',
+				billing: 'month',
+				features: [
+					'Disease progression prediction',
+					'Treatment optimization algorithms',
+					'Population health analytics',
+					'Clinical decision support',
+					'Real-time patient monitoring',
+					'Predictive risk modeling',
+					'Healthcare cost optimization',
+					'Regulatory compliance tools'
+				],
+				ctaLabel: 'Request Demo',
+				href: '/services/ai-healthcare-predictive-analytics'
 			}
 		]
 	},
@@ -1114,6 +1555,26 @@ export const servicesCatalog: ServiceCategory[] = [
 				],
 				ctaLabel: 'Strengthen Compliance',
 				href: 'https://ziontechgroup.com/services'
+			},
+			{
+				id: 'ai-financial-trading-platform-2025',
+				title: 'AI-Powered Financial Trading & Risk Management Platform',
+				description: 'Advanced AI-driven trading platform offering algorithmic trading, real-time risk management, and multi-asset portfolio optimization with institutional-grade security.',
+				category: 'FinTech & DeFi',
+				price: '$3,999',
+				billing: 'month',
+				features: [
+					'AI-powered trading algorithms',
+					'Real-time risk management',
+					'Multi-asset portfolio optimization',
+					'Market sentiment analysis',
+					'Automated trade execution',
+					'Compliance monitoring',
+					'Performance analytics',
+					'Institutional-grade security'
+				],
+				ctaLabel: 'Get Started',
+				href: '/services/ai-financial-trading-platform'
 			}
 		]
 	},
