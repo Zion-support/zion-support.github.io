@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect, memo } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { ArrowRight, 
@@ -31,7 +31,7 @@ interface HeroSlide {
 }[];
 }
 
-export default function EnhancedHeroSection(...args: any[]): any {
+const EnhancedHeroSection = memo(function EnhancedHeroSection(...args: any[]): any {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -379,4 +379,6 @@ export default function EnhancedHeroSection(...args: any[]): any {
       </motion.div>
     </section>
   );
-}
+});
+
+export default EnhancedHeroSection;

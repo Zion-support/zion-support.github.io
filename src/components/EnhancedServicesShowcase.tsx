@@ -1,4 +1,4 @@
-import React, { useState } from 'react.ts';
+import React, { useState, memo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Brain, 
@@ -32,7 +32,7 @@ interface Service {
 
 }
 
-const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+const ServiceCard: React.FC<{ service: Service; index: number }> = memo(({ service, index }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, i
       />
     </motion.div>
   </motion.div>
-);
+));
 
 const services: Service[] = [
   {
@@ -214,7 +214,7 @@ const services: Service[] = [
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase(...args: any[]): any {
+const EnhancedServicesShowcase = memo(function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -351,4 +351,6 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
       </div>
     </section>
   );
-}
+});
+
+export default EnhancedServicesShowcase;
