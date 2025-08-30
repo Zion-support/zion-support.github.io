@@ -296,6 +296,34 @@ export function Header({ className }: HeaderProps) {
                     >
                       Cloud & DevOps
                     </Link>
+                    <Link
+                      to="/cybersecurity"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Cybersecurity
+                    </Link>
+                    <Link
+                      to="/quantum-computing"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Quantum Computing
+                    </Link>
+                    <Link
+                      to="/blockchain"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Blockchain
+                    </Link>
+                    <Link
+                      to="/digital-transformation"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Digital Transformation
+                    </Link>
                   </div>
                 </div>
 

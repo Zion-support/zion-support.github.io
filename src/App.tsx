@@ -34,6 +34,14 @@ const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
+// Additional service pages
+const CloudDevOps = createLazyComponent(() => import('./pages/cloud-devops'));
+const Cybersecurity = createLazyComponent(() => import('./pages/cybersecurity'));
+const QuantumComputing = createLazyComponent(() => import('./pages/quantum-computing'));
+const Blockchain = createLazyComponent(() => import('./pages/blockchain'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/digital-transformation'));
+const Enterprise = createLazyComponent(() => import('./pages/enterprise'));
+
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
@@ -166,6 +174,12 @@ function App() {
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
+                    <Route path="/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/quantum-computing" element={<QuantumComputing />} />
+                    <Route path="/blockchain" element={<Blockchain />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/enterprise" element={<Enterprise />} />
                     
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />

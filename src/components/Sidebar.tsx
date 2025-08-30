@@ -106,13 +106,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       title: 'Enterprise Services',
       icon: Building,
       links: [
-        { name: 'Cloud DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot', icon: Shield, description: 'Security solutions' },
-        { name: 'Digital Twin', href: '/services/digital-twin', icon: Rocket, description: 'Digital simulation' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge', icon: Cpu, description: 'Internet of Things' },
-        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database, description: 'Data processing' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure', icon: Settings, description: 'Infrastructure management' },
-        { name: 'Zero Trust Security', href: '/services/zero-trust-network-architecture', icon: Lock, description: 'Network security' }
+        { name: 'Cloud DevOps', href: '/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security solutions' },
+        { name: 'Enterprise Solutions', href: '/enterprise', icon: Building, description: 'Enterprise technology' },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp, description: 'Business transformation' },
+        { name: 'IT Infrastructure', href: '/it-services', icon: Settings, description: 'Infrastructure management' },
+        { name: 'Data Analytics', href: '/services/data-analytics', icon: Database, description: 'Data processing' }
       ]
     },
     {
@@ -121,11 +120,11 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       icon: Star,
       links: [
         { name: 'Healthcare Tech', href: '/services/healthcare-tech', icon: Heart, description: 'Medical technology' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Lock, description: 'Blockchain technology' },
-        { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Zap, description: 'Quantum solutions' },
+        { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock, description: 'Blockchain technology' },
+        { name: 'Quantum Computing', href: '/quantum-computing', icon: Zap, description: 'Quantum solutions' },
         { name: 'Space Technology', href: '/services/space-tech', icon: Rocket, description: 'Aerospace solutions' },
         { name: 'Sustainability Tech', href: '/services/sustainability', icon: Globe, description: 'Green technology' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: TrendingUp, description: 'Business modernization' }
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp, description: 'Business modernization' }
       ]
     },
     {
