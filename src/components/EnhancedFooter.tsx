@@ -48,7 +48,8 @@ import {
   Github,
   Facebook,
   Instagram,
-  Youtube
+  Youtube,
+  Handshake
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -282,12 +283,13 @@ export function EnhancedFooter() {
           <Link
             to="/contact"
             className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"
-
+          >
             <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
           </Link>
         </motion.div>
       </div>
     </footer>
   );
+}
 
-export default EnhancedFooter;}}}
+export default EnhancedFooter;

@@ -396,7 +396,7 @@ export function EnhancedHeader() {
                       transition={{ duration: 0.3 }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
-
+                    >
                       {/* Featured Services */}
                       <div className="mb-6">
                         <h3 className="text-lg font-semibold text-cyan-400 mb-4 font-orbitron">Featured Services</h3>
@@ -406,7 +406,7 @@ export function EnhancedHeader() {
                               key={service.name}
                               to={service.href}
                               className="group p-4 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
-
+                            >
                               <div className="flex items-center space-x-3 mb-2">
                                 <service.icon className="w-5 h-5 text-cyan-400" />
                                 <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -447,7 +447,7 @@ export function EnhancedHeader() {
                                     key={service.name}
                                     to={service.href}
                                     className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 transition-colors group"
-
+                                  >
                                     <service.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                                     <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                                       {service.name}
@@ -464,7 +464,7 @@ export function EnhancedHeader() {
                         <Link
                           to="/services"
                           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
-
+                        >
                           View All Services
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
@@ -484,7 +484,7 @@ export function EnhancedHeader() {
                       ? 'text-cyan-400 border-b-2 border-cyan-400'
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
-
+                >
                   {item.name}
                 </Link>
               ))}
@@ -516,13 +516,13 @@ export function EnhancedHeader() {
                 <Link
                   to="/contact"
                   className="btn-neon-cyan text-sm"
-
+                >
                   Get Started
                 </Link>
                 <Link
                   to="/login"
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
-
+                >
                   <User className="w-5 h-5" />
                 </Link>
               </div>
@@ -532,7 +532,7 @@ export function EnhancedHeader() {
             <button
               className="xl:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-
+            >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -547,7 +547,7 @@ export function EnhancedHeader() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-
+            >
               <div className="container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 gap-6">
                   {/* Mobile Search */}
@@ -574,7 +574,7 @@ export function EnhancedHeader() {
                             : 'text-gray-300 hover:text-cyan-400 pl-4'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
-
+                      >
                         {item.name}
                       </Link>
                     ))}
@@ -590,7 +590,7 @@ export function EnhancedHeader() {
                           to={service.href}
                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
                           onClick={() => setMobileMenuOpen(false)}
-
+                        >
                           <service.icon className="w-5 h-5 text-cyan-400" />
                           <div>
                             <span className="text-white font-medium">{service.name}</span>

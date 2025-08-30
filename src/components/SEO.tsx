@@ -109,4 +109,4 @@ export function SEO({
       <meta name="yandex-verification" content="your-yandex-verification-code" />
     </Helmet>
   );
-}}
+}

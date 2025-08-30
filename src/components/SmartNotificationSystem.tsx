@@ -32,9 +32,11 @@ interface Notification {
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
+}
 
 interface Props {
   enabled?: boolean;
+}
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -57,8 +59,10 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         category: 'onboarding',
         action: {
           label: 'Get Started',
-          onClick: () => // // console.log('Get Started clicked')
-
+          onClick: () => {
+            // console.log('Get Started clicked')
+          }
+        }
       },
       {
         id: '2',
@@ -72,7 +76,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         action: {
           label: 'View Details',
           onClick: () => // // console.log('View Details clicked')
-
+        }
       },
       {
         id: '3',
@@ -96,8 +100,8 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         action: {
           label: 'Update Now',
           onClick: () => // // console.log('Update Now clicked')
-
-
+        }
+      }
     ];
 
     setNotifications(sampleNotifications);

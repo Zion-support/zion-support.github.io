@@ -20,6 +20,7 @@ import {
 
 interface FloatingActionButtonProps {
   enabled?: boolean;
+}
 
 export function FloatingActionButton({ enabled = true }: FloatingActionButtonProps) {
   const [isExpanded, setIsExpanded] = useState(false);

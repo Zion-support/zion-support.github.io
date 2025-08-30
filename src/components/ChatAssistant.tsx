@@ -48,6 +48,7 @@ interface Message {
     sources?: string[];
     suggestions?: string[];
   };
+}
 
 interface ChatAssistantProps {
   enabled?: boolean;

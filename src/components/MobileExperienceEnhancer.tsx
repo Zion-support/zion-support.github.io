@@ -46,6 +46,7 @@ interface MobileOptimization {
   enabled: boolean;
   category: 'performance' | 'touch' | 'visual' | 'layout';
   impact: 'high' | 'medium' | 'low';
+}
 
 interface TouchGesture {
   id: string;
@@ -54,6 +55,7 @@ interface TouchGesture {
   gesture: string;
   action: string;
   enabled: boolean;
+}
 
 export function MobileExperienceEnhancer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,7 +89,7 @@ export function MobileExperienceEnhancer() {
         setDeviceType('tablet');
       } else {
         setDeviceType('desktop');
-
+      }
     };
 
     detectDevice();
@@ -136,7 +138,7 @@ export function MobileExperienceEnhancer() {
       enabled: false,
       category: 'visual',
       impact: 'medium'
-
+    }
   ];
 
   // Touch gestures

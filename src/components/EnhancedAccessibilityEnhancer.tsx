@@ -114,6 +114,7 @@ export default function EnhancedAccessibilityEnhancer() {
         newSet.add(featureId);
       } else {
         newSet.delete(featureId);
+      }
 
       return newSet;
     });
@@ -127,6 +128,7 @@ export default function EnhancedAccessibilityEnhancer() {
         } else {
           document.documentElement.classList.remove('high-contrast');
           setContrastMode('normal');
+        }
 
         break;
 
@@ -135,6 +137,7 @@ export default function EnhancedAccessibilityEnhancer() {
           setFontSize(20);
         } else {
           setFontSize(16);
+        }
 
         break;
 
@@ -145,6 +148,7 @@ export default function EnhancedAccessibilityEnhancer() {
         } else {
           document.documentElement.classList.remove('reduced-motion');
           setReducedMotion(false);
+        }
 
         break;
 
@@ -163,7 +167,7 @@ export default function EnhancedAccessibilityEnhancer() {
       case 'color-blind-friendly':
         setColorBlindMode(enabled);
         break;
-
+    }
   }, [accessibilityFeatures]);
 
   // Accessibility audit
@@ -183,7 +187,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Add descriptive alt text or aria-label',
           wcagCriteria: '1.1.1 Non-text Content (A)'
         });
-
+      }
     });
 
     // Check for proper heading structure
@@ -200,6 +204,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Maintain proper heading hierarchy (h1 → h2 → h3)',
           wcagCriteria: '1.3.1 Info and Relationships (A)'
         });
+      }
 
       previousLevel = level;
     });
@@ -220,7 +225,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Add label, aria-label, or aria-labelledby',
           wcagCriteria: '3.3.2 Labels or Instructions (A)'
         });
-
+      }
     });
 
     // Check for color contrast (simplified)
@@ -240,7 +245,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Ensure sufficient color contrast (4.5:1 for normal text)',
           wcagCriteria: '1.4.3 Contrast (Minimum) (AA)'
         });
-
+      }
     });
 
     // Check for keyboard navigation
@@ -256,7 +261,7 @@ export default function EnhancedAccessibilityEnhancer() {
           recommendation: 'Ensure element is keyboard accessible or hide with aria-hidden',
           wcagCriteria: '2.1.1 Keyboard (A)'
         });
-
+      }
     });
 
     // Simulate audit time
@@ -277,7 +282,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('focus-visible');
     } else {
       document.documentElement.classList.remove('focus-visible');
-
+    }
   }, [focusIndicator]);
 
   // Apply keyboard navigation
@@ -286,7 +291,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('keyboard-navigation');
     } else {
       document.documentElement.classList.remove('keyboard-navigation');
-
+    }
   }, [keyboardNavigation]);
 
   // Apply color blind mode
@@ -295,7 +300,7 @@ export default function EnhancedAccessibilityEnhancer() {
       document.documentElement.classList.add('color-blind-friendly');
     } else {
       document.documentElement.classList.remove('color-blind-friendly');
-
+    }
   }, [colorBlindMode]);
 
   // Apply screen reader mode
@@ -307,7 +312,7 @@ export default function EnhancedAccessibilityEnhancer() {
     } else {
       document.documentElement.classList.remove('screen-reader-mode');
       document.documentElement.removeAttribute('aria-live');
-
+    }
   }, [screenReaderMode]);
 
   return (
@@ -319,7 +324,7 @@ export default function EnhancedAccessibilityEnhancer() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="Open Accessibility Settings"
-
+      >
         <Accessibility className="w-6 h-6 text-white" />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
