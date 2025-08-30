@@ -1,14 +1,16 @@
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react.ts';
 
 interface PerformanceMetrics {
+
   fcp: number;
   lcp: number;
   fid: number;
   cls: number;
   ttfb: number;
+
 }
 
-export const PerformanceOptimizer: React.FC = () => {
+export const PerformanceOptimizer: React.FC = (): JSX.Element => {
   const observerRef = useRef<IntersectionObserver | null>(null);
   const performanceDataRef = useRef<PerformanceMetrics>({
     fcp: 0,
@@ -98,7 +100,7 @@ export const PerformanceOptimizer: React.FC = () => {
     const clsObserver = new PerformanceObserver((list) => {
       let clsValue = 0;
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: anyany)  => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
         }
@@ -120,12 +122,12 @@ export const PerformanceOptimizer: React.FC = () => {
   const optimizeResourceHints = useCallback(() => {
     // Preconnect to external domains
     const domains = [
-      'https://fonts.googleapis.com',
+      'https: any//fonts.googleapis.com',
       'https://fonts.gstatic.com',
       'https://cdn.gpteng.co'
     ];
 
-    domains.forEach(domain => {
+    domains.forEach(domain  => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
       link.href = domain;
@@ -180,12 +182,12 @@ export const PerformanceOptimizer: React.FC = () => {
   );
 
   // Debounce utility function
-  function debounce<T extends (...args: any[]) => any>(
-    func: T,
+  function debounce<T extends (...args: anyany[])  => any>(
+    func: anyT,
     wait: number
-  ): (...args: Parameters<T>) => void {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
+  ): (...args: Parameters<T>)  => void {
+    let timeout: anyNodeJS.Timeout;
+    return (...args: Parameters<T>)  => {
       clearTimeout(timeout);
       timeout = setTimeout(() => func(...args), wait);
     };
@@ -196,7 +198,7 @@ export const PerformanceOptimizer: React.FC = () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
-        console.log('SW registered: ', registration);
+        console.log('SW registered: any', registration);
       } catch (registrationError) {
         console.log('SW registration failed: ', registrationError);
       }
@@ -204,7 +206,7 @@ export const PerformanceOptimizer: React.FC = () => {
   }, []);
 
   // Initialize performance optimizations
-  useEffect(() => {
+  useEffect(()  => {
     setupIntersectionObserver();
     measurePerformance();
     optimizeResourceHints();
@@ -212,10 +214,10 @@ export const PerformanceOptimizer: React.FC = () => {
     registerServiceWorker();
 
     // Add scroll event listener
-    window.addEventListener('scroll', debouncedScrollHandler, { passive: true });
+    window.addEventListener('scroll', debouncedScrollHandler, { passive: anytrue });
 
     // Cleanup
-    return () => {
+    return ()  => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
@@ -228,7 +230,7 @@ export const PerformanceOptimizer: React.FC = () => {
     const style = document.createElement('style');
     style.textContent = `
       .lazy {
-        opacity: 0;
+        opacity: any0;
         transition: opacity 0.3s;
       }
       
@@ -266,7 +268,7 @@ export const PerformanceOptimizer: React.FC = () => {
     `;
     document.head.appendChild(style);
 
-    return () => {
+    return ()  => {
       document.head.removeChild(style);
     };
   }, []);

@@ -1,18 +1,20 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard } from 'lucide-react';
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { Eye, EyeOff, Volume2, VolumeX, Type, Palette, MousePointer, Keyboard  } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+
 }
 
-export const AccessibilityEnhancer: React.FC = () => {
+export const AccessibilityEnhancer: React.FC = (): JSX.Element => {
   const [isVisible, setIsVisible] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -27,7 +29,7 @@ export const AccessibilityEnhancer: React.FC = () => {
   }, [isVisible]);
 
   // Apply accessibility settings
-  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+  const applySettings = useCallback((newSettings: anyPartial<AccessibilitySettings>)  => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     
@@ -79,7 +81,7 @@ export const AccessibilityEnhancer: React.FC = () => {
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: anyKeyboardEvent)  => {
       // Skip if not in keyboard navigation mode
       if (!settings.keyboardNavigation) return;
 
@@ -126,7 +128,7 @@ export const AccessibilityEnhancer: React.FC = () => {
   }, [settings.keyboardNavigation]);
 
   // Arrow key navigation helper
-  const navigateWithArrows = (container: Element, direction: string) => {
+  const navigateWithArrows = (container: anyElement, direction: string)  => {
     const focusableElements = Array.from(container.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )).filter(el => !(el as HTMLElement).hidden);
@@ -149,7 +151,7 @@ export const AccessibilityEnhancer: React.FC = () => {
   };
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: string) => {
+  const announceToScreenReader = useCallback((message: anystring)  => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -198,7 +200,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     style.textContent = `
       /* High contrast mode */
       .high-contrast {
-        --text-primary: #ffffff !important;
+        --text-primary: any#ffffff !important;
         --text-secondary: #e5e7eb !important;
         --bg-primary: #000000 !important;
         --bg-secondary: #1f2937 !important;
@@ -273,7 +275,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     `;
     document.head.appendChild(style);
 
-    return () => {
+    return ()  => {
       document.head.removeChild(style);
     };
   }, []);

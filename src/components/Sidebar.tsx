@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link, useLocation  } from 'react-router-dom.ts';
+import { X, 
   Home, 
   Briefcase, 
   Users, 
@@ -65,25 +64,27 @@ import {
   GraduationCap,
   Activity,
   DollarSign as DollarSignIcon
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+ } from 'lucide-react.ts';
+import { cn  } from '@/lib/utils';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyboolean;
+  onClose: ()  => void;
   className?: string;
+
 }
 
-export function Sidebar({ isOpen, onClose, className }: SidebarProps) {
+export function Sidebar(...args: any[]): any {
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const [expandedSections, setExpandedSections] = useState<any>([]);
 
   // Close sidebar when location changes
   React.useEffect(() => {
     onClose();
   }, [location.pathname, onClose]);
 
-  const toggleSection = (sectionTitle: string) => {
+  const toggleSection = (sectionTitle: anystring)  => {
     setExpandedSections(prev => 
       prev.includes(sectionTitle) 
         ? prev.filter(title => title !== sectionTitle)

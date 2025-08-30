@@ -1,8 +1,7 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Brain, 
   Globe, 
   Shield, 
   Zap, 
@@ -14,7 +13,7 @@ import {
   Award,
   Clock,
   Heart
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 const highlights = [
   {
@@ -108,7 +107,7 @@ const technologies = [
   'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
 ];
 
-export function FeatureHighlights() {
+export function FeatureHighlights(...args: any[]): any {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -189,9 +188,9 @@ export function FeatureHighlights() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg: anygrid-cols-3 gap-8 mb-20"
         >
-          {highlights.map((highlight, index) => (
+          {highlights.map((highlight, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -242,9 +241,9 @@ export function FeatureHighlights() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
-          {features.map((feature, index) => (
+          {features.map((feature, index)  => (
             <motion.div
               key={index}
               variants={itemVariants}
@@ -284,8 +283,8 @@ export function FeatureHighlights() {
             Trusted by Industry Leaders
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
+            {achievements.map((achievement, index)  => (
               <motion.div
                 key={index}
                 variants={achievementVariants}

@@ -1,13 +1,13 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader';
-import { EnhancedFuturisticFooter } from './components/EnhancedFuturisticFooter';
-import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
-import { SEO } from './components/SEO';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { ErrorBoundary } from './components/ErrorBoundary';
+import React, { Suspense } from 'react.ts';
+import { Routes, Route  } from 'react-router-dom.ts';
+import { AppHeader  } from './layout/AppHeader';
+import { EnhancedFuturisticFooter  } from './components/EnhancedFuturisticFooter';
+import { ChatAssistant  } from './components/ChatAssistant';
+import { LoadingSpinner  } from './components/ui/LoadingSpinner';
+import { SEO  } from './components/SEO';
+import { PerformanceOptimizer  } from './components/PerformanceOptimizer';
+import { AccessibilityEnhancer  } from './components/AccessibilityEnhancer';
+import { ErrorBoundary  } from './components/ErrorBoundary';
 
 // Core pages with better code splitting
 const Home = React.lazy(() => import('./pages/Home'));
@@ -109,7 +109,7 @@ const EnhancedLoadingSpinner = () => (
   </div>
 );
 
-function App() {
+function App(...args: any[]): any {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-futuristic">

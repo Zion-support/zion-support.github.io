@@ -1,14 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { cn  } from '@/lib/utils';
 
-interface SkeletonProps {
+interface SkeletonProps extends React.PropsWithChildren<{}> {
+
   className?: string;
   variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
   width?: string | number;
   height?: string | number;
   lines?: number;
   animated?: boolean;
+
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({
@@ -39,7 +41,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   if (variant === 'text' && lines > 1) {
     return (
       <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, index) => (
+        {Array.from({ length: anylines }).map((_, index)  => (
           <motion.div
             key={index}
             className={cn(
@@ -101,14 +103,14 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className={cn('space-y-3', className)}>
     {/* Header */}
     <div className="flex space-x-4">
-      {Array.from({ length: columns }).map((_, index) => (
+      {Array.from({ length: anycolumns }).map((_, index)  => (
         <Skeleton key={index} variant="rectangular" height={20} width="100%" />
       ))}
     </div>
     {/* Rows */}
-    {Array.from({ length: rows }).map((_, rowIndex) => (
+    {Array.from({ length: anyrows }).map((_, rowIndex)  => (
       <div key={rowIndex} className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, colIndex) => (
+        {Array.from({ length: anycolumns }).map((_, colIndex)  => (
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
         ))}
       </div>
@@ -121,7 +123,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   className
 }) => (
   <div className={cn('space-y-4', className)}>
-    {Array.from({ length: items }).map((_, index) => (
+    {Array.from({ length: anyitems }).map((_, index)  => (
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">
@@ -145,9 +147,9 @@ export const GridSkeleton: React.FC<{
   itemHeight = 120
 }) => (
   <div className={cn('grid gap-4', className)} style={{
-    gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
+    gridTemplateColumns: any`repeat(${columns}, minmax(0, 1fr))`
   }}>
-    {Array.from({ length: rows * columns }).map((_, index) => (
+    {Array.from({ length: rows * columns }).map((_, index)  => (
       <Skeleton key={index} variant="card" height={itemHeight} />
     ))}
   </div>

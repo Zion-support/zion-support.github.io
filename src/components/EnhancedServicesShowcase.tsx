@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React, { useState } from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Database, 
@@ -15,9 +14,10 @@ import {
   Clock,
   CheckCircle,
   Search
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Service {
+
   id: string;
   title: string;
   description: string;
@@ -29,6 +29,7 @@ interface Service {
   marketSize: string;
   path: string;
   category: string;
+
 }
 
 const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
@@ -213,7 +214,7 @@ const services: Service[] = [
 
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
 
-export default function EnhancedServicesShowcase() {
+export default function EnhancedServicesShowcase(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -295,8 +296,8 @@ export default function EnhancedServicesShowcase() {
         {/* Services Grid */}
         <div className="max-w-7xl mx-auto">
           {filteredServices.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)  => (
                 <ServiceCard key={service.id} service={service} index={index} />
               ))}
             </div>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Star, 
   Quote, 
   ChevronLeft, 
   ChevronRight,
@@ -9,9 +8,10 @@ import {
   Building,
   Users,
   Award
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface Testimonial {
+
   id: string;
   name: string;
   position: string;
@@ -22,6 +22,7 @@ interface Testimonial {
   industry: string;
   results: string[];
   avatar: string;
+
 }
 
 const testimonials: Testimonial[] = [
@@ -87,7 +88,7 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-export default function EnhancedTestimonialsSection() {
+export default function EnhancedTestimonialsSection(...args: any[]): any {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
@@ -111,7 +112,7 @@ export default function EnhancedTestimonialsSection() {
     setIsAutoPlaying(false);
   };
 
-  const goToTestimonial = (index: number) => {
+  const goToTestimonial = (index: anynumber)  => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false);
   };
@@ -190,8 +191,8 @@ export default function EnhancedTestimonialsSection() {
                   </blockquote>
 
                   {/* Results */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index) => (
+                  <div className="grid grid-cols-1 md: anygrid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index)  => (
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 }}
@@ -277,13 +278,13 @@ export default function EnhancedTestimonialsSection() {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: anygrid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index) => (
+              ].map((indicator, index)  => (
                 <motion.div
                   key={indicator.label}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,18 +1,22 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Button } from './ui/button';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import { Button  } from './ui/button';
+import { AlertTriangle, RefreshCw, Home, Mail  } from 'lucide-react.ts';
 
-interface Props {
-  children: ReactNode;
+interface Props extends React.PropsWithChildren<{}> {
+
+  children: anyReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo)  => void;
+
 }
 
 interface State {
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -55,11 +59,11 @@ export class ErrorBoundary extends Component<Props, State> {
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: anyError, errorInfo: ErrorInfo)  => {
     try {
       // Send error to your error tracking service (e.g., Sentry, LogRocket, etc.)
       const errorData = {
-        errorId: this.state.errorId,
+        errorId: anythis.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
@@ -76,7 +80,7 @@ export class ErrorBoundary extends Component<Props, State> {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(errorData),
-      }).catch(() => {
+      }).catch(()  => {
         // Silently fail if error logging fails
       });
     } catch (logError) {
@@ -209,15 +213,15 @@ Timestamp: ${new Date().toISOString()}
 }
 
 // Hook for functional components to catch errors
-export const useErrorHandler = () => {
-  const [error, setError] = React.useState<Error | null>(null);
+export const useErrorHandler: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
+  const [error, setError] = React.useState<any>(null);
 
   React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
+    const handleError = (event: anyErrorEvent)  => {
       setError(event.error);
     };
 
-    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+    const handleUnhandledRejection = (event: anyPromiseRejectionEvent)  => {
       setError(new Error(event.reason));
     };
 
@@ -235,10 +239,10 @@ export const useErrorHandler = () => {
 
 // Higher-order component for error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: anyReact.ComponentType<P>,
   errorBoundaryProps?: Partial<Props>
-) => {
-  const WrappedComponent = (props: P) => (
+)  => {
+  const WrappedComponent = (props: anyP)  => (
     <ErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ErrorBoundary>

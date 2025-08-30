@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { Link  } from 'react-router-dom.ts';
+import { ArrowRight, 
   Play, 
   Star, 
   CheckCircle, 
@@ -15,9 +14,10 @@ import {
   Rocket,
   Target,
   TrendingUp
-} from 'lucide-react';
+ } from 'lucide-react.ts';
 
 interface HeroSlide {
+
   title: string;
   subtitle: string;
   description: string;
@@ -27,16 +27,17 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[];
 }
 
-export default function EnhancedHeroSection() {
+export default function EnhancedHeroSection(...args: any[]): any {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const heroSlides: HeroSlide[] = [
     {
-      title: "AI-Powered Business Solutions",
+      title: any"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -85,7 +86,7 @@ export default function EnhancedHeroSection() {
     }
   ];
 
-  useEffect(() => {
+  useEffect(()  => {
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -105,7 +106,7 @@ export default function EnhancedHeroSection() {
     setIsAutoPlaying(false);
   };
 
-  const goToSlide = (index: number) => {
+  const goToSlide = (index: anynumber)  => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
@@ -139,11 +140,11 @@ export default function EnhancedHeroSection() {
             rotate: [0, 360],
             scale: [1, 1.1, 1]
           }}
-          transition={{ duration: 20, repeat: Infinity }}
+          transition={{ duration: any20, repeat: Infinity }}
         ></motion.div>
         
         {/* Floating particles */}
-        {[...Array(6)].map((_, i) => (
+        {[...Array(6)].map((_, i)  => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
@@ -209,8 +210,8 @@ export default function EnhancedHeroSection() {
                 </p>
 
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg:mx-0">
-                  {currentSlideData.features.map((feature, index) => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anymx-0">
+                  {currentSlideData.features.map((feature, index)  => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
