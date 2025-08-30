@@ -26,7 +26,7 @@ const caseStudies = [
     industry: "Technology",
     challenge: "High customer service costs and long response times",
     solution: "Implemented AI chatbot with natural language processing",
-    results[
+    results: [
       "40% reduction in customer service costs",
       "85% faster response times",
       "95% customer satisfaction rate",
@@ -38,7 +38,7 @@ const caseStudies = [
       satisfaction: "95%",
       availability: "24/7"
     },
-    technologies["AI/ML", "NLP", "Cloud Computing", "API Integration"],
+    technologies: ["AI/ML", "NLP", "Cloud Computing", "API Integration"],
     duration: "6 months",
     roi: "300%",
     image: "/images/case-study-1.jpg"
@@ -50,7 +50,7 @@ const caseStudies = [
     industry: "Healthcare",
     challenge: "Legacy infrastructure causing downtime and security risks",
     solution: "Complete cloud migration with CI/CD pipeline implementation",
-    results[
+    results: [
       "99.9% uptime achieved",
       "60% reduction in deployment time",
       "Enhanced security compliance",
@@ -62,7 +62,7 @@ const caseStudies = [
       securityScore: "A+",
       scalability: "10x"
     },
-    technologies["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform"],
+    technologies: ["AWS", "Docker", "Kubernetes", "Jenkins", "Terraform"],
     duration: "8 months",
     roi: "250%",
     image: "/images/case-study-2.jpg"
@@ -74,7 +74,7 @@ const caseStudies = [
     industry: "Finance",
     challenge: "Scattered data sources and lack of real-time insights",
     solution: "Centralized data warehouse with real-time analytics dashboard",
-    results[
+    results: [
       "Real-time data insights",
       "30% improvement in decision making",
       "Automated reporting system",
@@ -86,7 +86,7 @@ const caseStudies = [
       reporting: "Automated",
       predictions: "90% accuracy"
     },
-    technologies["Big Data", "Apache Spark", "Tableau", "Python", "SQL"],
+    technologies: ["Big Data", "Apache Spark", "Tableau", "Python", "SQL"],
     duration: "10 months",
     roi: "400%",
     image: "/images/case-study-3.jpg"
@@ -98,7 +98,7 @@ const caseStudies = [
     industry: "Banking",
     challenge: "Increasing cyber threats and regulatory compliance requirements",
     solution: "Comprehensive security framework with SOC2 compliance",
-    results[
+    results: [
       "Zero security breaches",
       "SOC2 Type II compliance achieved",
       "Advanced threat detection",
@@ -110,7 +110,7 @@ const caseStudies = [
       threatDetection: "99.9%",
       training: "100% staff"
     },
-    technologies["SIEM", "EDR", "Firewall", "VPN", "Security Training"],
+    technologies: ["SIEM", "EDR", "Firewall", "VPN", "Security Training"],
     duration: "12 months",
     roi: "200%",
     image: "/images/case-study-4.jpg"
@@ -122,7 +122,7 @@ const caseStudies = [
     industry: "Manufacturing",
     challenge: "Inefficient production monitoring and quality control",
     solution: "IoT sensors with edge computing for real-time monitoring",
-    results[
+    results: [
       "25% increase in production efficiency",
       "90% reduction in quality issues",
       "Predictive maintenance",
@@ -134,7 +134,7 @@ const caseStudies = [
       maintenance: "Predictive",
       monitoring: "Real-time"
     },
-    technologies["IoT", "Edge Computing", "Machine Learning", "5G", "Cloud"],
+    technologies: ["IoT", "Edge Computing", "Machine Learning", "5G", "Cloud"],
     duration: "9 months",
     roi: "350%",
     image: "/images/case-study-5.jpg"
@@ -146,7 +146,7 @@ const caseStudies = [
     industry: "Retail",
     challenge: "Outdated systems limiting growth and customer experience",
     solution: "Complete digital transformation with modern tech stack",
-    results[
+    results: [
       "50% increase in online sales",
       "Enhanced customer experience",
       "Streamlined operations",
@@ -158,25 +158,17 @@ const caseStudies = [
       operations: "Streamlined",
       mobile: "First priority"
     },
-<<<<<<< HEAD
-    technologies["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
+    technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
-  };
-=======;
-    technologies: ["React", "Node.js", "Microservices", "API Gateway", "Mobile"],;
-    duration: "15 months",;
-    roi: "500%",;
-    image: "/images/case-study-6.jpg";
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  }
 ];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-export default function CaseStudies(...args[]):  {
+export default function CaseStudies() {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -185,10 +177,8 @@ export default function CaseStudies(...args[]):  {
     const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
     const matchesTechnology = selectedTechnology === 'All' ||
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
-<<<<<<< HEAD
-    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
 
     return matchesIndustry && matchesTechnology && matchesSearch;

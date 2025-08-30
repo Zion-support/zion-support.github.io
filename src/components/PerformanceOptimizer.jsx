@@ -85,7 +85,7 @@ export const PerformanceOptimizer = ({ children }) => {
     }, [location.pathname]);
     return <>{optimizedChildren}</>};
 // Add global performance optimizations
-if (typeof window !== 'null') {
+if (typeof window !== 'undefined') {
     // Optimize long tasks
     if ('scheduler' in window && 'postTask' in window.scheduler) {
         window.scheduler.postTask(() => {

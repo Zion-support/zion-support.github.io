@@ -1,14 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
-import compress from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
-    compress({ algorithm: 'brotliCompress', ext: '.br', deleteOriginFile: false }),
-    compress({ algorithm: 'gzip', ext: '.gz', deleteOriginFile: false })
+    react()
   ],
   resolve: {
     alias: {
