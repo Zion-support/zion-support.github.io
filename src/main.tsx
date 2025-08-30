@@ -1,8 +1,8 @@
-import React from 'react.ts'
-import ReactDOM from 'react-dom/client.ts'
-import { BrowserRouter as Router             } from 'react-router-dom.ts'
-import { HelmetProvider             } from 'react-helmet-async.ts'
-import App from './App.tsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App'
 import './index.css'
 
 // Service worker registration function
@@ -10,7 +10,7 @@ const registerServiceWorker = async () => {
   if ('serviceWorker' in navigator) {
     try {
       const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: anyanyanyanyanyanyanyanyanyanyanyany'/',
+        scope: '/',
       });
       
       if (registration.installing) {
@@ -46,8 +46,8 @@ const registerServiceWorker = async () => {
 };
 
 // Performance monitoring
-const reportWebVitals = (metric: anyanyanyanyanyanyanyanyanyanyanyany)             => {
-  if (process.env.NODE_ENV === 'development') {
+const reportWebVitals = (metric: any) => {
+  if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metric);
   }
   // In production, you could send this to analytics
@@ -67,11 +67,11 @@ class RootErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Root error boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">

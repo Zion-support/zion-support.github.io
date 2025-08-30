@@ -17,6 +17,8 @@ import {
   Rocket,
   Sun,
   Moon
+} from 'lucide-react';
+
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -27,14 +29,17 @@ export function AppHeader() {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)};
+      setScrolled(window.scrollY > 20);
+    };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close mobile menu when route changes
   useEffect(() => {
     setMobileMenuOpen(false);
-    setActiveDropdown(null)}, [location.pathname]);
+    setActiveDropdown(null);
+  }, [location.pathname]);
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
@@ -69,15 +74,10 @@ export function AppHeader() {
 
   const isActiveRoute = (path) => {
     if (path === '/') {
-<<<<<<< HEAD
       return location.pathname === '/';
-
+    }
     return location.pathname.startsWith(path);
   };
-=======
-      return location.pathname === '/'}
-    return location.pathname.startsWith(path)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <motion.header
