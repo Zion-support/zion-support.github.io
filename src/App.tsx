@@ -10,7 +10,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
 import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
+import { EnhancedPerformanceMonitor } from './components/EnhancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
 import { SecurityEnhancer } from './components/SecurityEnhancer';
 
@@ -223,7 +223,7 @@ function App() {
               
               {/* Enhanced Components */}
               <EnhancedAccessibilityPanel />
-              <AdvancedPerformanceMonitor />
+              <EnhancedPerformanceMonitor />
               <InteractiveUserExperience />
               <SecurityEnhancer />
               <ChatAssistant />
