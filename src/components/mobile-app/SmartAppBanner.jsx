@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from "lucide-react";
+import { X, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useIsMobile } from "@/hooks/use-mobile";
 export const SmartAppBanner = ({ appName = "Zion Marketplace", appIconSrc, appStoreUrl = "/download", googlePlayUrl = "/download", delay = 1500 }) => {

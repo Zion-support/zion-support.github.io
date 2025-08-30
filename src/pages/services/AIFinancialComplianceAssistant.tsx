@@ -1,38 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  FileText, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart
-} from 'lucide-react';
+import { Shield, FileText, TrendingUp, Users, Database, BarChart3, Zap, CheckCircle, ArrowRight, Star, DollarSign, Target, Globe, Lock, Search, Calendar, MessageSquare, Bell, Phone, Mail, MapPin, Scale, AlertTriangle, BookOpen, CreditCard, Building, Eye, Clock, Award, Gauge, PieChart } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialComplianceAssistant() {

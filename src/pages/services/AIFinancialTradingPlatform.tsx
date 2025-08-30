@@ -1,40 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  TrendingUp, 
-  Target, 
-  Users, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  LineChart,
-  PieChart,
-  Activity,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  AlertTriangle
-} from 'lucide-react';
+import { Brain, TrendingUp, Target, Users, BarChart3, Calendar, Zap, CheckCircle, Star, ArrowRight, Globe, Smartphone, Monitor, BookOpen, MessageSquare, Share2, Analytics, Palette, Clock, DollarSign, Shield, Headphones, Rocket, LineChart, PieChart, Activity, Cpu, Database, Network, Lock, Eye, AlertTriangle } from 'lucide-react';
 
 export default function AIFinancialTradingPlatform() {
   const features = [

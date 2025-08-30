@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  Users, 
-  Building, 
-  TrendingUp, 
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Filter,
-  Search
-} from 'lucide-react';
+import { Star, Quote, Users, Building, TrendingUp, Award, CheckCircle, ArrowRight, Filter, Search } from 'lucide-react';
 
 const testimonials = [
   {

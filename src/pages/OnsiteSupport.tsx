@@ -1,33 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Users, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Rocket, 
-  Phone, 
-  Mail, 
-  Calendar, 
-  Star, 
-  Award, 
-  Building, 
-  Wrench, 
-  Settings, 
-  Database, 
-  Server, 
-  Network, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Info, 
-  ArrowRight,
-  Globe
-} from 'lucide-react';
+import { Users, MapPin, Clock, CheckCircle, Shield, Zap, Brain, Cloud, Rocket, Phone, Mail, Calendar, Star, Award, Building, Wrench, Settings, Database, Server, Network, Lock, Eye, AlertTriangle, Info, ArrowRight, Globe } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function OnsiteSupport() {

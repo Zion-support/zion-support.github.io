@@ -1,4 +1,4 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 export function BackToTopButton() {

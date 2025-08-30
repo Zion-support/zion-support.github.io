@@ -7,7 +7,7 @@ interface DemoService {
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: unknown;
   color: string;
   demoUrl: string;
   features: string[];

@@ -1,44 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Sparkles, 
-  Users, 
-  Target, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Rocket,
-  MessageCircle,
-  Search,
-  Filter,
-  Settings,
-  RefreshCw,
-  Heart,
-  Bookmark,
-  Share2,
-  Download,
-  Upload,
-  FileText,
-  BarChart3,
-  Globe,
-  Award,
-  TrendingUp,
-  Clock,
-  Eye,
-  Lock,
-  Key,
-  Wifi,
-  Server,
-  Network,
-  Settings as SettingsIcon
-} from 'lucide-react';
+import { Sparkles, Users, Target, CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Cpu, Database, Rocket, MessageCircle, Search, Filter, Settings, RefreshCw, Heart, Bookmark, Share2, Download, Upload, FileText, BarChart3, Globe, Award, TrendingUp, Clock, Eye, Lock, Key, Wifi, Server, Network, Settings as SettingsIcon } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const Match: React.FC = () => {

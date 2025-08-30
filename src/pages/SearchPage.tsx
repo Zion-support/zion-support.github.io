@@ -1,72 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  X, 
-  ArrowRight, 
-  Clock, 
-  TrendingUp, 
-  Star, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Building, 
-  Globe, 
-  Server, 
-  Database, 
-  Network, 
-  Lock, 
-  Heart, 
-  ShoppingCart, 
-  MessageCircle, 
-  FileText, 
-  Video, 
-  TestTube, 
-  Code, 
-  BookOpen, 
-  Briefcase, 
-  Newspaper, 
-  Target, 
-  DollarSign, 
-  Settings, 
-  Bell, 
-  Download, 
-  Edit, 
-  Trash2, 
-  Plus, 
-  Calendar, 
-  Truck, 
-  BarChart3, 
-  Atom, 
-  Leaf, 
-  Satellite, 
-  Cpu, 
-  Rocket, 
-  TrendingUp as TrendingUpIcon, 
-  Award, 
-  Activity, 
-  CheckCircle, 
-  AlertCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink, 
-  HelpCircle, 
-  Lightbulb, 
-  Info, 
-  AlertTriangle, 
-  Tag,
-  Bookmark,
-  Share2,
-  Eye,
-  Calendar as CalendarIcon,
-  User,
-  Tag as TagIcon
-} from 'lucide-react';
+import { Search, Filter, X, ArrowRight, Clock, TrendingUp, Star, Brain, Cloud, Shield, Zap, Users, Building, Globe, Server, Database, Network, Lock, Heart, ShoppingCart, MessageCircle, FileText, Video, TestTube, Code, BookOpen, Briefcase, Newspaper, Target, DollarSign, Settings, Bell, Download, Edit, Trash2, Plus, Calendar, Truck, BarChart3, Atom, Leaf, Satellite, Cpu, Rocket, TrendingUp as TrendingUpIcon, Award, Activity, CheckCircle, AlertCircle, Phone, Mail, MapPin, ExternalLink, HelpCircle, Lightbulb, Info, AlertTriangle, Tag, Bookmark, Share2, Eye, Calendar as CalendarIcon, User, Tag as TagIcon } from 'lucide-react';
 
 interface SearchResult {
   id: string;
@@ -78,7 +13,7 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: unknown;
   featured?: boolean;
 }
 

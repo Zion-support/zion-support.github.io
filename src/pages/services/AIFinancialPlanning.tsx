@@ -1,52 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  DollarSign, 
-  TrendingUp, 
-  BarChart3, 
-  Users, 
-  Zap, 
-  Globe, 
-  Lock, 
-  Eye,
-  Star,
-  Cpu,
-  Database,
-  Search,
-  Filter,
-  Download,
-  Share2,
-  Play,
-  ArrowRight,
-  CheckCircle,
-  AlertTriangle,
-  FileText,
-  Clock,
-  Award,
-  Brain,
-  Target,
-  PieChart,
-  Activity,
-  Calculator,
-  Shield,
-  Settings,
-  CreditCard,
-  AlertCircle,
-  Calendar,
-  Package,
-  Route,
-  Warehouse,
-  Factory,
-  Ship,
-  Plane,
-  PiggyBank,
-  TrendingDown,
-  Lightbulb,
-  Wallet,
-  Receipt,
-  Banknote
-} from 'lucide-react';
+import { DollarSign, TrendingUp, BarChart3, Users, Zap, Globe, Lock, Eye, Star, Cpu, Database, Search, Filter, Download, Share2, Play, ArrowRight, CheckCircle, AlertTriangle, FileText, Clock, Award, Brain, Target, PieChart, Activity, Calculator, Shield, Settings, CreditCard, AlertCircle, Calendar, Package, Route, Warehouse, Factory, Ship, Plane, PiggyBank, TrendingDown, Lightbulb, Wallet, Receipt, Banknote } from 'lucide-react';
 
 export default function AIFinancialPlanning() {
   const features = [

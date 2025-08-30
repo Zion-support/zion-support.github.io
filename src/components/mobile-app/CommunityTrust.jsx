@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Users, Award, Star, TrendingUp, Globe } from 'lucide-react';
 
 export const CommunityTrust = () => {

@@ -1,6 +1,5 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart } from "lucide-react";
+import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart } from 'lucide-react';
 import { useCart } from "@/context/CartContext";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";

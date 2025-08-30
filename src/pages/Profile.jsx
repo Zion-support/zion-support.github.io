@@ -1,4 +1,3 @@
-import React from 'react';
 import { useEffect } from 'react';
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
@@ -66,5 +65,5 @@ export default function Profile() {
       
     </>);
 }
-;
+
 export default Profile;

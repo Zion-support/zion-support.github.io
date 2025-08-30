@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import { Star } from 'lucide-react';
 import { cn } from "@/lib/utils";
 export function ProfileHero({ name, title, avatarUrl, coverImageUrl, location, rating, reviewCount, aiScore, profileType }) {
     return (<div className="w-full overflow-hidden">

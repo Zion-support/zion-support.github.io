@@ -142,24 +142,7 @@ const ComprehensiveServicesShowcase = () => {
               </TabsTrigger>))}
           </TabsList>
 
-import {Brain,
-            Shield,
-            Cloud,
-            Database,
-            Users,
-            Globe,
-            Zap,
-            Target,
-            TrendingUp,
-            Atom,
-            Link,
-            Leaf,
-            Rocket,
-            Package,
-            ArrowRight,
-            CheckCircle,
-            Star,
-            Award} from 'lucide-react';
+import { Brain, Shield, Cloud, Database, Users, Globe, Zap, Target, TrendingUp, Atom, Link, Leaf, Rocket, Package, ArrowRight, CheckCircle, Star, Award } from 'lucide-react';
 
 export const ComprehensiveServicesShowcase: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('all');
@@ -687,38 +670,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                 </a>
 import React, {useState, useMemo, useCallback, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
-import {Search,
-            Filter,
-            Star,
-            TrendingUp,
-            Zap,
-            Shield,
-            Brain,
-            Globe,
-            ArrowRight,
-            CheckCircle,
-            DollarSign,
-            Clock,
-            Users,
-            Target,
-            Sparkles,
-            Eye,
-            Heart,
-            Share2,
-            Download,
-            Play,
-            BookOpen,
-            Code,
-            Database,
-            Cloud,
-            Lock,
-            Rocket,
-            Lightbulb,
-            Cpu,
-            Network,
-            Smartphone,
-            Monitor,
-            Server} from 'lucide-react';
+import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Globe, ArrowRight, CheckCircle, DollarSign, Clock, Users, Target, Sparkles, Eye, Heart, Share2, Download, Play, BookOpen, Code, Database, Cloud, Lock, Rocket, Lightbulb, Cpu, Network, Smartphone, Monitor, Server } from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;

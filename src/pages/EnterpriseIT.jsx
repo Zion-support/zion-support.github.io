@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Building2, Server, Shield, Zap, Users, Globe, ArrowRight } from 'lucide-react';

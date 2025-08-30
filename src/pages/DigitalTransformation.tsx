@@ -1,31 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Zap, 
-  Shield, 
-  Users, 
-  TrendingUp, 
-  Globe, 
-  CheckCircle, 
-  Star, 
-  ArrowRight, 
-  Cpu, 
-  Database, 
-  Cloud,
-  Target,
-  Award,
-  Lightbulb,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
-  Check,
-  BarChart3,
-  Lock,
-  Eye,
-  Heart
-} from 'lucide-react';
+import { Rocket, Zap, Shield, Users, TrendingUp, Globe, CheckCircle, Star, ArrowRight, Cpu, Database, Cloud, Target, Award, Lightbulb, Crown, Sparkles, ChevronRight, Clock, Check, BarChart3, Lock, Eye, Heart } from 'lucide-react';
 
 const DigitalTransformation = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -13,7 +12,7 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 export function EnhancedSEO({

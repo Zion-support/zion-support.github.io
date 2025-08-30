@@ -1,23 +1,6 @@
-import React from 'react';
 import { SEO } from '@/components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  Zap, 
-  Lock, 
-  Target, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Eye,
-  Cpu
-} from 'lucide-react';
+import { Shield, Brain, BarChart3, AlertTriangle, Zap, Lock, Target, CheckCircle, ArrowRight, Star, Clock, DollarSign, TrendingUp, Eye, Cpu } from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = () => {
   const features = [

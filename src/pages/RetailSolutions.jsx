@@ -1,31 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Smartphone, 
-  CreditCard, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  FileText,
-  Clock,
-  Eye,
-  Package,
-  Truck,
-  Store,
-  Tag,
-  Brain,
-  Code
-} from 'lucide-react';
+import { ShoppingCart, Smartphone, CreditCard, Users, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, TrendingUp, Award, Globe, Lock, Activity, FileText, Clock, Eye, Package, Truck, Store, Tag, Brain, Code } from 'lucide-react';
 
 const retailSolutions = [
   {

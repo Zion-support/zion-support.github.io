@@ -1,24 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Database, 
-  Users, 
-  Globe, 
-  Mail, 
-  Phone,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Info,
-  ArrowRight,
-  ExternalLink,
-  Download,
-  FileText
-} from 'lucide-react';
+import { Shield, Lock, Eye, Database, Users, Globe, Mail, Phone, Calendar, CheckCircle, AlertTriangle, Info, ArrowRight, ExternalLink, Download, FileText } from 'lucide-react';
 
 const PrivacyPolicy = () => {
   const lastUpdated = '2025-01-15';

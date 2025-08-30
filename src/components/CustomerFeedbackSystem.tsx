@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  MessageCircle, 
-  ThumbsUp, 
-  ThumbsDown, 
-  Send, 
-  Heart,
-  Award,
-  TrendingUp,
-  Users,
-  Clock,
-  Flag,
-  Share2,
-  Download,
-  Filter,
-  Search
-} from 'lucide-react';
+import { Star, MessageCircle, ThumbsUp, ThumbsDown, Send, Heart, Award, TrendingUp, Users, Clock, Flag, Share2, Download, Filter, Search } from 'lucide-react';
 
 interface Feedback {
   id: string;

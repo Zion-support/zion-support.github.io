@@ -11,8 +11,8 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Search as SearchIcon } from "lucide-react";
+import { Menu, X, Sparkles } from 'lucide-react';
+import { Search as SearchIcon } from 'lucide-react';
 
 export function Header({ hideLogin = false, customLogo, customTheme }) {
   const { user } = useAuth();

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Search } from "lucide-react";
+import { Search } from 'lucide-react';
 import { ListingScoreCard } from "@/components/ListingScoreCard";
 import { captureException } from "@/utils/sentry";
 import { Skeleton } from "@/components/ui/skeleton";

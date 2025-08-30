@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const MobileLaunchHero = () => {
   return (
     <div className="py-16 bg-gradient-to-br from-blue-900 to-purple-900 text-white">

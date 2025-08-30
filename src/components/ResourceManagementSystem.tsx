@@ -1,46 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Users, 
-  Calendar, 
-  Clock, 
-  Target, 
-  TrendingUp, 
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Settings,
-  RefreshCw,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Star,
-  Award,
-  Briefcase,
-  Home,
-  Building,
-  Wifi,
-  Server,
-  Database,
-  Lock,
-  Unlock
-} from 'lucide-react';
+import { Users, Calendar, Clock, Target, TrendingUp, AlertCircle, CheckCircle, XCircle, Plus, Edit, Trash2, Eye, Download, Share2, Filter, Search, BarChart3, PieChart, Activity, Zap, Brain, Cloud, Shield, Globe, Settings, RefreshCw, ArrowUp, ArrowDown, Minus, Star, Award, Briefcase, Home, Building, Wifi, Server, Database, Lock, Unlock } from 'lucide-react';
 
 interface Resource {
   id: string;

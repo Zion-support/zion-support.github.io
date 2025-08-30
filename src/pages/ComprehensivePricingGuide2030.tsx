@@ -1,25 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Star, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  DollarSign,
-  Zap,
-  Target,
-  ArrowRight,
-  Search
-} from 'lucide-react';
+import { Brain, Shield, Cloud, Star, CheckCircle, Phone, Mail, MapPin, ExternalLink, TrendingUp, Users, Award, Clock, DollarSign, Zap, Target, ArrowRight, Search } from 'lucide-react';
 import { innovativeAIServices2030 } from '../data/innovativeAIServices2030';
 import { innovativeCybersecurityServices2030 } from '../data/innovativeCybersecurityServices2030';
 import { innovativeCloudDevOpsServices2030 } from '../data/innovativeCloudDevOpsServices2030';

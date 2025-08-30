@@ -1,44 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Smartphone, 
-  Download, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Users, 
-  CheckCircle, 
-  ArrowRight,
-  Star,
-  Globe,
-  Lock,
-  Wifi,
-  Battery,
-  Settings,
-  Bell,
-  Search,
-  Home,
-  User,
-  BarChart3,
-  MessageCircle,
-  ShoppingCart,
-  Calendar,
-  FileText,
-  Heart,
-  Bookmark,
-  Share2,
-  Play,
-  Pause,
-  SkipBack,
-  SkipForward,
-  Volume2,
-  Maximize2,
-  RotateCcw,
-  Wifi as WifiIcon,
-  Battery as BatteryIcon,
-  Signal
-} from 'lucide-react';
+import { Smartphone, Download, Zap, Shield, Cloud, Users, CheckCircle, ArrowRight, Star, Globe, Lock, Wifi, Battery, Settings, Bell, Search, Home, User, BarChart3, MessageCircle, ShoppingCart, Calendar, FileText, Heart, Bookmark, Share2, Play, Pause, SkipBack, SkipForward, Volume2, Maximize2, RotateCcw, Wifi as WifiIcon, Battery as BatteryIcon, Signal } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {

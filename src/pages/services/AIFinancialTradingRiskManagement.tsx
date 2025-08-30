@@ -1,26 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  TrendingUp, 
-  Shield, 
-  Clock, 
-  Zap, 
-  Search, 
-  Eye,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe,
-  Users,
-  BarChart3,
-  Lock,
-  DollarSign,
-  Activity,
-  AlertTriangle,
-  Target
-} from 'lucide-react';
+import { TrendingUp, Shield, Clock, Zap, Search, Eye, CheckCircle, ArrowRight, Phone, Mail, Globe, Users, BarChart3, Lock, DollarSign, Activity, AlertTriangle, Target } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement() {
   const features = [

@@ -1,35 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Mic, 
-  MicOff, 
-  Paperclip, 
-  Image, 
-  FileText, 
-  Video, 
-  Smile,
-  Settings,
-  Zap,
-  Brain,
-  TrendingUp,
-  Lightbulb,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Loader2,
-  ChevronDown,
-  ChevronUp,
-  Minimize2,
-  Maximize2,
-  Volume2,
-  VolumeX
-} from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User, Sparkles, Mic, MicOff, Paperclip, Image, FileText, Video, Smile, Settings, Zap, Brain, TrendingUp, Lightbulb, Clock, CheckCircle, AlertCircle, Loader2, ChevronDown, ChevronUp, Minimize2, Maximize2, Volume2, VolumeX } from 'lucide-react';
 
 interface Message {
   id: string;
@@ -88,13 +59,13 @@ export function ChatAssistant({
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: unknown) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: unknown) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -170,7 +141,7 @@ export function ChatAssistant({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
+  const generateAIResponse = (userInput: string): { content: string; metadata: unknown } => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from 'lucide-react';
 const AIAutonomousResearchAssistant = () => {

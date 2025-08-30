@@ -1,38 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
-import { 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
-  BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
-  Clock,
-  DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
-  Calendar as CalendarIcon,
-  CheckSquare,
-  GitBranch,
-  FileText,
-  Users as UsersIcon,
-  PieChart,
-  Activity
-} from 'lucide-react';
+import { Brain, Target, TrendingUp, Users, BarChart3, Calendar, Zap, CheckCircle, Star, ArrowRight, Globe, Smartphone, Monitor, BookOpen, MessageSquare, Share2, Analytics, Palette, Clock, DollarSign, Shield, Headphones, Rocket, Calendar as CalendarIcon, CheckSquare, GitBranch, FileText, Users as UsersIcon, PieChart, Activity } from 'lucide-react';
 
 export default function AIProjectManagementPlatform() {
   const features = [

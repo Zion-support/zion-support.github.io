@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Star, 
-  Quote, 
-  ChevronLeft, 
-  ChevronRight,
-  Globe,
-  Building,
-  Users,
-  Award
-} from 'lucide-react';
+import { Star, Quote, ChevronLeft, ChevronRight, Globe, Building, Users, Award } from 'lucide-react';
 
 interface Testimonial {
   id: string;

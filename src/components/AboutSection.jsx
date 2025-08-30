@@ -1,15 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Award, 
-  Users, 
-  Globe, 
-  Target, 
-  TrendingUp, 
-  Shield,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+import { Award, Users, Globe, Target, TrendingUp, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
 export function AboutSection() {
     const achievements = [

@@ -1,38 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Keyboard, 
-  MousePointer, 
-  Sun, 
-  Moon, 
-  Contrast, 
-  Type, 
-  Move, 
-  Settings, 
-  X, 
-  CheckCircle, 
-  AlertTriangle, 
-  Info,
-  Accessibility,
-  Braille,
-  Headphones,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Zap,
-  Shield,
-  Target,
-  Award,
-  BarChart3,
-  Palette,
-  RotateCcw,
-  Save,
-  Loader2
-} from 'lucide-react';
+import { Eye, EyeOff, Volume2, VolumeX, Keyboard, MousePointer, Sun, Moon, Contrast, Type, Move, Settings, X, CheckCircle, AlertTriangle, Info, Accessibility, Braille, Headphones, Monitor, Smartphone, Tablet, Zap, Shield, Target, Award, BarChart3, Palette, RotateCcw, Save, Loader2 } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -264,7 +232,7 @@ export default function EnhancedAccessibilityEnhancer({
       recognition.interimResults = true;
       recognition.lang = 'en-US';
 
-      recognition.onresult = (event: any) => {
+      recognition.onresult = (event: unknown) => {
         let finalTranscript = '';
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
@@ -277,7 +245,7 @@ export default function EnhancedAccessibilityEnhancer({
         }
       };
 
-      recognition.onerror = (event: any) => {
+      recognition.onerror = (event: unknown) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };

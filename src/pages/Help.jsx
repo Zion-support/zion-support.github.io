@@ -1,22 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Search, 
-  BookOpen, 
-  MessageCircle, 
-  Phone,
-  Mail,
-  Video,
-  FileText,
-  Users,
-  Settings,
-  CreditCard,
-  Shield,
-  Globe,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp
-} from 'lucide-react';
+import { Search, BookOpen, MessageCircle, Phone, Mail, Video, FileText, Users, Settings, CreditCard, Shield, Globe, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [openCategories, setOpenCategories] = useState([]);

@@ -3,16 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Alert, AlertDescription } from './ui/alert';
-import { 
-  Activity, 
-  Zap, 
-  Gauge, 
-  TrendingUp, 
-  AlertTriangle,
-  CheckCircle,
-  Clock,
-  Cpu
-} from 'lucide-react';
+import { Activity, Zap, Gauge, TrendingUp, AlertTriangle, CheckCircle, Clock, Cpu } from 'lucide-react';
 
 // Simple Progress component
 const Progress: React.FC<{ value: number; className?: string }> = ({ value, className = "" }) => (

@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from 'lucide-react';
 import { useAuth } from "@/hooks/useAuth";
 import { register } from "@/services/auth";
 import { toast } from "@/hooks/use-toast";
@@ -127,7 +127,7 @@ export default function Signup() {
             }
         }
         finally { }
-        ;
+        
         const onInvalid = (errors) => {
             const firstError = Object.keys(errors)[0];
             if (firstError) {

@@ -1,23 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  Star, 
-  TrendingUp, 
-  Users, 
-  Zap,
-  Shield,
-  BarChart3,
-  Code,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink
-} from 'lucide-react';
+import { Search, Filter, Grid3X3, List, Star, TrendingUp, Users, Zap, Shield, BarChart3, Code, Globe, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { zion2026AIMarketplaceServices } from '../../data/zion-2026-ai-marketplace-services';
 
 const Zion2026AIMarketplaceShowcase: React.FC = () => {

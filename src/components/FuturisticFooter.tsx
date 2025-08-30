@@ -1,30 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Facebook, 
-  Instagram,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Zap as ZapIcon
-} from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, ArrowUp, Heart, Shield, Zap, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap as ZapIcon } from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });

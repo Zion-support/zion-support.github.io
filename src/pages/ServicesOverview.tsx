@@ -1,84 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Zap, 
-  Globe, 
-  Star, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ExternalLink,
-  Award,
-  Clock,
-  Target,
-  BarChart3,
-  Cpu,
-  Lock,
-  ShoppingCart,
-  MessageCircle,
-  BookOpen,
-  Settings,
-  Palette,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  ShieldCheck,
-  Globe2,
-  Leaf,
-  Satellite,
-  Atom,
-  Code,
-  FileText,
-  GraduationCap,
-  Building,
-  Briefcase,
-  Lightbulb,
-  Sparkles,
-  DollarSign,
-  Users,
-  Eye,
-  ArrowUpRight,
-  Grid,
-  List,
-  ChevronRight,
-  ChevronDown,
-  Info,
-  Calendar,
-  UserCheck,
-  Globe,
-  Layers,
-  Activity,
-  PieChart,
-  BarChart,
-  LineChart,
-  TrendingDown,
-  Zap,
-  Target,
-  Award,
-  Clock,
-  Users,
-  Shield,
-  Lock,
-  Key,
-  Eye,
-  EyeOff,
-  AlertTriangle,
-  CheckCircle2,
-  XCircle,
-  Info as InfoIcon
-} from 'lucide-react';
+import { Search, Filter, Brain, Shield, Cloud, Rocket, Heart, Zap, Globe, Star, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Award, Clock, Target, BarChart3, Cpu, Lock, ShoppingCart, MessageCircle, BookOpen, Settings, Palette, Database, Network, Smartphone, Monitor, Server, ShieldCheck, Globe2, Leaf, Satellite, Atom, Code, FileText, GraduationCap, Building, Briefcase, Lightbulb, Sparkles, DollarSign, Users, Eye, ArrowUpRight, Grid, List, ChevronRight, ChevronDown, Info, Calendar, UserCheck, Globe, Layers, Activity, PieChart, BarChart, LineChart, TrendingDown, Zap, Target, Award, Clock, Users, Shield, Lock, Key, Eye, EyeOff, AlertTriangle, CheckCircle2, XCircle, Info as InfoIcon } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { servicesCatalog } from '../data/servicesCatalog';
 
@@ -143,7 +65,7 @@ const serviceCategories = [
 ];
 
 // Enhanced service features display
-const ServiceCard = ({ service, viewMode }: { service: any; viewMode: 'grid' | 'list' }) => {
+const ServiceCard = ({ service, viewMode }: { service: unknown; viewMode: 'grid' | 'list' }) => {
   const [expanded, setExpanded] = useState(false);
   
   const getCategoryIcon = (category: string) => {
@@ -290,7 +212,7 @@ const ServicesSidebar = ({
 }: { 
   selectedCategory: string; 
   onCategoryChange: (category: string) => void; 
-  categoriesWithCounts: any[];
+  categoriesWithCounts: unknown[];
 }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">

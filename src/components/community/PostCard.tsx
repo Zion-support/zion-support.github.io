@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface PostCardProps {
   post: {
     id: string;

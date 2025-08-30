@@ -96,20 +96,7 @@ import {MICRO_SAAS_SERVICES,
             SERVICE_CATEGORIES,
             type} MicroSaasService 
 } from '@/data/microSaasServices';
-import {Star,
-            Clock,
-            Users,
-            Zap,
-            Shield,
-            Globe,
-            TrendingUp,
-            CheckCircle,
-            ExternalLink,
-            Play,
-            FileText,
-            MessageCircle,
-            ArrowRight,
-            Sparkles} from 'lucide-react';
+import { Star, Clock, Users, Zap, Shield, Globe, TrendingUp, CheckCircle, ExternalLink, Play, FileText, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 import {Link} from 'react-router-dom';
 
 export default function MicroSaasServicesPage() {}

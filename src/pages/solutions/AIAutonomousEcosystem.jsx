@@ -1,4 +1,3 @@
-import React from 'react';
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
 const AIAutonomousEcosystem = () => {
     const ecosystemFeatures = [

@@ -1,21 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  Type, 
-  Volume2, 
-  VolumeX, 
-  MousePointer, 
-  Keyboard, 
-  Settings,
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Accessibility,
-  CheckCircle,
-  AlertTriangle
-} from 'lucide-react';
+import { Eye, Type, Volume2, VolumeX, MousePointer, Keyboard, Settings, X, Plus, Minus, Contrast, Accessibility, CheckCircle, AlertTriangle } from 'lucide-react';
 
 interface AccessibilitySettings {
   fontSize: number;
@@ -111,7 +96,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, []);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

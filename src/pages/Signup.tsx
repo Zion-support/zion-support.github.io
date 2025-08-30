@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff, 
-  User,
-  Building,
-  ArrowRight,
-  Shield,
-  Zap,
-  Users,
-  CheckCircle
-} from "lucide-react";
+import { Mail, Lock, Eye, EyeOff, User, Building, ArrowRight, Shield, Zap, Users, CheckCircle } from 'lucide-react';
 export default function Signup() {
   const [formData, setFormData] = useState({
     firstName: '',

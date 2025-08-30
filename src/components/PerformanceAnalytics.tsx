@@ -1,19 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Activity, 
-  TrendingUp, 
-  TrendingDown, 
-  Clock, 
-  Zap, 
-  AlertTriangle,
-  CheckCircle,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Network,
-  Monitor
-} from 'lucide-react';
+import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCircle, BarChart3, Cpu, HardDrive, Network, Monitor } from 'lucide-react';
 
 interface PerformanceMetric {
   name: string;

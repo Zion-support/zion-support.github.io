@@ -1,20 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Type, 
-  Contrast, 
-  MousePointer,
-  Keyboard,
-  Monitor,
-  Settings,
-  X,
-  Check,
-  AlertTriangle
-} from 'lucide-react';
+import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast, MousePointer, Keyboard, Monitor, Settings, X, Check, AlertTriangle } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -189,7 +175,7 @@ export const EnhancedAccessibilityPanel: React.FC = () => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: unknown) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);

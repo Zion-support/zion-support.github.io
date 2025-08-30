@@ -1,34 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  Users, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Search, 
-  FileText, 
-  Video, 
-  BookOpen, 
-  HelpCircle, 
-  Star, 
-  MapPin, 
-  Globe, 
-  Calendar,
-  Send,
-  Ticket,
-  Headphones,
-  MessageSquare,
-  VideoCall,
-  Mailbox
-} from 'lucide-react';
+import { MessageCircle, Mail, Phone, Clock, Users, Shield, Cloud, Brain, Zap, CheckCircle, ArrowRight, Search, FileText, Video, BookOpen, HelpCircle, Star, MapPin, Globe, Calendar, Send, Ticket, Headphones, MessageSquare, VideoCall, Mailbox } from 'lucide-react';
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');

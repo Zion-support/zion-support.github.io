@@ -1,31 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Download, 
-  Share2, 
-  Users,
-  DollarSign,
-  Activity,
-  Eye,
-  FileText,
-  Clock,
-  Star,
-  Search,
-  ChevronDown,
-  ChevronUp,
-  Shield,
-  Server,
-  X
-} from 'lucide-react';
+import { BarChart3, TrendingUp, Download, Share2, Users, DollarSign, Activity, Eye, FileText, Clock, Star, Search, ChevronDown, ChevronUp, Shield, Server, X } from 'lucide-react';
 
 interface ReportData {
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
   category: string;
-  data: any;
+  data: unknown;
   lastUpdated: string;
   status: 'active' | 'archived' | 'draft';
   priority: 'low' | 'medium' | 'high' | 'critical';
@@ -217,7 +199,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+      let aValue: unknown, bValue: unknown;
       
       switch (sortBy) {
         case 'date':

@@ -35,6 +35,48 @@ module.exports = {
       }
     },
 
+    // 🆕 NEW: Comprehensive Error Automation - runs every 2 hours (HIGHEST PRIORITY)
+    {
+      name: 'comprehensive-error-automation',
+      script: './scripts/automation/comprehensive-error-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '7200000' // 2 hours
+      }
+    },
+
+    // 🆕 NEW: Enhanced Error Fixer - runs every 15 minutes (HIGHEST PRIORITY)
+    {
+      name: 'enhanced-error-fixer',
+      script: './scripts/automation/enhanced-error-fixer.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '900000' // 15 minutes
+      }
+    },
+
+    // 🆕 NEW: Automation Dashboard - runs continuously (HIGHEST PRIORITY)
+    {
+      name: 'automation-dashboard',
+      script: './scripts/automation/automation-dashboard.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production',
+        AUTOMATION_INTERVAL: '30000' // 30 seconds
+      }
+    },
+
     // 🧠 NEW: Intelligent Predictive Monitor - runs every 5 minutes (HIGHEST PRIORITY)
     {
       name: 'intelligent-predictive-monitor',

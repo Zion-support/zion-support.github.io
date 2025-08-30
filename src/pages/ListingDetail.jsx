@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
-import { Star, MessageSquare, Brain, Shield } from "lucide-react";
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { Link } from 'react-router-dom';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
@@ -201,5 +201,5 @@ export default function ListingDetail() {
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;
-    ;
+    
 }

@@ -1,36 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  Check, 
-  Star, 
-  Zap, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  ShoppingCart,
-  Users,
-  Building,
-  Rocket,
-  DollarSign,
-  Clock,
-  Globe,
-  Lock,
-  BarChart3,
-  MessageCircle,
-  Target,
-  TrendingUp,
-  Code,
-  Server,
-  Smartphone,
-  Database,
-  BookOpen,
-  HelpCircle,
-  Mail,
-  Video,
-  GraduationCap,
-  ArrowRight
-} from 'lucide-react';
+import { Check, Star, Zap, Brain, Cloud, Shield, ShoppingCart, Users, Building, Rocket, DollarSign, Clock, Globe, Lock, BarChart3, MessageCircle, Target, TrendingUp, Code, Server, Smartphone, Database, BookOpen, HelpCircle, Mail, Video, GraduationCap, ArrowRight } from 'lucide-react';
 
 interface PricingTier {
   name: string;
@@ -40,7 +10,7 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: unknown;
   cta: string;
   ctaLink: string;
 }

@@ -1,27 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Rocket, 
-  Lightbulb, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
-  Code, 
-  Globe, 
-  Award, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Building,
-  Smartphone,
-  Server,
-  Palette,
-  Cpu
-} from 'lucide-react';
+import { Rocket, Lightbulb, Target, TrendingUp, Users, Zap, Shield, Cloud, Brain, Code, Globe, Award, CheckCircle, ArrowRight, Star, Building, Smartphone, Server, Palette, Cpu } from 'lucide-react';
 
 const startupSolutions = [
   {

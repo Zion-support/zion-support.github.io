@@ -16,7 +16,7 @@ import { FeaturesGuideSection } from "@/components/FeaturesGuideSection";
 import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
-import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from "lucide-react";
+import { ArrowRight, Users, Zap, Settings, Sparkles, BarChart3, Smartphone } from 'lucide-react';
 export default function Index() {
     const { t } = useTranslation();
     const { isRTL } = useLanguage();

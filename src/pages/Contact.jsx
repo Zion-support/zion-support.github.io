@@ -1,21 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Send, 
-  CheckCircle,
-  MessageSquare,
-  Building,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Github
-} from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageSquare, Building, Globe, Linkedin, Twitter, Facebook, Instagram, Github } from 'lucide-react';
 
 const contactMethods = [
   {

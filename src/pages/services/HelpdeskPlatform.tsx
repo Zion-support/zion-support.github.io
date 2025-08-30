@@ -1,38 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
-import { 
-  MessageCircle, 
-  Brain, 
-  Target, 
-  Zap, 
-  BarChart3, 
-  Clock, 
-  Award, 
-  Star,
-  Globe,
-  Cpu,
-  Database,
-  CheckCircle,
-  Eye,
-  Users,
-  FileText,
-  Shield,
-  TrendingUp,
-  Phone,
-  Mail,
-  Calendar,
-  Search,
-  Ticket,
-  Headphones,
-  Download,
-  Share2,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Settings,
-  Smartphone
-} from 'lucide-react';
+import { MessageCircle, Brain, Target, Zap, BarChart3, Clock, Award, Star, Globe, Cpu, Database, CheckCircle, Eye, Users, FileText, Shield, TrendingUp, Phone, Mail, Calendar, Search, Ticket, Headphones, Download, Share2, ShoppingCart, Heart, GraduationCap, Settings, Smartphone } from 'lucide-react';
 
 export default function HelpdeskPlatform() {
   const features = [

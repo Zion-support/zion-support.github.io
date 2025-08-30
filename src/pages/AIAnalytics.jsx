@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Smartphone,
-  Monitor,
-  Code,
-  FileText,
-  PieChart,
-  LineChart
-} from 'lucide-react';
+import { Brain, BarChart3, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Users, Award, Globe, Lock, Activity, Clock, Eye, Database, Smartphone, Monitor, Code, FileText, PieChart, LineChart } from 'lucide-react';
 
 const aiAnalyticsSolutions = [
   {

@@ -1,48 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  Database, 
-  BarChart3, 
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  DollarSign,
-  Target,
-  Globe,
-  Lock,
-  Search,
-  Calendar,
-  MessageSquare,
-  Bell,
-  Phone,
-  Mail,
-  MapPin,
-  Scale,
-  AlertTriangle,
-  BookOpen,
-  CreditCard,
-  Building,
-  Eye,
-  Clock,
-  Award,
-  Gauge,
-  PieChart,
-  Activity,
-  Stethoscope,
-  Pill,
-  Microscope,
-  Shield,
-  Activity as Heartbeat,
-  FileText,
-  UserCheck,
-  Clipboard,
-  TestTube
-} from 'lucide-react';
+import { Heart, Brain, TrendingUp, Users, Database, BarChart3, Zap, CheckCircle, ArrowRight, Star, DollarSign, Target, Globe, Lock, Search, Calendar, MessageSquare, Bell, Phone, Mail, MapPin, Scale, AlertTriangle, BookOpen, CreditCard, Building, Eye, Clock, Award, Gauge, PieChart, Activity, Stethoscope, Pill, Microscope, Shield, Activity as Heartbeat, FileText, UserCheck, Clipboard, TestTube } from 'lucide-react';
 import { SEO } from '../../components/SEO';
 
 export default function AIHealthcarePredictiveAnalytics() {

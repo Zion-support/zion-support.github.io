@@ -1,56 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
-  Cloud,
-  Shield,
-  Server,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users,
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,
-  Atom,
-  // Blockchain icon removed - not available in lucide-react
-  Heart,
-  Scale,
-  Factory,
-  Satellite,
-  ShoppingCart,
-  Building,
-  Truck,
-  Eye,
-  Download,
-  ExternalLink,
-  Award,
-  Target,
-  Lightbulb,
-  BarChart3,
-  PieChart,
-  Activity,
-  Gauge,
-  ShieldCheck,
-  X
-} from 'lucide-react';
+import { Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Lock, Code, Rocket, Users, Search, Filter, Star, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Play, BookOpen, MessageCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Atom, Scale, Factory, Satellite, ShoppingCart, Building, Truck, Eye, Download, ExternalLink, Award, Target, Lightbulb, BarChart3, PieChart, Activity, Gauge, ShieldCheck, X } from 'lucide-react';
 
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';

@@ -1,21 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  TrendingUp, 
-  Target, 
-  Award, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket, 
-  Globe,
-  CheckCircle,
-  Star,
-  DollarSign,
-  Clock,
-  Users,
-  BarChart3
-} from 'lucide-react';
+import { TrendingUp, Target, Award, Zap, Shield, Brain, Rocket, Globe, CheckCircle, Star, DollarSign, Clock, Users, BarChart3 } from 'lucide-react';
 
 const valueMetrics = [
   {

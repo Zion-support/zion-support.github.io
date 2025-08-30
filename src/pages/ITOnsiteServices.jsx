@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Wrench, 
-  Server, 
-  Network, 
-  Shield, 
-  Users, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Smartphone,
-  Monitor,
-  Brain,
-  Code,
-  Truck,
-  FileText
-} from 'lucide-react';
+import { Wrench, Server, Network, Shield, Users, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, TrendingUp, Award, Globe, Lock, Activity, Clock, Eye, Database, Smartphone, Monitor, Brain, Code, Truck, FileText } from 'lucide-react';
 
 const onsiteServices = [
   {

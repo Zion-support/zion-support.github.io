@@ -1,4 +1,3 @@
-import React from "react";
 import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";

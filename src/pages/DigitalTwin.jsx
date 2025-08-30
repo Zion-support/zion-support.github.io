@@ -1,44 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Monitor, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Building,
-  Car,
-  Plane,
-  Factory,
-  Cog,
-  BarChart3,
-  TrendingUp,
-  MapPin,
-  Layers,
-  RefreshCw,
-  AlertTriangle
-} from 'lucide-react';
+import { Monitor, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Globe, Lock, Activity, Clock, Eye, Database, Code, FileText, Truck, Wrench, Cpu, Brain, Target, Rocket, Lightbulb, Gauge, Network, Server, Building, Car, Plane, Factory, Cog, BarChart3, TrendingUp, MapPin, Layers, RefreshCw, AlertTriangle } from 'lucide-react';
 
 const digitalTwinSolutions = [
   {

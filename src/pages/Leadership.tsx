@@ -1,26 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Rocket,
-  Building,
-  Heart,
-  Crown,
-  Sparkles,
-  ArrowRight,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin
-} from 'lucide-react';
+import { Users, Award, Star, Target, TrendingUp, Globe, Zap, Shield, Brain, Rocket, Building, Heart, Crown, Sparkles, ArrowRight, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export default function Leadership() {

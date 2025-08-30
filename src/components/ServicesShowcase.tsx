@@ -1,22 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  ShoppingCart, 
-  MessageCircle, 
-  BookOpen, 
-  DollarSign,
-  Gauge,
-  HelpCircle
-} from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, Users, Globe, Cpu, Lock, ShoppingCart, MessageCircle, BookOpen, DollarSign, Gauge, HelpCircle } from 'lucide-react';
 
 export function ServicesShowcase() {
   const services = [

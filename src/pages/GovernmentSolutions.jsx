@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Building2, 
-  Shield, 
-  Users, 
-  FileText, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Server,
-  Brain,
-  Code,
-  Globe2
-} from 'lucide-react';
+import { Building2, Shield, Users, FileText, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, TrendingUp, Award, Globe, Lock, Activity, Clock, Eye, Database, Server, Brain, Code, Globe2 } from 'lucide-react';
 
 const governmentSolutions = [
   {

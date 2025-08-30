@@ -1,33 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  X,
-  Settings,
-  Volume2,
-  VolumeX,
-  Mic,
-  MicOff,
-  Paperclip,
-  Image,
-  FileText,
-  Download,
-  Share2,
-  RefreshCw,
-  ThumbsUp,
-  ThumbsDown,
-  Star,
-  Zap,
-  Brain,
-  Globe,
-  Clock,
-  CheckCircle,
-  AlertCircle
-} from 'lucide-react';
+import { MessageCircle, Send, Bot, User, Sparkles, X, Settings, Volume2, VolumeX, Mic, MicOff, Paperclip, Image, FileText, Download, Share2, RefreshCw, ThumbsUp, ThumbsDown, Star, Zap, Brain, Globe, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface ChatMessage {
   id: string;

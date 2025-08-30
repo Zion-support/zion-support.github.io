@@ -1,38 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Cloud,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Network,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Server,
-  Database,
-  Smartphone
-} from 'lucide-react';
+import { Shield, Lock, Eye, CheckCircle, Users, Clock, ArrowRight, Play, Settings, Target, Cpu, Cloud, Activity, Sparkles, Search, Zap, Globe, Building, DollarSign, BarChart3, TrendingUp, Network, Key, Fingerprint, Monitor, AlertTriangle, ShieldCheck, Globe2, Server, Database, Smartphone } from 'lucide-react';
 
 const ZeroTrustNetworkAccess = () => {
   const features = [

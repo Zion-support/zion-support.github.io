@@ -1,45 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Network, 
-  CheckCircle, 
-  Users, 
-  Clock, 
-  ArrowRight,
-  Play,
-  Settings,
-  Target,
-  Cpu,
-  Activity,
-  Sparkles,
-  Search,
-  Zap,
-  Globe,
-  Building,
-  DollarSign,
-  BarChart3,
-  TrendingUp,
-  Key,
-  Fingerprint,
-  Monitor,
-  AlertTriangle,
-  ShieldCheck,
-  Globe2,
-  Database,
-  Smartphone,
-  Code,
-  FileText,
-  AlertCircle,
-  CheckSquare,
-  HardDrive,
-  Wifi,
-  Lock,
-  Shield,
-  Cloud,
-  Database2,
-  Router
-} from 'lucide-react';
+import { Server, Network, CheckCircle, Users, Clock, ArrowRight, Play, Settings, Target, Cpu, Activity, Sparkles, Search, Zap, Globe, Building, DollarSign, BarChart3, TrendingUp, Key, Fingerprint, Monitor, AlertTriangle, ShieldCheck, Globe2, Database, Smartphone, Code, FileText, AlertCircle, CheckSquare, HardDrive, Wifi, Lock, Shield, Cloud, Database2, Router } from 'lucide-react';
 
 const ITInfrastructure = () => {
   const features = [

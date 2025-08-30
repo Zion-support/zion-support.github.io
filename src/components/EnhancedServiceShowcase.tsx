@@ -1,24 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Code, 
-  Database,
-  Rocket,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  Play,
-  Target,
-  Award,
-  CheckCircle
-} from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, Users, Globe, Code, Database, Rocket, TrendingUp, Star, ArrowRight, Play, Target, Award, CheckCircle } from 'lucide-react';
 
 interface Service {
   id: string;

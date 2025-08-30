@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
-  ArrowRight, BookOpen, TrendingUp, Star, Eye
-} from 'lucide-react';
+import { Calendar, Clock, User, Tag, Search, Filter, ArrowRight, BookOpen, TrendingUp, Star, Eye } from 'lucide-react';
 
 function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -376,3 +373,5 @@ function Blog() {
     </div>
   );
 }
+
+export default Blog;

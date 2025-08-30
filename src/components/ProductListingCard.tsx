@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductListing } from "@/types/listings";
-import { DollarSign } from "lucide-react";
+import { DollarSign } from 'lucide-react';
 import { RatingStars } from "@/components/RatingStars";
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { useDispatch } from 'react-redux';
@@ -200,6 +200,6 @@ export function ProductListingCard({
       </div>
     </div>
   );
-};
+}
 
 export default React.memo(ProductListingCard);

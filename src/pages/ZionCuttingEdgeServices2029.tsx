@@ -1,25 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Users, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Brain, 
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  ArrowRight,
-  CheckCircle,
-  Clock,
-  DollarSign
-} from 'lucide-react';
+import { Search, Filter, Star, Users, TrendingUp, Shield, Zap, Globe, Brain, Rocket, Phone, Mail, MapPin, ExternalLink, ArrowRight, CheckCircle, Clock, DollarSign } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { zionCuttingEdgeServices2029 } from '../../data/zion-2029-cutting-edge-services';
 import { zionEmergingTechServices2029 } from '../../data/zion-2029-emerging-tech-services';

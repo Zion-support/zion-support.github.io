@@ -1,41 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Link, 
-  Zap, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Activity,
-  Clock,
-  Eye,
-  Database,
-  Monitor,
-  Code,
-  FileText,
-  Truck,
-  Wrench,
-  Cpu,
-  Brain,
-  Target,
-  Rocket,
-  Lightbulb,
-  Gauge,
-  Network,
-  Server,
-  Wallet,
-  Key,
-  BarChart3,
-  TrendingUp,
-  Building,
-  Car,
-  Plane
-} from 'lucide-react';
+import { Link, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award, Globe, Lock, Activity, Clock, Eye, Database, Monitor, Code, FileText, Truck, Wrench, Cpu, Brain, Target, Rocket, Lightbulb, Gauge, Network, Server, Wallet, Key, BarChart3, TrendingUp, Building, Car, Plane } from 'lucide-react';
 
 const blockchainSolutions = [
   {

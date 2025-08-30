@@ -1,27 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  TrendingUp, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Star,
-  Clock,
-  DollarSign,
-  Target,
-  PieChart,
-  LineChart,
-  Activity
-} from 'lucide-react';
+import { Brain, TrendingUp, BarChart3, Zap, Shield, Users, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Star, Clock, DollarSign, Target, PieChart, LineChart, Activity } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';

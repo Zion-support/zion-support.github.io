@@ -1,62 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  ArrowRight, 
-  ChevronDown, 
-  Globe, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Lock, 
-  Users, 
-  TrendingUp, 
-  Award, 
-  Clock, 
-  DollarSign, 
-  CheckCircle,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  BarChart3,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Phone,
-  Mail,
-  MapPin,
-  Target,
-  Lightbulb,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,
-  FileText,
-  MessageCircle,
-  Calendar,
-  Settings,
-  Monitor,
-  Truck,
-  Car,
-  Clipboard,
-  Link,
-  Microscope,
-  X,
-  Atom,
-  Heart,
-  Leaf
-} from 'lucide-react';
+import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle, Rocket, Cpu, Database, Network, Smartphone, BarChart3, Code, Server, Chip, Wifi, ShieldCheck, Bot, Workflow, Eye, Sparkles, Phone, Mail, MapPin, Target, Lightbulb, BarChart, PieChart, LineChart, Activity, FileText, MessageCircle, Calendar, Settings, Monitor, Truck, Car, Clipboard, Link, Microscope, X, Atom, Heart, Leaf } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 
 interface ServiceContact {
@@ -133,7 +77,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: unknown) => {
     setSelectedService(service);
   };
 
@@ -164,7 +108,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
   };
 
   const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: any } = {
+    const iconMap: { [key: string]: unknown } = {
       'AI & Automation': Brain,
       'AI & Analytics': BarChart3,
       'AI & Legal': Shield,

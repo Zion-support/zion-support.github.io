@@ -1,270 +1,391 @@
 #!/usr/bin/env node
 
-/**
- * Zion Tech Group - PM2 Automation Dashboard
- * Real-time monitoring and control of all automation processes
- */
-
-const pm2 = require('pm2');
-const chalk = require('chalk');
-const ora = require('ora');
-const Table = require('cli-table3');
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 class AutomationDashboard {
   constructor() {
-    this.processes = [];
+    this.projectRoot = process.cwd();
+    this.dashboardPath = path.join(this.projectRoot, 'automation-dashboard.json');
+    this.automations = this.initializeAutomations();
+    this.status = 'idle';
+    this.lastRun = null;
     this.stats = {
-      total: 0,
-      online: 0,
-      errored: 0,
-      stopped: 0,
-      totalMemory: 0,
-      totalCPU: 0
+      totalRuns: 0,
+      successfulFixes: 0,
+      errorsFixed: 0,
+      warningsFixed: 0,
+      totalErrors: 0,
+      totalWarnings: 0
     };
   }
 
-  async initialize() {
-    return new Promise((resolve, reject) => {
-      pm2.connect((err) => {
-        if (err) {
-          console.error(chalk.red('❌ Failed to connect to PM2'));
-          reject(err);
-          return;
-        }
-        console.log(chalk.green('✅ Connected to PM2'));
-        resolve();
-      });
-    });
-  }
-
-  async getProcessList() {
-    return new Promise((resolve, reject) => {
-      pm2.list((err, processes) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        this.processes = processes;
-        this.calculateStats();
-        resolve(processes);
-      });
-    });
-  }
-
-  calculateStats() {
-    this.stats = {
-      total: this.processes.length,
-      online: this.processes.filter(p => p.pm2_env.status === 'online').length,
-      errored: this.processes.filter(p => p.pm2_env.status === 'errored').length,
-      stopped: this.processes.filter(p => p.pm2_env.status === 'stopped').length,
-      totalMemory: this.processes.reduce((sum, p) => sum + (p.monit.memory || 0), 0),
-      totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0)
+  initializeAutomations() {
+    return {
+      'enhanced-error-fixer': {
+        name: 'Enhanced Error Fixer',
+        script: './scripts/automation/enhanced-error-fixer.cjs',
+        description: 'Automatically fixes common TypeScript and ESLint errors',
+        schedule: '*/15 * * * *', // Every 15 minutes
+        lastRun: null,
+        status: 'idle',
+        priority: 'high'
+      },
+      'comprehensive-error-automation': {
+        name: 'Comprehensive Error Automation',
+        script: './scripts/automation/comprehensive-error-automation.cjs',
+        description: 'Intelligent error analysis and resolution',
+        schedule: '0 */2 * * *', // Every 2 hours
+        lastRun: null,
+        status: 'idle',
+        priority: 'medium'
+      },
+      'console-error-fixer': {
+        name: 'Console Error Fixer',
+        script: './scripts/automation/console-error-fixer.cjs',
+        description: 'Fixes console and runtime errors',
+        schedule: '*/10 * * * *', // Every 10 minutes
+        lastRun: null,
+        status: 'idle',
+        priority: 'high'
+      },
+      'typescript-syntax-fixer': {
+        name: 'TypeScript Syntax Fixer',
+        script: './scripts/automation/typescript-syntax-fixer.cjs',
+        description: 'Fixes TypeScript syntax and type errors',
+        schedule: '*/30 * * * *', // Every 30 minutes
+        lastRun: null,
+        status: 'idle',
+        priority: 'medium'
+      },
+      'smart-dependency-manager': {
+        name: 'Smart Dependency Manager',
+        script: './scripts/automation/smart-dependency-manager.cjs',
+        description: 'Manages and updates dependencies',
+        schedule: '0 */6 * * *', // Every 6 hours
+        lastRun: null,
+        status: 'idle',
+        priority: 'low'
+      }
     };
   }
 
-  displayHeader() {
-    console.log('\n' + '='.repeat(80));
-    console.log(chalk.cyan.bold('🚀 Zion Tech Group - PM2 Automation Dashboard'));
-    console.log(chalk.gray('Real-time monitoring and control of automation processes'));
-    console.log('='.repeat(80));
-  }
-
-  displayStats() {
-    const statsTable = new Table({
-      head: [
-        chalk.cyan('Metric'),
-        chalk.cyan('Value'),
-        chalk.cyan('Status')
-      ],
-      colWidths: [30, 20, 30]
-    });
-
-    statsTable.push(
-      ['Total Processes', this.stats.total.toString(), this.getStatusIcon('total')],
-      ['Online Processes', this.stats.online.toString(), chalk.green('✅ Running')],
-      ['Errored Processes', this.stats.errored.toString(), this.stats.errored > 0 ? chalk.red('❌ Issues') : chalk.green('✅ Clean')],
-      ['Stopped Processes', this.stats.stopped.toString(), this.stats.stopped > 0 ? chalk.yellow('⚠️  Stopped') : chalk.green('✅ All Running')],
-      ['Total Memory Usage', this.formatBytes(this.stats.totalMemory), this.getMemoryStatus()],
-      ['Total CPU Usage', this.stats.totalCPU.toFixed(1) + '%', this.getCPUStatus()]
-    );
-
-    console.log('\n' + chalk.blue.bold('📊 System Statistics:'));
-    console.log(statsTable.toString());
-  }
-
-  getStatusIcon(type) {
-    switch (type) {
-      case 'total':
-        return chalk.blue('📊 Total');
-      default:
-        return chalk.gray('📋 Info');
-    }
-  }
-
-  getMemoryStatus() {
-    const memoryGB = this.stats.totalMemory / (1024 * 1024 * 1024);
-    if (memoryGB < 1) return chalk.green('✅ Low');
-    if (memoryGB < 2) return chalk.yellow('⚠️  Medium');
-    return chalk.red('❌ High');
-  }
-
-  getCPUStatus() {
-    if (this.stats.totalCPU < 50) return chalk.green('✅ Low');
-    if (this.stats.totalCPU < 80) return chalk.yellow('⚠️  Medium');
-    return chalk.red('❌ High');
-  }
-
-  formatBytes(bytes) {
-    if (bytes === 0) return '0 B';
-    const k = 1024;
-    const sizes = ['B', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-  }
-
-  displayProcessTable() {
-    const table = new Table({
-      head: [
-        chalk.cyan('ID'),
-        chalk.cyan('Name'),
-        chalk.cyan('Status'),
-        chalk.cyan('Memory'),
-        chalk.cyan('CPU'),
-        chalk.cyan('Uptime'),
-        chalk.cyan('Restarts')
-      ],
-      colWidths: [5, 25, 12, 12, 8, 15, 10]
-    });
-
-    this.processes.forEach(process => {
-      const status = this.getProcessStatus(process.pm2_env.status);
-      const memory = this.formatBytes(process.monit.memory || 0);
-      const cpu = (process.monit.cpu || 0).toFixed(1) + '%';
-      const uptime = this.formatUptime(process.pm2_env.pm_uptime);
-      const restarts = process.pm2_env.restart_time || 0;
-
-      table.push([
-        process.pm_id.toString(),
-        chalk.white(process.name),
-        status,
-        memory,
-        cpu,
-        uptime,
-        restarts.toString()
-      ]);
-    });
-
-    console.log('\n' + chalk.blue.bold('🔄 Process Status:'));
-    console.log(table.toString());
-  }
-
-  getProcessStatus(status) {
-    switch (status) {
-      case 'online':
-        return chalk.green('✅ Online');
-      case 'errored':
-        return chalk.red('❌ Errored');
-      case 'stopped':
-        return chalk.yellow('⏸️  Stopped');
-      case 'launching':
-        return chalk.blue('🚀 Launching');
-      default:
-        return chalk.gray('❓ Unknown');
-    }
-  }
-
-  formatUptime(uptime) {
-    if (!uptime) return 'N/A';
-    const seconds = Math.floor(uptime / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-
-    if (days > 0) return `${days}d ${hours % 24}h`;
-    if (hours > 0) return `${hours}h ${minutes % 60}m`;
-    if (minutes > 0) return `${minutes}m ${seconds % 60}s`;
-    return `${seconds}s`;
-  }
-
-  async restartProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.restart(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
-      });
-    });
-  }
-
-  async stopProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.stop(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
-      });
-    });
-  }
-
-  async startProcess(processName) {
-    return new Promise((resolve, reject) => {
-      pm2.start(processName, (err) => {
-        if (err) {
-          reject(err);
-          return;
-        }
-        resolve();
-      });
-    });
-  }
-
-  displayCommands() {
-    console.log('\n' + chalk.blue.bold('🎮 Available Commands:'));
-    console.log(chalk.gray('  restart <process>  - Restart a specific process'));
-    console.log(chalk.gray('  stop <process>     - Stop a specific process'));
-    console.log(chalk.gray('  start <process>    - Start a specific process'));
-    console.log(chalk.gray('  refresh            - Refresh process list'));
-    console.log(chalk.gray('  quit               - Exit dashboard'));
-    console.log(chalk.gray('  help               - Show this help'));
-  }
-
-  async run() {
+  async start() {
+    console.log('🚀 Starting Automation Dashboard...');
+    
     try {
-      await this.initialize();
+      // Load existing dashboard state
+      await this.loadDashboard();
       
-      while (true) {
-        await this.getProcessList();
-        
-        this.displayHeader();
-        this.displayStats();
-        this.displayProcessTable();
-        this.displayCommands();
+      // Start monitoring
+      await this.startMonitoring();
+      
+      // Run initial health check
+      await this.runHealthCheck();
+      
+      console.log('✅ Automation Dashboard started successfully');
+      
+    } catch (error) {
+      console.error('❌ Failed to start Automation Dashboard:', error);
+    }
+  }
 
-        // Wait for user input
-        await this.waitForInput();
+  async startMonitoring() {
+    console.log('📊 Starting automation monitoring...');
+    
+    // Monitor PM2 processes
+    setInterval(async () => {
+      await this.monitorPM2Processes();
+    }, 30000); // Every 30 seconds
+    
+    // Check automation schedules
+    setInterval(async () => {
+      await this.checkSchedules();
+    }, 60000); // Every minute
+    
+    // Generate periodic reports
+    setInterval(async () => {
+      await this.generatePeriodicReport();
+    }, 300000); // Every 5 minutes
+  }
+
+  async monitorPM2Processes() {
+    try {
+      const pm2List = execSync('pm2 list --json', { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8' 
+      });
+      
+      const processes = JSON.parse(pm2List);
+      
+      for (const process of processes) {
+        if (this.automations[process.name]) {
+          this.automations[process.name].status = process.pm2_env.status;
+          this.automations[process.name].lastRun = new Date().toISOString();
+        }
+      }
+      
+      await this.saveDashboard();
+      
+    } catch (error) {
+      console.warn('Warning: Could not monitor PM2 processes:', error.message);
+    }
+  }
+
+  async checkSchedules() {
+    const now = new Date();
+    
+    for (const [key, automation] of Object.entries(this.automations)) {
+      if (this.shouldRunAutomation(automation, now)) {
+        await this.runAutomation(key, automation);
+      }
+    }
+  }
+
+  shouldRunAutomation(automation, now) {
+    if (automation.status === 'running') return false;
+    
+    const lastRun = automation.lastRun ? new Date(automation.lastRun) : null;
+    if (!lastRun) return true;
+    
+    // Simple schedule checking (can be enhanced with cron parsing)
+    const timeSinceLastRun = now - lastRun;
+    const scheduleMinutes = this.parseSchedule(automation.schedule);
+    
+    return timeSinceLastRun >= scheduleMinutes * 60 * 1000;
+  }
+
+  parseSchedule(schedule) {
+    // Simple schedule parsing (can be enhanced)
+    if (schedule.includes('*/15')) return 15;
+    if (schedule.includes('*/10')) return 10;
+    if (schedule.includes('*/30')) return 30;
+    if (schedule.includes('*/2')) return 120;
+    if (schedule.includes('*/6')) return 360;
+    return 60; // Default to 1 hour
+  }
+
+  async runAutomation(key, automation) {
+    console.log(`🚀 Running automation: ${automation.name}`);
+    
+    try {
+      automation.status = 'running';
+      automation.lastRun = new Date().toISOString();
+      this.status = 'running';
+      
+      await this.saveDashboard();
+      
+      // Run the automation script
+      const output = execSync(`node ${automation.script}`, { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8',
+        timeout: 300000 // 5 minutes timeout
+      });
+      
+      // Parse output for statistics
+      this.parseAutomationOutput(output, automation);
+      
+      automation.status = 'completed';
+      this.status = 'idle';
+      this.stats.totalRuns++;
+      
+      console.log(`✅ Automation completed: ${automation.name}`);
+      
+    } catch (error) {
+      console.error(`❌ Automation failed: ${automation.name}`, error.message);
+      automation.status = 'failed';
+      this.status = 'error';
+    }
+    
+    await this.saveDashboard();
+  }
+
+  parseAutomationOutput(output, automation) {
+    // Parse common output patterns to extract statistics
+    const lines = output.split('\n');
+    
+    for (const line of lines) {
+      if (line.includes('Fixed') && line.includes('issues')) {
+        const match = line.match(/Fixed\s+(\d+)\s+issues/);
+        if (match) {
+          this.stats.successfulFixes += parseInt(match[1]);
+        }
+      }
+      
+      if (line.includes('errors') && line.includes('fixed')) {
+        const match = line.match(/(\d+)\s+errors\s+fixed/);
+        if (match) {
+          this.stats.errorsFixed += parseInt(match[1]);
+        }
+      }
+      
+      if (line.includes('warnings') && line.includes('fixed')) {
+        const match = line.match(/(\d+)\s+warnings\s+fixed/);
+        if (match) {
+          this.stats.warningsFixed += parseInt(match[1]);
+        }
+      }
+    }
+  }
+
+  async runHealthCheck() {
+    console.log('🏥 Running health check...');
+    
+    try {
+      // Check if all automation scripts exist
+      for (const [key, automation] of Object.entries(this.automations)) {
+        if (!fs.existsSync(automation.script)) {
+          console.warn(`⚠️ Automation script not found: ${automation.script}`);
+          automation.status = 'error';
+        }
+      }
+      
+      // Check PM2 status
+      const pm2Status = execSync('pm2 ping', { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8' 
+      });
+      
+      if (pm2Status.includes('pong')) {
+        console.log('✅ PM2 is running');
+      } else {
+        console.warn('⚠️ PM2 is not responding');
+      }
+      
+      // Check current error count
+      await this.updateErrorCounts();
+      
+      await this.saveDashboard();
+      
+    } catch (error) {
+      console.error('❌ Health check failed:', error.message);
+    }
+  }
+
+  async updateErrorCounts() {
+    try {
+      const lintOutput = execSync('npm run lint 2>&1', { 
+        cwd: this.projectRoot, 
+        encoding: 'utf8' 
+      });
+      
+      const errors = (lintOutput.match(/error/g) || []).length;
+      const warnings = (lintOutput.match(/warning/g) || []).length;
+      
+      this.stats.totalErrors = errors;
+      this.stats.totalWarnings = warnings;
+      
+    } catch (error) {
+      console.warn('Warning: Could not update error counts:', error.message);
+    }
+  }
+
+  async generatePeriodicReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      dashboard: {
+        status: this.status,
+        lastRun: this.lastRun,
+        automations: this.automations
+      },
+      statistics: this.stats,
+      summary: this.generateSummary()
+    };
+    
+    try {
+      const reportPath = path.join(this.projectRoot, `automation-report-${Date.now()}.json`);
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      console.log(`📊 Periodic report generated: ${reportPath}`);
+    } catch (error) {
+      console.error('Failed to generate periodic report:', error.message);
+    }
+  }
+
+  generateSummary() {
+    const activeAutomations = Object.values(this.automations).filter(a => a.status === 'running').length;
+    const completedAutomations = Object.values(this.automations).filter(a => a.status === 'completed').length;
+    const failedAutomations = Object.values(this.automations).filter(a => a.status === 'failed').length;
+    
+    return {
+      activeAutomations,
+      completedAutomations,
+      failedAutomations,
+      totalAutomations: Object.keys(this.automations).length,
+      errorReduction: this.stats.totalErrors > 0 ? 
+        Math.round((this.stats.errorsFixed / this.stats.totalErrors) * 100) : 0
+    };
+  }
+
+  async loadDashboard() {
+    try {
+      if (fs.existsSync(this.dashboardPath)) {
+        const data = fs.readFileSync(this.dashboardPath, 'utf8');
+        const dashboard = JSON.parse(data);
+        
+        // Merge with current state
+        this.automations = { ...this.automations, ...dashboard.automations };
+        this.stats = { ...this.stats, ...dashboard.stats };
+        this.lastRun = dashboard.lastRun;
+        
+        console.log('📊 Dashboard state loaded');
       }
     } catch (error) {
-      console.error(chalk.red('❌ Dashboard error:'), error.message);
-    } finally {
-      pm2.disconnect();
+      console.warn('Warning: Could not load dashboard state:', error.message);
     }
   }
 
-  async waitForInput() {
-    // In a real implementation, this would handle user input
-    // For now, we'll just wait a bit and refresh
-    await new Promise(resolve => setTimeout(resolve, 5000));
+  async saveDashboard() {
+    try {
+      const dashboard = {
+        timestamp: new Date().toISOString(),
+        automations: this.automations,
+        stats: this.stats,
+        lastRun: this.lastRun
+      };
+      
+      fs.writeFileSync(this.dashboardPath, JSON.stringify(dashboard, null, 2));
+    } catch (error) {
+      console.error('Failed to save dashboard state:', error.message);
+    }
+  }
+
+  // Public methods for external control
+  async getStatus() {
+    return {
+      status: this.status,
+      automations: this.automations,
+      stats: this.stats,
+      lastRun: this.lastRun
+    };
+  }
+
+  async runAutomationNow(automationKey) {
+    const automation = this.automations[automationKey];
+    if (automation) {
+      await this.runAutomation(automationKey, automation);
+      return { success: true, message: `Automation ${automation.name} started` };
+    } else {
+      return { success: false, message: `Automation ${automationKey} not found` };
+    }
+  }
+
+  async stopAutomation(automationKey) {
+    const automation = this.automations[automationKey];
+    if (automation && automation.status === 'running') {
+      automation.status = 'stopped';
+      await this.saveDashboard();
+      return { success: true, message: `Automation ${automation.name} stopped` };
+    } else {
+      return { success: false, message: `Automation ${automationKey} not running` };
+    }
   }
 }
 
 // Run the dashboard
 if (require.main === module) {
   const dashboard = new AutomationDashboard();
-  dashboard.run().catch(console.error);
+  dashboard.start().catch(console.error);
 }
 
 module.exports = AutomationDashboard;
