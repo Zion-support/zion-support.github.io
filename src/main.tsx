@@ -117,13 +117,6 @@ const renderApp = () => {
 
 // Initialize the application
 try {
-<<<<<<< HEAD
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').catch(error => {
-      console.warn('Service worker registration failed:', error);
-    });
-  }
-=======
   renderApp();
   
   // Register service worker with error handling
@@ -145,7 +138,6 @@ try {
     }
   }
   
->>>>>>> 7b4ba2cca717083215dc8a46c85484659e410fa9
 } catch (error) {
   console.error('Failed to render application:', error);
   

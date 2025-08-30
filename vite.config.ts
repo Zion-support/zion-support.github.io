@@ -1,21 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-<<<<<<< HEAD
-import path from 'path'
-=======
 import compression from 'vite-plugin-compression'
 import { resolve } from 'path'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
->>>>>>> 7b4ba2cca717083215dc8a46c85484659e410fa9
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-<<<<<<< HEAD
-    react()
-=======
     react(),
     compression({
       algorithm: 'gzip',
@@ -29,7 +22,6 @@ export default defineConfig({
       threshold: 10240,
       deleteOriginFile: false,
     }),
->>>>>>> 7b4ba2cca717083215dc8a46c85484659e410fa9
   ],
   resolve: {
     alias: {
@@ -99,7 +91,7 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    open: true,
+    cors: true,
   },
   css: {
     postcss: {
@@ -111,7 +103,7 @@ export default defineConfig({
             discardComments: {
               removeAll: true,
             },
-            normalizeWhitespace: true,
+            normalizeWhitespace: false,
           }],
         }),
       ],
