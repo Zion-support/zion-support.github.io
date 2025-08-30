@@ -59,31 +59,31 @@ export default function Services() {
           reviewCount: 89
         },
         {
-          name: 'Quantum AI Platform',
-          description: 'Next-generation quantum computing with AI capabilities for complex problem solving',
-          features: ['Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Optimization', 'Quantum Simulation'],
-          href: '/services/quantum-ai-platform',
-          price: 'From $25,000',
-          rating: 5.0,
-          reviewCount: 67
-        },
-        {
-          name: 'AI Cybersecurity Suite',
-          description: 'AI-powered threat detection and automated incident response with zero-trust architecture',
-          features: ['AI Threat Detection', 'Zero-Trust Architecture', 'Automated Incident Response', 'Compliance Automation'],
-          href: '/services/ai-cybersecurity-suite',
-          price: 'From $8,500',
+          name: 'AI Healthcare Predictive Analytics',
+          description: 'Predict diseases with 94% accuracy and optimize patient care with AI-powered insights',
+          features: ['Predictive Diagnostics', 'Early Risk Detection', 'Treatment Optimization', 'Population Health Analytics'],
+          href: '/services/ai-healthcare-predictive-analytics',
+          price: 'From $899/month',
           rating: 4.9,
           reviewCount: 156
         },
         {
-          name: 'AI Healthcare Analytics',
-          description: 'Predictive diagnostics and patient care optimization with AI-powered insights',
-          features: ['Predictive Diagnostics', 'Patient Care Optimization', 'Clinical Research Acceleration', 'Healthcare Operations'],
-          href: '/services/ai-healthcare-analytics',
-          price: 'From $12,000',
+          name: 'AI Financial Compliance Assistant',
+          description: 'Automated regulatory compliance with AI-powered monitoring and risk assessment',
+          features: ['SOX Compliance', 'GDPR & Privacy', 'PCI DSS', 'AML/KYC', 'Basel III', 'IFRS/GAAP'],
+          href: '/services/ai-financial-compliance-assistant',
+          price: 'From $499/month',
           rating: 4.9,
           reviewCount: 134
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          description: 'End-to-end supply chain intelligence with AI-powered optimization and real-time visibility',
+          features: ['Route Optimization', 'Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Real-time Monitoring'],
+          href: '/services/ai-supply-chain-optimization',
+          price: 'From $799/month',
+          rating: 4.9,
+          reviewCount: 98
         }
       ]
     },
@@ -237,37 +237,37 @@ export default function Services() {
       ]
     },
     {
-      name: 'Micro SaaS Solutions',
+      name: 'Innovative Micro SaaS',
       icon: Zap,
-      description: 'Specialized software-as-a-service solutions for specific business needs',
+      description: 'Cutting-edge software-as-a-service solutions powered by advanced AI',
       color: 'from-yellow-600 to-orange-600',
       services: [
         {
-          name: 'AI Lead Scoring',
-          description: 'Intelligent lead qualification and scoring with AI-powered analytics',
-          features: ['Lead Qualification', 'Scoring Algorithms', 'CRM Integration', 'Performance Analytics'],
-          href: '/services/ai-lead-scoring',
+          name: 'AI Incident Postmortems',
+          description: 'AI-powered incident management with automated root cause analysis and prevention',
+          features: ['Root Cause Analysis', 'Real-time Monitoring', 'Predictive Prevention', 'Team Collaboration'],
+          href: '/services/ai-incident-postmortems',
+          price: 'From $299/month',
+          rating: 4.9,
+          reviewCount: 89
+        },
+        {
+          name: 'AI Content Optimizer Pro',
+          description: 'Advanced AI-powered content optimization for SEO and engagement',
+          features: ['SEO Optimization', 'Readability Scoring', 'Multi-language Support', 'Performance Analytics'],
+          href: '/services/ai-content-optimizer-pro',
           price: 'From $199/month',
-          rating: 4.8,
+          rating: 4.9,
           reviewCount: 156
         },
         {
-          name: 'Website AI Chatbot',
-          description: 'Intelligent customer support chatbot with natural language processing',
-          features: ['24/7 Support', 'Natural Language Processing', 'Multi-language Support', 'Integration APIs'],
-          href: '/services/website-ai-chatbot',
-          price: 'From $99/month',
-          rating: 4.9,
-          reviewCount: 234
-        },
-        {
-          name: 'AI HR Talent Acquisition',
-          description: 'Revolutionize hiring with AI-powered candidate matching and recruitment automation',
-          features: ['AI Matching', 'Intelligent Sourcing', 'Predictive Analytics', 'Smart Screening'],
-          href: '/services/ai-hr-talent-acquisition',
-          price: 'From $399',
+          name: 'AI Sales Copilot',
+          description: 'AI-powered sales automation and customer relationship management',
+          features: ['Lead Scoring', 'Sales Forecasting', 'Customer Insights', 'Automated Follow-ups'],
+          href: '/services/ai-sales-copilot',
+          price: 'From $3,500',
           rating: 4.8,
-          reviewCount: 267
+          reviewCount: 89
         }
       ]
     }
@@ -275,28 +275,28 @@ export default function Services() {
 
   const emergingTechnologies = [
     {
-      name: 'Quantum Computing',
+      name: 'Quantum AI Platform',
       icon: Cpu,
-      description: 'Next-generation quantum computing solutions for complex problem-solving',
-      href: '/services/quantum-computing',
+      description: 'Next-generation quantum computing with AI capabilities for complex problem-solving',
+      href: '/services/quantum-ai-platform',
       color: 'from-violet-600 to-purple-600'
     },
     {
-      name: 'Blockchain Solutions',
-      icon: Lock,
-      description: 'Enterprise blockchain implementation and DeFi solutions',
-      href: '/services/blockchain-enterprise-solutions',
+      name: 'AI Cybersecurity Suite',
+      icon: Shield,
+      description: 'AI-powered threat detection and automated incident response',
+      href: '/services/ai-cybersecurity-suite',
+      color: 'from-red-600 to-orange-600'
+    },
+    {
+      name: 'Digital Twin Solutions',
+      icon: Rocket,
+      description: 'Real-time digital simulation and monitoring solutions',
+      href: '/services/digital-twin',
       color: 'from-blue-600 to-indigo-600'
     },
     {
-      name: 'IoT & Edge Computing',
-      icon: Network,
-      description: 'Internet of Things and edge computing infrastructure',
-      href: '/services/iot-edge',
-      color: 'from-green-600 to-teal-600'
-    },
-    {
-      name: 'Healthcare Technology',
+      name: 'AI Healthcare Analytics',
       icon: Heart,
       description: 'AI-powered healthcare solutions and medical technology',
       href: '/services/healthcare-tech',

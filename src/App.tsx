@@ -41,6 +41,8 @@ const RevolutionaryServicesShowcase2030 = React.lazy(() => import('./pages/Revol
 const ComprehensiveServicesShowcase2026 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2026'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
 const InnovativeServicesShowcase2025 = React.lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const InnovativeServicesShowcase2030 = React.lazy(() => import('./pages/InnovativeServicesShowcase2030'));
+const ComprehensivePricingGuide2030 = React.lazy(() => import('./pages/ComprehensivePricingGuide2030'));
 const ScheduleDemo = React.lazy(() => import('./pages/ScheduleDemo'));
 
 // Service pages that exist
@@ -134,6 +136,8 @@ const App = React.memo(() => {
     { path: '/comprehensive-services-showcase-2026', element: <ComprehensiveServicesShowcase2026 /> },
     { path: '/comprehensive-pricing-guide-2027', element: <ComprehensivePricingGuide2027 /> },
     { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+    { path: '/innovative-services-showcase-2030', element: <InnovativeServicesShowcase2030 /> },
+    { path: '/comprehensive-pricing-guide-2030', element: <ComprehensivePricingGuide2030 /> },
     { path: '/schedule-demo', element: <ScheduleDemo /> },
     { path: '/services/cloud-devops', element: <CloudDevOps /> },
     { path: '/services/digital-transformation', element: <DigitalTransformation /> },
