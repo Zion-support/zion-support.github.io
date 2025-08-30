@@ -130,13 +130,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Minimum 50 team members"
         ],
         bestFor: [
-<<<<<<< HEAD
-          'Large enterprises (200+ employees)',
-          'Multi-national operations',
-          'Custom AI requirements'
-        ]
-
-=======
           "Large enterprises",
           "Global brands",
           "Publishing companies",
@@ -146,7 +139,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         implementationTime: "3-4 weeks",
         supportLevel: "24/7 dedicated support"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketComparison: [
       {
@@ -185,21 +177,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         additionalBenefits: ["White-label options", "Custom AI training"]
       }
     ],
-<<<<<<< HEAD
-    useCases: [
-      'Enterprise operations management',
-      'Multi-location business coordination',
-      'Supply chain optimization',
-      'Financial planning and analysis',
-      'Strategic planning and execution'
-    ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-
-=======
     customEnterprise: {
       features: [
         "Custom AI model training",
@@ -222,7 +199,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         website: "https://ziontechgroup.com/ai-content-generation"
       }
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
   // AI Customer Service Automation
@@ -311,14 +287,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Minimum 25 support agents"
         ],
         bestFor: [
-<<<<<<< HEAD
-          'Large enterprises',
-          'Multi-brand companies',
-          'Agency teams',
-          'Custom AI requirements'
-        ]
-
-=======
           "Large enterprises",
           "Global support teams",
           "High-volume operations"
@@ -327,7 +295,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         implementationTime: "4-6 weeks",
         supportLevel: "24/7 dedicated support"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketComparison: [
       {

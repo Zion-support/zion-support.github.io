@@ -31,6 +31,7 @@ export interface SpecializedITInfrastructureService2026 {
   };
   competitors?: string[];
   marketSize?: string;
+}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
   // 5G Enterprise Network Solutions
@@ -616,5 +617,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     },
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
     marketSize: "$12.8 billion by 2026"
+  }
+];
 
-];}}
+export default SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026;
