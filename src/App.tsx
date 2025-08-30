@@ -81,31 +81,7 @@ const Documentation = createLazyComponent(() => import('./pages/Documentation'))
 const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Status = createLazyComponent(() => import('./pages/Status'));
-const Training = createLazyComponent(() => import('./pages/Training'));
-const Support = createLazyComponent(() => import('./pages/Support'));
-const Events = createLazyComponent(() => import('./pages/Events'));
-const Security = createLazyComponent(() => import('./pages/Security'));
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));
-const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
-const Talent = createLazyComponent(() => import('./pages/Talent'));
-const Equipment = createLazyComponent(() => import('./pages/Equipment'));
-const GreenIT = createLazyComponent(() => import('./pages/GreenIT'));
-const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
-const MarketplaceProducts = createLazyComponent(() => import('./pages/marketplace/Products'));
-const MarketplaceTalent = createLazyComponent(() => import('./pages/marketplace/Talent'));
-const MarketplaceEquipment = createLazyComponent(() => import('./pages/marketplace/Equipment'));
-const MarketplaceServices = createLazyComponent(() => import('./pages/marketplace/Services'));
-const Login = createLazyComponent(() => import('./pages/Login'));
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));
-const SearchPage = createLazyComponent(() => import('./pages/SearchPage'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const ResearchDevelopment = createLazyComponent(() => import('./pages/research-development'));
-const MobileLaunch = createLazyComponent(() => import('./pages/MobileLaunch'));
-const Analytics = createLazyComponent(() => import('./pages/Analytics'));
-const Match = createLazyComponent(() => import('./pages/Match'));
-const Solutions = createLazyComponent(() => import('./pages/solutions'));
+
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -202,31 +178,7 @@ const ComprehensiveServicesShowcase2027Page = createLazyComponent(() => import('
 const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesLanding2025'));
 const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
 const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
-const NewServicesShowcase2025 = createLazyComponent(() => import('./pages/NewServicesShowcase2025'));
 
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-900 via-red-800 to-red-900">
-    <div className="text-center text-white">
-      <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
-      <p className="text-red-200 mb-4">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-
-        Try again
-      </button>
-=======
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-
-    </div>
-  </div>
-);
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
