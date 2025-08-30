@@ -333,21 +333,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         additionalBenefits: ["White-label options", "Custom AI training"]
       }
     ],
-<<<<<<< HEAD
-    useCases: [
-      'Digital marketing agencies',
-      'E-commerce businesses',
-      'Content creators and publishers',
-      'B2B marketing teams',
-      'Educational institutions'
-    ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-
-=======
     customEnterprise: {
       features: [
         "Custom AI training",
@@ -370,7 +355,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         website: "https://ziontechgroup.com/ai-customer-service"
       }
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
   // AI Sales Intelligence Platform
@@ -458,13 +442,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Minimum 50 sales users"
         ],
         bestFor: [
-<<<<<<< HEAD
-          'Large enterprises',
-          'Custom security requirements',
-          'Extended support needs'
-        ]
-
-=======
           "Large sales organizations",
           "Enterprise companies",
           "Global sales teams"
@@ -473,7 +450,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         implementationTime: "5-6 weeks",
         supportLevel: "24/7 dedicated support"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketComparison: [
       {
@@ -512,21 +488,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         additionalBenefits: ["White-label options", "Custom AI training"]
       }
     ],
-<<<<<<< HEAD
-    useCases: [
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Enterprise corporations',
-      'Educational institutions'
-    ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-
-=======
     customEnterprise: {
       features: [
         "Custom AI training",
@@ -549,7 +510,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         website: "https://ziontechgroup.com/ai-sales-intelligence"
       }
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
   // AI Financial Analytics Platform
@@ -615,42 +575,10 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
           "Hedge funds",
           "Institutional investors"
         ],
-<<<<<<< HEAD
-        popular: true
-      },
-      {
-        name: 'Enterprise',
-        price: '$1,999',
-        billing: 'month',
-        description: 'Full-scale enterprise solution with custom features and dedicated support',
-        features: [
-          'Custom optimization algorithms',
-          'Advanced analytics and reporting',
-          'Custom integrations',
-          'Dedicated account manager',
-          '24/7 support',
-          'API access',
-          'Custom compliance features',
-          'Advanced security features'
-        ],
-        benefits: [
-          'Maximum cost optimization',
-          'Custom solutions',
-          'Enterprise-grade support',
-          'Full cost lifecycle management'
-        ],
-        bestFor: [
-          'Large enterprises',
-          'Custom optimization requirements',
-          'Enterprise-grade support needs'
-        ]
-
-=======
         roi: "1000-1500%",
         implementationTime: "8-12 weeks",
         supportLevel: "24/7 dedicated support"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketComparison: [
       {
@@ -780,18 +708,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         supportLevel: "24/7 dedicated support"
       }
     ],
-<<<<<<< HEAD
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-
-
-];
-
-export default comprehensivePricingGuide2025;}}}}}}}}}
-=======
     marketComparison: [
       {
         competitor: "Epic",
@@ -855,4 +771,3 @@ export default comprehensivePricingGuide2025;}}}}}}}}}
 ];
 
 export default COMPREHENSIVE_PRICING_GUIDE_2025;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

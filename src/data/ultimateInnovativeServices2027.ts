@@ -40,13 +40,8 @@ contactInfo: {
     keyFeatures: string[];
     competitiveAdvantages: string[];
     testimonials?: string[];
-<<<<<<< HEAD
     caseStudies?: string[];
   };
-
-=======
-    caseStudies?: string[]}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
   // AI-Powered Quantum Computing Platform
   {
@@ -58,7 +53,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     price: 15999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-optimized quantum algorithms",
       "Hybrid classical-quantum processing",
       "Quantum machine learning models",
@@ -70,28 +65,28 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "Quantum-safe encryption",
       "Quantum cloud infrastructure"
     ],
-    benefits[
+    benefits: [
       "1000x faster computation for complex problems",
       "Breakthrough discoveries in drug development",
       "Unbreakable quantum encryption",
       "Revolutionary AI model training",
       "Climate modeling and prediction"
     ],
-    useCases[
+    useCases: [
       "Enterprise business management",
       "Financial institutions",
       "Manufacturing operations",
       "Healthcare systems",
       "Government operations"
     ],
-    targetAudience[
+    targetAudience: [
       "Fortune 500 companies",
       "Government agencies",
       "Financial institutions",
       "Healthcare systems",
       "Manufacturing conglomerates"
     ],
-    tags["Quantum AI", "Business Automation", "Autonomous Systems", "Quantum Computing", "AI Management"],
+    tags: ["Quantum AI", "Business Automation", "Autonomous Systems", "Quantum Computing", "AI Management"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$15,999 - $99,999/month",
@@ -104,14 +99,14 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     technicalSpecs: {
-      technology["Quantum Computing", "GPT-5", "Quantum Neural Networks", "Quantum Cryptography", "Advanced AI"],
-      integrations["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom APIs"],
+      technology: ["Quantum Computing", "GPT-5", "Quantum Neural Networks", "Quantum Cryptography", "Advanced AI"],
+      integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom APIs"],
       apiEndpoints: 1000,
       uptime: "99.999%",
-      security["Quantum Encryption", "Zero Trust", "AI Threat Detection", "Quantum Key Distribution"],
-      compliance["ISO 27001", "SOC 2", "GDPR", "HIPAA", "SOX", "PCI DSS"]
+      security: ["Quantum Encryption", "Zero Trust", "AI Threat Detection", "Quantum Key Distribution"],
+      compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA", "SOX", "PCI DSS"]
     },
-    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
+          competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
     marketTrend: "Exponential growth in quantum AI adoption",
     aiModel: "GPT-5 + Quantum Neural Networks",
     trainingData: "Multi-domain business data + Quantum simulations"

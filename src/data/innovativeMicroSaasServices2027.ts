@@ -497,7 +497,6 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
     },
-<<<<<<< HEAD
     marketSize: "$15.8 billion by 2027"
   },
 
@@ -955,16 +954,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
       website: "https://ziontechgroup.com"
     },
     marketSize: "$67.2 billion by 2027"
-
-=======
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
-    createdAt: "2027-01-15T10:00:00.000Z",
-    technologyStack: ["Python", "TensorFlow", "Climate Models", "Satellite Data", "IoT Sensors"],
-    useCases: ["Climate Prediction", "Risk Assessment", "Sustainability Planning", "Environmental Monitoring"],
-    integrations: ["Weather APIs", "Satellite Systems", "IoT Platforms", "Analytics Tools"],
-    compliance: ["Environmental Standards", "Climate Protocols", "Data Accuracy", "Scientific Validation"],
-    support: ["24/7 Support", "Scientific Consultation", "Implementation", "Training"];
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }
 ];
-}}
+
+export default INNOVATIVE_MICRO_SAAS_SERVICES_2027;
