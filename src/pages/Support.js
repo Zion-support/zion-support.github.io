@@ -14,7 +14,7 @@ export default function Support() {
             {
                 question: 'Do you offer remote support?',
                 answer: 'Yes, we provide comprehensive remote support for all our services. Our team can assist you from anywhere in the world, ensuring you get the help you need regardless of your location.'
-
+            }
         ],
         technical: [
             {
@@ -28,7 +28,7 @@ export default function Support() {
             {
                 question: 'Can you integrate with existing systems?',
                 answer: 'Absolutely! We specialize in seamless integration with existing systems. Our team will assess your current infrastructure and ensure our solutions work perfectly with your existing technology stack.'
-
+            }
         ],
         billing: [
             {
@@ -56,7 +56,7 @@ export default function Support() {
             {
                 question: 'How do you handle data privacy?',
                 answer: 'We follow strict data privacy protocols and are fully GDPR compliant. All data is encrypted, access is strictly controlled, and we never share your data with third parties without explicit consent.'
-
+            }
         ]
     };
     const supportChannels = [
@@ -125,3 +125,69 @@ export default function Support() {
             link: '/community'
         }
     ];
+
+    return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+            <div className="container mx-auto px-4 py-16">
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl font-bold mb-6">Support Center</h1>
+                    <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Get the help you need with our comprehensive support resources and expert assistance.
+                    </p>
+                </div>
+
+                {/* FAQ Section */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        {Object.keys(faqCategories).map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
+                                    activeCategory === category
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                                }`}
+                            >
+                                {category.charAt(0).toUpperCase() + category.slice(1)}
+                            </button>
+                        ))}
+                    </div>
+
+                    <div className="space-y-6">
+                        {faqCategories[activeCategory].map((faq, index) => (
+                            <div key={index} className="bg-slate-800 rounded-lg p-6">
+                                <h3 className="text-xl font-semibold mb-3 text-blue-400">{faq.question}</h3>
+                                <p className="text-gray-300">{faq.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Support Channels */}
+                <div className="mb-16">
+                    <h2 className="text-3xl font-bold mb-8 text-center">Support Channels</h2>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {supportChannels.map((channel, index) => (
+                            <div key={index} className="bg-slate-800 rounded-lg p-6 text-center">
+                                <div className="text-4xl mb-4">{channel.icon}</div>
+                                <h3 className="text-xl font-semibold mb-2">{channel.name || channel.title}</h3>
+                                <p className="text-gray-300 mb-3">{channel.description}</p>
+                                {channel.response && (
+                                    <p className="text-sm text-blue-400 mb-4">Response: {channel.response}</p>
+                                )}
+                                <a
+                                    href={channel.link}
+                                    className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                >
+                                    Get Help
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
