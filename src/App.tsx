@@ -22,6 +22,11 @@ const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServic
 const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025').then(module => ({ default: module.NewServicesShowcase2025 })));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 
+// New innovative services
+const AIMicroSaaSPlatform = lazy(() => import('./pages/services/ai-micro-saas-platform').then(module => ({ default: module.AIMicroSaaSPlatform })));
+const QuantumAITradingPlatform = lazy(() => import('./pages/services/quantum-ai-trading-platform').then(module => ({ default: module.QuantumAITradingPlatform })));
+const AICybersecurityPlatform = lazy(() => import('./pages/services/ai-cybersecurity-platform').then(module => ({ default: module.AICybersecurityPlatform })));
+
 // Loading component
 const PageLoader = () => (
   <div className="flex items-center justify-center min-h-screen bg-gray-900">
@@ -78,6 +83,12 @@ export default function App() {
                 <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
                 <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
                 <Route path="/pricing" element={<PricingPage />} />
+                
+                {/* New innovative services */}
+                <Route path="/services/ai-micro-saas-platform" element={<AIMicroSaaSPlatform />} />
+                <Route path="/services/quantum-ai-trading-platform" element={<QuantumAITradingPlatform />} />
+                <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
+                
                 <Route path="/solutions" element={<SolutionsPage />} />
                 <Route path="/solutions/*" element={<SolutionsPage />} />
                 <Route path="/about" element={<AboutPage />} />

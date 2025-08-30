@@ -48,6 +48,9 @@ export function Header() {
       href: '/services',
       icon: Zap,
       dropdown: [
+        { name: 'AI Micro SaaS Platform', href: '/services/ai-micro-saas-platform', icon: Brain },
+        { name: 'Quantum AI Trading Platform', href: '/services/quantum-ai-trading-platform', icon: Atom },
+        { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', icon: Shield },
         { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
@@ -58,6 +61,7 @@ export function Header() {
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
         { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
         { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'New Services 2025', href: '/new-services-2025', icon: Star },
         { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },
