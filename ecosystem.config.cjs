@@ -1,8 +1,7 @@
 module.exports = {
   apps: [
-    // Main application
     {
-      name: 'zion-app',
+      name: 'bolt-app',
       script: 'npm',
       args: 'start',
       cwd: './',
@@ -11,8 +10,8 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        NODE_ENV: 'development',
+        PORT: 3000
       },
       env_production: {
         NODE_ENV: 'production',
@@ -310,5 +309,18 @@ module.exports = {
       out_file: './logs/intelligent-build-pipeline-out.log'
     }
     }
-  ]
+  ],
+
+  deploy: {
+    production: {
+      user: 'root',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
+      path: '/workspace/production',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': ''
+    }
+  }
 };
