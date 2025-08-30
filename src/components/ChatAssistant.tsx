@@ -176,7 +176,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
       
       const aiResponse: ChatMessage = {
-        id: anyany(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: generateAIResponse(content),
         timestamp: new Date(),
@@ -191,7 +191,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       console.error('Error sending message:', error);
       
       const errorMessage: ChatMessage = {
-        id: anyany(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),

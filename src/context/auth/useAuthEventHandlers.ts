@@ -16,8 +16,8 @@ interface User {
 }
 
 export const useAuthEventHandlers = (
-  setUser: any(user: User | null)   => void,
-  setOnboardingStep: any(step: number)   => void
+  setUser: (user: User | null)   => void,
+  setOnboardingStep: (step: number)   => void
 ) => {
   const handleSignedIn = useCallback((user: anyUser)   => {
     setUser(user);

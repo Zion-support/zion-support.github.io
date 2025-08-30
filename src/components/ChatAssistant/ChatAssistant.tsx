@@ -35,7 +35,7 @@ export function ChatAssistant(...args: any[]): any {
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
-        id: anyany(Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
         timestamp: new Date(),

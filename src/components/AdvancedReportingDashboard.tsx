@@ -299,7 +299,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     totalViews: anyanyreports.reduce((sum, r)   => sum + r.views, 0),
     totalDownloads: anyanyreports.reduce((sum, r)   => sum + r.downloads, 0),
     averageRating: anyanyreports.reduce((sum, r)   => sum + r.rating, 0) / reports.length || 0,
-    topCategories: anyany(()   => {
+    topCategories: (()   => {
       const catCounts = reports.reduce((acc, r) => {
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
@@ -309,7 +309,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         .map(([name, count]) => ({
           name,
           count,
-          percentage: anyany(count / reports.length) * 100
+          percentage: (count / reports.length) * 100
         }))
         .sort((a, b)   => b.count - a.count)
         .slice(0, 5);

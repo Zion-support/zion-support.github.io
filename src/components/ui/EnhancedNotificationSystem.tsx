@@ -25,8 +25,8 @@ interface NotificationContextType {
 
   notifications: anyanyNotification[];
   addNotification: (notification: Omit<Notification, 'id'>)   => void;
-  removeNotification: anyany(id: string)   => void;
-  clearAll: anyany()   => void;
+  removeNotification: (id: string)   => void;
+  clearAll: ()   => void;
 
 
 }
@@ -209,7 +209,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 
 // Utility functions for easy notification creation
 export const notify = {
-  success: anyany(title: string, message: string, options?: Partial<Notification>)   => {
+  success: (title: string, message: string, options?: Partial<Notification>)   => {
     // This would be used with the context
     console.log('Success notification: anyany', { title, message, ...options });
   },

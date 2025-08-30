@@ -10,8 +10,8 @@ interface TeamRecommendationDisplayProps extends React.PropsWithChildren<{}> {
   recommendation: anyanyTeamRecommendation;
   projectBrief: ProjectBrief; // For budget comparison
   onInviteTalent: (talentId: string, roleTitle: string)   => void;
-  // onEditRole: anyany(roleId: string)   => void; // For future add/remove
-  // onRemoveRole: anyany(roleId: string)   => void; // For future add/remove
+  // onEditRole: (roleId: string)   => void; // For future add/remove
+  // onRemoveRole: (roleId: string)   => void; // For future add/remove
 
 }
 
