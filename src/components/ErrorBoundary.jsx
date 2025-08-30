@@ -167,6 +167,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             setError(event.error);
             if (onError) {
                 onError(event.error, { componentStack: event.error?.stack });
+            }
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
@@ -179,6 +180,7 @@ export function ErrorBoundary({ children, fallback, onError }) {
             setError(new Error(event.reason));
             if (onError) {
                 onError(new Error(event.reason), { componentStack: event.reason?.stack });
+            }
 
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
