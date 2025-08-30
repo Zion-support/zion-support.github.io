@@ -55,7 +55,9 @@ export function Header() {
         { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
         { name: 'IoT & Edge Computing', href: '/services/iot-edge-computing', icon: Activity },
         { name: 'Space Technology', href: '/services/space-technology', icon: Rocket },
-        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe }
+        { name: 'Comprehensive Portfolio', href: '/comprehensive-services', icon: Globe },
+        { name: 'Revolutionary Services', href: '/revolutionary-services', icon: Sparkles },
+        { name: 'Pricing', href: '/pricing', icon: DollarSign }
       ]
     },
     {

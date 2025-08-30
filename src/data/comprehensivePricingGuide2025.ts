@@ -1,623 +1,947 @@
-export interface ComprehensivePricingGuide {
+export interface PricingTier {
+  name: string;
+  price: number;
+  currency: string;
+  billingCycle: string;
+  features: string[];
+  bestFor: string;
+  popular?: boolean;
+}
+
+export interface ServicePricing {
   id: string;
   title: string;
+  description: string;
   category: string;
-  pricing: {
-    starter: string;
-    professional: string;
-    enterprise: string;
-    setup: string;
-    marketPrice: string;
-    roi: string;
-    paybackPeriod: string;
+  pricingTiers: PricingTier[];
+  marketComparison: {
+    competitors: string[];
+    averageMarketPrice: string;
+    ourAdvantage: string;
   };
-  features: {
-    starter: string[];
-    professional: string[];
-    enterprise: string[];
-  };
-  marketAnalysis: {
-    marketSize: string;
-    growthRate: string;
-    competition: string;
-    marketPosition: string;
-  };
-  technicalSpecs: {
-    technology: string[];
-    integrations: string[];
-    uptime: string;
-    security: string[];
-    compliance: string[];
-  };
-  useCases: string[];
-  targetAudience: string;
+  roi: string;
+  implementationTime: string;
+  supportLevel: string;
   contactInfo: {
-    mobile: string;
+    phone: string;
     email: string;
-    address: string;
     website: string;
   };
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const comprehensivePricingGuide2025: ComprehensivePricingGuide[] = [
+export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
+  // AI Business Intelligence Platform
   {
-    id: 'ai-customer-churn-predictor',
-    title: 'AI Customer Churn Predictor Pro',
-    category: 'AI Services',
-    pricing: {
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: '$1,299/month',
-      setup: '$499 one-time',
-      marketPrice: '$299 - $1,299/month',
-      roi: '300% within 6 months',
-      paybackPeriod: '2-3 months'
+    id: "ai-business-intelligence-platform",
+    title: "AI Business Intelligence Platform",
+    description: "Transform your data into actionable insights with AI-powered analytics and automated reporting.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic AI analytics",
+          "5 data sources",
+          "Standard dashboards",
+          "Email support",
+          "Basic reporting"
+        ],
+        bestFor: "Small businesses starting with AI analytics"
+      },
+      {
+        name: "Professional",
+        price: 2999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced AI analytics",
+          "Unlimited data sources",
+          "Custom dashboards",
+          "Priority support",
+          "Advanced reporting",
+          "API access",
+          "Mobile app"
+        ],
+        bestFor: "Growing companies needing comprehensive BI",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 8999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full AI capabilities",
+          "Unlimited everything",
+          "Custom AI models",
+          "24/7 support",
+          "White-label options",
+          "On-premise deployment",
+          "Custom integrations"
+        ],
+        bestFor: "Large enterprises requiring full AI capabilities"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+      averageMarketPrice: "$3,500 - $12,000/month",
+      ourAdvantage: "30% more affordable with superior AI capabilities"
     },
-    features: {
-      starter: [
-        'Real-time churn risk scoring',
-        'Basic retention campaigns',
-        'CRM integration (1 platform)',
-        'Email support',
-        'Standard analytics'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced behavioral analysis',
-        'Multi-CRM integration',
-        'Automated retention campaigns',
-        'Priority support',
-        'Advanced analytics dashboard',
-        'Custom retention strategies'
-      ],
-      enterprise: [
-        'All Professional features',
-        'AI-powered predictive modeling',
-        'Unlimited integrations',
-        'Custom AI model training',
-        'Dedicated account manager',
-        'White-label solutions',
-        'API access',
-        'Custom reporting'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$2.5B global customer success market',
-      growthRate: '23.4% CAGR',
-      competition: 'ChurnZero, Gainsight, Intercom',
-      marketPosition: 'Leading AI-powered platform with highest accuracy'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Predictive Analytics', 'NLP', 'Cloud Computing'],
-      integrations: ['Salesforce', 'HubSpot', 'Zendesk', 'Intercom', 'Stripe'],
-      uptime: '99.9%',
-      security: ['SOC 2 Type II', 'GDPR compliant', 'End-to-end encryption'],
-      compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001']
-    },
-    useCases: ['SaaS companies', 'E-commerce platforms', 'Subscription services', 'B2B software'],
-    targetAudience: 'SaaS companies, E-commerce businesses, Subscription services, Customer success teams'
+    roi: "250-400% within 12 months",
+    implementationTime: "6-8 weeks",
+    supportLevel: "Enterprise-grade with 24/7 availability",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Quantum AI Hybrid Platform
   {
-    id: 'ai-seo-optimizer-pro',
-    title: 'AI SEO Optimizer Pro',
-    category: 'AI Services',
-    pricing: {
-      starter: '$199/month',
-      professional: '$399/month',
-      enterprise: '$899/month',
-      setup: '$299 one-time',
-      marketPrice: '$199 - $899/month',
-      roi: '250% within 4 months',
-      paybackPeriod: '1-2 months'
+    id: "quantum-ai-hybrid-platform",
+    title: "Quantum AI Hybrid Platform",
+    description: "Revolutionary platform combining quantum computing with AI for unprecedented computational power.",
+    category: "Quantum Computing",
+    pricingTiers: [
+      {
+        name: "Research",
+        price: 2499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic quantum algorithms",
+          "AI model acceleration",
+          "Research support",
+          "Email support",
+          "Basic documentation"
+        ],
+        bestFor: "Research institutions and academic projects"
+      },
+      {
+        name: "Professional",
+        price: 4999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced quantum algorithms",
+          "Full AI integration",
+          "Custom development",
+          "Priority support",
+          "API access",
+          "Performance analytics",
+          "Training sessions"
+        ],
+        bestFor: "Companies requiring quantum AI capabilities",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 14999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full quantum capabilities",
+          "Custom algorithm development",
+          "Dedicated support team",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Exclusive quantum resources"
+        ],
+        bestFor: "Large enterprises and government agencies"
+      }
+    ],
+    marketComparison: {
+      competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"],
+      averageMarketPrice: "$5,000 - $20,000/month",
+      ourAdvantage: "Competitive pricing with superior AI integration"
     },
-    features: {
-      starter: [
-        'AI content analysis',
-        'Basic keyword research',
-        'SEO auditing (10 pages)',
-        'Email support',
-        'Standard reports'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced keyword tracking',
-        'Competitor analysis',
-        'Content optimization',
-        'Priority support',
-        'Advanced analytics',
-        'Local SEO optimization'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Unlimited page analysis',
-        'Custom AI training',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced reporting'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$1.2B global SEO tools market',
-      growthRate: '18.7% CAGR',
-      competition: 'SEMrush, Ahrefs, Moz, Yoast SEO',
-      marketPosition: 'Advanced AI-powered SEO platform with automated optimization'
-    },
-    technicalSpecs: {
-      technology: ['NLP', 'Machine Learning', 'Web Scraping', 'Data Analytics'],
-      integrations: ['WordPress', 'Shopify', 'WooCommerce', 'Google Analytics'],
-      uptime: '99.8%',
-      security: ['SSL encryption', 'GDPR compliance', 'Regular security audits'],
-      compliance: ['GDPR', 'CCPA', 'SOC 2']
-    },
-    useCases: ['E-commerce websites', 'Blog platforms', 'Business websites', 'Content marketing'],
-    targetAudience: 'Digital marketers, SEO agencies, E-commerce businesses, Content creators'
+    roi: "500-1000% for research and optimization applications",
+    implementationTime: "8-12 weeks",
+    supportLevel: "Premium with dedicated quantum experts",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Zero Trust Security Platform
   {
-    id: 'quantum-ai-trading-platform',
-    title: 'Quantum AI Trading Platform',
-    category: 'Quantum Computing',
-    pricing: {
-      starter: '$5,000/month',
-      professional: '$15,000/month',
-      enterprise: '$50,000/month',
-      setup: '$15,000 one-time',
-      marketPrice: '$5,000 - $50,000/month',
-      roi: '500% within 12 months',
-      paybackPeriod: '2-3 months'
+    id: "zero-trust-security-platform",
+    title: "Zero Trust Security Platform",
+    description: "Enterprise-grade zero trust security with continuous verification and real-time threat prevention.",
+    category: "Cybersecurity",
+    pricingTiers: [
+      {
+        name: "Basic",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic identity verification",
+          "Multi-factor authentication",
+          "Email support",
+          "Standard security",
+          "Basic reporting"
+        ],
+        bestFor: "Small businesses needing basic security"
+      },
+      {
+        name: "Professional",
+        price: 1999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full zero trust implementation",
+          "Advanced threat detection",
+          "Priority support",
+          "Compliance automation",
+          "Real-time monitoring",
+          "API access",
+          "Mobile app"
+        ],
+        bestFor: "Companies requiring comprehensive security",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 5999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Complete security suite",
+          "Custom integrations",
+          "24/7 support",
+          "On-premise options",
+          "Custom compliance",
+          "White-label solutions",
+          "Dedicated security team"
+        ],
+        bestFor: "Large enterprises with complex security needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk"],
+      averageMarketPrice: "$2,500 - $8,000/month",
+      ourAdvantage: "25% more affordable with superior AI capabilities"
     },
-    features: {
-      starter: [
-        'Basic quantum algorithms',
-        'Real-time market data',
-        'Standard risk assessment',
-        'Email support',
-        'Basic analytics'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced quantum optimization',
-        'AI-powered risk management',
-        'Portfolio optimization',
-        'Priority support',
-        'Advanced analytics',
-        'Custom trading strategies'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom quantum algorithms',
-        'White-label solutions',
-        'Dedicated quantum engineers',
-        'Custom integrations',
-        'API access',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$15B global algorithmic trading market',
-      growthRate: '31.2% CAGR',
-      competition: 'None (first mover)', 'Traditional trading platforms',
-      marketPosition: 'First-to-market quantum AI trading platform with revolutionary capabilities'
-    },
-    technicalSpecs: {
-      technology: ['Quantum Computing', 'AI/ML', 'High-Performance Computing', 'Blockchain'],
-      integrations: ['Bloomberg Terminal', 'Reuters', 'Interactive Brokers', 'TD Ameritrade'],
-      uptime: '99.99%',
-      security: ['Quantum encryption', 'Multi-factor authentication', 'SOC 2 compliance'],
-      compliance: ['SOC 2', 'PCI DSS', 'Financial regulations']
-    },
-    useCases: ['Hedge funds', 'Investment banks', 'Trading firms', 'Asset management'],
-    targetAudience: 'Financial institutions, Hedge funds, Investment banks, Professional traders'
+    roi: "300-500% through reduced security incidents",
+    implementationTime: "4-6 weeks",
+    supportLevel: "Enterprise with 24/7 security monitoring",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // IoT Edge AI Platform
   {
-    id: 'ai-smart-contract-auditor',
-    title: 'AI Smart Contract Auditor Pro',
-    category: 'Blockchain & Web3',
-    pricing: {
-      starter: '$399/month',
-      professional: '$799/month',
-      enterprise: '$1,999/month',
-      setup: '$599 one-time',
-      marketPrice: '$399 - $1,999/month',
-      roi: '400% within 6 months',
-      paybackPeriod: '1-2 months'
+    id: "iot-edge-ai-platform",
+    title: "IoT Edge AI Platform",
+    description: "Intelligent IoT platform with edge AI processing for real-time decision making and optimization.",
+    category: "IoT & Edge Computing",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic edge processing",
+          "Up to 100 devices",
+          "Email support",
+          "Basic analytics",
+          "Standard security"
+        ],
+        bestFor: "Small IoT deployments"
+      },
+      {
+        name: "Professional",
+        price: 1499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced edge AI",
+          "Unlimited devices",
+          "Priority support",
+          "Real-time analytics",
+          "Custom AI models",
+          "API access",
+          "Mobile dashboard"
+        ],
+        bestFor: "Growing IoT operations",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 4999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full edge AI capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated IoT team"
+        ],
+        bestFor: "Large-scale IoT deployments"
+      }
+    ],
+    marketComparison: {
+      competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+      averageMarketPrice: "$1,800 - $6,000/month",
+      ourAdvantage: "20% more affordable with superior edge AI"
     },
-    features: {
-      starter: [
-        'Basic vulnerability detection',
-        'Single blockchain support',
-        'Standard security checks',
-        'Email support',
-        'Basic reporting'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI analysis',
-        'Multi-blockchain support',
-        'Gas optimization',
-        'Priority support',
-        'Advanced reporting',
-        'Custom rules engine'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$1.8B global blockchain security market',
-      growthRate: '42.1% CAGR',
-      competition: 'MythX, Slither, Manticore, Echidna',
-      marketPosition: 'Leading AI-powered smart contract security platform'
-    },
-    technicalSpecs: {
-      technology: ['AI/ML', 'Blockchain Analysis', 'Static Code Analysis', 'NLP'],
-      integrations: ['Ethereum', 'Binance Smart Chain', 'Polygon', 'Solana'],
-      uptime: '99.9%',
-      security: ['End-to-end encryption', 'Multi-factor authentication', 'Regular security audits'],
-      compliance: ['SOC 2', 'GDPR', 'Blockchain security standards']
-    },
-    useCases: ['DeFi protocols', 'NFT marketplaces', 'DAO governance', 'Smart contract development'],
-    targetAudience: 'Blockchain developers, DeFi protocols, NFT projects, DAOs'
+    roi: "200-400% through operational efficiency",
+    implementationTime: "6-10 weeks",
+    supportLevel: "Premium with IoT specialists",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Blockchain Web3 Development Platform
   {
-    id: 'ai-healthcare-diagnostics',
-    title: 'AI Healthcare Diagnostics Platform',
-    category: 'HealthTech & BioTech',
-    pricing: {
-      starter: '$2,500/month',
-      professional: '$5,000/month',
-      enterprise: '$15,000/month',
-      setup: '$5,000 one-time',
-      marketPrice: '$2,500 - $15,000/month',
-      roi: '300% within 18 months',
-      paybackPeriod: '6-8 months'
+    id: "blockchain-web3-platform",
+    title: "Blockchain Web3 Development Platform",
+    description: "Comprehensive platform for building and deploying decentralized applications with enterprise security.",
+    category: "Blockchain & Web3",
+    pricingTiers: [
+      {
+        name: "Developer",
+        price: 1499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic development tools",
+          "Single chain support",
+          "Email support",
+          "Basic templates",
+          "Standard security"
+        ],
+        bestFor: "Individual developers and small projects"
+      },
+      {
+        name: "Professional",
+        price: 2499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Multi-chain support",
+          "Advanced development tools",
+          "Priority support",
+          "Custom smart contracts",
+          "Security auditing",
+          "API access",
+          "Analytics dashboard"
+        ],
+        bestFor: "Growing blockchain projects",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 7999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full platform capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated blockchain team"
+        ],
+        bestFor: "Large blockchain enterprises"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Alchemy", "Infura", "QuickNode", "Moralis"],
+      averageMarketPrice: "$2,800 - $9,000/month",
+      ourAdvantage: "15% more affordable with superior enterprise features"
     },
-    features: {
-      starter: [
-        'Basic medical image analysis',
-        'Standard disease detection',
-        'Email support',
-        'Basic reporting',
-        'Standard integrations'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI diagnostics',
-        'Patient outcome prediction',
-        'Priority support',
-        'Advanced analytics',
-        'Custom models',
-        'Multi-modality support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI model training',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Regulatory compliance tools'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$45B global AI in healthcare market',
-      growthRate: '38.7% CAGR',
-      competition: 'IBM Watson Health', 'Google Health', 'Microsoft Healthcare',
-      marketPosition: 'Leading AI-powered healthcare diagnostics platform with FDA clearance'
-    },
-    technicalSpecs: {
-      technology: ['Deep Learning', 'Computer Vision', 'NLP', 'Machine Learning'],
-      integrations: ['Epic', 'Cerner', 'Allscripts', 'PACS systems'],
-      uptime: '99.95%',
-      security: ['HIPAA compliance', 'SOC 2 Type II', 'End-to-end encryption'],
-      compliance: ['HIPAA', 'FDA', 'SOC 2', 'ISO 27001']
-    },
-    useCases: ['Hospitals', 'Medical clinics', 'Diagnostic centers', 'Research institutions'],
-    targetAudience: 'Healthcare providers, Hospitals, Medical clinics, Diagnostic centers'
+    roi: "400-800% for successful dApp deployments",
+    implementationTime: "8-12 weeks",
+    supportLevel: "Premium with blockchain experts",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // AI Marketing Automation Platform
   {
-    id: 'ai-financial-fraud-detection',
-    title: 'AI Financial Fraud Detection Suite',
-    category: 'FinTech',
-    pricing: {
-      starter: '$1,500/month',
-      professional: '$3,500/month',
-      enterprise: '$8,500/month',
-      setup: '$2,500 one-time',
-      marketPrice: '$1,500 - $8,500/month',
-      roi: '350% within 8 months',
-      paybackPeriod: '2-3 months'
+    id: "ai-marketing-automation",
+    title: "AI Marketing Automation Platform",
+    description: "Intelligent marketing platform that automates campaigns and personalizes customer engagement.",
+    category: "Marketing & Sales",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 899,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic AI automation",
+          "Up to 10,000 contacts",
+          "Email support",
+          "Basic templates",
+          "Standard analytics"
+        ],
+        bestFor: "Small businesses starting with AI marketing"
+      },
+      {
+        name: "Professional",
+        price: 1799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced AI automation",
+          "Unlimited contacts",
+          "Priority support",
+          "Custom campaigns",
+          "Advanced analytics",
+          "API access",
+          "Mobile app"
+        ],
+        bestFor: "Growing companies needing AI marketing",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 4999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full AI capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated marketing team"
+        ],
+        bestFor: "Large enterprises with complex marketing needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
+      averageMarketPrice: "$2,200 - $7,000/month",
+      ourAdvantage: "20% more affordable with superior AI capabilities"
     },
-    features: {
-      starter: [
-        'Basic fraud detection',
-        'Real-time monitoring',
-        'Standard risk scoring',
-        'Email support',
-        'Basic reporting'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Multi-channel detection',
-        'Priority support',
-        'Advanced analytics',
-        'Custom rules engine',
-        'Compliance reporting'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$8.5B global fraud detection market',
-      growthRate: '25.3% CAGR',
-      competition: 'Sift', 'Signifyd', 'Riskified', 'Forter',
-      marketPosition: 'Leading AI-powered financial fraud detection platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Real-time Analytics', 'Big Data Processing', 'API Integration'],
-      integrations: ['Stripe', 'PayPal', 'Square', 'Adyen', 'Banking APIs'],
-      uptime: '99.99%',
-      security: ['PCI DSS compliance', 'SOC 2 Type II', 'End-to-end encryption'],
-      compliance: ['PCI DSS', 'SOC 2', 'GDPR', 'Financial regulations']
-    },
-    useCases: ['Banks', 'Credit unions', 'Payment processors', 'E-commerce platforms'],
-    targetAudience: 'Financial institutions, Payment processors, E-commerce businesses, Fintech startups'
+    roi: "250-500% through improved conversion rates",
+    implementationTime: "4-6 weeks",
+    supportLevel: "Premium with marketing specialists",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Cloud-Native DevOps Platform
   {
-    id: 'ai-personalized-learning',
-    title: 'AI Personalized Learning Platform',
-    category: 'EduTech',
-    pricing: {
-      starter: '$299/month',
-      professional: '$599/month',
-      enterprise: '$1,499/month',
-      setup: '$499 one-time',
-      marketPrice: '$299 - $1,499/month',
-      roi: '250% within 12 months',
-      paybackPeriod: '4-6 months'
+    id: "cloud-native-devops",
+    title: "Cloud-Native DevOps Platform",
+    description: "Enterprise-grade DevOps platform automating the entire software development lifecycle.",
+    category: "Cloud & DevOps",
+    pricingTiers: [
+      {
+        name: "Team",
+        price: 1499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic CI/CD",
+          "Up to 10 developers",
+          "Email support",
+          "Standard security",
+          "Basic monitoring"
+        ],
+        bestFor: "Small development teams"
+      },
+      {
+        name: "Professional",
+        price: 2199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced CI/CD",
+          "Unlimited developers",
+          "Priority support",
+          "Full automation",
+          "Advanced monitoring",
+          "API access",
+          "Custom workflows"
+        ],
+        bestFor: "Growing development teams",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 6999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full platform capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated DevOps team"
+        ],
+        bestFor: "Large enterprises with complex DevOps needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"],
+      averageMarketPrice: "$2,500 - $8,500/month",
+      ourAdvantage: "25% more affordable with superior automation"
     },
-    features: {
-      starter: [
-        'Basic content personalization',
-        'Standard progress tracking',
-        'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Adaptive learning paths',
-        'Priority support',
-        'Advanced analytics',
-        'Custom content creation',
-        'Multi-modal support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$20B global edtech market',
-      growthRate: '19.8% CAGR',
-      competition: 'Duolingo', 'Khan Academy', 'Coursera', 'Udemy',
-      marketPosition: 'Leading AI-powered personalized learning platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'NLP', 'Adaptive Algorithms', 'Data Analytics'],
-      integrations: ['LMS systems', 'Google Classroom', 'Canvas', 'Blackboard'],
-      uptime: '99.8%',
-      security: ['FERPA compliance', 'Data encryption', 'Regular security audits'],
-      compliance: ['FERPA', 'COPPA', 'SOC 2', 'GDPR']
-    },
-    useCases: ['K-12 schools', 'Universities', 'Corporate training', 'Online education'],
-    targetAudience: 'Educational institutions, Corporate training departments, Online learning platforms'
+    roi: "300-600% through faster development cycles",
+    implementationTime: "6-10 weeks",
+    supportLevel: "Enterprise with DevOps experts",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // AI Customer Service Platform
   {
-    id: 'ai-marketing-automation',
-    title: 'AI Marketing Automation Suite',
-    category: 'MarTech',
-    pricing: {
-      starter: '$399/month',
-      professional: '$799/month',
-      enterprise: '$1,999/month',
-      setup: '$599 one-time',
-      marketPrice: '$399 - $1,999/month',
-      roi: '300% within 6 months',
-      paybackPeriod: '2-3 months'
+    id: "ai-customer-service",
+    title: "AI Customer Service Platform",
+    description: "Intelligent customer service combining AI chatbots with human agents for exceptional experiences.",
+    category: "Customer Service",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 699,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic AI chatbot",
+          "Up to 1,000 conversations",
+          "Email support",
+          "Basic templates",
+          "Standard analytics"
+        ],
+        bestFor: "Small businesses starting with AI support"
+      },
+      {
+        name: "Professional",
+        price: 1299,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced AI chatbot",
+          "Unlimited conversations",
+          "Priority support",
+          "Custom workflows",
+          "Advanced analytics",
+          "API access",
+          "Mobile app"
+        ],
+        bestFor: "Growing companies needing AI support",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 3999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full AI capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated support team"
+        ],
+        bestFor: "Large enterprises with complex support needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"],
+      averageMarketPrice: "$1,600 - $5,500/month",
+      ourAdvantage: "25% more affordable with superior AI capabilities"
     },
-    features: {
-      starter: [
-        'Basic campaign automation',
-        'Standard personalization',
-        'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI optimization',
-        'Multi-channel automation',
-        'Priority support',
-        'Advanced analytics',
-        'Custom workflows',
-        'A/B testing automation'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$25B global marketing automation market',
-      growthRate: '22.1% CAGR',
-      competition: 'HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign',
-      marketPosition: 'Advanced AI-powered marketing automation platform'
-    },
-    technicalSpecs: {
-      technology: ['Machine Learning', 'Predictive Analytics', 'Marketing Automation', 'Data Integration'],
-      integrations: ['Salesforce', 'HubSpot', 'Mailchimp', 'Facebook Ads', 'Google Ads'],
-      uptime: '99.9%',
-      security: ['SOC 2 compliance', 'Data encryption', 'Regular security audits'],
-      compliance: ['SOC 2', 'GDPR', 'CCPA', 'CAN-SPAM']
-    },
-    useCases: ['E-commerce businesses', 'B2B companies', 'Marketing agencies', 'SaaS companies'],
-    targetAudience: 'Marketing teams, E-commerce businesses, B2B companies, Marketing agencies'
+    roi: "200-400% through improved support efficiency",
+    implementationTime: "4-6 weeks",
+    supportLevel: "Premium with support specialists",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Compliance & Governance Platform
   {
-    id: 'ai-satellite-data-analytics',
-    title: 'AI Satellite Data Analytics Platform',
-    category: 'Space Tech',
-    pricing: {
-      starter: '$2,000/month',
-      professional: '$5,000/month',
-      enterprise: '$15,000/month',
-      setup: '$3,000 one-time',
-      marketPrice: '$2,000 - $15,000/month',
-      roi: '400% within 18 months',
-      paybackPeriod: '4-6 months'
+    id: "compliance-governance",
+    title: "AI-Powered Compliance & Governance Platform",
+    description: "Comprehensive compliance management automating regulatory requirements and risk assessment.",
+    category: "Compliance & Governance",
+    pricingTiers: [
+      {
+        name: "Basic",
+        price: 1499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic compliance tracking",
+          "Standard regulations",
+          "Email support",
+          "Basic reporting",
+          "Standard security"
+        ],
+        bestFor: "Small companies with basic compliance needs"
+      },
+      {
+        name: "Professional",
+        price: 2599,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced compliance automation",
+          "Multiple regulations",
+          "Priority support",
+          "Risk assessment",
+          "Advanced reporting",
+          "API access",
+          "Custom workflows"
+        ],
+        bestFor: "Companies requiring comprehensive compliance",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 7999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full compliance suite",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated compliance team"
+        ],
+        bestFor: "Large enterprises with complex compliance needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["MetricStream", "LogicGate", "NAVEX Global", "Diligent"],
+      averageMarketPrice: "$3,200 - $10,000/month",
+      ourAdvantage: "20% more affordable with superior AI automation"
     },
-    features: {
-      starter: [
-        'Basic image analysis',
-        'Standard monitoring',
-        'Email support',
-        'Basic analytics',
-        'Standard data access'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Real-time processing',
-        'Priority support',
-        'Advanced analytics',
-        'Custom dashboards',
-        'Multi-satellite support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
-    },
-    marketAnalysis: {
-      marketSize: '$3.5B global satellite data analytics market',
-      growthRate: '28.9% CAGR',
-      competition: 'Planet Labs', 'Maxar', 'Airbus Defence and Space', 'DigitalGlobe',
-      marketPosition: 'Leading AI-powered satellite data analytics platform'
-    },
-    technicalSpecs: {
-      technology: ['Computer Vision', 'Machine Learning', 'Satellite Data Processing', 'Big Data Analytics'],
-      integrations: ['NASA APIs', 'ESA data', 'Commercial satellite providers', 'GIS systems'],
-      uptime: '99.8%',
-      security: ['Government-grade security', 'Data encryption', 'Access controls'],
-      compliance: ['Government security standards', 'Data protection regulations']
-    },
-    useCases: ['Agriculture', 'Urban planning', 'Environmental monitoring', 'Climate research'],
-    targetAudience: 'Government agencies, Research institutions, Agricultural companies, Urban planners'
+    roi: "300-600% through reduced compliance costs",
+    implementationTime: "8-12 weeks",
+    supportLevel: "Enterprise with compliance experts",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   },
 
+  // Digital Twin Platform
   {
-    id: 'ai-iot-edge-computing',
-    title: 'AI IoT Edge Computing Platform',
-    category: 'Emerging Tech',
-    pricing: {
-      starter: '$599/month',
-      professional: '$1,299/month',
-      enterprise: '$3,999/month',
-      setup: '$999 one-time',
-      marketPrice: '$599 - $3,999/month',
-      roi: '350% within 12 months',
-      paybackPeriod: '3-4 months'
+    id: "digital-twin-platform",
+    title: "AI-Powered Digital Twin Platform",
+    description: "Advanced digital twin platform for real-time monitoring, simulation, and optimization.",
+    category: "AI & Analytics",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 1999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic digital twin",
+          "Up to 10 assets",
+          "Email support",
+          "Basic visualization",
+          "Standard analytics"
+        ],
+        bestFor: "Small companies starting with digital twins"
+      },
+      {
+        name: "Professional",
+        price: 3499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced digital twin",
+          "Unlimited assets",
+          "Priority support",
+          "3D visualization",
+          "Advanced analytics",
+          "API access",
+          "Custom models"
+        ],
+        bestFor: "Growing companies needing digital twins",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 9999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full digital twin capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated digital twin team"
+        ],
+        bestFor: "Large enterprises with complex digital twin needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure Digital Twins"],
+      averageMarketPrice: "$4,500 - $15,000/month",
+      ourAdvantage: "25% more affordable with superior AI capabilities"
     },
-    features: {
-      starter: [
-        'Basic edge AI processing',
-        'Standard device management',
-        'Email support',
-        'Basic analytics',
-        'Standard protocols'
-      ],
-      professional: [
-        'All Starter features',
-        'Advanced AI algorithms',
-        'Real-time processing',
-        'Priority support',
-        'Advanced analytics',
-        'Custom workflows',
-        'Multi-protocol support'
-      ],
-      enterprise: [
-        'All Professional features',
-        'Custom AI models',
-        'White-label solutions',
-        'Dedicated support',
-        'API access',
-        'Custom integrations',
-        'Advanced security features'
-      ]
+    roi: "400-800% through operational optimization",
+    implementationTime: "10-16 weeks",
+    supportLevel: "Premium with digital twin specialists",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered HR Platform
+  {
+    id: "ai-hr-platform",
+    title: "AI-Powered HR Management Platform",
+    description: "Intelligent HR platform automating recruitment, employee management, and workforce analytics.",
+    category: "Business Operations",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic HR automation",
+          "Up to 100 employees",
+          "Email support",
+          "Basic reporting",
+          "Standard features"
+        ],
+        bestFor: "Small companies starting with AI HR"
+      },
+      {
+        name: "Professional",
+        price: 1899,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced HR automation",
+          "Unlimited employees",
+          "Priority support",
+          "AI recruitment",
+          "Advanced analytics",
+          "API access",
+          "Mobile app"
+        ],
+        bestFor: "Growing companies needing AI HR",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 5999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full HR capabilities",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated HR team"
+        ],
+        bestFor: "Large enterprises with complex HR needs"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Workday", "BambooHR", "ADP", "Paychex", "Gusto"],
+      averageMarketPrice: "$2,400 - $8,500/month",
+      ourAdvantage: "25% more affordable with superior AI capabilities"
     },
-    marketAnalysis: {
-      marketSize: '$12B global edge computing market',
-      growthRate: '37.4% CAGR',
-      competition: 'AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn',
-      marketPosition: 'Leading AI-powered edge computing platform for IoT'
+    roi: "250-500% through improved HR efficiency",
+    implementationTime: "6-8 weeks",
+    supportLevel: "Premium with HR specialists",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Financial AI Platform
+  {
+    id: "financial-ai-platform",
+    title: "AI-Powered Financial Intelligence Platform",
+    description: "Comprehensive financial platform using AI for risk assessment, fraud detection, and investment analysis.",
+    category: "Financial Services",
+    pricingTiers: [
+      {
+        name: "Professional",
+        price: 2499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Basic financial AI",
+          "Risk assessment",
+          "Email support",
+          "Basic analytics",
+          "Standard security"
+        ],
+        bestFor: "Financial companies starting with AI"
+      },
+      {
+        name: "Advanced",
+        price: 3999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Advanced financial AI",
+          "Full risk management",
+          "Priority support",
+          "Fraud detection",
+          "Advanced analytics",
+          "API access",
+          "Custom models"
+        ],
+        bestFor: "Growing financial companies",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 12999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Full financial AI suite",
+          "Custom development",
+          "24/7 support",
+          "On-premise options",
+          "Custom integrations",
+          "White-label solutions",
+          "Dedicated financial team"
+        ],
+        bestFor: "Large financial institutions"
+      }
+    ],
+    marketComparison: {
+      competitors: ["Bloomberg", "Reuters", "FactSet", "Morningstar", "Refinitiv"],
+      averageMarketPrice: "$5,000 - $20,000/month",
+      ourAdvantage: "30% more affordable with superior AI capabilities"
     },
-    technicalSpecs: {
-      technology: ['Edge Computing', 'Machine Learning', 'IoT Protocols', 'Real-time Processing'],
-      integrations: ['MQTT', 'CoAP', 'HTTP/HTTPS', 'AWS IoT', 'Azure IoT', 'Google Cloud IoT'],
-      uptime: '99.9%',
-      security: ['End-to-end encryption', 'Device authentication', 'Secure boot'],
-      compliance: ['SOC 2', 'ISO 27001', 'IoT security standards']
-    },
-    useCases: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles'],
-    targetAudience: 'Manufacturing companies, Smart city projects, IoT device manufacturers, Industrial companies'
+    roi: "500-1000% for successful implementations",
+    implementationTime: "8-12 weeks",
+    supportLevel: "Enterprise with financial experts",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
   }
 ];
 
-export default comprehensivePricingGuide2025;
+// Special Pricing Packages
+export const SPECIAL_PRICING_PACKAGES = [
+  {
+    name: "Startup Package",
+    description: "Perfect for startups and small businesses",
+    services: ["AI Business Intelligence Platform", "AI Marketing Automation", "AI Customer Service Platform"],
+    originalPrice: 5597,
+    discountedPrice: 3999,
+    savings: "28% savings",
+    features: [
+      "Full access to 3 core AI services",
+      "Priority support",
+      "Implementation assistance",
+      "Training sessions",
+      "30-day money-back guarantee"
+    ],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    name: "Enterprise Suite",
+    description: "Complete solution for large enterprises",
+    services: ["All 15 AI and technology services"],
+    originalPrice: 49999,
+    discountedPrice: 34999,
+    savings: "30% savings",
+    features: [
+      "Full access to all services",
+      "24/7 dedicated support",
+      "Custom development",
+      "On-premise options",
+      "White-label solutions",
+      "Dedicated account team",
+      "Priority implementation"
+    ],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    name: "Industry Solutions",
+    description: "Tailored packages for specific industries",
+    industries: ["Healthcare", "Finance", "Manufacturing", "Retail", "Government"],
+    pricing: "Custom pricing based on requirements",
+    features: [
+      "Industry-specific AI models",
+      "Compliance automation",
+      "Custom integrations",
+      "Dedicated industry experts",
+      "Implementation support"
+    ],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  }
+];
+
+// Contact Information
+export const CONTACT_INFORMATION = {
+  phone: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  supportHours: "24/7",
+  responseTime: "< 2 hours",
+  consultation: "Free initial consultation available"
+};
