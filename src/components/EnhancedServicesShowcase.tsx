@@ -13,7 +13,8 @@ import {
   TrendingUp,
   Users,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Search
 } from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '../data/nextGenInnovativeServices2025';
 
@@ -30,6 +31,105 @@ interface Service {
   path: string;
   category: string;
 }
+
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: index * 0.1 }}
+    className="group relative"
+  >
+    <motion.div
+      className="relative bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-3xl p-8 h-full hover:border-zion-cyan/50 transition-all duration-300 cursor-pointer"
+      whileHover={{ 
+        y: -5,
+        borderColor: 'rgba(34, 221, 210, 0.5)'
+      }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Background gradient overlay */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+      
+      {/* Icon */}
+      <motion.div
+        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 0.6 }}
+      >
+        <service.icon className="w-8 h-8 text-white" />
+      </motion.div>
+
+      {/* Category badge */}
+      <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
+        {service.category}
+      </div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+        {service.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-gray-300 mb-6 leading-relaxed">
+        {service.description}
+      </p>
+
+      {/* Features */}
+      <div className="space-y-2 mb-6">
+        {service.features.map((feature, featureIndex) => (
+          <motion.div
+            key={feature}
+            className="flex items-center text-sm text-gray-300"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: featureIndex * 0.1 }}
+          >
+            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+            {feature}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>
+          <p className="text-xs text-gray-400">Monthly</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-purple">{service.roi}</p>
+          <p className="text-xs text-gray-400">ROI</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>
+          <p className="text-xs text-gray-400">Market</p>
+        </div>
+      </div>
+
+      {/* CTA Button */}
+      <motion.div
+        className="relative z-10"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Link
+          to={service.path}
+          className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
+        >
+          Learn More
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+      </motion.div>
+
+      {/* Hover effect overlay */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        initial={false}
+      />
+    </motion.div>
+  </motion.div>
+);
 
 const services: Service[] = [
   {
@@ -117,10 +217,16 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredServices = selectedCategory === 'All' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
+  const filteredServices = services.filter(service => {
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+    const matchesSearch = searchTerm === '' || 
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
@@ -305,9 +411,10 @@ export default function EnhancedServicesShowcase() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
               >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
           </div>
 
           {/* Search */}
