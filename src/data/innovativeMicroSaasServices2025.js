@@ -8,7 +8,7 @@ export const innovativeMicroSaasServices2025 = [
         pricing: "Enterprise",
         price: 25000,
         pricingModel: "monthly",
-        features[
+        features: [
             "Quantum algorithm optimization",
             "AI model quantum acceleration",
             "Hybrid classical-quantum workflows",
@@ -18,7 +18,7 @@ export const innovativeMicroSaasServices2025 = [
             "Quantum machine learning models",
             "Secure quantum communication"
         ],
-        benefits[
+        benefits: [
             "1000x faster AI training",
             "Unbreakable quantum encryption",
             "Revolutionary drug discovery",

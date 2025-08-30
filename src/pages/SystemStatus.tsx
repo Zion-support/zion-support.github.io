@@ -1,4 +1,7 @@
-import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp } from 'lucide-react';
 
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
@@ -154,7 +157,8 @@ export default function SystemStatus() {
       case 'maintenance':
         return <Clock className="w-5 h-5 text-blue-500" />;
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />}
+        return <Clock className="w-5 h-5 text-gray-500" />;
+    }
   };
 
   const getSeverityColor = (severity: string)  => {
@@ -168,28 +172,32 @@ export default function SystemStatus() {
       case 'maintenance':
         return 'bg-blue-500';
       default:
-        return 'bg-gray-500'}
+        return 'bg-gray-500';
+    }
   };
 
-  const formatDate = (dateString: string)  => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
-    })};
+    });
+  };
 
   const refreshStatus = async () => {
     setIsRefreshing(true);
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
-    setIsRefreshing(false)};
+    setIsRefreshing(false);
+  };
 
   useEffect(() => {
     const interval = setInterval(refreshStatus, 30000); // Auto-refresh every 30 seconds
-    return () => clearInterval(interval)}, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const overallStatus = services.every(s => s.status === 'operational') 
     ? 'operational' 
@@ -284,49 +292,50 @@ export default function SystemStatus() {
             Service Status
           </h2>
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index)  => (
-                <div
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <motion.div
                   key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="text-zion-cyan">{service.icon}</div>
-                    <div className="flex items-center gap-2">
-                      {getStatusIcon(service.status)}
-                      <span className="text-sm text-zion-slate-light">Operational</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="text-2xl">{service.icon}</div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white">{service.name}</h3>
+                        <p className="text-sm text-slate-400">{service.description}</p>
+                      </div>
+                    </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
+                      {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                    <p className="text-sm text-gray-400">{service.description}</p>
-                  </div>
-                </div>
-                <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
-                  {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                </div>
-              </div>
 
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Uptime</span>
-                  <span className="text-white font-medium">{service.uptime}%</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Response Time</span>
-                  <span className="text-white font-medium">{service.responseTime}ms</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-400 text-sm">Last Updated</span>
-                  <span className="text-white font-medium text-sm">
-                    {new Date(service.lastUpdated).toLocaleTimeString()}
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Uptime</span>
+                      <span className="text-white font-medium">{service.uptime}%</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Response Time</span>
+                      <span className="text-white font-medium">{service.responseTime}ms</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-slate-400 text-sm">Last Updated</span>
+                      <span className="text-white font-medium text-sm">
+                        {new Date(service.lastUpdated).toLocaleTimeString()}
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Incidents */}
@@ -476,4 +485,5 @@ export default function SystemStatus() {
         </motion.div>
       </div>
     </div>
-  )}
+  );
+}

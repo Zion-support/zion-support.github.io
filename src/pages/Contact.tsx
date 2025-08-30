@@ -1,42 +1,9 @@
-import React, { useState } from 'react.ts';
+import React, { useState } from 'react';
 import { SEO  } from '../components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';
 
-const Contact: React.FC = (): JSX.Element => {
-  const [activeTab, setActiveTab] = useState('general');
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    comp: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
-  });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })};
-
-  const handleSubmit = (e: React.FormEvent)  => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you within 24 hours.');
-    setFormData({
-      name: '',
-      email: '',
-      comp: '',
-      phone: '',
-      service: '',
-      message: '',
-      budget: '',
-      timeline: ''
-    })};
 
   const contactMethods = [
     {
@@ -73,45 +40,9 @@ const Contact: React.FC = (): JSX.Element => {
     }
   ];
 
-  const serviceCategories = [
-    {
-      name: 'AI-Powered Micro SAAS',
-      services: [
-        'AI Code Review & Security',
-        'AI Customer Experience Analytics',
-        'AI DevOps Automation Platform',
-        'AI IoT Edge Computing Platform'
-      ]
-    },
-    {
-      name: 'Cloud & Infrastructure',
-      services: [
-        'Cloud DevOps',
-        'IT Infrastructure',
-        'Digital Twin'
-      ]
-    },
-    {
-      name: 'Data & Analytics',
-      services: [
-        'Data Analytics',
-        'AI Business Intelligence',
-        'IoT Edge Computing'
-      ]
-    },
-    {
-      name: 'Security & Compliance',
-      services: [
-        'Zero Trust Network Architecture',
-        'AI Cybersecurity Suite',
-        'AI Compliance Assistant'
-      ]
-    }
-  ];
-
   const quickLinks = [
-    { title: 'AI Services Showcase', url: '/ai-services-showcase', icon: '🚀' },
-    { title: 'All Services', url: '/all-services', icon: '📋' },
+    { title: 'Services', url: '/services', icon: '🚀' },
+    { title: 'About Us', url: '/about', icon: '🏢' },
     { title: 'Pricing', url: '/pricing', icon: '💰' },
     { title: 'Comprehensive Services', url: '/comprehensive-services', icon: '🔍' }
   ];
@@ -504,6 +435,7 @@ const Contact: React.FC = () => {
         </section>
       </div>
     </>
-  )};
+  );
+}
 
 export default Contact;

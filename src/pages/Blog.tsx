@@ -241,8 +241,8 @@ export default function Blog() {
               </p>
             </motion.div>
             
-            <div className="grid lg: grid-cols-3 gap-8">
-              {featuredPosts.map((post, index)  => (
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -287,8 +287,9 @@ export default function Blog() {
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
-                  </motion.article>
-                ))}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
