@@ -51,36 +51,36 @@ export default function Home() {
 
   const featuredServices = [
     {
+      name: 'AI Quantum Neural Network Platform',
+      description: 'Revolutionary hybrid quantum-classical neural networks for unprecedented AI performance',
+      icon: Brain,
+      href: '/services/ai-quantum-neural-network-platform',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Quantum neural processing', 'Hybrid AI architecture', 'Real-time learning']
+    },
+    {
+      name: 'AI Autonomous Business Operations',
+      description: 'Fully autonomous AI operations that work 24/7 making intelligent business decisions',
+      icon: Bot,
+      href: '/services/ai-autonomous-business-operations-platform',
+      color: 'from-blue-600 to-cyan-600',
+      features: ['Autonomous decision making', 'Process automation', 'Predictive analytics']
+    },
+    {
+      name: 'AI Customer Experience Analytics',
+      description: 'AI-powered analytics platform that reveals the true voice of your customers',
+      icon: Heart,
+      href: '/services/ai-customer-experience-analytics-platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['Real-time sentiment analysis', 'Journey mapping', 'Predictive insights']
+    },
+    {
       name: 'AI Enterprise Orchestrator',
       description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
-      icon: Brain,
+      icon: Workflow,
       href: '/services/ai-enterprise-orchestrator',
-      color: 'from-purple-600 to-pink-600',
+      color: 'from-orange-600 to-red-600',
       features: ['Multi-agent coordination', 'Workflow automation', 'Enterprise integration']
-    },
-    {
-      name: 'AI Cybersecurity Suite',
-      description: 'AI-powered threat detection and response for comprehensive security',
-      icon: Shield,
-      href: '/services/ai-cybersecurity-suite',
-      color: 'from-red-600 to-orange-600',
-      features: ['Threat detection', 'Real-time response', 'Compliance automation']
-    },
-    {
-      name: 'Quantum AI Platform',
-      description: 'Next-generation quantum computing solutions for complex problem solving',
-      icon: Atom,
-      href: '/services/quantum-ai-platform',
-      color: 'from-blue-600 to-cyan-600',
-      features: ['Quantum algorithms', 'Optimization', 'Research support']
-    },
-    {
-      name: 'AI Healthcare Analytics',
-      description: 'Predictive diagnostics and care optimization powered by AI',
-      icon: Heart,
-      href: '/services/ai-healthcare-analytics',
-      color: 'from-green-600 to-emerald-600',
-      features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
   ];
 
@@ -90,10 +90,10 @@ export default function Home() {
       icon: Brain,
       color: 'from-purple-600 to-pink-600',
       services: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'AI Content Generation', href: '/services/ai-content-generation-platform' },
-        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation' },
-        { name: 'AI Project Management', href: '/services/ai-project-management-platform' }
+        { name: 'AI Quantum Neural Network Platform', href: '/services/ai-quantum-neural-network-platform' },
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform' },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' }
       ]
     },
     {
@@ -112,7 +112,7 @@ export default function Home() {
       icon: Zap,
       color: 'from-blue-600 to-cyan-600',
       services: [
-        { name: 'Quantum AI Platform', href: '/services/quantum-ai-platform' },
+        { name: 'AI Quantum Neural Network Platform', href: '/services/ai-quantum-neural-network-platform' },
         { name: 'Edge Computing', href: '/services/edge-computing-platform' },
         { name: 'Digital Twin', href: '/services/digital-twin' },
         { name: 'Space Technology', href: '/services/space-tech' }
@@ -123,9 +123,9 @@ export default function Home() {
       icon: Building,
       color: 'from-indigo-600 to-purple-600',
       services: [
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
         { name: 'IoT & Edge', href: '/services/iot-edge' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' }
       ]
     }
@@ -133,32 +133,32 @@ export default function Home() {
 
   const microSaaSProducts = [
     {
-      name: 'AI Sales Copilot',
-      description: 'Complete sales automation suite with AI-powered insights',
-      icon: TrendingUp,
-      href: '/services/ai-sales-copilot',
-      price: '$299/month'
+      name: 'AI Customer Experience Analytics',
+      description: 'AI-powered analytics platform for customer insights and optimization',
+      icon: Heart,
+      href: '/services/ai-customer-experience-analytics-platform',
+      price: '$799/month'
     },
     {
-      name: 'AI Support Helpdesk',
-      description: 'Intelligent customer support platform with 24/7 availability',
-      icon: MessageCircle,
-      href: '/services/ai-support-helpdesk',
-      price: '$199/month'
+      name: 'AI Autonomous Business Operations',
+      description: 'Fully autonomous AI operations platform for business automation',
+      icon: Bot,
+      href: '/services/ai-autonomous-business-operations-platform',
+      price: '$4,999/month'
     },
     {
-      name: 'AI Content Generator',
-      description: 'AI-powered content creation and optimization platform',
-      icon: BookOpen,
-      href: '/services/ai-content-generator',
-      price: '$149/month'
+      name: 'AI Quantum Neural Network Platform',
+      description: 'Revolutionary quantum-classical neural network platform',
+      icon: Brain,
+      href: '/services/ai-quantum-neural-network-platform',
+      price: '$7,999/month'
     },
     {
-      name: 'AI Lead Scoring',
-      description: 'Machine learning-based lead prioritization and scoring',
-      icon: Target,
-      href: '/services/ai-lead-scoring',
-      price: '$99/month'
+      name: 'AI Business Intelligence',
+      description: 'Advanced AI-powered business intelligence and analytics',
+      icon: BarChart3,
+      href: '/services/ai-business-intelligence',
+      price: '$599/month'
     }
   ];
 
