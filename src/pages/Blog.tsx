@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { SEO  } from '@/components/SEO';
-import { Search, 
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  Search, 
   Filter, 
   Calendar, 
   User, 
@@ -14,7 +15,7 @@ import { Search,
   Cloud,
   Brain,
   Rocket
- } from 'lucide-react';
+} from 'lucide-react';
 
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -98,30 +99,30 @@ export default function Blog() {
     },
     {
       id: 7,
-      title: 'Cybersecurity Compliance: Navigating Regulatory Requirements',
-      excerpt: 'A comprehensive guide to meeting cybersecurity compliance standards in various industries.',
-      category: 'security',
-      author: 'Michael Rodriguez',
+      title: 'AI Ethics in Business: Balancing Innovation with Responsibility',
+      excerpt: 'Exploring the ethical considerations and best practices for implementing AI in business.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
       date: 'November 30, 2024',
-      readTime: '11 min read',
-      image: '/images/blog/cybersecurity-compliance.jpg'
+      readTime: '6 min read',
+      image: '/images/blog/ai-ethics.jpg'
     },
     {
       id: 8,
-      title: 'Digital Transformation Success Stories: Lessons from Industry Leaders',
-      excerpt: 'Real-world examples of successful digital transformation initiatives and key learnings.',
-      category: 'transformation',
-      author: 'Dr. Sarah Chen',
+      title: 'Cybersecurity in the Cloud: Protecting Your Digital Assets',
+      excerpt: 'Essential security measures and best practices for cloud-based applications and infrastructure.',
+      category: 'security',
+      author: 'Michael Rodriguez',
       date: 'November 28, 2024',
       readTime: '8 min read',
-      image: '/images/blog/digital-transformation.jpg'
+      image: '/images/blog/cloud-security.jpg'
     },
     {
       id: 9,
-      title: 'AI Ethics in Business: Balancing Innovation with Responsibility',
-      excerpt: 'Exploring the ethical considerations of implementing AI solutions in business environments.',
-      category: 'ai',
-      author: 'Jennifer Kim',
+      title: 'Digital Transformation Strategies: A Comprehensive Guide',
+      excerpt: 'Step-by-step approach to successfully implementing digital transformation in your organization.',
+      category: 'transformation',
+      author: 'Alex Thompson',
       date: 'November 25, 2024',
       readTime: '6 min read',
       image: '/images/blog/ai-ethics.jpg'
@@ -129,7 +130,8 @@ export default function Blog() {
   ];
 
   const filteredPosts = selectedCategory === 'all' 
-    ? recentPosts: recentPosts.filter(post  => post.category === selectedCategory);
+    ? recentPosts 
+    : recentPosts.filter(post => post.category === selectedCategory);
 
   const searchResults = searchQuery 
     ? [...featuredPosts, ...recentPosts].filter(post => 
@@ -201,7 +203,7 @@ export default function Blog() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            {categories.map((category)  => (
+            {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -241,8 +243,8 @@ export default function Blog() {
               </p>
             </motion.div>
             
-            <div className="grid lg: grid-cols-3 gap-8">
-              {featuredPosts.map((post, index)  => (
+            <div className="grid lg:grid-cols-3 gap-8">
+              {featuredPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -287,8 +289,9 @@ export default function Blog() {
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform duration-300" />
                       </div>
                     </div>
-                  </motion.article>
-                ))}
+                  </div>
+                </motion.article>
+              ))}
             </div>
           </div>
         </section>
@@ -333,8 +336,8 @@ export default function Blog() {
               </button>
             </motion.div>
           ) : (
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {(searchQuery ? searchResults : filteredPosts).map((post, index)  => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {(searchQuery ? searchResults : filteredPosts).map((post, index) => (
                 <motion.article
                   key={post.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -416,7 +419,7 @@ export default function Blog() {
               </div>
               
               <p className="text-sm text-slate-400 mt-4">
-                No spam, unsubscribe at  time. We respect your privacy.
+                No spam, unsubscribe at any time. We respect your privacy.
               </p>
             </motion.div>
           </div>

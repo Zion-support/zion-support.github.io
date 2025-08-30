@@ -1,4 +1,4 @@
-import { useState, useCallback  } from 'react.ts';
+import { useState, useCallback  } from 'react';
 
 interface Toast {
 

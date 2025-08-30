@@ -1,8 +1,9 @@
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO  } from '@/components/SEO';
-import { Users, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { 
+  Users, 
   Target, 
   Award, 
   Globe, 
@@ -20,7 +21,7 @@ import { Users,
   Cloud,
   Lock,
   Database
- } from 'lucide-react';
+} from 'lucide-react';
 
 export default function About() {
   const stats = [
@@ -32,25 +33,25 @@ export default function About() {
 
   const values = [
     {
-      icon: Innovation,
+      icon: Lightbulb,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Excellence,
+      icon: Award,
       title: 'Excellence in Execution',
       description: 'Every project is delivered with meticulous attention to detail and unwavering commitment to quality.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Partnership,
+      icon: Heart,
       title: 'Partnership Approach',
       description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Security,
+      icon: Shield,
       title: 'Security & Trust',
       description: 'Your data and systems are protected with enterprise-grade security and compliance standards.',
       color: 'from-red-500 to-orange-500'
@@ -91,7 +92,7 @@ export default function About() {
   const milestones = [
     {
       year: '2018',
-      title: 'Comp Founded',
+      title: 'Company Founded',
       description: 'Zion Tech Group established with a vision to democratize AI technology.'
     },
     {
@@ -116,13 +117,12 @@ export default function About() {
     }
   ];
 
-const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to democratize AI technology and transform businesses through innovative solutions. Meet our expert team and discover our journey."
-        keywords="about Zion Tech Group, AI comp, technology team, comp mission, digital transformation"
+        keywords="about Zion Tech Group, AI company, technology team, company mission, digital transformation"
         canonical="https://ziontechgroup.com/about"
       />
 
@@ -256,8 +256,8 @@ const About: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <motion.div 
                 key={index}
                 className="text-center group"
@@ -296,21 +296,23 @@ const About: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index)  => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
               <motion.div
                 key={index}
-                className="text-center group"
+                className="group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <value.icon className="w-10 h-10 text-white" />
+                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
+                  <p className="text-slate-300 leading-relaxed">{value.description}</p>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-slate-300 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -335,8 +337,8 @@ const About: React.FC = () => {
             </p>
           </motion.div>
           
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index)  => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
                 className="group"
@@ -381,7 +383,7 @@ const About: React.FC = () => {
               Our Journey
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Key milestones that have shaped our comp and driven our growth
+              Key milestones that have shaped our company and driven our growth
             </p>
           </motion.div>
           
@@ -410,8 +412,40 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  )}
+      </section>
 
-export default About;
+      {/* CTA Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+              Join hundreds of businesses that have already revolutionized their operations with our AI-powered solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                to="/services" 
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                Explore Our Services
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

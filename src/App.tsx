@@ -121,6 +121,14 @@ const AICustomerSupportAutomation = React.lazy(() => import('./pages/services/AI
 const AIFinancialAnalytics = React.lazy(() => import('./pages/services/AIFinancialAnalytics'));
 const AIMarketingAutomation = React.lazy(() => import('./pages/services/AIMarketingAutomation'));
 
+// New AI-powered micro SAAS services
+const AIHRRecruitmentSuite = React.lazy(() => import('./pages/services/AIHRRecruitmentSuite'));
+const AISupplyChainOptimization = React.lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICyberThreatIntelligence = React.lazy(() => import('./pages/services/AICyberThreatIntelligence'));
+
+// Comprehensive services showcase
+const ComprehensiveServicesShowcase2030 = React.lazy(() => import('./pages/ComprehensiveServicesShowcase2030'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
@@ -239,6 +247,14 @@ function App() {
                   <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
                   <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
                   <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                  
+                  {/* New AI-powered micro SAAS services */}
+                  <Route path="/services/ai-hr-recruitment-suite" element={<AIHRRecruitmentSuite />} />
+                  <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                  <Route path="/services/ai-cyber-threat-intelligence" element={<AICyberThreatIntelligence />} />
+                  
+                  {/* Comprehensive services showcase */}
+                  <Route path="/comprehensive-services-showcase-2030" element={<ComprehensiveServicesShowcase2030 />} />
                   
                   {/* Search and Utility Routes */}
                   <Route path="/search" element={<SearchPage />} />

@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import { safeStorage } from '@/utils/safeStorage';
 import { useAuth } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems } from '@/utils/cartUtils';
-const initialState = { items[] };
+const initialState = { items: [] };
 function cartReducer(state, action) {
     switch (action.type) {
         case 'ADD_ITEM': {
@@ -18,7 +18,7 @@ function cartReducer(state, action) {
         case 'REMOVE_ITEM':
             return { items: state.items.filter(i => i.id !== action.payload) };
         case 'CLEAR_CART':
-            return { items[] };
+            return { items: [] };
         default:
             return state}
 }

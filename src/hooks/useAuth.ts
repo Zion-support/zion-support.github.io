@@ -1,4 +1,4 @@
-import { useState, useEffect  } from 'react.ts';
+import { useState, useEffect  } from 'react';
 
 interface User {
 
@@ -16,7 +16,7 @@ interface AuthState {
   isAuthenticated: boolean;
   isLoading: boolean}
 
-export function useAuth(...args[]):  {
+export function useAuth() {
   const [authState, setAuthState] = useState<any>({
     user: null,
     isAuthenticated: false,

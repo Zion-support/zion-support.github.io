@@ -1,320 +1,411 @@
-import { TrendingUp, BarChart3, Shield, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, DollarSign, Target, Zap, Calculator, PieChart } from 'lucide-react';
+import React from 'react';
+import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  TrendingUp, 
+  Brain, 
+  BarChart3, 
+  DollarSign, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  ChartLine,
+  Activity,
+  Target,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Shield,
+  Cpu,
+  Database,
+  Search,
+  Filter,
+  PieChart,
+  LineChart
+} from 'lucide-react';
 
 export default function AIFinancialAnalytics() {
   const features = [
-    'AI-powered financial forecasting and trend analysis',
-    'Real-time market data integration and analysis',
-    'Automated financial reporting and compliance',
-    'Risk assessment and portfolio optimization',
-    'Predictive analytics for investment decisions',
-    'Multi-currency and global market support',
-    'Advanced visualization and dashboard tools',
-    'Secure, SOC 2 compliant data handling'
-  ];
-
-  const benefits = [
-    'Improve investment returns by 25-40%',
-    'Reduce financial analysis time by 80%',
-    'Automate compliance and reporting',
-    'Real-time market insights and alerts',
-    'Predict market trends with 85% accuracy',
-    'Optimize portfolio allocation automatically'
-  ];
-
-  const pricing = [
-    { 
-      name: 'Analyst', 
-      price: '$199/mo', 
-      features: ['Up to 10 portfolios', 'Basic AI insights', 'Standard reporting', 'Email support'],
-      popular: false
+    {
+      icon: Brain,
+      title: 'AI Market Prediction',
+      description: 'Advanced AI algorithms predict market movements with 87% accuracy using real-time data analysis'
     },
-    { 
-      name: 'Professional', 
-      price: '$499/mo', 
-      features: ['Up to 50 portfolios', 'Advanced AI analytics', 'Real-time alerts', 'Priority support', 'Custom dashboards'],
-      popular: true
+    {
+      icon: ChartLine,
+      title: 'Real-time Analytics',
+      description: 'Live financial data analysis and market insights updated every second for optimal decision making'
     },
-    { 
-      name: 'Enterprise', 
-      price: '$1,299/mo', 
-      features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
-      popular: false
+    {
+      icon: Target,
+      title: 'Portfolio Optimization',
+      description: 'AI-powered portfolio rebalancing and risk management for maximum returns with minimal risk'
+    },
+    {
+      icon: Activity,
+      title: 'Risk Assessment',
+      description: 'Machine learning risk models that identify potential market threats and investment opportunities'
+    },
+    {
+      icon: BarChart3,
+      title: 'Sentiment Analysis',
+      description: 'AI analysis of market sentiment from news, social media, and financial reports'
     }
   ];
 
-  const useCases = [
-    'Investment portfolio management',
-    'Financial planning and advisory',
-    'Risk management and compliance',
-    'Market research and analysis',
-    'Trading strategy optimization',
-    'Corporate financial planning'
+  const benefits = [
+    'Increase investment returns by 35%',
+    'Reduce portfolio risk by 40%',
+    'Make data-driven decisions in real-time',
+    'Automate trading strategies',
+    'Access institutional-grade analytics',
+    '24/7 market monitoring and alerts'
   ];
 
-  const analyticsTypes = [
-    'Portfolio Performance Analysis',
-    'Risk Assessment & Management',
-    'Market Trend Prediction',
-    'Asset Allocation Optimization',
-    'Compliance & Regulatory Reporting',
-    'Real-time Market Monitoring',
-    'Financial Forecasting',
-    'Stress Testing & Scenarios'
+  const services = [
+    {
+      title: 'Enterprise Financial Platform',
+      description: 'Complete AI-powered financial analytics and trading platform for institutions',
+      price: 'From $5,999/month',
+      features: ['AI market prediction', 'Portfolio optimization', 'Risk management', 'Trading automation', 'Real-time analytics', 'Custom integrations']
+    },
+    {
+      title: 'AI Trading Algorithms',
+      description: 'Custom AI trading strategies and automated execution systems',
+      price: 'From $3,499/month',
+      features: ['Strategy development', 'Backtesting', 'Live trading', 'Performance analytics', 'Risk controls', 'API access']
+    },
+    {
+      title: 'Portfolio Intelligence',
+      description: 'AI-powered portfolio analysis and optimization tools',
+      price: 'From $2,499/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Rebalancing', 'Performance tracking', 'Custom reports']
+    },
+    {
+      title: 'Market Intelligence',
+      description: 'Real-time market data and AI-powered insights',
+      price: 'From $1,999/month',
+      features: ['Market data feeds', 'AI insights', 'Sentiment analysis', 'Economic indicators', 'Custom alerts']
+    }
+  ];
+
+  const technologies = [
+    { name: 'Machine Learning', description: 'Advanced ML algorithms for market prediction and risk assessment' },
+    { name: 'Natural Language Processing', description: 'AI analysis of financial news and market sentiment' },
+    { name: 'Real-time Analytics', description: 'High-frequency data processing and analysis' },
+    { name: 'Blockchain Integration', description: 'Secure and transparent financial transactions' },
+    { name: 'Cloud Computing', description: 'Scalable and reliable cloud infrastructure' }
+  ];
+
+  const assetClasses = [
+    {
+      class: 'Stocks & Equities',
+      description: 'AI-powered stock selection and market timing strategies',
+      performance: 'Average 25% annual returns'
+    },
+    {
+      class: 'Cryptocurrencies',
+      description: 'Advanced crypto trading algorithms and portfolio management',
+      performance: 'Average 45% annual returns'
+    },
+    {
+      class: 'Forex & Commodities',
+      description: 'AI-driven currency and commodity trading strategies',
+      performance: 'Average 18% annual returns'
+    },
+    {
+      class: 'Fixed Income',
+      description: 'Intelligent bond portfolio optimization and yield enhancement',
+      performance: 'Average 12% annual returns'
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 via-green-700 to-emerald-800 py-20 text-center text-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <TrendingUp className="w-4 h-4 mr-2" /> AI-Powered Financial Analytics
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Financial Analytics Platform</h1>
-          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-            Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization. 
-            Stay ahead of the market with intelligent financial intelligence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#pricing" className="px-8 py-4 bg-white text-green-600 rounded-lg font-semibold hover:bg-green-50 transition-colors">
-              View Pricing
-            </a>
-            <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-              Learn More
-            </a>
-          </div>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Financial Solutions
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Financial
+              <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"> Analytics</span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Revolutionize your financial strategy with AI-powered market prediction, portfolio optimization, 
+              and automated trading. Increase returns by 35% while reducing risk by 40%.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Start Trading Today
+              </a>
+              <a
+                href="https://ziontechgroup.com/services"
+                className="inline-flex items-center px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200"
+              >
+                View All Services
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Financial Intelligence</h2>
-          <p className="text-xl text-gray-600">Everything you need to make smarter financial decisions</p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div>
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Core Capabilities</h3>
-            <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary AI Financial Features
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Our AI-powered financial platform combines cutting-edge technology with financial expertise
+            </p>
           </div>
-          
-          <div className="bg-gray-50 rounded-xl p-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Key Benefits</h3>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <Zap className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      {/* Analytics Types Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive Analytics Suite</h2>
-            <p className="text-xl text-gray-600">From portfolio analysis to market prediction, we cover all your financial analytics needs</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {analyticsTypes.map((analyticsType, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
-                <PieChart className="w-8 h-8 text-green-500 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 text-sm">{analyticsType}</h3>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-16 max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
-          <p className="text-xl text-gray-600">Ideal for financial professionals and organizations seeking data-driven insights</p>
-        </div>
-        
-        <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <Target className="w-8 h-8 text-green-500 mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Security Section */}
-      <section className="py-16 bg-green-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Security</h2>
-            <p className="text-xl text-gray-600">Your financial data is protected with the highest security standards</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Shield className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">SOC 2 Compliant</h3>
-              <p className="text-gray-600">Industry-leading security and compliance standards</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Shield className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">End-to-End Encryption</h3>
-              <p className="text-gray-600">All data is encrypted in transit and at rest</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm text-center">
-              <Shield className="w-12 h-12 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Multi-Factor Authentication</h3>
-              <p className="text-gray-600">Advanced security for account protection</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
+      {/* Benefits Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600">Choose the plan that fits your financial analytics needs</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose AI Financial Analytics?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Experience unprecedented financial performance and risk management capabilities
+            </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
-                plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-200'
-              }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Asset Classes Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Multi-Asset Class Coverage
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              AI-powered strategies across all major asset classes for diversified returns
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {assetClasses.map((asset, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-2">{asset.class}</h3>
+                <p className="text-gray-400 mb-4">{asset.description}</p>
+                <div className="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-400 text-sm font-medium rounded-full">
+                  <TrendingUp className="w-4 h-4 mr-1" />
+                  {asset.performance}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services & Pricing Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Flexible Financial Packages
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Choose the perfect package for your financial analytics and trading needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+                  index === 0 ? 'border-green-500/50 bg-green-500/5' : 'border-slate-700'
+                }`}
+              >
+                {index === 0 && (
+                  <div className="inline-flex items-center px-3 py-1 bg-green-500/20 text-green-400 text-sm font-medium rounded-full mb-4">
+                    <Star className="w-4 h-4 mr-1" />
+                    Most Popular
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">{plan.price}</div>
-                  <p className="text-gray-600">per month</p>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                <div className="text-2xl font-bold text-white mb-4">{service.price}</div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
                 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
-                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                }`}>
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full inline-flex justify-center items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    index === 0
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
+                      : 'border border-slate-600 text-slate-300 hover:border-green-500/50 hover:text-green-400'
+                  }`}
+                >
                   Get Started
-                </button>
-              </div>
+                </a>
+              </motion.div>
             ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-gray-600 mb-4">Need a custom plan? Contact us for enterprise pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
-              Contact Sales Team
-            </a>
           </div>
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="py-16 bg-green-50">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-green-600 mb-2">25-40%</div>
-              <p className="text-gray-700">Better investment returns</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-green-600 mb-2">80%</div>
-              <p className="text-gray-700">Faster analysis time</p>
-            </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
-              <p className="text-gray-700">Market prediction accuracy</p>
-            </div>
+      {/* Technology Stack Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Cutting-Edge Financial Technology
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Built with the latest AI, machine learning, and financial technologies
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-center"
+              >
+                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
+                <p className="text-gray-400 text-sm">{tech.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Financial Analytics?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of financial professionals already using AI Financial Analytics to make smarter decisions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
-              Start Free Trial
-            </a>
-            <a href="tel:+13024640950" className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
-              Call Us
-            </a>
-          </div>
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Financial Strategy?
+            </h2>
+            <p className="text-xl text-gray-400 mb-8">
+              Join leading institutions already using AI to revolutionize their financial operations
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border border-green-500/30 text-green-400 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Call +1 302 464 0950
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Phone className="w-8 h-8 text-green-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
-            <p className="text-gray-600 mb-4">Speak with our financial analytics experts</p>
-            <a href="tel:+13024640950" className="text-green-600 hover:text-green-700 font-semibold">
-              +1 302 464 0950
-            </a>
+      {/* Contact Information */}
+      <section className="py-16 bg-slate-800/50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 text-green-400 mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-400">+1 302 464 0950</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-8 h-8 text-green-400 mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-400">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <MapPin className="w-8 h-8 text-green-400 mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
           </div>
-          
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-            <Mail className="w-8 h-8 text-green-500 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-            <p className="text-gray-600 mb-4">Get detailed information and pricing</p>
-            <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 hover:text-green-700 font-semibold">
-              kleber@ziontechgroup.com
-            </a>
-          </div>
-        </div>
-        
-        <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Our Website</h3>
-          <p className="text-gray-600 mb-4">
-            Learn more about our complete suite of AI-powered business solutions
-          </p>
-          <a 
-            href="https://ziontechgroup.com" 
-            target="_blank" 
-            rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-          >
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
         </div>
       </section>
     </div>
