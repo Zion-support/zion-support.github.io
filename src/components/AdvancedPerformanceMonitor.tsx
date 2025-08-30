@@ -1,497 +1,446 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info interface PerformanceMetrics {
-=======
-import React, { useEffect, useState, useCallback, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info  } from 'lucide-react';
+import { 
+  Activity, 
+  Zap, 
+  Clock, 
+  TrendingUp, 
+  AlertTriangle, 
+  CheckCircle, 
+  X,
+  BarChart3,
+  Gauge,
+  HardDrive,
+  Network,
+  Monitor,
+  Smartphone,
+  Globe,
+  Settings,
+  RefreshCw
+} from 'lucide-react';
 
 interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  domLoad: number;
+  windowLoad: number;
+  jsHeapSize: number;
+  jsHeapUsed: number;
+  networkRequests: number;
+  totalSize: number;
+}
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  fps: number;
-  memory: number;
-  loadTime: number;
-  networkLatency: number;
-  cpuUsage: number;
-<<<<<<< HEAD
-  timestamp: number;
-=======
-  timestamp: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+interface PerformanceScore {
+  score: number;
+  grade: 'A' | 'B' | 'C' | 'D' | 'F';
+  color: string;
+}
 
-interface PerformanceAlert {
-
-  id: string;
-  type: 'warning' | 'error' | 'info' | 'success';
-  message: string;
-  metric: string;
-  value: number;
-<<<<<<< HEAD
-  timestamp: number;
-=======
-  timestamp: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
-  const [metrics, setMetrics] = useState<any>({;
-    fps: 0,;
-    memory: 0,;
-    loadTime: 0,;
-    networkLatency: 0,;
-    cpuUsage: 0,;
-    timestamp: Date.now();
-  });
-
-  const [alerts, setAlerts] = useState<any>([]);
+export function AdvancedPerformanceMonitor() {
   const [isVisible, setIsVisible] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [scores, setScores] = useState<Partial<Record<keyof PerformanceMetrics, PerformanceScore>>>({});
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [optimizationTips, setOptimizationTips] = useState<string[]>([]);
 
-  // FPS monitoring
-  const measureFPS = useCallback(() => {;
-    let frameCount = 0;
-    let lastTime = performance.now();
+  // Calculate performance scores
+  const calculateScore = useCallback((metric: keyof PerformanceMetrics, value: number): PerformanceScore => {
+    let score = 0;
+    let grade: 'A' | 'B' | 'C' | 'D' | 'F';
+    let color = '';
 
-    const countFrames = () => {;
-      frameCount++;
-      const currentTime = performance.now();
-
-      if (currentTime - lastTime >= 1000) {
-        const fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        setMetrics(prev => ({ ...prev, fps, timestamp: Date.now() }));
-        frameCount = 0;
-<<<<<<< HEAD
-        lastTime = currentTime;
-
-      requestAnimationFrame(countFrames);
-    };
-=======
-        lastTime = currentTime};
-      ;
-      requestAnimationFrame(countFrames)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    requestAnimationFrame(countFrames)}, []);
-
-  // Memory monitoring
-<<<<<<< HEAD
-  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
-      setMetrics(prev = > ({ ...prev, memory: memoryUsage }))};
-=======;
-  const memoryUsage = memory.usedJSHeapSize / 1024 / 1024;
-      setMetrics(prev => ({ ...prev, memory: memoryUsage }));
-<<<<<<< HEAD
-
-=======
+    switch (metric) {
+      case 'fcp':
+        if (value <= 1800) { score = 100; grade = 'A'; color = 'text-green-500'; }
+        else if (value <= 3000) { score = 80; grade = 'B'; color = 'text-yellow-500'; }
+        else if (value <= 4000) { score = 60; grade = 'C'; color = 'text-orange-500'; }
+        else if (value <= 5000) { score = 40; grade = 'D'; color = 'text-red-500'; }
+        else { score = 20; grade = 'F'; color = 'text-red-600'; }
+        break;
+      case 'lcp':
+        if (value <= 2500) { score = 100; grade = 'A'; color = 'text-green-500'; }
+        else if (value <= 4000) { score = 80; grade = 'B'; color = 'text-yellow-500'; }
+        else if (value <= 6000) { score = 60; grade = 'C'; color = 'text-orange-500'; }
+        else if (value <= 8000) { score = 40; grade = 'D'; color = 'text-red-500'; }
+        else { score = 20; grade = 'F'; color = 'text-red-600'; }
+        break;
+      case 'fid':
+        if (value <= 100) { score = 100; grade = 'A'; color = 'text-green-500'; }
+        else if (value <= 300) { score = 80; grade = 'B'; color = 'text-yellow-500'; }
+        else if (value <= 500) { score = 60; grade = 'C'; color = 'text-orange-500'; }
+        else if (value <= 800) { score = 40; grade = 'D'; color = 'text-red-500'; }
+        else { score = 20; grade = 'F'; color = 'text-red-600'; }
+        break;
+      case 'cls':
+        if (value <= 0.1) { score = 100; grade = 'A'; color = 'text-green-500'; }
+        else if (value <= 0.25) { score = 80; grade = 'B'; color = 'text-yellow-500'; }
+        else if (value <= 0.4) { score = 60; grade = 'C'; color = 'text-orange-500'; }
+        else if (value <= 0.6) { score = 40; grade = 'D'; color = 'text-red-500'; }
+        else { score = 20; grade = 'F'; color = 'text-red-600'; }
+        break;
+      case 'ttfb':
+        if (value <= 800) { score = 100; grade = 'A'; color = 'text-green-500'; }
+        else if (value <= 1200) { score = 80; grade = 'B'; color = 'text-yellow-500'; }
+        else if (value <= 2000) { score = 60; grade = 'C'; color = 'text-orange-500'; }
+        else if (value <= 3000) { score = 40; grade = 'D'; color = 'text-red-500'; }
+        else { score = 20; grade = 'F'; color = 'text-red-600'; }
+        break;
+      default:
+        score = 100; grade = 'A'; color = 'text-green-500';
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    return { score, grade, color };
   }, []);
 
-  // Load time monitoring
-  const measureLoadTime = useCallback(() => {;
-    if (typeof window !== 'null') {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-<<<<<<< HEAD
-        setMetrics(prev => ({ ...prev, loadTime }));
+  // Collect performance metrics
+  const collectMetrics = useCallback(async () => {
+    if (!('PerformanceObserver' in window)) return;
 
+    const newMetrics: Partial<PerformanceMetrics> = {};
+    const newScores: Partial<Record<keyof PerformanceMetrics, PerformanceScore>> = {};
 
-=======
-        setMetrics(prev = > ({ ...prev, loadTime }))};
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  }, []);
+    try {
+      // Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        // FCP (First Contentful Paint)
+        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+        if (fcpEntry) {
+          newMetrics.fcp = Math.round(fcpEntry.startTime);
+          newScores.fcp = calculateScore('fcp', newMetrics.fcp);
+        }
 
-  // Network latency monitoring
-  const measureNetworkLatency = useCallback(async () => {;
-    try {;
-      const start = performance.now();
-      await fetch('/api/health', { method: 'HEAD' });
-      const end = performance.now();
-      const latency = end - start;
-<<<<<<< HEAD
-      setMetrics(prev => ({ ...prev, networkLatency: latency }));
+        // LCP (Largest Contentful Paint)
+        const lcpEntry = performance.getEntriesByName('largest-contentful-paint')[0];
+        if (lcpEntry) {
+          newMetrics.lcp = Math.round(lcpEntry.startTime);
+          newScores.lcp = calculateScore('lcp', newMetrics.lcp);
+        }
+
+        // FID (First Input Delay) - requires user interaction
+        if ('PerformanceEventTiming' in window) {
+          const fidEntries = performance.getEntriesByType('first-input');
+          if (fidEntries.length > 0) {
+            newMetrics.fid = Math.round(fidEntries[0].processingStart - fidEntries[0].startTime);
+            newScores.fid = calculateScore('fid', newMetrics.fid);
+          }
+        }
+
+        // CLS (Cumulative Layout Shift)
+        if ('PerformanceObserver' in window) {
+          let clsValue = 0;
+          const clsEntries = performance.getEntriesByType('layout-shift');
+          clsEntries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          newMetrics.cls = Math.round(clsValue * 1000) / 1000;
+          newScores.cls = calculateScore('cls', newMetrics.cls);
+        }
+      }
+
+      // Navigation timing
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        newMetrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart);
+        newMetrics.domLoad = Math.round(navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart);
+        newMetrics.windowLoad = Math.round(navigationEntry.loadEventEnd - navigationEntry.navigationStart);
+        
+        newScores.ttfb = calculateScore('ttfb', newMetrics.ttfb);
+      }
+
+      // Memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        newMetrics.jsHeapSize = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+        newMetrics.jsHeapUsed = Math.round(memory.totalJSHeapSize / 1024 / 1024);
+      }
+
+      // Network requests
+      const resources = performance.getEntriesByType('resource');
+      newMetrics.networkRequests = resources.length;
+      newMetrics.totalSize = resources.reduce((total, resource) => {
+        const transferSize = (resource as PerformanceResourceTiming).transferSize || 0;
+        return total + transferSize;
+      }, 0);
+
+      setMetrics(newMetrics as PerformanceMetrics);
+      setScores(newScores);
+
+      // Generate optimization tips
+      generateOptimizationTips(newMetrics as PerformanceMetrics, newScores);
+
     } catch (error) {
-      // If health check fails, use a default value
-      setMetrics(prev => ({ ...prev, networkLatency: 0 }));
+      console.error('Error collecting performance metrics:', error);
+    }
+  }, [calculateScore]);
 
-=======
-      setMetrics(prev = > ({ ...prev, networkLatency: latency }))} catch (error) {
-      // If health check fails, use a default value;
-      setMetrics(prev  => ({ ...prev, networkLatency: 0 }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  // Generate optimization tips based on metrics
+  const generateOptimizationTips = useCallback((metrics: PerformanceMetrics, scores: Partial<Record<keyof PerformanceMetrics, PerformanceScore>>) => {
+    const tips: string[] = [];
+
+    if (scores.fcp?.grade === 'C' || scores.fcp?.grade === 'D' || scores.fcp?.grade === 'F') {
+      tips.push('Optimize First Contentful Paint: Minimize render-blocking resources, optimize CSS delivery');
+    }
+
+    if (scores.lcp?.grade === 'C' || scores.lcp?.grade === 'D' || scores.lcp?.grade === 'F') {
+      tips.push('Improve Largest Contentful Paint: Optimize images, use next-gen formats, implement lazy loading');
+    }
+
+    if (scores.fid?.grade === 'C' || scores.fid?.grade === 'D' || scores.fid?.grade === 'F') {
+      tips.push('Reduce First Input Delay: Minimize JavaScript execution time, break up long tasks');
+    }
+
+    if (scores.cls?.grade === 'C' || scores.cls?.grade === 'D' || scores.cls?.grade === 'F') {
+      tips.push('Fix Cumulative Layout Shift: Set explicit dimensions for images and media elements');
+    }
+
+    if (scores.ttfb?.grade === 'C' || scores.ttfb?.grade === 'D' || scores.ttfb?.grade === 'F') {
+      tips.push('Optimize Time to First Byte: Improve server response time, use CDN, optimize database queries');
+    }
+
+    if (metrics.networkRequests > 50) {
+      tips.push('Reduce network requests: Combine CSS/JS files, use sprites, implement resource hints');
+    }
+
+    if (metrics.totalSize > 5 * 1024 * 1024) { // 5MB
+      tips.push('Reduce total page size: Compress assets, use modern image formats, implement lazy loading');
+    }
+
+    setOptimizationTips(tips);
   }, []);
 
-  // CPU usage estimation
-  const estimateCPUUsage = useCallback(() => {;
-    let lastTime = performance.now();
-    let frameCount = 0;
-<<<<<<< HEAD
+  // Start monitoring
+  const startMonitoring = useCallback(() => {
+    setIsMonitoring(true);
+    collectMetrics();
 
-    const measureFrame = () => {
-=======
-    
-    const measureFrame = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-      frameCount++;
-      const currentTime = performance.now();
+    // Set up continuous monitoring
+    const interval = setInterval(collectMetrics, 10000); // Every 10 seconds
 
-      if (currentTime - lastTime >= 1000) {
-        const cpuUsage = Math.min(100, (frameCount / 60) * 100);
-        setMetrics(prev => ({ ...prev, cpuUsage }));
-        frameCount = 0;
-<<<<<<< HEAD
-        lastTime = currentTime;
+    return () => clearInterval(interval);
+  }, [collectMetrics]);
 
-      requestAnimationFrame(measureFrame);
-    };
-
-    requestAnimationFrame(measureFrame);
-  }, []);
-=======
-        lastTime = currentTime};
-      ;
-      requestAnimationFrame(measureFrame)};
-    
-    requestAnimationFrame(measureFrame)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-  // Performance alerts
-<<<<<<< HEAD
-  const checkPerformanceAlerts = useCallback((metrics: PerformanceMetrics) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newAlerts: PerformanceAlert[] = [];
-
-    if (metrics.fps < 30) {
-      newAlerts.push({
-        id: `fps-${Date.now()}`,
-        type: 'error',
-        message: `Low FPS detected: ${metrics.fps}`,
-        metric: 'fps',
-        value: metrics.fps,
-        timestamp: Date.now()
-      })} else if (metrics.fps < 50) {
-      newAlerts.push({
-        id: `fps-${Date.now()}`,
-        type: 'warning',
-        message: `FPS below optimal: ${metrics.fps}`,
-        metric: 'fps',
-        value: metrics.fps,
-        timestamp: Date.now()
-<<<<<<< HEAD
-      });
-=======
-      })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    if (metrics.memory > 100) {
-      newAlerts.push({
-        id: `memory-${Date.now()}`,
-        type: 'warning',
-        message: `High memory usage: ${metrics.memory.toFixed(1)}MB`,
-        metric: 'memory',
-        value: metrics.memory,
-        timestamp: Date.now()
-<<<<<<< HEAD
-      });
-=======
-      })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    if (metrics.loadTime > 3000) {
-      newAlerts.push({
-        id: `load-${Date.now()}`,
-        type: 'warning',
-        message: `Slow load time: ${metrics.loadTime.toFixed(0)}ms`,
-        metric: 'loadTime',
-        value: metrics.loadTime,
-        timestamp: Date.now()
-<<<<<<< HEAD
-      });
-=======
-      })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    if (metrics.networkLatency > 1000) {
-      newAlerts.push({
-        id: `network-${Date.now()}`,
-        type: 'warning',
-        message: `High network latency: ${metrics.networkLatency.toFixed(0)}ms`,
-        metric: 'networkLatency',
-        value: metrics.networkLatency,
-        timestamp: Date.now()
-<<<<<<< HEAD
-      });
-
-    if (newAlerts.length > 0) {
-      setAlerts(prev => [...prev, ...newAlerts]);
-
-=======
-      })}
-
-    if (newAlerts.length > 0) {
-      setAlerts(prev = > [...prev, ...newAlerts])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  // Stop monitoring
+  const stopMonitoring = useCallback(() => {
+    setIsMonitoring(false);
   }, []);
 
-  // Auto-hide alerts after 5 seconds
   useEffect(() => {
-<<<<<<< HEAD
-    const timer = setTimeout(() => {;
-      setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000))}, 5000);
-=======
-    const timer = setTimeout(() => {;
-      setAlerts(prev => prev.filter(alert => Date.now() - alert.timestamp < 5000));
-    }, 5000);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    // Initial metrics collection
+    collectMetrics();
 
-    return () => clearTimeout(timer)}, [alerts]);
+    // Set up performance observer for Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint' || 
+              entry.entryType === 'first-input' || 
+              entry.entryType === 'layout-shift') {
+            collectMetrics();
+          }
+        });
+      });
 
-  // Initialize monitoring
-  useEffect(() => {
-    measureFPS();
-    measureMemory();
-    measureLoadTime();
-    measureNetworkLatency();
-    estimateCPUUsage();
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
-    const interval = setInterval(() => {;
-      measureMemory();
-      measureLoadTime();
-      measureNetworkLatency();
-      checkPerformanceAlerts(metrics)}, 2000);
-
-    return () => clearInterval(interval)}, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
-
-<<<<<<< HEAD
-  const getPerformanceScore = useMemo(() => {
-    const score = 100;
-
-=======
-  const getPerformanceScore = useMemo(() => {;
-    let score = 100;
-    
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    if (metrics.fps < 30) score -= 30;
-    else if (metrics.fps < 50) score -= 15;
-
-    if (metrics.memory > 100) score -= 20;
-    else if (metrics.memory > 50) score -= 10;
-
-    if (metrics.loadTime > 3000) score -= 20;
-    else if (metrics.loadTime > 1000) score -= 10;
-
-    if (metrics.networkLatency > 1000) score -= 15;
-    else if (metrics.networkLatency > 500) score -= 5;
-<<<<<<< HEAD
-
-    return Math.max(0, score);
-  }, [metrics]);
-=======
-    
-    return Math.max(0, score)}, [metrics]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-  const getScoreColor = (score: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (score >= 80) return 'text-green-400';
-    if (score >= 60) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getScoreIcon = (score: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (score >= 80) return <CheckCircle className="w-4 h-4" />;
-    if (score >= 60) return <AlertTriangle className="w-4 h-4" />;
-    return <XCircle className="w-4 h-4" />};
+      return () => observer.disconnect();
+    }
+  }, [collectMetrics]);
 
   if (!isVisible) {
     return (
-      <motion.button
-        onClick = {() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 z-50 p-3 bg-slate-800 hover:bg-slate-700 rounded-full shadow-lg transition-all duration-300"
-<<<<<<< HEAD
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-
-        <Activity className="w-5 h-5 text-cyan-400" />
-      </motion.button>
-    )};
-=======;
-        whileHover={{ scale: 1.1 }};
-        whileTap={{ scale: 0.9 }};
-      >;
-        <Activity className="w-5 h-5 text-cyan-400" />;
-      </motion.button>;
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-zion-blue-dark border border-zion-purple/30 rounded-full shadow-lg hover:bg-zion-blue hover:scale-110 transition-all duration-300"
+        title="Performance Monitor"
+      >
+        <Activity className="w-6 h-6 text-zion-cyan" />
+      </button>
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <AnimatePresence>
       <motion.div
-        initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-        exit = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-        className="fixed bottom-4 right-4 z-50 bg-slate-900 border border-slate-700 rounded-lg shadow-2xl"
-
+        initial={{ opacity: 0, y: 20, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 20, scale: 0.9 }}
+        className="fixed bottom-4 right-4 z-50 w-96 max-h-[80vh] bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 overflow-hidden"
+      >
         {/* Header */}
-        <div className="flex items-center justify-between p-3 border-b border-slate-700">
+        <div className="flex items-center justify-between p-4 bg-zion-blue-darker border-b border-zion-purple/20">
           <div className="flex items-center space-x-2">
-            <Activity className="w-4 h-4 text-cyan-400" />
-            <span className="text-sm font-semibold text-white">Performance Monitor</span>
+            <Activity className="w-5 h-5 text-zion-cyan" />
+            <h3 className="text-white font-semibold">Performance Monitor</h3>
           </div>
           <div className="flex items-center space-x-2">
             <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="p-1 hover:bg-slate-700 rounded transition-colors"
-
-              <TrendingUp className="w-4 h-4 text-slate-400" />
+              onClick={isMonitoring ? stopMonitoring : startMonitoring}
+              className={`p-2 rounded-lg transition-colors ${
+                isMonitoring 
+                  ? 'bg-red-500/20 text-red-400 hover:bg-red-500/30' 
+                  : 'bg-green-500/20 text-green-400 hover:bg-green-500/30'
+              }`}
+              title={isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
+            >
+              <RefreshCw className={`w-4 h-4 ${isMonitoring ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={() => setIsVisible(false)}
-              className="p-1 hover:bg-slate-700 rounded transition-colors"
-
-              <XCircle className="w-4 h-4 text-slate-400" />
+              className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors"
+            >
+              <X className="w-4 h-4" />
             </button>
           </div>
         </div>
 
-        {/* Performance Score */}
-        <div className="p-3 border-b border-slate-700">
-          <div className="flex items-center justify-between">
-            <span className="text-xs text-slate-400">Performance Score</span>
-            <div className={`flex items-center space-x-1 ${getScoreColor(getPerformanceScore)}`}>
-              {getScoreIcon(getPerformanceScore)}
-              <span className="text-sm font-bold">{getPerformanceScore}</span>
+        {/* Content */}
+        <div className="p-4 space-y-4 max-h-[calc(80vh-80px)] overflow-y-auto">
+          {metrics ? (
+            <>
+              {/* Core Web Vitals */}
+              <div className="space-y-3">
+                <h4 className="text-zion-cyan font-medium flex items-center">
+                  <Gauge className="w-4 h-4 mr-2" />
+                  Core Web Vitals
+                </h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {scores.fcp && (
+                    <div className="bg-zion-blue/20 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs text-zion-slate-light">FCP</span>
+                        <span className={`text-sm font-bold ${scores.fcp.color}`}>
+                          {scores.fcp.grade}
+                        </span>
+                      </div>
+                      <div className="text-white font-mono text-sm">
+                        {metrics.fcp}ms
+                      </div>
+                    </div>
+                  )}
+                  {scores.lcp && (
+                    <div className="bg-zion-blue/20 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs text-zion-slate-light">LCP</span>
+                        <span className={`text-sm font-bold ${scores.lcp.color}`}>
+                          {scores.lcp.grade}
+                        </span>
+                      </div>
+                      <div className="text-white font-mono text-sm">
+                        {metrics.lcp}ms
+                      </div>
+                    </div>
+                  )}
+                  {scores.fid && (
+                    <div className="bg-zion-blue/20 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs text-zion-slate-light">FID</span>
+                        <span className={`text-sm font-bold ${scores.fid.color}`}>
+                          {scores.fid.grade}
+                        </span>
+                      </div>
+                      <div className="text-white font-mono text-sm">
+                        {metrics.fid}ms
+                      </div>
+                    </div>
+                  )}
+                  {scores.cls && (
+                    <div className="bg-zion-blue/20 rounded-lg p-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-xs text-zion-slate-light">CLS</span>
+                        <span className={`text-sm font-bold ${scores.cls.color}`}>
+                          {scores.cls.grade}
+                        </span>
+                      </div>
+                      <div className="text-white font-mono text-sm">
+                        {metrics.cls}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Performance Metrics */}
+              <div className="space-y-3">
+                <h4 className="text-zion-cyan font-medium flex items-center">
+                  <BarChart3 className="w-4 h-4 mr-2" />
+                  Performance Metrics
+                </h4>
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zion-slate-light">TTFB:</span>
+                    <span className="text-white font-mono">{metrics.ttfb}ms</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zion-slate-light">DOM Load:</span>
+                    <span className="text-white font-mono">{metrics.domLoad}ms</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zion-slate-light">Window Load:</span>
+                    <span className="text-white font-mono">{metrics.windowLoad}ms</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zion-slate-light">Network Requests:</span>
+                    <span className="text-white font-mono">{metrics.networkRequests}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-zion-slate-light">Total Size:</span>
+                    <span className="text-white font-mono">
+                      {Math.round(metrics.totalSize / 1024 / 1024 * 100) / 100}MB
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Memory Usage */}
+              {metrics.jsHeapSize && (
+                <div className="space-y-3">
+                  <h4 className="text-zion-cyan font-medium flex items-center">
+                    <HardDrive className="w-4 h-4 mr-2" />
+                    Memory Usage
+                  </h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-zion-slate-light">JS Heap Used:</span>
+                      <span className="text-white font-mono">{metrics.jsHeapSize}MB</span>
+                    </div>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-zion-slate-light">JS Heap Total:</span>
+                      <span className="text-white font-mono">{metrics.jsHeapUsed}MB</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Optimization Tips */}
+              {optimizationTips.length > 0 && (
+                <div className="space-y-3">
+                  <h4 className="text-zion-cyan font-medium flex items-center">
+                    <AlertTriangle className="w-4 h-4 mr-2" />
+                    Optimization Tips
+                  </h4>
+                  <div className="space-y-2">
+                    {optimizationTips.map((tip, index) => (
+                      <div key={index} className="text-xs text-zion-slate-light bg-zion-blue/10 rounded-lg p-2">
+                        {tip}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="text-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+              <p className="text-zion-slate-light">Collecting performance data...</p>
             </div>
-          </div>
+          )}
         </div>
-
-        {/* Metrics */}
-        <div className="p-3 space-y-2">
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            <div className="text-center">
-              <div className="text-cyan-400 font-semibold">{metrics.fps}</div>
-              <div className="text-slate-400">FPS</div>
-            </div>
-            <div className="text-center">
-              <div className="text-green-400 font-semibold">{metrics.memory.toFixed(1)}MB</div>
-              <div className="text-slate-400">Memory</div>
-            </div>
-            <div className="text-center">
-              <div className="text-yellow-400 font-semibold">{metrics.loadTime.toFixed(0)}ms</div>
-              <div className="text-slate-400">Load</div>
-            </div>
-            <div className="text-center">
-              <div className="text-purple-400 font-semibold">{metrics.networkLatency.toFixed(0)}ms</div>
-              <div className="text-slate-400">Network</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Alerts */}
-        {alerts.length > 0 && (
-          <div className="p-3 border-t border-slate-700">
-            <div className="space-y-2">
-              {alerts.slice(-3).map((alert) => (
-                <motion.div
-                  key={alert.id}
-                  initial = {
-  { opacity: 0,
-  x: 20 
-
-
-
-
-
-
-}}
-                  animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                  exit = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}}
-                  className={`flex items-center space-x-2 p-2 rounded text-xs ${
-                    alert.type === 'error' ? 'bg-red-900/20 text-red-400' :
-                    alert.type === 'warning' ? 'bg-yellow-900/20 text-yellow-400' :
-                    alert.type === 'info' ? 'bg-blue-900/20 text-blue-400' :
-                    'bg-green-900/20 text-green-400'
-                  }`}
-
-                  {alert.type === 'error' ? <XCircle className="w-3 h-3" /> :
-                   alert.type === 'warning' ? <AlertTriangle className="w-3 h-3" /> :
-                   alert.type === 'info' ? <Info className="w-3 h-3" /> :
-                   <CheckCircle className="w-3 h-3" />}
-                  <span>{alert.message}</span>
-                </motion.div>
-              ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        )}
-      </motion.div>;
-    </AnimatePresence>;
-  )};
-=======
-            </div>;
-          </div>;
-        )};
-      </motion.div>;
-    </AnimatePresence>;
+      </motion.div>
+    </AnimatePresence>
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}}}}}
-=======
-};
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
