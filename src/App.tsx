@@ -433,13 +433,13 @@ export default function App() {
                             <button
                               onClick={() => window.history.back()}
                               className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-
+                            >
                               Go Back
                             </button>
                             <button
                               onClick={() => window.location.href = '/'}
                               className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-
+                            >
                               Go Home
                             </button>
                           </div>
