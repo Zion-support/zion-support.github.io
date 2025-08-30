@@ -193,6 +193,7 @@ export default function SearchPage() {
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
 
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Categories', count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', count: 0 },
     { id: 'cloud', name: 'Cloud Solutions', count: 0 },
@@ -213,6 +214,21 @@ export default function SearchPage() {
     { id: 'article', name: 'Articles', count: 0 },
     { id: 'guide', name: 'Guides', count: 0 },
     { id: 'case-study', name: 'Case Studies', count: 0 }
+=======
+    { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },
+    { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },
+    { id: 'talent', name: 'Talent', icon: <Users className="w-4 h-4" />, count: 0 },
+    { id: 'equipment', name: 'Equipment', icon: <Building className="w-4 h-4" />, count: 0 },
+    { id: 'companies', name: 'Companies', icon: <Building className="w-4 h-4" />, count: 0 }
+  ];
+
+  const sortOptions = [
+    { value: 'relevance', label: 'Relevance' },
+    { value: 'newest', label: 'Newest' },
+    { value: 'rating', label: 'Highest Rated' },
+    { value: 'price-low', label: 'Price: Low to High' },
+    { value: 'price-high', label: 'Price: High to Low' }
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   ];
 
   // Mock search data - in a real app, this would come from an API
@@ -336,6 +352,7 @@ export default function SearchPage() {
       readTime: '12 min read'
     },
     {
+<<<<<<< HEAD
       id: 'cloud-security-best-practices',
       title: 'Cloud Security Best Practices for 2024',
       category: 'security',
@@ -367,10 +384,25 @@ export default function SearchPage() {
       date: '2024-01-14',
       author: 'Case Study Team',
       readTime: '20 min read'
+=======
+      id: 4,
+      type: 'service',
+      title: 'Cloud Migration Consulting',
+      description: 'Expert consulting services for migrating legacy systems to cloud infrastructure',
+      category: 'Consulting',
+      rating: 4.6,
+      reviews: 203,
+      price: '$300/hour',
+      location: 'Remote',
+      company: 'Zion Tech Group',
+      tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
+      featured: false
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
     }
   ];
 
   useEffect(() => {
+<<<<<<< HEAD
     // Load recent searches from localStorage
     const saved = localStorage.getItem('recentSearches');
     if (saved) {
@@ -521,6 +553,108 @@ export default function SearchPage() {
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
               <Search className="w-10 h-10 text-green-400" />
+=======
+    if (searchQuery) {
+      performSearch();
+    }
+  }, [searchQuery, activeCategory, sortBy]);
+
+  const performSearch = async () => {
+    setLoading(true);
+    // Simulate API call delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Filter result based on search query and category
+    let filteredResults = mockResults.filter(result => {
+      const matchesQuery = result.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          result.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+      
+      const matchesCategory = activeCategory === 'all' || result.type === activeCategory;
+      
+      return matchesQuery && matchesCategory;
+    };
+
+    // Sort results
+    filteredResults.sort((a, b) => {
+      switch (sortBy) {
+        case 'newest':
+          return b.id - a.id;
+        case 'rating':
+          return b.rating - a.rating;
+        case 'price-low':
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        case 'price-high':
+          return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        default:
+          return 0;
+      }
+    });
+
+    setResults(filteredResults);
+    setLoading(false);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setSearchParams({ q: searchQuery.trim() });
+    }
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'service':
+        return <Server className="w-5 h-5 text-zion-cyan" />;
+      case 'talent':
+        return <Users className="w-5 h-5 text-zion-purple" />;
+      case 'equipment':
+        return <Building className="w-5 h-5 text-zion-orange" />;
+      default:
+        return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
+    }
+  };
+
+  const getTypeLabel = (type: string) => {
+    switch (type) {
+      case 'service':
+        return 'Service';
+      case 'talent':
+        return 'Talent';
+      case 'equipment':
+        return 'Equipment';
+      default:
+        return 'Unknown';
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Search Header */}
+      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">
+            Search Zion Tech Group
+          </h1>
+          
+          {/* Search Form */}
+          <form onSubmit={handleSearch} className="max-w-4xl mx-auto">
+            <div className="relative">
+              <SearchIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-6 h-6" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search for services, talent, equipment, companies..."
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
+              />
+              <button
+                type="submit"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-md font-semibold hover:bg-zion-cyan-light transition-colors"
+              >
+                Search
+              </button>
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Find What You <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Need</span>

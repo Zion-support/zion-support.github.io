@@ -67,12 +67,16 @@ export default function About() {
       image: '/team/devops-team.jpg'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
+<<<<<<< HEAD
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
+=======
+        description="Learn about Zion Tech Group's mission to democratize AI technology and transform businesses through innovative solutions. Meet our expert team and discover our journey."
+        keywords="Zion Tech Group, AI company, technology innovation, artificial intelligence, digital transformation"
+        canonical="https://ziontechgroup.com/about"
       />
       
       {/* Hero Section */}
@@ -85,6 +89,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               About <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
             </h1>
@@ -117,6 +122,33 @@ export default function About() {
                 We believe that technology should be accessible, understandable, and transformative. 
                 Our team works tirelessly to bridge the gap between complex technological innovations 
                 and practical business applications.
+=======
+            About Zion Tech Group
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            We're on a mission to democratize artificial intelligence, making cutting-edge technology accessible to businesses of all sizes.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-xl text-slate-300 mb-6">
+                To be the leading force in AI democratization, creating a future where every business can harness the power of artificial intelligence.
               </p>
             </motion.div>
 
@@ -167,6 +199,7 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -176,6 +209,18 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
+=======
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div 
+                key={index}
+                className="text-center group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               >
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
                   <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -189,6 +234,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
+<<<<<<< HEAD
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -197,6 +243,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-300">The principles that guide everything we do</p>
           </motion.div>
@@ -213,6 +260,30 @@ export default function About() {
                 <value.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{value.description}</p>
+=======
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Our Core Values
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <motion.div
+                key={index}
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${value.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{value.title}</h3>
+                <p className="text-slate-300 text-center">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -231,6 +302,7 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
@@ -289,19 +361,6 @@ export default function About() {
         </div>
       </section>
     </div>
-  )}
-=======
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white mb-4">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300 text-lg">
-                https://ziontechgroup.com;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
 };
 

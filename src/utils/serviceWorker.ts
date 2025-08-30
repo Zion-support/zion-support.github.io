@@ -147,11 +147,38 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
       if (response.ok) {
         cache.put(request, response);
       }
+<<<<<<< HEAD
     }).catch(() => {
       // Silently fail background update
     });
     
     return cachedResponse;
+=======
+
+      // Register new service worker with better error handling
+      const registration = await navigator.serviceWorker.register('/sw.js', {
+        scope: '/',
+        updateViaCache: 'none'
+      });
+
+      console.log('Service Worker registered successfully:', registration);
+      this.swRegistration = registration;
+
+      // Wait for service worker to be ready before setting up handlers
+      await navigator.serviceWorker.ready;
+
+      // Handle updates
+      this.handleUpdates(registration);
+
+      // Handle messages
+      this.handleMessages();
+
+      return registration;
+    } catch (error) {
+      console.error('Service Worker registration failed:', error);
+      return null;
+    }
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   }
   
   // Fetch from network if no cache
@@ -166,6 +193,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
   }
 }
 
+<<<<<<< HEAD
 // Network First Strategy
 async function networkFirst(request: Request, cacheName: string): Promise<Response> {
   try {
@@ -352,6 +380,22 @@ export function registerServiceWorker(): void {
                   }
                 }
               });
+=======
+  private handleUpdates(registration: ServiceWorkerRegistration) {
+    try {
+      // Check for updates
+      registration.addEventListener('updatefound', () => {
+        const newWorker = registration.installing;
+        if (newWorker) {
+          newWorker.addEventListener('statechange', () => {
+            try {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New version available
+                this.showUpdateNotification();
+              }
+            } catch (error) {
+              console.error('Error handling worker state change:', error);
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             }
           });
         })
@@ -369,13 +413,13 @@ export function registerServiceWorker(): void {
     notification.innerHTML = `
       <div class="flex items-center space-x-3">
         <span>🔄 New version available</span>
-        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">;
-          Update;
-        </button>;
-        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">;
-          ✕;
-        </button>;
-      </div>;
+        <button id="sw-update-btn" class="bg-white text-blue-500 px-3 py-1 rounded text-sm hover:bg-gray-100">
+          Update
+        </button>
+        <button id="sw-dismiss-btn" class="text-white/80 hover:text-white">
+                      ✕
+          </button>
+        </div>
     `;
 
     document.body.appendChild(notification);
@@ -456,9 +500,9 @@ export function registerServiceWorker(): void {
 
     try {
       const cacheNames = await caches.keys();
-      await Promise.all(
-        cacheNames.map(cacheName = > caches.delete(cacheName));
-      );
+              await Promise.all(
+          cacheNames.map(cacheName => caches.delete(cacheName))
+        );
       console.log('All caches cleared');
     } catch (error) {
       console.error('Failed to clear caches:', error);
@@ -472,10 +516,12 @@ export function registerServiceWorker(): void {
       const cacheNames = await caches.keys();
       let totalSize = 0;
 
-      for (const cache = await caches.open(cacheName);
+      for (const cacheName of cacheNames) {
+        const cache = await caches.open(cacheName);
         const keys = await cache.keys();
         
-        for (const response = await cache.match(request);
+        for (const request of keys) {
+          const response = await cache.match(request);
           if (response) {
             const blob = await response.blob();
             totalSize += blob.size;
@@ -499,7 +545,7 @@ export function registerServiceWorker(): void {
     try {
       const registration = await this.getRegistration();
       if (registration) {
-        await (registration as ).sync.register(tag);
+        await (registration as any).sync.register(tag);
         console.log('Background sync requested:', tag);
         return true;
       }
@@ -544,12 +590,18 @@ export function registerServiceWorker(): void {
         return null;
       }
 
+<<<<<<< HEAD
       const vapidKey = process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '';
       const applicationServerKey = this.urlBase64ToUint8Array(vapidKey);
 
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: applicationServerKey as ArrayBufferView
+=======
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
       });
 
       console.log('Push subscription created:', subscription);
@@ -562,8 +614,8 @@ export function registerServiceWorker(): void {
 
   private urlBase64ToUint8Array(base64String: string): Uint8Array {
     const padding = '='.repeat((4 - base64String.length % 4) % 4);
-    const base64 = (base64String + padding);
-      .replace(/-/g, '+');
+    const base64 = (base64String + padding)
+      .replace(/-/g, '+')
       .replace(/_/g, '/');
 
     const rawData = window.atob(base64);
